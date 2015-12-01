@@ -101,7 +101,7 @@
           The Artist: O Artista
           title: Curso 3
           Artist Functions: Funções do artista
-          Artist For Loops: Laços for do Artista
+          Artist For Loops: Laços para do Artista
           Artist Nested Loops: Laços aninhados do artista
           Bee Conditionals: Condicionais da abelha
           Bee Nested Loops: Laços aninhados da abelha
@@ -213,7 +213,10 @@
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
           description_audience: 10-18 anos de idade
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Superdesafio - variáveis
+          Super Challenge - For Loops: Super desafio - Laços para
+          Super Challenge - Functions and Parameters: Super Desafio - Funções e Parâmetros
+          Extreme Challenge - Comprehensive: Desafio Extremo - Abrangente
         Course4pre:
           title: Pré-requisitos para o Curso 4
           description_short: Uma breve revisão dos conceitos para os alunos que não
@@ -232,13 +235,13 @@
           'Bee: Debugging': 'Abelha: Depuração'
         usability:
           Intro: Introdução
-          Variables and For Loops: Variáveis e laços for
+          Variables and For Loops: Variáveis e laços para
           Functions and Functions with Parameters: Funções e funções com parâmetros
           title: Teste de usabilidade
           description_short: ''
           description: Uma seleção de níveis do Curso 4 para o teste de usabilidade.
           Variables: Variáveis
-          For Loops: Laços for
+          For Loops: Laços para
           Binary: Binário
         potus:
           title: especial
@@ -400,6 +403,7 @@
           The Artist: O Artista
           Play Lab: Laboratório
           Play Lab 2015: Laboratório 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Eventos
           description: Eventos
@@ -737,6 +741,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Laços enquanto
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: DP - Fase 3
           description: Ensine álgebra com programação funcional com base em blocos
@@ -1391,6 +1428,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1419,6 +1465,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1470,6 +1523,8 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Armazenamento permanente
+            de dados e conclusão do Clicker
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1505,6 +1560,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1517,3 +1576,111 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: 10-18 anos de idade
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: Laboratório da Era do Gelo
+          description_short: Crie uma história ou faça um jogo com o Laboratório da
+            Era do Gelo!
+          description: Crie uma história ou faça um jogo com o Laboratório da Era
+            do Gelo!
+          Ice Age Play Lab: Laboratório da Era do Gelo
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programação
+          description: Esta unidade introduz os conceitos fundamentais de programação
+            de computadores, que ajudam na habilidade de criar ricos aplicativos interativos.
+            Esse curso usa JavaScript como linguagem de programação, e o Laboratório
+            de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
+            mas os conceitos aprendidos nessas lições envolvem todas as ferramentas
+            e linguagens de programação.
+          While Loop Basics: Noções básicas do laço enquanto
+          While Loops_ Counting Flips: Laços enquanto_ Contando arremessos
+          Arrays_ Intro: Arrays_ Introdução
+          Arrays_ Photo Album: Arrays_ Álbum de fotografias
+          Images are Arrays: Imagens são arrays
+          Arrays and Loops_ Altering Images: Arrays e laços_ alterando imagens
+          Arrays and Loops_ Hidden Images: Arrays e laços_ Imagens ocultas
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Laços enquanto
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Laboratório do Gumball
+          description_short: Crie uma história ou faça um jogo com o Laboratório do
+            Gumball!
+          description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
+          Gumball Play Lab: Laboratório do Gumball
+        starwars:
+          title: 'Star Wars: Construindo uma Galáxia com Código'
+          description_short: Aprenda a programar droids, e crie seu próprio jogo do
+            Star Wars em uma galáxia muito, muito distante.
+          description: Aprenda a programar droids, e crie seu próprio jogo do Star
+            Wars em uma galáxia muito, muito distante.
+          Hour of Code 2015: Hora do Código 2015
+        starwarsblocks:
+          title: 'Star Wars: Construindo uma Galáxia com Código'
+          description_short: Aprenda a programar droids, e crie seu próprio jogo do
+            Star Wars em uma galáxia muito, muito distante.
+          description: Aprenda a programar droids, e crie seu próprio jogo do Star
+            Wars em uma galáxia muito, muito distante.
+          Hour of Code 2015: Hora do Código 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Hora do Código Minecraft
+          description_short: Explore o mundo de Minecraft usando códigos
+          description: Use blocos de código para levar Steve ou Alex a uma aventura
+            pelo mundo do Minecraft
+          Hour of Code 2015: Hora do Código 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Bem-vindo!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Resumo

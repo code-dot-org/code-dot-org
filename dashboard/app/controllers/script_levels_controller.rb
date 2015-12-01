@@ -14,6 +14,21 @@ class ScriptLevelsController < ApplicationController
   # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
+  before_action :disable_session_for_cached_pages
+
+  def disable_session_for_cached_pages
+    if ScriptLevelsController.is_cachable_request?(request)
+      request.session_options[:skip] = true
+    end
+  end
+
+  # Return true if request is one that can be publicly cached.
+  def self.is_cachable_request?(request)
+    script_id = request.params[:script_id]
+    script = Script.get_from_cache(script_id) if script_id
+    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+  end
+
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
@@ -22,12 +37,16 @@ class ScriptLevelsController < ApplicationController
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally.
-    unless current_user
+    redirect_path = build_script_level_path(@script.starting_level)
+
+    if current_user
+      redirect_to(redirect_path)
+    else
       client_state.reset
       reset_session
-    end
 
-    redirect_to(build_script_level_path(@script.starting_level)) and return
+      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+    end
   end
 
   def next
@@ -99,7 +118,7 @@ class ScriptLevelsController < ApplicationController
   def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (client_state.level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
+          (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
@@ -130,7 +149,8 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.
-      level_source = current_user.last_attempt(@level).try(:level_source)
+      @last_activity = current_user.last_attempt(@level)
+      level_source = @last_activity.try(:level_source)
 
       user_level = current_user.user_level_for(@script_level)
       if user_level && user_level.submitted?
@@ -183,10 +203,6 @@ class ScriptLevelsController < ApplicationController
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
       has_i18n: @game.has_i18n?
-    )
-
-    level_view_options(
-      script_level_id: @script_level.level_id
     )
 
     @@fallback_responses ||= {}

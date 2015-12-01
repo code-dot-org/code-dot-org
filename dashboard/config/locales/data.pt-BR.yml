@@ -550,6 +550,62 @@
           alertar a todos
         studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
+        studio_iceage_1: Manny quer dizer "Olá" - você pode ajudá-lo?
+        studio_iceage_2: Diego (personagem 1) e vovó (personagem 2) querem dizer "olá"
+          um para o outro. Você pode ajudá-los usando o bloco "diga" duas vezes?
+        studio_iceage_3: Você pode ajudar o Scrat a chegar à bandeira?
+        studio_iceage_4: Você pode ajudar o Scrat (personagem 1) a chegar à vovó (personagem
+          2) e reproduzir um som quando ele chegar lá?
+        studio_iceage_5: Você pode ajudar o Sid a dizer "saudações" quando ele for
+          clicado? Não se esqueça de clicar nele depois de clicar em Executar
+        studio_iceage_6: Você pode ajudar o Diego a se mover usando as setas para
+          cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
+        studio_iceage_7: O bloco "repita infinitamente" permite que você execute um
+          código continuamente. Você pode conectar blocos a ele para ajudar o Sid
+          a se mover para a direita e para a esquerda repetidamente?
+        studio_iceage_8: Você pode adicionar um bloco para marcar um ponto e um bloco
+          para reproduzir um som quando o Sid chega ao Manny, e então movê-lo com
+          as setas até marcar um ponto?
+        studio_iceage_9: Defina o plano de fundo para esta era do gelo e ajude o Sid
+          a chegar à vovó mais rápido alterando sua velocidade. Então mova-o com as
+          setas para chegar até a vovó e alertar todos.
+        studio_iceage_10: Crie seu próprio jogo. Quando terminar, clique em Concluir
+          para deixar que seus amigos experimentem seu jogo em seus celulares.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
@@ -668,9 +724,9 @@
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
-        C4_for_loops: Laços for
-        C4_for_loops_bee: Laços for
-        C4_for_loops_no_bee: Laços for
+        C4_for_loops: Laços para
+        C4_for_loops_bee: Laços para
+        C4_for_loops_no_bee: Laços para
         C4_math_artist: Programação do Artista com matemática
         C4_function_edit: Editando funções
         C4_function_create: Criando funções
@@ -679,7 +735,7 @@
         C4_unplugged_algorithms: Algoritmos com tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variáveis em envelopes
-        C4_unplugged_forloops: Laços for
+        C4_unplugged_forloops: Laços para
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
         frozen_intro: Introdução à Hora de Código
@@ -692,7 +748,13 @@
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introdução às Funções
+        csp_applab_functions_parameters: Funções com Parâmetros
+        csp_applab_loops: Laços
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Um pouco sobre pixels
         csp_pixelation_color_1: Widget de pixelização de cores - Parte 1
         csp_pixelation_color_2: Widget de pixelização de cores - Parte 2
@@ -730,6 +792,22 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
+        starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
+        starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
+        starwars_congrats: 'Star Wars: Construindo uma galáxia com código - Parabéns'
+        starwars_blocks_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
+        starwars_blocks_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
+        starwars_blocks_congrats: 'Star Wars: Construindo uma galáxia com código -
+          Parabéns'
+        mc_intro: Minecraft - Introdução
+        mc_repeat: Minecraft - Repetição
+        mc_if_statements: Minecraft - Instruções se
+        mc_congrats_share: Minecraft - Parabéns
+        mc_congrats_no_share: Minecraft - Parabéns
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
@@ -835,3 +913,13 @@
         Infinity_move_directions_callout_arrow: Use as setas para direcionar
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
+        craft_run_button_callout: Clique em "Executar" para testar seu programa
+        craft_drag_block_callout: Arraste um bloco "moveForward();" e prenda-o debaixo
+          do outro bloco
+        craft_callout_preplaced: Nós colocamos alguns blocos aqui para começar
+        craft_inside_repeat: Repita ações colocando blocos aqui
+        craft_callout_preplaced_house: Este código vai começar a construir a sua casa.
+          Consegue acabá-lo?
+        craft_what_is_iron: Minere esse ferro!
+        craft_callout_moveforward: Este código vai verificar se há lava, você consegue
+          adicionar um comando para avançar?

@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'Rätta följande fel:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Denna sida har åldersgräns
   activerecord:
     errors:
       messages:
@@ -256,6 +255,7 @@
         playlab: Skapa en App
         artist: Rita något
         calculate: Calculate Something
+        applab: Skapa en App
     user:
       classroom: Lärare hemsida
       district_dashboard: Distrikt Dashboard
@@ -279,6 +279,8 @@
       prize_us_only: (Endast US-studenter)
       prizes_link: Mer information
   teacher:
+    answer: Svar
+    for_teachers_only: Endast för lärare
     title:
       one: 'Din lärare:'
       other: 'Dina lärare:'
@@ -350,10 +352,10 @@
       viewing_solution: Visa lösning
       try_it_yourself: Prova det själv
       section: Grupp
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      example: Exempel lösning
+      example_with_number: Exempel lösning %{solution_number}
+      submitted_on: 'Inlämnad den %{date} '
+      unsubmit: Ångra Inlämnad
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
@@ -375,10 +377,10 @@
     classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio är basen för onlinekurser skapade av Code.org
     lines_of_code: '%{lines_count} RADER KOD SKRIVEN AV STUDENTER'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} rader kod <br/> skrivna av %{students_count}
+      miljoner studenter'
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
@@ -404,7 +406,7 @@
     local_school: närliggande skola
     online: Online
     see_details: Se detaljer
-    view_course: View Course
+    view_course: Titta på Kurs
     prize_info: 'Priser för deltagande (endast USA): upp till $1.000 i klassrums-
       belöningar.'
     tryfirst: 'Eller, du kan prova  först och registrera dig senare:'
@@ -423,12 +425,11 @@
     heading_legacy: <h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prova en Code Studio kurs genom att välja en nedan
     print_certificate: Skriv ut intyg
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Lär med Code Studio
+    description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
   gender:
     male: Man
     female: Kvinna
@@ -437,34 +438,34 @@
     student: Student
     teacher: Lärare
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Vi tackar våra <a href="https://code.org/about/donors"> givare</a>,
+      <a href="https://code.org/about/partners"> partners</a>, vårt <a href="https://code.org/about/team">
+      utökade team</a>, vårt video team och våra <a href="https://code.org/about/advisors">
+      utbildningsrådgivare</a> för deras stöd i att skapa Code Studio.
     help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
       till med att skapa denna övning.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
+      till med att skapa detta material.
     art_from_html: Angry Birds ™ & © 2009-2014 Rovio Entertainment Ltd. Alla rättigheter
       reserverade. <br/> Plants vs Zombies ™ & © 2014 Electronic Arts Inc. Alla rättigheter
       reserverade.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
+      Ltd. Alla rättigheter reserverade. < br / > Plants vs Zombies &#8482; &amp;
+      © %{current_year} Electronic Arts Inc. Alla rättigheter reserverade
     powered_by_aws: Drivs av Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och
+      Hour of Code&reg; är varumärken som tillhör Code.org.'
     copyright: Copyright
     more: Mer
     feedback: Ge feedback
     translate: Hjälp oss översätta till ditt språk
     support: Hjälp
     support_url: http://support.code.org/
-    tos_short: Terms
+    tos_short: Villkor
     tos: Villkor
     privacy: Sekretesspolicy
     secure: Skyddad version
-    report_abuse: Report Abuse
+    report_abuse: Rapportera missbruk
   reference_area:
     title: Behöver du hjälp?
     subtitle: Se dessa filmer och tips
@@ -506,6 +507,7 @@
   pdf_download: Ladda ner PDF
   download_coming_soon: Nedladdningsbar aktivitet kommer snart.
   video_coming_soon: Video kommer snart!
+  not_started: Studenten har inte försökt på denna nivå.
   share_code:
     title: Klicka på 'Kör' för att testa mitt program
     bounce_og_title: Kolla in mitt Studsa Spel
@@ -541,11 +543,11 @@
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
         Code övning!
     20-hour:
-      title: Accelerated Course
+      title: Snabbkurs
       body: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp.
         Kursen är utformad för användning i klassrummet från förskoleklass till årskurs
         8, men det är roligt att lära sig i alla åldrar.
-      body_short: Learn basic computer science in an accelerated version of courses
+      body_short: Lär dig grundläggande datavetenskap i en snabbare version av kurser
         2-4.
     hoc2014:
       try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
@@ -555,10 +557,15 @@
       body: Se ett galleri av app och artist bilder som skapats av våra användare
     frozen:
       title: Frost
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Använd Play Lab för att skapa en berättelse eller ett spel med Disney
         Infinity karaktärer i huvudrollen .
+    minecraft:
+      title: Minecraft
+      body: Utforska en Minecraft värld med kod.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -613,8 +620,8 @@
   dialog:
     ok: Ok
     startover_title: Är du säker på att du vill börja om?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Detta kommer att återställa pusslet och ta bort all data du har
+      lagt till eller ändrat.
     startover_ok: Börja om
     startover_cancel: Avbryt
   time:
@@ -712,33 +719,31 @@
     view_all: Titta på mina projekt
     remix: Remix
     click_to_remix: Klicka på "Remix" för att göra en spin-off som din egen version!
-    edit_project: Edit Project
+    edit_project: Redigera projektet
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'>
+        Användarvillkor</a> och kan inte delas med andra.
+      contact_us: Om du tror att detta är ett fel, vänligen <a href='https://code.org/contact'>
+        Kontakta oss.</a>
+      go_to_code_studio: Gå till Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Om du har upplevt stötande innehåll, hot, cybermobbning, trakasserier
+          eller upphovsrättsintrång av innehåll du äger medan använder appar byggda
+          på Code Studio, vänligen fyll i formuläret nedan. Vi kommer ta din rapport
+          på allvar, undersöka detta och vidta lämpliga åtgärder.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Ange en e-postadress
+          age: Vänligen ange en ålder
+          abuse_type: Var snäll och svara på hur dettaninnehåll bryter mot användarvillkoren
+          abuse_detail: Lämna närmare uppgifter om innehållet du rapporterar
+        abusive_url: Webbadressen till innehållet rapporteras
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Hur kränker detta innehåll %{link_start}Terms av Service%{link_end}?
+          harassment: Hot, cybermobbning, trakasserier
+          offensive: Stötande innehåll
+          infringement: Upphovsrättsintrång
           other: Annat
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Ange så mycket information som möjligt angående innehållet du rapporterar.
+        acknowledge: Genom att skicka denna information, erkänner du att det kommer
+          att hanteras i enlighet med villkoren i den %{link_start_privacy}Privacy
+          Policy%{link_end} och %{link_start_tos}Terms av Service%{link_end}

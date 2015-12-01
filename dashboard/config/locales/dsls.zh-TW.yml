@@ -33,7 +33,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: 將右邊的程式放到正確的格子中
         Matching: 配對
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -45,7 +45,7 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: 拖曳方塊至符合位置。
         Instructions: 說明
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: 將右邊的程式積木放到正確的格子中
         Maze Match: 迷宮比賽
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -54,7 +54,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: 將右邊的程式放到正確的格子中
         Matching: 配對
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -65,8 +65,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Artist Loops Matching One
-        Match the loop to the shape: Match the loop to the shape
+        Artist Loops Matching One: 藝術家迴圈配對
+        Match the loop to the shape: 將正確的迴圈放到對應的形狀旁邊
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -76,9 +76,8 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the
-          blocks that complete it.
+        Artist Matching: 藝術家配對遊戲
+        Match the shape with the blocks that complete it.: 將可以完成形狀的程式積木放到對應的圖形旁邊
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -90,7 +89,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: Bounce Matching
+        Bounce Matching: 反彈球配對遊戲
         Match the events with the actions: 事件配合動作
         Matching: 配對
       2-3 flappy match 1:
@@ -100,7 +99,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Flappy Matching One
+        Flappy Matching One: Flappy 配對遊戲
         Match the events with the actions: 事件配合動作
         Matching: 配對
       2-3 maze match 1:
@@ -110,8 +109,8 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match One: Maze Match One
+        Match the puzzles to the blocks: 將右邊的程式積木放到正確的格子中
+        Maze Match One: 迷宮配對遊戲
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>2)</h4>
         <h4>2)</h4>: <h4>2)</h4>
@@ -166,7 +165,7 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: 拖曳方塊至符合位置。
         Instructions: 說明
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: 將右邊的程式積木放到正確的格子中
         Maze Match: 迷宮比賽
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
@@ -460,8 +459,8 @@
         Which set of blocks is the correct answer?: Which set of blocks is the correct
           answer?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
+        Baking cookies: 烘烤餅乾
+        Banana: 香蕉
         Brushing your teeth: 刷你的牙齒
         Multiple Choice: 多選
         Shopping from a grocery list: 從購物清單購物
@@ -486,14 +485,14 @@
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: 梳理你的頭髮
         Cleaning your room: 清掃你的房間
-        Eating your dessert: Eating your dessert
+        Eating your dessert: 吃甜點
         Multiple Choice: 多選
-        Washing your face: Washing your face
+        Washing your face: 洗臉
         Which one of these activities would be best for practicing crowdsourcing?: 這些活動之中哪一個是群眾外包最佳的練習
       4-5 Digital Footprint Multi 1:
         Multiple Choice: 多選
         Which piece of information listed below is okay to share on the internet?: 下面列出的哪一條資訊在網路上分享是合適的
-        Your address: 您的位址
+        Your address: 您的地址
         Your birthday: 你的生日
         Your favorite food: 你最喜歡的食物
         Your parent's credit card number: 你父母的信用卡卡號

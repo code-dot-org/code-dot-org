@@ -231,7 +231,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@no_ie10" if browser['browserName'] == 'Internet Explorer' && browser['version'] == '10.0'
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
-  arguments += " -t ~@no_firefox" if browser['browserName'] == 'Firefox'
+  arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
+  arguments += " -t ~@no_ios" if browser['browserName'] == 'iphone'
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access

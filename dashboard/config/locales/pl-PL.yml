@@ -265,6 +265,7 @@
         playlab: Utwórz aplikację
         artist: Narysuj cokolwiek
         calculate: Calculate Something
+        applab: Utwórz aplikację
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
@@ -288,6 +289,8 @@
       prize_us_only: (Tylko dla uczniów w USA)
       prizes_link: Więcej informacji
   teacher:
+    answer: Odpowiedź
+    for_teachers_only: Tylko dla nauczycieli
     title:
       one: 'Twój nauczyciel:'
       other: 'Twoi nauczyciele:'
@@ -455,10 +458,13 @@
       te materiały.
     help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli
       utworzyć te materiały.
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Wszystkie
-      prawa zastrzeżone.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone
+    art_from_html: Star Wars &#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+      Wszystkie prawa zastrzeżone. < br /> Frozen&#8482; &amp; &copy; %{current_year}
+      Disney. Wszystkie prawa zastrzeżone. <br /> Ice Age &#8482; &amp; &copy; %{current_year}
+      20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds &#8482;
+      &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone.
+      < br / > Plants vs Zombies &#8482; &amp; &copy; %{current_year} Electronic Arts
+      Inc. Wszystkie prawa zastrzeżone
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482;
       &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone
@@ -517,6 +523,7 @@
   pdf_download: Pobierz PDF
   download_coming_soon: Już wkrótce aktywności  do pobrania.
   video_coming_soon: Wkrótce wideo!
+  not_started: Uczeń nie próbował na tym poziomie.
   share_code:
     title: Kliknij "Uruchom", aby zobaczyć mój program w akcji
     bounce_og_title: Sprawdź moją grę w odbijanie
@@ -564,10 +571,15 @@
         użytkowników
     frozen:
       title: Frosen
+    starwars:
+      title: Gwiezdne Wojny
     infinity:
       title: Infinity Play Lab
       body: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity
         w rolach głównych.
+    minecraft:
+      title: Minecraft
+      body: Odkrywaj świat Minecraft poprzez kodowanie.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!

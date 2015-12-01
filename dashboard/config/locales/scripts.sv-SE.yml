@@ -13,63 +13,62 @@
           description_short: Bara en inofficiell testkurs.
         course1:
           'Jigsaw: Learn to drag and drop': 'Pussel: Lär dig dra och släpp'
-          'Maze: Sequence': 'Labyrint: sekvens'
+          'Maze: Sequence': 'Labyrint: Sekvens'
           'Maze: Debugging': 'Labyrint: Felsökning'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artister 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee inte blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Labyrint 2: slingor'
-          'Bee 2: Loops': 'Bee 2: slingor'
-          Multi & Match: Multi & Matcha
-          K-1 Flappy: Förskoleklass-årskurs1 Flappy
+          'Artist 1: Intro': 'Konstnären 1: Introduktion'
+          Artists 2: Konstnärer 2
+          Spelling Bee: Stavnings-bi
+          Spelling Bee not blockly: Stavnings-bi inte blockly
+          'Bee 1: Intro': 'Bi 1: Introduktion'
+          'Maze 2: Loops': 'Labyrint 2: Slingor'
+          'Bee 2: Loops': 'Bi 2: Slingor'
+          Multi & Match: Flerval & Matcha
+          K-1 Flappy: Flappy för förskoleklass - årskurs 1
           Flappy non blockly: Flappy inte blockly
           title: Kurs 1
-          Artist 2: Artist 2
+          Artist 2: Konstnären 2
           Happy Maps: Glada kartor
-          Move it, Move it: Flytta det, flytta den
+          Move it, Move it: Flytta den, flytta den
           'Real-life Algorithms: Plant a Seed': 'Verklighetsalgoritmer: Så ett frö'
           Building a Foundation: Bygga en grund
-          Getting Loopy: Bli Snurrig
+          Getting Loopy: Att bli snurrig
           The Big Event: Den stora händelsen
-          Going Places Safely: Tryggt gå till platser
-          description: Kurs 1 är utformad för att de som börjat lära sig läsa ska
-            kunna skapa datorprogram som hjälper dem att lära sig att samarbeta med
-            andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra
-            uppgifter. I slutet av kursen skapar eleverna sina egna anpassade spel
-            eller berättelse som de kan dela. Rekommenderas för förskolan-årskurs
-            1.
-          'Bee: Sequence': 'Bee: sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Artist: Shapes': 'Artist: former'
-          'Maze: Loops': 'Labyrint: slingor'
-          'Bee: Loops': 'Bee: slingor'
-          'Studio: Create a Story': Play Lab - skapa en berättelse
-          'Artist: Loops': Artist Loopar
-          description_audience: Åldrar 4 + (pseudo- läsare)
-          description_short: Kurs 1 är utformad för "tidiga läsare".
+          Going Places Safely: Trygg resa
+          description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna
+            kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta
+            med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra
+            uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse
+            som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
+          'Bee: Sequence': 'Bi: Sekvens'
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Artist: Shapes': 'Konstnären: Former'
+          'Maze: Loops': 'Labyrint: Slingor'
+          'Bee: Loops': 'Bi: Slingor'
+          'Studio: Create a Story': Spel-labb - skapa en berättelse
+          'Artist: Loops': 'Konstnären: Slingor'
+          description_audience: Från 4 år (icke-läsare)
+          description_short: Börja med kurs 1 för nybörjar-läsare.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
           The Artist: Konstnären
-          Artist Debugging: Artist Felsökning
+          Artist Debugging: 'Konstnären: Felsökning'
           Bounce: Studsa
-          'Studio: Create a Story': Play Lab - skapa en berättelse
-          Artist Loops: Artist Loopar
-          Bee Conditionals: Bee Villkorssatser
+          'Studio: Create a Story': Spel-labb - skapa en berättelse
+          Artist Loops: 'Konstnären: Slingor'
+          Bee Conditionals: 'Bi: Villkor'
           Flappy: Flappy
           title: Kurs 2
-          Bee Loops: 'Bee: slingor'
-          Artist Functions: Artist Funktioner
-          The Artist Debugging: Artisten Felsöker
-          Bee Debugging: Bee felsökning
-          Bee Functions: Bee funktioner
-          Maze Loops: 'Labyrint: slingor'
+          Bee Loops: 'Bi: Slingor'
+          Artist Functions: 'Konstnären: Funktioner'
+          The Artist Debugging: 'Konstnären: Felsökning'
+          Bee Debugging: 'Biet: Felsökning'
+          Bee Functions: 'Biet: Funktioner'
+          Maze Loops: 'Labyrint: Slingor'
           Graph Paper Programming: Kalkyleringsprogrammering
-          'Real-life Algorithms: Paper Planes': 'Verkliga algoritmer: Pappersflygplan'
-          Getting Loopy: Bli Snurrig
-          Relay programming: Relä programmering
+          'Real-life Algorithms: Paper Planes': 'Algoritmer i verkliga livet: Pappersflygplan'
+          Getting Loopy: Att bli snurrig
+          Relay programming: Stafettprogrammering
           Conditionals: Villkor
           Binary Bracelets: Binära armband
           The Big Event: Den stora händelsen
@@ -78,11 +77,11 @@
             erfarenhet av programmering. I kursen kommer eleverna skapa program för
             att lösa problem och utveckla interaktiva spel eller berättelser som de
             kan dela. Rekommenderas för årskurserna 2-5.
-          'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Maze: Loops': 'Labyrint: slingor'
-          'Artist: Loops': Artist Loopar
-          'Bee: Loops': 'Bee: slingor'
+          'Maze: Sequence': 'Labyrint: Sekvens'
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Maze: Loops': 'Labyrint: Slingor'
+          'Artist: Loops': 'Konstnären: Slingor'
+          'Bee: Loops': 'Bi: Slingor'
           'Bee: Debugging': Bee felsökning
           'Artist: Debugging': Artist Felsökning
           'Bee: Conditionals': Bee Villkorssatser
@@ -93,17 +92,17 @@
           description_short: Kurs 2 är utformad för elever som kan läsa.
         course3:
           The Maze: Labyrinten
-          'Studio: Create a Story': Play Lab - skapa en berättelse
+          'Studio: Create a Story': Spel-labb - skapa en berättelse
           The Artist: Konstnären
           title: Kurs 3
-          Artist Functions: Artist Funktioner
+          Artist Functions: 'Konstnären: Funktioner'
           Artist For Loops: Konstnär 'för' loopar
           Artist Nested Loops: Artist Kapslade slingor/loopar
-          Bee Conditionals: Bee Villkorssatser
+          Bee Conditionals: 'Bi: Villkor'
           Bee Nested Loops: Bee Kapslade slingor/loopar
           Bee Debuggin: Bee felsökning
-          Bee Debugging: Bee felsökning
-          Bee Functions: Bee funktioner
+          Bee Debugging: 'Biet: Felsökning'
+          Bee Functions: 'Biet: Funktioner'
           Artist Functions with Params: Artist Funktioner med Parametrar
           Bounce: Studsa
           Maze Conditionals: Labyrint villkorssatser
@@ -204,7 +203,11 @@
           Maze and Bee: Labyrint och Bee
           Artist Binary: Artist binär
           description_audience: Åldrar 10 + (efter kurs 3)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Super utmaning - variabler
+          Super Challenge - For Loops: Super utmaning - för loopar
+          Super Challenge - Functions and Parameters: Super utmaning - funktioner
+            och parametrar
+          Extreme Challenge - Comprehensive: Extreme utmaning - Omfattande
         Course4pre:
           title: Kurs 4 förutsättning
           description_short: En kort sammanfattning av begrepp för elever som inte
@@ -212,9 +215,9 @@
           description: En kort sammanfattning av begrepp för elever som inte har tagit
             kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
-          'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Artist: Loops': Artist Loopar
+          'Maze: Sequence': 'Labyrint: Sekvens'
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Artist: Loops': 'Konstnären: Slingor'
           'Bee: Conditionals': Bee Villkorssatser
           'Artist: Nested Loops': 'Artist: Kapslade slingor'
           'Farmer: While Loops': 'Bonde: ''Medan'' loopar'
@@ -359,8 +362,8 @@
             och programmeringsbegrepp. Kursen är utformad för användning i klassrummet
             från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
             åldrar.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Denna 20-timmars kurs omfattar ren dator vetenskap och
+            programmeringsbegrepp i kurserna 2-4.
           Introduction to Computer Science: Introduktion till Datavetenskap
           The Maze: Labyrinten
           Computational Thinking: Uträkningstänkande
@@ -390,6 +393,7 @@
           The Artist: Konstnären
           Play Lab: Play Lab
           Play Lab 2015: Play Lab 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Händelser
           description: Händelser
@@ -402,21 +406,22 @@
           title: Flappy kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
             vår Flappy Code övning!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Skriv ditt eget Flappy spel på mindre än 10 minuter!
           Flappy Code: Flappy kod
         jigsaw:
           title: Pussel
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Prova vår Jigsaw handledning
+          description_short: Prova vår Jigsaw handledning
           Jigsaw: Pussel
         step:
           title: steg
-          description: ''
-          description_short: Step tutorial
+          description: Steg handledning
+          description_short: Steg handledning
           Step: steg
         Hour of Code:
           title: Timme av Kod 2013
-          description: ''
+          description: Prova grunderna i datavetenskap med karaktärerna från Angry
+            Birds och Plants vs. Zombies!
           description_short: Prova grunderna i datavetenskap med många roliga figurer!
           Hour of Code 2013: Timme av Kod 2013
         Code Studio Puzzle Challenge:
@@ -456,9 +461,9 @@
           description: En kort sammanfattning av begrepp för elever som inte har tagit
             kurs 2 och 3.
           Course 4 Prerequisite: Kurs 4 förutsättning
-          'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: sekvens'
-          'Artist: Loops': Artist Loopar
+          'Maze: Sequence': 'Labyrint: Sekvens'
+          'Artist: Sequence': 'Konstnären: Sekvens'
+          'Artist: Loops': 'Konstnären: Slingor'
           'Bee: Conditionals': Bee Villkorssatser
           'Artist: Nested Loops': 'Artist: Kapslade slingor'
           'Farmer: While Loops': 'Bonde: ''Medan'' loopar'
@@ -712,6 +717,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: '''Medan'' loopar(slingor)'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1087,8 +1125,8 @@
           Equity PD: Equity PD
         hoc2015:
           title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          description_short: Använd Play Lab för att skapa en berättelse eller spel.
+          description: Använd Play Lab för att skapa en berättelse eller spel.
           Hour of Code: Timmen med Kod
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
@@ -1252,11 +1290,11 @@
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
           Happy Maps: Glada kartor
-          Move it, Move it: Flytta det, flytta den
+          Move it, Move it: Flytta den, flytta den
           'Real-life Algorithms: Plant a Seed': 'Verklighetsalgoritmer: Så ett frö'
           Graph Paper Programming: Kalkyleringsprogrammering
           Building a Foundation: Bygga en grund
-          Getting Loopy: Bli Snurrig
+          Getting Loopy: Att bli snurrig
           The Big Event: Den stora händelsen
           Binary Bracelets: Binära armband
           Songwriting: Låtskrivande
@@ -1362,6 +1400,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1390,6 +1437,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1441,6 +1495,8 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1476,6 +1532,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1488,3 +1548,109 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: Åldrar 10 + (efter kurs 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: Ice Age Play Lab
+          description_short: Skapa en berättelse eller gör ett spel med Ice Age Play
+            Lab!
+          description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
+          Ice Age Play Lab: Ice Age Play Lab
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: '''Medan'' loopar(slingor)'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Play Lab
+          description_short: Skapa en berättelse eller gör ett spel med Gumball Play
+            Lab!
+          description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
+          Gumball Play Lab: Gumball Play Lab
+        starwars:
+          title: 'Star Wars: Bygg en galax med kod'
+          description_short: Lär dig att programmera droider och skapa ditt eget Star
+            Wars spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars
+            spel i en galax långt, långt borta.
+          Hour of Code 2015: Hour of Code 2015
+        starwarsblocks:
+          title: 'Star Wars: Bygg en galax med kod'
+          description_short: Lär dig att programmera droider och skapa ditt eget Star
+            Wars spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars
+            spel i en galax långt, långt borta.
+          Hour of Code 2015: Hour of Code 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft Hour of Code
+          description_short: Utforska en Minecraft värld med kod
+          description: Använd block av kod för att ta Steve eller Alex på ett äventyr
+            genom denna Minecraft värld
+          Hour of Code 2015: Hour of Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Välkommen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Sammanfattning

@@ -17,11 +17,11 @@
         password_confirmation: Potvrda lozinke
         current_password: Trenutna lozinka
         locale: Jezik
-        age: Godine starosti
+        age: Godine
         gender: Spol
         edit_header: Uredi podatke o računu
         error:
-          future: Ne može biti u budućnosti
+          future: ne može biti u budućnosti
   hello: Pozdrav svima
   welcome_back: Dobrodošao natrag, %{name}
   submit: Pošalji
@@ -38,17 +38,16 @@
   stage_number: Nivo %{number}
   puzzle: Zadatak
   trophies: Trofeji
-  courses: Tečaji
+  courses: Tečajevi
   of: od
   more: VIŠE
   less: MANJE
   beta: beta
-  try_hoc: 'Isprobaj Hour of Code, klikni ovdje >> '
-  try_k8intro: Ili isprobaj naš informatički tečaj za djecu u osnovnoj školi (15-25
-    sati)
-  k8intro: Uvod u informatiku za osnovnu školu (15-25 sati)
+  try_hoc: 'Isprobaj Sat programiranja, klikni ovdje >> '
+  try_k8intro: Isprobaj naš informatički tečaj za manju djecu 4-8 godina (15-25 sati)
+  k8intro: Uvod u informatiku za manju djecu, 4-8 godina (15-25 sati)
   already_started: 'Već si započeo? Nastavi ovdje >> '
-  demos: 'Admin: Sve demo'
+  demos: 'Admin: Sve demonstracije'
   continue: Nastavi
   prize: nagrada
   more_info: Više informacija
@@ -69,7 +68,7 @@
     need_unlock: Nisi primio upute za otključavanje?
   signup_form:
     student_count: '%{count} učenika se već prijavilo.'
-    teacher_count: '%{count} nastavnika se već prijavilo.'
+    teacher_count: '%{count} učitelja se već prijavilo.'
     overview_student: Prijavite se za račun kako biste mogli pratiti svoj napredak.
       Vaša e-pošta koristi se prvenstveno kako bismo vam omogućili prijavu i ponovno
       dobijanje lozinke. Za više informacija pogledajte naša <a href="http://code.org/privacy">Pravila
@@ -88,7 +87,7 @@
     address_placeholder: adresa, grad, država, poštanski broj
     gender: Spol (nije obavezno)
     birthday: Datum rođenja (nije obavezno)
-    age: Godine starosti
+    age: Godine
     user_type: Jeste li učenik ili učitelj?
     submit: Prijava
     teacher: Jeste li učitelj?
@@ -194,15 +193,15 @@
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB prostora na Dropbox-u
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
+      valve: Portal 2 (PC ili Mac preuzimanje igre)
+      ea_bejeweled: Bejeweled 3 (PC preuzimanje igre)
+      ea_fifa: FIFA Soccer 13 (PC preuzimanje igre)
+      ea_simcity: SimCity 4 Deluxe Edition (PC preuzimanje igre)
+      ea_pvz: Plants vs. Zombies (PC preuzimanje igre)
       skype: $10 Skype credit
     msg:
-      choose: 'Choose a prize:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
+      choose: 'Odaberite nagradu:'
+      choose_teacher: 'Kliknite na logo da biste zatražili svoju nagradu:'
       earned: Zaslužili ste nagradu! (Samo za američke učenike)
       not_earned_title: Završite tutorijal, zaradite nagrade (samo za američke studente)
       not_earned: 'Nauči sve informatičke pojmove, prikupi svih %{num_trophies} trofeja
@@ -256,10 +255,11 @@
       free_play:
         playlab: Napravi aplikaciju
         artist: Nacrtaj nešto
-        calculate: Calculate Something
+        calculate: Izračunajte nešto
+        applab: Napravi aplikaciju
     user:
       classroom: Učiteljeva Početna stranica
-      district_dashboard: District Dashboard
+      district_dashboard: Regionalna nadzorna ploča
       label: Zdravo, %{username}
       stats: Moj napredak
       settings: Moj račun
@@ -280,6 +280,8 @@
       prize_us_only: (samo za američke učenike)
       prizes_link: više informacija
   teacher:
+    answer: Odgovor
+    for_teachers_only: Samo za nastavnike
     title:
       one: 'Vaš učitelj:'
       other: 'Vaši učitelji:'
@@ -345,7 +347,7 @@
       jer niste registrirali adresu e-pošte'
     student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Pregled odgovora
       student: Učenik
       viewing_solution: Pogledajte rješenje
       try_it_yourself: Pokušajte sami
@@ -506,6 +508,7 @@
   pdf_download: Preuzmite PDF
   download_coming_soon: Aktivnosti koje možete preuzeti stižu uskoro.
   video_coming_soon: Video stiže uskoro!
+  not_started: Učenik nije pokušao ovu razinu.
   share_code:
     title: Klikni 'Pokreni' da vidiš kako moj program radi
     bounce_og_title: Pogledaj moju igru Odbijanja
@@ -552,9 +555,15 @@
         korisnici
     frozen:
       title: Snježno kraljevstvo
+    starwars:
+      title: Star Wars
     infinity:
-      title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: Infinity Laboratorij igara
+      body: Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney
+        Infinity.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!
@@ -586,8 +595,8 @@
     wrong_body: Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!
     correct_title: Ispravno
     correct_body: To je točan odgovor.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    toofew_title: Premalo odgovora.
+    toofew_body: Odaberite dva odgovora prije slanja.
   match:
     wrong_title: Netočno rješenje
     wrong_body: Rješenje koje ste unijeli nije ispravno.  Molimo pokušajte ponovo!
@@ -598,11 +607,11 @@
     badname: Vaš argument ima krivo ime.
     badname_case: Nazivi funkcija su osjetljivi na velika i mala slova. Pokušajte
       promijeniti veličinu slova naziva.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badrange: Vaš ugovor ima neodgovarajući raspon.
+    baddomainsize: Vaš ugovor nema odgovarajući broj elemenata u domeni.
+    baddomainname: Jedan ili više elemenata vaše domene ima pogrešan naziv.
+    baddomaintype: Jedan ili više elemenata vaše domene ima pogrešan tip, ili su pogrešno
+      poredani.
   text_match:
     placeholder: Ovdje unesite vaš odgovor
     open_response_title: Hvala
@@ -622,12 +631,12 @@
     script:
       name:
         20-hour:
-          title: Uvod u informatiku za osnovnu školu (15-25 sati)
+          title: Uvod u informatiku za manju djecu, 4-8 godina (15-25 sati)
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
             i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne
             škole, ali je zabavan za učenje bez obzira na dob polaznika.
         Hour of Code:
-          title: Sat Kodiranja
+          title: Sat programiranja 2013
           description: ''
         edit-code:
           title: Uredi kôd
@@ -706,21 +715,20 @@
     delete_confirm_text: Brisanje projekta trajno će ga ukloniti s popisa vaših projekata.
       Svatko tko ima link na njega ga više neće moći vidjeti.
     view_all: Moji projekti
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    remix: Remiks
+    click_to_remix: Kliknite na "Remiks" da pokrenete svoju verziju!
     edit_project: Uređivanje projekta
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete
+        Korištenja</a> Code.org-a i zbog toga ne može biti podijeljen s ostalima.
+      contact_us: Ako mislite da je to greška, molimo Vas da nas <a href='https://code.org/contact'>kontaktirate.</a>
+      go_to_code_studio: Idi na Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Ako ste prilikom korištenja aplikacija napravljenih korištenjem Code
+          Studia naišli na uvredljiv sadržaj, prijetnje, internetsko zlostavljanje,
+          uznemiravanje ili primjer povrede autorskih prava za vaš vlastiti sadržaj,
+          molimo Vas da popunite donji obrazac. Mi ćemo vašu prijavu ozbiljno razmotriti,
+          istražiti i poduzeti odgovarajuće mjere.
         validation:
           email: Unesite e-mail adresu
           age: Molimo navedite dob
@@ -728,13 +736,12 @@
           abuse_detail: Molimo unesite detalje u svezi sadržaja koji prijavljujete
         abusive_url: URL sadržaja koji prijavljujete
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
+          question: Kako ovaj sadržaj krši %{link_start}Uvjete Korištenja%{link_end}?
+          harassment: Prijetnje, internetsko zlostavljanje, uznemiravanje
           offensive: Uvredljiv sadržaj
-          infringement: Copyright Infringement
+          infringement: Povreda autorskih prava
           other: Ostalo
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Molimo vas da nam date što više detalja o sadržaju koji prijavljujete.
+        acknowledge: Slanjem ove informacije, vi prihvaćate da će se postupati u skladu
+          s uvjetima %{link_start_privacy}Pravila privatnosti%{link_end} i %{link_start_tos}Uvjetima
+          korištenja%{link_end}

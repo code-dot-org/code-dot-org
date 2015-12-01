@@ -224,6 +224,7 @@ de:
         playlab: Eine App erstellen
         artist: Zeichne etwas
         calculate: Calculate Something
+        applab: Eine App erstellen
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Dashboard
@@ -247,6 +248,8 @@ de:
       prize_us_only: (nur für Schüler der USA)
       prizes_link: Mehr Informationen
   teacher:
+    answer: Antwort
+    for_teachers_only: Nur für Lehrer
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
@@ -312,8 +315,8 @@ de:
       section: Abschnitt
       example: Lösungsbeispiel
       example_with_number: 'Lösungsbeispiel %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      submitted_on: 'Am %{date} abgegeben'
+      unsubmit: Zurücknehmen
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -402,7 +405,7 @@ de:
     tos: Bedingungen
     privacy: Datenschutzerklärung
     secure: Sichere Version
-    report_abuse: Report Abuse
+    report_abuse: Missbrauch melden
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -434,6 +437,7 @@ de:
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
+  not_started: Der Schüler hat diese Stufe nicht versucht.
   share_code:
     title: 'Klicke auf "Ausführen", um das Programm in Aktion zu sehen'
     bounce_og_title: Schau dir mein Sprung-Spiel an
@@ -475,9 +479,14 @@ de:
       body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden
     frozen:
       title: Die Eiskönigin
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Spiele Lab
       body: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Charakteren zu erstellen.
+    minecraft:
+      title: Minecraft
+      body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -611,22 +620,23 @@ de:
     click_to_remix: 'Klicke auf "Remix" um Deine eigene Version zu erstellen!'
     edit_project: Projekt bearbeiten
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      tos: |-
+        Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'> "Terms of Service" </a> von Code.org gemeldet und kann nicht mit anderen geteilt werden.
+      contact_us: "Wenn Sie glauben, dies ist ein Fehler, dann <a href='https://code.org/contact'> kontaktieren Sie uns bitte.</a>"
       go_to_code_studio: Gehe zu Code Studie
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Wenn Sie anstößige Inhalte, Bedrohungen, Cyber-Mobbing, Belästigung oder eine Instanz von Verstößen gegen das Urheberrecht für Inhalte, die Sie besitzen, gefunden haben, während Sie Apps die auf Code-Studio aufgebaut wurden benutzten, füllen Sie bitte das untenstehende Formular aus. Wir werden Ihren Bericht sehr ernst nehmen, untersuchen und entsprechende Maßnahmen ergreifen.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Bitte geben eine e-Mail-Adresse an
+          age: Bitte geben ein Alter an
+          abuse_type: Bitte beantworten Sie wie dieser Inhalt die allgemeinen Geschäftsbedingungen verletzt
+          abuse_detail: Bitte gebe Details über den Inhalt, den du melden möchtest
+        abusive_url: URL des gemeldeten Inhalts
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Wie verletzt dieser Inhalt die %{link_start}allgemeinen Geschäftsbedingungen%{link_end}?'
+          harassment: Bedrohungen, Cybermobbing, Belästigung
+          offensive: Anstößige Inhalte
+          infringement: Copyright-Verletzungen
           other: Andere
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Bitte geben Sie so viele Details wie möglich über den Inhalt, den Sie melden möchten.
+        acknowledge: 'Durch die Übermittlung dieser Daten, akzeptieren Sie, dass diese gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end} und die %{link_start_tos}allgemeinen Geschäftsbedingungen%{link_end} behandelt werden'

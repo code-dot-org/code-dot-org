@@ -81,7 +81,7 @@ html[dir='rtl'] #visualizationColumn {
   overflow-x: hidden;
 }
 
-#visualizationColumn.embed_hidesource {
+#visualizationColumn.centered_embed {
   margin: 0 auto;
 }
 
@@ -95,7 +95,7 @@ html[dir='rtl'] #visualizationColumn {
     overflow: auto;
   }
 
-  &.embed_hidesource {
+  &.centered_embed {
     position: relative;
   }
 }
@@ -220,7 +220,8 @@ div.droplet-palette-group-header-selected.orange {
 }
 
 .share-code-spacer {
-  min-height:25px;
+  clear: both;
+  min-height: 25px;
 }
 
 button.arrow {
@@ -250,6 +251,12 @@ button.arrow:disabled {
   -webkit-touch-callout: none;
   &.soft-buttons-none {
     display: none;
+  }
+  &.soft-buttons-compact {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
   }
 }
 .soft-buttons-1 {
@@ -414,10 +421,11 @@ html[dir='rtl'] #codeWorkspace {
   position: relative;
 }
 
-@media screen and (min-width: 1101px) and (max-width: 1150px) {
-  $width: 350px;
+@mixin visualization-width-height-original($width, $height, $visualizationOriginalWidth) {
+  $scale: $width / $visualizationOriginalWidth;
+
   #visualization.responsive {
-    max-height: $width;
+    max-height: $height;
     max-width: $width;
   }
   #visualizationColumn.responsive {
@@ -434,7 +442,7 @@ html[dir='rtl'] #codeWorkspace {
   }
   div#visualizationResizeBar {
     left: $width;
-    line-height: $width;
+    line-height: $height;
   }
   html[dir='rtl'] div#visualizationResizeBar {
     right: $width;
@@ -443,133 +451,52 @@ html[dir='rtl'] #codeWorkspace {
     margin-left: $width;
   }
   #visualization.responsive > * {
-    -webkit-transform: scale(0.875);
-    -ms-transform: scale(0.875);
-    transform: scale(0.875);
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
   }
+}
+
+@mixin visualization-width($width) {
+  @include visualization-width-height-original($width, $width, 400px);
+}
+
+@mixin bee-counter($font-size, $stroke-width) {
   .bee-counter-text {
-    font-size: 20px;
-    stroke-width: 1.2px;
+    font-size: $font-size;
+    stroke-width: $stroke-width;
   }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  @include visualization-width(350px);
+  @include bee-counter(20px, 1.2px);
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
-  $width: 300px;
-  #visualization.responsive {
-    max-height: $width;
-    max-width: $width;
-  }
-  #visualizationColumn.responsive {
-    max-width: $width;
-  }
-  .small-footer-base.responsive {
-    max-width: $width;
-  }
-  #codeWorkspace {
-    left: $width;
-  }
-  html[dir='rtl'] #codeWorkspace {
-    right: $width;
-  }
-  div#visualizationResizeBar {
-    left: $width;
-    line-height: $width;
-  }
-  html[dir='rtl'] div#visualizationResizeBar {
-    right: $width;
-  }
-  #visualizationEditor.responsive {
-    margin-left: $width;
-  }
-  #visualization.responsive > * {
-    -webkit-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    transform: scale(0.75);
-  }
-  .bee-counter-text {
-    font-size: 24px;
-    stroke-width: 1.4px;
-  }
+  @include visualization-width(300px);
+  @include bee-counter(24px, 1.4px);
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
-  $width: 250px;
-  #visualization.responsive {
-    max-height: $width;
-    max-width: $width;
-  }
-  #visualizationColumn.responsive {
-    max-width: $width;
-  }
-  .small-footer-base.responsive {
-    max-width: $width;
-  }
-  #codeWorkspace {
-    left: $width;
-  }
-  html[dir='rtl'] #codeWorkspace {
-    right: $width;
-  }
-  div#visualizationResizeBar {
-    left: $width;
-    line-height: $width;
-  }
-  html[dir='rtl'] div#visualizationResizeBar {
-    right: $width;
-  }
-  #visualizationEditor.responsive {
-    margin-left: $width;
-  }
-  #visualization.responsive > * {
-    -webkit-transform: scale(0.625);
-    -ms-transform: scale(0.625);
-    transform: scale(0.625);
-  }
-  .bee-counter-text {
-    font-size: 28px;
-    stroke-width: 1.6px;
-  }
+  @include visualization-width(250px);
+  @include bee-counter(28px, 1.6px);
 }
 
 @media screen and (max-width: 1000px) {
-  $width: 200px;
-  #visualization.responsive {
-    max-height: $width;
-    max-width: $width;
-  }
-  #visualizationColumn.responsive {
-    max-width: $width;
+  @include visualization-width(200px);
+  @include bee-counter(32px, 2px);
+
+  #soft-buttons {
+    margin-left: 0;
+    button {
+      margin: 0;
+    }
   }
   .small-footer-base.responsive {
-    max-width: $width;
     small {
       float: left;
     }
-  }
-  #codeWorkspace {
-    left: $width;
-  }
-  html[dir='rtl'] #codeWorkspace {
-    right: $width;
-  }
-  div#visualizationResizeBar {
-    left: $width;
-    line-height: $width;
-  }
-  html[dir='rtl'] div#visualizationResizeBar {
-    right: $width;
-  }
-  #visualizationEditor.responsive {
-    margin-left: $width;
-  }
-  #visualization.responsive > * {
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  .bee-counter-text {
-    font-size: 32px;
-    stroke-width: 2px;
   }
 }
 
@@ -911,7 +838,33 @@ input[type="radio"] {
 
 #prompt2 {
   font-size: 12px;
-  color: $charcoal;  
+  color: $charcoal;
+}
+
+.modal-content {
+  .instructionsImage {
+    height: 35px;
+    vertical-align: text-bottom;
+  }
+  .instructions2 {
+    .instructionsImage {
+      height: 24px;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+#prompt-table {
+  .instructionsImage {
+    height: 25px;
+    vertical-align: text-bottom;
+  }
+  #prompt2 {
+    .instructionsImage {
+      height: 20px;
+      vertical-align: text-bottom;
+    }
+  }
 }
 
 #ani-gif-preview-wrapper {
@@ -1310,43 +1263,12 @@ $workspace-header-button-margin: ($workspace-headers-height -
   border: 1px solid $purple;
   margin: 0px;
   color: white;
-  width: 48.5%;
   font-size: 13px;
   text-align: center;
   &:disabled {
     color: $purple;
     background-color: lightgrey;
   }
-}
-
-#print-button {
-  background-color: $purple;
-  border: 1px solid $purple;
-  color: white;
-  margin: 0px;
-  width: 48.5%;
-  font-size: 13px;
-  text-align: center;
-}
-
-#shapeways-print-go-button {
-  margin-bottom: 10px;
-}
-
-#shapeways-message-body {
-  font-size: 15px;
-  margin-bottom: 7px;
-  line-height: 26px;
-}
-
-#shapeways-message-body-disclaimer {
-  font-size: 11px;
-  margin-bottom: -11px;
-}
-
-#shapeways-message {
-  display: block;
-  text-align: center;
 }
 
 .hide {
@@ -1368,11 +1290,20 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
-.sharing {
-  float: left;
-  margin-top: 15px;
+#sharing {
+  clear: both;
+  margin-top: 25px;
   font-size: 20px;
   color: $charcoal;
+
+  .feedback-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 15px 0 0;
+    float: left;
+    border: $lighter_gray;
+    border-style: solid
+  }
 
   label {
     margin-top: 15px;
@@ -1381,24 +1312,49 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 
   div {
-    margin-bottom: 15px;
+    margin: 10px 0;
   }
 
-  .saved-to-gallery {
-    width: 48.5%;
-    font-size: 13px;
-    margin: 0px;
-    border: 1px solid $purple;
-  }
-  .social-buttons {
-    a:hover {
+  button {
+    background-color: $purple;
+    color: white;
+    font-size: 0.7em;
+    min-width: 40px;
+    text-align: center;
+    margin: 0;
+
+    .disabled,
+    &[disabled=disabled],
+    &:disabled {
+      border: 1px solid $purple;
+      background-color: $lighter_gray;
+      box-shadow: none;
+    }
+
+    a, a:hover, a:link, a:visited {
+      background-color: transparent;
+      color: white;
       text-decoration: none;
     }
   }
+
+  button.saved-to-gallery {
+    font-family: "Gotham 4i";
+  }
+
   #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 260px;
+    width: 200px;
+    padding: 10px;
+  }
+
+  #copy-button {
+    max-width: 100px;
+  }
+
+  #sharing-phone i.fa {
+    font-size: 24px;
   }
 
   input#phone {
@@ -1413,7 +1369,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   div#phone-charges {
     font-size: 10px;
     margin-top: 0px;
-    color: red;
+    color: $red;
   }
 }
 

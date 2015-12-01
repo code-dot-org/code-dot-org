@@ -3,24 +3,23 @@ title 'An Introduction to Arrays'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 30 - An Introduction to Arrays
+## Unit 3: Lesson 24 - Introduction to Arrays
 
 # Background
 
-Variables are ill-suited for storing lists. However, arrays can solve many of the shortcomings of trying to use a variable to store multiple items. The array index is important. It begins at 0 and is used to access the items in an array and it defines the length of an array.
+It is very common to want to store lists of information in our programs. This could be done with variables but they have many shortcomings when it comes to doing so. Most programming languages, including JavaScript, include a list structure of some sort to make it easier to hold many pieces of related information. When used carefully, lists can greatly expand the functionality of our apps.  The list structure in JavaScript is called an array.
+
+# Vocabulary
+
+**List:** a generic term for a programming data structure that holds multiple items
+
+**Array:** a data structure in JavaScript used to represent a list 
 
 # Lesson
 
 * Learn how to design arrays to hold a variety of information.
-* Create an array in App Lab. 
-
-
-
-# Resources
-* Activity: <a href="https://docs.google.com/document/d/1DxxduJEKepEWUu2qH_pEtGPqfZmvL_k_iNYAGUaE41s" target="_blank">
-My Favorite Things
-</a>
-
+* Accessing information in an array by its index.
+* Develop a simple application that uses an array.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

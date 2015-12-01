@@ -307,6 +307,27 @@ is:
         studio_playlab_8: 'Getur þú bætt við kubbum til að skora stig og  spila hljóð þegar einhyrningurinn rekst á vitkann, og síðan fært hann með örvarlyklunum þar til þú skorar?'
         studio_playlab_9: Settu bakgrunn fyrir innrás geimvera og auktu hraða Geimróbóta svo hann komist fljótar til geimverunnar. Færðu hann svo með örvarlyklunum til geimverunnar svo hann geti varað alla við innrásinni
         studio_playlab_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
+        studio_iceage_1: 'Manny vill segja "hæ" - getur þú hjálpað honum?'
+        studio_iceage_2: 'Diego (leikari 1) og Granny (leikari 2) vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota "segja" kubbinn tvisvar?'
+        studio_iceage_3: Getur þú hjálpað Scrat að ná til flaggsins?
+        studio_iceage_4: Getur þú hjálpað Scrat (leikara 1) að ná til til Granny (leikara 2) og spilað hljóð þegar hann nær þangað?
+        studio_iceage_5: 'Getur þú látið Sid segja "greetings" þegar smellt er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra'
+        studio_iceage_6: Getur þú látið Diego hreyfast með upp/niður/hægri/vinstri örvarlyklunum svo hann nái til allra flagganna?
+        studio_iceage_7: '"Endurtaka endalaust" kubburinn lætur kóða keyra án enda. Getur þú fest kubba við hann til að hjálpa Sid að hreyfast stöðugt til hægri og vinstri?'
+        studio_iceage_8: Getur þú bætt við kubbi til að skora stig og kubbi til að spila hljóð þegar Sid rekst á Manny, og síðan fært hann með örvarlyklunum þar til þú skorar?
+        studio_iceage_9: Stilltu bakgrunninn fyrir þessa ísöld og hjálpaðu Sid að ná til Granny hraðar með þvi að breyta hraða hans. Færðu hann svo með örvarlyklunum til Sid og varaðu alla aðra við.
+        studio_iceage_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_k1_1: 'Getur þú látið hundinn segja "Halló heimur"?'
         studio_k1_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
@@ -435,7 +456,13 @@ is:
         infinity_playlab_intro: 'Leikjasmiðja - kynning'
         infinity_playlab_events: 'Leikjasmiðja - Atvik'
         infinity_playlab_repeat_forever: 'Leikjasmiðja - Endurtaka endalaust'
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Kynning á föllum
+        csp_applab_functions_parameters: Föll með stikum
+        csp_applab_loops: Lykkjur
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Svolítið bitastætt um díla
         csp_pixelation_color_1: 'Litadílamynstursgræja - 1. hluti'
         csp_pixelation_color_2: 'Litadílamynstursgræja - 2. hluti'
@@ -467,6 +494,21 @@ is:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
+        starwars_typing: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
+        starwars_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
+        starwars_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
+        starwars_blocks_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
+        starwars_blocks_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
+        starwars_blocks_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
+        mc_intro: 'Minecraft - Kynning'
+        mc_repeat: 'Minecraft - Endurtekning'
+        mc_if_statements: 'Minecraft - Ef setningar'
+        mc_congrats_share: 'Minecraft - Hamingjuóskir'
+        mc_congrats_no_share: 'Minecraft - Hamingjuóskir'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
@@ -538,3 +580,10 @@ is:
         Infinity_move_directions_callout_arrow: Notaðu þessar örvar til að stýra
         Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
         Infinity_repeat_callout: 'Setja "færa" kubba hér innan í'
+        craft_run_button_callout: 'Smelltu á "Keyra" til að prófa forritið þitt'
+        craft_drag_block_callout: 'Dragðu "moveForward();" kubb og festu hann neðan undir hinn kubbinn'
+        craft_callout_preplaced: Við höfum sett kubba hér til að koma þér af stað
+        craft_inside_repeat: Endurtaktu aðgerðir með því að setja kubba hér
+        craft_callout_preplaced_house: Þessi kóði mun byrja að byggja húsið þitt. Getur þú klárað það?
+        craft_what_is_iron: Grafðu út þetta járn!
+        craft_callout_moveforward: Þessi kóði mun athuga með hraun. Getur þú bætt við skipun um að fara áfram?

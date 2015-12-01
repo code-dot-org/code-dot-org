@@ -71,10 +71,10 @@
           %{count} errorek %{resource} hau gordetzea ekidin dute:
           :
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
+      send_instructions: Gonbidapen emaila bidali zaio %{email}-ri.
+      invitation_token_invalid: Emandako gonbidapen tokena ez da baliagarria!
+      updated: Zure pasahitza ondo ezarri da. Orain barruan zaude.
+      no_invitations_remaining: Ez dago gonbidapenik
       invitation_removed: Zure gonbidapena ezabatua izan da.
       new:
         header: Gonbidapena bidali
@@ -86,9 +86,9 @@
       invitation_instructions:
         subject: Gonbidapenaren jarraibideak
         hello: Kaixo %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
+        someone_invited_you: Norbaitek zu gonbidatu zaitu %{url} gunera, beheko lotura
+          erabiliz onar dezakezu gonbidapena.
         accept: Gonbidapena onartu
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        ignore: Ez baduzu gonbidapena onartu nahi, mesedez, utzi alde batera mezu
+          hau.<br /> Zure kontua ez da sortuko zuk lotura atzitu eta pasahitza finkatzenn
+          duzun arte.

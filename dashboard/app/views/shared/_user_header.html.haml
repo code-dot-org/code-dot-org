@@ -34,5 +34,8 @@
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
   });
   $('.user_options a:last').click(function (e) {
-    dashboard.clientState.reset();
+    // this partial can be returned in an API call so it's possible for it to be on non-dashboard pages
+    if (typeof dashboard !== 'undefined') {
+      dashboard.clientState.reset();
+    }
   });

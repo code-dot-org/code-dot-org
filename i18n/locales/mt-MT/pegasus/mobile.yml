@@ -1,4 +1,5 @@
 mt-MT:
+  hour_of_code: Hour of Code
   hello: Haw Lilly
   select_language: Please select your language
   en: Computer Science
@@ -32,7 +33,10 @@ mt-MT:
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Reset
-  cded_sign_up: Sign up
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  cded_sign_up: Irreġistra
   cded_try_it: Try it
   twentyhours_trynow: Try now
   california_heading: Ask your school to teach computer science
@@ -51,7 +55,8 @@ mt-MT:
   thank_you_: Thank you!
   congratulations: Congratulations!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
-  course_name_accelerated: Accelerated Course
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  course_name_accelerated: Kors Aċċellerat
   course_name_course1: Course 1
   course_name_course2: Course 2
   course_name_course3: Course 3
@@ -108,8 +113,7 @@ mt-MT:
   learn_classes: Find local classes
   hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
+  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more."
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond an Hour
   what_gender: What gender are you?
@@ -205,8 +209,15 @@ mt-MT:
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: "Code ta' Flappy"
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# served'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Irreġistra
+  homepage_action_text_try_it: Try it
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: Watch the video
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
@@ -279,13 +290,35 @@ mt-MT:
   class_submission_level_college: College
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: JavaScript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Try now
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_start_button: Try now
+  starwars_watch_videos: Before you get started, watch one of these inspirational videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_gradelevel: Ages 6+
+  mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Name
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -293,7 +326,7 @@ mt-MT:
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
   volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
+  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
   volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
@@ -304,15 +337,15 @@ mt-MT:
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Deskrizzjoni
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
+  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
   volunteer_engineer_submission_header_private: Information kept private and never shared
-  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email: Indirizz elettroniku
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
-  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_placeholder: Indirizz elettroniku
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Submit
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
@@ -326,8 +359,20 @@ mt-MT:
   volunteer_engineer_submission_location_flexibility_remote: 'having a Q&A with students remotely (via short video conference)'
   volunteer_engineer_submission_location_flexibility_curriculum: contributing to open-source curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: University computer science student
-  volunteer_engineer_submission_experience_software_professional: Software Engineer
+  volunteer_engineer_submission_experience_software_professional: Software engineer or technical specialist
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: Età
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
@@ -343,8 +388,8 @@ mt-MT:
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
   dashboard_landing_print_certificates: Pprintja certifikati ghal studenti li jtemmu dan il-kors
   dashboard_landing_educator_blog: "Aqra aħbarijiet u aġġornamenti tal-materjali tagħna fil-Blog ta l'Edukaturi"
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_smart_hints: Jekk jogħġbok tgħinna biex iżżid suġġerimenti smart fil-lezzjonijiet Code.org
+  dashboard_landing_video_player: Ittestja il-Video Plyer il-gdid taghna flis-skola tieghek
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
@@ -401,7 +446,7 @@ mt-MT:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: It-Taqsima
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grad
   dashboard_sections_table_course: Kors
@@ -423,8 +468,8 @@ mt-MT:
   dashboard_students_progress: Progress
   dashboard_students_age: Età
   dashboard_students_gender: Sess
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: Maskili
+  dashboard_students_female: Femminili
   dashboard_students_secret: Secret
   dashboard_students_password: Password
   dashboard_students_username: 'Username: %{student_username}'
@@ -508,32 +553,45 @@ mt-MT:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn more
+  learn_more: Try now
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
-  learn_sign_up_button: Sign up
+  learn_sign_up_button: Irreġistra
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator, while supplies last'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Prova il-kors gdid Hour of Code fis-sezzjoni beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: "Artist ma' Anna u Elsa mil film Frozen"
-  carousel_heading_international: Tutorials in your language
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_international: Partner tutorials in your language
+  carousel_heading_domestic: Partner tutorials available in English
+  carousel_heading_beginners: Partner tutorials for Grades K-8
+  carousel_heading_javascript: Partner tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_devices: Partner tutorial apps for phones and tablets
+  carousel_heading_languages: Partner tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
   carousel_heading_webpages: Learn to make web pages
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -542,10 +600,11 @@ mt-MT:
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
-  older_systems: Tutorials that work on older systems
+  older_systems: Partner tutorials that work on older systems
   older_systems_subheading: 'These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a>'
-  mobile_devices: Tutorials for mobile devices
+  mobile_devices: Partner tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Write your first computer program
   codeintl_name: Write your first computer program
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -583,8 +642,10 @@ mt-MT:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Write your first computer program
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -624,7 +685,10 @@ mt-MT:
   projguts_gradelevel: Ages 10-13
   hourofcode_gradelevel: Ages 4-104
   frozen_gradelevel: Ages 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -664,6 +728,7 @@ mt-MT:
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
   frozen_platformtext: Modern browsers + tablets
+  starwars_platformtext: Modern browsers + tablets
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -703,9 +768,12 @@ mt-MT:
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -746,6 +814,7 @@ mt-MT:
   projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
   hourofcode_longdescription: Placeholder for new code.org/hoc
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
@@ -934,4 +1003,12 @@ mt-MT:
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: Aħbi din it-twissija
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flap
+  infinity_shortcode: inf
+  playlab_shortcode: play
+  artist_shortcode: art

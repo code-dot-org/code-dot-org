@@ -87,7 +87,7 @@
           'Bee: Conditionals': 'Bie: Betingelser'
           'Artist: Sequence2': 'Kunstner: Rekkefølge 2'
           'Maze: Sequence2': 'Labyrint: Rekkefølge 2'
-          'Artist: Nested Loops': 'Kunstner: Løkker inni løkker'
+          'Artist: Nested Loops': 'Kunstner: Løkker i løkker'
           description_audience: Alder 6+ (leseferdigheter kreves)
           description_short: Kurs 2 er laget for elever som kan lese.
         course3:
@@ -110,7 +110,7 @@
           Computational Thinking: Programmeringstenkning
           Functional Suncatchers: Fungerende solfangere
           Songwriting Parameters: Låtskriving parametere
-          Dice Race: Kappløp med terninger
+          Dice Race: Terningskappløp
           Internet: Internett
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitalt statsborgerskap
@@ -126,15 +126,15 @@
           'Artist: Functions': 'Kunstner: Funksjoner'
           'Bee: Functions': 'Bie: Funksjoner'
           'Bee: Conditionals': 'Bie: Betingelser'
-          'Maze: Conditionals': Labyrin:t Betingelser
-          'Artist: Nested Loops': 'Kunstner: Løkker inni løkker'
+          'Maze: Conditionals': 'Labyrint: Betingelser'
+          'Artist: Nested Loops': 'Kunstner: Løkker i løkker'
           'Farmer: While Loops': 'Bonde: Mens-løkker'
-          'Bee: Nested Loops': 'Bie: Løkker inni løkker'
+          'Bee: Nested Loops': 'Bie: Løkker i løkker'
           'Bee: Debugging': 'Bie: Feilsøking'
-          Maze2: Labyrint 2
-          Artist2: Kunstner 2
-          'Artist: Functions2': 'Kunstner: Funksjoner 2'
-          'Bee: Functions2': 'Bie: Funksjoner 2'
+          Maze2: Labyrint2
+          Artist2: Kunstner2
+          'Artist: Functions2': 'Kunstner: Funksjoner2'
+          'Bee: Functions2': 'Bie: Funksjoner2'
           'Bee: Conditionals2': 'Bie: Betingelser 2'
           'Maze: Conditionals2': 'Labyrint: Betingelser 2'
           'Artist: Nested Loops2': 'Kunstner: Løkker inni løkker 2'
@@ -146,18 +146,18 @@
           description_audience: Alder 8+ (etter kurs 2)
           description_short: Kurs 3 er en oppfølger til kurs 2.
         playlab:
-          title: Spill-Lab
-          description: Lag en historie eller spill med Spill-Labben!
-          Play Lab: Spill-Lab
-          description_short: Lag en historie eller spill med Spill-Labben!
+          title: Spill-lab
+          description: Lag en historie eller spill med Spill-labben!
+          Play Lab: Spill-lab
+          description_short: Lag en historie eller spill med Spill-labben!
         artist:
           title: Kunstner
-          description: Tegn kule bilder og tegninger med kunstneren!
+          description: Tegn kule bilder og tegninger med Kunstneren!
           Artist: Kunstner
-          description_short: Tegn kule bilder og tegninger med kunstneren!
+          description_short: Tegn kule bilder og tegninger med Kunstneren!
         hourofcode:
           Maze: Labyrint
-          title: Hour of Code (kodetimen)
+          title: Kodetimen
           description: Prøv grunnleggende informatikk med figurene fra Angry Birds,
             planter mot zombies og Scrat fra Istid!
           description_short: Prøv grunnleggende informatikk med mange morsomme figurer!
@@ -177,7 +177,7 @@
             av dette kurset vil elevene lage interaktive historier og spill som de
             kan dele med andre. Anbefalt for fjerde til syvende klasse.
           'Artist: Variables': 'Artist: Variabler'
-          'Bee: For Loops': 'Bee: For-løkker'
+          'Bee: For Loops': 'Bie: For-løkker'
           title: Kurs 4
           'Algorithms: Tangrams': 'Algoritmer: Tangram'
           Variables: Variabler
@@ -189,9 +189,9 @@
           'Artist: Functions': 'Kunstner: Funksjoner'
           'Unplugged: Tangrams': 'Frakoblet: Tangram'
           Artist: Kunstner
-          Bee: Bier
-          'Unplugged: Envelope Variables': 'Frakoblet: Konvolutt variabler'
-          'Unplugged: Madlibs': 'Frakoblet: Sprø funksjoner'
+          Bee: Bie
+          'Unplugged: Envelope Variables': 'Frakoblet: Konvoluttvariabler'
+          'Unplugged: Madlibs': 'Frakoblet: Ordlek'
           'Unplugged: For Loop Fun': 'Frakoblet: Gøy med For-løkker'
           'Unplugged: Songwriting with Parameters': 'Frakoblet: Låtskriving med parametere'
           'Artist: Functions with Parameters': 'Kunstner: Funksjoner med parametere'
@@ -201,7 +201,11 @@
           Maze and Bee: Labyrint og Bie
           Artist Binary: Kunstner Binær
           description_audience: Alder 10+ (etter kurs 3)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Super-utfordring - Variabler
+          Super Challenge - For Loops: Superutfordring - for-løkker
+          Super Challenge - Functions and Parameters: Superutfordring - Funksjoner
+            og parametere
+          Extreme Challenge - Comprehensive: Ekstrem utfordring - Omfattende
         Course4pre:
           title: Kurs 4 forkunnskaper
           description_short: Et kort sammendrag av prinsippene for elever som ikke
@@ -213,9 +217,9 @@
           'Artist: Sequence': 'Kunstner: rekkefølge'
           'Artist: Loops': 'Kunstner: Løkker'
           'Bee: Conditionals': 'Bie: Betingelser'
-          'Artist: Nested Loops': 'Kunstner: Løkker inni løkker'
+          'Artist: Nested Loops': 'Kunstner: Løkker i løkker'
           'Farmer: While Loops': 'Bonde: Mens-løkker'
-          'Bee: Nested Loops': 'Bie: Løkker inni løkker'
+          'Bee: Nested Loops': 'Bie: Løkker i løkker'
           'Artist: Functions': 'Kunstner: Funksjoner'
           'Bee: Debugging': 'Bie: Feilsøking'
         usability:
@@ -270,11 +274,11 @@
             (Stort spel)'
         infinity:
           title: Disney Infinity Spill-Lab
-          description_short: Bruk Spill-Lab for å lage en historie eller spill med
+          description_short: Bruk Spill-lab for å lage en historie eller spill med
             Disney Infinity figurer.
-          description: Bruk Spill-Lab for å lage en historie eller spill med Disney
+          description: Bruk Spill-lab for å lage en historie eller spill med Disney
             Infinity figurer.
-          Play Lab: Spill-Lab
+          Play Lab: Spill-lab
           Infinity: Uendelig
         algebrademo:
           title: Algebra Demo
@@ -386,8 +390,9 @@
           The Maze: Labyrinten
           Applab: Applab
           The Artist: Kunstneren
-          Play Lab: Spill-Lab
+          Play Lab: Spill-lab
           Play Lab 2015: Spillelabben 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Hendelser
           description: Hendelser
@@ -414,8 +419,8 @@
           Step: Trinn
         Hour of Code:
           title: Kodetimen 2013
-          description: Prøv det grunnleggende om datavitenskap med karakterer fra
-            Angry Birds og Plants vs. Zombies!
+          description: Prøv det grunnleggende innenfor koding med karakterer fra Angry
+            Birds og Plants vs. Zombies!
           description_short: Prøv grunnleggende informatikk med mange morsomme figurer!
           Hour of Code 2013: Kodetimen 2013
         Code Studio Puzzle Challenge:
@@ -459,9 +464,9 @@
           'Artist: Sequence': 'Kunstner: rekkefølge'
           'Artist: Loops': 'Kunstner: Løkker'
           'Bee: Conditionals': 'Bie: Betingelser'
-          'Artist: Nested Loops': 'Kunstner: Løkker inni løkker'
+          'Artist: Nested Loops': 'Kunstner: Løkker i løkker'
           'Farmer: While Loops': 'Bonde: Mens-løkker'
-          'Bee: Nested Loops': 'Bie: Løkker inni løkker'
+          'Bee: Nested Loops': 'Bie: Løkker i løkker'
           'Artist: Functions': 'Kunstner: Funksjoner'
           'Bee: Debugging': 'Bie: Feilsøking'
         cspunit1:
@@ -524,16 +529,16 @@
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Spill-Lab: Animasjon (Big Game)'
           'Unplugged: Booleans': 'Frakoblet: boolske verdier'
-          'Eval: Boolean Operators': 'Evaueringl: Boolske operatorer'
+          'Eval: Boolean Operators': 'Evauering: Boolske operatorer'
           'Play Lab: Booleans': 'Spill-Lab: Boolske verdier'
-          'Play Lab: Boolean (Big Game)': 'Spille Lab: Logiske verdier (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Spille Lab: Logiske verdier (Stort spill)'
           'Unplugged: Conditionals and Piecewise Functions': 'Frakoblet: Betingelser
             og stykkevise funksjoner'
           'Eval: Conditionals': 'Evaluering: Betingelser'
           'Unplugged: Collision Detection and the Distance Formula': 'Frakoblet: Oppdage
             kollisjoner og formel for avstand'
           'Play Lab: Collision Detection (Big Game)': 'Spill-Lab: Oppdage kollisjoner
-            (Big Game)'
+            (Stort spill)'
           Evaluation Blocks: Evalueringsblokker
           Strings and Images: Strenger og bilder
           Contracts: Kontrakter
@@ -568,7 +573,7 @@
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Spill-Lab: Oppdage kollisjoner
-            (Big Game)'
+            (Stort spill)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
         text-compression:
@@ -708,6 +713,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Mens Løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -937,12 +975,12 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Frispill
+          Free Play: Gratis spill
         allthethings:
           Jigsaw: Puslespill
           Maze: Labyrint
           Artist: Kunstner
-          Bee: Bier
+          Bee: Bie
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flakse
@@ -1085,7 +1123,7 @@
           title: Kodetimen 2015
           description_short: Bruk Spillelabben til å lage en historie eller et spill.
           description: Bruk Spillelabben til å lage en historie eller et spill.
-          Hour of Code: Hour of Code (kodetimen)
+          Hour of Code: Kodetimen
           Hour of Code 2015: Kodetimen 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1358,6 +1396,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1386,6 +1433,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1437,6 +1491,8 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1472,6 +1528,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1484,3 +1544,107 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: Alder 10+ (etter kurs 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: Istid Spill-lab
+          description_short: Lag en historie eller et spill med Istid Spill-lab!
+          description: Lag en historie eller et spill med Istid Spill-lab!
+          Ice Age Play Lab: Istid Spill-lab
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Mens Løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Gumball Spill-lab
+          description_short: Lag en historie eller lag et spill med Gumball spill-lab!
+          description: Lag en historie eller lag et spill med Gumball spill-lab!
+          Gumball Play Lab: Gumball Spill-lab
+        starwars:
+          title: 'Star Wars: Skap en galakse med kode!'
+          description_short: Lær å programmere droner og skap ditt eget Star Wars-spill
+            i en galakse langt, langt borte.
+          description: Lær å programmere droner og skap ditt eget Star Wars-spill
+            i en galakse langt, langt borte.
+          Hour of Code 2015: Kodetimen 2015
+        starwarsblocks:
+          title: 'Star Wars: Skap en galakse med kode!'
+          description_short: Lær å programmere droner og skap ditt eget Star Wars-spill
+            i en galakse langt, langt borte.
+          description: Lær å programmere droner og skap ditt eget Star Wars-spill
+            i en galakse langt, langt borte.
+          Hour of Code 2015: Kodetimen 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Kodetimen med Minecraft
+          description_short: Utforsk en Minecraft-verden gjennom kode
+          description: Bruk kodeblokker til å ta med Steve eller Alex ut på et eventyr
+            i denne Minecraft-verdenen
+          Hour of Code 2015: Kodetimen 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Velkommen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Oppsummering

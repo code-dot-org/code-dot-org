@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 請修正下列錯誤：
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: 這是大哥哥用的，小朋友不許偷用
   activerecord:
     errors:
       messages:
@@ -229,9 +228,10 @@
         playlab: 製作一個App
         artist: 畫些什麼東西
         calculate: Calculate Something
+        applab: 製作一個App
     user:
       classroom: 教師主頁
-      district_dashboard: District Dashboard
+      district_dashboard: 分區訊息
       label: 嗨 %{username}
       stats: 我的進度
       settings: 我的帳號
@@ -241,7 +241,7 @@
       signup: 註冊帳號
       already_registered: 已經註冊了嗎？
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name} 的進度'
       progress: 您的進度
       lines: '全部程式碼行數: %{lines}'
       close: 關閉
@@ -252,6 +252,8 @@
       prize_us_only: （僅適用于美國學生）
       prizes_link: 更多的資訊
   teacher:
+    answer: '答案 '
+    for_teachers_only: 僅限教師
     title:
       one: 你的老師：
       other: 你的老師：
@@ -263,12 +265,12 @@
       section: 班别：
       stages: '要顯示的階段:'
       show_past: 顯示之前的學生活動 (%{bullet_html})：
-      levels_key: Levels key
+      levels_key: 關卡精髓
       perfect: 完美完成
       completed: 完成了，但是用到太多程式積木
       tried: 試過，但未完成
       not_tried: 還沒試過
-      activity: Indicates student activity in the last %{hours} %{plural}
+      activity: 顯示過去學生 %{hours} %{plural} 的活動
       no_section: 沒有指定班級
       trophies: 獎盃
     students:
@@ -311,15 +313,15 @@
     cant_remove_teacher_no_email: 因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}
     student_teacher_disassociated: '%{student_name}的老師%{teacher_name}已經被移除'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: 答案檢視器
       student: '學生 '
-      viewing_solution: Viewing Solution
+      viewing_solution: 查看解決方案
       try_it_yourself: 自己試試
       section: 班級
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      example: 解答範例
+      example_with_number: 解答範例 %{solution_number}
+      submitted_on: '%{date} 已送出'
+      unsubmit: 不提交
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
     email_confirm_needed_required: 您的電子位址 %{email} 尚未被確認：
@@ -340,10 +342,9 @@
     classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
-    description: Code Studio is home to online courses created by Code.org
+    description: Code.org 建立的所有線上課程，通通位在程式碼工作室中。
     lines_of_code: '%{lines_count} 行程式碼由學生撰寫'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: 由 %{students_count} 百萬學生所撰寫的 <br/>%{lines_count} 行程式碼
     all_courses: 課程 1, 2, 及 3 導論
     lesson_plans: 課程計畫
     signin_message: 已經註冊了? %{link}
@@ -364,7 +365,7 @@
     local_school: 當地的學校
     online: 在線上
     see_details: 查看詳細資訊
-    view_course: View Course
+    view_course: 觀看課程
     prize_info: 參加獎 (僅限美國公立學校教師)：至多$1,000元美金的獎金。
     tryfirst: 或者，你也可以先試試，之後再 註冊：
     trynow: 快來試試
@@ -379,12 +380,11 @@
     heading_legacy: <h2>我們的一般課程</h2>適合<h1>所有年齡</h1>
     your_gallery: 相片圖庫
     no_primary_course: 試試在 Code Studio 參加一個課程
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    choose_next_course: 從下方課程中選擇一個進行體驗
+    print_certificate: 列印證書
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: 在程式碼工作室中學習
+    description: 任何人都可以學習電腦科學並透過程式碼來設計遊戲、app及藝術創作。
   gender:
     male: 男性
     female: 女性
@@ -393,32 +393,30 @@
     student: '學生 '
     teacher: 教師
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: 我們感謝 <a href="Https://code.org/about/donors"> 捐助者</a>、 <a href="Https://code.org/about/partners">
+      合作夥伴</a>、 我們的 <a href="Https://code.org/about/team"> 擴展的團隊</a>，我們視頻的演員陣容，我們的
+      <a href="Https://code.org/about/advisors"> 教育顧問</a> 的支援，建立Code工作室
     help_from_html: 從Google, Microsoft, Facebook, and Twitter的工程師在幫忙創建本教程。
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: 來自google 微軟 Fb及推特的工程師的協助創造了這些元素
     art_from_html: 憤怒鳥&trade; & &copy; 2009年-2014 Rovio 娛樂有限公司版權所有。<br/>植物與僵屍&trade;
       & &copy; 2014 EA美商藝電公司版權所有。
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html_old: 憤怒鳥&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment
+      Ltd. 版權所有。<br /> 植物大戰僵屍&#8482; &amp; &copy; %{current_year} Electronic Arts
+      Inc. 版權所有
     powered_by_aws: 由亞馬遜網路服務系統提供服務
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
+      Code&reg; 都是 Code.org.的注冊商標。'
+    copyright: 版權所有
     more: 更多
     feedback: 提供回饋
     translate: 幫我們翻譯成您國家的語言
     support: 支援
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: 服務條款
     tos: 服務條款
     privacy: 隱私權政策
     secure: 安全版本
-    report_abuse: Report Abuse
+    report_abuse: 濫用回報
   reference_area:
     title: 需要幫忙嗎？
     subtitle: 看看這些影片和提示
@@ -429,25 +427,19 @@
   video:
     tab: 影片
     notes: 看不到影片嗎？顯示文字說明。
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: 影片說明即將完成。
     autoplay_option: 自動播放影片
     download: 下載影片
   compatability:
     working:
       header: 我們正在設法支援您的瀏覽器。
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
+      message: Code.org 使用較先進的網路技術，使網站能以較快的速度運行操作。你現在所使用的瀏覽器無法支援所需的所有的功能，因此你在使用這個網站時可能會遇到一些問題。請將你所遇到的問題
+        <a href='%{report_issue_url}'>回報</a>給我們，幫助我們改進。你也可以 <a href='%{supported_browsers_url}'>升級你的瀏覽器到支援的版本</a>。
       hide_this_warning: 隱藏此警告
     upgrade:
       header: 請升級您的瀏覽器。
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
+      message: Code.org 使用較先進的網路技術，使網站能以較快的速度運行操作。很不幸的是你現在所使用的瀏覽器無法支援所需的所有的功能。<br/><br/>
+        安裝支援列表中的任何一種瀏覽器然後繼續操作。或是你也可以<a href='#'>試著觀看這個網頁</a>，但是部份功能可能會無法運作。
       button: 將我轉向至”受支援的瀏覽器清單“
   slow_loading: 請在等等，這次讀取的時間比較久一點.......
   try_reloading: 請嘗試重新載入網頁
@@ -456,29 +448,27 @@
   lesson_plan: 教案
   view_lesson_plan: 檢視教案
   pdf_download: 下載 PDF
-  download_coming_soon: Downloadable activity coming soon.
+  download_coming_soon: 可下載的活動內容也即將完成。
   video_coming_soon: 視頻快將推出 ！
+  not_started: 學生尚未試過這個關卡。
   share_code:
-    title: Click 'Run' to see my program in action
-    bounce_og_title: Check out my Bounce Game
+    title: 按下"執行"來看看我的程式如何運作
+    bounce_og_title: 看看我的彈跳遊戲
     flappy_og_title: 快來嘗試我設計的Flappy Game
-    studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
+    studio_og_title: 看看我的遊玩實驗室 App
+    check_out_what_i_made: 看看我做了什麼
     og_description: 我用 Code.org寫了自己的程式碼
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: 它看起來像是一組電話號碼。請嘗試將它從文字內容移掉。
+    address_not_allowed: 它看起來像是一個地址。請嘗試將它從文字內容移掉。
+    email_not_allowed: 它看起來像是一個電子郵件。請嘗試將它從文字內容移掉。
+    profanity_not_allowed: 它看起來像是一些不雅的文字。請嘗試將它從文字內容移掉。
   builder:
     created: 您創建了一個新的腳本。
     destroyed: 你毀了一個腳本。
-    manage: Build Levels
+    manage: 建立關卡
     view: 檢視
     back: 返回腳本
-    success: You successfully edited the blocks.
+    success: 你已經成功地編輯程式積木
     level:
       create: 建立新水準
       current: 當前水平
@@ -486,35 +476,35 @@
   upsell:
     hoc:
       title: 一小時的程式設計課程
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: 請試試數百萬人已經體驗過的電腦科學基礎課程。
     flappy:
       title: Flappy遊戲設計
       body: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
     20-hour:
-      title: Accelerated Course
+      title: 速成課程
       body: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: 在速成課程2-4中學習電腦科學的基本知識。
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: 試試全新Beta版的一小時程式碼教程
+      try_frozen: 來自冰雪奇緣的藝術家安娜及愛紗。
     gallery:
       title: 相片圖庫
-      body: View a gallery of app and artist images created by our users
+      body: 觀看由所有使用者所建立的應用程式以及藝術圖畫。
     frozen:
       title: 冰雪奇緣
+    starwars:
+      title: 星際大戰
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: 當個創世神
+      body: 使用程式來探索創世神的世界
   gallery:
     students_drew_these_with_code: 學生用程式畫出這些圖案 ！
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
+    students_made_these_with_code: 學生們使用程式碼做了這些內容！
+    picture_count: 在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式畫了 <b>%{count}</b> 張圖片。點擊圖片觀看每個程式是如何運作。
+    activity_count: 在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個app以及圖畫。點擊圖片及螢幕截圖來觀看每個程式是如何運作。
     want_to_make_your_own: 想要做您自已的嗎？
     more: 更多 &rarr;
     caption_by_name_age: '%{name}, %{age} 歲'
@@ -523,11 +513,8 @@
     header_playlab: 播放實驗室
     header_artist: 畫家
   landing:
-    prerelease: This course is in <span class='betatext'>beta</span>.  This means
-      it is not the final version of the course, and is subject to revision as feedback
-      is received and improvements are made.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
+    prerelease: 本課程還在 <span class='betatext'>beta</span>階段。這表示它不是本課程的最後版本，它會依據收到的回饋，作出修訂與改善。
+    prerelease_hoc2014: 本教程還在 <span class='betatext'>beta</span>階段。它會依據收到的回饋，作出修訂與改善。
     feedback: 提供意見
     report_bug: 報告錯誤
     support: 請求幫助
@@ -546,10 +533,9 @@
     correct_body: 這是正確的答案。
   contract_match:
     wrong_title: 不正確的答案
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
+    badname: 契約上的名稱有誤。
+    badname_case: 函數名稱是大小寫有別的。試著更改聯絡人名稱的大小寫。
+    badrange: 契約上的範圍有誤。
     baddomainsize: 您的契約裡的定義域沒有正確的項目數。
     baddomainname: 有一個或多個您的定義域欄位的名稱錯誤。
     baddomaintype: 有一個或多個您的定義域欄位的類型錯誤，或順序錯誤。
@@ -560,8 +546,7 @@
   dialog:
     ok: 確定
     startover_title: 你確定要重新開始嗎？
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: 這個動作將會重置關卡，同時你所新增或更動的所有資料也將跟著一併重置回到起始狀態。
     startover_ok: 重新開始
     startover_cancel: 取消
   time:
@@ -590,21 +575,18 @@
           title: Flappy遊戲設計
           description: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
         jigsaw:
-          title: Jigsaw
+          title: 拼圖
           description: ''
         step:
           title: 步驟
           description: ''
         sample_level_builder:
-          title: Sample Level Builder
+          title: 範例關卡產生器
           description: ''
   age_interstitial:
     age: 你的年齡
     header: 帳戶資訊更新
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
+    message: 為了讓使用者有更好的體驗，以及更好的隱私權保護。我們需要現有的使用者在這裡輸入他們的年齡。<br/>和往常一樣，code.org將永遠不會將這些資料以任何形式與其它夥伴共享。
     sign_out: 如果您不願意提供您的年齡，您可以選擇<a href="%{url}">登出</a>。
   zendesk_too_young_message: 對不起，過度年輕的使用者無法登入到我們支援的網站。您可以瀏覽無須登入的網頁 <a href="HTTP://support.code.org">
     support.code.org</a> 或請您的父母或老師聯繫我們。
@@ -650,33 +632,24 @@
     view_all: 查看我的專案
     remix: 混音
     click_to_remix: 點擊「混音」，創造自己的版本！
-    edit_project: Edit Project
+    edit_project: 編輯專案
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: 這個專案被回報為違反 Code.org 的<a href='http://code.org/tos'>服務條款</a>因此不能跟其它人進行分享。
+      contact_us: 如果你認為這是一個錯誤，請與我們 <a href='HTTPs://code.org/contact'> 聯繫</a>。
+      go_to_code_studio: 前往程式碼工作室
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: 當你在使用程式碼工作示所以製作出來的app時，如果遇到了冒犯性的內容、 威脅、 網路霸淩、 騷擾或侵犯版權的內容，請填寫下面的表格。我們將非常認真地看待你的回報，進行相對應的調查並採取適當的行動。
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: 請提供一個電子郵件地址
+          age: 請指定適用年齡
+          abuse_type: 請說明內容是如何違反服務條款。
+          abuse_detail: 請提供有關您所回報內容的詳細資訊
+        abusive_url: 被回報內容的URL網址
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 這些內容是如何違反%{link_start}服務條款%{link_end}的呢？
+          harassment: 威脅，網路霸淩及騷擾
+          offensive: 冒犯性的內容
+          infringement: 著作權侵權
           other: 其他
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: 依據您所回報的內容，請盡可能提供更詳盡的細節。
+        acknowledge: 送出這些資訊，代表你已經了解它將依照 %{link_start_privacy}隱私權政策%{link_end} 以及 %{link_start_tos}服務條款%{link_end}進行處理及保管。

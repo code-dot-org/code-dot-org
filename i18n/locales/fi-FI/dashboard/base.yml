@@ -2,7 +2,7 @@ fi:
   errors:
     messages:
       not_saved: 'Ole hyvä ja korjaa seuraavat virheet:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Tähän sisältöön on asetettu ikäraja, joten se ei ole nuorempien opiskelijoiden käytettävissä.
   activerecord:
     errors:
       messages:
@@ -224,9 +224,10 @@ fi:
         playlab: Tee sovellus
         artist: Piirrä jotakin
         calculate: Calculate Something
+        applab: Tee sovellus
     user:
       classroom: Opettajan kotisivu
-      district_dashboard: District Dashboard
+      district_dashboard: Koulupiirin hallintapaneeli
       label: 'Hei %{username}'
       stats: Minun edistymiseni
       settings: Tilini
@@ -253,6 +254,8 @@ fi:
       prize_us_only: (vain oppilaille USA:ssa)
       prizes_link: lisätietoja
   teacher:
+    answer: Vastaus
+    for_teachers_only: Vain opettajille
     title:
       one: 'Opettajasi:'
       other: 'Opettajasi:'
@@ -311,15 +314,15 @@ fi:
     cant_remove_teacher_no_email: '%{teacher_name} ei voida poistaa opettajastasi sillä et ole rekisteröinyt sähköpostiosoitetta'
     student_teacher_disassociated: 'Opettaja %{teacher_name} on poistettu oppilaalta %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Vastausten tarkastelu
       student: Oppilas
       viewing_solution: Vastauksen katselu
       try_it_yourself: Kokeile itse
       section: Ryhmä
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
-      unsubmit: Unsubmit
+      example: Malliratkaisu
+      example_with_number: 'Malliratkaisu %{solution_number}'
+      submitted_on: 'Lähetetty:'
+      unsubmit: Peruuta lähetys
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'
@@ -340,9 +343,9 @@ fi:
     classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    description: Code Studio on paikka josta löydät Code.org:in verkkokurssit.
+    lines_of_code: '%{lines_count} OPPILAIDEN KIRJOITTAMAA KOODIRIVIÄ'
+    lines_of_code_linebreak: '%{lines_count} KIRJOITETTUA KOODIRIVIÄ<br/>%{students_count} MILJOONAA OPISKELIJAA'
     all_courses: Katsaus kursseihin 1, 2 ja 3
     lesson_plans: Tuntisuunnitelmat
     signin_message: 'Jo rekisteröitynyt? %{link}'
@@ -378,11 +381,11 @@ fi:
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     your_gallery: Galleria
     no_primary_course: Kokeile kurssia Code Studiossa
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    choose_next_course: Kokeile jotakin allaolevista Code Studion kursseista
+    print_certificate: Tulosta todistus
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Opiskele Code Studio:ssa
+    description: Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä, sovelluksia ja taidetta.
   gender:
     male: Mies
     female: Nainen
@@ -391,9 +394,9 @@ fi:
     student: Oppilas
     teacher: Opettaja
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Kiitämme <a href="https://code.org/about/donors">lahjoittajia</a>, <a href="https://code.org/about/partners">yhteistyökumppaneita</a>, <a href="https://code.org/about/team">laajennettua tiimiämme</a>, videoiden esiintyjiä, ja <a href="https://code.org/about/advisors">koulutusneuvonantajia</a> heidän tuestaan Code Studion luomisessa.'
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitteriltä auttoivat luomaan nämä materiaalit.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Toimii Amazon Web Services -palvelun päällä
@@ -404,11 +407,11 @@ fi:
     translate: Auta meitä kääntämään palvelu omalle kielellesi
     support: Tuki
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Ehdot
     tos: Ehdot
     privacy: Yksityisyyskäytäntö
     secure: Turvallinen versio
-    report_abuse: Report Abuse
+    report_abuse: Ilmoita väärinkäytöksestä
   reference_area:
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet
@@ -440,6 +443,7 @@ fi:
   pdf_download: Lataa PDF
   download_coming_soon: Ladattavia aktiviteetteja tulossa pian.
   video_coming_soon: Video tulossa pian!
+  not_started: Opiskelija ei ole yrittänyt tätä tasoa.
   share_code:
     title: "Napsauta 'Aja' nähdäksesi ohjelmani toiminnassa"
     bounce_og_title: Tutustu Bounce-peliini
@@ -470,9 +474,9 @@ fi:
       title: Flappy Code
       body: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!
     20-hour:
-      title: Accelerated Course
+      title: Nopeutettu kurssi
       body: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Opettele tietojenkäsittelytieteen perusteita nopeutetulla versiolla kursseista 2-4.
     hoc2014:
       try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
       try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
@@ -481,9 +485,14 @@ fi:
       body: Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa
     frozen:
       title: Frozen
+    starwars:
+      title: Tähtien Sota
     infinity:
       title: Infinity Pelilabra
-      body: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn Infinity hahmot.
+      body: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn Infinity-hahmot.
+    minecraft:
+      title: Minecraft
+      body: Tutki Minecraft-maailmaa koodin kautta.
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -517,12 +526,12 @@ fi:
     correct_body: Tämä on oikea vastaus.
   contract_match:
     wrong_title: Väärä vastaus
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    badname: Sopimuksessasi on väärä nimi.
+    badname_case: Funktioiden nimissä kirjainkoko on merkitsevä. Yritä muuttaa oman sopimuksesi nimen kirjainkokoa.
+    badrange: Sopimuksessasi on väärä maalijoukko.
+    baddomainsize: Sopimuksesi lähtöjoukossa ei ole oikeaa määrää alkioita.
+    baddomainname: Yhdellä tai useammalla lähtöjoukon alkiolla on väärä nimi.
+    baddomaintype: Yhdellä tai useammalla lähtöjoukon alkiolla on väärä tyyppi tai ne ovat väärässä järjestyksessä.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
     open_response_title: Kiitos
@@ -530,7 +539,7 @@ fi:
   dialog:
     ok: OK
     startover_title: Oletko varma, että haluat aloittaa alusta?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Tämä alustaa tehtävän alkutilaan ja poistaa tekemäsi lisäykset ja muutokset.
     startover_ok: Aloita alusta
     startover_cancel: Peru
   time:
@@ -615,24 +624,24 @@ fi:
     view_all: Katso omia projektejasi
     remix: Remix
     click_to_remix: 'Klikkaa "Remix" ja tee oma versiosi!'
-    edit_project: Edit Project
+    edit_project: Muokkaa projektia
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "Tämän projektin on raportoitu rikkovan Code.org:in <a href='http://code.org/tos'> Käyttöehtoja</a>, minkä vuoksi sitä ei voi jakaa muiden kanssa."
+      contact_us: "Jos uskot tämän olevan virhe, ota <a href='https://code.org/contact'> yhteyttä.</a>"
+      go_to_code_studio: Siirry Code Studio:on
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Jos olet kohdannut loukkaavaa sisältöä, uhkauksia, nettikiusaamista, häirintää tai omistamaasi sisältöön kohdistuvia tekijänoikeusrikkomuksia rakentaessasi sovelmia Code Studio:ssa, täytä alla oleva lomake. Otamme ilmoituksesi hyvin vakavasti, tutkimme tapauksen, ja ryhdymme tarvittaviin toimenpiteisiin.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Anna sähköpostiosoitteesi
+          age: Määritä ikä
+          abuse_type: Kerro kuinka tämä sisältö rikkoo käyttöehtoja.
+          abuse_detail: Anna täsmällinen kuvaus raportoimastasi sisällöstä.
+        abusive_url: Raportoidun sisällön URL-osoite
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Miten tämä sisältö rikkoo %{link_start}Käyttöehtoja%{link_end}?'
+          harassment: Uhkat, nettikiusaaminen, häirintä
+          offensive: Loukkaavaa sisältöä
+          infringement: Tekijänoikeusrikkomus
           other: Muut
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Anna mahdollisimman paljon yksityiskohtaista tietoa koskien sisältöä josta raportoit.
+        acknowledge: 'Toimittamalla nämä tiedot huomioit, että niitä käsitellään %{link_start_privacy}Yksityisyyskäytännön%{link_end} ja %{link_end}Palvelukuvauksen%{link_start_tos} mukaisesti'

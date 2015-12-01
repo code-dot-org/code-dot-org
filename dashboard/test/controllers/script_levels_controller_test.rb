@@ -461,11 +461,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    client_state.set_level_progress(5, 10)
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
 
     get :reset, script_id: Script::HOC_NAME
 
-    assert_redirected_to hoc_chapter_path(chapter: 1)
+    assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
@@ -487,13 +488,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    client_state.set_level_progress(5, 10)
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
 
     get :reset, script_id: 'laurel'
-    assert_redirected_to "/s/laurel/stage/1/puzzle/1"
+    assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
+  end
+
+  test "reset redirects for custom scripts for signed in users" do
+    sign_in(create(:user))
+
+    get :reset, script_id: 'laurel'
+    assert_redirected_to '/s/laurel/stage/1/puzzle/1'
   end
 
   test "should render blockly partial for blockly levels" do

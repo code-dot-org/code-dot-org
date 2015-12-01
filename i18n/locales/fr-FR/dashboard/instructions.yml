@@ -2,35 +2,34 @@ fr:
   data:
     instructions:
       2-3 Artist 1 new_instruction: "Salut ! Je suis un artiste. Tu peux écrire du code pour me faire dessiner presque n'importe quoi. Utilise quelques blocs pour me faire repasser sur les lignes grises de l'image. (Chaque ligne a une longueur d'environ 100 pixels.)"
-      2-3 Artist 11_instruction: 'Ajoutez une ligne au panneau stop en dessinant un octagone de 8 côtés, chacun faisant 100 pixels de long. Quel angle de rotation choisiriez-vous ? (Indice : Que font 360/8 ?)'
+      2-3 Artist 11_instruction: 'Ajoute une ligne au panneau stop en dessinant un octogone de 8 côtés, chacun faisant 100 pixels de long. Quel angle de rotation choisiriez-vous ? (Indice : Combien font 360/8 ?)'
       2-3 Artist 12_instruction: "Utilise le bloc « répéter plusieurs fois » pour créer un « cercle » qui complètera le globe. Si chaque mouvement effectue une rotation d'1 degré sur la droite, combien de répétitions dois-tu effectuer ? 180 ? 360 ? 500 ?"
-      2-3 Artist 2 new_instruction: Le mur de cette maison est à moitié fini. La valeur de chaque côté est 100, mais le mur incomplet est à 50. Finissez la construction.
+      2-3 Artist 2 new_instruction: 'Cette maison a un mur à moitié fini. Chaque côté a une valeur de 100, mais le mur à moitié fini a une valeur de 50. Termine le mur. '
       2-3 Artist 2_instruction: 'Le mur de cette maison est à moitié terminé. Chaque côté a une longueur de 100, mais le mur à moitié fait a une hauteur de 50. Finis le mur. '
       2-3 Artist 3.4_instruction: "Le bloc de saut déplace l'artiste sans rien dessiner. Dessine la ligne pointillée en utilisant les blocs de saut et de dessin."
-      2-3 Artist 3_instruction: Ce chapeau a une taille de 100 pixels. Dessine un chapeau qui fait 70 pixels de moins.
+      2-3 Artist 3_instruction: Ce chapeau a une taille de 100 pixels de haut. Dessine un chapeau qui fait 70 pixels de moins.
       2-3 Artist 3new_instruction: "Le chapeau rouge est de 100 pixels de haut. Terminez le dessin d'un chapeau noir qui est plus court de 70 pixels. La largeur du chapeau noir est de 50 pixels."
       2-3 Artist 4_instruction: Aide-moi à terminer la maison pour ce chat.
       2-3 Artist 5_instruction: "Refais ce code avec un bloc « répéter plusieurs fois » pour dessiner la même maison à l'aide de seulement 3 blocs."
       2-3 Artist 6_instruction: "Cette maison a besoin d'un toit ! Dessine le triangle. Astuce : les 3 côtés sont égaux."
       2-3 Artist 7_instruction: |
         Termine en dessinant la moitié droite de la dernière fenêtre.
-        
         Chaque carré de la fenêtre fait 25 pixels. 
-      2-3 Artist 8_instruction: Complète les chambres pour chacun des animaux en divisant le rectangle en 2 carrés égaux. Le rectangle est de 200 pixels de large et 100 pixels de haut.
+      2-3 Artist 8_instruction: Complète les chambres pour chacun des animaux en divisant le rectangle en 2 carrés égaux. Le rectangle fait 200 pixels de large et 100 pixels de haut.
       2-3 Artist 9_instruction: Termine ce cerf-volant
       2-3 Artist Assessment 1_instruction: 'Évaluation : Termine la dernière dent, de 25 pixels de large et 25 pixels de hauteur.'
-      2-3 Artist Debugging 1_instruction: Peux-tu faire en sorte que ce chapeau ait une hauteur de 100 ?
-      2-3 Artist Debugging 10_instruction: 'La direction de mon contrôleur de jeu est trop étroite. Astuce : rend-le plus large de 10 pixels'
-      2-3 Artist Debugging 11_instruction: Aide-moi à terminer mon magnifique flocon de neige. Combien de fois ai-je besoin de « répéter » pour le finir ?
-      2-3 Artist Debugging 12_instruction: "Je suis censé ajouter une vague sur cet océan. Peux-tu m'aider ?"
-      2-3 Artist Debugging 2_instruction: 'Le code pour les trois moustaches que tu voies est erroné. Astuce : chaque moustache est longue de 75 pixels. Corrige ce code pour dessiner les moustaches.'
+      2-3 Artist Debugging 1_instruction: Peux-tu faire en sorte que le haut du chapeau ait une longueur de 100 ?
+      2-3 Artist Debugging 10_instruction: 'Le bouton de direction de ma manette de jeu est trop étroit. Astuce : rends-le plus large de 10 pixels.'
+      2-3 Artist Debugging 11_instruction: Aide moi à terminer mon magnifique flocon de neige. Combien de fois ai-je besoin de « répéter » pour le finir ?
+      2-3 Artist Debugging 12_instruction: "Je suis censé ajouter une vague d'océan à cette scène.  Est-ce que tu peux m'aider?"
+      2-3 Artist Debugging 2_instruction: 'Le code pour les trois moustaches que tu vois est erroné. Astuce : chaque moustache est longue de 75 pixels. Corrige ce code pour dessiner les moustaches.'
       2-3 Artist Debugging 3_instruction: "Mon bateau a un trou ! Peux-tu y remédier en changeant l'angle de la ligne ? Astuce : le dernier angle est dévié de 15 degrés."
       2-3 Artist Debugging 4_instruction: "Quelle est l'image que nous essayons de dessiner ? Finis de relier les points en utilisant les angles et les lignes appropriées."
-      2-3 Artist Debugging 5_instruction: 'Le code pour la jambe et le pied que tu voies est erroné. Astuce : le pied est trop long, nous devrons peut-être enlever un morceau (jeu de mots volontaire)'
+      2-3 Artist Debugging 5_instruction: 'Le code pour la jambe et le pied que tu vois est erroné. Astuce : le pied est trop long, nous devrons peut-être enlever un pas (jeu de mot volontaire).'
       2-3 Artist Debugging 6_instruction: On dirait que je suis assis sur une chaise à laquelle il manque un pied. Modifie les blocs pour dessiner le pied.
       2-3 Artist Debugging 7_instruction: On dirait que le C est dessiné dans le mauvais sens dans le code. Peux-tu le faire ressembler à un C ?
-      2-3 Artist Debugging 8_instruction: "Mon moulinet n'est pas complet. Combien de fois dois-je répéter pour le terminer ?"
-      2-3 Artist Debugging 9_instruction: "Le code de cette tige est incorrect. Astuce : l'angle est dévié de 60 degrés"
+      2-3 Artist Debugging 8_instruction: "Mon moulinet n'est pas complet. Combien de fois dois-je le répéter pour le terminer ?"
+      2-3 Artist Debugging 9_instruction: "Le code de cette tige est incorrect. Astuce : l'angle est dévié de 60 degrés."
       2-3 Artist Debugging Assessment 1_instruction: "Cette forme est trop petite. Peux-tu l'agrandir ? Astuce : elle devrait avoir 75 pixels de plus de chaque côté."
       2-3 Artist Free Play_instruction: Jeu libre ! Dessine tout ce que tu veux.
       2-3 Artist Functions 1_instruction: 'Salut. Moi artiste zombie. Moi aime dessiner ! Toi aider moi à dessiner les verres carrés. Astuce : le pont entre les verres fait 25 pixels de moins que la longueur du carré.'
@@ -38,181 +37,180 @@ fr:
       2-3 Artist Functions 11.5_instruction: Voici encore la même fonction « dessiner un hexagone ». Que se passe-t-il si tu tournes seulement de 60 degrés à chaque fois que tu exécutes la boucle ?
       2-3 Artist Functions 11_instruction: "Nous avons renommé la fonction « dessiner un carré » en « dessiner un hexagone », mais elle dessine encore des carrés ! Peux-tu modifier la fonction « dessiner un hexagone » pour dessiner un hexagone avec des côtés de 50 pixels et dessiner l'image en utilisant cette fonction ?"
       2-3 Artist Functions 12_instruction: 'Les fonctions sont très pratiques pour dessiner des choses complexes plusieurs fois. Peux-tu utiliser la fonction « dessiner une fleur » pour remplir le reste du bac de plantes ? (Astuce : les plantes sont toutes séparées par une longueur de 100 pixels) '
-      2-3 Artist Functions 13_instruction: "Voici quatre fonctions. Utilise-les comme bon te semble à l'intérieur d'une ou plusieurs boucles pour faire des images que tu pourras partager avec tes amis. Appuie sur Démarrer pour voir un exemple."
+      2-3 Artist Functions 13_instruction: "Voici quatre fonctions. Utilise les comme bon te semble à l'intérieur d'une ou plusieurs boucles pour faire des images que tu pourras partager avec tes amis. Appuie sur Démarrer pour voir un exemple."
       2-3 Artist Functions 2_instruction: Les fonctions te permettent de définir de nouveaux blocs ! Nous avons déplacé les blocs permettant de dessiner un carré dans une fonction appelée « dessiner un carré ». Peux-tu utiliser la fonction « dessiner un carré » pour créer les verres ? Les carrés sont espacés de 75 pixels.
       2-3 Artist Functions 3_instruction: Modifie la fonction pour dessiner un carré de 115 pixels de côté et dessine les plus grands verres. Les carrés sont maintenant espacés de 45 pixels.
       2-3 Artist Functions 4_instruction: Utilise le bloc « répéter » pour dessiner ces 3 carrés.
       2-3 Artist Functions 7_instruction: "Utilise la fonction « dessiner une maison » pour dessiner les deux maisons à l'aide de deux paramètres différents. (Astuce : la première maison fait 100 pixels.)"
-      2-3 Artist Functions 9_instruction: "Voici une fonction pour le flocon de neige. Expérimente-la pour créer une scène d'hiver ! Il s'agit d'un niveau de jeu libre, donc il n'y a aucun puzzle à résoudre. Amuse-toi !"
+      2-3 Artist Functions 9_instruction: "Voici une fonction pour le flocon de neige. Expérimente la pour créer une scène d'hiver ! Il s'agit d'un niveau de jeu libre, donc il n'y a aucun puzzle à résoudre. Amuse toi !"
       2-3 Artist Loops 1_instruction: "Peux-tu tracer un hexagone avec des côtés de 100 pixels de long pour terminer la cellule ? N'oublie pas, cela signifie que tu devras seulement tourner de 60 degrés !"
-      2-3 Artist Loops 10_instruction: Que se passe-t-il à la conception, lorsque nous faisons notre dernier pas deux fois moins long ?
-      2-3 Artist Loops 11_instruction: "Maintenant nous allons mettre *autre* boucle autour de notre création toute entière !  N'oubliez pas d'ajouter un angle à la fin de la boucle externe."
-      2-3 Artist Loops 2_instruction: Maintenant, utilisez un bloc répéter pour que la cellule devienne une coquille.
-      2-3 Artist Loops 4_instruction: "Voulez-vous voir ce qui se passe lorsque nous répétons cette forme encore et encore une fois à l'aide d'une boucle ?"
-      2-3 Artist Loops 5_instruction: Maintenant faisons un petit changement à la boucle et voyons comment ce que devient notre image.
-      2-3 Artist Loops 6_instruction: "Ajoutez un déplacement et un tour supplémentaire à l'intérieur de la boucle et voyez l'évolution de votre conception."
-      2-3 Artist Loops 7_instruction: "Nous pouvons utiliser les boucles pour faire toutes sortes de polygones.  Pouvez-vous créer un losange à l'intérieur de cet hexagone ?"
+      2-3 Artist Loops 10_instruction: "Qu'arrive-t-il à la conception, lorsque nous faisons notre dernier pas deux fois moins long ?"
+      2-3 Artist Loops 11_instruction: "Maintenant mettons une *autre* boucle autour de l'ensemble de notre création !  N'oubliez pas d'ajouter un angle à la fin de la boucle externe."
+      2-3 Artist Loops 2_instruction: Maintenant, utilise un bloc répéter pour que la cellule devienne une coquille.
+      2-3 Artist Loops 4_instruction: "Veux-tu voir ce qu'il se passe lorsque nous répétons cette forme encore et encore à l'aide d'une boucle ?"
+      2-3 Artist Loops 5_instruction: Maintenant faisons un petit changement à la boucle et voyons comment cela change notre image.
+      2-3 Artist Loops 6_instruction: "Ajoute un déplacement et un tour supplémentaire à l'intérieur de la boucle et vois l'évolution de votre dessin."
+      2-3 Artist Loops 7_instruction: "Nous pouvons utiliser les boucles pour faire toutes sortes de polygones.  Peux-tu créer un losange à l'intérieur de cet hexagone ?"
       2-3 Artist Loops 8_instruction: "Mettons les deux éléments à l'intérieur d'une boucle."
-      2-3 Artist Loops 9_instruction: "Nous allons boucler sur les mêmes éléments, mais maintenant nous allons ajouter quelques distance entre eux. \r Utilisez le même code que précédemment, mais ajoutez un pas en avant à la fin de la boucle externe."
-      2-3 Artist Loops New 1_instruction: Dessinons la tête de ce robot ! Pouvez-vous faire un carré de 100 pixels de côté ?
-      2-3 Artist Loops New 10_instruction: Maintenant connectons ensemble un groupe de V, en les dessinant dans une boucle.
-      2-3 Artist Loops New 11_instruction: Cette fois nous allons le dessiner 24 fois. Ajoutez un virage à gauche de 30 degrés à ce code et mettez le tout dans un bloc Répéter.
+      2-3 Artist Loops 9_instruction: "Nous allons boucler sur les mêmes éléments, mais maintenant nous allons ajouter quelques distance entre eux. \r Utilise le même code que précédemment, mais ajoute un pas en avant à la fin de la boucle externe."
+      2-3 Artist Loops New 1_instruction: Dessinons la tête de ce robot ! Peux-tu faire un carré de 100 pixels de côté ?
+      2-3 Artist Loops New 10_instruction: Maintenant connectons ensemble plusieurs V, en les dessinant dans une boucle.
+      2-3 Artist Loops New 11_instruction: Cette fois nous allons le dessiner 24 fois. Ajoute un virage à gauche de 30 degrés à ce code et mets le tout dans un bloc Répéter.
       2-3 Artist Loops New 12_instruction: |
-        Dessinez un losange avec des côtés de 100 pixels.
+        Dessine un losange avec des côtés de 100 pixels.
         
-      2-3 Artist Loops New 13_instruction: Maintenant dessinez le losange 3 fois dans une boucle.
+      2-3 Artist Loops New 13_instruction: Maintenant dessine le losange 3 fois dans une boucle.
       2-3 Artist Loops New 14_instruction: Maintenant nous allons dessiner le losange 10 fois mais en pivotant de 90 degrés entre chaque losange.
-      2-3 Artist Loops New 15_instruction: "Dessinez quelque chose d'amusant."
-      2-3 Artist Loops New 2_instruction: Voici une partie du code que vous utilisé pour dessiner ce carré. Que se passe-t-il si vous utilisez le bloc Répéter pour exécuter ce code 4 fois ?
-      2-3 Artist Loops New 9_instruction: Pour remplir la flèche, dessinez un simple V dont les deux parties font 50 pixels de long.
-      2-3 Artist Match Hex Pic_instruction: "Correspondances : Aidez à finir l'hexagone."
-      2-3 Artist Match Rho Pic_instruction: 'Correspondances : Terminez le code manquant.'
-      2-3 Artist Match Sq Pic_instruction: 'Correspondances : Complétez le code manquant'
-      2-3 Artist Match Tri pic_instruction: 'Correspondances : Renseignez le code manquant.'
-      2-3 Artist Nested Loops 1_instruction: "Vous avez utilisé des boucles pour dessiner des formes avant, mais saviez-vous que vous pouvez mettre une boucle à l'intérieur d'une autre boucle ? \r bouclez tout ce bloc de code 3 fois pour dessiner le motif."
-      2-3 Artist Nested Loops 10_instruction: Bouclez ce code 12 fois pour compléter le motif.
-      2-3 Artist Nested Loops 11_instruction: Bouclez ce code 4 fois pour compléter le motif, en tournant à 90 degrés après chaque cercle.
-      2-3 Artist Nested Loops 12_instruction: Bouclez ce code 12 fois pour compléter les boucles.
-      2-3 Artist Nested Loops 2_instruction: Maintenant bouclez le triangle 6 fois. Après chaque triangle, vous devrez tourner à 60 degrés avant de dessiner la prochaine.
-      2-3 Artist Nested Loops 3_instruction: Vous aurez besoin de boucler le triangle 12 fois dessiner ce motif. Divisez le nombre de degrés dans un cercle (360) par le nombre de formes que vous dessinez (12) pour découvrir de combien est-ce que vous devez tourner après chaque forme.
-      2-3 Artist Nested Loops 4_instruction: 'Boucle ce losange 12 fois pour dessiner une fleur. Conseil : les 12 losanges sont juste comme les 12 triangles, que vous avez fait - de combien est-ce que vous devez tourner après chaque forme ?'
-      2-3 Artist Nested Loops 5_instruction: Retrace les fenêtres de ce bâtiment avec une boucle imbriquée. Les fenêtres mesurent 20 pixels et sont séparées de 20 pixels.
-      2-3 Artist Nested Loops 6_instruction: "Ce dinosaure a 8 pointes en haut sa queue ; chaque pointe mesure 30 pixels. Boucle le triangle 8 fois, mais n'oublie pas d'aller vers l'avant après chacun d'eux."
-      2-3 Artist Nested Loops 7_instruction: "Boucle ce triangle 10 fois pour dessiner le soleil. Tu devras déplacer et tourner après chaque triangle. Tu peux déterminer l'angle de rotation en divisant le nombre de degrés dans un cercle par le nombre de formes qui composent ton soleil."
+      2-3 Artist Loops New 15_instruction: "Dessine quelque chose d'amusant."
+      2-3 Artist Loops New 2_instruction: Voici une partie du code que tu as utilisé pour dessiner ce carré. Que se passe-t-il si tu utilises le bloc Répéter pour exécuter ce code 4 fois ?
+      2-3 Artist Loops New 9_instruction: Pour terminer la flèche, dessine un simple V dont les deux parties font 50 pixels de long.
+      2-3 Artist Match Hex Pic_instruction: "Correspondances : Aide à terminer l'hexagone."
+      2-3 Artist Match Rho Pic_instruction: 'Correspondances : Termine le code manquant.'
+      2-3 Artist Match Sq Pic_instruction: 'Correspondances : Complète le code manquant'
+      2-3 Artist Match Tri pic_instruction: 'Correspondances : Renseigne le code manquant.'
+      2-3 Artist Nested Loops 1_instruction: "Tu as utilisé des boucles pour dessiner des formes avant, mais savais-tu que tu peux mettre une boucle à l'intérieur d'une autre boucle ? \r Mets en boucle tout ce bloc de code 3 fois pour dessiner le motif."
+      2-3 Artist Nested Loops 10_instruction: Fais boucler ce code 12 fois pour compléter le motif.
+      2-3 Artist Nested Loops 11_instruction: Fais boucler ce code 4 fois pour compléter le motif, en tournant de 90 degrés après chaque cercle.
+      2-3 Artist Nested Loops 12_instruction: Fais boucler ce code 12 fois pour compléter les boucles.
+      2-3 Artist Nested Loops 2_instruction: Maintenant fais boucler le triangle 6 fois. Après chaque triangle, tu devras tourner de 60 degrés avant de dessiner le suivant.
+      2-3 Artist Nested Loops 3_instruction: Tu auras besoin de boucler le triangle 12 fois pour dessiner ce motif. Divise le nombre de degrés dans un cercle (360) par le nombre de formes que tu dessines (12) pour découvrir de combien est-ce que tu devras tourner après chaque forme.
+      2-3 Artist Nested Loops 4_instruction: 'Fais boucler ce losange 12 fois pour dessiner une fleur. Conseil : les 12 losanges sont juste comme les 12 triangles, que tu as fait - de combien est-ce que tu devras tourner après chaque forme ?'
+      2-3 Artist Nested Loops 5_instruction: Remplis les fenêtres de ce bâtiment avec une boucle imbriquée. Les fenêtres mesurent 20 pixels de longueur et sont séparées de 20 pixels.
+      2-3 Artist Nested Loops 6_instruction: "Ce dinosaure a 8 pointes sur sa queue ; chaque pointe mesure 30 pixels. Fais boucler le triangle 8 fois, mais n'oublie pas d'avancer après chacun d'eux."
+      2-3 Artist Nested Loops 7_instruction: "Fais boucler ce triangle 10 fois pour dessiner le soleil. Tu devras te déplacer et tourner après chaque triangle. Tu peux déterminer l'angle de rotation en divisant le nombre de degrés dans un cercle par le nombre de formes qui composent ton soleil."
       2-3 Artist Nested Loops 8_instruction: "Maintenant nous allons ajouter quelques herbes à notre image. Les touffes d'herbe sont séparées de 50 pixels."
-      2-3 Artist Nested Loops 9_instruction: Nous allons terminer ce dessin en ajoutant une fleur. Boucle le losange 12 fois pour dessiner ta fleur.
+      2-3 Artist Nested Loops 9_instruction: Nous allons terminer ce dessin en ajoutant une fleur. Fais boucler le losange 12 fois pour dessiner ta fleur.
       2-3 Artist Nested Loops Free Play_instruction: Activité libre, dessine quelque chose de cool avec des boucles imbriquées.
-      2-3 Bee Conditionals 1_instruction: Salut ! Je suis une abeille. Aide-moi à obtenir le nectar de la fleur.
-      2-3 Bee Conditionals 10_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar. Veille à ne pas butiner une fleur violette si celui-ci n'en possède pas. \r\n"
+      2-3 Bee Conditionals 1_instruction: Salut ! Je suis une abeille. Aide moi à récolter le nectar de la fleur.
+      2-3 Bee Conditionals 10_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar. Veille à ne pas butiner une fleur violette si celle-ci n'en possède pas.\r\n"
       2-3 Bee Conditionals 11_instruction: Butine sur les fleurs qui ont du nectar.
-      2-3 Bee Conditionals 12_instruction: Utilise une boucle pour vérifier et collecter le nectar de toutes ces fleurs.
-      2-3 Bee Conditionals 13_instruction: 'Collecte du nectar et fais du miel. Astuce : que se passe-t-il si tu utilises la condition "si nectar" sur une fleur rouge ? Peux-tu compléter ceci avec une boucle ?'
-      2-3 Bee Conditionals 14_instruction: "Collecte le nectar et fais du miel. Veille à ne pas butiner de fleur pourpre, si elle n'en a pas."
+      2-3 Bee Conditionals 12_instruction: Utilise une boucle pour vérifier et récolter le nectar de toutes ces fleurs.
+      2-3 Bee Conditionals 13_instruction: |
+        Récolte du nectar et produit du miel. Astuce : 
+        que se passe-t-il si tu utilises la condition "si nectar" sur une fleur rouge ? Peux-tu compléter ceci avec une boucle ?
+      2-3 Bee Conditionals 14_instruction: "Récolte le nectar et fais du miel. Veille à ne pas butiner de fleur pourpre si elle n'a pas de nectar."
       2-3 Bee Conditionals 15_instruction: Collecte le nectar des quatre fleurs.
-      2-3 Bee Conditionals 2_instruction: "Salut, je suis une abeille ! Aide-moi à collecter l'ensemble du nectar des fleurs. Utilise une boucle."
-      2-3 Bee Conditionals 3_instruction: "Aide-moi à collecter l'ensemble du nectar des fleurs et miel. Utilise une boucle."
-      2-3 Bee Conditionals 4_instruction: "Aide-moi à collecter l'ensemble du nectar des fleurs et faire tout le miel."
+      2-3 Bee Conditionals 2_instruction: Salut, je suis une abeille ! Aide moi à récolter tout le nectar des fleurs. Utilise une boucle.
+      2-3 Bee Conditionals 3_instruction: Aide moi à récolter tout le nectar des fleurs et produire le miel. Utilise une boucle.
+      2-3 Bee Conditionals 4_instruction: Aide moi à récolter tout le nectar des fleurs et produire tout le miel.
       2-3 Bee Conditionals 5_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles ! Veille à ne pas butiner de fleur violette si elle n'en a pas. Vérifie si le nectar est égal à 1 à l'aide du bloc « si »."
       2-3 Bee Conditionals 6_instruction: "Vérifie cette fleur avec un bloc « si » pour voir s'il y a du nectar disponible."
       2-3 Bee Conditionals 7_instruction: Butine chaque fleur qui a du nectar.
-      2-3 Bee Conditionals 8_instruction: Ce champ possède des fleurs rouges et violettes. Les fleurs rouges ont une quantité connue de nectar, mais le nectar de la fleur violette est inconnue. Recueille tout le nectar.
-      2-3 Bee Conditionals 9_instruction: Recueille tout le nectar de chaque fleur.
-      2-3 Bee Conditionals Assessment 1_instruction: "Évaluation : Collecte tout le nectar. Veille à ne pas butiner de fleur pourpre, si elle n'en a pas."
-      2-3 Bee Debugging 1_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 10_instruction: "Ces blocs sont vraiment casse-pieds. Corriger la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 2_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 3_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 4_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 5_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel.  Tu peux maintenant utiliser exécuter et étape."
+      2-3 Bee Conditionals 8_instruction: Ce champ possède des fleurs rouges et violettes. Les fleurs rouges ont une quantité connue de nectar, mais la quantité de nectar de la fleur violette est inconnu. Récolte tout le nectar.
+      2-3 Bee Conditionals 9_instruction: Récolte tout le nectar de chaque fleur.
+      2-3 Bee Conditionals Assessment 1_instruction: "Évaluation : Récolte tout le nectar. Veille à ne pas butiner de fleur pourpre si elle n'a pas de nectar."
+      2-3 Bee Debugging 1_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 10_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 2_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 3_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 4_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 5_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel. Tu peux maintenant utiliser exécuter et étape.
       2-3 Bee Debugging 6_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel. "
-      2-3 Bee Debugging 7_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 8_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging 9_instruction: "Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Debugging Assessment 1_instruction: "Évaluation : Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de recueillir l'ensemble du nectar et faire tout le miel."
-      2-3 Bee Functions 1_instruction: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « obtenir 2 nectars » pour recueillir le nectar de chaque fleur.
-      2-3 Bee Functions 10_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar.  Crée une fonction qui recueille du nectar qu'à partir des fleurs violettes qui ont du nectar."
-      2-3 Bee Functions 2_instruction: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « obtenir 5 » pour obtenir 5 nectars à la fois. Veille aussi à utiliser une boucle pour obtenir un nombre de blocs idéal.
-      2-3 Bee Functions 3_instruction: Recueille tout le nectar de chaque fleur.
-      2-3 Bee Functions 4_instruction: "La fonction « déplacer et obtenir le nectar » déplace l'abeille, recueille le nectar et renvoie l'abeille à où elle a commencé. Utilise la fonction pour recueillir l'ensemble du nectar."
+      2-3 Bee Debugging 7_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 8_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging 9_instruction: Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.
+      2-3 Bee Debugging Assessment 1_instruction: 'Évaluation : Ces blocs sont vraiment casse-pieds. Corrige la ou les erreur(s) afin de récolter tout le nectar et produire tout le miel.'
+      2-3 Bee Functions 1_instruction: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « obtenir 2 nectars » pour récolter le nectar de chaque fleur.
+      2-3 Bee Functions 10_instruction: 'Les fleurs violettes peuvent avoir 1 ou 0 nectar.  Crée une fonction qui récolte du nectar seulement sur les fleurs violettes qui en ont.'
+      2-3 Bee Functions 2_instruction: Les fonctions sont des blocs de code qui effectuent une tâche. Utilise la fonction « obtenir 5 » pour récolter 5 nectars à la fois. Veille aussi à utiliser une boucle pour obtenir un nombre de blocs idéal.
+      2-3 Bee Functions 3_instruction: Récolte tout le nectar de chaque fleur.
+      2-3 Bee Functions 4_instruction: "La fonction « déplacer et obtenir le nectar » déplace l'abeille, récolte le nectar et renvoie l'abeille là où elle a commencé. Utilise la fonction pour récolter tout le nectar."
       2-3 Bee Functions 5_instruction: |
         Il y a maintenant plus de nectar dans les fleurs. 
         Modifie la fonction donnée afin qu'elle recueille 4 nectars et utilise-la pour recueillir l'ensemble du nectar des fleurs.
-      2-3 Bee Functions 6_instruction: Maintenant, utilise la même fonction pour recueillir le nectar des trois fleurs.
-      2-3 Bee Functions 7_instruction: "Les fleurs sont maintenant plus loin. Modifie la fonction donnée et utilise-la pour recueillir l'ensemble du nectar des fleurs."
-      2-3 Bee Functions 8_instruction: "Crée ta propre fonction qui obtient 7 nectar, se déplace vers l'avant et fait 7 de miel. Utilise cette fonction pour recueillir du nectar sur chaque fleur et faire du miel à chaque nid d'abeille."
-      2-3 Bee Functions 9_instruction: "Créer ta propre fonction qui descend un chemin, obtient du nectar, produit du miel, puis retourne l'abeille vers le haut du chemin."
-      2-3 Bee Functions Assessment 1_instruction: 'Évaluation : Utilise la fonction donnée pour recueillir le nectar de chaque fleur.'
-      2-3 Bee Functions Assessment 2_instruction: 'Évaluation : Crée une fonction pour faire 3 de miel à la fois.'
-      2-3 Bee Loops 1_instruction: 'Chaque fleur contient une unité de nectar. Recueille le nectar de chacune des fleurs. '
+      2-3 Bee Functions 6_instruction: Maintenant, utilise la même fonction pour récolter le nectar des trois fleurs.
+      2-3 Bee Functions 7_instruction: Les fleurs sont maintenant plus loin. Modifie la fonction donnée et utilise la pour récolter tout le nectar des fleurs.
+      2-3 Bee Functions 8_instruction: "Crée ta propre fonction qui récolte 7 nectars, se déplace vers l'avant et produit 7 miels. Utilise cette fonction pour récolter du nectar sur chaque fleur et faire du miel à chaque nid d'abeille."
+      2-3 Bee Functions 9_instruction: "Créer ta propre fonction qui descend un chemin, récolte du nectar, produit du miel, puis renvoie l'abeille vers le haut du chemin."
+      2-3 Bee Functions Assessment 1_instruction: 'Évaluation : Utilise la fonction donnée pour récolter le nectar de chaque fleur.'
+      2-3 Bee Functions Assessment 2_instruction: 'Évaluation : Crée une fonction pour produire 3 miels à la fois.'
+      2-3 Bee Loops 1_instruction: 'Chaque fleur contient une unité de nectar. Récolte le nectar de chacune des fleurs. '
       2-3 Bee Loops 10_instruction: |-
-        Peux-tu utiliser une boucle "tant que" à l'intérieur de deux autres boucles pour recueillir tout le nectar ?
-      2-3 Bee Loops 11_instruction: |-
-        Utilise des boucles "Tant que" pour recueillir l'ensemble du nectar des fleurs dans ce terrain.
-      2-3 Bee Loops 12_instruction: |-
-        Utilise des boucles "Tant que" pour recueillir l'ensemble du nectar des fleurs dans ce terrain.
-      2-3 Bee Loops 13_instruction: |-
-        Évaluation : Utiliser le bloc "répéter" pour recueillir l'ensemble du nectar.
-      2-3 Bee Loops 1A_instruction: "Salut, Je suis une abeille. Peut-tu m'aider à récolter le nectar de ces fleurs ? "
-      2-3 Bee Loops 2_instruction: Utilise une boucle pour recueillir le nectar et faire le miel.
-      2-3 Bee Loops 2A_instruction: Peut-tu faire la même action plus facilement avec une boucle ?
-      2-3 Bee Loops 3_instruction: "Récolte le nectar de chaque fleur et produit du miel à chaque nid d'abeille."
-      2-3 Bee Loops 3A_instruction: Peut-tu utiliser une boucle pour collecter tout ce nectar ?
-      2-3 Bee Loops 3B_instruction: 'Maintenant, utiliser un nouveau bloc "répéter" pour collecter tous le nectar et fabriquer tous le miel.'
-      2-3 Bee Loops 4_instruction: Utilisez une boucle semblable comme le dernier puzzle, mais rajoute un tour dedans.
-      2-3 Bee Loops 4A_instruction: "Que se passe-t-il si tu fait cette boucle en 3 séquence ? N'oublie pas de fabriquer le miel à la fin!"
-      2-3 Bee Loops 5_instruction: Utilise une boucle pour descendre les marches et recueillir le nectar.
-      2-3 Bee Loops 6_instruction: "Utilise une boucle pour recueillir le nectar de chaque fleur et faire du miel à chaque nid d'abeille."
-      2-3 Bee Loops 7_instruction: Met ces blocs dans une boucle pour recueillir le nectar de chaque fleur.
+        Peux-tu utiliser une boucle "tant que" à l'intérieur de deux autres boucles pour récolter tout le nectar ?
+      2-3 Bee Loops 11_instruction: 'Utilise des boucles "Tant que" pour récolter tous le nectar des fleurs dans ce terrain.'
+      2-3 Bee Loops 12_instruction: 'Utilise des boucles "Tant que" pour récolter tous le nectar des fleurs dans ce terrain.'
+      2-3 Bee Loops 13_instruction: 'Évaluation : Utiliser le bloc "répéter" pour récolter tous le nectar.'
+      2-3 Bee Loops 1A_instruction: "Salut, je suis une abeille. Peux-tu m'aider à récolter le nectar de ces fleurs ? "
+      2-3 Bee Loops 2_instruction: Utilise une boucle pour récolter le nectar et produire du miel.
+      2-3 Bee Loops 2A_instruction: Peux-tu faire la même action plus facilement avec une boucle ?
+      2-3 Bee Loops 3_instruction: "Récolte le nectar de chaque fleur et produit du miel dans chaque nid d'abeille."
+      2-3 Bee Loops 3A_instruction: Peux-tu utiliser une boucle pour collecter tout ce nectar ?
+      2-3 Bee Loops 3B_instruction: 'Maintenant, utilise un nouveau bloc "répéter" pour collecter tout le nectar et produire tout le miel.'
+      2-3 Bee Loops 4_instruction: Utilise une boucle semblable au dernier puzzle, mais rajoute un tour dedans.
+      2-3 Bee Loops 4A_instruction: "Que se passe-t-il si tu fais répéter cette séquence 3 fois ? N'oublie pas de produire le miel à la fin !"
+      2-3 Bee Loops 5_instruction: Utilise une boucle pour descendre les marches et récolter le nectar.
+      2-3 Bee Loops 6_instruction: "Utilise une boucle pour récolter le nectar de chaque fleur et produire du miel dans chaque nid d'abeille."
+      2-3 Bee Loops 7_instruction: Mets ces blocs dans une boucle pour récolter le nectar de chaque fleur.
       2-3 Bee Loops 8_instruction: |-
-        Ces fleurs ont une quantité inconnue de nectar. Utilise la boucle "tant qu'il y a du nectar"  pour recueillir l'ensemble du nectar. Cette boucle s'exécutera tant que la condition est vraie, dans ce cas Nectar > 0.
+        Ces fleurs ont une quantité inconnue de nectar. Utilise la boucle "tant qu'il y a du nectar" pour récolter l'ensemble du nectar. Cette boucle s'exécutera tant que la condition est vraie, dans ce cas Nectar > 0.
       2-3 Bee Loops 9_instruction: |-
-        La boucle "Tant que" peut exécuter la même action qu'une instruction "if" dans une boucle. Ajouter une boucle "Tant que" à ce code pour effectuer la même tâche.
-      2-3 Bee Loops Assessment 1_instruction: "Évaluation - utilise une boucle Tant Que pour recueillir l'ensemble du nectar de cette fleur."
-      2-3 Maze 1_instruction: "Peux-tu m'aider à attraper le cochon vilain ? Empile un ensemble de blocs « avancer » et appuie sur « Démarrer ». "
+        La boucle "Tant que" peut exécuter la même action qu'une instruction "Si" dans une boucle. Ajoute une boucle "Tant que" à ce code pour effectuer la même tâche.
+      2-3 Bee Loops Assessment 1_instruction: 'Évaluation - Utilise une boucle "Tant que" pour récolter tout le nectar de cette fleur.'
+      2-3 Maze 1_instruction: "Peux-tu m'aider à attraper le vilain cochon ? Empile un ensemble de blocs « avancer » et appuie sur « Démarrer ». "
       2-3 Maze 10_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
       2-3 Maze 11_instruction: "Amène-moi à la fleur, j'ai faim ! Combien de fois dois-tu répéter un bloc ?"
       2-3 Maze 12 (copy 1)_instruction: "Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Astuce : crée une boucle à l'aide d'un bloc « répéter N fois ».)"
       2-3 Maze 12 (copy 2)_instruction: "Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Astuce : crée une boucle à l'aide d'un bloc « répéter N fois ».)"
       2-3 Maze 12 (old)_instruction: |-
-        Emmène-moi jusqu'au cochon, en utilisant cette fois le bloc "Répéter plusieurs fois" !
+        Emmène moi jusqu'au cochon, en utilisant cette fois le bloc "Répéter plusieurs fois" !
       2-3 Maze 12_instruction: |
         Peux-tu remplacer ces 5 blocs avec seulement 2 blocs ?
-        (Astuce : créée une boucle avec le bloc "répéter plusieurs fois")
+        (Astuce : crée une boucle avec le bloc "répéter plusieurs fois")
       2-3 Maze 13 (old)_instruction: |-
-        Emmène-moi jusqu'au cochon, en utilisant cette fois le bloc "Répéter jusqu'à" !
-      2-3 Maze 13_instruction: "Emmène-moi jusqu'au cochon en utilisant seulement deux blocs."
+        Emmène moi jusqu'au cochon, en utilisant cette fois le bloc "Répéter jusqu'à" !
+      2-3 Maze 13_instruction: "Emmène moi jusqu'au cochon en utilisant seulement deux blocs."
       2-3 Maze 14 (old)_instruction: |-
-        Emmène-moi jusqu'au cochon en utilisant le bloc "Répéter jusqu'à" !
+        Emmène moi jusqu'au cochon en utilisant le bloc "Répéter jusqu'à" !
       2-3 Maze 14_instruction: |-
         Emmène-moi jusqu'au tournesol ! (où diable est ce bloc "Répéter plusieurs fois" lorsqu'on a besoin de lui ?)
       2-3 Maze 15 (old)_instruction: |-
-        Emmène-moi jusqu'au cochon en utilisant le bloc "Répéter jusqu'à" !
-      2-3 Maze 15_instruction: "Utilise deux boucles pour aller jusqu'au cochon en utilisant moins de boucles."
+        Emmène moi jusqu'au cochon en utilisant le bloc "Répéter jusqu'à" !
+      2-3 Maze 15_instruction: "Utilise deux boucles pour aller jusqu'au cochon en utilisant moins de blocs."
       2-3 Maze 16 (old)_instruction: |-
-        Emmène-moi jusqu'au cochon en utilisant le bloc "Répéter jusqu'à" !
+        Emmène moi jusqu'au cochon en utilisant le bloc "Répéter jusqu'à" !
       2-3 Maze 16 before_instruction: "Emmène-moi jusqu'au cochon."
-      2-3 Maze 16_instruction: "Emmène-moi jusqu'au tournesol. Fais tourner la séquence en boucle !"
-      2-3 Maze 2_instruction: "Ce cochon m'agace. Aide-moi à l'attraper !"
-      2-3 Maze 3_instruction: "Trace le chemin et conduit-moi jusqu'au vilain cochon.  Évite la TNT ou les plumes vont s'envoler!"
+      2-3 Maze 16_instruction: "Emmène moi jusqu'au tournesol. Fais tourner la séquence en boucle !"
+      2-3 Maze 2_instruction: "Ce cochon m'agace. Aide moi à l'attraper !"
+      2-3 Maze 3_instruction: "Suis le chemin et conduis moi jusqu'au vilain cochon. Évite la TNT ou les plumes vont voler!"
       2-3 Maze 4_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
       2-3 Maze 5_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
-      2-3 Maze 6_instruction: "Reste calme et aide moi a trouver ce cochon. Autrement je pourrais m'énerver!"
+      2-3 Maze 6_instruction: "Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!"
       2-3 Maze 7_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
-      2-3 Maze 8_instruction: "Amène moi jusqu'au cochon!"
+      2-3 Maze 8_instruction: "Amène moi jusqu'au cochon !"
       2-3 Maze 9_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
       2-3 Maze Loops 1_instruction: "Peux-tu m'amener au cochon en utilisant 5 blocs?"
-      2-3 Maze Loops 17_instruction: "Amène moi jusqu'au tournesol!"
-      2-3 Maze Loops 18_instruction: "Amène moi jusqu'au tournesol!"
-      2-3 Maze Loops 19_instruction: "Amène moi jusqu'au tournesol!"
-      2-3 Maze Loops 20_instruction: "Amène moi jusqu'au tournesol!"
-      2-3 Maze Loops 21_instruction: "Amène moi jusqu'au tournesol!"
-      2-3 Maze Loops Assessment 1_instruction: "Évaluation: amène moi jusqu'au tournesol en utilisant seulement 5 blocs! "
+      2-3 Maze Loops 17_instruction: "Amène moi jusqu'au tournesol !"
+      2-3 Maze Loops 18_instruction: "Amène moi jusqu'au tournesol !"
+      2-3 Maze Loops 19_instruction: "Amène moi jusqu'au tournesol !"
+      2-3 Maze Loops 20_instruction: "Amène moi jusqu'au tournesol !"
+      2-3 Maze Loops 21_instruction: "Amène moi jusqu'au tournesol !"
+      2-3 Maze Loops Assessment 1_instruction: "Évaluation : amène moi jusqu'au tournesol en utilisant seulement 5 blocs !"
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: "Emmène-moi jusqu'au cochon ! Quels blocs sont répétés ?"
-      2-3 Maze sq10v2_instruction: "Emmène-moi jusqu'au cochon ! Quels blocs sont répétés ?"
-      2-3 maze sq11_instruction: "Emmène-moi jusqu'au cochon ! Quels blocs sont répétés ?"
-      2-3 maze sq12_instruction: 'Pouvez-vous remplacer la réponse par une boucle en utilisant un bloc "répéter" ?'
+      2-3 Maze sq10_instruction: "Emmène moi jusqu'au cochon ! Quels blocs sont répétés ?"
+      2-3 Maze sq10v2_instruction: "Emmène moi jusqu'au cochon ! Quels blocs sont répétés ?"
+      2-3 maze sq11_instruction: "Emmène moi jusqu'au cochon ! Quels blocs sont répétés ?"
+      2-3 maze sq12_instruction: 'Peux-tu remplacer la réponse par une boucle en utilisant un bloc "répéter" ?'
       2-3 maze sq13_instruction: |
-        Cher humain. Moi zombie. Dois... obtenir... tournesol.
+        Cher humain. Moi zombie. Dois... aller... au tournesol.
         Crée boucle avec bloc "répéter jusqu'à".
       2-3 maze sq14_instruction: Peux-tu rejoindre le tournesol en utilisant uniquement quatre blocs ?
-      2-3 maze sq15_instruction: Pouvez-vous obtenir le tournesol en utilisant seulement cinq blocs ?
-      2-3 maze sq16_instruction: "OK, c'est similaire, mais légèrement différent. Peux-tu le faire en seulement cinq blocs ?"
-      2-3 Maze sq2_instruction: 'Suis le chemin et amène-moi à ce stupide cochon.  Évite la TNT ou les plumes vont voler !'
+      2-3 maze sq15_instruction: Peux-tu rejoindre le tournesol en utilisant seulement cinq blocs ?
+      2-3 maze sq16_instruction: "Ok, c'est similaire mais légèrement différent. Peux-tu le faire en seulement cinq blocs ?"
+      2-3 Maze sq2_instruction: 'Suis le chemin et amène moi à ce stupide cochon.  Évite la TNT ou les plumes vont voler !'
       2-3 Maze sq3_instruction: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
       2-3 Maze sq4_instruction: "Garde ton calme et aide-moi à trouver le méchant cochon. Dans le cas contraire, je pourrais m'énerver !"
-      2-3 Maze sq5_instruction: Envoie-moi sur le cochon ! Combien de fois dois-tu répéter un bloc ?
-      2-3 Maze sq6_instruction: "Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Astuce : crée une boucle à l'aide d'un bloc « répéter X fois ».)"
-      2-3 Maze sq7_instruction: "Emmène-moi jusqu'à l'intrus vert en utilisant seulement trois blocs."
+      2-3 Maze sq5_instruction: "Amène moi jusqu'au cochon ! Combien de fois dois-tu répéter un bloc ?"
+      2-3 Maze sq6_instruction: "Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Astuce : crée une boucle à l'aide d'un bloc « répéter plusieurs fois ».)"
+      2-3 Maze sq7_instruction: "Emmène moi jusqu'à l'intrus vert en utilisant seulement trois blocs."
       2-3 Maze sq8_instruction: |-
-        Emmène-moi jusqu'au cochon ! (Mais où est ce bloc "répéter" quand j'en ai besoin ?)
+        Emmène moi jusqu'au cochon ! (Mais où est ce bloc "répéter" quand j'en ai besoin ?)
       2-3 Maze sq9_instruction: Crée des boucles pour rejoindre le cochon en utilisant moins de blocs.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: "Aide l'oiseau à attraper le cochon en le déplaçant vers l'avant"
+      2-3level1_instruction: "Aide l'oiseau à attraper le vilain cochon en le déplaçant vers l'avant."
       4-5 Artist 1_instruction: 'Aide-moi à finir de dessiner ma boîte. (Chaque ligne est longue de 300 pixels.) '
       4-5 Artist 10_instruction: 'Appuie sur "Exécuter" pour tester ton code. Puis, répète-le assez de fois pour finir le dessin. Les couleurs seront différentes à chaque fois.'
       4-5 Artist 11_instruction: Complète les lignes vertes. Les lignes font 300 pixels de longueur et sont séparées par 15 pixels.
@@ -240,7 +238,7 @@ fr:
       4-5 Artist For Loops 4_instruction: "Complète le bloc «pour» pour qu'il compte de 1 à 10 par bonds de 1."
       4-5 Artist For Loops 6_instruction: Dessine des carrés avec des côtés de 50, 60, 70, 80 et 90 pixels. Tu devras utiliser la fonction «dessiner un carré» cinq fois.
       4-5 Artist For Loops 7_instruction: 'Dessine les mêmes carrés, mais utilise un bloc «compter avec» pour changer les tailles. Place le bloc «compteur» dans la fonction «dessiner une carré». Indice: Il est dans la catégorie Variables.'
-      4-5 Artist For Loops 8_instruction: Peux-tu compléter le programme en plaçant des blocs dans le bloc «pour» qui compte de 10 à 200 par bonds de 10? Tu peux trouver le bloc «pour» dans la catégorie Boucles.
+      4-5 Artist For Loops 8_instruction: Peux-tu compléter le programme en plaçant des blocs dans le bloc «pour» qui compte de 10 à 200 par bonds de 10 ? Tu peux trouver le bloc «pour» dans la catégorie Boucles.
       4-5 Artist For Loops 9_instruction: Ces cercles sont de taille 5, 10, 15, 20, 25, 30, et 35. Dessine les cercles en utilisant un bloc «pour».
       4-5 Artist Free Draw 1_instruction: Dessin libre! Dessine tout ce que tu souhaites créer.
       4-5 Artist Functions 1_instruction: Utiliser une boucle de répétition pour dessiner ce triangle.
@@ -279,10 +277,7 @@ fr:
       4-5 Artist Patterns 9.5_instruction: "Nous allons boucler ce code pour dessiner deux rangées d'hexagones. Observe comment notre deuxième rangée est décalée vers la droite."
       4-5 Artist Patterns 9_instruction: "Répétez maintenant ce code 3 fois pour dessiner la ligne entière. Rappelez-vous, chaque hexagone a 80 pixels de large de l'ultime point gauche à celle droite."
       4-5 Artist Patterns Free Play_instruction: 'Jeux gratuite - essaie de dessiner un modèle de votre choix!'
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Bee Conditionals - FC Test_instruction: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour voir si une fleur s'y cache. Si c'est le cas, alors tu peux recueillir son nectar."
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -343,7 +338,7 @@ fr:
       4-5 Maze 10_instruction: Peux-tu rejoindre le tournesol en utilisant uniquement quatre blocs ?
       4-5 Maze 11_instruction: Peux-tu aller au tournesol en utilisant uniquement six blocs?
       4-5 Maze 12_instruction: "OK, cette fois c'est un peu différent. Peux-tu y arriver en six blocs uniquement?"
-      4-5 Maze 13_instruction: "Amène moi jusqu'au cochon!"
+      4-5 Maze 13_instruction: "Amène moi jusqu'au cochon !"
       4-5 Maze 14_instruction: "Amène-moi au cochon! Utilise le bloc répéter jusqu'à."
       4-5 Maze 2 (copy 1)_instruction: Amène le zombie vers le tournesol, mais évite le gobeur!
       4-5 Maze 2_instruction: Amène le zombie vers le tournesol, mais évite le gobeur!
@@ -405,6 +400,11 @@ fr:
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings_moviebot_instruction: |
+        This level cloned from "U3 Digital Assistant
+        Target"
+      allthethings_template_backed1_instruction: 'Backed by a template #1'
+      allthethings_template_backed2_instruction: 'Backed by a template #2'
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -441,6 +441,7 @@ fr:
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: Utilise une boucle imbriquée pour compléter le dessin.
       Auto Open Function Editor_instruction: "Vous pouvez appeler des fonctions à partir d'autres fonctions ! En utilisant votre fonction Forme comme base, créez trois formes de maison, chacune 20 pixels plus grande que la précédente en commençant à 50 pixels de longueur. Utiliser une boucle avec compteur peut aider. "
+      Bee Recommended Blocks test_instruction: "Les fleurs violettes peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles ! Veille à ne pas butiner de fleur violette si elle n'en a pas. Vérifie si le nectar est égal à 1 à l'aide du bloc « si »."
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -593,12 +594,8 @@ fr:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: Cette abeille a beaucoup de travail à faire ! As-tu remarqué des modèles que tu pourrais utiliser pour simplifier ton code ?
+      Busy Bee_instruction: Cette abeille a beaucoup de travail à faire ! As-tu remarqué des modèles que tu pourrais utiliser pour simplifier ton code ?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -873,7 +870,7 @@ fr:
       Course 4 Artist 20_instruction: 'Encore envie de jouer ?  Voici une page vierge où tu peux créer tout ce que tu veux !'
       Course 4 Artist 3_instruction: 'Bon, essayez de comprendre ce qui arrivera si vous faites fonctionner ce code (ou appuyez sur "run" pour essayer). Ensuite, répétez-le suffisamment de fois pour terminer le dessin.'
       Course 4 Artist 4_instruction: 'Il y a combien de degrés dans un cercle? Remplissez le bloc "repeat" (répéter) avec ce numéro pour créer un cercle de couleurs. '
-      Course 4 Artist 5_instruction: "Dessinez l'autre moitié de cette conception pour qu'il soit symétrique. Les triangles sont équilatéraux sont de 50 pixels."
+      Course 4 Artist 5_instruction: "Dessine l'autre moitié de cette conception pour la rendre symétrique. Les triangles sont équilatéraux et sont de 50 pixels de côté."
       Course 4 Artist 6_instruction: |
         Complétez le code pour dessiner ces triangles-là.
         Indice: 3 triangles dans une rotation de 360 degrés.
@@ -890,10 +887,11 @@ fr:
       Course 4 Artist Binary 6_instruction: Quelle est la chaîne binaire la plus courte qui, répétée plusieurs fois, va dessiner cette image ?
       Course 4 Artist Binary 7_instruction: Finis ce dessin.
       Course 4 Artist Binary Free Play 2_instruction: 'Jeu libre : Pour dessiner, voici une canevas de plus haute résolution - 16 bits par 16 bits !'
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
+      Course 4 Artist Binary Free Play 2a_instruction: "Voici une toile de résolution plus élevée pour dessiner sur - 16 pixels par 16 pixels! \r \r \nEst-ce que tu vois ce qu'il se passe lorsque tu commences à faire preuve de créativité avec les bits ?"
+      Course 4 Artist Binary Free Play 2b_instruction: Clique ici pour avoir des conseils.
       Course 4 Artist Binary Free Play_instruction: 'Jeu libre : dessine ce que tu veux avec les binaires !'
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
+      Course 4 Artist Binary pre1_instruction: "Le binaire est une façon de représenter des informations en utilisant seulement deux valeurs.  Ici, nous allons utiliser les valeurs « éteint» (représenté par le chiffre 0) et « allumé» (représenté par le numéro 1).  \r \n\r \nNous t'avons fourni une grille de \"pixels\" que tu peux parcourir pour faire des dessins en allumant seulement certains carrés.  Peux-tu faire dessiner à l'artiste « 01010101 » en binaire sur la première rangée ?"
+      Course 4 Artist Binary ryan_instruction: "Le binaire est une façon de représenter des informations en utilisant seulement deux valeurs.  Ici, nous allons utiliser les valeurs « éteint» (représenté par le chiffre 0) et « allumé» (représenté par le numéro 1).  \r \n\r \nNous t'avons fourni une grille de \"pixels\" que tu peux parcourir pour faire des dessins en allumant seulement certains carrés.  Peux-tu faire dessiner à l'artiste « 01010101 » en binaire sur la première rangée ?"
       Course 4 Artist For  Functions 10_instruction: 'Plus difficile, peux-tu dessiner une étoile en utilisant la fonction "Tracer une ligne de carrés" ? Bonne chance !'
       Course 4 Artist For  Functions 11_instruction: 'Plus difficile, peux-tu dessiner une étoile en utilisant la fonction "Tracer une ligne de carrés" ? Bonne chance !'
       Course 4 Artist For Loops 1_instruction: 'Dessine ce triangle qui a des côtés de 50 pixels. Astuce : Utilise le bloc "Répéter".'
@@ -912,6 +910,7 @@ fr:
         Le premier fait 50 pixels de côté, le plus grand fait 300 pixels de côté et chaque carré est 25 pixels plus grand que le précédent. Je t'ai donné pratiquement toute la programmation dont tu auras besoin sauf pour un bloc. Lequel ?
       Course 4 Artist For Loops 5_instruction: 'Bon travail avec le dernier puzzle ! Utilisons ce bloc de variable "compteur" encore pour dessiner ce dessin cool. '
       Course 4 Artist For Loops 6_instruction: "Jeu libre! Essaie d'utiliser une boucle pour dessiner une suite de formes grandissantes de ton choix."
+      Course 4 Artist For Loops 6a_instruction: Effectue trois petits changements dans le code du niveau précédent pour y arriver !
       Course 4 Artist For Loops 7_instruction: 'Que se passe-il si tu enlèves le "Répète 3 fois" de cette algorithme, en gardant les blocs "bouge" et "tourne" dans la boucle ? Dans ce triangle en spirale, chaque côté a 20 pixels de plus que le précédent.'
       Course 4 Artist For Loops 8_instruction: La plus petite ligne des spirales carrées est de 10, la plus grande de 200 et chaque ligne est 10 pixels plus grande que la précédente. Peux-tu compléter les blocs manquants pour terminer cette magnifique image ?
       Course 4 Artist For Loops 8a_instruction: La plus petite ligne des spirales carrées est de 10, la plus grande de 200 et chaque ligne est 10 pixels plus grande que la précédente. Peux-tu compléter les blocs manquants pour terminer cette magnifique image ?
@@ -921,17 +920,11 @@ fr:
       Course 4 Artist Functions 1_instruction: Peux-tu dessiner un carré qui a 100 pixels de côté en utilisant une boucle ?
       Course 4 Artist Functions 10_instruction: "De quel bloc as-tu besoin d'ajouter pour que le triangle soit sur le dessus du carré ?"
       Course 4 Artist Functions 11_instruction: 'Regarde ce code qui dessine un cube - peux-tu le déplacer dans une fonction appelée "Dessine un cube"'
-      Course 4 Artist Functions 12.1_instruction: |
-        Let's create a function called
-        "draw an octagon 20" that draws an octagon where each side is 20 pixels
-        long.
+      Course 4 Artist Functions 12.1_instruction: 'Créons une fonction appelée "dessiner un octogone 20" qui dessine un octogone où chaque côté fait 20 pixels de long.'
       Course 4 Artist Functions 12_instruction: Bouclez la fonction de carré pour dessiner une ligne
-      Course 4 Artist Functions 13.1_instruction: "Now, let's make a function called\n\"jump to upper right\" that moves the artist to the upper-right of the octagon\nthat you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself\nto the upper-right corner, try jumping in a pattern that makes just 3/8 of\nthe octagon."
-      Course 4 Artist Functions 13_instruction: "Vérifiez dehors nous avons une nouvelle fonction appelée « tracer une ligne de carrés ». N'hésitez pas à jeter un oeil à l'intérieur du bloc de fonction pour voir comment nous avons le construit. Cliquez sur « Exécuter » lorsque vous êtes prêt pour le prochain casse-tête."
-      Course 4 Artist Functions 14.1_instruction: |
-        Now, let's make a function called
-        "jump to upper right" that moves the artist to the top-right of the octagon
-        that you just drew so we can finish this pattern.
+      Course 4 Artist Functions 13.1_instruction: "Maintenant, créons une fonction appelée « sauter en haut à droite » qui déplace l'artiste en au haut à droite de l'octogone que tu viens de dessiner, afin de terminer ce modèle. \r \n\r \nAstuce : pour te déplacer jusqu'à l'angle supérieur droit, essaye de sauter dans un modèle qui fait juste 3/8 de l'octogone."
+      Course 4 Artist Functions 13_instruction: "Nous avons une nouvelle fonction appelée « tracer une ligne de carrés ». N'hésite pas à jeter un oeil à l'intérieur du bloc de cette fonction pour voir comment nous l'avons construite. Clique sur « Exécuter » lorsque tu es prêt pour la prochaine énigme."
+      Course 4 Artist Functions 14.1_instruction: "Maintenant, créons une fonction appelée « sauter en haut à droite » qui déplace l'artiste en au haut à droite de l'octogone que tu viens de dessiner, afin de terminer ce modèle."
       Course 4 Artist Functions 14_instruction: "Vous faites un bon travail ! Allons y utiliser votre nouvelle fonction de « Tracer une ligne de carrés » pour dessiner une forme carrée. N'oubliez pas que chaque carré est de 40 pixels de longueur."
       Course 4 Artist Functions 15_instruction: "Allons y l'intensifier un peu, pouvez-vous dessiner une forme d'étoile à l'aide de la fonction de « tracer une ligne de carrés » ? Bonne chance! Remarque : vous devrez peut-être tourner 144 degrés"
       Course 4 Artist Functions 2_instruction: 'Peux-tu dessiner 3 carrés avec 20 pixels de distance entre chaque carré ? Astuce : chaque carré a une taille de 100 pixels'
@@ -944,12 +937,8 @@ fr:
       Course 4 Artist Functions 7_instruction: Peux-tu dessiner une ligne de carrés en utilisant une fonction Carré ? Chaque carré a 40 pixels de longueur.
       Course 4 Artist Functions 8_instruction: "Avez-vous compris l'utilisation des blocs de fonction ? Modifions ce carré afin qu'il ait une taille de 200 pixels. Astuce : cliquez sur « modifier » pour modifier la taille dans l'éditeur de la fonction « dessiner un carré ». N'oubliez pas de cliquer sur « enregistrer et fermer » pour sortir de l'éditeur de fonction. "
       Course 4 Artist Functions 9_instruction: Nous vous avons donné presque tout le code pour créer une fonction. Cependant, il semble manquer quelque chose. Pouvez-vous terminer ce bloc fonction ?
-      Course 4 Artist Functions challenge_instruction: |
-        Click here to see the hints
-        again.
-      Course 4 Artist Functions Inspiration_instruction: |
-        Click here to see the hints
-        again.
+      Course 4 Artist Functions challenge_instruction: Clique ici pour revoir les astuces.
+      Course 4 Artist Functions Inspiration_instruction: Clique ici pour revoir les astuces.
       Course 4 Artist Functions inspire_instruction: "Appuies ici pour voir l'image d'inspiration de nouveau."
       Course 4 Artist Inspire_instruction: "Vous voulez un deuxième coup d'oeil au\nmodèle ou des conseils?  Cliquez ici!\r\n\r\nSinon, fabriquer un des vôtres!"
       Course 4 Artist Params 1_instruction: Nous allons éditer une fonction qui dessine un carré de côté 50 pixels
@@ -991,8 +980,7 @@ fr:
         Voici un algorithme qui dessine un triangle à partir de triangles plus petits. Peux-tu le modifier pour qu'il utilise la variable "côtés" pour dessiner chaque triangle? Parcours le code, et à chaque fois que tu vois le nombre 3, remplace le avec ta variable "côtés". Souviens-toi d'utiliser le bloc "set sides".
       Course 4 Artist Vars 11_instruction: 'Voici le même algorithme que celui que nous avons créé pour le dernier puzzle - quelle valeur dois-tu attribuer à la variable "côtés" pour dessiner cette image de carrés?'
       Course 4 Artist Vars 12_instruction: "Maintenant affectons la variable « côtés » à la valeur 5. Plus nous ajoutons de côtés à cet algorithme, plus le motif global devient grand ! Nous allons ajouter une nouvelle variable appelée « longueur » et l'utiliser partout où tu utilises un « avancer ». Affecte la variable « longueur » à 75 pour cette forme."
-      Course 4 Artist Vars 13_instruction: |-
-        Plus une forme a de côtés, plus chaque côté doit être court afin que le modèle entier s'adapte à l'écran. Au lieu d'attribuer la variable "longueur" manuellement, utillisons la variable "côtés" ry un bloc de math pour déterminer la variable "longueur". Choisis l'équation correcte dans la boîte à outils pour définir la variable "longueur",  et pour mettre à jour la varaible "côtés".
+      Course 4 Artist Vars 13_instruction: "Quand une forme a beaucoup de côtés, chaque côté doit être plus court si tu veux que toute la forme rentre dans l'écran.\n\r\nNous allons recréer l'algorithme pour cette forme incroyable, mais au lieu de régler manuellement la variable « longueur », nous allons utiliser un bloc math avec la variable \"côtés\" à l'intérieur pour s'assurer que chaque forme s'adapte correctement. Le périmètre de chaque polygone est de 300 pixels.\r\nBesoin de quelques conseils ?  Clique ici."
       Course 4 Artist Vars 14_instruction: 'Jeu gratuit: vérifie-le, maintenant ton algorithme est niché dans ue boucle de plus. Essaie de changer le variables de tes variables pour dessiner de jolis modèles.'
       Course 4 Artist Vars 2_instruction: 'Au lieu de « avancer de 100 », le bloc « avancer » fait maintenant référence à la variable "longueur". Peux-tu affecter « longueur » à 150 pour dessiner ce nouveau triangle ?'
       Course 4 Artist Vars 3_instruction: |-
@@ -1044,9 +1032,7 @@ fr:
       Course 4 Bee Params 3_instruction: |-
         Il y a maintenant des fleurs des deux côtés ! J'ai rajouté un paramètre appelé "direction " à la fonction. Utilise les variables "gauche " et "droite" pour contrôler la direction. Remplis le reste de la définition de la fonction et clique "enregistrer et fermer"
       Course 4 Bee Params 4 (copy 1)_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter toutes les fleurs. Rappelle-toi, 0 = gauche et 1 = droite."
-      Course 4 Bee Params 4 - Two WhenRun_instruction: |
-        Try using your new function
-        to collect all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter toutes les fleurs. Rappelle toi d'utiliser les variables gauche et droite."
       Course 4 Bee Params 4 backup_instruction: |-
         Est-ce que cela ne serait pas bien si nous pouvions collecter tous ces nectars avec une seule fonction ? Essaie d'ajouter un npiveau paramètre à ta fonction appelé "nectars" pour contrôler le volume de nectar à collecter. Tu voudras probablement renommer la fonction aussi ! 
       Course 4 Bee Params 4_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter toutes les fleurs. Rappelle-toi que tu dois utiliser les variables gauche et droite."
@@ -1057,21 +1043,10 @@ fr:
         Tu voudras probablement renommer la fonction aussi !
       Course 4 Bee Params 7 (copy 1)_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter tout ce nectar. "
       Course 4 Bee Params 7_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter tout ce nectar."
-      Course 4 Bee Params 8 Clone 2_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 clone 3_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 Clone_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 new_instruction: |
-        Oooh, now there's honey to deal with
-        too! How could you update your function to either get nectar or make honey.
+      Course 4 Bee Params 8 Clone 2_instruction: "Oh non, il faut aussi s'occuper du miel ! Comment peux-tu modifier la fonction pour soit récolter du nectar, soit produire du miel."
+      Course 4 Bee Params 8 clone 3_instruction: "Oh non, il faut aussi s'occuper du miel ! Comment peux-tu modifier la fonction pour soit récolter du nectar, soit produire du miel."
+      Course 4 Bee Params 8 Clone_instruction: "Oh non, il faut aussi s'occuper du miel ! Comment peux-tu modifier la fonction pour soit récolter du nectar, soit produire du miel."
+      Course 4 Bee Params 8 new_instruction: "Oh non, il faut aussi s'occuper du miel ! Comment peux-tu modifier la fonction pour soit récolter du nectar, soit produire du miel."
       Course 4 Bee Params 8_instruction: "Oh non, il faut aussi s'occuper du miel ! Comment peux-tu mettre à jour la fonction pour soit collecter du nectar soit faire du miel."
       Course 4 Bee Params Ex_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter tout ce nectar."
       Course 4 Binary 1_instruction: Voilà une fonction qui utilise une suite binaire de 1 et de 0 et donne comme instructions au fermier de se déplacer de gauche à droite, du haut vers le bas et de retourner les carrés ou il y a un zéro. Exécute le code fourni pour voir comment le fermier utilise le binaire pour dessiner une image.
@@ -1083,6 +1058,13 @@ fr:
       Course 4 Binary 6_instruction: Quelle chaîne binaire, répétée 10 fois, dessinera cette image ?
       Course 4 Binary 7_instruction: Quelle chaîne binaire, répétée 10 fois, dessinera cette image ?
       Course 4 Binary 8_instruction: "Tu peux compléter la plus grande partie de cette image en répétant un nombre binaire de 5 bits - ensuite, tu auras besoin d'un nombre de 4 bits pour compléter le coin en bas à droite."
+      Course 4 EC 1a_instruction: "Pas de règle. Pas d'indice. Juste le Challenge !"
+      Course 4 EC 1b_instruction: "Pas de règle. Pas d'indice. Juste le Challenge !"
+      Course 4 EC 2a_instruction: "** Challenge extrême : ** pas de règle. Pas d'indice. Juste le Challenge !"
+      Course 4 EC 2b_instruction: "** Challenge extrême : ** pas de règle. Pas d'indice. Juste le Challenge !"
+      Course 4 EC 2c_instruction: "** Challenge extrême : ** pas de règle. Pas d'indice. Juste le Challenge !"
+      Course 4 EC 3_instruction: 'Utilise ce que tu as appris dans le niveau précédent pour dessiner une image comme celle là. Remarque : Le code devient plus simple si tu incorpores des paramètres. '
+      Course 4 EC 3a_instruction: "Challenge extrême : Pas de règle. Pas d'indice. Juste le Challenge !"
       Course 4 Maze 1_instruction: "Amène angry bird jusqu'au cochon !"
       Course 4 Maze 2_instruction: Évitez la TNT!
       Course 4 Maze 3_instruction: "Programme angry bird pour quail arrive jusqu'au cochon. "
@@ -1104,17 +1086,18 @@ fr:
         Voilà une fonction appelée "patrouille".
         Edite-la pour déplacer le chat de 400 pixels vers le haut puis 400 pixels vers le bas.
       Course 4 Play Lab Params 5_instruction: 'Renseigne les données du paramètres "acteur" pour que nous puissions appeler la fonction "patrouille" pour chaque acteur. Rappelle toi, les acteurs ont les numéros 1, 2 et 3.'
-      Course 4 Play Lab Params 6_instruction: 'Rajoute un autre paramètre appelé "vitesse" à la fonction "patrouille". Utilise le block "fixer la vitesse" avec le nouveau paramètre "vitesse".'
+      Course 4 Play Lab Params 6_instruction: "Ajoute un autre paramètre intitulé « vitesse » à la fonction « patrouiller ». Essaye d'utiliser un bloc « régler la vitesse » avec le nouveau paramètre « vitesse » pour aider les pingouins à obtenir les deux drapeaux avant que les autres lutins n'en obtienne un seul."
       Course 4 Play Lab Params 7_instruction: Utilisez les touches fléchées pour contrôler le chien et collecter tous les drapeaux.
       Course 4 Play Lab Params 8_instruction: |-
         Utilise un bloc "si touché" pour renvoyer le chien en haut à gauche s'il touche un des personnages.
-      Course 4 Play Lab Params 9_instruction: 'Voici un des jeux sur lesquels nous avons travaillé sur plus tôt. Nous avons ajouté une fonction appelée « score_points » qui prend un paramètre « points. » Modifiez la fonction de sorte que le paramètre « points » soit ajouté à la variable « player_points ». Faites marquer 10 points par le chien pour passer au puzzle suivant. '
-      Course 4 Play Lab Vars 1_instruction: Pas besoin de coder, appuyez simplement sur « exécuter » pour jouer au jeu ! Dans ce jeu, vous êtes le chien qui tente de récolter plus de drapeaux que le chat. Utilisez la flèche vers le bas pour contrôler le chien. Appuyez sur « Terminer » lorsque vous avez terminé de jouer.
+      Course 4 Play Lab Params 9_instruction: "Voici notre jeu à un stade plus précoce, mais la plupart du code est masqué. Il existe une nouvelle fonction « marquer_points ». \r\n \r\nModifie la fonction afin qu'un paramètre \"points\" soit ajouté à la variable \"score_joueur\". \r\n\r\nLa variable \"score_joueur\" devrait augmenter chaque fois que Dog touche Chat et diminuer chaque fois que Cat touche Dog. \r\n\r\nRemarque : lorsque tu as terminé, clique sur \" Démarrer \" pour jouer.  Lorsque Dog inscrit 6 points, tu passeras au puzzle suivant. "
+      Course 4 Play Lab Vars 1_instruction: Pas besoin de coder, appuie simplement sur « exécuter » pour jouer au jeu ! Dans ce jeu, tu es le chien qui tente de récolter plus de drapeaux que le chat. Utilise la flèche vers le bas pour contrôler le chien. Appuie sur « Terminer » lorsque tu as terminé de jouer.
       Course 4 Play Lab Vars 2_instruction: "Cette course n'était pas très juste ! Changez la variable « dog_speed » pour s'assurer que vous pouvez collecter plus de drapeaux que le chat. Le premier à récolter 10 drapeaux gagne !"
       Course 4 Play Lab Vars 3_instruction: Voici un nouveau type de jeu ! Utilisez les flèches gauche et droite pour se déplacer et la flèche haut pour sauter. Essayez de récolter tous les drapeaux.
       Course 4 Play Lab Vars 4_instruction: 'Maintenant, nous utilisons une variable appelée « hauteur » pour contrôler à quelle hauteur le chien peut sauter. Mettez à jour la variable « hauteur » pour que le chien puisse sauter assez haut pour atteindre tous les drapeaux. Astuce : les nouveaux drapeaux ont 200 pixels de haut.'
       Course 4 Play Lab Vars 5_instruction: "Nous allons construire un jeu ! Tout d'abord nous aurons besoin d'un score. Le bloc de « régler les points à » permet de régler le score à 10. "
-      Course 4 Play Lab Vars 6 (copy 1)_instruction: "Cool, maintenant nous avons notre variable de score, mais comment allons-nous la rendre utile ? Que diriez-vous d'ajouter des points à votre variable de score chaque fois que vous frappez l'ennemi avec une boule de feu ? Utilisez l'événement « quand acteur 2 touche quoi que ce soit » pour déclencher une mise à jour de votre score lorsque vos boules de feu frappent le chat. Vous pouvez incrémenter le score en définissant score = score + 1. Augmentez votre score jusqu'à 10 (1 point à la fois !) pour passer le niveau."
+      Course 4 Play Lab Vars 6 (copy 1)_instruction: |-
+        Chouette, maintenant nous avons notre variable de score, mais comment allons-nous la rendre utile ? Et si on ajoutait des points à la variable de pointage à chaque fois que tu frappes l'ennemi avec une boule de feu ? Utilise l'événement « quand acteur 2 touche quoi que ce soit » pour déclencher une mise à jour de ton score lorsque tes boules de feu frappent le chat. Tu peux incrémenter le pointage en définissant "points = points +1". Augmente ton pointage jusqu'à 10 (1 point à la fois !) pour passer le niveau.
       Course 4 Play Lab Vars 6_instruction: |
         Dans notre jeu, comment comptons-nous les points ?
         Ajoute 1 à la variable "points" chaque fois que le chien touche le chat avec une boule de feu. Utilise l'évènement "quand le personnage 2 touche quelque chose" pour déclencher une mise à jour de ton score. Tu peux incrémenter ta variable en paramétrant "points = points +1."
@@ -1141,18 +1124,33 @@ fr:
         Tu te souviens qu'un nombre premier est un nombre entier qui n'est divisible que par lui-même. Utilise la fonction "est_nombrepremier" pour enoncer seulement les nombres premiers de 1 à 100.
       Course 4 Play Labs For Loops 6a_instruction: "Le chien va quand même chronométrer en comptant\navec notre \"boucle pour\" en utilisant l' \"incrément\", mais cette fois, on va ajouter Le Magicien à l'intérieur du mix. Peux-tu changer le code pour que cet \"incrément\" aille en haut de deux chaque fois que tu appuies sur Le Magicien?\r\n\r\nFais attention! Le Magicien bouge rapidement!"
       Course 4 Play Labs For Loops 7_instruction: "Pourrais-tu utiliser une boucle « Répéter » pour m'aider à dire la séquence 1, 4, 7, 10, 13, 16, 19, 22, 25 ?"
-      Course 4 Play Labs For Loops 7a_instruction: "C'est maintenant qu'on arrive quelque part! Et\nsi on commençait à compter combien de fois on peut cliquer sur Le Magicien avant que le chien arrive à 30?  \r\n\r\nTermines d'ajouter les blocs au Magicien pour que chaque fois qu'il ait cliqué, la variable \"cliqué\" augmente de un. Tu peux ignorer \"incrément\" pour l'instant.\r\n\r\nDog va commencer à compter lorsque tu cliques sur \"Exécuter\"."
+      Course 4 Play Labs For Loops 7a_instruction: "C'est maintenant qu'on arrive quelque part! Et\nsi on commençait à compter combien de fois on peut cliquer sur Le Magicien avant que le chien arrive à 30?  \r\n\r\nContinue d'ajouter les blocs au Magicien pour que chaque fois qu'il est cliqué, la variable \"cliqué\" augmente de un. Tu peux ignorer \"incrément\" pour l'instant.\r\n\r\nDog va commencer à compter lorsque tu cliqueras sur \"Exécuter\"."
       Course 4 Play Labs For Loops 8_instruction: Quelle boucle « Répéter » me ferais dire 19, 27, 35, 43, 51 ?
-      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1) Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
-      Course 4 SCV 1_instruction: Click here to view the instructions again.
-      Course 4 SCV 2_instruction: Click here to view the instructions again.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary to make this game work the way it's been explained.  How will you\nget Dog to move in all directions using the arrow keys?  How will you add\npoints when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand Penguin touch?"
-      Course 4 SCV 4_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
+      Course 4 Play Labs For Loops 8a_instruction: "Pour terminer notre jeu, nous avons besoin de ramener la variable « incrément» ! Rattachons le au niveau de jeu. \r \n\r \n1) Conserve le nombre de fois où le magicien est cliqué. \r\n2) Si le magicien est cliqué au moins 10 fois avant que le chien compte jusqu'à 30, augmente « incrément » de 1 et recommence. \r\n3) Si le magicien n'est pas cliqué au moins 10 fois, le jeu est fini."
+      Course 4 SCF 1_instruction: "Utilise les fonctions proposées pour dessiner quatre rangées d'hexagones. Tu remarques que nos lignes paires sont décalées vers la droite ?"
+      Course 4 SCF 1a_instruction: Peux-tu trouver comment récolter tout ce nectar en utilisant le moins de blocs possible ?
+      Course 4 SCF 1b_instruction: Peux-tu trouver comment récolter tout ce nectar en utilisant le moins de blocs possible ?
+      Course 4 SCF 2_instruction: 'Utilise ce que tu as appris dans le niveau précédent pour dessiner une image comme celle là. Remarque : Le code devient plus simple si tu incorpores des paramètres. '
+      Course 4 SCF 3 Fail 1_instruction: Peux-tu trouver comment ...
+      Course 4 SCF 3 Fail 2_instruction: Peux-tu trouver comment ...
+      Course 4 SCF 3_instruction: 'Utilise ce que tu as appris dans le niveau précédent pour dessiner une image comme celle là. Remarque : Le code devient plus simple si tu incorpores des paramètres. '
+      Course 4 SCFL 1_instruction: Résous ce puzzle en utilisant le moins de blocs possible.
+      Course 4 SCFL 1a_instruction: Peux-tu emmener Skrat à son gland en utilisant le moins de blocs possible ?
+      Course 4 SCFL 1b_instruction: Peux-tu emmener Skrat à son gland en utilisant le moins de blocs possible ?
+      Course 4 SCFL 2_instruction: Résous ce puzzle en utilisant le moins de blocs possible.
+      Course 4 SCFL 3_instruction: Peux-tu trouver comment recréer ce dessin ?
+      Course 4 SCFL 4_instruction: Peux-tu trouver comment recréer ce dessin ?
+      Course 4 SCFL 5_instruction: Peux-tu trouver comment recréer ce dessin ?
+      Course 4 SCFL 6_instruction: Peux-tu trouver comment récréer ce dessin avec une seule boucle ?
+      Course 4 SCFL 7_instruction: "L'Artiste veut attraper quelques vagues ! Peux-tu trouver comment recréer ce dessin ?"
+      Course 4 SCFP 1_instruction: "Crée une fonction avec des paramètres qui permettent à l'Artiste de sauter vers l'avant ou l'arrière de x pixels, et aussi vers le haut ou le bas de y pixels (en utilisant les nombres positifs et négatifs)."
+      Course 4 SCV 1_instruction: Clique ici pour revoir les instructions.
+      Course 4 SCV 2_instruction: Clique ici pour revoir les instructions.
+      Course 4 SCV 3_instruction: "Maintenant on joue à chat !  Touche le chat pour marquer 2 points. Touche le pingouin pour marquer 3 points.  Cumule 10 points pour gagner ! \r\nMais attention lorsque le chat et le pingouin se touchent, ils enlèvent des points. \r\n \r\nAjoute les blocs nécessaires pour faire fonctionner ce jeu tel qu'expliqué.  Comment feras-tu en sorte que le chien se déplace dans toutes les directions en utilisant les touches fléchées ?  Comment feras-tu pour ajouter des points lorsque le chien touche le chat ou le pingouin ?  Comment soustrairas tu les points quand le chat et le pingouin se touchent ?"
+      Course 4 SCV 4_instruction: Résous ce puzzle en utilisant le moins de blocs possible.
+      Course 4 SCV 5_instruction: Résous ce puzzle en utilisant le moins de blocs possible.
+      Course 4 SCV 6_instruction: Clique ici pour revoir les instructions.
+      Course 4 SCVP 1_instruction: "Crée une fonction avec des paramètres qui permettent à l'Artiste de sauter vers l'avant ou l'arrière de x pixels, et aussi vers le haut ou le bas de y pixels (en utilisant les nombres positifs et négatifs)."
       Course 4 Variables Assessment_instruction: Peux-tu créer cette image en utilisant une variable pour les côtés ? Chaque ligne doit faire 50 pixels de long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
@@ -1402,10 +1400,11 @@ fr:
       frozen circle_instruction: "Un cercle est une forme spéciale. Peux-tu trouver par quel nombre remplacer le point d'interrogation pour dessiner un cercle ?"
       frozen cross rotate dense_instruction: "Nous allons le répéter 90 fois ! Combien de fois 90 rentre dans 360 ? Indice : C'est un très petit nombre."
       frozen cross rotate_instruction: Maintenant, essaie de le répéter 10 fois. De combien de degrés dois-tu tourner entre chaque ligne ?
-      frozen cross_instruction: "Utilise le bloc « Répéter » pour créer un signe plus. As-tu remarqué qu'Elsa peut se déplacer vers l'avant et vers l'arrière ?"
+      frozen cross_instruction: "Place un bloc « Répéter » autour de ces commandes pour créer un signe plus. As-tu remarqué que Elsa peut se déplacer vers l'avant et vers l'arrière ?"
       frozen diamond mini snowflake_instruction: Savais-tu que chaque flocon de neige a une forme différente ? Nous allons créer un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 4 fois, en tournant à droite de 90 degrés entre chaque parallélogramme.
       frozen diamond snowflake_instruction: "Maintenant, nous allons créer un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 10 fois, en tournant à droite par 36 degrés entre chacun d'eux."
-      frozen diamond_instruction: 'Nous allons créer un parallélogramme. Ça ressemble à un carré, mais avec des angles différents : les angles sont de 60 et 120 degrés au lieu de 90 degrés.'
+      frozen diamond_instruction: |-
+        Utilise un "Répéter" autour de ces blocs pour créer un parallélogramme. C'est comme un rectangle, mais les angles sont différents. Celui-ci a des angles de 60 degrés et 120 degrés au lieu d'avoir tous les angles à 90 degrés.
       frozen freeplay_instruction: "Tu es officiellement devenu un maître de l'art ! Crée un paradis d'hiver."
       frozen line_instruction: "Salut ! Je suis Elsa d'Arendelle. Aide-moi à créer une ligne."
       frozen perpendicular_instruction: Maintenant, voyons si nous pouvons créer deux lignes qui ont un angle de 90 degrés entre elles. Tu devras utiliser le bloc « Tourner » ainsi que le bloc « Avancer ».
@@ -1527,24 +1526,25 @@ fr:
       K-1 maze debug 8_instruction: "Débogue ce niveau en réorganisant et en ajoutant des blocs afin de m'amener au cochon !"
       K-1 maze debug 9_instruction: "Débogue ce niveau en réorganisant et en ajoutant des blocs afin de m'amener au cochon !"
       K-1 Maze debug Assessment 1_instruction: "Évaluation -- Débogue ce niveau en réorganisant et en ajoutant des blocs afin de m'amener au cochon !"
-      K-1 Maze Loops 1_instruction: "Amène moi jusqu'au cochon!"
+      K-1 Maze Loops 1_instruction: "Amène moi jusqu'au cochon !"
       K-1 Maze Loops 10_instruction: Amène-moi au cochon ! Utilise la boucle.
       K-1 Maze Loops 11_instruction: Amène-moi au cochon ! Utilise la boucle.
       K-1 Maze Loops 12_instruction: Amène-moi au cochon ! Utilise la boucle.
       K-1 Maze Loops 2_instruction: "Utilise le bloc Répéter pour m'amener au cochon !"
       K-1 Maze Loops 3_instruction: Amène-moi au cochon ! Utilise la boucle.
-      K-1 Maze Loops 4_instruction: "Amène moi jusqu'au cochon!"
+      K-1 Maze Loops 4_instruction: "Amène moi jusqu'au cochon !"
       K-1 Maze Loops 5_instruction: Amène-moi au cochon ! Utilise la boucle.
       K-1 Maze Loops 6_instruction: Amène-moi au cochon ! Utilise la boucle.
       K-1 Maze Loops 7_instruction: Amène-moi au cochon ! Utilise la boucle.
       K-1 Maze Loops 8_instruction: Amène-moi au cochon ! Utilise la boucle.
-      K-1 Maze Loops 9_instruction: "Amène moi jusqu'au cochon!"
+      K-1 Maze Loops 9_instruction: "Amène moi jusqu'au cochon !"
       K-1 Maze Loops Assessment 1_instruction: "Évaluation -- Utilise des boucles pour m'amener au cochon !"
       K-1 Maze Loops Assessment 2_instruction: "Évaluation -- Utilise des boucles pour m'amener au cochon !"
       K-1 Maze Multi 14_instruction: "Niveau d'évaluation"
       K-1 Maze Multi 15_instruction: "Niveau d'évaluation"
       K-1 Maze Sequence Assessment 1_instruction: "Ceci est un test ! \r Déplace-moi dans une direction, puis dans une autre direction pour m'amener au cochon"
       K-1 Maze Sequence Assessment 2_instruction: "Ceci est un test ! \r Déplace-moi dans une direction, puis dans une autre direction pour m'amener au cochon."
+      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -1718,9 +1718,7 @@ fr:
         with a router, and explores issues in routing and DNS
       New Artist Project_instruction: Dessiner quelque chose de génial ! Votre code est enregistré comme un projet dont vous pouvez y revenir à tout moment.
       NEW Course 4 Artist Functions 1_instruction: Peux-tu dessiner un carré de 100 pixels de côté en utilisant une boucle ?
-      NEW Course 4 Artist Functions 10.1_instruction: |
-        Use the functions from the
-        previous puzzles to draw this pattern.
+      NEW Course 4 Artist Functions 10.1_instruction: Utilise les fonctions du puzzle précédents pour dessiner ce modèle.
       NEW Course 4 Artist Functions 10_instruction: 'Clique sur "edit" pour remplir les blocs dans la définition de la fonction pour dessiner un carré de 40 pixels.'
       NEW Course 4 Artist Functions 11_instruction: |-
         Nous avons une nouvelle fonction appelée "dessine une ligne de carrés". N'hésite pas à regarder à l'intérieur du bloc de la fonction pour voir comment elle est construite. Clique sur "Exécuter" quand tu es prêt pour le prochain puzzle.
@@ -1732,7 +1730,7 @@ fr:
         Voici un nouveau type de bloc. Il s'appelle un "bloc de fonction". Clique sur "Exécuter" pour voir ce qu'il peut faire. 
       NEW Course 4 Artist Functions 4_instruction: 'Utilise la fonction "dessiner un carré" pour dessiner ce modèle. Remarque: Tu devras utiliser un bloc "tourner à droite de 120 degrés" après chaque carré.'
       NEW Course 4 Artist Functions 5_instruction: |-
-        Comment le bloc "dessiner un carré" a-t-il su quelles commandes exécuter? Clique sur "edit" dans le bloc de fonction "dessiner un carré". Les blocs dans l'éditeur de fonction sont la définition qui composent "dessiner un carré". Lorsque vous avez terminé, clique sur "Enregistrer et fermer" et ensuite "Exécuter".
+        Comment le bloc "dessiner un carré" a-t-il su quelles commandes exécuter? Clique sur "edit" dans le bloc de fonction "dessiner un carré". Les blocs dans l'éditeur de fonction sont la définition qui composent "dessiner un carré". Lorsque tu as terminé, clique sur "Enregistrer et fermer" et ensuite "Exécuter".
       NEW Course 4 Artist Functions 6_instruction: "Utilise le bloc de fonction \"dessiner un carré\", peux-tu dessiner cette image? Conseil: chaque carré est espacé de 20 pixels. \r\n"
       NEW Course 4 Artist Functions 7_instruction: |-
         Tu sais maintenant bien utiliser les blocs fonctions ? Modifions la taille du carré pour qu'elle soit de 200 pixels. Astuce : clique sur "éditer" pour changer la taille dans l'éditeur de la fonction "dessine un carré". N'oublie pas de cliquer sur "Enregistrer et fermer" pour sortir de l'éditeur de fonction. 
@@ -1761,7 +1759,7 @@ fr:
       NEW Course 4 Artist Params 7_instruction: 'Peux-tu compléter ce dessin ? Astuce : chaque triangle est 25 pixels plus grand que le dernier. Le premier triangle a une taille de 25 pixels.'
       NEW Course 4 Artist Params 8_instruction: 'Peux-tu dessiner chacun de ces triangles avec cette nouvelle fonction ? Le premier a une taille de 25 pixels, le second de 50 et le troisième de 75. Astuce : commence en cliquant dans le bloc fonction sur "éditer".'
       NEW Course 4 Artist Params 9_instruction: 'Clique sur "Editer" pour compléter la définition de la fonction "dessine un carré" et rajoute un paramètre. Elle devra contenir le paramètre "longueur", comme pour le triangle. Cette fois, dessine 3 carrés : 25, 50 et 75 pixels de côté, chacun espacé de 100 pixels.'
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? "
+      NEW Course 4 Artist Params inspire_instruction: "Jeu libre d'inspiration : tu sais maintenant tout ce que tu dois savoir pour faire une figure comme ça ! Si cette photo t'inspire, essaye de faire quelque chose de similaire. Sinon, crée quelque chose qui t'es propre. \r\n\r\nTu veux savoir comment notre figure d'inspiration a été faite ? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Regarde ce code, peux-tu voir comment les blocs "définir la longueur" et "longueur" travaillent ensemble ? Clique sur "exécuter" pour les voir en action. '
       NEW Course 4 Artist Vars 12_instruction: "Modifie cet algorithme afin qu'il utilise la variable « côtés » au lieu d'un nombre fixe pour dessiner un pentagone. Remplacez le nombre 5 avec la variable « côtés » et utilise le bloc « paramétrer côtés »."
       NEW Course 4 Artist Vars 2.5_instruction: 'Regarde ce code, peux-tu voir comment les blocs "définir la longueur" et "longueur" travaillent ensemble ? Clique sur "exécuter" pour les voir en action. '
@@ -1819,6 +1817,24 @@ fr:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
+      Overworld Avoid Monsters_instruction: Foncer dans un Creeper est une mauvaise idée. Faufile-toi entre les Creepers avec précautions et mets toi à l’abri dans ta maison.
+      Overworld Chop Tree_instruction: "Le bois est une ressource très importante. On l'utilise pour fabriquer beaucoup de choses. Marche jusqu'à l'arbre et utilise la commande « détruire un bloc » pour l'abattre."
+      Overworld Chop Trees_instruction: Nous devons construire une maison avant que le soleil ne se couche. Les maisons nécessitent beaucoup de bois. Abats les 3 arbres.
+      Overworld Free Play 20x20_instruction: "Félicitations ! Tu as terminé tous nos puzzles ! Maintenant extrais, construis et crée quelque chose d'unique à l'aide de tout ce que tu as appris jusqu'ici."
+      Overworld Free Play_instruction: Tu peux maintenant jouer sur cette carte. Tu peux choisir ce que tu veux construire.
+      Overworld House Frame - A_instruction: Nous allons construire notre propre maison ! Cet endroit semble approprié. Construis le pourtour sur les blocs de terre.
+      Overworld House Frame - C_instruction: Nous allons construire notre propre maison ! Cet endroit semble approprié. Construis le pourtour sur les blocs de terre.
+      Overworld House Frame B_instruction: "Un mur est terminé, nous allons construire le reste de la maison en suivant ton plan d'étage ! Tu vas devoir te répéter beaucoup ici."
+      Overworld House Frame B2_instruction: "Un mur est terminé, nous allons construire le reste de la maison en suivant ton plan d'étage ! Tu vas devoir te répéter beaucoup ici."
+      Overworld House Frame C_instruction: "Un mur est terminé, nous allons construire le reste de la maison en suivant ton plan d'étage ! Tu vas devoir te répéter beaucoup ici."
+      Overworld House Frame Chosen_instruction: Construis le reste de ta maison à partir des matériaux que tu souhaites. La commande « répéter » sera utile.
+      Overworld House Frame_instruction: Nous allons construire notre propre maison ! Cet endroit semble bien. Construis le pourtour sur les blocs de terre.
+      Overworld Minecart Track_instruction: Tu es de retour à la surface avec beaucoup de ressources souterraines. Maintenant, nous allons construire une piste sur le chemin de terre en partant de ta maison. La première étape consiste à ouvrir la voie. Suis le chemin et coupe les arbres.
+      Overworld Move to Sheep_instruction: Ajoute une deuxième commande « avancer plus » pour atteindre le mouton.
+      Overworld Place Wall_instruction: "La construction d'une maison commence toujours par un mur. Construis la première partie de ta maison en mettant les commandes « placer » et « avancer plus » à l'intérieur de la boucle répéter."
+      Overworld Plant Crops_instruction: "Il est bon d'être prévoyant. Plante des cultures des deux côtés de l'eau pour ne pas avoir faim plus tard."
+      Overworld Powered Minecart_instruction: "Super boulot ! Tu as rassemblé beaucoup de ressources et construit une maison modeste. Maintenant pose des rails depuis le bord de la carte jusqu'à la porte de ta maison."
+      Overworld Shear Sheep_instruction: "C'est l'heure de tondre les moutons ! Utilise la commande « tondre » pour recueillir la laine des deux moutons."
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -1999,10 +2015,7 @@ fr:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour voir si une fleur s'y cache. Si c'est le cas, alors tu peux recueillir son nectar."
       Ryan Test Locked Blocks_instruction: |
         Voilà une fonction appelée "patrouille".
         Edite-la pour déplacer le chat de 400 pixels vers le haut puis 400 pixels vers le bas.
@@ -2065,12 +2078,12 @@ fr:
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: "Les blocs « si-sinon » vérifient une condition et suivant le résultat, font une chose ou une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc."
+      scrat 18_instruction: "Les blocs « si-sinon » vérifient une condition et suivant le résultat, font une chose ou l'autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc."
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: 'Un exercice de plus avec le bloc "if-else". Pouvez-vous y arriver du premier coup ?'
-      scrat 20_instruction: "Pouvez-vous ajouter seulement 3 blocs pour m'aider à résoudre un labyrinthe encore plus compliqué ? Si vous le faites bien, je peux suivre n'importe quelle chemin sinueux, peu importe sa longueur. Faites-vite ! La glace fond !"
+      scrat 19_instruction: 'Un exercice de plus avec le bloc "si-sinon". Peux-tu y arriver du premier coup ?'
+      scrat 20_instruction: "Peux-tu ajouter seulement 3 blocs pour m'aider à résoudre un labyrinthe encore plus compliqué ? Si tu le fais bien, je peux suivre n'importe quelle chemin sinueux, peu importe sa longueur. Fais-vite ! La glace fond !"
       SpecialFrozenLevel_instruction: "Tu es officiellement devenu un maître de l'art ! Crée un paradis hivernal."
       Standalone_Artist_1_instruction: "Bienvenue à l'artiste ! Tout d'abord, nous allons essayer de faire un simple carré à l'aide du bloc tourner à droite et du bloc déplacer vers l'avant. Chaque côté doit être de 100 pixels de long."
       Standalone_Artist_2_instruction: Dessiner ce diamant avec des angles de 120 et 60 degrés et des côtés de longueur 150 pixels.
@@ -2083,9 +2096,9 @@ fr:
       Standalone_Artist_8_instruction: "Voici une fonction appelée « Dessiner une forme » que nous avons programmée pour dessiner des hexagones. Exécute le code pour voir ce qu'il fait, puis joue avec la fonction pour voir ce qui se passe. Peux-tu la faire dessiner des carrés, des triangles ou des octogones?"
       Standalone_Artist_9_instruction: "Maintenant, allez-y, faites l'image que vous désirez ! Vous avez même une fonction vide avec laquelle vous pouvez faire faire ce que vous voulez !"
       Standalone_Artist_v2_instruction: "Bienvenue à l'artiste ! Tout d'abord, nous allons essayer de faire un simple carré à l'aide du bloc tourner à droite et du bloc déplacer vers l'avant. Chaque côté doit être de 100 pixels de long."
-      template test_instruction: what up
+      template test_instruction: "what's up"
       Test Play Lab_instruction: This is a test play lab level.
-      test_sarah_instruction: hi
+      test_sarah_instruction: hi hi
       Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
@@ -2148,9 +2161,190 @@ fr:
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
         to be dropped.
+      U3 - Arrays - appendItem_instruction: |
+        Create an array of odd numbers 1-11
+        by using appendItem. (Click to see full instructions)
+      U3 - Arrays - assignment_instruction: |
+        Use indexes to change the values in
+        this array from 1 to 0. (Click to see full instructions)
+      U3 - Arrays - assignment2_instruction: |
+        Calculate the sum of three values stored
+        in an array. (Click to see full instructions)
+      U3 - Arrays - assignment3_instruction: |
+        Increase the value of each value in
+        the randomly generated array by 1. (Click to see full instructions)
+      U3 - Arrays - createFirstArray_instruction: |
+        Create an array of the even numbers
+        from 0-10 and display its contents with console.log. (Click to see full instructions)
+      U3 - Arrays - Demo App_instruction: |
+        Use the "My Favorite Things" app. How
+        might this app be making use of an array? (Click to see full instructions)
+      U3 - Arrays - expressionsAsIndexes_instruction: |
+        Write a program that displays
+        a randomly chosen color from the array. (Click to see full instructions)
+      U3 - Arrays - favThings addItem_instruction: |
+        Write code that allows a user
+        to add their own favorite things to the list. (Click to see full instructions)
+      U3 - Arrays - favThings bounds_instruction: |
+        Add if statements to your event
+        handlers that prevent the global index from going out of bounds. (Click to
+        see full instructions)
+      U3 - Arrays - favThings Counting Variable_instruction: |
+        Create a global variable
+        for the current index and use it to display the first item in the array. (Click
+        to see full instructions)
+      U3 - Arrays - favThings createArray_instruction: |
+        Create an array of words
+        describing your favorite things. (Click to see full instructions)
+      U3 - Arrays - favThings firstOutput_instruction: |
+        Use setText to display the
+        first item in the array. (Click to see full instructions)
+      U3 - Arrays - favThings giveIDs_instruction: |
+        Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)
+      U3 - Arrays - favThings keepPlaying_instruction: |
+        Make any other improvements
+        you want! (Click to see full instructions)
+      U3 - Arrays - favThings Next_instruction: |
+        Write code that allows the user
+        to move forward through your list by clicking the "Next" button. (Click
+        to see full instructions)
+      U3 - Arrays - favThings Prev_instruction: |
+        Write code that allows the user
+        to move backward through your list by clicking the "Last" button. (Click
+        to see full instructions)
+      U3 - Arrays - favThings template_instruction: |
+        Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)
+      U3 - Arrays - globalVariableIndex_instruction: |
+        Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)
+      U3 - Arrays - indexPractice_instruction: |
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
+      U3 - Arrays - insertingItems_instruction: |
+        Insert items into an array to form
+        a complete sentence. (Click to see full instructions)
+      U3 - Arrays - insertionErrors_instruction: |
+        Run each command that references
+        indexes that are out of bounds and observe the results. (Click to see full
+        instructions)
+      U3 - Arrays - introIndex_instruction: |
+        Display the first and last element in
+        the array. Display the number 5 from the array. (Click to see full instructions)
+      U3 - Arrays - length_instruction: |
+        Use list.length to determine the length
+        of each array. (Click to see full instructions)
+      U3 - Arrays - lengthMinus1_instruction: |
+        Use list.length - 1 to log the last
+        item in the array to the console. (Click to see full instructions)
+      U3 - Arrays - remove_instruction: |
+        Remove items from an array to form a complete
+        sentence. (Click to see full instructions)
+      U3 - Arrays - stringsInArrays_instruction: |
+        Write a sentence word by word by
+        adding strings to an array. (Click to see full instructions)
+      U3 - Canvas - 200dots_instruction: |
+        Add a loop to your program that draws 200
+        dots on your canvas. (Click to see full instructions)
+      U3 - Canvas - appendToArray_instruction: |
+        Create an array to store each event
+        parameter. Append each event parameter to this array within your event handler.
+        (Click to see full instructions)
+      U3 - Canvas - changeToMouseMove_instruction: |
+        Change your program so that dots
+        are drawn at the location of the mouse as the user moves the mouse on the
+        canvas. (Click to see full instructions)
+      U3 - Canvas - clickToAdd_instruction: |
+        Change your program so that dots are
+        added to the canvas when the user clicks on it. (Click to see full instructions)
+      U3 - Canvas - delete_instruction: |
+        Create a button that deletes the drawing
+        by clearing the canvas and removing all stored values. (Click to see full
+        instructions)
+      U3 - Canvas - draw at click point_instruction: |
+        Change your program so that
+        dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - introCanvas_instruction: |
+        Add a canvas to your app and set it
+        to be the active canvas. Then add a large dot to your canvas. (Click to see
+        full instructions)
+      U3 - Canvas - movementFunction fix Orig_instruction: |
+        Write a function that
+        takes the movement of the mouse as input and generates a line width as output.
+        (Click to see full instructions)
+      U3 - Canvas - movementFunction_instruction: |
+        Write a function that takes the
+        movement of the mouse as input and generates a line width as output. (Click
+        to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use `offsetX` and `offsetY` with
+        small random value added. (Click to see full instructions)
+      U3 - Canvas - redrawOriginal_instruction: |
+        Write a function that processes
+        your array, redrawing the dots as they originally appeared. (Click to see
+        full instructions)
+      U3 - Canvas - redrawRandom_instruction: |
+        Set up a button and event handler
+        for the random function. (Click to see full instructions)
+      U3 - Canvas - redrawRandom2_instruction: |
+        Write a function that processes your
+        array, redrawing every dot with a random size. (Click to see full instructions)
+      U3 - Canvas - shiftKey_instruction: |
+        Add an if statement to your event handler
+        so dots are only drawn when the shift key is pressed. (Click to see full instructions)
+      U3 - Canvas - sketch_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - sprayPaint_instruction: |
+        Update the spray paint code so that
+        redraws your image using multiple random dots instead of one using a nested
+        for loop. (Click to see full instructions)
+      U3 - Canvas - transparentDots_instruction: |
+        Change the colors of your dots
+        so they have a fully transparent stroke and partially transparent fill. (Click
+        to see full instructions)
+      U3 - Canvas - usingOffsetXY_instruction: |
+        Add a console.log command inside
+        the function of your event handler. Use it to display the event parameter.
+        Click on the screen to see the contents of the event parameter (Click to see
+        full instructions)
+      U3 - Conditional Basics - 6_instruction: |
+        Add a setText after the if statement
+        to "Nope. Guess again." (Click to see full instructions)
+      U3 - Conditionals - Combine AND and OR_instruction: |
+        Write an if statement
+        that uses AND and OR to display "Time to go to school!" if it's not the
+        weekend and the user is under 18. (Click to see full instrucitons.
+      U3 - Conditionals - Combine AND OR and NOT_instruction: |
+        Write an if statement
+        that uses AND and OR to display "Time to go to school!" if it's not the
+        weekend and the user is under 18. (Click to see full instrucitons.
+      U3 - Conditionals - Combine AND OR Simple_instruction: |
+        Write an if statement
+        that uses AND and OR to display "Sleep in!" if it's the weekend and the
+        user is a teenager. (Click to see full instructions.
+      U3 - Conditionals - intoOr_instruction: |
+        Add 2 if statements that use the OR
+        operator. (Click to see full instructions)
+      U3 - Conditionals - introAND_instruction: |
+        Add 2 if statements that use the
+        OR operator. (Click to see full instructions)
+      U3 - Conditionals - Simple AND_instruction: |
+        Write an if statement that uses
+        AND to display "You are a teenager." if the user enters an age between 13
+        and 19. (Click to see full instructions)
+      U3 - Conditionals - Simple OR_instruction: |
+        Write an if statement that uses
+        OR to display "It's the weekend!" if the user enters a weekend day at the
+        prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
-        messages to match the correct button (Click to see full instructions).
+        Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
         game. (Click to see full instructions)
@@ -2167,14 +2361,318 @@ fr:
         instructions)
       U3 - Design Mode - WTF Console Log_instruction: |
         Add a 3 console.log messages
-        and test them out(Click to see full instructions).
+        and test them out. (Click to see full instructions.)
       U3 - Design Mode -Recreate Beyond Buttons_instruction: |
         Recreate the game from
-        the 'chaser-game' with a welcome screen and game over screen. (Click to
-        see full instructions)
+        the "Chaser Game" with a Welcome Screen and Game Over Screen. (Click to
+        see full instructions.)
       U3 - Design Mode 1_instruction: |
         Add a large red button to your screen using
-        Design Mode (Click for full instructions).
+        Design Mode. (Click for full instructions.)
+      U3 - Dice - Dropdown and Score_instruction: |
+        Add guess and score to the Dice
+        Game (Click to see full instructions)
+      U3 - Dice - Dropdown with Strings_instruction: |
+        Add a dropdown for difficulty
+        level that prints the difficulty level in the console. (Click to see full
+        instructions)
+      U3 - Dice - If_instruction: |
+        Show different die images for the random number
+        generated. (Click to see full instructions)
+      U3 - Dice - Nested_instruction: |
+        Use nested if statements to make the scoring
+        different for the different game levels. (Click to see full instructions)
+      U3 - High Low - Debug_instruction: |
+        Debug the order of the conditionals so
+        that it will actually tell the user when their guess is close. (Click to see
+        full instructions)
+      U3 - High Low - Dropdown_instruction: |
+        Add a dropdown for their guess instead
+        of promptNum (Click to see full instructions)
+      U3 - High Low - Else if_instruction: |
+        Add an else-if statement in order to
+        tell the user if their guess is high or low instead of just wrong. (Click
+        to see full instructions)
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill tell the user when they are right and when they are wrong. (Click to\nsee full instructions)\r\n"
+      U3 - High Low - If_instruction: |
+        Add code to the if statement that indicates
+        the user guessed the secret number. (Click to see full instructions)
+      U3 - Keys - Add Image URLs_instruction: |
+        Add image URLs to your array. Replace
+        the text area with an image and setText with setImageURL. Then test your app!
+        (Click to see full instructions)
+      U3 - Keys - Buttons and Keys_instruction: |
+        Have the program respond the same
+        way for both clicking images on the screen and hitting the up and down keys
+        on the keyboard. (Click to see full instructions)
+      U3 - Keys - Demo App_instruction: |
+        Play with the image scroller. Press the
+        left and right arrows to progress through the images.
+      U3 - Keys - Final Image Scroller_instruction: |
+        Update the image scroller to
+        respond to buttons and key presses. (Click to see full instructions)
+      U3 - Keys - Functions_instruction: |
+        Write a doUpArrow and doDownArrow function
+        and call the functions instead of duplicating the code. (Click to see full
+        instructions)
+      U3 - Keys - Key Up and Down_instruction: |
+        Try out the keyup and keydown events
+        to see how they are different from keypress. (Click to see full instructions)
+      U3 - Keys - Multiple Keys_instruction: |
+        Play a different sound when the down
+        arrow is pressed. (Click to see full instructions)
+      U3 - Keys - Practice Adding Images with URL_instruction: |
+        Add image URLs to
+        your image array. Test out the add button. Style your image scroller. (Click
+        to see full instructions)
+      U3 - Keys - Words to Images_instruction: |
+        Add image URLs to your image array.
+        Test out the add button. Style your image scroller. (Click to see full instructions)
+      U3 - Loops -  9 Part 2_instruction: |
+        Change the boolean expression for the
+        while loop so that it will roll until both dice are greater than 3. (Click
+        to see full instructions)
+      U3 - Loops -  Complex Condition_instruction: |
+        Change the boolean expression
+        for the while loop so that it will roll until both dice are greater than 3.
+        (Click to see full instructions)
+      U3 - Loops - 1_instruction: |
+        Change the condition for the while loop to check
+        if the variable num is less than 90. (Click to see full instructions)
+      U3 - Loops - 10_instruction: |
+        Write a program that if the sum of the dice is
+        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
+        to see full instructions)
+      U3 - Loops - 11_instruction: |
+        Fix the condition so that it keeps rolling the
+        die as long as the value is not a 2 or a 3 instead of rolling infinitely.
+        (Click to see full instructions)
+      U3 - Loops - 12_instruction: |
+        Change the code so that it prints the string
+        'Hi' 5 times. (Click to see full instructions)
+      U3 - Loops - 13_instruction: |
+        Update the code to count up by 3 instead of 1.
+        (Click to see full instructions)
+      U3 - Loops - 14_instruction: |
+        Change the loop condition to prevent the infinite
+        loop and stop counting at once the count is past 30. (Click to see full instructions)
+      U3 - Loops - 15_instruction: |
+        Count the number of times the sum of the dice
+        is 7. (Click to see full instructions)
+      U3 - Loops - 16_instruction: |
+        Find out how many times you have to roll to get
+        the sum of 7 100 times (Click to see full instructions)
+      U3 - Loops - 2_instruction: |
+        Try creating an infinite loop using !=, > and
+        <. (Click to see full instructions)
+      U3 - Loops - 3_instruction: |
+        Change the if statement to a while loop so the
+        program will run until it rolls a 6. (Click to see full instructions)
+      U3 - Loops - 4_instruction: |2
+         Use the Debug Commands to to make a list of all
+        the values rolled before a 6. (Click to see full instructions)
+      U3 - Loops - 5_instruction: |
+        Add code inside the while loop which will update
+        the variable num so that the condition will eventually become false. (Click
+        to see full instructions)
+      U3 - Loops - 6_instruction: |
+        Fix the problem so the loop will run at least
+        once. Change the initial value of num to a dummy value such as -1. (Click
+        to see full instructions)
+      U3 - Loops - 7_instruction: |
+        Without adding any lines of code, reorder the
+        code so that it prints all the values of num. (Click to see full instructions)
+      U3 - Loops - 8_instruction: |
+        Debug which number is not getting printed and
+        add a write statement to display that value. (Click to see full instructions)
+      U3 - Loops - 9_instruction: |2
+         Modify the condition so that it keeps rolling
+        as long as both are less than 3. (Click to see full instructions)
+      U3 - Loops - Continue_instruction: |2
+         Use the Debug Commands to to make a list
+        of all the values rolled before a 6. (Click to see full instructions)
+      U3 - Loops - minus = operator_instruction: |
+        Update the code to use the -= operator
+        to count from 30 down to 0 by 3s. (Click to see full instructions)
+      U3 - Loops - Minus Minus_instruction: |
+        Change the code to count down from 10
+        to 1. (Click to see full instructions)
+      U3 - Loops - plus and minus = operator_instruction: |
+        Update the code to use
+        the += operator. (Click to see full instructions)
+      U3 - Loops - Plus Plus_instruction: |
+        Change the code to use count++ instead
+        of count = count + 1.  (Click to see full instructions)
+      U3 - Loops - Typing in Console_instruction: |
+        Use console to check the ending
+        value of num. (Click to see full instructions)
+      U3 - Loops And Arrays - Add 5_instruction: |
+        Add 5 to all the values in an array
+        (Click to see full instructions)
+      U3 - Loops And Arrays - Challenge 1_instruction: |
+        Write a function that finds
+        and returns the minimum value in an array.   (Click to see full instructions)
+      U3 - Loops And Arrays - Challenge 2_instruction: |
+        Write a function that finds
+        and returns the minimum value in an array.   (Click to see full instructions)
+      U3 - Loops And Arrays - Counting Times_instruction: |
+        Count the number of times
+        5 appears in an array. (Click to see full instructions)
+      U3 - Loops And Arrays - Divid by 2_instruction: |
+        Divide every value in the
+        array by 2. (Click to see full instructions)
+      U3 - Loops And Arrays - Find Max_instruction: |
+        Design a function that displays
+        the smallest number in an array  (Click to see full instructions)
+      U3 - Loops And Arrays - Find Min_instruction: |
+        Complete the 'findMinVal'
+        function to find and display the smallest value in an array  (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Functions that Return Value_instruction: |
+        Call findMin
+        within the console.log statement to calculate the minimum of two values.  (Click
+        to see full instructions)
+      U3 - Loops And Arrays - General Search Param_instruction: |
+        Add a second parameter
+        to the 'search' function for the value to search for.  (Click to see full
+        instructions)
+      U3 - Loops And Arrays - Intro For Loop_instruction: |
+        Add a for loop with a
+        console.log inside and test out the 3 pieces of the for loop. (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Linear Search_instruction: |
+        Visit every element in
+        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - Loop Array If_instruction: |
+        Use an if statement to
+        only display the values in the array that are greater than 5. (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Make it a Function - add list parameter_instruction: |
+        Create
+        a function that takes a list parameter and prints if the list contains a 5.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - Make it a Function_instruction: |
+        Move the code that
+        searches the list for a 5 into a function called 'search'. (Click to see
+        full instructions)
+      U3 - Loops And Arrays - Multiple Returns_instruction: |
+        Test out the return
+        values of the findMax function.  (Click to see full instructions)
+      U3 - Loops And Arrays - Print Array_instruction: |
+        Use a for loop to print out
+        all the values in an array. (Click to see full instructions)
+      U3 - Loops And Arrays - Printing Single True_instruction: |
+        Process the array
+        and display a single 'true' if the array contains a 5 or a single 'false'
+        if it does not.  (Click to see full instructions)
+      U3 - Loops And Arrays - Return Index_instruction: |
+        Make the search function
+        return the index of the search value in the array. (Click to see full instructions)
+      U3 - Loops And Arrays - Return Value_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Loops And Arrays - Search and Remove_instruction: |
+        Search for 5 in the
+        array and remove it from the array. (Click to see full instructions)
+      U3 - Loops And Arrays - Search with Boolean Var_instruction: |
+        Make a boolean
+        variable to use as a flag to keep track of whether there is a 5 in the array.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Movie Bot - Multiple If Sequences_instruction: |
+        Add another set of if,
+        else if, and else statements inside the question if statement to check for
+        keywords for movie ratings (G, PG, PG-13, and R). (Click to see full instructions)
+      U3 - Movie Bot - Nested Motivation_instruction: |
+        Add a separate set of if statements
+        to check for a "?" in the input. (Click to see full instructions)
+      U3 - Movie Bot - toLowerCase_instruction: |
+        Use the toLowerCase command to change
+        all user input into lowercase letters after they enter it. (Click to see full
+        instructions)
+      U3 - Movie Bot - When Multiple If Statements_instruction: |
+        Add an if and else-if
+        statement that checks for please and thank you. (Click to see full instructions)
+      U3 - Practice Create Performance Task_instruction: |
+        Design and implement your
+        practice Create Performance Task. (Click to see full instructions)
+      U3 - Return Values - constrainTurtle_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Return Values - debuggingConstrain_instruction: |
+        Correct the error in
+        constrain so that it correctly reports the maximum value.  (Click to see full
+        instructions)
+      U3 - Return Values - debuggingMaxVal_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - debuggingReturns_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - increase1_instruction: |
+        Call the increase function within
+        moveForward, write, and console.log.  (Click to see full instructions)
+      U3 - Return Values - increase2_instruction: |
+        Change the increase function to
+        return 3 times the input value. (Click to see full instructions)
+      U3 - Return Values - min1_instruction: |
+        Test out the return values of the findMax
+        function.  (Click to see full instructions)
+      U3 - Return Values - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - useMinVal_instruction: |
+        Call minVal within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - wrapTurtle_instruction: |
+        Write wrap in this simple app
+        to let the turtle "wrap" to the other side of the screen when it goes off.  (Click
+        to see full instructions)
+      U3 - Return Values - writeMaxVal_instruction: |
+        Write the function maxVal and
+        then use it within the console.log statement to calculate the maximum of two
+        values.  (Click to see full instructions)
+      U3 - Simulation - 1_instruction: |
+        Use a while loop to "flip a coin 10 times"
+        and write the values to the screen. (Click to see full instructions)
+      U3 - Simulation - 2.1_instruction: |
+        Change your looping condition so the simulation
+        runs until there are 5 heads flipped. (Click to see full instructions)
+      U3 - Simulation - 2.5_instruction: |
+        Run your simulation to get the full 10,000
+        flips! How long did it take? (Click to see full instructions)
+      U3 - Simulation - 2_instruction: |
+        Keep track of how many heads (1s) your program
+        generates and print the results to the screen. (Click to see full instructions)
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
+      U3 - Simulation - 4_instruction: |
+        Update your while loop's condition so the
+        the coin flips until there are three heads in a row. (Click to see full instructions)
+      U3 - Simulation - 5_instruction: |
+        Change your while loop to run until you get
+        a streak of 12 heads. How many flips did it take? (Click to see full instructions)
+      U3 - Simulation - 6_instruction: |
+        Keep adding to your simulation. What do you
+        want to explore next? (Click to see full instructions)
+      U3 - Simulation - App_instruction: |
+        Change your code to run the full simulation
+        with 10,000 coins. What was your longest streak of heads? (Click to see full
+        instructions)
+      U3 - Simulation - Template_instruction: |
+        Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
+      U3 - User Input - Save getText To Variable_instruction: |
+        Save the age and name
+        of the user in variables (Click to see full instructions)
+      U3 - User Input - Saving After Input_instruction: |
+        Save the age of the user
+        in a variable using getText() (Click to see full instructions)
+      U3 - User Input and String -  Concat_instruction: |
+        Output a message about age
+        in a Text Area (Click to see full instructions)
       U3 - Variables - Clicker Game_instruction: |
         Create your improved Chaser-Game
         here. (Click to see full instructions)
@@ -2210,14 +2708,35 @@ fr:
         (click
         to see full instructions)
       U3 - Variables - Set to Expression with Other Variables_instruction: |
-        (click
-        to see full instructions)
+        Write
+        an expression that calculates the player's total score and stores it in the
+        totalScore variable. The calculation is: the player's points times lives
+        divided by the total time. (click to see full instructions)
       U3 - Variables - Set to Expression with Turtle_instruction: |
         (click to see
         full)
       U3 - Variables - Set to Expression_instruction: |
         Test out the new expressions.
         (Click to see full instructions)
+      U3 Digital Assistant Design_instruction: |
+        Pick a topic for your Digital Assistant
+        and create the basic layout with a text input and text area. (Click to show
+        full instructions)
+      U3 Digital Assistant Set Text_instruction: |
+        Have your digital assistant repeat
+        back what the user types and include a canned response. (Click to see full
+        instructions)
+      U3 Digital Assistant Target - Mehal_instruction: |
+        Try out a demo of the Digital
+        Assistant!
+      U3 Digital Assistant Target_instruction: Try out a demo of the Digital Assistant!
+      U3 Digital Assistant Template_instruction: This is a project template!
+      U3 Digital_instruction: |
+        Choose a specialization topic for your digital assistant.
+        Create a basic digital assistant that takes the user's input and displays
+        back a default response.
+      U3 full clicker demo_instruction: 'Clicker game - Try it out!'
+      U3 mehal's clone_instruction: Try out a demo of the Digital Assistant!
       U3- Variables - Assign Random For Turtle Draw_instruction: |
         Try writing the
         same code in text mode.
@@ -2226,10 +2745,12 @@ fr:
         before each moveForward so the turtle turns a different amount each time.
         (Click to see full instructions)
       U3- Variables - Create And Assign_instruction: |
-        Edit the variables to be created
-        and assigned on one line. Add a third variable. Print all three in the console.
-        (Click to see full instructions)
-      U3- Variables - Text Mode_instruction: Try writing the same code in text mode.
+        On one line add a variable
+        called "lives" and assign it the value 3. Print it to the console. (Click
+        to see full instructions)
+      U3- Variables - Text Mode_instruction: |
+        1. Switch to text mode and type instructions;
+        2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
         the button using the "Insert and show" link in the Design Mode Events tab.
@@ -2238,8 +2759,8 @@ fr:
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the 'chaser-game' from the last
-        lesson using Design Mode. (Click to see full instructions).
+        Recreate the "Chaser Game" from the last
+        lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
         the same id to see the warning message in the console. Change the ids to make
@@ -2359,8 +2880,8 @@ fr:
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -2403,6 +2924,10 @@ fr:
       U3L08 - drawSquaresWithParams_instruction: |
         Write drawSmallSquare() to draw
         a 25px square. (Click to see full instructions)
+      U3L08 - drawSquareWithParam - for video_instruction: |
+        Use drawSquare() to recreate
+        the image of both squares, this time using parameters. (Click to see full
+        instructions)
       U3L08 - drawSquareWithParam_instruction: |
         Use drawSquare() to recreate the
         image of both squares, this time using parameters. (Click to see full instructions)
@@ -2413,7 +2938,7 @@ fr:
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -2426,21 +2951,21 @@ fr:
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -2451,6 +2976,10 @@ fr:
       U3L08 - triangleTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
+      U3L1 - Simulation - Template_instruction: |
+        Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
+      U3L12 Chaser Template_instruction: This is a project template!
       U3L13 - Button with ID_instruction: |
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
@@ -2469,8 +2998,8 @@ fr:
         Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
       U3L13 - Project_instruction: |
-        Create your Multi-screen App. (Click to see full
-        instructions)
+        Create your multi-screen app. (Click to see full
+        instructions.)
       U3L13 - Turtle Driver Project_instruction: |
         Create a "turtle driver" that
         includes buttons to move the turtle forward and turn it left and right. (Click
@@ -2481,17 +3010,126 @@ fr:
       U3L13 eventsDetails_instruction: |
         Add an event handler to the button to move
         the turtle forward. (Click to see full instructions)
+      U3L14 - Assigning Random Value_instruction: |
+        Write a program that simulates
+        the rolling of two dice and reports their individual values as well as the
+        sum. (click to see full instructions)
+      U3L14 - concatenate simple_instruction: |
+        Modify the write statement on line
+        3 to combine text and variables together to make the app display a single
+        line of text that shows the player's lives and score. (click to see full
+        instructions)
+      U3L14 - Mini Calculator embed_instruction: |
+        You will be prompted for two numbers,
+        one right after the other.  See what happens.  Enter different numbers until
+        you get the idea.
+      U3L14 - moving memory challenge1_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge2_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge3_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge4_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge5_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
+      U3L14 - moving memory challenge6_instruction: |
+        Using only the variables provided,
+        assignment (=) and arithmetic (+ - * /) re-assign the values to make the console.log
+        statement display the correct value(s).  (Click to see full instructions)
       U3L14 - Unfortunate Events Free Play_instruction: |
         Follow the "Unfortunate
         Events" Worksheet and enter your code here to experiment.  We've pre-loaded
         the code you need to start.
-      U3L16 - challenge say hi app_instruction: "In this challenge we give you starter\ncode that lays all the elements out on the screen.  Here’s what you need to\ndo:\r\nAdd event handler to textInput with the event type ‘input’ that shows\nthe “Say hi” button when that event occurs.\r\nAdd event handler to button\nso that on click, it writes a hello message to the screen and hides the textInput\nand button."
+      U3L14 - User Input Division calculator_instruction: |
+        Write a program that acts
+        as a simple calculator. (click to see full instructions)
+      U3L14 - Variable ReAssignment pt2_instruction: |
+        Trace the code and predict
+        what you think will be printed to the console. Then add a console.log statement
+        at the end of the program to see the last value of someNum to see if your
+        full prediction is correct. (click to see full Instructions)
+      U3L15 - add code to make count down work_instruction: |
+        Write code to make the
+        down arrow work as expected. (Click to see full instructions)
+      U3L15 - Add reset button to UpDown app_instruction: |
+        Add code so that clicking
+        the start over button will reset the game and send you back to the main screen.
+        (Click to see full instructions)
+      U3L15 - clicker update score_instruction: |
+        Add code to update the score when
+        the apple is clicked. (Click to see full instructions)
+      U3L15 - count upDown bug forget to set text_instruction: |
+        Find the bug in the
+        program and fix it. (Click to see full instructions)
+      U3L15 - count upDown bug logic error wrong update_instruction: |
+        Find the bug
+        in the program and fix it. (Click to see full instructions)
+      U3L15 - count upDown bug var not created globally_instruction: |
+        Find the bug
+        in the program and fix it. (Click to see full instructions)
+      U3L15 - Debug forget to update var on reset in UpDown app_instruction: |
+        Run
+        the app, and click the up or down button until you get to the gameOverScreen.
+        Click 'Start Over' and try the app again. Find and fix the issue in the
+        code. (Click to see full instructions)
+      U3L15 - Debug if never triggers in UpDown app_instruction: |
+        Run the app and
+        use the up and down arrows to try to hit the gameOverScreen. You can't! Find
+        and fix the issue in the code. (Click to see full instructions)
+      U3L15 - Debugging Simple If-statements =v==_instruction: |
+        Run the app, and
+        click the up button. Then restart and run it again, and click the down button.
+        Find and fix the issue in the code. (Click to see full instructions)
+      U3L15 - DEMO up down count practice app_instruction: |
+        Try out the demo app
+        (Click to see full instructions)
+      U3L15 - global var example count up_instruction: |
+        Look at the code for this
+        app and see how the code works to update the count variable when the up arrow
+        is clicked. (Click to see full instructions).
+      U3L15 - mini clicker update score_instruction: |
+        Add code to update the score
+        when the apple is clicked. (Click to see full instructions)
+      U3L15 - practice with setText_instruction: |
+        Use setText to complete the click
+        event handler for the down arrow. (Click to see full instructions)
+      U3L15 - Simple If-statements in UpDown App_instruction: |
+        Add an if statement
+        so that the app changes screens when the count reaches -5. (Click to see full
+        instructions)
+      U3L15 - variable scoping problem debugging_instruction: |
+        See if you can figure
+        out why the code is no longer working. (Click to see full instructions)
+      U3L15 click add lives_instruction: |
+        Add lives to the clicker game that decrement
+        by 1 when the background image is clicked (Click to see full instructions)
+      U3L15 full clicker app_instruction: |
+        Complete your clicker game! (Click to
+        see full instructions)
+      U3L16 - challenge say hi app_instruction: |
+        Write a greeting to the user when
+        they hit 'enter' in the text input, using the 'change' event. (Click to
+        see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
+      U3L16 - doubleQuotes_instruction: |
+        Save a string inside a variable and log
+        it to the console. (Click to see full instructions)
       U3L16 - hideAndShow_instruction: |
         Introducing textInput, getText and write.  First
         run the starter code several times.  Try to change what's written to the
@@ -2519,12 +3157,24 @@ fr:
         connecting an event handler to it.  We've started you out with code similar
         to the result of the last level, you can copy your code from that level into
         here if you prefer. 
+      U3L16 - intro getText_instruction: |
+        Add text input UI elements for name and
+        age. (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
+      U3L16 - introStrings_instruction: |
+        Save a string inside a variable and log
+        it to the console. (Click to see full instructions)
+      U3L16 - nameAgeTemplate_instruction: |
+        Add an Text Input box for the name and
+        age. (Click to see full instructions)
       U3L16 - newEventTypes_instruction: |
         Experiment with different event types and
         select the one that you think is best. (Click to see full instructions)
+      U3L16 - outputWithTextArea_instruction: |
+        Output a message to the 'textArea'
+        (Click to see full instructions)
       U3L16 - projectTemplate_instruction: |
         Create your own "Chaser App". (Click
         to see full instructions)
@@ -2538,7 +3188,7 @@ fr:
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -2548,20 +3198,46 @@ fr:
       U3L16 - singleSetPosition_instruction: |
         Move the button to the middle of the
         screen. (Click to see full instructions)
+      U3L16 - stringsVsNumbers_instruction: |
+        Run the program to see how strings and
+        numbers behave with different arithmetic operators. (Click to see full instructions)
       U3L16 - text labels_instruction: |
         Use the textLabel command to replace the
         button in your program with a text label. (Click to see full instructions)
       U3L16 - textInput getText write_instruction: |
-        Introducing textInput, getText
-        and write.  First run the starter code several times.  Try to change what's
-        written to the screen when the button is clicked. Then use getText to write
-        to the screen what the user entered in the text box.
+        Add an Text Input box for the
+        name and age. (Click to see full instructions)
+      U3L16 - toUpper_instruction: |
+        Make the name of the user appear in uppercase
+        (Click to see full instructions)
       U3L16 - use images_instruction: |
         Use the image command to replace the text
         label in your program with an image. (Click to see full instructions)
+      U3L16 Mad Lib Clear Input_instruction: |
+        Clear the user's previous text when
+        the Play Again button is clicked (Click to see full instructions) 
+      U3L16 Mad Lib Demo_instruction: 'Mad Lib Demo - Try it out!'
+      U3L16 Mad Lib getText_instruction: |
+        Before setting the text area with your
+        Mad Lib outline, get the user's text and incorporate their responses. (Click
+        to see full instructions) 
+      U3L16 Mad Lib setText_instruction: |
+        When the Next button is clicked, set the
+        text area to have the main outline of your How-to Mad Lib (without the user's
+        input). (Click to see full instructions) 
+      U3L16 Mad Lib Student Setup_instruction: |
+        Back to Mad Lib: To get started,
+        set up the two screens for your Mad Lib app (Click to show full instructions)
+      U3L16 Mad Lib toUpper_instruction: |
+        Apply the toUpperCase and toLowerCase string
+        functions to the user's text. (Click to see full instructions) 
+      U3L17 - getAndSetKeyValue_instruction: |
+        Create an image like app. (Click to
+        see full instructions)
       U3L17 - getKeyValue_instruction: |
-        Create and update your key value pairs using
-        setKeyValue. (Click to see full instructions)
+        Run the program several times to observe
+        how the setKeyValue commands now always arrive in order. (Click to see full
+        instructions)
       U3L17 - introCallbacks_instruction: |
         Run the program several times to observe
         how the setKeyValue commands now always arrive in order. (Click to see full
@@ -2578,6 +3254,14 @@ fr:
       U3L17 - twoSetKeyValue_instruction: |
         Run the program several times to observe
         how often setKeyValue commands arrive out of order. (Click to see full instructions)
+      U3L18 comparison operators_instruction: |
+        Use console.log to print out the different
+        boolean expressions below to see what information they return. (Click to see
+        full instructions)
+      U3L18 comparison operators_for_video_instruction: |
+        Use `console.log` to print
+        out the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
       U3L19 - Clicker Game Freeplay Area_instruction: |
         Use this App Lab area to improve
         your clicker game.  You should start by copy/pasting the code from your old
@@ -2589,14 +3273,27 @@ fr:
         Add console.log() statements
         to find out the value of a and b after the first reassignment statement a
         = b; (Click to see full instructions)
-      U3L19 - DEMO up down count practice app_instruction: Try out the demo app
+      U3L19 - DEMO up down count practice app_instruction: |
+        Try out the demo app
+        (Click to see full instructions)
       U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof code from the previous screen.  Try changing the value assigned to foo\nto see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto foo to see the string change. \r\n2. By only modifying the lines of code\nthat were given to you, try to get the output to say: “The value of foo is:\n9.  And isn’t that fine.” \r\n"
+      U3L19 - fix the var name syntax error v2_instruction: |
+        Fix the error and get
+        it to print the value of both variables (Click to see full instructions)
       U3L19 - fix the var name syntax error_instruction: |
         Fix the error and get it
         to print the value of both variables (Click to see full instructions)
+      U3L19 - global var example count up_instruction: |
+        Look at the code for this
+        app and see how the code works to update the count variable when the up arrow
+        is clicked. (Click to see full instructions).
       U3L19 - practice with setText_instruction: |
         Add another button that changes
         the text to the value of a new variable. (Click to see full instructions)
+      U3L19 - Simple If-statements in UpDown App_instruction: |
+        Add an if statement
+        so that the app changes screens when the count reaches -5. (Click to see full
+        instructions)
       U3L19 - Target Clicker App_instruction: |
         Investigate the new elements of the
         'chaser-game'
@@ -2605,9 +3302,9 @@ fr:
         and b. Add console.log statements to find out the actual value of a and b.
         (Click for full instructions)
       U3L19 - three basic ops of variables_instruction: |
-        Add another variable with
-        a name of your choosing. Print the value of the variable to the console. (Click
-        to see full instructions)
+        Add another variable called
+        "lives" and set the value to 3. Print the value of the variable to the console.
+        (Click to see full instructions)
       U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run\nthe program and you should see the output show up in the console area below\nthe workspace.  Then try adding a few more console.log statements.  Display\nsome text.  Make another variable and display that.  \r\nThe app screen will\nbe blank -- that's the point.  With console.log you can test output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |
         Set up the down button to
@@ -2622,14 +3319,22 @@ fr:
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
+      U3L19 - variable reassignment part 1_instruction: |
+        Predict the value of a and
+        b. Add console.log statements to find out the actual value of a and b. (Click
+        for full instructions)
       U3L19 - variable scope problem 2_instruction: |
         What is happening with foo?
         Play with the level to try to figure it out. (Click to see full instructions)
       U3L19 - variable scoping problem debugging_instruction: |
         See if you can figure
         out why the code is no longer work. (Click to see full instructions)
+      U3L19 - write var and string with same name v2_instruction: |
+        Fix the code so
+        that the values of both variables print to the console. (Click to see full
+        instructions)
       U3L19 - write var and string with same name_instruction: |
         Fix the code so that
         the value of both variables prints to the console. (Click to see full instructions)
@@ -2640,9 +3345,9 @@ fr:
         Draw a 1x1 square above and to the
         left of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Adjust the "if" block to make
-        the bot respond "That's the color of the sky!" if the user inputs the color
-        "blue".
+        Add if, else if, and else statements
+        to detect the movie genres Comedy, Romance, Action, and Horror. (Click to
+        see full instructions)
       U3L23 Chatbot Intro 1a_instruction: |
         Store the user's input inside a variable
         and log it to the console.
@@ -2688,8 +3393,8 @@ fr:
         to check if the strings "pizza" or "soup" are anywhere in the user's
         response.
       U3L24 Chatbot Basic Conditionals_instruction: |
-        Add a chained conditional with
-        at least 3 "else if" statements to your personal assistant.
+        Check out the project description
+        for instructions. (Click to see full instructions.)
       U3L24 Chatbot Conditionals 2_instruction: |
         Adjust the "if" block to make
         the bot respond "I don't know that color." if the user types anything besides
@@ -2704,16 +3409,18 @@ fr:
       U3L24 Chatbot Nested Conditionals_instruction: |
         Add a chained conditional with
         at least 3 "else if" statements to your personal assistant.
+      U3L24 introIncludes_instruction: |
+        Practice using the includes command. (Click
+        to see full instructions)
       U3L24 Nested Conditionals 1_instruction: |
-        Replace all instances of `str.indexOf("word")`
-        with a function `contains(sentence, word)` that returns true if the word is
-        in the sentence and returns false otherwise.
+        Change all of the boolean expressions
+        to use includes instead of ==. (Click to see full instructions)
       U3L24 Nested Conditionals 2_instruction: |
-        Use a nested conditional to respond
-        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+        Nest your movie genre if statements
+        inside the if statements to check for a ? in the input. 
       U3L24 Nested Conditionals Bugs 2_instruction: |
-        Fix the bugs that still exist
-        in this program. Prove that the program works correctly.
+        Fix the problem with the code
+        so that all the conditions can be reached. (Click to see full instructions)
       U3L24 Nested Conditionals Bugs 3_instruction: |
         Fix the bugs that still exist
         in this program. Prove that the program works correctly.
@@ -2721,6 +3428,13 @@ fr:
         Expose the bugs in this problem
         by typing inputs into the user-input box. Track which inputs cause unexpected
         outputs.
+      U3L25 - drag out key event_instruction: |
+        Set up an event handler to respond
+        to keypress events, and display event.key in the console.  Hit keys on the
+        keyboard to see what happens.  (Click to see full instructions)
+      U3L25 - play sound when up key_instruction: |
+        Change the code so the sound will
+        only play when the up arrow is pressed. (Click to see full instructions)
       U3L25 Chatbot Strings_instruction: |
         1. Adjust your digital assistant to evaluate
         inputs the same way whether the inputs are capitalized or lowercase. 2. If
@@ -2753,10 +3467,8 @@ fr:
         music for those who listen.” Manipulate it using the functions str.toUpperCase()
         and str.toLowerCase().
       U3L26 AND operator_instruction: |
-        Inside the findingNemo function, write a conditional
-        statement that detects if a command contains all the phrases "2000" "animated"
-        and "G-rated." The function should return true if the above conditions are
-        met and return false otherwise
+        Update the genre and rating if statements
+        to give only one movie suggestion at a time. (Click to see full instructions)
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
@@ -2774,10 +3486,9 @@ fr:
         make Movie Bot respond normally. Otherwise, make Movie Bot respond "Sorry,
         I don't know about bad movies." 
       U3L26 OR operator_instruction: |
-        Inside the isBest function, write a conditional
-        statement that detects if a command contains at least one of the phrases "all
-        time" "all-time" "overall" or "millennium." The function should return
-        true if the above conditions are met and return false otherwise
+        Update the if statement to use an OR to check
+        for a "?" as well as who, what, where, when, why, how in the user input.
+        (Click to see full instructions)
       U3L27 Chatbot Final_instruction: |
         Make your digital assistant awesome and when
         you are finished, ask one of your classmates to test it for you using the
@@ -2816,5 +3527,11 @@ fr:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      Underground Avoiding Lava_instruction: "De la lave se cache sous certains de ces blocs, qu'il faudra recouvrir avant d'avancer. Une commande « si » te sera utile ici. Ajoute une commande « avancer plus » au bon endroit pour extraire ces blocs."
+      Underground If Statements_instruction: Les choses deviennent plus difficiles maintenant. Extrais 3 redstones, mais ne tombe pas dans la lave. Utilise une commande « Si » pour placer des pavés sur tous les blocs de lave que tu découvres.
+      Underground Iron_instruction: Marcher dans de la lave en fusion est une mauvaise idée. Place des blocs de pierre pour créer un pont, puis extrais au moins deux blocs de fer.
+      Underground Mine in a Circle_instruction: "Trouve un moyen d'obtenir 5 diamants et 7 redstones ! Essaye d'utiliser une commande répéter à l'intérieur d'une commande répéter pour marcher le long d'un carré. \r\n"
+      Underground Mining Coal_instruction: Tu trouveras les ressources les plus précieuses sous terre, mais il peut faire sombre. Place au moins 2 torches et extrais au moins 2 charbons.
+      Underground Test Level_instruction: "Récolte l'ensemble des minéraux !"
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

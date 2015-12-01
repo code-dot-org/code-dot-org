@@ -549,6 +549,64 @@
           скорост. След това го преместeте  със стрелките, за да предупреди останалите
         studio_playlab_10: Създайте своя собствена игра. Когато сте готови, щракнете
           върху Финал, за да споделите с приятелите си играта за телефон.
+        studio_iceage_1: Мани иска да каже "Здравей" - може ли да му помогнете?
+        studio_iceage_2: Диего (актьор 1) и Грани (актьор 2) биха искали да си кажат
+          "здрасти" един на друг. Можете ли да им помогнете като поставите 2 блока
+          за диалог?
+        studio_iceage_3: Може да ви помогнете на Scrat да вземе знамето?
+        studio_iceage_4: Може ли да помогнете на Scrat (актьор 1) да стигне до Грани
+          (актьор 2) и да се чуе звук, когато той го направи?
+        studio_iceage_5: Може ли да помогнете на Сид да каже "Поздравления", когато
+          бъде щракнато върху му? Не забравяйте да щракнете върху него, след като
+          натиснете Старт
+        studio_iceage_6: Може ли да помогнете на Диего да се движи чрез клавишите
+          със стрелки и да стигне до всички знамена?
+        studio_iceage_7: Блокът "повторение завинаги" ви позволява да стартирате даден
+          код непрекъснато. Можете ли да прикачите блокове към него, за да помогнете
+          на Сид да се движи надясно и наляво?
+        studio_iceage_8: Може ли да добавите блок за добавяне на една точка и блок
+          за звук, когато Сид връхлита върху Мани, а след това го преместете със стрелките
+          докато спечелите точки?
+        studio_iceage_9: Задайте фона за тази Ледена епоха и помогнете на Сид да стигне
+          до Грани по-бързо чрез промяна на неговата скорост. След това го преместете
+          със стрелките, за да предупреди всички останали.
+        studio_iceage_10: Създайте своя собствена игра. Когато сте готови, щракнете
+          върху Финал, за да споделите с приятелите си играта за телефон.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Създайте своя собствена игра. Когато сте готови, щракнете
           върху Финал, за да споделите с приятелите си играта за телефон.
         studio_k1_1: Можете ли да накарате това куче да казва "Здравей, свят"?
@@ -687,7 +745,13 @@
         infinity_playlab_intro: Игрална лаборатория - Въведение
         infinity_playlab_events: Игрална лаборатория - Събития
         infinity_playlab_repeat_forever: Игрална Лаборатория - повторение завинаги
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Въвеждане във функциите
+        csp_applab_functions_parameters: Функции с параметри
+        csp_applab_loops: Цикли
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Малко за пикселите
         csp_pixelation_color_1: Приспособление за цветова пикселизация - част 1
         csp_pixelation_color_2: Приспособление за цветова пикселизация - част 2
@@ -721,6 +785,24 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Междузвездни войни: Изграждане на галактика с код - Въведение'
+        starwars_typing: 'Междузвездни войни: Изграждане на галактика с код - JavaScript'
+        starwars_events: 'Междузвездни войни: Изграждане на галактика с код - събития'
+        starwars_congrats: 'Междузвездни войни: Изграждане на галактика с код - Честито'
+        starwars_blocks_intro: 'Междузвездни войни: Изграждане на галактика с код
+          - Въведение'
+        starwars_blocks_events: 'Междузвездни войни: Изграждане на галактика с код
+          - събития'
+        starwars_blocks_congrats: 'Междузвездни войни: Изграждане на галактика с код
+          - Честито'
+        mc_intro: Minecraft - Въведение
+        mc_repeat: Minecraft - повторение
+        mc_if_statements: Minecraft - "ако" отчети
+        mc_congrats_share: Minecraft - Поздравления
+        mc_congrats_no_share: Minecraft - Поздравления
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
@@ -831,3 +913,13 @@
         Infinity_move_directions_callout_arrow: Използвайте тези стрелки за управление
         Infinity_move_collide_callout: Издай звук, когато това събитие се случи.
         Infinity_repeat_callout: Постави блоковете за движение тук вътре
+        craft_run_button_callout: Натиснете "Старт", за да пробвате вашата програма
+        craft_drag_block_callout: Плъзни "moveForward();" блок и го залепи под друг
+          блок
+        craft_callout_preplaced: Ние сме поставили някои блокове тук, за да започнете
+        craft_inside_repeat: Повторете действията като поставите блокове тук вътре
+        craft_callout_preplaced_house: Този код ще започне изграждането на вашия дом.
+          Можете ли да го завършите?
+        craft_what_is_iron: Изкопай това желязо!
+        craft_callout_moveforward: Този код ще провери за лава, можете ли да добавите
+          команда да вървим напред?

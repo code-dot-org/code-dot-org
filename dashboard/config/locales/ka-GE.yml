@@ -259,6 +259,7 @@
         playlab: აპლიკაციის შექმნა
         artist: დახატეთ რამე
         calculate: Calculate Something
+        applab: აპლიკაციის შექმნა
     user:
       classroom: მასწავლებლის მთავარი გვერდი
       district_dashboard: განყოფილების მართვის პანელი
@@ -282,6 +283,8 @@
       prize_us_only: (მხოლოდ აშშ-ის სტუდენტებისთვის)
       prizes_link: მეტი ინფორმაცია
   teacher:
+    answer: პასუხი
+    for_teachers_only: მხოლოდ მასწავლებლებისთვის
     title:
       one: 'თქვენი მასწავლებელი:'
       other: 'თქვენი მასწავლებლები:'
@@ -467,7 +470,7 @@
     tos: მომსახურების პირობები
     privacy: კონფიდენციალურობის პოლიტიკა
     secure: დაცული ვერსია
-    report_abuse: Report Abuse
+    report_abuse: შეგვატყობინეთ დარღვევა
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -508,6 +511,7 @@
   pdf_download: გადმოიწერეთ PDF
   download_coming_soon: მალე ჩამოტვირთვაც შესაძლებელი გახდება.
   video_coming_soon: ვიდეო მალე დაემატება!
+  not_started: The student has not attempted this level.
   share_code:
     title: დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა
     bounce_og_title: ნახეთ ჩემი Bounce თამაში
@@ -554,10 +558,15 @@
       body: ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა
     frozen:
       title: '"გაყინული"'
+    starwars:
+      title: ვარსკვლავური ომები
     infinity:
       title: თამაშების ლაბორატორია Infinity
       body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს
         პერსონაჟების მონაწილეობით.
+    minecraft:
+      title: მაინკრაფტი
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
     students_made_these_with_code: მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!
@@ -731,7 +740,7 @@
         abuse_type:
           question: How does this content violate the %{link_start}Terms of Service%{link_end}?
           harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
+          offensive: შეურაცხმყოფელი კონტენტი
           infringement: Copyright Infringement
           other: სხვა
         detail: Please provide as much detail as possible regarding the content you

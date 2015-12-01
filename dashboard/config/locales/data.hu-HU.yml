@@ -405,8 +405,9 @@
         Custom_builder: Húzd a blokkokat az eszköztárból a munkaterületre, és állítsd
           be rajta a szintet amit szeretnél létrehozni. Nyomd meg a "Futtatás"-t,
           ha kész vagy.
-        flappy_1: Csatolj egy blokkot a "klikkelésre" blokkhoz, majd nyomd meg a "Futtatás"-t.
-          Kattints, vagy érintsd meg a képernyőt, hogy Flappy-t a célba segítsd.
+        flappy_1: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg a
+          "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba
+          segítsd.
         flappy_2: Most már talaj is van. Csatolj egy blokkot a "ha becsapódik a talajba"
           blokkhoz. Kell, hogy legyen "JÁTÉK VÉGE", amikor Flappy ütközik.
         flappy_3: A "futtatáskor" blokk segítségével fut végig a programod, amikor
@@ -431,9 +432,9 @@
           és az összes szabályt, sőt még a gravitációt is. Ha elkészültél, kattints
           a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
         flappy_k1_1: Flappy játék
-        flappy_k1_2: Csatolj egy blokkot a "klikkelésre" blokkhoz, majd nyomd meg
-          a "Futtatás"-t. Kattints, vagy érintsd meg a képernyőt, hogy Flappy-t a
-          célba segítsd.
+        flappy_k1_2: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg
+          a "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba
+          segítsd.
         flappy_k1_3: Nos mi hozzáadtuk a talajt. Csatolj egy blokkot a "ha becsapódik
           a talajba" blokkhoz. Ha Flappy ütközik, itt a "VÉGE A JÁTÉKNAK".
         flappy_k1_4: A "futtatáskor" blokk segítségével fut végig a programod, amikor
@@ -546,6 +547,63 @@
           másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
+        studio_iceage_1: Manny szeretné azt mondani, hogy "hello". Tudnál segíteni
+          neki?
+        studio_iceage_2: Diego (1. szereplő) és Granny (2. szereplő) szeretné egymásnak
+          azt mondani, hogy "hello". Tudsz segíteni nekik a "mond" elem kétszeri használatával?
+        studio_iceage_3: Tudsz segíteni Motkánynak a zászló megszerzésében?
+        studio_iceage_4: Tudsz segíteni Motkánynak (1. szereplő), hogy elkapja Grannyt
+          (2. szereplő) és ha megvan, akkor lejátszani egy hangot?
+        studio_iceage_5: Segítenél Sidnek kimondani, hogy "Üdvözlet" amikor rákattintasz?
+          Ne felejts el rákattintani miután a Futtatásra kattintottál.
+        studio_iceage_6: Segítenél Diegonak mozogni a fel/le/jobbra/balra nyilakkal,
+          hogy begyűjtse az összes a zászlót?
+        studio_iceage_7: Az "Ismételd örökké" elem engedélyezi, hogy kódot futtass
+          folyamatosan. Tudnál úgy elemeket hozzáadni, hogy Sid folyamatosan jobbra-balra
+          lépegessen?
+        studio_iceage_8: Tudnál egy-egy elemet úgy betenni, hogy pontot szerezzen
+          és hangot játsszon le Sid, amikor nekiütközik Mannynek? Ezután addig mozgasd
+          Sidet, amíg pontot nem szerez.
+        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
+          faster by changing its speed. Then move him with the arrow keys to get to
+          Sid and alert everyone else.
+        studio_iceage_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
+          gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a
           Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_k1_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
@@ -689,7 +747,13 @@
         infinity_playlab_intro: Játéklabor - bevezetés
         infinity_playlab_events: Játéklabor - események
         infinity_playlab_repeat_forever: Játéklabor - végtelen ismétlés
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Bevezetés a függvényekbe
+        csp_applab_functions_parameters: Paraméteres függvények
+        csp_applab_loops: Ciklusok
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -721,6 +785,21 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: A galaxis építése kóddal - Bevezetés'
+        starwars_typing: 'Star Wars: A galaxis építése kóddal - JavaScript'
+        starwars_events: 'Star Wars: A galaxis építése kóddal - Események'
+        starwars_congrats: 'Star Wars: A galaxis építése kóddal - Gratulálunk'
+        starwars_blocks_intro: 'Star Wars: A galaxis építése kóddal - Bevezetés'
+        starwars_blocks_events: 'Star Wars: A galaxis építése kóddal - Események'
+        starwars_blocks_congrats: 'Star Wars: A galaxis építése kóddal - Gratulálunk'
+        mc_intro: Minecraft - Bevezetés
+        mc_repeat: Minecraft - Ismétlés
+        mc_if_statements: Minecraft - Ha állítások
+        mc_congrats_share: Minecraft - Gratulálunk
+        mc_congrats_no_share: Minecraft - Gratulálunk
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
@@ -830,3 +909,14 @@
         Infinity_move_directions_callout_arrow: Használd ezeket a nyilakat az irányításhoz
         Infinity_move_collide_callout: Lejátszik egy hangot, amikor az esemény bekövetkezik.
         Infinity_repeat_callout: Ide húzz be Mozgasd blokkokat
+        craft_run_button_callout: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a
+          programodat
+        craft_drag_block_callout: Vonszold ide az előrelépni blokkot és kattintsd
+          a másik blokk alá
+        craft_callout_preplaced: Idetettünk néhány blokkot kezdetnek
+        craft_inside_repeat: Ismételd a blokkokat úgy, hogy ide helyezed őket
+        craft_callout_preplaced_house: Ez a kód megkezdi a házad építését. Be tudod
+          fejezni?
+        craft_what_is_iron: Bányászd ki a vasat!
+        craft_callout_moveforward: Ez a kód leellenőrzi a lávát, hozzá tudsz adni
+          egy utasítást, hogy előrelépjen?

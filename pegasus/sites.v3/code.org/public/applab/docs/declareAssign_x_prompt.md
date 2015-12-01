@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## var x = prompt("Enter a value");
+## Prompt the user for a value and store it
 
 [/name]
-
 
 [category]
 
@@ -20,15 +19,14 @@ Category: Variables
 
 [short_description]
 
-Declares that the code will now use a variable named x and assign it an initial value provided by the user.
+Declares a variable and prompts the user for its initial value.
 
 [/short_description]
 
-Variables are simply names you use to refer to stored values in your code.  You can name your variables whatever you want so long as the name is not already used by the system.  Variable names can not have spaces or special characters.  In practice, it is helpful to name your variables in a way that describes the value they store.  For instance, if the variable you create is to store a person's name you might name that variable personName.
+Many apps process data. To be able to process data your apps need to keep track of the data in memory. Variables are simply names you use to refer to stored data in your apps. You can name your variables whatever you want so long as the name is not already used by the system. Variable names can not have spaces or special characters. In practice, it is helpful to name your variables in a way that describes the value they store. For instance, if the variable you create is to store a person's name you might name that variable personName.
 
-Where you declare the variable defines the variable's "scope".  Scope refers to which blocks of code can access that variable by name.  For instance, if you create a variable inside a function, that variable name can only be accessed inside that function.
+To process data in our apps we need to assign values to memory locations we have previously named using var to declare a variable. The prompt() function causes a pop-up window to display with the given message and the app waits for the user to type something in and click OK. The variable getting the value always goes on the left hand side of the assignment operator =.
 
-With this type of assignment, the user is prompted to enter a variable value in a pop up window.
 [/description]
 
 ### Examples
@@ -36,12 +34,29 @@ ____________________________________________________
 
 [example]
 
+```
+// Name a famous person you admire.
+var firstName = prompt("What's your famous person's first name?");
+var lastName = prompt("What's your famous person's last name?");
+console.log("Hi " + firstName + " " + lastName);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Change Counter** Count the amount of change a user has.
 
 ```
-// Famous people
-var firstName = prompt("What's your famous person's first name?")
-var lastName = prompt("What's your famous person's last name?")
-console.log("Hi " + firstName + " " + lastName)
+// Count the amount of change a user has.
+var quarters = prompt("How many quarters do you have?");
+var dimes = prompt("How many dimes do you have?");
+var nickels = prompt("How many nickels do you have?");
+var pennies = prompt("How many pennies do you have?");
+var total = quarters*25 + dimes*10 + nickels*5 + pennies*1;
+write("You have " + total + " cents.");
 ```
 
 [/example]
@@ -53,7 +68,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-var x = prompt("Enter value")
+var x = prompt("Enter a value")
 ```
 
 [/syntax]
@@ -64,26 +79,24 @@ var x = prompt("Enter value")
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | variable name | Yes | The name you will use in the program to reference the variable  |
-| "Enter value" | string | Yes | The string the user will see in the pop up when asked to enter a value  |
+| x | variable name | Yes | The name you will use in the program to reference the variable. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
+| "Enter a value" | string | Yes | The string the user will see in the pop-up window when asked to enter a value.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value.
+No return value. Variable created in memory and value assigned.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Your code will be more readable if you give your variables easy to understand variable names.  On the other hand, the longer the variable name, the more you have to type.
-- Don't hesitate to rename a variable if you decide you don't like the name, better to have it be an accurate name so that future programmers in that code know what it means.  Because of this, often when writing code, you'll end up wanting to rename a variable using search and replace.  If you name one variable "square" and another named "squareWidth", if you have to do a search and replace on "square" to name it "fancySquare", search and replace will also name squareWidth to "fancySquareWidth".  This is one reason some programmers hate using one letter variable names like "i" or "x".
-- Because the scope is defined in the place where the variable is created, it is important to be very careful where you create variables.  Most programmers like to create their variables at the top of a block of code (top of the file, top of a function, etc) so they are less likely to get moved around in later edits.
-- Prompting the user all the time with pop ups can get annoying, use this sparingly.
-
+- Whatever the user types in the pop-up window is stored as a string in the variable. However, Javascript will convert a string of a number to a number if you use it in an aritmetic equation. See the change counting example above.
+- The block of code where you declare the variable defines the variable's scope. Scope refers to which blocks of code can access that variable by name. For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables decalred at the top of your program are global and can be accessed anywhere in your program.
+- Excessive use of prompt() can get annoying, use this sparingly.
 
 [/tips]
 

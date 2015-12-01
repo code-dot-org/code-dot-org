@@ -178,16 +178,19 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
   # one-off internal reports
-  get '/admin/brook/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
+  get '/admin/temp/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
+  get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
-  get '/admin/funometer', to: 'reports#funometer', as: 'funometer'
-  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
-  get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
-  get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
-  get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
-  get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
-  get '/admin/concepts', to: 'reports#admin_concepts', as: 'admin_concepts'
+  get '/admin/concepts', to: 'admin_reports#admin_concepts', as: 'admin_concepts'
+  get '/admin/funometer', to: 'admin_reports#funometer', as: 'funometer'
+  get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
+  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
+  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
+  get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
+  get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
+  get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
 
   # internal search tools
   get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
@@ -268,5 +271,6 @@ Dashboard::Application.routes.draw do
 
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
   get '/api/:action', controller: 'api'
 end

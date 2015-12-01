@@ -1,7 +1,7 @@
 "uk":
   errors:
     messages:
-      not_saved: 'Будь-ласка виправте ці помилки:'
+      not_saved: 'Виправте ці помилки:'
       too_young: Цей вміст має вікові обмеження і недоступний для молодших школярів
   activerecord:
     errors:
@@ -260,6 +260,7 @@
         playlab: Створити програму
         artist: Намалювати
         calculate: Calculate Something
+        applab: Створити програму
     user:
       classroom: Домашня сторінка вчителя
       district_dashboard: Панель області
@@ -283,6 +284,8 @@
       prize_us_only: (лише для учнів зі США)
       prizes_link: Детальніше
   teacher:
+    answer: Відповідь
+    for_teachers_only: Лише для вчителів
     title:
       one: 'Ваш вчитель:'
       other: 'Ваші вчителі:'
@@ -354,7 +357,7 @@
       section: Група
       example: Приклад рішення
       example_with_number: Приклад рішення %{solution_number}
-      submitted_on: Надіслано %{date}
+      submitted_on: 'Надіслано:'
       unsubmit: Відкликати
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
@@ -449,17 +452,19 @@
       Twitter, та багатьох інших, які допомогли створити ці матеріали.
     help_from_html_old: Інженери Google, Microsoft, Facebook та Twitter допомогли
       створити цей підручник.
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Всі
-      права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Всі права захищені
+    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+      Всі права захищені.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
+      Всі права захищені.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century
+      Fox. Всі права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Всі права захищені
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Всі права застережено.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Всі права застережено
     powered_by_aws: На потужностях Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE та Hour
       of Code&reg; з торговими марками Code.org.'
-    copyright: Авторське право
+    copyright: Авторські права
     more: Більше
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
@@ -508,6 +513,7 @@
   pdf_download: Завантажити PDF
   download_coming_soon: Заготовки до діяльності скоро будуть.
   video_coming_soon: Незабаром буде відео!
+  not_started: Учень не має спроб на цьому рівні.
   share_code:
     title: Натисни кнопку "Запустити", щоб побачити мою програму в дії
     bounce_og_title: Подивіться на мою гру Арканоід
@@ -552,10 +558,15 @@
       body: Переглянути галерею програм та художніх зображень, створених нашими користувачами
     frozen:
       title: Крижане серце
+    starwars:
+      title: Зоряні війни
     infinity:
       title: Ігрова лабораторія Infiinty
       body: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів
         Діснея Infiinty.
+    minecraft:
+      title: Майнкрафт
+      body: Дослідимо світ Майнкрафту через код.
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!

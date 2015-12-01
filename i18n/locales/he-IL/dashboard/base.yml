@@ -90,8 +90,10 @@ he:
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
+    student_terms: 'אני מסכים לשמור על התנאים של Code.org. אם אני מתחת לגיל 13, ההורים שלי, או האפוטרופוס החוקי מאשר לי להשתמש בשירותים של Code.org. כתובות הדוא"ל לא נשמרות בטופס באופן שמאפשר לנו ליצור באמצעותן קשר עם המשתמשים.'
+    teacher_terms: |
+      אני מסכים להיות כפוף לתנאים של Code.org.
+      קישור: http://code.org/tos.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
   signin_form:
     title: כבר יצרת משתמש? היכנס למערכת
@@ -225,6 +227,7 @@ he:
         playlab: צור אפליקציה
         artist: צייר משהו
         calculate: Calculate Something
+        applab: צור אפליקציה
     user:
       classroom: דף הבית של המורה
       district_dashboard: District Dashboard
@@ -248,6 +251,10 @@ he:
       prize_us_only: (תלמידי ארצות-הברית בלבד!)
       prizes_link: מידע נוסף
   teacher:
+    answer: |
+      תשובה
+      
+    for_teachers_only: למורים בלבד
     title:
       one: 'המורה שלך :'
       other: 'המורים שלך:'
@@ -256,16 +263,16 @@ he:
       remove: האם אתה בטוח שברצונך להסיר את המורה הזה?
     tools: כלים למורה
     followers:
-      section: 'Section:'
+      section: 'סעיף:'
       stages: 'שלב(ים) להצגה:'
       show_past: 'הצג פעילות התלמיד (%{bullet_html}) בעבר:'
       levels_key: מפתח רמות
-      perfect: Completed, perfect
+      perfect: הושלם, מושלם
       completed: הושלם, אך היה שימוש בבלוקים רבים מדי
       tried: ניסה אך לא השלים
       not_tried: טרם ניסה
       activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
+      no_section: אין סעיף שהוקצה
       trophies: גביעי ניצחון
     students:
       name: שם
@@ -282,16 +289,16 @@ he:
       vist: Ask your students to visit
       section_code: 'and enter their section-code:'
       first_please: 'First, please %{add_section}'
-      for: For
-      enter: 'enter:'
+      for: בשביל
+      enter: 'הזן:'
     sections:
-      add: Add section
+      add: הוספת סעיף
       manage: נהל אגפים
-      section: Section
-      students: Students
+      section: סעיף
+      students: סטודנטים
       section_code: Section Code
       add_section_code: Add Students Section-Code
-      secret: Secret type
+      secret: סוג סודי
       grade: Grade
       course: קורס
       rename: שינוי שם
@@ -306,14 +313,14 @@ he:
     cant_remove_teacher_no_email: '%{teacher_name} לא יכול להימחק מרשימת המורים שלך מכיוון שלא נרשמת עם כתובת מייל'
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: הצגת תשובה
       student: תלמיד
       viewing_solution: Viewing Solution
       try_it_yourself: נסה זאת בעצמך
-      section: Section
+      section: סעיף
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
@@ -389,7 +396,7 @@ he:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
@@ -435,6 +442,7 @@ he:
   pdf_download: הורדת PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: וידאו בקרוב!
+  not_started: The student has not attempted this level.
   share_code:
     title: "לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה"
     bounce_og_title: תראה את המשחק קפיצה שלי
@@ -476,9 +484,14 @@ he:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: Students made these with code!
@@ -490,7 +503,7 @@ he:
     caption_time_ago: '%{time_ago} ago'
     header: גלריה
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: אמן
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."

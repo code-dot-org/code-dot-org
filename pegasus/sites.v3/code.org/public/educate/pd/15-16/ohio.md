@@ -50,11 +50,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Columbus State Community College<br/>
+[Columbus State Community College<br/>
 Conference Center<br/>
 Room 407<br/>
 315 Cleveland Avenue<br/>
-Columbus, OH 43215
+Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
 
 Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
 
@@ -111,11 +111,11 @@ Breakfast and lunch will be served.
 
 **September 12th Location**
 
-Columbus State Community College<br/>
+[Columbus State Community College<br/>
 Conference Center<br/>
 Room 415<br/>
 315 Cleveland Avenue<br/>
-Columbus, OH 43215
+Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
 
 [Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
@@ -165,11 +165,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Columbus State Community College<br/>
+[Columbus State Community College<br/>
 Conference Center<br/>
 Room 402<br/>
 315 Cleveland Avenue<br/>
-Columbus, OH 43215
+Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Development+Center/@39.969909,-82.9919726,16z/data=!4m2!3m1!1s0x0:0xb426e07cbf2840c5)
 
 [Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
@@ -204,10 +204,10 @@ Tuesday, November 10, 2015 <br/>
 
 **Location**
 
-Microsoft Corporation<br/> 
+[Microsoft Corporation<br/> 
 Scarlet Room<br/>
 8800 Lyra Drive, Suite 400<br/>
-Columbus, OH 43240
+Columbus, OH 43240](https://www.google.com/maps/place/Microsoft+Corporation/@40.1445251,-82.9729873,15z/data=!4m2!3m1!1s0x0:0x4d85ce7a6fec2b0e?sa=X&ved=0CGoQ_BIwC2oVChMIjfKP8JqYyQIVRimICh2FvwBf)
 
 Free parking is available in three lots surrounding the building.
 
@@ -226,10 +226,10 @@ Tuesday, November 10, 2015 <br/>
 
 **Location**
 
-Microsoft Corporation<br/> 
-Scarlet Room, Suite 400<br/>
-8800 Lyra Drive<br/>
-Columbus, OH 43240
+[Microsoft Corporation<br/> 
+Scarlet Room<br/>
+8800 Lyra Drive, Suite 400<br/>
+Columbus, OH 43240](https://www.google.com/maps/place/Microsoft+Corporation/@40.1445251,-82.9729873,15z/data=!4m2!3m1!1s0x0:0x4d85ce7a6fec2b0e?sa=X&ved=0CGoQ_BIwC2oVChMIjfKP8JqYyQIVRimICh2FvwBf)
 
 Free parking is available in three lots surrounding the building.
 

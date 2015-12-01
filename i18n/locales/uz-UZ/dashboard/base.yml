@@ -6,48 +6,48 @@ uz:
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: talab etiladi
     attributes:
       user:
-        name: Display Name
-        email: Email
-        username: Username
-        password: Password
-        password_confirmation: Password confirmation
-        current_password: Current password
+        name: Ismni ko`rsatish
+        email: Elektron pochta
+        username: Foydalanuvchi nomi
+        password: Kalit so`z
+        password_confirmation: Kalitni so`zni tasdiqlash
+        current_password: Joriy kalit so`z
         locale: Til
         age: Yoshi
         gender: Jinsi
-        edit_header: Edit Account Details
+        edit_header: "Foydalanuvchi ma'lumotlarini tahrir qilish"
         error:
-          future: "can't be in the future"
+          future: yaqin orada bo`la olmaydi
   hello: Salom Dunyo
-  welcome_back: 'Welcome back, %{name}'
-  submit: Submit
+  welcome_back: 'Qayta tashrifingiz bilan, %{name}'
+  submit: Tasdiqlash
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
-    submit: Add teacher
+      label: 'O`qituvchi qo`shing:'
+      placeholder: Bo`lim kodi
+    submit: O`qituchi qo`shish
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
+    placeholder: Iltimos, ko`makchi so`zni shu yerga kiriting
+    submit: Ko`makchi so`z qo`shing
   appname: Code.org
-  stage: Stage
-  stage_number: 'Stage %{number}'
-  puzzle: Puzzle
-  trophies: Trophies
-  courses: Courses
-  of: of
-  more: MORE
-  less: LESS
+  stage: Pog`ona
+  stage_number: 'Pog`ona %{number}'
+  puzzle: Jumboq
+  trophies: Mukofotlar
+  courses: Kurslar
+  of: ni
+  more: Ko`p
+  less: Oz
   beta: beta
   try_hoc: 'Try the Hour of Code, click here >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: Continue
+  continue: Davom etish
   prize: prize
   more_info: Batafsil
   auth:
@@ -96,7 +96,7 @@ uz:
   signin_form:
     title: Have an account already? Sign in
     login: Email or username
-    password: Password
+    password: Kalit so`z
     remember: Remember me
     submit: Sign in
   signin:
@@ -221,8 +221,9 @@ uz:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
-      classroom: Teacher Home Page
+      classroom: O‘qituvchining bosh sahifasi
       district_dashboard: District Dashboard
       label: 'Hi %{username}'
       stats: Code Studio
@@ -244,6 +245,8 @@ uz:
       prize_us_only: (U.S. students only)
       prizes_link: more info
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
@@ -262,11 +265,11 @@ uz:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trophies
+      trophies: Mukofotlar
     students:
-      name: Name
-      username: Username
-      password: Password
+      name: Ismi
+      username: Foydalanuvchi nomi
+      password: Kalit so`z
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -303,13 +306,13 @@ uz:
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
     panel:
       answer_viewer: Answer Viewer
-      student: Student
+      student: O‘quvchi
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on %{date}'
+      submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
@@ -358,7 +361,7 @@ uz:
     view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: Hoziroq sinang
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
@@ -380,18 +383,18 @@ uz:
     female: Female
     none: Javob bermaslikni ma’qul ko‘raman
   user_type:
-    student: Student
-    teacher: Teacher
+    student: O‘quvchi
+    teacher: "O'qituvchi"
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: Biz ayniqsa ushbu materiallarni yaratishga yordam bergan Google, Microsoft, Facebook, Twitter muhandislariga va boshqalarda minnatdorchilik bildirmoqchimiz.
-    help_from_html_old: Ushbu materiallarni yaratishga yordam bergan Google, Microsoft, Facebook va Twitter muhandislari
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    help_from_html: Biz, ayniqsa, ushbu materiallarni yaratishga yordam bergan Google, Microsoft, Facebook, Twitter muhandislari va boshqalarga minnatdorchilik bildirmoqchimiz.
+    help_from_html_old: Ushbu materiallarn yaratishgai Google, Microsoft, Facebook va Twitter muhandislari yordam berishgan.
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
-    more: More
+    more: Yana
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
@@ -402,7 +405,7 @@ uz:
     secure: Secure Version
     report_abuse: Nosozlik haqida xabar berish
   reference_area:
-    title: Yordam
+    title: Yordam kerakmi?
     subtitle: See these videos and hints
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
@@ -432,6 +435,7 @@ uz:
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
@@ -473,9 +477,14 @@ uz:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -497,7 +506,7 @@ uz:
     support_url: //support.code.org
   multi:
     wrong_title: Noto‘g‘ri javob
-    wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan marta urinib ko‘ring!
+    wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!
     correct_title: To‘g‘ri
     correct_body: Bu to‘g‘ri javob.
     toofew_title: Too few answers.
@@ -520,11 +529,11 @@ uz:
     open_response_title: Rahmat
     open_response_body: Javobingiz uchun tashakkur!
   dialog:
-    ok: OK
-    startover_title: Are you sure you want to start over?
+    ok: Davom etish
+    startover_title: Rostan boshidan boshlamoqchimisiz?
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: Start Over
-    startover_cancel: Cancel
+    startover_ok: Boshidan boshlamoq
+    startover_cancel: Bekor qilish
   time:
     hour: 1 soat
     day: kun
@@ -582,26 +591,26 @@ uz:
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: Save
-    delete: Delete
+    save: Saqlash
+    delete: "O'chirish"
     exit: Return to Course
     my_projects: My Projects
     share: Share
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
-    more: More
-    name: Name
+    more: Yana
+    name: Ismi
     updated: Updated
     project_type: Project Type
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
-    really_delete: Delete?
+    really_delete: "O'chirasizmi?"
     delete_yes: 'Yes'
     delete_no: 'No'
     saved: Saved
     not_saved: Not saved
-    cancel: Cancel
+    cancel: Bekor qilish
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: View My Projects
@@ -625,6 +634,6 @@ uz:
           harassment: Threats, cyberbullying, harassement
           offensive: Offensive content
           infringement: Copyright Infringement
-          other: Other
+          other: Boshqa
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

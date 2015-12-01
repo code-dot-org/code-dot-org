@@ -10,13 +10,14 @@
       "addOperator": null,
       "insertItem": null,
       "appendItem": null,
+      "removeItem": null,
       "randomNumber": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
       "declareAssign_x_array_1_4": {
-        "block": "var list = [1,2,3];"
+        "block": "var list = [];"
       }
     },
     "edit_code": true,
@@ -40,7 +41,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
     "text_mode_at_start": "true",
     "design_mode_at_start": "false",
@@ -50,12 +51,12 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Run each command that references indexes that are out of bounds and observe the results. (Click to see full instructions)",
-    "markdown_instructions": "# Inserting Items: Out of Bounds\r\n\r\nIn many languages trying to access indexes of an array that don't exist will create an error. **JavaScript allows for some strange behavior** with arrays that it's useful to see, even though **you will likely never use this functionality**.\r\n\r\n**Warning:** some of this code will generate errors or work in unexpected ways. Don't spend a long time trying to understand weird results. The point to take from this is **referencing indexes that are out of bounds will almost never do what you intend**, and we'll be learning ways to avoid this as we move forward.\r\n\r\n# Do This\r\n\r\n* **Starter code** has been provided which creates an array with three elements.\r\n* One by one uncomment the **commands that reference indexes that are out of bounds** and run the code\r\n* **Examine the output** and try to understand what is happening\r\n* **Recomment** each line after you've used it to make sure you're only seeing behavior from one command.",
+    "markdown_instructions": "# Out of Bounds\r\n\r\nIn many languages trying to access indexes of an array that don't exist will create an error. **JavaScript allows for some strange behavior** with arrays that it's useful to see, even though **you will likely never use this functionality**.\r\n\r\n**Warning:** some of this code will generate errors or work in unexpected ways. Don't spend a long time trying to understand weird results. The point to take from this is **referencing indexes that are out of bounds will almost never do what you intend**, and we'll be learning ways to avoid this as we move forward.\r\n\r\n# Do This:\r\n\r\n* **Starter code** has been provided which creates an array with three elements.\r\n* Uncomment the **first command that references indexes that are out of bounds** and run the code.\r\n* **Examine the output** and try to understand what is happening.\r\n* Reset and then **recomment** the line after you've used it. \r\n* **Repeat the process for all the lines.**\r\n\r\n**Note:** We have used a different style of comment to in this program. `/* long block comment */` is used when you want to write a multiple line comment. ",
     "slider_speed": "1",
+    "start_blocks": "var myArray = [10, 20, 30];\r\n\r\n/* Uncomment each of the following commands one at a time and \r\nrun the program. Examine the output to see what\r\nthe results of each command are. Recomment commands\r\nonce you've used them so that you're only\r\nseeing the results of a single command. */\r\n\r\n//insertItem(myArray,-1,0);\r\n\r\n//insertItem(myArray,1000,40);\r\n\r\n//myArray[-1] = 0;\r\n\r\n//myArray[1000] = 40;\r\n\r\n//myArray[3] = 40;\r\n\r\nconsole.log(myArray);",
     "encrypted_examples": [
 
-    ],
-    "start_blocks": "var myArray = [10, 20, 30];\r\n\r\n//Uncomment each of these commands one at a time and run the program. Examine the output to see what\r\n//the results of each command are. Recomment commands once you've used them so that you're only\r\n//seeing the results of a single command.\r\n\r\n//insertItem(myArray,-1,0);\r\n\r\n//insertItem(myArray,1000,40);\r\n\r\n//myArray[-1] = 0;\r\n\r\n//myArray[1000] = 40;\r\n\r\n//myArray[3] = 40;\r\n\r\nconsole.log(myArray);"
+    ]
   }
 }]]></config>
   <blocks/>

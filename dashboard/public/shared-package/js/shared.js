@@ -313,6 +313,8 @@ window.apps = {
 
     timing.startTiming('Puzzle', script_path, '');
 
+    var lastSavedProgram;
+
     // Sets up default options and initializes blockly
     var baseOptions = {
       containerId: 'codeApp',
@@ -339,6 +341,12 @@ window.apps = {
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
+        } else {
+          // Only locally cache non-channel-backed levels. Use a client-generated
+          // timestamp initially (it will be updated with a timestamp from the server
+          // if we get a response.
+          lastSavedProgram = decodeURIComponent(report.program);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
         report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
@@ -351,6 +359,12 @@ window.apps = {
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);
+      },
+      onComplete: function (response) {
+        if (!appOptions.channel) {
+          // Update the cache timestamp with the (more accurate) value from the server.
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        }
       },
       onResetPressed: function() {
         cancelReport();
@@ -373,21 +387,35 @@ window.apps = {
           return;
         }
 
+        var afterVideoCallback = showInstructions;
+        if (appOptions.level.afterVideoBeforeInstructionsFn) {
+          afterVideoCallback = function () {
+            appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
+          };
+        }
+
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
           if (hasInstructions) {
-            appOptions.autoplayVideo.onClose = showInstructions;
+            appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
           showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
-          showInstructions();
+          afterVideoCallback();
         }
       }
     };
     $.extend(true, appOptions, baseOptions);
+
+    // Load locally cached version if it's newer than the version from the server.
+    var cachedProgram = dashboard.clientState.sourceForLevel(
+        appOptions.scriptName, appOptions.serverLevelId, appOptions.level.lastAttemptTimestamp);
+    if (cachedProgram !== undefined && appOptions.levelGameName !== 'Jigsaw') {
+      appOptions.level.lastAttempt = cachedProgram;
+    }
 
     // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
     // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
@@ -710,6 +738,18 @@ var projects = module.exports = {
       dashboard.header.showProjectLevelHeader();
     }
   },
+  setName: function(newName) {
+    current = current || {};
+    if (newName) {
+      current.name = newName;
+      this.setTitle(newName);
+    }
+  },
+  setTitle: function(newName) {
+    if (newName && appOptions.gameDisplayName) {
+      document.title = newName + ' - ' + appOptions.gameDisplayName;
+    }
+  },
 
   //////////////////////////////////////////////////////////////////////
   // End of properties and callbacks.
@@ -740,9 +780,7 @@ var projects = module.exports = {
             sourceHandler.setInitialLevelSource(current.levelSource);
           }
         } else {
-          current = {
-            name: 'My Project'
-          };
+          this.setName('My Project');
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
@@ -772,9 +810,7 @@ var projects = module.exports = {
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
-      current = {
-        name: 'Untitled Project'
-      };
+      this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
@@ -786,6 +822,10 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
+  /**
+   * @returns {string} The name of the standalone app capable of running
+   * this project as a standalone project, or null if none exists.
+   */
   getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
@@ -803,10 +843,21 @@ var projects = module.exports = {
           return null;
         }
         return 'playlab';
+      default:
+        return null;
     }
   },
+  /**
+   * @returns {string} The path to the app capable of running
+   * this project as a standalone app.
+   * @throws {Error} If no standalone app exists.
+   */
   appToProjectUrl: function () {
-    return '/projects/' + projects.getStandaloneApp();
+    var app = projects.getStandaloneApp();
+    if (!app) {
+      throw new Error('This type of project cannot be run as a standalone app.');
+    }
+    return '/projects/' + app;
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
@@ -824,7 +875,6 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
-
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -855,7 +905,9 @@ var projects = module.exports = {
 
     current.levelSource = sourceAndHtml.source;
     current.levelHtml = sourceAndHtml.html;
-    current.level = this.appToProjectUrl();
+    if (this.getStandaloneApp()) {
+      current.level = this.appToProjectUrl();
+    }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
     sources.put(channelId, packSourceFile(), filename, function (err, response) {
@@ -923,7 +975,7 @@ var projects = module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    current.name = newName;
+    this.setName(newName);
     this.save(callback);
   },
   /**
@@ -946,7 +998,7 @@ var projects = module.exports = {
     var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
-    current.name = newName;
+    this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, true);
       this.save(wrappedCallback);
@@ -969,9 +1021,9 @@ var projects = module.exports = {
   serverSideRemix: function() {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
-        current.name = 'Big Game Template';
+        this.setName('Big Game Template');
       } else if (projects.appToProjectUrl() === '/projects/applab') {
-        current.name = 'My Project';
+        this.setName('My Project');
       }
     }
     function redirectToRemix() {
@@ -1055,6 +1107,12 @@ var projects = module.exports = {
     return deferred;
   },
 
+  /**
+   * Generates the url to perform the specified action for this project.
+   * @param {string} action Action to perform.
+   * @returns {string} Url to the specified action.
+   * @throws {Error} If this type of project does not have a standalone app.
+   */
   getPathName: function (action) {
     var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
     if (action) {
@@ -1066,6 +1124,7 @@ var projects = module.exports = {
 
 function fetchSource(data, callback) {
   current = data;
+  projects.setTitle(current.name);
   if (data.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
       unpackSourceFile(data);

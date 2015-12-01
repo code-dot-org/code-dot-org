@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Adding Image URLs\r\n\r\nYou are going to be creating your own image scroller! Lets set up the array of image URLs. There are a couple different ways to set up an array but we are going to use `appendItem` to add all the image URLs. \r\n\r\n**Note:** At this point you should have collected image URLs to use for your image scroller. If you have not collected your image URLs yet, go do that now. \r\n\r\n# Do This\r\n\r\n*  ** Add your image URLs to the images array.**  Pull out an `appendItem` command. Change the array name to match the array. Change the item parameter to your image URL.\r\n\r\n<img src=\"https://images.code.org/91fcb850da2f4b2f4cad24d094135867-image-1447174515231.gif\" style=\"width: 350px\">\r\n\r\n* ** Test the the 'Add' button** to check that it adds a new image at the current index of the array.\r\n\r\n<img src=\"https://images.code.org/0388145b2221da0255ad98005d749a0e-image-1447174724522.gif\" style=\"width: 200px\">\r\n\r\n* ** Set the colors and theme **of your app to personalize it. ** Note: ** You can change the way the screen looks but make sure to keep all the elements currently on the screen or your app might not work.",
+    "markdown_instructions": "# Adding Image URLs\r\n\r\nWe're ready to start improving the \"My Favorite Things\" app. \r\n\r\nWe'll do this in two steps:\r\n1. We'll change it from scrolling text to scrolling images\r\n2. We will add key events to scroll with the keyboard\r\n\r\n**Step 1:**\r\n* The default values in your array should be image URLs\r\n* The large **text area** needs to be changed to an **image**\r\n* Instead of **setting the text** you'll now be using `setImageURL` to set the URL of the image.\r\n\r\n# Do This\r\n**NOTE: We've re-loaded the code from the \"My Favorite Things\" App you wrote in the previous lesson.** (If you want to refer to code you just wrote, you can go back to look at it).\r\n\r\n* **Set the default values** in your array to be image URLs. (You might need to take a minute to go collect a few if you didn't in preparation for this lesson).\r\n\r\n* In Design Mode **delete the text area** and replace it with an **image**. Make sure your image has a descriptive and meaningful ID.\r\n\r\n* Inside your function that updates the display **replace `setText` with `setImageURL`**. Make sure you reference your new image element **by its correct ID**\r\n\r\n<img src=\"https://images.code.org/9f7f4aeeb9b1a84ae781043602166865-image-1447337890448.gif\" style=\"width: 350px\">\r\n\r\n* ** Test your app** to confirm that it's now showing the images in your array.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -166,11 +166,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "slider_speed": "1.0",
-    "project_template_level_name": "U3 - Keys - Image Scroller Template",
-    "instructions": "Add image URLs to your image array. Test out the add button. Style your image scroller. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "U3 - Arrays - favThings Template",
+    "instructions": "Add image URLs to your array. Replace the text area with an image and setText with setImageURL. Then test your app! (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

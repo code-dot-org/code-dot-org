@@ -230,6 +230,7 @@
         playlab: 构建一个应用程序
         artist: 绘画一些东西
         calculate: Calculate Something
+        applab: 构建一个应用程序
     user:
       classroom: 教师主页
       district_dashboard: 选区的仪表盘
@@ -253,6 +254,8 @@
       prize_us_only: （仅适用于美国学生）
       prizes_link: 更多信息
   teacher:
+    answer: 回答
+    for_teachers_only: 仅限教师
     title:
       one: 你的老师：
       other: 你的老师：
@@ -448,6 +451,7 @@
   pdf_download: 下载 PDF
   download_coming_soon: 可下载的活动即将推出.
   video_coming_soon: 视频即将推出！
+  not_started: 学生已经不会尝试这一水平。
   share_code:
     title: 按此“运行”来看我的程序运行
     bounce_og_title: 看看我的弹球游戏
@@ -489,9 +493,14 @@
       body: 查看由我们用户创建的应用程序和艺术家图片的画廊
     frozen:
       title: 冻结
+    starwars:
+      title: 星球大战
     infinity:
       title: 无限发挥实验室
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: 我的世界
+      body: 用代码来探索Minecraft。
   gallery:
     students_drew_these_with_code: 学生使用代码画这些!
     students_made_these_with_code: 学生使用代码做这些!

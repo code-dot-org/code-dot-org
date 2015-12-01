@@ -4,6 +4,7 @@ module ViewOptionsHelper
     no_header
     no_footer
     small_footer
+    share_footer
     has_i18n
     no_padding
     white_background
@@ -14,6 +15,9 @@ module ViewOptionsHelper
     is_external_project_level
     is_channel_backed
     post_milestone
+    puzzle_ratings_url
+    server_level_id
+    game_display_name
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

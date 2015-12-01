@@ -1,4 +1,5 @@
 "ms-MY":
+  hour_of_code: Hour of Code
   hello: Helo dunia
   select_language: Sila pilih bahasa anda
   en: Computer Science
@@ -11,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Adakah anda seorang guru Sains Komputer? Sila lihat sumber
     lain Minggu Pendidikan Sains Komputer</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>pernah mencuba</h3><h2>1 Jam Pengaturcaraan</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>pernah mencuba</h3><h2>1 Jam Pengaturcaraan</h2>
   anybody_can_learn: Sesiapapun boleh belajar.
   learn_now: Pelajari Sekarang
   petition_message: Setiap pelajar di setiap sekolah perlu diberi peluang untuk mempelajari
@@ -35,11 +36,14 @@
   hoc2014_everyone: Sesiapa sahaja
   hoc2014_support: Beri sokongan
   hoc2014_whatishoc: Apakah 1 Jam Pengaturcaraan?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Tetapkan semula
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Mendaftar
   cded_try_it: Selamat mencuba
   twentyhours_trynow: Cuba sekarang
@@ -62,12 +66,15 @@
     ulang-gelung, penyata jika-kemudian, dan algoritma asas.
   all_ages: Semua peringkat umur
   beginner: Pemula
-  n_participants: "# peserta"
+  n_participants: '# peserta'
   go: Pergi
   thank_you_: Terima kasih!
   congratulations: Tahniah!
   congratulations_on_completing_hoc: Tahniah kerana telah menyiapkan satu Hour of
     Code
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Accelerated Course
   course_name_course1: Kursus 1
   course_name_course2: Kursus 2
@@ -111,7 +118,7 @@
   beyond_an_hour: Di sebalik Hour of Code
   get_started: Mula
   i_agree: saya setuju
-  participant_select: "-Pilih-"
+  participant_select: -Pilih-
   participant_student: pelajar
   participant_parent: Ibu bapa
   participant_educator: Pendidik
@@ -132,12 +139,10 @@
   learn_next_level: Teruskan ke tahap seterusnya
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
-  hoc_is_here: "#SatuJamKod ada di sini - Jom tengok! @codeorg"
+  hoc_is_here: '#SatuJamKod ada di sini - Jom tengok! @codeorg'
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Belajar Hour of Code
   beyond_hoc: Melepasi Satu Jam
   what_gender: Apakah jantina anda?
@@ -146,11 +151,11 @@
   help_recruit_coders: bantu kami merekrut lebih banyak coders ke pasukan anda!
   help_recruit: bantu kami merekrut lebih banyak coders!
   lines_of_code: LEBIH <b># BARIS KOD</b> DITULIS HINGGA KINI.
-  lines_of_code_alt: "<b>#</b> BARIS KOD YANG DITULIS OLEH PARA PELAJAR"
+  lines_of_code_alt: <b>#</b> BARIS KOD YANG DITULIS OLEH PARA PELAJAR
   who_has_done_hoc: 'Siapa yang dah buat #SatuJamKod? @codeorg'
   hoc_leaderboards: Papan Carta Satu Jam Kod
-  students_and_lines: "%{students} pelajar telah selesaikan Satu Jam Kod dan telah
-    menulis %{lines} baris kod."
+  students_and_lines: '%{students} pelajar telah selesaikan Satu Jam Kod dan telah
+    menulis %{lines} baris kod.'
   start_hoc: Mulakan Satu Jam Kod sekarang
   contact_form_topic_press: Akhbar/media (temu bual atau penglibatan perbualan)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
@@ -220,7 +225,7 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Satu Jam Kod
   homepage_slot_text_frozen: Frozen with Anna and Elsa
@@ -229,8 +234,15 @@
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Kedai
   homepage_slot_text_flappy: Kod Flappy
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# served'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Mendaftar
+  homepage_action_text_try_it: Selamat mencuba
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Tonton Video
   homepage_action_text_teachervideo: Tonton Video
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Tandatangan petisyen
   homepage_signpetition_dropdown: Tandatangan petisyen kami &#x25BE;
@@ -247,7 +259,7 @@
   homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
   homepage_slot_text_link_hoc: Cuba Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Explore all of our tutorials
@@ -306,26 +318,55 @@
   class_submission_level_college: Kolej
   class_submission_level_vocational: Vokasional
   class_submission_languages_other: Bahasa lain
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: Cuba sekarang
+  starwars_blocks_title: blok
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: Cuba sekarang
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Nama
@@ -384,9 +425,24 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Ingin membantu menyumbang
     kepada projek kurikulum open-source (sumber-terbuka)
   volunteer_engineer_submission_experience_unspecified: Tidak dinyatakan
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Pelajar
     universiti (atau penyelidik)
   volunteer_engineer_submission_experience_software_professional: Pakar Perisian
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
   petition_age: Umur
   dashboard_landing_title: Laman Utama Guru
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
@@ -617,26 +673,43 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ketahui lebih lanjut
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Mendaftar
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Cuba tutorial 1 Jam Pengaturcaraan yang baru dari kami
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorial dalam bahasa anda
   carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_beginners: Tutorials for Grades K-8
   carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
@@ -647,6 +720,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Nota pendidik
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -662,6 +736,7 @@
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Menulis atur cara komputer yang pertama
   codeintl_name: Menulis atur cara komputer yang pertama
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -699,8 +774,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Menulis atur cara komputer yang pertama
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Peringkat umur 4-104 tahun
   codeintl_gradelevel: Peringkat umur 4-104 tahun
   thinkersmithspanish_gradelevel: Por todos
@@ -740,7 +817,10 @@
   projguts_gradelevel: Umur 10-13 tahun
   hourofcode_gradelevel: Peringkat umur 4-104 tahun
   frozen_gradelevel: Umur 8 keatas
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Peringkat umur 4-104 tahun
+  infinity_gradelevel: Peringkat umur 4-104 tahun
+  artist_gradelevel: Peringkat umur 4-104 tahun
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -780,6 +860,7 @@
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
   frozen_platformtext: Modern browsers + tablets
+  starwars_platformtext: Modern browsers + tablets
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -830,7 +911,12 @@
   hourofcode_shortdescription: Placeholder for new code.org/hoc
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -964,6 +1050,8 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1286,38 +1374,19 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: mengepak
+  infinity_shortcode: inf
+  playlab_shortcode: Main
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

@@ -198,22 +198,24 @@
           'Artist: For Loops': 'Artista: Cicli con Contatore'
           'Play Lab: For Loops': 'Laboratorio: Cicli con Contatore'
           'Artist: Functions': 'Artista: Funzioni'
-          'Unplugged: Tangrams': 'Senza Rete: Tangram'
+          'Unplugged: Tangrams': Tangram
           Artist: 'Artista: Sequenze e Cicli'
           Bee: Ape
-          'Unplugged: Envelope Variables': 'Senza Rete: Variabili della Busta'
-          'Unplugged: Madlibs': 'Senza Rete: Mad-Libs'
-          'Unplugged: For Loop Fun': 'Senza Rete: Divertiti usando i Cicli con Contatore'
-          'Unplugged: Songwriting with Parameters': 'Senza Rete: Composizione di Canzoni
-            con Parametri'
+          'Unplugged: Envelope Variables': Variabili e Buste
+          'Unplugged: Madlibs': Mad-Libs
+          'Unplugged: For Loop Fun': Divertiti usando i Cicli con Contatore
+          'Unplugged: Songwriting with Parameters': Composizione di Canzoni con Parametri
           'Artist: Functions with Parameters': 'Artista: Funzioni con Parametri'
-          'Unplugged: Binary': 'Senza Rete: Binario'
+          'Unplugged: Binary': Binario
           Bee Binary: 'Ape: Binario'
           Farmer Binary: 'Contadina: Binario'
           Maze and Bee: 'Il Labirinto e l''Ape: Sequenze, Cicli, Istruzioni Condizionali'
           Artist Binary: 'Artista: Binario'
           description_audience: Da 10 anni in su (dopo il Corso 3)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Super Sfida - Variabili
+          Super Challenge - For Loops: Super Sfida - Per Cicli
+          Super Challenge - Functions and Parameters: Super Sfida - Funzioni e Parametri
+          Extreme Challenge - Comprehensive: Sfida Estrema - Completo
         Course4pre:
           title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli
@@ -255,8 +257,8 @@
           title: Informatica in Algebra
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Senza Rete: Videogiochi
-            e Piani Cartesiani'
+          'Unplugged: Video Games and Coordinate Planes': Tradizionale &ndash; Videogiochi
+            e Piani Cartesiani
           'Calc: Evaluation Blocks': 'Calcolo: Blocchi di Valutazione'
           'Eval: Strings and Images': Stringhe e Immagini
           'Unplugged: Contracts': 'Senza Rete: Contratti'
@@ -265,7 +267,7 @@
           'Play Lab: Defining Variables (Big Game)': 'Laboratorio: Definizione di
             Variabili (Big Game)'
           'Eval: Defining Functions': 'Valutazione: Definizione di Funzioni'
-          'Unplugged: The Design Recipe': 'Senza rete: La Ricetta della Progettazione'
+          'Unplugged: The Design Recipe': Tradizionale &ndash; La Ricetta della Progettazione
           'Play Lab: Defining Functions': 'Laboratorio: Definizione di Funzioni'
           'Eval: Functions': 'Valutazione: Funzioni'
           'Play Lab: Animation (Big Game)': 'Laboratorio: Animazione (Big Game)'
@@ -273,8 +275,8 @@
           'Eval: Boolean Operators': 'Valutazione: Operatori Booleani'
           'Play Lab: Booleans': 'Laboratorio: Valori Booleani'
           'Play Lab: Boolean (Big Game)': 'Laboratorio: Valori Booleani (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Lezione Senza Rete:
-            Istruzioni Condizionali e Funzioni a Tratti'
+          'Unplugged: Conditionals and Piecewise Functions': Tradizionale &ndash;
+            Istruzioni Condizionali e Funzioni a Tratti
           'Eval: Conditionals': Istruzioni condizionali
           'Unplugged: Collision Detection and the Distance Formula': 'Senza Rete:
             Rilevamento delle Collisioni e Formula per la Distanza'
@@ -308,7 +310,7 @@
           Blockly Basics: Concetti di base di Blockly
           Writing computer programs: Scrivere programmi per il computer
           Navigating the teacher dashboard: Esplorare il cruscotto di lavoro dell'insegnante
-          Unplugged lessons: Lezioni Senza Rete
+          Unplugged lessons: Lezioni Tradizionali
           Classroom Culture: Cultura di classe
           Ways to go beyond Courses 1, 2, and 3: Cosa fare dopo i corsi 1, 2 e 3
           K-5 Courses: K-5 Courses
@@ -370,8 +372,9 @@
             è pensato per l'uso nelle scuole a partire dai 10 anni, ma è divertente
             per imparare un po' di informatica a qualunque età. Guarda i corsi 2-4
             se vuoi sperimentare in modo più approfondito.
-          description_short: Questo corso di 20 ore copre i concetti base di informatica
-            e programmazione dei corsi 2-4.
+          description_short: Questo corso rapido in 20 lezioni introduce in modo sintetico
+            i concetti fondamentali dell'informatica e della programmazione coperti
+            dai corsi 2, 3, e 4.
           Introduction to Computer Science: Cos'è l'informatica
           The Maze: Il labirinto
           Computational Thinking: Pensiero computazionale
@@ -400,7 +403,8 @@
           Applab: Applab
           The Artist: L'artista
           Play Lab: Laboratorio
-          Play Lab 2015: Laboratorio Play Lab 2015
+          Play Lab 2015: Laboratorio 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Eventi
           description: Eventi
@@ -413,7 +417,8 @@
           title: Flappy
           description: Vuoi creare la tua versione del gioco "Flappy" in meno di 10
             minuti? Prova questo corso!
-          description_short: Scrivi il tuo gioco Flappy in meno di 10 minuti!
+          description_short: Crea la tua versione del gioco "Flappy" in meno di 10
+            minuti!
           Flappy Code: Flappy
         jigsaw:
           title: Puzzle
@@ -424,8 +429,8 @@
           Jigsaw: Puzzle
         step:
           title: Fai un passo
-          description: Passo del tutorial
-          description_short: Passo del tutorial
+          description: Passo del corso
+          description_short: Passo del corso
           Step: Fai un passo
         Hour of Code:
           title: L'Ora del Codice 2013
@@ -525,29 +530,29 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'Senza Rete: Videogiochi
-            e Piani Cartesiani'
+          'Unplugged: Video Games and Coordinate Planes': Tradizionale &ndash; Videogiochi
+            e Piani Cartesiani
           'Calc: Evaluation Blocks': 'Calcolo: Blocchi di Valutazione'
           'Eval: Strings and Images': 'Valutazione: Stringhe e Immagini'
-          'Unplugged: Contracts': 'Senza Rete: Contratti'
+          'Unplugged: Contracts': Tradizionale &ndash; Contratti
           'Eval: Writing Contracts': 'Valutazione: Scrittura di Contratti'
           'Calc: Defining Variables': 'Calcolo: Definizione di Variabili'
           'Play Lab: Defining Variables (Big Game)': 'Laboratorio: Definizione di
             Variabili (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Senza rete: La Ricetta della Progettazione'
+          'Unplugged: The Design Recipe': Tradizionale &ndash; La Ricetta della Progettazione
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Laboratorio: Animazione (Big Game)'
-          'Unplugged: Booleans': 'Senza Rete: Valori Booleani'
+          'Unplugged: Booleans': Tradizionale &ndash; Valori Booleani
           'Eval: Boolean Operators': 'Valutazione: Operatori Booleani'
           'Play Lab: Booleans': 'Laboratorio: Valori Booleani'
           'Play Lab: Boolean (Big Game)': 'Laboratorio: Valori Booleani (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Lezione Senza Rete:
-            Istruzioni Condizionali e Funzioni a Tratti'
+          'Unplugged: Conditionals and Piecewise Functions': Tradizionale &ndash;
+            Istruzioni Condizionali e Funzioni a Tratti
           'Eval: Conditionals': 'Valutazione: Istruzioni Condizionali'
-          'Unplugged: Collision Detection and the Distance Formula': 'Senza Rete:
-            Rilevamento delle Collisioni e Formula per la Distanza'
+          'Unplugged: Collision Detection and the Distance Formula': Tradizionale
+            &ndash; Rilevamento delle Collisioni e Formula per la Distanza
           'Play Lab: Collision Detection (Big Game)': 'Laboratorio: Rilevamento delle
             Collisioni (Big Game)'
           Evaluation Blocks: Blocchi di Valutazione
@@ -725,6 +730,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Cicli "Mentre"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1016,12 +1054,12 @@
           App Lab: Laboratorio per le App
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Simulatore di Internet
@@ -1051,7 +1089,7 @@
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1131,7 +1169,7 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           The Design Recipe: La Ricetta della Progettazione
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
@@ -1139,7 +1177,7 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Wrap-Up: Conclusione
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1157,7 +1195,7 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1175,7 +1213,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
@@ -1191,7 +1229,7 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1216,7 +1254,7 @@
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1334,7 +1372,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1366,7 +1404,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1388,11 +1426,20 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1416,11 +1463,18 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1429,7 +1483,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1467,11 +1521,13 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1493,7 +1549,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Benvenuti!
+          Welcome!: Benvenuto!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1502,15 +1558,130 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
-          description_short: Something special for those who know it exists. These
-            puzzles might not be around long, so enjoy them while you can!
+          description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
+            Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
+            finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
           Halloween 2015: Halloween 2015
         SpecialSeries:
-          title: Special Levels
-          description_short: Something special for those who know it exists. These
-            puzzles might not be around long, so enjoy them while you can!
+          title: Esercizi speciali
+          description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
+            Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
+            finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
           Halloween 2015: Halloween 2015
+          description: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
+            Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
+            finché ci sono!
+        iceage:
+          title: Laboratorio Gioco Età del ghiaccio
+          description_short: Crea una storia oppure fai un gioco con il Laboratorio
+            Gioco Età del ghiaccio!
+          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco
+            Età del ghiaccio!
+          Ice Age Play Lab: Laboratorio Gioco Età del ghiaccio
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Cicli "Mentre"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Laboratorio Gioco Gumball
+          description_short: Crea una storia oppure fai un gioco con il Laboratorio
+            Gioco Gumball!
+          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco
+            Gumball!
+          Gumball Play Lab: Laboratorio Gioco Gumball
+        starwars:
+          title: 'Star Wars: Costruisci una galassia con il codice'
+          description_short: Impara a programmare i droidi e crea la tua versione
+            di Star Wars ... in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Star
+            Wars ... in una galassia lontana lontana...
+          Hour of Code 2015: L'Ora del Codice 2015
+        starwarsblocks:
+          title: 'Star Wars: Costruisci una galassia con il codice'
+          description_short: Impara a programmare i droidi e crea la tua versione
+            di Star Wars ... in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Star
+            Wars ... in una galassia lontana lontana...
+          Hour of Code 2015: L'Ora del Codice 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Minecraft L'Ora del Codice
+          description_short: Esplora il mondo di Minecraft attraverso il codice
+          description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
+            con Steve o Alex
+          Hour of Code 2015: L'Ora del Codice 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Benvenuto!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Conclusione

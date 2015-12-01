@@ -26,7 +26,8 @@ class PropertiesApi < Sinatra::Base
     dont_cache
     content_type :json
     not_authorized unless owns_channel? channel_id
-    PropertyType.new(channel_id, storage_id(endpoint)).to_hash.to_json
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).to_hash.to_json
   end
 
   #
@@ -37,7 +38,8 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
     content_type :json
-    PropertyType.new(channel_id, storage_id(endpoint)).get(name).to_json
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).get(name).to_json
   end
 
   #
@@ -47,7 +49,8 @@ class PropertiesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
-    PropertyType.new(channel_id, storage_id(endpoint)).delete(name)
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).delete(name)
     no_content
   end
 
@@ -69,7 +72,9 @@ class PropertiesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = PropertyType.new(channel_id, storage_id(endpoint)).set(name, PropertyBag.parse_value(request.body.read), request.ip)
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    parsed_value = PropertyBag.parse_value(request.body.read)
+    value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
     dont_cache
     content_type :json
@@ -94,7 +99,8 @@ class PropertiesApi < Sinatra::Base
 
     overwrite = request.GET['overwrite'] == '1'
 
-    bag = PropertyType.new(channel_id, storage_id(endpoint))
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    bag = PropertyType.new(decrypted_channel_id, storage_id(endpoint))
     bag_hash = nil
     json_data.each do |k, v|
       if !overwrite

@@ -1,72 +1,78 @@
 "hi-IN":
-  hello: "हैलो वर्ल्ड"
-  select_language: "कृपया अपनी भाषा चुनें"
+  hour_of_code: Hour of Code
+  hello: हैलो वर्ल्ड
+  select_language: कृपया अपनी भाषा चुनें
   en: Computer Science
-  computer_science_edweek: "कंप्यूटर विज्ञान शिक्षा सप्ताह"
-  csedweek_dates: "दिसंबर 8-14, 2014"
+  computer_science_edweek: कंप्यूटर विज्ञान शिक्षा सप्ताह
+  csedweek_dates: दिसंबर 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> ऑवर ऑफ़ कोड</a> आ रहा है। सभी शिक्षकों और आयोजकों को बोला रहा
     है, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> आपके ऑवर ऑफ़ कोड  का प्लान करे</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>की कोशिश की है एक</h3><h2>आवर ऑफ़ कोड</h2>"
-  anybody_can_learn: "हर कोई सीख सकता है"
-  learn_now: "अब जानें"
-  petition_message: "हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना
-    चाहिए"
-  petition_sign_message: "अगर आप सहमत हैं, आपका नाम साइन इन करें।  # दूसरों में शामिल
-    हों।"
+  n_have_learned_an_hoc: <h1>#</h1><h3>की कोशिश की है एक</h3><h2>आवर ऑफ़ कोड</h2>
+  anybody_can_learn: हर कोई सीख सकता है
+  learn_now: अब जानें
+  petition_message: हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना चाहिए
+  petition_sign_message: 'अगर आप सहमत हैं, आपका नाम साइन इन करें।  # दूसरों में शामिल
+    हों।'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
-  name: "नाम"
-  email: "ईमेल"
-  zipcode: "ज़िप कोड या देश"
-  submit: "सबमिट करें"
-  twentyhours_heading: "हमारे कंप्यूटर विज्ञान पाठ्यक्रम का इंट्रो प्रयास करें"
-  twentyhours_text: "आपका पहला ऑवर ऑफ़ कोड समाप्त हो गया?अनुवर्ती कोर्स में कंप्यूटर
-    विज्ञान और प्रोग्रामिंग अवधारणाओं को और अधिक विस्तार से जाने।"
+  name: नाम
+  email: ईमेल
+  zipcode: ज़िप कोड या देश
+  submit: सबमिट करें
+  twentyhours_heading: हमारे कंप्यूटर विज्ञान पाठ्यक्रम का इंट्रो प्रयास करें
+  twentyhours_text: आपका पहला ऑवर ऑफ़ कोड समाप्त हो गया?अनुवर्ती कोर्स में कंप्यूटर
+    विज्ञान और प्रोग्रामिंग अवधारणाओं को और अधिक विस्तार से जाने।
   hoc2014_heading: <a href="http://hourofcode.com"> ऑवर ऑफ़ कोड</a> में शामिल <br/>
     8-14 दिसंबर, 2014 <br/>
   hoc2014_students: Students
-  hoc2014_try: "कर के देखे"
-  hoc2014_teachers: "शिक्षक"
-  hoc2014_host: "मेजबानी करे"
-  hoc2014_everyone: "हर कोई"
-  hoc2014_support: "समर्थन करे"
-  hoc2014_whatishoc: "ऑवर ऑफ़ कोड क्या है?"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  hoc2014_try: कर के देखे
+  hoc2014_teachers: शिक्षक
+  hoc2014_host: मेजबानी करे
+  hoc2014_everyone: हर कोई
+  hoc2014_support: समर्थन करे
+  hoc2014_whatishoc: ऑवर ऑफ़ कोड क्या है?
+  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
   csedweek_map_search_reset: Reset
+  csedweek_map_legend_title: Legend
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Sign up
-  cded_try_it: "कर के देखे"
-  twentyhours_trynow: "अब कोशिश करे"
-  california_heading: "कंप्यूटर विज्ञान पढ़ाने के लिए अपने स्कूल से पूछो"
-  california_text: "किसी भी शिक्षक हमारे <a href='http://studio.code.org/'> मुफ्त
-    पाठ्यक्रमों</a> को इस्तेमाल कर सकते हैं।  कोई भी प्राथमिक स्कूल <a href='http://code.org/educate/k5'>
+  cded_try_it: कर के देखे
+  twentyhours_trynow: अब कोशिश करे
+  california_heading: कंप्यूटर विज्ञान पढ़ाने के लिए अपने स्कूल से पूछो
+  california_text: किसी भी शिक्षक हमारे <a href='http://studio.code.org/'> मुफ्त पाठ्यक्रमों</a>
+    को इस्तेमाल कर सकते हैं।  कोई भी प्राथमिक स्कूल <a href='http://code.org/educate/k5'>
     कंप्यूटर विज्ञान पढ़ा सकता है</a>। हाई स्कूलों से पूछना <a href='http://code.org/educate/districts'>
-    हमारे सहायक बने।"
-  california_button: "अधिक जानें"
+    हमारे सहायक बने।
+  california_button: अधिक जानें
   flappy_heading: Code.org के लिए flappy जन्मदिन
   flappy_text: Code.org की स्थापना को एक साल हुए|<br/><br/> हमारे साथ जश्न मे शामिल
     हो और खुद अपना <b>फ्लेप्पी</b> खेल बनाये| आप अपने नियम कोड कर सकते है और दोस्तों
     को बी दिखा सकते है!
-  view_english_site: "देखें हिंदी साइट"
-  non_english_tutorials: "ट्यूटोरियल एकाधिक भाषाओं में अनुवाद:"
-  write_your_first_program: "अपना पहला कंप्यूटर प्रोग्राम लिखे"
+  view_english_site: देखें हिंदी साइट
+  non_english_tutorials: 'ट्यूटोरियल एकाधिक भाषाओं में अनुवाद:'
+  write_your_first_program: अपना पहला कंप्यूटर प्रोग्राम लिखे
   learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
     programming. This is a game-like tutorial starring video lectures by Bill Gates,
     Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
     statements, and basic algorithms.
-  all_ages: "सभी आयु"
-  beginner: "शुरआती"
-  n_participants: "# प्रतिभागियों"
-  go: "जाएं"
-  thank_you_: "धन्यवाद!"
-  congratulations: "बधाइयाँ!"
+  all_ages: सभी आयु
+  beginner: शुरआती
+  n_participants: '# प्रतिभागियों'
+  go: जाएं
+  thank_you_: धन्यवाद!
+  congratulations: बधाइयाँ!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
   course_name_accelerated: Accelerated Course
   course_name_course1: Course 1
   course_name_course2: Course 2
@@ -76,54 +82,54 @@
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
-  get_a_certificate_of_achievement: "उपलब्धि का एक प्रमाण पत्र प्राप्त करे"
+  get_a_certificate_of_achievement: उपलब्धि का एक प्रमाण पत्र प्राप्त करे
   enter_valid_age: Please select a valid age
-  enter_valid_email: "कृपया एक मान्य ईमेल एड्रेस डाले"
+  enter_valid_email: कृपया एक मान्य ईमेल एड्रेस डाले
   get_a_certificate_message: We'll send you a certificate and information about how
     to <a href='/learn/beyond'>Learn beyond One Hour</a>
   get_a_certificate_message_after: Click on the certificate to download or print it.
     Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or
     see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
-  thanks_for_submitting: "सबमिट करने के लिए धन्यवाद!"
+  thanks_for_submitting: सबमिट करने के लिए धन्यवाद!
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
-  personalize_certificate: "आपके प्रमाण पत्र को व्यक्तिगत करें"
-  share_achievement: "आपकी उपलब्धि साझा करें"
+  personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
+  share_achievement: आपकी उपलब्धि साझा करें
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
   leaderboards_for_hoc: Leaderboards ऑवर ऑफ़ कोड के लिए।
   support_url: http://support.code.org/
-  country: "देश"
-  city: "शहर"
-  gender: "लिंग"
-  boys: "लड़के"
-  girls: "लड़कियों"
-  give_my_hour: "करने के लिए मुझे घंटा दे:"
-  girls_team: "लड़कियों टीम"
-  boys_team: "लड़कों की टीम"
-  tell_the_world: "दुनिया को बताना!"
-  thanks_for_voting: "मतदान के लिए धन्यवाद!"
+  country: देश
+  city: शहर
+  gender: लिंग
+  boys: लड़के
+  girls: लड़कियों
+  give_my_hour: 'करने के लिए मुझे घंटा दे:'
+  girls_team: लड़कियों टीम
+  boys_team: लड़कों की टीम
+  tell_the_world: दुनिया को बताना!
+  thanks_for_voting: मतदान के लिए धन्यवाद!
   share_on_facebook: Facebook पर भेजे
   share_on_twitter: Twitter पर भेजे
-  beyond_an_hour: "कोड की एक घंटे से परे"
-  get_started: "शुरू करें"
-  i_agree: "मैं सहमत हूँ"
-  participant_select: "-चयन करें-"
-  participant_student: "छात्र"
-  participant_parent: "अभिभावक"
-  participant_educator: "शिक्षक"
-  participant_engineer: "सॉफ्टवेयर इंजीनियर"
-  participant_other: "इनमें से कोई नहीं"
-  print_all: "सभी को प्रिंट कर दो"
-  print_ice_art: "अपनी बर्फ कला मुद्रित करें "
-  create_art_with_zombie: "या फिर ज़ोंबी से उन्नत कला बनाए "
-  i_am_a: "मैं एक हूँ"
-  never_spam: "हम आपको कभीं स्पैम नही करेंगे"
-  enter_country: "यदि संयुक्त राज्य के बाहर देश हैं तो अपना देश डालें"
-  used_infrequent_updates: "केवल निराले अपडेट के लिए प्रयुक्त"
-  privacy_practices_children: "बच्चो के लिए हमारे गोपनीयता प्रथाओं को पढ़ें"
-  petition_thankyou: "याचिका पर हस्ताक्षर करने के लिए धन्यवाद "
-  continue_learning_header: "एक घंटे के बाद भी पढ़ते रहे"
+  beyond_an_hour: कोड की एक घंटे से परे
+  get_started: शुरू करें
+  i_agree: मैं सहमत हूँ
+  participant_select: -चयन करें-
+  participant_student: छात्र
+  participant_parent: अभिभावक
+  participant_educator: शिक्षक
+  participant_engineer: सॉफ्टवेयर इंजीनियर
+  participant_other: इनमें से कोई नहीं
+  print_all: सभी को प्रिंट कर दो
+  print_ice_art: 'अपनी बर्फ कला मुद्रित करें '
+  create_art_with_zombie: 'या फिर ज़ोंबी से उन्नत कला बनाए '
+  i_am_a: मैं एक हूँ
+  never_spam: हम आपको कभीं स्पैम नही करेंगे
+  enter_country: यदि संयुक्त राज्य के बाहर देश हैं तो अपना देश डालें
+  used_infrequent_updates: केवल निराले अपडेट के लिए प्रयुक्त
+  privacy_practices_children: बच्चो के लिए हमारे गोपनीयता प्रथाओं को पढ़ें
+  petition_thankyou: 'याचिका पर हस्ताक्षर करने के लिए धन्यवाद '
+  continue_learning_header: एक घंटे के बाद भी पढ़ते रहे
   continue_learning_body: There are lots of options.  You can learn online, or at
     a local school, or summer camp.
   learn_next_level: Continue to the next level
@@ -133,21 +139,19 @@
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond One Hour
-  what_gender: "आपका लिंग क्या है?"
-  girl: "लड़की"
-  boy: "लड़का"
+  what_gender: आपका लिंग क्या है?
+  girl: लड़की
+  boy: लड़का
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
@@ -168,9 +172,9 @@
   studiobar_teacher_body: Introduce Code Studio in your classroom
   studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: "दान करे"
+  studiobar_donate_title: दान करे
   studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: "दुकान"
+  studiobar_shop_title: दुकान
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
     learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
@@ -217,17 +221,24 @@
     engaged, involved and participating.&rdquo;
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
+  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: "दुकान"
+  homepage_slot_text_shop: दुकान
   homepage_slot_text_flappy: Flappy Code
+  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_num_served: '# served'
+  homepage_action_text_join_us: Join us
+  homepage_action_text_sign_up: Sign up
+  homepage_action_text_try_it: कर के देखे
+  homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: ''
+  homepage_action_text_girlvideo: Inspire a girl
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
@@ -236,15 +247,15 @@
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: "अधिक जानें"
+  homepage_banner_text_link: अधिक जानें
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "अधिक जानें"
+  homepage_banner_privacy_link: अधिक जानें
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
-  homepage_slot_text_link_hoc: "एक घंटे कोडिंग की कोशिश करें "
+  homepage_slot_text_link_hoc: 'एक घंटे कोडिंग की कोशिश करें '
   homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Explore all of our tutorials
@@ -264,11 +275,11 @@
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
-  homepage_donors_donate: "दान करे"
-  contact_form_topic_student: "मै एक विद्यार्थी हूँ"
+  homepage_donors_donate: दान करे
+  contact_form_topic_student: मै एक विद्यार्थी हूँ
   contact_form_topic_parent: I'm a parent
-  contact_form_topic_teacher: "मैं एक अध्यापक/शिक्षक हूँ"
-  contact_form_topic_outside_us: "मैं अमेरिका के बाहर हूँ"
+  contact_form_topic_teacher: मैं एक अध्यापक/शिक्षक हूँ
+  contact_form_topic_outside_us: मैं अमेरिका के बाहर हूँ
   contact_form_topic_contribution: Charitable contribution
   contact_form_topic_partner: I'd like to partner
   contact_form_topic_other: Other
@@ -287,7 +298,7 @@
   class_submission_in_school_exploring_computer_science: Exploring Computer Science
   class_submission_in_school_other: Other in school
   class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: "ग्रीष्मकालीन शिविर"
+  class_submission_out_of_school_summer_camp: ग्रीष्मकालीन शिविर
   class_submission_out_of_school_afterschool_program: Afterschool program
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
@@ -297,35 +308,64 @@
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
   class_submission_level_preschool: Preschool
-  class_submission_level_elementary: "प्राथमिक"
-  class_submission_level_middle_school: "माध्यमिक विद्यालय"
-  class_submission_level_high_school: "उच्च विद्यालय"
-  class_submission_level_college: "कॉलेज"
+  class_submission_level_elementary: प्राथमिक
+  class_submission_level_middle_school: माध्यमिक विद्यालय
+  class_submission_level_high_school: उच्च विद्यालय
+  class_submission_level_college: कॉलेज
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
+  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
+    videos</a> by role models and celebrities
+  starwars_subtitle: Building a Galaxy With Code
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_start_button: अब कोशिश करे
+  starwars_blocks_title: Blocks
+  starwars_blocks_description: Use drag-drop blocks.
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
+  starwars_blocks_start_button: अब कोशिश करे
+  starwars_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  starwars_speak_languages: Speak another language?
+  starwars_help_translate: Help us translate
+  starwars_platform_text: Modern browsers, smartphones, tablets
+  mc_name: Minecraft Hour of Code
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
+    this Minecraft world.
+  mc_gradelevel: Ages 4-104
+  mc_platformtext: Modern browsers, smartphones, tablets
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "नाम"
+  volunteer_engineer_submission_field_name: नाम
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -345,7 +385,7 @@
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "विवरण "
+  volunteer_engineer_submission_field_description: विवरण 
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
@@ -362,14 +402,14 @@
     (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_submit: "सबमिट करें"
+  volunteer_engineer_submission_submit: सबमिट करें
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
     of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
     more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_one_hr_per_week: "प्रति सप्ताह 1 घंटे"
-  volunteer_engineer_submission_commitment_three_hrs_per_week: "प्रति सप्ताह 3 घंटे"
-  volunteer_engineer_submission_commitment_five_hrs_per_week: "प्रति सप्ताह 5 घंटे"
+  volunteer_engineer_submission_commitment_one_hr_per_week: प्रति सप्ताह 1 घंटे
+  volunteer_engineer_submission_commitment_three_hrs_per_week: प्रति सप्ताह 3 घंटे
+  volunteer_engineer_submission_commitment_five_hrs_per_week: प्रति सप्ताह 5 घंटे
   volunteer_engineer_submission_commitment_now_and_then: Every now and then
   volunteer_engineer_submission_commitment_annually: 2-3 times per year
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
@@ -381,10 +421,25 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
     to open-source curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: "सॉफ्टवेयर इंजीनियर"
-  petition_age: "आयु"
+  volunteer_engineer_submission_experience_software_professional: सॉफ्टवेयर इंजीनियर
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
+    for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
+    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
+    prepare me for coding with my students
+  petition_age: आयु
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -457,7 +512,7 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: "रद्द करें"
+  dashboard_action_cancel: रद्द करें
   dashboard_action_delete: Delete
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
@@ -512,14 +567,14 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: "नाम"
+  dashboard_students_name: नाम
   dashboard_students_progress: Progress
-  dashboard_students_age: "आयु"
-  dashboard_students_gender: "लिंग"
+  dashboard_students_age: आयु
+  dashboard_students_gender: लिंग
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
-  dashboard_students_password: "पासवर्ड"
+  dashboard_students_password: पासवर्ड
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -580,7 +635,7 @@
   dashboard_grade_other: Other
   dashboard_login_word: Word
   dashboard_login_picture: Picture
-  dashboard_login_none: "ईमेल"
+  dashboard_login_none: ईमेल
   dashboard_new_password: new password
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
@@ -588,15 +643,15 @@
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_stage: "मंच"
-  dashboard_puzzle: "पहेली"
+  dashboard_stage: मंच
+  dashboard_puzzle: पहेली
   dashboard_question: Question
   dashboard_response: Response
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: "छात्र"
+  dashboard_student: छात्र
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -612,26 +667,43 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: "अधिक जानें"
+  learn_more: अधिक जानें
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Sign up
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorials in your language
   carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_beginners: Tutorials for Grades K-8
   carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
@@ -642,6 +714,7 @@
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -657,8 +730,9 @@
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
-  codeorg_name: "अपना पहला कंप्यूटर प्रोग्राम लिखे"
-  codeintl_name: "अपना पहला कंप्यूटर प्रोग्राम लिखे"
+  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  codeorg_name: अपना पहला कंप्यूटर प्रोग्राम लिखे
+  codeintl_name: अपना पहला कंप्यूटर प्रोग्राम लिखे
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -690,12 +764,14 @@
   makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
-  blockly_name: "ब्लॉक्ली"
+  blockly_name: ब्लॉक्ली
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: अपना पहला कंप्यूटर प्रोग्राम लिखे
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artist
   codeorg_gradelevel: Ages 4-104
   codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -707,35 +783,38 @@
   khanpl_gradelevel: Middle school +
   tynker_gradelevel: Ages 5-13
   scratch_gradelevel: Ages 8+
-  lightbot_gradelevel: "सभी आयु"
-  thinkersmith_gradelevel: "सभी आयु"
+  lightbot_gradelevel: सभी आयु
+  thinkersmith_gradelevel: सभी आयु
   condcards_gradelevel: Ages 8-12
-  lightbotintl_gradelevel: "सभी आयु"
-  codehs_gradelevel: "उच्च विद्यालय"
-  codecademy_gradelevel: "उच्च विद्यालय"
+  lightbotintl_gradelevel: सभी आयु
+  codehs_gradelevel: उच्च विद्यालय
+  codecademy_gradelevel: उच्च विद्यालय
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: "उच्च विद्यालय"
+  processing_gradelevel: उच्च विद्यालय
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: "प्राथमिक"
-  kodable_gradelevel: "प्राथमिक"
+  codespark_gradelevel: प्राथमिक
+  kodable_gradelevel: प्राथमिक
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: "प्राथमिक"
-  makeschool_gradelevel: "उच्च विद्यालय"
-  touchdevelop_gradelevel: "उच्च विद्यालय"
+  bitsbox_gradelevel: प्राथमिक
+  makeschool_gradelevel: उच्च विद्यालय
+  touchdevelop_gradelevel: उच्च विद्यालय
   appinventor_gradelevel: Middle school +
-  blockly_gradelevel: "सभी आयु"
+  blockly_gradelevel: सभी आयु
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
   hourofcode_gradelevel: Ages 4-104
   frozen_gradelevel: Ages 8+
+  starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
+  infinity_gradelevel: Ages 4-104
+  artist_gradelevel: Ages 4-104
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -775,6 +854,7 @@
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
   frozen_platformtext: Modern browsers + tablets
+  starwars_platformtext: Modern browsers + tablets
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -825,7 +905,12 @@
   hourofcode_shortdescription: Placeholder for new code.org/hoc
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
+  starwars_shortdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -959,6 +1044,8 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
+  starwars_longdescription: Learn to program droids, and create your own Star Wars
+    game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1003,19 +1090,19 @@
   khan_beyond_gradelevel: Middle school +
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
-  lightbot_beyond_gradelevel: "सभी आयु"
-  codecademy_beyond_gradelevel: "उच्च विद्यालय"
-  kodable_beyond_gradelevel: "प्राथमिक"
-  scratchjr_beyond_gradelevel: "प्राथमिक"
+  lightbot_beyond_gradelevel: सभी आयु
+  codecademy_beyond_gradelevel: उच्च विद्यालय
+  kodable_beyond_gradelevel: प्राथमिक
+  scratchjr_beyond_gradelevel: प्राथमिक
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: "उच्च विद्यालय"
+  hacketyhack_beyond_gradelevel: उच्च विद्यालय
   robomind_beyond_gradelevel: Ages 8-13
-  makeschool_beyond_gradelevel: "उच्च विद्यालय"
+  makeschool_beyond_gradelevel: उच्च विद्यालय
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: "उच्च विद्यालय"
-  codehs_beyond_gradelevel: "उच्च विद्यालय"
+  touchdevelop_beyond_gradelevel: उच्च विद्यालय
+  codehs_beyond_gradelevel: उच्च विद्यालय
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -1033,7 +1120,7 @@
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: "उच्च विद्यालय"
+  processing_beyond_gradelevel: उच्च विद्यालय
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets
@@ -1281,38 +1368,19 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_girlvideo: Inspire a girl
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  starwars_gradelevel: Ages 6+
-  starwars_platformtext: Modern browsers + tablets
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: फ़ड़फ़ड़ाय
+  infinity_shortcode: inf
+  playlab_shortcode: play
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

@@ -245,16 +245,20 @@ def upgrade_frontend(name, host)
   # out from under a running instance. The rake build command will restart the instance.
   stop_frontend name, host, log_path
 
+  success = false
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+    success = true
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
     # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
+    success = false
   end
 
   puts IO.read log_path
+  success
 end
 
 # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
@@ -303,13 +307,19 @@ end
 
 # Update the front-end instances, in parallel, updating up to 20% of the
 # instances at any one time.
+MAX_FRONTEND_UPGRADE_FAILURES = 5
 task :deploy do
   with_hipchat_logging("deploy frontends") do
     if CDO.daemon && CDO.app_servers.any?
       Dir.chdir(deploy_dir) do
+        num_failures = 0
         thread_count = (CDO.app_servers.keys.length * 0.20).ceil
         threaded_each CDO.app_servers.keys, thread_count do |name|
-          upgrade_frontend name, CDO.app_servers[name]
+          succeeded = upgrade_frontend name, CDO.app_servers[name]
+          if !succeeded
+            num_failures += 1
+            raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
+          end
         end
       end
     end
@@ -378,7 +388,7 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '85', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--auto_retry', '--html'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message

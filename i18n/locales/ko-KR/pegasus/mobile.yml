@@ -1,4 +1,5 @@
 ko-KR:
+  hour_of_code: Hour of Code
   hello: Hello world
   select_language: 언어를 선택하세요.
   en: 컴퓨터과학(Computer Science, 정보과학)
@@ -32,6 +33,9 @@ ko-KR:
   csedweek_map_search_placeholder: Hour of Code 이벤트 검색하기
   csedweek_map_search_search: 검색
   csedweek_map_search_reset: 처음 상태로
+  csedweek_map_legend_title: 찾아보기
+  csedweek_map_legend_event: Hour of Code 행사
+  csedweek_map_legend_cs_tech_jam: 컴퓨터과학(정보과학) Tech Jam
   cded_sign_up: 가입 신청하기
   cded_try_it: 해보기
   twentyhours_trynow: 해보기
@@ -51,14 +55,15 @@ ko-KR:
   thank_you_: 감사합니다!
   congratulations: 축하합니다!
   congratulations_on_completing_hoc: 축하합니다! One Hour of Code 를 완료하셨습니다.
+  congratulations_volunteer: '축하합니다: 여러분은 이제 Hour of Code를 모두 해보았습니다. 학급 <a href="https://code.org/volunteer">자원봉사자로 등록하고</a> Hour of Code를 진행하는 다른 학생들을 도와주세요.'
   course_name_accelerated: 빠른 과정
   course_name_course1: 과정1
   course_name_course2: 코스2
   course_name_course3: 코스3
   course_name_course4: 과정4
   congratulations_on_completing_course: '%{course} 를 완료하셨습니다! 축하합니다!'
-  congrats_next_tutorials_title: 다음 자습서를 보세요.
-  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
+  congrats_next_tutorials_title: 이제 다음 튜토리얼들을 해보세요.
+  congrats_next_tutorials_desc: '이러한 짧은 1시간짜리 튜토리얼을 해 보거나 <a href="%{current_path}/next">파트너 튜토리얼</a>을 보세요.'
   get_a_certificate_of_achievement: 인증서 받기
   enter_valid_age: 유효한 나이를 선택하십시오.
   enter_valid_email: 이메일을 정확히 입력해 주세요
@@ -108,8 +113,7 @@ ko-KR:
   learn_classes: 학교 수업
   hoc_is_here: '@codeorg 에서  #HourOfCode 를 살펴보세요'
   just_did_hoc: '@codeorg 에서  #HourOfCode 를 완료했습니다'
-  twitter_teach_cs: '왜 더 많은 학교들이 컴퓨터 과학을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다.  http://youtu.be/nKIu9yen5nc. http://code.org/ 에서 더 자세한 내용을 알아보세요.'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
+  twitter_teach_cs: 왜 더 많은 학교들이 컴퓨터과학(정보과학)을 가르치지 않을까요? 우리가 이를 해결 할 수 있습니다. http://youtu.be/nKIu9yen5nc. http://code.org/ 에서 더 많은 내용을 알아보세요.
   learn_hoc: Hour of Code 해보기
   beyond_hoc: Hour of Code 이후 학습
   what_gender: 성별?
@@ -166,14 +170,21 @@ ko-KR:
   homepage_slot_text_course4: 과정4
   homepage_slot_text_shop: 상점
   homepage_slot_text_flappy: 플래피 코드
+  homepage_action_text_hoc: 모든 학생들을 위한 1시간짜리 Hour of Code
+  homepage_action_text_num_served: '# 명에게 제공하였습니다'
+  homepage_action_text_join_us: 함께 참여하기
+  homepage_action_text_sign_up: 가입 신청하기
+  homepage_action_text_try_it: 해보기
+  homepage_action_text_volunteers: 기술 자원봉사자 모집
   homepage_action_text_codevideo: 동영상 보기
   homepage_action_text_teachervideo: 동영상 보기
+  homepage_action_text_girlvideo: 여학생들에게 영감 주기
   homepage_action_text_learn: 학습 시작
   homepage_action_text_signpetition: 청원서에 서명하세요
   homepage_signpetition_dropdown: 청원서에 서명하세요
-  homepage_diversity_pledge: 다양성 인증 서약하기
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: 다양성 존중 서약하기
+  homepage_banner_text_prizes: '12월 7일 - 13일, Hour of Code가 다시 찾아옵니다. '
+  homepage_banner_link_prizes: '역사상 가장 큰 학습 이벤트 참가하세요. '
   homepage_banner_text_main: Code.org와 College Board는 컴퓨터 과학 분야에서 다양성을 개선하기 위해 동맹을 형성 한다.
   homepage_banner_text_link: 더 알아보기
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -183,7 +194,7 @@ ko-KR:
   homepage_slot_text_link_hoc: Hour of Code 해보기
   homepage_slot_text_link_host: Hour of Code의 주인
   homepage_slot_text_link_hocserved: '# 명에게 제공하였습니다'
-  homepage_solot_text_link_volunteer: Hour of Code 자원봉사하기
+  homepage_solot_text_link_volunteer: Hour of Code 자원봉사자
   homepage_slot_text_title_students: 학생들
   homepage_slot_text_blurb_students: 우리의 모든 튜토리얼을 탐구해 보세요.
   homepage_slot_text_link_codestudio: 코드 스튜디오를 사용해 보세요.
@@ -240,55 +251,89 @@ ko-KR:
   class_submission_level_college: 대학교
   class_submission_level_vocational: 직업관련
   class_submission_languages_other: 다른 프로그래밍언어
-  volunteer_engineer_submission_title: Hour of Code 자원봉사하기
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  inspirational_videos_more: '더 많은 <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">영감을 주는 동영상들</a> 에는 다양한 직업과 유명인들이 나옵니다.'
+  starwars_subtitle: 코드로 은하계 건설하기
+  starwars_javascript_title: 자바스크립트
+  starwars_javascript_description: 끌어서 놓기 블록들과 자바스크립트를 사용하세요.
+  starwars_javascript_specs: 영어만 가능 | 최신 브라우저 | 11살 이상
+  starwars_javascript_start_button: 해보기
+  starwars_blocks_title: blocks
+  starwars_blocks_description: 끌어서 놓기 블록들을 이용하세요.
+  starwars_blocks_specs: 여러 가지 언어 (지원 예정) | 최신 브라우저, 스마트폰, 태블릿 | 6-10 세
+  starwars_blocks_start_button: 해보기
+  starwars_watch_videos: 시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요.
+  starwars_speak_languages: 다른 언어를 할 줄 아나요?
+  starwars_help_translate: 번역하는 것을 도와주세요.
+  starwars_platform_text: 최신 웹브라우저, 스마트폰, 태블릿
+  mc_name: 마인크래프트 Hour of Code
+  mc_longdescription: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
+  mc_shortdescription: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
+  mc_gradelevel: 6세 이상
+  mc_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
+  mc_specs: 여러 가지 언어 (지원 예정) | 최신 브라우저, 태블릿 | 6세 이상
+  minecraft_subtitle: 마인크래프트 Hour of Code
+  volunteer_engineer_submission_title: 학생들에게 꿈과 희망을 주고, Hour of Code 에 자원봉사해 주세요.
+  volunteer_engineer_submission_subtitle_generic: '올 해 12월7일-13일까지 100,000 명의 선생님들이 수업 중에 Hour of Code 행사를 운영할 예정입니다. 선생님들은 여러분들의 도움이 필요합니다! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} 명의 선생님들이 이번 12월 Hour of Code 수업을 도와주실, 컴퓨터과학(정보과학) 교육에 열정적인 자원봉사자를 필요로 하고 있습니다.<br>%{num_volunteers} 명의 자원봉사자들이 등록되어 있습니다. 함께 해주세요.'
+  volunteer_engineer_submission_intro_background: Hour of Code 는 전세계 180개 이상의 나라에서 수 억명의 학생들에게 컴퓨터과학(정보과학) 을 소개하는 한 시간 짜리 활동을 해보도록 하는 전세계적인 운동입니다. 12월7일-13일 컴퓨터과학교육주간 동안 저희와 함께 해주세요.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    이 선생님들은 다른 분들로부터 도움 받고 싶어합니다.<span style="font-family: 'Gotham 7r', sans-serif;">컴퓨터과학(정보과학) 교육에 열정적인 전문가</span> 로써 수업을 도와주시거나, 학생들에게<span style="font-family: 'Gotham 7r', sans-serif;">꿈과 희망을 심어 주실 수 있는 분으로서,</span> 컴퓨터과학(정보과학) 으로 가능한 다양한 것들에 대해서 이야기해 주시길 원하고 있습니다.(화상 회의로도 가능합니다.) 자원봉사를 원하지 않으신다면, Hour of Code 행사 운영에 대해서 <a href="%{url}">더 살펴봐주세요.</a>
+  volunteer_engineer_submission_intro_signup: '컴퓨터과학/공학/교육과 대학생이거나 소프트웨어 개발자이시면 <span class="form-required-field">*</span> 표 있는 곳을 채워주세요.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_header_shared: 자원봉사자 지도에 선생님에게 공유되는 정보
   volunteer_engineer_submission_field_name: 이름
   volunteer_engineer_submission_field_name_placeholder: 성명
   volunteer_engineer_submission_field_company: 회사 (또는 대학)
   volunteer_engineer_submission_field_company_placeholder: 회사 (또는 대학)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_experience_level: 경험 수준
+  volunteer_engineer_submission_field_location: 위치
+  volunteer_engineer_submission_field_location_desc: 여러분의 위치는 선생님들이 학교 인근의 자원봉사자분들을 검색하는데 활용될 것이며, 지도 위에 핀으로 표시될 것입니다. 만약에 여러분이 개인정보에 대해 걱정하신다면 직장/학교 주소 또는 여러분이 살고 있는 도시만 사용해주세요.
+  volunteer_engineer_submission_field_location_placeholder: 우편번호, 시도/국가 또는 도로명 주소
+  volunteer_engineer_submission_field_location_flexibility: Hour of Code 행사 중에 도울 수 있습니다... (가능한 것을 모두 선택해 주세요.)
+  volunteer_engineer_submission_checkbox_after_hoc: 저는 Hour of Code 행사 이후의 봉사활동에도 관심이 있습니다.
+  volunteer_engineer_submission_field_time_commitment: Hour of Code 행사 이후의 봉사 가능 시간
+  volunteer_engineer_submission_field_linkedin: LinkedIn 프로필
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook 프로필
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: 설명
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: 여러분의 컴퓨터과학/공학/교육 경험과 지역 선생님들을 어떻게 도움주실 수 있는지 자세히 설명해 주세요.
+  volunteer_engineer_submission_field_description_placeholder: 관련 경험 또는 참여 방법에 대한 설명입니다. 영어 이외의 말이 가능하시다면 여기에 포함시켜주세요.
+  volunteer_engineer_submission_header_private: 정보는 비밀로 보관되며 절대 공유되지 않습니다.
   volunteer_engineer_submission_field_email: 이메일
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: 여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나 우리는 선생님들의 요청을 여러분들께 전달할 것입니다.
   volunteer_engineer_submission_field_email_placeholder: 이메일
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: 여러분은 지역 선생님들의 Hour of Code 활동 등이 가능한 자원봉사자 명단에 들어갈 것입니다. 여러분의 이메일과 주소는 절대로 공개되지 않습니다만 아래의 정보들(정확한 위치를 포함한 정보들) 은 지역 선생님들에게 안내가 될 것입니다.
+  volunteer_engineer_submission_checkbox_contact: '선생님들이 자원봉사자를 구하실 때 저에게 연락주시는 것에 동의합니다. (참고: 여러분의 이메일 주소가 공유 되지는 않을 것입니다.)'
   volunteer_engineer_submission_submit: 제출하기
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Hour of Code 행사를 위해 자원해주셔서 감사드립니다. Hour of Code 행사를 준비하고 다른 자원봉사자들을 모집하기 위해 <a href="%{url}">여기를 좀 더 자세히 살펴봐주세요.</a>'
   volunteer_engineer_submission_commitment_uncertain: 소속없음
   volunteer_engineer_submission_commitment_one_hr_per_week: 1주일에 1시간
   volunteer_engineer_submission_commitment_three_hrs_per_week: 1주일에 3시간
   volunteer_engineer_submission_commitment_five_hrs_per_week: 1주일에 5시간
   volunteer_engineer_submission_commitment_now_and_then: 가끔씩
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 일 년에 두 세번
+  volunteer_engineer_submission_commitment_monthly: 한 달에 몇시간
+  volunteer_engineer_submission_commitment_weekly: 일주일에 몇 시간
   volunteer_engineer_submission_commitment_more: 더 많은
-  volunteer_engineer_submission_location_flexibility_onsite: 학교에서 온라인활용
-  volunteer_engineer_submission_location_flexibility_remote: ' 원격 멘토링(교사 또는 학생)'
-  volunteer_engineer_submission_location_flexibility_curriculum: 공개 교육과정 프로젝트에 기꺼이 참여하여 공헌
+  volunteer_engineer_submission_location_flexibility_onsite: 학교에서 온라인활용 살펴보기(1-2 시간의 교실수업 또는 학교 활동)
+  volunteer_engineer_submission_location_flexibility_remote: ' 원격 멘토링(원격 화상 회의 활용)'
+  volunteer_engineer_submission_location_flexibility_curriculum: 공개 교육과정 프로젝트에 기꺼이 참여하여 공헌하기
   volunteer_engineer_submission_experience_unspecified: 경험이 없는
-  volunteer_engineer_submission_experience_university_student_or_researcher: 현재 대학생(또는 연구원)
-  volunteer_engineer_submission_experience_software_professional: 소프트웨어 전문가
+  volunteer_engineer_submission_experience_tech_company: 기술 회사에 비엔지니어
+  volunteer_engineer_submission_experience_university_student_or_researcher: 현재 컴퓨터 과학(공학)과 대학생
+  volunteer_engineer_submission_experience_software_professional: 소프트웨어 엔지니어 또는 전문 기술자
+  volunteer_engineer_submission_distance_8: 5 마일
+  volunteer_engineer_submission_distance_16: 10 마일
+  volunteer_engineer_submission_distance_24: 15 마일
+  volunteer_engineer_submission_distance_32: 20 마일
+  volunteer_engineer_submission_num_volunteers_5: 자원봉사자 5명
+  volunteer_engineer_submission_num_volunteers_10: 자원봉사자 10명
+  volunteer_engineer_submission_num_volunteers_25: 자원봉사자 25명
+  volunteer_engineer_submission_num_volunteers_50: 자원봉사자 50명
+  volunteer_engineer_submission_type_task_onsite: 저의 반에 오셔서 전문적으로 도와주시거나 학생들에게 꿈과 희망을 주세요.
+  volunteer_engineer_submission_type_task_remote: 스카이프로 우리반 아이들에게 멋진 말씀들을 해주세요.
+  volunteer_engineer_submission_type_task_mentor: 우리 학생들에게 코딩을 가르치기 위해서 저와 함께 준비하는데 도움을 주실 수 있는 멘토 분들을 찾고 있습니다.
   petition_age: 나이
   dashboard_landing_title: 선생님 홈페이지
   dashboard_landing_welcome: 새롭게 개선된 교사용 상황판
@@ -309,14 +354,14 @@ ko-KR:
   dashboard_landing_progress_title: 반 진도
   dashboard_landing_progress_biggest: 주요 진도의 상황
   dashboard_landing_view_progress: '%{biggest_section} 진도 살펴보기'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: 진행사항 인쇄
   dashboard_landing_available_title: 가능한 코스
   dashboard_landing_available_courses: 선생님과 학생들에게 현재 가능한 코스
   dashboard_landing_more_tutorials: 더 많은 튜토리얼을 보고 싶습니까?
   dashboard_landing_more_tutorials_desc: '더 많은 튜토리얼은 <a href="/learn/beyond">우리의 파트너에 의해 제공</a>됩니다. 로봇과 함께 프로그램을 배우고, 웹 페이지를 만들고, 당신만의 어플리케이션을 만들고, C++, 루비 혹은 파이선 같은 언어를 탐험할 수 있습니다.'
   dashboard_hoc_courses: 모든 연령대를 위한 Hour of Code
   dashboard_hoc_courses_desc: 당신의 학생과 1시간 이내로 끝낼 수 있는 튜토리얼을 해보세요.
-  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
+  dashboard_hoc_courses_desc_and_cta: '이 한 시간 짜리 짧은 튜토리얼들을 여러분의 학생들과 함께 해보세요. 컴퓨터과학교육주간동안 <a href="https://hourofcode.com">Hour of Code 운동</a>에 함께 참여해 주세요.'
   dashboard_k5_courses: 초등학생을 위한 20시간 과정
   dashboard_k5_courses_desc: '이 과정은 컴퓨터 사용이 전혀 필요 없는 활동들을 온라인, 자기 주도 및 자기 진도에 맞춰 학습할 수 있는 튜토리얼 입니다. 각 과정들은 20개 정도의 레슨들로 구성되어 있고, 레슨들은 하나의 유닛을 구성하거나 한 학기 분량으로 이루어집니다. 유치원에 다니는 아이들도 참여할 수 있습니다. 학습을 시작하는 것을 돕기 위해서, 우리는미국에서 무료로 매우 높은 수준의 전문적인 개발 워크샵을 제공합니다. <a href="/professional-development-workshops">당신 주변에서 찾으세요!</a>'
   dashboard_middle_courses: 중학생을 위한 20시간 과정
@@ -353,7 +398,7 @@ ko-KR:
   dashboard_navigation_section_speakers: '컴퓨터과학(정보과학) <br/> 특별 초청 연사들'
   dashboard_navigation_all_sections: 학생 계정 및 진도
   dashboard_navigation_view_progress: 진도 보기
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: 텍스트 응답 보기
   dashboard_navigation_add_students: 학생 추가
   dashboard_navigation_manage_students: 학생 관리
   dashboard_navigation_lesson_plans_resources: 수업 계획 및 자료
@@ -449,8 +494,8 @@ ko-KR:
   dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
   dashboard_stage: stage
   dashboard_puzzle: Puzzle
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: 질문
+  dashboard_response: 응답
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
   dashboard_teacher: 선생님
@@ -467,24 +512,36 @@ ko-KR:
   dashboard_sections_login_type_explanation: '이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한 내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.'
   dashboard_faq: 자주 묻는 질문
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announcements: 공시사항
+  dashboard_announce_view_all: 모두 보기
+  dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을 소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요. 그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_description: 컴퓨터과학교육주간 동안 Hour of Code 에 함께 참여해 주세요.
   learn_sign_up_button: 가입 신청하기
-  learn_educator_resources_description: Hour of Code를 가르치는 방법 알기
+  learn_videos_watch: 학생들에게 영감을 줄 수 있는 이 동영상을 수업 시간에 보여주세요.
+  learn_videos_show: 학생들에게 영감을 줄 수 있는 이 동영상을 여러분의 학급에 보여주세요.
+  learn_videos_before_hoc: Hour of Code를 시작하기 전에 영감을 불러일으킬 동영상을 감상하세요.
+  learn_educator_resources_description: Hour of Code를 가르치는 방법 배우기
   learn_educator_resources_button: 교사를 위한 자료
-  learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_are_you_educator: '교육자이신가요? Hour of Code <a href="http://hourofcode.com/resources/how-to">를 가르치는 방법</a>을 배워보세요.'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: '모든 교육자들에 대한 상품에 대해<a href="https://hourofcode.com/prizes">더 살펴보세요.</a>'
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
   hoc2014_try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
   hoc2014_try_scrat: 앵그리버드, 식물과좀비, 스크랫
   hoc2014_try_frozen: 프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐
+  carousel_heading_codeorg: Code.org 튜토리얼
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: 써드 파티 튜토리얼
+  carousel_heading_third_party: 써드 파티 튜토리얼
   carousel_heading_international: 다른 언어로 된 튜토리얼
   carousel_heading_domestic: 영어 튜토리얼들
-  carousel_heading_beginners: 처음하는 사람들을 위한 튜토리얼
+  carousel_heading_beginners: K-8(유치원-초1) 학생들을 위한 튜토리얼
   carousel_heading_javascript: Javascript 를 교육할 수 있는 튜토리얼들
   carousel_heading_unplugged: 적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요.
   carousel_heading_devices: 스마트폰과 패드를 위한 튜토리얼 앱
@@ -495,6 +552,7 @@ ko-KR:
   carousel_heading_robots: 로봇 프로그래밍
   carousel_heading_ide: 선생님들이 자주 사용하는 양식들
   educator_notes: 교육자 참고사항들
+  teach_led_lesson_plans: 교사 주도 Hour of Code 수업 계획
   how_to_teach_hoc: "'Hour of Code' 가르치는 방법"
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   beyond_submission: Beyond an Hour 튜토리얼에 제출하고 싶으세요? 기준 및 제출 양식을 보세요.
@@ -507,6 +565,7 @@ ko-KR:
   older_systems_subheading: '구버전 웹브라우져에서도 동작해야합니다. 모든 튜토리얼들을 제대로 살펴보시려면 <a href="http://browsehappy.com/" target="_blank">최신버전 웹브라우저</a> 로 업그레이드하세요.'
   mobile_devices: 모바일 기기를 위한 튜토리얼들
   frozen_name: 안나, 엘사와 함께하는 코드
+  starwars_name: '스타워즈: 코드로 은하계 건설하기'
   codeorg_name: 컴퓨터 프로그램을 직접 만들어 보세요
   codeintl_name: 컴퓨터 프로그램을 직접 만들어 보세요
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -537,15 +596,17 @@ ko-KR:
   robomindnl_name: 가상 로봇 프로그램
   flappy_name: 플래피 게임을 만들어 보세요
   bitsbox_name: 'Bitbox - 게임 만들기'
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: 웹브라우져에서 아이폰 게임 만들기
   touchdevelop_name: TouchDevelop
   appinventor_name: 앱인벤터 Hour of Code
   blockly_name: Blockly(블러클리)
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 가위, 바위, 보
-  hourofcode_name: 새로운 code.org/hoc
+  hourofcode_name: 컴퓨터 프로그램을 직접 만들어 보세요
   playlab_name: Play Lab
+  infinity_name: 무한 Play Lab
+  artist_name: 예술가
   codeorg_gradelevel: 나이 4세-104세
   codeintl_gradelevel: 나이 4세-104세
   thinkersmithspanish_gradelevel: Por todos
@@ -585,7 +646,10 @@ ko-KR:
   projguts_gradelevel: 나이 10세-13세
   hourofcode_gradelevel: 나이 4세-104세
   frozen_gradelevel: 나이 8세이상
+  starwars_gradelevel: 6세 이상
   playlab_gradelevel: 나이 4세-104세
+  infinity_gradelevel: 나이 4세-104세
+  artist_gradelevel: 나이 4세-104세
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   thinkersmithspanish_platformtext: 언플러그드
@@ -625,6 +689,7 @@ ko-KR:
   projguts_platformtext: 언플러그드
   hourofcode_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   frozen_platformtext: 최신 웹 브라우져 + 태블릿
+  starwars_platformtext: 최신 웹 브라우져 + 태블릿
   playlab_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeorg_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
   codeintl_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
@@ -656,16 +721,19 @@ ko-KR:
   robomindnl_shortdescription: 가상 로봇을 위한 코드 작성하기
   flappy_shortdescription: '게임을 직접 만들어보세요 - 플래피 버드, 샤크, 잠수함'
   bitsbox_shortdescription: 실제 자바스크립트(JavaScript)를 사용한 앱 개발 및 공유 과정을 배워보세요.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
+  makeschool_shortdescription: 아이폰 게임을 만들어보세요! 여러분의 몬스터를 가르쳐 움직이는 코드를 만들어 보면서 배워보세요.
   touchdevelop_shortdescription: '스마트폰에서 퍼즐을 풀고, 게임을 만들고, 코딩에 대한 모든 것을 배워보세요. '
   appinventor_shortdescription: 앱을 직접 만들어보세요!(안드로이드 만 가능)
   blockly_shortdescription: 오프라인에서도 배울 수 있도록 압축(ZIP) 파일을 다운로드 하세요.
   thinkersmith2_shortdescription: 정보를 표현하기 위해 컴퓨터에서 사용하는 1/0 들의 표현을 배워보세요.
   kodableunplugged_shortdescription: 재미있는 컴퓨터과학 언플러그드 활동 예시들
   projguts_shortdescription: 가위/바위/보 를 이용해 모델링과 시뮬레이션을 경험해 보세요.
-  hourofcode_shortdescription: 새로운 code.org/hoc
+  hourofcode_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
   frozen_shortdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
+  starwars_shortdescription: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
   playlab_shortdescription: Play Lab을 이용해 스토리나 게임을 만드세요!
+  infinity_shortdescription: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
+  artist_shortdescription: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
   codeintl_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -696,7 +764,7 @@ ko-KR:
   robomindnl_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
   flappy_longdescription: 드래그 앤 드롭 프로그래밍으로 플래피 버드 게임을 직접 만들고, 다른 모양(플래피 샤크, 플래피 산타 등등)으로 변형해 보세요. 한 번의 클릭으로 아이폰에 게임으로 추가할 수 있습니다.
   bitsbox_longdescription: 자신의 가상 태블릿을 설정한 후, 실행할 수 있는 앱을 만들고 공유해 보세요. 간단한 과정을 통해 실제 자바스크립트(Javascript) 언어를 이용해 어린 아이들도 만들 수 있습니다. 그리고 더 자세히 배울 수 있는 경험을 얻어보세요.
-  makeschool_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  makeschool_longdescription: '스위프트(Swift)라는 시작하기 쉬운 새로운 언어를 이용해 아이폰 게임을 만들면서 코드를 배워 보세요. 포켓&eacute;몬 게임과 비슷한 액션 게임을 만들어서 자신의 몬스터가 새로운 동작을 할 수 있도록 가르쳐보세요. 자신의 몬스터가 승리할 수 있도록 도와주면서 변수, 매소드, 객체 등에 대해 배울 수 있습니다.'
   touchdevelop_longdescription: 화면 터치 기반의 코드 편집기를 통해, 픽셀 아트, 퍼즐 풀기, 새 날리기 게임 등을 만드는 방법들에 대해서 가이드 받게 됩니다.
   appinventor_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도 가능합니다.
   blockly_longdescription: '인터넷 접속이 느린(혹은 인터넷에 연결할 수 없거나) 컴퓨터들만 있다고요? 블러클리(Blockly) 튜토리얼을 다운로드 받으세요. 블러클리는 code.org 튜토리얼의 초기버전이라고 할 수 있습니다. - 3MB 의 적은 압축(ZIP) 파일을 다운로드 받으면 컴퓨터나 메모리스틱에 넣어 가지고 다닐 수 있습니다.'
@@ -705,6 +773,7 @@ ko-KR:
   projguts_longdescription: 이 언플러그드 활동은 학생들에게 서로 다른 버전의 가위/바위/보 게임을 수행함으로서 모델링과 시뮬레이션 작업이 이루어지는 방법을 배우게 되며, 서로 다른 모델링 실험의 결과를 살펴볼 수 있게 됩니다.
   hourofcode_longdescription: 새로운 code.org/hoc
   frozen_longdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
+  starwars_longdescription: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
   playlab_longdescription: 플레이 랩으로 이야기나 게임을 만들어보세요! 동물, 해적, 좀비, 닌자 등 여러 가지 캐릭터들을 움직이고, 소리내고, 점수를 올리고, 파이어볼을 쏘는 등의 움직임들이 가능합니다.
   codeorg_beyond_name: 컴퓨터과학(정보과학) 소개 코스(유치원-중2)
   khan_beyond_name: 컴퓨터 프로그래밍 배우기
@@ -719,7 +788,7 @@ ko-KR:
   groklearning_beyond_name: 파이썬(Python) 프로그래밍 배우기
   hacketyhack_beyond_name: 루비(Ruby) 배우기
   robomind_beyond_name: 가상 로봇 프로그램
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: 웹브라우져에서 아이폰 게임 만들기
   appinventor_beyond_name: 앱인벤터 Hour of Code
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: 강아지 카렐과 함께 코드 배우기
@@ -830,7 +899,7 @@ ko-KR:
   groklearning_beyond_shortdescription: 파이썬(python) 프로그래밍 기초 소개
   hacketyhack_beyond_shortdescription: 루비(Ruby) 기초부터 배우기
   robomind_beyond_shortdescription: 가상 로봇을 위한 코드 작성하기
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: 한 시간 안에 아이폰 게임을 만드는 방법을 배워보세요.
   appinventor_beyond_shortdescription: 앱을 직접 만들어보세요!(안드로이드 만 가능)
   touchdevelop_beyond_shortdescription: 스마트폰, 태블릿, 컴퓨터에 직접 모바일 앱을 코딩해보세요.
   codehs_beyond_shortdescription: 재미있는 비주얼 환경을 이용해 자바스크립트(JavaScript) 프로그래밍 배우기
@@ -867,7 +936,7 @@ ko-KR:
   groklearning_beyond_longdescription: 파이썬(python) 프로그래밍 언어 소개 과정은 프로그래밍 언어를 경험해보지 못한 사람들도 할 수 있습니다. 유니크한 소개 컨텐츠들의 조합과 문제들은 파이썬 언어와 파이썬 프로그래밍을 잘 이해할 수 있도록 해 줄 것입니다. 이 내용들은 다양한 연령대, 다양한 문화적 배경을 가진 학생들에게 교육되었기 때문에 여러분들 모두에게도 적합할 것입니다.
   hacketyhack_beyond_longdescription: '해키티 핵(Hackety Hack)은 프로그래밍의 가장 기초를 가장 바닥부터 배울 수 있습니다. 어떤 프로그래밍 경험도 필요하지 않습니다! 해키티 핵과 함께 여러분들은 루비(Ruby) 프로그래밍 언어를 배우게 될 것입니다. 루비는 데스크탑 PC 응용프로그램, 웹 사이트 등 모든 종류의 프로그램들에 사용되고 있습니다.[참고사항: 데스트탑 PC에 설치 필요]'
   robomind_beyond_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
-  makeschool_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
+  makeschool_beyond_longdescription: 오브젝티브C(Objective C) 라는 것을 들어보셨나요? 아이폰 게임을 한 시간 만에 만들어보세요! 코드를 만들고 테스트하고 실행시켜보는 모든 과정을 웹 브라우져에서 해 볼 수 있고, 또 만든 것을 페이스북이나 친구들에게 해보라고 할 수도 있습니다! 아이폰 프로그램 개발 경험은 전혀 필요하지 않습니다. 변수, 매소드, 객체가 무엇인지 이해하게 될 것입니다.
   appinventor_beyond_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도 가능합니다.
   touchdevelop_beyond_longdescription: 터치디벨롭(TouchDevelop)은 아이패드, 아이폰, 안드로이드, PC, 맥, 윈도우 폰에서 실행되는 앱을 만들 수 있게 해 줍니다. 손가락 터치는 스마트 폰이나 태블릿에서도 코딩을 재미있게 해줍니다.
   codehs_beyond_longdescription: '카렐과 강아지(Karel & Dog)를 통해 프로그래밍의 기초를 재미있고 편리하게 배워보세요. 비주얼적인 소개 과정을 통해 강아지에게 명령을 내리는 것과 똑같은 방법으로 컴퓨터에게 명령을 주면서 코딩을 배워보세요. 이 튜토리얼은 선생님과 함께 하면 좋습니다만, 혼자서도 충분히 할 수 있습니다. [참고사항: 유료]'
@@ -894,3 +963,11 @@ ko-KR:
   compatibility_https_header: Code.org가 HTTPS를 사용할 수 있도록 활성화 해주세요
   compatibility_https_message: "보안을 강화하기 위해서, %{https_date}부터 HTTPS방식으로 변경됩니다. 이 날짜 이후로는 Code.org에  들어올 수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a> 를 클릭하여 알아볼 수 있습니다."
   compatibility_https_hide_this_warning: 경고창 숨기기
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: 펄럭이기
+  infinity_shortcode: inf
+  playlab_shortcode: 실행
+  artist_shortcode: art

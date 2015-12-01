@@ -255,6 +255,7 @@
         playlab: Izdelja App
         artist: Nariši kaj
         calculate: Calculate Something
+        applab: Izdelja App
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: District Dashboard
@@ -278,6 +279,8 @@
       prize_us_only: (samo ameriški učenci)
       prizes_link: več informacij
   teacher:
+    answer: Odgovor
+    for_teachers_only: Samo za učitelje
     title:
       one: 'Vaš učitelj:'
       other: 'Tvoji učitelji:'
@@ -347,8 +350,8 @@
       viewing_solution: Gledanje rešitve
       try_it_yourself: Poskusi sam
       section: Razdelek
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: Primer rešitve
+      example_with_number: Primer rešitve %{solution_number}
       submitted_on: Submitted on %{date}
       unsubmit: Unsubmit
   user:
@@ -424,8 +427,8 @@
     print_certificate: Natisni certifikat
   share:
     title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    description: Kdorkoli se lahko nauči računalništva. S kodo ustvari igre, aplikacije
+      in umetnost.
   gender:
     male: Moški
     female: Ženska
@@ -446,8 +449,8 @@
       Vse pravice pridržane.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Vse pravice pridržane.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+      Entertainment Ltd. Vse pravice pridržane.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. Vse pravice pridržane.
     powered_by_aws: Podprto s strani Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour
       of Code&reg; sta blagovni znamki Code.org.'
@@ -457,11 +460,11 @@
     translate: Pomagajte nam prevesti v vaš jezik
     support: Podpora
     support_url: http://support.code.org/
-    tos_short: Terms
+    tos_short: Pravila
     tos: Pogoji
     privacy: Izjava o zasebnosti
     secure: Varna različica
-    report_abuse: Report Abuse
+    report_abuse: Prijavi zlorabo
   reference_area:
     title: Potrebujete pomoč?
     subtitle: Poglejte si naslednje videe in namige
@@ -502,6 +505,7 @@
   download_coming_soon: Aktivnosti, ki jih boste lahko naložili na vaš računalnik,
     pridejo pozneje.
   video_coming_soon: Video pride pozneje!
+  not_started: The student has not attempted this level.
   share_code:
     title: Klikni 'Zaženi', da vidiš svoj program v akciji
     bounce_og_title: Oglejte si moje Bounce igre
@@ -548,9 +552,14 @@
         uporabniki
     frozen:
       title: Zmrznjenka (Frozen)
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Raziskuj Minecraft svet s pomočjo kode.
   gallery:
     students_drew_these_with_code: Učenci so to narisali s svojimi programi!
     students_made_these_with_code: Učenci so to ustvarili s svojimi programi!
@@ -702,7 +711,7 @@
     view_all: Poglej si Moji projekti
     remix: Remiks
     click_to_remix: Click 'Remix' to spin-off your own version!
-    edit_project: Edit Project
+    edit_project: Uredi projekt
     abuse:
       tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
         of Service</a> and cannot be shared with others.
@@ -716,19 +725,18 @@
           will take your report very seriously, investigate accordingly, and take
           appropriate action.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Prosimo, navedite e-poštni naslov
+          age: Prosimo, navedite starost
+          abuse_type: Prosimo, odgovorite, kako ta vsebina krši Pravila storitve
+          abuse_detail: Prosimo, navedite podrobnosti glede vsebine, ki jo prijavljate
+        abusive_url: URL vsebine, ki jo prijavljate
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Kako ta vsebina krši %{link_start}Pogoje storitve%{link_end}?
+          harassment: Grožnje, ustrahovanje, nadlegovanje
+          offensive: Žaljiva vsebina
+          infringement: Kršitev avtorskih pravic
           other: Drugi
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
+        detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}

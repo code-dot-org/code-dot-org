@@ -35,9 +35,9 @@ Breakfast and lunch will be served.
 
 **November 21st Location**
 
-Google<br/>
+[Google<br/>
 340 Main St.<br/>
-Los Angeles, CA 90291
+Los Angeles, CA 90291](https://www.google.com/maps/place/Google+Venice,+340+Main+St,+Venice,+CA+90291/@33.9958697,-118.4788045,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2bacf16b3cbf5:0x31fc6f8820c621e)
 
 The parking garage is located underground.  Please pull under the binoculars in front of the building on Main Street (yes we are the "binocular building"), push the button on the keypad to the left in front of the gate, and let Reception/Security know you are here to meet with Jen Barth for Code.org event.  They will buzz you in.
 
@@ -91,12 +91,12 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Octoboer 17th Location**
+**December 12th Location**
 
-Alliance College-Ready Public Schools<br/>
+[Alliance College-Ready Public Schools<br/>
+Columbia Ave. Building<br/>
 515 Columbia Ave<br/>
-Room TBD<br/>
-Los Angeles, CA 90017<br/>
+Los Angeles, CA 90017](https://www.google.com/maps/place/515+Columbia+Ave,+Los+Angeles,+CA+90017/@34.0568357,-118.2683455,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c7a5dc0c6221:0xcce25074a5f9e728)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -149,9 +149,9 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Columbia Memorial Space Center<br/> 
+[Columbia Memorial Space Center<br/> 
 12400 Columbia Way <br/>
-Downey, CA 90242
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -198,12 +198,12 @@ Semester 2: Saturday, February 20, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**October 17th Location**
+**February 20th Location**
 
-Ball Junior High School<br/>
-Room 37<br/>
-1500 W Ball Rd<br/>
-Anaheim, CA 92802
+[Columbia Memorial Space Center<br/> 
+12400 Columbia Way <br/>
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -234,10 +234,10 @@ Tuesday, October 20, 2015 <br/>
 
 **Location**
 
-Los Angeles Unified School District<br/>
-333 So. Beaudry Avenue<br/>
+[Los Angeles Unified School District<br/>
 Room 202 - 2nd floor <br/>
-Los Angeles 90017<br/>
+333 So. Beaudry Avenue<br/>
+Los Angeles 90017<br/>](https://www.google.com/maps/place/Los+Angeles+Unified+School+District/@34.0562743,-118.257519,15z/data=!4m2!3m1!1s0x0:0x46dbbd0a986126b8)
 
 
 [**Back to the top**](#top)

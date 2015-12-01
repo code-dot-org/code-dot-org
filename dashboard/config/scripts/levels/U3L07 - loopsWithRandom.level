@@ -18,7 +18,7 @@
     "encrypted_examples": "IzD1IsWQ223jSTrz9wySyqNwzZD9eXFcRNvrh+gndLm6fph6FuKo8YE/5+gE\ndraQ\n",
     "embed": "false",
     "instructions": "Increase the number of iterations to fill the screen with white. (Click to see full instructions)",
-    "markdown_instructions": "# Using multiple loops\r\n\r\nSome repeated tasks can't easily be solved with a single loop. Instead, you'll need to use **one loop after another**, each one solving a part of the problem. Now that you've filled the screen with colored dots, let's cover it up by **adding a loop that fills the screen with semi-transparent white dots**.\r\n\r\n# Do This\r\n<img src=\"https://images.code.org/329912b3c61cc62acbd36035ff4b823a-image-1443109101866.gif\" style=\"float: right; width: 100px\">\r\n**Drag ** a second loop into your program\r\n\r\n**Add** commands to draw dots in random locations that are white with opacity set to 0.5.\r\n\r\n**Increase the iterations** so that the colored dots are totally erased. How many does it take?\r\n\r\n",
+    "markdown_instructions": "# Using Multiple Loops\r\n\r\nSome repeated tasks can't easily be solved with a single loop. Instead, you'll need to use **one loop after another**, each one solving a part of the problem. Now that you've filled the screen with colored dots, let's cover it up by **adding a loop that fills the screen with semi-transparent white dots**.\r\n\r\n# Do This:\r\n<img src=\"https://images.code.org/329912b3c61cc62acbd36035ff4b823a-image-1443109101866.gif\" style=\"float: right; width: 100px\">\r\n**Drag ** a second loop into your program.\r\n\r\n**Add** commands to draw dots in random locations that are white with opacity set to 0.5.\r\n\r\n**Increase the iterations** so that the colored dots are totally erased. How many does it take?\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -48,7 +48,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

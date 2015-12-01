@@ -1,4 +1,5 @@
 zh-CN:
+  hour_of_code: 编程一小时
   hello: 世界你好
   select_language: 请选择您的语言
   en: 计算机科学
@@ -27,11 +28,14 @@ zh-CN:
   hoc2014_everyone: 每个人
   hoc2014_support: '支持它 &#x25BE;'
   hoc2014_whatishoc: 什么是编程一小时？
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: '#CSEdWeek/ 编程一小时是一个世界性的活动'
+  csedweek_map_signup: 登记参加活动
+  csedweek_map_search_placeholder: 搜索变成一小时的活动
+  csedweek_map_search_search: 搜索
   csedweek_map_search_reset: 重置
+  csedweek_map_legend_title: 图例
+  csedweek_map_legend_event: 编程一小时活动
+  csedweek_map_legend_cs_tech_jam: 计算机技术展会
   cded_sign_up: 登陆
   cded_try_it: 体验一下
   twentyhours_trynow: 现在就试试
@@ -51,14 +55,15 @@ zh-CN:
   thank_you_: 谢谢！
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你完成编程一小时。
+  congratulations_volunteer: '恭喜你： 现在你已经尝试了编程一小时，<a href="https://code.org/volunteer"> 在教室里报名做志愿者</a>，帮助学生了解编程一小时！'
   course_name_accelerated: 速成班
   course_name_course1: '课程 1:'
   course_name_course2: 课程2
   course_name_course3: 课程 3：
-  course_name_course4: 课程 4
+  course_name_course4: 第4课
   congratulations_on_completing_course: '祝贺您完成 %{course}'
   congrats_next_tutorials_title: 接下来尝试这些教程
-  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
+  congrats_next_tutorials_desc: '尝试这些简短的1 小时教程，或尝试 <a href="%{current_path}/next"> 合作伙伴教程</a>。'
   get_a_certificate_of_achievement: 获取结业证书
   enter_valid_age: 请选择一个有效的年龄
   enter_valid_email: 请输入一个有效的电子邮件地址
@@ -109,7 +114,6 @@ zh-CN:
   hoc_is_here: '#HourOfCode来了 —— 让我们试试看！@codeorg'
   just_did_hoc: '我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg'
   twitter_teach_cs: 为什么没有更多的学校教计算机科学？我们可以解决这个问题。http://youtu.be/nKIu9yen5nc。请访问 http://code.org/ 了解更多。
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
   learn_hoc: 学习编程一小时
   beyond_hoc: 一小时之后
   what_gender: 你的性别是什么？
@@ -163,27 +167,34 @@ zh-CN:
   homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: 我们的所有教程
-  homepage_slot_text_course4: 课程 4
+  homepage_slot_text_course4: 第4课
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: 飞扬的代码
+  homepage_action_text_hoc: 变成一小时提供给每一个学生
+  homepage_action_text_num_served: '# 送达'
+  homepage_action_text_join_us: 加入我们
+  homepage_action_text_sign_up: 登陆
+  homepage_action_text_try_it: 体验一下
+  homepage_action_text_volunteers: 我们需要技术志愿者
   homepage_action_text_codevideo: 观看视频
   homepage_action_text_teachervideo: 观看视频
+  homepage_action_text_girlvideo: 鼓舞激励一个女孩
   homepage_action_text_learn: 开始学习
   homepage_action_text_signpetition: 在请愿书上签名
   homepage_signpetition_dropdown: '签署我们请愿 &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: 承诺多样性
+  homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
+  homepage_banner_link_prizes: '加入史上最大的学习盛会 '
   homepage_banner_text_main: Code.org和大学理事会是一个以增加电脑科学的多样性的联盟。
   homepage_banner_text_link: 了解更多
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: 学习更多内容
+  homepage_banner_privacy_link: 了解更多
   homepage_slot_text_title_hoc: 编程一小时
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_link_hoc: 来试试”编程一小时“项目！
   homepage_slot_text_link_host: 举办一个小时编程活动
   homepage_slot_text_link_hocserved: '# 送达'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: 成为编程一小时志愿者
   homepage_slot_text_title_students: 学生
   homepage_slot_text_blurb_students: 体验我们所有的教程
   homepage_slot_text_link_codestudio: 尝试编程工作室
@@ -240,13 +251,35 @@ zh-CN:
   class_submission_level_college: 大学
   class_submission_level_vocational: 职业级
   class_submission_languages_other: 其他语言
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  inspirational_videos_more: '更多<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> 榜样和名人激励人心的视频'
+  starwars_subtitle: 创建一个充满代码的星系
+  starwars_javascript_title: JavaScript
+  starwars_javascript_description: 使用拖放块和 JavaScript。
+  starwars_javascript_specs: 英语 | 现代浏览器 | 11岁以上
+  starwars_javascript_start_button: 现在就试试
+  starwars_blocks_title: 块
+  starwars_blocks_description: 使用拖放块。
+  starwars_blocks_specs: 各国语言 (即将推出) | 现代浏览器、 智能手机、 平板电脑 | 年龄在 6-10岁之间
+  starwars_blocks_start_button: 现在就试试
+  starwars_watch_videos: 在开始之前，看一段鼓舞人心的视频
+  starwars_speak_languages: 另一种语言?
+  starwars_help_translate: 帮我们翻译
+  starwars_platform_text: 最新的浏览器，智能手机，平板电脑
+  mc_name: 我的世界编程一小时
+  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_gradelevel: 6岁以上
+  mc_platformtext: 最新的浏览器，智能手机，平板电脑
+  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: 我的世界编程一小时
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">technical</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not an engineer, anyone can organize an Hour of Code. <a href="%{url}">Learn more here</a>.
+    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: 姓名
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -254,7 +287,7 @@ zh-CN:
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
   volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: "If you enter your exact address we won't share it, just show you as a pin on map."
+  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
   volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
@@ -265,7 +298,7 @@ zh-CN:
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: 描述
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation
+  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
   volunteer_engineer_submission_header_private: Information kept private and never shared
   volunteer_engineer_submission_field_email: 电子邮件地址
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
@@ -273,7 +306,7 @@ zh-CN:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: 提交
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
   volunteer_engineer_submission_commitment_uncertain: 不确定
   volunteer_engineer_submission_commitment_one_hr_per_week: 每周 1 小时
   volunteer_engineer_submission_commitment_three_hrs_per_week: 每周 3 小时
@@ -287,8 +320,20 @@ zh-CN:
   volunteer_engineer_submission_location_flexibility_remote: 远程辅导 (教师或学生)
   volunteer_engineer_submission_location_flexibility_curriculum: 愿意为开源课程项目作出贡献
   volunteer_engineer_submission_experience_unspecified: 未指定
+  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: 当前大学生 (或研究员)
   volunteer_engineer_submission_experience_software_professional: 软件专业人士
+  volunteer_engineer_submission_distance_8: 5 miles
+  volunteer_engineer_submission_distance_16: 10 miles
+  volunteer_engineer_submission_distance_24: 15 miles
+  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
+  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
+  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: 年龄
   dashboard_landing_title: 教师主页
   dashboard_landing_welcome: 欢迎您来到我们最新改进的教师仪表板。
@@ -469,19 +514,31 @@ zh-CN:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash; every participating organizer will receive a gift card to Amazon.com or Microsoft's Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
+  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在CS教育周期间参加
   learn_more: 学习更多内容
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: 登陆
+  learn_videos_watch: Watch this inspirational video with your classroom
+  learn_videos_show: Show this inspirational video to your class
+  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: 教育资源
   learn_are_you_educator: 'Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how to teach an Hour of Code</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
+  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_hoc_prizes: 了解更多关于每个教育者的奖项
+  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
   hoc2014_try_new_tutorial: 试试我们新的beta 版的一小时代码教程
   hoc2014_try_scrat: 愤怒的小鸟、PvZ和Scrat
   hoc2014_try_frozen: 艺术家与冻结的安娜和艾尔莎
+  carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: 中文教程
   carousel_heading_domestic: 英文教程可用
   carousel_heading_beginners: 初学者教程
@@ -495,6 +552,7 @@ zh-CN:
   carousel_heading_robots: 学习使用机器人进行编程
   carousel_heading_ide: 在教师中流行的平台
   educator_notes: 教育家笔记
+  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   how_to_teach_hoc: 如何教授一小代码
   more_resources_educators: 给教师和教育工作者们的更多资源
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -507,6 +565,7 @@ zh-CN:
   older_systems_subheading: '这些应该能在较旧的网页浏览器上运行。若要访问所有教程，请升级到 <a href="http://browsehappy.com/"target="_blank"> 最新的网页浏览器。</a>'
   mobile_devices: 用于移动设备的教程
   frozen_name: Code with Anna and Elsa
+  starwars_name: '星球大战: 建立一个充满代码的星系'
   codeorg_name: 编写你的第一个计算机程序
   codeintl_name: 编写你的第一个计算机程序
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -546,6 +605,8 @@ zh-CN:
   projguts_name: 石头、剪子、布
   hourofcode_name: 新 code.org/hoc 的占位符
   playlab_name: 播放实验室
+  infinity_name: 无限发挥实验室
+  artist_name: 艺术家
   codeorg_gradelevel: 年龄鉴于4至104
   codeintl_gradelevel: 年龄鉴于4至104
   thinkersmithspanish_gradelevel: Por todos
@@ -585,7 +646,10 @@ zh-CN:
   projguts_gradelevel: 10-13岁
   hourofcode_gradelevel: 年龄鉴于4至104
   frozen_gradelevel: 年龄 8 +
+  starwars_gradelevel: 6岁以上
   playlab_gradelevel: 年龄鉴于4至104
+  infinity_gradelevel: 年龄鉴于4至104
+  artist_gradelevel: 年龄鉴于4至104
   codeorg_platformtext: 最新的浏览器，智能手机，平板电脑
   codeintl_platformtext: 最新的浏览器，智能手机，平板电脑
   thinkersmithspanish_platformtext: 离线的
@@ -625,6 +689,7 @@ zh-CN:
   projguts_platformtext: 离线的
   hourofcode_platformtext: 最新的浏览器，智能手机，平板电脑
   frozen_platformtext: 最新的浏览器 + 平板电脑
+  starwars_platformtext: 最新的浏览器 + 平板电脑
   playlab_platformtext: 最新的浏览器，智能手机，平板电脑
   codeorg_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
   codeintl_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
@@ -663,9 +728,12 @@ zh-CN:
   thinkersmith2_shortdescription: 了解计算机如何使用 0 和 1 来表示信息
   kodableunplugged_shortdescription: 一个有趣的Unplugged活动
   projguts_shortdescription: 尝试用石头、剪子、布来建模和模拟
-  hourofcode_shortdescription: 新 code.org/hoc 的占位符
+  hourofcode_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
   frozen_shortdescription: 让我们用代码同安娜和艾尔莎一起去探寻冰雪的魔力与美丽。
+  starwars_shortdescription: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
   playlab_shortdescription: 创建一个故事或做游戏玩实验室！
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
+  artist_shortdescription: Draw cool pictures and designs with the Artist!
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。了解重复，循环，条件和基本算法。提供34种语言。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。了解重复，循环，条件和基本算法。提供34种语言。
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -705,6 +773,7 @@ zh-CN:
   projguts_longdescription: '这"不插电"活动由一群学生玩不同版本的剪刀/ 石头/ 布的游戏，以协助学生学习如何建模与模拟运作原理，并查看结果作为不同的建模实验。'
   hourofcode_longdescription: 新 code.org/hoc 的占位符
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  starwars_longdescription: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
   playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
   codeorg_beyond_name: 介绍电脑科学 (学龄前到8 年级）
   khan_beyond_name: 学习电脑程式设计
@@ -898,3 +967,11 @@ zh-CN:
   compatibility_https_header: Please enable HTTPS for Code.org.
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: 隐藏此警告
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: 拍翅膀
+  infinity_shortcode: inf
+  playlab_shortcode: 玩
+  artist_shortcode: art

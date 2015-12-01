@@ -264,6 +264,7 @@
         playlab: একটি অ্যাপ তৈরি করুন
         artist: Draw Something
         calculate: Calculate Something
+        applab: একটি অ্যাপ তৈরি করুন
     user:
       classroom: শিক্ষক হোম পেজ
       district_dashboard: District Dashboard
@@ -287,6 +288,8 @@
       prize_us_only: (U.S. students only)
       prizes_link: আরও তথ্য
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'আপনার শিক্ষক:'
       other: 'আপনার শিক্ষক:'
@@ -512,6 +515,7 @@
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
@@ -560,9 +564,14 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
