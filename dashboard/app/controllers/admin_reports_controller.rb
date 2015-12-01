@@ -15,8 +15,10 @@ class AdminReportsController < ApplicationController
   def funometer
     authorize! :read, :reports
 
+    DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+
     # Compute the global funometer percentage.
-    ratings = PuzzleRating.all
+    ratings = DASHBOARD_REPORTING_DB_READONLY[:puzzle_ratings].all
     @overall_percentage = get_percentage_positive(ratings)
 
     # Generate the funometer percentages, by day, for the last month.
@@ -44,7 +46,7 @@ class AdminReportsController < ApplicationController
     @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
 
     # Compute the global funometer percentage for the script.
-    ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
+    ratings = DASHBOARD_REPORTING_DB_READONLY[:puzzle_ratings].where('puzzle_ratings.script_id = ?', @script_id)
     @overall_percentage = get_percentage_positive(ratings)
 
     # Generate the funometer percentages for the script, by day, for the last month.
@@ -72,7 +74,7 @@ class AdminReportsController < ApplicationController
     @level_id = params[:level_id]
     @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
 
-    ratings = PuzzleRating.where('script_id = ?', @script_id).where('level_id = ?', @level_id)
+    ratings = DASHBOARD_REPORTING_DB_READONLY[:puzzle_ratings].where('puzzle_ratings.script_id = ?', @script_id).where('level_id = ?', @level_id)
     @overall_percentage = get_percentage_positive(ratings)
 
     # Generate the funometer percentages for the level, by day, for the last month.
