@@ -39,7 +39,6 @@ function createVideo(options) {
 //   onClose - actions to take after closing the video dialog, or immediately
 //             if the video isn't shown.
 function showVideoDialog(options, forceShowVideo) {
-  options['force_fallback'] = true;
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
