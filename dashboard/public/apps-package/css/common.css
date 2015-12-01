@@ -1206,3 +1206,6 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 
 .droplet-hover-div {
   max-width: 100% !important; }
+
+.legacy-share-view #belowVisualization {
+  display: none; }
