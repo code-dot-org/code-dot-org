@@ -908,34 +908,7 @@ applabCommands.setText = function (opts) {
  * @private
  */
 applabCommands.getElementInnerText_ = function (element) {
-  var cleanedText = element.innerHTML;
-  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
-  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
-
-  // This next step requires some explanation
-  // In multiline text it's possible for the first line to render wrapped or unwrapped.
-  //     Line 1
-  //     Line 2
-  //   Can render as either of:
-  //     Line 1<div>Line 2</div>
-  //     <div>Line 1</div><div>Line 2</div>
-  //
-  // But leading blank lines will always render wrapped and should be preserved
-  //
-  //     Line 2
-  //     Line 3
-  //   Renders as
-  //    <div><br></div><div>Line 2</div><div>Line 3</div>
-  //
-  // To handle this behavior we strip leading newlines UNLESS they are followed
-  // by another newline, using a negative lookahead (?!)
-  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
-
-  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
-  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
-  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
-  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
-  return cleanedText;
+  return utils.unescapeText(element.innerHTML);
 };
 
 /**
@@ -947,18 +920,7 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText.toString();
-  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
-  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
-  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
-  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
-
-  // Now wrap each line except the first line in a <div>,
-  // replacing blank lines with <div><br><div>
-  var lines = escapedText.split('\n');
-  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
-    return '<div>' + (line.length ? line : '<br>') + '</div>';
-  }).join('');
+  element.innerHTML = utils.escapeText(newText.toString());
 };
 
 applabCommands.getChecked = function (opts) {

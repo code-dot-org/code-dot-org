@@ -6,7 +6,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
-
+var utils = require('../../utils');
 var elementUtils = require('./elementUtils');
 
 var TextAreaProperties = React.createClass({
@@ -19,6 +19,13 @@ var TextAreaProperties = React.createClass({
   render: function () {
     var element = this.props.element;
 
+    var escapedText = '';
+    if (element.parentElement.className === 'textArea') {
+      escapedText = utils.unescapeText(element.parentElement.innerHTML);
+    } else {
+      escapedText = utils.unescapeText(element.innerHTML);
+    }
+
     return (
       <div id='propertyRowContainer'>
         <PropertyRow
@@ -29,7 +36,7 @@ var TextAreaProperties = React.createClass({
         <PropertyRow
           desc={'text'}
           isMultiLine={true}
-          initialValue={$(element).text()}
+          initialValue={escapedText}
           handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
