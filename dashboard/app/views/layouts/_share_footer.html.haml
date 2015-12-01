@@ -2,25 +2,25 @@
 
 :ruby
   reactProps = {
-    i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
-    copyrightInBase: true,
-    baseCopyrightString: I18n.t('footer.copyright'),
-    baseMoreMenuString: I18n.t('footer.more'),
+    i18nDropdown: '',
+    copyrightInBase: false,
+    baseMoreMenuString: I18n.t('footer.built_on_code_studio'),
+    className: 'dark',
     menuItems: [
       {
-        text: I18n.t('footer.report_abuse'),
-        link: '/report_abuse',
+        text: I18n.t('footer.make_my_own_app'),
+        link: 'https://code.org/learn',
         newWindow: true
       },
       {
-        text: I18n.t('footer.support'),
-        link: "https://support.code.org",
+        text: I18n.t('footer.how_it_works'),
+        link: url_for(action: 'edit'),
         newWindow: true
       },
       {
-        text: I18n.t('footer.translate'),
-        link: "https://code.org/translate",
-        newWindow: true
+        text: I18n.t('footer.copyright'),
+        link: '#',
+        copyright: true
       },
       {
         text: I18n.t('footer.tos'),
