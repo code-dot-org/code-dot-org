@@ -269,6 +269,13 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   }
 end
 
+Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".congrats"
+    And element ".congrats" contains text "#{expected_text}"
+  }
+end
+
 # pixelation and other dashboard levels pull a bunch of hidden dialog elements
 # into the dom, so we have to check for the dialog more carefully.
 Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expectedText|
@@ -363,6 +370,15 @@ end
 Then /^there's an image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")
   exists.should eq true
+end
+
+Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
+end
+
+Then /^I click an image "([^"]*)"$/ do |path|
+  @browser.execute_script("$('img[src*=\"#{path}\"]').click();")
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -591,6 +607,11 @@ end
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
   wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+end
+
+Then /^my query params match "(.*)"$/ do |matcher|
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
+  wait.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
