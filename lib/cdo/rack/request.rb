@@ -2,17 +2,17 @@ require 'rack/request'
 require 'ipaddr'
 
 module Rack
-  module CdoExtension
-    TRUSTED_PROXIES = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
-      IPAddr.new(proxy)
-    end
-
-    def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip}
-    end
-  end
-
   class Request
+    module CdoExtension
+      TRUSTED_PROXIES = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
+        IPAddr.new(proxy)
+      end
+
+      def trusted_proxy?(ip)
+        super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip}
+      end
+    end
+
     prepend CdoExtension
 
     def json_body()
