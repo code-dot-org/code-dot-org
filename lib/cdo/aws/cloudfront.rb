@@ -36,6 +36,15 @@ module AWS
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
         }
+      },
+      hourofcode: {
+        aliases: [CDO.hourofcode_hostname],
+        origin: "#{ENV['RACK_ENV']}-origin.hourofcode.com",
+        ssl_cert: 'hourofcode-cloudfront',
+        log: {
+          bucket: 'cdo-logs',
+          prefix: "#{ENV['RACK_ENV']}-hourofcode-cdn"
+        }
       }
     }
 
@@ -72,7 +81,7 @@ module AWS
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
       cloudfront = Aws::CloudFront::Client.new
-      ids = %i(pegasus dashboard).map do |app|
+      ids = CONFIG.keys.map do |app|
         distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
           i.aliases.items.include?(CDO.method("#{app}_hostname").call)
         end
@@ -113,9 +122,9 @@ module AWS
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.
     # Syntax reference: http://docs.aws.amazon.com/sdkforruby/api/Aws/CloudFront/Types/DistributionConfig.html
-    # `app` is a symbol containing the app name (:pegasus or :dashboard)
+    # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
     def self.config(app, reference = nil)
-      config = HTTP_CACHE[app]
+      config = app == :hourofcode ? HTTP_CACHE[:pegasus] : HTTP_CACHE[app]
       cloudfront = CONFIG[app]
       behaviors = config[:behaviors].map do |behavior|
         paths = behavior[:path]
