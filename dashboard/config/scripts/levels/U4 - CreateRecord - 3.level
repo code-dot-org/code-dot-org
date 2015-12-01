@@ -1,21 +1,13 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-05T21:56:35.000Z",
+  "created_at": "2015-12-01T18:17:29.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "write": null,
-      "whileBlock": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
-      "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
-      "randomNumber_min_max": null,
+      "createRecord": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
@@ -23,6 +15,8 @@
     },
     "edit_code": true,
     "embed": "false",
+    "instructions": "Add the provided javascript object as a record to a table. (Click to see full instructions)",
+    "markdown_instructions": "# Separate Javascript Object\r\n\r\nOften we want to create a javascript object first and then just add it as a record. It is easier to do this by creating the javascript objec then just using its name in the createRecord call.\r\n\r\n# Do This\r\nStarter code has been provided that makes a javascript object of a cartoon character.\r\n\r\n* Add a `createRecord` command.  Change the table name to something descriptive like famousCartoonCharacters.\r\n* Change the second parameter in order to create a record of the provided javascript object.\r\n* Run the program. \r\n* Go look at the table to check that it worked.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -42,19 +36,19 @@
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "true",
+    "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "true",
+    "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "true",
+    "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Update the code to use the -= operator to count from 30 down to 0 by 3's. (Click to see full instructions)",
-    "markdown_instructions": "# Try Out the *-=* Operator\r\n\r\nThe `-=` operator works almost identically to `+=`, but it instead it subtracts the value provided from the variable. Let's use this operator to **create a loop that counts down from 30 by 3's**.\r\n\r\n# Do This:\r\n\r\n* **Change the code to use `-=`** to count from *down* from 30 to 0 by 3's.",
-    "start_blocks": "var count = 0;\r\nwhile(count != 30){ \r\n  count = count + 3;\r\n  console.log(count); \r\n}",
-    "encrypted_examples": "opS6jKqLKfBSERWVZI05NgMv9wNC4gSoiJsUf6ynV5so3gAKNrM5vLBSoanb\ndmtj\n"
+    "encrypted_examples": [
+
+    ],
+    "start_blocks": "var mickeyMouse = {};\r\nmickeyMouse.name = \"Mickey Mouse\";\r\nmickeyMouse.gender = \"Male\";"
   }
 }]]></config>
   <blocks/>
