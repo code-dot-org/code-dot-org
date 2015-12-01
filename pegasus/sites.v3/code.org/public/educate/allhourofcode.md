@@ -40,6 +40,9 @@ Student-led tutorials are designed so they can be fun for a student working alon
 [Kano Computing](http://hourofcode.kano.me/)  
 **Middle school. Web-based.** Make art while learning JavaScript.
 
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**High school. Web-based.** Learn to edit and write JavaScript as you explore computer science concepts like variables and functions.
+
 
 ## Tutorials for Grades K-8
 [Tynker](http://www.tynker.com/hour-of-code/)  
@@ -180,10 +183,10 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
 **Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
 
-[ScratchJr: Can I Make a Spooky Forest?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204150029/1)  
+[ScratchJr: Can I Make a Spooky Forest?](https://drive.google.com/file/d/0B_kqMacZctDuWDRtLXQwRWp4ZGc/view)  
 **Ages 5-9. Art, Storytelling, Sequence, Unplugged.** Students will learn more features of ScratchJr by creating a spooky forest with multiple characters!
 
-[ScratchJr: Can I Make My Characters Greet Each Other?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204143525/1)  
+[ScratchJr: Can I Make My Characters Greet Each Other?](https://drive.google.com/file/d/0B_kqMacZctDuNVg0QTJaWUR6WVE/view)  
 **Ages 5-9. Art, Storytelling, Events, Unplugged.** Students will learn advanced features of the ScratchJr app when they make a dog and kitten meet each other and exchange hellos!
 
 [ScratchJr: Can I Make the Sun Set?](https://drive.google.com/file/d/0B_kqMacZctDuTG5CdEhoR2o3M0E/view?usp=sharing)  
