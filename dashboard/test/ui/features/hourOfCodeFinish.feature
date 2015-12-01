@@ -15,7 +15,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I press the last button with text "Continue"
   And I get redirected to "/congrats" via "dashboard"
   And my query params match "\?i\=.*\&s\=bWM\="
-  And there's an image "MC_Hour_Of_Code_Certificate.jpg"
+  And I wait to see an image "MC_Hour_Of_Code_Certificate.jpg"
   And I type "Robo Coder" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see an image "/api/hour/certificate/"
