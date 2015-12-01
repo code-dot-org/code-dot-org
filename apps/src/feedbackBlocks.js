@@ -53,6 +53,7 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
   this.div = document.createElement('div');
+  this.div.setAttribute('id', 'feedbackBlocksContainer');
   this.html = readonly({
     app: options.app,
     assetUrl: studioApp.assetUrl,
@@ -83,6 +84,17 @@ FeedbackBlocks.prototype.show = function() {
     doc.write(this.html);
     doc.close();
   }
+};
+
+FeedbackBlocks.prototype.hideDiv = function() {
+  this.div.className += " hiddenIframe";
+};
+
+FeedbackBlocks.prototype.revealDiv = function() {
+  // this regex should simply match the first FULL WORD instance of
+  // "hiddenIframe"; meaning it will ignore instances of, for example,
+  // "hiddenIframeSomethingElse"
+  this.div.className = this.div.className.replace(/\bhiddenIframe\b/,'');
 };
 
 /**
