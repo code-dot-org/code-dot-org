@@ -498,8 +498,7 @@ $default-modal-width: 640px;
 }
 
 .dash_modal_body {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 25px;
 }
 
 .btn#dataConfirmOK:hover {
@@ -1790,31 +1789,25 @@ $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
 .modal-content {
+  margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+
   p, pre {
     line-height: 27px;
     font-size: 24px;
     color: $purple;
   }
-
-  p.congrats {
-    margin-left: $modal-image-width + $modal-image-margin-gap;
-    html[dir=rtl] & {
-      margin-left: 0;
-      margin-right: $modal-image-width + $modal-image-margin-gap;
-    }
+  .congrats {
     font-size: 27px;
     line-height: 30px;
     margin-bottom: 15px;
   }
-
-  &.no-modal-icon p.congrats {
-    margin-left: $modal-no-icon-gap;
-    html[dir=rtl] & {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-
 
   .instructions2 {
     font-size: 18px;
@@ -1826,6 +1819,15 @@ $modal-no-icon-gap: 22px;
     margin: 0px auto 6px;
     position: relative;
     z-index: -1;
+  }
+
+  .feedback-image {
+    width: 180px;
+    height: auto;
+    margin: 0 15px 0 0;
+    float: left;
+    border: lightgrey;
+    border-style: solid
   }
 
   .feedback-links {
@@ -1897,7 +1899,6 @@ $modal-no-icon-gap: 22px;
   width: $modal-image-width;
   height: auto;
   margin-top: -60px;
-  margin-bottom: 10px;
   float: left;
   html[dir=rtl] & {
     float: right;

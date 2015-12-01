@@ -23,7 +23,7 @@
   %div{style: 'display: none;'}
     - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
       %div{id: "#{error_type}-dialogcontent"}
-        .modal-content.no-modal-icon
+        .modal-content
           %p.dialog-title
             =t('contract_match.wrong_title')
           %p
