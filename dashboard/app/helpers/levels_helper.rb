@@ -127,6 +127,8 @@ module LevelsHelper
 
     set_channel if @level.channel_backed?
 
+    view_options server_level_id: @level.id
+
     unless params[:share]
       # Set videos and callouts.
       view_options(
@@ -311,7 +313,12 @@ module LevelsHelper
         callback: @callback,
     }
 
-    level_options[:lastAttempt] = @last_attempt
+    unless params[:no_last_attempt]
+      level_options[:lastAttempt] = @last_attempt
+      if @last_activity
+        level_options[:lastAttemptTimestamp] = @last_activity.updated_at.to_datetime.to_milliseconds
+      end
+    end
 
     if current_user.nil? || current_user.teachers.empty?
       # only students with teachers should be able to submit
@@ -351,7 +358,6 @@ module LevelsHelper
     embed
     share
     hide_source
-    script_level_id
     submitted
     unsubmit_url
   ))
@@ -425,6 +431,8 @@ module LevelsHelper
       else
         script
       end
+    elsif @level.try(:is_project_level) && data_t("game.name", @game.name)
+      data_t "game.name", @game.name
     else
       @level.key
     end

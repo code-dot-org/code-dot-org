@@ -147,8 +147,6 @@
   twitter_teach_cs: Pourquoi n'y a-t-il pas plus d'écoles qui enseignent l'informatique
     ? Nous pouvons résoudre cela. http://youtu.be/nKIu9yen5nc. Visitez http://code.org/
     pour en savoir plus.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> En savoir plus</a> sur
-    les prix pour chaque éducateur.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Plus loin qu'Une Heure
   what_gender: Es-tu un garçon ou une fille ?
@@ -253,7 +251,7 @@
   homepage_banner_privacy_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
-  homepage_slot_text_link_hoc: Essayez l'Heure de Code
+  homepage_slot_text_link_hoc: Essayer l'Heure de Code
   homepage_slot_text_link_host: Hébergez une Heure de Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Soyez bénévole pour Une Heure de Code
@@ -329,15 +327,15 @@
   starwars_blocks_specs: Plusieurs langues (à venir) | navigateurs modernes, smartphones,
     tablettes | 6-10 ans
   starwars_blocks_start_button: Essaie maintenant
-  starwars_watch_videos: Avant de commencer, regarde une de ces vidéos inspirantes
-  starwars_speak_languages: Tu parles une autre langue ?
+  starwars_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
+  starwars_speak_languages: Vous parlez une autre langue ?
   starwars_help_translate: Aidez-nous à traduire
   starwars_platform_text: Navigateurs récents, smartphones, tablettes
   mc_name: Une Heure de Code Minecraft
-  mc_longdescription: Utilise des blocs de code pour emmener Steve ou Alex dans une
-    aventure dans le monde de Minecraft.
-  mc_shortdescription: Utilise des blocs de code pour emmener Steve ou Alex dans une
-    aventure dans le monde de Minecraft.
+  mc_longdescription: Utilise des blocs de code pour vivre une aventure dans le monde
+    de Minecraft avec Steve ou Alex.
+  mc_shortdescription: Utilise des blocs de code pour vivre une aventure dans le monde
+    de Minecraft avec Steve ou Alex.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs modernes, smartphones, tablettes
   mc_specs: Plusieurs langues (à venir) | navigateurs modernes et tablettes | 6 ans
@@ -366,6 +364,9 @@
   volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
     si vous êtes étudiant en informatique ou développeur. Les champs marqués d'une
     <span class="form-required-field"> *</span> sont obligatoires.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants
     sur la carte des bénévoles
   volunteer_engineer_submission_field_name: Nom
@@ -715,15 +716,26 @@
   learn_educator_resources_button: Ressources de l'éducateur
   learn_are_you_educator: Vous êtes éducateur ? Apprendre <a href="http://hourofcode.com/resources/how-to">
     à enseigner Une Heure de Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Trouvez un bénévole
+    local</a> pour vous aider pendant votre Heure de Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> En savoir plus</a> sur
+    les prix pour chaque éducateur.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Essaie nos nouvelles Heures de Code
   hoc2014_try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version
     bêta
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat
   hoc2014_try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
   carousel_heading_codeorg: Tutoriels par Code.org
+  carousel_heading_codeorg_any_device: Tutoriels par Code.org (pour tous supports)
   carousel_heading_3rd_party: Tutoriels par des tiers
   carousel_heading_third_party: Tutoriels par des tiers
-  carousel_heading_international: Tutoriels dans votre langue
+  carousel_heading_international: Tutoriel dans votre langue
   carousel_heading_domestic: Tutoriels disponibles en anglais
   carousel_heading_beginners: Tutoriels pour débutants
   carousel_heading_javascript: Tutoriels sur le langage JavaScript
@@ -794,6 +806,8 @@
   projguts_name: Pierre, papier, ciseaux
   hourofcode_name: Espace réservé pour le nouveau code.org/hoc
   playlab_name: Labo
+  infinity_name: Infinity Play Lab
+  artist_name: Artiste
   codeorg_gradelevel: De 4 à 104 ans
   codeintl_gradelevel: De 4 à 104 ans
   thinkersmithspanish_gradelevel: Por todos
@@ -835,6 +849,8 @@
   frozen_gradelevel: 8 ans et plus
   starwars_gradelevel: 6 ans et plus
   playlab_gradelevel: De 4 à 104 ans
+  infinity_gradelevel: De 4 à 104 ans
+  artist_gradelevel: De 4 à 104 ans
   codeorg_platformtext: Navigateurs modernes, smartphones, tablettes
   codeintl_platformtext: Navigateurs modernes, smartphones, tablettes
   thinkersmithspanish_platformtext: Débranché
@@ -929,12 +945,15 @@
     et des 0 pour coder l'information
   kodableunplugged_shortdescription: Un exercice amusant sans connexion
   projguts_shortdescription: Modélise des simulations en utilisant pierre/papier/ciseaux
-  hourofcode_shortdescription: Espace réservé pour le nouveau code.org/hoc
+  hourofcode_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
   frozen_shortdescription: Aidons Anna et Elsa à explorer la magie et la beauté de
     la glace.
   starwars_shortdescription: Apprends à programmer des droïdes et crée ton propre
     jeu Star Wars dans une galaxie lointaine, très lointaine.
   playlab_shortdescription: Programme une histoire ou un jeu avec le Labo !
+  infinity_shortdescription: Utilisez le labo pour créer une histoire ou un jeu mettant
+    en vedette les personnages de Disney Infiny.
+  artist_shortdescription: Dessine des super images et schémas avec l'Artiste!
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec le
     glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette
     les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs
@@ -1452,3 +1471,19 @@
     date. <a href='%{it_requirements_url}'> cliquez ici</a> pour savoir comment activer
     HTTPS pour accéder a Code.org.
   compatibility_https_hide_this_warning: Masquer cet avertissement
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: battre des ailes
+  infinity_shortcode: inf
+  playlab_shortcode: jouer
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

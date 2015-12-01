@@ -12,21 +12,12 @@ social:
   "og:video:type": ""
 ---
 
-%link{href: "/css/learn_tabs.css", rel: "stylesheet"}
+%link{type: "text/css", href: "/css/learn_tabs.css", rel: "stylesheet"}
+%link{type: "text/css", href: "/shared/css/course-blocks.css", rel: "stylesheet"}
+%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
+%script{type: "text/javascript", src: "/js/bootstrap.min.js"}
 
-%br/
-%div.learn-hoc-banner
-  %div.banner-character
-    %div.character-img
-  %div.banner-content
-    %div#hoc-sign-up
-      = I18n.t(:learn_sign_up_description)
-      &nbsp;
-      %a{:href=>'http://www.hourofcode.com'}
-        %button
-          = I18n.t(:learn_sign_up_button)
-    %div#hoc-teacher-guide
-      = I18n.t(:learn_hoc_prizes)
-%br/
 
+= view :learn_code_studio
 = view :learn_carousels, variation:'learn'
+= view :learn_teacher_banner

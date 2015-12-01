@@ -1,0 +1,20 @@
+title 'Computer Science in Science PD Pre-Phase 3B'
+description "Phase 3 Academic Year Development"
+description_short "Phase 3 Academic Year Development"
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'sciPD3OLP33 intro'
+level 'sciPD2 timeline'
+level 'ECSPD PD details'
+level 'PD check your progress'
+
+stage 'Thinking About Implementation'
+level 'sciPD33 rubric'
+level 'sciPD3 implement2'
+
+stage 'Wrap-Up'
+level 'sciPD3 thanks'
+level 'sciPD3 reflection'
+level 'sciPD3 end'

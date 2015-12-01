@@ -756,9 +756,9 @@ SQL
     end
   end
 
-  def track_script_progress(script)
+  def User.track_script_progress(user_id, script_id)
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user: self, script: script).first_or_create!
+      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
       time_now = Time.now
 
       user_script.started_at = time_now unless user_script.started_at
@@ -769,13 +769,38 @@ SQL
     end
   end
 
-  # returns whether a new level has been completed
-  def track_level_progress(script_level, new_result)
+  # returns whether a new level has been completed and asynchronously enqueues an operation
+  # to update the level progress.
+  def track_level_progress_async(script_level, new_result)
+    level_id = script_level.level_id
+    script_id = script_level.script_id
+    old_user_level = UserLevel.where(user_id: self.id,
+                                 level_id: level_id,
+                                 script_id: script_id).first
+
+    async_op = {'model' => 'User',
+                'action' => 'track_level_progress',
+                'user_id' => self.id,
+                'level_id' => level_id,
+                'script_id' => script_id,
+                'new_result' => new_result}
+    if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
+      User.progress_queue.enqueue(async_op.to_json)
+    else
+      User.handle_async_op(async_op)
+    end
+
+    old_result = old_user_level.try(:best_result)
+    !Activity.passing?(old_result) && Activity.passing?(new_result)
+  end
+
+  # The synchronous handler for the track_level_progress helper.
+  def User.track_level_progress_sync(user_id, level_id, script_id, new_result)
     new_level_completed = false
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_level = UserLevel.where(user_id: self.id,
-                                   level_id: script_level.level_id,
-                                   script_id: script_level.script_id).first_or_create!
+      user_level = UserLevel.where(user_id: user_id,
+                                   level_id: level_id,
+                                   script_id: script_id).first_or_create!
 
       new_level_completed = true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
 
@@ -786,11 +811,19 @@ SQL
       user_level.save!
     end
 
-    if new_level_completed && script_level.script
-      track_script_progress(script_level.script)
+    if new_level_completed && script_id
+      User.track_script_progress(user_id, script_id)
     end
+  end
 
-    new_level_completed
+  def User.handle_async_op(op)
+    raise 'Model must be User' if op['model'] != 'User'
+    case op['action']
+      when 'track_level_progress'
+        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'])
+      else
+        raise "Unknown action in #{op}"
+    end
   end
 
   def assign_script(script)
@@ -831,7 +864,7 @@ SQL
         end
       end
     end
-    track_script_progress(script)
+    User.track_script_progress(self.id, script.id)
   end
 
   def User.csv_attributes
@@ -842,4 +875,9 @@ SQL
   def to_csv
     User.csv_attributes.map{ |attr| self.send(attr) }
   end
+
+  def User.progress_queue
+    AsyncProgressHandler.progress_queue
+  end
+
 end

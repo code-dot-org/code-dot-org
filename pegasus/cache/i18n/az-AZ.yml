@@ -140,8 +140,6 @@
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: Bir Kod Saatı öyrənin
   beyond_hoc: Kod Saatı bitəndən sonra
   what_gender: Cinsiniz nədir?
@@ -353,15 +351,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Ad
@@ -595,8 +596,8 @@
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
     words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
+  dashboard_students_join_link: 'Şagirdlərinizə deyin ki, özlərinə hesab düzəltsinlər
+    və bölmənizə növbəti keçiddən qoşulsunlar:'
   dashboard_students_no_email: Şagirdlərinizin e-poçt ünvanı yoxdursa, yaxud onların
     hesablarını özünüz düzəltmək istəyirsinizsə, bu bölmənin məxfi kodunu <b>söz</b>
     və ya <b>şəkil</b> növünə dəyişin.
@@ -682,16 +683,27 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
   carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_beginners: Tutorials for Grades K-8
   carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
@@ -756,8 +768,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: İlk kompüter proqramınızı yazın
   playlab_name: Oyun labı
+  infinity_name: Infinity Play Lab
+  artist_name: Rəssam
   codeorg_gradelevel: 4-104 yaş
   codeintl_gradelevel: 4-104 yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -799,6 +813,8 @@
   frozen_gradelevel: 8+ yaş
   starwars_gradelevel: 6+ yaş
   playlab_gradelevel: 4-104 yaş
+  infinity_gradelevel: 4-104 yaş
+  artist_gradelevel: 4-104 yaş
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Sərbəst
@@ -893,6 +909,9 @@
   starwars_shortdescription: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
     Ulduz Müharibələri oyunu düzəldin.
   playlab_shortdescription: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
   codeorg_longdescription: İnfromatikanın təməl anlayışlarını sürüklə-burax tipli
     proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin
     video mühazirələri, "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et"
@@ -1352,3 +1371,19 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Bu xəbərdarlığı gizlət
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: qanad çal
+  infinity_shortcode: inf
+  playlab_shortcode: səsləndir
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

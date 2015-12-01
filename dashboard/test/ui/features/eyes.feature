@@ -110,9 +110,9 @@ Scenario:
   And I close my eyes
 
 @dashboard_db_access
-@as_student
 Scenario:
-  Given I open my eyes to test "embedded ninjacat"
+  Given I am a student
+  And I open my eyes to test "embedded ninjacat"
   When I am on "http://learn.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
   And I rotate to landscape
   Then element "#runButton" is visible
@@ -126,11 +126,12 @@ Scenario:
   And I press "finishButton"
   And I see no difference for "finish dialog"
   And I close my eyes
+  And I sign out
 
 @dashboard_db_access
-@as_student
 Scenario:
-  Given I open my eyes to test "calc expression evaluation"
+  Given I am a student
+  And I open my eyes to test "calc expression evaluation"
   When I am on "http://learn.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
@@ -143,11 +144,12 @@ Scenario:
   And I wait to see "#x-close"
   Then I see no difference for "evaluated expression"
   And I close my eyes
+  And I sign out
 
 @dashboard_db_access
-@as_student
 Scenario:
-  Given I open my eyes to test "calc variable"
+  Given I am a student
+  And I open my eyes to test "calc variable"
   When I am on "http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
@@ -160,6 +162,7 @@ Scenario:
   And I wait to see "#x-close"
   Then I see no difference for "evaluated expression"
   And I close my eyes
+  And I sign out
 
 @dashboard_db_access
 Scenario Outline: Simple blockly level page view
@@ -173,6 +176,7 @@ Scenario Outline: Simple blockly level page view
   And I press "x-close"
   And I see no difference for "closed dialog"
   And I close my eyes
+  And I sign out
 Examples:
   | url                                                                   | test_name                 |
   | http://learn.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true      | first maze level          |
@@ -193,6 +197,7 @@ Scenario Outline: Simple page view without instructions dialog
   When I rotate to landscape
   Then I see no difference for "initial load"
   And I close my eyes
+  And I sign out
 Examples:
   | url                                                               | test_name                 |
   | http://learn.code.org/projects/applab/new                         | new applab project        |

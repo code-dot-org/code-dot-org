@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+# A daemonized version of 'process_queues' supporting the following
+# "init-script" arguments: start, stop, restart, reload, and status.
+
+require 'daemons'
+require 'pathname'
+
+pwd  = File.dirname(File.expand_path(__FILE__))
+log_dir = Pathname.new(File.join(pwd, '../../log/')).cleanpath
+config_dir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
+config_file = "#{config_dir}/queue_config.json.erb"
+
+argv = ARGV + ['--', config_file]
+
+options =  {
+  dir_mode: :normal, # Use absolute directory paths.
+  dir: config_dir, # directory where pid file will be stored
+  log_dir: log_dir,
+  backtrace: true,   # Log uncaught exceptions to ‘[app_name].log’ in the pid-file directory.
+  monitor: true,     # Monitor the program and restart crashed instances.
+  log_output: true,  # Log the output to process_queues.output in the config directory.
+  ARGV: argv
+}
+
+if ARGV[0] == 'start'
+  # Make sure the config file exists.
+  raise "#{config_file} does not exist" unless File.exists?(config_file)
+  raise "#{config_file} is not readable" unless File.readable?(config_file)
+
+  puts " * Using config #{config_file}"
+  puts " * Logging to #{log_dir}/process_queues.output"
+end
+
+
+Daemons.run('process_queues', options)

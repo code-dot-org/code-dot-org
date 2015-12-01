@@ -27,7 +27,7 @@
     בתכנות בקורס הבא הזה.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
-  hoc2014_students: Students
+  hoc2014_students: סטודנטים
   hoc2014_try: נסו זאת
   hoc2014_teachers: מורים
   hoc2014_host: ארח זאת
@@ -73,8 +73,8 @@
   course_name_accelerated: Accelerated Course
   course_name_course1: קורס 1
   course_name_course2: קורס 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
+  course_name_course3: קורס 3
+  course_name_course4: קורס 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -135,8 +135,6 @@
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@
   twitter_teach_cs: מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן זאת.
     http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
   learn_hoc: למד שעה של קוד
   beyond_hoc: מעבר לשעה אחת
   what_gender: מהו המין שלך?
@@ -208,7 +206,7 @@
   homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: כל המדריכים שלנו
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: קורס 4
   homepage_slot_text_shop: חנות
   homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_hoc: An Hour of Code for every student.
@@ -238,7 +236,7 @@
   homepage_slot_text_link_host: ארח שעה של קוד
   homepage_slot_text_link_hocserved: '# למדו'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_title_students: סטודנטים
   homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
   homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
   homepage_slot_text_link_local: מצא כיתה מקומית
@@ -298,27 +296,26 @@
   class_submission_languages_other: שפות אחרות
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_javascript_start_button: נסה עכשיו
+  starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
+  starwars_javascript_specs: אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה
+  starwars_javascript_start_button: נסה כעת
   starwars_blocks_title: בלוקים
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
-  starwars_blocks_start_button: נסה עכשיו
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  starwars_platform_text: דפדפנים מודרנים, סמרטפונים, טבלטים
+  starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
+  starwars_blocks_specs: שפות נוספות (בקרוב) | דפדפנים מודרניים | סמארטפונים, טאבלטים
+    | לגילאי 6 עד 10
+  starwars_blocks_start_button: נסו כעת
+  starwars_watch_videos: לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו
+  starwars_speak_languages: האם אתם דוברים שפה נוספת?
+  starwars_help_translate: עזרו לנו לתרגם
+  starwars_platform_text: דפדפנים מודרנים, סמארטפונים, טאבלטים
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: לגילאי 6 ומעלה
   mc_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -333,15 +330,18 @@
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
+    computer science education</span> who can help in the classroom, or for somebody
+    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
+    students by talking about the breadth of possibilities with computer science (which
+    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
+    more</a> about organizing your own Hour of Code event.'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: שם
@@ -515,11 +515,11 @@
   dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים
     עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל
     את המשתמשים שלהם.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: סעיף
   dashboard_sections_table_secret: סוג התחברות
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: קורס
-  dashboard_sections_table_students: Students
+  dashboard_sections_table_students: סטודנטים
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: שם החלק
   dashboard_sections_choose_secret: אם ברצונך לספק חשבונות לתלמידיך, בחרו סוג הסודי
@@ -652,11 +652,22 @@
   learn_educator_resources_button: Educator resources
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
+    prizes for every educator.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: נסה את ההדרכות החדשות של "שעת הקוד"
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: האנגרי בירדז,צמחים נגד זומבים וראט הסנאי
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
+  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: הדרכות בשפה שלך
@@ -686,8 +697,8 @@
   older_systems_subheading: אלה צריכים לעבוד בדפדפנים ישנים יותר. כדי לגשת לכל הדרכות,
     יש לשדרג<a href="http://browsehappy.com/" target="_blank"> לדפדפן אינטרנט מודרני.</a>
   mobile_devices: הדרכות עבור התקנים ניידים
-  frozen_name: Code with Anna and Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  frozen_name: תכנתו עם אנה ואלזה
+  starwars_name: 'מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד'
   codeorg_name: כתוב את תוכנת המחשב הראשונה שלך
   codeintl_name: כתוב את תוכנת המחשב הראשונה שלך
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -727,6 +738,8 @@
   projguts_name: אבן, נייר ומספריים
   hourofcode_name: מחזיק מקום עבור code.org/hoc חדש
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: אמן
   codeorg_gradelevel: גילאי 4-104
   codeintl_gradelevel: גילאי 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -766,8 +779,10 @@
   projguts_gradelevel: גילאי 10-13
   hourofcode_gradelevel: גילאי 4-104
   frozen_gradelevel: גילאי 8 +
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: לגילאי 6 ומעלה
   playlab_gradelevel: גילאי 4-104
+  infinity_gradelevel: גילאי 4-104
+  artist_gradelevel: גילאי 4-104
   codeorg_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   thinkersmithspanish_platformtext: ללא חיבור
@@ -852,12 +867,15 @@
   thinkersmith2_shortdescription: למד כיצד מחשבים משתמשים ב1 ו- 0 כדי לייצג מידע
   kodableunplugged_shortdescription: תרגיל כיפי שאינו מצריך חיבור
   projguts_shortdescription: נסו מודלים וסימולציות באמצעות אבן/נייר/מספריים
-  hourofcode_shortdescription: מחזיק מקום עבור code.org/hoc חדש
+  hourofcode_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
   frozen_shortdescription: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
     והיופי של קרח.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  starwars_shortdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
+    הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+  playlab_shortdescription: ליצור סיפור או משחק עם Play Lab!
+  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
+    Infinity characters.
+  artist_shortdescription: ציירו תמונות מגניבות ועיצובים עם האמן!
   codeorg_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
@@ -974,11 +992,10 @@
     איך מידול וסימולציה עובדים על ידי כך שקבוצת תלמידים תשחק בגרסאות שונות של המשחק
     "אבן נייר ומספריים" , ותראה את התוצאות כניסוים שונים במידול.
   hourofcode_longdescription: מחזיק מקום עבור code.org/hoc חדש
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  frozen_longdescription: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+    שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+  starwars_longdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
+    הפרטי שלכם בגלקסיה רחוקה, רחוקה...
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
@@ -1296,3 +1313,19 @@
     בתאריך  %{https_date}. לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
     כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org.
   compatibility_https_hide_this_warning: הסתר את האזהרה הזו
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: נופף
+  infinity_shortcode: inf
+  playlab_shortcode: הפעל
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

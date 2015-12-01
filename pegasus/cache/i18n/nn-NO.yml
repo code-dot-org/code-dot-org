@@ -139,8 +139,6 @@
   just_did_hoc: 'Eg har gjennomført #kodetimen - prøv du også! @kidsakoder'
   twitter_teach_cs: Kvifor lærar ikkje fleire skuler informatikk? Vi kan fikse dette.
     http://youtu.be/nKIu9yen5nc. Besøk http://code.org/ for å lære meir.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lær meir</a> om premiane
-    for kvar lærar.
   learn_hoc: Prøv Kodetimen
   beyond_hoc: Etter Kodetimen
   what_gender: Er du jente eller gut?
@@ -356,6 +354,9 @@
   volunteer_engineer_submission_intro_signup: Ver gild å oppgi følgjande informasjon
     om du er ein informatikkstudent eller jobbar med programmering. Felta markert
     med <span class="form-required-field">*</span> er obligatoriske.
+  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
+    more</a> about organizing your own Hour of Code event and find a local volunteer
+    on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informasjon vert delt med lærarar på
     eit kart over frivillige
   volunteer_engineer_submission_field_name: Namn
@@ -454,7 +455,7 @@
     dette kurset
   dashboard_landing_educator_blog: Les om nyheiter og oppdateringar av materiellet
     vårt i lærerbloggen
-  dashboard_landing_smart_hints: Ver snitt og hjelp oss med å legge inn smarte hint
+  dashboard_landing_smart_hints: Ver snill og hjelp oss med å legge inn smarte hint
     i Code.org-innføringskursa
   dashboard_landing_video_player: Prøv den nye videospelaren på skulen din
   dashboard_landing_progress_title: Klassen si framdrift
@@ -685,11 +686,22 @@
   learn_educator_resources_button: Lærarressursar
   learn_are_you_educator: Er du lærar? Sjekk<a href="http://hourofcode.com/resources/how-to">
     korleis du kan gjennomføra Kodetimen</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
+    to help during your Hour of Code
+  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
+    led Hour of Code lesson plans</a>
+  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
+    for teaching one Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lær meir</a> om premiane
+    for kvar lærar.
+  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
+    videos</a>
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-leksjonar
   hoc2014_try_new_tutorial: Prøv den nye Kodetime-leksjonen (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Skap kunst med Anna og Elsa frå Frost
   carousel_heading_codeorg: Guider laget av Code.org
+  carousel_heading_codeorg_any_device: Tutorial av Code.org (for alle enheter)
   carousel_heading_3rd_party: Guider laget av andre
   carousel_heading_third_party: Guider laget av andre
   carousel_heading_international: Leksjonar på ditt språk
@@ -759,8 +771,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
-  hourofcode_name: Plassholder for ny code.org/hoc
+  hourofcode_name: Skriv ditt første dataprogram
   playlab_name: Spel-lab
+  infinity_name: Infinity Spill-lab
+  artist_name: Kunstnar
   codeorg_gradelevel: Frå 4 - 104 år
   codeintl_gradelevel: Frå 4 - 104 år
   thinkersmithspanish_gradelevel: Por todos
@@ -802,6 +816,8 @@
   frozen_gradelevel: Alderen 8+
   starwars_gradelevel: Alder 6 +
   playlab_gradelevel: Frå 4 - 104 år
+  infinity_gradelevel: Frå 4 - 104 år
+  artist_gradelevel: Frå 4 - 104 år
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   thinkersmithspanish_platformtext: Straumlaust
@@ -892,12 +908,15 @@
   kodableunplugged_shortdescription: Ei morsom fråkopla øving
   projguts_shortdescription: Prøv modellering og simulering ved å bruke stein, saks
     og papir
-  hourofcode_shortdescription: Plassholder for ny code.org/hoc
+  hourofcode_shortdescription: Lær å kode med Mark Zuckerberg og Angry Birds!
   frozen_shortdescription: La oss bruke kode for å bli med Anna og Elsa som utforskar
     den magiske og vakre isen.
   starwars_shortdescription: Lær å programmere droner og skap ditt eige Star Wars-spel
     i ein galakse langt, langt borte.
   playlab_shortdescription: Lag ein historie eller eit spel med Spel-lab!
+  infinity_shortdescription: Bruk Spill-Lab for å lage ei historie eller spel med
+    Disney Infinity figurar.
+  artist_shortdescription: Teikn stilige bilde og design med Kunstnaren!
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med drag-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande
@@ -1373,3 +1392,19 @@
     <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer
     HTTPS for Code.org.
   compatibility_https_hide_this_warning: Skjul denne advarselen
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: flaks
+  infinity_shortcode: inf
+  playlab_shortcode: spel av
+  artist_shortcode: art
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_languages: Tutorials in other programming languages

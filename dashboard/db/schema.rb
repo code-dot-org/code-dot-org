@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022174100) do
+ActiveRecord::Schema.define(version: 20151124014528) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -551,9 +551,9 @@ ActiveRecord::Schema.define(version: 20151022174100) do
 
   create_table "workshops", force: :cascade do |t|
     t.string   "name",         limit: 255
-    t.string   "program_type", limit: 255, null: false
-    t.string   "location",     limit: 255
-    t.string   "instructions", limit: 255
+    t.string   "program_type", limit: 255,  null: false
+    t.string   "location",     limit: 1000
+    t.string   "instructions", limit: 1000
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "phase",        limit: 4

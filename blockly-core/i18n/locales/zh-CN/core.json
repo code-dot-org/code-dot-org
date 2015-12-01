@@ -70,7 +70,7 @@
   "DELETE_BLOCK": "删除块",
   "DELETE_PARAMETER": "删除参数...",
   "DELETE_PARAMETER_TITLE": "这将会删除所有'%1'参数值。确认？",
-  "DELETE_X_BLOCKS": "删除 %1 块",
+  "DELETE_X_BLOCKS": "删除 %1 模块",
   "DISABLE_BLOCK": "禁用块",
   "DUPLICATE_BLOCK": "复制",
   "ENABLE_BLOCK": "启用块",
