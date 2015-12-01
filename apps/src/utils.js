@@ -307,7 +307,7 @@ exports.browserSupportsCssMedia = function () {
   for (var i = 0; i < styleSheets.length; i++) {
     var rules = styleSheets[i].cssRules || styleSheets[i].rules;
     try {
-      if (rules.length > 0) {
+      if (rules && rules.length > 0) {
         // see if we can access media
         var media = rules[0].media;
       }
