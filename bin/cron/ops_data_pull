@@ -27,37 +27,39 @@ def get_program_type(script_name)
   end
 end
 
-pd_scripts = Script.all.select(&:pd?)
-pd_scripts.each do |script|
-  # Get all users with any activity in the script
-  users = script.users
-  headers = nil
-  data = users.map do |user|
-    row = {}
-    row.merge!({
-                   :'ID' => user.id,
-                   :'Ops First Name' => user.ops_first_name,
-                   :'Ops Last Name' => user.ops_last_name,
-                   :'Email' => user.email,
-                   :'District' => user.district.try(:name) || 'None',
-                   :'School' => user.ops_school || 'None'
-               })
-    level_progress = summarize_user_progress(script, user)[:levels]
-    percent = percent_complete(script, user)
-    script.stages.each do |stage|
-      level_hash = {}
-      stage.script_levels.map(&:level).each do |level|
-        progress = level_progress[level.id]
-        level_hash[level.id.to_s] = %w(perfect passed).include?(progress.try(:[], :status)) ? '1' : '0'
+SeamlessDatabasePool.use_persistent_read_connection do
+  pd_scripts = Script.all.select(&:pd?)
+  pd_scripts.each do |script|
+    # Get all users with any activity in the script
+    users = script.users
+    headers = nil
+    data = users.map do |user|
+      row = {}
+      row.merge!({
+                     :'ID' => user.id,
+                     :'Ops First Name' => user.ops_first_name,
+                     :'Ops Last Name' => user.ops_last_name,
+                     :'Email' => user.email,
+                     :'District' => user.district.try(:name) || 'None',
+                     :'School' => user.ops_school || 'None'
+                 })
+      level_progress = summarize_user_progress(script, user)[:levels]
+      percent = percent_complete(script, user)
+      script.stages.each do |stage|
+        level_hash = {}
+        stage.script_levels.map(&:level).each do |level|
+          progress = level_progress[level.id]
+          level_hash[level.id.to_s] = %w(perfect passed).include?(progress.try(:[], :status)) ? '1' : '0'
+        end
+        row.merge!(level_hash)
+        row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
       end
-      row.merge!(level_hash)
-      row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
+      row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
+      headers ||= row.keys
+      row.values
     end
-    row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
-    headers ||= row.keys
-    row.values
+    program_type = get_program_type(script.name)
+    locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id, program_type: program_type}, time: DateTime.now}
+    Properties.set("pd_progress_#{script.id}", locals_options)
   end
-  program_type = get_program_type(script.name)
-  locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id, program_type: program_type}, time: DateTime.now}
-  Properties.set("pd_progress_#{script.id}", locals_options)
 end
