@@ -68,7 +68,7 @@ if node['cdo-apps']['daemon']
   cronjob at:'35 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'geocode_hoc_activity')
-  cronjob at:'55 8 * * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
+  cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
 end
 
 cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
