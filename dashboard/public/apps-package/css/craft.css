@@ -1061,7 +1061,12 @@ input[type="radio"] {
 
 .hide-source #belowVisualization {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+}
+
+.legacy-share-view #belowVisualization {
+  display: none;
+}
 
 .hide-source #bubble {
   display: none; }

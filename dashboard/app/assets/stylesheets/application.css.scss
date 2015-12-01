@@ -246,6 +246,9 @@ html, body {
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
 }
+.legacy-share-view .push {
+  display: none;
+}
 
 .footer {
   height: $footer_height;                 /* A height is required to push this footer to the bottom of the page. */
