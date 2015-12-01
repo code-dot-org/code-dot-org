@@ -1,26 +1,17 @@
-require 'minitest/autorun'
-require 'rack/test'
-ENV['RACK_ENV'] = 'test'
-require_relative '../../deployment'
-
 require_relative '../src/env'
-require 'mocha/mini_test'
+require 'rack/test'
+require 'minitest/autorun'
 
 class HourOfCodeHelpersTest < Minitest::Test
-  def pegasus_app
-    config_ru = File.absolute_path('../config.ru', __dir__)
-    Rack::Builder.parse_file(config_ru).first
-  end
-
   include Rack::Test::Methods
+
   def build_rack_mock_session
-    @session ||= Rack::MockSession.new(pegasus_app, 'localhost.code.org')
+    config_ru = File.absolute_path('../config.ru', __dir__)
+    pegasus_app = Rack::Builder.parse_file(config_ru).first
+    Rack::MockSession.new(pegasus_app, 'hourofcode.com')
   end
 
   def test_debug
-    build_rack_mock_session
-    header 'host', 'hourofcode.com'
-
     # 89.151.64.0 is the user's real address (Great Britain IP address range)
     # 54.240.158.170 is cloudfront
     # 10.31.164.34 is the load balancer or something
