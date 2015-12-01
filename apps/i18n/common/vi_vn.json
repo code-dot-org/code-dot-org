@@ -241,5 +241,7 @@
   "watchVideo": "Xem Video",
   "when": "Khi nào",
   "whenRun": "Khi chạy",
-  "workspaceHeaderShort": "Không gian làm việc:"
+  "workspaceHeaderShort": "Không gian làm việc:",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

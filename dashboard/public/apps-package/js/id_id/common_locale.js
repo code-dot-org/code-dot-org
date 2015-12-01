@@ -396,4 +396,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Tonton Videonya"},
 "when":function(d){return "ketika"},
 "whenRun":function(d){return "ketika dijalankan"},
-"workspaceHeaderShort":function(d){return "Area kerja: "}};
+"workspaceHeaderShort":function(d){return "Area kerja: "},
+"copy":function(d){return "Copy"},
+"sendToPhone":function(d){return "Send To Phone"}};

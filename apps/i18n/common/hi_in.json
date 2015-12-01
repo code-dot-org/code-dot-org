@@ -241,5 +241,7 @@
   "watchVideo": "ये वीडियो देखें",
   "when": "कब",
   "whenRun": "जब चलाएँ",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

@@ -241,5 +241,7 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "מתי לרוץ",
-  "workspaceHeaderShort": "סביבת העבודה: "
+  "workspaceHeaderShort": "סביבת העבודה: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

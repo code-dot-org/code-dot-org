@@ -241,5 +241,7 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "beim Ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

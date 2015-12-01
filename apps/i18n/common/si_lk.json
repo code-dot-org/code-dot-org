@@ -241,5 +241,7 @@
   "watchVideo": "වීඩියෝව නරඹන්න",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "වැඩ අවකාශය: "
+  "workspaceHeaderShort": "වැඩ අවකාශය: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

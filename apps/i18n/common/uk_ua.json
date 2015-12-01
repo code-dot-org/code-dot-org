@@ -241,5 +241,7 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: "
+  "workspaceHeaderShort": "Робоча область: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

@@ -241,5 +241,7 @@
   "watchVideo": "Tonton Videonya",
   "when": "ketika",
   "whenRun": "ketika dijalankan",
-  "workspaceHeaderShort": "Area kerja: "
+  "workspaceHeaderShort": "Area kerja: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

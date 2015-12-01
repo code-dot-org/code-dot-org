@@ -241,5 +241,7 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: "
+  "workspaceHeaderShort": "Munkaterület: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

@@ -241,5 +241,7 @@
   "watchVideo": "காணொளியை பார்க்கவும்",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }

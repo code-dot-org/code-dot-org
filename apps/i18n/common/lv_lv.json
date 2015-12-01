@@ -241,5 +241,7 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: "
+  "workspaceHeaderShort": "Darba virsma: ",
+  "copy": "Copy",
+  "sendToPhone": "Send To Phone"
 }
