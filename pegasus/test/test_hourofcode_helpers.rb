@@ -5,13 +5,13 @@ require 'minitest/autorun'
 class HourOfCodeHelpersTest < Minitest::Test
   include Rack::Test::Methods
 
-  def build_rack_mock_session
-    config_ru = File.absolute_path('../config.ru', __dir__)
-    pegasus_app = Rack::Builder.parse_file(config_ru).first
-    Rack::MockSession.new(pegasus_app, 'hourofcode.com')
+  def app
+    Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
 
-  def test_debug
+  # Covers #hoc_canonicalized_i18n_path / #hoc_detect_country in helpers/hourofcode_helpers.rb
+  def test_hourofcode_redirect
+    header 'host', 'hourofcode.com'
     # 89.151.64.0 is the user's real address (Great Britain IP address range)
     # 54.240.158.170 is cloudfront
     # 10.31.164.34 is the load balancer or something
