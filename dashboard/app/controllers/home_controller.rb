@@ -43,4 +43,8 @@ class HomeController < ApplicationController
   def audio_test
     render 'audio_test', layout: false, formats: [:html]
   end
+
+  def certificate_link_test
+    render 'certificate_link_test', formats: [:html]
+  end
 end
