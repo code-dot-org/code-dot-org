@@ -49,7 +49,7 @@ Sign up for this prize is now closed. Check back to see this year's winners.
 <% if @country == 'us' || @country == 'ca'  %>
 
 
-
+<a id="video-chats"></a>
 ## 30 classrooms will win a video chat with a guest speaker
 
 Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
@@ -57,37 +57,37 @@ Lucky classrooms will have the opportunity to talk with guest speakers who will 
 [col-33]
 
 ![image](/images/fit-175/Kevin_Systrom.jpg)<br/>
-Kevin Systrom <br/> (co-founder and CEO of Instagram)
+Kevin Systrom <br/> (co-founder and CEO of Instagram) <br/> [Watch live Dec. 9 11 am PST](https://plus.google.com/events/cpt85j7p1ohaqu5e86m272aukn4)
 
 [/col-33]
 
 [col-33]
 
 ![image](/images/fit-175/Dao_Nguyen.jpg)<br/>
-Dao Nguyen <br/> (Publisher, Buzzeed)
+Dao Nguyen <br/> (Publisher, Buzzfeed) <br/> [Watch live Dec. 7 12 pm PST](https://plus.google.com/events/cag6mbpocahk8h8qr3hrd7h0skk)
 
 [/col-33]
 
 [col-33]
 
 ![image](/images/fit-175/Aloe_Blacc.jpg)<br/>
-Aloe Blacc <br/> (Recording artist)
+Aloe Blacc <br/> (Recording artist) <br/> [Watch live Dec. 8 3 pm PST](https://plus.google.com/events/clir8qtd7t2fhh33n8d9o2m389g)
 
 [/col-33]
 
-<br/>
+<br/><br/>
 
 [col-33]
 
 ![image](/images/fit-175/Julie_Larson-Green.jpg)<br/>
-Julie Larson-Green <br/> (Chief Experience Officer, Microsoft)
+Julie Larson-Green <br/> (Chief Experience Officer, Microsoft) <br/>
 
 [/col-33]
 
 [col-33]
 
 ![image](/images/fit-175/Hadi-Partovi.jpg)<br/>
-Hadi Partovi <br/> (Code.org co-founder)
+Hadi Partovi <br/> (Code.org co-founder) <br/> [Watch live Dec. 11 10 am PST](https://plus.google.com/events/c2e67fd7el3es36sits1fd67prc)
 
 [/col-33]
 
