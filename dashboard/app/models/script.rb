@@ -19,8 +19,12 @@
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
+require 'cdo/script_constants'
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
+  include ScriptConstants
+
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
@@ -35,27 +39,6 @@ class Script < ActiveRecord::Base
   include SerializedProperties
 
   serialized_attrs %w(pd admin_required)
-
-  # Names used throughout the code
-  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
-  EDIT_CODE_NAME = 'edit-code'
-  TWENTY_FOURTEEN_NAME = 'events'
-  JIGSAW_NAME = 'jigsaw'
-  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  STARWARS_NAME = 'starwars'
-  MINECRAFT_NAME = 'mc'
-  STARWARS_BLOCKS_NAME = 'starwarsblocks'
-  FROZEN_NAME = 'frozen'
-  PLAYLAB_NAME = 'playlab'
-  INFINITY_NAME = 'infinity'
-  ARTIST_NAME = 'artist'
-  ALGEBRA_NAME = 'algebra'
-  FLAPPY_NAME = 'flappy'
-  TWENTY_HOUR_NAME = '20-hour'
-  COURSE1_NAME = 'course1'
-  COURSE2_NAME = 'course2'
-  COURSE3_NAME = 'course3'
-  COURSE4_NAME = 'course4'
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -160,14 +143,25 @@ class Script < ActiveRecord::Base
       script_cache_from_cache || script_cache_from_db
   end
 
-
-  # Returns a cached map from script level id to id, or an empty map if in level_builder mode
+  # Returns a cached map from script level id to id, or nil if in level_builder mode
   # which disables caching.
   def self.script_level_cache
     return nil unless self.should_cache?
     @@script_level_cache ||= {}.tap do |cache|
       script_cache.values.each do |script|
         cache.merge!(script.script_levels.index_by(&:id))
+      end
+    end
+  end
+
+  # Returns a cached map from level id to id, or nil if in level_builder mode
+  # which disables caching.
+  def self.level_cache
+    return nil unless self.should_cache?
+    @@level_cache ||= {}.tap do |cache|
+      script_level_cache.values.each do |script_level|
+        level = script_level.level
+        cache[level.id] = level unless cache.has_key? level.id
       end
     end
   end
@@ -186,6 +180,22 @@ class Script < ActiveRecord::Base
       @@script_level_cache[script_level_id] = script_level if script_level && self.should_cache?
     end
     script_level
+  end
+
+  # Find the level with the given id from the cache, unless the level build mode
+  # is enabled in which case it is always fetched from the database. If we need to fetch
+  # the level and we're not in level mode (for example because the level was created after
+  # the cache), then an entry for the level is added to the cache.
+  def self.cache_find_level(level_id)
+    level = level_cache[level_id] if self.should_cache?
+
+    # If the cache missed or we're in levelbuilder mode, fetch the level from the db.
+    if level.nil?
+      level = Level.find(level_id)
+      # Cache the level, unless it wasn't found.
+      @@level_cache[level_id] = level if level && self.should_cache?
+    end
+    level
   end
 
   def cached
@@ -217,17 +227,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    self.name == TWENTY_HOUR_NAME
+    ScriptConstants.twenty_hour?(self.name)
   end
 
   def hoc?
-    # Note that now multiple scripts can be an 'hour of code' script.
-    # If adding a script here, you must also update the Data_HocTutorials gsheet so the end of script API works
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME, STARWARS_BLOCKS_NAME, MINECRAFT_NAME].include? self.name
+    ScriptConstants.hoc?(self.name)
   end
 
   def flappy?
-    self.name == FLAPPY_NAME
+    ScriptConstants.flappy?(self.name)
+  end
+
+  def minecraft?
+    ScriptConstants.minecraft?(self.name)
   end
 
   def find_script_level(level_id)

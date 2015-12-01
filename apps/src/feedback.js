@@ -232,15 +232,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // feedback block
       var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
-      // If there are feedback blocks, temporarily remove them.
-      // Get pointers to the parent and next sibling so we can re-insert
-      // the feedback blocks into the correct location if needed.
-      var feedbackBlocksParent = null;
-      var feedbackBlocksNextSib = null;
+      // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocksParent = feedbackBlocks.div.parentNode;
-        feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
-        feedbackBlocksParent.removeChild(feedbackBlocks.div);
+        feedbackBlocks.hideDiv();
       }
 
       // If the user requests the hint...
@@ -255,9 +249,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
         hintRequestButton.parentNode.removeChild(hintRequestButton);
 
         // Restore feedback blocks, if present.
-        if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
-          feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
-          feedbackBlocks.show();
+        if (feedbackBlocks && feedbackBlocks.div) {
+          feedbackBlocks.revealDiv();
         }
 
         // Report hint request to server.

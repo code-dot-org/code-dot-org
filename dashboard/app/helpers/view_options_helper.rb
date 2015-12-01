@@ -4,6 +4,7 @@ module ViewOptionsHelper
     no_header
     no_footer
     small_footer
+    share_footer
     has_i18n
     no_padding
     white_background
