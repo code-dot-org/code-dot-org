@@ -7,15 +7,15 @@
     first_tutorial = "mc"
     second_tutorial = "starwars"
   end
-  if request.locale != "en-US" 
-    launch_code = "starwarsblocks"
+  if request.locale != "en-US"
+    launch_path = "/api/hour/begin/starwarsblocks"
   else
-    launch_code = "starwars"
+    launch_path = "/starwars"
   end
 
 %a{href: "/api/hour/begin/mc"}
   %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
-%a{href: "/api/hour/begin/#{launch_code}"}
+%a{href: launch_path}
   %img.banner{id: "banner-starwars", src: "/images/starwars_banner.jpg", style: "display: none;"}
 
 #learnCodeStudio.container.col-md-12
@@ -65,10 +65,10 @@
 
     $("#codeStudioCarousel").swipe( {
       swipeLeft: function() {
-        $(this).parent().carousel('next'); 
+        $(this).parent().carousel('next');
       },
       swipeRight: function() {
-        $(this).parent().carousel('prev'); 
+        $(this).parent().carousel('prev');
       },
       excludedElements: "button, .noSwipe",
       threshold: 25
