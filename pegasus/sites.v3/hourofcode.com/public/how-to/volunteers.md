@@ -48,7 +48,8 @@ Most schools still don’t teach computer science. Most students don’t know th
 ## 6. Promote the Hour of Code in your community
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
 
-## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
+## 7. Prepare before you visit a classroom.
+Review a typical agenda below, and [review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to connect with students during your visit.
 
 # Agenda for Volunteering in a Classroom
 
