@@ -8,13 +8,13 @@ theme: none
 -unless request.post?
   -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
-  - course = request.params['course'] || ScriptInfo::HOC_NAME
+  - course = request.params['course'] || ScriptConstants::HOC_NAME
 
   - small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
   - course_name = 'Hour of Code'
-  - if course == ScriptInfo::TWENTY_HOUR_NAME
+  - if course == ScriptConstants::TWENTY_HOUR_NAME
     - course_name = "K-8 Intro to Computer Science Course"
-  - elsif course == ScriptInfo::MINECRAFT_NAME
+  - elsif course == ScriptConstants::MINECRAFT_NAME
     - course_name = "Minecraft Hour of Code"
 
   %h1 Print a batch of certificates
@@ -40,11 +40,11 @@ theme: none
     %br
     %input{:type=>"submit", :value=>"Submit"}
 -else
-  -course = request.params['course'] || ScriptInfo::HOC_NAME
+  -course = request.params['course'] || ScriptConstants::HOC_NAME
   -sponsor = request.params['sponsor']
 
   %div.hide-print
-    -if course == ScriptInfo::TWENTY_HOUR_NAME
+    -if course == ScriptConstants::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
     -else
       %h1 Hour of Code Certificates

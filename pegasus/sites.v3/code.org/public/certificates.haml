@@ -3,7 +3,7 @@ Title: Print Certificates
 ---
 -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
--course = request.params['course'] || ScriptInfo::HOC_NAME
+-course = request.params['course'] || ScriptConstants::HOC_NAME
 -course_name = course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
 -small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
 

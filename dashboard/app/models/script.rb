@@ -19,10 +19,12 @@
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
-require 'cdo/scripts/script_info'
+require 'cdo/script_constants'
 
 # A sequence of Levels
 class Script < ActiveRecord::Base
+  include ScriptConstants
+
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
@@ -37,27 +39,6 @@ class Script < ActiveRecord::Base
   include SerializedProperties
 
   serialized_attrs %w(pd admin_required)
-
-  # Names used throughout the code
-  HOC_2013_NAME = ScriptInfo::HOC_2013_NAME
-  EDIT_CODE_NAME = ScriptInfo::EDIT_CODE_NAME
-  TWENTY_FOURTEEN_NAME = ScriptInfo::TWENTY_FOURTEEN_NAME
-  JIGSAW_NAME = ScriptInfo::JIGSAW_NAME
-  HOC_NAME = ScriptInfo::HOC_NAME
-  STARWARS_NAME = ScriptInfo::STARWARS_NAME
-  MINECRAFT_NAME = ScriptInfo::MINECRAFT_NAME
-  STARWARS_BLOCKS_NAME = ScriptInfo::STARWARS_BLOCKS_NAME
-  FROZEN_NAME = ScriptInfo::FROZEN_NAME
-  PLAYLAB_NAME = ScriptInfo::PLAYLAB_NAME
-  INFINITY_NAME = ScriptInfo::INFINITY_NAME
-  ARTIST_NAME = ScriptInfo::ARTIST_NAME
-  ALGEBRA_NAME = ScriptInfo::ALGEBRA_NAME
-  FLAPPY_NAME = ScriptInfo::FLAPPY_NAME
-  TWENTY_HOUR_NAME = ScriptInfo::TWENTY_HOUR_NAME
-  COURSE1_NAME = ScriptInfo::COURSE1_NAME
-  COURSE2_NAME = ScriptInfo::COURSE2_NAME
-  COURSE3_NAME = ScriptInfo::COURSE3_NAME
-  COURSE4_NAME = ScriptInfo::COURSE4_NAME
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -219,19 +200,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    ScriptInfo.twenty_hour?(self.name)
+    ScriptConstants.twenty_hour?(self.name)
   end
 
   def hoc?
-    ScriptInfo.hoc?(self.name)
+    ScriptConstants.hoc?(self.name)
   end
 
   def flappy?
-    ScriptInfo.flappy?(self.name)
+    ScriptConstants.flappy?(self.name)
   end
 
   def minecraft?
-    ScriptInfo.minecraft?(self.name)
+    ScriptConstants.minecraft?(self.name)
   end
 
   def find_script_level(level_id)

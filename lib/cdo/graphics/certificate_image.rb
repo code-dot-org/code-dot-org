@@ -2,7 +2,7 @@
 # Note: requires pegasus_dir to be in scope.
 
 require 'rmagick'
-require_relative '../scripts/script_info'
+require_relative '../script_constants'
 
 def create_certificate_image2(image_path, name, params={})
   name = name.to_s.gsub(/@/,'\@').strip
@@ -32,7 +32,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  course ||= ScriptInfo::HOC_NAME
+  course ||= ScriptConstants::HOC_NAME
 
   template_file = certificate_template_for(course)
 
@@ -85,22 +85,22 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 end
 
 def prefilled_title_course?(course)
-  ScriptInfo.hoc?(course) || ScriptInfo.twenty_hour?(course)
+  ScriptConstants.hoc?(course) || ScriptConstants.twenty_hour?(course)
 end
 
 # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
 # 2015 this fallback mapping is only ever hit on bulk /certificates pages.
 def fallback_course_title_for(course)
   case course
-    when ScriptInfo::ARTIST_NAME
+    when ScriptConstants::ARTIST_NAME
       'Artist'
-    when ScriptInfo::COURSE1_NAME
+    when ScriptConstants::COURSE1_NAME
       'Course 1'
-    when ScriptInfo::COURSE2_NAME
+    when ScriptConstants::COURSE2_NAME
       'Course 2'
-    when ScriptInfo::COURSE3_NAME
+    when ScriptConstants::COURSE3_NAME
       'Course 3'
-    when ScriptInfo::COURSE4_NAME
+    when ScriptConstants::COURSE4_NAME
       'Course 4'
     else
       course
@@ -108,13 +108,13 @@ def fallback_course_title_for(course)
 end
 
 def certificate_template_for(course)
-  if ScriptInfo.hoc?(course)
-    if ScriptInfo.minecraft?(course)
+  if ScriptConstants.hoc?(course)
+    if ScriptConstants.minecraft?(course)
       'MC_Hour_Of_Code_Certificate.jpg'
     else
       'hour_of_code_certificate.jpg'
     end
-  elsif ScriptInfo.twenty_hour?(course)
+  elsif ScriptConstants.twenty_hour?(course)
     '20hours_certificate.jpg'
   else
     'blank_certificate.png'
