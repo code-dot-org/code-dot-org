@@ -8,7 +8,7 @@
 # - green (all features enabled)
 #
 # See the documentation below for more details.
-
+puts "Loading..."
 require_relative '../../dashboard/config/environment'
 require 'pp'
 
@@ -31,7 +31,6 @@ EOF
   end
 
   mode = argv.shift
-
   # Set global Gatekeeper and DCDO flags.
   case mode
     when 'red'
@@ -60,6 +59,7 @@ EOF
   end
 
   # Set script-specific Gatekeeper flags.
+  puts "Setting flags to #{mode}"
   HIGH_SCALE_SCRIPT_NAMES.each do |script_name|
     Gatekeeper.set('public_caching_for_script', value: true, where: {script_name: script_name})
     case mode
