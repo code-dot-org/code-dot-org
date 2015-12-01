@@ -40,7 +40,7 @@ pd_scripts.each do |script|
                    :'Ops Last Name' => user.ops_last_name,
                    :'Email' => user.email,
                    :'District' => user.district.try(:name) || 'None',
-                   :'School' => user.school
+                   :'School' => user.ops_school || 'None'
                })
     level_progress = summarize_user_progress(script, user)[:levels]
     percent = percent_complete(script, user)
