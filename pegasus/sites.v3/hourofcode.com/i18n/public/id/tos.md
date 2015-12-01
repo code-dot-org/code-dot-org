@@ -22,7 +22,7 @@ Syarat-syarat ini dapat berubah. Anda setuju untuk terikat oleh perubahan jika A
 
 Beberapa Layanan mungkin akan dikenakan tambahan panduan tertulis, peraturan atau Ketentuan Layanan ("**Persyaratan tambahan**") dan penggunaan Anda atas layanan tersebut akan mensyaratkan persetujuan Anda atas syarat-syarat tambahan. Jika terdapat pertentangan antara persyaratan dan persyaratan tambahan, persyaratan tambahan akan mengontrol untuk layanan itu, kecuali persyaratan tambahan secara tegas menyatakan bahwa istilah-istilah ini akan mengontrol.
 
-### Children Under Age 13
+### Anak di bawah usia 13
 
 Kami mengambil langkah untuk meminimalkan pengumpulan data pribadi dari pengguna di bawah umur 13 tahun seperti yang dijelaskan dalam Code.org [kebijakan privasi](http://code.org/privacy). Jika Anda berada di bawah usia 13 tahun, kami mendorong Anda untuk mendapatkan persetujuan dari orang tua atau wali sebelum membuat akun pada Code.org. Code.org memungkinkan perwakilan distrik sekolah tertentu dan sekolah-sekolah, seperti guru, administrator, konselor dan pendidik lainnya ("**pendidik**") untuk menghubungkan dengan siswa melalui Layanan untuk memberikan panduan, pendidikan dan serupanya. Jika Anda seorang pendidik, Anda dapat mendaftar akun layanan untuk satu atau lebih dari siswa Anda.
 

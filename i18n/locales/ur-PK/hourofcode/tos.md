@@ -22,19 +22,19 @@ These Terms are subject to change. You are agreeing to be bound by such changes 
 
 Some Services may be subject to additional posted guidelines, rules or terms of service (“**Additional Terms**”) and your use of such Services will be conditioned on your agreement to the Additional Terms. If there is any conflict between these Terms and the Additional Terms, the Additional Terms will control for that Service, unless the Additional Terms expressly state that these Terms will control.
 
-### Children Under Age 13
+### 13 سال سے کم عمر بچے
 
 We take steps to minimize the collection of personal data from Users under the age of 13 as explained in the Code.org [privacy policy](http://code.org/privacy). If you are under the age of 13, we encourage you to get the approval of a parent or legal guardian before creating an account on Code.org. Code.org allows certain representatives of school districts and schools, such as teachers, administrators, counselors, and other educators (a “**Educator**”) to connect with students through the Services in order to provide tutorial, educational and similar services. If you are an Educator, you may register accounts on the Services for one or more of your students.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### آپکا اکاؤنٹ
 
 If you create an account for Services, you are responsible for the security of your account and for keeping your own password safe. If you are using an account assigned to you by an Educator, your Educator may be able to access and disable your account.
 
 Code.org may permit you to register an account for the Services through certain third party social networking services, such as Facebook Connect and Google (“**Authentication Service**”). By registering for the Services using an Authentication Service, you agree that Code.org may access your account information from the Authentication Service and you agree to any and all terms of use of the Authentication Service regarding your use of the Services via the Authentication Service. You are solely responsible for your interactions with the Authentication Service.
 
-### Privacy
+### نجی نوعیت
 
 Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 
@@ -102,15 +102,15 @@ The CODE® logo design is a registered trademark of Code.org. You may only use t
 
 Code.org does not represent or warrant that the Services will be error-free, free of viruses or other harmful components, or that defects will be corrected. We do not represent or warrant that the information available on or through the Services will be correct, accurate, timely or otherwise reliable. We may make changes to the features, functionality or content of the Services at any time. We reserve the right in our sole discretion to edit or delete any Content, information or other materials made available as a part of the Services.
 
-### Code.org Store and Support Forums
+### Code.org سٹور اور سپورٹ فورم
 
 The Code.org store and Code.org support forums are operated by third parties. Please read the User Agreement and Privacy Policy for these sites separately before purchasing an item from the Code.org store or before posting a question or answer to the support forum. By accessing the Code.org store and support forums, you agree to be bound by the respective user agreement and privacy policy of these third parties.
 
-### Volunteer mentors
+### رضاکار رہنما
 
 Code.org encourages software engineers to volunteer as mentors to assist teachers in computer science education. Code.org provides information about these potential volunteers without any warranty, references, or background checks. If you are an Educator who chooses to ask for the assistance of a volunteer sourced via Code.org’s database, it is entirely your responsibility to thoroughly check references or perform the necessary background checks. Code.org provides no warranty or information other than the ability to contact a potential volunteer, and all liability in any use of volunteers rests only with you. Code.org does not guarantee the accuracy or completeness of any information provided by volunteers and we neither adopt nor endorse, nor are we responsible for, the accuracy or reliability of any opinion, advice, or statement made by any party other than Code.org. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on information or other content posted on the Service or transmitted by others.
 
-### Pledges, Donations and Payments
+### وعدے، عطیات اور ادائیگی
 
 A. Pledges and Donations. If you make a pledge or donation on this website, You agree to pay all pledges and donations specified.
 

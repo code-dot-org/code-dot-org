@@ -8,14 +8,19 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 # How to bring the Hour of Code to your company
 
-**Ada banyak cara perusahaan dapat berpartisipasi dalam Hour of Code dan membantu memperluas partisipasi dalam ilmu komputer. Pertimbangkan:**
+## Inspire students and volunteer for the Hour of Code
+
+**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+
+  * [Sign up](%= resolve_url('https://code.org/volunteer') %) to volunteer.
+  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
+
+## Additional ways companies can support the Hour of Code:
 
   * Gunakan [toolkit pemasaran](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) kami untuk membuat timeline komunikasi dan berbagi konten promosi.
-  * Meminta CEO Anda untuk mengirim email perusahaan, menekankan pentingnya ilmu komputer dan mendorong karyawan untuk menyebarkan berita ini. [Lihat email ini](%= resolve_url('/promote/resources#sample-emails') %).
-  * Selenggarakan Hour of Code Happy Hour dengan rekan kerja untuk mencoba [tutorial](%= resolve_url('https://code.org/learn') %).
-  * Undang siswa sekelas atau mitra nirlaba Anda untuk melakukan Hour of Code di kantor perusahaan Anda.
-  * Dorong **software engineers** di perusahaan Anda untuk mengunjungi kelas di daerah Anda untuk membantu memipin Hour of Code dan menginspirasi siswa untuk belajar ilmu komputer. Mereka dapat [mendaftar](%= resolve_url('https://code.org/volunteer/engineer') %) untuk dihubungkan dengan kelas.
-  * Untuk instruksi selengkapnya tentang menghubungkan karyawan Anda dengan kelas, Gunakan [panduan untuk perusahaan mitra](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %) kami
+  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [Lihat email ini](%= resolve_url('/promote/resources#sample-emails') %).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
+  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## Bagaimana untuk menyelenggarakan Hour of Code
 
@@ -99,6 +104,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
   * [Cetak sertifikat](%= resolve_url('https://code.org/certificates') %) untuk siswa Anda.
   * [Cetak stiker "Aku sejam kode!"](%= resolve_url('/promote/resources#stickers') %).
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
   * Bagikan foto dan video acara Hour of Code Anda pada media sosial. Gunakan #HourOfCode dan @codeorg sehingga kita dapat menyoroti keberhasilan Anda juga!
 
 [col-33]
