@@ -712,15 +712,17 @@ $height-to-width: 434 / 477;
     color: $lighter_gray;
   }
 
+  #show-code, #feedbackButtons, #puzzleRatingButtons {
+    margin-left: -100px;
+  }
+
+  .modal-content {
+    //margin-left: 110px; // TODO(bjordan): needed?
+  }
+
   .social-buttons a:hover {
     background: none !important;
     fill: white !important;
-  }
-
-  #sharing button {
-    font-size: 20px;
-    height: 40px;
-    padding: 5px;
   }
 
   #puzzleRatingButtons a:hover.puzzle-rating-btn {

@@ -146,7 +146,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (options.appDiv) {
     feedback.appendChild(options.appDiv);
   }
-
+  
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
   feedback.appendChild(
@@ -659,7 +659,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
-  sharingDiv.setAttribute('id', 'sharing');
+  sharingDiv.setAttribute('style', 'display:inline-block');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
@@ -670,14 +670,14 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       sharingInput.focus();
       sharingInput.select();
     });
+  }
 
-    var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
-    if (sharingCopyButton) {
-      dom.addClickTouchEvent(sharingCopyButton, function() {
-        sharingInput.focus();
-        sharingInput.select();
-      });
-    }
+  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
+  if (sharingShapeways) {
+    dom.addClickTouchEvent(sharingShapeways, function() {
+      $('#send-to-phone').hide();
+      $('#shapeways-message').show();
+    });
   }
 
   //  SMS-to-phone feature
@@ -686,7 +686,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
-        $(sendToPhone).show();
+        $('#shapeways-message').hide();
+        sendToPhone.setAttribute('style', 'display:inline-block');
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');

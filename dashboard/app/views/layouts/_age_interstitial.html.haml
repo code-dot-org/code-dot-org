@@ -1,6 +1,6 @@
 .modal#age-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
   .modal-dialog
-    .modal-content.no-modal-icon
+    .modal-content{style: 'margin-left: 0px; padding: 20px'}
       %h1{style: 'margin: 10px 0;font-size: 32px'}= t('age_interstitial.header')
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.message').html_safe
       = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
@@ -33,3 +33,4 @@
       });
     });
   });
+
