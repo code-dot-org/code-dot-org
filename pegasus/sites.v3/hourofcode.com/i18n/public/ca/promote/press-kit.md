@@ -49,7 +49,7 @@ Esperem despertar l'interès dels alumnes per a seguir aprenent. La investigaci�
 
 *Per què és important?*
 
-A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundària. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. Sabem, que a pesar de que els nostres estudiants quan creixin, faran medicina, negocis, política, o arts, saber com construir tecnologia els permetrà tenir la confiança i el saber fer per tenir èxit.
+In China, every student takes computer science to graduate high school. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. Sabem, que a pesar de que els nostres estudiants quan creixin, faran medicina, negocis, política, o arts, saber com construir tecnologia els permetrà tenir la confiança i el saber fer per tenir èxit.
 
 **Més detalls i una cita que pot utilitzar com idea**
 

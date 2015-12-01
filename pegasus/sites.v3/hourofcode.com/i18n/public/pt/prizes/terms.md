@@ -32,4 +32,12 @@ Para esclarecer, essa premiação não será feita por sorteio, nem como concurs
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Chat com vídeo com um orador convidado:
+
+Prêmio limitado para turmas do ensino fundamental e médio dos EUA e Canadá. A Code.org selecionará as turmas vencedoras, fornecerá um horário para o bate-papo on-line e trabalhará com o professor apropriado para definir os detalhes da tecnologia. Não é preciso que a escola toda se inscreva para se qualificar para este prêmio. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

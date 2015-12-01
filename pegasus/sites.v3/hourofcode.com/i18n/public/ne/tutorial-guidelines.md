@@ -151,7 +151,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * कृपया सिफारिश गरिएका कम्प्युटर विज्ञान ज्ञानको ग्रेड स्तर: सुरु गर्ने, मध्यवर्ती, वा उन्नतका भित्र पनि सामेल छ। Hour of Code को वेबसाइटले सुरु गर्नेहरूको लागि सबै भन्दा प्रमुख रूपले गतिविधिहरूलाई हाइलाइट गर्नेछ। If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * प्राविधिक आवश्यकताहरू: 
       * हामीले तिनिहरूको Hour of Code को अभ्यासहरूलाई पहिलो र अन्तिम पृष्ठमा 1 -पिक्सेल ट्रयाकिङ् छविहरूमा समावेश गर्ने राम्रोसँग सहभागीतालाई ट्रयाक गर्ने क्रममा प्रत्येक तेस्रो पाट्रीको अभ्यासगत साझेदारहरू चाहन्छौँ। सुरुको पृष्ठमा सुरु गर्ने पिक्सेल-छवि र अन्तिम पृष्ठमा अन्तिम पिक्सेलको-छविलाई राख्नुहोस्। पिक्सलहरूलाई अन्तरिम पृष्ठहरूमा नराख्नुहोस्)। थप विवरणहरूको लागि तलमा ट्रयाकिङ् पिक्सेलको चयन हेर्नुहोस्। 
-      * तपाइँको गतिविधि सकाउन, प्रयोगकर्ताहरूलाई [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * तपाइँको गतिविधि सकाउन, प्रयोगकर्ताहरूलाई [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) मा प्रतक्ष्य गरिनुपर्छ जहाँ तिनिहरू निम्न लिखित कार्य गर्न सक्षम हुनेछन्: 
           * तिनिहरूले सकाउने Hour of Code को सामाजिक मिडियामा साझा गर्न
           * तिनिहरूले सकाउने Hour of Code को प्रमाणपत्र प्राप्त गर्न
           * कुन देसहरू/सहरहरूको Hour of Code को गतिविधिहरूमा बढी दरले सहभागी छन् भन्ने बारेमा लिडरबोर्डहरू हेर्नुहोस्
@@ -215,13 +215,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 यसको एउटा टुक्राले भ्रमको स्थितिलाई रोक्न "Hour of Code" व्यापार चिन्हको सुरक्षा गर्छ। हाम्रो अधिकांश सहभागीहरूले तपाइँको वेब साइटहरूमा "Hour of Code" को प्रयोग गर्छन्। हामी यसको प्रयोग गर्न रोक्न चाँहदैनौँ, तर हामी यसलाई केहि सीमाहरू भित्र ठीक गर्न पक्का गर्न चाहन्छौँ:
 
-  1. "Hour of Code" को लागि कुनै पनि सन्दर्भलाई यसले तपाइँको आफ्नो ब्र्याण्ड नामलाई, तर Hour of Code लाई ग्रामीण स्तरका गतिको रूपमा सन्दर्भित गर्नु भन्दा सुझाव नगर्ने फेसनमा प्रयोग गरिएको हुन्छ। Good example: "Participate in the Hour of Code™ at ACMECorp.com". नराम्रो उदाहरण: "ACME Corp द्वारा Hour of Code मा प्रयास गर्नुहोस्"
-  2. तपाइँले उल्लेख गर्नुभएको अधिक प्रमुख स्थानहरूमा "Hour of Code", तपाइँको वेब सापट र एपको विवरणहरू दुबैमा "TM" सुपरस्क्रिप्टको प्रयोग गर्नुहोस्
+  1. "Hour of Code" को लागि कुनै पनि सन्दर्भलाई यसले तपाइँको आफ्नो ब्र्याण्ड नामलाई, तर Hour of Code लाई ग्रामीण स्तरका गतिको रूपमा सन्दर्भित गर्नु भन्दा सुझाव नगर्ने फेसनमा प्रयोग गरिएको हुन्छ। Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. भाषा पृष्ठमा समावेश गर्नुहोस् (वा फुटरमा), निम्न लिखित कुरा भन्ने CSEdWeek र Code.org वेब साइटहरूको लिङ्कहरूको समावेश गर्दैछ:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. एपको नामहरूमा "Hour of Code" को प्रयोग छैन
+  4. No use of "Hour of Code" in app names.
 
 [**माथि फर्कन**](#top)
 
