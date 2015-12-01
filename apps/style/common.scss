@@ -644,6 +644,10 @@ input[type="radio"] {
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
+
+  .legacy-share-view & {
+
+  }
 }
 
 #gameButtons:after{
@@ -1320,6 +1324,8 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
+
+
 .sharing {
   float: left;
   margin-top: 15px;
@@ -1495,3 +1501,8 @@ $see-examples-thick-underline-color: $yellow;
 .droplet-hover-div {
   max-width: 100% !important;
 }
+
+.legacy-share-view #belowVisualization {
+  display: none;
+}
+

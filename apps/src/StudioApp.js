@@ -251,7 +251,8 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
-  if( config.isLegacyShare & dom.isMobile() ) {
+  if( config.isLegacyShare ) {
+    $("body").addClass("legacy-share-view");
     if( dom.isIOS() ) {
       if (!window.navigator.standalone) {
         addToHome.show(true);
@@ -1587,8 +1588,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       $('body').append(wireframeSendToPhone);
     }
     document.body.style.backgroundColor = '#202B34';
-  // For share page on mobile, do not show this part.
-  } else if (!options.embed && !(this.share && dom.isMobile())) {
+  // For share page, do not show this part.
+  } else if (!options.embed && !this.share) {
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
