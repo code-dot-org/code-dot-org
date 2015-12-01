@@ -9,7 +9,7 @@
 #
 # See the documentation below for more details.
 
-require_relative '../../config/environment'
+require_relative '../../dashboard/config/environment'
 require 'pp'
 
 # The names of scripts we expect to see
