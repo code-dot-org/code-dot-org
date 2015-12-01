@@ -1,5 +1,22 @@
+require 'rack/request'
+
 module Rack
+  module CdoExtension
+    def self.load_trusted_proxies
+      JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json'))).map do |proxy|
+        IPAddr.new(proxy)
+      end
+    end
+    TRUSTED_PROXIES = load_trusted_proxies
+
+    def trusted_proxy?(ip)
+      super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip}
+    end
+  end
+
   class Request
+    prepend CdoExtension
+
     def json_body()
       return nil unless content_type.split(';').first == 'application/json'
       return nil unless content_charset.downcase == 'utf-8'
