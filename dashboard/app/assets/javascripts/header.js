@@ -83,6 +83,9 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
 
         // Clear the existing class and replace
         $('#header-level-' + levelId).attr('class', 'level_link ' + status);
+
+        // Write down new progress in sessionStorage
+        dashboard.clientState.trackProgress(null, null, serverProgress[levelId], scriptName, levelId);
       }
     });
   });
@@ -482,6 +485,9 @@ function populateProgress(scriptName) {
 
         // Clear the existing class and replace
         $('#level-' + levelId).attr('class', 'level_link ' + status);
+
+        // Write down new progress in sessionStorage
+        dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
       }
     });
   });
