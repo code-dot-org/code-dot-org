@@ -289,7 +289,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
-          this.saveSource_(callback);
+          this.save(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -378,9 +378,8 @@ var projects = module.exports = {
    *   call to `sourceHandler.getLevelSource`.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
-   * @param {boolean} sourceOnly If true, we refrain from modifying channels api
    */
-  save: function(sourceAndHtml, callback, forceNewVersion, sourceOnly) {
+  save: function(sourceAndHtml, callback, forceNewVersion) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -392,7 +391,6 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-      sourceOnly = args[2];
 
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
@@ -422,20 +420,10 @@ var projects = module.exports = {
       currentSourceVersionId = response.versionId;
       current.migratedToS3 = true;
 
-      if (sourceOnly) {
-        // manually set updatedAt. Note, this puts current out of sync with
-        // what we have stored in db. This date string is also formatted slightly
-        // differently than the string we get from channels API, but should be
-        // okay, since our timeago plugin can still handle it
-        current.updatedAt = new Date().toISOString();
-        this.updateCurrentData_(err, current, false);
-        executeCallback(callback, current);
-      } else {
-        channels.update(channelId, current, function (err) {
-          this.updateCurrentData_(err, current, false);
-          executeCallback(callback, current);
-        }.bind(this));
-      }
+      channels.update(channelId, current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
+        executeCallback(callback, data);
+      }.bind(this));
     }.bind(this));
   },
   updateCurrentData_: function (err, data, isNewChannel) {
@@ -459,16 +447,6 @@ var projects = module.exports = {
       }
     }
     dashboard.header.updateTimestamp();
-  },
-  /**
-   * Saves to sources API without hitting channels API
-   */
-  saveSource_: function (sourceAndHtml, callback) {
-    if (sourceAndHtml) {
-      return this.save(sourceAndHtml, callback, false, true);
-    } else {
-      return this.save(callback, false, true);
-    }
   },
   /**
    * Autosave the code if things have changed
@@ -496,7 +474,7 @@ var projects = module.exports = {
       return;
     }
 
-    this.saveSource_({source: source, html: html}, function () {
+    this.save({source: source, html: html}, function () {
       hasProjectChanged = false;
     });
   },

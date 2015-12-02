@@ -51,8 +51,6 @@ var applabConstants = require('./constants');
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-window._ = _;
-
 /**
  * Create a namespace for the application.
  */
