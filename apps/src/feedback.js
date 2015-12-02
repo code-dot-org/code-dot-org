@@ -666,19 +666,17 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
-    dom.addClickTouchEvent(sharingInput, function() {
+    var copySharingInput = function() {
       sharingInput.focus();
       sharingInput.select();
       document.execCommand('copy');
-    });
+    };
+
+    dom.addClickTouchEvent(sharingInput, copySharingInput);
 
     var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
     if (sharingCopyButton) {
-      dom.addClickTouchEvent(sharingCopyButton, function() {
-        sharingInput.focus();
-        sharingInput.select();
-        document.execCommand('copy');
-      });
+      dom.addClickTouchEvent(sharingCopyButton, copySharingInput);
     }
   }
 
