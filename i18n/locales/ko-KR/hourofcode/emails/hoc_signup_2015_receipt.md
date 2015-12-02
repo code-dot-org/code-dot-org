@@ -6,47 +6,41 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Hour of Code! 행사를 개최하는데 가입해 주셔서 감사합니다.
+# Hour of Code! 행사를 주최하는데 가입해 주셔서 감사합니다.
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+여러분들은 12월7일-13일 동안 학생들의 남은 인생을 변화시킬 수 있는 한 시간의 Hour of Code 를, 전세계의 모든 학생들이 배울 수 있도록 가능하게 만들어가고 있습니다.
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### 우리는 새로운 튜토리얼들과 다른 멋진 업데이트들을 만나볼 수 있게 될 것입니다. 여러분은 어떤 것을 하고 싶으신가?
+
+## 1. Find a local volunteer to help you with your event.
+
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 1. 널리 알려주세요.
 
-We need your help to reach 100,000 organizers worldwide. 여러분의 친구들에게 #HourOfCode 를 이야기해 주세요. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-<% if international == 'true' %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+## 4. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+[이 이메일을 ](https://<%= hostname %>/promote/resources#sample-emails) 여러분의 상사나 CEO에게 보내주세요.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+## 5. Promote the Hour of Code in your community
 
-## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
+지역 커뮤니티 그룹이나 친구들과도 함께 해보세요. [이 이메일을 보내주세요.](https://<%= hostname %>/resources#sample-emails).
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
-
-## 4. 여러분의 동료들과 Hour of Code를 함께 해 보세요.
-
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
-
-## 5. 지역 의원들에게 Hour of Code 를 지원해달라고 요청하세요.
-
-여러분의 시장, 시의원, 교육의원을 여러분의 학교에 초대하고, 그들이 여러분의 학교에 방문할 수 있도록 [이메일](https://<%= hostname %>/resources#politicians) 을 보내보세요.
-
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+모든 학생들이 컴퓨터과학기초와 기술들을 배울 수 있도록 하기 위한 이 운동을 이끌어주셔서 감사드립니다.
 
 Hadi Partovi  
-Founder, Code.org
+Code.org 설립자
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> 여러분은 Code.org 에 의해 조직된 200개 이상의 파트너들에 의해 지원되는 Hour of Code 에 가입하셨기 때문에 이 이메일을 받게 되셨습니다. Code.org 는 501c3 를 따르는 비영리 조직입니다. 주소는 1301 5th Ave, Suite 1225, Seattle, WA, 98101 입니다. 이 이메일을 받고 싶지 않으시면? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
 
 ![](<%= tracking_pixel %>)

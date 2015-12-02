@@ -9,6 +9,6 @@ layout: wide
 
 # Få heile skulen å vere med
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informasjon om korleis du får heile skulen din til å arrangere ein Kodetime legges inn her.
 
 <%= view :signup_button %>

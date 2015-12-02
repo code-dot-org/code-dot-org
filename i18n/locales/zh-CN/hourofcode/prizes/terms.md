@@ -30,4 +30,12 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## 与特邀嘉宾视频聊天：
+
+奖励仅限于美国和加拿大K-12教室。 Code.org会随机选取获奖学校，提供一个网上交谈的时间，并和合适的教师一起敲定技术细节。 赢得奖励并不需要整个学校申请资格。 Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

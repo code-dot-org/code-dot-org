@@ -12,7 +12,7 @@ nav: prizes_nav
 
 Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
 
-## 1. گسترش واژه
+## 1.این مفهوم را گسترش دهید.
 
 درباره #HourOfCode به دوستان خود بگویید.
 

@@ -10,35 +10,29 @@ de: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#
 
 Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode mudar suas vidas, no período de 7 a 13 de dezembro.
 
-*Todos* os organizadores da Hora do Código em todo o mundo vão receber um cartão de presente da Amazon, do iTunes, ou da Windows Store como presente de agradecimento. [Detalhes](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
 #### Entraremos em contato para falar sobre novos tutoriais e outras atualizações. Então, o que você pode fazer agora?
 
-## 1. Divulgue
+## 1. Find a local volunteer to help you with your event.
 
-Precisamos de sua ajuda para chegar a 100.000 organizadores em todo o mundo. Conte para seus amigos sobre a #HoraDoCodigo. [Use esses recursos úteis](https://<%= hostname %>/promote/resources) para promover seu evento.
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-<% if international == 'true' %>
+## 2. Divulgue
 
-## 2. Peça para sua escola oferecer uma Hora do Código
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Envie este e-mail](https://<%= hostname %>/promote/resources#sample-emails) para o seu diretor, ou [distribua esses folhetos](https://<%= hostname %>/promote/resources). <% else %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. Recrute toda a sua escola para a Hora do Código e concorra a US$10.000
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Envie este e-mail](https://<%= hostname %>/promote/resources#sample-emails) para o seu diretor, ou [distribua esses folhetos](https://<%= hostname %>/promote/resources). Planeje para que todos os alunos de sua escola participem e você pode ganhar US$10.000 em tecnologia para a sua escola. [Preencha este formulário para participar](https://<%= hostname %>/prizes/hardware-signup). <% end %>
-
-## 3. Peça para seu empregador para participar
+## 4. Peça para seu empregador participar
 
 <a
 
-## 4. Promova a Hora do Código em sua comunidade
+## 5. Promote the Hour of Code in your community
 
 Recrute um grupo na sua região ou mesmo alguns amigos. [Envie este e-mail](https://<%= hostname %>/resources#sample-emails).
-
-## 5. Peça que um representante político apoie a Hora do Código
-
-[Envie este e-mail](https://<%= hostname %>/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola.
 
 Obrigado por liderar o movimento para dar a todos os alunos a chance de aprender os conceitos e habilidades básicas da ciência da computação.
 

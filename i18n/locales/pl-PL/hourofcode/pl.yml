@@ -2,7 +2,7 @@ pl:
   site_name: GODZINA KODOWANIA
   hour_of_code: Godzina Kodowania
   language: Polski
-  front_title: Dołącz do największej akcji edukacyjnej w historii, 7-13 grudnia 2015
+  front_title: 'Dołącz do największej inicjatywy edukacyjnej w historii, %{campaign_date}, 2015'
   coming_soon: Wkrótce dostępne
   campaign_date_start_short: 7 grudnia
   campaign_date_start_long: 7 grudnia
@@ -12,6 +12,7 @@ pl:
   front_intro_default: 'Godzina Kodowania jest globalną akcją, w której udział biorą dziesiątki milionów uczniów z ponad 180 krajów. Nieważne kim jesteś ani skąd pochodzisz, każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są dostępne w ponad 40 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>'
   front_watch_video: Obejrzyj nowy film
   front_watch_regular_video: Obejrzyj wideo
+  front_volunteers: Potrzebni są wolontariusze techniczni
   header_menu_resources: Materiały
   header_menu_faq: FAQ
   header_menu_prizes: Nagrody
@@ -125,6 +126,7 @@ pl:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -149,11 +151,11 @@ pl:
   prizes_details: Szczegóły
   nav_back_to_resources: Powrót do Zasobów
   how_to_nav_educators: Dla nauczycieli
-  how_to_nav_after_school: Dla zajęć pozalekcyjnych
+  how_to_nav_after_school: Dla zajęć pozaszkolnych
   how_to_nav_parents: Dla rodziców
   how_to_nav_public_officials: Dla urzędników państwowych
   how_to_nav_districts: Dla powiatów
-  how_to_nav_assemblies: Dla zebrań szkolnych
+  how_to_nav_assemblies: Dla zespołów szkół
   how_to_nav_organizations: Dla organizacji
   how_to_nav_companies: Dla firm
   how_to_nav_afterschool_educators: Dla nauczycieli pozaszkolnych
@@ -162,7 +164,7 @@ pl:
   prizes_nav_home: Wszystkie nagrody
   prizes_nav_hardware: Zapisy na nagrody sprzętowe
   prizes_nav_terms: Regulamin
-  prizes_nav_faq: FAQ
+  prizes_nav_faq: Często zadawane pytania (FAQ)
   prizes_nav_dc: Tajemnicza podróż do Waszyngtonu.
   prizes_nav_technology: $10 000 w technologii dla Twojej szkoły
   prizes_nav_video_chat: Wideokonferencja z tytanem technologii
@@ -192,20 +194,24 @@ pl:
   front_join_us_description: Informatyka jest podstawą dla każdego ucznia. Pomóż nam przybliżyć ją 100 milionom uczniów.
   front_join_us_description_short: Informatyka jest podstawą każdego dla ucznia.
   front_join_us_button: Dołącz do nas
-  front_what_is_hoc: Czym jest Godzina Kodowania?
+  front_what_is_hoc: Czym jest Godzina kodowania?
   front_join_us_header: Każdy może nauczyć się podstaw dobrze się przy tym bawiąc!
+  front_join_us_volunteer_header: Wolontariusze na Godzinę Kodowania
   front_join_us_teacher: Jesteś nauczycielem?
   front_join_us_inspire: Zainspiruj uczniów
   front_join_us_inspire_link: Godzina kodowania w klasie.
   front_join_us_teacher_link: Zainspiruj uczniów Godziną Kodowania w klasie
+  front_join_us_teacher_volunteer: Szukaj lokalnych wolontariuszu, którzy mogą odwiedzić twoją klasę lub zainspirować twoich studentów zdalnie
   front_join_us_parent: Jesteś rodzicem?
   front_join_us_ask_link: Poproś swoją szkołę
   front_join_us_ask: o współorganizowanie Godziny Kodowania.
   front_join_us_parent_link: Poproś swoją szkołe, aby zorganizowała Godzinę Kodowania
   front_join_us_computer_science: Jesteś miłośnikiem informatyki?
+  front_join_us_cs_volunteer: Jesteś pasjonatem informatyki?
   front_join_us_spread: Opowiadaj o nas.
   front_join_us_spread_word: Rozgłoś te informacje w swojej społeczności lokalnej
   front_join_us_spread_word_work: Rozgłoś te informacje w lokalnej społeczności i miejscu pracy
+  front_join_us_sign_up_volunteer: Zarejestruj się na wolontariusza poprzez lokalną klasę lub czat wideo
   front_join_us_organize: Lub sam/sama zorganizuj Godzinę kodowania.
   front_join_us_how_to_run: Oto jak zostać współorganizatorem Godziny kodowania
   front_join_us_help_promote: Pomóż promować akcję
@@ -233,6 +239,7 @@ pl:
   signup_whole_school_flag_label: To wydarzenie jest dla całej szkoły
   signup_your_event: Zarejestruj swoje wydarzenie
   signup_match_volunteer: Pomóż mi znaleźć lokalnego programistę, aby zainspirował moich uczniów
+  signup_multiple_event_warning: Jeśli jesteś gospodarzem wielu wydarzeń, prosimy o przesłanie unikatową nazwę lub e-mail dla każdego z nich. Liczymy tylko jedno wydarzenie po kombinacji nazwy i e-mail.
   signup_name_placeholder: Twoje imię i nazwisko
   signup_email_placeholder: Jan.Kowalski@example.com
   signup_organization_name_placeholder: Na przykład Lincoln High School
@@ -254,7 +261,7 @@ pl:
   map_search_reset: Resetuj
   map_legend_title: Legenda
   map_legend_hoc_events: Wydarzenia Godziny Kodowania
-  map_legend_cs_tech_jam: CS Tech Jam
+  map_legend_cs_tech_jam: Special Event
   meta_tag_og_title: Zbliża się Godzina Kodowania
   meta_tag_og_description: The Hour of Code to globalny ruch docierający do dziesiątek milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek od 4 do 104 lat.
   meta_tag_twitter_title: Zbliża się Godzina Kodowania
@@ -283,7 +290,7 @@ pl:
   hardware_prizes_form_plan_file_description: 'Prześli prosty harmonogram, jak planujesz zorganizować Godzinę Kodowania dla każdego ucznia w twojje szkole. Zobacz przykladowy plan : #PDF# | #Word#'
   hardware_prizes_form_submit_label: Wyślij
   hoc_faq_title: Najczęściej zadawane pytania
-  hoc_faq_what_is_hoc_q: Czym jest Godzina Kodowania?
+  hoc_faq_what_is_hoc_q: Czym jest Godzina kodowania?
   hoc_faq_what_is_hoc_a: "Godzina kodowania to jednogodzinne wprowadzenie do informatyki, mające na celu wyjaśnienie kodu i pokazanie, że każdy może nauczyć się podstaw. <a href='http://code.org/learn'>Sprawdź poradniki</a>."
   hoc_faq_last_year: Wypróbuj poradniki
   hoc_faq_when_is_hoc_q: Kiedy jest Godzina Kodowania?
@@ -296,14 +303,14 @@ pl:
   hoc_faq_behind_hoc_a: "Godzina Kodowania jest organizowana przez <a href='http://code.org'> Code.org</a>, organizację non-profit (501c3) poświęconą upowszechnianiu  informatyki przez udostępnienie jej w większej liczbie szków i zwiększenie udziału kobiet i niedostatecznie reprezentowanych osób kolorowych. Także <a href='http://code.org/about/partners'> Bezprecedensowa koalicja partnerów</a> zebrała się by pobrzeć Godzinę Kodowania &mdash;, w tym Microsoft, Apple, Amazon, Boys and Girls Clubs of America oraz College Board."
   hoc_faq_host_q: Nic nie wiem o kodowaniu. Czy nadal mogę utworzyć wydarzenie?
   hoc_faq_host_a: "Oczywiście. Ćwiczenia Hour of Code możesz wykonywać samodzielnie. Jedyne co musisz zrobić to <a href='%{codeorg_url}/learn'>spróbować naszych obecnych samouczków</a>, wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą. Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola wzwyż. Zacznij planowanie swojego wydarzenia poprzez przeczytanie naszych <a href=''how-to'>jak poprowadzić</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Czy potrzebuję komputerów dla każdego uczestnika?
   hoc_faq_need_computers_a: "Nie. Posiadamy samouczki do Hour of Code, które działają na komputerach, smartfonach, tabletach, a niektóre z nich w ogóle nie potrzebują urządzenia! Możesz dołączyć gdziekolwiek jesteś, z jakimkolwiek sprzętem. <p><i>Oto kilka opcji:</i><br><ul><li><b>Pracujcie w parach.</b> Badania pokazują, że uczniowie najlepiej uczą się poprzez <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programowanie parami</a>, dzielenie komputera i współpracowanie. Zachęć swoich uczniów, by połączyli się w pary.<li><b>Użyj projektora.</b> Jeśli masz projektor i ekran komputera podłączony do sieci, twoja cała klasa może uczestniczyć w Hour of Code wspólnie. Oglądajcie fragmenty filmików razem i na zmianę rozwiązujcie zagadki i odpowiadajcie na pytania.<li><b>Przeprowadźcie to bez podłączenia.</b>Oferujemy samouczki, które w ogóle nie wymagają komputera.</ul>"
   hoc_faq_international_q: 'Jestem w <country>. Jak mogę wziąć udział międzynarodowo?'
   hoc_faq_international_a: "Każdy może zorganizować godzinę kodowania, gdziekolwiek na całym świecie. W ubiegłym roku uczniowie na całym świecie wzięli udział w Godzinie Kodowania. Dowiedz się więcej <a href='/promote'>tutaj</a>."
   hoc_faq_tutorial_q: Jak mogę stworzyć samouczek do Hour of Code?
   hoc_faq_tutorial_a: "Jeśli jesteś zainteresowany byciem partnerem przy nauce, <a href='target-tutorial-guidelines'> Zobacz nasze wskazówki i instrukcje</a>. Chcielibyśmy zrealizować szereg atrakcyjnych działań, ale głównym celem jest, aby  uczniowie i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia."
-  hoc_faq_more_questions_q: Masz więcej pytań?
-  hoc_faq_more_questions_a: "Spróbuj znaleźć odpowiedź na naszym <a href='http://support.code.org'>oficjalnym forum</a>."
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
   hoc_faq_account_a: "Nie. Rejestracja i logowanie nie są wymagane aby spróbować Godziny Kodowania. Większość kursów <a href='http://code.org/learn/beyond'>kursów</a> wymaga stworzenia konta jedynie aby zapisywać postęp uczniów."
   hoc_faq_frozen_q: Gdzie jest samouczek z Anną i Elsą?
@@ -313,7 +320,17 @@ pl:
   hoc_faq_scratch_q: Podczas godziny kodowania używam Scratcha, ale co jeśli moi uczniowie używają iPadów zamiast laptopów?
   hoc_faq_scratch_a: "Scratch nie działa na tabletach. Jeśli uczniowie są młodzi, mogą użyć aplikacji ScratchJS dla iPada (dla początkujących czytelników). Jeśli spojrzysz na poradniki na <a href='http://code.org/learn'>Code.org/learn</a>, możesz znaleźć inne poradniki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot lub CodeSpark."
   hoc_faq_count_hoc_q: Jak liczyć Godziny Kodowania?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "Postęp Godzin Kodowania nie jest dokładnym pomiarem użycia. Nie liczymy dokładnie unikalnych identifykatorów uczniów, kiedy śledzimy udział w Godzinie Kodowania, zwłaszcza że nie wymagaby, aby uczniowie się zalogowali czy zarejestrowali. W rezultacie zarówno przeszacowujemy jak i niedoszacowujemy uczestników w tym samym czasie. Przeczytaj o wszystkich sczegółach <a href='%{codeorg_url}/loc'>tutaj</a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: Masz więcej pytań?
+  hoc_faq_more_questions_a: "Spróbuj znaleźć odpowiedź na naszym <a href='http://support.code.org'>oficjalnym forum</a>."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
   stats_i18n: Uczniowie uczą się w 40 językach
@@ -348,7 +365,7 @@ pl:
   resources_how_to_guides: Przewodniki
   resources_promote: Promowanie
   resources_nav_tutorials: Wypróbuj poradniki
-  resources_nav_promote: Opowiadaj o nas
+  resources_nav_promote: Podaj dalej
   resources_nav_spread_word: Jak się zaangażować
   resources_banner_promote_text: Promowanie
   resources_banner_promote_button: Zachęć innych do zarejestrowania za pomocą broszur, inspirujących posterów i bannerów w mediach społecznościowych.
@@ -374,7 +391,7 @@ pl:
   title_press_release: Komunikat prasowy Godziny Kodowania dla urzędników publicznych
   title_op_ed: Przykładowy artykuł wspierający Tydzień Edukacji Informatycznej oraz Godzinę Kodowania
   title_press_kit: Materiały prasowe
-  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_proclamation: Przykładowa rezolucja wspierająca Tydzień Edukacji Informatycznej i Godzinę Kodowania
   title_stats: Notki i statystyki
   title_partners: Partnerzy
   title_prizes_faq: Częste pytania dotyczące nagród
@@ -383,7 +400,7 @@ pl:
   title_prizes: Nagrody
   title_hardware_prize_form: Zarejestruj się po nagrody sprzętowe
   title_resources: Materiały
-  title_signup_thanks: Dziękujemy za rejestrację jako organizator Hour of Code!
+  title_signup_thanks: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
   title_tutorial_guidelines: Wytyczne dla samouczków
   title_whole_school: Uczestnictwo Całej Szkoły
   events_nav_title: Wydarzenia Godziny Kodowania

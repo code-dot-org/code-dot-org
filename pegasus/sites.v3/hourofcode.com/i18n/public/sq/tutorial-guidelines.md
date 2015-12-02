@@ -16,7 +16,7 @@ Do të donim të organizonim një sërë aktivitetesh per opsionet kryesore, por
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**Pasi të lexosh udhëzimet, mund të dorëzosh tutorialin tënd përmes [Orës tonë të Kodimit në faqen e paraqitjes së veprimtarisë](https://goo.gl/kNrV3l).**
 
 ** E RE:** Ndryshe nga vitet e shkuara, ne planifikojmë të paraqesim një tjetër format për "udhëheqen e mësuesve" në aktivitet e Orës së Kodimit. Keto do te listohen me poshte faqeve me aktivitetet e vete-udhezuara te hasura nga studenti dhe ne email. Detajet më poshtë.
 
@@ -35,7 +35,7 @@ Do të donim të organizonim një sërë aktivitetesh per opsionet kryesore, por
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## E re për 2015-ën: dy formate të aktiviteteve: te vetë-udhëzuara ose * me plan mësimor *
 
 Tani qe dhjetera e qindra mesues kane provuar Oren e Kodimit, shume klasa jane gati per me shume kreativitet, per te mesuar bazat e shkencave kompjuterike. Per te ndihmuar mesuesit te gjejne inspirim, ne deshirojme te bejme nje ore leksion "Mesuesi-Udheheqes" dhe plane aktiviteti per veteranet e Ores se kodimit. Ne do te vazhdojme te promovojme formatin "vete-udheheqes"
 
@@ -116,7 +116,7 @@ Në fund të fundit, qëllimi i fushtës së Orës Kodimit është për të zgje
 
 ## Si të dorëzosh (deri më 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
+Vizitoni [faqen e Dorzimit të Aktivitetit të Orës së Kodimit™](https://goo.gl/kNrV3l) dhe ndiqni hapat për të dërguar tutorialin tuaj.
 
 **Çfarë do ju duhet:**
 
@@ -215,13 +215,13 @@ Pas suksesit ne fushaten e 2013-es, ne ndermorem hapa qe te siguroheshim per org
 
 Një pjesë e kësaj është për të mbrojtur markën "Ora e Kodimit" për të parandaluar konfuzionin. Shumë nga partnerët tanë kanë përdorur "Orën e Kodimit" në faqet e tyre të web-it. Ne nuk duam të parandalojmë këtë përdorim, por ne duam të sigurohemi se përshtatet brenda disa kufijve:
 
-  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Shembull i keq: "Provo Orën e Kodimit nga ACME Corp"
-  2. Përdorni një "TM" sipërshkrim në vendet më të dukshme që ju përmendni "Orën e Kodimit", në faqen tuaj web dhe në përshkrimet e aplikacionit
+  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim:
     
     *"Ora e Kodimit" është një nismë në shkallë vendi nga Java Edukative e Shkencave Kompjuterike[csedweek.org] dhe Code.org [code.org] për të futur miliona studentë për një orë në shkencën kompjuterike dhe programimin kompjuterik. "*
 
-  4. Nuk ka përdorimi të "Orës së Kodimit" në emrat e aplikacioneve
+  4. No use of "Hour of Code" in app names.
 
 [**Përsëri në krye**](#top)
 

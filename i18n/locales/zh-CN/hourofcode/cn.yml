@@ -1,21 +1,22 @@
 cn:
-  site_name: HOUR of CODE
-  hour_of_code: Hour of Code
+  site_name: 编程一小时
+  hour_of_code: 编程一小时
   language: 简体字
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: '加入史上最大的学习活动，%{campaign_date} 2015'
   coming_soon: 即将推出
-  campaign_date_start_short: Dec. 7
-  campaign_date_start_long: December 7
-  campaign_date_short: Dec. 7-13
-  campaign_date_full: December 7-13
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  campaign_date_start_short: 12 月 7 日
+  campaign_date_start_long: 12 月 7 日
+  campaign_date_short: 12 月 7-13
+  campaign_date_full: 12 月 7-13
+  front_header_banner: 加入有史以来最大的学习活动，2015年12月7日至13日
+  front_intro_default: '编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过30种语言，参加这个活动的学生完全不需要经验。<strong>参与者的年龄可以从4岁到104岁。</strong>'
   front_watch_video: 观看新的视频
-  front_watch_regular_video: Watch the video
+  front_watch_regular_video: 观看视频
+  front_volunteers: 需要技术志愿者
   header_menu_resources: 资源
   header_menu_faq: 常见问题
   header_menu_prizes: 奖品
-  header_menu_how_to: How-To
+  header_menu_how_to: 操作方法
   header_menu_promote: Promote
   company_4-H: 4-H青少年发展
   company_asa: 课后联盟
@@ -127,6 +128,7 @@ cn:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan 统一学区
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -149,20 +151,20 @@ cn:
   prizes_brilliant: 在每个省和地区一所学校因为一个辉煌的项目将收到 $2000美元。
   prizes_actua: 横跨加拿大的15所学校将通过Actua的成员之一获得实践STEM讲习班。
   prizes_details: 详细情况
-  nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
-  how_to_nav_public_officials: For public officials
-  how_to_nav_districts: For districts
-  how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
-  how_to_nav_companies: For companies
-  how_to_nav_afterschool_educators: For after-school educators
-  how_to_nav_volunteers: For volunteers
+  nav_back_to_resources: 返回到资源
+  how_to_nav_educators: 给教育工作者
+  how_to_nav_after_school: 为放学后
+  how_to_nav_parents: 给父母
+  how_to_nav_public_officials: 给公职人员
+  how_to_nav_districts: 给区域管理者
+  how_to_nav_assemblies: 给学校的小组
+  how_to_nav_organizations: 给单位
+  how_to_nav_companies: 给公司
+  how_to_nav_afterschool_educators: 给校外教育工作者
+  how_to_nav_volunteers: 给志愿者
   prizes_nav_title: 奖品
-  prizes_nav_home: All prizes
-  prizes_nav_hardware: Hardware prize signup
+  prizes_nav_home: 所有奖品
+  prizes_nav_hardware: 硬件奖品注册
   prizes_nav_terms: 服务条款
   prizes_nav_faq: 常见问题
   prizes_nav_dc: 华盛顿特区的神秘之旅
@@ -172,42 +174,46 @@ cn:
   prizes_nav_brilliant: $2,000的杰出实验室计划
   prizes_nav_actua: 真实的工作室
   prizes_nav_kids_code: Jeunesse儿童代码
-  prizes_header: Prizes for every educator
+  prizes_header: 给每个教育工作者的奖品
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
-  whats_next_header: "What's next?"
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
+  whats_next_header: 下一步是什么?
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
-  whats_next_try_button: Try tutorials
+  whats_next_how_to: "<a href='/how-to'> 如何组织编程一小时</a>"
+  whats_next_promote: "<a href='/promote'> 编程一小时推广</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'> 如何推广编程一小时</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'> 如何推广编程一小时</a>"
+  whats_next_try: "<a href='http://code.org/learn'> 试学教程</a>"
+  whats_next_try_button: 试学教程
   n_have_learned_an_hoc: '<h1>尝试</h1><h2>一小时编码</h2><h3># 送达</h3>'
   anybody_can_learn: 任何人都可以学习。
   get_started: 开始
   beyond_an_hour: 《编程一小时》以外的更多内容
-  register_now: 现在就注册
+  register_now: 立即注册
   share_on_facebook: 分享到Facebook
   share_on_twitter: 分享到Twitter
   front_join_us_heading: 一次每个学生都可以参与的编程一小时活动。
   front_join_us_description: 计算机科学是每一个学生的基础知识。帮助我们把它介绍给 1 亿学生。
-  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_description_short: 计算机科学是每个学生的基础。
   front_join_us_button: 加入我们
-  front_what_is_hoc: 什么是编程一小时？
+  front_what_is_hoc: 编程一小时是什么？
   front_join_us_header: 任何人都可以学习基础知识，并享受动手做的乐趣 ！
+  front_join_us_volunteer_header: 编程一小时志愿者
   front_join_us_teacher: 你是一个老师吗？
   front_join_us_inspire: 激发学生兴趣
   front_join_us_inspire_link: 教室里的《编程一小时》。
   front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
+  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
   front_join_us_parent: 你是父母吗？
   front_join_us_ask_link: 让你当地的学校
   front_join_us_ask: 举办一个编程一小时活动。
   front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: 只是自己喜欢计算机科学吗？
+  front_join_us_cs_volunteer: Passionate about computer science education?
   front_join_us_spread: 分享给你的朋友
   front_join_us_spread_word: Spread the word in your community
   front_join_us_spread_word_work: Spread the word in your community or workplace
+  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
   front_join_us_organize: 或者自己组织一个编程一小时活动。
   front_join_us_how_to_run: 了解如何举办编程一小时活动
   front_join_us_help_promote: 帮助提高编程一小时活动
@@ -219,7 +225,7 @@ cn:
   front_join_us_host: 举办它
   front_join_us_support: 点赞
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: For more information, please visit code.org
+  front_join_us_code_info: 有关详细信息，请访问 code.org
   front_join_us_n_students_served: '# served'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 您的姓名
@@ -235,6 +241,7 @@ cn:
   signup_whole_school_flag_label: 这一活动是为整个学校举办
   signup_your_event: 登记您的活动
   signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: 您的姓名
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 例如，林肯高中
@@ -245,7 +252,7 @@ cn:
   signup_event_type_out_of_school: 学校之外
   signup_submit_label: 注册
   signup_submit_error_message: 有一个错误。请检查以确保所有必填的字段都已正确地填写。
-  signup_thank_you_header: 感谢您注册主办一个Hour of Code活动。
+  signup_thank_you_header: 感谢您注册主办一个编程一小时活动。
   signup_thank_you_message: 我们发送了一封确认邮件，其中有帮助您开始的信息。
   map_header: 世界各地的《编程一小时》活动
   see_all_events: 查看所有事件
@@ -254,12 +261,12 @@ cn:
   map_search_placeholder: 搜索《编程一小时》事件
   map_search_search: 搜索
   map_search_reset: 重置
-  map_legend_title: Legend
-  map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: CS Tech Jam
-  meta_tag_og_title: 《编程一小时》在这里
+  map_legend_title: 图例
+  map_legend_hoc_events: 编程一小时活动
+  map_legend_cs_tech_jam: Special Event
+  meta_tag_og_title: 编程一小时活动即将开始
   meta_tag_og_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。参与者的年龄可以从4岁到104岁。
-  meta_tag_twitter_title: 《编程一小时》在这里
+  meta_tag_twitter_title: 编程一小时活动即将开始
   meta_tag_twitter_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。参与者的年龄可以从4岁到104岁。
   twitter_default_text: '我正在参加今年的 #HourOfCode，你呢？@codeorg'
   hardware_prizes_form_name_label: 您的姓名
@@ -281,15 +288,15 @@ cn:
   hardware_prizes_form_number_students_placeholder: 学生人数
   hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
   hardware_prizes_form_technology_plan_placeholder: Plan for using new technology
-  hardware_prizes_form_plan_file_label: 上传您的Hour of Code流程计划
-  hardware_prizes_form_plan_file_description: '提交一个简单的日程安排，显示你将如何组织你们学校的每个学生完成Hour of Code。请参阅样本计划： #PDF # |#Word #'
+  hardware_prizes_form_plan_file_label: 上传您的编程一小时的活动计划
+  hardware_prizes_form_plan_file_description: '提交一个简单的日程安排，显示你将如何组织你们学校的每个学生完成编程一小时活动。请参阅计划书样本： #PDF # |#Word #'
   hardware_prizes_form_submit_label: 提交
   hoc_faq_title: 常见问题
-  hoc_faq_what_is_hoc_q: 什么是编程一小时？
+  hoc_faq_what_is_hoc_q: 编程一小时是什么？
   hoc_faq_what_is_hoc_a: "编程一小时是一个介绍计算机科学一小时的活动，旨在揭秘编程并说明它是任何人都可以学习的基础知识。<a href='http://code.org/learn'>查看教程</a>。"
   hoc_faq_last_year: 尝试教程
   hoc_faq_when_is_hoc_q: 编程一小时活动将在什么时候举行？
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: 为什么要学习计算机科学？
   hoc_faq_why_cs_a: "<i>每一个</i>学生都应该获得学习计算机科学的机会。它有益于培养解决问题的能力，逻辑能力和创造性。通过早期的学习，学生们将为他们在21世纪的职业成功打下基础。在<a href='http://code.org'>Code.org</a>上查看更多数据。"
   hoc_faq_how_participate_q: 我怎样才能参加编程一小时活动？
@@ -298,14 +305,14 @@ cn:
   hoc_faq_behind_hoc_a: "编程一小时活动的组织者是<a href='http://code.org'>Code.org</a>, 它是一个面向公众的501c3公益组织，致力于在更多的学校推广计算机科学教育，并为女性和就业率低的有色人种学生学习计算机的机会。同时，一个<a href='http://code.org/about/partners'>空前强大的合作伙伴联盟</a>也在支持着编程一小时活动。&mdash; 这些合作伙伴包括：微软公司,苹果公司,亚马逊公司,美国男孩女孩俱乐部和大学理事会。"
   hoc_faq_host_q: 我完全不懂编程。我也可以举办这个活动吗？
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: 我需要为所有的学生准备计算机吗？
   hoc_faq_need_computers_a: "不需要。我们的教程可以在电脑、智能手机、平板电脑上运行，也可以完全不用电脑来完成！无论你在哪里，有什么设备，都可以参加编程一小时的活动。<p><i>这里有一些参考选项：</i> <br> <ul> <li><b>结对学习</b> 研究表明，学生在共享一台电脑并且共同工作的<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>结对编程</a>中学习效果最好，应当鼓励学生们结对互助。<li><b>使用投影设备</b>使用投影设备和连接互联网的电脑，通过一起观看视频，轮流解决谜题和回答问题，全体学员可以一起参加编程一小时活动。<li><b>不插电活动</b>我们提供完全不需要电脑的编程一小时活动教程。</ul>"
   hoc_faq_international_q: '我在<country>。我如何加入国际化的活动？'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: 我怎样才能编写编程一小时的教程？
   hoc_faq_tutorial_a: "如果你有兴趣成为教程的合作伙伴，<a href='targetHOC'> 请参阅我们的指南和介绍</a>。我们需要各种引人入胜的项目，但主要目标是为那些不熟悉计算机科学的学生和教师提供更优化的体验。"
-  hoc_faq_more_questions_q: 还有更多的问题吗？
-  hoc_faq_more_questions_a: "试着在我们的 <a href='http://support.code.org'> 支持论坛</a> 中找到答案。"
   hoc_faq_account_q: 学生需要使用帐户登录吗?
   hoc_faq_account_a: "不，学生尝试编程一小时完全不需要注册或登陆。大多数<a href='http://code.org/learn/beyond'>后续课程</a>需要创建账户以保存学生的学习进度。"
   hoc_faq_frozen_q: 安娜和艾尔莎的教程在哪里？
@@ -315,8 +322,18 @@ cn:
   hoc_faq_scratch_q: 我正在为编程一小时制作简易程序，但是如果我的学生只有iPad没有笔记本电脑怎么办？
   hoc_faq_scratch_a: "Scratch不能在平板电脑上运行。如果你的学生都很小，他们可以使用ScratchJR iPad应用程序（早期阅读器）。如果你看一下<a href='http://code.org/learn'> Code.org/learn</a>的教程，你可以找到在iPad可行的其他教程 - Code.org，Tynker， Lightbot，或CodeSpark。"
   hoc_faq_count_hoc_q: 你对《编程一小时》有多期待？
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "《编程一小时》跟踪器不会对使用情况进行准确测量。在学员参与《编程一小时》时，我们不会对学生的登录信息进行精准统计，特别是因为我们不需要学生注册或登陆。因此，高估和低估的情况会同时发生。<a href='http://code.org/loc'>点击这里</a>阅读详细信息。"
-  stats_hoc_2013_image_alt: 2013年Hour of Code统计数据
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: 还有更多的问题吗？
+  hoc_faq_more_questions_a: "试着在我们的 <a href='http://support.code.org'> 支持论坛</a> 中找到答案。"
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  stats_hoc_2013_image_alt: 2013年编程一小时活动统计数据
   stats_growth: 它以最快的速度到达 1500 万用户。
   stats_i18n: Students are learning in 40 languages
   stats_tumblr: Tumblr： 3.5 年
@@ -335,18 +352,18 @@ cn:
   resources_how_to_districts: 区域操作指南
   resources_how_to_officials: 公职人员的操作指南
   resources_handouts: 传播手册
-  resources_one_pager: One-page handout
-  resources_brochure: Brochure
+  resources_one_pager: 单页传单
+  resources_brochure: 宣传册
   resources_posters: 海报
   resources_videos: 视频
   resources_banners: 横幅
   resources_emails: 电子邮件示例
-  resources_logo: Hour of Code logo
+  resources_logo: 编程一小时图标
   resources_stats: 有用的统计信息和导语
   resources_press_kit: 新闻资料袋
   resources_social: 社交网络
   resources_country_resources: Country Specific Resources
-  resources_stickers: Stickers
+  resources_stickers: 贴纸
   resources_how_to_guides: How-to guides
   resources_promote: Promote
   resources_nav_tutorials: 尝试教程

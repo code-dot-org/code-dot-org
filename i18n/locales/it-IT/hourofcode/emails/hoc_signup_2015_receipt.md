@@ -1,52 +1,46 @@
 * * *
 
-da: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" Oggetto: "Grazie per accettato di ospitare un'Ora di Codice!" litmus_tracking_id: "5g5lyi1a"
+da: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" Oggetto: "Grazie per accettato di organizzare un'Ora del Codice!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Grazie per esserti iscritto per ospitare un evento dell'Ora del Codice!
+# Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
 
-Stai facendo sì che gli studenti di tutto il mondo possano imparare un'Ora del Codice che può cambiare il resto delle loro vite, dal 7 al 13 dicembre.
+Stai facendo sì che studenti in tutto il mondo possano provare un'Ora del Codice, che potrà cambiare il resto delle loro vite, dal 7 al 13 dicembre.
 
-*Ogni* organizzatore di un'Ora del Codice riceverà **un buono acquisto per Amazon. com, iTunes o Microsoft's Windows Store** come regalo di ringraziamento.[Dettagli](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-#### Saremo in contatto per le nuove lezioni e altri aggiornamenti interessanti. Cosa puoi fare ora?
+#### Ci sentiremo presto per i nuovi corsi ed altri aggiornamenti interessanti. Cosa puoi fare ora?
 
-## 1. Diffondi la notizia
+## 1. Find a local volunteer to help you with your event.
 
-Abbiamo bisogno del tuo aiuto per raggiungere i 100.000 organizzatori in tutto il mondo. Dì ai tuoi amici de L'Ora del Codice con #HourOfCode. [ Usa queste utili risorse](https://<%= hostname %>/promote/resources) per promuover il tuo evento.
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-<% if international == 'true' %>
+## 2. Spargi la voce
 
-## Proponi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+## 4. Chiedi al tuo datore di lavoro di partecipare
 
-## 3. Proponi al tuo datore di lavoro di essere coinvolti
+[Invia questo messaggio di posta elettronica](https://<%= hostname %>/promote/resources#sample-emails) al tuo diretto responsabile, o al responsabile dell'intera organizzazione.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+## 5. Promote the Hour of Code in your community
 
-## Promuovi un'Ora di Codice nella tua comunità
+Recluta un po' di persone o qualche amico. [ Invia questo messaggio di posta elettronica](https://<%= hostname %>/resources#sample-emails).
 
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
-
-## 5. Proponi ad un funzionario locale di sostenere L'Ora del Codice
-
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
-
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+Grazie per farti promotore del movimento per dare a tutti gli studenti la possibilità di apprendere i concetti fondamentali dell'informatica.
 
 Hadi Partovi  
-Founder, Code.org
+Fondatore, Code.org
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> Hai ricevuto questo messaggio di posta elettronica perché ti sei iscritto all'Ora del Codice, movimento sostenuto da più di 200 partner e organizzato da Code.org. Code.org è un'associazione no-profit 501c3 senza scopi di lucro. Il nostro indirizzo è 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Non vuoi ricevere ulteriori messaggi di posta elettronica? <a href="%= unsubscribe_link %">Annulla l'iscrizione</a>. </small>
 
 ![](<%= tracking_pixel %>)

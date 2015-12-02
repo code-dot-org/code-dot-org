@@ -47,7 +47,7 @@ Upamo, da bomo spodbudili pri študentih zanimanje za učenje računalništva. R
 
 *Zakaj je to pomembno?*
 
-Na Kitajskem vsak študent na maturi vzame predmet računalništvo. V ZDA pa 90 odstotkov šol računalništva niti ne poučuje. To je čas, da dohitijo 21. stoletje. Ne glede na to kaj bodo naši učenci postali, ko odrastejo, ali bodo šli v medicino, gospodarstvo, politiko, ali umetnost, bodo vedeli, kako tehnologija deluje, kar jim bo dalo samozavest in znanje za uspeh.
+In China, every student takes computer science to graduate high school. V ZDA pa 90 odstotkov šol računalništva niti ne poučuje. To je čas, da dohitijo 21. stoletje. Ne glede na to kaj bodo naši učenci postali, ko odrastejo, ali bodo šli v medicino, gospodarstvo, politiko, ali umetnost, bodo vedeli, kako tehnologija deluje, kar jim bo dalo samozavest in znanje za uspeh.
 
 **Več podrobnosti in citatov lahko uporabite na promocijskih materialih**
 
