@@ -29,8 +29,6 @@ DEPENDENCIES
     path: cdo-secrets
   cdo-solr
     path: cdo-solr
-  cdo-sqs
-    path: cdo-sqs
   cdo-users
     path: cdo-users
   cdo-varnish
@@ -73,10 +71,8 @@ GRAPH
   cdo-secrets (0.1.0)
   cdo-solr (0.1.0)
     cdo-java-7 (>= 0.0.0)
-  cdo-sqs (0.1.0)
-    apt (>= 0.0.0)
   cdo-users (0.1.0)
-  cdo-varnish (0.3.3)
+  cdo-varnish (0.3.2)
     apt (>= 0.0.0)
   chef-client (4.2.4)
     cron (>= 1.2.0)
