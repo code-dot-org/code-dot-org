@@ -24,7 +24,7 @@
 }
 
 .courseblock-tall {
-  min-height: 350px;
+  height: 350px;
 }
 
 #bottomalign {
@@ -39,6 +39,8 @@
   float: left;
   display: inline-block;
   width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .multi-item-carousel .carousel-control.left,
@@ -89,12 +91,7 @@
   }
 
   .container-fluid {
-    padding-left: 0px;
-  }
-
-  .courseblock-tall {
-    min-height: 370px;
-    max-width: 290px;
+    padding-left: 10px;
   }
 
   .carousel-control.left {
@@ -102,19 +99,19 @@
   }
 
   .carousel-control.right {
-    right: 0px;
+    left: 96.5%;
+  }
+
+  .courseblock-tall {
+    height: 340px;
   }
 
   #learnCodeStudio {
-    max-width: 400px;
-  }
-
-  #learnCodeStudio .carousel-inner {
-    margin-bottom: 15px;
+    max-width: 380px;
   }
 
   #quicklinks {
-    width: 184px;
+    width: 175px;
   }
 
   .multi-item-carousel .carousel-inner .active.left {
@@ -128,12 +125,6 @@
   }
   .multi-item-carousel .carousel-inner .prev {
     left: -100%;
-  }
-
-  .multi-item-carousel .carousel-control.left,
-  .multi-item-carousel .carousel-control.right {
-    position: relative;
-    margin-left: 80px;
   }
 }
 
@@ -166,6 +157,10 @@
 
   #learnCodeStudio {
     max-width: 400px;
+  }
+
+  #quicklinks {
+    width: 190px;
   }
 
   .multi-item-carousel .carousel-inner .active.left {
