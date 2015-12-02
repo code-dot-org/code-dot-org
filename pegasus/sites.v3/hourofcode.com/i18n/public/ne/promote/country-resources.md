@@ -45,6 +45,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -53,7 +57,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## अभ्यासहरूमा प्रयास गर्नुहोस्:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -64,7 +68,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## तपाइँको हार्डवेयरलाई आवकश्यक पर्ने - कम्प्युटरहरू वैकल्पिक हुनेको योजना बनाउनुहोस्
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -72,12 +76,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * तिनिहरूले सकाएपछि विद्यार्थीहरूले के देख्नेछन् भनि हेर्न **बधाई पृष्ठलाई पूर्वावलोकन ** गर्नुहोस्। 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Plan ahead based on your technology available
+## तपाइँको उपलब्ध प्राविधिमा आधारित योजना बनाउनुहोस्
 
   * **पर्याप्त साधनहरू छैन?** [जोडी प्रोगामिङ्को](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)प्रयोग गर्नुहोस्। When participants partner up, they help each other and rely less on the teacher.
   * **कम ब्यान्डविथ हुन्छ?** भिडियोहरूलाई कक्षाको अगाडि देखाउने योजना बनाउनुहोस्, जसले गर्दा हरेक विद्यार्थीले तिनिहरूको आफ्नो भिडियोलाई डाउनलोड गर्दैनन्। वा अनप्लग / अफलाइन अभ्यासहरूमा प्रयास गर्नुहोस्।
 
-## 4) Inspire students - show them a video
+## तिनिहरूलाई भिडियो देखाउन- विद्यार्थीहरूलाई प्रेरित गर्नुहोस्
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -85,7 +89,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**तपाइँको विद्यार्थीहरू - तिनिहरूको छोटो परिचयन दिन उत्साहि हुन्छन्**
 
 <% else %>
 

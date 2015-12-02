@@ -24,9 +24,9 @@ Beritahu temanmu mengenai #HourOfCode.
 
 [Kirim email ini](<%= resolve_url('/promote/resources#email') %>) ke manajer Anda, atau CEO.
 
-## 4. Promosikan Jam Kode di komunitas Anda
+## 4. Promosikan Hour of Code di komunitas Anda
 
-Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Jam Kode untuk masyarakat di lingkunganmu. [Kirim email ini](<%= resolve_url('/promote/resources#email') %>).
+Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa, pensiunan atau serikat pekerja. Atau selenggarakan "hajatan" Hour of Code untuk masyarakat di lingkunganmu. [Kirim email ini](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 

@@ -21,12 +21,6 @@ nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Ha disse bannere på hjemmesiden din
-
-[![bilde](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![bilde](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![bilde](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Post these on social media
@@ -42,6 +36,16 @@ nav: promote_nav
 [![bilde](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Inkluder språk på siden (eller som bunntekst), inkluder lenker til CSEdWeek og Code.org sidene, som sier det følgende:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

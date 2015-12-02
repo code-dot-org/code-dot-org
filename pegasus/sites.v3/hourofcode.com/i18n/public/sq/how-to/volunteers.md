@@ -6,67 +6,67 @@ nav: how_to_nav
 
 ---
 
-# How-to Guide for Volunteers
+# Si-të Udhëzues për Vullnetarët
 
-## 1. Sign up to volunteer
+## 1. Regjistrohu për vullnetarë
 
-Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
+Vizito një klasë vendore për të inspiruar studentët të vazhdojnë mësimin në Shkenca Kompjuterike. [ Vullnetarë për një orë](https://code.org/volunteer/engineer).
 
-## 2. Join a Volunteer Training webinar
+## 2. Join a volunteer info session
 
-We'll be hosting two webinars to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These webinars will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Ne do të diskutojmë si të koordinohemi më mësimdhënës përpara ngjarjes së Orës së tyre të Kodimit dhe gjithashtu çfarë duhet të bëni në ditën e ngjarjes për tu pregaditur. Ju lutem ejani me pytjet e juaja! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Date        | Koha                  |
-| ----------- | --------------------- |
-| November 16 | 1:00pm - 1:30pm PST   |
-| December 3  | 11:00am - 11:30am PST |
+| Data      | Koha                                | Link to info session                                                            |
+| --------- | ----------------------------------- | ------------------------------------------------------------------------------- |
+| 16 Nëntor | 1:00 pasdite - 1:30 pasdite PST     | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| 3 Dhjetor | 11:00 paradite - 11:30 paradite PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
-## 3. Spend 30 minutes trying the tutorials beforehand
+## 3. Shpenzoni 30 minuta duke provuar tutorilet më përpara
 
-Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
+Provo tutorialet e Orës së Kodimit në [code.org/learn](https://code.org/learn). Zgjedh disa nga tutorialet më të famshme dhe shpenzo ca kohë për tu familjarizuar me secilin prej tyre. Kjo do të të marrë kohë rreth 5-10 minuta për tutorial për të kuptuar se si funksionon.
 
-## 4. Recruit your co-workers to volunteer
+## 4. Rekruto kolegët tuaj për vullnetarë
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
+Tregoji shokëve dhe kolegëve tuaj rreth Orës së Kodimit. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Sample email:**
+**Email mostër:**
 
-**Subject line**: Join me in volunteering for the Hour of Code
+**Rreshti për temë**: Bashkohu me mua në vullnetarizimin për Orën e Kodimit
 
-If you remember your very first line of code, you know it shaped the rest of your life.
+Nese e kujtoni rreshtin tuaj të parë të kodimit, e dini që i ka dhënë formë pjesës tjetër të jetës.
 
-That’s what the Hour of Code is all about. In the last two years, the movement has shattered stereotypes of what it’s like to code and helped more than 100 million students in 180 countries try computer science for the first time.
+Ajo është rreth çka bën fjalë Ora e Kodimit. Në dy vitet e fundit, lëvizja ka shpartalluar paragjykimet së si është të kodosh dhe ndihmoi më shumë se 100 milion studentë në 180 vende të provojnë shkencat kompjuterike për herën e parë.
 
-**I signed up to volunteer in local classroom**   
-7,098 teachers have already asked for help. Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
+**Unë u regjistrova për vullnetarë në klasën vendore**  
+7,098 mësimdhënës tashmë kanë kërkuar për ndihmë. Code.org është duke përshtatur klasët me vullnetarë teknik sikur ju të cilët mund të ndihmojnë studentët dhe mësimdhënësit në Orën e tyre të parë të Kodimit.
 
-Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.* Can’t volunteer? [Help spread the word about the Hour of Code](https://hourofcode.com/promote).
+Ju lutem [vullnetarizo për një orë](https://code.org/volunteer/engineer). Pasi që regjistroheni, mësimdhënësit vendorë do të jenë të gatshëm të ju kontaktojnë për ndihmë duke përdorur një formë të sigurt.*Nuk mund të vullnetarizoni? [Ndihmo për të përhapur fjalen rreth Orës së Kodimit](https://hourofcode.com/promote).
 
-**Your experience matters**  
-Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is a chance to inspire at least one young person in your area.
+**Eksperienca juaj ka rëndësi**  
+Shumica e shkollave ende nuk mësojnë shkenca kompjuterike. Shumica e studenteve nuk e dijnë se është për të zgjidhur probleme të mëdhaja dhe për të na bashkuar të gjithë neve më afer. Kjo është një shansë për të inspiruar së paku një person të ri në rrethin tuaj.
 
-**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+**[Regjistrohu për vullnetarë](https://code.org/volunteer/engineer)**
 
-*Your email address will never be shared with teachers.
+*Adresa e email tuaj kurrë nuk do të shpërndahet me mësimdhënës.
 
-## 5. Ask your employer to get involved
+## 5. Pyet punëdhënësin tuaj të bashkangjitet
 
-[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+[Dërgo këtë email](https://hourofcode.com/promote/resources#email) te menagjeri, apo shefi juaj.
 
-## 6. Promote the Hour of Code in your community
+## 6. Promovo Orën e Kodimit në komunitetin tuaj
 
-Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](https://hourofcode.com/promote/resources#email).
+Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Dërgo këtë email](https://hourofcode.com/promote/resources#email).
 
-## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
+## 7. Lexo agjendën e sygjeruar më poshtë kështu që ju e dini çfarë të prisni kur ju vizitoni një klasë.
 
-# Agenda for Volunteering in a Classroom
+# Agjenda për vullnetarizim në një klasë
 
-### 1. Sign into the school and greet the teacher. Confirm the agreed schedule and discuss any talking points.
+### 1. Hyr në shkollë dhe përshendet mësimdhënësin. Konfirmo orarin e rënë dakord dhe diskuto ndonjë pikë kyçe.
 
-### 2. Bring stuff from your company like stickers. Kids love anything they can interact with.
+### 2. Sjell gjëra nga kompania juaj sikur stikerë. Fëmijët duan çdo gjë që mund të bashkëveprojnë me të.
 
-### 3. Spend 5-10 minutes talking about computer science: how it impacted you personally and how it has broad, worldwide impact. Answer any questions from students.
+### 3. Shpenzo 5-10 minuta duke biseduar rreth shkencave kompjuterike: si ajo ka ndikuar në ju personalisht dhe si në përgjithësi, ndikim botëror. Përgjigju çfarëdo pyetje nga studentët.
 
-### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
+### 4. Fillo [ videon e Orës së Kodimit](https://www.youtube.com/watch?v=2DxWIxec6yo)
 
-### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.
+### 5. Lejo studentët të zhyten në tutoriale. Ec përreth klasës duke u përgjigjur në çfarëdo pyetje dhe duke udhëzuar ata përmes kuizeve të vështira. Provo të mos ju japësh studentëve zgjidhjen menjëherë. Në vend të kësaj provo duke u bërë atyre pyetje kështu që ata mund ti përgjigjen vetes se çka ka shkuar keq.
