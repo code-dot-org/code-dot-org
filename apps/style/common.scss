@@ -1181,8 +1181,8 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
   .generatedCode {
     font-size: 14px;
-    overflow: scroll;
-    max-height: 400px;
+    overflow: auto;
+    max-height: 200px;
   }
 }
 
