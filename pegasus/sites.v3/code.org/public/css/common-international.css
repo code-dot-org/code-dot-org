@@ -540,3 +540,16 @@
 .form-required-field {
   color: #f00;
 }
+
+/* Partner tutorial landing pages */
+@media screen and (min-width: 971px) {
+  .mc-tutorial {
+    float: left !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    background-image: url(/images/mc/MC_Wide_Blank_V2.jpg) !important;
+    background-size: 595px 100px !important;
+  }
+}
