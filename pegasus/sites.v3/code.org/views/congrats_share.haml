@@ -37,7 +37,8 @@
     var queryParams = {
       url: urlToShare,
       related: 'codeorg',
-      hashtags: 'HourOfCode', // TODO(bjordan): anon certs may not always be HoC
+      // TODO(bjordan): include "HourOfCode" hashtag if not present in i18n text
+      hashtags: '',
       text: "#{@just_did_hoc_text}"
     };
 
