@@ -1,9 +1,9 @@
 {
-  "description": "Customize this to describe your queue processor configurations.",
+  "description": "Queue processors for async user level progress",
   "queues": [
     {
       "name": "ActivityQueue",
-      "handler_class": "Activity::AsyncHandler",
+      "handler_class": "AsyncProgressHandler",
       "queue_url": "<%= CDO.activity_queue_url %>",
       "num_processors": 1,
       "num_workers_per_processor": 10,

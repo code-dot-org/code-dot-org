@@ -8,4 +8,5 @@ unless File.basename($0) == 'rake' || !Script.should_cache?
   Script.script_cache_to_cache
   Script.script_cache
   Script.script_level_cache
+  Script.level_cache
 end

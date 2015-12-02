@@ -6,7 +6,7 @@
 .banner {
   max-width: 910px;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -82,7 +82,7 @@
   .active > div { display:none; }
   .active > div:first-child { display:block; }
 
-  .banner { 
+  .banner {
     display: none;
     height: 0px;
     width: 0px;
@@ -142,7 +142,7 @@
   .active > div { display:none; }
   .active > div:first-child { display:block; }
 
-  .banner { 
+  .banner {
     display: none;
     height: 0px;
     width: 0px;
@@ -188,7 +188,7 @@
   .active > div:first-child { display:block; }
   .active > div:first-child + div { display:block; }
 
-  .banner { 
+  .banner {
     max-width: 540px;
   }
 
