@@ -2152,7 +2152,7 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     touchedHazardCount: 0,
     setActivityRecord: null,
-    hasSetDroid: false,
+    hasSetSprite: false,
     hasSetDroidSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
@@ -5549,6 +5549,10 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setSprite' && tracked.hasSetSprite !== value) {
       return false;
     }
 
