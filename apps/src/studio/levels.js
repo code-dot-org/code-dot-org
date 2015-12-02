@@ -2977,16 +2977,14 @@ levels.js_hoc2015_change_setting = {
   ],
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setMap': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setDroid': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successGenericCharacter() } },
-    // Special message for timing out when not enough items collected.
-    { required: { 'timedOut': true, 'collectedItemsBelow': 3 },
-      result: { success: false, message: msg.failedChangeSettingTimeout() } },
-    // If all items are collected, but either property not set?  Failure.
-    { required: { 'setMap': false, 'collectedItemsAtOrAbove': 3 },
+    // If all items are collected, but either property not set?  Immediate failure.
+    { required: { 'collectedItemsAtOrAbove': 3 },
       result: { success: false, message: msg.failedChangeSettingSettings() } },
-    { required: { 'setDroidSpeed': false, 'collectedItemsAtOrAbove': 3 },
-      result: { success: false, message: msg.failedChangeSettingSettings() } }
+    // Timed out and obviously collected not enough items.
+    { required: { 'timedOut': true },
+      result: { success: false, message: msg.failedChangeSettingTimeout() } }
   ]
 };
 
@@ -3554,7 +3552,7 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
      </block>',
   toolbox:
     tb('<block type="studio_setSprite"><title name="VALUE">C-3PO</title></block> \
-        <block type="studio_setDroidSpeed"></block> \
+        <block type="studio_setDroidSpeed"><title name="VALUE">fast</title></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
         <block type="studio_addCharacter"><title name="VALUE">"mousedroid"</title></block> \
