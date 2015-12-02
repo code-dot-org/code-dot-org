@@ -116,9 +116,6 @@ body {
 
 #belowVisualization p {
   color: white;
-  & .legacy-share-view {
-    display: none;
-  }
 }
 
 /* 'Look' icon */
@@ -214,9 +211,6 @@ $height-to-width: 434 / 477;
 
 #visualization {
   height: 677px !important;
-  .legacy-share-view & {
-    height: auto !important;
-  }
 }
 
 @mixin reset-dialog {

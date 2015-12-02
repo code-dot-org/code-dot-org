@@ -178,14 +178,14 @@ Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ = "بازگشت صحیح اگر هر دو �
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT = "بازگرداندن مقدار بولین true اگر ورودی اول  از ورودی دوم بزرگتر باشد.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE = "اگر ورودی اول بزرگتر یا مساوی ورودی دوم باشد، مقدار بولین true را برمی گرداند.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT = "بازگرداندن مقدار بولین true، اگر ورودی اول کوچکتر از ورودی دوم باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "اگر ورودی اول کوچکتر یا مساوی ورودی دوم باشد، مقدار بولین true را برگردان.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "اگر ورودی اول کوچکتر یا مساوی ورودی دوم باشد، مقدار بولین true را بر میگرداند.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "اگر هر دو ورودی با یکدیگر برابر نبودند، مقدار بولین true را برگردان.";
 Blockly.Msg.LOGIC_NEGATE_HELPURL = "http://code.google.com/p/blockly/wiki/Not";
-Blockly.Msg.LOGIC_NEGATE_TITLE = "1% نه";
-Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "اگر ورودی برابر مقدار بولین not بود، مقدار بولین true را برگردان. اگر ورودی برابر مقدار بولین false بود مقدار بولین true را برگردان.";
+Blockly.Msg.LOGIC_NEGATE_TITLE = "برعکس 1%";
+Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "اگر ورودی برار False  بود، مقدار بولین true را برمیگرداند. اگر ورودی برابر true بود مقدار بولین  False را برمیگرداند.";
 Blockly.Msg.LOGIC_NULL = "تهی";
 Blockly.Msg.LOGIC_NULL_HELPURL = "http://en.wikipedia.org/wiki/Nullable_type";
-Blockly.Msg.LOGIC_NULL_TOOLTIP = "مقدار خالی را باز میگرداند.";
+Blockly.Msg.LOGIC_NULL_TOOLTIP = "تهی بازمی‌گرداند.";
 Blockly.Msg.LOGIC_OPERATION_AND = "و";
 Blockly.Msg.LOGIC_OPERATION_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AC%D8%A8%D8%B1_%D8%A8%D9%88%D9%84%DB%8C";
 Blockly.Msg.LOGIC_OPERATION_OR = "یا";
@@ -240,24 +240,24 @@ Blockly.Msg.MATH_ONLIST_TOOLTIP_AVERAGE = "میانگین (میانگین ریا
 Blockly.Msg.MATH_ONLIST_TOOLTIP_MAX = "بزرگ‌ترین عدد در فهرست را بازگردان.";
 Blockly.Msg.MATH_ONLIST_TOOLTIP_MEDIAN = "عدد میانه در فهرست را برگردان.";
 Blockly.Msg.MATH_ONLIST_TOOLTIP_MIN = "کوچک‌ترین عدد در فهرست را بازگردان.";
-Blockly.Msg.MATH_ONLIST_TOOLTIP_MODE = "شایع‌ترین قلم(های) در فهرست را بر می‌گرداند.";
+Blockly.Msg.MATH_ONLIST_TOOLTIP_MODE = "لیستی از شایع ترین موارد در لیست را برمبگرداند.";
 Blockly.Msg.MATH_ONLIST_TOOLTIP_RANDOM = "موردی تصادفی از فهرست را بر می‌گرداند.";
 Blockly.Msg.MATH_ONLIST_TOOLTIP_STD_DEV = "انحراف معیار فهرست را بر می‌گرداند.";
-Blockly.Msg.MATH_ONLIST_TOOLTIP_SUM = "جمع همهٔ عددهای فهرست را باز می‌گرداند.";
+Blockly.Msg.MATH_ONLIST_TOOLTIP_SUM = "مجموع همهٔ عددهای لیست را برمی‌گرداند.";
 Blockly.Msg.MATH_POWER_SYMBOL = "^";
 Blockly.Msg.MATH_RANDOM_FLOAT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%AA%D8%B5%D8%A7%D8%AF%D9%81%DB%8C";
 Blockly.Msg.MATH_RANDOM_FLOAT_TITLE_RANDOM = "کسر تصادفی";
-Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "بازگرداندن کسری تصادفی بین ۰٫۰ (بسته) تا ۱٫۰ (باز).";
+Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "کسری تصادفی بین (و یا برابر) 0.0 و ( حتما کوچکتر) 1.0 را برمیگرداند.";
 Blockly.Msg.MATH_RANDOM_INT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%AA%D8%B5%D8%A7%D8%AF%D9%81%DB%8C";
-Blockly.Msg.MATH_RANDOM_INT_TITLE = "عدد صحیح تصادفی بین %1 تا %2";
-Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "یک عدد تصادفی بین دو مقدار مشخص‌شده به صورت بسته باز می‌گرداند.";
+Blockly.Msg.MATH_RANDOM_INT_TITLE = "عدد صحیح تصادفی بین 1% تا 2%";
+Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "یک عدد صحیح تصادفی بین و یا برابر دو مقدار مشخص‌شده به باز می‌گرداند.";
 Blockly.Msg.MATH_ROUND_HELPURL = "http://fa.wikipedia.org/wiki/%D8%B1%D9%88%DB%8C%D9%87_%28%D8%B9%D9%84%D9%88%D9%85_%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D9%87%29";
 Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "گردکردن";
-Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDDOWN = "قطع کردن";
-Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "تقریب به بالا";
+Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDDOWN = "گرد به پایین";
+Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "گرد به بالا";
 Blockly.Msg.MATH_ROUND_TOOLTIP = "گردکردن یک عدد به بالا یا پایین.";
 Blockly.Msg.MATH_SINGLE_HELPURL = "http://fa.wikipedia.org/wiki/%D8%B1%DB%8C%D8%B4%D9%87_%D8%AF%D9%88%D9%85";
-Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE = "مطلق";
+Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE = "صحیح مثبت";
 Blockly.Msg.MATH_SINGLE_OP_ROOT = "ریشهٔ دوم";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_ABS = "قدر مطلق یک عدد را بازمی‌گرداند.";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_EXP = "بازگرداندن توان e یک عدد.";

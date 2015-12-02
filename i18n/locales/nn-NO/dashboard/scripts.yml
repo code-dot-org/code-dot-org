@@ -366,7 +366,7 @@ nn:
           Eval: Eval
         flappy:
           title: Flakse-kode
-          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen i Flaksekode!
+          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa i Flaksekode!
           description_short: Lag ditt eige Flappy-spel på mindre enn ti minutt!
           Flappy Code: Flakse-kode
         jigsaw:
@@ -1348,6 +1348,10 @@ nn:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

@@ -36,7 +36,7 @@ pt-BR:
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Evento da Hora do Código
   csedweek_map_legend_cs_tech_jam: Evento especial
-  cded_sign_up: Inscreva-se
+  cded_sign_up: Registrar
   cded_try_it: Experimente
   twentyhours_trynow: Experimente agora
   california_heading: Peça a sua escola para ensinar ciência da computação
@@ -211,7 +211,7 @@ pt-BR:
   homepage_action_text_hoc: Uma Hora do Código para cada aluno.
   homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Participe
-  homepage_action_text_sign_up: Inscreva-se
+  homepage_action_text_sign_up: Registrar
   homepage_action_text_try_it: Experimente
   homepage_action_text_volunteers: Procuramos voluntários técnicos
   homepage_action_text_codevideo: Assista ao vídeo
@@ -229,7 +229,7 @@ pt-BR:
   homepage_banner_privacy_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
-  homepage_slot_text_link_hoc: Tente a Hora do Código
+  homepage_slot_text_link_hoc: Tente a Hour of Code
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Voluntário da Hora do Código
@@ -290,6 +290,10 @@ pt-BR:
   class_submission_level_vocational: Profissional
   class_submission_languages_other: Outro(s) idioma(s)
   inspirational_videos_more: 'Mais <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">vídeos inspiradores</a> por modelos e celebridades'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Construindo uma galáxia com código
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use blocos de arrastar-soltar e JavaScript.
@@ -298,7 +302,7 @@ pt-BR:
   starwars_blocks_title: Blocos
   starwars_blocks_description: Use blocos de arrastar-soltar.
   starwars_blocks_specs: Vários idiomas (em breve) | Navegadores modernos, smartphones, tablets | De 6 a 10 anos
-  starwars_blocks_start_button: Experimente agora
+  starwars_blocks_start_button: Saiba Mais
   starwars_watch_videos: Antes de começar, assista um desses vídeos inspiradores
   starwars_speak_languages: Fala outra língua?
   starwars_help_translate: Ajude-nos a traduzir
@@ -307,7 +311,7 @@ pt-BR:
   mc_longdescription: Use blocos de código para levar Steve ou Alex a uma aventura pelo mundo do Minecraft.
   mc_shortdescription: Use blocos de código para levar Steve ou Alex a uma aventura pelo mundo do Minecraft.
   mc_gradelevel: A partir de 6 anos
-  mc_platformtext: Navegadores Web modernos, smartphones, tablets
+  mc_platformtext: Navegadores modernos, smartphones, tablets
   mc_specs: Muitos idiomas (em breve) | Navegadores modernos e tablets | Idades 6+
   minecraft_subtitle: Hora do Código Minecraft
   volunteer_engineer_submission_title: Inspirar alunos e voluntários para a Hora do Código.
@@ -317,7 +321,7 @@ pt-BR:
   volunteer_engineer_submission_intro_recruit: |-
     Estes professores adorariam ter alguém<span style="font-family: 'Gotham 7r', sans-serif;">apaixonado por ciência da computação</span> que pudesse ajudá-los em suas aulas, ou alguém que pudesse<span style="font-family: 'Gotham 7r', sans-serif;">inspirar</span> seus alunos falando sobre a gama de possibilidades da ciência da computação (o que pode ser feito por meio de de vídeo conferência). Se você não quer se voluntariar,<a href="%{url}">aprenda mais</a> sobre como organizar seu próprio evento da Hora do Código.
   volunteer_engineer_submission_intro_signup: 'Forneça as seguintes informações se você é um estudante de ciência da computação ou um profissional de software. Os campos marcados com um <span class="form-required-field">*</span> são obrigatórios.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Não quer ser voluntário? <a href="%{learn_more}"> Saiba mais</a> sobre como organizar o seu próprio evento da Hora do Código e encontrar um voluntário local no nosso <a href="%{volunteer_local}"> mapa de voluntários</a>.'
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
   volunteer_engineer_submission_field_name_placeholder: Nome completo
@@ -522,7 +526,7 @@ pt-BR:
   dashboard_grade_other: Outros
   dashboard_login_word: Palavra
   dashboard_login_picture: Imagem
-  dashboard_login_none: E-mail
+  dashboard_login_none: Email
   dashboard_new_password: nova senha
   dashboard_progress_not_started: não iniciado
   dashboard_progress_in_progress: em progresso
@@ -557,18 +561,18 @@ pt-BR:
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Saiba Mais
   learn_sign_up_description: Cadastre-se para participar da Hora do Código durante a Semana da Educação em Ciência da Computação
-  learn_sign_up_button: Inscreva-se
+  learn_sign_up_button: Registrar
   learn_videos_watch: Assista a esse vídeo inspirador com sua turma
   learn_videos_show: Mostre esse vídeo inspirador para sua turma
   learn_videos_before_hoc: Assista a um vídeo inspirador antes de sua Hora do Código
   learn_educator_resources_description: Aprenda como ensinar uma Hora do Código
   learn_educator_resources_button: Recursos para educadores
   learn_are_you_educator: 'Você é um educador? Saiba <a href="http://hourofcode.com/resources/how-to">como ensinar uma Hora do Código</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Saiba mais</a> sobre os prêmios para educadores.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Encontre um voluntário na região</a> para ajudar durante a sua Hora do Código'
+  learn_teacher_led_lesson_plans: 'Inspire-se pelos <a href="https://code.org/teacher-led">planos de professores para a lição da Hora do Código</a>'
+  learn_how_to_hoc: 'Siga <a href="https://hourofcode.com/how-to">nosso guia prático</a> para ensinar uma Hora do Código'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Saiba mais</a> sobre os prêmios para cada educador, enquanto eles durarem'
+  learn_inspirational_videos: 'Inspire seus alunos mostrando <a href="https://code.org/educate/inspire">esses vídeos</a>'
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
   hoc2014_try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão beta
   hoc2014_try_scrat: Angry Birds, PvZ e Scrat
@@ -577,13 +581,17 @@ pt-BR:
   carousel_heading_codeorg_any_device: Tutoriais da Code.org (para todos os dispositivos)
   carousel_heading_3rd_party: Tutoriais de terceiros
   carousel_heading_third_party: Tutoriais de terceiros
-  carousel_heading_international: Tutoriais no seu idioma
+  carousel_heading_international: Tutoriais de parceiros no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para alunos do Ensino Fundamental
+  carousel_heading_beyond_beginners: Tutoriais para iniciantes
   carousel_heading_javascript: Tutoriais que ensinam JavaScript
+  carousel_heading_beyond_javascript: Tutoriais que ensinam JavaScript
   carousel_heading_unplugged: 'Não tem dispositivos eletrônicos nem Internet? Conheça as atividades de ciência da computação "offline"'
   carousel_heading_devices: Aplicativos de tutoriais para telefones e tablets
+  carousel_heading_beyond_devices: Aplicativos de tutoriais para telefones e tablets
   carousel_heading_languages: Tutoriais sobre outras linguagens de programação
+  carousel_heading_beyond_languages: Tutoriais sobre outras linguagens de programação
   carousel_heading_apps_games: Crie seus próprios aplicativos e jogos
   carousel_heading_university: Cursos universitários on-line
   carousel_heading_webpages: Aprenda a fazer páginas da Web
@@ -641,7 +649,7 @@ pt-BR:
   thinkersmith2_name: Bugigangas binárias
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, papel, tesoura
-  hourofcode_name: Espaço reservado para um novo code.org/hoc
+  hourofcode_name: Escreva seu primeiro programa de computador
   playlab_name: Laboratório
   infinity_name: Laboratório infinito
   artist_name: Artista
@@ -650,10 +658,10 @@ pt-BR:
   thinkersmithspanish_gradelevel: Todas as idades
   khan_gradelevel: Ensino Fundamental II
   khanes_gradelevel: A partir do ensino fundamental II
-  khanpt_gradelevel: Ensino Fundamental II
-  khanhe_gradelevel: Ensino Fundamental II
-  khanfr_gradelevel: Ensino Fundamental II
-  khanpl_gradelevel: Ensino Fundamental II
+  khanpt_gradelevel: A partir do ensino fundamental II
+  khanhe_gradelevel: A partir do ensino fundamental II
+  khanfr_gradelevel: A partir do ensino fundamental II
+  khanpl_gradelevel: A partir do ensino fundamental II
   tynker_gradelevel: De 5 a 13 anos
   scratch_gradelevel: A partir de 8 anos
   lightbot_gradelevel: Todas as idades
@@ -662,13 +670,13 @@ pt-BR:
   lightbotintl_gradelevel: Todas as idades
   codehs_gradelevel: Ensino Médio
   codecademy_gradelevel: Ensino Médio
-  codecombat_gradelevel: Ensino Fundamental II
-  codemonkey_gradelevel: Ensino Fundamental II
-  codeavengers_gradelevel: Ensino Fundamental II
+  codecombat_gradelevel: A partir do ensino fundamental II
+  codemonkey_gradelevel: A partir do ensino fundamental II
+  codeavengers_gradelevel: A partir do ensino fundamental II
   processing_gradelevel: Ensino Médio
   robomind_gradelevel: De 8 a 13 anos
   groklearning_gradelevel: A partir do ensino fundamental II
-  quorum_gradelevel: Ensino Fundamental II
+  quorum_gradelevel: A partir do ensino fundamental II
   codespark_gradelevel: Ensino Fundamental
   kodable_gradelevel: Ensino Fundamental
   tynkerapp_gradelevel: De 5 a 13 anos
@@ -677,7 +685,7 @@ pt-BR:
   bitsbox_gradelevel: Ensino Fundamental
   makeschool_gradelevel: Ensino Médio
   touchdevelop_gradelevel: Ensino Médio
-  appinventor_gradelevel: Ensino Fundamental II
+  appinventor_gradelevel: A partir do ensino fundamental II
   blockly_gradelevel: Todas as idades
   thinkersmith2_gradelevel: A partir de 8 anos
   kodableunplugged_gradelevel: De 8 a 13 anos
@@ -689,7 +697,7 @@ pt-BR:
   infinity_gradelevel: De 4 a 104 anos
   artist_gradelevel: De 4 a 104 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
-  codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
+  codeintl_platformtext: Navegadores modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Navegadores Web modernos
   khanes_platformtext: Navegadores Web modernos
@@ -716,7 +724,7 @@ pt-BR:
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablets Android
   robomindnl_platformtext: Navegadores Web modernos, Web móvel
-  flappy_platformtext: Navegadores Web modernos, smartphones, tablets
+  flappy_platformtext: Navegadores modernos, smartphones, tablets
   bitsbox_platformtext: Navegadores Web modernos
   makeschool_platformtext: Navegadores Web modernos
   touchdevelop_platformtext: Navegadores Web modernos, smartphones, todos os dispositivos
@@ -725,10 +733,10 @@ pt-BR:
   thinkersmith2_platformtext: Offline
   kodableunplugged_platformtext: Offline
   projguts_platformtext: Offline
-  hourofcode_platformtext: Navegadores Web modernos, smartphones, tablets
+  hourofcode_platformtext: Navegadores modernos, smartphones, tablets
   frozen_platformtext: Navegadores modernos + tablets
   starwars_platformtext: Navegadores modernos + tablets
-  playlab_platformtext: Navegadores Web modernos, smartphones, tablets
+  playlab_platformtext: Navegadores modernos, smartphones, tablets
   codeorg_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -851,7 +859,7 @@ pt-BR:
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: De 4 a 104 anos
-  khan_beyond_gradelevel: Ensino Fundamental II
+  khan_beyond_gradelevel: A partir do ensino fundamental II
   tynker_beyond_gradelevel: De 5 a 13 anos
   scratch_beyond_gradelevel: A partir de 8 anos
   lightbot_beyond_gradelevel: Todas as idades
@@ -859,7 +867,7 @@ pt-BR:
   kodable_beyond_gradelevel: Ensino Fundamental
   scratchjr_beyond_gradelevel: Ensino Fundamental
   hopscotch_beyond_gradelevel: A partir do Ensino Fundamental II
-  pocketcode_beyond_gradelevel: Ensino Fundamental II
+  pocketcode_beyond_gradelevel: A partir do ensino fundamental II
   groklearning_beyond_gradelevel: A partir do Ensino Fundamental II
   hacketyhack_beyond_gradelevel: Ensino Médio
   robomind_beyond_gradelevel: De 8 a 13 anos
@@ -881,7 +889,7 @@ pt-BR:
   mozilla_beyond_gradelevel: A partir de 12 anos
   codecombat_beyond_gradelevel: A partir do Ensino Fundamental II
   codea_beyond_gradelevel: A partir do Ensino Médio
-  lego_beyond_gradelevel: Ensino Fundamental II
+  lego_beyond_gradelevel: A partir do ensino fundamental II
   finch_beyond_gradelevel: A partir de 8 anos
   arduino_beyond_gradelevel: A partir do Ensino Médio
   processing_beyond_gradelevel: Ensino Médio

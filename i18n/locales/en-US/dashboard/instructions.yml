@@ -703,6 +703,8 @@ en:
       CSP Data Unit -Counting Records - Easy Way_instruction: crwdns49704:0crwdne49704:0
       CSP Data Unit -Counting Records - Hard Way_instruction: crwdns49705:0crwdne49705:0
       CSP U4 - JSON Object Intro - Bad Way_instruction: crwdns49706:0crwdne49706:0
+      CSP U4 - JSON Object Intro - Good Way_instruction: crwdns55160:0crwdne55160:0
+      CSP U4 - Objects - createObject_instruction: crwdns55161:0crwdne55161:0
       ECSPD Binary Odometer_instruction: crwdns48371:0crwdne48371:0
       Eval Booleans 1_instruction: crwdns35153:0crwdne35153:0
       Eval Booleans 2_instruction: crwdns34454:0crwdne34454:0
@@ -1538,6 +1540,16 @@ en:
       U3L27 Chatbot Final_instruction: crwdns43514:0crwdne43514:0
       U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
+      U4 - CreateRecord - 1_instruction: crwdns55162:0crwdne55162:0
+      U4 - CreateRecord - 2_instruction: crwdns55163:0crwdne55163:0
+      U4 - CreateRecord - 3_instruction: crwdns55164:0crwdne55164:0
+      U4 - CreateRecord - 4_instruction: crwdns55165:0crwdne55165:0
+      U4 - CreateRecord - 5_instruction: crwdns55166:0crwdne55166:0
+      U4 - Objects - createObject_instruction: crwdns55167:0crwdne55167:0
+      U4 - Objects - eventParameter_instruction: crwdns55168:0crwdne55168:0
+      U4L02 - Objects - createObject_instruction: crwdns55169:0crwdne55169:0
+      U4L02 - Objects - eventParameter_instruction: crwdns55170:0crwdne55170:0
+      U4L02 - Objects - Template1_instruction: crwdns55171:0crwdne55171:0
       U4L06 Data Storage 1_instruction: crwdns48398:0crwdne48398:0
       U4L06 Data Storage 2_instruction: crwdns48399:0crwdne48399:0
       U4L06 Data Storage 3_instruction: crwdns48400:0crwdne48400:0

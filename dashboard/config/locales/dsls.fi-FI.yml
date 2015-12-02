@@ -142,7 +142,7 @@
         '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Pyöriä/sivu: 3<br/>Ikkunoita/sivu:
           2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Jokainen
-          näistä kulkuneuvoista on hajotettu pieniksi osiksi. Vertaa jokaista ajoneuvoa
+          näistä kulkuneuvoista on hajotettu pieniksi osiksi. Yhdistä jokainen ajoneuvo
           sen ositettuun listaan.
         Matching: Yhdistely
       4-5 Suncatchers Match 1:
@@ -484,8 +484,8 @@
         Eugene is a _____ city.: Eugene on _____ kaupunki.
         0: '? Tässä on kolme lausetta. Mitkä alla olevista malleista hahmottavat täsmällisesti
           niin, että kaikki kaikki kolme sopivat samaan kaavaan kuin mallikin?'
-        1: ': Tässä on kolme lausetta. Mitkä alla olevista malleista hahmottavat täsmällisesti
-          niin, että kaikki kaikki kolme sopivat samaan kaavaan kuin mallikin?'
+        1: ': Tässä on kolme lausetta. Mitkä alla olevista malleista yleistyvät niin,
+          että kaikki kaikki kolme lausetta sopivat samaan kaavaan kuin mallikin?'
         Multiple Choice: Monivalinta
         Seattle _____ a _____ _____.: Seattle _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
