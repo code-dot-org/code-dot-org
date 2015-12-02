@@ -35,7 +35,7 @@ class ClassSubmission
   end
 
   def self.formats()
-    @formats ||= formats_with_i18n_labels({
+    (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
       'in_school'=>[
         'daily_programming_course',
         'ap_computer_science',
@@ -103,7 +103,7 @@ class ClassSubmission
   end
 
   def self.levels()
-    @levels ||= levels_with_i18n_labels(
+    (@levels ||= {})[I18n.locale] ||= levels_with_i18n_labels(
       'preschool',
       'elementary',
       'middle_school',
