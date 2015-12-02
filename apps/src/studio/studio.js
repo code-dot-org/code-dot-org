@@ -423,6 +423,10 @@ var drawMap = function () {
   gameTextGroup.setAttribute('id', 'gameTextGroup');
   svg.appendChild(gameTextGroup);
 
+  var overlayGroup = document.createElementNS(SVG_NS, 'g');
+  overlayGroup.setAttribute('id', 'overlayGroup');
+  svg.appendChild(overlayGroup);
+
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
@@ -441,14 +445,48 @@ var drawMap = function () {
   victoryText.setAttribute('visibility', 'hidden');
   gameTextGroup.appendChild(victoryText);
 
-  var resetText = document.createElementNS(SVG_NS, 'text');
-  resetText.setAttribute('id', 'resetText');
-  resetText.setAttribute('class', 'studio-reset-text');
-  resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
-  resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
-  resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
-  resetText.setAttribute('visibility', 'visible');
-  gameTextGroup.appendChild(resetText);
+  if (dom.isMobile() || dom.isWindowsTouch()) {
+    var resetOverlayRect = document.createElementNS(SVG_NS, 'rect');
+    resetOverlayRect.setAttribute('width', Studio.MAZE_WIDTH);
+    resetOverlayRect.setAttribute('height', Studio.MAZE_HEIGHT);
+    resetOverlayRect.setAttribute('fill', 'black');
+    resetOverlayRect.setAttribute('opacity', 0.3);
+    overlayGroup.appendChild(resetOverlayRect);
+    var resetTextA = document.createElementNS(SVG_NS, 'text');
+    resetTextA.setAttribute('id', 'resetTextA');
+    resetTextA.setAttribute('class', 'studio-reset-text');
+    resetTextA.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    resetTextA.setAttribute('y', RESET_TEXT_Y_POSITION - 30);
+    resetTextA.appendChild(document.createTextNode(studioMsg.tapToPlay()));
+    resetTextA.setAttribute('visibility', 'visible');
+    overlayGroup.appendChild(resetTextA);
+    var resetTextB = document.createElementNS(SVG_NS, 'text');
+    resetTextB.setAttribute('id', 'resetTextB');
+    resetTextB.setAttribute('class', 'studio-reset-text');
+    resetTextB.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    resetTextB.setAttribute('y', RESET_TEXT_Y_POSITION);
+    resetTextB.appendChild(document.createTextNode(studioMsg.swipeToMove()));
+    resetTextB.setAttribute('visibility', 'visible');
+    overlayGroup.appendChild(resetTextB);
+    var touchDragIcon = document.createElementNS(SVG_NS, 'image');
+    touchDragIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        studioApp.assetUrl('media/common_images/touch-drag.png'));
+    var touchIconSize = 300;
+    touchDragIcon.setAttribute('width', touchIconSize);
+    touchDragIcon.setAttribute('height', touchIconSize);
+    touchDragIcon.setAttribute('x', (Studio.MAZE_WIDTH - touchIconSize) / 2);
+    touchDragIcon.setAttribute('y', (Studio.MAZE_HEIGHT - touchIconSize) / 2 - 25);
+    overlayGroup.appendChild(touchDragIcon);
+  } else {
+    var resetText = document.createElementNS(SVG_NS, 'text');
+    resetText.setAttribute('id', 'resetText');
+    resetText.setAttribute('class', 'studio-reset-text');
+    resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
+    resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
+    resetText.setAttribute('visibility', 'visible');
+    overlayGroup.appendChild(resetText);
+  }
 
   if (level.floatingScore) {
     var floatingScore = document.createElementNS(SVG_NS, 'text');
@@ -2118,12 +2156,28 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
   document.getElementById('victoryText')
     .setAttribute('visibility', 'hidden');
-  var resetText = document.getElementById('resetText');
-  if (level.tapSvgToRunAndReset) {
-    resetText.textContent = studioMsg.tapOrClickToPlay();
-    resetText.setAttribute('visibility', 'visible');
+  if (dom.isMobile() || dom.isWindowsTouch()) {
+    var resetTextA = document.getElementById('resetTextA');
+    var resetTextB = document.getElementById('resetTextB');
+    if (level.tapSvgToRunAndReset) {
+      resetTextA.textContent = studioMsg.tapToPlay();
+      resetTextB.textContent = studioMsg.swipeToMove();
+      resetTextA.setAttribute('visibility', 'visible');
+      resetTextB.setAttribute('visibility', 'visible');
+      $('#overlayGroup *').attr('visibility', 'visible');
+    } else {
+      resetTextA.setAttribute('visibility', 'hidden');
+      resetTextB.setAttribute('visibility', 'hidden');
+      $('#overlayGroup *').attr('visibility', 'hidden');
+    }
   } else {
-    resetText.setAttribute('visibility', 'hidden');
+    var resetText = document.getElementById('resetText');
+    if (level.tapSvgToRunAndReset) {
+      resetText.textContent = studioMsg.tapOrClickToPlay();
+      resetText.setAttribute('visibility', 'visible');
+    } else {
+      resetText.setAttribute('visibility', 'hidden');
+    }
   }
   if (level.floatingScore) {
     document.getElementById('floatingScore')
@@ -2859,8 +2913,7 @@ Studio.execute = function() {
     Studio.eventHandlers = handlers;
   }
 
-  var resetText = document.getElementById('resetText');
-  resetText.setAttribute('visibility', 'hidden');
+  $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
@@ -3476,9 +3529,18 @@ Studio.displayVictoryText = function() {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
-  var resetText = document.getElementById('resetText');
-  resetText.textContent = studioMsg.tapOrClickToReset();
-  resetText.setAttribute('visibility', 'visible');
+  if (dom.isMobile() || dom.isWindowsTouch()) {
+    var resetTextA = document.getElementById('resetTextA');
+    var resetTextB = document.getElementById('resetTextB');
+    resetTextB.textContent = studioMsg.tapToReset();
+    resetTextA.setAttribute('visibility', 'hidden');
+    resetTextB.setAttribute('visibility', 'visible');
+    $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
+  } else {
+    var resetText = document.getElementById('resetText');
+    resetText.textContent = studioMsg.tapOrClickToReset();
+    resetText.setAttribute('visibility', 'visible');
+  }
 };
 
 Studio.animateGoals = function() {
