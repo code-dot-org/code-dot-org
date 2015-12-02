@@ -723,6 +723,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
               trackEvent("SendToPhone", "error");
             });
         });
+      } else { // not hidden, hide
+        $(sendToPhone).hide();
       }
     });
   }
