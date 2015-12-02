@@ -42,7 +42,7 @@
   csedweek_map_legend_title: 찾아보기
   csedweek_map_legend_event: Hour of Code 행사
   csedweek_map_legend_cs_tech_jam: 컴퓨터과학(정보과학) Tech Jam
-  cded_sign_up: 가입 신청하기
+  cded_sign_up: 가입 신청
   cded_try_it: 해보기
   twentyhours_trynow: 해보기
   california_heading: 학교에 컴퓨터과학(정보과학) 수업을 요청하세요.
@@ -69,8 +69,8 @@
     등록하고</a> Hour of Code를 진행하는 다른 학생들을 도와주세요.'
   course_name_accelerated: 빠른 과정
   course_name_course1: 과정1
-  course_name_course2: 코스2
-  course_name_course3: 코스3
+  course_name_course2: 과정2
+  course_name_course3: 과정3
   course_name_course4: 과정4
   congratulations_on_completing_course: '%{course} 를 완료하셨습니다! 축하합니다!'
   congrats_next_tutorials_title: 이제 다음 튜토리얼들을 해보세요.
@@ -202,7 +202,7 @@
   homepage_action_text_hoc: 모든 학생들을 위한 1시간짜리 Hour of Code
   homepage_action_text_num_served: '# 명에게 제공하였습니다'
   homepage_action_text_join_us: 함께 참여하기
-  homepage_action_text_sign_up: 가입 신청하기
+  homepage_action_text_sign_up: 가입 신청
   homepage_action_text_try_it: 해보기
   homepage_action_text_volunteers: 기술 자원봉사자 모집
   homepage_action_text_codevideo: 동영상 보기
@@ -285,15 +285,19 @@
   class_submission_languages_other: 다른 프로그래밍언어
   inspirational_videos_more: 더 많은 <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">영감을
     주는 동영상들</a> 에는 다양한 직업과 유명인들이 나옵니다.
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: 코드로 은하계 건설하기
   starwars_javascript_title: 자바스크립트
   starwars_javascript_description: 끌어서 놓기 블록들과 자바스크립트를 사용하세요.
   starwars_javascript_specs: 영어만 가능 | 최신 브라우저 | 11살 이상
-  starwars_javascript_start_button: 해보기
-  starwars_blocks_title: blocks
+  starwars_javascript_start_button: 지금 해보기
+  starwars_blocks_title: 블럭
   starwars_blocks_description: 끌어서 놓기 블록들을 이용하세요.
   starwars_blocks_specs: 여러 가지 언어 (지원 예정) | 최신 브라우저, 스마트폰, 태블릿 | 6-10 세
-  starwars_blocks_start_button: 해보기
+  starwars_blocks_start_button: 지금 해보기
   starwars_watch_videos: 시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요.
   starwars_speak_languages: 다른 언어를 할 줄 아나요?
   starwars_help_translate: 번역하는 것을 도와주세요.
@@ -321,9 +325,9 @@
     가능합니다.) 자원봉사를 원하지 않으신다면, Hour of Code 행사 운영에 대해서 <a href="%{url}">더 살펴봐주세요.</a>'
   volunteer_engineer_submission_intro_signup: 컴퓨터과학/공학/교육과 대학생이거나 소프트웨어 개발자이시면 <span
     class="form-required-field">*</span> 표 있는 곳을 채워주세요.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: 자원봉사를 찾고 있나요? <a href="%{learn_more}">여기서
+    더 살펴보세요.</a> Hour of Code 행사를 운영하는 것에 대한 방법과, 자원봉사자를 찾는 것은 다음 지도를 살펴보세요 <a href="%{volunteer_local}">자원봉사
+    지도</a>.
   volunteer_engineer_submission_header_shared: 자원봉사자 지도에 선생님에게 공유되는 정보
   volunteer_engineer_submission_field_name: 이름
   volunteer_engineer_submission_field_name_placeholder: 성명
@@ -576,14 +580,14 @@
   dashboard_progress_completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
   dashboard_progress_completed_perfect: 완료
   dashboard_progress_furthest_level_attempted: 시도한 가장 높은 레벨
-  dashboard_stage: stage
-  dashboard_puzzle: Puzzle
+  dashboard_stage: 단계
+  dashboard_puzzle: 퍼즐
   dashboard_question: 질문
   dashboard_response: 응답
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
   dashboard_teacher: 선생님
-  dashboard_student: student
+  dashboard_student: 학생
   dashboard_sections_email_question: 모든 학생들이 올바른 이메일 주소를 가지고 있나요?
   dashboard_sections_account_creation_question: 학생들의 계정은 누가 만들었나요?
   dashboard_sections_password_question: '"비밀번호"로서 학생들이 사용해야하는 것은?'
@@ -604,9 +608,9 @@
     그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
-  learn_more: 더 알아보기
+  learn_more: 지금 해보기
   learn_sign_up_description: 컴퓨터과학교육주간 동안 Hour of Code 에 함께 참여해 주세요.
-  learn_sign_up_button: 가입 신청하기
+  learn_sign_up_button: 가입 신청
   learn_videos_watch: 학생들에게 영감을 줄 수 있는 이 동영상을 수업 시간에 보여주세요.
   learn_videos_show: 학생들에게 영감을 줄 수 있는 이 동영상을 여러분의 학급에 보여주세요.
   learn_videos_before_hoc: Hour of Code를 시작하기 전에 영감을 불러일으킬 동영상을 감상하세요.
@@ -614,30 +618,34 @@
   learn_educator_resources_button: 교사를 위한 자료
   learn_are_you_educator: 교육자이신가요? Hour of Code <a href="http://hourofcode.com/resources/how-to">를
     가르치는 방법</a>을 배워보세요.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: 여러분의 Hour of Code 행사 동안에 도움을 줄 <a href="https://code.org/volunteer/local">지역
+    자원봉사자</a>를 찾아보세요.
+  learn_teacher_led_lesson_plans: <a href="https://code.org/teacher-led">선생님들이 이끄는
+    Hour of Code 수업 계획</a>을 보고 영감을 받으세요.
+  learn_how_to_hoc: Hour of Code 한 시간을 교육하기 위한 <a href="https://hourofcode.com/how-to">
+    how-to 가이드</a>를 살펴보세요.
   learn_hoc_prizes: 모든 교육자들에 대한 상품에 대해<a href="https://hourofcode.com/prizes">더 살펴보세요.</a>
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: 학생들에게 <a href="https://code.org/educate/inspire">이 동영상</a>을
+    보여줌으로써 격려해 주세요.
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
   hoc2014_try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
   hoc2014_try_scrat: 앵그리버드, 식물과좀비, 스크랫
   hoc2014_try_frozen: 프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐
   carousel_heading_codeorg: Code.org 튜토리얼
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Code.org 튜토리얼들(모든 장비에서 가능한)
   carousel_heading_3rd_party: 써드 파티 튜토리얼
   carousel_heading_third_party: 써드 파티 튜토리얼
-  carousel_heading_international: 다른 언어로 된 튜토리얼
-  carousel_heading_domestic: 영어 튜토리얼들
-  carousel_heading_beginners: K-8(유치원-초1) 학생들을 위한 튜토리얼
-  carousel_heading_javascript: Javascript 를 교육할 수 있는 튜토리얼들
+  carousel_heading_international: 한국어로 제공되는 협찬 튜토리얼
+  carousel_heading_domestic: 영어로 제공되는 협찬 튜토리얼들
+  carousel_heading_beginners: K-8(유치원-초1) 학생들을 위한 협찬 튜토리얼
+  carousel_heading_beyond_beginners: 처음하는 사람들을 위한 튜토리얼
+  carousel_heading_javascript: Javascript 를 교육할 수 있는 협찬 튜토리얼들
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요.
-  carousel_heading_devices: 스마트폰과 패드를 위한 튜토리얼 앱
-  carousel_heading_languages: 다른 프로그래밍 언어에 대한 튜토리얼들
+  carousel_heading_devices: 스마트폰과 태블릿들을 위한 협찬 튜토리얼 앱들
+  carousel_heading_beyond_devices: 스마트폰과 패드를 위한 튜토리얼 앱
+  carousel_heading_languages: 다른 프로그래밍언어로 되어있는 협찬 튜토리얼들
+  carousel_heading_beyond_languages: 다른 프로그래밍 언어에 대한 튜토리얼들
   carousel_heading_apps_games: 앱이나 게임을 직접 만들어보세요.
   carousel_heading_university: 온라인 대학 강좌들
   carousel_heading_webpages: 웹 페이지 만들기
@@ -653,10 +661,10 @@
   teachers_notes_hoc: '선생님들: 교육자들을 위한 중요한 안내사항들을 살펴보세요.'
   previous: 이전
   next: 다음
-  older_systems: 저사양 시스템용 튜토리얼들
+  older_systems: 저사양 시스템용 파트너 튜토리얼들
   older_systems_subheading: 구버전 웹브라우져에서도 동작해야합니다. 모든 튜토리얼들을 제대로 살펴보시려면 <a href="http://browsehappy.com/"
     target="_blank">최신버전 웹브라우저</a> 로 업그레이드하세요.
-  mobile_devices: 모바일 기기를 위한 튜토리얼들
+  mobile_devices: 모바일 기기를 위한 파트너 튜토리얼들
   frozen_name: 안나, 엘사와 함께하는 코드
   starwars_name: '스타워즈: 코드로 은하계 건설하기'
   codeorg_name: 컴퓨터 프로그램을 직접 만들어 보세요
@@ -826,8 +834,8 @@
   frozen_shortdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
   starwars_shortdescription: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
   playlab_shortdescription: Play Lab을 이용해 스토리나 게임을 만드세요!
-  infinity_shortdescription: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
-  artist_shortdescription: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
+  infinity_shortdescription: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
+  artist_shortdescription: 화가를 이용해 멋진 그림과 디자인을 만들어보세요!
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
     빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택
     실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
@@ -925,7 +933,7 @@
     짝 학생을 프로그램하게 됩니다.
   projguts_longdescription: 이 언플러그드 활동은 학생들에게 서로 다른 버전의 가위/바위/보 게임을 수행함으로서 모델링과 시뮬레이션
     작업이 이루어지는 방법을 배우게 되며, 서로 다른 모델링 실험의 결과를 살펴볼 수 있게 됩니다.
-  hourofcode_longdescription: 새로운 code.org/hoc
+  hourofcode_longdescription: 새로운 code.org/hoc 를 위한 기호
   frozen_longdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게
     눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
   starwars_longdescription: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.

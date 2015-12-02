@@ -8,45 +8,39 @@ från: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72
 
 # Thanks for signing up to host an Hour of Code!
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+Du gör det möjligt för elever runt om i världen att delta i En timma av kod under perioden 7-13 december som kan komma att förändra resten av deras liv.
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### Vi hör av oss om nya tutorials och andra spännande uppdateringar. Vad kan du göra nu?
 
-## 1. Sprid ordet
+## 1. Find a local volunteer to help you with your event.
 
-We need your help to reach 100,000 organizers worldwide. Berätta för dina vänner om #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-<% if international == 'true' %>
+## 2. Spread the word
 
-## 2. Ask your whole school to offer an Hour of Code
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+## 4. Ask your employer to get involved
 
-## Fråga om din arbetsgivare vill engagera sig
+[ Skicka detta e-postmeddelande](https://<%= hostname %>/främja/resurser #sample-e-post) till din chef eller VD.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+## 5. Promote the Hour of Code in your community
 
-## 4. Promote the Hour of Code in your community
+Rekrytera en lokal grupp eller kanske några vänner. [ Skicka detta e-postmeddelande](https://<%= hostname %>/ resurser #sample-e-post).
 
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
+Tack för att du deltar i rörelsen för att ge varje elev möjlighet att lära sig grundläggande datorkunskaper.
 
-## 5. Ask a local elected official to support the Hour of Code
-
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
-
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
-
-Hadi Partovi  
-Founder, Code.org
+Hadi Partovi   
+grundare, Code.org
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> Du får detta e-postmeddelande får du eftersom du registrerat dig för En timma av kod som stöds av mer än 200 partners och organiseras av Code.org. Code.org är en ideell organisation enligt 501c 3. Vår adress är 1301 5th Ave, Suite 1225, Seattle, WA, 98101, USA. Vill du inte få dessa e-postmeddelanden? <a href="%= unsubscribe_link %">Avsluta prenumeration</a>. </small>
 
 ![](<%= tracking_pixel %>)

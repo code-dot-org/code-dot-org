@@ -1352,8 +1352,16 @@ function checkForCollisions() {
         if (level.blockMovingIntoWalls) {
           cancelQueuedMovements(i, false);
           cancelQueuedMovements(i, true);
+
+          // Since we never overlap the wall/obstacle when blockMovingIntoWalls
+          // is set, throttle the event so it doesn't fire every frame while
+          // attempting to move into a wall:
+
+          Studio.throttledCollideSpriteWithWallFunctions[i]();
+
+        } else {
+          Studio.collideSpriteWith(i, 'wall');
         }
-        Studio.collideSpriteWith(i, 'wall');
       } else {
         sprite.endCollision('wall');
       }
@@ -1931,6 +1939,8 @@ Studio.init = function(config) {
 
   Studio.initSprites();
 
+  Studio.makeThrottledSpriteWallCollisionHelpers();
+
   studioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
@@ -2142,7 +2152,7 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     touchedHazardCount: 0,
     setActivityRecord: null,
-    hasSetDroid: false,
+    hasSetSprite: false,
     hasSetDroidSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
@@ -3887,6 +3897,25 @@ Studio.makeThrottledPlaySound = function() {
     constants.SOUND_THROTTLE_TIME);
 };
 
+Studio.makeThrottledSpriteWallCollisionHelpers = function () {
+  Studio.throttledCollideSpriteWithWallFunctions = [];
+
+  var makeCollideHelper = function (spriteIndex) {
+    return function () {
+      // For the case where this is used (blockMovingIntoWalls), we prevented
+      // the wall collision, so we need to queue a wall collision event and
+      // immediately reset the collision state since we didn't actually overlap:
+      Studio.collideSpriteWith(spriteIndex, 'wall');
+      Studio.sprite[spriteIndex].endCollision('wall');
+    };
+  };
+
+  for (var i = 0; i < Studio.spriteCount; i++) {
+    Studio.throttledCollideSpriteWithWallFunctions[i] =
+      _.throttle(makeCollideHelper(i), constants.TOUCH_OBSTACLE_THROTTLE_TIME);
+  }
+};
+
 Studio.playSound = function (opts) {
 
   if (typeof opts.soundName !== 'string') {
@@ -5216,10 +5245,11 @@ Studio.moveSingle = function (opts) {
       Studio.willSpriteTouchWall(sprite, projectedX, projectedY)) {
     wallCollision = true;
 
-    // We prevented the wall collision, but queue a wall collision event and
-    // immediately reset the collision state since we didn't actually overlap:
-    Studio.collideSpriteWith(opts.spriteIndex, 'wall');
-    sprite.endCollision('wall');
+    // Since we never overlap the wall/obstacle when blockMovingIntoWalls
+    // is set, throttle the event so it doesn't fire every frame while
+    // attempting to move into a wall:
+
+    Studio.throttledCollideSpriteWithWallFunctions[opts.spriteIndex]();
   }
 
   if (!level.allowSpritesOutsidePlayspace &&
@@ -5519,6 +5549,10 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setSprite' && tracked.hasSetSprite !== value) {
       return false;
     }
 

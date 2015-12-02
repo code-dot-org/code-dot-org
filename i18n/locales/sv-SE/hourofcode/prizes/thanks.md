@@ -14,7 +14,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 Berätta för dina vänner om #HourOfCode.
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Be din skola att arrangera En timma av kod
 
 [Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
 

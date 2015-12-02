@@ -12,14 +12,14 @@ nav: how_to_nav
 
 Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 
-## 2. Join a Volunteer Training webinar
+## 2. Join a volunteer info session
 
-We'll be hosting two webinars to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These webinars will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Date        | Vrijeme               |
-| ----------- | --------------------- |
-| November 16 | 1:00pm - 1:30pm PST   |
-| December 3  | 11:00am - 11:30am PST |
+| Date        | Vrijeme               | Link to info session                                                            |
+| ----------- | --------------------- | ------------------------------------------------------------------------------- |
+| November 16 | 1:00pm - 1:30pm PST   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| December 3  | 11:00am - 11:30am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
 ## 3. Spend 30 minutes trying the tutorials beforehand
 
@@ -27,7 +27,7 @@ Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick
 
 ## 4. Recruit your co-workers to volunteer
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
+Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
 **Sample email:**
 

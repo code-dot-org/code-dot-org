@@ -124,7 +124,7 @@ describe('Level tests', function() {
         clock.tick(100); // fake 1000 ms for every real 1ms
       }
     }, 1);
-    clock = sinon.useFakeTimers();
+    clock = sinon.useFakeTimers(Date.now());
 
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();

@@ -1,37 +1,34 @@
 "zh":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: 您好，我是一个艺术家。你写的代码可以让我画几乎所有的东西。 用几个块去画过图像的灰色线条.
+      2-3 Artist 1 new_instruction: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。
         (每一行是100个像素长)
       2-3 Artist 11_instruction: 为停止标志画一个八边形的边界，八边形每条边长100像素。每次需要转多少度？（提示：360除以8是多少？）
-      2-3 Artist 12_instruction: 设置"重复次数"块，以便它创建"圈"来完成的眼球。如果每次都是向右转1度，你需要重复次才能完成这个圈？180
+      2-3 Artist 12_instruction: 设置"重复次数"模块，以便它创建一个"圈"来完成眼球。如果每次都是向右转1度，你需要重复次才能完成这个圈？180
         吗？360 吗？500 吗？
-      2-3 Artist 2 new_instruction: 这所房子已经完成了一半的墙。每一边长都是 100，但是完成了一半的墙只有 50。请完成该墙。
+      2-3 Artist 2 new_instruction: '这所房子有一堵墙只完成了一半。每一边长都是 100，但是完成了一半的墙只有 50。请完成该墙。 '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
-      2-3 Artist 3.4_instruction: |
-        跳块移动艺术家但不画线。通过使用两个“跳”块和“画”块画虚线。
-        跳跃积木块能在不划线的情况下移动艺术家。请同时使用跳跃和画线积木块来画出虚线。
+      2-3 Artist 3.4_instruction: “跳”模块会移动艺术家但不画线。通过使用两个“跳”块和“画”块来画出虚线。
       2-3 Artist 3_instruction: 这顶帽子的高度是 100 像素。请你画一顶高度为 70 像素的帽子。
-      2-3 Artist 3new_instruction: 红色的帽子高度是 100 像素。请绘制一顶高度小70 个像素的黑色帽子，帽子的宽度为 50 像素。
+      2-3 Artist 3new_instruction: 红色的帽子高度是 100 像素。请绘制一顶高度矮70 个像素的黑色帽子，帽子的宽度为 50 像素。
       2-3 Artist 4_instruction: 帮我为小猫盖好房子
       2-3 Artist 5_instruction: 将这段代码用“重复次数”模块来代替，画出同样的房子只需要3块模块。
-      2-3 Artist 6_instruction: Zhè fángzi xūyào yīgè wūdǐng! Huà yīgè sānjiǎoxíng.
-        提示：所有三面都具有相同的长度。
+      2-3 Artist 6_instruction: 这个房子需要一个屋顶！提示：所有三面都具有相同的长度。
       2-3 Artist 7_instruction: 请绘制最后一个窗口的右半部分。窗口的每个方块为 25 像素。
       2-3 Artist 8_instruction: 把矩形分拆成两个大小相等的正方形，来给每只动物做个房间。这个矩形的宽是 200 像素，高是100 像素。
       2-3 Artist 9_instruction: 完成这只风筝
-      2-3 Artist Assessment 1_instruction: 评价： 完成绘制最后一个齿, 宽度25 像素和高度 25 像素。
+      2-3 Artist Assessment 1_instruction: 评估： 完成绘制最后一个齿, 宽度25 像素并且高度 25 像素。
       2-3 Artist Debugging 1_instruction: 你能制作一顶长为100 像素的帽子吗？
-      2-3 Artist Debugging 10_instruction: 我的游戏控制器上的方向垫太窄了！提示：使它的宽多10个像素。
+      2-3 Artist Debugging 10_instruction: 我的游戏控制器上的方向垫太窄了！提示：让它宽10个像素。
       2-3 Artist Debugging 11_instruction: 帮我完成我美丽的雪花。我需要重复多少次才能完成呢？
-      2-3 Artist Debugging 12_instruction: 我希望添加一片海浪到这一幕中。 你可以帮我吗？
+      2-3 Artist Debugging 12_instruction: 我希望添加一片海浪到场景里。你能帮我吗？
       2-3 Artist Debugging 2_instruction: 你看到的三条胡须的代码是错误的。提示： 每条胡须是 75 像素。请修改此代码来绘制胡须。
       2-3 Artist Debugging 3_instruction: '我的船有个洞! 你可以帮我调整线的角度修好它吗? 提示: 最后一个角偏差了 15
         度。'
       2-3 Artist Debugging 4_instruction: |
         我们想要画的图是什么？
-        用适当的线条和角度连接这些小点。
+        用适当的线条和角度连接这些点。
       2-3 Artist Debugging 5_instruction: 画腿脚的程序是错误的。提示：脚太长了，可能需要删除一步。
       2-3 Artist Debugging 6_instruction: 好像我坐的椅子少了一条腿，你能帮忙补上吗？
       2-3 Artist Debugging 7_instruction: 好像这个C画反了，你能把它改过来吗？
@@ -45,9 +42,8 @@
       2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
       2-3 Artist Functions 1_instruction: 你好。我的僵尸艺术家。我爱画画 ！请帮我画副方形眼镜。 提示： 眼镜之间的桥梁比正方形边长短25
         像素。
-      2-3 Artist Functions 10_instruction: 这里是两个功能，一个要绘制一个大齿轮，另一个要画一个小齿轮。使用它们来绘制一个机器内部
-        ！
-      2-3 Artist Functions 11.5_instruction: 在这里是那相同的"画一个六边形"功能。如果在循环中每次只转 60 度会发生什么呢？
+      2-3 Artist Functions 10_instruction: 这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。使用它们来绘制一个机器的内部结构！
+      2-3 Artist Functions 11.5_instruction: 这里同样是"画一个六边形"的功能。如果在循环中每次只转 60 度会发生什么呢？
       2-3 Artist Functions 11_instruction: |
         We've renamed the "draw a square"
         function to "draw a hexagon," but it still only draws squares! Can you modify
@@ -93,7 +89,7 @@
       2-3 Artist Loops 2_instruction: |
         Now use a repeat block to make the cell a
         shell.
-      2-3 Artist Loops 4_instruction: 你想看会发生什么如果我们使用循环重复那个形状一遍又一遍?
+      2-3 Artist Loops 4_instruction: 如果我们用循环来一次次重复这个形状的话，会发生什么呢？
       2-3 Artist Loops 5_instruction: |
         Now let's make a small change to the loop
         and see how different our picture becomes.
@@ -103,7 +99,7 @@
       2-3 Artist Loops 7_instruction: |
         We can use loops to make all kinds of polygons.  Can
         you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: 让我们放这两个元素投入到循环里面。
+      2-3 Artist Loops 8_instruction: 将两个元素放到一个循环里。
       2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
         we're going to add some distance between them.\r\nUse the same code as\nbefore,
         but add a step forward at the end of the outer loop."
@@ -121,7 +117,7 @@
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
       2-3 Artist Loops New 15_instruction: 绘制一些有趣的东西。
-      2-3 Artist Loops New 2_instruction: 这里有一些你会用来绘制该正方形的代码。如果您使用重复块来运行这段代码 4 次，会发生什么？
+      2-3 Artist Loops New 2_instruction: 这里有一些你用来绘制该正方形的代码。如果您使用重复块来运行这段代码 4 次，会发生什么？
       2-3 Artist Loops New 9_instruction: |
         Draw a simple V where both sides are 50
         pixels to complete the arrow.
@@ -130,7 +126,7 @@
       2-3 Artist Match Sq Pic_instruction: 比赛： 完成缺少的代码
       2-3 Artist Match Tri pic_instruction: 匹配： 填写缺少的代码。
       2-3 Artist Nested Loops 1_instruction: "你之前已经使用过循环了，但你知道吗，还可以把一个循环中放到另一个循环中?
-        \r 循环这段代码 3次就能绘制出需要的模式。"
+        \r 循环这段代码 3次就能绘制出需要的图形了。"
       2-3 Artist Nested Loops 10_instruction: 让这段代码循环12次来完成这个图案。
       2-3 Artist Nested Loops 11_instruction: 让这段代码循环4次可以完成该图案，在每个圆圈后要旋转 90 度哦。
       2-3 Artist Nested Loops 12_instruction: 让这段代码循环12次就可完成这个弯曲的图案。
@@ -187,7 +183,7 @@
       2-3 Bee Conditionals 15_instruction: 从四朵花中采集花蜜。
       2-3 Bee Conditionals 2_instruction: 你好，我是一只蜜蜂。帮我从所有花中采集花蜜。记得使用循环哦。
       2-3 Bee Conditionals 3_instruction: 帮我从所有花中采集花蜜并酿造蜂蜜。使用一个循环。
-      2-3 Bee Conditionals 4_instruction: 帮我从所有花中采集花蜜和并酿造所有的蜂蜜。
+      2-3 Bee Conditionals 4_instruction: 帮我从所有花中采集花蜜并酿造成蜂蜜。
       2-3 Bee Conditionals 5_instruction: |
         Purple flowers may have either 1 or 0
         nectar, but you don't know which one! Be careful not to collect nectar from
@@ -386,9 +382,9 @@
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: 猪头！那个块被重复执行了？
-      2-3 Maze sq10v2_instruction: 猪头！那个块被重复执行了？
-      2-3 maze sq11_instruction: 猪头！那个块被重复执行了？
+      2-3 Maze sq10_instruction: 帮我送到那头猪那里！什么模块被重复执行了？
+      2-3 Maze sq10v2_instruction: 帮我送到那头猪那里！什么模块被重复执行了？
+      2-3 maze sq11_instruction: 帮我到达猪那里！哪些模块被重复执行了？
       2-3 maze sq12_instruction: |
         Can you replace the previous answer with a loop
         by using a "repeat times" block?
@@ -2175,7 +2171,17 @@
         \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
         all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: "Create an object with at\nleast
+        5 values including at least one string and one number. (Click to see\nfull
+        instructions) \n"
+      CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2378,7 +2384,7 @@
         to create some functions of your own design
       Eval Free Play_instruction: 自由发挥： 用代码来创造艺术吧！
       Eval Strings Images .1_instruction: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、
-        数字或其他用引号引起来的字符的任意组合。运行字符串"Hello,world ！"，看看会发生什么。
+        数字或其他用引号引起来的字符的任意组合。运行字符串"你好, 世界！"，看看会发生什么。
       Eval Strings Images .2_instruction: |
         The string-append function takes two Strings
         and returns a single combined String. Add a String "Universe" to the second
@@ -3124,13 +3130,11 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: 和苦力怕撞上可不是什么好事。躲开苦力怕，安全地到达你的家里。
-      Overworld Chop Tree_instruction: 木材是非常重要的资源。很多东西都是用木材做的。走到大树跟前，用“destroy block”命令把树砍倒。
-      Overworld Chop Trees_instruction: 我们要在太阳落山之前建起一栋房子。建房子需要很多木材，去砍3棵树吧。
-      Overworld Free Play 20x20_instruction: 祝贺你！你已经完成我们所有的难题！现在采矿吧，建设吧！使用你学会的所有知识来创造你的世界吧！
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
+      Overworld Avoid Monsters_instruction: 碰上爬行者可不妙。小心绕过爬行者，安全到达自己的家才是上策。
+      Overworld Chop Tree_instruction: 木头是非常重要的资源，很多东西都要用到它。走到树边，使用“摧毁方块”命令，即可将树砍倒。
+      Overworld Chop Trees_instruction: 我们必须在太阳下山之前，建造一座房子。房子需要用到大量木头。将这所有 3 棵树砍倒吧。
+      Overworld Free Play 20x20_instruction: 恭喜！你完成了我们所有谜题！现在，快用你至今为止学会的知识，采矿、建造和创造一些独特的东西吧。
+      Overworld Free Play_instruction: 这块地方完全由你掌控。你可以随意选择要建造的东西。
       Overworld House Frame - A_instruction: |
         Let's make our own house! This spot
         looks good. Build a frame on the dirt blocks.
@@ -3150,19 +3154,13 @@
         rest of the house by following your floor plan! You’ll have to repeat yourself
         quite a lot here.
       Overworld House Frame Chosen_instruction: 使用你喜欢的材料建立房子的其它部分。“重复”命令将派上用场。
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: 再添加一个"向前移动"命令到达羊的位置。
-      Overworld Place Wall_instruction: 盖房先盖墙。把“摆放”和“向前移动”命令放在“重复”块内，建造你的房子的第一部分。
-      Overworld Plant Crops_instruction: 未雨绸缪。在水的两边种上庄稼可以让你不会挨饿。
-      Overworld Powered Minecart_instruction: 太棒了！你已经收集到大量资源并且建造了一个温暖的家。现在把铁路从地图的边缘铺到你家门前。
-      Overworld Shear Sheep_instruction: 使用剪羊毛的时候了！使用“剪羊毛”命令收集两只羊的羊毛。
+      Overworld House Frame_instruction: 我们来建造自己的房子吧！这个地方看起来不错。先在泥土广场上建起框架。
+      Overworld Minecart Track_instruction: 你已带着许多地下资源回到了地表。现在，我们要从你的房子出发，沿着泥土路建一条铁轨。第一步要清理小路。沿小路前进，清除沿途的树木。
+      Overworld Move to Sheep_instruction: 添加第二个 "向前移动" 命令，到达羊的位置。
+      Overworld Place Wall_instruction: 每座房子都是由砌墙开始的。在重复循环里面放入 "放下" 和 "向前移动" 命令，建造房子的第一部分。
+      Overworld Plant Crops_instruction: 提前规划非常好。在水的两边种植作物，这样以后就不用挨饿了。
+      Overworld Powered Minecart_instruction: 干得漂亮！你收集了大量资源，建起了一个体面的家。现在从地图边缘铺设一条轨道，通向你的房门口吧。
+      Overworld Shear Sheep_instruction: 剪羊毛时间到了！用 "剪" 命令从两只羊身上收集羊毛。
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3412,17 +3410,17 @@
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: 好吧，我们再做一遍吧-这个与上一个差不多，但是别忘记看墙哦！
+      scrat 17_instruction: 好吧，我们再做一遍吧-这个与上一个差不多，但是小心墙壁！
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: 这个“如果-另外”代码块检查这个条件是否对，然后做一件事或另一个。如果想让我得到橡子的活，你需要尝试使用这个“如果-另外”代码块。
+      scrat 18_instruction: 这个“如果-否则”代码块检查这个条件是否成立，然后做一件事或另一件事。如果想让我得到橡子的活，你需要尝试使用这个“如果-否则”代码块。
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: 最后一个“如果-或者”代码块的练习，你能就在第一次弄对吗？
-      scrat 20_instruction: 你可以只添加3个代码块就帮我解决一个更复杂的迷宫吗？如果你做对了，
+      scrat 19_instruction: 最后一个“如果-否则”模块的练习，你能第一次就做正确吗？
+      scrat 20_instruction: 你可以只添加3个代码块就帮我解决一个更复杂的迷宫吗？如果你做对了，我能走任何长度的曲线了。快一点！冰在融化！
       SpecialFrozenLevel_instruction: |
         You've officially become a master artist!
         Create a winter wonderland.
@@ -3551,7 +3549,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3822,22 +3820,22 @@
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3846,7 +3844,7 @@
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3881,7 +3879,7 @@
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -4033,8 +4031,9 @@
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
         a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
@@ -4829,8 +4828,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4901,6 +4900,38 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4936,13 +4967,14 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: 岩浆隐藏在某些块的下方，你得填上它们才能前进。使用”如果“命令来解决这个问题。在合适的位置添加”向前移动“命令来采集这些资源。
-      Underground If Statements_instruction: 现在事情越来越棘手了。采 3块 红石，但别掉进岩浆里。使用"如果"命令将圆石填入岩浆里。
-      Underground Iron_instruction: 走进熔岩是一个你就惨了。用圆石建一座桥，然后挖最少两块铁矿石。
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: 你可以在地下发现宝贵地资源，但是这里太黑了。最少放两个火把，并挖至少两块煤。
+      Underground Avoiding Lava_instruction: 岩浆会藏在这样一些方块下面，在向前移动之前，必须先覆盖上。"如果" 命令在这儿用起来很方便。在正确的位置添加
+        "向前移动" 命令，开采这些方块。
+      Underground If Statements_instruction: 现在，事情变得棘手了。开采 3 块红石，但不能掉入岩浆中。使用 "如果"
+        命令，就能将圆石放在你发现的任何岩浆上。
+      Underground Iron_instruction: 走入熔化的岩浆可不是个好主意。放下圆石造一座桥，然后开采至少两个铁矿方块吧。
+      Underground Mine in a Circle_instruction: 想办法获得 5 块钻石和 7 块红石！试试在重复命令中用重复命令，走出一个正方形路线。
+      Underground Mining Coal_instruction: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少
+        2 块煤炭。
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

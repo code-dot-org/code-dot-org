@@ -1536,101 +1536,101 @@ vi:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Tôi tên là Jens Bergensten, nhưng tốt hơn nên gọi tôi là Jeb. Tôi là trưởng nhóm lập trình viên của Minecraft, ở đây tại Mojang, Stockholm. Tôi nghĩ lúc tôi mười bảy tuổi hay có thể là mười hai tuổi, tôi đã bắt đầu lập chương vì tôi muốn tạo ra các trò chơi. Một trong số những người bạn của cha tôi nói với tôi là để tạo ra trò chơi thì tôi cần phải học cách lập trình. Đó là cách mà tôi bắt đầu. Tôi thích thiết kế và lập cấu trúc của các trò chơi. Đó là những gì tôi thực sự thích ở Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: Trong một giờ tới, bạn sẽ học những khái niệm cơ bản của khoa học máy tính bằng cách lập trình Alex hoặc Steve để vượt qua một phần giả lập của thế giới Minecarft.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Lập trình truyền thống thường là bằng văn bản, nhưng ngày nay chúng ta sẽ sử dụng Blovkly, là một hệ thống sử dụng các khối hữu hình và bạn sẽ kéo và thẻ để viết chương trình. Nói cách khác, bạn đang tạo mã Javascript.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Các khái niệm mà bạn sẽ học là những gì mà các lập trình viên máy tính sử dụng hằng ngày và là nền tảng cho khoa học máy tính. Ở đây, tại Mojang, chúng tôi sử dụng các khái niệm giống nhau này để giúp Minecraft hoạt động.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Trước khi bắt đầu, bạn sẽ chọn nhân vật của mình. Tôi sẽ chọn Alex. Hãy xây dựng mã cho một chương trình để giúp cô ấy di chuyển quanh màn hình.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chơi Minecraft, là nơi chương trình của bạn sẽ hoạt động. Các hướng dẫn cho mỗi cấp độ được viết bên dưới.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Khu vực ở giữa là hộp công cụ và mỗi khối này là một lệnh để hướng dẫn cho các hoạt động của Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: Nếu chúng ta kéo khối moveForward(); vào không gian làm việc rồi sau đó bấm chạy, điều gì xảy ra? Alex di chuyển về phía một không gian trên lưới.
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: Và nếu chúng ta muốn làm điều gì đó sau khi cô ấy đã di chuyển về phía một không gian thì sao? Chúng ta có thể thêm một khối khác vào chương trình của chúng ta. Tôi sẽ chọn khối turnRight(); và tôi sẽ kéo nó vào bên dưới khối moveForward(); cho đến khi đường màu cam này xuất hiện. Sau đó tôi sẽ thả nó và hai khối sẽ dính lại với nhau. Khi chúng ta nhấn chạy một lần nữa, Alex sẽ thực hiện các lệnh đã được tập hợp từ đầu đến cuối trong không gian làm việc của chúng ta.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Nếu bạn muốn xóa một khối, chỉ cần kéo nó từ cụm lệnh trở lại hộp công cụ.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Để hoàn tác các thay đổi và quay lại mức ban đầu của cấp độ, hãy sử dụng nút Start Over ở góc phải trên cùng của không gian làm việc. Một điều nữa: bạn nhìn thấy hình tam giác nhỏ trên các khối rẽ không? Bất cứ khi nào bạn nhìn thấy các hình tam giác này, có nghĩa là bạn có thể chọn một tùy chọn khác. Hãy bắt đầu lập mã nào!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Tôi là Lydia Winters, giám đốc thương hiệu của Mojang và chúng tôi đã tạo ra một trò chơi nhỏ gọi là Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Điều mà tôi thích làm trong Minecraft là khám phá. Tôi yêu thích khám phá trong những hang động và quan sát những gì tôi có thể tìm thấy. Vì không phải là lập trình viên, nên tôi thực sự rất thích thú khi khám phá bài học của Minecraft và thực sự tự học được một vài cách mã hóa.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: Cấp cuối cùng cần nhiều khối moveForward();. Sẽ dễ hơn nếu chúng ta chỉ yêu cầu máy tính thực hiện lệnh moveForward(); bốn hoặc năm lần. May là máy tính thực sự rất giỏi về khoản lặp lại các lệnh với các vòng lặp.
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Khi xây dựng Minecraft, chúng tôi sử dụng các vòng lặp để đặt tất cả các nguyên vật liệu ban đầu để tạo nên một thế giới mới. Đó là hàng ngàn, hàng ngàn khối. Chúng tôi cũng sử dụng các vòng này cho một số mục đích khác, ví dụ như để khiến chân của Alex chuyển động ra phía trước và sau khi cô ấy bước. Các vòng lặp là một phần quan trọng khi lập trình.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: Ban đêm đang buông xuống, vì vậy trong vài cấp độ kế tiếp, chúng ta sẽ xây một ngôi nhà để lưu trú an toàn. Chúng ta sẽ sử dụng khối lặp để làm được điều này cực dễ dàng.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: Để xây tường của ngôi nhà, chúng ta có thể hoặc là yêu cầu Alex moveForward(); và đặt các tấm ván bốn lần hoặc chúng ta có thể yêu cầu cô ấy moveForward(); và đặt một tấm ván, sau đó nhận lệnh này và sử dụng khối lặp để yêu cầu cô ấy thực hiện hành động này nhiều lần. Bây giờ, chúng ta sẽ bấm vào khối lặp và cho cô ấy biết số lần mà chúng ta muốn cô ấy thực hiện hành động này. Bây giờ, hãy xây ngôi nhà của chúng ta trước khi trời tối! Chúc vui vẻ.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: Bây giờ, chúng ta sẽ học về các lệnh if. Lệnh if là một phần căn bản khi học lập trình. Chúng giúp máy tính đưa ra quyết định.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: Tất cả các máy tính đều sử dụng lệnh if, bao gồm cả điện thoại của tôi. Ví dụ, khi tôi mở khóa điện thoại của mình, nó sẽ chạy một số mã nói rằng nếu tọi nhập mật khẩu chính xác, thì khi đó điện thoại sẽ mở khóa. Nếu không, nó sẽ hiển thị thông báo lỗi.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: Bạn có thể sử dụng lệnh if trong mã của mình để khiến Steve và Alice phản ứng trước những gì mà họ nhìn thấy trong thế giới này. Ví dụ, nếu có một hòn đá ở phía trước họ, họ có thể rẽ trái. Hoặc rẽ phải nếu họ gặp một cái cây.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: Trong trường hợp này, chúng ta không muốn rơi vào dung nham. Đối phó với dung nham dễ lắm. Chúng ta có thể nhìn thấy nó trên màn hình. Nhưng còn dung nham mà chúng ta không thể nhìn thấy ở dưới đá thì sao?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: Sau khi chúng ta đào hòn đá lên, chúng ta sẽ cần phải kiểm tra xem có dung nham ở đó không trước khi di chuyển về phía trước. Nếu có dung nham ở đó, chúng ta cần phải đặt một hòn đá ở phía trước nhân vật của chúng ta trước khi chúng ta có thể di chuyển về phía trước. Bằng cách đó, chúng ta có thể di chuyển tiếp một cách an toàn. Đã đến lúc khai thác thêm! Và hãy nhớ sử dụng lệnh if để di chuyển cẩn thận.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Xin chúc mừng! Bạn vừa học được các khối xây dựng cơ bản của khoa học máy tính.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Bây giờ bạn có thể sử dụng các khối này để xây dựng tác phẩm của riêng mình. Không có thêm hướng dẫn nào khác và không có câu đố để giải quyết. Bạn có thể xây bất cứ thứ gì mà bạn muốn. Bạn có sự lựa chọn.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ L bằng đuốc rồi. Em làm được chữ A bằng ván gỗ bulo rồi. Làm được rồi, làm được rồi. Chúng em đã xây được môi ngôi nhà bằng len!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: Khi các bạn hoàn thành tác phẩm của mình, hãy chọn chia sẻ để nhận liên kết và chia sẻ với bạn bè của mình. Chúc vui vẻ!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Xin chúc mừng! Bạn vừa học được các khối xây dựng cơ bản của khoa học máy tính.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Bây giờ bạn có thể sử dụng các khối này để xây dựng tác phẩm của riêng mình. Không có thêm hướng dẫn nào khác và không có câu đố để giải quyết. Bạn có thể xây bất cứ thứ gì mà bạn muốn. Bạn có sự lựa chọn.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ L bằng đuốc rồi. Em làm được chữ A bằng ván gỗ bulo rồi. Làm được rồi, làm được rồi. Chúng em đã xây được môi ngôi nhà bằng len!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Bây giờ bạn có thể xây dựng bất cứ thứ gì mà bạn muốn. Chúc vui vẻ!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1649,7 +1649,7 @@ vi:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình.
       7:
         image: notes/gumball_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

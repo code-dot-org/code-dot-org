@@ -25,7 +25,7 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 <% elsif @country == 'ca' %>
 
-## Videos <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
+## Videá <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
@@ -44,6 +44,10 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
 
 <% elsif @country == 'uk' %>
 

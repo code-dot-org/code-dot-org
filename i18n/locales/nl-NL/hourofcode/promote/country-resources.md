@@ -43,6 +43,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -51,43 +55,43 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
-## 1) Try the tutorials:
+## 1) Probeer de opdrachten:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Alle Uur Code handleidingen:**
+**Alle CodeUur handleidingen:**
 
-  * Require minimal prep-time for organizers
-  * Zijn zelf-sturend, waardoor scholieren op hun eigen tempo en vaardigheidsniveau kunnen werken
+  * Er is minimale voorbereiding vereist van de organisatoren
+  * Zij zijn zelf-geleid, die leerlingen toe laten om op hun eigen tempo en vaardigheidsniveau kunnen werken
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Plan uw hardware benodigdheden - computers zijn optioneel
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Probeer de opdrachten op de computers of apparaten van leerlingen.** Controleer dat ze goed werken (met geluid en video).
   * **Bekijk de felicitatiepagina alvast** om te zien wat leerlingen zien wanneer ze klaar zijn. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Zorg voor koptelefoons voor de klas**, of vraag leerlingen ze zelf mee te nemen, als de opdracht die je kiest het beste werkt met geluid.
 
-## 3) Plan ahead based on your technology available
+## 3) Plan vooruit op basis van de beschikbare techniek
 
-  * **Heb je niet genoeg apparaten?** Gebruik [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Heb je niet genoeg apparaten?** Gebruik [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Wanneer deelnemers samenwerken, kunnen ze elkaar helpen en vertrouwen ze minder op de leraar.
   * **Weinig bandbreedte?** Toon de video's klassikaal zodat niet iedere leerling ze hoeft te downloaden. Of probeer de unplugged/offline-opdrachten.
 
-## 4) Inspire students - show them a video
+## 4) Inspireer leerlingen - laat ze een video zien
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Toon leerlingen bij de start van Uur Code een inspirerende video. Voorbeelden:
 
-  * De originele Code.org lanceringsvideo, met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * De originele Code.org lanceringsvideo, in samenwerking met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-  * [President Obama roept alle leerlingen op om te leren programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [President Obama roept alle leerlingen op om mee te doen met programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Maak je leerlingen enthousiast - geef ze een korte inleiding**
 
 <% else %>
 
-# Additional resources coming soon!
+# Extra middelen komen binnenkort!
 
 <% end %>
 

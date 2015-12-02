@@ -39,11 +39,11 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 컴퓨터과학 분야의 최초의 여성인 그레이스 머레이 호퍼(Grace Murray Hopper)는 새로운 프로그래밍 언어를 만들어 내는데 공헌하였으며, 컴퓨터과학 분야의 수 많은 성과들을 만들어내는 기초가 된 컴퓨터 시스템의 기초 표준들을 만들어내는 선구자 역할을 하였습니다; 그리고
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+다음 주간 동안에 <%= campaign_date('start-long') %>, 그레이스 호퍼(Grace Hopper) 의 생일이 있으며, 그러한 것이 '컴퓨터과학교육주간'으로 설계되었습니다: 이제, 그러므로, 다시 말해서
 
 해결방안, [하원의원, 상원의원, 주정부, 지역, 시, 학교 위원회]는 --
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) 컴퓨터과학교육 주간을 지정하는데 지원해 주시기 바랍니다. (<%= campaign_date('full') %>);
 
 (2) 학교, 교육자, 학부모와 정책입안자들이 컴퓨터과학교육주간에 학생들이 Hour of Code 행사에 참여하도록 하는 것을 장려합니다;
 

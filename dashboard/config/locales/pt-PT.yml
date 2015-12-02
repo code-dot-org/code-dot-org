@@ -481,6 +481,9 @@
     privacy: Política de privacidade
     secure: Versão segura
     report_abuse: Denunciar abuso
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -580,7 +583,7 @@
         da Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Explora um mundo Minecraft através do código.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!

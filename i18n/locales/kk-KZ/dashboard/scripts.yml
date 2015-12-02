@@ -147,8 +147,8 @@ kk:
         hourofcode:
           Maze: Maze
           title: Код Жазу Сағаты
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Компьютер ғылымының негіздерін Энгри Бердс, Өсімдіктер Зомбилерге қарсы және Мұз Дәуіріндегі Скрат тәріздес кейіпкерлермен үйрен!
+          description_short: Компьютер ғылымының негіздерін көптеген қызықты кейіпкерлермен үйрен!
         frozen:
           title: Code with Anna and Elsa
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
@@ -381,8 +381,8 @@ kk:
           Step: Қадам
         Hour of Code:
           title: Hour of Code 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Компьютер ғылымының негіздерін Энгри Бердс және Өсімдіктер Зомбилерге қарсы кейіпкерлерімен үйрен!
+          description_short: Компьютер ғылымының негіздерін көптеген қызықты кейіпкерлермен үйрен!
           Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -1026,11 +1026,11 @@ kk:
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
+          title: Кодтау сағаты 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Код Жазу Сағаты
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Кодтау сағаты 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1348,6 +1348,10 @@ kk:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1461,22 +1465,22 @@ kk:
           title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Кодтау сағаты 2015
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Кодтау сағаты 2015
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Кодтау Сағаты
           description_short: Explore a Minecraft world through code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Кодтау сағаты 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'

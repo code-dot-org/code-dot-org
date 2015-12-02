@@ -32,4 +32,12 @@ Netleştirmek gerekirse ; bu bir çekiliş veya şans içeren bir yarışma değ
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Bir konuk konuşmacıyla video sohbeti:
+
+Para ödülü Amerika ve Kanada'daki K-12 derslikleri ile sınırlıdır. Code.org kazanan sınıfları seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını ayarlayacaktır. Ödüle hak kazanmak için bütün okulun katılması zorunlu değildir. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

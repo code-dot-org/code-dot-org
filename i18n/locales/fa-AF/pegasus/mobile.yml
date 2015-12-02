@@ -278,6 +278,10 @@ fa-AF:
   class_submission_level_vocational: فنی و حرفه ای
   class_submission_languages_other: زبان (های) دیگر
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -568,10 +572,14 @@ fa-AF:
   carousel_heading_international: آموزش به زبان شما
   carousel_heading_domestic: آموزش به زبان انگلیسی
   carousel_heading_beginners: آموزش برای مبتدیان
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: آموزش جاوا اسکریپت
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: هیچ وسیله ای یا اینترنت ندارید؟ علوم کامپیوتر روی کاغذ را امتحان کنید
   carousel_heading_devices: برنامه های آموزشی برای تلفن های همراه و تبلت ها
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: آموزش ها به زبان های برنامه نویسی دیگر
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: بازی یا نرم افزار خود را بسازید
   carousel_heading_university: ' دوره های آنلاین دانشگاه'
   carousel_heading_webpages: یادگیری ساخت صفحات وب

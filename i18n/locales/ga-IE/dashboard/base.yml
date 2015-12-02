@@ -404,6 +404,9 @@ ga:
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints

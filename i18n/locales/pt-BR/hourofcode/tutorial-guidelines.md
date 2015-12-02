@@ -109,7 +109,7 @@ Uma comissão de professores de ciência da computação classificará os tutori
 
 Fundamentalmente, o objetivo da campanha Hora do Código é ampliar a participação de alunos e professores em ciência da computação, e ajudar a mostrar que essa ciência é acessível a todos, e "mais fácil do que se imagina". De diferentes formas, alunos e professores atingem melhor esta meta quando há menos opções e elas são mais simples, com foco em opções da mais alta qualidade para um usuário de primeira viagem. Observe também que as campanhas da Hora do Código de 2013 e 2014 foram um sucesso que atingiu mais de 120 milhões de alunos, e o resultado das pesquisas de opinião foi quase unanimemente positivo por parte dos professores e alunos participantes. Por esse motivo, acreditamos que as listas existentes são muito boas. Buscamos aumentar o número de tutoriais na lista da Hora do Código não para ampliar as opções, mas para continuar a aumentar a qualidade (ou as novidades) para os alunos, ou expandir as opções para não falantes da língua inglesa, devido à natureza global da campanha de 2015.
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="submit"></a>
 
@@ -165,7 +165,7 @@ Visite a [Página de envio de atividade da Hour of Code™](https://goo.gl/kNrV3
       * Para atividades offline 
           * Número de downloads da versão impressa da atividade (se aplicável)
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="design"></a>
 
@@ -204,7 +204,7 @@ Benefícios da programação em duplas:
   * É possível mostrar que a programação não é uma atividade individual, mas que envolve interação social
   * Nem todas as salas de aula ou laboratórios têm computadores suficientes para uma experiência de 1:1
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="tm"></a>
 
@@ -214,15 +214,15 @@ Depois do sucesso da campanha de 2013, tomamos medidas para garantir que a Hora 
 
 Como parte desse trabalho, queremos proteger a marca "Hour of Code" (adaptada para o português como "Hora do Código") para evitar confusões. Muitos de nossos parceiros de tutoriais têm usado os nomes "Hour of Code" e "Hora do Código" em seus sites. Não queremos impedir esse uso, mas garantir que esteja dentro de alguns limites:
 
-  1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora do Código promovida pela ACME Corp"
-  2. Use "TM" sobrescrito nos textos de maior destaque quando mencionar "Hour of Code", tanto em seu website como em descrições de aplicativos
+  1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Use o seguinte texto na página (ou no rodapé), com links para os sites da Semana da Educação em Ciência da Computação e Code.org:
     
     *"A 'Hora do Código' é uma iniciativa nacional da Semana da Educação em Ciência da Computação[csedweek.org] e da Code.org[code.org] para proporcionar a experiência de uma hora de ciência da computação e programação de computadores a milhões de estudantes."*
 
-  4. É proibido o uso de "Hour of Code" em nomes de aplicativos
+  4. No use of "Hour of Code" in app names.
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="pixel"></a>
 
@@ -241,7 +241,7 @@ Exemplos de pixels de rastreamento para o AppInventor:
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="promote"></a>
 
@@ -254,7 +254,7 @@ Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos us
   * Promova um evento local, ou peça para seus funcionários promoverem um evento em escolas ou grupos comunitários locais.
   * Consulte nosso kit de recursos para obter mais informações (em breve).
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="disabilities"></a>
 
@@ -262,6 +262,6 @@ Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos us
 
 Se você criar um tutorial voltado para pessoas com deficiência visual, adoraríamos divulgá-lo para os usuários com leitores de tela. Ainda não recebemos nenhum tutorial com esse perfil, e estamos ansiosos para disponibilizar essa opção para esses estudantes.
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <%= view :signup_button %>

@@ -16,12 +16,17 @@ nav: how_to_nav
 ## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
 
-ჩვენ ნებისმიერი ასაკის მოსწავლისთვის ჩავატარებთ სხვადასხვა პარტნიორის მიერ შექმნილ მრავალ [სახალისო, ერთსაათიან გაკვეთილს](<%= resolve_url('https://code.org/learn') %>). *<%= campaign_date('full') %>-მდე კოდის ერთი საათის დასაწყებად ახალ გაკვეთილებს შემოგთავაზებთ.* [სცადეთ მიმდინარე გაკვეთილები.](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.*
 
-**კოდის ერთი საათის ყველა ტუტორიალი:**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
   * მასწავლებლისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
+
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+
+  * Are lesson plans that require some advance teacher preparation
+  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
@@ -38,7 +43,9 @@ nav: how_to_nav
 
 ## 5) მოანდომეთ მოსწავლეებს მიიღონ მონაწილეობა კოდის თქვენს ერთ საათში
 
-**დაიწყეთ თქვენი ღონისძიება მოსწავლეებთან იმის განხილვით, თუ როგორ გავლენას იქონიებს მათ ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა.**
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+
+[![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
 
 **აჩვენე შთამაგონებელი ვიდეო:**
 
@@ -69,6 +76,8 @@ nav: how_to_nav
   * ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა
   * "პროგრამის სწავლა უცხო ენის სწავლას გავს; შეუძლებელია დაუყოვნებლის დაიწყოთ გამართულად საუბარი."
 
+**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+
 **რა ვქნათ, თუ მოსწავლემ მალე დაამთავრა?**
 
   * მოსწავლეებს შეუძლიათ ყველა გაკვეთილის ნახვა და კოდის ერთი საათის სხვა აქტივობის ცდა აქ [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
@@ -94,6 +103,7 @@ nav: how_to_nav
 
   * [დაბეჭდეთ სერთიფიკატები](<%= resolve_url('https://code.org/certificates') %>) თქვენი მოსწავლეებისთვის.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]
@@ -122,12 +132,16 @@ nav: how_to_nav
 
   * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
   * მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის მასწავლებლებისგან. 
-  * დაესწარით ჩვენს [კოდის ერთი საათისთვის მასწავლებლების მოსამზადებელ ვებინარს](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
   * მხარდაჭერისა და რჩევებისთვის ესტუმრეთ [კოდის ერთი საათის ფორუმს](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
   * გადახედეთ [კოდის ერთი საათის ხშირად დასმულ კითხვებს](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?
 
-კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. ამ მოგზაურობის გასაგრძელებლად, [წაახალისეთ თქვენი ბავშვები ისწავლონ ონლაინ](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+
+  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -1,18 +1,19 @@
 az:
   site_name: KOD SAATI
-  hour_of_code: Hour of Code
+  hour_of_code: Kod Saatı
   language: Azərbaycan dili
-  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
+  front_title: 'Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date} 2015'
   coming_soon: Tezliklə
   campaign_date_start_short: 7 dek.
   campaign_date_start_long: 7 dekabr
-  campaign_date_short: Dec. 7-13
+  campaign_date_short: 7-13 dekabr
   campaign_date_full: 7-13 dekabr
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_header_banner: Tarixin ən böyük təhsil hadisəsinə qoşulun, 7-13 dekabr 2015
   front_intro_default: 'Kod Saatı 180-dən çox ölkədə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. Hər kəs, istədiyi hər yerdə bir Kod Saatı tədbiri təşkil edə bilər. Bir saatlıq dərsliklər 40-dan çox dildə mövcuddur. Heç bir ilkin təcrübə tələb olunmur. <strong>4 yaşlıdan tutmuş 104 yaşlıya qədər.</strong>'
   front_watch_video: Yeni videoya baxın
   front_watch_regular_video: Videoya baxın
-  header_menu_resources: Qaynaqlar
+  front_volunteers: Technical volunteers wanted
+  header_menu_resources: Resurslar
   header_menu_faq: Tez-tez verilən suallar
   header_menu_prizes: Hədiyyələr
   header_menu_how_to: Təlimatlar
@@ -125,6 +126,7 @@ az:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -148,20 +150,20 @@ az:
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detallar
   nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
+  how_to_nav_educators: Təlimçilər üçün
   how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
+  how_to_nav_parents: Valideynlər üçün
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
   how_to_nav_organizations: For organizations
-  how_to_nav_companies: For companies
+  how_to_nav_companies: Şirkətlər üçün
   how_to_nav_afterschool_educators: For after-school educators
-  how_to_nav_volunteers: For volunteers
+  how_to_nav_volunteers: Könüllülər üçün
   prizes_nav_title: Hədiyyələr
-  prizes_nav_home: All prizes
+  prizes_nav_home: Bütün hədiyyələr
   prizes_nav_hardware: Hardware prize signup
-  prizes_nav_terms: Terms and conditions
+  prizes_nav_terms: Qaydalar və şərtlər
   prizes_nav_faq: Tez-tez verilən suallar
   prizes_nav_dc: Mystery trip to Washington D.C.
   prizes_nav_technology: $10,000 of technology for your school
@@ -172,7 +174,7 @@ az:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Hər bir təlimçı üçün hədiyyələr
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -183,29 +185,33 @@ az:
   whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Bir Kod Saatı</h1><h2>ilə özünüzü sınayın</h2><h3># nəfər faydalanıb</h3>'
   anybody_can_learn: Hər kəs öyrənə bilər.
-  get_started: Start
+  get_started: Başla
   beyond_an_hour: Beyond an Hour of Code
   register_now: Qeydiyyatdan keçin
-  share_on_facebook: "Facebook'da paylaşın"
-  share_on_twitter: Share on Twitter
+  share_on_facebook: '"Facebook"da bölüşün'
+  share_on_twitter: '"Twitter"də bölüşün'
   front_join_us_heading: Hər bir şagird üçün Kod Saatı.
   front_join_us_description: İnformatika hər bir şagird üçün təməl bilikdir. Bunu 100 milyonlara çatdırmağımıza kömək edin.
   front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: Bizə qoşulun
   front_what_is_hoc: 'Kod Saatı nədir? '
   front_join_us_header: Hər kəs təməl bilikləri öyrənərək bundan zövq ala bilər!
+  front_join_us_volunteer_header: Kod Saatı könüllüləri
   front_join_us_teacher: Müəllimsiniz?
   front_join_us_inspire: Şagirdləri həvəsləndirin
   front_join_us_inspire_link: sinifdə bir Kod Saatı keçirməklə.
   front_join_us_teacher_link: Sinifdə bir Kod Saatı keçirməklə şagirdləri həvəsləndirin
+  front_join_us_teacher_volunteer: Sinfinizi ziyarət edə və ya şagirdlərinizi məsafədən həvəsləndirə bilrəcək yerli könüllülər tapın
   front_join_us_parent: Valideynsiniz?
   front_join_us_ask_link: Məktəbinizdən xahiş edin ki,
   front_join_us_ask: Kod Saatı təşkil etsin.
   front_join_us_parent_link: Məktəbinizdən bir Kod Saatı keçirməyi xahiş edin
   front_join_us_computer_science: Sadəcə informatikanı sevirsiniz?
+  front_join_us_cs_volunteer: Passionate about computer science education?
   front_join_us_spread: Xəbərlərimizi yayın.
   front_join_us_spread_word: Spread the word in your community
   front_join_us_spread_word_work: İcmanızda və ya iş yerinizdə səsimizi yayın
+  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
   front_join_us_organize: Və ya özünüz Kod Saatı təşkil edin.
   front_join_us_how_to_run: Kod Saatını belə təşkil edin
   front_join_us_help_promote: Kod Saatını təbliğ etməyə kömək edin
@@ -232,7 +238,8 @@ az:
   signup_send_posters_address_label: Məktəb və ya təşkilatın ünvanı
   signup_whole_school_flag_label: Bu tədbir bütün məktəb üçündür
   signup_your_event: Tədbirinizi qeydiyyatdan keçirin
-  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_match_volunteer: Şagirdlərimi həvəsləndirmək üçün yerli bir proqramçı tapmağıma kömək edin
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Adınız
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Məsələn, Linkoln litseyi
@@ -253,11 +260,11 @@ az:
   map_search_search: Axtarış
   map_search_reset: Reset
   map_legend_title: Legend
-  map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: CS Tech Jam
-  meta_tag_og_title: The Hour of Code is coming
+  map_legend_hoc_events: Kod Saatı tədbiri
+  map_legend_cs_tech_jam: Special Event
+  meta_tag_og_title: Kod Saatı gəlir
   meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
-  meta_tag_twitter_title: The Hour of Code is coming
+  meta_tag_twitter_title: Kod Saatı gəlir
   meta_tag_twitter_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
   twitter_default_text: 'Mən builki #HourOfCode Kod Saatında iştirak edirəm, bəs siz? @codeorg'
   hardware_prizes_form_name_label: Adınız
@@ -287,7 +294,7 @@ az:
   hoc_faq_what_is_hoc_a: "Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən keçirin</a>."
   hoc_faq_last_year: Dərslikləri sınaqdan keçirin
   hoc_faq_when_is_hoc_q: Kod Saatı nə vaxtdır?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Nəyə görə informatika?
   hoc_faq_why_cs_a: "<i>21-ci əsrdə hər bir tələbənin </i> informatikaya yiyələnmək üçün imkanı olmalıdır. İnformatikanın əsaslarını bilmək kreativliyi və problem həll etmək bacarığını inkişaf etdirir.  21-ci əsrdə hər hansı sahədə karyera uğuruna nail olmaq üçün, erkən yaşdan  başlamaq lazımdır. Daha ətraflı: <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Kod Saatında necə iştirak edə bilərəm?
@@ -298,25 +305,35 @@ az:
     "Microsoft", "Apple", "Amazon", "Boys and Girls Clubs of America" və "the College Board" &mdash; kimi <a href='http://code.org/about/partners'> təşkilatlar</a>bir araya gəldilər və Kod Saatına təstək vermək üçün misilsiz bir birlik yaratdılar.
   hoc_faq_host_q: Mən kodlaşdırma haqqında heç nə bilmirəm. Mən də tədbir təşkil edə bilərəmmi?
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Hər bir iştirakçı üçün kompüter lazımdırmı?
-  hoc_faq_need_computers_a: "Xeyir. Bizdə kompüterdə, smartfonda, planşetdə işləyən çalışmalar var, bəzi çalışmalar üçün isə heç kompüterə gərək də yoxdur! Siz olduğunuz yerdə, istənilən şərtlə tədbirə qoşula bilərsiniz. <p><i>Bəzi imkanları təqdim edirik:</i> <br> <ul> <li><b>Cüt-cüt işləyin.</b> Tədqiqatlar göstərir ki, şagirdlər <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>yoldaşlı işləyəndə </a>, kompüteri bölüşəndə, birlikdə çalışanda daha yaxşı nəticə əldə edirlər. Şagirdlərinizi birlikdə işləməyə həvəsləndirin. <li><b>Proyektordan istifadə edin.</b> Əgər sizə proyektor və lövhə, internetə qoşulmuş kompüter varsa, bütün sinif Kod Saatında birlikdə çalışa bilər. Videolara birlikdə baxın, pazzılları birlikdə qurun, suallara birlikdə cavab axtarın. <li><b>Avadanlıqsız da işləmək olar.</b> Bizim elə çalışmalar təqdim edirik ki, onların heç kompüterə ehtiyacı yoxdur. </ul>"
+  hoc_faq_need_computers_a: "Xeyr. Kompüter, smartfon, planşetdə işləyən Kod Saatı dərslikləri var, bəzi dərsliklər üçün isə heç kompüterə gərək də yoxdur! Siz olduğunuz yerdə, istənilən şərtlə tədbirə qoşula bilərsiniz. <p><i>Bəzi imkanları təqdim edirik:</i> <br> <ul> <li><b>Cüt-cüt işləyin.</b> Tədqiqatlar göstərir ki, şagirdlər <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>yoldaşlı işləyəndə </a>, kompüteri bölüşəndə, birlikdə işləyəndə daha yaxşı nəticə əldə edirlər. Şagirdlərinizi birlikdə işləməyə həvəsləndirin. <li><b>Proyektordan istifadə edin.</b> Əgər sizə proyektor və lövhə, internetə qoşulmuş kompüter varsa, bütün sinif Kod Saatında birlikdə çalışa bilər. Videolara birlikdə baxın, tapmacaları birlikdə tapın, suallara birlikdə cavab axtarın. <li><b>Avadanlıqsız da işləmək olar.</b> Elə dərsliklər təqdim edirik ki, onların heç kompüterə ehtiyacı yoxdur. </ul>"
   hoc_faq_international_q: '<country> indi olduğum ölkədir. Buradan necə iştirak edim?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: Mən Kod Saatı üçün çalışmanı necə hazırlaya bilərəm?
   hoc_faq_tutorial_a: "Əgər siz çalışmaların hazırlanması üçün bizimlə əməkdaşlıq etməkdə maraqlısınızsa, <a href='target-tutorial-guidelines'>  ünvanında yerləşən bələdçi və təlimatlarla tanış olun</a>. Biz müxtəlif çür çalışmaları toplamaq istəyirik, amma əsas məqsədimiz bu təcrübəni informatika sahəsində yeni olan müəllim və şagirdlər üçün ən uyğun hala gətirməkdir."
-  hoc_faq_more_questions_q: Hələ də suallarınız var?
-  hoc_faq_more_questions_a: "<a href='http://support.code.org'>dəstək forumunda</a>suallarınıza cavab axtarın."
   hoc_faq_account_q: Şagirdlərin bir hesabdan istifadə edərək daxil olması lazımdır?
   hoc_faq_account_a: "Yox. Kod Saatını sınaqdan keçirmək üçün şagirdlərə heç bir qeydiyyat və ya daxil olmaq tələb olunmur. Most of the <a href='http://code.org/learn/beyond'>Növbəti kurslar</a>ın çoxu şagirdlərin nailiyyətlərini yadda saxlamaq üçün bir hesabın açılmasını tələb edir."
   hoc_faq_frozen_q: Anna və Elza olan dərslik haradadır?
   hoc_faq_frozen_a: "O, indi <a href='http://code.org/learn'>Code.org/learn</a> ünvanında nəşr edilib. Ümid edirik ki, xoşunuza gəlir!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Our new Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
   hoc_faq_scratch_a: |-
     "Scratch" planşetlərdə işləmir. Əgər şagirdlərinizin yaşı azdırsa, onda "iPad" proqram əlavəsi "ScratchJR"dan (oxumağı yeni öyrənənlər üçün) istifadə edə bilərlər. Əgər <a href='http://code.org/learn'>Code.org/learn</a> ünvanındakı dərsliklərə baxsanız, "iPad"də işləyən digər dərslikləri tapa bilərsiniz - "Code.org"dan, "Tynker", "Lightbot" və ya "CodeSpark" dan.
   hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: Hələ də suallarınız var?
+  hoc_faq_more_questions_a: "<a href='http://support.code.org'>dəstək forumunda</a>suallarınıza cavab axtarın."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: 2013-cü ildəki Kod Saatına aid statistika
   stats_growth: İstifadəçi sayını 15 milyona ən tez çatdıran.
   stats_i18n: Şagirdlər 40 dildə öyrənir
@@ -327,7 +344,7 @@ az:
   stats_instagram: 'İnstaqram: 14 ay'
   stats_hoc: 'Kod Saatı: 5 gün'
   stats_global: Kod Saatını 100 milyondan çox şagir sınaqdan keçirdi
-  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_girls_more: Son 70 ildəkindən daha çox qız informatika ilə tanış oldu
   stats_nina: '"Hər gün eyni nəticə alındı&mdash; 100%-lik maraq" - Nina Nikols Peri, müəllimə'
   stats_student: '"Məncə, <b>bu həyatda bir dəfə olan</b> şansdır." - Mariana Alzate, 5-ci sinif şagirdi'
   stats_michael: '"Mən öz şagirdlərimi <b>heç vaxt </b> öyrənməyə bu qədər həvəsli görməmişdim" - Maykl Klark, müəllim'
@@ -342,21 +359,21 @@ az:
   resources_videos: Videolar
   resources_banners: Bannerlər
   resources_emails: E-məktub nümunələri
-  resources_logo: Hour of Code logo
+  resources_logo: Kod Saatı loqotipi
   resources_stats: Faydalı statistika və şüarlar
   resources_press_kit: Mətbuat üçün materiallar
   resources_social: Sosial
   resources_country_resources: Ölkənin özünəməxsus resursları
   resources_stickers: Stickers
-  resources_how_to_guides: How-to guides
+  resources_how_to_guides: Təlimatlar
   resources_promote: Təbliğat
   resources_nav_tutorials: Dərslikləri sınaqdan keçirin
-  resources_nav_promote: Səsimizi yayın
-  resources_nav_spread_word: How to get involved
+  resources_nav_promote: Hərkəsə səsimizi yayın
+  resources_nav_spread_word: Necə qoşulmalı
   resources_banner_promote_text: Təbliğat
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
-  resources_banner_howto_text: How-to
-  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  resources_banner_howto_text: Təlimatlar
+  resources_banner_howto_button: Bir Kod Saatı təşkil etməkdən ötrü təlimçilər, valideynlər və rayon şöbələri üçün resurslar.
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
@@ -373,23 +390,23 @@ az:
   title_how_to_companies: 'How to host an Hour of Code - Companies'
   title_how_to_officials: Dövlət məmurları üçün təlimat
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
-  title_how_to: How-to Guide
+  title_how_to: Təlimat
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Mətbuat üçün materiallar
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Tərəfdaşlar
-  title_prizes_faq: Prizes FAQ
-  title_prizes_terms: Prizes Terms
+  title_prizes_faq: Hədiyyələrlə bağlı suallar
+  title_prizes_terms: Hədiyyələrlə bağlı şərtlər
   title_prizes_thanks: Çox sağ olun
   title_prizes: Hədiyyələr
   title_hardware_prize_form: Sign up for Hardware Prizes
-  title_resources: Qaynaqlar
+  title_resources: Resurslar
   title_signup_thanks: '"Kod Saatı" təşkili üçün qeydiyyatınıza görə təşəkkür edirik!'
-  title_tutorial_guidelines: Tutorial Guidelines
+  title_tutorial_guidelines: Dərsliklər üzrə təlimatlar
   title_whole_school: Whole School Participation
-  events_nav_title: Hour of Code Events
+  events_nav_title: Kod Saatı tədbiri
   events_nav_all: Bütün tədbirlər
   events_nav_whole_schools: Bütün məktəblər
   events_nav_special: Xüsusi tədbirlər
@@ -400,7 +417,7 @@ az:
   events_special_title: Xüsusi Kod Saatı tədbirləri
   events_orgs_title: Tərəfdaş təşkilatların təşkil etdiyi bütün Kod Saatı təədbirləri
   event: tədbir
-  events: tədbirlər
+  events: tədbir
   footer_copyright_message: Copyright 2015 Code.org. Bütün hüquqları qorunur.
   footer_trademark_message: 'Hour of Code™ "Code.org"-a aid ticarət markasıdır.'
   footer_menu_partners: Tərəfdaşlar

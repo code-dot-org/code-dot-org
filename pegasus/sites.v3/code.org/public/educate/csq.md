@@ -26,13 +26,13 @@ CS Q will be designed primarily for students in grades 6-9, so it can be used in
 ### <a name="content"></a>A wide lens on Computer Science
 Computer Science encompases far more than just coding, and CS Q will provide students with opportunities to explore the many facets of CS, including:
 
-- Human Computer Interaction: The myriad ways in which people interface with the computing objects in their lives.
-- Computational Thinking and Problem Solving: Learning to think like a Computer Scientist and use computers to solve problems.
-- The Social Web: Understanding the internet, its impact on society, and how to use the web as a publishing platform.
-- Animations and Interactions: Programming computers to create art, animations, stories, and interactive games.
-- Physical Computing: Building computing devices that interact with and sense the physical world in novel and exciting ways.
-- Making Sense of Data: Harnessing, processing, and building understanding from the mountains of data all around us.
-- Mobile App Development: Designing, creating, and iterating on  mobile apps that solve a real problem.
+- **Human Computer Interaction:** The myriad ways in which people interface with the computing objects in their lives.
+- **Computational Thinking and Problem Solving:** Learning to think like a Computer Scientist and use computers to solve problems.
+- **The Social Web:** Understanding the internet, its impact on society, and how to use the web as a publishing platform.
+- **Animations and Interactions:** Programming computers to create art, animations, stories, and interactive games.
+- **Physical Computing:** Building computing devices that interact with and sense the physical world in novel and exciting ways.
+- **Making Sense of Data:** Harnessing, processing, and building understanding from the mountains of data all around us.
+- **Mobile App Development:** Designing, creating, and iterating on  mobile apps that solve a real problem.
 
 ## <a name="faq"></a>Frequently Asked Questions
 

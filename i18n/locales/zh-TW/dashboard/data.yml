@@ -105,6 +105,8 @@ zh:
         StudioEC: 播放實驗室
         Applab: App Lab
         NetSim: 網路模擬器
+        Custom: 畫家
+        CustomStudio: 播放實驗室
     trophy:
       name:
         Bronze: 銅牌
@@ -314,27 +316,29 @@ zh:
         studio_playlab_8: 當獨角獸奔向魔法師時，你可以新增一個程式積木來記錄得分並播放聲音，然後使用方向鍵移動獨角獸直到得分為止嗎？
         studio_playlab_9: 將背景設為外星人入侵太空場景，並透過更改速度幫助太空機器人更快抓到外星人。使用方向鍵來移動太空機器人，並警告其它人。
         studio_playlab_10: '創造你自己的遊戲。當你完成時，按一下 "完成"，讓朋友們可以在他們的手機上試試你的遊戲。'
-        studio_iceage_1: '蠻尼想要說 "你好" - 你能幫助牠嗎？'
-        studio_iceage_2: '狄亞哥(角色 1) 和 葛瑞妮(角色 2)要互相說 " 你好 "。你可以使用兩次 "說" 程式積木來幫助牠們嗎？'
-        studio_iceage_3: 你能幫助鼠奎特到達旗幟嗎？
-        studio_iceage_4: 你能幫助鼠奎特(角色 1)到達葛瑞妮(角色 2)那，同時在牠抵達時播放聲音嗎？
-        studio_iceage_5: '當喜德被按一下時，你能幫助牠說 "問候"嗎？別忘了在你按下執行後，要按一下喜德喔!'
-        studio_iceage_6: 你可以使用上下左右方向鍵來移動狄亞哥幫助牠收集所有的旗幟嗎？
-        studio_iceage_7: '"永遠重複" 程式積木能讓你不斷地運行代碼。你可以將程式積木加到其中來幫助喜德重複地左右移動嗎？'
-        studio_iceage_8: 當喜德奔向蠻尼時，你可以新增一個程式積木來記錄得分並播放聲音，然後使用方向鍵移動喜德直到得分為止嗎？
-        studio_iceage_9: 將背景設為冰河世紀，並透過更改速度幫助喜德更快到達葛瑞妮那。使用方向鍵來移動喜德，並警告其它人。
-        studio_iceage_10: '創造你自己的遊戲。當你完成時，按一下 "完成"，讓朋友們可以在他們的手機上試試你的遊戲。'
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_hello1: 'Anais 想要結交一些新朋友。你可以透過拖曳"say"方塊至工作區域並在裡面輸入"hello"，幫她跟朋友說聲hello嗎?'
+        studio_gumball_hello2: 'Darwin(角色1)和他的哥哥Gumball(角色2)正要去學校。使用"actor say"這個方塊幫助他們跟彼此打招呼吧!'
+        studio_gumball_move_to_flag: 蕉蕉即將贏得體育競賽！使用「移動」程式積木來幫助牠通過最後這200像素的距離。
+        studio_gumball_move_to_actor: 陶阿甘(角色1)及陶阿達(角色2)已經快趕不上體育表演會了！使用「移動角色」程式積木向下移動200像素，使陶阿甘往陶阿達方向靠近。接下來連接某個程式積木到「當角色碰觸」事件中，當他們找到彼此的時候播放音樂。
+        studio_gumball_repeat: '"永遠重複" 程式積木能讓你不斷地運行程式碼。你可以將程式積木加到其中來幫助陶阿甘重複地左右移動為比賽暖身嗎？'
+        studio_gumball_click_hello: '你能幫助土司在宣布比賽開始時說 " 各就各位，預備，跑!" ？ 如果要測試你的程式，別忘了在你按下執行後，要按一下土司喔!'
+        studio_gumball_move_events: 掏阿達正在參加旗幟收集競賽！將「移動」程式積木附加到每個事件中，幫助他到處亂跑。當你完成時，按一下執行，試著將所有旗幟收集完畢。
+        studio_gumball_sound_and_points: 我們已經提供大部份的程式碼讓土司(角色2)左右移動，以及讓蕉蕉(角色1)在畫面上隨意移動。你可以在「當角色碰觸」事件中新增程式積木，使得蕉蕉跟土司碰撞時播放音樂並同時得分，來完成剩下的程式碼嗎？按下執行來玩這個遊戲。
+        studio_gumball_warn_food_fight: '陶阿達剛從食物大戰中脫身！變更背景為"characters"並將陶阿達的速度設為快速，然後按下執行，移動他到佩佩那去警告她。'
+        studio_gumball_join_food_fight: 加入食物大戰！使用「角色丟擲物品」使蕉蕉往土司丟擲食物！當土司被丟到時，將他的情緒設定為生氣。
+        studio_gumball_free_play: 建立屬於你的遊戲或故事。當你完成時，按一下完成讓你的朋友們在他們的手機、平版或電腦上試試你的遊戲。
         studio_full_sandbox: '創造你自己的遊戲。當你完成時，按一下 "完成"，讓朋友們可以在他們的手機上試試你的遊戲。'
         studio_k1_1: 你能讓這隻狗說出「Hello World!」嗎？
         studio_k1_2: 你能讓狗先說一些話，然後讓貓接著說一些話嗎？
@@ -508,14 +512,14 @@ zh:
         starwars_blocks_intro: '星際大戰: 用程式建立一個銀河系-介紹'
         starwars_blocks_events: '星際大戰: 用程式建立一個銀河系-事件'
         starwars_blocks_congrats: '星際大戰: 用程式建立一個銀河系-恭喜'
-        mc_intro: '當個創世神 Minecraft - 介紹'
-        mc_repeat: '當個創世神 Minecraft - 迴圈'
-        mc_if_statements: '當個創世神 Minecraft - 判斷式'
-        mc_congrats_share: '當個創世神 Minecraft - 恭喜'
-        mc_congrats_no_share: '當個創世神 Minecraft - 恭喜'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        mc_intro: 'Minecraft - 簡介'
+        mc_repeat: 'Minecraft - 重複'
+        mc_if_statements: 'Minecraft - 「若」陳述句'
+        mc_congrats_share: 'Minecraft - 賀詞'
+        mc_congrats_no_share: 'Minecraft - 賀詞'
+        gumball_intro: '陶阿甘的一小時程式碼 - 簡介'
+        gumball_events: '陶阿甘的一小時程式碼 - 事件'
+        gumball_repeat: '陶阿甘的一小時程式碼 - 重複語法'
     callout:
       text:
         drag_blocks: '拖住一個"移動"積木，把它黏到其他積木下面'
@@ -587,10 +591,10 @@ zh:
         Infinity_move_directions_callout_arrow: 使用這些方向鍵來進行引導
         Infinity_move_collide_callout: 當事件發生時播放聲音。
         Infinity_repeat_callout: 在這裡面放置更多程式積木
-        craft_run_button_callout: '按下"執行"按鈕來測試你的程式'
-        craft_drag_block_callout: '拖曳一個 "moveForward();" 程式積木將它吸附在其它程式積木的下方'
-        craft_callout_preplaced: 我們已經在這裡放置了一些程式積木好讓你開始。
-        craft_inside_repeat: 將程式積木放在這裡可以進行重複動作
-        craft_callout_preplaced_house: 這些程式碼將開始建造你的房子。你可以將它完成嗎？
-        craft_what_is_iron: 挖掘這個鐵礦!
-        craft_callout_moveforward: 這段程式碼會檢查是否有岩漿，你能新增一個指令讓角色向前移動嗎?
+        craft_run_button_callout: 按「執行」試試您的程式
+        craft_drag_block_callout: 拖曳「往前」方塊，貼合到另一個方塊之下
+        craft_callout_preplaced: 我們預先在這裡放了一些方塊，方便您開始
+        craft_inside_repeat: 重複動作的方式是將方塊擺放在此
+        craft_callout_preplaced_house: 此程式碼會開始建造您的房屋。您能完成這件差事嗎？
+        craft_what_is_iron: 開採這塊鐵礦！
+        craft_callout_moveforward: 此程式碼會檢查岩漿，您能添加往前的指令嗎？
