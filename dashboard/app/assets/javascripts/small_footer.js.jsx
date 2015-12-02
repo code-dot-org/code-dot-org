@@ -161,8 +161,7 @@ window.dashboard.footer = (function () {
             bottom: 0,
             left: 0,
             width: 650,
-            maxWidth: '50%',
-            paddingBottom: '0.5em'
+            maxWidth: '50%'
           }),
           copyrightScrollArea: $.extend({}, this.state.copyrightScrollAreaStyle, {
             overflowY: 'auto',
