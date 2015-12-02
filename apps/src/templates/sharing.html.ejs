@@ -1,11 +1,11 @@
 <% var msg = require('../locale'); %>
 <% if (options.feedbackImage) { %>
-  <div>
-    <img class="feedback-image" src="<%= options.feedbackImage %>">
-  </div>
+  <img class="feedback-image" src="<%= options.feedbackImage %>"/>
+  <div class="sharing-content">
+<% } else { %>
+  <div class="sharing-content no-image">
 <% } %>
 
-<div>
 
 <% if (options.response && options.response.level_source) { %>
   <% if (options.appStrings && options.appStrings.sharingText) { %>
@@ -49,11 +49,12 @@
     <% } -%>
 
   </div>
-<% } %>
   <div id="send-to-phone" style="display: none">
     <label for="phone">Enter a US phone number:</label>
     <input type="text" id="phone" name="phone" />
     <button id="phone-submit" onClick="return false;">Send</button>
     <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>
   </div>
+<% } %>
+
 </div>
