@@ -919,55 +919,55 @@ sq:
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: "Ky mësim është dekorim diellsjellës funksional. Ju do të jeni duke krijuar këto dekorime duke përdorur funksionet. Janë disa hapa në krijimin e një nga këto diellsjellës dekorime. Disa nga hapat ju duhet t'i përsërisni shumë herë."
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+        text: Hapi i parë në thjeshtësimin e procesit për krijimin e një diellsjellës dekorimit është të zbulojmë cka ne duhet të përsërisim përseri dhe përsëri. Ne mund të grupojmë këta hapa në cfarë ne thërrasim një funksion.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: Por ka më shumë në krijimin e një diellsjellës dekorimi të bukur sesë përcjellja e hapave preciz. Nganjëherë ne duam të jemi kreativ dhe ndryshojmë ngjyren e rruzava që ne jemi duke përdorur. Ne mund të bëjmë cdo diellsjellës dekorim unik nëse ne përdorim rruza me ngjyra të ndryshme.
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: "Dekorimi juaj diellsjellës do të jetë unik i juaji kur ju mësoni të mendoni për rruza si variabla e cila është një fjalë që do të thotë 'placeholder' per informacionin që mund të ndryshojë. Kënaqu duke krijuaj dekorime diellsjellës të bukur duke përdorur funksionet dhe variablat!"
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly.
+        text: Ky mësim është rreth internetit. Interneti është një vend shumë i ngarkuar dhe i ngjashëm me këtë rrugë të ngarkuar. Mesazhet si veturat janë duke ikur shpejtë për të mbërrirë në destinacionet e tyre. Mesazhet lëvizin nëpërmes internetit shumë shpejt.
       2:
         image: notes/C3_internet_2.png
-        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+        text: Duke kuptuar si interneti punon do të ju ndihmojë të kuptoni cfarë po ndodhë kur ju përdorni internetin. Ju do të mësoni si mesazhet shkojnë nga kompjuteri juaj në një faqe të internetit të preferuar apo nga një shok në inbox të emailit. Sikur që është lehtë të drejtosh në rrugët e ngarkuara kur ju dini rrugët dhe mund të lexoni shenjat, udhëtimi në internet nuk është aq i komplikuar kur ju dini cfarë ndodhë pas skenës.
       3:
         image: notes/C3_internet_3.png
-        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+        text: Dergimi i mesazheve në internet është pak sikur dërgimi i mesazheve në email por me disa ndryshime. Uhë jam këtu në Google.com IP adresa për këtë faqe të internetit është ky numër. Ju mund të mendoni për një IP adresë si adresë kthyese në email. Le të imagjinojmë që unë dua të dërgojë një mesazh në postë te dikush në zyre. A po shikoni URL dhe IP adresën në atë derë? Unë e kam shkruar këtë mesazh dhe shtypur dërgo.
       4:
         image: notes/C3_internet_4.png
-        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+        text: "Sikur shërbimi i postës, gjëja e parë që ndodhë është që interneti e ndan mesazhin në pjesë të vogla kështu që mund të dërgohet më lehtë. Këto pjesë të vogla thirren pako. Secila pako e mesazheve është e dërguar në destinacionin njëherë. Këto paketa janë të vendosura së bashku në mënyrën e duhur kështu që pranuesi mund të lexojë mesazhin në mënyrë korrekte. Sigurisht, ka shumë gjëra për të mësuar se si interneti punon por ky është një fillim i bukur. Ju jeni në rrugën tuaj për t'u bërë një përdorues interneti i menqur! Ji i sigurtë të iu tregosh familjes dhe shokëve tuaj cfarë keni mësuar!"
       5:
         image: notes/C3_internet_5.png
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: Emri im është Armanda Camp dhe unë jam një inxhinier softueri në Google. Unë punojë në një ekip që punon në serverin backend që ruan profile dhe kontakte. Në punën time, ne mendojmë shumë se si kontaktet mund të dërgohen në paisje tjera, sikur në telefon. Shumë njerëz kanë shumë kontakte, ju mund të keni thënë, 1000 kontakte dhe ne nuk duam të dërgojmë të gjithë këto kontakte njëherë në telefonin tuaj sepse është mesazh shumë i madh. Njejtë sikur interneti e ndan një mesazh të madh në pako, ne përdorim një koncept që thirret ndarje ku ne mund të dërgojmë vetëm 100 kontakte në një kohë dhe lejojmë telefonin tuaj të pergjigjet duke kërkuar për 100 të rradhës.
       6:
         image: notes/C3_internet_6.png
-        text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
+        text: Gjëja më emocionuese për softuerin është fakti që mund të ketë ndikim në të gjithë botën. Unë në fillim mësova të programoj kur unë isha gati nëntëmbëdhjetë. Unë mendojë që isha gati student i vitit të dytë apo i ri në kolegj. Programi i parë që unë kujtoj dukë shkruar është diqka që konvertoi Celsius në Fahrenheit. Pëlqej programimin për shkak që unë pëlqej të ndihmojë njerëzit. Unë mund të shkruaj programe në Google që ndihmon njerëzit rreth gjithë botës dhe kjo është emocionuese.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+        text: Njerëzit marrin vendime cdo ditë. Për shembull, para se të dilni jashtë, ju keni një nëse deklarim që thotë nëse është duke rënë shi, unë duhet të marrë xhaketën time. Kompjuterët janë të mrekullueshëm kur ju vendosni këto lloje të deklaratave që mund seriozisht të ekzekutojnë këto gjëra në një shpejtësi të pabesueshme. Një program kompjuteri është me të vërtetë pak matematikë dhe disa nëse deklarata ku vendimi merret.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: "The if block helps the zombie make a decision. It checks something. For example, let's use the block that says if there's a path to the left, and put a turn left command inside it. We're telling the zombie to check its surroundings, see if there's a path on the left and if so, make that turn."
+        text: Blloku nëse ndihmon mumjet të marrin një vendim. Ajo kontrollon gjithcka. Për shembull, le të përdorim bllokun që thotë nëse ka një rrugë në të majtë, dhe jepi një komandë kthehu majtas brenda saj. Ne jemi duke ju treguar mumjeve të kontrollojnë rrethinat e saj, shikojnë nëse ka një rrugë majtas dhe nëse po, bëje atë kthesë.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: "Then we use the move forward block inside this repeat to get it to keep moving forward as long as it just wants to go straight. Then when there's a turn, the if block will tell it to make that turn to the left. You can see that if we do that, if we take the turn to the left and otherwise moving forward, we'll achieve our goal."
+        text: Pastaj ne përdorim bllokun ec përpara brenda kësaj përsëritje për të mbajtur atë duke lëvizur përpara aq gjatë sa dëshiron të shkojë drejtë. Pastaj kur ka një kthesë, blloku nëse do të ju tregojë të bëni atë kthesë në të majtë. Ju mund të shihni nëse ne e bëjmë atë, nëse ne marrim kthesën në të majtë dhe përndryshe duke lëvizur përpara, ne do të arrijmë qëllimin tonë.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: "It's an example of using an if statement which is really a fundamental concept in computer programming. One of the first things I learned was how to write a program that played tic-tac-toe. I had if statements to say, ok, if the other person is about to win, go ahead and block that spot. Have fun learning how to use if statements, it's a key concept."
+        text: Është një shembull të përdorimit nëse deklarimit i cili është më të vërtetë koncept fundamental në programimin kompjuterik. Një nga gjërat e para që kam mësuar ishtë si të shkruaj një program që ka luajtur lojën tic-tac toe. Unë kisha nëse deklaratën për të thënë, ok, nëse tjetri person do të fitojë, ec përpara dhe bllokoje atë vend. Kënaqu duke mësuar si të perdorësh nëse deklaratat, është një koncept kyq.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block.
+        text: Në këtë shembull, qëllimi juaj është ti dërgosh mumjet te luledielli. Ne mund të kishim përdorur pesë blloqe ec përpara apo ne mund të i kishin thënë kompjuterit të lëviz përpara dhe përsëris pesë herë duke përdorur bllokun përsëritës.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower.
+        text: Kjo kursen kohë dhe e bënë atë më të lehtë. Për të përdorur këtë, vetëm vendos bllokun ec përpara brenda bllokut përsëritës. Shtyp lësho dhe mumjet do të lëvizin përpara pesë herë për te luledielli.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -978,27 +978,27 @@ sq:
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program. The written notes and words tell the singer exactly what to do. Some parts of music are used over and over again.
+        text: Ky është mësimi i shkruarjes së këngës. Muzika është sikur një program kompjuteri. Shenimet e shkruara dhe fjalët tregojnë këngëtarit saktësisht cfarë të bëjë. Disa pjesë të muzikës janë të përdorura përseri dhe përsëri.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program that are used over and over again are called functions. When you read song lyrics and it says the word chorus, do you sing the word chorus? No, you look at the top of the page to see what words make up the chorus.
+        text: Ne e thërrasim këtë kor. Në një program kompjuterik, pjesët e programit që janë të përdorura shumë herë thirren funksione. Kur ju lexoni tekstin e këngëve dhe thotë fjalën kor, a e këndoni fjalën kor? Jo, ju shikoni në krye të faqes për të parë cfarë fjalë duhen për korin.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"
+        text: Në këtë mësim, ju do të mësoni një këngë të vogël pa kuptim që thirret lepuri i vogël foo foo. Kënga ka një kor që ju do të këndoni shumë herë përsëri dhe përsëri. Një funksion është një pjesë e kodimit qe ju mund ta thërrisni dhe përdorni shumë herë. Ajo e bën programimin më të lehtë dhe më eficient kështu që ju nuk duhet të shkuani hapat të funksionit tuaj shumë herë. Ju mund ta shkruani atë vetëm njëherë!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: "This is the conditional block. It says if you're at the flower or the honeycomb, then do something. This is useful when we don't know how much honey or nectar to get as we see here with this question mark."
+        text: Ky është blloku kushtëzues. Ajo thotë nëse jeni në lule apo në huall, pastaj bëj diqka. Kjo është e përdorshme kur ne nuk dijmë sa shumë mjaltë apo nektar të marrim siq e shohim këtë me këtë shenjë pyetse.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: "In this example, we're going to say, if it's a flower, get all the nectar and then use another one to say, if it's a honeycomb, make honey. Ta-dah!"
+        text: Në këtë shembull, ne do të themi, nëse është një lule, merr gjithë nektarin dhe pastaj përdore një tjetër për të thënë, nëse është një huall, bëj mjaltë. Ta-dah!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: "We have a new block that's called the if/else block. It's a conditional statement just like the if block you've used in the puzzles before. But now there's a new part at the bottom that says else. The if/else block lets the bee make a decision between two sets of actions. If the bee is at a flower, the bee will do the set of actions you put in the first part where it says do. If the bee is not at a flower, the bee will do the set of actions you put in the slot where it says else."
+        text: Ne kemi blloqe të reja që thirren blloku nëse/tjetër. Është një deklaratë kushtëzuese sikur blloku nëse që keni përdorur në enigma më parë. Por tani ka një pjesë tjetër në mes që thotë tjetër. Blloku nëse/tjetër lejon bletën të marrë një vendim në mes dy seteve të veprimeve. Nëse bleta është në një lule, bleta do të bëjë setin e veprimeve që ju vendosni në pjesën e parë ku ajo thotë bëje. Nëse bleta nuk është në një lule, bleta do të bëjë setin e veprimeve që ju vendosni në vrimë ku ajo thotë tjetër.
       2:
         image: notes/C4_conditionals_2.png
-        text: "If statements are how computers are able to make decisions. Humans set up conditions for the computer that say if the computer is presented with a certain situation do this. Else, which just means otherwise, do that. The top of our if/else block says if at flower. But the top of our block could say other things, like if nectar equals 2 or if there's a path ahead, our block will behave in the same way. That if the statement at the top is true it will do the first set of actions. But if the statement at the top is false, it will do the second set of actions."
+        text: Nëse deklarimet janë si kompjuterët janë të gatshëm të marrin vendime. Njerëzit vendosin kushtezimet për kompjuterin që thotë nëse kompjuteri është i prezantuar me një situatë të caktuar bëjë këtë. Tjetër, e cila do të thotë përndryshe, bëjë këtë. Maja e bllokut tonë nëse/tjetër thotë nëse në një lule. Por maja e bllokut tonë do të thotë gjëra tjera, sikur nëse nektari bën 2 apo nëse ka një rrugë përpara, blloku jonë do të sillet në të njejtën mënyrë. Ai nëse deklarim në maje është i vërtëte do të bëjë setin e parë të veprimeve. Por nëse deklarimi në maje është fals, do të bëjë setin e dytë të veprimeve.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png

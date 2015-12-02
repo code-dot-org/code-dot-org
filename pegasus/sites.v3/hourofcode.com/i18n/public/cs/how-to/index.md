@@ -13,22 +13,20 @@ nav: how_to_nav
   * Přihlaste se k hostování [Hodiny kódu](<%= resolve_url('/') %>) během <%= campaign_date('short') %>.
   * Propaguj svou [ Hodinu kódu](<%= resolve_url('/promote') %>) a povzbuď ostatní k hostování.
 
-## 2) Prohlédni si toto video s návodem
-<iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-
+## 1) Prohlédni si toto video s návodem <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zvol si výukový kurz:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.*
+Poskytujeme různé [zábavné, hodinu dlouhé cvičení](<%= resolve_url('https://code.org/learn') %>) pro studenty všech věků, vytvořeny různými druhy partnerů. * Nové cvičení přicházejí aby začali Hodinu kódu před <%= campaign_date('full') %>.*
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Studenty vedené cvičení Hodiny kódu:](<%= resolve_url("https://code.org/learn") %>)**
 
   * Vyžadují minimum času vyučujícího na přípravu
   * Řídí se samy, což umožňuje žákům postupovat jejich vlastním tempem a podle jejich úrovně
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Učiteli vedené cvičení Hodiny kódu:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
 
-  * Are lesson plans that require some advance teacher preparation
-  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
+  * Jsou učící plány, které potřebují určitou přípravu předem
+  * Jsou tříděni do kategoríí podle stupně *a* podle tématických oblastí (např. Matematika, Angličtina, atd.)
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
@@ -45,7 +43,7 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 
 ## 5) Inspirujte studenty k zahájení Hodiny kódu
 
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+**Přizvěte [lokální dobrovolníky](https://code.org/volunteer/local) aby inspirovali studenty, mluvením o škále možností s informatikou.** Jsou zde tisíce dobrovolníku kolem světa, připraveni vypomoci s Hodinou kódu. [Použijte tuto mapu](https://code.org/volunteer/local) k nalezení místních dobrovolníků, kteří mohou navštívit vaší učebnu nebo se připojit k video chat s vašimi studenty.
 
 [![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
 
@@ -78,7 +76,7 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
   * "Technologie nefunguje vždy tak, jak chceme."
   * "Učení programovat je jako se učit nový jazyk; nebudete ihned plynule mluvit."
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**[Koukněte na tyto učící tipy](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **Co dělat, když žák skončí dříve?**
 
@@ -105,7 +103,7 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 
   * [Tisk certifikátů](<%= resolve_url('https://code.org/certificates') %>) pro vaše studenty.
   * [Tisk "Udělal jsem Hodinu kódu!"](<%= resolve_url('/promote/resources#stickers') %>) nálepek pro vaše studenty.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
+  * [Objednejte si volitelné trička](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pro vaší školu.
   * Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
 [col-33]
@@ -134,16 +132,16 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 
   * Používejte tuto [šablonu plán lekcí ](/files/EducatorHourofCodeLessonPlanOutline.docx) k organizování Hodiny kódu.
   * Koukněte na [nejlepší praktiky](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) od minulých hodin kódu učitelů. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
+  * Zhlédněte záznam nášeho webináře [Návod pro kouče Hodiny kódu](https://youtu.be/EJeMeSW2-Mw).
+  * [Navštivte live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) s naším zakladatelem, Hadi Partovi, abyste připravili Hodinu kódu.
   * Navštivte [fórum učitelů Hodiny kódu ](http://forum.code.org/c/plc/hour-of-code) získat radu, pochopení a podporu od ostatních pedagogů. <% if @country == 'us' %>
   * Zkontrolujte si [FAQ Hodiny kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co přijde po Hodině kódu?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Hodina kódu je pouze první krok, na cestě k poučení o tom, jak technologie funguje, a jak vytvářet softwarové aplikace. K pokračování této cesty:
 
-  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Povzbuďte studenty v pokračování [učit se online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Nvštivte](<%= resolve_url('https://code.org/professional-development-workshops') %>) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
 
 <%= view :signup_button %>

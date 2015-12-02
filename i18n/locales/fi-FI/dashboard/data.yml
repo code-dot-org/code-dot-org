@@ -311,29 +311,30 @@ fi:
         studio_playlab_8: Voitko lisätä lohkon antamaan pisteen ja lohkon soittamaan äänen aina kun yksisarvinen osuu velhoon, ja sitten siirtämään häntä nuolilla kunnes saat pisteen?
         studio_playlab_9: Aseta tausta avaruusolioiden hyökkäykselle ja auta Spacebotia pääsemään avaruusolion luo nopeammin muuttamalla sen nopeutta. Sitten liikuta häntä nuolinäppäimillä päästäksesi perille ja hälyttääksesi kaikki muut
         studio_playlab_10: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_hello1: |-
+          Sid haluaa kerätä kaikki uudelle seikkailulle. Voitko auttaa häntä sanomaan "hei" vetämällä 'sano' lohkon työalueelle kirjoittamalla sen sisälle "hei"?
+        studio_iceage_hello2: "Sid (näyttelijä 1) löysi Mannyn (näyttelijä 2) ja haluaa kutsua hänet seikkailulle. Auta heitä tervehtimään toisiaan käyttämällä 'näyttelijä sanoo' lohkoa kahdesti."
+        studio_iceage_move_to_flag: "Scrat etsii tammenterhoaan! Auta häntä kulkemaan viimeiset 200 pikseliä käyttämällä 'liiku' lohkoa."
+        studio_iceage_move_to_actor: "Diego (näyttelijä 1) etsii Mannya (näyttelijä 2). Auta Diegoa kulkemaan 200 pikseliä Mannyn luokse käyttämällä 'liikuta näyttelijää' lohkoa. Sitten, yhdistä lohko tapahtumaan 'kun näyttelijä koskee' saadaksesi äänen kuulumaan kun he löytävät toisensa."
+        studio_iceage_repeat: "'Toista ikuisesti' komento antaa sinun toistaa koodia jatkuvasti. Voitko yhdistää lohkoja auttaaksesi isoäitiä kuntoilemaan liikkumalla oikeaan ja vasempaan toistuvasti?"
+        studio_iceage_click_hello: "Voitko auttaa Sidiä tekemään viimeisen kutsun ystävilleen kun häntä klikataan? Älä unohda klikata häntä kun olet painanut 'Suorita'."
         studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
         studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
+        studio_iceage_warn_ice_age: 'Jokaisen täytyy liikkua nopeammin koska jääkausi on tulossa! Vaihda taustaksi "jäävuoret" ja aseta Sidin nopeus nopeaksi, sitten paina suorita ja siirrä hänet Diegon luo varoittaaksesi häntä.'
         studio_iceage_throw_hearts: |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_free_play: Aika tehdä sinun oma pelisi tai tarinasi! Kun olet valmis, paina Lopeta antaaksesi ystäviesi koettaa peliäsi heidän puhelimillaan, tableteillaan ja tietokoneillaan!
         studio_gumball_hello1: 'Anais haluaisi saada uusia ystäviä. Voitko auttaa häntä sanomaan "hei" raahamalla "sanoa"-palikan työskentelyalueelle ja kirjoittamalla sen sisään sanan "hei"?'
         studio_gumball_hello2: 'Darwin (näyttelijä 1) ja hänen veljensä Gumball (näyttelijä 2) ovat menossa kouluun.  Auta heitä tervehtimään toisiaan käyttämällä "sano"-palikkaa kahdesti.'
         studio_gumball_move_to_flag: 'Banana Joe on voittamaisillaan liikuntapäivän kisan. Auta häntä liikkumaan viimeiset 200 pikseliä käyttämällä "liiku" -palikkaa.'
         studio_gumball_move_to_actor: '(Näyttelijä 1) Gumball ja Darwin (näyttelijä 2) ovat myöhässä liikuntapäivästä! Auta Gumballia liikkumaan 200 pikseliä alas Darwinin luo, käyttämällä "liikuta hahmoa"-palikkaa.  Seuraavaksi, liitä tapahtumaan "koskee hahmoa" palikka, joka soittaa äänimerkin, kun he löytävät toisensa.'
-        studio_gumball_repeat: '"Toista jatkuvasti" -palikalla voit suorittaa koodia ikuisesti. Voitko liittää siihen palikoita joilla Gumball voi lämmitellä kisaa varten liikkumalla toistuvasti vasemmalle ja oikealle?'
+        studio_gumball_repeat: '"Toista ikuisesti" -palikalla voit suorittaa koodia ikuisesti. Voitko liittää siihen palikoita joilla Gumball voi lämmitellä kisaa varten liikkumalla toistuvasti vasemmalle ja oikealle?'
         studio_gumball_click_hello: 'Voitko auttaa Antonia ilmoittamaan kisan alkaneeksi sanomalla "Valmiina, paikalla, nyt!"? Testataksesi ohjelmaasi, älä unohda napauttaa Antonia, käynnistettyäsi ohjelman.'
         studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
         studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_warn_food_fight: 'Darwin pakeni juuri ruokasodasta! Vaihda taustaksi "hahmot" ja aseta Darwinin nopeudeksi nopea, sitten paina Suorita ja siirrä hänet Pennyn luokse varoittaaksesi häntä.'
+        studio_gumball_join_food_fight: 'Liity ruokasotaan! Käytä "näyttelijä heittää tavaran oikealle" komentoa saadaksesi Banaani-Joen (näyttelijä 1) heittämään ruokaa Antonia (näyttelijä 2) päin. Aseta Antonin mieliala vihaiseksi kun häneen osuu.'
+        studio_gumball_free_play: Tee sinun oma pelisi tai tarinasi. Kun olet valmis, paina Lopeta antaaksesi ystäviesi koettaa peliäsi heidän puhelimillaan, tableteillaan ja tietokoneillaan!
         studio_full_sandbox: 'Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.'
         studio_k1_1: 'Osaatko laittaa koiran sanomaan "hei maailma"?'
         studio_k1_2: Osaatko laittaa koiran sanomaan jotain ja kissan vastaamaan siihen?

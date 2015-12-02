@@ -317,6 +317,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Koristi povuci-ispusti blokove i JavaScript.
@@ -337,7 +338,7 @@
     kroz ovaj svijet Minecrafta.
   mc_shortdescription: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu
     kroz ovaj svijet Minecrafta.
-  mc_gradelevel: Dob 6+
+  mc_gradelevel: Dob 4-104
   mc_platformtext: Suvremeni preglednici, mobiteli, tableti
   mc_specs: Više jezika (uskoro) | Suvremeni preglednici i tableti | Dob 6+
   minecraft_subtitle: Minecraft Sat Kodiranja
@@ -522,7 +523,7 @@
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Izbrisati?
-  dashboard_action_remove: jaja sam david i smjesan sam
+  dashboard_action_remove: Obriši
   dashboard_action_remove_confirm: Obrisati?
   dashboard_action_done: Gotovo
   dashboard_action_required: potrebno
@@ -726,6 +727,10 @@
   carousel_heading_ide: Platforme popularne među učiteljima
   educator_notes: Edukatorove bilješke
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Dodatni resursi za učitelje i edukatore
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -825,7 +830,7 @@
   starwars_gradelevel: Dob 6+
   playlab_gradelevel: Dob 4-104
   infinity_gradelevel: Dob 4-104
-  artist_gradelevel: Dob 4-104
+  artist_gradelevel: Dob 8+
   codeorg_platformtext: Suvremeni preglednici, mobiteli, tableti
   codeintl_platformtext: Suvremeni preglednici, mobiteli, tableti
   thinkersmithspanish_platformtext: Izvanmrežno

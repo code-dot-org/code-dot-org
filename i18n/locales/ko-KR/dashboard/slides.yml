@@ -1076,14 +1076,14 @@ ko:
         text: 이 퍼즐에서 우리는 여러분을 위한 정사각형 그리기 함수를 만들었습니다. 그것은 도구 상자에서 초록색 블록으로 보일 거예요. 여러분이 해야 할 일은 이전에 정사각형을 그리기 위해 작성했던 코드를 똑같이 작성하고 이 함수 안에 집어 넣는 것입니다. 그렇게 하기 위해 초록색의 정사각형 그리기 블록 안의 편집 옵션을 클릭하세요. 함수 편집기가 열릴 것입니다. 함수 편집기는 세 부분으로 나뉘어집니다. 함수의 이름을 짓는 부분. 이것은 그 함수 앞에 초록색 블록 위에 보일 것입니다. 그리고나서 함수가 할 일에 대한 짧은 설명을 적습니다.
       4:
         image: notes/C4_function_edit_4.png
-        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+        text: 이런 상황에서 그것은 사각형을 그리는 것으로 여겨질 수 있습니다. 이것 아래에 있는 흰색 공간은 작업 공간이고, 그것은 여러분들이 이미 사용중인 작업공간처럼 작동될 것입니다. 이 작업공간 안에 있는 툴박스로부터 블록들을 드래그 하고 드롭하세요. 함수를 만들기 위해 초록색으로 둘러싼 블록 안에 사각형을 만들 블록을 넣을 것을 기억하세요. 여러분이 일단 그것을 했다면 저장버튼을 클릭하고 빠져나가세요. 이것은 여러분을 작업 공간의 메인 퍼즐로 돌아가게 해 줄 것입니다. 이제 여러분은 퍼즐을 풀기 위한 다른 블록과 같이 사각형을 그리는 함수 블록을 사용할 수 있습니다.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
         text: 여기 한 변의 길이가 50 픽셀인 사각형을 1개 그리는 함수가 있습니다. 그렇다면, 한 개는 한 변의 길이가 50 픽셀이 되도록 그리고, 다른 한 개는 한 변의 길이가 100 픽셀이 되도록 그리려고 한다면 어떻게 해야할까요? 거의 비슷한 두 개의 함수를 따로 따로 만들 필요는 없습니다. 대신, 하나의 함수에 하나의 매개 변수를 함께 사용하면 됩니다.
       2:
         image: notes/C4_function_parameters_2.png
-        text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
+        text: 매개 변수는 함수에서 사용하는 변수에 값을 전달합니다. 다른 크기의 사각형을 만들기 위해 함수를 호출하며 매개 변수를 전달해 봅시다. 방금 매개 변수를 추가했던 것처럼 함수 편집기에서 이름과 설명을 편집할 수 있습니다. 빈 칸에 매개 변수의 이름을 입력하고 매개 변수 추가하기를 클릭하세요. 그러면 방금 만든 매개 변수의 이름에 빨간 블록이 생길 것입니다. 이제 매개 변수의 길이에 의해 100블록 앞으로 이동할 것입니다.
       3:
         image: notes/C4_function_parameters_3.png
         text: 저장하고 닫기를 누른 후 새로 만든 사각형 만들기 블록을 함수 카테고리에서 도구상자로 드래그 하세요. 그렇게 하면, 길이라고 쓰여있는 곳 옆이 비어있다는 것을 알게 될 것입니다. 함수는 길이 매개 변수를 사용하기 때문입니다. 수학 카테고리에서 수 블록을 드래그해서, 이 공간에 놓으세요. 함수를 계속 사용해보면서 살펴보고, 서로 다른 크기의 사각형들을 만들어보세요. 열심히 시도해 보세요!
@@ -1109,27 +1109,27 @@ ko:
         text: 만약에 높이가 50 픽셀이고 너비는 높이의 두 배만큼 넓은 사각형을 그리고 싶다면 컴퓨터가 그 일을 하도록 어떻게 프로그래밍 하면 될까요? 자, 저는 예술가에게 50만큼 위로 올라가서 오른쪽으로 돌고 그 다음에 100만큼 가는 것을 두 번 하라고 말할거예요. 하지만 그러면 저는 컴퓨터를 위해 수학을 하고 있는 것입니다.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
+        text: 머리 속으로 50에 2를 곱하는 것은 그리 어렵지 않을런지도 모릅니다. 하지만 컴퓨터는 정말 수학을 잘하기 때문에 우리는 가능한 그것을 컴퓨터에게 맡겨야 합니다. 만약에 제가 숫자 대신에 높이라는 변수를 사용했다면 높이를 50으로 쉽게 바꿀 수 있었을 것입니다. 그 다음에 예술가가 높이보다 두 배 넓은 사각형을 그리도록 높이만큼 위로 올라간 다음 오른쪽으로 돌고 나서 높이의 두 배만큼 앞으로 가도록 알고리즘을 변경할 수 있었을 것입니다.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: "This lesson is called Tangram Algorithms. A tangram is a puzzle with seven pieces that can be put together to make other shapes. You'll be using an algorithm to explain to your partner how to put the puzzle together."
+        text: 이번 학습은 칠교놀이 알고리즘입니다. 칠교놀이는 다른 모양을 만들기 위한 일곱개의 조각으로 하는 퍼즐입니다. 여러분들은 이 퍼즐을 어떻게 함께하는지 설명하기 위해 알고리즘을 이용할 수 있습니다.
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: 알고리즘은 어떤 작업을 완료하기 위해서 수행할 수 있는 단계들의 리스트에 불과합니다. 우리는 쇼핑리스트나 음식 요리법과 같은 곳에서 매일 알고리즘을 사용합니다. 알고리즘이 간단하면 여러 가지 형태로 변화시켜 사용할 수 있으며, 여러분이 원하는 것을 정확히 모르는 사람이라도 알고리즘을 통해 정확히 수행시킬 수 있습니다. 어떤 사람이라도 여러분이 원하는 것을 정확히 수행하기를 원한다면, 알고리즘은 매우 자세하고 상세해야 합니다.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: "I'm using an algorithm today to complete a painting. I wanted to try doing a painting of some wolves but I'm not the most amazing painter. Luckily for people by me, there is paint by numbers. There are forty colors and it has little letters and numbers that tell you which color to paint each section. Paint by numbers tells me exactly what color to use and where."
+        text: 나는 그림을 완성하기 위해 알고리즘을 사용하고 있습니다. 나는 몇 마리의 늑대 그림을 그리는 것을 시도하기고 싶었습니다. 하지만 나는 그다지 훌륭한 화가가 아니에요. 나로써는 다행히 사람들을 위해 숫자로 된 그림이 있습니다. 40개의 색깔이 있고, 그것은 작은 문자들과 숫자들을 갖고 있습니다. 그리고 그것들은 당신에게 각 영역에 어떤 색을 칠해야 할 지 알려줄 것입니다. 숫자로 그리는 그림은 어떤 색이 어디에 사용되는지 나에게 정확하게 말해 줍니다.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: 내가 방향을 따라갈 수 있고, 그림은 아주 훌륭해 보일 것이 분명합니다. 그것이 훌륭한 알고리즘입니다. 만약에 지시사항이 아주 구체적이지 않다면, 나의 늑대들은 멋져 보이지 않을 것입니다. 여러분들이 계획한 방법을 정확하게 보여주기 위해 정말로 무언가를 원할 때 그것이 아주 정확하게 만들어 질 것입니다.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
         text: 각 팀에서, 각 팀원의 종이를 펼지 접을지 지시하는 사람은, 누가 on 기호를 나타내고, 누가 off 기호를 나타내야 하는지 이해하고 있어야 합니다. 2진 체계는 마치 2개의 문자로만 이루어진 알파벳 문자라고도 생각할 수 있습니다. A와 B만으로, 모든 나머지 알파벳들을 표시해야하는 것과 같습니다. 2진 체계는 0 과 1 만으로 모든 것들을 표현해야 한다는 것입니다.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: '이진법을 사용하는 가장 일반적인 방법은 조건문입니다.  조건문은 프로그래밍에서 고전적인 방법입니다. 프로그램은 무엇인가 참이라면 이것을, 참이 아니라면 다른 것을 실행합니다. 만약 무엇인가 실행하기를 원한다면 좀 더 복잡해질 수도 있습니다. 조건문 대신에 컴퓨터의 이미지나 소리와 같은 무엇인가를 이용하여 작업할 수 있습니다.'
       3:
         image: notes/C4_unplugged_binary_3.png
         text: '컴퓨터는 2진 체계만 이해할 수 있습니다. 이미지는 0 과 1 로만 구성된 2진 체계가 아닌데 어떻게 이미지를 표현할 수 있는 것 일까요? 여기 예시가 있습니다: 이런 멋진 그림입니다. 그림은 기본적으로 정보의 형태라고 볼 수 있습니다. 모든 정보는 2진 체계를 이용해 여러 가지 형태로 저장될 수 있습니다. 어떻게 그렇게 할 수 있는지 이해할 수 있을 것입니다.'
@@ -1155,7 +1155,7 @@ ko:
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: "In this lesson, we'll be playing with some fill in the blank stories. You have a template that you can fill in to create similar stories that have very amusing differences."
+        text: 이 레슨에서 우리는 비어 있는 이야기를 채우는 놀이를 할 것입니다. 여러분은 유사하지만 아주 재미있는 차이점들을 가진 이야기들을 만들어 그 안을 채울 수 있는 양식을 가지게 됩니다.
       2:
         image: notes/C4_unplugged_madlibs_2.png
         text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
@@ -1165,7 +1165,7 @@ ko:
         text: "This lesson is called songwriting with parameters. We're going to be writing some songs here. Sometimes the chorus is just a little bit different each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o. The small change in each chorus can be shown using something we call parameters."
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece of information you can pass to a function to customize it for a special need. When you make ice cream sundaes with your friends, you are using a process similar to parameters in a computer program.
+        text: 때때로 함수는 매개 변수가 필요합니다. 매개변수는 함수를 특별한 요구에 최적화시키기 위해 여러분이 함수에게 전달할 수 있는 추가 정보입니다. 여러분이 친구와 아이스크림 선디를 만들 때 여러분은 컴퓨터 프로그램에서 매개변수를 사용하는 것과 비슷한 과정을 사용합니다.
       3:
         image: notes/C4_unplugged_parameters_3.png
         text: "The disk of vanilla ice cream might be the same for every sundae but when you ask your friends which two toppings they'd like, you could get lots of different combinations. Topping is the function name but each type of topping is a parameter. Functions and parameters work together to make great computer programs and great sundaes too."
@@ -1188,7 +1188,7 @@ ko:
         text: "예를 들어, 동생의 생일을 축하하는 알고리즘을 만들고 싶을 때, 올해에는 10번째 생일을 축하합니다! 라고 작성할 수 있는데, 내년에는 11번째 생일을 축하합니다라고 작성해야합니다. 그러한 경우 나이를 나타내는 수 대신에, 나이라는 변수에 동생의 나이를 저장해 두고 변경해 가면서 매년 축하 메시지를 만들 수 있게 됩니다. '나이'='나이'+1 로 매년 업데이트 시켜주면 되기 때문입니다."
       3:
         image: notes/C4_variables_artist_3.png
-        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+        text: 이 퍼즐에서 우리는 우리의 예술가가 그림을 그리는 선의 길이를 설정하기 위해 변수를 사용할 것입니다. 우리가 코딩한 후에 블록으로의 움직임은 이동하기 블록은 여러분이 설정한 변수가 무엇인지 알기 위해 길이 변수를 보게 될 것입니다.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
@@ -1270,16 +1270,16 @@ ko:
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to take a big difficult problem and break it down into several simpler problems. The goal of this lesson is to write a set of instructions that someone can follow to draw one of the monsters included in the lesson plan.
+        text: 컴퓨팅 사고력에 대한 레슨은 커다란 어려운 문제를 몇 개의 더 간단한 문제로 분할하는 방법을 여러분에게 가르쳐주려고 한다. 이 레슨의 목표는 누군가가 이 수업 계획에 포함되어 있는 괴물 중의 하나를 따라 그릴 수 있도록 하는 설명 세트를 작성하는 것이다.
       2:
         image: notes/unplug2_2.png
-        text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
+        text: '학생들은 설명문을 작성하기 위한 그룹들로 나뉠 것입니다. 그 다음에 그들은 괴물을 그려야 할 다른 그룹과 바꿀 것입니다. 그룹들은 컴퓨팅 사고력의 네 단계를 사용한 설명문을 작성할 것입니다: 분할, 패턴 찾기, 추상화와 알고리즘.'
       3:
         image: notes/unplug2_3.png
         text: 첫 번째 그룹들은 게임을 만들어내기 위한 계획을, 보다 작은 작업들로 분해할 것입니다. 그 다음에 카타로그에 나와있는 모든 몬스터들 사이에 어떤 패턴들이 있는지 살펴보게 될 것입니다. 몬스터들 사이의 차이를 발견하면, 그러한 자세한 차이들을 추상화하거나 고려하지 않을 수 있게 될 것입니다. 즉, 카탈로그의 한 몬스터는 베지터 눈을 가지고 있고, 다른 몬스터는 스프라이트 눈을 가지고 있습니다. 하지만, 두 몬스터 모두 눈을 가지고 있기 때문에, 몬스터는 어떤 눈을 가지고 있다고 작성할 수 있습니다.
       4:
         image: notes/unplug2_4.png
-        text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."
+        text: 그래서 학생들은 괴물의 각 부분이 어떤 스타일이어야 하는지는 빈칸으로 되어 있는 설명 세트(알고리즘이라 부르는) 를 작성할 수 있을 것입니다. 이것은 그들만의 괴물을 재현하기 위해 다른 학생들에게 전달할 설명 세트입니다.
     unplug3:
       1:
         image: notes/unplug3_1.png
@@ -1331,7 +1331,7 @@ ko:
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science.
+        text: 릴레이 프로그래밍은 컴퓨터과학(정보과학) 에 대해 더 잘 이해할 수 있는 매우 재미있는 수업입니다. 가끔씩 모든 사람들은 약간 불안해지고 여러분은 그들이 원상태로 돌아오도록 하고 싶습니다. 좋은 방법은 컴퓨터과학(정보과학) 에 몇 가지 신나는 것을 추가하는 것입니다.
       2:
         image: notes/unplug9_2.png
         text: You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step.
@@ -1341,7 +1341,7 @@ ko:
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+        text: 이 활동은 인터넷이 어떻게 동작하는지에 대해 이해하기 쉬운 방법으로 설명합니다. 우리는 학생들이 이메일과 같은 메시지 전송을 시뮬레이션 할 수 있도록 모든 필요한 기술에 대해 간단한 용어로 설명합니다.
       2:
         image: notes/unplug10_2.png
         text: 학생들이 세 가지 전송 방법 중 하나인 척 하는동안 메시지를 전송할 것입니다. 무선 인터넷, DSL 또는 광섬유 케이블. wifi를 표현하는 학생들은 그들의 머리에 전송할 메시지를 쓰고 있어야 합니다. 왜냐하면 wifi는 몇 가지 정보를 가장 잘 놓치기 때문입니다.
@@ -1395,22 +1395,22 @@ ko:
         text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: 우리는 도구상자에서 그것을 찾거나 끌어내지 않고도 수백 개의 명령어를 입력할 수 있습니다. 여러분은 이제 막 배우고 있기 때문에 입력하는 것이 처음에는 좀 느릴지도 모르지만 우리는 여러분이 한 번 시도해 보길 바랍니다.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: 여러분은 작업 공간의 오른쪽 상단에서 텍스트 보기 버튼을 클릭하여 어떤 퍼즐의 블록이든지 글자로 입력된 코드로 전환할 수 있습니다.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: 다음 레슨에서 우리는 여러분이 입력 모드에서 시작하도록 할 것입니다. 여러분은 여전히 도구상자로부터 블록을 끌어낼 수 있고, 명령어를 입력할 수도 있습니다. 여러분이 입력하기 시작하면 여러분이 입력하고 있는 그 아래에 사용 가능한 명령어들의 이름이 나타나는 것을 볼 수 있을 것입니다. 명령어 이름 전체를 입력하는 대신에 이것들 중 하나를 선택하여 더 빠르게 할 수 있습니다. 저는 직장에서 코드를 작성할 때 이런 자동완성 기능을 항상 사용합니다.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: 여러분이 코드를 작성할 때는 아주 정확해야 합니다. 여러분은 철자를 잘 써야 합니다. 괄호와 세미콜론을 포함하여 명령 이름도 정확히 올바르게 대문자로 써야 합니다. 아주 사소한 실수에도 BB-8은 그 코드를 이해할 수 없어 움직이지 못합니다.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: 명령줄에 오류가 있다면 편집기는 그것을 하이라이트로 표시하여 여러분이 그것을 고치게 할 것입니다.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: 여러분이 중간에 막히게 되면 언제든지 다시 시작 버튼을 눌러 다시 시작할 수 있습니다. 그리고 언제든지 오른쪽 상단을 클릭하여 블록 모드로 돌아갈 수 있습니다. 좋아요, 이제 명령어를 입력해 봅시다. 그리고 만약에 여러분이 실수를 하게 되었을 때 좌절하지 마세요. 제대로 하려면 누구나 꽤 많은 시도가 필요합니다.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -1420,7 +1420,7 @@ ko:
         text: 축하합니다, 해냈습니다! 여러분이 BB-8 을 프로그래밍 했습니다. 이제 더 어려운 것을 할 준비가 되었다고 생각합니다. 여러분은 이제 프로그래밍의 기초를 배웠기 때문에, R2-D2와 C3PO를 주연으로 하는 여러분 만의 게임을 만들 때가 왔습니다.
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: '게임을 만들기 위해 우리는 게임 프로그래머가 매일 사용하는 어떤 것을 배워야 합니다: 그것은 이벤트라고 부릅니다. 이벤트는 여러분의 프로그램에게 어떤 일이 발생했는지 알려주거나 또는 어떤 일이 발생할 때까지 기다렸다가 그 일이 발생하면 어떤 액션을 수행합니다.'
       4:
         image: notes/starwars_events_4.JPG
         text: 여러 가지 이벤트들 중 몇가지 예시는, 마우스 클릭, 방향 버튼, 화면 터치 등 입니다.
@@ -1429,13 +1429,13 @@ ko:
         text: 이번에는 R2-D2를 위로 보내 메시지를 조종사에게 전달한 후, 아래로 움직여 다른 조종사에게 이동할 수 있도록 할 것입니다. R2-D2를 이동시키기 위해서 이벤트들을 사용하면 됩니다. 플레이어는 위/아래 방향키나 버튼들을 사용합니다.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: 우리는 whenUp() 이벤트 블록을 goUp() 이벤트 블록에 연결할 것입니다. 플레이어가 위쪽 방향키를 누르면 whenUp() 블록에 연결된 코드가 실행됩니다. 그리고 우리는 같은 방법으로 R2-D2가 아래로 내려가게도 할 것입니다.
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: 이렇게 하기 위해, 우리 whenUp() 이라는 명령을 사용할 것입니다. 도구상자에서 명령을 끌어내면 여러분은 세미콜론 대신 시작과 끝에 중괄호를 볼 수 있습니다. 이것은 그 사이에 다른 명령을 넣기 위한 공간입니다. 선수가 위쪽 방향키를 누르면 우리가 이 괄호 안에 넣은 모든 명령이 실행됩니다.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: 우리는 R2-D2가 위로 올라가길 원하므로 명령 내부에 goUp(); 블록을 넣도록 해요. 그리고 같은 방법으로 R2-D2를 아래로 내려가도록 만들어 볼 거예요.
       9:
         image: notes/starwars_events_9.JPG
         text: 이제 드로이드를 제어하는 모든 코드를 미리 작성하는 대신, 버튼들을 눌렀을 때 R2-D2가 화면 이리저리 움직일 수 있도록 할 수 있습니다. 한 단계씩 진행해 나아가면 게임이 인터랙티브하게 변화될 것입니다.
@@ -1445,7 +1445,7 @@ ko:
         text: 안녕하세요, 저는 앨리스입니다. 저는 Code.org 를 운영하고, 엔지니어링 팀을 맏고 있습니다. 그리고, 여러분들이 지금 하고 있는 튜토리얼을 만들 때에도 참여했습니다.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 여러분은 지금 막 마지막 레벨을 성공하였습니다. 축하합니다! 여러분은 여러분만의 스타워즈 게임을만들기 위해 알아야 할 모든 것을 배웠습니다. 이제 더 이상의 목표도, 해결해야 할 퍼즐도 없습니다. 여러분은 여러분만의 게임을 만들 수 있고 어떻게 작동하도록 할지 선택할 수 있습니다. 한 가지 더, 여러분은 알아야 할 새로운 소리와 새로운 명령어를 모두 알아냈습니다.
       3:
         image: notes/starwars_congrats_3.JPG
         text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
@@ -1464,7 +1464,7 @@ ko:
         text: '안녕하세요, 저는 레이첼 로즈입니다. 저는 ILM의 수석 R&D 엔지니어로서, 애니메이션과 크리쳐 개발 팀을 이끌고 있습니다. 스타워즈: 깨어난 포스에서, 저는 예술가들이, 머나 먼 우주 어딘가에 실제로 있을 것 같은 캐릭터들의 장식을 만드는 것을 돕고 있습니다.'
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
+        text: 다음 시간에 우리는 여러분에게 프로그래밍의 기본 개념을 가르쳐 줄 스타워즈 게임을 할 것입니다. 대부분의 프로그래밍은 모두 텍스트로 되어 있습니다. 우리는 블록을 끌어다 놓는 것으로 프로그램을 작성할 수 있습니다. 우선, 우리는 레이와 함께 BB-8이 돌아다니며 모든 부품을 수집하고 다니도록 만들 것입니다.
       4:
         image: notes/starwars_blocks_intro_4.JPG
         text: 화면은 3개의 부분으로 구분해 볼 수 있습니다. 왼쪽의 공간은 프로그램이 실행되는 스타워즈 게임 공간입니다. 각 단계에서 해결해야할 목표들은 그 아래에 작성되어있습니다.
@@ -1495,7 +1495,7 @@ ko:
         text: 축하합니다, 해냈습니다! 여러분이 BB-8 을 프로그래밍 했습니다. 이제 더 어려운 것을 할 준비가 되었다고 생각합니다. 여러분은 이제 프로그래밍의 기초를 배웠기 때문에, R2-D2와 C3PO를 주연으로 하는 여러분 만의 게임을 만들 때가 왔습니다.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: '게임을 만들기 위해 우리는 게임 프로그래머가 매일 사용하는 어떤 것을 배워야 합니다: 그것은 이벤트라고 부릅니다. 이벤트는 여러분의 프로그램에게 어떤 일이 발생했는지 알려주거나 또는 어떤 일이 발생할 때까지 기다렸다가 그 일이 발생하면 어떤 액션을 수행합니다.'
       4:
         image: notes/starwars_blocks_events_4.JPG
         text: 여러 가지 이벤트들 중 몇가지 예시는, 마우스 클릭, 방향 버튼, 화면 터치 등 입니다.
@@ -1504,7 +1504,7 @@ ko:
         text: 이번에는 R2-D2를 위로 보내 메시지를 조종사에게 전달한 후, 아래로 움직여 다른 조종사에게 이동할 수 있도록 할 것입니다. R2-D2를 이동시키기 위해서 이벤트들을 사용하면 됩니다. 플레이어는 위/아래 방향키나 버튼들을 사용합니다.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: 우리는 whenUp() 이벤트 블록을 사용하고 그것에 goUp() 블록을 연결할 거에요. 플레이어가 위쪽 방향키를 누르면 whenUp() 블록에 연결된 코드가 실행됩니다. 그리고 우리는 같은 방식으로 R2-D2가 아래로 이동하도록 할 것입니다. 이제 드로이드를 제어 하는 모든 코드를 미리 작성하는 대신 화면을 돌아다니도록 하는 버튼 프레스 이벤트에 우리의 R2-D2가 반응하도록 할 수 있습니다.
       7:
         image: notes/starwars_blocks_events_7.JPG
         text: 점차적으로 여러분의 게임이 좀 더 인터랙티브하게 됩니다.
@@ -1514,7 +1514,7 @@ ko:
         text: 안녕하세요, 저는 앨리스입니다. 저는 Code.org 를 운영하고, 엔지니어링 팀을 맏고 있습니다. 그리고, 여러분들이 지금 하고 있는 튜토리얼을 만들 때에도 참여했습니다.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 여러분은 지금 막 마지막 레벨을 성공하였습니다. 축하합니다! 여러분은 여러분만의 스타워즈 게임을만들기 위해 알아야 할 모든 것을 배웠습니다. 이제 더 이상의 목표도, 해결해야 할 퍼즐도 없습니다. 여러분은 여러분만의 게임을 만들 수 있고 어떻게 작동하도록 할지 선택할 수 있습니다. 한 가지 더, 여러분은 알아야 할 새로운 소리와 새로운 명령어를 모두 알아냈습니다.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
         text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'

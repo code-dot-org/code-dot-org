@@ -256,6 +256,7 @@ et-EE:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Galaktika loomine koodiga
   starwars_javascript_title: JavaScript
   starwars_javascript_description: 'Kasuta "sikuta ja lase lahti" plokke ja JavaScripti.'
@@ -272,7 +273,7 @@ et-EE:
   mc_name: Minecrafti KoodiTund
   mc_longdescription: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles Minecrafti maailmas.
   mc_shortdescription: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles Minecrafti maailmas.
-  mc_gradelevel: Vanusele 6+
+  mc_gradelevel: Vanusele 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_specs: Palju keeli (tulekul) | Tänapäevased brauserid ja tahvelarvutid | Vanusele 6+
   minecraft_subtitle: Minecrafti KoodiTund
@@ -283,7 +284,7 @@ et-EE:
   volunteer_engineer_submission_intro_recruit: |-
     Need õpetajad otsivad kedagi, <span style="font-family: 'Gotham 7r', sans-serif;">kes armastab arvutiteaduse õpetamist</span> ja kes aitaks neid klassiruumis või kes <span style="font-family: 'Gotham 7r', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse arvukatest võimalustest (seda saab teha ka videovestluse teel). Kui Sa ei soovi olla vabatahtlik, loe <a href="%{url}">lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta.
   volunteer_engineer_submission_intro_signup: 'Palun sisesta järgnev info, kui oled arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class="form-required-field">*</span> on kohustuslikud.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Sa ei soovi olla vabatahtlik? <a href="%{learn_more}">Loe lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta ja selle kohta, kuidas leida kohalik vabatahtlik meie <a href="%{volunteer_local}">vabatahtlike kaardilt</a>.'
   volunteer_engineer_submission_header_shared: Vabatahtlike kaardil õpetajatega jagatud informatsioon
   volunteer_engineer_submission_field_name: Nimi
   volunteer_engineer_submission_field_name_placeholder: Täisnimi
@@ -367,7 +368,7 @@ et-EE:
   dashboard_hoc_courses_desc: Proovi ükskõik millist neist alla 1-tunnistest õpetustest koos oma õpilastega!
   dashboard_hoc_courses_desc_and_cta: 'Proovi neid lühikesi, ühe tunniseid õpetusi koos oma õpilastega. <a href="https://hourofcode.com">Ühine KoodiTund liikumisega</a> Programmeerimise nädala jooksul.'
   dashboard_k5_courses: 20-tunnised materjalid lasteaiast kuni 5 klassini
-  dashboard_k5_courses_desc: 'Need kursused koosnevad veebiõppest, ise õppimisest juhendite abil ning tegevustest, kus pole arvutit üldse vaja. Iga kursus koosneb umbes 20 tunnist, mida võib läbida kas ühe korraga või semestri vältel. Osaleda saavad isegi lasteaialapsed, kes ei oska veel lugeda. Alguse tegemiseks pakume ka kvaliteetseid professionaalse arengu seminare üle Usa, mis on tasuta.<a href="/professional-development-workshops">Leida kursus enda lähedal!</a>'
+  dashboard_k5_courses_desc: 'Need kursused koosnevad veebiõppest, ise õppimisest juhendite abil ning tegevustest, kus pole arvutit üldse vaja. Iga kursus koosneb umbes 20 tunnist, mida võib läbida kas ühe korraga või semestri vältel. Osaleda saavad isegi lasteaialapsed, kes ei oska veel lugeda. Alguse tegemiseks pakume ka kvaliteetseid professionaalse arengu seminare üle USA, mis on tasuta.<a href="/professional-development-workshops">Leia kursus enda lähedal!</a>'
   dashboard_middle_courses: 20-tunnised põhikooli kursused
   dashboard_middle_courses_desc: 'Põhikooli õppekava kasutab arvutiteadust ja programmeerimist põhikooli arvuti ja teadusõppe kontekstis. See on tööriist, millega matemaatika ja reaalainete kontseptsioone õpetada. Professionaalse arengu seminaridele registreerimiseks esita avaldus <a href="/educate/districts">piirkondlikud algatused</a> koosCode.org.'
   dashboard_high_courses: Aastapikkused keskkooli kursused
@@ -518,7 +519,7 @@ et-EE:
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
   dashboard_announce_view_all: Vaata kõiki
-  dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
+  dashboard_announce_hoc: '<b>23. november 2015</b> - Kas otsid arvutiteaduse õpetamist armastavat vabatahtlikku, kes aitaks sind KoodiTunni sündmusega? Üle 7000 vabatahtliku soovib inspireerida sinu õpilasi, külastades sinu klassiruumi või kaugvideovestluse teel. Vaata vabatahtlike kaardilt sinu läheduses paiknevate vabatahtlike kontaktandmeid.'
   code_hoc_coming: 'KoodiTund on siin - 8.-14. detsember!'
   code_sign_up: Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal
   learn_more: Lisateave
@@ -530,17 +531,17 @@ et-EE:
   learn_educator_resources_description: Õpi, kuidas õpetada KoodiTundi
   learn_educator_resources_button: Õpetaja materjalid
   learn_are_you_educator: 'Oled õpetaja? Õpi <a href="http://hourofcode.com/resources/how-to">kuidas õpetada KoodiTundi</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Leia kohalik vabatahtlik</a>, kes aitaks sind sinu KoodiTunniga'
+  learn_teacher_led_lesson_plans: 'Ammuta inspiratsiooni <a href="https://code.org/teacher-led">õpetaja juhitud KoodiTunni plaanidest</a>'
+  learn_how_to_hoc: 'Järgi <a href="https://hourofcode.com/how-to">meie juhendit</a> ühe KoodiTunni andmise kohta'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Loe lisa</a> auhindade kohta igale õpetajale.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Inspireeri õpilasi <a href="https://code.org/educate/inspire">nende videotega</a>'
   hoc2014_try_new_tutorials: Proovi meie uusi KoodiTunni juhendeid
   hoc2014_try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
   hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
   hoc2014_try_frozen: 'Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"'
   carousel_heading_codeorg: Code.org õppetükid
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Code.org õppetükid (kõikidele seadmetele)
   carousel_heading_3rd_party: Kolmandate isikute õppetükid
   carousel_heading_third_party: Kolmandate isikute õppetükid
   carousel_heading_international: Juhendid sinu keeles
@@ -561,6 +562,7 @@ et-EE:
   carousel_heading_ide: Õpetajate seas populaarsed platvormid
   educator_notes: Õpetaja märkmed
   teach_led_lesson_plans: Õpetaja juhitud KoodiTunni tunnikavad
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Kuidas õpetada KoodiTundi
   more_resources_educators: Rohkem vahendeid õpetajatele
   beyond_submission: Tahad esitada juhendit Kooditunni väliselt? Tutvu kriteeriumite ja esitamise vormiga.
@@ -657,7 +659,7 @@ et-EE:
   starwars_gradelevel: Vanusele 6+
   playlab_gradelevel: Vanusele 4-104
   infinity_gradelevel: Vanusele 4-104
-  artist_gradelevel: Vanusele 4-104
+  artist_gradelevel: Vanusele 8+
   codeorg_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeintl_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   thinkersmithspanish_platformtext: Ilma tehnikata tegevused
@@ -734,7 +736,7 @@ et-EE:
   appinventor_shortdescription: Loo päris enda rakendus! (ainult Android)
   blockly_shortdescription: Lae alla ZIP-fail, et õppida offline-režiimis
   thinkersmith2_shortdescription: Uuri välja, kuidas arvutid esitavad infot, kasutades ühtesid ja nulle
-  kodableunplugged_shortdescription: Lõbus avutivaba ülesanne
+  kodableunplugged_shortdescription: Lõbus arvutivaba ülesanne
   projguts_shortdescription: Proovige modelleerimist ja simulatsiooni kivi/paber/käärid abil
   hourofcode_shortdescription: "Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!"
   frozen_shortdescription: Programmeerigem, et ühineda Anna ja Elsaga samal ajal, kui nad avastavad jää võlu ja ilu.

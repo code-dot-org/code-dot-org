@@ -315,6 +315,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Galaxia bat eraikitzen Coderen bitartez
   starwars_javascript_title: Javascript
   starwars_javascript_description: Erabili arrastatzeko blokeak eta JavaScript.
@@ -734,6 +735,10 @@
   carousel_heading_ide: Irakasleen artean arrakastatsuak diren plataformak
   educator_notes: Hezitzailearen oharrak
   teach_led_lesson_plans: Irakasleak gidatutako Kode Ordurako irakasgaien plangintza
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Nola irakatsi Kode ordua
   more_resources_educators: Irakasle eta hezitzaileentzako baliabide gehiago
   beyond_submission: Ordu bat baino gehiagoko tutorial bat bidali nahi duzu? Bidalketa
