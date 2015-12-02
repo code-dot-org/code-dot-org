@@ -13,6 +13,8 @@ module ScriptConstants
   STARWARS_BLOCKS_NAME = 'starwarsblocks'
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
+  GUMBALL_NAME = 'gumball'
+  ICEAGE_NAME = 'iceage'
   INFINITY_NAME = 'infinity'
   ARTIST_NAME = 'artist'
   ALGEBRA_NAME = 'algebra'
@@ -38,6 +40,8 @@ module ScriptConstants
         FROZEN_NAME,
         FLAPPY_NAME,
         PLAYLAB_NAME,
+        GUMBALL_NAME,
+        ICEAGE_NAME,
         STARWARS_NAME,
         STARWARS_BLOCKS_NAME,
         MINECRAFT_NAME
