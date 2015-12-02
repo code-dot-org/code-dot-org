@@ -314,6 +314,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "goSprite":function(d){return "!!-go-!!"},
 "hello":function(d){return "!!-hello-!!"},
 "helloWorld":function(d){return "!!-Hello World!-!!"},
+"playlab_lastLevel_continueText":function(d){return "!!-Done-!!"},
 "hoc2015_lastLevel_continueText":function(d){return "!!-Done-!!"},
 "hoc2015_reinfFeedbackMsg":function(d){return "!!-You can press the \""+studio_locale.v(d,"backButton")+"\" button to go back to playing your game.-!!"},
 "hoc2015_shareGame":function(d){return "!!-Share your game:-!!"},

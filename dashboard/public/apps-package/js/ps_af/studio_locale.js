@@ -913,6 +913,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tapToReset":function(d){return "Tap to reset"},
 "tapToPlay":function(d){return "Tap to play"},
 "swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
 "setBackgroundIcy1":function(d){return "set icy 1 background"},
 "setBackgroundIcy2":function(d){return "set icy 2 background"},
 "setBackgroundIcy3":function(d){return "set icy 3 background"},
