@@ -102,7 +102,7 @@ zh:
   signin:
     try_heading: 想要在還沒註冊之前就先試試寫程式嗎？
     try_hoc: 第一次嘗試一小時編程
-    try_20hours: 試試看我們的 20 小時簡介電腦科學
+    try_20hours: 嘗試我們的：電腦科學簡介--20 小時 版本
   signinsection:
     welcome: '歡迎來到%{section_name}'
     name: 選取你的名字
@@ -406,6 +406,9 @@ zh:
     privacy: 隱私權政策
     secure: 安全版本
     report_abuse: 濫用回報
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: 需要幫忙嗎？
     subtitle: 看看這些影片和提示

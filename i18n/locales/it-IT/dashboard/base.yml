@@ -391,7 +391,7 @@ it:
     help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft, Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questi materiali.
     art_from_html: |
-      Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />
+      Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />
       Frozen&#8482; &amp; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />
       Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
       AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br />
@@ -410,6 +410,9 @@ it:
     privacy: Informativa sulla privacy
     secure: Versione sicura
     report_abuse: Segnala un abuso
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -490,7 +493,7 @@ it:
       body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
     minecraft:
       title: Minecraft
-      body: Esplora il mondo di Minecraft con il codice.
+      body: Esplora il mondo di Minecraft attraverso il codice.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: "Gli studenti l'hanno creato scrivendo del codice!"

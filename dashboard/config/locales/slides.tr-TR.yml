@@ -2552,8 +2552,8 @@
           first but we wanted you to give it a try.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar
+          ya da yazı ile kod girişi yapmak arasında geçiş yapabilirsin.
       4:
         image: notes/starwars_typing_4.JPG
         text: In the next lesson, we'll start you out in typing mode. Here you can
@@ -2570,8 +2570,8 @@
           cannot understand the code and won't be able to move.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Herhangi bir satırda hata yaptığında, editör senin için o satırı vurgular
+          böylece o satırı daha kolay düzeltebilirsin.
       7:
         image: notes/starwars_typing_7.JPG
         text: If you get stuck, you can always start over with the start over button
@@ -2676,11 +2676,10 @@
           far away.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
+        text: Bir saat içerisinde sana programlamanın temellerini öğretecek bir Star
+          Wars oyunu oluşturacaksın. Genellikle programlama yazı yazarak yapılır fakat
+          biz kod yazmayı blokları sürükleyerek yapacağız. BB-8 programını başlamak
+          için Rey ile tüm hurdaları toplamaya gidiyoruz.
       4:
         image: notes/starwars_blocks_intro_4.JPG
         text: Your screen is split into three parts. On the left is the Star Wars
@@ -2752,7 +2751,7 @@
           react to button press events that move him around the screen.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Adım adım oyunun daha interaktif oluyor.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -2786,167 +2785,164 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Benim adım Jens Bergensten ama bana daha çok Jeb derler. Minecraft mojang.com'da
+          baş geliştirici olarak çalışıyorum. Sanırım program yazmaya başladığımda
+          11 ya da 12 yaşındaydım çünkü oyun yapmak istiyordum. Babamın bir arkadaşı
+          bana oyun yapmak için program yazmayı öğrenmem gerektiğini söylemişti. İşte
+          ben de böyle başladım. Mimari şeyleri tasarlamayı ve çözmeyi seviyorum.
+          Minecraft'ın en sevdiğim tarafı işte bu.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: Önümüzdeki bir saat boyunca Alex ya da Steve ile program yazarak bilgisayar
+          biliminin temellerini ve Minecraft dünyasının simülasyonu çıkarılmış bir
+          parçasında ilerlemeyi öğreneceksiniz.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: Geleneksel program yazma genelde metinle olur ama bugün blok olarak
+          yazacağız. Bu, program yazmak için sürükleyip bırakabileceğiniz blokları
+          kullanan bir sistem. Aslında burada JavaScript kodu oluşturuyorsunuz.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Birazdan öğreneceğiniz konseptler bilgisayar programcılarının her gün
+          kullandığı ve bilgisayar biliminin temelini oluşturan şeylerdir. Mojang'da
+          biz de aynı konseptleri Minecraft'ın çalışması için kullanıyoruz.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Başlamadan önce karakterinizi seçeceksiniz. Ben Alex'i seçiyorum. Şimdi
+          onun ekranda hareket etmesine yardımcı olacak bir program kodu yapalım.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta Minecraft oyun alanı
+          bulunuyor, programınız işte burada çalışacak. Her bir seviyenin talimatları
+          aşağı yazılır.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Bu ortadaki alan araç kutusudur ve bu blokların her biri Alex'in hareketlerini
+          yönlendiren bir komuttur.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada
+          yaparsınız.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: '"ileri git" bloğunu çalışma alanımıza sürükleyip sonra Koş''a tıklarsak
+          ne olur? Alex, panonun üzerinde bir birim ileri gider.'
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Peki Alex bir birim ileri gittikten sonra başka bir şey yapmak istersek
+          ne mi yapacağız? Programımıza başka bir blok ekleyebiliriz. Şimdi "sağa
+          dön" bloğunu seçeceğim ve bunu turuncu çizgi görünene kadar "ileri git"
+          bloğunun altına sürükleyeceğim. Ardından bunu bırakacağım ve iki blok birbirine
+          bağlanacak.  Tekrar Koş seçeneğine bastığımızda Alex çalışma alanımızda
+          biriken komutları yukarıdan aşağı doğru gerçekleştirir.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Ve bir bloğu silmek isterseniz bloğu yığından alıp araç kutusuna sürüklemeniz
+          yeterli.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: Yaptığınız değişiklikleri geri almak ve seviyeyi başladığı hale getirmek
+          için çalışma alanının sağ üst köşesindeki Baştan Başla düğmesini kullanın.
+          Son bir şey daha; dönüş bloklarındaki küçük üçgeni görüyor musunuz? Bu üçgenleri
+          gördüğünüzde farklı bir seçenek seçebilirsiniz. Şimdi kod yazmaya başlayalım!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Ben Lydia Winters, Mojang'ın marka direktörüyüm ve Minecraft adında
+          küçük bir oyun yaptık.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Minecraft'ta yapmayı en sevdiğim şey keşfetmek. Mağaralarda maceraya
+          atılmayı ve neler bulabileceğimi görmeyi çok seviyorum. Programcı olmayan
+          biri olarak, Minecraft dersleri görerek kendi başıma kod yazmayı öğrenmek
+          için gerçekten sabırsızlanıyorum.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: Son seviyede çok fazla "ileri git" bloğu gerekiyordu. Bilgisayara dört
+          veya beş defa ileri git komutunu verebilseydik çok daha kolay olurdu. Neyse
+          ki bilgisayarlar, tekrar döngüleriyle komutları tekrar etmede çok iyi.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Minecraft'ı yaparken yeni bir dünya yaratmak için gereken başlangıç
+          malzemelerini yerleştirmek için tekrar döngülerini kullanıyoruz. Bu da binlerce
+          blok anlamına gelir. Döngüleri ayrıca küçük şeyler için de, mesela Alex
+          yürürken ayaklarını ileri geri hareket ettirmek için kullanıyoruz. Tekrar
+          döngüleri, program yazmanın çok önemli bir parçasıdır.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Gece çökmek üzere, bu nedenle önümüzdeki birkaç seviyede güvende kalmak
+          için bir ev yapacağız. Bunu çok kolay bir şekilde yapmak için tekrar bloğunu
+          kullanacağız.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Evimizin duvarını yapmak için Alex'e dört defa ilerlemesini ve kalasları
+          yerleştirmesini söyleyebilir ya da ona ileri giderek bir kalası yerleştirmesini
+          söyleyip ardından bu komutu alıp tekrar bloğunu kullanarak bu eylemi birkaç
+          defa gerçekleştirmesini sağlayabiliriz. Şimdi tekrar bloğuna tıklayacağız
+          ve ona bu eylemi kaç defa gerçekleştirmesini istediğimizi söyleyeceğiz.
+          Şimdi gece çökmeden evimizi yapalım! İyi eğlenceler.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Şimdi eğer komutlarını öğreneceğiz. Eğer komutları, program yazmayı
+          öğrenmenin temel bir parçasıdır. Bunlar bir bilgisayarın karar vermesine
+          yardımcı olur.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Tüm bilgisayarlar eğer komutlarını kullanır, buna telefonum da dahil.
+          Örneğin telefonumun kilidini açtığımda eğer şifreyi doğru girersem telefonun
+          kilidi açılır diyen bir kodu çalıştırır. Aksi takdirde bir hata mesajı verir.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Seteve'in ve Alice'in dünyada gördükleri bir şey için tepki vermeleri
+          için kodunuzda eğer komutlarını kullanabilirsiniz. Örneğin eğer önlerinde
+          bir kaya varsa sola dönebilirler. Ya da eğer bir ağaçla karşılaşırsa sağa
+          dönerler.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Bu durumda lavın içine düşmek de istemeyiz. Lav için de plan yapmak
+          çok kolay. Lavı ekranda görebiliyoruz. Peki ya taşın altındaki göremediğimiz
+          lav?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Taşı çıkardıktan sonra ileri gitmeden önce orada lav olup olmadığını
+          kontrol etmemiz gerekecek. Eğer orada lav varsa ileri gitmeden önce karakterimizin
+          önüne bir taş yerleştirmek isteyebiliriz. Bu şekilde güvenli bir şekilde
+          ilerleyebiliriz. Şimdi maden çıkarma zamanı! Nereye gittiğinize dikkat etmek
+          için eğer komutlarını kullanmayı unutmayın.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Tebrikler! Bilgisayar biliminin temel blok yapımını öğrendiniz.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka
+          bir talimat ya da çözülecek başka bir yapboz yok. İstediğiniz her şeyi yapabilirsiniz.
+          Seçim size kalmış.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[öğrenci konuşması] Gerçek olmak üzere. Kırkıyorum. Meşalelerden bir
+          L yaptım. Huş kalaslardan bir A yaptım. Oldu, başardık. Yünden bir ev yaptık!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Eserinizi tamamladığınızda arkadaşlarınızla paylaşmak için bir link
+          almak üzere paylaş seçeneğini seçin. İyi eğlenceler!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Tebrikler! Bilgisayar biliminin temel blok yapımını öğrendiniz.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka
+          bir talimat ya da çözülecek başka bir yapboz yok. İstediğiniz her şeyi yapabilirsiniz.
+          Seçim size kalmış.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[öğrenci konuşması] Gerçek olmak üzere. Kırkıyorum. Meşalelerden bir
+          L yaptım. Huş kalaslardan bir A yaptım. Oldu, başardık. Yünden bir ev yaptık!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Şimdi istediğiniz her şeyi yapabilirsiniz. İyi eğlenceler!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2977,8 +2973,8 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada
+          yaparsınız.
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

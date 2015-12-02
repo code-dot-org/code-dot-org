@@ -198,7 +198,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "jump":function(d){return "קפוץ"},
 "jumpBackward":function(d){return "קפוץ אחורה"},
 "jumpForward":function(d){return "קפוץ קדימה"},
-"jumpTooltip":function(d){return "מזיז את האמן מבלי להשאיר סימנים."},
+"jumpTooltip":function(d){return "להזיז את האמן מבלי להשאיר סימנים."},
 "jumpEastTooltip":function(d){return "הזז/י את האומן מזרחה בלי להשאיר אף סימן."},
 "jumpNorthTooltip":function(d){return "הזז/י את האומן צפונה בלי להשאיר אף סימן."},
 "jumpSouthTooltip":function(d){return "הזז/י את האומן דרומה בלי להשאיר אף סימן."},

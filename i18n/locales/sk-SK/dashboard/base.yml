@@ -346,7 +346,7 @@ sk:
     teacher_dashboard: Zobraziť nástenku pokroku
     teacher_student_count_one: 'Máte %{count} študenta.'
     teacher_student_count: 'Máte %{count} študentov.'
-    teacher_averages: 'On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.'
+    teacher_averages: 'Vaši študenti získali v priemere %{trophy_average} z %{trophy_max} trofejí "Concept Mastery".'
     teacher_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť tento kurz
     teacher_read_blog: Prečítajte si o novinkách a aktualizáciách materiálov na našom Educator blogu
     classroom: Tvoja trieda
@@ -385,7 +385,7 @@ sk:
     student: Študent
     teacher: Učiteľ
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Ďakujeme našim <a href="https://code.org/about/donors"> darcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, nášmu <a href="https://code.org/about/team"> tímu</a>, nášmu video obsadeniu a nášmu <a href="https://code.org/about/advisors"> poradcovi vo vzdelávaní </a> za ich podporu pri vytváraní Code štúdia.'
     help_from_html: Inžinieri z Google, Microsoft, Facebook a Twitter pomoholi vytvoriť tento tutoriál.
     help_from_html_old: Kolegovia z Google, Microsoft-u, Facebook-u a Twitter-u pomoholi vytvoriť tento tutoriál.
     art_from_html: 'Angry Birds&trade; & &copy; 2009-2014 Rovio zábava S.r.o. Všetky práva vyhradené. <br/> Rastliny vs zombie&trade; & &copy; 2014 Electronic Arts Inc Všetky práva vyhradené.'
@@ -403,6 +403,9 @@ sk:
     privacy: Zásady ochrany súkromia
     secure: Bezpečná verzia
     report_abuse: Nahlásenie zneužitia
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Potrebujete pomôcť?
     subtitle: Pozrite si tieto videá a tipy
@@ -419,7 +422,7 @@ sk:
   compatability:
     working:
       header: Pracujeme na podpore pre Váš prehliadač.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      message: "Code.org používa moderné webové technológie. Vďaka tomu sa webová stránka rýchlejšie používa. Váš prehliadač nepodporuje všetky funkcie, ktoré sú nezbytné, a môže dochádzať k problémom pri používaní tejto časti webu. Pomôžte nám s tým <a href='%{report_issue_url}'> nahlasovaním všetkých problémov, ktoré nájdete</a>. Tiež je možné <a href='%{supported_browsers_url}'> inovovať prehliadať na podporovanú verziu</a>."
       hide_this_warning: Skryť toto upozornenie
     upgrade:
       header: Prosím aktualizujte svoj prehliadač.

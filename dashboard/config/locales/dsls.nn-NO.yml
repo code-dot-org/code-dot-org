@@ -11,8 +11,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Set saman knappkombinasjonen
-          til dansebevegelsen.
+        Match the button combination to the dance moves.: Kombiner knappane så dei
+          passar til dansetrinna.
         Matching: Samansetting
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -35,7 +35,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Set saman rutenettet to programmet.
+        Match the grid to the program.: Få rutenettet til å passe med programmet.
         Matching: Samansetting
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -45,10 +45,10 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Dra blokkene for å lage par.
-        Instructions: Istruksjonar
-        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
-        Maze Match: Labyrint Lag par
+        Drag the blocks to match.: Dra blokkane for å lage par.
+        Instructions: Instruksjonar
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkane
+        Maze Match: Set saman labyrintane
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -56,7 +56,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Set saman rutenettet med tilhøyrande program
+        Match the grid to the program: Set saman rutenettet med programmet
         Matching: Samansetting
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -67,8 +67,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Kunstner Løkker Lag eit par!
-        Match the loop to the shape: Set løkka saman med til figuren som høyrer til
+        Artist Loops Matching One: Set saman kunstnarløkkene - Ein
+        Match the loop to the shape: Finn figuren som passar til løkka
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -78,7 +78,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Kunstnar Set saman
+        Artist Matching: Kunstnar-samansetjing
         Match the shape with the blocks that complete it.: Set figuren saman med dei
           blokkene som fullfører forma.
       2-3 bounce match 1:
@@ -92,7 +92,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: Sprett Set saman
+        Bounce Matching: Sprett-matching
         Match the events with the actions: Set saman hendingane med handlingane
         Matching: Samansetting
       2-3 flappy match 1:
@@ -168,7 +168,7 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Dra blokkene for å lage par.
-        Instructions: Istruksjonar
+        Instructions: Instruksjonar
         Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
         Maze Match: Labyrint Lag par
       K-1 Artist 2 Match 1:
@@ -232,8 +232,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Set saman knappkombinasjonen
-          til dansebevegelsen.
+        Match the button combination to the dance moves.: Kombiner knappane så dei
+          passar til dansetrinna.
         Matching: Samansetting
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -265,7 +265,7 @@
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Dra blokkene for å lage par.
-        Instructions: Istruksjonar
+        Instructions: Instruksjonar
         Match the puzzles and blocks: Vel dei oppgåvene og blokkene som passar saman
         Matching: Samansetting
       K-1 Move It Match 1:
@@ -289,7 +289,7 @@
         /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
         /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
         Drag the images from right to center.: Dra bilda frå høgre til midten.
-        Instructions: Istruksjonar
+        Instructions: Instruksjonar
         Match up all the flowers by colour!: Set saman blomstrane etter farge!
         Matching Images Two: Set saman bilder to
       test matching text:

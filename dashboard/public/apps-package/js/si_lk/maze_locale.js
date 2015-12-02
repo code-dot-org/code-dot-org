@@ -162,7 +162,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "digTooltip":function(d){return "කුණු ඒකක 1 ඉවත් කරන්න"},
 "dirE":function(d){return "නැ"},
 "dirN":function(d){return "උ"},
-"dirS":function(d){return "දකුණ"},
+"dirS":function(d){return "ද"},
 "dirW":function(d){return "බ"},
 "doCode":function(d){return "do"},
 "elseCode":function(d){return "else"},
