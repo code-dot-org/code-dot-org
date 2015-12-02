@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var myObj = { };\r\nconsole.log(myObj);",
+    "start_blocks": "var student1 = {};\r\nstudent1.name = \"Maya\";\r\nstudent1.grade = 11;\r\nstudent1.onTimeToClass = true;\r\n\r\nvar student2 = {};\r\n\r\nconsole.log(student1);\r\nconsole.log(studnet2);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -44,10 +44,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

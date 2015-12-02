@@ -39,16 +39,19 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="create_a_circle" editable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="jump_by_constant_dropdown">
-              <title name="DIR">jumpForward</title>
-              <title name="VALUE" config="50,100,150,200,300">???</title>
+            <block type="create_a_circle" editable="false">
               <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="18,45,60,90,120,180">???</title>
+                <block type="jump_by_constant_dropdown">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE" config="50,100,150,200,300">???</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="18,45,60,90,120,180">???</title>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
