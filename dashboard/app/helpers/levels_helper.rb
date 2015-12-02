@@ -282,7 +282,6 @@ module LevelsHelper
     if level_overrides[:embed]
       view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
     end
-    view_options(no_footer: true) if level_overrides[:share] && browser.mobile?
 
     level_overrides.merge!(no_padding: view_options[:no_padding])
 
