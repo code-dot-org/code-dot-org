@@ -754,5 +754,11 @@
   "failedMultiplyCharactersTimeoutBlockly": "Você precisa pegar 20 Mouse Droids. Use o comando \"adicione um Mouse Droid\" dentro do evento \"quando pegar Mouse Droid\" para adicionar dois ou mais Mouse Droids sempre que você pegar um.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, você adicionou código para criar Mouse Droids. Você pode ir para o próximo desafio ou tentar pegar 20 Mouse Droids novamente. Tente facilitar, adicionando mais deles! (Pressione e segure as teclas do seu teclado - ou tela - para se mover mais rápido).",
   "failedChangeSettingTimeout": "Pegue três Pilotos Rebeldes para seguir em frente.",
-  "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."
+  "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade.",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }

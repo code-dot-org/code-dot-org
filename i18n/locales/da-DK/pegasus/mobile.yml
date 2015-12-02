@@ -282,6 +282,7 @@ da-DK:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Byg en galakse med kode
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Brug træk-slip blokke og JavaScript.
@@ -587,6 +588,7 @@ da-DK:
   carousel_heading_ide: Platforme populære blandt lærere
   educator_notes: Lærervejledning
   teach_led_lesson_plans: Lærerstyret Hour of Code lektions planer
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
   beyond_submission: Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne og indsendelseformularen.

@@ -108,7 +108,7 @@
   "whenPaddleCollidedTooltip":"当球撞到球拍时，执行下面的操作",
   "whenRight":"当箭头向右",
   "whenRightTooltip":"执行下面按向右箭头键时采取的行动。",
-  "whenUp":"当箭头向上",
+  "whenUp":"当箭头键向上",
   "whenUpTooltip":"执行下面按向上箭头键时采取的行动。",
   "whenWallCollided":"当球撞到墙",
   "whenWallCollidedTooltip":"当球撞到墙时，执行下面的操作",

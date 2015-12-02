@@ -256,6 +256,7 @@ ka-GE:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: გალაქტიკის შექმნა კოდით
   starwars_javascript_title: JavaScript
   starwars_javascript_description: გამოიყენეთ ბლოკლი და JavaScript.
@@ -561,6 +562,7 @@ ka-GE:
   carousel_heading_ide: მასწავლებლებს შორის პოპულარული პლატფორმები
   educator_notes: მასწავლებლის ჩანაწერები
   teach_led_lesson_plans: კოდის ერთი საათის გაკვეთილების გეგმები მასწავლებლებისთვის
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: როგორ გავუძღვეთ კოდის ერთ საათს
   more_resources_educators: მეტი რესურსი მასწავლებლებისთვის
   beyond_submission: გინდათ კოდის ერთი საათის შემდგომი ტუტორიალის გამოგზავნა? ნახეთ კრიტერიუმები და გაგზავნის ფორმა.

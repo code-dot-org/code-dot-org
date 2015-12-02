@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Bạn có thể nhấn vào \"Keep Playing\" để quay trở lại trò chơi.",
   "replayButton":"Chơi lại",
   "selectChooseButton":"Chọn",
-  "tooManyBlocksFail":"Đã hoàn thành Câu đố {puzzleNumber}. Xin chúc mừng! Bạn cũng có thể hoàn thành câu đố bằng {numBlocks, plural, one {1 block} {# blocks}} khác."
+  "tooManyBlocksFail":"Đã hoàn thành Câu đố {puzzleNumber}. Xin chúc mừng! Bạn cũng có thể hoàn thành câu đố bằng {numBlocks, plural, one {1 block} other {# blocks}}."
 }

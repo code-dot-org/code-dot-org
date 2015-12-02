@@ -3495,9 +3495,9 @@ kk:
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2 frequency caesar_instruction: Instructions
-      U2 frequency random sub_instruction: Instructions
-      U2 vigenere cipher_instruction: Instructions
+      U2 frequency caesar_instruction: Нұсқаулар
+      U2 frequency random sub_instruction: Нұсқаулар
+      U2 vigenere cipher_instruction: Нұсқаулар
       U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your

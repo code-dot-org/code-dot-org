@@ -320,6 +320,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Bloky presúvajte myšou spolu s JavaScript-om.
@@ -339,7 +340,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -730,6 +731,10 @@
   carousel_heading_ide: Platformy, ktoré sú populárne medzi učiteľmi
   educator_notes: Poznámky pedagógov
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Ako učiť "Hodinu programovania"
   more_resources_educators: Ďalšie zdroje pre učiteľov
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -827,10 +832,10 @@
   projguts_gradelevel: Vek 10-13
   hourofcode_gradelevel: Vek 4-104
   frozen_gradelevel: Vek 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Vek 4-104
   playlab_gradelevel: Vek 4-104
   infinity_gradelevel: Vek 4-104
-  artist_gradelevel: Vek 4-104
+  artist_gradelevel: Vek 8+
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Unplugged
@@ -1407,3 +1412,8 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

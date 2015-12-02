@@ -1,5 +1,5 @@
 bg-BG:
-  hour_of_code: Час на Кодирането
+  hour_of_code: Hour of Code
   hello: Здравей, свят
   select_language: Моля, изберете вашия език
   en: Компютърни науки
@@ -141,7 +141,7 @@ bg-BG:
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
   studiobar_teacher_body: Използвайте Студиото по кодиране в класната си стая
-  studiobar_frozen_title: Час на Кодирането
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Създаване на зимна приказка с Анна и Елза
   studiobar_donate_title: Дарения
   studiobar_donate_body: 'Едно дете  получава вузможност да учи от всеки долар, който си дарил'
@@ -189,9 +189,9 @@ bg-BG:
   homepage_banner_text_link: Научете повече
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Научете повече
-  homepage_slot_text_title_hoc: Час на Кодирането
+  homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
-  homepage_slot_text_link_hoc: Опитайте Часа на Кодирането
+  homepage_slot_text_link_hoc: Опитайте Hour of Code
   homepage_slot_text_link_host: Организирайте Hour of Code
   homepage_slot_text_link_hocserved: '# опитаха'
   homepage_solot_text_link_volunteer: Доброволец за Часа на кода
@@ -252,19 +252,20 @@ bg-BG:
   class_submission_level_vocational: Професионално
   class_submission_languages_other: Друг език (и)
   inspirational_videos_more: 'Още <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> вдъхновяващи видеа</a> от модели и знаменитости'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_choose_theme: Изберете си тема за Игрална лаборатория
+  playlab_classic_title: Класически
+  playlab_gumball_title: Гъмбол
+  playlab_iceage_title: 'Ледена епоха - Очаквайте скоро'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Изграждане на галактика с код
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Използвайте блокове и JavaScript.
   starwars_javascript_specs: Английски само | Модерни браузъри | Възраст 11 +
-  starwars_javascript_start_button: Научете повече
+  starwars_javascript_start_button: Опитайте сега
   starwars_blocks_title: Блокове
   starwars_blocks_description: Използвайте drag-drop блокове.
   starwars_blocks_specs: На повече езици (Очаквайте скоро) | Съвременни браузъри, смартфони, таблетки | Възраст 6-10
-  starwars_blocks_start_button: Научете повече
+  starwars_blocks_start_button: Опитайте сега
   starwars_watch_videos: Преди да започнете, гледайте едно от тези вдъхновяващи видеа
   starwars_speak_languages: Говорите друг език?
   starwars_help_translate: Помогнете ни с превода
@@ -309,7 +310,7 @@ bg-BG:
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
   volunteer_engineer_submission_final_paragraph: Вие ще бъдете отбелязан на картата в помощ на местните учители, за да се свържем с Вас за Часът на кода или други възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат споделяни. Но друга информация (включително приблизителното местоположение) ще бъде публична и видима от местните учители.
   volunteer_engineer_submission_checkbox_contact: 'Съгласен съм, учителите да могат да се свържат с мен за доброволческа помощ (Забележка: Вашият имейл адрес няма да бъде споделен)'
-  volunteer_engineer_submission_submit: Изпрати
+  volunteer_engineer_submission_submit: Подаване
   volunteer_engineer_submission_thankyou: Благодарим Ви за изпращане на Вашата информация.
   volunteer_engineer_submission_commitment_uncertain: Неопределено
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 час седмично
@@ -561,6 +562,7 @@ bg-BG:
   carousel_heading_ide: Платформи, популярни сред учителите
   educator_notes: Бележки за учители
   teach_led_lesson_plans: Ръководство с учебни планове за учители
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Как да преподавате един Час на Кода
   more_resources_educators: Повече ресурси за учители и възпитатели
   beyond_submission: Искате ли да продължите с уроците и след Часа на кода? Вижте критериите за попълване на форма.

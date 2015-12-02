@@ -320,6 +320,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Construire une Galaxie avec du code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Utilise les blocs et Javascript.
@@ -760,6 +761,10 @@
   carousel_heading_ide: Plateformes populaires parmi les enseignants
   educator_notes: Notes de l'enseignant
   teach_led_lesson_plans: Plan de cours Une Heure de Code pour les enseignants
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Comment enseigner une Heure de Code
   more_resources_educators: Plus de ressources pour enseignants et éducateurs
   beyond_submission: Tu veux soumettre un tutoriel pour Au-delà d'Une Heure? Consulte
@@ -1489,3 +1494,8 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

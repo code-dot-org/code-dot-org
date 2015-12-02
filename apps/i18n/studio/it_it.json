@@ -182,7 +182,7 @@
   "hoc2015_change_setting_instructions": "\"E' il momento di visitare un altro pianeta.\"",
   "hoc2015_change_setting_instructions2": "Usa le nuove istruzioni per impostare il tuo droide e la sua velocità. Poi, raggiungi i Piloti dell'Alleanza Ribelle [rebelpilot].",
   "hoc2015_event_free_instructions": "\"Te la devi cavare da solo adesso, R2-D2.\"",
-  "hoc2015_event_free_instructions2": "Hai tutti gli strumenti necessari per creare una versione tutta tua. Esplora e prova liberamente tutti i Comandi e gli Eventi. Quando hai finito, premi il pulsante Condividi per continuare.",
+  "hoc2015_event_free_instructions2": "Hai tutti gli strumenti necessari per creare una versione tutta tua. Esplora e prova liberamente tutti i Comandi e gli Eventi. Quando hai finito, premi il pulsante Condividi per continuare.", 
   "iceAge": "L'era glaciale!",
   "incrementPlayerScore": "aggiungi un punto",
   "itemIAProjectile1": "cuori",
@@ -754,5 +754,11 @@
   "failedMultiplyCharactersTimeoutBlockly": "Devi raggiungere 20 Droidi-Topo. Usa il blocco \"aggiungi un Droide-Topo\" all'interno dell'evento \"quando raggiungi un Droide-Topo\" per aggiungere due o più Droidi-Topo ogni volta che ne raggiungi uno.",
   "failedMultiplyCharactersTimeoutGotSome": "Complimenti, hai aggiunto il codice per far apparire i Droidi-Topo. Puoi passare al prossimo esercizio o provare di nuovo a prendere 20 Droidi-Topo. Più Droidi-Topo aggiungi e più sarà facile superare il livello! (Tieni premuti i tasti freccia della tastiera (o dello schermo) per muoverti più velocemente.)",
   "failedChangeSettingTimeout": "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello.",
-  "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."
+  "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità.",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }

@@ -219,7 +219,7 @@ function loadGumball(skin, assetUrl) {
 }
 
 function loadIceAge(skin, assetUrl) {
-  skin.defaultBackground = 'icy';
+  skin.defaultBackground = 'icy1';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -264,23 +264,23 @@ function loadIceAge(skin, assetUrl) {
   skin.fadeExplosion = false;
   skin.timePerExplosionFrame = 40;
 
-  skin.grassy = {
-    background: skin.assetUrl('background.jpg'),
+  skin.icy1 = {
+    background: skin.assetUrl('background_icy1.jpg'),
   };
-  skin.tile = {
-    background: skin.assetUrl('background_tile.jpg'),
+  skin.icy2 = {
+    background: skin.assetUrl('background_icy2.jpg'),
   };
-  skin.leafy = {
-    background: skin.assetUrl('background_leafy.jpg'),
+  skin.icy3 = {
+    background: skin.assetUrl('background_icy3.jpg'),
   };
-  skin.icy = {
-    background: skin.assetUrl('background_icy.jpg'),
+  skin.icy4 = {
+    background: skin.assetUrl('background_icy4.jpg'),
   };
-  skin.flower = {
-    background: skin.assetUrl('background_flower.jpg'),
+  skin.icy5 = {
+    background: skin.assetUrl('background_icy5.jpg'),
   };
-  skin.iceberg = {
-    background: skin.assetUrl('background_ice.jpg'),
+  skin.ground = {
+    background: skin.assetUrl('background_ground.jpg'),
   };
 
   skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
@@ -311,22 +311,22 @@ function loadIceAge(skin, assetUrl) {
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundGrassy(), '"grassy"'],
-    [msg.setBackgroundTile(), '"tile"'],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundFlower(), '"flower"'],
-    [msg.setBackgroundIceberg(), '"iceberg"']];
+    [msg.setBackgroundIcy1(), '"icy1"'],
+    [msg.setBackgroundIcy2(), '"icy2"'],
+    [msg.setBackgroundIcy3(), '"icy3"'],
+    [msg.setBackgroundIcy4(), '"icy4"'],
+    [msg.setBackgroundIcy5(), '"icy5"'],
+    [msg.setBackgroundGround(), '"ground"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.grassy.background, '"grassy"'],
-    [skin.tile.background, '"tile"'],
-    [skin.leafy.background, '"leafy"'],
-    [skin.icy.background, '"icy"'],
-    [skin.flower.background, '"flower"'],
-    [skin.iceberg.background, '"iceberg"'],
+    [skin.icy1.background, '"icy1"'],
+    [skin.icy2.background, '"icy2"'],
+    [skin.icy3.background, '"icy3"'],
+    [skin.icy4.background, '"icy4"'],
+    [skin.icy5.background, '"icy5"'],
+    [skin.ground.background, '"ground"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [
@@ -619,16 +619,37 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.customObstacleZones = {endor : {}, hoth: {}, starship: {}};
 
+  function generateGridObstacleZones() {
+    var zones = [];
+    for (var row = 0; row < 4; row++) {
+      for (var col = 0; col < 4; col++) {
+        var zone = {
+          minX: 50 + col * 100 + 5,
+          maxX: 50 + col * 100 + 49 - 5,
+          minY: 50 + row * 100 + 15,
+          maxY: 50 + row * 100 + 49 - 5
+        };
+        zones.push(zone);
+      }
+    }
+    return zones;
+  }
+
+  skin.customObstacleZones.endor.grid =
+  skin.customObstacleZones.hoth.grid =
+  skin.customObstacleZones.starship.grid =
+    generateGridObstacleZones();
+
   skin.customObstacleZones.endor.blobs = [
-    { minX: 361, maxX: 413, minY: 261, maxY: 344 },
+    { minX: 346, maxX: 413, minY: 261, maxY: 344 },
     { minX: 318, maxX: 404, minY: 342, maxY: 397 },
-    { minX: 308, maxX: 352, minY: 72, maxY: 110 },
-    { minX: 264, maxX: 352, minY: 112, maxY: 197 },
-    { minX: 109, maxX: 154, minY: 289, maxY: 351 },
-    { minX: 109, maxX: 205, minY: 228, maxY: 288 },
+    { minX: 308, maxX: 348, minY: 72, maxY: 110 },
+    { minX: 264, maxX: 348, minY: 112, maxY: 197 },
+    { minX: 96, maxX: 149, minY: 289, maxY: 349 },
+    { minX: 96, maxX: 199, minY: 238, maxY: 288 },
     { minX: 83, maxX: 125, minY: 125, maxY: 147 },
     { minX: 58, maxX: 99, minY: 72, maxY: 91 },
-    { minX: 57, maxX: 156, minY: 92, maxY: 123 }];
+    { minX: 57, maxX: 149, minY: 92, maxY: 123 }];
 
   skin.customObstacleZones.endor.horizontal = [
     { minX: 51, maxX: 299, minY: 269, maxY: 293 },
@@ -639,16 +660,16 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.customObstacleZones.endor.circle = [
     { minX: 251, maxX: 317, minY: 332, maxY: 348 },
-    { minX: 83, maxX: 198, minY: 326, maxY: 348 },
-    { minX: 250, maxX: 317, minY: 77, maxY: 94 },
-    { minX: 316, maxX: 334, minY: 77, maxY: 348 },
+    { minX: 83, maxX: 198, minY: 332, maxY: 348 },
+    { minX: 250, maxX: 317, minY: 77, maxY: 93 },
+    { minX: 313, maxX: 337, minY: 77, maxY: 348 },
     { minX: 163, maxX: 236, minY: 202, maxY: 244 },
     { minX: 83, maxX: 200, minY: 77, maxY: 93 },
-    { minX: 62, maxX: 82, minY: 77, maxY: 348 }];
+    { minX: 62, maxX: 85, minY: 77, maxY: 348 }];
 
   skin.customObstacleZones.hoth.blobs = [
-    { minX: 116, maxX: 142, minY: 283, maxY: 342 },
-    { minX: 116, maxX: 187, minY: 226, maxY: 281 },
+    { minX: 100, maxX: 142, minY: 283, maxY: 342 },
+    { minX: 100, maxX: 187, minY: 226, maxY: 281 },
     { minX: 356, maxX: 394, minY: 264, maxY: 311 },
     { minX: 311, maxX: 393, minY: 313, maxY: 388 },
     { minX: 310, maxX: 344, minY: 61, maxY: 106 },
@@ -659,9 +680,9 @@ function loadHoc2015(skin, assetUrl) {
   skin.customObstacleZones.hoth.horizontal = [
     { minX: 54, maxX: 299, minY: 268, maxY: 294 },
     { minX: 150, maxX: 350, minY: 171, maxY: 198 },
-    { minX: 53, maxX: 99, minY: 161, maxY: 200 },
-    { minX: 252, maxX: 350, minY: 66, maxY: 100 },
-    { minX: 54, maxX: 195, minY: 62, maxY: 92 }];
+    { minX: 53, maxX: 99, minY: 171, maxY: 198 },
+    { minX: 252, maxX: 350, minY: 66, maxY: 92 },
+    { minX: 54, maxX: 195, minY: 66, maxY: 92 }];
 
   skin.customObstacleZones.hoth.circle = [
     { minX: 250, maxX: 298, minY: 312, maxY: 342 },
@@ -679,7 +700,7 @@ function loadHoc2015(skin, assetUrl) {
     { minX: 101, maxX: 144, minY: 300, maxY: 350 },
     { minX: 101, maxX: 197, minY: 208, maxY: 299 },
     { minX: 261, maxX: 344, minY: 120, maxY: 192 },
-    { minX: 55, maxX: 128, minY: 77, maxY: 141 }];
+    { minX: 55, maxX: 133, minY: 77, maxY: 141 }];
 
   skin.customObstacleZones.starship.horizontal = [
     { minX: 52, maxX: 298, minY: 267, maxY: 300 },
@@ -691,11 +712,11 @@ function loadHoc2015(skin, assetUrl) {
   skin.customObstacleZones.starship.circle = [
     { minX: 251, maxX: 316, minY: 315, maxY: 351 },
     { minX: 153, maxX: 242, minY: 165, maxY: 251 },
-    { minX: 252, maxX: 314, minY: 66, maxY: 101 },
-    { minX: 316, maxX: 333, minY: 66, maxY: 351 },
+    { minX: 252, maxX: 314, minY: 66, maxY: 100 },
+    { minX: 310, maxX: 339, minY: 66, maxY: 351 },
     { minX: 80, maxX: 200, minY: 316, maxY: 351 },
-    { minX: 82, maxX: 200, minY: 66, maxY: 102 },
-    { minX: 69, maxX: 80, minY: 66, maxY: 351 }];
+    { minX: 82, maxX: 200, minY: 66, maxY: 100 },
+    { minX: 63, maxX: 86, minY: 66, maxY: 351 }];
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
@@ -886,7 +907,7 @@ function loadHoc2015(skin, assetUrl) {
 
   skin.horizontal_nonjumbo =
     [[0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-     [0, 0x02, 0x03, 0x04, 0x00, 0x24, 0x25, 0x00],
+     [0, 0x02, 0x03, 0x20, 0x00, 0x24, 0x25, 0x00],
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
      [0, 0x10, 0x00, 0x34, 0x35, 0x20, 0x23, 0x00],
      [0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
@@ -898,7 +919,7 @@ function loadHoc2015(skin, assetUrl) {
     [[0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x213, 0x213, 0x213, 0x00,  0x213, 0x213, 0x00],
      [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
-     [0, 0x10,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
+     [0, 0x30,  0x00,  0x213, 0x213, 0x213, 0x213, 0x00],
      [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
      [0, 0x213, 0x213, 0x213, 0x213, 0x213, 0x00,  0x00],
      [0, 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00],
@@ -919,9 +940,9 @@ function loadHoc2015(skin, assetUrl) {
      [0x00, 0x103, 0x103, 0x00,  0x00, 0x00,  0x22,  0x00],
      [0x00, 0x103, 0x103, 0x00,  0x00, 0x110, 0x110, 0x00],
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x110, 0x110, 0x00],
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x00],
-     [0x00, 0x00,  0x102, 0x102, 0x00, 0x00,  0x00,  0x23],
-     [0x00, 0x00,  0x03,  0x00,  0x00, 0x00,  0x121, 0x121],
+     [0x00, 0x00,  0x132, 0x132, 0x00, 0x00,  0x00,  0x00],
+     [0x00, 0x00,  0x132, 0x132, 0x00, 0x00,  0x00,  0x23],
+     [0x00, 0x00,  0x31,  0x00,  0x00, 0x00,  0x121, 0x121],
      [0x00, 0x00,  0x00,  0x00,  0x00, 0x00,  0x121, 0x121]];
 
   // Sounds.
