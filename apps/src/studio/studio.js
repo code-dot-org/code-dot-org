@@ -3519,7 +3519,7 @@ Studio.displayVictoryText = function() {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
-  if (dom.isMobile()) {
+  if (dom.isMobile() || dom.isWindowsTouch()) {
     var resetTextA = document.getElementById('resetTextA');
     var resetTextB = document.getElementById('resetTextB');
     resetTextB.textContent = studioMsg.tapToReset();
