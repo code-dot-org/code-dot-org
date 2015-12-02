@@ -34,12 +34,13 @@
   }
 
   function generateTwitterURL(urlToShare) {
+    var translatedText = "#{@just_did_hoc_text}";
     var queryParams = {
       url: urlToShare,
       related: 'codeorg',
-      // TODO(bjordan): include "HourOfCode" hashtag if not present in i18n text
-      hashtags: '',
-      text: "#{@just_did_hoc_text}"
+      // Add HoC hashtag if not present in i18n'd text
+      hashtags: translatedText.indexOf('HourOfCode') < 0 ? '#HourOfCode' : '',
+      text: translatedText;
     };
 
     return 'https://twitter.com/share?' + $.param(queryParams, true);
