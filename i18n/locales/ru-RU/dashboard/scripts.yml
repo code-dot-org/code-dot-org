@@ -27,10 +27,10 @@ ru:
           Flappy non blockly: Flappy без использования блоков
           title: Курс 1
           Artist 2: Художник 2
-          Happy Maps: Счастливые карты
+          Happy Maps: Весёлые карты
           Move it, Move it: Двигай это, двигай это
-          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посадить семя'
-          Building a Foundation: Построение фундамента
+          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посади зерно'
+          Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
           The Big Event: Большое Событие
           Going Places Safely: Безопасное путешествие
@@ -1164,11 +1164,11 @@ ru:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Счастливые карты
+          Happy Maps: Весёлые карты
           Move it, Move it: Двигай это, двигай это
-          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посадить семя'
+          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посади зерно'
           Graph Paper Programming: Программирование на бумаге в клеточку
-          Building a Foundation: Построение фундамента
+          Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
           The Big Event: Большое Событие
           Binary Bracelets: Двоичные браслеты
@@ -1348,6 +1348,10 @@ ru:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1474,8 +1478,8 @@ ru:
           Craft: Craft
         mc:
           title: Час Кода Minecraft
-          description_short: Изучайте мир Minecraft используя программный код
-          description: Используйте блоки кода, чтобы помочь Стиву или Алексу в их приключениях в мире Minecraft
+          description_short: Исследуйте мир Minecraft с помощью программного кода
+          description: Используйте блоки кода, чтобы отправить Стива или Алекс в путешествие по миру Minecraft
           Hour of Code 2015: Час кода 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

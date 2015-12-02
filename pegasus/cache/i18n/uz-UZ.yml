@@ -325,6 +325,10 @@
   class_submission_languages_other: Boshqa til(lar)
   inspirational_videos_more: Rol modeli va mashxurlardan ko‘roq <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ilhomlantiruvchi
     videolar</a>
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Dasturlash bilan galaktika quring
   starwars_javascript_title: Javascript
   starwars_javascript_description: Ko‘chuvchi blok va JavaScriptdan foydalaning.
@@ -480,7 +484,7 @@
   dashboard_landing_progress_biggest: Bu sizning eng katta bo‘limingiz uchun yutuqlaringiz.
   dashboard_landing_view_progress: '%{biggest_section} uchun o‘sishni ko‘rish'
   dashboard_landing_print_progress: Print progress
-  dashboard_landing_available_title: Available courses
+  dashboard_landing_available_title: Mavjud kurslar
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
@@ -534,11 +538,11 @@
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: O'chirasizmi?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
+  dashboard_action_remove: Ko‘chirish
+  dashboard_action_remove_confirm: Ko‘chirasizmi?
+  dashboard_action_done: Bajarildi
+  dashboard_action_required: zarur
+  dashboard_navigation_home_page: O‘qituvchining bosh sahifasi
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Dars rejasi va materiallari
@@ -564,7 +568,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
+  dashboard_sections_name: Bo‘lim nomi
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -689,7 +693,7 @@
   dashboard_faq: Frequently Asked Questions
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announce_view_all: Barini ko‘rish
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -727,10 +731,14 @@
   carousel_heading_international: Tutorials in your language
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Grades K-8
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
   carousel_heading_webpages: Learn to make web pages
@@ -745,7 +753,7 @@
   participants: participants
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: Previous
+  previous: Avvalgi
   next: Keyingi
   older_systems: Tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all

@@ -46,7 +46,7 @@
   csedweek_map_legend_title: Légende
   csedweek_map_legend_event: Heure de code
   csedweek_map_legend_cs_tech_jam: Jam Informatique
-  cded_sign_up: S’inscrire
+  cded_sign_up: Inscription
   cded_try_it: Participez
   twentyhours_trynow: Essaie maintenant
   california_heading: Demandez à votre école d'enseigner l'Informatique
@@ -168,7 +168,7 @@
     élève de CM2
   stats_michael: « Je n'ai <b>vraiment jamais</b> vu mes élèves aussi enthousiasmés
     d'apprendre. » — Michael Clark, enseignant
-  studiobar_title: Explore <a href='http://studio.code.org'> Code Studio</a>
+  studiobar_title: Essayez <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explorez Code Studio
   studiobar_elementary_title: Cours pour débutants
   studiobar_elementary_body: Nos trois nouveaux cours pour la Grande Section&#8209;5
@@ -230,7 +230,7 @@
   homepage_action_text_hoc: Une Heure de Code pour chaque élève.
   homepage_action_text_num_served: '# served'
   homepage_action_text_join_us: Rejoignez-nous
-  homepage_action_text_sign_up: S’inscrire
+  homepage_action_text_sign_up: Inscription
   homepage_action_text_try_it: Participez
   homepage_action_text_volunteers: Bénévoles techniques recherchés
   homepage_action_text_codevideo: Voir la vidéo
@@ -316,6 +316,10 @@
   class_submission_languages_other: Autre(s) langue(s)
   inspirational_videos_more: Plus de <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     vidéos inspirantes</a> de personnalités icônes et de célébrités
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Construire une Galaxie avec du code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Utilise les blocs et Javascript.
@@ -326,7 +330,7 @@
   starwars_blocks_description: Utilise les blocs.
   starwars_blocks_specs: Plusieurs langues (à venir) | navigateurs modernes, smartphones,
     tablettes | 6-10 ans
-  starwars_blocks_start_button: Essaie maintenant
+  starwars_blocks_start_button: En savoir plus
   starwars_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
   starwars_speak_languages: Vous parlez une autre langue ?
   starwars_help_translate: Aidez-nous à traduire
@@ -337,7 +341,7 @@
   mc_shortdescription: Utilise des blocs de code pour vivre une aventure dans le monde
     de Minecraft avec Steve ou Alex.
   mc_gradelevel: 6 ans et plus
-  mc_platformtext: Navigateurs modernes, smartphones, tablettes
+  mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langues (à venir) | navigateurs modernes et tablettes | 6 ans
     et plus
   minecraft_subtitle: Une Heure de Code Minecraft
@@ -364,9 +368,10 @@
   volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
     si vous êtes étudiant en informatique ou développeur. Les champs marqués d'une
     <span class="form-required-field"> *</span> sont obligatoires.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Pas à la recherche de bénévolat ? <a
+    href="%{learn_more}">Apprenez plus</a> sur l'organisation de votre propre Heure
+    de Code et trouvez un bénévole local sur notre <a href="%{volunteer_local}">carte
+    des bénévoles</a>.
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants
     sur la carte des bénévoles
   volunteer_engineer_submission_field_name: Nom
@@ -708,7 +713,7 @@
   learn_more: En savoir plus
   learn_sign_up_description: Enregistre-toi pour participer à l'Heure de Code pendant
     la Semaine de l'Education de l'Informatique
-  learn_sign_up_button: S’inscrire
+  learn_sign_up_button: Inscription
   learn_videos_watch: Regardez cette vidéo inspirante avec votre classe
   learn_videos_show: Montrez cette vidéo inspirante à votre classe
   learn_videos_before_hoc: Regardez une vidéo inspirante avant votre Heure de Code
@@ -718,14 +723,14 @@
     à enseigner Une Heure de Code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Trouvez un bénévole
     local</a> pour vous aider pendant votre Heure de Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_teacher_led_lesson_plans: Soyez inspirés par <a href="https://code.org/teacher-led">les
+    plans de cours d'un enseignant pour l'Heure de Code</a>
+  learn_how_to_hoc: Suivez <a href="https://hourofcode.com/how-to">notre guide pratique</a>
+    pour enseigner une Heure de Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> En savoir plus</a> sur
     les prix pour chaque éducateur.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspirez les élèves en leur montrant <a href="https://code.org/educate/inspire">ces
+    vidéos</a>
   hoc2014_try_new_tutorials: Essaie nos nouvelles Heures de Code
   hoc2014_try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version
     bêta
@@ -738,11 +743,16 @@
   carousel_heading_international: Tutoriel dans votre langue
   carousel_heading_domestic: Tutoriels disponibles en anglais
   carousel_heading_beginners: Tutoriels pour débutants
+  carousel_heading_beyond_beginners: Tutoriels pour débutants
   carousel_heading_javascript: Tutoriels sur le langage JavaScript
+  carousel_heading_beyond_javascript: Tutoriels sur le langage JavaScript
   carousel_heading_unplugged: Pas d'équipement ou pas d'Internet ? Essayez l'informatique
     'débranchée'
   carousel_heading_devices: Applications d'apprentissage pour téléphones et tablettes
+  carousel_heading_beyond_devices: Applications d'apprentissage pour téléphones et
+    tablettes
   carousel_heading_languages: Tutoriels sur d'autres langages de programmation
+  carousel_heading_beyond_languages: Tutoriels sur d'autres langages de programmation
   carousel_heading_apps_games: Créez vos propres applications ou jeux
   carousel_heading_university: Cours d'université en ligne
   carousel_heading_webpages: Apprenez à faire des pages webs
@@ -797,14 +807,14 @@
   robomindnl_name: Programmer un robot virtuel
   flappy_name: Créer un jeu Flappy Bird
   bitsbox_name: Bitsbox — créer un jeu
-  makeschool_name: Crée un jeu pour iPhone dans ton navigateur !
+  makeschool_name: Construis un jeu pour iPhone dans ton navigateur !
   touchdevelop_name: TouchDevelop
   appinventor_name: Heure de Code AppInventor
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pierre, papier, ciseaux
-  hourofcode_name: Espace réservé pour le nouveau code.org/hoc
+  hourofcode_name: Écris ton premier programme informatique
   playlab_name: Labo
   infinity_name: Infinity Play Lab
   artist_name: Artiste
@@ -851,8 +861,8 @@
   playlab_gradelevel: De 4 à 104 ans
   infinity_gradelevel: De 4 à 104 ans
   artist_gradelevel: De 4 à 104 ans
-  codeorg_platformtext: Navigateurs modernes, smartphones, tablettes
-  codeintl_platformtext: Navigateurs modernes, smartphones, tablettes
+  codeorg_platformtext: Navigateurs récents, smartphones, tablettes
+  codeintl_platformtext: Navigateurs récents, smartphones, tablettes
   thinkersmithspanish_platformtext: Débranché
   khan_platformtext: Navigateurs web récents
   khanes_platformtext: Navigateurs web récents
@@ -864,7 +874,7 @@
   scratch_platformtext: Navigateurs pour ordinateur de bureau
   lightbot_platformtext: TOUS les navigateurs et iOS, Android, ou une console de jeu
   thinkersmith_platformtext: Débranché
-  condcards_platformtext: Déconnecté
+  condcards_platformtext: Débranché
   lightbotintl_platformtext: iOS, Android (ou navigateur web)
   codehs_platformtext: Navigateurs récents. (Suivre le cours nécessite $$)
   codecademy_platformtext: Navigateurs web récents. Applications iOS, Android
@@ -879,7 +889,7 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablettes Android
   robomindnl_platformtext: Navigateurs web récents, web mobile
-  flappy_platformtext: Navigateurs modernes, smartphones, tablettes
+  flappy_platformtext: Navigateurs récents, smartphones, tablettes
   bitsbox_platformtext: Navigateurs web récents
   makeschool_platformtext: Navigateurs web récents
   touchdevelop_platformtext: Navigateurs récents, smartphones, pour tous les appareils
@@ -888,10 +898,10 @@
   thinkersmith2_platformtext: Débranché
   kodableunplugged_platformtext: Débranché
   projguts_platformtext: Débranché
-  hourofcode_platformtext: Navigateurs modernes, smartphones, tablettes
+  hourofcode_platformtext: Navigateurs récents, smartphones, tablettes
   frozen_platformtext: Navigateurs récents + tablettes
   starwars_platformtext: Navigateurs récents + tablettes
-  playlab_platformtext: Navigateurs modernes, smartphones, tablettes
+  playlab_platformtext: Navigateurs récents, smartphones, tablettes
   codeorg_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
   codeintl_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -935,7 +945,7 @@
   bitsbox_shortdescription: Code une série d'applications pour jouer et partager,
     en utilisant le langage JavaScript.
   makeschool_shortdescription: Fais un jeu pour iPhone ! Apprends en écrivant du code
-    pour apprendre de nouveaux mouvements à ton monstre !
+    pour enseigner de nouveaux mouvements à ton monstre !
   touchdevelop_shortdescription: 'Résous des énigmes, crée des jeux, apprends à coder,
     et tout cela sur ton téléphone. '
   appinventor_shortdescription: Développe ta propre application ! (Android seulement)
@@ -1079,11 +1089,11 @@
     une série d'applications pour jouer et partager. Des modes d'emploi simples permettent
     même à de jeunes enfants de programmer en JavaScript, et plus vous vous perfectionnez
     plus vous avancez.
-  makeschool_longdescription: Apprenez à coder en créant un jeu iPhone utilisant un
-    tout nouveau langage de programmation adapté aux débutants qui s'appelle Swift
-    ! Créez un jeu d'action inspiré des Pok&eacute;mon et écrivez le code pour apprendre
-    de nouveaux mouvements à votre monstre. Vous apprendrez à utiliser les variables,
-    les méthodes et les objets pour aider votre monstre à gagner !
+  makeschool_longdescription: Apprenez à codez en créant un jeu iPhone en utilisant
+    un tout nouveau langage de programmation adapté aux débutants qui s'appelle Swift!
+    Créez un jeu d'action inspiré des Pokemons et écrivez le code pour apprendre de
+    nouveaux mouvements à votre monstre. Vous apprendrez à utilisez les variables,
+    les méthodes et les objets pour aider votre monstre à gagner!
   touchdevelop_longdescription: 'L''éditeur, facile à utiliser par l''écran tactile,
     vous guidera pour créer du pixel art, résoudre le casse-tête de l''ours ou créer
     votre propre jeu du saut de l''oiseau. '
@@ -1193,7 +1203,7 @@
   alice_beyond_gradelevel: Secondaire
   sphero_beyond_gradelevel: 8 ans et plus
   codeorg_beyond_platformtext: Navigateurs récents, tablettes
-  khan_beyond_platformtext: Navigateurs web récents
+  khan_beyond_platformtext: Navigateurs web modernes
   tynker_beyond_platformtext: Navigateurs web récents ($$ requis)
   scratch_beyond_platformtext: N'importe quel navigateur
   lightbot_beyond_platformtext: iOS, Android (ou navigateur web)
@@ -1251,7 +1261,7 @@
     en Python
   hacketyhack_beyond_shortdescription: Apprenez Ruby, depuis les bases
   robomind_beyond_shortdescription: Écris du code pour un robot virtuel
-  makeschool_beyond_shortdescription: Apprenez à créer un jeu pour iPhone en une heure
+  makeschool_beyond_shortdescription: Apprenez à créer un jeu pour Iphone en une heure
   appinventor_beyond_shortdescription: Développe ta propre application ! (Android
     seulement)
   touchdevelop_beyond_shortdescription: Codez des applications mobiles directement
@@ -1340,11 +1350,11 @@
     en contrôlant leur propre robot virtuel. Le cours en ligne est complètement indépendant
     avec de courtes présentations, des films, des questionnaires et des conseils qui
     aident à résoudre les exercices de programmation. '
-  makeschool_beyond_longdescription: Connaissez-vous ObjectiveC ? Apprenez à créer
-    un jeu pour iPhone en une heure ! Nous vous guiderons étape par étape pour coder,
-    tester et jouer à votre jeu dans le navigateur et ensuite le partager sur Facebook
-    pour que vos amis l'essayent. Aucune connaissance antérieure de développement
-    sur iPhone n'est nécessaire. Vous devez comprendre ce que sont les variables,
+  makeschool_beyond_longdescription: Connaissez-vous ObjectiveC? Apprenez à créez
+    un jeu pour iPhone en une heure! Nous vous guiderons étape par étape pour coder,
+    tester et jouer à votre jeu dans le navigateur et ensuite à le partager sur Facebook
+    pour que vos amis l'essayent. Aucune connaissance antérieure du développement
+    sur iPhone n'est nécessaire. Vosu devez comprendre ce que sont les variables,
     les méthodes et les objets.
   appinventor_beyond_longdescription: Des tutoriels video, courts et amusants vous
     guident pour créer trois applications simples pour votre téléphone ou votre tablette

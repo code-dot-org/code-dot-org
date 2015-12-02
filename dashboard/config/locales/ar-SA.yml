@@ -277,8 +277,8 @@
       prize_us_only: (طلاب الولايات المتحدة فقط)
       prizes_link: المزيد من المعلومات
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: أجب
+    for_teachers_only: للمعلمين فقط
     title:
       one: 'المعلم الخاص بك:'
       other: 'معلميك:'
@@ -351,8 +351,8 @@
       section: القسم
       example: مثال الحل
       example_with_number: مثال الحل %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: 'تم تقديمه في:'
+      unsubmit: عدم تقديم
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
@@ -462,7 +462,10 @@
     tos: شروط الخدمة
     privacy: سياسة الخصوصية
     secure: نسخة آمنة
-    report_abuse: Report Abuse
+    report_abuse: الابلاغ عن سوء استخدام
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
@@ -501,7 +504,7 @@
   pdf_download: تحميل ملف بي دي اف
   download_coming_soon: 'قريبا أنشطة قابلة للتحميل. '
   video_coming_soon: قريبا فيديو!
-  not_started: The student has not attempted this level.
+  not_started: الطالب لم يحاول اجتياز هذا المستوى.
   share_code:
     title: انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي وهو يعمل
     bounce_og_title: هل تريد تجربة لعبة الارتداد الخاصة بي
@@ -547,13 +550,13 @@
     frozen:
       title: ملكة الثلج Frozen
     starwars:
-      title: Star Wars
+      title: حرب النجوم "Star Wars"
     infinity:
       title: لعبة مختبر اللعب اللانهائية
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: استكشف عالم Minecraft عن طريق الكود.
   gallery:
     students_drew_these_with_code: قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!
     students_made_these_with_code: قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!
@@ -706,33 +709,32 @@
     view_all: عرض مشاريعي
     remix: إعادة المزج
     click_to_remix: انقر فوق 'إعادة المزج' لعرض نسخة معدلة خاصة بك!
-    edit_project: Edit Project
+    edit_project: تعديل المشروع
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: هذا المشروع قد تم الإبلاغ عنه بانتهاكه Code.org، <a href='http://code.org/tos'>
+        شروط الخدمة</a>، ولا يمكن مشاركته مع الآخرين.
+      contact_us: إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'>
+        مراسلتنا.</a>
+      go_to_code_studio: الذهاب الي Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل
+          من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات
+          الموجودة على Code Studio, الرجء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك
+          على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: الرجاء تقديم بريد إلكتروني
+          age: الرجاء تحديد سن
+          abuse_type: الرجاء الاجابة عن كفيفة انتهاك هذا المحتوى لشروط الخدمة
+          abuse_detail: الرجاء تقديم تفاصيل بشأن المحتوى الذي تقوم بالإبلاغ عنه
+        abusive_url: الرابط "URL" للمحتوي الذي تقوم بالابلاغ عنه
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: كيف يقوم هذا المحتوى رابط %{link_start} بانتهاك شروط الخدمة رابط%{link_end}
+            ؟
+          harassment: التهديدات والتسلط عبر الإنترنتت, تصرفات غير لائقة
+          offensive: محتوى مسيء
+          infringement: التعدي على حقوق النشر
           other: أخرى
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه.
+        acknowledge: عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا
+          للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط
+          الاستخدام%{link_end}

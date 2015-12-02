@@ -315,6 +315,10 @@
   class_submission_languages_other: Egyéb nyelv(ek)
   inspirational_videos_more: További<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspiráló
     videók</a> példaképekkel és hírességekkel
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Galaxis építése kóddal
   starwars_javascript_title: Javascript
   starwars_javascript_description: Használd a mozgatható blokkokat és JavaScriptet.
@@ -718,11 +722,15 @@
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Oktatóanyagok JavaScript oktatásához
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki
     az offline számítástechnikát
   carousel_heading_devices: Oktató alkalmazások telefonra és tabletre
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Oktatóanyagok egyéb programozási nyelveken
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Csinálj saját appot vagy játékot.
   carousel_heading_university: Egyetemi kurzusok online
   carousel_heading_webpages: Tanulj weblapkészítést

@@ -1,5 +1,5 @@
 ru-RU:
-  hour_of_code: Hour of Code
+  hour_of_code: Час кода
   hello: Привет, мир!
   select_language: Выберите язык
   en: Информатика
@@ -141,7 +141,7 @@ ru-RU:
   studiobar_flappy_body: Создай и поделись своей игрой Flappy
   studiobar_teacher_title: Сделано для учителей
   studiobar_teacher_body: Познакомьте Ваш класс со Студией Кода
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: Час кода
   studiobar_frozen_body: Создай зимнюю сказку с Анной и Эльзой
   studiobar_donate_title: Пожертвовать
   studiobar_donate_body: За каждый пожертвованный доллар, один ребенок получает возможность учиться
@@ -191,7 +191,7 @@ ru-RU:
   homepage_banner_text_link: узнать больше
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: узнать больше
-  homepage_slot_text_title_hoc: Hour of Code
+  homepage_slot_text_title_hoc: Час кода
   homepage_slot_text_blurb_hoc: Любой может научиться. Начните сегодня
   homepage_slot_text_link_hoc: Попробуйте Час кода
   homepage_slot_text_link_host: Провести Час Кода
@@ -254,6 +254,10 @@ ru-RU:
   class_submission_level_vocational: Профессиональный
   class_submission_languages_other: Другие языки
   inspirational_videos_more: 'Ещё <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> вдохновляющие видео</a> с ролевыми моделями и знаменитостями'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Создайте галактику, используя код
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Используйте переносные блоки и JavaScript.
@@ -262,7 +266,7 @@ ru-RU:
   starwars_blocks_title: Блоки
   starwars_blocks_description: Используйте переносные блоки.
   starwars_blocks_specs: Множество языков (скоро) | Современные браузеры, смартфоны, планшеты | Возраст 6-10 лет
-  starwars_blocks_start_button: Попробуйте сейчас
+  starwars_blocks_start_button: Подробнее
   starwars_watch_videos: Прежде чем начать, посмотрите одно их этих вдовнохвляющих видео
   starwars_speak_languages: Говорите на другом языке?
   starwars_help_translate: Помогите нам перевести
@@ -347,7 +351,7 @@ ru-RU:
   dashboard_landing_news_title: Ресурсы для дошкольного и начального образования (только на английском языке)
   dashboard_landing_new_beta: Новинка! Попробуй наши бета-курсы для учеников 5 класса.
   dashboard_landing_new_k5courses: Новинка! Попробуй наши курсы для учеников 5 класса.
-  dashboard_landing_useful_links: Другие полезные ссылки (только на английском языке)
+  dashboard_landing_useful_links: Другие полезные ссылки
   dashboard_landing_office_hours: Задай вопрос лично ! Посетите наши ежемесячные видео-приемные.
   dashboard_landing_print_certificates: Распечатать сертификаты учеников, которые закончили этот курс
   dashboard_landing_educator_blog: Знакомтесь с новостями и обновлениями наших материалов на нашем Учебном Блоге
@@ -494,7 +498,7 @@ ru-RU:
   dashboard_progress_completed_too_many_blocks: Завершено, слишком много блоков
   dashboard_progress_completed_perfect: Завершено, отлично
   dashboard_progress_furthest_level_attempted: запрошен слишком высокий уровень
-  dashboard_stage: этап
+  dashboard_stage: Этап
   dashboard_puzzle: Головоломка
   dashboard_question: Вопрос
   dashboard_response: Ответ
@@ -544,10 +548,14 @@ ru-RU:
   carousel_heading_international: Обучающее руководство на Вашем языке
   carousel_heading_domestic: Учебные материалы доступны на английском языке
   carousel_heading_beginners: Учебники для начинающих
+  carousel_heading_beyond_beginners: Учебники для начинающих
   carousel_heading_javascript: Пособие для изучения JavaScript
+  carousel_heading_beyond_javascript: Пособие для изучения JavaScript
   carousel_heading_unplugged: 'Нет выхода в Интернет ? Попробуй "информатику оффлайн"'
   carousel_heading_devices: Обучающие приложения для телефонов и планшетов
+  carousel_heading_beyond_devices: Обучающие приложения для телефонов и планшетов
   carousel_heading_languages: Учебные материалы по другим языкам программирования
+  carousel_heading_beyond_languages: Учебные материалы по другим языкам программирования
   carousel_heading_apps_games: Создавай свои собственные приложения или игры
   carousel_heading_university: Университетские курсы онлайн
   carousel_heading_webpages: Научись создавать веб-страницы
@@ -598,14 +606,14 @@ ru-RU:
   robomindnl_name: Запрограммируйте виртуального робота
   flappy_name: Сделайте игру Flappy
   bitsbox_name: 'Bitsbox - сделайте игру'
-  makeschool_name: Создайте игру для iPhone в Вашем браузере!
+  makeschool_name: Создайте игру на iPhone в Вашем браузере!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Час Кода
   blockly_name: Блокли
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Камень, ножницы, бумага
-  hourofcode_name: Заполнитель для новых code.org/hoc
+  hourofcode_name: Написать первую компьютерную программу
   playlab_name: Лаборатория игр
   infinity_name: Лаборатория игр Infinity
   artist_name: Художник
@@ -770,7 +778,7 @@ ru-RU:
   robomindnl_longdescription: 'Ученики изучают основы програмиррования, управляя своим собственным виртуальным роботом. Этот онлайн урок содержит короткие презентации, фильмы, тесты, и автоматические подсказки для помощи с упражнениями по программированию. '
   flappy_longdescription: Используя перетаскивание блоков, создайте игру Порхающая птичка. Вы можете выбрать другой персонаж (акулу, Деда Мороза, или кого-нибудь ещё). Вы можете добавить игру на ваш телефон одним щелчком.
   bitsbox_longdescription: С помощью собственного виртуального планшета, вы можете создать несколько игровых программ и поделиться ими. Простые инструкции позволяют даже маленьким детям изучить настоящий язык программирования Javascript, и чем лучше вы учитесь, тем большего вы добьетесь.
-  makeschool_longdescription: 'Научитесь программировать, создавая игру для iPhone с помощью нового языка программирования для начинающих - Swift! Создавайте игру с пок&eacute;монами - пишите код, чтобы научить монстриков выполнять новые движения. Вы научитесь использовать переменные, методы, и объекты, чтобы привести персонажей к победе!'
+  makeschool_longdescription: 'Научитесь программировать, создавая игру для iPhone с помощью нового языка программирования для начинающих - Swift! Создавайте игру с покемонами - пишите код, чтобы научить монстриков выполнять новые движения. Вы научитесь использовать переменные, методы, и объекты, чтобы привести персонажей к победе!'
   touchdevelop_longdescription: Сенсорный редактор поможет вам создать картину из точек, решить головоломку с медведем, или разработать вашу собственную игру с прыгающей птичкой.
   appinventor_longdescription: Развлекательные, короткие видео-уроки покажут вам как создать три простых приложения для Android телефона или планшета. Они предназначены как для новичков, так и для опытных учеников. Эти уроки Часа кода помогут начать программирование собственных приложений. Также, вы сможете поделиться своими творениями с друзьями! Эти уроки подходят как для индивидуальной, так и групповой работы с учителем.
   blockly_longdescription: 'Есть ПК с медленным (отсутствующим) доступом в Интернет? Скачай Blockly учебники, которые были предвестникомами Code.org учебников - один ZIP-файл 3MB может быть загружен на любой компьютер или использоваться с помощью карты памяти'
@@ -905,7 +913,7 @@ ru-RU:
   groklearning_beyond_shortdescription: Введение в программирование на Питоне
   hacketyhack_beyond_shortdescription: Обучайтесь Ruby с нуля
   robomind_beyond_shortdescription: Напишите код для виртуального робота
-  makeschool_beyond_shortdescription: Научитесь делать игру для iPhone за один час
+  makeschool_beyond_shortdescription: Создайте игру для iPhone за один час
   appinventor_beyond_shortdescription: Сделайте своё собственное приложение! (Только для Android)
   touchdevelop_beyond_shortdescription: Кодируйте мобильные приложения прямо на вашем телефоне, планшете или ноутбуке
   codehs_beyond_shortdescription: Познакомьтесь с программированием на JavaScript в занимательной визуальной среде
@@ -942,7 +950,7 @@ ru-RU:
   groklearning_beyond_longdescription: Вводный курс в язык программирования Python для тех, кто не имеет опыта программирования. Наше уникальное сочетание базового материала с интересными задачами поможет разобраться как в языке Python, так и с самим программированием в целом. Мы уже использовали эти учебные материалы с учениками разного возраста и с разным базовым уровнем и убеждены, что они подойдут и вам.
   hacketyhack_beyond_longdescription: 'Hackety Hack научит вас основам программирования с самого начала. Для этого урока не требуется предыдущего опыта в программировании! С Hackety Hack вы изучите язык Ruby, который используется для различных типов программ, включая программы для настольных компьютеров и вебсайты. [Примечание: требуется установка программы]'
   robomind_beyond_longdescription: 'Ученики изучают основы программирования, управляя своим собственным виртуальным роботом. Этот онлайн урок содержит короткие презентации, фильмы, тесты, и автоматические подсказки для помощи с упражнениями по программированию. '
-  makeschool_beyond_longdescription: Уже знаете немного о Objective-C? Тогда научитесь создавать игру для iPhone за один час! Мы покажем, как можно спроектировать, запрограммировать, протестировать и поиграть в игру в своем браузере, а затем поделиться этой игрой с друзьями на Facebook! Предыдущий опыт разработки приложений для iPhone не нужен. Необходимо знать что такое переменные, методы и объекты.
+  makeschool_beyond_longdescription: Уже знаете немного о ObjectiveC? Тогда научитесь создавать игру для iPhone за один час! Мы покажем, как можно спроектировать, запрограммировать, протестировать и поиграть в игру в своем браузере, а затем поделиться этой игрой с друзьями на Facebook! Предыдущий опыт разработки приложений для iPhone не нужен. Необходимо знать что такое переменные, методы и объекты.
   appinventor_beyond_longdescription: Развлекательные, короткие видео-уроки покажут вам как создать три простых приложения для Android телефона или планшета. Они предназначены как для новичков, так и для опытных учеников. Эти уроки Часа кода помогут начать программирование собственных приложений. Также, вы сможете поделиться своими творениями с друзьями! Эти уроки подходят как для индивидуальной, так и групповой работы с учителем.
   touchdevelop_beyond_longdescription: TouchDevelop позволяет создавать программы на iPad, iPhone, Android, PC, Mac, Windows Phone. Наш сенсорный редактор сделает программирование весёлым даже на телефоне или планшете!
   codehs_beyond_longdescription: 'Изучайте основы программирования с собакой Карел - это весёлое, доступное и визуальное вступление в программирование, где команды для компьютера, используются как команды для собаки. Этот урок лучше изучать с учителем, но можно и самостоятельно. [Примечание: требуется оплата]'

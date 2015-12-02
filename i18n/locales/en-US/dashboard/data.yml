@@ -105,6 +105,8 @@ en:
         StudioEC: crwdns23433:0crwdne23433:0
         Applab: crwdns27901:0crwdne27901:0
         NetSim: crwdns28006:0crwdne28006:0
+        Custom: crwdns55147:0crwdne55147:0
+        CustomStudio: crwdns55148:0crwdne55148:0
     trophy:
       name:
         Bronze: crwdns2640:0crwdne2640:0
@@ -307,16 +309,17 @@ en:
         studio_playlab_8: crwdns24738:0crwdne24738:0
         studio_playlab_9: crwdns24739:0crwdne24739:0
         studio_playlab_10: crwdns23435:0crwdne23435:0
-        studio_iceage_1: crwdns50995:0crwdne50995:0
-        studio_iceage_2: crwdns50996:0crwdne50996:0
-        studio_iceage_3: crwdns50997:0crwdne50997:0
-        studio_iceage_4: crwdns50998:0crwdne50998:0
-        studio_iceage_5: crwdns50999:0crwdne50999:0
-        studio_iceage_6: crwdns51000:0crwdne51000:0
-        studio_iceage_7: crwdns51001:0crwdne51001:0
-        studio_iceage_8: crwdns51002:0crwdne51002:0
-        studio_iceage_9: crwdns51003:0crwdne51003:0
-        studio_iceage_10: crwdns51004:0crwdne51004:0
+        studio_iceage_hello1: crwdns55149:0crwdne55149:0
+        studio_iceage_hello2: crwdns55150:0crwdne55150:0
+        studio_iceage_move_to_flag: crwdns55151:0crwdne55151:0
+        studio_iceage_move_to_actor: crwdns55152:0crwdne55152:0
+        studio_iceage_repeat: crwdns55153:0crwdne55153:0
+        studio_iceage_click_hello: crwdns55154:0crwdne55154:0
+        studio_iceage_move_events: crwdns55155:0crwdne55155:0
+        studio_iceage_sound_and_points: crwdns55156:0crwdne55156:0
+        studio_iceage_warn_ice_age: crwdns55157:0crwdne55157:0
+        studio_iceage_throw_hearts: crwdns55158:0crwdne55158:0
+        studio_iceage_free_play: crwdns55159:0crwdne55159:0
         studio_gumball_hello1: crwdns54731:0crwdne54731:0
         studio_gumball_hello2: crwdns54732:0crwdne54732:0
         studio_gumball_move_to_flag: crwdns54733:0crwdne54733:0

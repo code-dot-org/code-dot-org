@@ -36,12 +36,12 @@
   hoc2014_support: Tue &#x25BE;
   hoc2014_whatishoc: Mikä on koodaustunti?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_signup: Ilmoita tapahtumasi
+  csedweek_map_search_placeholder: Etsi koodaustunteja
+  csedweek_map_search_search: Haku
   csedweek_map_search_reset: Alusta
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_title: Kartan selite
+  csedweek_map_legend_event: Koodaustunti
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Luo käyttäjätunnus
   cded_try_it: Kokeile
@@ -78,7 +78,7 @@
   course_name_course3: Kurssi 3
   course_name_course4: Kurssi 4
   congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Hanki todistus suorituksesta
@@ -224,21 +224,21 @@
   homepage_slot_text_course4: Kurssi 4
   homepage_slot_text_shop: Kauppa
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Koodaustunti jokaiselle opiskelijalle.
   homepage_action_text_num_served: '# käyttäjää'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Liity joukkoomme
   homepage_action_text_sign_up: Luo käyttäjätunnus
   homepage_action_text_try_it: Kokeile
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Teknisiä vapaaehtoistyöntekijöitä tarvitaan
   homepage_action_text_codevideo: Katso video
   homepage_action_text_teachervideo: Katso video
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Inspiroi tyttö
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_link_prizes: 'Liity historian suurimpaan oppimistapahtumaan. '
   homepage_banner_text_main: Code.org ja College Board liittoutuvat yhteen parantaakseen
     tietojenkäsittelytieteen moninaisuutta.
   homepage_banner_text_link: Lue lisää
@@ -250,7 +250,7 @@
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
   homepage_slot_text_link_host: Järjestä Koodaustunti
   homepage_slot_text_link_hocserved: '# käyttäjää'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
   homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
   homepage_slot_text_link_codestudio: Kokeile Koodistudiota
@@ -310,35 +310,39 @@
   class_submission_level_college: Yliopisto / korkeakoulu
   class_submission_level_vocational: Ammatillinen opetus
   class_submission_languages_other: Muu kieli(kielet)
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
+  inspirational_videos_more: Lisää <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
+    inspiroivia videoita</a> roolimalleilta ja kuuluisuuksilta
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Kasaa koodista Galaksi
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
+  starwars_javascript_specs: Vain englanti | Modernit selaimet | Yli 11-vuotiaille
   starwars_javascript_start_button: Kokeile nyt
   starwars_blocks_title: lohkot
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
+  starwars_blocks_specs: Monia kieliä (tulossa pian) | Modernit selaimet, älypuhelimet,
+    tabletit | Ikävuosille 6-10
   starwars_blocks_start_button: Kokeile nyt
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
+  starwars_speak_languages: Puhutko muuta kieltä?
+  starwars_help_translate: Auta meitä kääntämisessä
   starwars_platform_text: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_name: Minecraft Koodaustunti
+  mc_longdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
+    läpi Minecraft-maailman.
+  mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
+    läpi Minecraft-maailman.
   mc_gradelevel: Ages 4-104
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
+  mc_specs: Monia kieliä (tulossa pian) | Modernit selaimet ja tabletit | Yli 6-vuotiaille
+  minecraft_subtitle: Minecraft Koodaustunti
+  volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena
+    Koodaustunnille.
+  volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää
+    Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
     have signed up.'
@@ -362,35 +366,37 @@
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Nimi
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
+  volunteer_engineer_submission_field_name_placeholder: Koko nimi
+  volunteer_engineer_submission_field_company: Yritys (tai yliopisto)
+  volunteer_engineer_submission_field_company_placeholder: Yritys (tai yliopisto)
+  volunteer_engineer_submission_field_experience_level: Kokemustaso
+  volunteer_engineer_submission_field_location: Sijainti
+  volunteer_engineer_submission_field_location_desc: Sijaintisi näkyy kartalla ja
+    sen avulla opettajat voivat etsiä lähialueeltaan vapaaehtoisia. Jos olet huolissasi
+    yksityisyydensuojastasi, käytä vain työ/kouluosoitettasi tai mainitse vain pelkkä
+    kaupunki.
+  volunteer_engineer_submission_field_location_placeholder: Postinumero, kaupunki
+    ja osavaltio/maa tai katuosoite
+  volunteer_engineer_submission_field_location_flexibility: Voin auttaa Koodaustuntia...
+    (Valitse kaikki sopivat vaihtoehdot)
+  volunteer_engineer_submission_checkbox_after_hoc: Olen kiinnostunut vapaaehtoistyöstä
+    Koodaustunnin jälkeen
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin: LinkedIn-profiili
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook-profiili
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Kuvaus
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
+  volunteer_engineer_submission_field_description_desc: Kuvaa tietojenkäsittelytieteen
+    osaamisesi ja mitä apua voisit tarjota vapaaehtoisena paikallisille opettajille.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
   volunteer_engineer_submission_field_email: Sähköpostiosoite
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: Sähköpostiosoitettasi ei koskaan
+    jaeta, mutta lähetämme sinulle pyyntöjä opettajilta.
   volunteer_engineer_submission_field_email_placeholder: Sähköpostiosoite
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
@@ -407,9 +413,9 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 tuntia viikossa
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 tuntia viikossa
   volunteer_engineer_submission_commitment_now_and_then: Silloin tällöin
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2 - 3 kertaa vuodessa
+  volunteer_engineer_submission_commitment_monthly: Pari tuntia kuukaudessa
+  volunteer_engineer_submission_commitment_weekly: Pari tuntia viikossa
   volunteer_engineer_submission_commitment_more: Lisää
   volunteer_engineer_submission_location_flexibility_onsite: Paikanpäällä koulussa
   volunteer_engineer_submission_location_flexibility_remote: Mentorointi etänä (opettajien
@@ -421,14 +427,14 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Nykyinen
     yliopisto-opiskelija (tai tutkija)
   volunteer_engineer_submission_experience_software_professional: Ohjelmistoammattilainen
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: 8 km
+  volunteer_engineer_submission_distance_16: 16km
+  volunteer_engineer_submission_distance_24: 24km
+  volunteer_engineer_submission_distance_32: 32 km
+  volunteer_engineer_submission_num_volunteers_5: 5 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_num_volunteers_10: 10 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_num_volunteers_25: 25 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_num_volunteers_50: 50 vapaaehtoistyöntekijää
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -472,7 +478,7 @@
   dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
     students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
     during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses: 20 tunnin kursseja esi- ja alakoulutasolle
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -601,9 +607,9 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Napsauta
     tästä</a> nähdäksesi tiedot yksityisyyskäytännöistämme. Voit jakaa sen oppilaille
     tai tulostaa sen.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_curriculum_k5_title: Esi- ja ala-koulun opetusmateriaalia
+  dashboard_curriculum_middle_title: Yläkoulun opetusmateriaalia
+  dashboard_curriculum_high_title: Lukion opetusmateriaalia
   dashboard_lesson_plans: Tuntisuunnitelma
   dashboard_view_all_lesson_plans: Katso kaikkia tuntisuunnitelmia
   dashboard_course1: 'Kurssi 1:'
@@ -641,8 +647,8 @@
   dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
   dashboard_stage: Taso
   dashboard_puzzle: Tehtävä
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Kysymys
+  dashboard_response: Vastaus
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
     yhdessä viikossa:'
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
@@ -661,9 +667,9 @@
   dashboard_sections_login_type_explanation: Tämä taulukko auttaa selittämään minkä
     kirjautumistavoista, <b>kuva, sana, tai sähköposti</b> haluat valita ryhmään.
   dashboard_faq: Usein kysyttyjä kysymyksiä
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
+  dashboard_announcements: Ilmoituksia
+  dashboard_announce_view_all: Näytä kaikki
   dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
     on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
     uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja
@@ -702,10 +708,14 @@
   carousel_heading_international: Oppitunnit omalla kielelläsi
   carousel_heading_domestic: Oppitunnit englanniksi
   carousel_heading_beginners: Oppitunnit aloittelijoille
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: JavaScriptiä opettavat oppitunnit
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Ei laitetta tai internetiä? Kokeile "tietokoneeton tekeminen"-oppituntejamme
   carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Oppaat muista ohjelmointikielistä
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Tee omia sovelluksia tai pelejä
   carousel_heading_university: Yliopistokurssit verkossa
   carousel_heading_webpages: Opi tekemään verkkosivuja
@@ -1367,8 +1377,8 @@
     Nykyään kymmenet tuhannet opiskelijat, suunnittelijat, tutkijat ja harrastajat
     käyttävät Processingia oppimisessa, prototyypeissä ja tuotannossa.
   alice_beyond_longdescription: Käyttäen innovatiivista ohjelmointiympäristöä tukemaan
-    3D-animaatioiden luomista, Alice-projekti tuottaa työkaluja ja materiaaleja automaatioajattelun
-    opetamiseen ja oppimiseen, ongelmanratkaisuun ja tietokoneohjelmointiin eri ikäisille
+    3D-animaatioiden luomista, Alice-projekti tarjoaa työkaluja ja materiaaleja automatisointiajattelun
+    opettamiseen ja oppimiseen, ongelmanratkaisuun ja ohjelmointiin eri ikäisille
     ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan.
     Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.

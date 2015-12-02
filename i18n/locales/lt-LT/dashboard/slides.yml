@@ -160,8 +160,7 @@ lt:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: Labas, mano vardas Saloni. Aš naudoju kompiuterinius mokslus sprendžiant sveikatos ir medicinos problemas. Susipažinkime su „if else“ (jeigu tada) blokeliu. Jis atrodo taip, kaip ir „if“ (jeigu) blokelis, tačiau papildomai gale turi dalį, kuri pasako, kas įvyks priešingu atveju.
       2:
         image: notes/hoc5_2.jpg
         text: |-

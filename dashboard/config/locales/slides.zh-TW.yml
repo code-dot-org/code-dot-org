@@ -178,8 +178,7 @@
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: 一個 if else 的敘述是指兩件事情間的決定。讓我們跟夥伴松鼠Scrat一起來看看如何利用 if else的敘述句吧
       2:
         image: notes/saloni_ifelse_scrat2.jpg
         text: This block looks the same as the "if" block, but there's an extra part
@@ -194,7 +193,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: 現在，幫助松鼠Scrat得到那顆橡樹果吧
     function:
       1:
         image: notes/stage13_1.jpg
@@ -290,10 +289,7 @@
           wonderland that you can then share with your friends.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: 在接下來的一個小時，你會學習到基本的如何編碼。傳統的程式設計一般是以文字方式呈現，但在這邊我們使用Blockly，你可以利用拖移及放置視覺方塊來設計程式。這也是一般的大學生學習基本的程式編碼方式。在方塊下，你依然在編碼。
       4:
         image: notes/frozen1_4.jpg
         text: A program is a set of instructions that tells a computer what to do.
@@ -516,11 +512,7 @@
           just like a real-live video game.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: 一個事件是一個讓某件事情發生的動作。比方說，當你按下滑鼠上的按鈕或是網頁載入，這就是一個事件。當你觸摸平板電腦的螢幕滑動時，這也是一個事件。事件是一個很絕佳的方式來讓使用者根據他們的需求決定你程式的走向
       4:
         image: notes/C1_bigevent_unplugged_4.png
         text: Things happen that we all respond to. We feel hungry and we go to the
@@ -578,9 +570,7 @@
           And that is loops! Loops are repeating an action over and over.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: 當你重複某件事情很多次時，比方說我保持呼啦圈搖動這個動作，我就是在做一個動作的迴圈。這是個迴圈。這是個迴圈。然後這是個迴圈。
       3:
         image: notes/C1_getting_loopy_3.png
         text: Today we're going to have a dance party. We'll act out loops with a
@@ -2701,151 +2691,105 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: 我是 Jens Bergensten，大家叫我 Jeb。我在斯德哥爾摩的 Mojang 工作，擔任 Minecraft 首席開發師。記得我是在十一或十二歲開始玩程式設計，因為我想製作遊戲。聽我父親有位朋友說，若要製作遊戲，就得學會程式設計。這就是我的緣起。我平常喜歡設計和研究遊戲的架構，這正是我最愛
+          Minecraft 的地方。
       2:
         image: notes/mc_intro_2.JPG
-        text: 在接下來的這個小時，你將透過利用程式來控制艾力克思或史蒂夫，通過一小段模擬的當個創世神世界來學習基本的電腦科學知識。
+        text: 接著這一個小時，您將學到電腦科學的基礎知識，為 Alex 或 Steve 設計程式，讓他們在 Minecraft 世界的模擬角落中移動。
       3:
         image: notes/mc_intro_3.JPG
-        text: 傳統的程式設計方法是使用文字模式，今天我們將使用程式積木來練習程式設計，這個系統允許你使用拖拉視覺化程式積木的方式來進行程式設計。實際上你所建立的是一種名為
-          javascript 的程式碼。
+        text: 傳統程式設計通常是用文字，但今天我們要用 Blockly，這個系統是以方塊拖放來寫程式的。其實，這是在建立 JavaScript 程式碼。
       4:
         image: notes/mc_intro_4.JPG
-        text: 你將學到的是程式設計師每天都會使用到的概念，同時也是電腦科學的基礎。在Mojang，我們使用同樣的概念來讓"當個創世神"正常運作。
+        text: 您將學到的概念就是電腦程式設計師每天所運用，也就是基礎電腦科學。我們在 Mojang 也是以相同的概念製作 Minecraft。
       5:
         image: notes/mc_intro_5.JPG
-        text: 在你開始之前，你將會選擇你的角色。我先選擇艾力克思。讓我們開始建立一些程式碼來幫助她在畫面上四處移動。
+        text: 在您著手之前，先要挑選角色。我選 Alex。我們來為程式建立程式碼，讓她在畫面中走動。
       6:
         image: notes/mc_intro_6.JPG
-        text: 你的畫面將分成三個主要區域。在左邊是"當個創世神"的遊戲區，你的程式碼將在這裡執行。每一個關卡的操作說明會出現在這下面。
+        text: 您的畫面會劃分為三個主要部分。左邊是 Minecraft 遊戲空間，您的程式會在這邊執行。每一關的指示寫在下方。
       7:
         image: notes/mc_intro_7.JPG
-        text: 中間的區域是工具中，每一個程式積木都是一個指令，可以用來控制艾力克思的行動。
+        text: 中央區是工具箱，這些方塊各是一個指令，指揮 Alex 行動。
       8:
         image: notes/mc_intro_8.JPG
-        text: 右邊白色的空白區域稱為工作區，這是我們準備用來建立的程式碼的地方。
+        text: 右邊的白色空間稱為工作空間，我們在這裡建立程式。
       9:
         image: notes/mc_intro_9.JPG
-        text: 如果我們將 "向前移動" 程式積木拖拉到工作區然後按下執行按鈕，你猜會發生什麼事情呢？艾力克思會向前移動一格。
+        text: 若將「往前」方塊拖到工作空間，然後按一下「執行」，會發生什麼事？Alex 會在格線中前移一格。
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: 若我們要讓她在前移一格之後做件事情呢？可以在我們的程式中新增另一個方塊。我選「右轉」方塊，然後拖到「往前」方塊下方，等橘色線出現。接著我把它放下，兩個方塊就會貼合。再按一次「執行」，Alex
+          就會執行工作空間之中，由上往下堆疊的指令。
       11:
         image: notes/mc_intro_11.JPG
-        text: 如果你想要刪除程式積木，只要將它拖回工具箱區再放開就可以了。
+        text: 若是想要刪除一個方塊，僅需將它從堆疊中拖回工具箱即可。
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 若要還原所作的變更回到關卡開始的情形，請用工作空間右上角的「重新開始」按鈕。還有一點：看見轉向方塊上的小三角了嗎？凡是出現這樣的三角形時，就代表有不同的選項可供選擇。我們就來開始編程式碼吧！
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: 我是 Lydia Winters，擔任 Mojang 品牌總監，本公司製作了一個小遊戲，叫做 Minecraft。
       2:
         image: notes/mc_repeat_2.JPG
-        text: 在當個創世神裡我最喜歡做的事情是探索。我喜歡在洞穴裡冒險，看看我能找到什麼。對一個不是從事程式設計的人來說，能夠通過"當個創世神"這個課程，學會實際動手寫程式，真的很讓人興奮。
+        text: 我在 Minecraft 中最愛做的事情就是探索，我很愛在洞穴中歷險，看看我能找到什麼。因為我並非程式設計師，所以特別期待能瞭解 Minecraft
+          的課程，自己實際學一點程式編碼。
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: 最後一關需要用到許多「往前」方塊。最好是能夠直接告訴電腦執行「往前」指令四或五次。幸運的是，電腦十分擅長重複指令，只要使用重複迴圈即可。
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: 製作 Minecraft 時，我們就是用重複迴圈放置原始材料，創造新世界。那要用到成千上萬個方塊。我們也在小處使用迴圈，例如讓 Alex
+          的腳前後走動。重複迴圈是程式設計中格外強大的功能。
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: 夜晚就要來臨，所以接下來幾關我們要蓋一棟房屋，以策安全。只要用重複方塊就能輕易辦到。
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: 要替房屋築牆，可以叫 Alex 往前並且放置木材四次，也可以讓她往前並放置一塊木材，接著取這個指令，使用重複方塊讓她將此動作執行多次。現在我們就按重複方塊，告訴她我們要她執行幾次這個動作。我們先在天黑之前把房屋蓋好吧！祝您玩得愉快。
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: 現在我們要來學習「若」陳述句。「若」陳述句是學習程式設計的基礎，能幫助電腦做決定。
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: 所有電腦都使用「若」陳述句，包括我的手機。例如，我將手機解鎖時，它會執行一些程式碼，指出要是我輸入密碼正確，則將手機解鎖，否則會顯示錯誤訊息。
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: 您可在程式碼中使用「若」陳述句讓 Steve 與 Alice 對在世界中遇到的事物作出反應。例如，若前方有塊岩石，可以左轉，或者若碰到樹木便右轉。
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: 這裡的例子當中，我們要避免掉進岩漿。就岩漿規劃很簡單，從畫面上可以看到它，不過石頭下面看不見的岩漿怎麼辦呢？
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: 我們開採石頭之後，需要檢查那地方是否有岩漿，然後再往前。那裡若有岩漿，可以在角色前方放置石頭，然後再往前，這樣移動起來就很安全。現在該再多開採一些了！別忘了使用「若」陳述句，好注意自己的腳步。
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: 恭喜！您已學到電腦科學的基礎用法。
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: 現在起您可運用這些基礎方法來自創作品。已無更多指示，也沒有謎題要解。一切任您自由創造，選擇權就在您的手中。
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[學生經驗談] 實際操作就沒錯，例如修剪。我用火把造了 L。我用樺木材做出個 A。有用，有用耶。我們用羊毛蓋了間房屋！'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: 當你完成創作時，選擇共用來得到一個連結並將它與你的朋友分享。玩得愉快！
+        text: 當您創作完成時，請選取分享，取得連結以與朋友分享。祝您玩得愉快！
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: 恭喜！您已學到電腦科學的基礎用法。
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: 現在起您可運用這些基礎方法來自創作品。已無更多指示，也沒有謎題要解。一切任您自由創造，選擇權就在您的手中。
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[學生經驗談] 實際操作就沒錯，例如修剪。我用火把造了 L。我用樺木材做出個 A。有用，有用耶。我們用羊毛蓋了間房屋！'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: 現在您可以建立任何你想要的。玩得愉快！
+        text: 現在，您也可以隨心所欲地建造。祝您玩得愉快！
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2876,7 +2820,7 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: 右邊白色的空白區域稱為工作區，這是我們準備用來建立的程式碼的地方。
+        text: 右邊的白色空間稱為工作空間，我們在這裡建立程式。
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
