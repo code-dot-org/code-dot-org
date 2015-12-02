@@ -2977,7 +2977,7 @@ levels.js_hoc2015_change_setting = {
   ],
   'progressConditions' : [
     // Collected all the items and set the right properties?  Success.
-    { required: { 'setDroid': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
+    { required: { 'setSprite': true, 'setDroidSpeed': true, 'collectedItemsAtOrAbove': 3 },
       result: { success: true, message: msg.successGenericCharacter() } },
     // If all items are collected, but either property not set?  Immediate failure.
     { required: { 'collectedItemsAtOrAbove': 3 },
