@@ -4,6 +4,7 @@
 - learn_categories << {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}
 - learn_categories << {tag:"Apps", name: I18n.t(:carousel_heading_devices)}
 - learn_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}
+- learn_categories << {tag:"Teacherled", name: I18n.t(:teach_led_lesson_plans)}
 
 - beyond_categories = []
 - beyond_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beyond_beginners)}
@@ -35,12 +36,20 @@
   %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
     %button{:style=>"font-size:20px;"}
       = I18n.t(:carousel_heading_domestic)
+  %br
+  %br    
 
 - categories = variation == 'learn' ? learn_categories : beyond_categories
 #all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+
+  - if variation == 'learn'
+    = view :learn_teacher_banner
+
+- if request.locale == "en-US"
+  = I18n.t(:learn_footer_all_tutorials)
 
 - if variation == 'beyond'
   %br
