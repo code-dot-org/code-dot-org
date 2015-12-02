@@ -263,7 +263,7 @@
         calculate: Calculate Something
         applab: Lag en app
     user:
-      classroom: Lærerens startside
+      classroom: Hjemmeside for lærere
       district_dashboard: Distrikt skrivebord
       label: Hei %{username}
       stats: Min fremdrift
@@ -469,6 +469,9 @@
     privacy: Personvern
     secure: Sikker versjon
     report_abuse: Rapporter misbruk
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Trenger du hjelp?
     subtitle: Se disse videoene og tipsene

@@ -1516,6 +1516,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1657,9 +1661,9 @@
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Jelajahi sebuah dunia Minecraft melalui Code
-          description: Gunakan blok Code untuk mendapatkan Steve atau Alex pada petualangan
-            melalui dunia Minecraft ini
+          description_short: Jelajahi dunia Minecraft melalui kode
+          description: Gunakan balok kode untuk membawa Steve atau Alex dalam petualangan
+            melintasi dunia Minecraft ini
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

@@ -1,5 +1,5 @@
 "el-GR":
-  hour_of_code: Ώρα του Κώδικα
+  hour_of_code: Η Ώρα του Κώδικα
   hello: Γεια σου κόσμε
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
   en: Επιστήμη των Υπολογιστών
@@ -174,11 +174,11 @@
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
   studiobar_hoc_title: Η Ώρα του Κώδικα
   studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
-  studiobar_flappy_title: Flappy κώδικα
+  studiobar_flappy_title: Flappy κώδικας
   studiobar_flappy_body: Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy
   studiobar_teacher_title: Φτιαγμένο για εκπαιδευτικούς
   studiobar_teacher_body: Παρουσιάστε το Στούντιο Κώδικα (Code Studio) στην τάξη σας
-  studiobar_frozen_title: Η Ώρα του Κώδικα
+  studiobar_frozen_title: Ώρα του Κώδικα
   studiobar_frozen_body: Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με Άννα και
     Έλσα
   studiobar_donate_title: Κάντε μια δωρεά
@@ -223,7 +223,7 @@
   homepage_slot_text_studio: Όλα τα σεμινάρια μας
   homepage_slot_text_course4: Μάθημα 4
   homepage_slot_text_shop: Κατάστημα
-  homepage_slot_text_flappy: Flappy κώδικας
+  homepage_slot_text_flappy: Flappy κώδικα
   homepage_action_text_hoc: Μία Ώρα Κώδικα για κάθε μαθητή.
   homepage_action_text_num_served: '# ΕχουνΕξυπηρετηθεί'
   homepage_action_text_join_us: Ελάτε μαζί μας
@@ -316,6 +316,10 @@
   class_submission_languages_other: Άλλες γλώσσες
   inspirational_videos_more: Περισσότερα <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">βίντεο
     παρακίνησης</a> από πρότυπα και διασημότητες
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Χτίζοντας έναν Γαλαξία Με Κώδικα
   starwars_javascript_title: Javascript
   starwars_javascript_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε» και Javascript.
@@ -330,14 +334,14 @@
   starwars_watch_videos: Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης
   starwars_speak_languages: Μιλάτε άλλη γλώσσα;
   starwars_help_translate: Βοηθήστε μας να μεταφράσουμε
-  starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
+  starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   mc_name: Η Ώρα του Κώδικα με το Minecraft
   mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον Άλεξ
     σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_shortdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_gradelevel: Ηλικίες 6+
-  mc_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   mc_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης και tablets
     | Ηλικιών 6 +
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
@@ -451,7 +455,7 @@
   volunteer_engineer_submission_type_task_mentor: Ψάχνω για έναν σύμβουλο για να με
     βοηθήσει να προετοιμαστώ για την κωδικοποίηση με τους μαθητές μου
   petition_age: Ηλικία
-  dashboard_landing_title: H Αρχική Σελίδα του Εκπαιδευτικού
+  dashboard_landing_title: Αρχική Σελίδα Εκπαιδευτή
   dashboard_landing_welcome: Καλώς ήλθατε στο νέο και βελτιωμένο πίνακα εκπαιδευτικού.
   dashboard_landing_video: Παρακολουθήστε αυτό το βίντεο
   dashboard_landing_watch_video: για μια περιήγηση στα νέα χαρακτηριστικά και τις
@@ -615,7 +619,7 @@
     με τους μαθητές σας:'
   dashboard_students_print_info: Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των
     μαθητών σας.
-  dashboard_students_secret_picture_title: Μυστική Εικόνα
+  dashboard_students_secret_picture_title: Μυστική εικόνα
   dashboard_students_secret_picture: Αυτή η ενότητα χρησιμοποιεί την <b>εικόνα</b>
     ως τον μυστικό της τύπο.  Αυτό σημαίνει ότι κάθε ένας από τους μαθητές σας έχει
     μια μυστική εικόνα για χρήση αντί για έναν κωδικό πρόσβασης για να εισέλθει.  Οι
@@ -674,13 +678,13 @@
   dashboard_login_picture: Εικόνα
   dashboard_login_none: Ηλεκτρονικό ταχυδρομείο
   dashboard_new_password: νέος κωδικός
-  dashboard_progress_not_started: δεν ξεκίνησε
+  dashboard_progress_not_started: δεν έχει ξεκινήσει
   dashboard_progress_in_progress: σε εξέλιξη
   dashboard_progress_not_completed: δεν έχει ολοκληρωθεί
   dashboard_progress_completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
   dashboard_progress_completed_perfect: ολοκληρώθηκε, τέλειο
   dashboard_progress_furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
-  dashboard_stage: σκηνή
+  dashboard_stage: Επίπεδο
   dashboard_puzzle: Παζλ
   dashboard_question: Ερώτηση
   dashboard_response: Απάντηση
@@ -688,7 +692,7 @@
     μία εβδομάδα μόνο:'
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   dashboard_teacher: Καθηγητής
-  dashboard_student: φοιτητής/μαθητής
+  dashboard_student: Μαθητής
   dashboard_sections_email_question: Έχουν όλοι οι μαθητές έγκυρη διεύθυνση ηλεκτρονικού
     ταχυδρομείου;
   dashboard_sections_account_creation_question: Ποιος δημιουργεί το λογαριασμός του
@@ -716,7 +720,7 @@
   code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής
-  learn_more: Μάθετε περισσότερα
+  learn_more: Δοκιμάστε τώρα
   learn_sign_up_description: Εγγραφείτε για να συμμετάσχετε στην Ώρα του Κώδικα κατά
     τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη Υπολογιστών
   learn_sign_up_button: Εγγραφή
@@ -751,13 +755,17 @@
   carousel_heading_international: Σεμινάρια στη γλώσσα σας
   carousel_heading_domestic: Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά
   carousel_heading_beginners: Βοηθήματα εκμάθησης για αρχάριους
+  carousel_heading_beyond_beginners: Βοηθήματα εκμάθησης για αρχάριους
   carousel_heading_javascript: Μαθήματα που διδάσκουν JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο;
     Δοκιμάστε  την 'unplugged' Επιστήμη της Πληροφορικής
   carousel_heading_devices: Εφαρμογές εκμάθησης για τηλέφωνα και tablets
+  carousel_heading_beyond_devices: Εφαρμογές εκμάθησης για τηλέφωνα και tablets
   carousel_heading_languages: Βοηθήματα εκμάθησης σε άλλες γλώσσες προγραμματισμού
+  carousel_heading_beyond_languages: Βοηθήματα εκμάθησης σε άλλες γλώσσες προγραμματισμού
   carousel_heading_apps_games: Δημιουργήστε τις δικές σας εφαρμογές ή παιχνίδια
-  carousel_heading_university: Πανεπιστημιακά μαθήματα διαθέσιμα online
+  carousel_heading_university: Μαθήματα Πανεπιστημίων σε σύνδεση
   carousel_heading_webpages: Μάθετε να δημιουργείτε ιστοσελίδες
   carousel_heading_robots: Μάθετε να προγραμματίζετε με ρομπότ
   carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
@@ -816,7 +824,7 @@
   thinkersmith2_name: Δυαδικές φούσκες
   kodableunplugged_name: fuzzFamily φρενίτιδα
   projguts_name: Πέτρα, Ψαλίδια, Χαρτί
-  hourofcode_name: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
+  hourofcode_name: Γράψε το πρώτο σου πρόγραμμα για υπολογιστή
   playlab_name: Εργαστήριο Παιχνιδιού
   infinity_name: αιώνιο εργαστήρι παιχνιδιού
   artist_name: Καλλιτέχνης
@@ -863,8 +871,8 @@
   playlab_gradelevel: Ηλικίες 4-104
   infinity_gradelevel: Ηλικίες 4-104
   artist_gradelevel: Ηλικίες 4-104
-  codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
-  codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
+  codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   thinkersmithspanish_platformtext: Χωρίς σύνδεση
   khan_platformtext: Σύγρονα Προγράμματα περιήγησης
   khanes_platformtext: Σύγρονα Προγράμματα περιήγησης
@@ -894,7 +902,7 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android ταμπλέτες
   robomindnl_platformtext: Σύγχρονα προγράμματα περιήγησης, κινητά
-  flappy_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  flappy_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   bitsbox_platformtext: Σύγρονα Προγράμματα περιήγησης
   makeschool_platformtext: Σύγρονα Προγράμματα περιήγησης
   touchdevelop_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, όλες οι
@@ -904,10 +912,10 @@
   thinkersmith2_platformtext: Χωρίς σύνδεση
   kodableunplugged_platformtext: Χωρίς σύνδεση
   projguts_platformtext: Χωρίς σύνδεση
-  hourofcode_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  hourofcode_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   frozen_platformtext: Σύγχρονα προγράμματα περιήγησης + ταμπλέτες
   starwars_platformtext: Σύγχρονα προγράμματα περιήγησης + ταμπλέτες
-  playlab_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
+  playlab_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   codeorg_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
     Θυμωμένα Πουλιά!
   codeintl_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
@@ -955,8 +963,8 @@
     Καρχαρία, ή το Υποβρύχιο
   bitsbox_shortdescription: Γράψτε μια σειρά από εφαρμογές για παιγνίδι και μοίρασμα
     χρησιμοποιώντας αληθινή JavaScript.
-  makeschool_shortdescription: Κάντε ένα παιχνίδι για iPhone! Μάθετε γράφοντας κώδικα
-    για να διδάξετε στο τέρας σας νέες κινήσεις!
+  makeschool_shortdescription: Κάντε ένα  παιχνίδι για iPhone ! Μάθετε γράφοντας κώδικα
+    για να διδάξετε στο τέρας σας  νέες κινήσεις!
   touchdevelop_shortdescription: 'Λύστε γρίφους, δημιουργήστε παιχνίδια και μάθετε
     να γράφετε κώδικα στο τηλέφωνό σας. '
   appinventor_shortdescription: Κάντε τη δική σας εφαρμογή! (Μόνο για android)
@@ -966,7 +974,8 @@
   kodableunplugged_shortdescription: Μια  διασκεδαστική άσκηση χωρίς τη χρήση υπολογιστή
   projguts_shortdescription: Δοκιμάστε τη μοντελοποίηση και την προσομοίωση χρησιμοποιώντας
     πέτρα/ψαλίδι/χαρτί
-  hourofcode_shortdescription: Σύμβολο κράτησης θέσης για το νέο code.org/hoc
+  hourofcode_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και
+    τα Θυμωμένα Πουλιά!
   frozen_shortdescription: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα
     και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
   starwars_shortdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
@@ -1099,10 +1108,10 @@
     δυνατό ακόμη και για μικρά παιδιά να προγραμματίσουν σε πραγματική Javascript
     και όσο πιο προχωρημένος είστε τόσο θα προχωρήσετε παρακάτω.
   makeschool_longdescription: Μάθετε να προγραμματίζετε φτιάχνοντας ένα παιχνίδι για
-    το iPhone χρησιμοποιώντας τη Swift, μια ολοκαίνουργια γλώσσα προγραμματισμού κατάλληλη
-    και για αρχάριους! Δημιουργήστε ένα παιχνίδι δράσης εμπνευσμένο από τα Pokemon
-    και γράψτε κώδικα γα να μάθετε νέες κινήσεις στο τέρας σας. Θα μάθετε πως να χρησιμοποιείτε
-    μεταβλητές, μεθόδους και αντικείμενα για να βοηθήσετε το τέρας σας να νικήσει!
+    το iPhone με τη Swift, μια ολοκαίνουργια γλώσσα προγραμματισμού κατάλληλη και
+    για αρχάριους! Δημιουργήστε ένα παιχνίδι δράσης εμπνευσμένο από τα Pokemon και
+    γράψτε κώδικα γα να μάθετε νέες κινήσεις στο τερατάκι σας. Θα μάθετε να χρησιμοποιείτε
+    μεταβλητές, μεθόδους και αντικείμενα για να βοηθήσετε το τερατάκι σας να νικήσει!
   touchdevelop_longdescription: 'Αυτός ο editor είναι κατάλληλος για οθόνες αφής και
     θα σας βοηθήσει να δημιουργήσετε τέχνη με pixel, να λύσετε το γρίφο της αρκούδας
     ή να φτιάξετε δικό σας παιχνίδι με το πουλί που πηδάει. '
@@ -1162,7 +1171,7 @@
   edx_beyond_name: Χάρβαρντ κατηγορία CS50
   coursera_beyond_name: Στάνφορντ κατηγορία CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Μαθήματα Πανεπιστημίων σε σύνδεση
+  teachingtree_beyond_name: Πανεπιστημιακά μαθήματα διαθέσιμα online
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1509,11 +1518,3 @@
   infinity_shortcode: inf
   playlab_shortcode: παίξε
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

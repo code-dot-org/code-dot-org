@@ -75,12 +75,12 @@ sv:
           "Maze: Loops": 'Labyrint: Slingor'
           "Artist: Loops": 'Konstnären: Slingor'
           "Bee: Loops": 'Bi: Slingor'
-          "Bee: Debugging": Bee felsökning
-          "Artist: Debugging": Artist Felsökning
-          "Bee: Conditionals": Bee Villkorssatser
-          "Artist: Sequence2": 'Artist: sekvens2'
-          "Maze: Sequence2": 'Labyrint: Sequence2'
-          "Artist: Nested Loops": 'Artist: Kapslade slingor'
+          "Bee: Debugging": 'Biet: Felsökning'
+          "Artist: Debugging": 'Konstnären: Felsökning'
+          "Bee: Conditionals": 'Biet: Villkor'
+          "Artist: Sequence2": 'Konstnären: Sekvens2'
+          "Maze: Sequence2": 'Labyrint: Sekvens2'
+          "Artist: Nested Loops": 'Konstnären: Nästlade slingor'
           description_audience: Åldrar 6 + (läsförmåga krävs)
           description_short: Kurs 2 är utformad för elever som kan läsa.
         course3:
@@ -89,61 +89,61 @@ sv:
           The Artist: Konstnären
           title: Kurs 3
           Artist Functions: 'Konstnären: Funktioner'
-          Artist For Loops: "Konstnär 'för' loopar"
-          Artist Nested Loops: Artist Kapslade slingor/loopar
+          Artist For Loops: "Konstnären: 'för'-slingor"
+          Artist Nested Loops: 'Konstnären: Nästlade slingor'
           Bee Conditionals: 'Bi: Villkor'
-          Bee Nested Loops: Bee Kapslade slingor/loopar
-          Bee Debuggin: Bee felsökning
+          Bee Nested Loops: 'Biet: Nästlade slingor'
+          Bee Debuggin: 'Biet: Felsökning'
           Bee Debugging: 'Biet: Felsökning'
           Bee Functions: 'Biet: Funktioner'
-          Artist Functions with Params: Artist Funktioner med Parametrar
+          Artist Functions with Params: 'Konstnären: Funktioner med parametrar'
           Bounce: Studsa
-          Maze Conditionals: Labyrint villkorssatser
-          Artist Functions with Parameters: Artist Funktioner med parametrar
+          Maze Conditionals: 'Labyrint: Villkorssatser'
+          Artist Functions with Parameters: 'Konstnären: Funktioner med parametrar'
           Computational Thinking: Uträkningstänkande
           Functional Suncatchers: Funktionella Solfångare
-          Songwriting Parameters: Låtskrivande parametrar
+          Songwriting Parameters: Låtskrivningsparametrar
           Dice Race: Tärningsspelet
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitalt medborgarskap
-          Farmer - While Loops: "Bonde - 'medan' loopar"
+          Farmer - While Loops: "Bonde - 'medan'-slingor"
           description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
-          "Studio: Create a Game": 'PlayLab - skapa ett spel'
+          "Studio: Create a Game": 'Spel-labbet: skapa ett spel'
           Maze: Labyrint
-          Artist: Artist
-          "Artist: Functions": Artist Funktioner
-          "Bee: Functions": 'Bee: funktioner'
-          "Bee: Conditionals": Bee Villkorssatser
-          "Maze: Conditionals": 'Labyrint: villkorssatser'
-          "Artist: Nested Loops": 'Artist: Kapslade slingor'
-          "Farmer: While Loops": "Bonde: 'Medan' loopar"
-          "Bee: Nested Loops": 'Bee: Kapslade slingor'
-          "Bee: Debugging": Bee felsökning
+          Artist: Konstnären
+          "Artist: Functions": 'Konstnären: Funktioner'
+          "Bee: Functions": 'Biet: Funktioner'
+          "Bee: Conditionals": 'Biet: Villkor'
+          "Maze: Conditionals": 'Labyrint: Villkorssatser'
+          "Artist: Nested Loops": 'Konstnären: Nästlade slingor'
+          "Farmer: While Loops": "Bonde: 'medan'-slingor"
+          "Bee: Nested Loops": 'Biet: Nästlade slingor'
+          "Bee: Debugging": 'Biet: Felsökning'
           Maze2: Labyrint2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functioner2'
-          "Bee: Functions2": 'Bee: Functioner2'
-          "Bee: Conditionals2": 'Bee: Villkorssatser2'
-          "Maze: Conditionals2": 'Labyrint: villkorssatser2'
-          "Artist: Nested Loops2": 'Artist: Kapslade slingor2'
-          "Farmer: While Loops2": "Bonde: 'Medan' loopar2"
-          "Bee: Nested Loops2": 'Bee: Kapslade slingor2'
-          "Bee: Debugging2": 'Bee: Felsökning2'
-          "Artist: Patterns": 'Artist: mönster'
+          Artist2: Konstnär2
+          "Artist: Functions2": 'Konstnären: Funktioner2'
+          "Bee: Functions2": 'Biet: Funktioner2'
+          "Bee: Conditionals2": 'Biet: Villkorssatser2'
+          "Maze: Conditionals2": 'Labyrint: Villkorssatser2'
+          "Artist: Nested Loops2": 'Konstnären: Nästlade slingor2'
+          "Farmer: While Loops2": "Bonde: 'medan'-slingor2"
+          "Bee: Nested Loops2": 'Biet: Nästlade slingor2'
+          "Bee: Debugging2": 'Biet: Felsökning2'
+          "Artist: Patterns": 'Konstnären: mönster'
           Songwriting: Låtskrivande
           description_audience: Åldrar 8 + (efter kurs 2)
           description_short: Kurs 3 är en uppföljning till kurs 2.
         playlab:
-          title: Play Lab
-          description: Skapa en berättelse eller gör ett spel med Play Lab!
-          Play Lab: Play Lab
-          description_short: Skapa en berättelse eller gör ett spel med Play Lab!
+          title: Spel-labb
+          description: Skapa en berättelse eller gör ett spel med Spel-labbet!
+          Play Lab: Spel-labb
+          description_short: Skapa en berättelse eller gör ett spel med Spel-labbet!
         artist:
-          title: Artist
-          description: Rita häftiga bilder och mönster med artisten!
-          Artist: Artist
-          description_short: Rita häftiga bilder och mönster med artisten!
+          title: Konstnären
+          description: Rita häftiga bilder och mönster med konstnären!
+          Artist: Konstnären
+          description_short: Rita häftiga bilder och mönster med konstnären!
         hourofcode:
           Maze: Labyrint
           title: Timmen med Kod
@@ -152,31 +152,31 @@ sv:
         frozen:
           title: Koda med Anna och Elsa
           description: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
-          Artist: Artist
+          Artist: Konstnären
           description_short: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet.
         course4:
           description_short: Elever som går kurs 4 bör ha gått kurs 2 och 3 innan.
           description: Kurs 4 är utformad för elever som har gått kurs 2 och 3. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-8.
-          "Artist: Variables": 'Artist: variabler'
-          "Bee: For Loops": 'Bee: För loopar'
+          "Artist: Variables": 'Konstnären: Variabler'
+          "Bee: For Loops": 'Bilet: "för"-slingor'
           title: Kurs 4
           "Algorithms: Tangrams": 'Algoritmer: Tangrams'
           Variables: Variabler
-          "Play Lab: Variables": 'Play Lab: variabler'
-          "Play Lab: Functions with Parameters": 'Play Lab: Funktioner med parametrar'
-          "Bee: Functions with Parameters": 'Bee: Funktioner med parametrar'
-          "Artist: For Loops": "Artist: 'För' loopar"
-          "Play Lab: For Loops": "Play Lab: 'För' loopar"
-          "Artist: Functions": Artist Funktioner
+          "Play Lab: Variables": 'Spel-labb: Variabler'
+          "Play Lab: Functions with Parameters": 'Spel-labb: Funktioner med parametrar'
+          "Bee: Functions with Parameters": 'Biet: Funktioner med parametrar'
+          "Artist: For Loops": "Konstnären: 'för'-slingor"
+          "Play Lab: For Loops": "Spel-labb: 'för'-slingor"
+          "Artist: Functions": 'Konstnären: Funktioner'
           "Unplugged: Tangrams": 'Ouppkopplad: Tangram'
-          Artist: Artist
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Ouppkopplad: Kuvert variabler'
+          Artist: Konstnären
+          Bee: Biet
+          "Unplugged: Envelope Variables": 'Ouppkopplad: Kuvertvariabler'
           "Unplugged: Madlibs": 'Ouppkopplad: Madlibs'
-          "Unplugged: For Loop Fun": "Ouppkopplad: 'För' loopar Skoj"
-          "Unplugged: Songwriting with Parameters": 'Ouppkopplad: Låtskrivande med parametrar'
-          "Artist: Functions with Parameters": 'Artist: Funktioner med parametrar'
-          "Unplugged: Binary": 'Ouppkopplad: binära'
+          "Unplugged: For Loop Fun": 'Ouppkopplad: Skoj med "för" - slingor'
+          "Unplugged: Songwriting with Parameters": 'Ouppkopplad: Skriva låtar med parametrar'
+          "Artist: Functions with Parameters": 'Konstnären: Funktioner med parametrar'
+          "Unplugged: Binary": 'Ouppkopplad: Binärt'
           Bee Binary: Bee binär
           Farmer Binary: Bonde binär
           Maze and Bee: Labyrint och Bee
@@ -194,12 +194,12 @@ sv:
           "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Konstnären: Sekvens'
           "Artist: Loops": 'Konstnären: Slingor'
-          "Bee: Conditionals": Bee Villkorssatser
-          "Artist: Nested Loops": 'Artist: Kapslade slingor'
-          "Farmer: While Loops": "Bonde: 'Medan' loopar"
-          "Bee: Nested Loops": 'Bee: Kapslade slingor'
-          "Artist: Functions": Artist Funktioner
-          "Bee: Debugging": Bee felsökning
+          "Bee: Conditionals": 'Biet: Villkor'
+          "Artist: Nested Loops": 'Konstnären: Nästlade slingor'
+          "Farmer: While Loops": "Bonde: 'medan'-slingor"
+          "Bee: Nested Loops": 'Biet: Nästlade slingor'
+          "Artist: Functions": 'Konstnären: Funktioner'
+          "Bee: Debugging": 'Biet: Felsökning'
         usability:
           Intro: Introduktion
           Variables and For Loops: "Variabler och 'för' loopar"
@@ -249,7 +249,7 @@ sv:
           title: Disney Infinity Play Lab
           description_short: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
           description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
-          Play Lab: Play Lab
+          Play Lab: Spel-labb
           Infinity: Oändligt
         algebrademo:
           title: Algebra Demo
@@ -353,7 +353,7 @@ sv:
           The Maze: Labyrinten
           Applab: Applab
           The Artist: Konstnären
-          Play Lab: Play Lab
+          Play Lab: Spel-labb
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
@@ -375,10 +375,10 @@ sv:
           description_short: Prova vår Jigsaw handledning
           Jigsaw: Pussel
         step:
-          title: steg
+          title: Steg
           description: Steg handledning
           description_short: Steg handledning
-          Step: steg
+          Step: Steg
         Hour of Code:
           title: Timme av Kod 2013
           description: Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!
@@ -422,12 +422,12 @@ sv:
           "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Konstnären: Sekvens'
           "Artist: Loops": 'Konstnären: Slingor'
-          "Bee: Conditionals": Bee Villkorssatser
-          "Artist: Nested Loops": 'Artist: Kapslade slingor'
-          "Farmer: While Loops": "Bonde: 'Medan' loopar"
-          "Bee: Nested Loops": 'Bee: Kapslade slingor'
-          "Artist: Functions": Artist Funktioner
-          "Bee: Debugging": Bee felsökning
+          "Bee: Conditionals": 'Biet: Villkor'
+          "Artist: Nested Loops": 'Konstnären: Nästlade slingor'
+          "Farmer: While Loops": "Bonde: 'medan'-slingor"
+          "Bee: Nested Loops": 'Biet: Nästlade slingor'
+          "Artist: Functions": 'Konstnären: Funktioner'
+          "Bee: Debugging": 'Biet: Felsökning'
         cspunit1:
           title: 'CSP enhet 1 - Digital Information'
           description_short: Utforska hur digital information är representerad och överförd
@@ -900,8 +900,8 @@ sv:
         allthethings:
           Jigsaw: Pussel
           Maze: Labyrint
-          Artist: Artist
-          Bee: Bee
+          Artist: Konstnären
+          Bee: Biet
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
@@ -1348,6 +1348,10 @@ sv:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1459,13 +1463,13 @@ sv:
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Bygg en galax med kod'
-          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
-          description: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Bygg en galax med kod'
-          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
-          description: Lär dig att programmera droider och skapa ditt eget Star Wars spel i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1474,8 +1478,8 @@ sv:
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Utforska en Minecraft värld med kod
-          description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft värld
+          description_short: Utforska en Minecraft-värld med kodning
+          description: Använd kodblock för att ta Steve eller Alex på ett äventyr genom den här Minecraft-världen
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

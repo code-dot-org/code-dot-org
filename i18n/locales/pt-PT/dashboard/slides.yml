@@ -1513,101 +1513,101 @@ pt:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: O meu nome é Jens Bergensten, mas conhecem-me por Jeb. Sou o diretor de programação de Minecraft aqui na Mojang, em Estocolmo. Acho que comecei a programar com 11 ou 12 anos, porque queria fazer jogos. Um dos amigos do meu pai disse-me que, para fazer jogos, temos de aprender a programar. Foi assim que comecei. Gosto de conceber e perceber a arquitetura dos jogos. É disso que gosto mesmo em Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: Durante a próxima hora vão aprender o básico da programação ao programarem a Alex ou o Steve para avançarem através de uma simulação de parte de um mundo Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: 'A programação tradicional faz-se normalmente em texto, mas hoje vamos usar Blockly, um sistema que utiliza blocos visuais de arrastar e largar para escrever programas. No interior, estás a criar código JavaScript. '
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Os conceitos que vais aprender são os mesmos que os programadores utilizam todos os dias e são a base da programação. Aqui, na Mojang, utilizamos esses mesmos conceitos para fazer com que Minecraft funcione.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: 'Antes de começares, vais escolher a tua personagem. Eu vou escolher a Alex. Vamos produzir código para um programa que a ajude a mover-se pelo ecrã. '
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: O teu ecrã está dividido em três partes principais. À esquerda, tens o espaço de jogo de Minecraft, onde o teu programa vai correr. As instruções para cada nível estão escritas em baixo.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Esta zona intermédia é a caixa de ferramentas, e cada um destes blocos é um comando que dirige as ações da Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. '
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: 'Se arrastarmos o bloco "mover para a frente" para o nosso espaço de trabalho e clicarmos em Correr, o que acontece? A Alex avança um espaço na grelha.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: 'E se quisermos fazer qualquer coisa depois de ela avançar um espaço? Podemos adicionar outro bloco ao nosso programa. Vou escolher o bloco "virar à direita", e vou arrastá-lo para debaixo do meu bloco "mover para a frente" até aparecer esta linha cor-de-laranja. Depois, largo-o e os dois blocos encaixam-se. Quando premirmos Correr outra vez, a Alex vai executar os comandos que estão empilhados de cima a baixo no nosso espaço de trabalho.'
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Se quiseres apagar um bloco, basta arrastá-lo da pilha de volta para a caixa de ferramentas.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: Para anular as mudanças e para voltar ao início do nível, utiliza o botão Começar Outra Vez no extremo superior direito do espaço de trabalho. Mais uma coisa, vês o pequeno triângulo nos blocos de virar? Quando vires esses triângulos, isso quer dizer que podes escolher uma opção diferente. Vamos começar a codificar!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Chamo-me Lydia Winters e sou a diretora de marca da Mojang, e nós fizemos um pequeno jogo chamado Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: O que eu gosto mais de fazer em Minecraft é explorar. Adoro aventurar-me por grutas e ver o que consigo encontrar. Não sendo uma programadora, estou mesmo empolgada por ver as lições de Minecraft e aprender a programar.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: 'O último nível exigia imensos blocos de "mover para a frente". Seria mais fácil se pudéssemos dizer ao computador para executar esse comando quatro ou cinco vezes. Felizmente para nós, os computadores são muito bons a repetir comandos em sequências de repetição. '
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Ao construir Minecraft, utilizamos sequências de repetição para colocar todos os materiais iniciais necessários à criação de um novo mundo. São milhares e milhares de blocos. Nós também utilizamos sequências para coisas mais pequenas, como para mover os pés da Alex para a frente e para trás, quando ela caminha. As sequências de repetição são uma parte importante da programação.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: 'Está a chegar a noite. Por isso, nos próximos níveis, vamos construir uma casa para nos mantermos em segurança. Vamos utilizar o bloco de repetição para fazer isto com facilidade. '
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: 'Para construir uma parede da nossa casa, podemos dizer à Alex para se "mover para a frente" e colocar pranchas quatro vezes, ou então dizemos-lhe para se "mover para a frente" e colocar uma prancha, e depois pegamos neste comando e utilizamos o bloco de repetição para que ela repita a ação várias vezes. Agora vamos clicar no bloco de repetição e dizer-lhe quantas vezes queremos que ela repita esta ação. Agora vamos construir a nossa casa antes que a noite caia! Diverte-te.'
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: 'Agora vamos aprender o que são as declarações de "se". As declarações de "se" são uma parte fundamental da aprendizagem da programação. Elas ajudam os computadores a tomar decisões.'
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: 'Todos os computadores utilizam declarações de "se", incluindo o meu telemóvel. Por exemplo, quando desbloqueio o meu telemóvel, ele corre programação que diz que se eu introduzir a palavra-passe correta, desbloqueará o telemóvel. Caso contrário, apresentará uma mensagem de erro.'
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: 'Podes utilizar declarações de "se" na tua programação para fazer com que o Steve e a Alex reajam ao que veem no mundo. Por exemplo, se houver uma rocha à frente deles, podem virar à esquerda. Ou à direita, se encontrarem uma árvore.'
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: Neste caso, não queremos cair na lava. Planear tendo em conta a lava é fácil. Vemo-la no ecrã. Mas e a lava que não vemos debaixo da pedra?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: 'Depois de escavar a pedra, temos de verificar se há lava nesse local antes de avançarmos. Se houver lava, vamos colocar uma pedra à frente da nossa personagem antes de avançarmos. Assim, podemos avançar em segurança. Está na hora de escavar um pouco mais! E lembra-te de utilizar a declaração de "se" para te manteres em segurança.'
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Parabéns! Acabaste de aprender os fundamentos da programação.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Agora podes utilizar estes blocos para construíres a tua própria criação. Acabaram as instruções e os quebra-cabeças. Podes construir o que quiseres. Tu é que escolhes.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas. Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma casa com lã!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: 'Quando acabares a tua criação, escolhe "partilhar" para obteres uma hiperligação que te permitirá partilhar com os teus amigos! Diverte-te!'
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Parabéns! Acabaste de aprender os fundamentos da programação.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Agora podes utilizar estes blocos para construíres a tua própria criação. Acabaram as instruções e os quebra-cabeças. Podes construir o que quiseres. Tu é que escolhes.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas. Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma casa com lã!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Agora podes construir o que quiseres. Diverte-te!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1626,7 +1626,7 @@ pt:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. '
       7:
         image: notes/gumball_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

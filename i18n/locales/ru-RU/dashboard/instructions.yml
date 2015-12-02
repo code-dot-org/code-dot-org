@@ -895,9 +895,7 @@ ru:
       Course 4 Artist For Loops 7_instruction: 'Что произойдёт, если вы уберёте "Повторить 3 раза" из этого алгоритма, оставив блоги "двигаться" и "повернуться" в цикле? В этом спиральном треугольнике каждая сторона на 20 пикселей больше, чем предыдущая.'
       Course 4 Artist For Loops 8_instruction: "Всего лишь одно маленькое изменение в коде из прошлого изображения может создать этот рисунок. Сможете понять в чем отличие?\r\n\r\nПодсказка: Вам нужно убрать что-то!"
       Course 4 Artist For Loops 8a_instruction: Всего лишь одно маленькое изменение в коде из прошлого изображения может создать этот рисунок. Сможете понять в чем отличие?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
+      Course 4 Artist For Loops 9_instruction: Вы можете сделать спираль? Двигайся вперед от 1 до 75 пикселей, увеличивая каждый раз на 1 пиксель.
       Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
       Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nNeed a hint? Click here."
       Course 4 Artist Functions 1_instruction: |
@@ -1435,7 +1433,19 @@ ru:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2245,24 +2255,24 @@ ru:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Бежать прямо к Рептилиям это плохая идея. Осторожно двигайтесь мимо Рептилий и безопасно дойдите до вашего дома.
-      Overworld Chop Tree_instruction: Древесина – это очень важный ресурс. Многие вещи сделаны из неё. Дойдите до дерева и используйте команду «уничтожить блок», чтобы срубить его.
-      Overworld Chop Trees_instruction: Нам нужно построить дом до захода солнца. Для дома нужно много древесины. Срубите все 3 дерева.
-      Overworld Free Play 20x20_instruction: Поздравляем! Вы решили все наши головоломки! Теперь добывайте, стройте и создавайте что-то уникальное, используя все, что вы узнали до настоящего времени.
-      Overworld Free Play_instruction: Это ваш игровой ландшафт. Вы должны выбрать что построить.
+      Overworld Avoid Monsters_instruction: Криперов лучше не трогать. Осторожно обойдите их и зайдите в свой безопасный дом.
+      Overworld Chop Tree_instruction: Дерево – это очень важный ресурс, из которого изготавливаются многие предметы. Подойдите к дереву и используйте команду «уничтожить блок», чтобы срубить его.
+      Overworld Chop Trees_instruction: Нам нужно построить дом до наступления темноты. Для постройки дома требуется много дерева. Срубите все три дерева.
+      Overworld Free Play 20x20_instruction: Поздравляем! Вы решили все наши задачки. Теперь вы можете добывать ресурсы, строить и создавать уникальные вещи, используя полученные знания и умения.
+      Overworld Free Play_instruction: Используйте эту местность для игры. Вы сами решаете, что и где строить.
       Overworld House Frame - A_instruction: Давайте построим свой дом! Это место хорошо подходит для этого. Постройте раму на этих блоках земли.
       Overworld House Frame - C_instruction: Давайте построим свой дом! Это место хорошо подходит для этого. Постройте раму на этих блоках земли.
       Overworld House Frame B_instruction: Одна стена построена, постройте остальное следуя плану вашего дома! Нужно будет повторять много действий.
       Overworld House Frame B2_instruction: Одна стена построена, постройте остальное следуя плану вашего дома! Нужно будет повторять много действий.
       Overworld House Frame C_instruction: Одна стена построена, постройте остальное следуя плану вашего дома! Нужно будет повторять много действий.
       Overworld House Frame Chosen_instruction: Постройте остальную часть вашего дома из любого материала, который вам нравится. Команда «повторить» вам пригодится.
-      Overworld House Frame_instruction: Давайте построим свой дом! Это место хорошо подходит для этого. Постройте раму на этих блоках земли.
-      Overworld Minecart Track_instruction: 'Мы снова на поверхности, имея много подземных ресурсов. Теперь попробуем построить путь вдоль пути от вашего дома. Первый этап - очистить путь. Следуйте по пути и расчищайте деревья.'
-      Overworld Move to Sheep_instruction: Добавьте вторую команду «двигаться вперед», чтобы дойти до овцы.
-      Overworld Place Wall_instruction: Каждый дом начинается со стен. Постройте первую часть вашего дома, разместив команды «поставить» и «двигаться вперед» внутри повторения цикла.
-      Overworld Plant Crops_instruction: 'Это хорошо - планировать заранее. Грядки расположены по обе стороны от воды, так что вы не будете голодать.'
-      Overworld Powered Minecart_instruction: Отличная работа! Вы собрали много ресурсов и построили небольшой дом. Теперь проложите железную дорогу от края карты до двери вашего дома.
-      Overworld Shear Sheep_instruction: Время стрижки овец! Используйте команду «стричь» для сбора шерсти с обеих овец.
+      Overworld House Frame_instruction: Давайте построим дом! Это место подходит. Постройте каркас на блоках земли.
+      Overworld Minecart Track_instruction: Вы вернулись на поверхность, добыв много ископаемых ресурсов. Сейчаc мы построим рельсы вдоль земляной дорожки, ведущей от дома. Первый этап – расчистить путь. Идите по дорожке и рубите деревья.
+      Overworld Move to Sheep_instruction: Добавьте еще одну команду «двигаться вперед», чтобы подойти к овце.
+      Overworld Place Wall_instruction: Любой дом начинается со стены. Постройте первую часть дома, вставив команды «разместить» и «двигаться вперед» в цикл повтора.
+      Overworld Plant Crops_instruction: Лучше планировать все наперед. Посадите саженцы по берегам водоема, чтобы в будущем вам не пришлось голодать.
+      Overworld Powered Minecart_instruction: Отличная работа! Вы собрали кучу ресурсов и построили скромный домик. Теперь проложите рельсы от края карты до порога вашего дома.
+      Overworld Shear Sheep_instruction: Пора стричь овец! Используйте команду «стричь», чтобы получить шерсть с обеих овец.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2619,7 +2629,7 @@ ru:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2888,22 +2898,22 @@ ru:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -2912,7 +2922,7 @@ ru:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -2947,7 +2957,7 @@ ru:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3099,8 +3109,9 @@ ru:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -3884,8 +3895,8 @@ ru:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -3955,6 +3966,41 @@ ru:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
@@ -3981,11 +4027,11 @@ ru:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: Лава скрывается под некоторыми из этих блоков, вам нужно будет её закрыть прежде чем двигаться вперед. Здесь вам пригодится команда «если». Добавьте команду «двигаться вперед» в правильное место, чтобы добыть все ресурсы.
-      Underground If Statements_instruction: Теперь вещи посложнее. Нужно добыть 3 красного камня, но не упасть в лаву. Используйте команду «если», чтобы уложить булыжники над любой лавой, которую вы откроете.
-      Underground Iron_instruction: Идти в расплавленную лаву является плохой идеей. Сделайте из булыжников мост, а затем раскопайте хотя бы два железных блока.
-      Underground Mine in a Circle_instruction: "Найдите способ, чтобы получить 5 алмазов и 7 красных камней! Попробуйте использовать команду \"повторить\" внутри команды \"повторить\", чтобы двигаться по квадрату. \r\n"
-      Underground Mining Coal_instruction: Вы сможете найти наиболее ценные ресурсы под землей, но там темно. Нужно поставить как минимум 2 факела и добыть по крайней мере 2 угля.
+      Underground Avoiding Lava_instruction: Под некоторыми из этих блоков таится лава – ее надо закрыть перед тем, как двигаться вперед. Здесь нам пригодится оператор «если». Вставьте команду «двигаться вперед» в нужное место, чтобы добыть эти блоки.
+      Underground If Statements_instruction: Задача усложняется. Добудьте 3 блока красного камня, но не упадите в лаву. Используйте команду «если», чтобы накрыть булыжником обнаруженную лаву.
+      Underground Iron_instruction: Не стоит ходить по расплавленной лаве. Разместите сверху булыжник, чтобы создать мостик, а затем добудьте не менее двух блоков железа.
+      Underground Mine in a Circle_instruction: Найдите способ добыть 5 алмазов и 7 блоков красного камня! Чтобы ходить по квадрату, попробуйте вложить команду «повтор» в другую команду «повтор».
+      Underground Mining Coal_instruction: Самые ценные ресурсы находятся под землей, но учтите, что может стать темно. Разместите не менее 2 факелов и добудьте не менее 2 блоков угля.
       Underground Test Level_instruction: Соберите все минералы!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Используйте этот тест, чтовы создать xml для модульного тестирования

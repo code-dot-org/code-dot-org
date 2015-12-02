@@ -1,5 +1,5 @@
 es-ES:
-  hour_of_code: Hora del Codigo
+  hour_of_code: Hora del código
   hello: Hola mundo
   select_language: Por favor seleccione su idioma
   en: Ciencias de la computación
@@ -141,7 +141,7 @@ es-ES:
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
   studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
-  studiobar_frozen_title: Hora del código
+  studiobar_frozen_title: Hora del Codigo
   studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
@@ -183,7 +183,7 @@ es-ES:
   homepage_slot_text_studio: Todos nuestros tutoriales
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Tienda
-  homepage_slot_text_flappy: Código Flappy
+  homepage_slot_text_flappy: Código de Flappy
   homepage_action_text_hoc: Una hora de código para cada estudiante.
   homepage_action_text_num_served: '# servido'
   homepage_action_text_join_us: Únete
@@ -191,7 +191,7 @@ es-ES:
   homepage_action_text_try_it: Pruébalo
   homepage_action_text_volunteers: Se necesitan voluntarios técnicos
   homepage_action_text_codevideo: Mira el Video
-  homepage_action_text_teachervideo: Mira el Video
+  homepage_action_text_teachervideo: Mira el video
   homepage_action_text_girlvideo: Inspira a una chica
   homepage_action_text_learn: Empieza a aprender
   homepage_action_text_signpetition: Firma la petición
@@ -203,7 +203,7 @@ es-ES:
   homepage_banner_text_link: Aprende más
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Aprende más
-  homepage_slot_text_title_hoc: Hora del código
+  homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
   homepage_slot_text_link_host: Sea anfitrión de una hora de código
@@ -266,6 +266,10 @@ es-ES:
   class_submission_level_vocational: Vocacional
   class_submission_languages_other: Otros idiomas
   inspirational_videos_more: 'Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> vídeos inspiradores</a> por modelos y celebridades'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Construyendo una Galaxia con Código
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Arrastra y suelta bloques y utiliza JavaScript.
@@ -274,7 +278,7 @@ es-ES:
   starwars_blocks_title: Bloques
   starwars_blocks_description: Arrastra y suelta bloques.
   starwars_blocks_specs: Muchos idiomas (muy pronto) | Navegadores modernos, teléfonos inteligentes, tablets | Edades 6-10
-  starwars_blocks_start_button: Probar ahora
+  starwars_blocks_start_button: Aprenda más
   starwars_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
   starwars_speak_languages: ¿Hablas otro idioma?
   starwars_help_translate: Ayúdanos a traducir
@@ -293,7 +297,7 @@ es-ES:
   volunteer_engineer_submission_intro_recruit: |-
     Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: '¿No está buscando ser voluntario? <a href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.'
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
@@ -513,7 +517,7 @@ es-ES:
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora del Código del año pasado. En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora del Código del 2013
   dashboard_teacher: Profesor
-  dashboard_student: estudiante
+  dashboard_student: Estudiante
   dashboard_sections_email_question: ¿Todos los estudiantes tienen una dirección de correo electrónico válida?
   dashboard_sections_account_creation_question: ¿Quién crea la cuenta del estudiante?
   dashboard_sections_password_question: '¿Qué usan los estudiantes como "contraseña"?'
@@ -540,11 +544,11 @@ es-ES:
   learn_educator_resources_description: Aprende como enseñar una Hour of Code
   learn_educator_resources_button: Recursos del educador
   learn_are_you_educator: '¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">como a enseñar una Hora del Código</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/voluntario/local">Encuentra un voluntario local</a> para ayudar durante tu Hora de Código'
+  learn_teacher_led_lesson_plans: 'Inspirado por <a href="https://code.org/teacher-led"> profesor guia planes de lección de la hora de Código</a>'
+  learn_how_to_hoc: 'Siga <a href="https://hourofcode.com/how-to"> nuestra guía de cómo</a> para la enseñanza de una Hora de Código'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Más información</a> sobre los premios para educadores.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Inspirar a los estudiantes mostrándoles <a href="https://code.org/educate/inspire"> estos videos</a>'
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
   hoc2014_try_scrat: Scrat, PvZ y Angry Birds
@@ -556,10 +560,14 @@ es-ES:
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Guías disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_javascript: Guías que enseñan JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática sin conexión
   carousel_heading_devices: Aplicaciones Tutorial para teléfonos y tablets
+  carousel_heading_beyond_devices: Tutoriales en aplicaciones para teléfonos y tabletas
   carousel_heading_languages: Guías en otros lenguajes de programación
+  carousel_heading_beyond_languages: Tutoriales en otros lenguajes de programación
   carousel_heading_apps_games: Crea tus propias aplicaciones o juegos
   carousel_heading_university: Cursos de universidades en línea
   carousel_heading_webpages: Aprende a hacer páginas web
@@ -610,14 +618,14 @@ es-ES:
   robomindnl_name: Programá tu robot virtual
   flappy_name: Crea un juego Flappy
   bitsbox_name: 'Bitsbox - crea un juego'
-  makeschool_name: ¡Crea un juego para iPhone en tu navegador!
+  makeschool_name: ¡Desarrolla un juego para iPhone en tu navegador!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor en la Hora del Código
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piedra, papel, tijera
-  hourofcode_name: Espacio reservado para un nuevo code.org/hoc
+  hourofcode_name: Codifica tu primer programa de computación
   playlab_name: Laboratorio de Juegos
   infinity_name: Laboratorio de Juego Infinity
   artist_name: Artista
@@ -694,7 +702,7 @@ es-ES:
   robomindnl_platformtext: Navegador moderno, versión móvil
   flappy_platformtext: Cualquier navegador moderno, smartphone, tableta
   bitsbox_platformtext: Navegadores modernos
-  makeschool_platformtext: Cualquier navegador moderno
+  makeschool_platformtext: Navegadores modernos
   touchdevelop_platformtext: Navegador moderno, teléfonos inteligentes, todos los dispositivos
   appinventor_platformtext: Navegadores modernos + Android
   blockly_platformtext: Sólo navegadores modernos
@@ -706,14 +714,14 @@ es-ES:
   starwars_platformtext: Navegadores modernos y tabletas
   playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeorg_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
-  codeintl_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
+  codeintl_shortdescription: Aprende a programar con el creador de Facebook y Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Aprenda a dibujar con JavaScript
   khanes_shortdescription: Aprendé a dibujar en JavaScript
-  khanpt_shortdescription: Aprenda a dibujar con JavaScript
-  khanhe_shortdescription: Aprenda a dibujar con JavaScript
-  khanfr_shortdescription: Aprenda a dibujar con JavaScript
-  khanpl_shortdescription: Aprenda a dibujar con JavaScript
+  khanpt_shortdescription: Aprende a dibujar en JavaScript
+  khanhe_shortdescription: Aprende a dibujar en JavaScript
+  khanfr_shortdescription: Aprende a dibujar en JavaScript
+  khanpl_shortdescription: Aprende a dibujar en JavaScript
   tynker_shortdescription: Aprende a programar resolviendo rompecabezas divertidos y construye tus propios juegos para móviles.
   scratch_shortdescription: Crea animaciones, historias y juegos interactivos.
   lightbot_shortdescription: ¡Programa a Lightbot para resolver rompecabezas utilizando procedimientos y bucles!
@@ -735,14 +743,14 @@ es-ES:
   robomindnl_shortdescription: Escribe código para un robot virtual
   flappy_shortdescription: 'Haz tu propio juego - Flappy Bird, Tiburón o Submarino'
   bitsbox_shortdescription: Programa una serie de aplicaciones para jugar y compartir, con JavaScript real.
-  makeschool_shortdescription: ¡Crea un juego para iPhone! ¡Aprende escribiendo código que le enseña a tu monstruo nuevos movimientos!
+  makeschool_shortdescription: ¡Crea un juego para iPhone! ¡Aprende a escribir código para enseñarle a tu monstruo nuevos movimientos!
   touchdevelop_shortdescription: 'Resuelve problemas, crea juegos y aprende a programar, todo desde tu teléfono. '
   appinventor_shortdescription: ¡Crea tu propia aplicación! (sólo para Android)
   blockly_shortdescription: Descarga un archivo ZIP para aprender desconectado
   thinkersmith2_shortdescription: Aprenda cómo las computadoras usan unos y ceros para representar la información
   kodableunplugged_shortdescription: 'Un divertido ejercicio "desconectado"'
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel, o tijeras
-  hourofcode_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
+  hourofcode_shortdescription: Aprende a programar con el creador de Facebook y Angry Birds!
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
   starwars_shortdescription: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
   playlab_shortdescription: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
@@ -778,7 +786,7 @@ es-ES:
   robomindnl_longdescription: 'Los alumnos aprenden las bases de la programación controlando su propio robot virtual. El curso en línea es completamente autocontenido con pequeñas presentaciones, vídeos, cuestionarios y consejos automáticos que ayudan a completar los ejercicios de programación. '
   flappy_longdescription: Usa programación arrastrar-y-soltar para hacer tu propio juego Flappy Bird y personalizarlo para ver diferentes opciones (tiburón Flappy, Flappy Santa, o el que sea). Añade el juego a tu teléfono con un solo clic.
   bitsbox_longdescription: Personaliza tu propia tableta virtual, y luego programa una serie de aplicaciones para jugar y compartir. Guías simples hacen posible que niños muy jóvenes programen en JavaScript real, y cuanto más avancen más lejos llegarán.
-  makeschool_longdescription: '¡Aprende a programar haciendo un juego para iPhone usando un lenguaje de programación totalmente nuevo y apto para principiantes llamado Swift! Crea un juego de acción inspirado en Pok&eacute;mon y escribe código para enseñarle a tu monstruo nuevos movimientos ¡Aprenderás cómo utilizar variables, métodos y objetos para ayudar a tu monstruo a ganar!'
+  makeschool_longdescription: '¡Aprende a programar haciendo un juego para iPhone usando un lenguaje de programación totalmente nuevo y para principiantes llamado Swift! Crea un juego de acción inspirado en Pok&eacute;mon y escribe código para enseñar a tu monstruo a moverse. ¡Aprenderás cómo utilizar variables, métodos y objetos para ayudar a tu monstruo ganar!'
   touchdevelop_longdescription: 'El editor táctil te guiará a crear arte de pixeles, resolver el problema del oso, o hacer tu propio juego de un pájaro saltarín. '
   appinventor_longdescription: 'Videotutoriales rápidos y entretenidos te guían para construir tres aplicaciones sencillas para tu teléfono o tableta Android. Tanto para principiantes como para expertos esta hora del código te va a preparar para comenzar a hacer tus propias aplicaciones antes de saberlo. Imagínate  compartir tus creaciones con tus amigos. Estas actividades son aptas tanto para hacer sólo como para hacer en clase con los profesores.'
   blockly_longdescription: ¿Teneis PCs con conexión lenta (o inexistente)? Descarga el tutorial de Blockly, que fue el precursor de los tutoriales de Code.org. Es un único archivo de 3MB que puede descargarse en cualquier computadora o usarlo desde un Pen Drive
@@ -876,7 +884,7 @@ es-ES:
   groklearning_beyond_platformtext: Navegadores modernos
   hacketyhack_beyond_platformtext: Instalación en computadora de escritorio
   robomind_beyond_platformtext: Navegador moderno, versión móvil
-  makeschool_beyond_platformtext: Cualquier navegador moderno
+  makeschool_beyond_platformtext: Navegadores modernos
   appinventor_beyond_platformtext: Navegador moderno + Android
   touchdevelop_beyond_platformtext: Navegador moderno, teléfonos inteligentes, todos los dispositivos
   codehs_beyond_platformtext: Navegadores modernos ($$ requerido)
@@ -889,9 +897,9 @@ es-ES:
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Instalación en computadora
-  w3schools_beyond_platformtext: Cualquier navegador moderno
-  codeavengers_beyond_platformtext: Cualquier navegador moderno
-  mozilla_beyond_platformtext: Cualquier navegador moderno
+  w3schools_beyond_platformtext: Navegadores modernos
+  codeavengers_beyond_platformtext: Navegadores modernos
+  mozilla_beyond_platformtext: Navegadores modernos
   codecombat_beyond_platformtext: Funciona en la web (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Compra de robot
@@ -950,7 +958,7 @@ es-ES:
   groklearning_beyond_longdescription: Un curso introductorio a la programación con Python para personas sin experiencia en programación. Nuestra mezcla única de contenido introductorio con desafíos te va a llevar a un sólido entendimiento de Python y la programación en general. Hemos enseñando estos contenidos alumnos de varias edades y con distintos conocimientos previos y estamos seguros de que también se te adaptará.
   hacketyhack_beyond_longdescription: 'Hackety Hack te va a enseñar las bases de la programación desde cero. ¡No se necesita experiencia previa! Con Hackety Hack vas a aprender el lenguaje de programación Ruby, que se utiliza para una gran variedad de cosas, incluyendo páginas web y aplicaciones de escritorio. Nota: se requiere instalar la aplicación.'
   robomind_beyond_longdescription: 'Los alumnos aprenden las bases de la programación controlando su propio robot virtual. El curso online es completamente autocontenido con presentaciones cortas, videos, cuestionarios y consejos que ayudan a completar los ejercicios de programación. '
-  makeschool_beyond_longdescription: ¿Ya sabes algo de ObjectiveC? ¡Aprende a hacer un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar, testear y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook para que tus amigos puedan probarlo. No se necesita experiencia previa en desarrollo para iPhone, pero debes entender sobre variables, métodos y objetos.
+  makeschool_beyond_longdescription: ¿Ya sabés algo de ObjectiveC? ¡Aprende a hacer un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar, testear y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook para que todos puedan jugarlo. No se necesita experiencia previa en desarrollo para iPhone, pero debés entender que son variables, métodos y objetos.
   appinventor_beyond_longdescription: 'Videotutoriales rápidos y entretenidos te guían para construir tres aplicaciones sencillas para tu teléfono o tableta Android. Tanto para principiantes como para expertos esta hora del código te va a preparar para comenzar a hacer tus propias aplicaciones antes de saberlo. Imagínate  compartir tus creaciones con tus amigos. Estas actividades son aptas tanto para hacer sólo como para hacer en clase con los profesores.'
   touchdevelop_beyond_longdescription: TouchDevelop te permite crear tus propias aplicaciones en los dispositivos iPan, iPhone, Android, PC, y teléfono inteligente de Windows. ¡Nuestro editor de un entorno amigable táctil hace que codificar sea divertido aún en teléfonos inteligentes o tabletas!
   codehs_beyond_longdescription: 'Aprende programación básica con Karel el perro. Una introducción divertida, accesible y visual a la programación, donde darle órdenes a una computadora es como darle órdenes a un perro. El tutorial es genial si es dirigido por un docente, pero se puede hacer de manera independiente. [Nota: requiere pago]'
