@@ -77,14 +77,32 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
 
 module.exports = FeedbackBlocks;
 
+/**
+ * Generate a url (with params) for the iFrame that's going to hold the
+ * blocks.
+ * TODO(elijah) replace this whole thing with an implementation that
+ * doesn't require an iframe, since we can now have multiple blocklys on
+ * the same page
+ */
 FeedbackBlocks.prototype.readonlyTemplateUrl_ = function () {
-  return '/readonly_template?app=' + this.iframeOptions.app + '&js_locale=' + this.iframeOptions.options.locale;
+  var params = {
+    app: this.iframeOptions.app,
+    js_locale: this.iframeOptions.options.locale,
+    locale_dir: this.iframeOptions.options.localeDirection
+  };
+
+  // Simple polyfill for $.params
+  var paramString = Object.keys(params).map(function (key) {
+    return key + "=" + encodeURIComponent(params[key]);
+  }).join("&");
+
+  return "/readonly_template?" + paramString;
 };
 
 FeedbackBlocks.prototype.show = function() {
   var iframeOptions = this.iframeOptions;
   var iframe = this.iframe;
-  iframe.setAttribute('src', this.readonlyTemplateUrl());
+  iframe.setAttribute('src', this.readonlyTemplateUrl_());
   iframe.onload = function () {
     this[iframeOptions.app + "Main"](iframeOptions.options);
   }.bind(iframe.contentWindow);
