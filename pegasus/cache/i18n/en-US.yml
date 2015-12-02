@@ -588,6 +588,7 @@
   carousel_heading_ide: "Platforms popular among teachers"
   educator_notes: "Educator Notes"
   teach_led_lesson_plans: "Teacher Led Hour of Code Lesson Plans"
+  learn_footer_all_tutorials: "See the <a href=\"https://code.org/educate/allhourofcode\">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href=\"https://hourofcode.com/tutorial-guidelines\">click here.</a>"
   how_to_teach_hoc: "How to Teach an Hour of Code"
   more_resources_educators: "More resources for teachers and educators"
   beyond_submission: "Want to submit a tutorial for Beyond an Hour? See the criteria and submission form."
