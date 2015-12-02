@@ -1467,7 +1467,7 @@ levels.gumball_join_food_fight = {
   ],
   toolbox:
     tb(
-      blockOfType('studio_whenSpriteCollided', {SPRITE1: 2, SPRITE2: 'anything'}) +
+      blockOfType('studio_whenSpriteCollided', {SPRITE1: 1, SPRITE2: 'anything'}) +
       blockOfType('studio_setSpriteEmotion', {SPRITE: 1}) +
       blockOfType('studio_throw', {SPRITE: 0, DIR: 2}) +
       blockOfType('studio_playSound') +
