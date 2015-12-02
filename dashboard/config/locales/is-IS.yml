@@ -457,10 +457,13 @@
       Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
     help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði
       við gerð þessa kennsluefnis.
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Öll
-      réttindi áskilin.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin
+    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Öll réttindi
+      áskilin.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+      Öll réttindi áskilin.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
+      Öll réttindi áskilin.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th
+      Century Fox. Öll réttindi áskilin.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin
@@ -478,6 +481,9 @@
     privacy: Persónuvernd
     secure: Örugg útgáfa
     report_abuse: Tilkynna misnotkun
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar

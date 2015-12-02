@@ -7,26 +7,26 @@ layout: wide
 
 <%= view :signup_button %>
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+# Pokyny pro výukové programy Hodinu kódu ™ a Týdne vzdělávání informatiky
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org bude pořádat různé aktivity Hodiny kódu na stránkách Code.org, Hodina kódu a CSEdWeek websajt(y). Aktuální seznam je na [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Rádi bychom nabídli různé zajímavé možnosti, ale naším hlavním cílem je zaujmout žáky bez zkušeností v informatice a také jejich učitele. Prosím, použij tento text jako průvodce vytvořením své aktivity, zaměřené na uživatele bez zkušeností s programováním a informatikou.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**Po přečtení pokynů, můžete odeslat váš kurz prostřednictvím naší [Hodina kódu ™ stránky zaslání aktivity ](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+**NOVÝ:** Na rozdíl od minulých let, máme v plánu zavést nový formát pro "učitel vede" Hodinu kódu aktivity. Budou uvedeny níže aktivity samouky orientované stránky na studenta a e-maily. Podrobnosti níže.
 
 <a id="top"></a>
 
-## Seznam:
+## Index:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Všeobecné pokyny pro vytvoření aktivity pro Hodinu kódu](#guidelines)
   * [Jak se hodnotí výukové materiály pro jejich zařazení](#inclusion)
-  * [How to submit (Due 10/15/2015)](#submit)
+  * [Jak odeslat (do 10/15/2015)](#submit)
   * [Rady pro vytvoření aktivity](#design)
   * [Pokyny k ochranným známkám](#tm)
   * [Sledovací obrázek](#pixel)
@@ -35,9 +35,9 @@ Rádi bychom nabídli různé zajímavé možnosti, ale naším hlavním cílem 
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activities: self-guided or *lesson-plan*
+## Nová pro rok 2015: dva formáty aktivit: průvodce nebo *lekce plán*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+Nyní desítky tisíc pedagogů se pokoušeli o Hodinu kódu, mnoho učeben jsou připravené na kreativnější, méně univerzální aktivity k výuce základů informatiky. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
 
 **Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
 
@@ -114,7 +114,7 @@ Koneckonců, cílem kampaně Hodina kódu je širší zapojení žáků a učite
 
 <a id="submit"></a>
 
-## How to submit (Due 10/15/2015)
+## Jak odeslat (do 10/15/2015)
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
@@ -151,7 +151,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Uveďte též doporučené znalosti informatiky podle úrovně vzdělání: začátečník, pokročilý nebo expert. Webová stránka Hodiny kódu zdůrazňuje především aktivity pro začátečníky. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Technické požadavky: 
       * Pro přesnější sledování účasti, chceme, aby každý výukový program od třetí partnerské strany měl na první a poslední stránce výukového programu jedno-pixelové sledovací obrázky. Umístěte výchozí pixelový obrázek na úvodní stránku a koncový pixelový obrázek na poslední stránku. Neumísťujte pixely na vnitřní stránky). Více podorbností naleznete v části Sledování Pixelů níže. 
-      * Po dokončení vaší činnosti, by uživatelé měli být přesměrováni na [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Po dokončení vaší činnosti, by uživatelé měli být přesměrováni na [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) kde budou schopni: 
           * Sdílet na sociálních sítích, že dokončili aktivitu Hodiny kódu
           * Získat certifikát o dokončení aktivity Hodiny kódu
           * Podívat se na žebříčky o tom, které země/města mají nejvyšší míru účasti v aktivitách Hodiny kódu
@@ -170,7 +170,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
 
 <a id="design"></a>
 
-## Rady pro vytvoření aktivity
+## Rady pro návrh vaší aktivity
 
 You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Za žádných okolností nelze používat logo ani název Code.org. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
@@ -215,13 +215,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 Jedna část toho je ochrana ochranné známky "Hour of Code" aby nedošlo k záměně. Mnoho z našich partnerů výukových kurzu používalo "Hour of Code" na vašich webových stránkách. My nechceme bránit tomuto použití, ale chceme se ujistit, že splňuje některá kritéria:
 
-  1. Jakýkoliv odkaz na "Hodinu kódu" by se měl používat způsobem, který nenaznačuje, že je to vaše vlastní značka, ale spíše že odkazuje na Hodinu kódu jako základní hnutí. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Špatný příklad: "Zkuste Hodinu kódu z ACME Corp"
-  2. Použijte "TM" značku jako horní index na nejvýznamnějších místech pro zmínku o akci "Hodina kódu", jak na vašem webu a tak v popisech aplikace
+  1. Jakýkoliv odkaz na "Hodinu kódu" by se měl používat způsobem, který nenaznačuje, že je to vaše vlastní značka, ale spíše že odkazuje na Hodinu kódu jako základní hnutí. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Dodržte styl na stránce (nebo zápatí), včetně odkazů na webové stránky CSEdWeek a Code.org s následujícím obsahem:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. Nepoužívejte název "Hodina kódu" v názvech aplikací
+  4. No use of "Hour of Code" in app names.
 
 [**Zpět nahoru**](#top)
 
@@ -246,7 +246,7 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 <a id="promote"></a>
 
-## Propagujte výukové programy, akce CSEdWeek a Hodina kódu
+## Propagujte výukové programy, akce CSEdWeek a Hodiny kódu
 
 Obracíme se žádostí na každého, aby představili svůj vlastní 1 hodinový kurz svým uživatelům. Please direct them to ***your*** Hour of Code page. Vaši uživatelé budou jistě pravděpodobněji reagovat na váš mail o vašem kurzu. Využívejte mezinárodní kampaň Hodiny kódu pro Computer Science Eucation Week (Týden vzdělávání v informatice) jako záminku pro vybídnutí uživatelů k pozvání dalších, aby se k nám připojili, aby nám pomohli dosáhnout celkového počtu 100 milionů účastníků.
 

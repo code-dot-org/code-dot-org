@@ -88,6 +88,26 @@ dashboard.clientState.levelProgress = function(scriptName, levelId) {
 };
 
 /**
+ * Returns the "best" of the two results, as defined in apps/src/constants.js.
+ * Note that there are negative results that count as an attempt, so we can't
+ * just take the maximum.
+ * @param {Number} a
+ * @param {Number} b
+ * @return {Number} The better result.
+ */
+dashboard.clientState.mergeActivityResult = function(a, b) {
+  a = a || 0;
+  b = b || 0;
+  if (a === 0) {
+    return b;
+  }
+  if (b === 0) {
+    return a;
+  }
+  return Math.max(a, b);
+};
+
+/**
  * Tracks the users progress after they click run
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
@@ -100,7 +120,8 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
     addLines(lines);
   }
 
-  if (testResult > dashboard.clientState.levelProgress(scriptName, levelId)) {
+  var savedResult = dashboard.clientState.levelProgress(scriptName, levelId);
+  if (savedResult !== dashboard.clientState.mergeActivityResult(savedResult, testResult)) {
     setLevelProgress(scriptName, levelId, testResult);
   }
 };

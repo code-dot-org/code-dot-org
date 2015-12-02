@@ -1500,6 +1500,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1617,14 +1621,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Construint una galàxia amb codi'
+          title: 'Star Wars: Construcció d''una galàxia amb codi'
           description_short: Aprèn a programar droides i a crear el teu propi joc
             d'Star Wars en una galàxia molt, molt llunyana.
           description: Aprèn a programar droides i a crear el teu propi joc d'Star
             Wars en una galàxia molt, molt llunyana.
           Hour of Code 2015: Hora del codi 2015
         starwarsblocks:
-          title: 'Star Wars: Construint una galàxia amb codi'
+          title: 'Star Wars: Construcció d''una galàxia amb codi'
           description_short: Aprèn a programar droides i a crear el teu propi joc
             d'Star Wars en una galàxia molt, molt llunyana.
           description: Aprèn a programar droides i a crear el teu propi joc d'Star

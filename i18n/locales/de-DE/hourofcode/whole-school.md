@@ -6,8 +6,8 @@ title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 <%= view :signup_button %>
 
-# Teilnahme der gesamten Schule
+# Lasse deine ganze Schule dabei sein
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informationen, wie gesamte Schulen an der Hour of Code teilnehmen können, folgen an dieser Stelle.
 
 <%= view :signup_button %>

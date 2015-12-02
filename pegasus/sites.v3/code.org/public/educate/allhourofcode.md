@@ -229,6 +229,9 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [Bitsbox Coding + Art](https://bitsbox.com/hocprint.html)    
 **Ages 5-9, Programming. Language Arts, Visual Arts, Music, Web-based.**
 
+[Flocabulary On One Condition](https://www.flocabulary.com/lesson-plan-coding-conditionals/#introlesson)  
+**Ages 7-13. Programming, Language arts, Storytelling, Web-based.** Students will learn how to write conditional statements and complete an activity sequence where they generate their own conditionals, evaluate given conditionals to determine the outcome of a program. 
+
 
 ## Middle School
 
@@ -273,6 +276,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
 **Ages 10-18. Programming, Game Design, English, Math, Creativity, Web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
+
+[Flocabulary On One Condition](https://www.flocabulary.com/lesson-plan-coding-conditionals/#introlesson)  
+**Ages 7-13. Programming, Language arts, Storytelling, Web-based.** Students will learn how to write conditional statements and complete an activity sequence where they generate their own conditionals, evaluate given conditionals to determine the outcome of a program. 
 
 
 ## High School

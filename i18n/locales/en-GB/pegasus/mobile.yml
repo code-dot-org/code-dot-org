@@ -291,6 +291,10 @@ en-GB:
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -581,10 +585,14 @@ en-GB:
   carousel_heading_international: Partner tutorials in your language
   carousel_heading_domestic: Partner tutorials available in English
   carousel_heading_beginners: Partner tutorials for Grades K-8
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Partner tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Partner tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Partner tutorials in other programming languages
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
   carousel_heading_webpages: Learn to make web pages

@@ -685,15 +685,17 @@
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
+      4-5 Bee Debugging 7_instruction: Fungsi ini kehilangan sesuatu...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
         properly.
-      4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
+      4-5 Bee Debugging 9_instruction: Mengapa lebah nya tidak menghasilkan madu yang
+        cukup?
       4-5 Bee Debugging Assessment 1_instruction: 'Evaluasi: Perbaiki kode.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
-      4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. \n"
+      4-5 Bee Nested Loops 1_instruction: Gunakan putaran untuk mengumpulkan semua
+        nektar.
+      4-5 Bee Nested Loops 2_instruction: "Kumpulkan semua nektar nya dari setiap
+        bunga.\nGunakan loop bersarang. \n"
       4-5 Bee Nested Loops 3_instruction: |
         Collect all of the nectar by putting the
         starter code into a nested loop.
@@ -2170,7 +2172,17 @@
         \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
         all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: "Create an object with at\nleast
+        5 values including at least one string and one number. (Click to see\nfull
+        instructions) \n"
+      CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -3128,23 +3140,18 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
+      Overworld Avoid Monsters_instruction: Berlari memasuki Creeper bukan ide yang
+        bagus. Bergerak perlahan melewati Creeper dan capai keselamatan rumah kamu.
+      Overworld Chop Tree_instruction: Kayu adalah sumber daya yang sangat penting.
+        Banyak barang terbuat darinya. Pergilah ke pohon dan gunakan perintah "hancurkan
+        balok" untuk menebangnya.
+      Overworld Chop Trees_instruction: Kita harus membangun rumah sebelum matahari
+        terbenam. Rumah memerlukan sangat banyak kayu. Tebang ke-3 pohon.
+      Overworld Free Play 20x20_instruction: Selamat! Kamu telah menyelesaikan semua
+        teka-teki kita! Sekarang tambang, bangun, dan buat sesuatu yang unik menggunakan
+        semua yang sejauh ini telah kamu pelajari.
+      Overworld Free Play_instruction: Kamu dapat mengutak-atik area ini. Pilih saja
+        apa yang ingin kamu bangun.
       Overworld House Frame - A_instruction: |
         Let's make our own house! This spot
         looks good. Build a frame on the dirt blocks.
@@ -3166,31 +3173,24 @@
       Overworld House Frame Chosen_instruction: |
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld House Frame_instruction: Ayo kita buat rumah untuk kita! Lokasi ini
+        sepertinya bagus. Bangun kusen di atas balok tanah.
+      Overworld Minecart Track_instruction: Kamu kembali ke atas permukaan dengan
+        banyak sumber daya bawah tanah. Sekarang kita akan membangun jalur sepanjang
+        jalan setapak tanah dari rumah kamu. Langkah pertama adalah mengosongkan jalan
+        setapak. Ikuti jalan setapak dan tebang pohon.
+      Overworld Move to Sheep_instruction: Tambahkan perintah "bergerak maju" kedua
+        untuk mencapai domba
+      Overworld Place Wall_instruction: Setiap rumah dimulai dengan dinding. Bangun
+        bagian pertama rumah kamu dengan menempatkan perintah "tempatkan" dan "bergerak
+        maju" di dalam putaran pengulangan.
+      Overworld Plant Crops_instruction: Sebaiknya rencanakan dahulu. Tanam bibit
+        di kedua sisi air agar kamu kelak tidak kelaparan.
+      Overworld Powered Minecart_instruction: Bagus! Kamu telah mengumpulkan banyak
+        sumber daya dan membangun rumah sederhana. Sekarang letakkan jalan rel dari
+        tepi peta ke pintu rumah kamu.
+      Overworld Shear Sheep_instruction: Waktunya mencukur domba! Gunakan perintah
+        "cukur" untuk mengumpulkan wol dari kedua domba.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3583,7 +3583,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3854,22 +3854,22 @@
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3878,7 +3878,7 @@
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3913,7 +3913,7 @@
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -4065,8 +4065,9 @@
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
         a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
@@ -4861,8 +4862,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4933,6 +4934,38 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4968,25 +5001,22 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
+      Underground Avoiding Lava_instruction: Lava bersembunyi di bawah beberapa balok
+        ini yang harus kamu tutup sebelum bergerak maju. Perintah "jika" akan berguna
+        di sini. Tambahkan perintah "bergerak maju" di tempat yang tepat untuk menambang
+        balok ini.
+      Underground If Statements_instruction: Sekarang permainan mulai sulit. Tambang
+        3 batu merah, tapi jangan sampai jatuh di lava. Gunakan perintah "Jika" untuk
+        menempatkan batu alam di atas lava yang kamu buka.
+      Underground Iron_instruction: Jalan kaki memasuki lava mencair bukan ide yang
+        bagus. Tempatkan batu alam untuk membuat jembatan, lalu tambang setidaknya
+        dua balok besi.
+      Underground Mine in a Circle_instruction: Temukan cara untuk mengambil 5 berlian
+        dan 7 batu merah! Coba gunakan perintah pengulangan di dalam perintah pengulangan
+        untuk berjalan kaki di lapangan.
+      Underground Mining Coal_instruction: Kamu akan menemukan sumber daya paling
+        berharga di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya
+        2 obor dan tambang setidaknya 2 batu bara.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

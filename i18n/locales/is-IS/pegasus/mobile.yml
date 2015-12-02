@@ -115,7 +115,7 @@ is-IS:
   learn_classes: Finna námskeið nálægt þér
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
-  twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast nánar.
+  twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt úr því. http://youtu.be/2DxWIxec6yo. Heimsæktu http://code.org/ til að fræðast nánar.
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -218,7 +218,7 @@ is-IS:
   homepage_banner_link_prizes: 'Taktu þátt í stærsta námsviðburði í sögunni. '
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
-  homepage_banner_privacy_main: 'Ágúst 3: Við höfum uppfært persónuverndarstefnu okkar með viðbót verkfæra sem notuð eru á nýja námskeiðinu okkar Meginhugtök tölvunarfræði fyrir framhaldsskóla.'
+  homepage_banner_privacy_main: 'Ágúst 3: Verkfærunum á námskeiðinu Meginhugtök tölvunarfræði fyrir framhaldsskóla hefur verið bætt við persónuverndarstefnu okkar.'
   homepage_banner_privacy_link: Læra meira
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
@@ -283,15 +283,19 @@ is-IS:
   class_submission_level_vocational: Starfsmenntun
   class_submission_languages_other: Önnur tungumál
   inspirational_videos_more: 'Fleiri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">hvatningarmyndbönd</a> með fyrirmyndum og frægu fólki'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Gerð Vetrarbrautar með Kóða
   starwars_javascript_title: Javascript
   starwars_javascript_description: Notaðu færanlega kubba og JavaScript.
   starwars_javascript_specs: Aðeins á ensku | Nýlegir vafrar | Aldur 11+
-  starwars_javascript_start_button: Prófa núna
-  starwars_blocks_title: kubbar
+  starwars_javascript_start_button: Prófaðu núna
+  starwars_blocks_title: Kubbar
   starwars_blocks_description: Nota færanlega kubba.
   starwars_blocks_specs: Mörg tungumál (á næstunni) | Nýlegir vafrar, snjallsímar, spjaldtölvur | Aldur 6-10
-  starwars_blocks_start_button: Prófa núna
+  starwars_blocks_start_button: Prófaðu núna
   starwars_watch_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en þú byrjar
   starwars_speak_languages: Talarðu annað tungumál?
   starwars_help_translate: Hjálpaðu að þýða
@@ -300,7 +304,7 @@ is-IS:
   mc_longdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_shortdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_gradelevel: Aldur 6+
-  mc_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  mc_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   mc_specs: Mörg tungumál (á næstunni) | Nýlegir vafrar og spjaldtölvur | Aldur 6+
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
   volunteer_engineer_submission_title: Vertu nemendum hvatning og hjálpaðu til við Klukkustund kóðunar.
@@ -308,9 +312,9 @@ is-IS:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} kennara vantar sjálfboðaliða með brennandi áhuga á fræðslu í tölvunarfræði til að hjálpa til við Klukkustund kóðunar nú í desember.<br>%{num_volunteers} sjálfboðaliðar hafa skráð sig. Vertu með.'
   volunteer_engineer_submission_intro_background: Klukkustund kóðunar er alheimsátak í að prófa einnar klukkustundar inngang að tölvunarfræði. Það nær til tuga miljóna nemenda í 180+ löndum. Taktu þátt á einhvern hátt í Fræðsluviku tölvunarfræði 7.-13. desember.
   volunteer_engineer_submission_intro_recruit: |-
-    Þessi kennarar mundu gjarnan vilja fá einhvern <span style="font-family: 'Gotham 7r', sans-serif;">með brennandi áhuga á að fræða um tölvunarfræði</span> sem getur hjálpað í skólastofunni eða einhvern sem getur <span style="font-family: 'Gotham 7r', sans-serif;">hvatt</span> nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta gæti farið fram í með netspjalli). Ef þú hefur ekki tök á að hjálpa til, <a href="%{url}">þá er hér nánar</a> um að skipuleggja þína eigin Klukkustund kóðunar.
+    Þessir kennarar mundu gjarnan vilja fá einhvern <span style="font-family: 'Gotham 7r', sans-serif;">með brennandi áhuga á að fræða um tölvunarfræði</span> sem getur hjálpað í skólastofunni eða einhvern sem getur <span style="font-family: 'Gotham 7r', sans-serif;">hvatt</span> nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta gæti farið fram með netspjalli).
   volunteer_engineer_submission_intro_signup: 'Vinsamlegast skráðu eftirfarandi upplýsingar ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span class="form-required-field">*</span> þarf að fylla út.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Liðveisla ekki í myndinni? <a href="%{learn_more}">Fáðu upplýsingar</a> um að skipuleggja þinn eigin atburð með Klukkustund kóðunar og finna nálægan sjálfboðaliða á <a href="%{volunteer_local}">liðveislukortinu</a>.'
   volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða
   volunteer_engineer_submission_field_name: Nafn
   volunteer_engineer_submission_field_name_placeholder: Fullt nafn
@@ -318,7 +322,7 @@ is-IS:
   volunteer_engineer_submission_field_company_placeholder: Fyrirtæki (eða stofnun)
   volunteer_engineer_submission_field_experience_level: Kunnáttustig
   volunteer_engineer_submission_field_location: Staður
-  volunteer_engineer_submission_field_location_desc: Ef þú setur nákvæmt heimilisfang munum við ekki deila því, aðeins sýna pinna á korti.
+  volunteer_engineer_submission_field_location_desc: Staðsetning þín verður notuð svo kennarar geti leitað að nálægum sjálfboðaliðum og hún verður sýnd sem pinni á korti. Hafir þú áhyggjur af persónuvernd, vinsamlegast notaðu þá heimilsfang vinnu/skóla eða aðeins bæjarheitið.
   volunteer_engineer_submission_field_location_placeholder: Póstnúmer, bær og fylki/land, eða götunúmer
   volunteer_engineer_submission_field_location_flexibility: Ég get hjálpað við Klukkustund kóðunar með... (veldu allt sem við á)
   volunteer_engineer_submission_checkbox_after_hoc: Ég hef áhuga á að vera sjálfboðaliði eftir Klukkustund kóðunar
@@ -329,7 +333,7 @@ is-IS:
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Lýsing
   volunteer_engineer_submission_field_description_desc: Lýstu reynslu þinni af tölvunarfræði og hvernig þú mundir vilja taka þátt sem sjálfboðaliði fyrir kennara á svæðinu.
-  volunteer_engineer_submission_field_description_placeholder: Lýsing á reynslu og/eða þátttöku
+  volunteer_engineer_submission_field_description_placeholder: Lýsing á reynslu og/eða þátttöku. Ef þú talar önnur tungumál en íslensku, láttu þá vita af því hér.
   volunteer_engineer_submission_header_private: Upplýsingar varðveittar sem einkamál og aldrei deildar
   volunteer_engineer_submission_field_email: Netfang
   volunteer_engineer_submission_field_email_desc: Netfangi þínu verður aldrei deilt, en við munum senda þér beiðnir frá kennurum.
@@ -337,7 +341,7 @@ is-IS:
   volunteer_engineer_submission_final_paragraph: Þú verður sýndur á korti fyrir kennara á svæðinu að hafa samband í tengslum við Klukkustund kóðunar eða önnur tækifæri til sjálfboðaliðastarfa. Netfangi þínu og nákvæmu heimilisfangi verður ALDREI deilt af okkur. En hinar upplýsingarnar (þ. á m. lausleg staðsetning) verða sýnilegar kennurum á svæðinu.
   volunteer_engineer_submission_checkbox_contact: Ég samþykki að kennarar megi hafa samband við mig vegna mögulegra sjálfboðaliðastarfa (Ath. netfangi þínu verður ekki deilt)
   volunteer_engineer_submission_submit: Senda inn
-  volunteer_engineer_submission_thankyou: 'Takk fyrir að senda inn upplýsingar um þig. Um undirbúning fyrir Klukkustund kóðunar og það að virkja aðra tölvunarfræðinga eru <a href="%{url}">nánari upplýsingar hér.</a>'
+  volunteer_engineer_submission_thankyou: 'Takk fyrir að bjóða liðveislu með Klukkustund kóðunar. Um undirbúning fyrir Klukkustund kóðunar og það að virkja aðra sjálfboðaliða eru <a href="%{url}">nánari upplýsingar hér.</a>'
   volunteer_engineer_submission_commitment_uncertain: Óvíst
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 klst. á viku
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 klst. á viku
@@ -525,7 +529,7 @@ is-IS:
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið
   dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
-  dashboard_stage: áfangi
+  dashboard_stage: Áfangi
   dashboard_puzzle: Þraut
   dashboard_question: Spurning
   dashboard_response: Svar
@@ -547,10 +551,10 @@ is-IS:
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_hoc: '<b>30. september 2015</b> - Klukkustund kóðunar 2015 er á næsta leiti! Slástu í hóp með skólastofum um allan heim í stærsta námsátaki sögunnar.'
+  dashboard_announce_hoc: '<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund kóðunar? Meira en 7.000 sjálfboðaliðar eru tilbúnir að veita nemendum hvatningu með því að heimsækja bekkinn þinn eða spjalla á netinu. Skoðaðu liðveislukortið til að ná sambandi við sjálfboðaliða á þínu svæði.'
   code_hoc_coming: 'Klukkustund kóðunar er komin - 8. - 14. desember!'
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
-  learn_more: Nánar
+  learn_more: Prófaðu núna
   learn_sign_up_description: Skráðu þig til að taka þátt í Klukkustund kóðunar í Viku tölvufræðikennslu
   learn_sign_up_button: Skráning
   learn_videos_watch: Horfðu á þetta hvatningarmyndband með bekknum þínum
@@ -559,11 +563,11 @@ is-IS:
   learn_educator_resources_description: Lærðu að kenna Klukkustund kóðunar
   learn_educator_resources_button: Efni fyrir fræðara
   learn_are_you_educator: 'Ertu fræðari? Lærðu <a href="http://hourofcode.com/resources/how-to">hvernig á að kenna Klukkustund kóðunar</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Finndu nálægan sjálfboðaliða</a> til að hjálpa til með þína Klukkustund kóðunar'
+  learn_teacher_led_lesson_plans: 'Fáðu innblástur í <a href="https://code.org/teacher-led">kennsluáætlun fyrir Klukkustund kóðunar undir leiðsögn kennara</a>'
+  learn_how_to_hoc: 'Fylgdu <a href="https://hourofcode.com/how-to">leiðarvísi okkar</a> um að kenna eina Klukkustund kóðunar'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Nánar</a> um verðlaun fyrir hvern fræðara.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Veittu nemendum hvatningu með því að sýna þeim <a href="https://code.org/educate/inspire">þessi myndbönd</a>'
   hoc2014_try_new_tutorials: Prófaðu nýja kennsluefnið fyrir Klukkustund kóðunar
   hoc2014_try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
@@ -572,20 +576,24 @@ is-IS:
   carousel_heading_codeorg_any_device: Kennsluefni frá Code.org (fyrir öll tæki)
   carousel_heading_3rd_party: Kennsluefni 3ja aðila
   carousel_heading_third_party: Kennsluefni þriðja aðila
-  carousel_heading_international: Kennsluefni á þínu tungumáli
-  carousel_heading_domestic: Kennsluefni á ensku
-  carousel_heading_beginners: Kennsluefni fyrir byrjendur
-  carousel_heading_javascript: Kennsluefni sem kennir JavaScript
+  carousel_heading_international: Kennsluefni samstarfsaðila á þínu tungumáli
+  carousel_heading_domestic: Kennsluefni samstarfsaðila á ensku
+  carousel_heading_beginners: 'Kennsluefni samstarfsaðila fyrir 5.- 8. bekk'
+  carousel_heading_beyond_beginners: Kennsluefni fyrir byrjendur
+  carousel_heading_javascript: Kennsluefni samstarfsaðila í JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Án tölvu eða netsambands? Prófaðu tölvunarfræði með "verkefnum án tölvu"'
-  carousel_heading_devices: Kennsluforrit fyrir síma og spjaldtölvur
-  carousel_heading_languages: Kennsluefni í öðrum forritunarmálum
+  carousel_heading_devices: Kennsluforrit samstarfsaðila fyrir síma og spjaldtölvur
+  carousel_heading_beyond_devices: Kennsluforrit fyrir síma og spjaldtölvur
+  carousel_heading_languages: Kennsluefni samstarfsaðila í öðrum forritunarmálum
+  carousel_heading_beyond_languages: Kennsluefni í öðrum forritunarmálum
   carousel_heading_apps_games: Búðu til eigin forrit eða leiki
   carousel_heading_university: Háskólakúrsar á netinu
   carousel_heading_webpages: Lærðu að búa til vefsíður
   carousel_heading_robots: Lærðu að forrita með vélmennum
   carousel_heading_ide: Tækni vinsæl meðal kennara
   educator_notes: Minnispunktar leiðbeinenda
-  teach_led_lesson_plans: Kennsluáætlanir fyrir Klukkustundir kóðunar með kennara
+  teach_led_lesson_plans: 'Klukkustund kóðunar - handleiðsla kennara'
   how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   beyond_submission: Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond an Hour)? Sjá viðmiðin og umsóknarformið.
@@ -594,13 +602,13 @@ is-IS:
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'
   previous: Fyrri
   next: Næsta
-  older_systems: Kennsluefni sem virkar á eldri kerfum
+  older_systems: Kennsluefni samstarfsaðila sem virkar á eldri kerfum
   older_systems_subheading: 'Þetta ætti að virka í eldri vöfrum. Til að geta notað allt kennsluefnið ættir þú að uppfæra <a href="http://browsehappy.com/" target="_blank">í nýlega vafraútgáfu.</a>'
-  mobile_devices: Kennsluefni fyrir farandtæki
+  mobile_devices: Kennsluefni samstarfsaðila fyrir farandtæki
   frozen_name: Kóðaðu með Önnu og Elsu
   starwars_name: 'Star Wars: Gerð Vetrarbrautar með Kóða'
-  codeorg_name: Skrifaðu fyrsta forritið þitt
-  codeintl_name: Skrifaðu fyrsta forritið þitt
+  codeorg_name: Skrifaðu fyrsta tölvuforritið þitt
+  codeintl_name: Skrifaðu fyrsta tölvuforritið þitt
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Kynning á JavaScript
   khanes_name: Kynning á JavaScript
@@ -636,7 +644,7 @@ is-IS:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Steinn, pappír, skæri
-  hourofcode_name: Staðgengill fyrir nýtt code.org/hoc
+  hourofcode_name: Skrifaðu fyrsta tölvuforritið þitt
   playlab_name: Leikjasmiðja
   infinity_name: Infinity leikjasmiðja
   artist_name: Listamaður
@@ -684,7 +692,7 @@ is-IS:
   infinity_gradelevel: 4-104 ára
   artist_gradelevel: 4-104 ára
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
-  codeintl_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
   khan_platformtext: Fyrir nýjustu vafra
   khanes_platformtext: Fyrir nýjustu vafra
@@ -713,7 +721,7 @@ is-IS:
   robomindnl_platformtext: Fyrir nýjustu vafraa, líka í farsímum
   flappy_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   bitsbox_platformtext: Fyrir nýjustu vafra
-  makeschool_platformtext: Nýjustu vafrar
+  makeschool_platformtext: Fyrir nýjustu vafra
   touchdevelop_platformtext: Nýjustu vafrar, snjallsímar, öll tæki
   appinventor_platformtext: Fyrir nýjustu vafra + Android
   blockly_platformtext: Aðeins nýjustu vafrar
@@ -895,7 +903,7 @@ is-IS:
   groklearning_beyond_platformtext: Nýjustu vafrar
   hacketyhack_beyond_platformtext: Uppsetning á skjáborðstölvu
   robomind_beyond_platformtext: Nýjustu vafrar, líka í farsímum
-  makeschool_beyond_platformtext: Nýjustu vafrar
+  makeschool_beyond_platformtext: Fyrir nýjustu vafra
   appinventor_beyond_platformtext: Nýlegur vafri + Android
   touchdevelop_beyond_platformtext: Nýjustu vafrar, snjallsímar, öll tæki
   codehs_beyond_platformtext: Fyrir nýjustu vafra (ekki frítt)
@@ -908,9 +916,9 @@ is-IS:
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Uppsetning á skjáborðstölvu
-  w3schools_beyond_platformtext: Nýjustu vafrar
-  codeavengers_beyond_platformtext: Nýjustu vafrar
-  mozilla_beyond_platformtext: Nýjustu vafrar
+  w3schools_beyond_platformtext: Fyrir nýjustu vafra
+  codeavengers_beyond_platformtext: Fyrir nýjustu vafra
+  mozilla_beyond_platformtext: Fyrir nýjustu vafra
   codecombat_beyond_platformtext: Fyrir vefsíðu (FireFox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Kaup á vélmenni

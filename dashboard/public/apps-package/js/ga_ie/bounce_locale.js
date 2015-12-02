@@ -165,7 +165,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "elseCode":function(d){return "else"},
 "finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
 "heightParameter":function(d){return "height"},
-"ifCode":function(d){return "if"},
+"ifCode":function(d){return "má"},
 "ifPathAhead":function(d){return "if path ahead"},
 "ifTooltip":function(d){return "If there is a path in the specified direction, then do some actions."},
 "ifelseTooltip":function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."},

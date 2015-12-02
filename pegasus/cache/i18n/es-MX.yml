@@ -318,6 +318,10 @@
   class_submission_languages_other: Otros idiomas
   inspirational_videos_more: Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     videos inspiradores</a> de modelos y celebridades
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Construyendo una Galaxia con Código
   starwars_javascript_title: Javascript
   starwars_javascript_description: Usa los bloques y JavaScript.
@@ -345,14 +349,14 @@
   volunteer_engineer_submission_subtitle_generic: 100.000 docentes van a realizar
     una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y
     necesitan tu ayuda!
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros quieren
-    a voluntarios apasionados por la enseñanza de ciencias de la computación para
-    ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios
-    se han inscripto. Únete a ellos.'
-  volunteer_engineer_submission_intro_background: La Hora del Código es un movimiento
-    mundial para introducir a la Informática a decenas de millones de estudiantes
-    en más de 180 países. Por favor únete a esta iniciativa durante la Semana de Educación
-    en Ciencias de la Computación, del 7 al 13 de Diciembre.
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros requieren
+    voluntarios apasionados por educacion computacional para aydar con su Hora de
+    Codigo este diciembre.<br>%{num_volunteers} voluntarios se han inscrito. Unete
+    a ellos.'
+  volunteer_engineer_submission_intro_background: La Hora de Codigo es un movimiento
+    global para intentar una hora introduccion a la ciencia computacional alcanzando
+    diez millone sde estudiantes en mas de 180 paises. Porfavor unete a esta iniciativa
+    durante la semana d educacion de ciencias de la computacion, del 7 al 13 de diciembre.
   volunteer_engineer_submission_intro_recruit: 'Estos maestros le encantaría tener
     a alguien <span style="font-family: ''Gotham 7r'', sans-serif;"> apasionado por
     la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula,
@@ -364,9 +368,10 @@
   volunteer_engineer_submission_intro_signup: Por favor introduzca la siguiente información
     si usted es un estudiante de informática o profesional del software. Los campos
     marcados con un <span class="form-required-field">*</span> son obligatorios.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: ¿No está buscando ser voluntario? <a
+    href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de
+    Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}">
+    mapa de voluntariado</a>.
   volunteer_engineer_submission_header_shared: Información compartida con docentes
     en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
@@ -708,16 +713,16 @@
   learn_educator_resources_button: Recursos del educador
   learn_are_you_educator: ¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">como
     a enseñar una Hora del Código</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/voluntario/local">Encuentra un voluntario
+    local</a> para ayudar durante tu Hora de Código
+  learn_teacher_led_lesson_plans: Inspirado por <a href="https://code.org/teacher-led">
+    profesor guia planes de lección de la hora de Código</a>
+  learn_how_to_hoc: Siga <a href="https://hourofcode.com/how-to"> nuestra guía de
+    cómo</a> para la enseñanza de una Hora de Código
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Más información</a> sobre
     los premios para educadores.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspirar a los estudiantes mostrándoles <a href="https://code.org/educate/inspire">
+    estos videos</a>
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en
     beta
@@ -730,11 +735,15 @@
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_javascript: Tutoriales que enseñan JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática
     sin conexión
   carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas
+  carousel_heading_beyond_devices: Tutoriales en aplicaciones para teléfonos y tabletas
   carousel_heading_languages: Tutoriales en otros lenguajes de programación
+  carousel_heading_beyond_languages: Tutoriales en otros lenguajes de programación
   carousel_heading_apps_games: Crea tus propias aplicaciones o juegos
   carousel_heading_university: Cursos de universidades en línea
   carousel_heading_webpages: Aprende a hacer páginas web
@@ -788,7 +797,7 @@
   robomindnl_name: Programá tu robot virtual
   flappy_name: Crea un juego Flappy
   bitsbox_name: Bitsbox - crea un juego
-  makeschool_name: ¡Crea un juego para iPhone en tu navegador!
+  makeschool_name: ¡Desarrolla un juego para iPhone en tu navegador!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor en la Hora del Código
   blockly_name: '"Blockly" es el nombre de la marca para el lenguaje arrastra+ubica.
@@ -927,8 +936,8 @@
   flappy_shortdescription: Haz tu propio juego - Flappy Bird, Tiburón o Submarino
   bitsbox_shortdescription: Programa una serie de aplicaciones para jugar y compartir,
     con JavaScript real.
-  makeschool_shortdescription: ¡Crea un juego para iPhone! ¡Aprende escribiendo código
-    que le enseña a tu monstruo nuevos movimientos!
+  makeschool_shortdescription: ¡Crea un juego para iPhone! ¡Aprende a escribir código
+    para enseñarle a tu monstruo nuevos movimientos!
   touchdevelop_shortdescription: 'Resuelve problemas, crea juegos y aprende a programar,
     todo desde tu teléfono. '
   appinventor_shortdescription: ¡Crea tu propia aplicación! (sólo para Android)
@@ -1063,10 +1072,10 @@
     que niños muy jóvenes programen en JavaScript real, y cuanto más avancen más lejos
     llegarán.
   makeschool_longdescription: ¡Aprende a programar haciendo un juego para iPhone usando
-    un lenguaje de programación totalmente nuevo y apto para principiantes llamado
-    Swift! Crea un juego de acción inspirado en Pok&eacute;mon y escribe código para
-    enseñarle a tu monstruo nuevos movimientos ¡Aprenderás cómo utilizar variables,
-    métodos y objetos para ayudar a tu monstruo a ganar!
+    un lenguaje de programación totalmente nuevo y para principiantes llamado Swift!
+    Crea un juego de acción inspirado en Pok&eacute;mon y escribe código para enseñar
+    a tu monstruo a moverse. ¡Aprenderás cómo utilizar variables, métodos y objetos
+    para ayudar a tu monstruo ganar!
   touchdevelop_longdescription: 'El editor táctil te guiará a crear arte de pixeles,
     resolver el problema del oso, o hacer tu propio juego de un pájaro saltarín. '
   appinventor_longdescription: Videotutoriales rápidos y entretenidos te guían para
@@ -1112,7 +1121,7 @@
   groklearning_beyond_name: Aprenda el lenguaje de programación Python
   hacketyhack_beyond_name: Aprenda el lenguaje de programación Ruby
   robomind_beyond_name: Programá tu robot virtual
-  makeschool_beyond_name: ¡Crea un juego para iPhone en tu navegador!
+  makeschool_beyond_name: ¡Desarrolla un juego para iPhone en tu navegador!
   appinventor_beyond_name: AppInventor en la Hora del Código
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Aprende a programar con Karel, el perro
@@ -1313,11 +1322,11 @@
     controlando su propio robot virtual. El curso online es completamente autocontenido
     con presentaciones cortas, videos, cuestionarios y consejos que ayudan a completar
     los ejercicios de programación. '
-  makeschool_beyond_longdescription: ¿Ya sabes algo de ObjectiveC? ¡Aprende a hacer
+  makeschool_beyond_longdescription: ¿Ya sabés algo de ObjectiveC? ¡Aprende a hacer
     un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar,
     testear y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook
-    para que tus amigos puedan probarlo. No se necesita experiencia previa en desarrollo
-    para iPhone, pero debes entender sobre variables, métodos y objetos.
+    para que todos puedan jugarlo. No se necesita experiencia previa en desarrollo
+    para iPhone, pero debés entender que son variables, métodos y objetos.
   appinventor_beyond_longdescription: Videotutoriales rápidos y entretenidos te guían
     para construir tres aplicaciones sencillas para tu teléfono o tableta Android.
     Tanto para principiantes como para expertos esta hora del código te va a preparar
@@ -1444,11 +1453,3 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

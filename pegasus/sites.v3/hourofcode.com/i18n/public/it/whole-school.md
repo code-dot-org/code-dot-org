@@ -7,8 +7,8 @@ layout: wide
 
 <%= view :signup_button %>
 
-# Coinvolgi tutta la scuola a partecipare
+# Fai partecipare tutta la scuola
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Le informazioni su come far partecipare tutta la scuola all'Ora del condice appariranno qui.
 
 <%= view :signup_button %>

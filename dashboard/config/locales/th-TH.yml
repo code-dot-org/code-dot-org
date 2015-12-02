@@ -463,6 +463,9 @@
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -703,7 +706,7 @@
     really_delete: ลบหรือไม่?
     delete_yes: ใช่
     delete_no: ไม่ใช่
-    saved: Saved
+    saved: จัดเก็บสู่ที่แสดงรูปภาพเรียบร้อยแล้ว!
     not_saved: Not saved
     cancel: ยกเลิก
     delete_confirm_title: Are you sure you want to delete this project?

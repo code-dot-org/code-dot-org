@@ -1523,6 +1523,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1640,36 +1644,35 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratorio Gioco Gumball
+          title: Laboratorio di Gumball
           description_short: Crea una storia oppure fai un gioco con il Laboratorio
-            Gioco Gumball!
-          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco
-            Gumball!
-          Gumball Play Lab: Laboratorio Gioco Gumball
+            di Gumball!
+          description: Crea una storia oppure fai un gioco con il Laboratorio di Gumball!
+          Gumball Play Lab: Laboratorio di Gumball
         starwars:
-          title: 'Star Wars: Costruisci una galassia con il codice'
+          title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description_short: Impara a programmare i droidi e crea la tua versione
-            di Star Wars ... in una galassia lontana lontana...
-          description: Impara a programmare i droidi e crea la tua versione di Star
-            Wars ... in una galassia lontana lontana...
+            di Guerre Stellari, in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Guerre
+            Stellari, in una galassia lontana lontana...
           Hour of Code 2015: L'Ora del Codice 2015
         starwarsblocks:
-          title: 'Star Wars: Costruisci una galassia con il codice'
+          title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description_short: Impara a programmare i droidi e crea la tua versione
-            di Star Wars ... in una galassia lontana lontana...
-          description: Impara a programmare i droidi e crea la tua versione di Star
-            Wars ... in una galassia lontana lontana...
+            di Guerre Stellari, in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Guerre
+            Stellari, in una galassia lontana lontana...
           Hour of Code 2015: L'Ora del Codice 2015
         minecraft:
           title: Minecraft
-          description_short: Use code to survive in a Minecraft world!
-          description: Use code to survive in a Minecraft world!
+          description_short: Usa il codice per sopravvivere nel mondo di Minecraft!
+          description: Usa il codice per sopravvivere nel mondo di Minecraft!
           Craft: Craft
         mc:
-          title: Minecraft L'Ora del Codice
-          description_short: Esplora il mondo di Minecraft attraverso il codice
-          description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
-            con Steve o Alex
+          title: L'Ora del Codice con Minecraft
+          description_short: Esplora un mondo di Minecraft con la programmazione
+          description: Usa blocchi di codice per guidare Steve o Alex in questo mondo
+            di Minecraft
           Hour of Code 2015: L'Ora del Codice 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

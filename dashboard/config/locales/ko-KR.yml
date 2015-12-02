@@ -437,6 +437,9 @@
     privacy: 개인정보보호 정책
     secure: 보안 버전
     report_abuse: 악용 사례 신고
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
@@ -504,8 +507,8 @@
       body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
     20-hour:
       title: 빠른 과정
-      body: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만,
-        연령에 상관없이 재미있게 배울 수 있습니다.
+      body: 이 20시간 과정은 컴퓨터과학(정보과학) 에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로
+        설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
       body_short: 2-4 과정의 속진 과정에서 기본적인 컴퓨터 과학을 알아보십시오.
     hoc2014:
       try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
@@ -519,7 +522,7 @@
       title: 스타워즈
     infinity:
       title: 무한 Play Lab
-      body: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
+      body: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
     minecraft:
       title: 마인크래프트
       body: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
@@ -536,7 +539,7 @@
     caption_time_ago: '%{time_ago} 전에'
     header: 갤러리
     header_playlab: Play Lab
-    header_artist: 예술가
+    header_artist: 화가
   landing:
     prerelease: 이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의
       코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다.

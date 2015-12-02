@@ -1501,6 +1501,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1618,14 +1622,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Zvjezdani ratovi: Izgradnja galaksije uz pomoć koda'
+          title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
           description_short: Nauči programirati droide, te kreiraj svoju Zvjezdani
             ratovi igricu u dalekoj, dalekoj galaksiji.
           description: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi
             igricu u dalekoj, dalekoj galaksiji.
           Hour of Code 2015: Sat kodiranja 2015
         starwarsblocks:
-          title: 'Zvjezdani ratovi: Izgradnja galaksije uz pomoć koda'
+          title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
           description_short: Nauči programirati droide, te kreiraj svoju Zvjezdani
             ratovi igricu u dalekoj, dalekoj galaksiji.
           description: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi

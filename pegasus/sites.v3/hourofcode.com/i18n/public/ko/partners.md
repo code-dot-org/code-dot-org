@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# 라틴 아메리카 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -16,7 +16,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# 아프리카 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -24,7 +24,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# 호주 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -32,15 +32,23 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# 인도네시아 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
 <% end %>
 
+<% if @country == 'ie' %>
+
+# Ireland Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
+
+<% end %>
+
 <% if @country == 'in' %>
 
-# India Partners
+# 인도 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -48,7 +56,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# 일본 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -56,7 +64,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# 뉴질랜드 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -64,7 +72,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# 영국 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -72,7 +80,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# 캐나다 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -96,7 +104,7 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Tutorial Partners
+# 튜토리얼 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -108,7 +116,7 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Additional Partners
+# 이외 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

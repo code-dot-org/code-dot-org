@@ -312,14 +312,15 @@ ca:
       7:
         image: notes/frozen1_7.jpg
         text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+          L'espai blanc a la dreta s'anomena l'àrea de treball, i aquí és on anem a construir el nostre programa. Per desplaçar-nos per la superfície de gel, utilitza el bloc "avança".
       8:
         image: notes/frozen1_8.jpg
         text: |-
           Aquí, el bloc "avançar" diu "avançar 100 píxels". Quan premeu "Executa", què passa? L' Elsa avança un tros a la pantalla, en realitat són 100 píxels! Els píxels són bàsicament petits quadrats de la pantalla de l'ordinador.
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: |-
+          L'altre bloc que tenim en aquest trencaclosques diu "gira a la dreta 90 graus". I quan fem servir aquest bloc "gira a la dreta", això fa girar una cert angle a l'Elsa. Pots jugar fins quant vols fer girar l'Elsa. L'angle es mesura respecte la direcció en que l'Elsa camina. Així, això és un gir de 90 graus. I això és un gir de 120 graus.
       10:
         image: notes/frozen1_10.jpg
         text: Recordeu que podeu canviar el nombre de píxels i graus clicant a les fletxes del seu costat.
@@ -347,7 +348,7 @@ ca:
         text: "Hola, sóc en Chris Bosh. Sóc un jugador de bàsquet de la NBA i vaig fer programació a l'institut."
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: "Un dels conceptes més importants en la Informàtica és com definir noves ordres. La majoria dels llenguatges de programació tenen només unes 100 paraules o comandes. I realment, l'art i la màgia consisteix en definir les teves pròpies paraules usant aquests blocs de construcció."
       3:
         image: notes/frozen3_3.jpg
         text: "Un cop li heu ensenyat a l'ordinador com fer una acció utilitzant una seqüència d'ordres, podeu inventar-vos un nom per aquesta acció de manera que sigui fàcil de repetir-la posteriorment. Quan definiu les ordres i els hi doneu un nom, això s'anomena funció."

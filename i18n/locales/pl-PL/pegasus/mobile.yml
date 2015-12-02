@@ -1,5 +1,5 @@
 pl-PL:
-  hour_of_code: Godzina Kodowania
+  hour_of_code: Godzina kodowania (Hour of Code)
   hello: Witaj świecie
   select_language: Wybierz język
   en: Informatyka
@@ -144,7 +144,7 @@ pl-PL:
   studiobar_flappy_body: "Utwórz i udostępnij swoją grę Flappy'ego"
   studiobar_teacher_title: Dla nauczycieli
   studiobar_teacher_body: Wprowadź Code Studio (Studio Kodowania) w swojej klasie
-  studiobar_frozen_title: Godzina kodowania (Hour of Code)
+  studiobar_frozen_title: Godzina Kodowania
   studiobar_frozen_body: Twórz z Anną i Elsą zimową krainę czarów
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
@@ -197,7 +197,7 @@ pl-PL:
   homepage_slot_text_studio: Wszystkie nasze poradniki
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Sklep
-  homepage_slot_text_flappy: Kod Flappiego
+  homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Godzina Kodowania dla każdego ucznia.
   homepage_action_text_num_served: '# spróbowało'
   homepage_action_text_join_us: Dołącz do nas
@@ -216,8 +216,8 @@ pl-PL:
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Ucz się więcej
-  homepage_slot_text_title_hoc: Godzina kodowania (Hour of Code)
+  homepage_banner_privacy_link: Naucz się więcej
+  homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
   homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
@@ -280,6 +280,10 @@ pl-PL:
   class_submission_level_vocational: Zawodowy
   class_submission_languages_other: Inne języki
   inspirational_videos_more: 'Więcej <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> inspirujących filmów </a> z udziałem osobistości i gwiazd'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Użyj bloków do przeciągania i upuszczania oraz JavaScript.
@@ -294,8 +298,8 @@ pl-PL:
   starwars_help_translate: Pomóż nam tłumaczyć
   starwars_platform_text: Nowoczesne przeglądarki, smartfony, tablety
   mc_name: Godzina Kodowania z Minecraft
-  mc_longdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie Minecrafta.
-  mc_shortdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie Minecrafta.
+  mc_longdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
+  mc_shortdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   mc_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki i tablety | Wiek 6 +
@@ -305,11 +309,11 @@ pl-PL:
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} nauczycieli potrzebuje ochotników-pasjonatów edukacji informatycznej do pomocy z Godziną Kodowania w grudniu. <br>%{num_volunteers} wolontariuszy już się zarejestrowało. Dołącz do nich.'
   volunteer_engineer_submission_intro_background: Godzina Kodowania jest globalną inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia Edukacji Informatycznej w dniach 7-13 grudnia.
   volunteer_engineer_submission_intro_recruit: |-
-    Ci nauczyciele byliby szczęśliwi mając kogoś <span style="font-family: 'Gotham 7r', sans-serif;">, pasjonata edukacji informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span style="font-family: 'Gotham 7r', sans-serif;"> zainspirować</span> ich uczniów opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu). Jeśli nie szukasz wolontariuszy, <a href="%{url}"> dowiedzieć się więcej</a> o organizacji własnej Godziny Kodowania.
+    Ci nauczyciele byliby szczęśliwi mając kogoś <span style="font-family: 'Gotham 7r', sans-serif;">, pasjonata edukacji informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span style="font-family: 'Gotham 7r', sans-serif;"> zainspirować</span> ich uczniów opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).
   volunteer_engineer_submission_intro_signup: 'Podaj następujące informacje, jeśli jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span class="form-required-field"> *</span> są wymagane.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Nie chcesz być wolontariuszem? <a href="%{learn_more}"> Dowiedz się więcej</a> o organizacji swojej własnej Godziny Kodowania i jak znaleźć wolontariusza w okolicy na naszej <a href="%{volunteer_local}"> mapie wolontariuszy</a>.'
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom na mapie wolontariuszy
-  volunteer_engineer_submission_field_name: Imię/Nazwisko
+  volunteer_engineer_submission_field_name: Nazwa
   volunteer_engineer_submission_field_name_placeholder: Pełne Nazwisko
   volunteer_engineer_submission_field_company: Firma (lub Uniwersytet)
   volunteer_engineer_submission_field_company_placeholder: Firma (lub Uniwersytet)
@@ -542,10 +546,10 @@ pl-PL:
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_hoc: '<b>15 październik 2015</b> - Zbliża się Godzina Kodowania &mdash; każdy organizator otrzyma jako podziękowanie bon do Amazon.com lub Sklepu Microsoft Windows. Dołącz do sal lekcyjnych na całym świecie od 7 do 13 grudnia.'
+  dashboard_announce_hoc: '<b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000 wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami w Twojej okolicy.'
   code_hoc_coming: 'Godzina Kodowania jest tutaj - 8-14 grudnia!'
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej (CS Education Week)
-  learn_more: Naucz się więcej
+  learn_more: Spróbuj teraz
   learn_sign_up_description: Zarejestruj się, by uczestniczyć w Godzinie Kodowania w czasie Tygodnia Nauczania Informatyki
   learn_sign_up_button: Zarejestruj się
   learn_videos_watch: Obejrzyj ten inspirujący film ze swoją klasą
@@ -554,26 +558,30 @@ pl-PL:
   learn_educator_resources_description: Dowiedz się, jak wykorzystać Godzinę kodowania (the Hour of Code)
   learn_educator_resources_button: Zasoby nauczyciela
   learn_are_you_educator: 'Czy jesteś nauczycielem? Dowiedz się, <a href="http://hourofcode.com/resources/how-to"> jak poprowadzić Godzinę Kodowania</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local"> Znajdź wolontariusza w okolicy</a>, by pomógł Ci podczas Godziny Kodowania'
+  learn_teacher_led_lesson_plans: 'Bądź zainspirowany przez <a href="https://code.org/teacher-led"> nauczyciela prowadzącego lekcję Godziny Kodowania</a>'
+  learn_how_to_hoc: 'Śledź <a href="https://hourofcode.com/how-to"> nasze porady</a> dla jednej Godziny Kodowania'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Dowiedz się więcej</a> o nagrodach dla każdego nauczyciela.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Zainspiruj uczniów pokazując im <a href="https://code.org/educate/inspire"> te filmy</a>'
   hoc2014_try_new_tutorials: Wypróbuj nasze nowe samouczki Godziny Kodowania
   hoc2014_try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta
   hoc2014_try_scrat: Angry Birds, PvZ i wiewióra
   hoc2014_try_frozen: Artysta z Anną i Elsą, z Frozen
   carousel_heading_codeorg: Poradnik utworzone przez Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Samouczki wykonane przez Code.org (dla wszystkich urządzeń)
   carousel_heading_3rd_party: Poradniki utworzone przez strony trzecie
   carousel_heading_third_party: Poradniki utworzone przez strony trzecie
-  carousel_heading_international: Poradniki w Twoim języku
-  carousel_heading_domestic: Poradniki (samouczki) dostępne w języku angielskim
-  carousel_heading_beginners: Samouczki dla początkujących
-  carousel_heading_javascript: Samouczki do nauki Javascript
+  carousel_heading_international: Samouczki partnerów w Twoim języku
+  carousel_heading_domestic: Samouczki partnerów dostępne w języku angielskim
+  carousel_heading_beginners: Samouczki partnerów dla uczniów z K-8
+  carousel_heading_beyond_beginners: Samouczki dla początkujących
+  carousel_heading_javascript: Samouczki partnerów do nauki JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Nie masz komputera lub dostępu do Internet? Poznaj informatykę "unplugged", czyli informatykę bez komputera'
-  carousel_heading_devices: Aplikacje z poradnikami dla telefonów komórkowych i tabletów
-  carousel_heading_languages: Poradniki dla innych języków programowania
+  carousel_heading_devices: Aplikacje z samouczkami partnerów dla telefonów komórkowych i tabletów
+  carousel_heading_beyond_devices: Aplikacje z poradnikami dla telefonów komórkowych i tabletów
+  carousel_heading_languages: Samouczki partnerów dla innych języków programowania
+  carousel_heading_beyond_languages: Poradniki dla innych języków programowania
   carousel_heading_apps_games: Utwórz własną aplikację lub grę
   carousel_heading_university: Uniwersyteckie kursy online
   carousel_heading_webpages: Naucz się tworzyć strony internetowe
@@ -589,9 +597,9 @@ pl-PL:
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
   previous: Poprzedni
   next: Następny
-  older_systems: Samouczki, które działają w starszych systemach
+  older_systems: Samouczki partnerów, które działają na starszych systemach
   older_systems_subheading: 'Te powinny działać na starszych przeglądarkach stron. Aby uzyskać dostęp do wszystkich poradników, uaktualnij <a href="http://browsehappy.com/" target="_blank"> do najnowszej wersji przeglądarki. </a>'
-  mobile_devices: Poradniki dla urządzeń mobilnych
+  mobile_devices: Samouczki partnerów dla urządzeń mobilnych
   frozen_name: Koduj z Anną i Elsą
   starwars_name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu'
   codeorg_name: Napisz swój pierwszy program komputerowy
@@ -608,7 +616,7 @@ pl-PL:
   lightbot_name: Lightbot
   thinkersmith_name: Moi przyjaciele wśród robotów
   condcards_name: Warunkowe z kartami
-  lightbotintl_name: Lightbot
+  lightbotintl_name: LightBot
   codehs_name: Naucz się kodować z Psem Karelem
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
@@ -631,7 +639,7 @@ pl-PL:
   thinkersmith2_name: Binarne Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
-  hourofcode_name: Symbol zastępczy dla nowego code.org/hoc
+  hourofcode_name: Napisz swój pierwszy program komputerowy
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artysta
@@ -691,7 +699,7 @@ pl-PL:
   scratch_platformtext: Przeglądarki tylko na komputery stacjonarne (nie na tablety)
   lightbot_platformtext: WSZYSTKIE przeglądarki i iOS, Android lub konsola do gier
   thinkersmith_platformtext: Odłączony (unplugged)/Bez komputera
-  condcards_platformtext: Odłączony (unplugged)/Bez komputera
+  condcards_platformtext: Odłączony (Unplugged)/Bez komputera
   lightbotintl_platformtext: iOS, Android (lub przeglądarki sieci web)
   codehs_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
   codecademy_platformtext: Nowoczesne przeglądarki. Aplikacje w systemach iOS i Android
@@ -708,7 +716,7 @@ pl-PL:
   robomindnl_platformtext: Nowoczesne przeglądarki, Mobilne sieci
   flappy_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   bitsbox_platformtext: Nowoczesne przeglądarki sieci web
-  makeschool_platformtext: Nowoczesne przeglądarki sieci
+  makeschool_platformtext: Nowoczesne przeglądarki sieci web
   touchdevelop_platformtext: Nowoczesne przeglądarki, smartfony, wszystkie urządzenia
   appinventor_platformtext: Nowoczesne przeglądarki + Android
   blockly_platformtext: Nowoczesne przeglądarki tylko
@@ -767,10 +775,10 @@ pl-PL:
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to zrobić na własną rękę lub z klasy!
   khanes_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to robić na własną rękę lub z klasą!
-  khanpt_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to zrobić na własną rękę lub z klasy!
-  khanhe_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to zrobić na własną rękę lub z klasy!
-  khanfr_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to zrobić na własną rękę lub z klasy!
-  khanpl_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to zrobić na własną rękę lub z klasy!
+  khanpt_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to robić na własną rękę lub z klasą!
+  khanhe_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to robić na własną rękę lub z klasą!
+  khanfr_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to robić na własną rękę lub z klasą!
+  khanpl_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to robić na własną rękę lub z klasą!
   tynker_longdescription: Buduj swoje własne gry i dziel się nimi z przyjaciółmi! Rozwiązuj zabawne łamigłówki kodowania i poznawaj pojęcia programowania na każdym poziomie. Personalizuj gry z animowanymi postaciami, na wielu poziomach i bogatych w rekwizyty. Czyń swoje gry realistyczne posługując się fizyką. Obserwuj kod jako wizualne bloki lub w JavaScript. Przenieś gry mobilne na iPad i tablety z Androidem. Kilkanaście zabawnych aktywności do wyboru!
   scratch_longdescription: W środowisku Scratcha możesz tworzyć własne interaktywne gry, opowiadania, animacje i dzielić się nimi z przyjaciółmi. Zacznij od animacji swojego imienia, tworząc kartkę z wakacji lub grę z odbijaniem.
   lightbot_longdescription: Prowadź Lightbot, by zapaliły się wszystkie niebieskie płytki! Lightbot to gra logiczna, w której mechanizmy programowania gier służą praktycznemu zrozumieniu podstaw kodowania. Poznaj sekwencje instrukcji, pisanie procedur i zastosowania pętli do rozwiązań na różnych poziomach. Idealne dla wszystkich grup wiekowych.
@@ -890,7 +898,7 @@ pl-PL:
   groklearning_beyond_platformtext: Nowoczesne przeglądarki sieci
   hacketyhack_beyond_platformtext: Pulpit instalacji
   robomind_beyond_platformtext: Nowoczesne przeglądarki, mobilne sieci
-  makeschool_beyond_platformtext: Nowoczesne przeglądarki sieci
+  makeschool_beyond_platformtext: Nowoczesne przeglądarki sieci web
   appinventor_beyond_platformtext: Nowoczesne przeglądarki + Android
   touchdevelop_beyond_platformtext: Nowoczesne przeglądarki, smartfony, wszystkie urządzenia
   codehs_beyond_platformtext: Nowoczesne przeglądarki ($$ wymagane)
@@ -903,9 +911,9 @@ pl-PL:
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Zainstaluj na pulpicie
-  w3schools_beyond_platformtext: Nowoczesne przeglądarki sieci
-  codeavengers_beyond_platformtext: Nowoczesne przeglądarki sieci
-  mozilla_beyond_platformtext: Nowoczesne przeglądarki sieci
+  w3schools_beyond_platformtext: Nowoczesne przeglądarki sieci web
+  codeavengers_beyond_platformtext: Nowoczesne przeglądarki sieci web
+  mozilla_beyond_platformtext: Nowoczesne przeglądarki sieci web
   codecombat_beyond_platformtext: Internetowe (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Zakup robota

@@ -8,9 +8,9 @@ nav: prizes_nav
 
 <%= view :signup_button %>
 
-# $10,000에 달하는 부상을 차지할 수 있는 기회에 등록해 주셔서 감사합니다.
+# $10,000에 달하는 하드웨어 상품을 얻을 수 있는 기회에 응모해 주셔서 감사합니다.
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
+여러분의 학교는 이제 한 학급 분량의 노트북 상품(또는 $10,000 상당의 다른 것)에 응모하였습니다. 우리는 여러분의 응모를 검토하고 최종 우승자는 12월에 발표됩니다.
 
 ## 1. 널리 알려주세요.
 
@@ -26,7 +26,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 4. 여러분의 동료들과 Hour of Code를 함께 해 보세요.
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [이메일 보내기](<%= resolve_url('/promote/resources#email') %>).
+지역 그룹을 참여시켜주세요 — 보이/걸 스카우트 클럽, 교회, 대학, 군경, 노동자 그룹 등. 또는 여러분의 이웃들을 위해 Hour of Code "블록파티"를 운영해 주세요. [이메일 보내기](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
