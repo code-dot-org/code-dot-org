@@ -754,5 +754,11 @@
   "failedMultiplyCharactersTimeoutBlockly": "Du må få tak i 20 musedroider. Bruk \"legg til ein musedroide\"-kommandoen i \"når har fått musedroide\"-hendinga for å legge til to eller fleire musedroider kvar gong du får tak i ein.",
   "failedMultiplyCharactersTimeoutGotSome": "Gratulerer, du har lagt til kode for å lage musedroidar. Du kan gå til neste nivå eller prøve å få 20 musedroider på nytt. Prøve å gjere det enklare ved å legge til fleire av dei! (Trykk og hald inne tastane på tastaturet (eller skjermen) for å flytte deg raskere.)",
   "failedChangeSettingTimeout": "Ta tre Rebel Pilots for å gå vidare.",
-  "failedChangeSettingSettings": "Gjer spelet til ditt eige. For å klare denne oppgåva må du endre droiden din og sette hastigheita."
+  "failedChangeSettingSettings": "Gjer spelet til ditt eige. For å klare denne oppgåva må du endre droiden din og sette hastigheita.",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }
