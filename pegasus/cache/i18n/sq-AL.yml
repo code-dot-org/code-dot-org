@@ -315,6 +315,10 @@
   class_submission_languages_other: Gjuhë të tjera
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -722,11 +726,15 @@
   carousel_heading_international: Mësimet në gjuhën tuaj
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
   carousel_heading_beginners: Tutoriale për Fillestarët
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorialet që mësojnë JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutoriale në gjuhë të tjera programimi
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
   carousel_heading_university: Kurse online të universitetit
   carousel_heading_webpages: Mëso të bësh faqe interneti
@@ -1417,11 +1425,3 @@
   infinity_shortcode: inf
   playlab_shortcode: luaj
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

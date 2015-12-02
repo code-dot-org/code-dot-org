@@ -316,30 +316,33 @@
   class_submission_languages_other: Digər dil(lər)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  starwars_subtitle: Qalaktikanı proqramlaşdırın
+  starwars_javascript_title: CavaSkript
+  starwars_javascript_description: Sürüklə-burax tipli bloklar və CavaSkript.
+  starwars_javascript_specs: Yalnız ingiliscə | Müasir veb səyyahlar | 11+ yaş
   starwars_javascript_start_button: Elə indi sınaqdan keçirin
   starwars_blocks_title: bloklar
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Sürüklə-burax tipli blokları işlədin.
+  starwars_blocks_specs: Çox dillərdə (tezliklə) | Müasir veb səyyahlar, smartfonlar,
+    planşetlər | 6-10 yaş
   starwars_blocks_start_button: Elə indi sınaqdan keçirin
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
+  starwars_watch_videos: Başlamazdan əvvəl bu həvəsləndirici videolardan birinə baxın
   starwars_speak_languages: Başqa bir dildə danışırsınız?
   starwars_help_translate: Tərcümə etməkdə bizə kömək edin
   starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_name: Maynkraft Kod Saatı
+  mc_longdescription: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft
+    dünyasında bir macəra yaşadın.
+  mc_shortdescription: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft
+    dünyasında bir macəra yaşadın.
   mc_gradelevel: 6+ yaş
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
+  mc_specs: Çox dillərdə (tezliklə) | Müasir veb səyyahlar və planşetlər | 6+ yaş
+  minecraft_subtitle: Maynkraft Kod Saatı
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -704,10 +707,14 @@
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Grades K-8
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
   carousel_heading_webpages: Veb səhifələr düzəltməyi öyrənin
@@ -1379,11 +1386,3 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

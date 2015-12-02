@@ -49,7 +49,7 @@ Biz ümid edirik ki, bu tələbələr öyrənməyə başlamaq üçün bir qığ�
 
 *Niyə bu vacibdir?*
 
-Çində hər bir orta məktəb məzunu informatika dərsi keçir. ABŞ-da məktəblərin 90 faizində bu heç tədris olunmur. 21-ci əsrin tələbləri ilə ayaqlaşmaq vaxtı çatıbdır. Biz bilirik ki, gələcəkdə seçdikləri sahədən asılı olmayaraq, tibbdə, biznesdə, siyasətdə və hətta incəsənətdə belə, informatika biliklər şagirdlərdə özünə inam yaradacaq və gələcək uğurlarının təməlini qoyacaq.
+In China, every student takes computer science to graduate high school. ABŞ-da məktəblərin 90 faizində bu heç tədris olunmur. 21-ci əsrin tələbləri ilə ayaqlaşmaq vaxtı çatıbdır. Biz bilirik ki, gələcəkdə seçdikləri sahədən asılı olmayaraq, tibbdə, biznesdə, siyasətdə və hətta incəsənətdə belə, informatika biliklər şagirdlərdə özünə inam yaradacaq və gələcək uğurlarının təməlini qoyacaq.
 
 **Ətraflı məlumat və materiallarda istifadə edə biləcəyiniz mənbə**
 

@@ -215,13 +215,13 @@ Setelah keberhasilan kampanye 2013, kami mengambil langkah-langkah untuk memasti
 
 Salah satu bagian dari ini adalah untuk melindungi merek dagang "Hour of Code" untuk mencegah kebingungan. Banyak mitra penyedia tutorial kami telah menggunakan "Hour of Code" pada situs web mereka. Kami tidak ingin mencegah penggunaannya, tetapi kami inginkan bahwa itu digunakan dalam beberapa batasan:
 
-  1. Setiap mereferensikan "Hour of Code" harus tidak mengatakan bahwa nama merek tersebut adalah milik anda, tetapi referensikan Hour of Code sebagai akar/inti dari gerakan/kampanye ini. Contoh baik: "Berpartisipasilan dalam Hour of Code™ di ACMECorp.com". Contoh yang buruk: "Cobalah Hour of Code dari perusahaan ACME"
-  2. Gunakanlah "TM" pada tulisan "Hour of Code" pada pojok kiri atas font kecil (superscript), pada situs web dan dalam deskripsi app
+  1. Setiap mereferensikan "Hour of Code" harus tidak mengatakan bahwa nama merek tersebut adalah milik anda, tetapi referensikan Hour of Code sebagai akar/inti dari gerakan/kampanye ini. Contoh baik: "Berpartisipasilan dalam Hour of Code™ di ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Sertakan bahasa pada halaman (atau pada footer), termasuk dalam alamat menuju CSEdWeek dan situs web Code.org, yang memilki tulisan:
     
     *"'Hour of Code™' adalah gerakan global dari Pekan Edukasi Ilmu Komputer [csedweek.org] dan Code.org [code.org] untuk mengenalkan jutaan siswa dengan sesi satu jam dari ilmu komputer dan pemrograman komputer."*
 
-  4. Tidak boleh menggunakan "Hour of Code" dalam nama app
+  4. No use of "Hour of Code" in app names.
 
 [**Kembali ke atas**](#top)
 

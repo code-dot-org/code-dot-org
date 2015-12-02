@@ -9,6 +9,6 @@ layout: wide
 
 # 여러분의 전체 학교가 참여하도록 해보세요.
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Hour of Code 이벤트가 진행되는 학교의 정보를 여기에서 확인하세요.
 
 <%= view :signup_button %>

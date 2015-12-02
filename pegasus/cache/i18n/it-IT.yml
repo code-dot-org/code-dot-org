@@ -328,6 +328,10 @@
   class_submission_languages_other: Altre lingue
   inspirational_videos_more: Altri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video
     stimolanti</a> fatti da celebrità e modelli di riferimento
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Costruisci una galassia con il codice
   starwars_javascript_title: Javascript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
@@ -342,7 +346,7 @@
   starwars_speak_languages: Parli un'altra lingua?
   starwars_help_translate: Aiutaci a tradurre
   starwars_platform_text: Browser moderni, smartphone, tablet
-  mc_name: Minecraft L'Ora del Codice
+  mc_name: L'Ora del Codice con Minecraft
   mc_longdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
     con Steve o Alex.
   mc_shortdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
@@ -350,7 +354,7 @@
   mc_gradelevel: Da 6 anni in su
   mc_platformtext: Browser moderni, smartphone, Tablet
   mc_specs: Molte lingue (prossimamente) | Browser recenti e tablet | Età 6+
-  minecraft_subtitle: Minecraft L'Ora del Codice
+  minecraft_subtitle: L'Ora del Codice con Minecraft
   volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
     del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
@@ -506,9 +510,10 @@
     e adatti al vostro ritmo, anche con attività da svolgere senza essere connessi
     (attività tradizionali o "unplugged"). Ogni corso è composto da circa 20 lezioni
     che possono essere svolte tutte di seguito o durante l'anno. Per gli insegnanti
-    negli USA offriamo dei laboratori/workshop professionali gratuiti e di elevata
-    qualità. <a href="/professional-development-workshops"> Trovate quello più vicino
-    a voi!</a>
+    in Italia accedi a http://programmailfuturo.it per avere assistenza specifica.
+    Per gli insegnanti negli USA offriamo dei laboratori/workshop professionali gratuiti
+    e di elevata qualità. <a href="/professional-development-workshops"> Trovate quello
+    più vicino a voi!</a>
   dashboard_middle_courses: Corsi da 20 ore per la scuola secondaria di primo grado
   dashboard_middle_courses_desc: Il nostro curriculum per la secondaria di primo grado
     utilizza l'informatica e la programmazione all'interno della matematica e delle
@@ -748,11 +753,15 @@
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Corsi disponibili in Inglese
   carousel_heading_beginners: Corsi per principianti
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Lezioni che insegnano il linguaggio Javascript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Non hai Internet o dispositivi informatici? Prova l'informatica
     con mezzi tradizionali!
   carousel_heading_devices: App per imparare su smartphone e tablet
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Corsi per imparare altri linguaggi di programmazione
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Costruisci la tua app o il tuo gioco
   carousel_heading_university: Corsi universitari online
   carousel_heading_webpages: Impara a costruire pagine web
@@ -776,7 +785,7 @@
     target="_blank">versione più moderna</a>.
   mobile_devices: Corsi per dispositivi mobili
   frozen_name: Programma con Anna ed Elsa
-  starwars_name: 'Star Wars: Costruisci una galassia con il codice'
+  starwars_name: 'Guerre Stellari: Costruisci una galassia con il codice'
   codeorg_name: Scrivi il tuo primo programma
   codeintl_name: Scrivi il tuo primo programma
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -961,7 +970,7 @@
   frozen_shortdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre
     esplorano la magia e la bellezza del ghiaccio.
   starwars_shortdescription: Impara a programmare i droidi e crea la tua versione
-    di Star Wars ... in una galassia lontana lontana...
+    di Guerre Stellari, in una galassia lontana lontana...
   playlab_shortdescription: Crea una storia o inventa un gioco col Laboratorio!
   infinity_shortdescription: Crea una storia o inventa un gioco con i personaggi di
     Disney Infinity come protagonisti!
@@ -1122,7 +1131,7 @@
     sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi
     condividere con i tuoi amici!
   starwars_longdescription: Impara a programmare i droidi e crea la tua versione di
-    Star Wars ... in una galassia lontana lontana...
+    Guerre Stellari, in una galassia lontana lontana...
   playlab_longdescription: Crea una storia o realizza un gioco col Laboratorio! Fai
     muovere animali, zombie, Ninja, pirati e molti altri personaggi. Crea suoni, fai
     guadagnare punti e addirittura lancia palle di fuoco!
@@ -1482,11 +1491,3 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

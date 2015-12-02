@@ -8,7 +8,7 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Efterskrift og statistik
+# Viden og statistik
 
 ## Brug denne kort tekst i et nyhedsbrev
 
