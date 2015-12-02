@@ -22,7 +22,7 @@
   name: නම
   email: විද්‍යුත් තැපැල
   zipcode: ZIP code or country
-  submit: යොමන්න
+  submit: යොමුකරන්න
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
@@ -315,6 +315,10 @@
   class_submission_languages_other: Other language(s)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -405,7 +409,7 @@
     (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_submit: යොමන්න
+  volunteer_engineer_submission_submit: යොමුකරන්න
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
     of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
     more here.</a>
@@ -715,10 +719,14 @@
   carousel_heading_international: Tutorials in your language
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Grades K-8
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
   carousel_heading_webpages: Learn to make web pages
@@ -1387,11 +1395,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
