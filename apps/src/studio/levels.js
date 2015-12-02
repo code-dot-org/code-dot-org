@@ -422,7 +422,7 @@ levels.playlab_3 = {
   ]
 };
 levels.iceage_move_to_flag = utils.extend(levels.playlab_3, {
-  background: 'icy2',
+  background: 'icy3',
   firstSpriteIndex: 2,
 });
 levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
@@ -900,7 +900,7 @@ levels.iceage_repeat = utils.extend(levels.playlab_7, {
   firstSpriteIndex: 4,
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
-  background: 'graffiti',
+  background: 'dots',
   firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
 });
