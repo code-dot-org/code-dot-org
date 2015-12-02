@@ -2,6 +2,7 @@
 - twitter ||= nil
 - download_filename ||= nil
 - download_path ||= nil
+- fallback_player ||= false
 
 .modal.fade{id: "showVideo_#{id}"}
   .modal-dialog.modal-lg
@@ -12,7 +13,7 @@
           %span{:class=>"sr-only"} Close
         %div{style: "clear:both"}
       .modal-body{style: "padding-top: 0px"}
-        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
+        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path, fallback_player: fallback_player
 
 :css
   .modal{
@@ -30,7 +31,7 @@
     ga('send', 'event', 'showvideo', 'click', {'id': "#{id}"});
   };
 
-  $("#showVideo_#{id}").on('hidden.bs.modal', function () 
+  $("#showVideo_#{id}").on('hidden.bs.modal', function ()
   {
     // Pause the video.
     window["playVideo_#{id}"](false);
@@ -39,7 +40,8 @@
   window["playVideo_#{id}"] = function(play)
   {
     var div = $("#showVideo_#{id} .videodiv")[0];
-    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    //var outerIframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    var iframe = div.getElementsById("video");
     func = play ? 'playVideo' : 'pauseVideo';
     iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
   }
