@@ -188,8 +188,8 @@
 
 .banner {
   float: left;
-  width: 510px !important;
-  margin-left: 45px !important;
+  width: 520px !important;
+  margin-left: 40px !important;
 }
 
 @media screen and (max-width: 319px)
@@ -207,14 +207,6 @@
 @media screen and (min-width: 320px) and (max-width: 599px) { 
   #learnCodeStudio .active > div { display:none; }
   #learnCodeStudio .active > div:first-child { display:block; }
-
-  #learnCodeStudio {
-    max-width: 600px;
-  }
-
-  .container-fluid {
-    padding-left: 30px !important;
-  }
 
   .learnpage {
     width: 320px;
@@ -252,35 +244,43 @@
   }
 }
 
-@media screen and (min-width: 600px) /* and (max-width: 969px) */ {
+@media screen and (min-width: 600px) {
   #learnCodeStudio .active > div { display:none; }
   #learnCodeStudio .active > div:first-child { display:block; }
   #learnCodeStudio .active > div:first-child + div { display:block; }
 
-  #codeStudioCarousel .col-md-4 { width: 50%; }
+  #codeStudioCarousel .col-md-4 { 
+    width: 50%;
+  }
 
   #learnCodeStudio {
     max-width: 600px !important;
   }
 
+  #quicklinks {
+    width: 170px !important;
+  }
+
+  .carousel-control.left {
+    left: -10px !important;
+  }
+
+  .carousel-control.right {
+    right: -10px !important;
+  }
+
+  .carousel-inner {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
   .container-fluid {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 0px !important;
   }
 
   .learnpage {
     width: 600px;
     margin: 0 auto;
-  }
-
-  .course-carousel .slides {
-    width: 600px;
-    height: 514px;
-  }
-
-  .course-carousel .slide .slide-img {
-    width: 520px;
-    height: 390px;
   }
 
   .fullwidth-carousel .slide {
@@ -294,19 +294,6 @@
   }
   .fullwidth-carousel .slide-shortdescription {
     width: 500px;
-  }  
-
-  .multi-item-carousel .carousel-inner .active.left {
-    left: -0% !important;
-  }
-  .multi-item-carousel .carousel-inner .active.right {
-    left: 0% !important;
-  }
-  .multi-item-carousel .carousel-inner .next {
-    left: 50% !important;
-  }
-  .multi-item-carousel .carousel-inner .prev {
-    left: -50% !important;
   }
 }
 
