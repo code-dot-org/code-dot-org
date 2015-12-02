@@ -241,7 +241,5 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Zona de treball: "
 }

@@ -396,6 +396,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ভিডিও দেখুন"},
 "when":function(d){return "যখন"},
 "whenRun":function(d){return "চালানোর সময়"},
-"workspaceHeaderShort":function(d){return "কর্মপরিসর:"},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "কর্মপরিসর:"}};

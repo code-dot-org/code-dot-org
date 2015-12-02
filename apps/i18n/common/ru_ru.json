@@ -241,7 +241,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

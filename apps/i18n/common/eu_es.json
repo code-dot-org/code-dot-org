@@ -241,7 +241,5 @@
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Lan eremua: "
 }

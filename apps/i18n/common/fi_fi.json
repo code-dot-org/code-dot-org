@@ -241,7 +241,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Työtila: "
 }
