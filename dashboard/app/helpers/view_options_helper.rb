@@ -20,6 +20,7 @@ module ViewOptionsHelper
     game_display_name
     stage_position
     level_position
+    public_caching
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)
