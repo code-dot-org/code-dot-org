@@ -5,54 +5,52 @@ data from live data APIs.'
 description_short 'Data'
 login_required 'true'
 
-# From U3
-stage 'Permanent Data Storage and Clicker Completion'
-level 'U3L22 Student Lesson Introduction'
-level 'U3L17 - introKeyValue'
-level 'U3L17 - setKeyValue'
-level 'U3L17 - twoSetKeyValue'
-level 'U3L17 - introCallbacks'
-level 'U3L17 - getKeyValue'
-assessment 'U3L22 Free Response Getting Started'
-assessment 'U3L22 Assessment'
-assessment 'U3L22 Reflection'
-
-stage 'Data is the Secret Ingredient'
+#1
+stage 'Why Make Apps?'
 level 'U4L01 Student Lesson Introduction'
+
 assessment 'U4L01 Free Response'
 assessment 'U4L01 Choose 2'
 assessment 'U4L01 Multiple Choice'
 
-stage 'Finding Data'
+
+#2
+stage 'Creating Javascript Objects'
 level 'U4L02 Student Lesson Introduction'
+level 'U4 - Objects - eventParameter'
+level 'U4 - Objects - createObject'
+level 'U4 - Objects - dotNotation'
+
 assessment 'U4L02 Free Response'
 assessment 'U4L02 Choose 2'
 assessment 'U4L02 Multiple Choice'
 
-stage 'Building Apps Using Structured Data'
+#3
+stage 'Permanent Data Storage'
 level 'U4L03 Student Lesson Introduction'
-assessment 'U4L03 Free Response'
-assessment 'U4L03 Choose 2'
-assessment 'U4L03 Multiple Choice'
-
-stage 'Data App Part 1: Brainstorm'
-level 'U4L04 Student Lesson Introduction'
-level 'U4 Inspirational Data Video'
-level 'CSP U4L04 Assessment 1 '
-level 'CSP U4L04 Assessment 2 '
-assessment 'U4L04 Free Response'
-assessment 'U4L04 Choose 2'
-assessment 'U4L04 Multiple Choice'
-
-stage 'APIs and Access to Large Data Sets'
-level 'U4L05 Student Lesson Introduction'
-level 'CSP U4 - JSON Object Intro - Bad Way'
-level 'CSP U4 - JSON Object Intro - Good Way'
 level 'CSP U4 - First Create Record Experience'
 level 'CSP U4 - Basic Terms'
 level 'CSP U4 - CreateRecord with JSON'
 level 'CSP U4 - Import Table'
 level 'CSP U4 - Export Table'
+
+assessment 'U4L03 Free Response'
+assessment 'U4L03 Choose 2'
+assessment 'U4L03 Multiple Choice'
+
+#4
+stage 'Reading Records'
+level 'U4L04 Student Lesson Introduction'
+
+assessment 'U4L04 Free Response'
+assessment 'U4L04 Choose 2'
+assessment 'U4L04 Multiple Choice'
+
+
+
+
+stage 'APIs and Access to Large Data Sets'
+level 'U4L05 Student Lesson Introduction'
 assessment 'U4L05 Free Response'
 assessment 'U4L05 Choose 2'
 assessment 'U4L05 Multiple Choice'
@@ -191,3 +189,22 @@ level 'U4L24 Student Lesson Introduction'
 assessment 'U4L24 Free Response'
 assessment 'U4L24 Choose 2'
 assessment 'U4L24 Multiple Choice'
+
+# From U3
+stage 'Permanent Data Storage and Clicker Completion'
+level 'U3L22 Student Lesson Introduction'
+level 'U3L17 - introKeyValue'
+level 'U3L17 - setKeyValue'
+level 'U3L17 - twoSetKeyValue'
+level 'U3L17 - introCallbacks'
+level 'U3L17 - getKeyValue'
+assessment 'U3L22 Free Response Getting Started'
+assessment 'U3L22 Assessment'
+assessment 'U3L22 Reflection'
+
+
+# not used stages
+stage 'Data is the Secret Ingredient'
+stage 'Finding Data'
+stage 'Building Apps Using Structured Data'
+stage 'Data App Part 1: Brainstorm'

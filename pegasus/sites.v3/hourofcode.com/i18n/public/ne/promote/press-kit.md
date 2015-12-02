@@ -49,7 +49,7 @@ nav: promote_nav
 
 *किन यसको महत्त्व हुन्छ?*
 
-चाइनामा, हरेक विद्यार्थीहरूले हाई स्कूल स्नातक गर्न कम्प्युटर विज्ञान लिने गर्छन्। संयुक्त राज्यमा, 90 प्रतिशत विद्यालयहरूले यसलाई पढाउँदैनन् पनि। यो समय हाम्रो लागि 21औँ सताब्दीलाई भेट्टाउने हो। We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every student takes computer science to graduate high school. संयुक्त राज्यमा, 90 प्रतिशत विद्यालयहरूले यसलाई पढाउँदैनन् पनि। यो समय हाम्रो लागि 21औँ सताब्दीलाई भेट्टाउने हो। We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **तपाइँको सामग्रीहरूमा धेरै विवरणहरू र उद्धरणको प्रयोग गर्न सक्नुहुन्छ**
 

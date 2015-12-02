@@ -256,6 +256,7 @@
         playlab: ایجاد یک برنامه
         artist: چیزی بکش
         calculate: Calculate Something
+        applab: ایجاد یک برنامه
     user:
       classroom: صفحه اصلی معلم
       district_dashboard: محدوده ی داشبورد
@@ -279,6 +280,8 @@
       prize_us_only: (فقط دانشجویان آمریکایی)
       prizes_link: اطلاعات بیشتر
   teacher:
+    answer: پاسخ
+    for_teachers_only: تنها برای معلمان
     title:
       one: 'معلم شما:'
       other: 'معلم های شما:'
@@ -353,7 +356,7 @@
       example: راه حل مثال
       example_with_number: راه حل مثال%{solution_number}
       submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      unsubmit: ثبت نشده
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
@@ -468,7 +471,10 @@
     tos: شرایط
     privacy: قوانین حفظ حریم خصوصی
     secure: نسخهٔ امن
-    report_abuse: Report Abuse
+    report_abuse: گزارش سوء استفاده
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: کمک نیاز دارید؟
     subtitle: دیدن این فیلم ها و نکات
@@ -509,6 +515,7 @@
   pdf_download: دانلود پی دی اف
   download_coming_soon: دانلود فعالیت به زودی .
   video_coming_soon: ویدئو بزودی!
+  not_started: دانش آموز در این سطح کوشش نکرده است.
   share_code:
     title: '''اجرا'' را بزن تا برنامه من را در عمل ببینی'
     bounce_og_title: بازی Bounce من را ببین
@@ -557,9 +564,14 @@
       body: دیدن یگ گالری از برنامه ها و تصاویر هنرمندانه ایجاد شده توسط کاربران ما
     frozen:
       title: منجمد
+    starwars:
+      title: جنگ ستارگان
     infinity:
       title: آزمایشگاه بازی نامحدود
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
     students_made_these_with_code: دانش آموزان اینها را با کد ساخته اند !
@@ -729,8 +741,8 @@
           will take your report very seriously, investigate accordingly, and take
           appropriate action.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
+          email: لطفا آدرس ایمیل را مشخص کنید
+          age: لطفا سن را مشخص کنید
           abuse_type: Please answer how this content violates the Terms of Service
           abuse_detail: Please provide details regarding the content you are reporting
         abusive_url: URL of the content being reported

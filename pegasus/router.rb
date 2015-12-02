@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
 require 'cgi'
@@ -142,6 +143,13 @@ class Documents < Sinatra::Base
     dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
+  end
+
+  # Page mode selection
+  get '/private/pm/*' do |page_mode|
+    dont_cache
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    redirect "/learn?r=#{rand(100000)}"
   end
 
   # /private (protected area)

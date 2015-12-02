@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Ha van út az adott irányban, akkor csinálj valamit."},
 "ifelseTooltip":function(d){return "Ha van út az adott irányban, akkor csináld az első blokk műveleteit, minden más esetben a második blokk műveleteit hajts végre."},
 "ifFlowerTooltip":function(d){return "Ha van virág illetve méhsejt a megadott irányban, akkor csinálj valamit."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Ha van virág a megadott irányban, akkor csinálj valamit."},
 "ifelseFlowerTooltip":function(d){return "Ha van virág illetve lép a megadott irányban, akkor az első blokk műveleteit végezd el. Más esetben a második blokk műveleteit."},
 "insufficientHoney":function(d){return "A megfelelő blokkokat használtad, de a mézből is megfelelő mennyiséget kell készítened."},
 "insufficientNectar":function(d){return "A megfelelő blokkokat használtad, de a nektárból is megfelelő mennyiséget kell gyűjtened."},

@@ -43,6 +43,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -51,7 +55,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
-## 1) Try the tutorials:
+## 1) Thử thực hành các khóa học:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -62,7 +66,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Trang thiết bị, phần cứng - máy tính là tùy chọn không bắt buộc
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -70,20 +74,20 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Xem trước trang thông báo kết quả** để xem những gì học sinh sẽ thấy khi hoàn thành. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Plan ahead based on your technology available
+## 3) Lên kế hoạch dựa trên trang thiết bị công nghệ mà bạn sẵn có
 
   * **Nếu không đủ thiết bị** học bằng cách [ ghép đôi](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
   * **Nếu có kết nối internet chậm** hãy chiếu video lên máy chiếu để mọi người có thể xem cùng lúc. Hoặc thực hành với các khóa học không cần mạng/khóa học offline.
 
-## 4) Inspire students - show them a video
+## 4) Truyền cảm hứng cho những người học - Cho chúng xem 1 video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Cho sinh viên một video cảm hứng để kick off Hour of Cord . Ví dụ:
 
   * Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Tổng thống Obama kêu gọi tất cả học sinh nên học môn tin học](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Làm học sinh thích thú - đưa chúng xem bài giới thiệu ngắn**
 
 <% else %>
 

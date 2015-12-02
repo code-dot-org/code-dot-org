@@ -12,11 +12,11 @@ nav: prizes_nav
 
 Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
 
-## 1. Spread the word
+## 1. Espalhe a palavra
 
 Fala aos teus amigos sobre o #HourOfCode.
 
-## 2. Ask your whole school to offer an Hour of Code
+## Pede à tua escola para oferecer uma Hora de Código
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 

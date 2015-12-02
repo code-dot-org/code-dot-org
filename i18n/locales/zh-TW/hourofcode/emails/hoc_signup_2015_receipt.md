@@ -8,45 +8,39 @@
 
 # 謝謝您報名舉辦Hour of Code!
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+您使得世界各地的學生有機會在十二月7日到13日學習到 Hour of Code 活動，而這有可能改變他們的一生。
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### 我們會與您保持接觸以通知您關於新的課程與其他令人興奮的更新資訊。您現在可以做什麼？
 
-## 1.廣為宣傳
+## 1. Find a local volunteer to help you with your event.
 
-We need your help to reach 100,000 organizers worldwide. 告訴你的朋友關於 #HourOfCode 。 [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-<% if international == 'true' %>
+## 2. Spread the word
 
-## 2.要求你的整所學校都提供一小程式設計活動
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+## 3. 問問你的同事是否想參與
 
-## 3. 詢問你的上司是否想參予
+[傳送這份電子郵件](https://<%= hostname %>/promote/resources#sample-emails)給您的經理，或是 CEO。
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+## 5. Promote the Hour of Code in your community
 
-## 4. Promote the Hour of Code in your community
+招募當地社團，或甚至是您的朋友。 [傳送這封電子郵件](https://<%= hostname %>/resources#sample-emails).
 
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
-
-## 5. 詢問當地的政府機構是否參予Hour of Code
-
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
-
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+謝謝您引導這次運動，讓每個學生有機會學習基礎的電腦科學技能。
 
 Hadi Partovi  
-Founder, Code.org
+Code.org 創辦人
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> 您會收到這封電子郵件是由於您註冊了 Hour of Code，這是由超過 200 位夥伴支援，Code.org 組織的活動。 Code.org 是一個 501c3 非營利組織。 我們的地址是 1301 5th Ave, Suite 1225, 西雅圖，華盛頓州，98101。 不想要這些電子郵件嗎？ <a href="%= unsubscribe_link %">取消訂閱</a>. </small>
 
 ![](<%= tracking_pixel %>)

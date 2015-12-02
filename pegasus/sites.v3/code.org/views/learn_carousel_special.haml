@@ -1,6 +1,7 @@
 -check_language ||= nil
 -international_layout ||= nil
 -subheading ||= nil
+-company = request.GET['company']
 -if check_language
   -items = tutorials.find_with_tag_and_language(tag, request.locale)
 -else
@@ -17,6 +18,7 @@
           -items.each_pair do |key, tutorial|
             -tags = I18n.t("#{tutorial[:code]}_gradelevel") + ' | ' + I18n.t("#{tutorial[:code]}_platformtext")
             -url = tutorials.launch_url_for(key,request.host_with_port)
+            -url = url + "?company=#{company}" if company
             -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             .slide.clear{:style=>"background-color:white;"}
               .slide-img<
@@ -37,7 +39,10 @@
                 -unless short_url.nil_or_empty?
                   .slide-shorturl-link
                     %a{:href=>url, :target=>'_blank'}
-                      =short_url
+                      -if tutorial[:short_code] == 'mchoc'
+                        ="http://code.com/mc"
+                      -else
+                        =short_url
                 -unless tutorial[:teachers_notes].nil_or_empty?
                   .slide-teachers-notes-link{style: "font-weight: 500; font-size: 12px; margin-top: 20px; padding-right: 0px;"}<
                     %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<

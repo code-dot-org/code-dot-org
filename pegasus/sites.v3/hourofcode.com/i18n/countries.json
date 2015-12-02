@@ -368,6 +368,15 @@
     "campaign_date_short": "Dec. 7-13",
     "campaign_date_full": "December 7-13"
   },
+  "pk": {
+    "full_name": "Pakistan",
+    "default_language": "ur",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_logn": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
+  },
   "pl": {
     "full_name": "Poland",
     "default_language": "pl",

@@ -1,19 +1,5 @@
--name_s ||= nil
--company_s ||= nil
--email_s ||= nil
--location_s ||= nil
--time_commitment_s ||= nil
--location_flexibility_ss ||= nil
--languages_ss ||= nil
--languages_other_ss ||= nil
--experience_s ||= nil
--description_s ||= nil
--linkedin_s ||= nil
--facebook_s ||= nil
--skype_s ||= nil
--helpouts_s ||= nil
--allow_contact_b ||= nil
--form ||= nil
+:ruby
+  form ||= Form2.new(data: "{}") # initialize an empty form if there was none provided to us as a local
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -25,83 +11,73 @@
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
--SOLR = Solr::Server.new(host:CDO.solr_server)
--num_teachers = format_integer_with_commas(SOLR.query(q:'kind_s:"HocSignup2015" && match_volunteer_flag_b:true').count)
--num_volunteers = format_integer_with_commas(SOLR.query(q:'kind_s:"VolunteerEngineerSubmission2015"').count)
-
-%h1= I18n.t(:volunteer_engineer_submission_title)
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
-  #error-message{style: 'display: none'}
-
-  %p= I18n.t(:volunteer_engineer_submission_intro_background)
-  %p{style: 'color: #00adbc; font-size: 1.125em; padding: 20px 20px 15px 20px;'}= I18n.t(:volunteer_engineer_submission_subtitle_specific).gsub('%{num_teachers}', num_teachers).gsub('%{num_volunteers}', num_volunteers)
-  %p= I18n.t(:volunteer_engineer_submission_intro_recruit).gsub('%{url}', 'https://hourofcode.com')
-  %img{src: "/images/fill-610x200/impact-hero.png", style: "margin-top: 10px;"}
-  %img{src: "/images/fill-295x150/sotm31.jpg", style: "margin: 10px 10px 20px 0;"}
-  %img{src: "/images/fill-300x150/homepage/kids3_2x.jpg", style: "margin: 10px 0 20px 0;"}
-  %p= I18n.t(:volunteer_engineer_submission_intro_signup)
+  - if form.secret
+    %h1 Update your information
 
   %h2= I18n.t(:volunteer_engineer_submission_header_shared)
+
+  #error-message{style: 'display: none'}
 
   .form-group
     %label.control-label{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
     %span.form-required-field *
     %div
-      %input#volunteer-name.form-control{name: "name_s", placeholder: I18n.t(:volunteer_engineer_submission_field_name_placeholder), type: "text", required: true, value: name_s}/
+      %input#volunteer-name.form-control{name: "name_s", placeholder: I18n.t(:volunteer_engineer_submission_field_name_placeholder), type: "text", required: true, value: form.data['name_s']}/
 
   .form-group
     %label.control-label{for: "volunteer-company"}= I18n.t(:volunteer_engineer_submission_field_company)
     %span
     %div
-      %input#volunteer-company.form-control{name: "company_s", placeholder: I18n.t(:volunteer_engineer_submission_field_company_placeholder), type: "text", required: false, value: company_s}/
+      %input#volunteer-company.form-control{name: "company_s", placeholder: I18n.t(:volunteer_engineer_submission_field_company_placeholder), type: "text", required: false, value: form.data['company_s']}/
 
   .form-group
     %label.control-label{for: "volunteer-experience"}= I18n.t(:volunteer_engineer_submission_field_experience_level)
     %span.form-required-field *
     %div
       %select#volunteer-experience.form-control{name: "experience_s", type: "select", required: true}
-        %option{selected: experience_s.nil_or_empty?, value: ""}
+        %option{selected: form.data['experience_s'].nil_or_empty?, value: ""}
         -VolunteerEngineerSubmission2015.experiences.each_pair do |key,label|
-          %option{value: key, selected: key == experience_s}= label
+          %option{value: key, selected: key == form.data['experience_s']}= label
 
   .form-group
     %label.control-label{for: "volunteer-location"}= I18n.t(:volunteer_engineer_submission_field_location)
     %span.form-required-field *
     %p= I18n.t(:volunteer_engineer_submission_field_location_desc)
     %div
-      %input#volunteer-location.form-control{name: "location_s", placeholder: I18n.t(:volunteer_engineer_submission_field_location_placeholder), type: "text", required: true, value: location_s}/
+      %input#volunteer-location.form-control{name: "location_s", placeholder: I18n.t(:volunteer_engineer_submission_field_location_placeholder), type: "text", required: true, value: form.data['location_s']}/
 
   .form-group
     %label.control-label{for: "volunteer-location-flexibility"}= I18n.t(:volunteer_engineer_submission_field_location_flexibility)
     %span.form-required-field *
     %div
       %select#volunteer-location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select", required: true, multiple: true}
-        %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}
+        %option{selected: form.data['location_flexibility_ss'].nil_or_empty?, value: ""}
         -VolunteerEngineerSubmission2015.locations.each_pair do |key,label|
-          %option{value: key, selected: (location_flexibility_ss||[]).include?(key)}= label
+          %option{value: key, selected: (form.data['location_flexibility_ss'] || []).include?(key)}= label
 
   .form-group
     .checkbox
       %label
-        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: "1", required: false}/
+        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: form.data['volunteer_after_hoc_b'], required: false}/
         = I18n.t(:volunteer_engineer_submission_checkbox_after_hoc)
 
   .form-group{style: "display: none;"}
     %label.control-label{for: "volunteer-time-commitment"}= I18n.t(:volunteer_engineer_submission_field_time_commitment)
     %div
       %select#volunteer-time-commitment.form-control{name: "time_commitment_s", type: "select", required: false}
-        %option{selected: time_commitment_s.nil_or_empty?, value: ""}
+        %option{selected: form.data['time_commitment_s'].nil_or_empty?, value: ""}
         -VolunteerEngineerSubmission2015.commitments.each_pair do |key,label|
-          %option{value: key, selected: key == time_commitment_s}= label
+          %option{value: key, selected: key == form.data['time_commitment_s']}= label
 
   .form-group
     %label.control-label{for: "volunteer-linkedin"}= I18n.t(:volunteer_engineer_submission_field_linkedin)
     %div
-      %input#volunteer-linkedin.form-control{name: "linkedin_s", placeholder: I18n.t(:volunteer_engineer_submission_field_linkedin_placeholder), type: "text", required: false, value: linkedin_s}/
+      %input#volunteer-linkedin.form-control{name: "linkedin_s", placeholder: I18n.t(:volunteer_engineer_submission_field_linkedin_placeholder), type: "text", required: false, value: form.data['linkedin_s']}/
   .form-group
     %label.control-label{for: "volunteer-facebook"}= I18n.t(:volunteer_engineer_submission_field_facebook)
     %div
-      %input#volunteer-facebook.form-control{name: "facebook_s", placeholder: I18n.t(:volunteer_engineer_submission_field_facebook_placeholder), type: "text", required: false, value: facebook_s}/
+      %input#volunteer-facebook.form-control{name: "facebook_s", placeholder: I18n.t(:volunteer_engineer_submission_field_facebook_placeholder), type: "text", required: false, value: form.data['facebook_s']}/
 
   .form-group
     %label.control-label{for: "volunteer-description"}= I18n.t(:volunteer_engineer_submission_field_description)
@@ -109,7 +85,7 @@
     %p= I18n.t(:volunteer_engineer_submission_field_description_desc)
     %div
       %textarea#volunteer-description.form-control{name: "description_s", placeholder: I18n.t(:volunteer_engineer_submission_field_description_placeholder), required: true, style: "height: 10em;"}
-        =description_s
+        = form.data['description_s']
   %hr
   %h2= I18n.t(:volunteer_engineer_submission_header_private)
 
@@ -118,20 +94,20 @@
     %span.form-required-field *
     %p= I18n.t(:volunteer_engineer_submission_field_email_desc)
     %div
-      %input#volunteer-email.form-control{name: "email_s", placeholder: I18n.t(:volunteer_engineer_submission_field_email_placeholder), type: "text", required: true, value: email_s}/
+      %input#volunteer-email.form-control{name: "email_s", placeholder: I18n.t(:volunteer_engineer_submission_field_email_placeholder), type: "text", required: true, value: form.data['email_s']}/
 
   %br
   .form-group
     %p= I18n.t(:volunteer_engineer_submission_final_paragraph)
     %div
       %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
-        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: 1, required: true, checked: true}
+        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
 
   .form-group
-    %button#btn-submit.btn.btn-default{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
+    %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
-#thanks{:style=>"display: none;"}
+#volunteer-engineer-thanks{:style=>"display: none;"}
   %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', 'https://hourofcode.com')
 
 :javascript
@@ -160,14 +136,13 @@
     });
   });
 
-:javascript
-  function processResponse(data)
+  function processVolunteerEngineerFormResponse(data)
   {
-    $('#volunteer-engineer-submit-form').hide();
-    $('#thanks').show();
+    $('form').hide();
+    $('#volunteer-engineer-thanks').show();
   }
 
-  function processError(data)
+  function processVolunteerEngineerFormError(data)
   {
     $('.has-error').removeClass('has-error');
 
@@ -189,15 +164,15 @@
 
   function volunteerEngineerFormSubmit()
   {
-    $("#btn-submit").attr('disabled','disabled');
-    $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
+    $("#volunteer-engineer-submit-form #btn-submit").attr('disabled','disabled');
+    $("#volunteer-engineer-submit-form #btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
     $.ajax({
-      url: "/forms/VolunteerEngineerSubmission2015#{'/' + form.secret if form}",
+      url: "/forms/VolunteerEngineerSubmission2015#{'/' + form.secret if form && form.secret}",
       type: "post",
       dataType: "json",
       data: $('#volunteer-engineer-submit-form').serialize()
-    }).done(processResponse).fail(processError);
+    }).done(processVolunteerEngineerFormResponse).fail(processVolunteerEngineerFormError);
 
     return false;
   }

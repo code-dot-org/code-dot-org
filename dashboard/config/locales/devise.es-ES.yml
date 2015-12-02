@@ -76,9 +76,9 @@
         one: '1 error impidió que este %{resource} se guardara:'
         other: '%{count} errores impiden que este %{resource} sea guardado:'
     invitations:
-      send_instructions: Se ha enviado un email de  invitación a %{email}.
+      send_instructions: Se ha enviado un email de invitación a %{email}.
       invitation_token_invalid: El token de invitación proporcionado no es válido!
-      updated: La contraseña se estableció con éxito. Ahora estas firmado.
+      updated: La contraseña se estableció con éxito. Ahora estas registrado.
       no_invitations_remaining: No hay invitaciones restantes
       invitation_removed: Su invitación ha sido removida.
       new:
@@ -95,5 +95,5 @@
           el enlace de más abajo.
         accept: Aceptar invitación
         ignore: Si no quieres aceptar la invitación, por favor ignore este email.<br
-          />Tu cuenta no sera creada hasta que acceda al enlace anterior y configurar
+          />Tu cuenta no sera creada hasta que acceda al enlace anterior y configure
           su contraseña.

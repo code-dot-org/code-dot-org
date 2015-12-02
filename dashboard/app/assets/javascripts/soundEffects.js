@@ -58,7 +58,7 @@ function Sounds() {
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
-      this.unlockAudio(); // Attempt immediately, for correct status on desktop
+      this.initializeAudioUnlockState_();
     } catch (e) {
       /**
        * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
@@ -72,7 +72,38 @@ function Sounds() {
   }
 
   this.soundsById = {};
+
+  /** @private {function[]} */
+  this.whenAudioUnlockedCallbacks_ = [];
 }
+
+/**
+ * Plays a silent sound to check whether audio is unlocked (usable) in the
+ * current browser.
+ * On mobile, our initial audio unlock will fail because unlocking audio
+ * requires user interaction.  In that case, we add a handler to catch
+ * the first user interaction and try unlocking audio again.
+ * @private
+ */
+Sounds.prototype.initializeAudioUnlockState_ = function () {
+  this.unlockAudio(function () {
+    if (this.isAudioUnlocked()) {
+      return;
+    }
+    var unlockHandler = function () {
+      this.unlockAudio(function () {
+        if (this.isAudioUnlocked()) {
+          document.removeEventListener("mousedown", unlockHandler, true);
+          document.removeEventListener("touchend", unlockHandler, true);
+          document.removeEventListener("keydown", unlockHandler, true);
+        }
+      }.bind(this));
+    }.bind(this);
+    document.addEventListener("mousedown", unlockHandler, true);
+    document.addEventListener("touchend", unlockHandler, true);
+    document.addEventListener("keydown", unlockHandler, true);
+  }.bind(this));
+};
 
 /**
  * Whether we're allowed to play audio by the browser yet.
@@ -84,14 +115,31 @@ Sounds.prototype.isAudioUnlocked = function () {
 };
 
 /**
+ * Ensure that a callback occurs with the audio system unlocked.
+ * If the audio system is already unlocked, the callback will occur immediately.
+ * Otherwise it will occur after audio is successfully unlocked.
+ * @param {function} callback
+ */
+Sounds.prototype.whenAudioUnlocked = function (callback) {
+  if (this.isAudioUnlocked()) {
+    callback();
+  } else {
+    this.whenAudioUnlockedCallbacks_.push(callback);
+  }
+};
+
+/**
  * Mobile browsers disable audio until a sound is triggered by user interaction.
  * This method tries to play a brief silent clip to test whether audio is
  * unlocked, and/or trigger an unlock if called inside a user interaction.
  *
  * Special thanks to this article for the general approach:
  * https://paulbakaus.com/tutorials/html5/web-audio-on-ios/
+ *
+ * @param {function} [onComplete] callback for after we've checked whether
+ *        audio was unlocked successfully.
  */
-Sounds.prototype.unlockAudio = function () {
+Sounds.prototype.unlockAudio = function (onComplete) {
   if (this.isAudioUnlocked()) {
     return;
   }
@@ -107,13 +155,52 @@ Sounds.prototype.unlockAudio = function () {
     source.noteOn(0);
   }
 
-  // by checking the play state after some time, we know if we're really unlocked
-  setTimeout(function() {
-    if (source.playbackState === source.PLAYING_STATE ||
-        source.playbackState === source.FINISHED_STATE) {
+  this.checkDidSourcePlay_(source, this.audioContext, function (didPlay) {
+    if (didPlay) {
       this.audioUnlocked_ = true;
+      this.whenAudioUnlockedCallbacks_.forEach(function (cb) {
+        cb();
+      });
+      this.whenAudioUnlockedCallbacks_.length = 0;
     }
-  }.bind(this), 0);
+
+    if (onComplete) {
+      onComplete();
+    }
+  }.bind(this));
+};
+
+/**
+ * Performs an asynchronous check for whether the given source and context
+ * actually played audio.  When finished, calls provided callback passing
+ * success/failure as a boolean argument.
+ * @param {!AudioBufferSourceNode} source
+ * @param {!AudioContext} context
+ * @param {!function(boolean)} onComplete
+ * @private
+ */
+Sounds.prototype.checkDidSourcePlay_ = function (source, context, onComplete) {
+  // Approach 1: Although AudioBufferSourceNode.playbackState is supposedly
+  //             deprecated, it's still the most reliable way to check whether
+  //             playback occurred on iOS devices through iOS9, and requires
+  //             only a 0ms timeout to work.
+  //             We feature-check this approach by seeing if the related enums
+  //             exist first.
+  if (source.PLAYING_STATE !== undefined && source.FINISHED_STATE !== undefined) {
+    setTimeout(function () {
+      onComplete(source.playbackState === source.PLAYING_STATE ||
+          source.playbackState === source.FINISHED_STATE);
+    }.bind(this), 0);
+    return;
+  }
+
+  // Approach 2: Platforms that have removed playbackState can be checked most
+  //             reliably with a longer delay and a check against the
+  //             AudioContext.currentTime, which should be greater than the
+  //             time passed to source.start() (in this case, zero).
+  setTimeout(function () {
+    onComplete('number' === typeof context.currentTime && context.currentTime > 0);
+  }.bind(this), 50);
 };
 
 /**
@@ -189,6 +276,18 @@ Sounds.prototype.playURL = function (url, playbackOptions) {
   }
 };
 
+/**
+ * @param {!string} url
+ * @returns {boolean} whether the given sound is currently playing.
+ */
+Sounds.prototype.isPlayingURL = function (url) {
+  var sound = this.soundsById[url];
+  if (sound) {
+    return sound.isPlaying();
+  }
+  return false;
+};
+
 Sounds.prototype.stopLoopingAudio = function (soundId) {
   var sound = this.soundsById[soundId];
   sound.stop();
@@ -214,6 +313,13 @@ function Sound(config, audioContext) {
   this.audioElement = null; // if HTML5 Audio
   this.reusableBuffer = null; // if Web Audio
   this.playableBuffer = null; // if Web Audio
+
+  /**
+   * @private {boolean} Whether the sound is currently playing - sadly, neither
+   *          audio system tracks this for us particularly well so we have to
+   *          do it ourselves.
+   */
+  this.isPlaying_ = false;
 }
 
 /**
@@ -232,10 +338,12 @@ Sound.prototype.play = function (options) {
     this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
 
     // Hook up on-ended callback, although browser support may be limited.
-    // Don't make anything depend on this callback happening.
-    if (options.onEnded) {
-      this.playableBuffer.onended = options.onEnded;
-    }
+    this.playableBuffer.onended = function () {
+      this.isPlaying_ = false;
+      if (options.onEnded) {
+        options.onEnded();
+      }
+    }.bind(this);
 
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
     if (this.playableBuffer.start) {
@@ -243,6 +351,7 @@ Sound.prototype.play = function (options) {
     } else {
       this.playableBuffer.noteOn(0);
     }
+    this.isPlaying_ = true;
     return;
   }
 
@@ -255,18 +364,20 @@ Sound.prototype.play = function (options) {
       Math.max(0, Math.min(1, options.volume));
   this.audioElement.volume = volume;
   this.audioElement.loop = !!options.loop;
-  if (options.onEnded) {
-    var unregisterAndCallback = function () {
-      this.audioElement.removeEventListener('abort', unregisterAndCallback);
-      this.audioElement.removeEventListener('ended', unregisterAndCallback);
-      this.audioElement.removeEventListener('pause', unregisterAndCallback);
+  var unregisterAndCallback = function () {
+    this.audioElement.removeEventListener('abort', unregisterAndCallback);
+    this.audioElement.removeEventListener('ended', unregisterAndCallback);
+    this.audioElement.removeEventListener('pause', unregisterAndCallback);
+    this.isPlaying_ = false;
+    if (options.onEnded) {
       options.onEnded();
-    }.bind(this);
-    this.audioElement.addEventListener('abort', unregisterAndCallback);
-    this.audioElement.addEventListener('ended', unregisterAndCallback);
-    this.audioElement.addEventListener('pause', unregisterAndCallback);
-  }
+    }
+  }.bind(this);
+  this.audioElement.addEventListener('abort', unregisterAndCallback);
+  this.audioElement.addEventListener('ended', unregisterAndCallback);
+  this.audioElement.addEventListener('pause', unregisterAndCallback);
   this.audioElement.play();
+  this.isPlaying_ = true;
 };
 
 Sound.prototype.stop = function () {
@@ -288,6 +399,14 @@ Sound.prototype.stop = function () {
       throw e;
     }
   }
+  this.isPlaying_ = false;
+};
+
+/**
+ * @returns {boolean} whether the sound is currently playing.
+ */
+Sound.prototype.isPlaying = function () {
+  return this.isPlaying_;
 };
 
 Sound.prototype.newPlayableBufferSource = function(buffer, options) {

@@ -20,7 +20,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
-## 3. 雇用主にも参加するよう聞いてみてください。
+## 3. 会社の方々にも働きかける
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 

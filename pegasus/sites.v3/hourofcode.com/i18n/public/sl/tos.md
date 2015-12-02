@@ -22,25 +22,25 @@ Ti pogoji se lahko spreminjajo. Strinjate se, da vas te spremembe obvezujejo v k
 
 Nekatere storitve so lahko predmet dodatnih smernic, pravil ali pogojev uporabe (“**Dodatni pogoji**”) in vaša uporaba teh storitev bo predmet vašega privoljenje v te dodatne pogoje. V kolikor nastopi nasprotje med temi pogoji in dodatnimi pogoji, potem dodatni pogoji določajo način uporabe tiste storitve, razen če dodatni pogoji eksplicitno določajo, da veljajo ti pogoji.
 
-### Children Under Age 13
+### Otroci mlajši od 13 let
 
 Trudimo se čim bolj zmanjšati količino osebnih podatkov, ki jih zbiramo od uporabnikov mlajših od 13 let, kot razloženo v [politiki zasebnosti](http://code.org/privacy) Code.org. V kolikor ste mlajši do 13 let, vas spodbujamo, da pridobite dovoljenje starša ali skrbnika preden ustvarite račun na Code.org. Code.org omogoča določenim predstavnikom šol, kot so učitelji, administrativni delavci, svetovalci in drugi edukatorji (“**Edukator**”), da se povežejo z učenci preko naše storitve, da lahko ponudijo svetovalne, izobraževalne in druge podobne storitve. V kolikor ste edukator, lahko registrirate računa za naše storitve za enega ali več vaših študentov.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Vaš račun
 
 V kolikor ustvarite račun za naše storitve, ste odgovorni za varnost vašega računa in za varno shrambo vašega gesla. V kolikor uporabljate račun, ki vam ga je dodelil vaš edukator, lahko edukator dostopa do vašega računa in vam račun zamrzne.
 
 Code.org vam lahko omogoči, da registrirate vaš račun za naše storitve s pomočjo določenih zunanjih socialnih omrežij, kot so Facebook Connect in Google (“**avtentikacijske storitve**”). Z registracijo za naše storitvijo s pomočjo avtentikacijske storitve, pristaneta da Code.org dostopa do podatkov o vašem računu na avtentikacijski storitvi in prav tako pristanete na vse pogoje uporabe avtentikacijske storitve, ki se tičejo uporabe naše storitve. Za uporabo avtentikacijske storitve ste v celoti odgovorni sami.
 
-### Privacy
+### Zasebnost
 
 Vaša zasebnost nam je pomembna. [Politika zasebnosti](http://code.org/privacy) Code.org podrobno pojasni, kako ravnamo z vašimi osebnimi podatki in je del teh pogojev uporabe. Prosimo, da podrobno preberete politiko zasebnosti in se podrobno seznanite s tem, kako Code.org zbira, uporablja in razkriva vaše osebne podatke.
 
 V kolikor ste učenec, ki uporablja račun registriran s strani edukatorja ali je kako drugače povezan z edukatorjem, pristaneta na to, da Code.org lahko razkrije edukatorju vaše podatke povezane s tem računom. V kolikor ste edukator, potem pristajate na to, da ne boste delili podatkov o učencih, ki jih dobite od Code.org komurkoli razen pooblaščencem razredov, šol in drugih izobraževalnih organizacij, ki jih predstavljate.
 
-### User Generated Content - Management; License Grant; Representations and Warranties
+### Uporabniško ustvarjene vsebine - upravljanje, avtorske pravice, zastopanje in jamstva
 
 Code.org lahko sedaj ali v prihodnje dovoli vam in drugim uporabnikom objaviti programsko kodo (tako izvorno kot prevedeno kodo), podatke, besedila, grafiko, zapiske, vprašanja, komentarje, ocene, slike in videe ali drugo komunikacijo (skupaj, “**uporabniške vsebine**”) v svoje storitve. Prosimo, razumite, da ne glede na to, ali so uporabniške vsebine objavljene ali ne, Code.org ne zagotavlja nobene zaupnosti poslanega gradiva.
 
@@ -54,17 +54,17 @@ By submitting or distributing User Content through the Services or directly to C
 
 Poleg tega, z oddajo in distribucijo uporabniške vsebine preko naših storitev, dajete vsem uporabnikom naše storitve ne-ekskluzivno licenco za dostop in uporabo vaših uporabniških vsebin.
 
-### User Content Representations and Warranties
+### Predstavljanje in jamstva za uporabniške vsebine
 
 Za uporabniške vsebine, ki jih objavite na naših storitvah ste v celoti odgovorni sami, prav tako za posledice objave. S prenosom, oddajo, ustvarjanjem ali objavljanjem vaše uporabniške vsebine na ali skozi naše storitve, zastopate in jamčite da: (1) ste ustvarjalec in lastnik vaših uporabniških vsebin in da imate pooblastila za uporabo potrebnih licenc, pravic, privoljenj in dovoljenj za objavo uporabniških vsebin, ki jih objavljate; (2) vaša uporabniška vsebina ne in ne bo (a) kršila ali zlorabila nobenih pravic tretjih oseb vključno z avtorskimi pravicami, blagovnimi znamkami, patenti, poslovnimi skrivnostmi, moralnimi pravicami, pravico zasebnosti, pravico javnosti ali katerekoli druge intelektualne lastnine ali druge lastniske pravice ali (b) žalili ali kršili pravico do zasebnosti, javnosti ali drugo lastninsko pravico drugih oseb; (3) vaša uporabniška vsebina ne vsebuje nobenih virusov, oglasnih programov, vohunskih programov, črvov ali druge zlonamerne kode.
 
-### Restrictions on Content and Use of the Services
+### Omejitve glede vsebin in uporabe naših storitev
 
 Pridržujemo si pravico, da kadarkoli (vendar temu nismo obvezani) lahko odstranimo ali zavrnemo distribucijo katerekoli uporabniške vsebine na spletni strani in zamrznemo ali odstranimo uporabnika, brez tveganj za vas. Prav tako si pridržujemo pravico do dostopa, branja, ohranitve in razkritja katerikoli informacije, za katero lahko upravičeno verjamemo, da je potrebna za (i) zadovoljitev vseh zakonov, predpisov, zakonskih postopkov ali vladnih zahtevkov, (ii) uveljavljamo pogoje, vključno s preiskavo možnih prestopkov le-teh, (iii) zaznavamo, preprečimo in kako drugače naslovimo goljufanje, ter varnostne in tehnične probleme, (iv) se odzovemo na zahteve po uporabniški pomoči, ali (v) zaščitimo pravice, lastnino ali varnost Code.org, naših uporabnikov ali javnosti.
 
 Ko dostopate ali uporabljate naše storitve, vam ni dovoljeno: (i) dostopati, spreminjati ali uporabljati ne-javne dele naših storitev, računalnikov Code.org ali tehničnih sistemov za zagotavljanje storitev Code.org; (ii) poskušati, preizkušati ali preverjati ranljivost katerikoli sistema ali omrežja ali predreti ali obiti kateregakoli varnostnega ali avtentikacijskega mehanizma; (iii) dostopati ali iskati ali poskušati dostopati ali iskati naše storitev na drug način (avtomatski ali drugačen) razen preko trenutno dostopnih, objavljenih vmesnikov, ki so dani na voljo s strani Code.org (in samo v skladu s temi pogoji), razen če ste za do dobili dovoljenje s strani Code.org z ločeno pogodbo (OPOMBA: pajkovanje naših storitev je dovoljeno v kolikor je opravljeno skladno z pravili v datoteki robots.txt, toda, zajem naših storitev brez predhodnega dovoljenja Code.org ni dovoljeno); (iv) ponarejanje katerekoli glave paketa TCP/IP ali katerekole druge informacije v glavi elektronske pošte ali sporočila, ali kako drugače uporabljati naše storitve za pošiljanje spremenjenih, zavajajočih ali informacij, ki se napačno predstavljajo; ali (v) vmešavanje ali motnja (ali poskus le-tega) dostopa kateregakoli uporabnika, gostitelja ali omrežja vključno s trpinjčenjem in nadlegovanjem, pošiljanjem virusov, preobremenitvijo, poplavljanjem, nezaželjeno pošto ali bombardiranje z elektronsko pošto naših storitev, ali da se napiše skripta, ki ustvari vsebine na tak način, da motijo ali ustvarijo nepotrebno breme našim storitvam.
 
-### Your License to Use Code.org Videos, Tutorials, Data, and APIs
+### Vaša licenca za uporabo video posnetkov, vaj, podatkov in aplikacijskih programskih vmesnikov Code.org
 
 Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 

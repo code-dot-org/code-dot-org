@@ -1,16 +1,6 @@
 if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
-  module SimpleCov::Configuration
-    def clean_filters
-      @filters = []
-    end
-  end
-
-  SimpleCov.configure do
-    clean_filters
-    load_profile 'test_frameworks'
-  end
 end
 
 require 'minitest/reporters'

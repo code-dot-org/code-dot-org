@@ -51,10 +51,10 @@ Breakfast and lunch will be served.
 
 **Location**
 
-FCPS Staff Development Center<br/>
+[FCPS Staff Development Center<br/>
 Staff Development Room<br/>
 44 W. Frederick St.<br/> 
-Walkersville, MD 21793
+Walkersville, MD 21793](https://www.google.com/maps/place/44+W+Frederick+St,+Walkersville,+MD+21793/@39.4800506,-77.3548383,17z/data=!3m1!4b1!4m2!3m1!1s0x89c9cfbc4d01eca3:0xdda2b4ca808226ce)
 
 Free parking is available in the lot next to the building.
 

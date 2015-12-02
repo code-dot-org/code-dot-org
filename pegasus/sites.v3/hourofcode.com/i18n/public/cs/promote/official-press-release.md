@@ -8,18 +8,18 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Ukázka tisková zprávy pro politiky
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Pro okamžité zveřejnění   
+[**datum**]   
+Kontakt: [**kontaktní informace**]  
   
 
 
 **
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  HEJTMAN/SENÁTOR/POSLANEC/STAROSTA [vložit jménoNAME] [SE ZÚČASTNIL V HODINĚ KÓDU S MÍSTNÍMI STUDENTY]</strong> <br /> Společenství to dodává povědomí o významu výuky informatiky z účasti na Týdne vzdělávání informatiky
 </center>
 
   

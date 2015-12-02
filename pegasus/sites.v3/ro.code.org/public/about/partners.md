@@ -38,9 +38,22 @@ social:
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.bitdefender.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Bitdefender-Logo-Black-259x160.png"></a>
                     </div>
-                  </div></div><h1 class="text-align-center">Parteneri</h1><div class="row"><div class="col-sm-3 col span_3">
+                  </div><div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.google.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/newgoogle.png"></a>
+                    </div>
+                  </div></div><h1 class="text-align-center">Sponsori</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.cisco.com/web/RO" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Cisco.png"></a>
+                    </div>
+                  </div><div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.contentspeed.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/contentspeed.png"></a>
+                    </div>
+                  </div><div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.gameloft.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ok_black_1_cleanfinalcs5-e1415645270641-228x160.png"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ibm.com/ro/ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ibmlogo.jpg"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
@@ -48,11 +61,27 @@ social:
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/strategad-163x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://sianimage.com/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/sianimage.png"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://siveco.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-siveco.png"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://strategad.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/strategad-163x160.png"></a>
+                    </div>
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upc.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/upc-logo-cmyk-lo-e1417814082326-157x160.png"></a>
+                    </div>
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.cargus.ro/ro/“ target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/urgentcargus.png"></a>
+                    </div>
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.zitec.com/“ target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ziteclogo.png"></a>
                     </div>
                   </div></div><h1 class="text-align-center">Suporteri</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
@@ -68,9 +97,13 @@ social:
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.aries.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-aries-300x97.jpg"></a>
+                    </div>
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://acs.pub.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/ACS_logo_digit-1-365x160.png"></a>
                     </div>
-                    </div><div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.britishcouncil.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/British-Council-stacked-Corporate-rgb-e1415722280172-558x160.jpg"></a>
                     </div>
@@ -78,15 +111,11 @@ social:
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.devicehub.net/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-simplu-696x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://digitalkids.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo-digital-kids-210x160.png"></a>
                     </div>
-		</div><div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.hahahaproduction.com" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/hahaha.png"></a>
-                    </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.geyc.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_geyc-2-280x160.jpg"></a>
                     </div>
@@ -98,11 +127,15 @@ social:
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.facebook.com/GirlsWhoCodeRO" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/GWCR_logo_300-160x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://hr-club.ro/ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/HRClub.png”></a>
+                    </div>
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://hyc.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Logo-HYC-patrat-160x160.jpg"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://inventeaza.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_inventeaza_extended-140x160.png"></a>
                     </div>
@@ -114,11 +147,11 @@ social:
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.jaromania.org" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/JA-YE-ROMANIA_vf-e1416154651265-293x160.jpg"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.lsacbucuresti.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/sigla_LSAC_vectorial_72dpi-1-453x160.png"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://lse.org.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/LSE-160x160.png"></a>
                     </div>
@@ -130,11 +163,11 @@ social:
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upb.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Sigla_UPB_color-1-e1414702368515-160x160.png"></a>
                     </div>
-                  </div><div class="col-sm-3 col span_3">
+                  </div></div><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.rgda.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/RGDA-new-logo-337x160.png"></a>
                     </div>
-                  </div></div><div class="row"><div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://scoaladevalori.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Logo-Scoala-de-Valori-color-e1417547444856-164x160.jpg"></a>
                     </div>
@@ -147,6 +180,14 @@ social:
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upir.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/upir.png"></a>
                     </div>
                   </div></div><h1 class="text-align-center">Parteneri Media</h1><div class="row"><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.digi24.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/D24.jpg”></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.thetrends.ro/" target="_blank"><img style="max-width: 100%" src="/images/trends1tif.png”></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.agora.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_AGORA-511x160.png"></a>
                     </div>

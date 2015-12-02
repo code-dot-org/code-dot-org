@@ -114,10 +114,6 @@ class Game < ActiveRecord::Base
     app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
-  def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
-  end
-
   def flappy?
     app == FLAPPY
   end
@@ -134,7 +130,7 @@ class Game < ActiveRecord::Base
     app == NETSIM || app == APPLAB
   end
 
-  # True if the app takes responsability for showing footer info
+  # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
     app === APPLAB
   end

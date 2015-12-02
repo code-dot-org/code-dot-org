@@ -387,3 +387,7 @@ exports.CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
 exports.SOUND_THROTTLE_TIME = 200;
+
+// How many milliseconds to throttle between whenTouchObstacle events when
+// blockMovingIntoWalls is enabled.
+exports.TOUCH_OBSTACLE_THROTTLE_TIME = 330;

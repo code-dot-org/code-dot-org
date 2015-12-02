@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Alza o abbassa la matita, per avviare o arrestare il disegno."},
 "penUp":function(d){return "Alza la matita"},
 "reinfFeedbackMsg":function(d){return "Ecco il tuo disegno! Continua a lavorarci sopra oppure passa al prossimo esercizio."},
-"setAlpha":function(d){return "imposta alpha"},
+"setAlpha":function(d){return "imposta la trasparenza"},
 "setColour":function(d){return "Imposta il colore"},
 "setPattern":function(d){return "imposta lo schema"},
 "setWidth":function(d){return "imposta la larghezza"},
