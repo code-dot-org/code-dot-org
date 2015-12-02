@@ -13,10 +13,11 @@
     launch_path = "/starwars"
   end
 
-%a{href: "/api/hour/begin/mc"}
-  %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
-%a{href: launch_path}
-  %img.banner{id: "banner-starwars", src: "/images/starwars_banner.jpg", style: "display: none;"}
+#banner-slideshow
+  %a{href: "/api/hour/begin/mc"}
+    %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
+  %a{href: launch_path}
+    %img.banner{id: "banner-starwars", src: "/images/starwars_banner.jpg", style: "display: none;"}
 
 #learnCodeStudio.container.col-md-12
   #codeStudioCarousel.carousel.slide.multi-item-carousel

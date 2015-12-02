@@ -3,6 +3,11 @@
   margin-bottom: 5px;
 }
 
+#banner-slideshow {
+  position: relative;
+  height: 110px;
+}
+
 .banner {
   max-width: 910px;
   border-radius: 5px;
@@ -11,6 +16,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  position: relative;
 }
 
 .smalltext {
@@ -90,6 +96,14 @@
     width: 0px;
   }
 
+  #banner-slideshow {
+    height: 20px;
+  }
+
+  .footer-banner {
+    margin: 0 10px;
+  }
+
   .container-fluid {
     padding-left: 10px;
   }
@@ -137,6 +151,14 @@
     display: none;
     height: 0px;
     width: 0px;
+  }
+
+  #banner-slideshow {
+    height: 20px;
+  }
+
+  .footer-banner {
+    margin: 0 10px;
   }
 
   .container-fluid {
@@ -193,6 +215,10 @@
 
   #quicklinks {
     width: 185px;
+  }
+
+  #banner-slideshow {
+    height: 80px;
   }
 
   .multi-item-carousel .carousel-inner .active.left {
