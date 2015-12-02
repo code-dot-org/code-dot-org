@@ -23,7 +23,7 @@ function packSourceFile() {
 
 function unpackSourceFile(data) {
   current.levelSource = data.source;
-  current.html = data.html;
+  current.levelHtml = data.html;
 }
 
 var events = {
@@ -50,6 +50,7 @@ var PathPart = {
 };
 
 /**
+ * Current state of our Channel API object
  * @typedef {Object} ProjectInstance
  * @property {string} id
  * @property {string} name
@@ -273,7 +274,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
-          this.save(callback);
+          this.saveSource_(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -362,8 +363,9 @@ var projects = module.exports = {
    *   call to `sourceHandler.getLevelSource`.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} sourceOnly If true, we refrain from modifying channels api
    */
-  save: function(sourceAndHtml, callback, forceNewVersion) {
+  save: function(sourceAndHtml, callback, forceNewVersion, sourceOnly) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -372,8 +374,11 @@ var projects = module.exports = {
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
-      callback = arguments[0];
-      forceNewVersion = arguments[1];
+      var args = Array.prototype.slice.apply(arguments);
+      callback = args[0];
+      forceNewVersion = args[1];
+      sourceOnly = args[2];
+
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
         html: this.sourceHandler.getLevelHtml()
@@ -402,10 +407,29 @@ var projects = module.exports = {
     sources.put(channelId, packSourceFile(), filename, function (err, response) {
       currentSourceVersionId = response.versionId;
       current.migratedToS3 = true;
-      channels.update(channelId, current, function (err, data) {
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
-      }.bind(this));
+
+      if (sourceOnly) {
+        // manually set updatedAt. Note, this puts current out of sync with
+        // what we have stored in db. This date string is also formatted slightly
+        // differently than the string we get from channels API, but should be okay.
+        current.updatedAt = (new Date()).toString();
+        this.updateCurrentData_(err, current, false);
+        executeCallback(callback, current);
+      } else {
+        // TODO - get to point where source/html are stored separately
+
+        // Explicitly stop saving levelSource/levelHtml to channels
+        var channelData = $.extend({}, current);
+        delete channelData.levelSource;
+        delete channelData.levelHtml;
+        // Also clear out html, which we never should have been setting.
+        delete channelData.html;
+
+        channels.update(channelId, channelData, function (err) {
+          this.updateCurrentData_(err, channelData, false);
+          executeCallback(callback, channelData);
+        }.bind(this));
+      }
     }.bind(this));
   },
   updateCurrentData_: function (err, data, isNewChannel) {
@@ -429,6 +453,12 @@ var projects = module.exports = {
       }
     }
     dashboard.header.updateTimestamp();
+  },
+  /**
+   * Saves to sources API without hitting channels API
+   */
+  saveSource_: function (sourceAndHtml, callback) {
+    return this.save(sourceAndHtml, callback, false, true);
   },
   /**
    * Autosave the code if things have changed
@@ -456,7 +486,7 @@ var projects = module.exports = {
       return;
     }
 
-    this.save({source: source, html: html}, function () {
+    this.saveSource_({source: source, html: html}, function () {
       hasProjectChanged = false;
     });
   },
@@ -611,15 +641,26 @@ var projects = module.exports = {
   }
 };
 
-function fetchSource(data, callback) {
-  current = data;
+/**
+ * @param {object} channelData Data we fetched from channels api
+ * @param {function} callback
+ */
+function fetchSource(channelData, callback) {
+  current = $.extend({}, channelData, {
+    // explicitly dont get html/source from channel api
+    levelHtml: null,
+    levelSource: null
+  });
+
   projects.setTitle(current.name);
-  if (data.migratedToS3) {
+  if (channelData.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
       unpackSourceFile(data);
       callback();
     });
   } else {
+    // It's possible that we created a channel, but failed to save anything to
+    // S3. In this case, it's expected that html/levelSource are null.
     callback();
   }
 }
