@@ -1544,8 +1544,16 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
-levels.iceage_free_play = utils.extend(levels.playlab_10, {});
-levels.gumball_free_play = utils.extend(levels.playlab_10, {});
+levels.iceage_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
+levels.gumball_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
