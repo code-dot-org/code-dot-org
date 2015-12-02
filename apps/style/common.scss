@@ -220,8 +220,7 @@ div.droplet-palette-group-header-selected.orange {
 }
 
 .share-code-spacer {
-  clear: both;
-  min-height: 25px;
+  min-height:25px;
 }
 
 button.arrow {
@@ -1263,12 +1262,43 @@ $workspace-header-button-margin: ($workspace-headers-height -
   border: 1px solid $purple;
   margin: 0px;
   color: white;
+  width: 48.5%;
   font-size: 13px;
   text-align: center;
   &:disabled {
     color: $purple;
     background-color: lightgrey;
   }
+}
+
+#print-button {
+  background-color: $purple;
+  border: 1px solid $purple;
+  color: white;
+  margin: 0px;
+  width: 48.5%;
+  font-size: 13px;
+  text-align: center;
+}
+
+#shapeways-print-go-button {
+  margin-bottom: 10px;
+}
+
+#shapeways-message-body {
+  font-size: 15px;
+  margin-bottom: 7px;
+  line-height: 26px;
+}
+
+#shapeways-message-body-disclaimer {
+  font-size: 11px;
+  margin-bottom: -11px;
+}
+
+#shapeways-message {
+  display: block;
+  text-align: center;
 }
 
 .hide {
@@ -1290,20 +1320,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
-#sharing {
-  clear: both;
-  margin-top: 25px;
+.sharing {
+  float: left;
+  margin-top: 15px;
   font-size: 20px;
   color: $charcoal;
-
-  .feedback-image {
-    width: 180px;
-    height: 180px;
-    margin: 0 15px 0 0;
-    float: left;
-    border: $lighter_gray;
-    border-style: solid
-  }
 
   label {
     margin-top: 15px;
@@ -1312,49 +1333,24 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 
   div {
-    margin: 10px 0;
+    margin-bottom: 15px;
   }
 
-  button {
-    background-color: $purple;
-    color: white;
-    font-size: 0.7em;
-    min-width: 40px;
-    text-align: center;
-    margin: 0;
-
-    .disabled,
-    &[disabled=disabled],
-    &:disabled {
-      border: 1px solid $purple;
-      background-color: $lighter_gray;
-      box-shadow: none;
-    }
-
-    a, a:hover, a:link, a:visited {
-      background-color: transparent;
-      color: white;
+  .saved-to-gallery {
+    width: 48.5%;
+    font-size: 13px;
+    margin: 0px;
+    border: 1px solid $purple;
+  }
+  .social-buttons {
+    a:hover {
       text-decoration: none;
     }
   }
-
-  button.saved-to-gallery {
-    font-family: "Gotham 4i";
-  }
-
   #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 200px;
-    padding: 10px;
-  }
-
-  #copy-button {
-    max-width: 100px;
-  }
-
-  #sharing-phone i.fa {
-    font-size: 24px;
+    width: 260px;
   }
 
   input#phone {
@@ -1499,8 +1495,3 @@ $see-examples-thick-underline-color: $yellow;
 .droplet-hover-div {
   max-width: 100% !important;
 }
-
-.legacy-share-view #belowVisualization {
-  display: none;
-}
-
