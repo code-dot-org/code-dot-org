@@ -8,42 +8,42 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Mostra da nota de prensa para os representantes políticos
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Para publicación inmediata  
+[**DATA**]  
+Contacto: [**INFORMACIÓN DE CONTACTO**]  
   
 
 
 **
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  GOBERNADOR/SENADOR/MEMBRO DA ASAMBLEA/REPRESENTANTE LOCAL/ALCALDE/CONCELLEIRO [INSERTE NOMBE][PARTICIPANTE NA HORA DO CÓDIGO CON ESTUDANTES LOCAIS]</strong><br /> A comunidade únese para crear conciencia sobre a importancia da ensinanza da informática, ó participar na Semana da Educación en Informática
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**DATA** - [**INSERTAR NOME**] uniuse ó director e persoal docente da [** INSERTAR NOME DO COLEXIO**], líderes empresariais e familias locais hoxe para [**NOME DO EVENTO**] para participar na Hora do Código dentro dos eventos da Semana da Educación en Informática. [INSERTAR NOME] e outros membros da comunidade atopábanse entre as ducias de millóns de persoas ó redor do mundo en tomar parte no maior evento educativo da historia.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**INTRODUCIR OS DETALLES DO EVENTO, EMPREGAR UNHA LINGUAXE DESCRIPTIVA E CUANTIFICABLE. POR EXEMPLO:**]  
+"Daniels Run Elementari School celebrou o evento da Hora do Código en todo o colexio para expoñer ós seus estudantes á informática. Máis de 700 estudantes de todos os cursos fixeron, polo menos, unha Hora do Código. E unha ducia de pais e voluntarios da comunidade axudaron co día e reuniron ós rapaces para unha demostración de porque a informática é importante nas vidas deste estudantes."
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**EXEMPLO DE TEXTO PARA CONTIDO:**]  
+Os ordenadores están en todas partes, pero poucos son os colexios ensinan informática dende hai máis de 10 anos. As rapazas e estudantes de cor están severamente pouco representados. A boa nova é que estamos a cambiar as cousas para mellor. A Hora do Código é unha porta que lle da acceso a tódolos estudantes a unha educación de calidade en informática.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Máis de 100 millóns de estudantes en todo o mundo xa teñen participado nalgunha Hora do Código. Gracias a Hora do Código, a informática situouse nas páxinas principais de Google, MSN, Yahoo! e Disney. O Presidente Obama, Shakira e Ashton Kutcher abriron con vídeos a Hora do Código. Maís de 100 socios se uniron para apoiar esta iniciativa.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**INSERTAR CITA DO PORTAVOR, EXEMPLO A CONTINUACIÓN:**]  
+"Precisamos animar e abrazar o interese dos estudantes pola informática," dixo [**INSERTE NOME**]. "Tódolos estuantes merecen a posibilidade de aprender informática para acceder ás mellores carreiras profesionais do século 21."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**INSERTE MÁIS INFORMACIÓN A CERCA DO EVENTO Y/OU SOBRE A SÚA ORGANIZACIÓN**
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**INSERTE UNHA CITA DE OUTRA ORGANIZACIÓN OU DALGUÉN QUE ACUDISE Ó EVENTO**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Para máis información sobre [**EVENTO/PROGRAMA/ETC**], visite [**INSERTE SITIO WEB**] ou contacte con [**INSERTE INFORMACIÓN DE CONTACTO**]
 
   
   

@@ -9,6 +9,6 @@ layout: wide
 
 # Få hele din skole til at deltage
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Oplysninger om at få hele skoler til at deltage i Hour of Code vil vises her.
 
 <%= view :signup_button %>

@@ -14,22 +14,22 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 ## 1. Diffondi la notizia
 
-Dì ai tuoi amici de L'Ora del Codice con #HourOfCode.
+Parla con i tuoi amici di #HourOfCode.
 
-## Proponi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
+## 2. Chiedi alla tua scuola di organizzare un'Ora del Codice
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
+[Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#email') %>) al Dirigente Scolastico della tua scuola.
 
-## 3. Proponi al tuo datore di lavoro di essere coinvolti
+## 3. Proponi al tuo datore di lavoro di coinvolgere la tua organizzazione
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
+[Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#email') %>) al tuo responsabile, o Amministratore Delegato.
 
-## Promuovi un'Ora di Codice nella tua comunità
+## 4. Promuovi l'Ora di Codice fra i tuoi conoscenti
 
-Ingaggia un gruppo di persone: boy-scout, parrocchia, università, gruppo di esperti o sindacato. Oppure ospita un "block party" dell'Ora di Codice per il tuo quartiere. [Send this email](<%= resolve_url('/promote/resources#email') %>).
+Recluta un po' di persone — tra i boy-scout, in parrocchia, all'università, tra gli esperti o al sindacato. Oppure ospita un "party" dell'Ora di Codice per il tuo quartiere. [Manda questa e-mail](<%= resolve_url('/promote/resources#email') %>).
 
-## 5. Proponi ad un funzionario locale di sostenere L'Ora del Codice
+## 5. Proponi ad un amministratore locale di sostenere L'Ora del Codice
 
-[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#politicians') %>) al Sindaco, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola.
 
 <%= view :signup_button %>
