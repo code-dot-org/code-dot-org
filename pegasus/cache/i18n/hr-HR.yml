@@ -313,6 +313,10 @@
   class_submission_languages_other: Drugi jezik/jezici
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Koristi povuci-ispusti blokove i JavaScript.
@@ -706,11 +710,15 @@
   carousel_heading_international: Vodiči na tvom jeziku
   carousel_heading_domestic: Upute dostupne na engleskom
   carousel_heading_beginners: Tutorijali za početnike
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorijali za učenje JavaScripta
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Nemate uređaje ili Internet? Isprobajte 'odspojenu'
     informatiku
   carousel_heading_devices: Tutorijalne aplikacije za mobitele i tablete
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorijali u drugim programskim jezicima
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Izradi svoje vlastite aplikacije ili igrice
   carousel_heading_university: Sveučilišni tečajevi online
   carousel_heading_webpages: Nauči izrađivati web stranice

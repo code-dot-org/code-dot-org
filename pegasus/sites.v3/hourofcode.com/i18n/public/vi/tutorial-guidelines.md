@@ -151,7 +151,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Xin vui lòng cũng bao gồm các kiến thức khoa học được đề nghị máy tính trong lớp cấp độ: sơ cấp, Trung cấp, hoặc nâng cao. Giờ của mã trang web sẽ đánh dấu hoạt động cho người mới bắt đầu nổi bật nhất. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Yêu cầu kỹ thuật: 
       * Để chính xác hơn theo dõi sự tham gia, chúng tôi muốn mỗi đối tác hướng dẫn bên thứ ba để bao gồm các hình ảnh 1-pixel theo dõi trên trang đầu tiên và cuối cùng của hướng dẫn giờ của mã của họ. Nơi xuất phát điểm ảnh, hình ảnh trên trang bắt đầu và một điểm ảnh hình ảnh cuối cùng trên trang cuối cùng. Không đặt điểm ảnh trên tạm thời trang). Xem phần theo dõi Pixel dưới đây để biết thêm chi tiết. 
-      * Sau khi kết thúc hoạt động của bạn, người dùng nên được hướng dẫn đến [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Sau khi kết thúc hoạt động của bạn, người dùng nên được hướng dẫn đến [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) nơi họ sẽ có thể: 
           * Chia sẻ trên xã hội truyền thông rằng họ hoàn thành giờ mã
           * Nhận được một giấy chứng nhận rằng họ hoàn thành giờ mã
           * Xem các ban lãnh đạo về những quốc gia/thành phố có tỷ lệ tham gia cao nhất trong giờ mã hoạt động
@@ -215,13 +215,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 Một trong những vai trò của việc này nhằm bảo vệ thương hiệu "Giờ Mã Hóa" tránh bị nhầm lẫn. Nhiều người trong số các đối tác đã được hướng dẫn sử dụng "Giờ Mã Hóa" trên trang web của bạn. Chúng tôi không muốn để ngăn chặn việc sử dụng này, nhưng chúng tôi muốn đảm bảo rằng nó được đặt trong một khuôn khổ nhất định:
 
-  1. Bất kỳ tham chiếu đến "Giờ mã" nên được sử dụng trong một thời trang không gợi ý rằng nó là tên thương hiệu riêng của bạn, nhưng thay vì tham khảo giờ mã như là một phong trào cơ sở. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Ví dụ xấu: "Hãy thử giờ của mã bởi ACME Corp"
-  2. Sử dụng một superscript "TM" trong những nơi nổi bật nhất bạn đề cập đến "Giờ mã", cả hai trên trang web của bạn và trong phần giới thiệu ứng dụng
+  1. Bất kỳ tham chiếu đến "Giờ mã" nên được sử dụng trong một thời trang không gợi ý rằng nó là tên thương hiệu riêng của bạn, nhưng thay vì tham khảo giờ mã như là một phong trào cơ sở. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Bao gồm các ngôn ngữ trên trang (hoặc trong các chân trang), trong đó có liên kết đến các trang web CSEdWeek và Code.org, nói những điều sau đây:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. Không sử dụng "Giờ của mã" trong tên ứng dụng
+  4. No use of "Hour of Code" in app names.
 
 [**Quay lại đầu trang**](#top)
 

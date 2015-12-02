@@ -76,13 +76,6 @@ class PropertiesApi < Sinatra::Base
     parsed_value = PropertyBag.parse_value(request.body.read)
     value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
-    # While the migration is in process, write to both Pegasus and DynamoDB
-    # when use_dynamo_properties is enabled.
-    # TODO(dave): remove this block once we we have finished the migration.
-    if CDO.use_dynamo_properties
-      PropertyBag.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
-    end
-
     dont_cache
     content_type :json
     value.to_json

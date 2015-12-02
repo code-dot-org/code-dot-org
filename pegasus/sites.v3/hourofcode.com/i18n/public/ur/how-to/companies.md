@@ -10,76 +10,81 @@ nav: how_to_nav
 
 # How to bring the Hour of Code to your company
 
-**There are many ways companies can participate in the Hour of Code and help expand participation in computer science. Consider:**
+## Inspire students and volunteer for the Hour of Code
+
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+
+  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
+  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+
+## Additional ways companies can support the Hour of Code:
 
   * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
-  * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
-  * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
-  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
+  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [ یہ ای-میل دیکھیں](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
-## How to host an Hour of Code event
+## آور-آف-کوڈ کا ایک ایونٹ کیسے ھوسٹ کریں۔
 
-## 1) Sign up
+## 1) سائن-اَپ
 
-  * Register your [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %> event.
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+  * اپنا [ آور-آف-کوڈ](<%= resolve_url('/') %>) ایونٹ <%= campaign_date('short') %> کے دوران رجسٹر کریں۔
+  * اپنے[ آور-آف-کوڈ](<%= resolve_url('/promote') %>) ایونٹ کو پروموٹ کریں اور دوسروں کو ھوسٹ کرنے کی ترغیب دیں۔
+  * اپنی کمپنی میں ** سوفٹ ویئر انجنیئرز** کا حوصلہ بڑھائیں کہ وہ مقامی کلاس روم کو وزٹ کریں تاکہ آور-آف-کوڈ کی قائدانہ مدد کی جاسکے اور اسٹوڈینٹس کو کمپیوٹر سائنس اسٹڈی کرنے کے لیے متاثر کیا جاسکے۔ وہ کرسکتے ہیں [ سائن-اَپ](<%= resolve_url('https://code.org/volunteer/engineer') %>) تاکہ کلاس روم کے ساتھ منسلک ہوسکیں۔
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) یہ ھاؤ-ٹو ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) ٹیٹوریئل منتخب کریں:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+ہم جملہ اقسام کے [ تفریحی، طویل دورانیہ کے ٹیٹوریئلز](<%= resolve_url('https://code.org/learn') %>) ھوسٹ کرتے ہیں جو تمام عمر کے شرکاء کے لیے اور کئی طرح کے پارٹنرز کے بنائے ہوئے ہوسکتے ہیں۔ * آور-آف-کوڈ کے نئے ٹیٹوریئلز تہلکہ مچانے آ رہے ہیں <%= campaign_date('full') %>.* اس سے پہلے [حالیہ ٹیٹوریئلز ٹرائی کریں۔](<%= resolve_url("https://code.org/learn") %>)
 
-**تمام اسباق گھنٹے کا کوڈ:**
+**آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
-  * Require minimal prep-time
-  * Are self-guided - allowing participants to work at their own pace and skill-level
+  * تیاری کے لیے کم از کم درکار وقت
+  * یہ سیلف-گائیڈڈ ہوتے ہیں جو شرکاء (پارٹیسیپنٹس) کو ان کی اپنی رفتار اور صلاحیت کے درجہ کے مطابق کام کرنے کا موقع دیتے ہیں۔
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 4) اپنی ٹیکنالوجی کی ضروریات کا پلان کریں – کمپیوٹرز آپشنل ہیں
 
-سب سے بہتر کوڈ کی گھڑی کا تجربہ انٹرنیٹ سے منسلک کمپیوٹرز سے ھو گا ۔ You **don’t** need a computer for every participant, and can even do the Hour of Code without a computer at all.
+آور-آف-کوڈ کو بہترین سیکھنے کا تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکے گا۔ آپ کو ہر ایک شریک پارٹیسیپنٹ کے لیے کمپیوٹر کی ضرورت ** نہیں** ہے، اور یہاں تک کہ آور-آف-کوڈ بغیر کسی کمپیوٹر کے بھی کرسکتے ہیں۔
 
-  * Test tutorials on the devices you plan to use. Make sure they work properly on browsers with sound and video.
-  * If the tutorial you choose works best with sound you may want to consider providing headphones.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Have participants partner with each other. They’ll also see that computer science is social and collaborative.
-  * Or try the [unplugged / offline tutorials](<%= resolve_url('https://code.org/learn') %>). These require no computers and is a great way to get participants up and moving. 
+  * جن ڈیوائس کو آپ استعمال کرنے کا سوچ رہے ہیں اس پر ٹیٹوریئلز ٹیسٹ کریں۔ یقینی اطمینان کرلیں کہ یہ براؤزر پر ساؤنڈ اور ویڈیو کے ساتھ درست طور پر کام کر رہے ہیں۔
+  * اگر آپ کے منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کر رہے ہیں تو آپ پھر شاید آپ ھیڈفونز حاصل کرنے پر غور کریں۔
+  * کافی ڈیوائسز نہیں ہیں؟ </strong> تو [پیئر پروگرامنگ](https://www.youtube.com/watch?v=vgkahOzFH2Q) استعمال کریں۔ شرکاء کو ایک دوسرے کا پارٹنر بنا دیں۔ وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔
+  * یا پھر [ غیرمنسلک/آف لائین ٹیٹوریئلز ٹرائی کریں۔](<%= resolve_url('https://code.org/learn') %>) ان کے لیے کمپیوٹر کی ضرورت نہیں ہوتی اور یہ پارٹیسیپنٹ کو بہت کچھ کرنے کا موقع دینے کا ایک بہترین طریقہ ہے۔ 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) پارٹیسیپنٹ (شرکاء) کو ایسی ترغیب دیں کہ وہ آور-آف-کوڈ شروع کریں
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+پارٹیسیپنٹ کو متاثر کرتے ہوئے اپنا آور-آف-کوڈ دل جمعی سے شروع کریں اور انہیں بتائیں کہ کمپیوٹر سائنس ہماری روزمرہ زندگی کے ہر حصہ پر کس طرح اثرانداز ہوسکتی ہے۔ کمپیوٹر سائنس کو جاری رکھنے میں آپ کس چیز سے متاثر ہوئے اور اپنی کمپنی میں اپنے کردار کو شیئر کریں۔
 
-**Show an inspirational video:**
+**کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:**
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Code.org کی اوریجنل ویڈیو پلے کریں، جس میں بل گیٹس، مارک زوکربرگ، اور NBA اسٹار کرس بوش نمایاں کردار ہیں۔ (اس کے [ 1 منٹ](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [ 5 منٹ](https://www.youtube.com/watch?v=nKIu9yen5nc)، اور [ 9 منٹ](https://www.youtube.com/watch?v=dU1xS07N-FA) پر مبنی ورژن ہیں)
+  * د ی [آور-آف-کوڈ 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw)، لانچ کریں، یا د ی <% if @country == 'uk' %> [ آور-آف-کوڈ 2015 ویڈیو](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> آور-آف-کوڈ 2015 ویڈیو</a> چلائیں۔ <% end %>
+  * [صدر اوباما نے تمام اسٹوڈینٹس کو کمپیوٹر سائنس سیکھنے پر زور دیا](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * مزید اثرانگیز ویڈیوز [یہاں](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) تلاش کریں.
 
-**Ideas to introduce your Hour of Code activity:** - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). - If you are a tech company, demo fun, innovative products your company is working on. - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals. - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on. - See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+**اپنے آور-آف-کوڈ کی ایکٹیویٹی کو متعارف کرانے کے لیے آپ کے آئیڈیاز: ** ٹیکنالوجی کا ہماری زندگیوں پر پڑنے والے اثرات کی وضاحت کریں، مثالوں کے ساتھ لڑکے اور لڑکیاں دونوں تاثرات دیں گے (ٹیکنالوجی پر بات چیت کریں کہ کس طرح یہ ہماری زندگیوں کو بچانے، لوگوں کی مدد کرنے اور لوگوں کو منسلک کرسکتی ہے، وغیرہ)۔ اگر آپ کی ایک ٹیکنالوجی کمپنی ہے تو ان جدید موضوعات جن پر آپ کی کمپنی کام کر رہی ہے، اسکا فن ڈیمو پیش کریں۔ - اگر آپ کی ایک ٹیک کمپنی نہیں ہے تو اپنی کمپنی کے مسائل کے حل اور گولز کے حصول کے لیے ٹیکنالوجی کے استعمال کے مختلف طریقہ ہائے کار پر گفتگو کریں۔ - اپنی کمپنی کے سافٹ ویئر انجنیئرز کو یہ بات کرنے کے لیے مدعو کریں کہ انہوں نے کمپیوٹر سائنس کا ہی مطالعہ کرنے کا کیوں فیصلہ کیا اور کیوں وہ ان پروجیکٹس پر کام کر رہے ہیں۔ - کمپیوٹر سائنس میں لڑکیوں کی دلچسپی بڑھانے کے لیے [ یہاں](<%= resolve_url('https://code.org/girls') %>) تجاویز دیکھیں۔ .
 
-## 6) Code!
+## 6) کوڈ!
 
-**Direct participants to the activity**
+**ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+  * ایک ٹیٹوریئل تحریر کریں۔ اپنے [منتخب کردہ ٹیٹوریئل کے لیے انفارمیشن فہرست](<%= resolve_url('https://code.org/learn') %>) کا لنک تلاش کریں جو کہ پارٹیسیپنٹس کی تعداد کے تحت ہے۔
+  * برائے نوجوان اسٹوڈینٹس، ٹیٹوریئلز پیج کو پیشگی لوڈ کریں یا بطور بُک مارک اسے محفوظ کرلیں۔
 
-**When participants come across difficulties it's okay to respond:**
+**:جب شرکاء کو مشکلات درپیش آئیں تو انہیں تو کہیں**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * مجھے معلوم نہیں۔ آئیں مل کر اس کا پتہ لگاتے ہیں"۔"
+  * ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"
+  * پروگرامنگ سیکھنا بالکل ایسے ہی ہے جیسا کوئی نئی زبان سیکھنا؛ جس پر آپ فوراً ہی رواں نہیں ہوسکتے"۔"
 
-**What to do if someone finishes early?**
+**اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
 
-  * They can try another Hour of Code activity at code.org/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+  * وہ آور-آف-کوڈ کی کوئی بھی دیگر ایکٹیویٹی ٹرائی کرسکتے ہیں یہاں code.org/learn
+  * یا انہیں کہیں کہ وہ اپنے اس دوست کی مدد کریں جسے ایکٹیویٹی میں دقت پیش آ رہی ہو۔
 
 [col-33]
 
@@ -99,9 +104,10 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## 7) Celebrate
 
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [ سرٹیفیکیٹس پرنٹ کریں](<%= resolve_url('https://code.org/certificates') %>) شریک پارٹیسیپینٹس کے لیے۔
+  * ["میں نے اپنا آور-آف-کوڈ مکمل کرلیا ہے"](<%= resolve_url('/promote/resources#stickers') %>) اسٹیکرز پرنٹ کریں۔
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+  * !سوشل میڈیا پر اپنے آور-آف-کوڈ کے ایونٹ کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم بھی آپ کی کامیابی کو اجاگر کرسکیں
 
 [col-33]
 
@@ -125,8 +131,8 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## What comes after the Hour of Code?
+## آور-آف-کوڈ کے بعد کیا آتا ہے؟
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+ٹیکانالوجی کیسے کام کرتی ہے اور سوفٹ ویئر ایپلیکیشنز کیسے بنائی جاتی ہیں، یہ سب جاننے کے لیے آور-آف-کوڈ اس سفر کا صرف پہلا قدم ہے۔ اس سفر کو جاری رکھنے کے لیے، [ اپنے پارٹیسیپنٹ کی حوصلہ افزائی کریں کہ وہ آن لائن سیکھیں](<%= resolve_url('https://code.org/learn/beyond') %>).
 
 <%= view :signup_button %>

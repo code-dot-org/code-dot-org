@@ -22,26 +22,26 @@ Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice. [ Iscrivi
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
 
-## 2. Spread the word
+## 2. Spargi la voce
 
-Tell your friends about the **#HourOfCode**!
+Parla ai tuoi amici di **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 3. Chiedi alla tua scuola di organizzare un'Ora del Codice
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>) al Dirigente Scolastico della tua scuola e invita ogni classe ad iscriversi. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
 
-## 4. Chiedi al tuo datore di lavoro di essere coinvolti
+## 4. Chiedi al tuo datore di lavoro di partecipare
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>) al tuo responsabile, o all'Amministratore Delegato della tua azienda.
 
-## 5. Promote Hour of Code in your community
+## 5. Promuovi l'Ora del Codice fra i tuoi conoscenti
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Utilizza questi [poster, banner, adesivi, video e altro](<%= resolve_url('/promote/resources') %>) per il tuo evento.
+[ Recluta un po' di persone](<%= resolve_url('/promote/resources#sample-emails') %>) — tra i boy-scout, in parrocchia, all'università, tra gli esperti, al sindacato o tra i tuoi amici. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Utilizza questi [poster, banner, adesivi, video e altro](<%= resolve_url('/promote/resources') %>) per il tuo evento.
 
-## 5. Chiedi ad un funzionario locale di sostenere l'Ora del Codice
+## 6. Proponi ad un rappresentante eletto di sostenere L'Ora del Codice
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>) agli Amministratori Locali, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
 
 <%= view :signup_button %>

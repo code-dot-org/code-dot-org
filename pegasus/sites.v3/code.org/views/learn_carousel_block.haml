@@ -1,15 +1,19 @@
 - short_code = I18n.t(:"#{id}_shortcode")
 - short_url = "https://hourofcode.com/#{short_code}"
-- show_sw_blocks = id == "starwars" && request.locale != "en-US"
-- if show_sw_blocks
-  - launch_code = "starwarsblocks"
+- if id == "starwars"
+  - if request.locale != "en-US"
+    - launch_path = "/api/hour/begin/starwarsblocks"
+  - else
+    - launch_path = "/starwars"
+- if id == "gumball" || id == "iceage" || id == "playlab"
+  - launch_path = "/playlab"
 - else
-  - launch_code = id
+  - launch_path = "/api/hour/begin/#{id}"
 
 .container-fluid
   .row-fluid
-    .courseblock-tall
-      %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
+    .courseblock-tall{id: "miniblock-#{id}"}
+      %a{href: launch_path, target: "_blank"}
         .imgspan
           %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
         .clear
@@ -27,8 +31,8 @@
           %br
           %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;", target: "_blank"}
             = short_url
-        #gobutton{style: "position: relative;"}
-          %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
+        %div{id: "gobutton-#{id}", style: "position: relative;"}
+          %a{href: launch_path, target: "_blank"}
             %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)
 
 :javascript
@@ -39,6 +43,7 @@
     return check; }
 
   // If mobile Star Wars block goes to blockly version
-  if (window.mobilecheck()) {
-    $('#gobutton a').attr("href", "/api/hour/begin/starwarsblocks");
+  if ("#{id}" == "starwars" && window.mobilecheck()) {
+    $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
   }

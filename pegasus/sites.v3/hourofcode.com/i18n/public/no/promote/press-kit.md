@@ -49,7 +49,7 @@ Vi håper det vil vekke en interesse hos elevene som motiverer til mer læring. 
 
 *Hvorfor er dette viktig?*
 
-I Kina tar alle elevene datavitenskap som fag før de går ut av videregående skole. 90 prosent av skolene i USA underviser ikke i det engang. Det er tide å nå igjen det 21. århundret. Vi vet at uansett hva studentene velger å gjøre når de vokser opp, om de går inn i medisin, forretning, politikk eller kunst, det å vite hvordan man bygger teknologi vil gi dem selvtilliten og kunnskapen til å lykkes.
+In China, every student takes computer science to graduate high school. 90 prosent av skolene i USA underviser ikke i det engang. Det er tide å nå igjen det 21. århundret. Vi vet at uansett hva studentene velger å gjøre når de vokser opp, om de går inn i medisin, forretning, politikk eller kunst, det å vite hvordan man bygger teknologi vil gi dem selvtilliten og kunnskapen til å lykkes.
 
 **Flere detaljer og et sitat som du kan bruke i materiellet**
 

@@ -31,6 +31,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Install the right version of node `nvm install v0.12.4`
   1. Make that your default version `nvm alias default v0.12.4`
   1. reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` (can be skipped if your version of node did not just change)
+1. Ensure that openssl is linked (El Capitan issue)
+  1. `brew link --force openssl`
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window  
   1. `ruby --version  # --> ruby 2.2.3`

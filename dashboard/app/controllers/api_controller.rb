@@ -64,6 +64,23 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  def user_progress
+    if current_user
+      script = Script.get_from_cache(params[:script_name])
+      render json: summarize_user_progress(script)
+    else
+      render json: {}
+    end
+  end
+
+  def user_progress_for_stage
+    if current_user
+      render json: current_user.user_progress_by_stage(params[:script_name], params[:stage_index].to_i)
+    else
+      render json: {}
+    end
+  end
+
   def section_text_responses
     load_section
     load_script

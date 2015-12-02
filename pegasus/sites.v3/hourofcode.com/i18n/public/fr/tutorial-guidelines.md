@@ -35,7 +35,7 @@ Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier 
 
 <a id="guidelines"></a>
 
-## Nouveauté 2015 : deux formats d'activités : autoduidé ou *plan de cours*
+## Nouveauté 2015 : deux formats d'activités : autoguidé ou *plan de cours*
 
 Maintenant que des dizaines de milliers d'éducateurs ont essayé Une Heure de Code, beaucoup de classes sont prêtes pour des activités plus créatives, moins uniforme qui permettent d'apprendre les rudiments de l'informatique. Pour aider les enseignants à trouver l'inspiration, nous aimerions recueillir et centraliser des leçons et des activités « dirigées par des enseignants » d'une heure pour les vétérans d'Une Heure de Code. Nous continuerons aussi à promouvoir le format "auto-guidé".
 
@@ -215,13 +215,13 @@ Après le succès de la campagne 2013, nous avons mis en place des règles pour 
 
 C'est pour protéger la marque « Une Heure de Code » et Hour of Code et éviter toute confusion. Beaucoup de partenaires pour les tutoriels ont utilisé « Une Heure de Code » sur leurs sites web. Nous ne voulons pas empêcher cette utilisation, mais nous voulons nous assurez que son utilisation prend en compte quelques règles :
 
-  1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Mauvais exemple: « Essayez Une Heures de Code par Tartampion »
-  2. Utilisez un exposant « TM » dans les endroits les plus importants lorsque vous mentionnez « Une Heure du Code » ou Hour of Code, aussi bien sur votre site web, que lors de la description de l'application
+  1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Inclure la langue dans la page (ou en pied de page), y compris des liens vers les sites web CSEdWeek et Code.org, en indiquant ce qui suit :
     
     *« Une Heure de Code ™ est une initiative nationale organisée durant la semaine d'éducation aux Sciences Informatiques [csedweek.org] et Code.org[code.org] pour initier des millions d'étudiants à une heure d'informatique et à la programmation informatique. »*
 
-  4. Pas d'utilisation de « Une Heure de Code » ou Hour of Code dans les noms d'applications
+  4. No use of "Hour of Code" in app names.
 
 [**Retour en début de page**](#top)
 

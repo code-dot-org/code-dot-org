@@ -331,6 +331,10 @@
   class_submission_languages_other: Cita valoda(s)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -728,10 +732,14 @@
   carousel_heading_international: Pamācības tavā valodā
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Pamācības tiem, kas māca JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Pamācības citās programēsanas valodās
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Izveido pats savas aplikācijas vai spēles
   carousel_heading_university: Universitāšu kursi tiešsaistē
   carousel_heading_webpages: Iemācies veidot mājas lapas

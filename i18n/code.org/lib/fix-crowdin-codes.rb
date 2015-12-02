@@ -69,7 +69,8 @@ locales = {
   'Ukrainian' => 'uk-UA',
   'Urdu (Pakistan)' => 'ur-PK',
   'Uzbek' => 'uz-UZ',
-  'Vietnamese' => 'vi-VN'
+  'Vietnamese' => 'vi-VN',
+  'Zulu' => 'zu-ZA'
 }
 
 untranslated_apps = [

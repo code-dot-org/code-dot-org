@@ -40,6 +40,9 @@ Student-led tutorials are designed so they can be fun for a student working alon
 [Kano Computing](http://hourofcode.kano.me/)  
 **Middle school. Web-based.** Make art while learning JavaScript.
 
+[Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
+**High school. Web-based.** Learn to edit and write JavaScript as you explore computer science concepts like variables and functions.
+
 
 ## Tutorials for Grades K-8
 [Tynker](http://www.tynker.com/hour-of-code/)  
@@ -180,10 +183,10 @@ Now that tens of thousands of educators have tried the Hour of Code, many classr
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
 **Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
 
-[ScratchJr: Can I Make a Spooky Forest?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204150029/1)  
+[ScratchJr: Can I Make a Spooky Forest?](https://drive.google.com/file/d/0B_kqMacZctDuWDRtLXQwRWp4ZGc/view)  
 **Ages 5-9. Art, Storytelling, Sequence, Unplugged.** Students will learn more features of ScratchJr by creating a spooky forest with multiple characters!
 
-[ScratchJr: Can I Make My Characters Greet Each Other?](https://pbs.app.box.com/s/y9y4htjhpupyapg8q4uuzlkbaj7nvojp/1/5208929949/42204143525/1)  
+[ScratchJr: Can I Make My Characters Greet Each Other?](https://drive.google.com/file/d/0B_kqMacZctDuNVg0QTJaWUR6WVE/view)  
 **Ages 5-9. Art, Storytelling, Events, Unplugged.** Students will learn advanced features of the ScratchJr app when they make a dog and kitten meet each other and exchange hellos!
 
 [ScratchJr: Can I Make the Sun Set?](https://drive.google.com/file/d/0B_kqMacZctDuTG5CdEhoR2o3M0E/view?usp=sharing)  
@@ -225,6 +228,9 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 
 [Bitsbox Coding + Art](https://bitsbox.com/hocprint.html)    
 **Ages 5-9, Programming. Language Arts, Visual Arts, Music, Web-based.**
+
+[Flocabulary On One Condition](https://www.flocabulary.com/lesson-plan-coding-conditionals/#introlesson)  
+**Ages 7-13. Programming, Language arts, Storytelling, Web-based.** Students will learn how to write conditional statements and complete an activity sequence where they generate their own conditionals, evaluate given conditionals to determine the outcome of a program. 
 
 
 ## Middle School
@@ -270,6 +276,9 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
 **Ages 10-18. Programming, Game Design, English, Math, Creativity, Web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
+
+[Flocabulary On One Condition](https://www.flocabulary.com/lesson-plan-coding-conditionals/#introlesson)  
+**Ages 7-13. Programming, Language arts, Storytelling, Web-based.** Students will learn how to write conditional statements and complete an activity sequence where they generate their own conditionals, evaluate given conditionals to determine the outcome of a program. 
 
 
 ## High School

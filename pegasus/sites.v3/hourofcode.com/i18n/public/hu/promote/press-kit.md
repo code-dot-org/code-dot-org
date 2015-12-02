@@ -49,7 +49,7 @@ We hope it’ll spark interest in students to keep learning. Research also shows
 
 *Miért fontos ez?*
 
-Kínában minden diák érettségizik számítástechnikából. Az USA-ban az iskolák 90 százaléka nem is tanítja. Itt az idő, hogy felzárkózzunk a XXI. századhoz. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every student takes computer science to graduate high school. Az USA-ban az iskolák 90 százaléka nem is tanítja. Itt az idő, hogy felzárkózzunk a XXI. századhoz. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **További részletek, és egy idézet, amit használhatsz az anyagodban**
 

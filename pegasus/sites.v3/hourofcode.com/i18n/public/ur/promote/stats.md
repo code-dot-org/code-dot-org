@@ -8,15 +8,15 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# بلوربس اور مفید اعدادوشمار
+# بلربز اور قابل استعمال شماریات (اسٹیٹس)
 
-## خبرنامے میں مختصر بلورب استعمال کریں
+## اس مختصر بلرب کو نیوزلیٹر میں استعمال کریں
 
-### اپنے اسکول میں کمپیوٹر سائنس لائیں ۔ کوڈ کی گھڑی کے ساتھ شروع کریں
+### اپنے اسکول میں کمپیوٹر سائنس کو لائیں۔ آور-آف-کوڈ سے شروعات کریں۔
 
-کمپیوٹر ہر جگہ ہیں لکن بہت کم اسکول دس سال پرانے کمپیوٹر سائنس سے مختلف پڑھاتے ہیں اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
+کمپیوٹر ہر جگہ ہیں لکن بہت کم اسکول دس سال پرانے کمپیوٹر سائنس سے مختلف پڑھاتے ہیں اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ اگر آپ نے گزشتہ سال [آور-آف-کوڈ](<%= resolve_url('/') %>) کے بارے میں سنا تھا، تو آپ یہ بھی جانتے ہوں گے کہ اس نے تاریخ رقم کر دی تھی۔ اولین آور-آف-کوڈ میں 15 ملین اسٹوڈینٹس نے کمپیوٹر سائنس پر کوشش کی تھی۔ گزشتہ سال، یہ تعداد بڑھ کر 60 ملین اسٹوڈینٹس تک جا پہنچی! [آور-آف-کوڈ](<%= resolve_url('/') %>) اس لئے ڈیزائن کیا گیا تاکہ کوڈ کا ابہام ختم کیا جاسکے اور یہ دکھایا جائے کہ کمپیوٹر سائنس کوئی راکٹ سائنس نہیں ہے۔ کوئی بھی بیسکس (بنیادی معلومات) سیکھ سکتا ہے [ سائن اَپ کریں](<%= resolve_url('/') %>) تاکہ اس پر ایک آور-آف-کوڈ ھوسٹ کرسکیں <%= campaign_date('full') %> کمپیوٹر سائنس ایجوکیشن ویک کے دوران۔ اپنے اسکول کو میپ (نقشہ) پر شامل کرنے کے لیے، https://hourofcode.com/ پر جائیں<%= @country %></p> 
 
-## Infographics
+## انفوگرافکس
 
 <%= view :stats_carousel %>
 
