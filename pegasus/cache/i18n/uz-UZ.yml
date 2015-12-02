@@ -350,7 +350,7 @@
     bloklaridan foydalaning.
   mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
     bloklaridan foydalaning.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brauzerlar | Yosh: 6+'
   minecraft_subtitle: Maynkraft Dasturlash soati
@@ -1412,3 +1412,8 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

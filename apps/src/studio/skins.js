@@ -219,7 +219,7 @@ function loadGumball(skin, assetUrl) {
 }
 
 function loadIceAge(skin, assetUrl) {
-  skin.defaultBackground = 'icy';
+  skin.defaultBackground = 'icy1';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -264,23 +264,23 @@ function loadIceAge(skin, assetUrl) {
   skin.fadeExplosion = false;
   skin.timePerExplosionFrame = 40;
 
-  skin.grassy = {
-    background: skin.assetUrl('background.jpg'),
+  skin.icy1 = {
+    background: skin.assetUrl('background_icy1.jpg'),
   };
-  skin.tile = {
-    background: skin.assetUrl('background_tile.jpg'),
+  skin.icy2 = {
+    background: skin.assetUrl('background_icy2.jpg'),
   };
-  skin.leafy = {
-    background: skin.assetUrl('background_leafy.jpg'),
+  skin.icy3 = {
+    background: skin.assetUrl('background_icy3.jpg'),
   };
-  skin.icy = {
-    background: skin.assetUrl('background_icy.jpg'),
+  skin.icy4 = {
+    background: skin.assetUrl('background_icy4.jpg'),
   };
-  skin.flower = {
-    background: skin.assetUrl('background_flower.jpg'),
+  skin.icy5 = {
+    background: skin.assetUrl('background_icy5.jpg'),
   };
-  skin.iceberg = {
-    background: skin.assetUrl('background_ice.jpg'),
+  skin.ground = {
+    background: skin.assetUrl('background_ground.jpg'),
   };
 
   skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
@@ -311,22 +311,22 @@ function loadIceAge(skin, assetUrl) {
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundGrassy(), '"grassy"'],
-    [msg.setBackgroundTile(), '"tile"'],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundFlower(), '"flower"'],
-    [msg.setBackgroundIceberg(), '"iceberg"']];
+    [msg.setBackgroundIcy1(), '"icy1"'],
+    [msg.setBackgroundIcy2(), '"icy2"'],
+    [msg.setBackgroundIcy3(), '"icy3"'],
+    [msg.setBackgroundIcy4(), '"icy4"'],
+    [msg.setBackgroundIcy5(), '"icy5"'],
+    [msg.setBackgroundGround(), '"ground"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.grassy.background, '"grassy"'],
-    [skin.tile.background, '"tile"'],
-    [skin.leafy.background, '"leafy"'],
-    [skin.icy.background, '"icy"'],
-    [skin.flower.background, '"flower"'],
-    [skin.iceberg.background, '"iceberg"'],
+    [skin.icy1.background, '"icy1"'],
+    [skin.icy2.background, '"icy2"'],
+    [skin.icy3.background, '"icy3"'],
+    [skin.icy4.background, '"icy4"'],
+    [skin.icy5.background, '"icy5"'],
+    [skin.ground.background, '"ground"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [

@@ -336,7 +336,7 @@
     läpi Minecraft-maailman.
   mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
     läpi Minecraft-maailman.
-  mc_gradelevel: 4-104-vuotiaille
+  mc_gradelevel: Ages 6+
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   mc_specs: Monia kieliä (tulossa pian) | Modernit selaimet ja tabletit | Yli 6-vuotiaille
   minecraft_subtitle: Minecraft Koodaustunti
@@ -1400,3 +1400,8 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
