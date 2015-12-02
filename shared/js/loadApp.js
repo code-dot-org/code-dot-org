@@ -15,7 +15,7 @@ function loadStyle(name) {
 }
 
 module.exports = function (callback) {
-  if (!appOptions.channel) {
+  if (!appOptions.channel && appOptions.publicCaching) {
     var lastAttemptLoaded = false;
 
     var loadLastAttemptFromSessionStorage = function () {
