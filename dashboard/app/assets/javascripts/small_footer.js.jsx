@@ -57,7 +57,7 @@ window.dashboard.footer = (function () {
       getInitialState: function () {
         return {
           menuState: MenuState.MINIMIZED,
-          copyrightStyle: null,
+          copyrightScrollAreaStyle: null,
           moreMenuStyle: null
         };
       },
@@ -66,8 +66,8 @@ window.dashboard.footer = (function () {
         var originalSetState = this.setState;
         var base = React.findDOMNode(this.refs.base);
         this.setState({
-          copyrightStyle: {
-            paddingBottom: base.offsetHeight
+          copyrightScrollAreaStyle: {
+            marginBottom: base.offsetHeight
           },
           moreMenuStyle: {
             bottom: base.offsetHeight,
@@ -151,10 +151,12 @@ window.dashboard.footer = (function () {
             // subtract top/bottom padding from row height
             height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
           }),
-          copyright: $.extend({}, this.state.copyrightStyle, {
-            display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
-            maxHeight: 240,
-            overflowY: 'scroll'
+          copyright: {
+            display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none'
+          },
+          copyrightScrollArea: $.extend({}, this.state.copyrightScrollAreaStyle, {
+            overflowY: 'auto',
+            maxHeight: 210
           }),
           moreMenu: $.extend({}, this.state.moreMenuStyle, {
             display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none'
@@ -187,11 +189,13 @@ window.dashboard.footer = (function () {
               </small>
             </div>
             <div id="copyright-flyout" style={styles.copyright}>
-              <EncodedParagraph text={this.props.copyrightStrings.thank_you}/>
-              <p>{this.props.copyrightStrings.help_from_html}</p>
-              <EncodedParagraph text={this.props.copyrightStrings.art_from_html}/>
-              <p>{this.props.copyrightStrings.powered_by_aws}</p>
-              <EncodedParagraph text={this.props.copyrightStrings.trademark}/>
+              <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
+                <EncodedParagraph text={this.props.copyrightStrings.thank_you}/>
+                <p>{this.props.copyrightStrings.help_from_html}</p>
+                <EncodedParagraph text={this.props.copyrightStrings.art_from_html}/>
+                <p>{this.props.copyrightStrings.powered_by_aws}</p>
+                <EncodedParagraph text={this.props.copyrightStrings.trademark}/>
+              </div>
             </div>
             {this.renderMoreMenu(styles)}
           </div>

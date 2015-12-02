@@ -361,10 +361,14 @@ $small-footer-standard-width: 400px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 625px;
+  width: 650px;
   max-width: 50%;
   min-width: 300px;
-  padding: 1em;
+  padding-bottom: 0.5em;
+}
+
+#copyright-scroll-area {
+  padding: 0.8em;
 }
 
 #more-menu {
