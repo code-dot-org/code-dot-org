@@ -15,21 +15,21 @@ function loadStyle(name) {
 }
 
 module.exports = function (callback) {
+  var lastAttemptLoaded = false;
+
+  var loadLastAttemptFromSessionStorage = function () {
+    if (!lastAttemptLoaded) {
+      lastAttemptLoaded = true;
+
+      // Load the locally-cached last attempt (if one exists)
+      setLastAttemptUnlessJigsaw(dashboard.clientState.sourceForLevel(
+          appOptions.scriptName, appOptions.serverLevelId));
+
+      callback();
+    }
+  };
+
   if (!appOptions.channel && appOptions.publicCaching) {
-    var lastAttemptLoaded = false;
-
-    var loadLastAttemptFromSessionStorage = function () {
-      if (!lastAttemptLoaded) {
-        lastAttemptLoaded = true;
-
-        // Load the locally-cached last attempt (if one exists)
-        setLastAttemptUnlessJigsaw(dashboard.clientState.sourceForLevel(
-            appOptions.scriptName, appOptions.serverLevelId));
-
-        callback();
-      }
-    };
-
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
@@ -85,6 +85,7 @@ module.exports = function (callback) {
       }
     }).then(callback);
   } else {
+    loadLastAttemptFromSessionStorage();
     callback();
   }
 };
