@@ -22,8 +22,9 @@ max_age: 60
   -share_url = "http://#{request.host_with_port}/certificates/blank"
 
 -facebook = {:u=>share_url}
--twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
--twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
+-just_did_hoc_text = I18n.t(:just_did_hoc)
+-twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>just_did_hoc_text}
+-twitter[:hashtags] = 'HourOfCode' unless just_did_hoc_text.include? '#HourOfCode'
 
 -company_param = params[:co]
 -form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param
