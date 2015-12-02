@@ -14,18 +14,6 @@ var channels = require('./clientApi').create('/v3/channels');
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
 
-function packSourceFile() {
-  return JSON.stringify({
-    source: current.levelSource,
-    html: current.levelHtml
-  });
-}
-
-function unpackSourceFile(data) {
-  current.levelSource = data.source;
-  current.levelHtml = data.html;
-}
-
 var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
@@ -66,6 +54,33 @@ var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
 var isEditing = false;
+
+/**
+ * Current state of our sources API data
+ */
+var currentSources = {
+  source: null,
+  html: null
+};
+
+/**
+ * Get string representation of our sources API object for upload
+ */
+function packSources() {
+  return JSON.stringify(currentSources);
+}
+
+/**
+ * Populate our current sources API object based off of given data
+ * @param {string} data.source
+ * @param {string} data.html
+ */
+function unpackSources(data) {
+  currentSources = {
+    source: data.source,
+    html: data.html
+  };
+}
 
 var projects = module.exports = {
   /**
@@ -260,14 +275,14 @@ var projects = module.exports = {
     }
 
     if (this.isProjectLevel() || current) {
-      if (current && current.levelHtml) {
-        sourceHandler.setInitialLevelHtml(current.levelHtml);
+      if (currentSources.html) {
+        sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
       if (isEditing) {
         if (current) {
-          if (current.levelSource) {
-            sourceHandler.setInitialLevelSource(current.levelSource);
+          if (currentSources.source) {
+            sourceHandler.setInitialLevelSource(currentSources.source);
           }
         } else {
           this.setName('My Project');
@@ -280,7 +295,7 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = this.sourceHandler.getLevelSource(current.levelSource);
+          currentSources.source = this.sourceHandler.getLevelSource(currentSources.source);
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -296,7 +311,7 @@ var projects = module.exports = {
           }
         }
       } else if (current) {
-        this.sourceHandler.setInitialLevelSource(current.levelSource);
+        this.sourceHandler.setInitialLevelSource(currentSources.source);
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
@@ -354,7 +369,7 @@ var projects = module.exports = {
    * being accidentally deleted.
    */
   clearHtml: function() {
-    current.levelHtml = '';
+    currentSources.html = '';
   },
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
@@ -393,41 +408,32 @@ var projects = module.exports = {
     var channelId = current.id;
     // TODO(dave): Remove this check and remove clearHtml() once all projects
     // have versioning: https://www.pivotaltracker.com/story/show/103347498
-    if (current.levelHtml && !sourceAndHtml.html) {
+    if (currentSources.html && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    current.levelSource = sourceAndHtml.source;
-    current.levelHtml = sourceAndHtml.html;
+    unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
     }
 
     var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-    sources.put(channelId, packSourceFile(), filename, function (err, response) {
+    sources.put(channelId, packSources(), filename, function (err, response) {
       currentSourceVersionId = response.versionId;
       current.migratedToS3 = true;
 
       if (sourceOnly) {
         // manually set updatedAt. Note, this puts current out of sync with
         // what we have stored in db. This date string is also formatted slightly
-        // differently than the string we get from channels API, but should be okay.
-        current.updatedAt = (new Date()).toString();
+        // differently than the string we get from channels API, but should be
+        // okay, since our timeago plugin can still handle it
+        current.updatedAt = new Date().toISOString();
         this.updateCurrentData_(err, current, false);
         executeCallback(callback, current);
       } else {
-        // TODO - get to point where source/html are stored separately
-
-        // Explicitly stop saving levelSource/levelHtml to channels
-        var channelData = $.extend({}, current);
-        delete channelData.levelSource;
-        delete channelData.levelHtml;
-        // Also clear out html, which we never should have been setting.
-        delete channelData.html;
-
-        channels.update(channelId, channelData, function (err) {
-          this.updateCurrentData_(err, channelData, false);
-          executeCallback(callback, channelData);
+        channels.update(channelId, current, function (err) {
+          this.updateCurrentData_(err, current, false);
+          executeCallback(callback, current);
         }.bind(this));
       }
     }.bind(this));
@@ -458,14 +464,18 @@ var projects = module.exports = {
    * Saves to sources API without hitting channels API
    */
   saveSource_: function (sourceAndHtml, callback) {
-    return this.save(sourceAndHtml, callback, false, true);
+    if (sourceAndHtml) {
+      return this.save(sourceAndHtml, callback, false, true);
+    } else {
+      return this.save(callback, false, true);
+    }
   },
   /**
    * Autosave the code if things have changed
    */
   autosave_: function () {
-    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-    if (current.levelSource === undefined) {
+    // Bail if baseline code doesn't exist (app not yet initialized)
+    if (currentSources.source === undefined) {
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
@@ -481,7 +491,7 @@ var projects = module.exports = {
     var source = this.sourceHandler.getLevelSource();
     var html = this.sourceHandler.getLevelHtml();
 
-    if (current.levelSource === source && current.levelHtml === html) {
+    if (currentSources.source === source && currentSources.html === html) {
       hasProjectChanged = false;
       return;
     }
@@ -642,20 +652,25 @@ var projects = module.exports = {
 };
 
 /**
+ * Given data from our channels api, updates current and gets sources from
+ * sources api
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  */
 function fetchSource(channelData, callback) {
-  current = $.extend({}, channelData, {
-    // explicitly dont get html/source from channel api
-    levelHtml: null,
-    levelSource: null
-  });
+  // Explicitly remove levelSource/levelHtml from channels
+  delete channelData.levelSource;
+  delete channelData.levelHtml;
+  // Also clear out html, which we never should have been setting.
+  delete channelData.html;
+
+  // Update current
+  current = channelData;
 
   projects.setTitle(current.name);
   if (channelData.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
-      unpackSourceFile(data);
+      unpackSources(data);
       callback();
     });
   } else {
