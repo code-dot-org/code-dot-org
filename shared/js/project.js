@@ -42,8 +42,6 @@ var PathPart = {
  * @typedef {Object} ProjectInstance
  * @property {string} id
  * @property {string} name
- * @property {string} levelHtml
- * @property {string} levelSource
  * hidden // unclear when this ever gets set
  * @property {boolean} isOwner Populated by our update/create callback.
  * @property {string} updatedAt String representation of a Date. Populated by
@@ -453,7 +451,7 @@ var projects = module.exports = {
    */
   autosave_: function () {
     // Bail if baseline code doesn't exist (app not yet initialized)
-    if (currentSources.source === undefined) {
+    if (currentSources.source === null) {
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
