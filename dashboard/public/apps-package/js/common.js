@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/home/ubuntu/staging/apps/build/js/level_base.js":[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/home/ubuntu/adhoc/apps/build/js/level_base.js":[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -55,7 +55,7 @@ exports.define = function (name) {
   };
 };
 
-},{}],"/home/ubuntu/staging/apps/node_modules/canvg/canvg.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/canvg/canvg.js":[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed
@@ -3130,7 +3130,7 @@ exports.define = function (name) {
 
 }));
 
-},{"rgbcolor":"/home/ubuntu/staging/apps/node_modules/rgbcolor/index.js","stackblur":"/home/ubuntu/staging/apps/node_modules/stackblur/index.js"}],"/home/ubuntu/staging/apps/node_modules/stackblur/index.js":[function(require,module,exports){
+},{"rgbcolor":"/home/ubuntu/adhoc/apps/node_modules/rgbcolor/index.js","stackblur":"/home/ubuntu/adhoc/apps/node_modules/stackblur/index.js"}],"/home/ubuntu/adhoc/apps/node_modules/stackblur/index.js":[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -3454,7 +3454,7 @@ function BlurStack()
 }
 
 module.exports = blur;
-},{}],"/home/ubuntu/staging/apps/node_modules/rgbcolor/index.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/rgbcolor/index.js":[function(require,module,exports){
 /*
 	Based on rgbcolor.js by Stoyan Stefanov <sstoo@gmail.com>
 	http://www.phpied.com/rgb-color-parser-in-javascript/
@@ -3757,7 +3757,7 @@ module.exports = function(color_string) {
 
 }
 
-},{}],"/home/ubuntu/staging/apps/build/js/canvg/svg_todataurl.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/canvg/svg_todataurl.js":[function(require,module,exports){
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 
@@ -3973,7 +3973,7 @@ SVGElement.prototype.toDataURL = function (type, options) {
 	}
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/sharedFunctionalBlocks.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/sharedFunctionalBlocks.js":[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4475,7 +4475,7 @@ function installCondForType(blockly, generator, type) {
   };
 }
 
-},{"./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/templates/page.html.ejs":[function(require,module,exports){
+},{"./locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/page.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -4499,7 +4499,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/slider.js":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/slider.js":[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -4757,7 +4757,7 @@ Slider.bindEvent_ = function (element, name, func) {
 
 module.exports = Slider;
 
-},{"./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js"}],"/home/ubuntu/staging/apps/build/js/skins.js":[function(require,module,exports){
+},{"./constants":"/home/ubuntu/adhoc/apps/build/js/constants.js","./dom":"/home/ubuntu/adhoc/apps/build/js/dom.js"}],"/home/ubuntu/adhoc/apps/build/js/skins.js":[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 'use strict';
@@ -4832,7 +4832,7 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/timeoutList.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/timeoutList.js":[function(require,module,exports){
 "use strict";
 
 var timeoutList = [];
@@ -4897,7 +4897,7 @@ exports.clearInterval = function (id) {
   }
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/appMain.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/appMain.js":[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -4980,7 +4980,7 @@ module.exports = function (app, levels, options) {
   });
 };
 
-},{"./StudioApp":"/home/ubuntu/staging/apps/build/js/StudioApp.js","./blocksCommon":"/home/ubuntu/staging/apps/build/js/blocksCommon.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./required_block_utils":"/home/ubuntu/staging/apps/build/js/required_block_utils.js","./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/required_block_utils.js":[function(require,module,exports){
+},{"./StudioApp":"/home/ubuntu/adhoc/apps/build/js/StudioApp.js","./blocksCommon":"/home/ubuntu/adhoc/apps/build/js/blocksCommon.js","./dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","./required_block_utils":"/home/ubuntu/adhoc/apps/build/js/required_block_utils.js","./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/required_block_utils.js":[function(require,module,exports){
 /* global Text */
 
 'use strict';
@@ -5299,7 +5299,7 @@ var titlesMatch = function titlesMatch(titleA, titleB) {
   return titleB.name === titleA.name && titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/blocksCommon.js":[function(require,module,exports){
+},{"./block_utils":"/home/ubuntu/adhoc/apps/build/js/block_utils.js","./locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js","./xml":"/home/ubuntu/adhoc/apps/build/js/xml.js"}],"/home/ubuntu/adhoc/apps/build/js/blocksCommon.js":[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -5451,7 +5451,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"./locale":"/home/ubuntu/staging/apps/build/js/locale.js"}],"/home/ubuntu/staging/apps/build/js/StudioApp.js":[function(require,module,exports){
+},{"./locale":"/home/ubuntu/adhoc/apps/build/js/locale.js"}],"/home/ubuntu/adhoc/apps/build/js/StudioApp.js":[function(require,module,exports){
 /* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
 
 /**
@@ -7654,10 +7654,10 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
   }
 };
 
-},{"./ResizeSensor":"/home/ubuntu/staging/apps/build/js/ResizeSensor.js","./acemode/mode-javascript_codeorg":"/home/ubuntu/staging/apps/build/js/acemode/mode-javascript_codeorg.js","./blockTooltips/DropletTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js","./block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./constants.js":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./feedback":"/home/ubuntu/staging/apps/build/js/feedback.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./logToCloud":"/home/ubuntu/staging/apps/build/js/logToCloud.js","./puzzleRatingUtils":"/home/ubuntu/staging/apps/build/js/puzzleRatingUtils.js","./templates/VersionHistory.jsx":"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx","./templates/alert.jsx":"/home/ubuntu/staging/apps/build/js/templates/alert.jsx","./templates/builder.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/instructions.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs","./templates/learn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs","./templates/makeYourOwn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js","react":"/home/ubuntu/staging/apps/node_modules/react/react.js","url":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js"}],"/home/ubuntu/staging/apps/node_modules/react/react.js":[function(require,module,exports){
+},{"./ResizeSensor":"/home/ubuntu/adhoc/apps/build/js/ResizeSensor.js","./acemode/mode-javascript_codeorg":"/home/ubuntu/adhoc/apps/build/js/acemode/mode-javascript_codeorg.js","./blockTooltips/DropletTooltipManager":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletTooltipManager.js","./block_utils":"/home/ubuntu/adhoc/apps/build/js/block_utils.js","./codegen":"/home/ubuntu/adhoc/apps/build/js/codegen.js","./constants.js":"/home/ubuntu/adhoc/apps/build/js/constants.js","./dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","./dropletUtils":"/home/ubuntu/adhoc/apps/build/js/dropletUtils.js","./feedback":"/home/ubuntu/adhoc/apps/build/js/feedback.js","./locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","./logToCloud":"/home/ubuntu/adhoc/apps/build/js/logToCloud.js","./puzzleRatingUtils":"/home/ubuntu/adhoc/apps/build/js/puzzleRatingUtils.js","./templates/VersionHistory.jsx":"/home/ubuntu/adhoc/apps/build/js/templates/VersionHistory.jsx","./templates/alert.jsx":"/home/ubuntu/adhoc/apps/build/js/templates/alert.jsx","./templates/builder.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/builder.html.ejs","./templates/buttons.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/buttons.html.ejs","./templates/instructions.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/instructions.html.ejs","./templates/learn.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/learn.html.ejs","./templates/makeYourOwn.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/makeYourOwn.html.ejs","./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js","./xml":"/home/ubuntu/adhoc/apps/build/js/xml.js","react":"/home/ubuntu/adhoc/apps/node_modules/react/react.js","url":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/url/url.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/react.js":[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":"/home/ubuntu/staging/apps/node_modules/react/lib/React.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/React.js":[function(require,module,exports){
+},{"./lib/React":"/home/ubuntu/adhoc/apps/node_modules/react/lib/React.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/React.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -7810,7 +7810,7 @@ module.exports = React;
 
 }).call(this,require('_process'))
 
-},{"./EventPluginUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginUtils.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactChildren":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactChildren.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponent.js","./ReactContext":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactDOM":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOM.js","./ReactDOMTextComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMTextComponent.js","./ReactDefaultInjection":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultInjection.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElementValidator.js","./ReactInstanceHandles":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./ReactPropTypes":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypes.js","./ReactReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js","./ReactServerRendering":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactServerRendering.js","./findDOMNode":"/home/ubuntu/staging/apps/node_modules/react/lib/findDOMNode.js","./onlyChild":"/home/ubuntu/staging/apps/node_modules/react/lib/onlyChild.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/onlyChild.js":[function(require,module,exports){
+},{"./EventPluginUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginUtils.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactChildren":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactChildren.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponent.js","./ReactContext":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactDOM":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOM.js","./ReactDOMTextComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMTextComponent.js","./ReactDefaultInjection":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultInjection.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElementValidator.js","./ReactInstanceHandles":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./ReactPropTypes":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypes.js","./ReactReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js","./ReactServerRendering":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactServerRendering.js","./findDOMNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/findDOMNode.js","./onlyChild":"/home/ubuntu/adhoc/apps/node_modules/react/lib/onlyChild.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/onlyChild.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -7851,7 +7851,7 @@ module.exports = onlyChild;
 
 }).call(this,require('_process'))
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactServerRendering.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactServerRendering.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -7934,7 +7934,7 @@ module.exports = {
 
 }).call(this,require('_process'))
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMarkupChecksum":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMarkupChecksum.js","./ReactServerRenderingTransaction":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactServerRenderingTransaction.js","./emptyObject":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyObject.js","./instantiateReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactServerRenderingTransaction.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactInstanceHandles":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMarkupChecksum":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMarkupChecksum.js","./ReactServerRenderingTransaction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactServerRenderingTransaction.js","./emptyObject":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyObject.js","./instantiateReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactServerRenderingTransaction.js":[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -8047,7 +8047,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 
-},{"./CallbackQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./ReactPutListenerQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/ubuntu/staging/apps/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultInjection.js":[function(require,module,exports){
+},{"./CallbackQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./ReactPutListenerQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultInjection.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -8207,7 +8207,7 @@ module.exports = {
 
 }).call(this,require('_process'))
 
-},{"./BeforeInputEventPlugin":"/home/ubuntu/staging/apps/node_modules/react/lib/BeforeInputEventPlugin.js","./ChangeEventPlugin":"/home/ubuntu/staging/apps/node_modules/react/lib/ChangeEventPlugin.js","./ClientReactRootIndex":"/home/ubuntu/staging/apps/node_modules/react/lib/ClientReactRootIndex.js","./DefaultEventPluginOrder":"/home/ubuntu/staging/apps/node_modules/react/lib/DefaultEventPluginOrder.js","./EnterLeaveEventPlugin":"/home/ubuntu/staging/apps/node_modules/react/lib/EnterLeaveEventPlugin.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./HTMLDOMPropertyConfig":"/home/ubuntu/staging/apps/node_modules/react/lib/HTMLDOMPropertyConfig.js","./MobileSafariClickEventPlugin":"/home/ubuntu/staging/apps/node_modules/react/lib/MobileSafariClickEventPlugin.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactComponentBrowserEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactDOMButton":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMButton.js","./ReactDOMComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMComponent.js","./ReactDOMForm":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMForm.js","./ReactDOMIDOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMIDOperations.js","./ReactDOMIframe":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMIframe.js","./ReactDOMImg":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMImg.js","./ReactDOMInput":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMInput.js","./ReactDOMOption":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMOption.js","./ReactDOMSelect":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMSelect.js","./ReactDOMTextComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMTextComponent.js","./ReactDOMTextarea":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMTextarea.js","./ReactDefaultBatchingStrategy":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultBatchingStrategy.js","./ReactDefaultPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultPerf.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactEventListener":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEventListener.js","./ReactInjection":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInjection.js","./ReactInstanceHandles":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactReconcileTransaction":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconcileTransaction.js","./SVGDOMPropertyConfig":"/home/ubuntu/staging/apps/node_modules/react/lib/SVGDOMPropertyConfig.js","./SelectEventPlugin":"/home/ubuntu/staging/apps/node_modules/react/lib/SelectEventPlugin.js","./ServerReactRootIndex":"/home/ubuntu/staging/apps/node_modules/react/lib/ServerReactRootIndex.js","./SimpleEventPlugin":"/home/ubuntu/staging/apps/node_modules/react/lib/SimpleEventPlugin.js","./createFullPageComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/createFullPageComponent.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/createFullPageComponent.js":[function(require,module,exports){
+},{"./BeforeInputEventPlugin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/BeforeInputEventPlugin.js","./ChangeEventPlugin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ChangeEventPlugin.js","./ClientReactRootIndex":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ClientReactRootIndex.js","./DefaultEventPluginOrder":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DefaultEventPluginOrder.js","./EnterLeaveEventPlugin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EnterLeaveEventPlugin.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./HTMLDOMPropertyConfig":"/home/ubuntu/adhoc/apps/node_modules/react/lib/HTMLDOMPropertyConfig.js","./MobileSafariClickEventPlugin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/MobileSafariClickEventPlugin.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactComponentBrowserEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactDOMButton":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMButton.js","./ReactDOMComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMComponent.js","./ReactDOMForm":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMForm.js","./ReactDOMIDOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMIDOperations.js","./ReactDOMIframe":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMIframe.js","./ReactDOMImg":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMImg.js","./ReactDOMInput":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMInput.js","./ReactDOMOption":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMOption.js","./ReactDOMSelect":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMSelect.js","./ReactDOMTextComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMTextComponent.js","./ReactDOMTextarea":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMTextarea.js","./ReactDefaultBatchingStrategy":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultBatchingStrategy.js","./ReactDefaultPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultPerf.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactEventListener":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEventListener.js","./ReactInjection":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInjection.js","./ReactInstanceHandles":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactReconcileTransaction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconcileTransaction.js","./SVGDOMPropertyConfig":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SVGDOMPropertyConfig.js","./SelectEventPlugin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SelectEventPlugin.js","./ServerReactRootIndex":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ServerReactRootIndex.js","./SimpleEventPlugin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SimpleEventPlugin.js","./createFullPageComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/createFullPageComponent.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/createFullPageComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -8270,7 +8270,7 @@ module.exports = createFullPageComponent;
 
 }).call(this,require('_process'))
 
-},{"./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SimpleEventPlugin.js":[function(require,module,exports){
+},{"./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SimpleEventPlugin.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -8699,7 +8699,7 @@ module.exports = SimpleEventPlugin;
 
 }).call(this,require('_process'))
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPluginUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginUtils.js","./EventPropagators":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPropagators.js","./SyntheticClipboardEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticClipboardEvent.js","./SyntheticDragEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticDragEvent.js","./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js","./SyntheticFocusEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticFocusEvent.js","./SyntheticKeyboardEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticKeyboardEvent.js","./SyntheticMouseEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticMouseEvent.js","./SyntheticTouchEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticTouchEvent.js","./SyntheticUIEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticUIEvent.js","./SyntheticWheelEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticWheelEvent.js","./getEventCharCode":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventCharCode.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticWheelEvent.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPluginUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginUtils.js","./EventPropagators":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPropagators.js","./SyntheticClipboardEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticClipboardEvent.js","./SyntheticDragEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticDragEvent.js","./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js","./SyntheticFocusEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticFocusEvent.js","./SyntheticKeyboardEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticKeyboardEvent.js","./SyntheticMouseEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticMouseEvent.js","./SyntheticTouchEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticTouchEvent.js","./SyntheticUIEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticUIEvent.js","./SyntheticWheelEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticWheelEvent.js","./getEventCharCode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventCharCode.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticWheelEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8760,7 +8760,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
 
-},{"./SyntheticMouseEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticTouchEvent.js":[function(require,module,exports){
+},{"./SyntheticMouseEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticTouchEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8808,7 +8808,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
 
-},{"./SyntheticUIEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticUIEvent.js","./getEventModifierState":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventModifierState.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticKeyboardEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticUIEvent.js","./getEventModifierState":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventModifierState.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticKeyboardEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -8895,7 +8895,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
 
-},{"./SyntheticUIEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticUIEvent.js","./getEventCharCode":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventCharCode.js","./getEventKey":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventKey.js","./getEventModifierState":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventModifierState.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getEventKey.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticUIEvent.js","./getEventCharCode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventCharCode.js","./getEventKey":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventKey.js","./getEventModifierState":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventModifierState.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventKey.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9000,7 +9000,7 @@ function getEventKey(nativeEvent) {
 
 module.exports = getEventKey;
 
-},{"./getEventCharCode":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventCharCode.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getEventCharCode.js":[function(require,module,exports){
+},{"./getEventCharCode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventCharCode.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventCharCode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9052,7 +9052,7 @@ function getEventCharCode(nativeEvent) {
 
 module.exports = getEventCharCode;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticFocusEvent.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticFocusEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9091,7 +9091,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
 
-},{"./SyntheticUIEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticUIEvent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticDragEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticUIEvent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticDragEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9130,7 +9130,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
 
-},{"./SyntheticMouseEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticClipboardEvent.js":[function(require,module,exports){
+},{"./SyntheticMouseEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticMouseEvent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticClipboardEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9175,7 +9175,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
 
-},{"./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ServerReactRootIndex.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ServerReactRootIndex.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9206,7 +9206,7 @@ var ServerReactRootIndex = {
 
 module.exports = ServerReactRootIndex;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/SelectEventPlugin.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SelectEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9401,7 +9401,7 @@ var SelectEventPlugin = {
 
 module.exports = SelectEventPlugin;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPropagators.js","./ReactInputSelection":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInputSelection.js","./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js","./getActiveElement":"/home/ubuntu/staging/apps/node_modules/react/lib/getActiveElement.js","./isTextInputElement":"/home/ubuntu/staging/apps/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js","./shallowEqual":"/home/ubuntu/staging/apps/node_modules/react/lib/shallowEqual.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/shallowEqual.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPropagators.js","./ReactInputSelection":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInputSelection.js","./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js","./getActiveElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getActiveElement.js","./isTextInputElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js","./shallowEqual":"/home/ubuntu/adhoc/apps/node_modules/react/lib/shallowEqual.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/shallowEqual.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9445,7 +9445,7 @@ function shallowEqual(objA, objB) {
 
 module.exports = shallowEqual;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/SVGDOMPropertyConfig.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SVGDOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9539,7 +9539,7 @@ var SVGDOMPropertyConfig = {
 
 module.exports = SVGDOMPropertyConfig;
 
-},{"./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconcileTransaction.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconcileTransaction.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9715,7 +9715,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 
-},{"./CallbackQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactInputSelection":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInputSelection.js","./ReactPutListenerQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/ubuntu/staging/apps/node_modules/react/lib/Transaction.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPutListenerQueue.js":[function(require,module,exports){
+},{"./CallbackQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactInputSelection":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInputSelection.js","./ReactPutListenerQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPutListenerQueue.js","./Transaction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Transaction.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPutListenerQueue.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9771,7 +9771,7 @@ PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 module.exports = ReactPutListenerQueue;
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInputSelection.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./ReactBrowserEventEmitter":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInputSelection.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9906,7 +9906,7 @@ var ReactInputSelection = {
 
 module.exports = ReactInputSelection;
 
-},{"./ReactDOMSelection":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMSelection.js","./containsNode":"/home/ubuntu/staging/apps/node_modules/react/lib/containsNode.js","./focusNode":"/home/ubuntu/staging/apps/node_modules/react/lib/focusNode.js","./getActiveElement":"/home/ubuntu/staging/apps/node_modules/react/lib/getActiveElement.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getActiveElement.js":[function(require,module,exports){
+},{"./ReactDOMSelection":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMSelection.js","./containsNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/containsNode.js","./focusNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/focusNode.js","./getActiveElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getActiveElement.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getActiveElement.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -9935,7 +9935,7 @@ function getActiveElement() /*?DOMElement*/ {
 
 module.exports = getActiveElement;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMSelection.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMSelection.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10148,7 +10148,7 @@ var ReactDOMSelection = {
 
 module.exports = ReactDOMSelection;
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./getNodeForCharacterOffset":"/home/ubuntu/staging/apps/node_modules/react/lib/getNodeForCharacterOffset.js","./getTextContentAccessor":"/home/ubuntu/staging/apps/node_modules/react/lib/getTextContentAccessor.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getNodeForCharacterOffset.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./getNodeForCharacterOffset":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getNodeForCharacterOffset.js","./getTextContentAccessor":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getTextContentAccessor.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getNodeForCharacterOffset.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10223,7 +10223,7 @@ function getNodeForCharacterOffset(root, offset) {
 
 module.exports = getNodeForCharacterOffset;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInjection.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInjection.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10265,7 +10265,7 @@ var ReactInjection = {
 
 module.exports = ReactInjection;
 
-},{"./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js","./EventPluginHub":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginHub.js","./ReactBrowserEventEmitter":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactComponentEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentEnvironment.js","./ReactDOMComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMComponent.js","./ReactEmptyComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEmptyComponent.js","./ReactNativeComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactNativeComponent.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./ReactRootIndex":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactRootIndex.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEventListener.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js","./EventPluginHub":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginHub.js","./ReactBrowserEventEmitter":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactComponentEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentEnvironment.js","./ReactDOMComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMComponent.js","./ReactEmptyComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEmptyComponent.js","./ReactNativeComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactNativeComponent.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./ReactRootIndex":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactRootIndex.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEventListener.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10448,7 +10448,7 @@ var ReactEventListener = {
 
 module.exports = ReactEventListener;
 
-},{"./EventListener":"/home/ubuntu/staging/apps/node_modules/react/lib/EventListener.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./ReactInstanceHandles":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./getEventTarget":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventTarget.js","./getUnboundedScrollPosition":"/home/ubuntu/staging/apps/node_modules/react/lib/getUnboundedScrollPosition.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getUnboundedScrollPosition.js":[function(require,module,exports){
+},{"./EventListener":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventListener.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./ReactInstanceHandles":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./getEventTarget":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventTarget.js","./getUnboundedScrollPosition":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getUnboundedScrollPosition.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getUnboundedScrollPosition.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10488,7 +10488,7 @@ function getUnboundedScrollPosition(scrollable) {
 
 module.exports = getUnboundedScrollPosition;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/EventListener.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventListener.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -10579,7 +10579,7 @@ module.exports = EventListener;
 
 }).call(this,require('_process'))
 
-},{"./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultPerf.js":[function(require,module,exports){
+},{"./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultPerf.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10845,7 +10845,7 @@ var ReactDefaultPerf = {
 
 module.exports = ReactDefaultPerf;
 
-},{"./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js","./ReactDefaultPerfAnalysis":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultPerfAnalysis.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./performanceNow":"/home/ubuntu/staging/apps/node_modules/react/lib/performanceNow.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/performanceNow.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js","./ReactDefaultPerfAnalysis":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultPerfAnalysis.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./performanceNow":"/home/ubuntu/adhoc/apps/node_modules/react/lib/performanceNow.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/performanceNow.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10873,7 +10873,7 @@ var performanceNow = performance.now.bind(performance);
 
 module.exports = performanceNow;
 
-},{"./performance":"/home/ubuntu/staging/apps/node_modules/react/lib/performance.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/performance.js":[function(require,module,exports){
+},{"./performance":"/home/ubuntu/adhoc/apps/node_modules/react/lib/performance.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/performance.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -10901,7 +10901,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = performance || {};
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultPerfAnalysis.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultPerfAnalysis.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11107,7 +11107,7 @@ var ReactDefaultPerfAnalysis = {
 
 module.exports = ReactDefaultPerfAnalysis;
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDefaultBatchingStrategy.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDefaultBatchingStrategy.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11180,7 +11180,7 @@ var ReactDefaultBatchingStrategy = {
 
 module.exports = ReactDefaultBatchingStrategy;
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./Transaction":"/home/ubuntu/staging/apps/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMTextarea.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./Transaction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Transaction.js","./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMTextarea.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -11321,7 +11321,7 @@ module.exports = ReactDOMTextarea;
 
 }).call(this,require('_process'))
 
-},{"./AutoFocusMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMSelect.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMSelect.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11499,7 +11499,7 @@ var ReactDOMSelect = ReactClass.createClass({
 
 module.exports = ReactDOMSelect;
 
-},{"./AutoFocusMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/AutoFocusMixin.js","./LinkedValueUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMOption.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/AutoFocusMixin.js","./LinkedValueUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMOption.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -11552,7 +11552,7 @@ module.exports = ReactDOMOption;
 
 }).call(this,require('_process'))
 
-},{"./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMInput.js":[function(require,module,exports){
+},{"./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMInput.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -11730,7 +11730,7 @@ module.exports = ReactDOMInput;
 
 }).call(this,require('_process'))
 
-},{"./AutoFocusMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/LinkedValueUtils.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/AutoFocusMixin.js","./DOMPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/LinkedValueUtils.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/LinkedValueUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -11887,7 +11887,7 @@ module.exports = LinkedValueUtils;
 
 }).call(this,require('_process'))
 
-},{"./ReactPropTypes":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypes.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypes.js":[function(require,module,exports){
+},{"./ReactPropTypes":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypes.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypes.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12236,7 +12236,7 @@ function getPreciseType(propValue) {
 
 module.exports = ReactPropTypes;
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactFragment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactFragment.js","./ReactPropTypeLocationNames":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMImg.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactFragment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactFragment.js","./ReactPropTypeLocationNames":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMImg.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12282,7 +12282,7 @@ var ReactDOMImg = ReactClass.createClass({
 
 module.exports = ReactDOMImg;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMIframe.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMIframe.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12327,7 +12327,7 @@ var ReactDOMIframe = ReactClass.createClass({
 
 module.exports = ReactDOMIframe;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMForm.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMForm.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12376,7 +12376,7 @@ var ReactDOMForm = ReactClass.createClass({
 
 module.exports = ReactDOMForm;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/LocalEventTrapMixin.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./LocalEventTrapMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/LocalEventTrapMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/LocalEventTrapMixin.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -12434,7 +12434,7 @@ module.exports = LocalEventTrapMixin;
 
 }).call(this,require('_process'))
 
-},{"./ReactBrowserEventEmitter":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./accumulateInto":"/home/ubuntu/staging/apps/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/ubuntu/staging/apps/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMButton.js":[function(require,module,exports){
+},{"./ReactBrowserEventEmitter":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./accumulateInto":"/home/ubuntu/adhoc/apps/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/ubuntu/adhoc/apps/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMButton.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12498,7 +12498,7 @@ var ReactDOMButton = ReactClass.createClass({
 
 module.exports = ReactDOMButton;
 
-},{"./AutoFocusMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/AutoFocusMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./keyMirror":"/home/ubuntu/staging/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/AutoFocusMixin.js":[function(require,module,exports){
+},{"./AutoFocusMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/AutoFocusMixin.js","./ReactBrowserComponentMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js","./ReactClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./keyMirror":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/AutoFocusMixin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12525,7 +12525,7 @@ var AutoFocusMixin = {
 
 module.exports = AutoFocusMixin;
 
-},{"./focusNode":"/home/ubuntu/staging/apps/node_modules/react/lib/focusNode.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/focusNode.js":[function(require,module,exports){
+},{"./focusNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/focusNode.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/focusNode.js":[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -12554,7 +12554,7 @@ function focusNode(node) {
 
 module.exports = focusNode;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserComponentMixin.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserComponentMixin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12585,7 +12585,7 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 
-},{"./findDOMNode":"/home/ubuntu/staging/apps/node_modules/react/lib/findDOMNode.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/findDOMNode.js":[function(require,module,exports){
+},{"./findDOMNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/findDOMNode.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/findDOMNode.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -12659,7 +12659,7 @@ module.exports = findDOMNode;
 
 }).call(this,require('_process'))
 
-},{"./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactInstanceMap":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./isNode":"/home/ubuntu/staging/apps/node_modules/react/lib/isNode.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/MobileSafariClickEventPlugin.js":[function(require,module,exports){
+},{"./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactInstanceMap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./isNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isNode.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/MobileSafariClickEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12717,7 +12717,7 @@ var MobileSafariClickEventPlugin = {
 
 module.exports = MobileSafariClickEventPlugin;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/HTMLDOMPropertyConfig.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/HTMLDOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -12928,7 +12928,7 @@ var HTMLDOMPropertyConfig = {
 
 module.exports = HTMLDOMPropertyConfig;
 
-},{"./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/EnterLeaveEventPlugin.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EnterLeaveEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13068,7 +13068,7 @@ var EnterLeaveEventPlugin = {
 
 module.exports = EnterLeaveEventPlugin;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPropagators.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./SyntheticMouseEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticMouseEvent.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticMouseEvent.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPropagators.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./SyntheticMouseEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticMouseEvent.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticMouseEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13149,7 +13149,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
 
-},{"./SyntheticUIEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticUIEvent.js","./ViewportMetrics":"/home/ubuntu/staging/apps/node_modules/react/lib/ViewportMetrics.js","./getEventModifierState":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventModifierState.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getEventModifierState.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticUIEvent.js","./ViewportMetrics":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ViewportMetrics.js","./getEventModifierState":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventModifierState.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventModifierState.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13196,7 +13196,7 @@ function getEventModifierState(nativeEvent) {
 
 module.exports = getEventModifierState;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticUIEvent.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticUIEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13258,7 +13258,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
 
-},{"./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js","./getEventTarget":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventTarget.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/DefaultEventPluginOrder.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js","./getEventTarget":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventTarget.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/DefaultEventPluginOrder.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13297,7 +13297,7 @@ var DefaultEventPluginOrder = [
 
 module.exports = DefaultEventPluginOrder;
 
-},{"./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ClientReactRootIndex.js":[function(require,module,exports){
+},{"./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ClientReactRootIndex.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13322,7 +13322,7 @@ var ClientReactRootIndex = {
 
 module.exports = ClientReactRootIndex;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ChangeEventPlugin.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ChangeEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13704,7 +13704,7 @@ var ChangeEventPlugin = {
 
 module.exports = ChangeEventPlugin;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginHub.js","./EventPropagators":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js","./isEventSupported":"/home/ubuntu/staging/apps/node_modules/react/lib/isEventSupported.js","./isTextInputElement":"/home/ubuntu/staging/apps/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/isTextInputElement.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginHub.js","./EventPropagators":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js","./isEventSupported":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isEventSupported.js","./isTextInputElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isTextInputElement.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/isTextInputElement.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -13747,7 +13747,7 @@ function isTextInputElement(elem) {
 
 module.exports = isTextInputElement;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/BeforeInputEventPlugin.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/BeforeInputEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015 Facebook, Inc.
  * All rights reserved.
@@ -14242,7 +14242,7 @@ var BeforeInputEventPlugin = {
 
 module.exports = BeforeInputEventPlugin;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./FallbackCompositionState":"/home/ubuntu/staging/apps/node_modules/react/lib/FallbackCompositionState.js","./SyntheticCompositionEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticCompositionEvent.js","./SyntheticInputEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticInputEvent.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticInputEvent.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPropagators":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPropagators.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./FallbackCompositionState":"/home/ubuntu/adhoc/apps/node_modules/react/lib/FallbackCompositionState.js","./SyntheticCompositionEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticCompositionEvent.js","./SyntheticInputEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticInputEvent.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticInputEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14288,7 +14288,7 @@ SyntheticEvent.augmentClass(
 
 module.exports = SyntheticInputEvent;
 
-},{"./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticCompositionEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticCompositionEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14333,7 +14333,7 @@ SyntheticEvent.augmentClass(
 
 module.exports = SyntheticCompositionEvent;
 
-},{"./SyntheticEvent":"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/SyntheticEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/SyntheticEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14499,7 +14499,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.threeArgumentPooler);
 
 module.exports = SyntheticEvent;
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js","./getEventTarget":"/home/ubuntu/staging/apps/node_modules/react/lib/getEventTarget.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getEventTarget.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js","./getEventTarget":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventTarget.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getEventTarget.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14530,7 +14530,7 @@ function getEventTarget(nativeEvent) {
 
 module.exports = getEventTarget;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/FallbackCompositionState.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/FallbackCompositionState.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14621,7 +14621,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./getTextContentAccessor":"/home/ubuntu/staging/apps/node_modules/react/lib/getTextContentAccessor.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getTextContentAccessor.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./getTextContentAccessor":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getTextContentAccessor.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getTextContentAccessor.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14658,7 +14658,7 @@ function getTextContentAccessor() {
 
 module.exports = getTextContentAccessor;
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/EventPropagators.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPropagators.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -14801,7 +14801,7 @@ module.exports = EventPropagators;
 
 }).call(this,require('_process'))
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginHub.js","./accumulateInto":"/home/ubuntu/staging/apps/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/ubuntu/staging/apps/node_modules/react/lib/forEachAccumulated.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMTextComponent.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginHub.js","./accumulateInto":"/home/ubuntu/adhoc/apps/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/ubuntu/adhoc/apps/node_modules/react/lib/forEachAccumulated.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMTextComponent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -14918,7 +14918,7 @@ assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 
-},{"./DOMPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactComponentBrowserEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactDOMComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMComponent.js","./escapeTextContentForBrowser":"/home/ubuntu/staging/apps/node_modules/react/lib/escapeTextContentForBrowser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMComponent.js":[function(require,module,exports){
+},{"./DOMPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactComponentBrowserEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactDOMComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMComponent.js","./escapeTextContentForBrowser":"/home/ubuntu/adhoc/apps/node_modules/react/lib/escapeTextContentForBrowser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -15429,7 +15429,7 @@ module.exports = ReactDOMComponent;
 
 }).call(this,require('_process'))
 
-},{"./CSSPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/CSSPropertyOperations.js","./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js","./DOMPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserEventEmitter":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactComponentBrowserEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactMultiChild":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMultiChild.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./escapeTextContentForBrowser":"/home/ubuntu/staging/apps/node_modules/react/lib/escapeTextContentForBrowser.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./isEventSupported":"/home/ubuntu/staging/apps/node_modules/react/lib/isEventSupported.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMultiChild.js":[function(require,module,exports){
+},{"./CSSPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CSSPropertyOperations.js","./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js","./DOMPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMPropertyOperations.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactBrowserEventEmitter":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactComponentBrowserEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactMultiChild":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMultiChild.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./escapeTextContentForBrowser":"/home/ubuntu/adhoc/apps/node_modules/react/lib/escapeTextContentForBrowser.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./isEventSupported":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isEventSupported.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMultiChild.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -15859,7 +15859,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 
-},{"./ReactChildReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactChildReconciler.js","./ReactComponentEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentEnvironment.js","./ReactMultiChildUpdateTypes":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./ReactReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactChildReconciler.js":[function(require,module,exports){
+},{"./ReactChildReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactChildReconciler.js","./ReactComponentEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentEnvironment.js","./ReactMultiChildUpdateTypes":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./ReactReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactChildReconciler.js":[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -15986,7 +15986,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 
-},{"./ReactReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js","./flattenChildren":"/home/ubuntu/staging/apps/node_modules/react/lib/flattenChildren.js","./instantiateReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/instantiateReactComponent.js","./shouldUpdateReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/shouldUpdateReactComponent.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/flattenChildren.js":[function(require,module,exports){
+},{"./ReactReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js","./flattenChildren":"/home/ubuntu/adhoc/apps/node_modules/react/lib/flattenChildren.js","./instantiateReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/instantiateReactComponent.js","./shouldUpdateReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/shouldUpdateReactComponent.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/flattenChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -16045,7 +16045,7 @@ module.exports = flattenChildren;
 
 }).call(this,require('_process'))
 
-},{"./traverseAllChildren":"/home/ubuntu/staging/apps/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js":[function(require,module,exports){
+},{"./traverseAllChildren":"/home/ubuntu/adhoc/apps/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentBrowserEnvironment.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -16092,7 +16092,7 @@ var ReactComponentBrowserEnvironment = {
 
 module.exports = ReactComponentBrowserEnvironment;
 
-},{"./ReactDOMIDOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMIDOperations.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOMIDOperations.js":[function(require,module,exports){
+},{"./ReactDOMIDOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMIDOperations.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOMIDOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -16261,7 +16261,7 @@ module.exports = ReactDOMIDOperations;
 
 }).call(this,require('_process'))
 
-},{"./CSSPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/CSSPropertyOperations.js","./DOMChildrenOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMChildrenOperations.js","./DOMPropertyOperations":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMPropertyOperations.js","./ReactMount":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/ubuntu/staging/apps/node_modules/react/lib/setInnerHTML.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMount.js":[function(require,module,exports){
+},{"./CSSPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CSSPropertyOperations.js","./DOMChildrenOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMChildrenOperations.js","./DOMPropertyOperations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMPropertyOperations.js","./ReactMount":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/ubuntu/adhoc/apps/node_modules/react/lib/setInnerHTML.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMount.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -17153,7 +17153,7 @@ module.exports = ReactMount;
 
 }).call(this,require('_process'))
 
-},{"./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js","./ReactBrowserEventEmitter":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElementValidator.js","./ReactEmptyComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEmptyComponent.js","./ReactInstanceHandles":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactInstanceMap":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactMarkupChecksum":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMarkupChecksum.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./ReactReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js","./ReactUpdateQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdateQueue.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./containsNode":"/home/ubuntu/staging/apps/node_modules/react/lib/containsNode.js","./emptyObject":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyObject.js","./getReactRootElementInContainer":"/home/ubuntu/staging/apps/node_modules/react/lib/getReactRootElementInContainer.js","./instantiateReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/ubuntu/staging/apps/node_modules/react/lib/setInnerHTML.js","./shouldUpdateReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/instantiateReactComponent.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js","./ReactBrowserEventEmitter":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElementValidator.js","./ReactEmptyComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEmptyComponent.js","./ReactInstanceHandles":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js","./ReactInstanceMap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactMarkupChecksum":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMarkupChecksum.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./ReactReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js","./ReactUpdateQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdateQueue.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./containsNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/containsNode.js","./emptyObject":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyObject.js","./getReactRootElementInContainer":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getReactRootElementInContainer.js","./instantiateReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/instantiateReactComponent.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./setInnerHTML":"/home/ubuntu/adhoc/apps/node_modules/react/lib/setInnerHTML.js","./shouldUpdateReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/instantiateReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -17292,7 +17292,7 @@ module.exports = instantiateReactComponent;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactCompositeComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCompositeComponent.js","./ReactEmptyComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEmptyComponent.js","./ReactNativeComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactNativeComponent.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCompositeComponent.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactCompositeComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCompositeComponent.js","./ReactEmptyComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEmptyComponent.js","./ReactNativeComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactNativeComponent.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCompositeComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18206,7 +18206,7 @@ module.exports = ReactCompositeComponent;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactComponentEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentEnvironment.js","./ReactContext":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElementValidator.js","./ReactInstanceMap":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactLifeCycle":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactLifeCycle.js","./ReactNativeComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactNativeComponent.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./ReactPropTypeLocationNames":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocations.js","./ReactReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./emptyObject":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyObject.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./shouldUpdateReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/shouldUpdateReactComponent.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactComponentEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentEnvironment.js","./ReactContext":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElementValidator.js","./ReactInstanceMap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactLifeCycle":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactLifeCycle.js","./ReactNativeComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactNativeComponent.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./ReactPropTypeLocationNames":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocations.js","./ReactReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./emptyObject":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyObject.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./shouldUpdateReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/shouldUpdateReactComponent.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/shouldUpdateReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -18311,7 +18311,7 @@ module.exports = shouldUpdateReactComponent;
 
 }).call(this,require('_process'))
 
-},{"./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponentEnvironment.js":[function(require,module,exports){
+},{"./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponentEnvironment.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -18373,7 +18373,7 @@ module.exports = ReactComponentEnvironment;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getReactRootElementInContainer.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getReactRootElementInContainer.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18408,7 +18408,7 @@ function getReactRootElementInContainer(container) {
 
 module.exports = getReactRootElementInContainer;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/containsNode.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/containsNode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18452,7 +18452,7 @@ function containsNode(outerNode, innerNode) {
 
 module.exports = containsNode;
 
-},{"./isTextNode":"/home/ubuntu/staging/apps/node_modules/react/lib/isTextNode.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/isTextNode.js":[function(require,module,exports){
+},{"./isTextNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isTextNode.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/isTextNode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18477,7 +18477,7 @@ function isTextNode(object) {
 
 module.exports = isTextNode;
 
-},{"./isNode":"/home/ubuntu/staging/apps/node_modules/react/lib/isNode.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/isNode.js":[function(require,module,exports){
+},{"./isNode":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isNode.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/isNode.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18504,7 +18504,7 @@ function isNode(object) {
 
 module.exports = isNode;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMarkupChecksum.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMarkupChecksum.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18552,7 +18552,7 @@ var ReactMarkupChecksum = {
 
 module.exports = ReactMarkupChecksum;
 
-},{"./adler32":"/home/ubuntu/staging/apps/node_modules/react/lib/adler32.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/adler32.js":[function(require,module,exports){
+},{"./adler32":"/home/ubuntu/adhoc/apps/node_modules/react/lib/adler32.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/adler32.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -18586,7 +18586,7 @@ function adler32(data) {
 
 module.exports = adler32;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEmptyComponent.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEmptyComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -18682,7 +18682,7 @@ module.exports = ReactEmptyComponent;
 
 }).call(this,require('_process'))
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactInstanceMap":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactBrowserEventEmitter.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactInstanceMap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactBrowserEventEmitter.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19035,7 +19035,7 @@ var ReactBrowserEventEmitter = assign({}, ReactEventEmitterMixin, {
 
 module.exports = ReactBrowserEventEmitter;
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginHub.js","./EventPluginRegistry":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginRegistry.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactEventEmitterMixin":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEventEmitterMixin.js","./ViewportMetrics":"/home/ubuntu/staging/apps/node_modules/react/lib/ViewportMetrics.js","./isEventSupported":"/home/ubuntu/staging/apps/node_modules/react/lib/isEventSupported.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/isEventSupported.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./EventPluginHub":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginHub.js","./EventPluginRegistry":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginRegistry.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactEventEmitterMixin":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEventEmitterMixin.js","./ViewportMetrics":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ViewportMetrics.js","./isEventSupported":"/home/ubuntu/adhoc/apps/node_modules/react/lib/isEventSupported.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/isEventSupported.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19100,7 +19100,7 @@ function isEventSupported(eventNameSuffix, capture) {
 
 module.exports = isEventSupported;
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ViewportMetrics.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ViewportMetrics.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19129,7 +19129,7 @@ var ViewportMetrics = {
 
 module.exports = ViewportMetrics;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactEventEmitterMixin.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactEventEmitterMixin.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19179,7 +19179,7 @@ var ReactEventEmitterMixin = {
 
 module.exports = ReactEventEmitterMixin;
 
-},{"./EventPluginHub":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginHub.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginHub.js":[function(require,module,exports){
+},{"./EventPluginHub":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginHub.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginHub.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19458,7 +19458,7 @@ module.exports = EventPluginHub;
 
 }).call(this,require('_process'))
 
-},{"./EventPluginRegistry":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginRegistry.js","./EventPluginUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginUtils.js","./accumulateInto":"/home/ubuntu/staging/apps/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/ubuntu/staging/apps/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/forEachAccumulated.js":[function(require,module,exports){
+},{"./EventPluginRegistry":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginRegistry.js","./EventPluginUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginUtils.js","./accumulateInto":"/home/ubuntu/adhoc/apps/node_modules/react/lib/accumulateInto.js","./forEachAccumulated":"/home/ubuntu/adhoc/apps/node_modules/react/lib/forEachAccumulated.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/forEachAccumulated.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -19489,7 +19489,7 @@ var forEachAccumulated = function(arr, cb, scope) {
 
 module.exports = forEachAccumulated;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/accumulateInto.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/accumulateInto.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -19556,7 +19556,7 @@ module.exports = accumulateInto;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginRegistry.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginRegistry.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19837,7 +19837,7 @@ module.exports = EventPluginRegistry;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/DOMChildrenOperations.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMChildrenOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19976,7 +19976,7 @@ module.exports = DOMChildrenOperations;
 
 }).call(this,require('_process'))
 
-},{"./Danger":"/home/ubuntu/staging/apps/node_modules/react/lib/Danger.js","./ReactMultiChildUpdateTypes":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./setTextContent":"/home/ubuntu/staging/apps/node_modules/react/lib/setTextContent.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/setTextContent.js":[function(require,module,exports){
+},{"./Danger":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Danger.js","./ReactMultiChildUpdateTypes":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMultiChildUpdateTypes.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./setTextContent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/setTextContent.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/setTextContent.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20018,7 +20018,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setTextContent;
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./escapeTextContentForBrowser":"/home/ubuntu/staging/apps/node_modules/react/lib/escapeTextContentForBrowser.js","./setInnerHTML":"/home/ubuntu/staging/apps/node_modules/react/lib/setInnerHTML.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/setInnerHTML.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./escapeTextContentForBrowser":"/home/ubuntu/adhoc/apps/node_modules/react/lib/escapeTextContentForBrowser.js","./setInnerHTML":"/home/ubuntu/adhoc/apps/node_modules/react/lib/setInnerHTML.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/setInnerHTML.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20107,7 +20107,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setInnerHTML;
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactMultiChildUpdateTypes.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactMultiChildUpdateTypes.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20140,7 +20140,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 
 module.exports = ReactMultiChildUpdateTypes;
 
-},{"./keyMirror":"/home/ubuntu/staging/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/Danger.js":[function(require,module,exports){
+},{"./keyMirror":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/Danger.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20328,7 +20328,7 @@ module.exports = Danger;
 
 }).call(this,require('_process'))
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./createNodesFromMarkup":"/home/ubuntu/staging/apps/node_modules/react/lib/createNodesFromMarkup.js","./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js","./getMarkupWrap":"/home/ubuntu/staging/apps/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/createNodesFromMarkup.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./createNodesFromMarkup":"/home/ubuntu/adhoc/apps/node_modules/react/lib/createNodesFromMarkup.js","./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js","./getMarkupWrap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/createNodesFromMarkup.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20419,7 +20419,7 @@ module.exports = createNodesFromMarkup;
 
 }).call(this,require('_process'))
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./createArrayFromMixed":"/home/ubuntu/staging/apps/node_modules/react/lib/createArrayFromMixed.js","./getMarkupWrap":"/home/ubuntu/staging/apps/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getMarkupWrap.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./createArrayFromMixed":"/home/ubuntu/adhoc/apps/node_modules/react/lib/createArrayFromMixed.js","./getMarkupWrap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getMarkupWrap.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getMarkupWrap.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20539,7 +20539,7 @@ module.exports = getMarkupWrap;
 
 }).call(this,require('_process'))
 
-},{"./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/createArrayFromMixed.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/createArrayFromMixed.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20625,7 +20625,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 
-},{"./toArray":"/home/ubuntu/staging/apps/node_modules/react/lib/toArray.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/toArray.js":[function(require,module,exports){
+},{"./toArray":"/home/ubuntu/adhoc/apps/node_modules/react/lib/toArray.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/toArray.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -20698,7 +20698,7 @@ module.exports = toArray;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/CSSPropertyOperations.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/CSSPropertyOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -20881,7 +20881,7 @@ module.exports = CSSPropertyOperations;
 
 }).call(this,require('_process'))
 
-},{"./CSSProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/CSSProperty.js","./ExecutionEnvironment":"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js","./camelizeStyleName":"/home/ubuntu/staging/apps/node_modules/react/lib/camelizeStyleName.js","./dangerousStyleValue":"/home/ubuntu/staging/apps/node_modules/react/lib/dangerousStyleValue.js","./hyphenateStyleName":"/home/ubuntu/staging/apps/node_modules/react/lib/hyphenateStyleName.js","./memoizeStringOnly":"/home/ubuntu/staging/apps/node_modules/react/lib/memoizeStringOnly.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/memoizeStringOnly.js":[function(require,module,exports){
+},{"./CSSProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CSSProperty.js","./ExecutionEnvironment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js","./camelizeStyleName":"/home/ubuntu/adhoc/apps/node_modules/react/lib/camelizeStyleName.js","./dangerousStyleValue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/dangerousStyleValue.js","./hyphenateStyleName":"/home/ubuntu/adhoc/apps/node_modules/react/lib/hyphenateStyleName.js","./memoizeStringOnly":"/home/ubuntu/adhoc/apps/node_modules/react/lib/memoizeStringOnly.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/memoizeStringOnly.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20914,7 +20914,7 @@ function memoizeStringOnly(callback) {
 
 module.exports = memoizeStringOnly;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/hyphenateStyleName.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/hyphenateStyleName.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20955,7 +20955,7 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 
-},{"./hyphenate":"/home/ubuntu/staging/apps/node_modules/react/lib/hyphenate.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/hyphenate.js":[function(require,module,exports){
+},{"./hyphenate":"/home/ubuntu/adhoc/apps/node_modules/react/lib/hyphenate.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/hyphenate.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -20988,7 +20988,7 @@ function hyphenate(string) {
 
 module.exports = hyphenate;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/dangerousStyleValue.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/dangerousStyleValue.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21046,7 +21046,7 @@ function dangerousStyleValue(name, value) {
 
 module.exports = dangerousStyleValue;
 
-},{"./CSSProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/CSSProperty.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/camelizeStyleName.js":[function(require,module,exports){
+},{"./CSSProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CSSProperty.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/camelizeStyleName.js":[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -21088,7 +21088,7 @@ function camelizeStyleName(string) {
 
 module.exports = camelizeStyleName;
 
-},{"./camelize":"/home/ubuntu/staging/apps/node_modules/react/lib/camelize.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/camelize.js":[function(require,module,exports){
+},{"./camelize":"/home/ubuntu/adhoc/apps/node_modules/react/lib/camelize.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/camelize.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21120,7 +21120,7 @@ function camelize(string) {
 
 module.exports = camelize;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/CSSProperty.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/CSSProperty.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21245,7 +21245,7 @@ var CSSProperty = {
 
 module.exports = CSSProperty;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/DOMPropertyOperations.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMPropertyOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21438,7 +21438,7 @@ module.exports = DOMPropertyOperations;
 
 }).call(this,require('_process'))
 
-},{"./DOMProperty":"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js","./quoteAttributeValueForBrowser":"/home/ubuntu/staging/apps/node_modules/react/lib/quoteAttributeValueForBrowser.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/quoteAttributeValueForBrowser.js":[function(require,module,exports){
+},{"./DOMProperty":"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js","./quoteAttributeValueForBrowser":"/home/ubuntu/adhoc/apps/node_modules/react/lib/quoteAttributeValueForBrowser.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/quoteAttributeValueForBrowser.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21466,7 +21466,7 @@ function quoteAttributeValueForBrowser(value) {
 
 module.exports = quoteAttributeValueForBrowser;
 
-},{"./escapeTextContentForBrowser":"/home/ubuntu/staging/apps/node_modules/react/lib/escapeTextContentForBrowser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/escapeTextContentForBrowser.js":[function(require,module,exports){
+},{"./escapeTextContentForBrowser":"/home/ubuntu/adhoc/apps/node_modules/react/lib/escapeTextContentForBrowser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/escapeTextContentForBrowser.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -21506,7 +21506,7 @@ function escapeTextContentForBrowser(text) {
 
 module.exports = escapeTextContentForBrowser;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/DOMProperty.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/DOMProperty.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21806,7 +21806,7 @@ module.exports = DOMProperty;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactDOM.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactDOM.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -21986,7 +21986,7 @@ module.exports = ReactDOM;
 
 }).call(this,require('_process'))
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElementValidator.js","./mapObject":"/home/ubuntu/staging/apps/node_modules/react/lib/mapObject.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/mapObject.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElementValidator.js","./mapObject":"/home/ubuntu/adhoc/apps/node_modules/react/lib/mapObject.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/mapObject.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -22039,7 +22039,7 @@ function mapObject(object, callback, context) {
 
 module.exports = mapObject;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactClass.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactClass.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22986,7 +22986,7 @@ module.exports = ReactClass;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponent.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactErrorUtils":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactErrorUtils.js","./ReactInstanceMap":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactLifeCycle":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactLifeCycle.js","./ReactPropTypeLocationNames":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocations.js","./ReactUpdateQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdateQueue.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./keyMirror":"/home/ubuntu/staging/apps/node_modules/react/lib/keyMirror.js","./keyOf":"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/keyOf.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponent.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactErrorUtils":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactErrorUtils.js","./ReactInstanceMap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactLifeCycle":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactLifeCycle.js","./ReactPropTypeLocationNames":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocations.js","./ReactUpdateQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdateQueue.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./keyMirror":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyMirror.js","./keyOf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyOf.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -23022,7 +23022,7 @@ var keyOf = function(oneKeyObj) {
 
 module.exports = keyOf;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactErrorUtils.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactErrorUtils.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -23054,7 +23054,7 @@ var ReactErrorUtils = {
 
 module.exports = ReactErrorUtils;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactComponent.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23209,7 +23209,7 @@ module.exports = ReactComponent;
 
 }).call(this,require('_process'))
 
-},{"./ReactUpdateQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdateQueue.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdateQueue.js":[function(require,module,exports){
+},{"./ReactUpdateQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdateQueue.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdateQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -23509,7 +23509,7 @@ module.exports = ReactUpdateQueue;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactInstanceMap":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactLifeCycle":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactLifeCycle.js","./ReactUpdates":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactUpdates.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactInstanceMap":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js","./ReactLifeCycle":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactLifeCycle.js","./ReactUpdates":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactUpdates.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -23792,7 +23792,7 @@ module.exports = ReactUpdates;
 
 }).call(this,require('_process'))
 
-},{"./CallbackQueue":"/home/ubuntu/staging/apps/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactPerf":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js","./ReactReconciler":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js","./Transaction":"/home/ubuntu/staging/apps/node_modules/react/lib/Transaction.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/Transaction.js":[function(require,module,exports){
+},{"./CallbackQueue":"/home/ubuntu/adhoc/apps/node_modules/react/lib/CallbackQueue.js","./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactPerf":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js","./ReactReconciler":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js","./Transaction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Transaction.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/Transaction.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24034,7 +24034,7 @@ module.exports = Transaction;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactReconciler.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactReconciler.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24159,7 +24159,7 @@ module.exports = ReactReconciler;
 
 }).call(this,require('_process'))
 
-},{"./ReactElementValidator":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElementValidator.js","./ReactRef":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactRef.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactRef.js":[function(require,module,exports){
+},{"./ReactElementValidator":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElementValidator.js","./ReactRef":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactRef.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactRef.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -24230,7 +24230,7 @@ ReactRef.detachRefs = function(instance, element) {
 
 module.exports = ReactRef;
 
-},{"./ReactOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactOwner.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactOwner.js":[function(require,module,exports){
+},{"./ReactOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactOwner.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactOwner.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24343,7 +24343,7 @@ module.exports = ReactOwner;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElementValidator.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElementValidator.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -24809,7 +24809,7 @@ module.exports = ReactElementValidator;
 
 }).call(this,require('_process'))
 
-},{"./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactFragment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactFragment.js","./ReactNativeComponent":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactNativeComponent.js","./ReactPropTypeLocationNames":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocations.js","./getIteratorFn":"/home/ubuntu/staging/apps/node_modules/react/lib/getIteratorFn.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocations.js":[function(require,module,exports){
+},{"./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactFragment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactFragment.js","./ReactNativeComponent":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactNativeComponent.js","./ReactPropTypeLocationNames":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypeLocations":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocations.js","./getIteratorFn":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getIteratorFn.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocations.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -24833,7 +24833,7 @@ var ReactPropTypeLocations = keyMirror({
 
 module.exports = ReactPropTypeLocations;
 
-},{"./keyMirror":"/home/ubuntu/staging/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPropTypeLocationNames.js":[function(require,module,exports){
+},{"./keyMirror":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPropTypeLocationNames.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24862,7 +24862,7 @@ module.exports = ReactPropTypeLocationNames;
 
 }).call(this,require('_process'))
 
-},{"_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactNativeComponent.js":[function(require,module,exports){
+},{"_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactNativeComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -24970,7 +24970,7 @@ module.exports = ReactNativeComponent;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactPerf.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactPerf.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25075,7 +25075,7 @@ module.exports = ReactPerf;
 
 }).call(this,require('_process'))
 
-},{"_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/CallbackQueue.js":[function(require,module,exports){
+},{"_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/CallbackQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25176,7 +25176,7 @@ module.exports = CallbackQueue;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactLifeCycle.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactLifeCycle.js":[function(require,module,exports){
 /**
  * Copyright 2015, Facebook, Inc.
  * All rights reserved.
@@ -25213,7 +25213,7 @@ var ReactLifeCycle = {
 
 module.exports = ReactLifeCycle;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceMap.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceMap.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25262,7 +25262,7 @@ var ReactInstanceMap = {
 
 module.exports = ReactInstanceMap;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactChildren.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25416,7 +25416,7 @@ module.exports = ReactChildren;
 
 }).call(this,require('_process'))
 
-},{"./PooledClass":"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js","./ReactFragment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactFragment.js","./traverseAllChildren":"/home/ubuntu/staging/apps/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/traverseAllChildren.js":[function(require,module,exports){
+},{"./PooledClass":"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js","./ReactFragment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactFragment.js","./traverseAllChildren":"/home/ubuntu/adhoc/apps/node_modules/react/lib/traverseAllChildren.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/traverseAllChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -25670,7 +25670,7 @@ module.exports = traverseAllChildren;
 
 }).call(this,require('_process'))
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./ReactFragment":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactFragment.js","./ReactInstanceHandles":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js","./getIteratorFn":"/home/ubuntu/staging/apps/node_modules/react/lib/getIteratorFn.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/getIteratorFn.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./ReactFragment":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactFragment.js","./ReactInstanceHandles":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js","./getIteratorFn":"/home/ubuntu/adhoc/apps/node_modules/react/lib/getIteratorFn.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/getIteratorFn.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -25714,7 +25714,7 @@ function getIteratorFn(maybeIterable) {
 
 module.exports = getIteratorFn;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactInstanceHandles.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactInstanceHandles.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26051,7 +26051,7 @@ module.exports = ReactInstanceHandles;
 
 }).call(this,require('_process'))
 
-},{"./ReactRootIndex":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactRootIndex.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactRootIndex.js":[function(require,module,exports){
+},{"./ReactRootIndex":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactRootIndex.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactRootIndex.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -26082,7 +26082,7 @@ var ReactRootIndex = {
 
 module.exports = ReactRootIndex;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactFragment.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactFragment.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -26268,7 +26268,7 @@ module.exports = ReactFragment;
 
 }).call(this,require('_process'))
 
-},{"./ReactElement":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactElement.js":[function(require,module,exports){
+},{"./ReactElement":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactElement.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -26577,7 +26577,7 @@ module.exports = ReactElement;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./ReactContext":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactCurrentOwner.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./ReactContext":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactContext.js","./ReactCurrentOwner":"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactCurrentOwner.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -26611,7 +26611,7 @@ var ReactCurrentOwner = {
 
 module.exports = ReactCurrentOwner;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ReactContext.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ReactContext.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26690,7 +26690,7 @@ module.exports = ReactContext;
 
 }).call(this,require('_process'))
 
-},{"./Object.assign":"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js","./emptyObject":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyObject.js","./warning":"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/warning.js":[function(require,module,exports){
+},{"./Object.assign":"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js","./emptyObject":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyObject.js","./warning":"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/warning.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -26754,7 +26754,7 @@ module.exports = warning;
 
 }).call(this,require('_process'))
 
-},{"./emptyFunction":"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/emptyFunction.js":[function(require,module,exports){
+},{"./emptyFunction":"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyFunction.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -26788,7 +26788,7 @@ emptyFunction.thatReturnsArgument = function(arg) { return arg; };
 
 module.exports = emptyFunction;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/emptyObject.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/emptyObject.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26813,7 +26813,7 @@ module.exports = emptyObject;
 
 }).call(this,require('_process'))
 
-},{"_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/PooledClass.js":[function(require,module,exports){
+},{"_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/PooledClass.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -26930,7 +26930,7 @@ module.exports = PooledClass;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/Object.assign.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/Object.assign.js":[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -26979,7 +26979,7 @@ function assign(target, sources) {
 
 module.exports = assign;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/ExecutionEnvironment.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/ExecutionEnvironment.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -27023,7 +27023,7 @@ var ExecutionEnvironment = {
 
 module.exports = ExecutionEnvironment;
 
-},{}],"/home/ubuntu/staging/apps/node_modules/react/lib/EventPluginUtils.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventPluginUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27245,7 +27245,7 @@ module.exports = EventPluginUtils;
 
 }).call(this,require('_process'))
 
-},{"./EventConstants":"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js","./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/EventConstants.js":[function(require,module,exports){
+},{"./EventConstants":"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js","./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/EventConstants.js":[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -27317,7 +27317,7 @@ var EventConstants = {
 
 module.exports = EventConstants;
 
-},{"./keyMirror":"/home/ubuntu/staging/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/keyMirror.js":[function(require,module,exports){
+},{"./keyMirror":"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyMirror.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/keyMirror.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27373,7 +27373,7 @@ module.exports = keyMirror;
 
 }).call(this,require('_process'))
 
-},{"./invariant":"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/react/lib/invariant.js":[function(require,module,exports){
+},{"./invariant":"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js","_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/react/lib/invariant.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -27431,7 +27431,7 @@ module.exports = invariant;
 
 }).call(this,require('_process'))
 
-},{"_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js":[function(require,module,exports){
+},{"_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/url/url.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -28140,13 +28140,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/punycode/punycode.js","querystring":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/querystring-es3/index.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/querystring-es3/index.js":[function(require,module,exports){
+},{"punycode":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/punycode/punycode.js","querystring":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/querystring-es3/index.js"}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/querystring-es3/index.js":[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/querystring-es3/decode.js","./encode":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/querystring-es3/encode.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/querystring-es3/encode.js":[function(require,module,exports){
+},{"./decode":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/querystring-es3/decode.js","./encode":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/querystring-es3/encode.js"}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/querystring-es3/encode.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -28233,7 +28233,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/querystring-es3/decode.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/querystring-es3/decode.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -28319,7 +28319,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/punycode/punycode.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/punycode/punycode.js":[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.3.2 by @mathias */
 ;(function(root) {
@@ -28854,7 +28854,7 @@ var isArray = Array.isArray || function (xs) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/templates/makeYourOwn.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -28875,7 +28875,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/learn.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -28898,7 +28898,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/instructions.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -28919,7 +28919,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/builder.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -28940,7 +28940,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/alert.jsx":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/alert.jsx":[function(require,module,exports){
 /* global $ */
 
 /**
@@ -28987,7 +28987,7 @@ module.exports = React.createClass({
   }
 });
 
-},{}],"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/templates/VersionHistory.jsx":[function(require,module,exports){
 /* global dashboard */
 'use strict';
 
@@ -29167,7 +29167,7 @@ module.exports = React.createClass({
   }
 });
 
-},{"../clientApi":"/home/ubuntu/staging/apps/build/js/clientApi.js","./VersionRow.jsx":"/home/ubuntu/staging/apps/build/js/templates/VersionRow.jsx"}],"/home/ubuntu/staging/apps/build/js/templates/VersionRow.jsx":[function(require,module,exports){
+},{"../clientApi":"/home/ubuntu/adhoc/apps/build/js/clientApi.js","./VersionRow.jsx":"/home/ubuntu/adhoc/apps/build/js/templates/VersionRow.jsx"}],"/home/ubuntu/adhoc/apps/build/js/templates/VersionRow.jsx":[function(require,module,exports){
 /* globals $ */
 
 /**
@@ -29239,7 +29239,7 @@ module.exports = React.createClass({
   }
 });
 
-},{}],"/home/ubuntu/staging/apps/build/js/clientApi.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/clientApi.js":[function(require,module,exports){
 /* global dashboard */
 // TODO(dave): Merge with the client API in /shared.
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
@@ -29275,7 +29275,7 @@ function clientApi(endpoint) {
   };
 }
 
-},{}],"/home/ubuntu/staging/apps/build/js/logToCloud.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/logToCloud.js":[function(require,module,exports){
 'use strict';
 
 var PageAction = {
@@ -29314,7 +29314,7 @@ module.exports = {
   }
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/feedback.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/feedback.js":[function(require,module,exports){
 /* global trackEvent */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -30705,7 +30705,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
   });
 };
 
-},{"./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./feedbackBlocks":"/home/ubuntu/staging/apps/build/js/feedbackBlocks.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./puzzleRatingUtils":"/home/ubuntu/staging/apps/build/js/puzzleRatingUtils.js","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/code.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/code.html.ejs","./templates/shareFailure.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/shareFailure.html.ejs","./templates/sharing.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/sharing.html.ejs","./templates/showCode.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/showCode.html.ejs","./templates/trophy.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/templates/trophy.html.ejs":[function(require,module,exports){
+},{"./codegen":"/home/ubuntu/adhoc/apps/build/js/codegen.js","./constants":"/home/ubuntu/adhoc/apps/build/js/constants.js","./dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","./feedbackBlocks":"/home/ubuntu/adhoc/apps/build/js/feedbackBlocks.js","./locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","./puzzleRatingUtils":"/home/ubuntu/adhoc/apps/build/js/puzzleRatingUtils.js","./templates/buttons.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/buttons.html.ejs","./templates/code.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/code.html.ejs","./templates/shareFailure.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/shareFailure.html.ejs","./templates/sharing.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/sharing.html.ejs","./templates/showCode.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/showCode.html.ejs","./templates/trophy.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/trophy.html.ejs","./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js","./xml":"/home/ubuntu/adhoc/apps/build/js/xml.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/trophy.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30726,7 +30726,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/showCode.html.ejs":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/showCode.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30747,7 +30747,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/sharing.html.ejs":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/sharing.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30768,7 +30768,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/shareFailure.html.ejs":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/shareFailure.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30789,7 +30789,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/code.html.ejs":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/code.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30810,7 +30810,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/templates/buttons.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30831,7 +30831,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/puzzleRatingUtils.js":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/puzzleRatingUtils.js":[function(require,module,exports){
 /**
  * @overview A helper class for all actions associated with Puzzle
  * Ratings, aka the Fun-O-Meter.
@@ -30950,7 +30950,7 @@ puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
   });
 };
 
-},{"./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./templates/puzzleRating.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/puzzleRating.html.ejs"}],"/home/ubuntu/staging/apps/build/js/templates/puzzleRating.html.ejs":[function(require,module,exports){
+},{"./dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","./templates/puzzleRating.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/puzzleRating.html.ejs"}],"/home/ubuntu/adhoc/apps/build/js/templates/puzzleRating.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -30971,7 +30971,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/feedbackBlocks.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/feedbackBlocks.js":[function(require,module,exports){
 'use strict';
 
 var constants = require('./constants');
@@ -31116,7 +31116,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function (blocks) {
   return blockXMLStrings.join('');
 };
 
-},{"./constants":"/home/ubuntu/staging/apps/build/js/constants.js","./templates/readonly.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/readonly.html.ejs"}],"/home/ubuntu/staging/apps/build/js/templates/readonly.html.ejs":[function(require,module,exports){
+},{"./constants":"/home/ubuntu/adhoc/apps/build/js/constants.js","./templates/readonly.html.ejs":"/home/ubuntu/adhoc/apps/build/js/templates/readonly.html.ejs"}],"/home/ubuntu/adhoc/apps/build/js/templates/readonly.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -31138,7 +31138,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/constants.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/constants.js":[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -31239,7 +31239,7 @@ exports.KeyCodes = {
 /** @const {string} SVG element namespace */
 exports.SVG_NS = 'http://www.w3.org/2000/svg';
 
-},{}],"/home/ubuntu/staging/apps/build/js/block_utils.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/block_utils.js":[function(require,module,exports){
 'use strict';
 
 var xml = require('./xml');
@@ -31524,7 +31524,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
   return '<block type="functional_call">' + mutation + contents + '</block>';
 };
 
-},{"./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js":[function(require,module,exports){
+},{"./xml":"/home/ubuntu/adhoc/apps/build/js/xml.js"}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletTooltipManager.js":[function(require,module,exports){
 'use strict';
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -31661,7 +31661,7 @@ DropletTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
 
 module.exports = DropletTooltipManager;
 
-},{"../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./DropletAutocompleteParameterTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js","./DropletAutocompletePopupTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js","./DropletBlockTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js","./DropletFunctionTooltip":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletBlockTooltipManager.js":[function(require,module,exports){
+},{"../dropletUtils":"/home/ubuntu/adhoc/apps/build/js/dropletUtils.js","./DropletAutocompleteParameterTooltipManager":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js","./DropletAutocompletePopupTooltipManager":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js","./DropletBlockTooltipManager":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletBlockTooltipManager.js","./DropletFunctionTooltip":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletFunctionTooltip.js"}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletBlockTooltipManager.js":[function(require,module,exports){
 'use strict';
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -31786,7 +31786,7 @@ DropletBlockTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
 
 module.exports = DropletBlockTooltipManager;
 
-},{"../dom":"/home/ubuntu/staging/apps/build/js/dom.js","./DropletFunctionTooltip":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js","./DropletFunctionTooltip.html.ejs":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.js":[function(require,module,exports){
+},{"../dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","./DropletFunctionTooltip":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletFunctionTooltip.js","./DropletFunctionTooltip.html.ejs":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs"}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletFunctionTooltip.js":[function(require,module,exports){
 'use strict';
 
 var msg = require('../locale');
@@ -31931,14 +31931,14 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
 
 module.exports = DropletFunctionTooltip;
 
-},{"../locale":"/home/ubuntu/staging/apps/build/js/locale.js","../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/locale.js":[function(require,module,exports){
+},{"../locale":"/home/ubuntu/adhoc/apps/build/js/locale.js","../utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/locale.js":[function(require,module,exports){
 // base locale
 
 "use strict";
 
 module.exports = window.blockly.common_locale;
 
-},{}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletAutocompletePopupTooltipManager.js":[function(require,module,exports){
 'use strict';
 
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
@@ -32094,7 +32094,7 @@ DropletAutocompletePopupTooltipManager.prototype.setTooltipsEnabled = function (
 
 module.exports = DropletAutocompletePopupTooltipManager;
 
-},{"../dom":"/home/ubuntu/staging/apps/build/js/dom.js","./DropletFunctionTooltip.html.ejs":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs":[function(require,module,exports){
+},{"../dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","./DropletFunctionTooltip.html.ejs":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs"}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletFunctionTooltip.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -32120,7 +32120,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletAutocompleteParameterTooltipManager.js":[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -32446,7 +32446,7 @@ DropletAutocompleteParameterTooltipManager.prototype.setTooltipsEnabled = functi
 
 module.exports = DropletAutocompleteParameterTooltipManager;
 
-},{"../dom":"/home/ubuntu/staging/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./DropletParameterTooltip.html.ejs":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs","./tooltipUtils.js":"/home/ubuntu/staging/apps/build/js/blockTooltips/tooltipUtils.js"}],"/home/ubuntu/staging/apps/build/js/dom.js":[function(require,module,exports){
+},{"../dom":"/home/ubuntu/adhoc/apps/build/js/dom.js","../dropletUtils":"/home/ubuntu/adhoc/apps/build/js/dropletUtils.js","./DropletParameterTooltip.html.ejs":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs","./tooltipUtils.js":"/home/ubuntu/adhoc/apps/build/js/blockTooltips/tooltipUtils.js"}],"/home/ubuntu/adhoc/apps/build/js/dom.js":[function(require,module,exports){
 'use strict';
 
 exports.addReadyListener = function (callback) {
@@ -32576,7 +32576,7 @@ exports.isIOS = function () {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/blockTooltips/tooltipUtils.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/tooltipUtils.js":[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -32723,7 +32723,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
   return null;
 };
 
-},{"../utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs":[function(require,module,exports){
+},{"../utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/blockTooltips/DropletParameterTooltip.html.ejs":[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape
 /**/) {
@@ -32749,7 +32749,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/ejs.js":[function(require,module,exports){
 
 /*!
  * EJS
@@ -33104,7 +33104,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":"/home/ubuntu/staging/apps/node_modules/ejs/lib/filters.js","./utils":"/home/ubuntu/staging/apps/node_modules/ejs/lib/utils.js","fs":"/home/ubuntu/staging/apps/node_modules/browserify/lib/_empty.js","path":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/path-browserify/index.js"}],"/home/ubuntu/staging/apps/node_modules/ejs/lib/utils.js":[function(require,module,exports){
+},{"./filters":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/filters.js","./utils":"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/utils.js","fs":"/home/ubuntu/adhoc/apps/node_modules/browserify/lib/_empty.js","path":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/path-browserify/index.js"}],"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/utils.js":[function(require,module,exports){
 
 /*!
  * EJS
@@ -33128,7 +33128,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],"/home/ubuntu/staging/apps/node_modules/ejs/lib/filters.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/ejs/lib/filters.js":[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -33327,7 +33327,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/path-browserify/index.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/path-browserify/index.js":[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -33556,7 +33556,7 @@ var substr = 'ab'.substr(-1) === 'b'
 
 }).call(this,require('_process'))
 
-},{"_process":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/process/browser.js":[function(require,module,exports){
+},{"_process":"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js"}],"/home/ubuntu/adhoc/apps/node_modules/browserify/node_modules/process/browser.js":[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -33649,9 +33649,9 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],"/home/ubuntu/staging/apps/node_modules/browserify/lib/_empty.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/node_modules/browserify/lib/_empty.js":[function(require,module,exports){
 
-},{}],"/home/ubuntu/staging/apps/build/js/acemode/mode-javascript_codeorg.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/acemode/mode-javascript_codeorg.js":[function(require,module,exports){
 /* global ace */
 'use strict';
 
@@ -33737,7 +33737,7 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
   });
 };
 
-},{"../dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./annotationList":"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js"}],"/home/ubuntu/staging/apps/build/js/acemode/annotationList.js":[function(require,module,exports){
+},{"../dropletUtils":"/home/ubuntu/adhoc/apps/build/js/dropletUtils.js","./annotationList":"/home/ubuntu/adhoc/apps/build/js/acemode/annotationList.js"}],"/home/ubuntu/adhoc/apps/build/js/acemode/annotationList.js":[function(require,module,exports){
 'use strict';
 
 var errorMapper = require('./errorMapper');
@@ -33816,7 +33816,7 @@ module.exports = {
   }
 };
 
-},{"./errorMapper":"/home/ubuntu/staging/apps/build/js/acemode/errorMapper.js"}],"/home/ubuntu/staging/apps/build/js/acemode/errorMapper.js":[function(require,module,exports){
+},{"./errorMapper":"/home/ubuntu/adhoc/apps/build/js/acemode/errorMapper.js"}],"/home/ubuntu/adhoc/apps/build/js/acemode/errorMapper.js":[function(require,module,exports){
 "use strict";
 
 var errorMap = [{
@@ -33851,7 +33851,7 @@ module.exports.processResults = function (results) {
   });
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/ResizeSensor.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/ResizeSensor.js":[function(require,module,exports){
 /**
  * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
  * directory of this distribution and at
@@ -33989,7 +33989,7 @@ module.exports = function (element, callback) {
     }
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/MusicController.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/MusicController.js":[function(require,module,exports){
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
 /* jshint
@@ -34262,7 +34262,7 @@ MusicController.prototype.getRandomTrack_ = function () {
   return this.trackList_[trackIndex];
 };
 
-},{"./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/JSInterpreter.js":[function(require,module,exports){
+},{"./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/JSInterpreter.js":[function(require,module,exports){
 'use strict';
 
 var codegen = require('./codegen');
@@ -34745,7 +34745,7 @@ JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
   return names;
 };
 
-},{"./codegen":"/home/ubuntu/staging/apps/build/js/codegen.js","./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/codegen.js":[function(require,module,exports){
+},{"./codegen":"/home/ubuntu/adhoc/apps/build/js/codegen.js","./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/codegen.js":[function(require,module,exports){
 /* global Interpreter, CanvasPixelArray */
 
 'use strict';
@@ -35337,7 +35337,7 @@ exports.selectCurrentCode = function (interpreter, cumulativeLength, userCodeSta
   return userCodeRow;
 };
 
-},{"./dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js"}],"/home/ubuntu/staging/apps/build/js/dropletUtils.js":[function(require,module,exports){
+},{"./dropletUtils":"/home/ubuntu/adhoc/apps/build/js/dropletUtils.js"}],"/home/ubuntu/adhoc/apps/build/js/dropletUtils.js":[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -35757,7 +35757,7 @@ exports.__TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig
 };
 
-},{"./utils":"/home/ubuntu/staging/apps/build/js/utils.js"}],"/home/ubuntu/staging/apps/build/js/utils.js":[function(require,module,exports){
+},{"./utils":"/home/ubuntu/adhoc/apps/build/js/utils.js"}],"/home/ubuntu/adhoc/apps/build/js/utils.js":[function(require,module,exports){
 /* global define */
 
 'use strict';
@@ -36072,7 +36072,7 @@ exports.browserSupportsCssMedia = function () {
   return true;
 };
 
-},{"./hammer":"/home/ubuntu/staging/apps/build/js/hammer.js","./lodash":"/home/ubuntu/staging/apps/build/js/lodash.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js"}],"/home/ubuntu/staging/apps/build/js/xml.js":[function(require,module,exports){
+},{"./hammer":"/home/ubuntu/adhoc/apps/build/js/hammer.js","./lodash":"/home/ubuntu/adhoc/apps/build/js/lodash.js","./xml":"/home/ubuntu/adhoc/apps/build/js/xml.js"}],"/home/ubuntu/adhoc/apps/build/js/xml.js":[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 'use strict';
 
@@ -36100,7 +36100,7 @@ exports.parseElement = function (text) {
   return element;
 };
 
-},{}],"/home/ubuntu/staging/apps/build/js/lodash.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/lodash.js":[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -39769,7 +39769,7 @@ exports.parseElement = function (text) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],"/home/ubuntu/staging/apps/build/js/hammer.js":[function(require,module,exports){
+},{}],"/home/ubuntu/adhoc/apps/build/js/hammer.js":[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
