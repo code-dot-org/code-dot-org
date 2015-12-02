@@ -566,7 +566,6 @@ And(/^I ctrl-([^"]*)$/) do |key|
 end
 
 def press_keys(element, key)
-  element.click # Ensures element focus for some browsers
   if key.start_with?(':')
     element.send_keys(make_symbol_if_colon(key))
   else

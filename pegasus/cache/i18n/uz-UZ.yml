@@ -329,6 +329,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Dasturlash bilan galaktika quring
   starwars_javascript_title: Javascript
   starwars_javascript_description: Ko‘chuvchi blok va JavaScriptdan foydalaning.
@@ -349,7 +350,7 @@
     bloklaridan foydalaning.
   mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
     bloklaridan foydalaning.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brauzerlar | Yosh: 6+'
   minecraft_subtitle: Maynkraft Dasturlash soati
@@ -746,6 +747,10 @@
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -1407,3 +1412,8 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
