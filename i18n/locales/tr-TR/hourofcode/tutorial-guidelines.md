@@ -150,7 +150,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Lütfen önerilen bilgisayar bilimi bilgi düzeyini seçilen seviyede belirtin: Başlangıç, Orta veya İleri. Kodlama Saati websitesi Başlangıç seviyesi aktivitelerini göze çarpacak şekilde renklendirecektir. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Teknik gereklilikler: 
       * Daha net bir şekilde katılımı takip edebilmek için, her üçüncü parti öğretici ortağının Kodlama Saati öğreticilerinin başına ve sonuna 1-piksel takip görüntüsü yerleştirmelerini istiyoruz. Başlangıç sayfasına bir başlangıç piksel-görüntüsü ve son sayfaya da son bir piksel-görüntüsü yerleştirin. Ara sayfalara piksel yerleştirmeyin. Daha fazla detay için Takip Pikseli bölümüne göz atın. 
-      * Aktiviteyi bitirirken, kullanıcılar [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
+      * Aktiviteyi bitirirken, kullanıcılar [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) sayfasına yönlendirilmelidirler. Bu sayfada aşağıda sıralananları yapabilirler: 
           * Kodlama Saatini bitirdiklerini sosyal medyada paylaşabilirler
           * Kodlama Saatini bitirdiklerine dair bir sertifika alabilirler
           * Hangi ülkelerin/şehirlerin Kodlama Saatinde en yüksek katılım oranlarına sahip olduğunu görebilirler
@@ -214,13 +214,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 Bunun bir parçası da marka olarak "Hour of Code"'un (Kodlama Saati) karışıklığa sebebiyet vermemek adına korunmasıdır. Çoğu öğretici ortaklarımız "Hour of Code"'u web sitelerinde kullandılar. Biz bu kullanımı önlemek istemiyoruz, ancak bazı kısıtlamalara uymasını istiyoruz:
 
-  1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Yanlış kullanım: "ACME Corp'un Kodlama Saatini (Hour of Code) deneyin."
-  2. "TM" işaretini "Hour of Code" yazdığınız her yerde kullanın, hem web sitenizde hem uygulama açıklamalarınızda
+  1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Bilgisayar Bilimi Eğitimi Haftası ve Code.org web sitelerinin linklerini paylaşın ve onlardan şu şekilde bahsedin:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. "Hour of Code"'u uygulama isimlerinde kullanmayın
+  4. No use of "Hour of Code" in app names.
 
 [**Başa dön**](#top)
 

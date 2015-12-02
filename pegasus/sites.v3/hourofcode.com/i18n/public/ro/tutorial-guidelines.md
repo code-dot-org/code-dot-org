@@ -215,13 +215,13 @@ După succesul campaniei 2013, am luat măsuri pentru a face sigur că am înfii
 
 O parte din acest lucru este de a proteja marca "Hour of Code" pentru a preveni confuzii. Mulţi dintre partenerii noştri au realizat tutoriale sau au folosit "Hour of Code" pe site-urile web. Nu vrem să prevenim acest lucru, dar vrem să ne asigurăm că se încadrează în câteva limite:
 
-  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Exemplu negativ: "Încercaţi Hour of Code scris de ACME Corp"
-  2. Utilizaţi un exponent "TM" în locurile cele mai proeminente în care menționați "Hour of Code", atât pe site-ul web cât şi în descrierea aplicației
+  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
     
     *"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."*
 
-  4. A nu se utiliza "Hour of Code" în numele aplicației
+  4. No use of "Hour of Code" in app names.
 
 [**La începutul paginii**](#top)
 

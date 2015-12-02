@@ -9,6 +9,6 @@ layout: wide
 
 # Pritegnite celotno vašo šolo za sodelovanje
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Tukaj pride informacija, kako pritegniti vašo celotno šolo k sodelovanju na Uri za kodo.
 
 <%= view :signup_button %>

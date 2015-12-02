@@ -19,12 +19,6 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Apresente estes banners em seu site
-
-[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Publique estas imagens nas mídias sociais
@@ -40,6 +34,16 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Baixar a versão em alta resolução](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Use o seguinte texto na página (ou no rodapé), com links para os sites da Semana da Educação em Ciência da Computação e Code.org:
+    
+    *"A 'Hora do Código' é uma iniciativa nacional da Semana da Educação em Ciência da Computação[csedweek.org] e da Code.org[code.org] para proporcionar a experiência de uma hora de ciência da computação e programação de computadores a milhões de estudantes."*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

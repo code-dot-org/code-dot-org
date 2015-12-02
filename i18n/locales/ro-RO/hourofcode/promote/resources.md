@@ -19,12 +19,6 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Includeți aceste bannere pe site-ul dvs.
-
-[![imagine](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Postați acestea pe rețelele sociale
@@ -40,6 +34,16 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![imagine](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Descarcati variantele cu rezoluție mare](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Orice trimitere la "Hour of Code" trebuie facută într-un mod care nu sugerează că este propriul dumneavoastră brand, ci mai degrabă recomandă Hour of Code ca o mişcare/ identitate de bază. Exemplu corect: "Participa la Hour of Code la ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Includeți limba pe pagina (sau în subsol), inclusiv link-uri către CSEdWeek şi Code.org, care spun următoarele:
+    
+    *"Hour of Code este o iniţiativă internațională a Computer Science Education Week[csedweek.org] şi Code.org [code.org] pentru a iniția milioane de studenţi în tehnologia computerelor și în programare cu ajutorul unei ore globale de programare."*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -98,7 +102,7 @@ Dragi părinți,
 
 Trăim într-o lume a tehnologiei. Şi noi ştim că oricare ar fi domeniul pe care elevii noştri aleg să continue ca adulţi, capacitatea lor de a reuşi va depinde tot mai mult de înţelegerea modului în care funcţionează tehnologia. Dar numai o mică parte dintre noi învăţăm informatică şi tot mai puţin elevi o studiază față de un deceniu în urmă.
 
-Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Informaticii în Educație 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
+Acesta este motivul pentru care întraga noastră școală se alătură celui mai amplu eveniment educațional din istorie: Ora de Programare, pe parcursul Săptămânii Educatiei in Tehnologia Computerelor. 7-13). Peste 100 milioane de elevi din toata lumea au încercat deja o Ora de Programare.
 
 Ora noastră de Programare este o declaraţie că [numele şcolii] este gata să ne formeze aceste abilităţi fundamentale ale secolului 21. Pentru a continua aducerea unor activități de programare pentru elevi, vrem să avem propriul nostru eveniment uriaș Ora de Programare. Vă incurajez sa fiți voluntari, să ajungeți catre mass-media locală si sa distribuiti veştile pe canalrle social media. Luați in considerare si organizarea unor evenimente adiționale în comunitate.
 

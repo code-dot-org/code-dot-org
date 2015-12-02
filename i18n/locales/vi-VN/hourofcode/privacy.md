@@ -159,7 +159,7 @@ Chúng tôi không cho thuê hoặc bán thông tin cá nhân chúng tôi thu th
 
 Đặc biệt, chúng tôi không chia sẻ bất kỳ thông tin cá nhân bạn cung cấp cho các nhà tài trợ hoặc tài trợ của chúng tôi (khác hơn so với các "báo cáo cộng đồng" của các báo cáo ẩn danh như mô tả dưới đây).
 
-### We may share student achievement data with your school or school district
+### Chúng tôi có thể chia sẻ dữ liệu thành tích của học sinh với trường học hay trường học địa phương.
 
 If your use of the Code.org Website is in the context of a partnership with your school or school district, we may allow the school or school district to access the same student progress report that is also shared with your teacher(s).
 

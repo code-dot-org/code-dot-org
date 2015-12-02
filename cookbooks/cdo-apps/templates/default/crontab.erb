@@ -67,6 +67,7 @@ if node['cdo-apps']['daemon']
   end
 
   # 'daemons' in all environments
+  cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
   cronjob at:'35 * * * *', do:deploy_dir('bin', 'analyze_hoc_activity')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'deliver_poste_messages')
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'geocode_hoc_activity')

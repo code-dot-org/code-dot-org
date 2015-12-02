@@ -36,20 +36,28 @@ Anda hanya bergabung dengan gerakan Hour of Code. Beritahu teman Anda dengan **#
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
+## 2. Find a local volunteer to help you with your event.
 
-[Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar. <% if @country == 'us' %> Salah satu sekolah yang beruntung di *setiap* negara Amerika (dan Washington Dc) akan memenangkan teknolgi senilai $10,000. [Daftar di sini](<%= resolve_url('/prizes/hardware-signup') %>) untuk menjadi layak dan [**lihat pemenang tahun lalu**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Tanyakanlah kepada bos anda untuk terlibat
+## 3. Minta seluruh isi sekolah untuk mengikuti Hour of Code
+
+[Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar.
+
+## Tanyakan pada bos anda untuk ikut terlibat
 
 [Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) ke manajer Anda atau CEO perusahaan.
 
-## 4. Promosikan Hour of Code dalam komunitas Anda
+## 5. Promosikan Hour of Code dalam komunitas Anda
 
 [Rekrut kelompok lokal](<%= resolve_url('/promote/resources#sample-emails') %>) — Pramuka, gereja, Universitas, grup veteran, serikat pekerja, atau bahkan beberapa teman. Anda tidak perlu berada di sekolah untuk belajar keterampilan baru. Gunakan [poster, spanduk, sticker, video ini dan banyak hal lagi](<%= resolve_url('/promote/resources') %>) untuk acara Anda sendiri.
 
-## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
+## 5. Tanyakan pejabat terpilih setempat untuk mendukung Hour of Code
 
 [Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) ke perwakilan setempat, dewan kota, atau dewan sekolah dan mengundang mereka untuk mengunjungi sekolah Anda untuk Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>

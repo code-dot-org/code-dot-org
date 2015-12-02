@@ -7,26 +7,26 @@ layout: wide
 
 <%= view :signup_button %>
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+# Guidelines for øvelser til Hour of Code™ og Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org er vært for en række forskellige Hour of Code aktiviteter på Code.org, Hour of Code og CSEdWeek hjemmesiderne. Den nuværende liste kan ses på [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Vi vil gerne tilbyde en masse motiverende muligheder, men det primære mål er at optimere oplevelsen for elever og lærere som er helt nye indenfor programmering. Brug venligst dette dokument som retningslinjer for udvikling af aktiviteter, som er målrettet brugere helt uden baggrund indenfor programmering og datalogi.
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l).**
+**Efter at have læst retningslinjerne, kan du indsende din øvelse gennem vores [Hour of Code ™-aktivitet indsendelsesside](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+**NYT:** I modsætning til tidligere år planlægger vi at indføre et nyt format for "lærer-styrede" Hour of Code aktiviteter. Disse vil kunne findes under de selvguidede øvelser på elevrettede sider og e-mails. Se detaljer nedenfor.
 
 <a id="top"></a>
 
 ## Indhold:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Generelle retningslinjer for Hour of Code øvelser](#guidelines)
   * [Sådan evalueres øvelser med henblik på optagelse](#inclusion)
-  * [How to submit (Due 10/15/2015)](#submit)
+  * [Sådan indsender du (inden 15. oktober 2015)](#submit)
   * [Forslag til hvordan du kan designe din aktivitet](#design)
   * [Retningslinjer for varemærker](#tm)
   * [Sporings Pixel](#pixel)
@@ -37,7 +37,7 @@ Vi vil gerne tilbyde en masse motiverende muligheder, men det primære mål er a
 
 ## New for 2015: two formats of activities: self-guided or *lesson-plan*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+Nu hvor titusinder af undervisere har prøvet Hour of Code, er mange klasser klar til at blive endnu mere kreative, end de selvguidede one-size-fits-all øvelser, hvor man lærer det grundlæggende. For at hjælpe lærere med at finde inspiration, vil vi gerne samle og kuratere en-times "lærer-styrede" aktiviteter til Hour of Code-vetaraner. We will continue promoting the "Self-guided" format as well.
 
 **Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
 
@@ -114,7 +114,7 @@ I sidste ende er målet med Hour of Code kampagnen er at udbrede deltagelsen i k
 
 <a id="submit"></a>
 
-## How to submit (Due 10/15/2015)
+## Sådan indsender du (inden 15. oktober 2015)
 
 Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
@@ -151,7 +151,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Vedlæg også anbefalet programmeringsviden inden for følgende kategorier: begynder, øvet eller avanceret. Hour of Codes hjemmeside vil fremhæve begynderaktiviteterne mest fremtrædende. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniske krav: 
       * For mere præcist at kunne spore elevernes deltagelse, vil vi have tredjeparts tutorial-partnere til også at indbygge 1 pixel sporingsbilleder på den første og sidste side i deres Hour of Code tutorials. Placer et start pixel-billede på startsiden og et afslutnings pixel-billede på sidste side. Placer ikke pixel på mellemliggende sider). Se afsnittet Tracking Pixel nedenfor, for flere detaljer. 
-      * Efter afslutningen af aktiviteten skal brugerne ledes videre til [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Efter afslutningen af aktiviteten skal brugerne ledes videre til [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) hvor de vil være i stand til at: 
           * Dele på sociale medier, at de færdige Hour of Code
           * Modtage et certifikat, at de har gennemført Hour of Code
           * Se på leaderboards hvilke lande/byer der har de højeste deltager antal i Hour of Code aktiviteterne
@@ -215,13 +215,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 Én del af dette er, at beskytte varemærket "Hour of Code" for, at forhindre forvirring. Mange af vores tutorial-partnere har brugt "Hour of Code" på deres websteder. Vi ønsker ikke at forhindre denne anvendelse, men vi vil sørge for at det passer inden for nogle grænser:
 
-  1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Dårligt eksempel: "Prøve Hour of Code, udviklet af ACME Corp"
-  2. Brug en "TM" hævet skrift på de mest fremtrædende steder, hvor du nævner "Hour of Code", både på webstedet og i app beskrivelser
+  1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Inkluder sprog på siden (eller i den sidefod), herunder links til hjemmesiderne CSEdWeek og Code.org, der siger følgende:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. Ingen brug af "Hour of Code" i app navne
+  4. No use of "Hour of Code" in app names.
 
 [**Tilbage til toppen**](#top)
 
@@ -261,7 +261,7 @@ Vi beder alle om at fremme deres egen 1 times tutorial til dine brugere. Please 
 
 ## En særlig bemærkning til elever med handicap
 
-Hvis du opretter en tutorial, der er designet til de svagtseende, vil vi gerne fremhæve det for seerne med skærm-læsere. Vi har endnu ikke modtaget sådan en tutorial, men vi vil meget gerne også give disse elever muligheder.
+Hvis du opretter en øvelse, der er designet til de svagtseende, vil vi gerne fremhæve det for seerne med skærm-læsere. Vi har endnu ikke modtaget sådan en øvelse, men vi vil meget gerne også give disse elever muligheder.
 
 [**Tilbage til toppen**](#top)
 
