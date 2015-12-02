@@ -103,7 +103,7 @@ Organizatorii evenimentelor Hour of Code în România vor beneficia de un prem
 Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is limited to US residents only.
 
 ## Is there a deadline to sign up to receive the all organizer thank-you gift?
-You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift. 
+You must sign up **before** December 4 in order to be eligible to receive the all organizer thank-you gift. 
 
 ## When will I receive my thank-you gift?
 We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
