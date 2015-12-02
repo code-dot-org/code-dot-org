@@ -251,7 +251,7 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
-  if (config.isLegacyShare) {
+  if (config.isLegacyShare && config.controllerAction == 'show') {
     $("body").addClass("legacy-share-view");
     if (dom.isIOS()) {
       if (!window.navigator.standalone) {

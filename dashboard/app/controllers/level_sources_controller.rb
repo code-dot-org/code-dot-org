@@ -24,6 +24,7 @@ class LevelSourcesController < ApplicationController
     else
       # sharing
       level_view_options hide_source: true
+      view_options no_header: true
       @is_legacy_share = true
     end
   end
@@ -31,6 +32,7 @@ class LevelSourcesController < ApplicationController
   def edit
     authorize! :read, @level_source
     level_view_options hide_source: false
+    @is_legacy_share = true
     # currently edit is the same as show...
     render "show"
   end
@@ -85,7 +87,6 @@ class LevelSourcesController < ApplicationController
       callouts: [],
       full_width: true,
       share_footer: true,
-      no_header: true,
       has_i18n: @game.has_i18n?,
       no_padding: browser.mobile?
     )
