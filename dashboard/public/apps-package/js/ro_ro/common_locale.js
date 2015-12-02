@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Vezi codul JavaScript generat."},
 "completedWithoutRecommendedBlock":function(d){return "Felicitări! Ai terminat Puzzle-ul "+common_locale.v(d,"puzzleNumber")+". (Dar ai putea folosi un bloc diferit pentru un cod mai puternic.)"},
 "continue":function(d){return "Continuă"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Uite ce am creat"},
 "designMode":function(d){return "Design"},
 "dialogCancel":function(d){return "Anulează"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Salvare în galerie"},
 "savedToGallery":function(d){return "Salvat în galerie!"},
 "score":function(d){return "scor"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Ne pare rău, nu putem distribui acest program."},
 "shareWarningsAge":function(d){return "Te rugăm să-ți completezi vârsta mai jos și să apeși butonul OK pentru a continua."},
 "shareWarningsMoreInfo":function(d){return "Informații suplimentare"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Urmărește clipul video"},
 "when":function(d){return "când"},
 "whenRun":function(d){return "când rulezi"},
-"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "}};

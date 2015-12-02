@@ -21,6 +21,7 @@
   "codeTooltip": "Generasiya olunmuş \"JavaScript\" kodunu nəzərdən keçirin.",
   "completedWithoutRecommendedBlock": "Təbriklər! Siz {puzzleNumber} nömrəli tapmacanı tamamladınız (lakin daha güclü kod yazmaq üçün başqa bir blokdan istifadə edə bilərdiniz).",
   "continue": "Davam et",
+  "copy": "Copy",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Design",
   "dialogCancel": "İmtina et",
@@ -205,6 +206,7 @@
   "saveToGallery": "Qalereyada yadda saxla",
   "savedToGallery": "Qalereyada yadda saxlandı!",
   "score": "xal",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Bağışlayın, bu proqramı bölüşə bilmirik.",
   "shareWarningsAge": "Zəhmət olmazsa, aşağıda yaşınızı daxil edin və davam etmək üçün \"Oldu\"nu klikləyin.",
   "shareWarningsMoreInfo": "Daha ətraflı",
@@ -241,7 +243,5 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "iş sahəsi: "
 }

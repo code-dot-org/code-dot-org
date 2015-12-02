@@ -21,6 +21,7 @@
   "codeTooltip": "Shikoni kodin e gjeneruar në JavaScript.",
   "completedWithoutRecommendedBlock": "Urime! Ju keni kompletuar Puzzle-in {puzzleNumber}. (Por ju mund të përdorni një kod ndryshe për një kod sa më të mirë)",
   "continue": "Vazhdo",
+  "copy": "Copy",
   "defaultTwitterText": "Shiko se çfarë bëra",
   "designMode": "Dizajni",
   "dialogCancel": "Anulo",
@@ -205,6 +206,7 @@
   "saveToGallery": "Ruaj tek galeria",
   "savedToGallery": "U ruajt në galeri!",
   "score": "rezultati",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Më vjen keq, ne nuk mund ta ndajmë këtë program.",
   "shareWarningsAge": "Të lutem shëno moshën tënde më poshtë dhe kliko OK për të vazhduar.",
   "shareWarningsMoreInfo": "Më shumë informata",
@@ -241,7 +243,5 @@
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur vrapon",
-  "workspaceHeaderShort": "Vendi i punës: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Vendi i punës: "
 }

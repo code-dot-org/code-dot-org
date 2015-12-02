@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Xem mã \"JavaScript\" đã được tạo ra."},
 "completedWithoutRecommendedBlock":function(d){return "Chúc mừng! Bạn đã hoàn thành câu đố "+common_locale.v(d,"puzzleNumber")+".(Nhưng bạn có thể dùng khối khác để lập trình tốt hơn.)"},
 "continue":function(d){return "Tiếp tục"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Hãy xem thử ứng dụng tôi vừa tạo"},
 "designMode":function(d){return "Thiết kế"},
 "dialogCancel":function(d){return "Huỷ"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Lưu vào bộ sưu tập"},
 "savedToGallery":function(d){return "Đã lưu trong bộ sưu tập!"},
 "score":function(d){return "Ghi điểm/điểm số"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Xin lỗi, chúng tôi không chia sẻ chương trình này."},
 "shareWarningsAge":function(d){return "Please provide your age below and click OK to continue."},
 "shareWarningsMoreInfo":function(d){return "More Info"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Xem Video"},
 "when":function(d){return "Khi nào"},
 "whenRun":function(d){return "Khi chạy"},
-"workspaceHeaderShort":function(d){return "Không gian làm việc:"},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Không gian làm việc:"}};

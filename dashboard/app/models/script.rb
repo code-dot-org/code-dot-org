@@ -161,6 +161,7 @@ class Script < ActiveRecord::Base
     @@level_cache ||= {}.tap do |cache|
       script_level_cache.values.each do |script_level|
         level = script_level.level
+        next unless level
         cache[level.id] = level unless cache.has_key? level.id
       end
     end

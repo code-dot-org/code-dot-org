@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Виж генерирания JavaScript код."},
 "completedWithoutRecommendedBlock":function(d){return "Поздравления! Вие завършихте пъзел "+common_locale.v(d,"puzzleNumber")+". (Но можехте да използвате различни блокове за по-силен код.)"},
 "continue":function(d){return "Продължи"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Вижте какво направих"},
 "designMode":function(d){return "Дизайн"},
 "dialogCancel":function(d){return "Отмени"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Записване в галерията"},
 "savedToGallery":function(d){return "Записано в галерията!"},
 "score":function(d){return "точки"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "За съжаление, не можем да споделим тази програма."},
 "shareWarningsAge":function(d){return "Въведете вашата възраст по-долу и щракнете върху OK, за да продължите."},
 "shareWarningsMoreInfo":function(d){return "Повече информация"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Гледайте видеото"},
 "when":function(d){return "когато"},
 "whenRun":function(d){return "при стартиране"},
-"workspaceHeaderShort":function(d){return "Работна област: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Работна област: "}};

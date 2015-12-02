@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Näytä tuotettu JavaScript-koodi."},
 "completedWithoutRecommendedBlock":function(d){return "Onnittelut! Ratkaisit tehtävän "+common_locale.v(d,"puzzleNumber")+". (Voisit kuitenkin käyttää eri palikkaa luodaksesi vielä voimakkaampaa koodia.)"},
 "continue":function(d){return "Jatka"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Katso mitä tein"},
 "designMode":function(d){return "Suunnittelu"},
 "dialogCancel":function(d){return "Peru"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Tallenna galleriaan"},
 "savedToGallery":function(d){return "Tallennettu galleriaan!"},
 "score":function(d){return "pisteet"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Emme valitettavasti voi jakaa tätä ohjelmaa."},
 "shareWarningsAge":function(d){return "Anna ikäsi alla ja jatka valitsemalla Ok."},
 "shareWarningsMoreInfo":function(d){return "Lisätietoa"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Katso video"},
 "when":function(d){return "kun"},
 "whenRun":function(d){return "suoritettaessa"},
-"workspaceHeaderShort":function(d){return "Työtila: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Työtila: "}};

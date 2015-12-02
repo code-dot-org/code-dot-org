@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Див. згенерований код JavaScript."},
 "completedWithoutRecommendedBlock":function(d){return "Вітаємо! Ви завершили завдання "+common_locale.v(d,"puzzleNumber")+". (Але можна використати інший блок для сильнішого коду.)"},
 "continue":function(d){return "Далі"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Подивіться, що у мене вийшло"},
 "designMode":function(d){return "Дизайн"},
 "dialogCancel":function(d){return "Скасувати"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Зберегти в галереї"},
 "savedToGallery":function(d){return "Збережено у галереї!"},
 "score":function(d){return "рахунок"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "На жаль, цією програмою не можна поділитись."},
 "shareWarningsAge":function(d){return "Запиши свій вік та клацни ОК для продовження."},
 "shareWarningsMoreInfo":function(d){return "Детальніше"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Переглянути відео"},
 "when":function(d){return "коли"},
 "whenRun":function(d){return "коли гра починається"},
-"workspaceHeaderShort":function(d){return "Робоча область: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Робоча область: "}};

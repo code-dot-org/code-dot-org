@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Lássuk a generált JavaScript kódot."},
 "completedWithoutRecommendedBlock":function(d){return "Gratulálunk! Teljesítetted ezt a feladványt: "+common_locale.v(d,"puzzleNumber")+". (De használhatsz más blokkot egy elegánsabb kódhoz.)"},
 "continue":function(d){return "Tovább"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Nézd meg, mit csináltam"},
 "designMode":function(d){return "Megjelenés"},
 "dialogCancel":function(d){return "Mégsem"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Mentés a galériába"},
 "savedToGallery":function(d){return "Elmentve a galériába!"},
 "score":function(d){return "pontszám"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."},
 "shareWarningsAge":function(d){return "Kérem adja meg az életkorát az alábbi mezőben, és kattintson az OK gombra a folytatáshoz."},
 "shareWarningsMoreInfo":function(d){return "További információ"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Nézd meg a videót"},
 "when":function(d){return "amikor"},
 "whenRun":function(d){return "futtatáskor"},
-"workspaceHeaderShort":function(d){return "Munkaterület: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Munkaterület: "}};

@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Žiūrėti sukurtą JavaScript kodą."},
 "completedWithoutRecommendedBlock":function(d){return "Sveikiname! Jūs pabaigėte galvosūkį "+common_locale.v(d,"puzzleNumber")+". (Bet galėjote panaudoti kitokius blokelius geresniam kodui.)"},
 "continue":function(d){return "Tęsti"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Pažiūrėkite, ką aš sukūriau"},
 "designMode":function(d){return "Dizainas"},
 "dialogCancel":function(d){return "Atšaukti"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Įrašyti į galeriją"},
 "savedToGallery":function(d){return "Įrašyta į galeriją!"},
 "score":function(d){return "rezultatas"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Deja, šios programos dalintis negalima."},
 "shareWarningsAge":function(d){return "Prašome žemiau pateikti savo amžių ir spausti Gerai."},
 "shareWarningsMoreInfo":function(d){return "Daugiau informacijos"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Peržiūrėk šį vaizdo įrašą"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "paleidus"},
-"workspaceHeaderShort":function(d){return "Darbo laukas: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Darbo laukas: "}};

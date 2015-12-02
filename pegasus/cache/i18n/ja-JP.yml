@@ -37,8 +37,8 @@
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: 検索
   csedweek_map_search_reset: リセット
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_title: 伝説
+  csedweek_map_legend_event: コードの時間イベント
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: 入会
   cded_try_it: 挑戦してみる
@@ -128,7 +128,7 @@
   twitter_teach_cs: なぜもっと多くの学校がコンピューターサイエンスを教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については
     http://code.org/を参照してください。
   learn_hoc: Hour of Codeを学ぶ
-  beyond_hoc: 1 時間を超えて
+  beyond_hoc: 時間を超えて
   what_gender: 性別は？
   girl: 女の子
   boy: 男の子
@@ -198,24 +198,24 @@
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: すべての生徒に、Hour of Codeを
   homepage_action_text_num_served: '# 人が試しました'
-  homepage_action_text_join_us: あなたもやってみませんか？
+  homepage_action_text_join_us: 参加しませんか
   homepage_action_text_sign_up: 入会
   homepage_action_text_try_it: 挑戦してみる
   homepage_action_text_volunteers: 技術ボランティア募集
   homepage_action_text_codevideo: ビデオを見る
   homepage_action_text_teachervideo: ビデオを見る
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: 学習を始める
+  homepage_action_text_learn: 学習開始
   homepage_action_text_signpetition: 請願書に署名します。
   homepage_signpetition_dropdown: 請願書に署名します &#x25BE;
   homepage_diversity_pledge: ダイバーシティーを認める誓約をしてください。
   homepage_banner_text_prizes: 'Hour of Code が12月７~13日にまたやって来ます。 '
   homepage_banner_link_prizes: '史上最大の学習イベントに参加します。 '
   homepage_banner_text_main: Code.orgとCollege Boardはコンピュータ・サイエンス分野での人材の多様性を向上するために協力して活動していきます。
-  homepage_banner_text_link: 詳しく
+  homepage_banner_text_link: もっと詳しく知る
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: 詳しく
+  homepage_banner_privacy_link: もっと詳しく知る
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
@@ -227,19 +227,19 @@
   homepage_slot_text_link_codestudio: Code Studioを試す
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_othercourses: その他のオンラインコース
-  homepage_slot_text_title_educators: 先生
+  homepage_slot_text_title_educators: 教育者
   homepage_slot_text_blurb_educators: 学生たちに教えよう
   homepage_slot_text_link_k5: 小学生以下向けのコース
   homepage_slot_text_link_fullcurriculum: すべてのカリキュラムを見る
   homepage_slot_text_link_pd: プロになるために
-  homepage_slot_text_title_advocates: 応援してくださる方へ
+  homepage_slot_text_title_advocates: 支持者
   homepage_slot_text_blurb_advocates: 人々の多様性をコンピューターによってサポートします
   homepage_slot_text_link_stats: 統計情報を表示
   homepage_slot_text_link_buy: 参加しよう
-  homepage_slot_text_link_donate: 寄付をする
+  homepage_slot_text_link_donate: 寄付します
   homepage_header_codestudio: Code Studio の生徒作品
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
-  homepage_donors_seall: 全て見る
+  homepage_donors_seall: すべてを見る
   homepage_donors_donate: 寄付する
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
@@ -280,19 +280,22 @@
   class_submission_languages_other: その他の言語
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: スターウォーズでプログラミング
-  starwars_javascript_title: Java Script
+  starwars_javascript_title: JavaScriptの
   starwars_javascript_description: ブロックと、JavaScriptを使います。
   starwars_javascript_specs: 英語のみ | 最新のブラウザー | 11歳以上向け
   starwars_javascript_start_button: 今すぐ試す
   starwars_blocks_title: ブロック達
   starwars_blocks_description: ドラッグアンドドロップできる、ブロックを使います。
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: 多くの言語 (近日公開予定) |最新のブラウザー、スマート フォン、タブレット |6-10 歳
   starwars_blocks_start_button: 今すぐ試す
   starwars_watch_videos: 始める前に、以下のビデオのうち1つを見てみましょう。
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_speak_languages: 別の言語を話しますか？
+  starwars_help_translate: 翻訳をお手伝い頂けませんか？
   starwars_platform_text: 最新ブラウザ、スマート フォン、タブレット
   mc_name: MinecraftのHour of Code (アワーオブコード)
   mc_longdescription: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
@@ -300,7 +303,7 @@
   mc_gradelevel: 6歳以上
   mc_platformtext: 最新ブラウザ、スマート フォン、タブレット
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: MinecraftのHour of Code (アワーオブコード)
+  minecraft_subtitle: Minecraftプログラミング入門
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -327,11 +330,11 @@
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: 名前
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_name_placeholder: フルネーム
+  volunteer_engineer_submission_field_company: 会社（あるいは大学）
+  volunteer_engineer_submission_field_company_placeholder: 会社（あるいは大学）
+  volunteer_engineer_submission_field_experience_level: 経験の程度
+  volunteer_engineer_submission_field_location: ロケーション
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -372,15 +375,15 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 週に３時間
   volunteer_engineer_submission_commitment_five_hrs_per_week: 週に５時間
   volunteer_engineer_submission_commitment_now_and_then: ときどき
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
+  volunteer_engineer_submission_commitment_annually: 年に2〜3回
+  volunteer_engineer_submission_commitment_monthly: 月額数時間
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: それ以上
   volunteer_engineer_submission_location_flexibility_onsite: 学校で
   volunteer_engineer_submission_location_flexibility_remote: 遠隔から指導している（先生もしくは生徒）
   volunteer_engineer_submission_location_flexibility_curriculum: オープンソース カリキュラム プロジェクトに貢献したい
   volunteer_engineer_submission_experience_unspecified: 指定なし
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: ハイテク企業での非エンジニア
   volunteer_engineer_submission_experience_university_student_or_researcher: 現在大学生または研究者
   volunteer_engineer_submission_experience_software_professional: ソフトウェアのプロ
   volunteer_engineer_submission_distance_8: 5 miles
@@ -467,7 +470,7 @@
   dashboard_navigation_section_speakers: コンピュータサイエンス <br/> ゲストスピーカー
   dashboard_navigation_all_sections: 生徒用アカウントと進捗状況
   dashboard_navigation_view_progress: 進行状況の表示
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: 表示テキストの回答
   dashboard_navigation_add_students: 生徒を追加
   dashboard_navigation_manage_students: 生徒の管理
   dashboard_navigation_lesson_plans_resources: レッスンプランと資料
@@ -585,12 +588,11 @@
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+  dashboard_announce_hoc: <B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの
+    コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
-  learn_more: さらに詳しく
+  learn_more: 今すぐ試す
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: 入会
@@ -598,7 +600,7 @@
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
+  learn_educator_resources_button: 教育リソース
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
@@ -622,10 +624,14 @@
   carousel_heading_international: あなたの言語のチュートリアル
   carousel_heading_domestic: 英語のチュートリアルもあります
   carousel_heading_beginners: 初心者のためのチュートリアル
+  carousel_heading_beyond_beginners: 初心者のためのチュートリアル
   carousel_heading_javascript: JavaScriptのチュートリアル
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: デバイスやインターネットがない？「アンプラグド（コンピュータを使わず学ぶ方法）」 のコンピューターサイエンスを試す
   carousel_heading_devices: 携帯とタブレットのアプリケーションのチュートリアル
+  carousel_heading_beyond_devices: 携帯とタブレットのアプリケーションのチュートリアル
   carousel_heading_languages: 他のプログラミング言語のチュートリアル
+  carousel_heading_beyond_languages: 他のプログラミング言語のチュートリアル
   carousel_heading_apps_games: 自分のアプリケーションやゲームを作る
   carousel_heading_university: 大学生向けのオンラインコース
   carousel_heading_webpages: Web ページ制作を学ぶ
@@ -650,7 +656,7 @@
     アップグレードにアクセスするすべてのチュートリアル、<a href="http://browsehappy.com/"target="_blank">最新ウェブブラウザ</a>。
   mobile_devices: モバイル デバイスのためのチュートリアル
   frozen_name: アナとエルザとコーディング
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'スター・ウォーズ: コードを書いて銀河をつくろう'
   codeorg_name: 初めてのコンピュータ プログラムを書く
   codeintl_name: 初めてのコンピュータ プログラムを書く
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -681,14 +687,14 @@
   robomindnl_name: バーチャルロボットをプログラムする
   flappy_name: Flappyゲームを作る
   bitsbox_name: Bitsbox - ゲームを作る
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: お使いのブラウザで、iPhone のゲームを構築！
   touchdevelop_name: TouchDevelop
   appinventor_name: Hour of Codeでアップインべンター
   blockly_name: Blockly
   thinkersmith2_name: 不要なバイナリ
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: グー、パー、チョキ
-  hourofcode_name: 新しいcode.or/hocのプレイスホルダ
+  hourofcode_name: 初めてのコンピュータ プログラムを書く
   playlab_name: プレイラボ
   infinity_name: インフィニティ プレイ ラボ
   artist_name: アーティスト
@@ -747,7 +753,7 @@
   tynker_platformtext: 最新Webブラウザ
   scratch_platformtext: パソコンのブラウザー専用です (タブレットには対応していません)
   lightbot_platformtext: すべてのブラウザーと iOS、アンドロイド、またはゲーム コンソール
-  thinkersmith_platformtext: アンプラグド（コンピュータを使わず学ぶ方法）
+  thinkersmith_platformtext: アンプラグド（コンピュタを使わず学ぶ方法）
   condcards_platformtext: アンプラグド（コンピュータを使わず学ぶ方法）
   lightbotintl_platformtext: iOS、Android (またはweb ブラウザ)
   codehs_platformtext: 最新ブラウザ（継続コースは費用がかかります)
@@ -770,8 +776,8 @@
   appinventor_platformtext: 最新ブラウザ + アンドロイド
   blockly_platformtext: 最新ブラウザのみ
   thinkersmith2_platformtext: アンプラグド（コンピュタを使わず学ぶ方法）
-  kodableunplugged_platformtext: アンプラグド（コンピュータを使わず学ぶ方法）
-  projguts_platformtext: アンプラグド（コンピュータを使わず学ぶ方法）
+  kodableunplugged_platformtext: アンプラグド（コンピュタを使わず学ぶ方法）
+  projguts_platformtext: アンプラグド（コンピュタを使わず学ぶ方法）
   hourofcode_platformtext: 最新ブラウザ、スマート フォン、タブレット
   frozen_platformtext: 最新のブラウザー + タブレット
   starwars_platformtext: 最新のブラウザー + タブレット
@@ -809,8 +815,7 @@
   robomindnl_shortdescription: バーチャルロボットのためのコードを書く
   flappy_shortdescription: 自分のゲームを作る - フラッピーバード、サメまたは、潜水艦
   bitsbox_shortdescription: JavaScriptを使って、遊んだり共有できるアプリを作成します
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
+  makeschool_shortdescription: iPhoneのゲームを作りましょう！コードの書き方を学び、モンスターに新しい動きを教えましょう！
   touchdevelop_shortdescription: 携帯電話でパズルを解いたり、ゲームを作って、コーディングについて学ぶ
   appinventor_shortdescription: あなたのアプリケーションを作りましょう！(Android限定)
   blockly_shortdescription: オフラインでも学習できるようにZIPファイルをダウンロードする
@@ -858,10 +863,7 @@
   flappy_longdescription: ドラッグ&ドロップによるプログラミングであなた独自のFlappyバードのゲームを作ります。見た目をカスタマイズしてみましょう
     (Flappyザメ、Flappyサンタなど)。そして、あなたの携帯にそのゲームを1クリックで登録しましょう
   bitsbox_longdescription: あなた独自の仮想タブレットをカスタマイズし、アプリを作って、遊んで、共有しましょう。簡単なチュートリアルが用意されているので、小さなお子さんでも本当のJavaScriptでプログラムを作成することができます。あなたが熟練していればより進めるでしょう。
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  makeschool_longdescription: Swiftと呼ばれる初心者用の新しいプログラミング言語を使って、iPhone用ゲームの作り方を勉強しましょう！ポケモン風のアクションゲームを作って、モンスターに新しい動きをプログラミングします。モンスターを勝たせるために、変数、メソッド、オブジェクトなどの使い方を学びましょう。
   touchdevelop_longdescription: タッチで簡単に操作できるエディターを使って、ピクセルアートを作ったり、パズルを解いたり、鳥がジャンプするあなた独自のゲームを作成します
   appinventor_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour
     of Codeでは、事前に何も知らなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています
@@ -886,7 +888,7 @@
   groklearning_beyond_name: Pythonプログラミングを学ぶ
   hacketyhack_beyond_name: Rubyを学ぶ
   robomind_beyond_name: バーチャルロボットをプログラムする
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: お使いのブラウザで、iPhone のゲームを構築！
   appinventor_beyond_name: Hour of Codeでアップインべンター
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: カレル犬と一緒にコーディングを学ぶ
@@ -997,7 +999,7 @@
   groklearning_beyond_shortdescription: pythonプログラミング入門
   hacketyhack_beyond_shortdescription: Rubyを基礎から学ぶ
   robomind_beyond_shortdescription: バーチャルロボットのためのコードを書く
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: iPhoneのゲームを1時間で作る方法を学ぼう
   appinventor_beyond_shortdescription: あなたのアプリケーションを作りましょう！(Android限定)
   touchdevelop_beyond_shortdescription: スマートフォンやタブレット、ラップトップで動くアプリケーションを作る
   codehs_beyond_shortdescription: 楽しいビジュアル環境でJavaScriptのプログラミングを学ぶ
@@ -1039,11 +1041,8 @@
   hacketyhack_beyond_longdescription: Hackety Hack では、ゼロからプログラミングの基礎について学ぶことができます。未経験でも大丈夫です！Hackety
     Hack では Ruby というプログラミング言語について学びます。Ruby はデスクトップアプリからウェブサイトを含む、様々なプログラミングでつかわれています[注：デスクトップへのインストールが必要です]。
   robomind_beyond_longdescription: 'バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、プログラミングの実習をサポートするための簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。 '
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
+  makeschool_beyond_longdescription: 既に ObjectiveC を知ってますか？1時間で iPhone ゲームを作り方を学びましょう！コード、テスト、プレイといった全てのプロセスをブラウザ上で学ぶことができます。できたものは、Facebook
+    に共有して友達に遊んでもらいましょう。iPhone での開発経験は必要ありません。変数、メソッド、オブジェクトがどのようなものなのか理解しなくてはなりません。
   appinventor_beyond_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour
     of Codeでは、事前に何も知らなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています
   touchdevelop_beyond_longdescription: TouchDevelop を使うと iPad, iPhone, Android, PC,
@@ -1099,11 +1098,3 @@
   infinity_shortcode: inf
   playlab_shortcode: 再生する
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

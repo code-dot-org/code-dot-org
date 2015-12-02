@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Погледни го генерираниот JavaScript code."},
 "completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "continue":function(d){return "Продолжи"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "Design"},
 "dialogCancel":function(d){return "Откажи"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Зачувај во галерија"},
 "savedToGallery":function(d){return "Зачувано во галерија!"},
 "score":function(d){return "Резултат"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Извинете, неможеме да го споделиме овој програм."},
 "shareWarningsAge":function(d){return "Please provide your age below and click OK to continue."},
 "shareWarningsMoreInfo":function(d){return "More Info"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Погледни го видеото"},
 "when":function(d){return "Кога"},
 "whenRun":function(d){return "Кога трча"},
-"workspaceHeaderShort":function(d){return "Работна површина: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Работна површина: "}};

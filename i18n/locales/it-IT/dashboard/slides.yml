@@ -1270,24 +1270,24 @@ it:
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: "Now we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. And then when it does, it performs an action. Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen."
+        text: "Adesso imparerai un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge un'azione. Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo sullo schermo."
       2:
         image: notes/infinity_playlab_events_2.png
         text: |-
-          Here, we're going to make Baymax move up to touch Hiro and move down to touch Rapunzel when the player uses the up/down arrow keys or the up/down buttons. We'll use the when up arrow block and attach the move actor up block to it, so when the player presses the up arrow key, everything attached to the "when up arrow" block is run. We'll do the same thing to make Baymax move down. Step by step your game is getting more interactive.
+          In questo esercizio, quando il giocatore usa i pulsanti freccia verso l'alto o verso il basso, faremo spostare Baymax verso l'alto fino a toccare Hiro e poi lo faremo spostare verso il basso per toccare Rapunzel. Per far spostare Baymax devi attaccare al blocco "quando si preme sulla freccia verso l'alto" il blocco "sposta Baymax verso l'alto". Quando il giocatore usa il pulsante freccia verso l'alto verrà eseguita qualunque istruzione attaccata al blocco "quando si preme sulla freccia verso l'alto". E facciamo la stessa cosa per far spostare Baymax verso il basso. Passo dopo passo, il tuo gioco diventa sempre più interattivo.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: "So what grade are you in? Second. Tenth grade. First grade. I was in eighth grade when I learned to program. I got my first computer when I was in sixth grade. What gets me excited is being able to fix people's problems. You can express yourself, you can build things from an idea."
+        text: "Che classe frequenti? Seconda elementare. Le superiori. Prima elementare. Io ero in terza media quando ho iniziato a programmare. Ho avuto il mio primo computer quando ero in prima media. Mi entusiasmo quando riesco a risolvere i problemi delle persone. Con un computer puoi esprimerti, puoi realizzare delle cose partendo da un'idea."
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: "Computer science is the basis for a lot of the things that college students and professionals will do for the next twenty or thirty years. I like programming because I like helping people. I get the opportunity to build something that's gonna make people's lives easier. I think it's the closest thing we have to a superpower. Getting started is the most important part. I'm a beginner myself and I want you to learn with me."
+        text: "L'informatica è alla base di molte delle cose che gli studenti universitari e i professionisti faranno per i prossimi venti o trenta anni. Mi piace la programmazione perché mi piace aiutare la gente. Ho l'opportunità di costruire qualcosa che può rendere la vita più facile per molte persone. Io penso che la programmazione sia quasi come avere un Superpotere. L'inizio è la parte più importante. Anche io sono un principiante e voglio che tu impari con me."
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: "I'm John Vechey, I'm one of the co-founders of PopCap Games. We make games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games isn't how perfect your code is, it's not how perfect your art is, it's about how does it feel and how much fun it is. You can only get that sense by trying it, by doing it, by learning and adapting and iterating your own skills of making games."
+        text: Ciao, io sono John Vechey, uno dei co-fondatori della PopCap Games. Abbiamo creato giochi come Plants vs Zombies, Bejeweled e Peggle. La maggior parte dei giochi non è perfetta quanto vorresti, né così perfetta come immagini, ma quello che conta è come ti fa sentire il gioco e quanto è divertente. Puoi provare quella sensazione solo provando, facendo, imparando, adattando e migliorando la tua capacità di creare giochi.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: "Do you have a favorite video game? Well, we're going to take one step towards creating games just like that using Play Lab. Good games have a story and every story has actors. Actors do things like speak, move, and interact with each other. Maybe even score points based on the rules of the game. Today we'll be learning how to do all these things, one by one, with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll build a game from scratch that can be shared and played on a phone."
+        text: "Hai un videogioco preferito? Beh, stiamo per fare il primo passo verso la creazione di un gioco proprio come hai fatto nel Laboratorio. I buoni giochi hanno una storia e ogni storia ha dei personaggi. I personaggi fanno delle cose, come parlare, spostarsi e interagire l'un l'altro. Potrebbero anche guadagnare dei punti in base alle regole del gioco. Oggi impareremo come fare tutte queste cose, una alla volta, con dei personaggi della Disney come Anna, Elsa, Hiro, Baymax e Rapunzel. Costruirai un gioco a partire da zero e poi potrai condividerlo con i tuoi amici e giocarci sul tuo telefono."
       5:
         image: notes/infinity_playlab_intro_5.png
         text: |-
@@ -1295,17 +1295,19 @@ it:
       6:
         image: notes/infinity_playlab_intro_6.png
         text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow outline, and then they'll snap together. In this first puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get to Baymax by dragging the "move right" block out and linking it to the "when run" block. Once you have your blocks in place, hit the "Run" button to see what you've programmed.
+          Per cominciare, è necessario collegare i blocchi al blocco arancione 'quando si clicca su "Esegui" '. È possibile collegare più blocchi insieme trascinandoli fino a che non vedrai formarsi la linea gialla di contorno e non si attaccheranno tra loro. In questo primo esercizio, Hiro è il personaggio 1 e Baymax il personaggio 2. Dobbiamo far spostare Hiro fino a raggiungere Baymax, per farlo devi attaccare un blocco "sposta il personaggio 1 a destra" sotto al blocco 'quando si clicca su "Esegui" '. Una volta che hai posizionato i blocchi, clicca sul pulsante "Esegui" per vedere ciò che hai programmato.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: "Get started and by the end you'll be able to create your own game with these amazing actors that can interact, score points, throw microbots, cherries, saucepans, sparkles, and ice.. and vanish each other. It's all up to you!"
+        text: "Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco con questi fantastici personaggi che possono interagire, guadagnare punti, lanciare micro-bot, ciliegie, padelle, palle di fuoco e ghiaccio o perfino farsi scomparire l'un l'altro. Dipende tutto da te!"
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
+        text: |-
+          Puoi immaginare di dover ripetere qualcosa per sempre? Fortunatamente non dovrai mai farlo visto che i computer sono veramente bravi nel ripetere le cose. Questo è il blocco "ripeti per sempre". Qualunque istruzione venga messa all'interno di questo blocco verrà ripetuta in continuazione durante il gioco.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."
+        text: |-
+          Quindi, se vogliamo che un personaggio faccia qualcosa in continuazione, senza che il giocatore faccia nulla, metteremo i relativi blocchi all'interno del blocco "ripeti per sempre". In questo esercizio, il nostro obiettivo è aiutare Anna a muoversi in continuazione in su e in giù. Imparare come funziona il comando "ripeti per sempre" ti risparmierà moltissimo tempo quando costruirai il tuo gioco.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
@@ -1438,11 +1440,11 @@ it:
         text: "Ciao, sono Rachel Rose, un'informatica senior nel settore Ricerca e Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono ai personaggi di apparire credibili come creature di una galassia lontana lontana..."
       3:
         image: notes/starwars_intro_3.JPG
-        text: Nella prossima ora, costruiremo la nostra personale versione del gioco di Star Wars. Ti insegneremo i concetti fondamentali della programmazione. I programmi di solito sono interamente testuali ma, in questo caso, per scrivere i nostri programmi, uniamo dei blocchi. In realtà stai sempre scrivendo del codice. Dopo che avrai appreso i concetti di base usando i blocchi, passeremo al JavaScript, uno dei linguaggi di programmazione più popolari per il web.
+        text: Nella prossima ora, costruirai la tua versione di un gioco basato su Guerre Stellari. Ti insegneremo i concetti fondamentali della programmazione. I programmi di solito sono interamente testuali ma, in questo caso, per scrivere i programmi, uniamo dei blocchi. In realtà stai sempre scrivendo del codice. Dopo che avrai appreso i concetti di base usando i blocchi, passeremo al JavaScript, uno dei linguaggi di programmazione più popolari per il web.
       4:
         image: notes/starwars_intro_4.JPG
         text: |-
-          Per cominciare, lavoriamo con Ray per programmare BB-8 in modo tale da fargli raccogliere tutti i rottami metallici. Il tuo schermo è suddiviso in tre parti. Sulla sinistra c'è l'area di gioco ("game space") di Star Wars, in cui viene eseguito il codice. Le spiegazioni di ogni esercizio ("instructions") sono scritte sotto quest'area.
+          Per cominciare, lavoriamo con Ray per programmare BB-8 in modo tale da fargli raccogliere tutti i rottami metallici. Il tuo schermo è suddiviso in tre parti. Sulla sinistra c'è l'area di gioco ("game space") di Guerre Stellari, in cui viene eseguito il codice. Le spiegazioni di ogni esercizio ("instructions") sono scritte sotto quest'area.
       5:
         image: notes/starwars_intro_5.JPG
         text: |-
@@ -1526,7 +1528,7 @@ it:
         text: Ciao, mi chiamo Alice e gestisco i gruppi di progettazione e produzione qui a Code.org. Ho realizzato il corso che stai facendo adesso.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "Sei già arrivato all'ultimo esercizio. Complimenti! Hai già imparato tutto quello che ti serve per creare la tua versione personale del gioco di Star Wars. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare il tuo gioco personale e decidere come funzionerà! Un'ultima cosa: hai a disposizione nuovi suoni e nuove istruzioni per fare ancora di più."
+        text: "Sei già arrivato all'ultimo esercizio. Complimenti! Hai già imparato tutto quello che ti serve per creare la tua versione personale del gioco basato su Guerre Stellari. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare il tuo gioco personale e decidere come funzionerà! Un'ultima cosa: hai a disposizione nuovi suoni e nuove istruzioni per fare ancora di più."
       3:
         image: notes/starwars_congrats_3.JPG
         text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi un Porco-Palla viene visualizzato uno Stormtrooper. Alla fine l'intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
@@ -1545,11 +1547,11 @@ it:
         text: "Ciao, sono Rachel Rose, un'informatica senior nel settore Ricerca e Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono ai personaggi di apparire credibili come creature di una galassia lontana lontana..."
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: Nella prossima ora, costruiremo la nostra personale versione del gioco di Star Wars. Ti insegneremo i concetti fondamentali della programmazione. I programmi di solito sono interamente testuali ma, in questo caso, per scrivere i nostri programmi, uniamo dei blocchi. Per cominciare, lavoriamo con Ray per programmare BB-8 in modo tale da fargli raccogliere tutti i rottami metallici.
+        text: Nella prossima ora, costruirai la tua versione di un gioco basato su Guerre Stellari. Ti insegneremo i concetti fondamentali della programmazione. I programmi di solito sono interamente testuali ma, in questo caso, per scrivere i programmi, uniamo dei blocchi. Per cominciare, lavoriamo con Ray per programmare BB-8 in modo tale da fargli raccogliere tutti i rottami metallici.
       4:
         image: notes/starwars_blocks_intro_4.JPG
         text: |-
-          Il tuo schermo è suddiviso in tre parti. Sulla sinistra c'è l'area di gioco ("game space") di Star Wars, in cui viene eseguito il codice. Le spiegazioni di ogni esercizio ("instructions") sono scritte sotto quest'area.
+          Il tuo schermo è suddiviso in tre parti. Sulla sinistra c'è l'area di gioco ("game space") di Guerre Stellari, in cui viene eseguito il codice. Le spiegazioni di ogni esercizio ("instructions") sono scritte sotto quest'area.
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: |-
@@ -1601,7 +1603,7 @@ it:
         text: Ciao, mi chiamo Alice e gestisco i gruppi di progettazione e produzione qui a Code.org. Ho realizzato il corso che stai facendo adesso.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "Sei già arrivato all'ultimo esercizio. Complimenti! Hai già imparato tutto quello che ti serve per creare la tua versione personale del gioco di Star Wars. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare il tuo gioco personale e decidere come funzionerà! Un'ultima cosa: hai a disposizione nuovi suoni e nuove istruzioni per fare ancora di più."
+        text: "Sei già arrivato all'ultimo esercizio. Complimenti! Hai già imparato tutto quello che ti serve per creare la tua versione personale del gioco basato su Guerre Stellari. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare il tuo gioco personale e decidere come funzionerà! Un'ultima cosa: hai a disposizione nuovi suoni e nuove istruzioni per fare ancora di più."
       3:
         image: notes/starwars_blocks_congrats_3.JPG
         text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi un Porco-Palla viene visualizzato uno Stormtrooper. Alla fine l'intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
@@ -1614,111 +1616,103 @@ it:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "Il mio nome è Jens Bergensten, ma tutti mi chiamano Jeb. Sono il capo sviluppatore di Minecraft, qui alla Mojang di Stoccolma. Penso di aver avuto undici anni, o forse dodici, quando ho cominciato a programmare, perché volevo creare dei giochi. Uno degli amici di mio padre mi aveva detto che, per creare dei giochi, dovevo imparare a programmare. Ecco come ho iniziato. Mi piace immaginare e progettare l'architettura dei giochi. Questo è ciò che mi piace veramente di Minecraft."
+        text: 'Mi chiamo Jens Bergensten, ma sono conosciuto come Jeb. Sono lo sviluppatore capo di Minecraft qui in Mojang a Stoccolma. Ho iniziato a programmare quando avevo circa 11 o 12 anni perché volevo creare videogiochi. Un amico di mio padre mi disse che per creare giochi bisogna prima imparare a programmare. È così che ho cominciato. Mi piace progettare e comprendere la struttura delle cose. È questo che più amo di Minecraft. '
       2:
         image: notes/mc_intro_2.JPG
-        text: "Nella prossima ora, imparerai i concetti base dell'informatica dando istruzioni a Steve o Alex in modo da farli muovere nel mondo virtuale di Minecraft."
+        text: "Nella prossima ora imparerete le basi della programmazione facendo muovere Alex o Steve all'interno di un mondo simulato di Minecraft."
       3:
         image: notes/mc_intro_3.JPG
-        text: 'I programmi tradizionali sono di solito del testo detto "codice". Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono uniti per scrivere programmi. Anche se usi i blocchi, in realtà stai scrivendo del codice JavaScript.'
+        text: In genere la programmazione avviene tramite testo, ma oggi useremo il blockly, un sistema che permette di scrivere programmi afferrando e trascinando blocchi. In realtà, state scrivendo codice JavaScript.
       4:
         image: notes/mc_intro_4.JPG
-        text: |-
-          I concetti che stai per apprendere ("commands"=istruzioni, "repeat blocks"=blocchi di ripetizione, "if statements"=istruzioni 'se') sono usati ogni giorno dai programmatori di computer e sono le basi dell'informatica. Qui a Mojang, utilizziamo questi stessi concetti per realizzare Minecraft.
+        text: "I concetti che imparerete vengono usati ogni giorno dai programmatori e sono i fondamenti dell'informatica. Qui in Mojang usiamo questi stessi concetti per far funzionare Minecraft."
       5:
         image: notes/mc_intro_5.JPG
-        text: Prima di iniziare, devi scegliere il tuo personaggio. Io scelgo Alex. Realizziamo del codice per un programma che la fa muovere sullo schermo.
+        text: Prima di iniziare dobbiamo scegliere un personaggio. Io userò Alex. Scriviamo insieme il codice per un programma che le permetta di muoversi per lo schermo.
       6:
         image: notes/mc_intro_6.JPG
-        text: |-
-          Il tuo schermo è suddiviso in tre parti principali. Sulla sinistra si trova l'area di gioco ("play space") di Minecraft, dove viene eseguito il programma. Le spiegazioni di ogni esercizio ("instructions") sono scritte sotto quest'area.
+        text: Il vostro schermo è ora diviso in tre parti. Sulla sinistra si trova la schermata di Minecraft, in cui girerà il vostro programma. Sotto ci sono le istruzioni per ogni livello.
       7:
         image: notes/mc_intro_7.JPG
-        text: |-
-          Questa zona centrale è la cassetta degli attrezzi ("tool box"). Ognuno di questi blocchi è un'istruzione che dirige le azioni di Alex.
+        text: "Nell'area centrale si trovano i blocchi che verranno usati come comandi per Alex."
       8:
         image: notes/mc_intro_8.JPG
-        text: 'Lo spazio bianco sulla destra è la tua area di lavoro ("workspace") ed è il posto in cui costruisci il tuo programma.'
+        text: "L'area sulla destra si chiama spazio di lavoro ed è dove creeremo il nostro programma."
       9:
         image: notes/mc_intro_9.JPG
-        text: |-
-          Se sposti il blocco "moveForward" (vai avanti) nell'area di lavoro come illustrato e premi il pulsante "Esegui", cosa succede? Alex si sposta di una casella avanti sulla griglia.
+        text: 'Se spostiamo il blocco "muovi avanti" nello spazio di lavoro e clicchiamo Run, che succede? Alex si muove di un passo sulla griglia.'
       10:
         image: notes/mc_intro_10.JPG
         text: |-
-          E cosa puoi fare se vuoi che Alex faccia qualcosa dopo essere avanzata di una casella? Puoi aggiungere un altro blocco al programma. Scegli il blocco "turnRight" (gira a destra) e spostalo sotto il blocco "moveForward" che hai aggiunto prima. Non appena appare una linea gialla sul contorno puoi rilasciarlo e i due blocchi si agganceranno. Se premi nuovamente "Esegui", Alex esegue le istruzioni associate ai blocchi presenti nell'area di lavoro, procedendo dall'alto verso il basso.
+          E se volessimo farle compiere un'altra azione dopo essersi mossa? Possiamo aggiungere un altro blocco al programma. Prendo il blocco "gira a destra" e lo posiziono sotto il blocco "muovi avanti" finché non appare questa linea arancione. Quindi lo lascio e i due blocchi si uniranno. Se premiamo ancora Run, Alex eseguirà tutti i comandi dall'alto in basso sullo spazio di lavoro.
       11:
         image: notes/mc_intro_11.JPG
-        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro e rimetterlo nella cassetta degli attrezzi.
+        text: Se volete rimuovere un blocco, è sufficiente trascinarlo indietro.
       12:
         image: notes/mc_intro_12.JPG
-        text: |-
-          Per annullare le modifiche e tornare nella situazione iniziale, usa il pulsante "Ripristina" che trovi sull'angolo in alto a destra della tua area di lavoro. Un'ultima cosa: hai notato il triangolino con la punta verso il basso nei blocchi "gira a ...."? Ogni volta che vedi questi triangolini, significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia a programmare!
+        text: "Per annullare le azioni e ricominciare dal principio, usate il pulsante Start Over in alto a destra dello spazio di lavoro. Un'altra cosa: vedete il piccolo triangolo sui blocchi di movimento? Se è visualizzato, significa che è possibile scegliere diverse opzioni. Ora iniziamo a programmare!"
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: 'Sono Lydia Winters, sono "brand director" alla Mojang, che ha realizzato questo gioco chiamato Minecraft.'
+        text: Sono Lydia Winters, direttore del marchio di Mojang, dove abbiamo creato un giochino chiamato Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "La cosa che preferisco fare in Minecraft è esplorare. Amo avventurarmi nelle grotte e vedere cosa riesco a trovare. Come chiunque altro che non sia un programmatore, sono davvero entusiasta di seguire queste lezioni con Minecraft e d'imparare anch'io un po' di codice."
+        text: "Quello che più mi piace di Minecraft è l'esplorazione. Adoro entrare nelle caverne e vedere cosa riesco a trovare. Da profana della programmazione, non vedo l'ora di imparare a creare qualcosa di mio con Minecraft."
       3:
         image: notes/mc_repeat_3.JPG
         text: |-
-          L'ultimo esercizio ha richiesto un bel po' di blocchi "vai avanti" (move forward). Sarebbe stato più semplice se avessimo potuto dire al computer di eseguire quattro o cinque volte l'istruzione "vai avanti". Fortunatamente, i computer sono davvero bravi a ripetere le istruzioni usando il blocco "ripeti ... volte" (repeat ... times).
+          Per l'ultimo livello ci sono voluti moltissimi blocchi "muovi avanti". Sarebbe stato più semplice dire al computer di eseguire questo comando quattro o cinque volte. Fortunatamente, i computer sanno ripetere i comandi con i loop.
       4:
         image: notes/mc_repeat_4.JPG
-        text: 'Durante la creazione di Minecraft, usiamo i blocchi di ripetizione (detti anche "cicli") per posizionare tutti i materiali necessari a creare un nuovo mondo. Sono migliaia e migliaia di blocchi. Usiamo i cicli anche in altri modi, ad esempio per far muovere i piedi di Alex avanti e indietro mentre cammina. I cicli giocano un ruolo importantissimo nella programmazione.'
+        text: Nel programmare Minecraft, abbiamo usato i loop per posizionare tutti i materiali iniziali e creare un nuovo mondo. Migliaia e migliaia di blocchi. Usiamo i loop anche per operazioni minori, come far muovere i piedi di Alex avanti e indietro mentre cammina. I loop sono uno strumento molto potente.
       5:
         image: notes/mc_repeat_5.JPG
-        text: 'Sta per scendere la notte e quindi, nei prossimi due livelli, devi costruire una casa per stare al sicuro. Useremo il blocco "ripeti ... volte" per farlo in maniera molto semplice.'
+        text: Sta calando la notte, quindi nei prossimi livelli costruiremo una casa per stare al sicuro. Useremo i loop per crearla molto facilmente.
       6:
         image: notes/mc_repeat_6.JPG
-        text: |-
-          Per costruire un muro della tua casa, puoi dire ad Alex di andare avanti e mettere le assi di legno per quattro volte di fila, oppure puoi dirle di andare avanti e mettere le assi di legno una sola volta, poi spostare queste due istruzioni all'interno di un blocco "ripeti ... volte" per farle eseguire queste azioni più volte. Poi inserisci nel blocco "ripeti ... volte" il numero di volte che vuoi che ripeta queste azioni. Ed ora costruisci la tua casa prima che scenda la notte! E buon divertimento.
+        text: Per costruire un muro, possiamo dire ad Alex di spostarsi avanti e posizionare le assi quattro volte, oppure di muoversi e posizionare una sola asse, quindi usare il loop per farle compiere questa azione più volte. Ora clicchiamo sul blocco per dirle quante volte dovrà eseguire questa azione. Costruiamo la nostra casa prima che cali la notte! Buon divertimento.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: 'Stai per imparare le istruzioni "se" (if). Le istruzioni "se" sono una parte fondamentale della programmazione. Danno al computer la possibilità di prendere delle decisioni.'
+        text: Ora impareremo le dichiarazioni if. Si tratta di un elemento chiave della programmazione, che aiuta i computer a prendere decisioni.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: 'Tutti i computer usano le istruzioni "se", compreso il mio telefono. Per esempio, quando sblocco il mio telefono, lui esegue del codice che dice che se inserisco la password correttamente, allora il telefono si deve sbloccare. Altrimenti, deve mostrare un messaggio di errore.'
+        text: Tutti i computer le usano, anche il mio cellulare. Quando sblocco il telefono, si attiva un codice che determina se la password è corretta, quindi sblocca il telefono. Altrimenti viene mostrato un messaggio di errore.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: |-
-          Nel tuo codice puoi usare le istruzioni "se" per far agire Steve e Alex in base a ciò che vedono nel mondo. Per esempio, se di fronte a loro c'è una roccia, possono girare a sinistra. Oppure possono girare a destra se si imbattono in un albero.
+        text: "Potete usare le dichiarazioni if per far reagire Steve e Alex a quello che vedono all'interno del mondo. Per esempio, se c'è una roccia di fronte a loro, possono girare a sinistra. Oppure a destra se incontrano un albero."
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In questo caso, non vuoi che cadano nella lava. È facile evitare la lava quando la vedi sullo schermo. Ma cosa puoi fare se la lava è nascosta sotto la roccia?
+        text: In questo caso, non vogliamo cadere nella lava. È facile evitare la lava, possiamo vederla sullo schermo. Ma come facciamo per quella che si trova sotto la pietra?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: |-
-          Dopo che hai scavato la roccia, devi controllare se c'è della lava prima di poter andare avanti. Se c'è della lava, devi mettere una lastra di pietra prima di proseguire. In questo modo puoi avanzare tranquillamente. È il momento di scavare altra roccia! E ricordati di usare l'istruzione "se" per fare attenzione a dove metti i piedi.
+        text: "Dopo aver scavato la pietra, dobbiamo controllare che non ci sia lava prima di proseguire. Se c'è, dobbiamo posizionare della pietra di fronte al nostro personaggio per poterci muovere. In questo modo possiamo avanzare in tutta sicurezza. È tempo di scavare! Ricordate di usare le dichiarazioni if per evitare rischi inutili."
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: "Complimenti! Hai appena imparato i concetti di base dell'informatica."
+        text: Congratulazioni! Avete appena imparato i fondamentali della programmazione.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Ora puoi usare questi blocchi per creare qualcosa di tuo. Non ci sono più indicazioni o esercizi da risolvere. Puoi costruire qualunque cosa tu voglia. A te la scelta.
+        text: Ora potete usare questi blocchi per le vostre creazioni. Non ci sono ulteriori istruzioni o puzzle da risolvere. Potrete creare tutto quello che volete. A voi la scelta.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa di lana!'
+        text: '[studenti] Sta diventando reale. Tosa. Ho fatto una L con le torce. Ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa con la lana!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: 'Quando hai finito di creare la tua versione del gioco, clicca su "Condividi" (Share) per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco. Buon divertimento!'
+        text: Quando avete finito di creare, cliccate Share per ottenere un link da condividere con gli amici. Buon divertimento!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: "Complimenti! Hai appena imparato i concetti di base dell'informatica."
+        text: Congratulazioni! Avete appena imparato i fondamentali della programmazione.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Ora puoi usare questi blocchi per creare qualcosa di tuo. Non ci sono più indicazioni o esercizi da risolvere. Puoi costruire qualunque cosa tu voglia. A te la scelta.
+        text: Ora potete usare questi blocchi per le vostre creazioni. Non ci sono ulteriori istruzioni o puzzle da risolvere. Potrete creare tutto quello che volete. A voi la scelta.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa di lana!'
+        text: '[studenti] Sta diventando reale. Tosa. Ho fatto una L con le torce. Ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa con la lana!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Ora puoi costruire qualunque cosa tu voglia. Buon divertimento!
+        text: Ora potete creare tutto quello che volete. Buon divertimento!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1731,27 +1725,29 @@ it:
         text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: |-
+          Lo schermo è diviso in tre parti principali. Sulla sinistra c'è l' "area di gioco", dove viene eseguito il programma. Le spiegazioni per ciascun esercizio sono scritte sotto quest'area.
       5:
         image: notes/gumball_intro_5.JPG
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: 'Lo spazio bianco sulla destra è la tua area di lavoro ("workspace") ed è il posto in cui costruisci il tuo programma.'
+        text: "L'area sulla destra si chiama spazio di lavoro ed è dove creeremo il nostro programma."
       7:
         image: notes/gumball_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: |-
+          Per cominciare, è necessario collegare i blocchi al blocco arancione 'quando si clicca su "Esegui" '. È possibile collegare più blocchi insieme trascinandoli fino a che non vedrai formarsi la linea gialla di contorno e non si attaccheranno tra loro.
       8:
         image: notes/gumball_intro_8.JPG
         text: |-
           In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/gumball_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: "Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco con tanti tipi di giocatori che possono interagire, guadagnare punti, lanciare oggetti o perfino farsi scomparire l'un l'altro. Dipende tutto da te!"
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: Adesso imparerai un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge una azione.
       2:
         image: notes/gumball_events_2.JPG
         text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
@@ -1765,10 +1761,11 @@ it:
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: Puoi immaginare di dover ripetere qualcosa per sempre? Fortunatamente non dovrai mai farlo visto che i computer sono veramente bravi nel ripetere le cose.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: |-
+          Questo è il blocco "ripeti per sempre". Qualsiasi istruzione all'interno di questo blocco verrà ripetuta in continuazione durante il gioco. Se vogliamo che un personaggio faccia qualcosa in continuazione, senza che il giocatore faccia nulla, metteremo i relativi blocchi all'interno del blocco "ripeti per sempre".
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: In questo esercizio, il nostro obiettivo è di aiutare il personaggio a fare un lavoro in continuazione. Imparare come funzionano i comandi di ripetizione ti farà risparmiare un sacco di tempo più tardi quando costruirai il tuo gioco.

@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Pogledaj stvoreni JavaScript kôd."},
 "completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "continue":function(d){return "Nastavi"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Pogledaj što sam napravio"},
 "designMode":function(d){return "Dizajn"},
 "dialogCancel":function(d){return "Odustani"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Spremi u galeriju"},
 "savedToGallery":function(d){return "Spremljeno u galeriju!"},
 "score":function(d){return "bodovi"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Žalim, ne možemo dijeliti ovaj program."},
 "shareWarningsAge":function(d){return "Ispod napiši koliko imaš godina i za nastavak klikni na 'U redu'."},
 "shareWarningsMoreInfo":function(d){return "Više informacija"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pogledaj filmić"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "pri pokretanju"},
-"workspaceHeaderShort":function(d){return "Radna površina: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Radna površina: "}};

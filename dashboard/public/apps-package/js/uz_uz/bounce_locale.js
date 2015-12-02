@@ -221,7 +221,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundRandom":function(d){return "set random scene"},
 "setBackgroundHardcourt":function(d){return "set hardcourt scene"},
 "setBackgroundRetro":function(d){return "set retro scene"},
-"setBackgroundTooltip":function(d){return "Sets the background image"},
+"setBackgroundTooltip":function(d){return "Orqa qismga rasm joylashtirish"},
 "setBallRandom":function(d){return "set random ball"},
 "setBallHardcourt":function(d){return "set hardcourt ball"},
 "setBallRetro":function(d){return "set retro ball"},

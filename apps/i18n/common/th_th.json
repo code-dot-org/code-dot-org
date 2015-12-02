@@ -21,6 +21,7 @@
   "codeTooltip": "ดูการสร้างโค้ด JavaScript.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "ดำเนินการต่อไป",
+  "copy": "Copy",
   "defaultTwitterText": "Check out what I made",
   "designMode": "ออกแบบ",
   "dialogCancel": "ยกเลิก",
@@ -205,6 +206,7 @@
   "saveToGallery": "จัดเก็บสู่ที่แสดงรูปภาพ",
   "savedToGallery": "จัดเก็บสู่ที่แสดงรูปภาพเรียบร้อยแล้ว!",
   "score": "ตะแนน",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "ขออภัย เราไม่สามารถใช้โปรแกรมนี้ร่วมกันได้.",
   "shareWarningsAge": "โปรดระบุอายุของคุณด้านล่าง และคลิกตกลงเพื่อดำเนินการต่อไป",
   "shareWarningsMoreInfo": "ข้อมูลเพิ่มเติม",
@@ -241,7 +243,5 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "พื้นที่ทำงาน: "
 }

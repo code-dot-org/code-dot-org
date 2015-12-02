@@ -25,7 +25,7 @@ ro:
           Artist5: Etapa 19
           Unplug11: Etapa 20
         Hour of Code:
-          desc: Oră de Cod
+          desc: Oră de Programare
           Maze: Etapa 1
         Edit Code:
           desc: Editează codul (beta)
@@ -105,6 +105,8 @@ ro:
         StudioEC: Laborator de Joacă
         Applab: Laboratului Aplicației
         NetSim: Simulator Internet
+        Custom: Artist
+        CustomStudio: Laborator de Joacă
     trophy:
       name:
         Bronze: Bronz
@@ -307,27 +309,29 @@ ro:
         studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl mutaţi cu săgeţile până când marcați?
         studio_playlab_9: 'Setați fundalul pentru această invazie extraterestră şi ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i alerteze pe toți ceilalți'
         studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_iceage_1: 'Manny vrea să spună "Bună ziua" - îl poți ajuta?'
-        studio_iceage_2: 'Diego (actorul 1) şi bunica (actorul 2) ar dori să-și spună "Bună ziua" reciproc. Îi poți ajuta utilizând de două ori blocul "spune"?'
-        studio_iceage_3: Îl poți ajuta pe Scrat să ajungă la steag?
-        studio_iceage_4: Îl poți ajuta pe Scrat (actorul 1) să ajungă la bunica (actorul 2) şi să emită un sunet atunci când el ajunge acolo?
-        studio_iceage_5: 'Îl poți ajuta pe Sid să spună "Salutare", atunci când acesta este apasat? Nu uita să faci clic pe el după ce dai clic pe Rulează'
-        studio_iceage_6: Îl poți ajuta pe Diego să se deplaseze folosind tastele cu săgeţi sus/jos/dreapta/stânga pentru a ajunge la toate steagurile?
-        studio_iceage_7: 'Blocul "repetă pentru totdeauna" îți permite să rulezi continuu un cod. Poți ataşa blocuri acestuia pentru a-l ajuta pe Sid să se miște la dreapta şi la stânga în mod repetat?'
-        studio_iceage_8: Poţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet atunci când Sid se lovește de Manny, urmând ca mai apoi să-l muţi cu săgeţile până când marchează scor?
-        studio_iceage_9: Setează fundalul pentru această epocă de gheață şi ajută-l pe Sid să ajungă mai repede la bunica prin schimbarea vitezei sale. Apoi mută-l cu tastele săgeată pentru a ajunge la Sid şi alertează-i pe toți ceilalți.
-        studio_iceage_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_hello1: 'Anais vrea sa isi faca noi prieteni. O poti ajuta sa spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru cuvantul "buna"?'
+        studio_gumball_hello2: 'Darwin (actorul 1) si fratele sau Gumball (actorul 2) se indreapta catre scoala. Ajuta-i sa se salute reciproc folosind blocul "actorul spune" de doua ori.'
+        studio_gumball_move_to_flag: 'Banana Joe este cat pe ce sa castige o cursa! Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".'
+        studio_gumball_move_to_actor: 'Gumball (actorul 1) si Darwin (actorul 2) au intarziat la ora! Ajuta-l pe Gumball sa mearga 200 de pixeli in jos catre Darwin folosind blocul "muta actor". Apoi, conecteaza un bloc la evenimentul "cand actorul" pentru a rula un sunet de cate ori se gasesc unul pe altul.'
+        studio_gumball_repeat: 'Blocul "repeta mereu" iti permite sa rulezi continuu. Poti atasa blocuri la el ca sa il ajuti pe Gumball sa faca incalzirea pentru cursa lui miscandu-se in stanga si in dreapta continuu?'
+        studio_gumball_click_hello: 'Poti sa il ajuti pe Anton sa anunte start-ul cursei spunand "Pe locuri, fiti gata, start!"? Pentru a-ti testa programul, nu uita sa apesi pe Anton dupa de apesi "ruleaza"!'
+        studio_gumball_move_events: 'Darwin este la concursul de strans steaguri! Ajuta-l sa alerge de colo colo atasand blocul "mergi" la fiecare eveniment. Cand esti gata, apasa ruleaza si incearca sa strangi toate stegurile.'
+        studio_gumball_sound_and_points: 'Am notat majoritatea codului care il tine pe Anton ( actorul 2) sa alerge din stanga in dreapta, la fel ca si codul care il muta pe Banana Joe (actorul 1) de-a lungul ecranului. Poti termina codul si adauga blocuri la evenimentul "cand actorii se ating" pentru a-i face sa ruleze un sunet apoi sa inscrie cate un punct cand Banana Joe si Anton se lovesc? Apasa Ruleaza pentru a juca jocul.'
+        studio_gumball_warn_food_fight: 'Darvin a scapat de o lupta cu alimente! Schimba fundalul la "caractere" si seteaza viteza lui Darwin la rapid, apoi apasa Ruleaza si muta-l catre Penny pentru a o avertiza.'
+        studio_gumball_join_food_fight: 'Alaturati-va luptei cu mancare! Foloseste comanda "actorul arunca elementul in dreapta" pentru ca Banana Joe (actorul 1) sa arunce cu mancare in Anton (actorul 2)! Seteaza-l pe Anton sa fie nervos cand este lovit.'
+        studio_gumball_free_play: 'Creeaza-ti propria poveste a jocului. Cand e gata, apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane, tablete sau calculatoare!'
         studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
         studio_k1_1: 'Poți face acest câine să spună "Bună ziua lume"?'
         studio_k1_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
@@ -364,7 +368,7 @@ ro:
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
-        hoc_wrapup: Încheierea Orei de Cod
+        hoc_wrapup: Încheierea Orei de Programare
         Unplug1: Ce este informatica?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
@@ -446,7 +450,7 @@ ro:
         C4_unplugged_forloops: Bucle Pentru
         C4_unplugged_parameters: Compoziții muzicale cu parametri
         C4_unplugged_binary: Binar
-        frozen_intro: Introducere în Ora de cod
+        frozen_intro: Introducere în Ora de Programare
         frozen_loops: Introducere în Bucle
         frozen_functions: Introducere în Funcții
         playlab_intro: Introducere in Play Lab
@@ -506,9 +510,9 @@ ro:
         mc_if_statements: 'Minecraft - Structuri daca'
         mc_congrats_share: 'Minecraft - Felicitari'
         mc_congrats_no_share: 'Minecraft - Felicitari'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        gumball_intro: 'Gumball Hour of Code - Introducere'
+        gumball_events: 'Gumball Hour of Code - Evenimente'
+        gumball_repeat: 'Gumball Hour of Code - Declaratiile de repetare'
     callout:
       text:
         drag_blocks: 'Trage un bloc "mutare" şi fixează-l sub alt bloc'

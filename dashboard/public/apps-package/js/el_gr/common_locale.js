@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Δείτε τον κώδικα JavaScript."},
 "completedWithoutRecommendedBlock":function(d){return "Συγχαρητήρια! Ολοκλήρωσες το Παζλ "+common_locale.v(d,"puzzleNumber")+". (Αλλά θα μπορούσες να χρησιμοποιήσεις ένα μπλοκ για καλύτερο κώδικα.)"},
 "continue":function(d){return "Συνέχεια"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Δείτε τι έκανα"},
 "designMode":function(d){return "Σχεδίαση"},
 "dialogCancel":function(d){return "Άκυρο"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Αποθήκευση στη συλλογή"},
 "savedToGallery":function(d){return "Αποθηκεύτηκε στη συλλογή!"},
 "score":function(d){return "σκορ"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."},
 "shareWarningsAge":function(d){return "Παρακαλούμε να δηλώστε την ηλικία σας παρακάτω και κάντε κλικ στο κουμπί OK για να συνεχίσετε."},
 "shareWarningsMoreInfo":function(d){return "Περισσότερες Πληροφορίες"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Δείτε το βίντεο"},
 "when":function(d){return "όταν"},
 "whenRun":function(d){return "όταν εκτελείται"},
-"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "}};

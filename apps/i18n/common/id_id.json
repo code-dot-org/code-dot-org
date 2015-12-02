@@ -21,6 +21,7 @@
   "codeTooltip": "Lihat kode JavaScript.",
   "completedWithoutRecommendedBlock": "Selamat! Anda menyelesaikan teka-teki {puzzleNumber}. (Tapi Anda bisa menggunakan blok yang berbeda untuk kode yang lebih baik.)",
   "continue": "Lanjutkan",
+  "copy": "Copy",
   "defaultTwitterText": "Lihat apa yang saya buat",
   "designMode": "Desain",
   "dialogCancel": "Batal",
@@ -205,6 +206,7 @@
   "saveToGallery": "Simpan di Galeri",
   "savedToGallery": "Tersimpan di Galeri!",
   "score": "Skor",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Maaf, kami tidak bisa membagikan program ini.",
   "shareWarningsAge": "Tolong isikan umur Anda dibawah dan klik OK untuk melanjutkan.",
   "shareWarningsMoreInfo": "Lebih Lanjut",
@@ -241,7 +243,5 @@
   "watchVideo": "Tonton Videonya",
   "when": "ketika",
   "whenRun": "ketika dijalankan",
-  "workspaceHeaderShort": "Area kerja: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Area kerja: "
 }

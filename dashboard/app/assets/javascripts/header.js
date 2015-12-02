@@ -27,11 +27,11 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName, stageIndex) {
   stageData = stageData || {};
-  progressData = progressData || {levels: {}};
+  progressData = progressData || {};
 
-  var clientLevelProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -53,7 +53,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
-    var status = mergedActivityCssClass((progressData.levels[level.id] || {}).result, clientLevelProgress[level.id]);
+    var status = activityCssClass(clientProgress[level.id]);
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -62,7 +62,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     if (sectionId) {
       href += '&section_id=' + sectionId;
     }
-    var link = $('<a>').attr('href', href).addClass('level_link').addClass(status).text(level.title);
+    var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link').addClass(status).text(level.title);
 
     if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
@@ -73,6 +73,23 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     }
     progressContainer.append(div).append('\n');
   });
+
+  $.ajax('/api/user_progress/' + scriptName + '/' + stageIndex).done(function (data) {
+    // Merge progress from server (loaded via AJAX)
+    var serverProgress = data || {};
+    Object.keys(serverProgress).forEach(function (levelId) {
+      if (serverProgress[levelId] !== clientProgress[levelId]) {
+        var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+
+        // Clear the existing class and replace
+        $('#header-level-' + levelId).attr('class', 'level_link ' + status);
+
+        // Write down new progress in sessionStorage
+        dashboard.clientState.trackProgress(null, null, serverProgress[levelId], scriptName, levelId);
+      }
+    });
+  });
+
   $('.level_free_play').qtip({
     content: {
       attr: 'title'
@@ -441,15 +458,7 @@ function activityCssClass(result) {
  * @return {string} The result css class.
  */
 function mergedActivityCssClass(a, b) {
-  a = a || 0;
-  b = b || 0;
-  if (a === 0) {
-    return activityCssClass(b);
-  }
-  if (b === 0) {
-    return activityCssClass(a);
-  }
-  return activityCssClass(Math.max(a, b));
+  return activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
 }
 
 function populateProgress(scriptName) {
@@ -468,6 +477,9 @@ function populateProgress(scriptName) {
 
         // Clear the existing class and replace
         $('#level-' + levelId).attr('class', 'level_link ' + status);
+
+        // Write down new progress in sessionStorage
+        dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
       }
     });
   });

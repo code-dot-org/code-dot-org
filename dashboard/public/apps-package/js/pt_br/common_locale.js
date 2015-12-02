@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Veja o código JavaScript gerado."},
 "completedWithoutRecommendedBlock":function(d){return "Parabéns! Você completou o desafio "+common_locale.v(d,"puzzleNumber")+". (Mas você poderia usar um bloco diferente para melhorar seu código)."},
 "continue":function(d){return "Continue"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Veja o que eu fiz"},
 "designMode":function(d){return "Design"},
 "dialogCancel":function(d){return "Cancelar"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Salvar na galeria"},
 "savedToGallery":function(d){return "Salvo na galeria!"},
 "score":function(d){return "pontuação"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Desculpe, não é possível compartilhar esse programa."},
 "shareWarningsAge":function(d){return "Informe abaixo sua idade e clique em OK para continuar."},
 "shareWarningsMoreInfo":function(d){return "Mais informações"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Assista ao vídeo"},
 "when":function(d){return "quando"},
 "whenRun":function(d){return "quando executar"},
-"workspaceHeaderShort":function(d){return "Área de trabalho: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Área de trabalho: "}};

@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Sjå JavaScript-koden som har blitt laga."},
 "completedWithoutRecommendedBlock":function(d){return "Gratulerer! Du har fullført oppgava "+common_locale.v(d,"puzzleNumber")+". (Men du kan bruke ei anna blokk for sterkare kode.)"},
 "continue":function(d){return "Hald fram"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Sjekk ut det eg har laga"},
 "designMode":function(d){return "Utforming"},
 "dialogCancel":function(d){return "Avbryt"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Lagre i galleriet"},
 "savedToGallery":function(d){return "Lagra i galleriet!"},
 "score":function(d){return "poengsum"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Beklager, vi kan ikkje dele dette programmet."},
 "shareWarningsAge":function(d){return "Skriv inn alder under og klikk OK for å halde fram."},
 "shareWarningsMoreInfo":function(d){return "Meir info"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Sjå videoen"},
 "when":function(d){return "når"},
 "whenRun":function(d){return "når den køyrer"},
-"workspaceHeaderShort":function(d){return "Arbeidsområde: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Arbeidsområde: "}};

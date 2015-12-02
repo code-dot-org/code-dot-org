@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "生成されたJavaScriptコードを見る。"},
 "completedWithoutRecommendedBlock":function(d){return "おめでとうございます！あなたはパズル"+common_locale.v(d,"puzzleNumber")+" を完了しました。(他のブロックを使ってより良いコードを書くことも出来ます。)"},
 "continue":function(d){return "続行"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "私の作品を試してみてください"},
 "designMode":function(d){return "デザイン"},
 "dialogCancel":function(d){return "キャンセル"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "ギャラリーに保存"},
 "savedToGallery":function(d){return "ギャラリーに保存されました！"},
 "score":function(d){return "スコア"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "プログラムをシェアできませんでした。"},
 "shareWarningsAge":function(d){return "下記にあなたの年齢を示し、OKを押して続けてください。"},
 "shareWarningsMoreInfo":function(d){return "情報をもっと見る"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行した時"},
-"workspaceHeaderShort":function(d){return "ワークスペース："},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "ワークスペース："}};

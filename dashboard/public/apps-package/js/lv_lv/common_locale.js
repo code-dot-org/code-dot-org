@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Skatīt ģenerēto JavaScript kodu."},
 "completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "continue":function(d){return "Turpināt"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Apskaties, ko esmu izveidojis"},
 "designMode":function(d){return "Izskats"},
 "dialogCancel":function(d){return "Atcelt"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Saglabāt galerijā"},
 "savedToGallery":function(d){return "Saglabāts galerijā!"},
 "score":function(d){return "rezultāts"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Piedod, mēs nevaram izplatīt šo programmu."},
 "shareWarningsAge":function(d){return "Lūdzu norādiet jūsu vecumu un noklikšķiniet uz Labi, lai turpinātu."},
 "shareWarningsMoreInfo":function(d){return "Vairāk informācijas"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Noskaties video"},
 "when":function(d){return "kad"},
 "whenRun":function(d){return "kad izpilda"},
-"workspaceHeaderShort":function(d){return "Darba virsma: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Darba virsma: "}};

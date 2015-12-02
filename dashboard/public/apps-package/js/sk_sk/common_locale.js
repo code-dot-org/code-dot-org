@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Pozrieť vygenerovaný kód JavaScript."},
 "completedWithoutRecommendedBlock":function(d){return "Gratulujeme! Dokončili ste Puzzle "+common_locale.v(d,"puzzleNumber")+". (Môžete použiť rôzne bloky kódu pre náročnejší kód.)"},
 "continue":function(d){return "Pokračovať"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Pozrite čo som vytvorila"},
 "designMode":function(d){return "Dizajn"},
 "dialogCancel":function(d){return "Zrušiť"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Ulož do galérie"},
 "savedToGallery":function(d){return "Uložené do galérie!"},
 "score":function(d){return "skóre"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Bohužiaľ tento program nie je možné zdieľať."},
 "shareWarningsAge":function(d){return "Prosím zadajte sem svoj vek a pre pokračovanie kliknite na tlačidlo OK."},
 "shareWarningsMoreInfo":function(d){return "Viac informácii"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pozrieť video"},
 "when":function(d){return "keď"},
 "whenRun":function(d){return "pri spustení"},
-"workspaceHeaderShort":function(d){return "Pracovná plocha: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Pracovná plocha: "}};

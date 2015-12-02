@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Просмотреть созданный код JavaScript."},
 "completedWithoutRecommendedBlock":function(d){return "Поздравляем! Ты завершил задачу "+common_locale.v(d,"puzzleNumber")+". (Но ты мог бы использовать другой блок для более надежного кода.)"},
 "continue":function(d){return "Продолжить"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Оцените, что я сделал"},
 "designMode":function(d){return "Дизайн"},
 "dialogCancel":function(d){return "Отмена"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Сохранить в галерею"},
 "savedToGallery":function(d){return "Сохранено в галерее!"},
 "score":function(d){return "очки"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "К сожалению, мы не можем поделиться этой программой."},
 "shareWarningsAge":function(d){return "Пожалуйста укажите ваш возраст ниже и нажмите ОК для продолжения."},
 "shareWarningsMoreInfo":function(d){return "Больше информации"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Посмотреть видео"},
 "when":function(d){return "когда"},
 "whenRun":function(d){return "При запуске"},
-"workspaceHeaderShort":function(d){return "Место сбора блоков: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Место сбора блоков: "}};

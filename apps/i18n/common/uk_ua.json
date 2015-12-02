@@ -21,6 +21,7 @@
   "codeTooltip": "Див. згенерований код JavaScript.",
   "completedWithoutRecommendedBlock": "Вітаємо! Ви завершили завдання {puzzleNumber}. (Але можна використати інший блок для сильнішого коду.)",
   "continue": "Далі",
+  "copy": "Copy",
   "defaultTwitterText": "Подивіться, що у мене вийшло",
   "designMode": "Дизайн",
   "dialogCancel": "Скасувати",
@@ -205,6 +206,7 @@
   "saveToGallery": "Зберегти в галереї",
   "savedToGallery": "Збережено у галереї!",
   "score": "рахунок",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "На жаль, цією програмою не можна поділитись.",
   "shareWarningsAge": "Запиши свій вік та клацни ОК для продовження.",
   "shareWarningsMoreInfo": "Детальніше",
@@ -241,7 +243,5 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Робоча область: "
 }

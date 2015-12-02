@@ -21,6 +21,7 @@
   "codeTooltip": "راجع تعليمات JavaScript البرمجية التي تم إنشائها.",
   "completedWithoutRecommendedBlock": "تهانينا! لقد أكملت اللغزو رقم{puzzleNumber} (و ايضا يكمنك استخدام مكعب اخر حتي يكون الكود الخاص بك أقوى)",
   "continue": "الاستمرار",
+  "copy": "Copy",
   "defaultTwitterText": "انظر ما الذي صنعته",
   "designMode": "تصميم",
   "dialogCancel": "إلغاء",
@@ -205,6 +206,7 @@
   "saveToGallery": "حفظ إلى المعرض",
   "savedToGallery": "تم الحفط في المعرض!",
   "score": "النتيجة",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "عذراً، لا يمكن أن نشارك هذا البرنامج.",
   "shareWarningsAge": "الرجاء تعبئة عمرك أدناه ثم اضغط حسنا للمتابعة.",
   "shareWarningsMoreInfo": "مزيد من المعلومات",
@@ -220,7 +222,7 @@
   "submit": "تسجيل",
   "submitYourProject": "تقديم مشروعك",
   "submitYourProjectConfirm": "لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟",
-  "unsubmit": "Unsubmit",
+  "unsubmit": "عدم تقديم",
   "unsubmitYourProject": "الغاء تقديم المشروع الخاص بك",
   "unsubmitYourProjectConfirm": "الغاء تقديم المشروع الخاص بك سوف يؤدي الي اعادة تعيين تاريخ التقديم, هل انت متأكد من الغاء التقديم ؟",
   "subtitle": "بيئة البرمجة المرئية",
@@ -241,7 +243,5 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "مساحة العمل: "
 }

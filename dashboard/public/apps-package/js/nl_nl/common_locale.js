@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Zie gegenereerde JavaScript-code."},
 "completedWithoutRecommendedBlock":function(d){return "Gefeliciteerd! U heeft puzzel "+common_locale.v(d,"puzzleNumber")+" voltooid. (Maar u kunt andere blokken gebruiken voor een betere code)"},
 "continue":function(d){return "Verder"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Kijk wat ik gemaakt heb"},
 "designMode":function(d){return "Ontwerp"},
 "dialogCancel":function(d){return "Annuleren"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Opslaan in galerij"},
 "savedToGallery":function(d){return "Opgeslagen in galerij!"},
 "score":function(d){return "score"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Sorry, we kunnen dit programma niet delen."},
 "shareWarningsAge":function(d){return "Voer hieronder je leetijd in en klik op OK om verder te gaan."},
 "shareWarningsMoreInfo":function(d){return "Meer Info"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Bekijk de video"},
 "when":function(d){return "wanneer"},
 "whenRun":function(d){return "als gestart"},
-"workspaceHeaderShort":function(d){return "Werkplaats: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Werkplaats: "}};

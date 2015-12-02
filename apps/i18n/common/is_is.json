@@ -21,6 +21,7 @@
   "codeTooltip": "Sjá samsvarandi JavaScript kóða.",
   "completedWithoutRecommendedBlock": "Til hamingju! Þú laukst þraut {puzzleNumber}. (En þú gætir notað öðruvísi kubb til að fá öflugri kóða.)",
   "continue": "Halda áfram",
+  "copy": "Copy",
   "defaultTwitterText": "Skoðaðu það sem ég bjó til",
   "designMode": "Hönnun",
   "dialogCancel": "Hætta við",
@@ -205,6 +206,7 @@
   "saveToGallery": "Vista í safni",
   "savedToGallery": "Vistað í safni!",
   "score": "stig",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Því miður getum við ekki deilt þessu forriti.",
   "shareWarningsAge": "Vinsamlegast færðu inn aldur þinn hér fyrir neðan og smelltu á Í lagi til að halda áfram.",
   "shareWarningsMoreInfo": "Nánar",
@@ -241,7 +243,5 @@
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Vinnusvæði: "
 }

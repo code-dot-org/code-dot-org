@@ -21,6 +21,7 @@
   "codeTooltip": "Voir le code JavaScript généré.",
   "completedWithoutRecommendedBlock": "Félicitations ! Tu as terminé le Puzzle {puzzleNumber}. (Mais tu aurais pu utiliser un bloc différent pour un meilleur code)",
   "continue": "Continuer",
+  "copy": "Copy",
   "defaultTwitterText": "Découvre ce que j'ai fait",
   "designMode": "Conception",
   "dialogCancel": "Annuler",
@@ -205,6 +206,7 @@
   "saveToGallery": "Sauvegarder dans la galerie",
   "savedToGallery": "Enregistré dans la galerie !",
   "score": "score",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Désolé, nous ne pouvons pas partager ce programme.",
   "shareWarningsAge": "S'il-te-plaît, indique ton âge ci-dessous et clique sur OK pour continuer.",
   "shareWarningsMoreInfo": "Plus d'information",
@@ -241,7 +243,5 @@
   "watchVideo": "Voir la vidéo",
   "when": "quand",
   "whenRun": "quand l'exécution commence",
-  "workspaceHeaderShort": "Espace de travail :",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Espace de travail :"
 }

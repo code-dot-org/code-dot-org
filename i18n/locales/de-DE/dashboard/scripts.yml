@@ -172,19 +172,19 @@ de:
           Artist: Künstler
           Bee: Biene
           "Unplugged: Envelope Variables": 'Ohne Stecker: Umschlagsvariablen'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
+          "Unplugged: Madlibs": 'Ohne Stecker: Madlibs'
+          "Unplugged: For Loop Fun": 'Ohne Stecker: Schleifenspaß'
+          "Unplugged: Songwriting with Parameters": 'Ohne Stecker: Song-Schreiben mit Parametern'
+          "Artist: Functions with Parameters": 'Künstler: Funktionen mit Parametern'
+          "Unplugged: Binary": 'Ohne Stecker: Binär'
+          Bee Binary: Bienen-Programm
+          Farmer Binary: Bauern-Programm
           Maze and Bee: Labyrinth und Biene
-          Artist Binary: Artist Binary
+          Artist Binary: Künstler-Programm
           description_audience: ab 10 Jahre (nach Kurs 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
+          Super Challenge - Variables: 'Super-Wettbewerb - Variablen'
+          Super Challenge - For Loops: 'Super-Wettbewerb - for-Schleifen'
+          Super Challenge - Functions and Parameters: 'Super-Wettbewerb - Funktionen und Parameter'
           Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
         Course4pre:
           title: Vorbereitung für Kurs 4
@@ -225,7 +225,7 @@ de:
           title: Computertechnologie in Algebra
           description: Lerne funktionales Programmieren mithilfe von Algebra
           description_short: Lerne funktionales Programmieren mithilfe von Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 'Ohne Stecker: Video-Spiele und Koordinatensysteme'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Text und Bilder
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
@@ -233,7 +233,7 @@ de:
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Ohne Stecker: Das Designrezept'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
@@ -471,7 +471,7 @@ de:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 'Ohne Stecker: Video-Spiele und Koordinatensysteme'
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Eval: Strings and Images": 'Eval: Strings and Images'
           "Unplugged: Contracts": 'Unplugged: Contracts'
@@ -479,17 +479,17 @@ de:
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Ohne Stecker: Das Designrezept'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Spielelabor: Animation (Großes Spiel)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Unplugged: Booleans": 'Ohne Stecker: Boolesche Logik'
           "Eval: Boolean Operators": 'Eval: Boolean Operators'
           "Play Lab: Booleans": 'Spielelabor: Booleans'
           "Play Lab: Boolean (Big Game)": 'Spielelabor: Boolean (Großes Spiel)'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
           "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Unplugged: Collision Detection and the Distance Formula": 'Ohne Stecker: Kollisionserkennung und Abstandsformeln'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Text und Bilder
@@ -1348,6 +1348,10 @@ de:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1474,8 +1478,8 @@ de:
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Erkunde eine Minecraft-Welt durch programmieren
-          description: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken
+          description_short: Entdecke die Welt von Minecraft mit Code
+          description: Verwende Code-Blöcke, um Steve oder Alex auf ein Abenteuer durch die Minecraft-Welt zu nehmen
           Hour of Code 2015: Programmierstunde 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

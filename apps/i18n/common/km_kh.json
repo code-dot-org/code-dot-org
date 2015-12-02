@@ -21,6 +21,7 @@
   "codeTooltip": "មើល​កូដ JavaScript ដែល​បាន​បង្កើត។",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "បន្ត",
+  "copy": "Copy",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Design",
   "dialogCancel": "បោះបង់",
@@ -205,6 +206,7 @@
   "saveToGallery": "រក្សាទុក​ទៅ​វិចិត្រសាល",
   "savedToGallery": "បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!",
   "score": "ពិន្ទុ",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "សូមទោស, យើង​មិន​អាច​ចែករំលែក​កម្មវិធី​នេះ​បាន​ទេ។",
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "More Info",
@@ -241,7 +243,5 @@
   "watchVideo": "មើល​វីដេអូ",
   "when": "នៅ​ពេល",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Workspace: "
 }

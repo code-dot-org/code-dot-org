@@ -278,7 +278,7 @@
         calculate: Calculate Something
         applab: Δημιουργήστε μια εφαρμογή
     user:
-      classroom: H Αρχική Σελίδα του Εκπαιδευτικού
+      classroom: Αρχική Σελίδα Εκπαιδευτή
       district_dashboard: Περιοχή Ταμπλό
       label: Γεια σου %{username}
       stats: Η πρόοδός μου
@@ -496,6 +496,9 @@
     privacy: Πολιτική Aπορρήτου
     secure: Ασφαλής έκδοση
     report_abuse: Αναφορά κατάχρησης
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Χρειάζεσε βοήθεια;
     subtitle: Δες αυτά τα βίντεο και τις υποδείξεις

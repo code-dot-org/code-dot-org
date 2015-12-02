@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Generasiya olunmuş \"JavaScript\" kodunu nəzərdən keçirin."},
 "completedWithoutRecommendedBlock":function(d){return "Təbriklər! Siz "+common_locale.v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız (lakin daha güclü kod yazmaq üçün başqa bir blokdan istifadə edə bilərdiniz)."},
 "continue":function(d){return "Davam et"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "Design"},
 "dialogCancel":function(d){return "İmtina et"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Qalereyada yadda saxla"},
 "savedToGallery":function(d){return "Qalereyada yadda saxlandı!"},
 "score":function(d){return "xal"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Bağışlayın, bu proqramı bölüşə bilmirik."},
 "shareWarningsAge":function(d){return "Zəhmət olmazsa, aşağıda yaşınızı daxil edin və davam etmək üçün \"Oldu\"nu klikləyin."},
 "shareWarningsMoreInfo":function(d){return "Daha ətraflı"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoya baxın"},
 "when":function(d){return "nə zaman"},
 "whenRun":function(d){return "icra etdikdə"},
-"workspaceHeaderShort":function(d){return "iş sahəsi: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "iş sahəsi: "}};

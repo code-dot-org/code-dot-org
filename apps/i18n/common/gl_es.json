@@ -21,6 +21,7 @@
   "codeTooltip": "Ver o código JavaScript xerado.",
   "completedWithoutRecommendedBlock": "Parabéns! Completaches o Puzzle {puzzleNumber}. (Pero podes usar un bloque diferente para un código máis forte.)",
   "continue": "Continuar",
+  "copy": "Copy",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Deseño",
   "dialogCancel": "Cancelar",
@@ -205,6 +206,7 @@
   "saveToGallery": "Gardar na Galería",
   "savedToGallery": "Gardado na Galería!",
   "score": "puntuación",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Lamentablemente non podemos compartir este programa.",
   "shareWarningsAge": "Por favor, indica abaixo a túa idade e fai click en OK para continuar.",
   "shareWarningsMoreInfo": "Máis información",
@@ -241,7 +243,5 @@
   "watchVideo": "Mira o vídeo",
   "when": "cando",
   "whenRun": "cando se executa",
-  "workspaceHeaderShort": "Espazo de traballo: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Espazo de traballo: "
 }

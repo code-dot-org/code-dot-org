@@ -21,6 +21,7 @@
   "codeTooltip": "See generated JavaScript code.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "Continue",
+  "copy": "Copy",
   "defaultTwitterText": "Ara x'ghamilt",
   "designMode": "Design",
   "dialogCancel": "Cancel",
@@ -202,9 +203,10 @@
   "runProgram": "Run",
   "runTooltip": "Run the program defined by the blocks in the workspace.",
   "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
-  "saveToGallery": "Save to gallery",
-  "savedToGallery": "Saved in gallery!",
+  "saveToGallery": "Save",
+  "savedToGallery": "Saved",
   "score": "score",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Sorry, we can't share this program.",
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "More Info",
@@ -241,7 +243,5 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Workspace: "
 }

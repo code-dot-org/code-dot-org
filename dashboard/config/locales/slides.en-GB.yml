@@ -2824,17 +2824,17 @@
           that directs Alex's actions.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
+        text: The white space on the right is called the workspace and this is where
           we'll build our program.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
+        text: If we drag the "move forward" block to our workspace and then click
           run, what happens? Alex moves forward one space on the grid.
       10:
         image: notes/mc_intro_10.JPG
         text: And what if we want to do something after she has moved forward one
           space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
+          "turn right" block and I'll drag it underneath my "move forward" block until
           this orange line appears. Then I'll drop it and the two blocks will snap
           together. When we press run again, Alex will perform the commands that are
           stacked from top to bottom in our workspace.
@@ -2861,8 +2861,8 @@
           some coding myself.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
+        text: The last level needed lots of "move forward" blocks. It would be easier
+          if we could just tell the computer to perform the "move forward" command
           four or five times. Luckily for us, computers are really good at repeating
           commands with repeat loops.
       4:
@@ -2878,12 +2878,12 @@
           easily.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
+        text: To build a wall of our house, we can either tell Alex to "move forward"
+          and place planks four times or we can tell her to "move forward" and place
           one plank, then take this command and use the repeat block to have her perform
           the action multiple times. Now we'll click on the repeat block and tell
           her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+          house before night falls! Have fun!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
@@ -2901,9 +2901,9 @@
           of them, they can turn left. Or turn right if they run into a tree.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In this case, we don't want to fall into the lava. It's easy to plan
+          for the lava. We can see it on the screen. But what about the lava that
+          we can't under the stone?
       5:
         image: notes/mc_if_statements_5.JPG
         text: After we mine the stone, we'll need to check if there's any lava in
@@ -2978,7 +2978,7 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
+        text: The white space on the right is called the workspace and this is where
           we'll build our program.
       7:
         image: notes/gumball_intro_7.JPG

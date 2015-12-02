@@ -275,6 +275,10 @@ ca-ES:
   class_submission_level_vocational: Formació professional
   class_submission_languages_other: Altres idiomes
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -569,10 +573,14 @@ ca-ES:
   carousel_heading_international: Tutorials en el teu idioma
   carousel_heading_domestic: Tutorials disponibles en anglès
   carousel_heading_beginners: Tutorials per a principiants
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials que ensenyen Javascript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Cap dispositiu o sense connexió a internet? Intenta informàtica "sense connexió"'
   carousel_heading_devices: "Tutorials d' aplicacions per a telèfons i tablets"
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials en altres llenguatges de programació
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Fes les teves pròpies apps o jocs
   carousel_heading_university: Cursos universitaris en línia
   carousel_heading_webpages: Aprèn a fer pàgines web

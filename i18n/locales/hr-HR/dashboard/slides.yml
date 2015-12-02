@@ -378,26 +378,24 @@ hr:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Ovo su blokovi za crtanje. Upotrijebite one kojima ćete pomaknuti umjetnika tako da popuni sive crte.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Ovo su blokovi za skakanje. Kad ih koristite, umjetnik se pomiče, ali ne crta pa ih koristite za skok do sljedeće sive crte.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'Zar pčele nisu divne? U skupu problema koji slijede, vaš cilj je pomoći pčeli da dođe do cvijeta, uzme nektar i odleti do košnice kako bi napravila med. Morat ćete upotrijebiti blokove "uzmi nektar" i "napravi med" za ovu vježbu.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Svaki cvijet ima drugu brojčanu oznaku meda: 1, 2, 3 i više. Prema broju u kutu znamo koliko je nektara u crvenome cvijetu. Zato pokupite sav nektar prije nego krenete dalje. Također, svako saće može sadržavati određenu količinu meda: 1, 2, 3 i više. Napravite samo onoliko meda koliko saće može sadržavati.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: Ako uspijete skupiti sav nektar i napraviti sav med, možete krenuti na sljedeći nivo. U suprotnome, morate ponovo pokušati riješiti problem. Poigrajte se i provjerite kako je biti programer i zujati poput pčele.
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: Petlja je ponavljanje aktivnosti. Da biste provjerili košnicu, pogledate u okvir i vratite ga nazad te ponavljate radnju nekoliko puta. To je petlja, ponavljanje iste aktivnosti više puta.
       2:
         image: notes/C1_bee_loops_2.png
         text: |-

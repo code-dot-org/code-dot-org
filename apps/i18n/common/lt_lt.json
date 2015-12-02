@@ -21,6 +21,7 @@
   "codeTooltip": "Žiūrėti sukurtą JavaScript kodą.",
   "completedWithoutRecommendedBlock": "Sveikiname! Jūs pabaigėte galvosūkį {puzzleNumber}. (Bet galėjote panaudoti kitokius blokelius geresniam kodui.)",
   "continue": "Tęsti",
+  "copy": "Copy",
   "defaultTwitterText": "Pažiūrėkite, ką aš sukūriau",
   "designMode": "Dizainas",
   "dialogCancel": "Atšaukti",
@@ -205,6 +206,7 @@
   "saveToGallery": "Įrašyti į galeriją",
   "savedToGallery": "Įrašyta į galeriją!",
   "score": "rezultatas",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Deja, šios programos dalintis negalima.",
   "shareWarningsAge": "Prašome žemiau pateikti savo amžių ir spausti Gerai.",
   "shareWarningsMoreInfo": "Daugiau informacijos",
@@ -241,7 +243,5 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Darbo laukas: "
 }

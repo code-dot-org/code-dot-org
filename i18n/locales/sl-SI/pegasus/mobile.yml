@@ -77,7 +77,7 @@ sl-SI:
   leaderboards_for_hoc: Lestvica vodilnih za Uro za kodo.
   support_url: http://support.code.org/
   country: Država
-  city: Mesto
+  city: mesto
   gender: Spol
   boys: Fantje
   girls: Dekleta
@@ -284,6 +284,10 @@ sl-SI:
   class_submission_level_vocational: Poklicno izobraževanje
   class_submission_languages_other: Drugi jezik(-i)
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -574,10 +578,14 @@ sl-SI:
   carousel_heading_international: Vaje v vašem jeziku
   carousel_heading_domestic: Vaje na voljo v angleškem jeziku
   carousel_heading_beginners: Vaje za začetnike
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Vodiči, ki učijo JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Nimate naprave ali interneta? Poskusite "izštekano" računalništvo'
   carousel_heading_devices: Aplikacije z vajami za telefone in tablice
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Vaje v drugih programskih jezikih
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Izdelajte lastno aplikacijo ali igro
   carousel_heading_university: Univerzitetni tečaji na spletu
   carousel_heading_webpages: Naučite se izdelati spletne strani

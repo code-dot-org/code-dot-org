@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "See generated JavaScript code."},
 "completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "continue":function(d){return "Continue"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Ara x'ghamilt"},
 "designMode":function(d){return "Design"},
 "dialogCancel":function(d){return "Cancel"},
@@ -357,9 +358,10 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "runProgram":function(d){return "Run"},
 "runTooltip":function(d){return "Run the program defined by the blocks in the workspace."},
 "runtimeErrorMsg":function(d){return "Your program did not run successfully. Please remove line "+common_locale.v(d,"lineNumber")+" and try again."},
-"saveToGallery":function(d){return "Save to gallery"},
-"savedToGallery":function(d){return "Saved in gallery!"},
+"saveToGallery":function(d){return "Save"},
+"savedToGallery":function(d){return "Saved"},
 "score":function(d){return "score"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Sorry, we can't share this program."},
 "shareWarningsAge":function(d){return "Please provide your age below and click OK to continue."},
 "shareWarningsMoreInfo":function(d){return "More Info"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Watch the Video"},
 "when":function(d){return "when"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

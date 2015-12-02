@@ -21,6 +21,7 @@
   "codeTooltip": "자바스크립트(JavaScript) 코드 보기.",
   "completedWithoutRecommendedBlock": "축하합니다! {puzzleNumber} 번 퍼즐을 해결했습니다. (하지만, 보다 강력한 다른 코드를 사용할 수도 있었습니다.)",
   "continue": "계속하기",
+  "copy": "Copy",
   "defaultTwitterText": "만든 작품 확인하기",
   "designMode": "디자인",
   "dialogCancel": "취소",
@@ -205,6 +206,7 @@
   "saveToGallery": "갤러리에 저장",
   "savedToGallery": "갤러리에 저장되었습니다!",
   "score": "점수",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "프로그램을 공유할 수 없습니다.",
   "shareWarningsAge": "나이를 입력하고 OK를 눌러 계속 진행하세요.",
   "shareWarningsMoreInfo": "추가 정보",
@@ -241,7 +243,5 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "작업 영역: "
 }

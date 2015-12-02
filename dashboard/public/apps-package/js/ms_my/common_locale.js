@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Lihat kod JavaScript yang dijana."},
 "completedWithoutRecommendedBlock":function(d){return "Congratulations! You completed Puzzle "+common_locale.v(d,"puzzleNumber")+". (But you could use a different block for stronger code.)"},
 "continue":function(d){return "Teruskan"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "Design"},
 "dialogCancel":function(d){return "Batal"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Simpan ke galeri"},
 "savedToGallery":function(d){return "Disimpan di dalam galeri!"},
 "score":function(d){return "skor"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Maaf, kami tidak dapat berkongsi program ini."},
 "shareWarningsAge":function(d){return "Please provide your age below and click OK to continue."},
 "shareWarningsMoreInfo":function(d){return "More Info"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Tonton Video"},
 "when":function(d){return "apabila"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

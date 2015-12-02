@@ -21,6 +21,7 @@
   "codeTooltip": "Xem mã \"JavaScript\" đã được tạo ra.",
   "completedWithoutRecommendedBlock": "Chúc mừng! Bạn đã hoàn thành câu đố {puzzleNumber}.(Nhưng bạn có thể dùng khối khác để lập trình tốt hơn.)",
   "continue": "Tiếp tục",
+  "copy": "Copy",
   "defaultTwitterText": "Hãy xem thử ứng dụng tôi vừa tạo",
   "designMode": "Thiết kế",
   "dialogCancel": "Huỷ",
@@ -205,6 +206,7 @@
   "saveToGallery": "Lưu vào bộ sưu tập",
   "savedToGallery": "Đã lưu trong bộ sưu tập!",
   "score": "Ghi điểm/điểm số",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Xin lỗi, chúng tôi không chia sẻ chương trình này.",
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "More Info",
@@ -241,7 +243,5 @@
   "watchVideo": "Xem Video",
   "when": "Khi nào",
   "whenRun": "Khi chạy",
-  "workspaceHeaderShort": "Không gian làm việc:",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Không gian làm việc:"
 }

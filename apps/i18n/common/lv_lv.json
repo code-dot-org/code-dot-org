@@ -21,6 +21,7 @@
   "codeTooltip": "Skatīt ģenerēto JavaScript kodu.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "Turpināt",
+  "copy": "Copy",
   "defaultTwitterText": "Apskaties, ko esmu izveidojis",
   "designMode": "Izskats",
   "dialogCancel": "Atcelt",
@@ -205,6 +206,7 @@
   "saveToGallery": "Saglabāt galerijā",
   "savedToGallery": "Saglabāts galerijā!",
   "score": "rezultāts",
+  "sendToPhone": "Send To Phone",
   "shareFailure": "Piedod, mēs nevaram izplatīt šo programmu.",
   "shareWarningsAge": "Lūdzu norādiet jūsu vecumu un noklikšķiniet uz Labi, lai turpinātu.",
   "shareWarningsMoreInfo": "Vairāk informācijas",
@@ -241,7 +243,5 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: ",
-  "copy": "Copy",
-  "sendToPhone": "Send To Phone"
+  "workspaceHeaderShort": "Darba virsma: "
 }

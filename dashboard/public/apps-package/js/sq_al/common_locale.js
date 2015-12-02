@@ -176,6 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "Shikoni kodin e gjeneruar në JavaScript."},
 "completedWithoutRecommendedBlock":function(d){return "Urime! Ju keni kompletuar Puzzle-in "+common_locale.v(d,"puzzleNumber")+". (Por ju mund të përdorni një kod ndryshe për një kod sa më të mirë)"},
 "continue":function(d){return "Vazhdo"},
+"copy":function(d){return "Copy"},
 "defaultTwitterText":function(d){return "Shiko se çfarë bëra"},
 "designMode":function(d){return "Dizajni"},
 "dialogCancel":function(d){return "Anulo"},
@@ -360,6 +361,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saveToGallery":function(d){return "Ruaj tek galeria"},
 "savedToGallery":function(d){return "U ruajt në galeri!"},
 "score":function(d){return "rezultati"},
+"sendToPhone":function(d){return "Send To Phone"},
 "shareFailure":function(d){return "Më vjen keq, ne nuk mund ta ndajmë këtë program."},
 "shareWarningsAge":function(d){return "Të lutem shëno moshën tënde më poshtë dhe kliko OK për të vazhduar."},
 "shareWarningsMoreInfo":function(d){return "Më shumë informata"},
@@ -396,6 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Shiko Videon"},
 "when":function(d){return "kur"},
 "whenRun":function(d){return "kur vrapon"},
-"workspaceHeaderShort":function(d){return "Vendi i punës: "},
-"copy":function(d){return "Copy"},
-"sendToPhone":function(d){return "Send To Phone"}};
+"workspaceHeaderShort":function(d){return "Vendi i punës: "}};

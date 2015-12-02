@@ -403,11 +403,7 @@ ka:
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: დიზაინის დასამთავრებლად გამოიყენეთ ჩასმული ციკლი.
       Auto Open Function Editor_instruction: 'შეგიძლიათ ფუნქციები სხვა ფუნქციებიდან გამოიძახოთ! გამოიყენეთ ფუნქცია "ფიგურა" საფუძვლად, შექმენით 3 სახლის ფიგურა, თითოეული წინაზე 20 პიქსელით დიდი, დაწყებული 50 პიქსელი სიგრძით. შეიძლება მთვლელის ციკლის გამოყენება გამოგადგეთ. '
-      Bee Recommended Blocks test_instruction: |
-        Purple flowers may have either 1
-        or 0 nectar, but you don't know which one! Be careful not to collect nectar
-        from a purple flower if it doesn't have any. Check if the nectar is equal
-        to 1 by using the if block.
+      Bee Recommended Blocks test_instruction: 'იისფერ ყვავილებს აქვთ 1 ან 0 ნექტარი, მაგრამ თქვენ არ იცით, რომელს რამდენი აქვს. ფრთხილად - არ მოკრიბოთ ნექტარი ისეთი ყვავილისგან, რომელიც მას არ შეიცავს. "თუ" ბლოკით შეამოწმეთ, შეიცავს თუ არა ყვავილი ნექტარს.'
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -560,12 +556,8 @@ ka:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      Busy Bee 2_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
-      Busy Bee_instruction: |
-        This bee has a lot of work to do! Do you notice any
-        patterns that you can use to simplify your code?
+      Busy Bee 2_instruction: ამ ფუტკარს ბევრი საქმე ელის! ამჩნევთ შაბლონებს, რომლებიც კოდის გამარტივებაში გამოგადგებათ?
+      Busy Bee_instruction: ამ ფუტკარს ბევრი საქმე ელის! ამჩნევთ შაბლონებს, რომლებიც კოდის გამარტივებაში გამოგადგებათ?
       C3-Farmer While Loops 1_instruction: |
         Move me to the hole and fill it with
         two shovelfuls of dirt, using the "fill" block.
@@ -834,7 +826,7 @@ ka:
       Course 2 Maze Loops 1_instruction: შეგიძლიათ მიმიყვანოთ გოჭთან 5 ბლოკის გამოყენებით?
       Course 4 2_instruction: ფუტკარს ახლა მხოლოდ ნექტარი უნდა. დაიმახსოვრეთ, ყველა ობიექტი ყვავილი არაა, ამიტომ შეამოწმეთ, რომ ფუტკარმა ნექტრის აღება მხოლოდ ყვავილთან სცადოს.
       Course 4 Artist 1_instruction: 'დამეხმარეთ ყუთის დახატვაში. (ყოველი ხაზი 200 პიქსელი სიგრძისაა) '
-      Course 4 Artist 10_instruction: "მინიშნების კიდევ ერთხელ სანახავად დააჭირეთ აქ!\r\n\r\nთავისუფალი თამაშის დროა! ეს არის საინტერესო ფიგურის კოდი. რა მოხდება, თუ მას გაიმეორებთ? მიაქციეთ ყურადღება იმას, რომ მობრუნებების ჯამი ამ ფიგურაში 420 გრადუსს უდრის, რაც იმას ნიშნავს, რომ ხატვის დასრულებისას მხატვარი იმავე მიმართულებით არ იდგება. ახალსა და საწყის მიმართულებებს შორის სხვაობა 60 გრადუსი იქნება."
+      Course 4 Artist 10_instruction: "მინიშნების კიდევ ერთხელ სანახავად დააჭირეთ აქ!\r\n\r\nაი, საინტერესო ფიგურის კოდი. რა მოხდება, თუ მას ბევრჯერ გაიმეორებთ, ყოველ გამეორების წინ მობრუნებით?   მიაქციეთ ყურადღება იმას, რომ მობრუნებების ჯამი ამ ფიგურაში 420 გრადუსს უდრის, რაც იმას ნიშნავს, რომ ხატვის დასრულებისას მხატვარი იმავე მიმართულებით არ იდგება. ახალსა და საწყის მიმართულებებს შორის სხვაობა 60 გრადუსი იქნება."
       Course 4 Artist 11_instruction: |
         ახლა კი გიწვევთ! ეს დიზაინი იყენებს მხოლოდ იმ ბლოკებს, რომლებიც ნანახი გაქვთ. შეგიძლიათ ხელახლა შექმნათ ის დამატებითი ინფორმაციის გარეშე? მინიშნება: შეგიძლიათ შეცდომების ხარჯზე ისწავლოთ. არაა აუცილებელი, პირველივე ცდა წარმატებული იყოს.
         მეტი მინიშნების ნახვა გინდათ? დააჭირეთ აქ!
@@ -858,12 +850,12 @@ ka:
       Course 4 Artist Binary 5_instruction: რომელი ექვსნიშნა ორობითი ხაზი დახატავს ამ სურათს 11-ჯერ გამეორებით?
       Course 4 Artist Binary 6_instruction: რომელია უმოკლესი ორობითი ხაზი, რომელიც შეგიძლიათ გაიმეოროთ ამ სურათის დასახატად?
       Course 4 Artist Binary 7_instruction: დაასრულეთ ეს ნახატი.
-      Course 4 Artist Binary Free Play 2_instruction: 'თავისუფალი თამაში: ეს უფრო მაღალი გაფართოების ტილოა - 16 ბიტი 16 ბიტზე!'
+      Course 4 Artist Binary Free Play 2_instruction: 'თავისუფალი თამაში: ეს ცარიელი ტილო მთლიანად თქვენს განკარგულებაშია. დახატეთ, რაც კი მოგესურვებათ!'
       Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
+      Course 4 Artist Binary Free Play 2b_instruction: მინიშნებების სანახავად დააჭირეთ აქ.
       Course 4 Artist Binary Free Play_instruction: 'თავისუფალი თამაში: დახატეთ რაც გსურთ, ორობითის გამოყენებით!'
-      Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
-      Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
+      Course 4 Artist Binary pre1_instruction: "ბინარულობა არის ინფორმაციის მხოლოდ ორი ვარიანტის წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს \"გამორთულია\" (წარმოდგენილია რიცხვით 0) და \"ჩართულია\" (წარმოდგენილია რიცხვით 1).\r\n\r\nმოცემული გაქვთ პიქსელების ბადე და გარკვეული პიქსელების ჩართვით შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს პირველ რიგში ბინარულად დაახატინოთ \"01010101\"?"
+      Course 4 Artist Binary ryan_instruction: "ბინარულობა არის ინფორმაციის მხოლოდ ორი ვარიანტის წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს \"გამორთულია\" (წარმოდგენილია რიცხვით 0) და \"ჩართულია\" (წარმოდგენილია რიცხვით 1).\r\n\r\nმოცემული გაქვთ პიქსელების ბადე და გარკვეული პიქსელების ჩართვით შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს პირველ რიგში ბინარულად დაახატინოთ \"01010101\"?"
       Course 4 Artist For  Functions 10_instruction: 'ცოტა გავართულოთ, შეგიძლიათ დახატოთ ვარსკვლავის ფორმა "დახატე კვადრატი" ფუნქციით? წარმატებები!'
       Course 4 Artist For  Functions 11_instruction: 'ცოტა გავართულოთ, შეგიძლიათ დახატოთ ვარსკვლავის ფორმა "დახატე კვადრატი" ფუნქციით? წარმატებები!'
       Course 4 Artist For Loops 1_instruction: 'დახატეთ ეს სამკუთხედი ისე, რომ ზომით 50 პქსელი იყოს. მინიშნება: გამოიყენეთ გამეორების ბლოკი.'
@@ -872,8 +864,8 @@ ka:
       Course 4 Artist For Loops 11a_instruction: "შევაჯამოთ ყველაფერი! თქვენი ცოდნის გამოყენებით \"for ციკლებისა\" და \"მთვლელების\" შესახებ, შექმენით ნახატი, სადაც ყოველ ფიგურას ორით მეტი გვერდი ექნება წინა ფიგურაზე. ასევე ყოველი გვერდი 10-ჯერ უფრო გრძელი უნდა იყოს მრავალკუთხედის გვერდების რაოდენობაზე.\r\n\r\nნიმუშად ამ მოკლე კოდს გაძლევთ."
       Course 4 Artist For Loops 12_instruction: 'ეგ მაგრად გამოიყურება, მაგრამ ახლა მინდა თითოეული ფიგურა წინას გვერდით დავხატო. ამჯერად ყველა გვერდის სიგრძეა 20 პიქსელი. გამოიყენეთ ნახტომის ბლოკი ფიგურის შემდეგ 40 პიქსელით წინ გადასახტომად. '
       Course 4 Artist For Loops 13_instruction: 'ეს ფიგურები ყოველ ჯერზე უფრო იზრდება! ეს ამოცანა ხომ ცვლადებით გადავჭერით? როგორ შევამციროთ გვერდების სიგრძეები მათი რაოდენობის მატებისას მთვლელი ცვლადის გამოყენებით? წინ ფიქსირებული სიდიდით გადაადგილების ნაცვლად გადაადგილდით (100 / "მთვლელი") პიქსელით.'
-      Course 4 Artist For Loops 14_instruction: თუ ჩვეულებრივზე ოდნავ მეტად ან ნაკლებად მოაბრუნებთ რომელიმე ფიგურას, ლამაზ ეფექტს მიიღებთ. სცადეთ 89 გრადუსით მობრუნება, რათა გამრუდებული კვადრატული სპირალი შექმნათ.
-      Course 4 Artist For Loops 15_instruction: "თავისუფალი თამაში: ეცადეთ დამოუკიდებლად შექმნათ რამე ნახატი \"მიზნისთვის\" ციკლების გამოყენებით. დამატებულია რამდენიმე ზოგადი ცვლადი, რომელთა გამოყენება ასევე შეგიძლიათ.\r\r მიაქციეთ ყურადღება, რომ ახლა თქვენი ინსტუმენტების პანელში იმდენი ბლოკია, რომ აუცილებელია, ისევ გადავანაწილოთ ისინი კატეგორებში. დაკლიკეთ სხვადასხვა ადგილებში და ანეხთ ყველა ბლოკი, რომლის გამოყენებაც შეგიძლიათ ამ დონეზე."
+      Course 4 Artist For Loops 14_instruction: თუ ჩვეულებრივზე ოდნავ მეტად ან ნაკლებად მოაბრუნებთ რომელიმე ფიგურას, ლამაზ ეფექტს მიიღებთ. სცადეთ წინა დონის კოდის გამოყენება და 89 გრადუსით მობრუნება, რათა ეს გამრუდებული კვადრატული სპირალი შექმნათ.
+      Course 4 Artist For Loops 15_instruction: 'თავისუფალი თამაში: ეცადეთ დამოუკიდებლად შექმნათ რამე ნახატი "მიზნისთვის" ციკლების გამოყენებით. დამატებულია რამდენიმე სასარგებლო ცვლადი.'
       Course 4 Artist For Loops 2_instruction: 'კოდი, რომელიც ხატავს სამკუთხედს ჩავსვი ციკლში, რომელიც ათობით ითვლის 50-დან 100-მდე.  კარგად დააკვირდით, როგორ ავაგე კოდი და მხოლოდ შემდეგ დააჭირეთ "გაშვებას.'
       Course 4 Artist For Loops 3_instruction: |
         უმცირეს სამკუთხედს გააჩნია 20 პიქსელი სიგრძის გვერდები, უდიდესს - 200 პიქსელი სიგრძის გვერდები და თითოეული სამკუთხედი 20 პიქსელით დიდია წინაზე. განაახლეთ "მიზნისთვის" ციკლი ამ სამკუთხედების დასახატად.
@@ -881,9 +873,7 @@ ka:
       Course 4 Artist For Loops 4_instruction: 'როგორ გამოიყნებთ დაგროვილ ცოდნას ამ კვადრატების დასახატად? უმცირესის სიგრძეა 15 პიქსელი, უდიდესის - 300 პიქსელი და ყოველი მომდევნო წინაზე 15 პიქსელით უფრო დიდია. '
       Course 4 Artist For Loops 5_instruction: 'წინა თავატეხი კარგად დაასრულეთ! ახლა ისევ გამოვიყენოთ "მთვლელი" ცვლადი, რომ დავხატოთ ეს მაგარი სურათი. '
       Course 4 Artist For Loops 6_instruction: 'თავისუფალი თამაში! ეცადეთ გამოიყენოთ "მიზნისთვის" ციკლი და დახატოთ ზრდადი ფიგურის ნიმუში, თქვენი დიზაინით.'
-      Course 4 Artist For Loops 6a_instruction: |
-        Make three small changes to the
-        code from the last level to get this!
+      Course 4 Artist For Loops 6a_instruction: შეცვალეთ წინა დონის კოდში სამი რამ და მიიღეთ ეს!
       Course 4 Artist For Loops 7_instruction: 'რა მოხდება, თუ "გაიმეორე 3-ჯერ"-ს მოვაშორებთ ამ ალგორითმიდან, მაგრამ "გადაადგილება" და "შემობრუნება" ბლოკებს დავტოვებთ ციკლში? ამ სპირალურ სამკუთხედში ყოველი გვერდი წინაზე 20 პიქსელით გრძელია.'
       Course 4 Artist For Loops 8_instruction: "წინა სურათის კოდი ოდნავ შევცვალეთ და, აი, ეს მივიღეთ. შეგიძლიათ მიხვდეთ, რა შეიცვალა?\r\n\r\nმინიშნება: რაღაცის წაშლაა საჭირო!"
       Course 4 Artist For Loops 8a_instruction: 'ამ კვადრატული სპირალის უმცირესი გვერდის სიგრძეა 10, უდიდესის - 200 და ყოველი ხაზი 10 პიქსელით გრძელია წინაზე. შეგიძლიათ შეავსოთ გამოტოვებული ბლოკები, რათა დაასრულოთ ეს მშვენიერი სურათი?'
@@ -950,7 +940,7 @@ ka:
       Course 4 Artist Vars 10_instruction: 'ეს ალგორითმი ხატავს სამკუთხედებს უფრო პატარა საკმუთხედებისგან. შეგიძლიათ შეცვალოთ ისე, რომ ის "გვერდების" ცვლადს იყენებდეს თითოეული სამკუთხედის დასახატად? გაარჩიეთ კოდი და ყოველ ჯერზე, როცა დაინახავთ 3-ს, შეცვალეთ ის თქვენი ცვლადით "გვერდები". არ დაგავიწყდეთ "მიანიჭე გვერდები" ბლოკის გამოყენება.'
       Course 4 Artist Vars 11_instruction: 'ეს ალგორითმი წინა თავსატეხისთვის მოვიფიქრეთ - რა უნდა მივანიჭოთ "გვერდები" ცვლადს, რომ დავხატოთ სურათი კვადრატებისგან?'
       Course 4 Artist Vars 12_instruction: 'მივანიჭოთ ცვლადს "გვერდები" 5. რაც მეტ გვერდს დავამატებთ ამ ალგორითმს, მით უფრო დიდ თარგს მივიღებთ საბოლოოდ! დაუკვირდით, რომ გვაქვს ახალი ცვლადი "სიგრძე". შეგვიძლია ის გამოვიყენოთ ყოველ ჯერზე როცა გვექნება "წინ გადაადგილება". ამ ფიგურისთვის ცვლადს "სიგრძე" მიანიჭეთ 75.'
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "როცა ფიგურას ბევრი გვერდი აქვს, ყოველი\nგვერდი უფრო მოკლე უნდა იყოს, თუ გვინდა, რომ მთელი ფიგურა დაეტიოს ეკრანზე.\n\r\nშევქმნათ ამ მშვენიერი ფიგურის ალგორითმი, მაგრამ ამჯერად \"სიგრის\" ცვლადის ხელით ჩასწორების მაგივრად გამოვიყენოთ მათემატიკური ბლოკი ცვალიდით \"გვერდები\" - ასე ფიგურა ნამდვილად ჩაეტევა სწორად. ყოველი მრავალკუთხედის პერიმეტრია 300 პიქსელი.\r\nგინდათ მინიშნებები? დააჭირეთ აქ."
       Course 4 Artist Vars 14_instruction: "თავისუფალი თამაში: ნახეთ, თქვენი ალგორითმი კიდევ ერთ ციკლშია ჩასმული. ატარეთ ექსპერიმენტები თქვენი ორი ცვლადის მნიშვნელობების ცვლით და დახატეთ საინტერესო ფიგურები.\r\n\r\nმეტი ეფექტისთვის, სცადეთ სხვადასხვა ფერი! გამოიყენეთ შემთხვევითი ფერი ციკლებში და ნახეთ, როგორ შეიცვლება თქვენი დიზაინი."
       Course 4 Artist Vars 2_instruction: '"გადაადგილდი 150-ით წინ"-ის გამოყენების ნაცვლად, "გადაადგილება" ბლოკი ახლა ცვლად "სიგრძე"-ს უკავშირდება. შეგიძლიათ "სიგრძეს" მიანიჭოთ 150 და ეს სამკუთხედი დახატოთ?'
       Course 4 Artist Vars 3_instruction: 'ეს ციკლი უნდა ხატავდეს კვადრატს, მაგრამ რაღაც აკლია. შეგიძლიათ გაასწოროთ ისე, რომ იყენებდეს "სიგრძე" ცვლადს და გაარკვიოთ, თუ რა სიგრძის უნდა იყოს თითოეული გვერდი? '
@@ -958,9 +948,9 @@ ka:
       Course 4 Artist Vars 5_instruction: 'გამოიყენეთ ცვლადი "გვერდები", რომ აკონტროლოთ რამდენჯერ უნდა გაეშვას ციკლი.'
       Course 4 Artist Vars 6_instruction: "ეს არის კოდი, რომელსაც შეუძლია ნებისმიერი წესიერი მრავალკუთხედის დახატვა. დავამატე ცვლადი \"გვერდები\", რომელსაც მინიჭებული აქვს 4. შეგიძლიათ გამოიყენოთ ცვლადი \"გვერდები\" (მათემატიკის ბლოკებთან ერთად) რათა დარწმუნდეთ, რომ სწორი რაოდენობით ვაკეთებ მობრუნებას იმისდა მიუხედავად, რამდენი გვერდი აქვს მრავალკუთხედს? \r\n\r\nმინიშნებასთან დასაბრუნებლად დაკლიკეთ აქ!"
       Course 4 Artist Vars 7_instruction: "შეგიძლიათ შეასწოროთ ცვლადი  \"გვერდები\" ისე, რომ დამეხმაროთ ამ ექვსკუთხედის დახატვაში?\r\n\r\nხედავთ, როგორ შეიძლება მხოლოდ ერთი მნიშვნელობის შეცვლით დახატოთ სამკუთხედი, ოთხკუთხედი, ხუთკუთხედი ან რვაკუთხედი?"
-      Course 4 Artist Vars 8_instruction: 'თავისუფალი თამაში: ცვალეთ ფიგურის გვერდების რაოდენობა. შეგიძლიათ შეცვალოთ ალგორითმი ისე, რომ ფიგურის ზომა არ იყოს დამოკიდებული გვერდების რაოდენობაზე? მინიშნება: შესაძლოა მათემატიკის ბლოკების გამოყენება დაგჭირდეთ (360 გაყოფილი "გვერდებზე"), ამჯერად ორ ადგილას.'
+      Course 4 Artist Vars 8_instruction: 'თავისუფალი თამაში: ცვალეთ ფიგურის გვერდების რაოდენობა. შეგიძლიათ შეცვალოთ ალგორითმი ისე, რომ ფიგურის ზომა არ იყოს დამოკიდებული გვერდების რაოდენობაზე? მინიშნება: თუ საწყის სიგრძეს გვერდების რიცხვზე გაყოფთ, ყოველი გვერდის სიგრძე შემცირდება, გვერდების რიცხვი კი გაიზრდება.'
       Course 4 Artist Vars 9_instruction: 'შეასწორეთ ეს ალგორითმი ისე, რომ ფიქსირებული რაოდენობის მაგივრად ის იყენებდეს ცვლადს "გვერდები" და ხატავდეს სამკუთხედს. არ დაგავიწყდეთ "მიანიჭე გვერდები" ბლოკის გამოყენება.'
-      Course 4 Bee 1_instruction: 'ფუტკარი ვერ არჩევს რა არის ღრუბელს ქვემოთ! ჯერ შეამოწმეთ ყვავილია ეს თუ ფიჭა. მხოლოდ შემდეგ შეაგროვეთ ნექტარი, თუ ეს ყვავილია. '
+      Course 4 Bee 1_instruction: 'ფუტკარი ვერ არჩევს რა არის ღრუბლის ქვემოთ! გამოვიყენოთ "თუ" ბლოკი და შევამოწმოთ ყვავილია ეს, თუ ფიჭა. მხოლოდ შემდეგ შეაგროვეთ ნექტარი, თუ ეს ყვავილია. '
       Course 4 Bee 2_instruction: შეამოწმეთ თითოეული ობიექტი, რომ ნახოთ ყვავილია თუ არა. თუ არის, შეაგროვეთ ნექტარი...სხვა შემთხვევაში შეგიძლიათ ყურადღება არ მიაქციოთ!
       Course 4 Bee 3_instruction: 'უცნობი ობიექტი ან ყვავილია ან ფიჭა. გამოიყენეთ "თუ/სხვაგვარად" ბლოკი. შეაგროვეთ ნექტრი თუ ყვავილია, თუ არა, გააკეთეთ თაფლი (რადგან მაშინ ფიჭა იქნება).'
       Course 4 Bee 4_instruction: 'ამ იისფერ ყვავილში შეიძლება იყოს 3, 2 ან 1 ნექტარი. აქ არის "თუ/სხვაგვარად" ბლოკი, კომბინირებული კიდევ ერთ "თუ/სხვაგვარად" ბლოკთან, რაც ქმნის "თუ/სხვაგვარად-თუ/სხვაგვარად" ბლოკს. დაასრულეთ ამოხსნა და შეაგროვეთ უცნობი რაოდენობის ნეტქარი.'
@@ -993,21 +983,10 @@ ka:
       Course 4 Bee Params 6_instruction: 'კარგი არ იქნებოდა, ყველა ნექტარის ერთი ფუნქციით შეგროვება რომ შეგვეძლოს? სცადეთ ფუნქციისთვის ახალი პარამეტრის, "ნექტარის ერთეულების" დამატება, რათა აკონტროლოთ შეგროვებული ნექტარის რაოდენობა. სასურველია ფუნქციასაც შეუცვალოთ სახელი!'
       Course 4 Bee Params 7 (copy 1)_instruction: სცადეთ გამოიყენოთ თქვენი ახალი ფუნქცია ამ ნექტარის შესაგროვებლად.
       Course 4 Bee Params 7_instruction: სცადეთ თქვენი ახალი ფუნქციის ამ ნექტარის შესაგროვებლად გამოყენება.
-      Course 4 Bee Params 8 Clone 2_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 clone 3_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 Clone_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 new_instruction: |
-        Oooh, now there's honey to deal with
-        too! How could you update your function to either get nectar or make honey.
+      Course 4 Bee Params 8 Clone 2_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
+      Course 4 Bee Params 8 clone 3_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
+      Course 4 Bee Params 8 Clone_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
+      Course 4 Bee Params 8 new_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
       Course 4 Bee Params 8_instruction: 'გამოწვევა: თაფლსაც უნდა მივხედოთ! გადაწერეთ თქვენი ფუნქცია ისე, რომ ის თაფლის და ნექტარის ერთეულების რაოდენობას შეიცავდეს. როგორ გამოიყენებთ ამ რიცხვებს შემდეგი მოქმედების გადასაწყვეტად?'
       Course 4 Bee Params Ex_instruction: სცადეთ თქვენი ახალი ფუნქციის ამ ნექტარის შესაგროვებლად გამოყენება.
       Course 4 Binary 1_instruction: ეს ფუნქცია იღებს 1-ებისა და 0-ების ორობით ხაზს და მიუთითებს ფერმერს, რომ მობრუნდეს მარცხნიდან მარჯვნივ, ზემოდან ქვემოთ, მობრუნდეს კვადრატებზე, რომლებიც ნულს შეიცავს. გაუშვით მოცემული კოდი და ნახეთ, როგორ იყენებს ფერმერი ორობით სისტემას სურათის დასახატად.
@@ -1019,24 +998,13 @@ ka:
       Course 4 Binary 6_instruction: რომელი ორობითი ხაზი დახატავს ამ სურათს 10-ჯერ გამეორებით?
       Course 4 Binary 7_instruction: რომელი ორობითი ხაზი დახატავს ამ სურათს 10-ჯერ გამეორებით?
       Course 4 Binary 8_instruction: 'ამ სურათის უდიდესი ნაწილის დასრულება შეგიძლიათ ციკლში 5 ბიტიანი ორობითი რიცხვის გამეორებით - შემდეგ დაგჭირდებათ დამატებით ერთი 4 ბიტიანი რიცხვი ქვედა მარჯვენა კუთხისთვის.'
-      Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 3_instruction: |
-        Use what you learned in the previous level to draw
-        an image like this. Note: The code becomes more simple if you incorporate
-        parameters. 
-      Course 4 EC 3a_instruction: |
-        Extreme Challenge: No rules. No clues. Just the
-        challenge!
+      Course 4 EC 1a_instruction: არანაირი წესები. არანაირი მინიშნებები. აბა, თუ გამოგივათ!
+      Course 4 EC 1b_instruction: არანაირი წესები. არანაირი მინიშნებები. აბა, თუ გამოგივათ!
+      Course 4 EC 2a_instruction: '**განსაკუთრებული დავალება**: არანაირი წესები. არანაირი მინიშნებები. აბა, თუ გამოგივათ!'
+      Course 4 EC 2b_instruction: '**განსაკუთრებული დავალება**: არანაირი წესები. არანაირი მინიშნებები. აბა, თუ გამოგივათ!'
+      Course 4 EC 2c_instruction: '**განსაკუთრებული დავალება**: არანაირი წესები. არანაირი მინიშნებები. აბა, თუ გამოგივათ!'
+      Course 4 EC 3_instruction: 'გამოიყენეთ წინა დონეზე შეძენილი ცოდნა და დახატეთ მსგავსი სურათი. მინიშნება: კოდი უფრო მარტივი იქნება, თუ პარამეტრებს ჩაურთავთ. '
+      Course 4 EC 3a_instruction: 'განსაკუთრებული დავალება: არანაირი წესები. არანაირი მინიშნებები. აბა, თუ გამოგივათ!'
       Course 4 Maze 1_instruction: მიიყვანეთ ეს გაბრაზებული ჩიტი გოჭთან!
       Course 4 Maze 2_instruction: მოერიდეთ დინამიტს!
       Course 4 Maze 3_instruction: 'დააპროგრამეთ გაბრაზებული ჩიტი ისე, რომ გოჭამდე მივიდეს. '
@@ -1050,11 +1018,7 @@ ka:
       Course 4 Play Lab Params 3_instruction: 'დავამატოთ კიდევ ერთი პარამეტრი ახტომის ფუნქციას, რათა შეგვეძლოს მისი ორი მსახიობისთვის გამოყენება. თითოეული მსახიობი რიცხვითაა წარმოდგენილი, დაწყბული ერთიდან. ჩაასწორეთ "ახტომა" ფუნქცია ისე, რომ განმარტებაში შედიოდეს პარამეტრი "მსახიობი". '
       Course 4 Play Lab Params 4_instruction: 'ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.'
       Course 4 Play Lab Params 5_instruction: 'შეავსეთ "მსახიობის" პარამეტრის შემავალი მონაცემი, რომ შევძლოთ "პატრული" ფუნქციის გამოძახება თითოეული მსახიობისთვის. გახსოვდეთ, რომ მსახიობები შეესაბამებიან რიცხვებს 1, 2 და 3.'
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: '"პატრულირების" ფუნქციას დაუმატეთ პარამეტრი "სიჩქარე". სცადეთ გამოიყენოთ ბლოკი "სიჩქარის განსაზღვრა" ამ ახალ "სიჩქარის" პარამეტრთან და მოაპოვებინეთ პინგვინს ორივე დროშა, სანამ ელფები რომელიმეს დაეუფლებიან.'
       Course 4 Play Lab Params 7_instruction: "შეხედეთ მოცემულ კოდს და სცადეთ გაარკვიოთ, რას აკეთებს თითოეული ბლოკი. \r\n\r\nროცა მორჩებით, გამოიყენეთ ისრები ძაღლის საკონტროლებლად და დროშების შესაგროვებლად."
       Course 4 Play Lab Params 8_instruction: 'გამოიყენეთ "შეხებისას" ბლოკი, რომ დააბრუნოთ ძაღლი მარცხენა ზედა კუთხეში მხოლოდ იმ შემთხვევაში, თუ ის სხვა მსახიობს შეეხება.'
       Course 4 Play Lab Params 9_instruction: "ესაა, თამაში წინა დონიდან,\nმაგრამ კოდის უმეტესობა დამალულია. მოცემულია ახალი ფუნქცია \"ქულის_დაგროვება\".\r\n\r\nდაარედაქტირეთ\nფუნქცია ისე, რომ ცვლადს \"მოთამაშის_ანგარიში\" დაემატოს პარამეტრი\n\"ქულები\".\r\n\r\nცვლადი \"მოთამაშის_ანგარიში\" უნდა გაიზარდოს ყოველჯერ, როცა\nძაღლი მონიშნავს კატას გულით და იკლებდეს, როცა კატა მონიშნავს ძაღლს გულით.\r\n\r\nმინიშნება:\nროცა დაასრულებთ, დააჭირეთ \"გაშვებას\". როცა ძაღლი დააგროვებს 6 ქულას, \nთქვენ გადახვლათ შემდეგ დონეზე. "
@@ -1083,60 +1047,32 @@ ka:
       Course 4 Play Labs For Loops 7a_instruction: "აი, ახლა რაღაც გამოგვდის! რა მოხდება, თუ დავითვლით, რამდენჯერ შეგვიძლია დავაჭიროთ ჯადოქარს, სანამ ძაღლი 30-ს მიაღწევს?\r\n\r\nდაუმატეთ ჯადოქარს ბლოკები ისე, რომ ყოველჯერ, როცა მას ვაჭერთ, ცვლადი \"დაკლიკვა\" ერთით იზრდებოდეს. \"ნაზრდს\" ჯერ-ჯერობით შეგიძლიათ არ მიაქციოთ ყურადღება.\r\n\r\nძაღლი დაიწყებს თვლას, როცა \"გაშვებას\" დააჭერთ."
       Course 4 Play Labs For Loops 8_instruction: 'როგორი "მიზნისთვის" ციკლი მათქმევინებს მწკრივს 19, 27, 35, 43, 51?'
       Course 4 Play Labs For Loops 8a_instruction: "ჩვენი თამაშის დასასრულებლად გვჭირდება \"ნაზრდის\" ცვლადის დაბრუნება! გადავაბათ ის თამაშის დონეს.\r\n\r\n1) დათვალეთ, რამდენჯერ დააჭერენ ჯადოქარს.\r\n2) თუ ჯადოქარს ათჯერ მაინც დააჭერენ, სანამ ძაღლი 30-მდე ავა,  გაზარდეთ \"ნაზრდი\" ერთით და დაიწყეთ თავიდან.\r\n3) თუ ჯადოქარს ათჯერ მაინც არ დააჭერენ, თამაში სრულდება."
-      Course 4 SCF 1_instruction: |
-        Use the suggested functions to draw four rows
-        of hexagons. Notice how our even numbered rows are shifted to the right?
-      Course 4 SCF 1a_instruction: |
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
-      Course 4 SCF 1b_instruction: |
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
-      Course 4 SCF 2_instruction: |
-        Use what you learned in the previous level to
-        draw an image like this. Note: The code becomes more simple if you incorporate
-        parameters. 
-      Course 4 SCF 3 Fail 1_instruction: Can you figure out how to...
-      Course 4 SCF 3 Fail 2_instruction: Can you figure out how to...
-      Course 4 SCF 3_instruction: |
-        Use what you learned in the previous level to
-        draw an image like this. Note: The code becomes more simple if you incorporate
-        parameters. 
-      Course 4 SCFL 1_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
-      Course 4 SCFL 1a_instruction: |
-        Can you get Skrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 1b_instruction: |
-        Can you get Skrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 2_instruction: |
-        Solve this puzzle using the fewest number of
-        blocks possible.
-      Course 4 SCFL 3_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 4_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 5_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 6_instruction: |
-        Can you figure out how to re-create this drawing
-        with a single loop?
-      Course 4 SCFL 7_instruction: |
-        The artist wants to catch some waves! Can you
-        figure out how to re-create this drawing?
+      Course 4 SCF 1_instruction: გამოიყენეთ შეთავაზებული ფუნქციები და დახატეთ ექვსკუთხედების ოთხი რიგი. ამჩნევთ, რომ ლუწნომრიანი რიგები მარჯვნივ არის გაწეული?
+      Course 4 SCF 1a_instruction: ხვდებით, როგორ შეაგროვოთ მთელი ნექტარი ბლოკების მინიმალური რაოდენობით?
+      Course 4 SCF 1b_instruction: ხვდებით, როგორ შეაგროვოთ მთელი ნექტარი ბლოკების მინიმალური რაოდენობით?
+      Course 4 SCF 2_instruction: 'გამოიყენეთ წინა დონეზე შეძენილი ცოდნა და დახატეთ მსგავსი სურათი. მინიშნება: კოდი უფრო მარტივი იქნება, თუ პარამეტრებს ჩაურთავთ. '
+      Course 4 SCF 3 Fail 1_instruction: შეგიძლიათ გამოიცნოთ, როგორ...
+      Course 4 SCF 3 Fail 2_instruction: შეგიძლიათ გამოიცნოთ, როგორ...
+      Course 4 SCF 3_instruction: 'გამოიყენეთ წინა დონეზე შეძენილი ცოდნა და დახატეთ მსგავსი სურათი. მინიშნება: კოდი უფრო მარტივი იქნება, თუ პარამეტრებს ჩაურთავთ. '
+      Course 4 SCFL 1_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობის გამოყენებით.
+      Course 4 SCFL 1a_instruction: შეგიძლიათ მიიყვანოთ სკრატი რკოსთან ბლოკების მინიმალური რაოდენობის გამოყენებით?
+      Course 4 SCFL 1b_instruction: შეგიძლიათ მიიყვანოთ სკრატი რკოსთან ბლოკების მინიმალური რაოდენობის გამოყენებით?
+      Course 4 SCFL 2_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობის გამოყენებით.
+      Course 4 SCFL 3_instruction: ხვდებით, როგორ უნდა გაიმეოროთ ეს ნახატი?
+      Course 4 SCFL 4_instruction: ხვდებით, როგორ უნდა გაიმეოროთ ეს ნახატი?
+      Course 4 SCFL 5_instruction: ხვდებით, როგორ უნდა გაიმეოროთ ეს ნახატი?
+      Course 4 SCFL 6_instruction: ხვდებით, როგორ გაიმეოროთ ეს ნახატი ერთი ციკლით?
+      Course 4 SCFL 7_instruction: მხატვარი სწორ ტალღაზეა! ხვდებით, როგორ უნდა გაიმეოროთ ეს ნახატი?
       Course 4 SCFP 1_instruction: |
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
         by y pixels (using positive and negative numbers).
-      Course 4 SCV 1_instruction: Click here to view the instructions again.
-      Course 4 SCV 2_instruction: Click here to view the instructions again.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary to make this game work the way it's been explained.  How will you\nget Dog to move in all directions using the arrow keys?  How will you add\npoints when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand Penguin touch?"
-      Course 4 SCV 4_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 6_instruction: Click here to view the instructions again.
+      Course 4 SCV 1_instruction: ინსტრუქციების ხელახლა სანახავად დააჭირეთ აქ.
+      Course 4 SCV 2_instruction: ინსტრუქციების ხელახლა სანახავად დააჭირეთ აქ.
+      Course 4 SCV 3_instruction: "ახლა მონიშვნის თამაშის დროა! მონიშნეთ კატა და მიიღეთ 2 ქულა.\nმონიშნეთ პინგვინი და მიიღეთ 3 ქულა. მოსაგებად კი 10 ქულა გჭირდებათ!\r\nფრთხილად იყავით, თუ\nკატა და პინფვინი ერთმანეთს მონიშნავენ, თქვენ ქულა გაკლდებათ.\r\n\r\nდაამატეთ ბლოკები, რომლებიც საჭიროა ამ თამაშის ახსნის მიხედვით სათამაშოდ. როგორ მიაღწევთ იმას, რომ ძაღლმა ისრების გამოყენებით იმოძრავოს? როგორ დაამატებთ ქულებს იმ შემთხვევაში, როცა ძაღლი კატას ან პინგვის დაიჭერს? როგორ გამოკლებთ ქულებს, თუ კატა და პინგვინი შეეხებიან ერთამენთს?"
+      Course 4 SCV 4_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობით.
+      Course 4 SCV 5_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობით.
+      Course 4 SCV 6_instruction: ინსტრუქციების ხელახლა სანახავად დააჭირეთ აქ.
       Course 4 SCVP 1_instruction: |
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
@@ -1148,7 +1084,19 @@ ka:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1390,19 +1338,10 @@ ka:
       frozen circle_instruction: წრე განსაკუთრებული ფიგურაა. შეგიძლიათ გაარკვიოთ, რა რიცხვებით უნდა შეიცვალოს კითხვის ნიშნები იმისთვის, რომ დაიხატოს წრე?
       frozen cross rotate dense_instruction: 'გავიმეოროთ 90-ჯერ! რამდენჯერ მოთავსდება 360-ში 90? მინიშნება: ძალიან პატარა რიცხვია.'
       frozen cross rotate_instruction: ახლა სცადეთ 10-ჯერ გაიმეოროთ. რამდენი გრადუსით უნდა მობრუნდეთ თითოეულ ხაზს შორის?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: ჩასვით ეს ბრძანებები გამეორების ბლოკში და შექმენით პლუსის ნიშანი. შეამჩნიეთ, რომ ელზას წინ და უკან მოძრაობა შეუძლია?
+      frozen diamond mini snowflake_instruction: 'იცოდით, რომ ყველა ფიფქს განსხვავებული ფორმა აქვს? შევქმნათ ფიფქი "გამეორების" ბლოკის გამოყენებით, რომლითაც პარალელოგრამს გავიმეორებთ 4-ჯერ, ყოველი პარალელოგრამის შემდეგ 90 გრადუსით მობრუნებით.'
       frozen diamond snowflake_instruction: ახლა შევქმნათ ახალი ფიფქი გამეორების ბლოკით, პარალელოგრამის 10-ჯერ გამეორებითა და ყოველი პარალელოგრამის შემდეგ 36 გრადუსით მობრუნებით.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: 'გამოიყენეთ გამეორების ბლოკი და შექმენით პარალელოგრამი. პარალელოგრამი იგივეა, რაც მართკუთხედი, მაგრამ განსხვავებული კუთხეებით: მას აქვს 60 და 120 გრადუსის კუთხეები 90 გრადუსის კუთხეების მაგივრად.'
       frozen freeplay_instruction: თქვენ ოფიციალურად გახდით ოსტატი მხატვარი! შექმენით ზამთრის საოცრებათა სამყარო.
       frozen line_instruction: გამარჯობა! მე ელზა ვარ არენდელიდან. დამეხმარეთ ერთი ხაზის შექმნაში.
       frozen perpendicular_instruction: ახლა ვნახოთ შეგვიძლია თუ არა ორი ისეთი ხაზის შექმნა, რომლებიც ერთმანეთთან 90 გრადუსიან კუთხეს ქმნიან. დაგჭირდებათ შემობრუნების ბლოკისა და გადაადგილების ბლოკის გამოყენება.
@@ -1770,7 +1709,7 @@ ka:
       NEW Course 4 Bee For Loops 5_instruction: შეგიძლიათ ციკლი უკუთვლისთვისაც გამოიყენოთ. სცადეთ შეაგროვოთ ნექტარი 5-დან 1-მდე უკუთვლით 1.
       NEW Course 4 Bee For Loops 6_instruction: 'უკანასკნელ რიცხვს თქვენს ციკლში ეწოდება "ნაზრდი", ციკლის ყოველ შესრულებაზე მთვლელი ცვლადი ნაზრდით იზრდება. სცადეთ ამ ყვავილების შეგროვება 2 ნაზრდის გამოყენებით.'
       NEW Course 4 Bee For Loops 7_instruction: "ახლა გავაერთიანოთ ცვლადი \"მთვლელი\" და მათემატიკური ბლოკი! როგორ შეგიძლიათ \"მთვლელის\" ცვლადის გამოყენება, იმისთვის, რომ ბაღში ბლოკების მინიმალური რაოდენობით გადაადგილდეთ? რა უნდა გააკეთოთ, რომ მოკრიბოთ 3, 6, 9, 12, 15 ნექტარი? პასუხი \"მთვლელი\" ცვლადია!\r\r დაიმახსოვრეთ: დაიმახსოვრე:\nთუ თქვენი ციკლი ითვლის ზრდადობით, თქვნს მთვლელ ცვლადს ნაზრდი ემატება ყოველ ჯერზე."
-      NEW Course 4 Bee For Loops 8_instruction: "გამოგივიდათ! \nრამდენი უნდა იყოს ნაზრდი, რომ შეაგროვოთ 3, 6, 9, 12, 15 ნექტარი?\r\n"
+      NEW Course 4 Bee For Loops 8_instruction: "გამოგივიდათ! \nრამდენი უნდა იყოს ნაზრდი, რომ შეაგროვოთ 3, 6, 9, 12, 15 ნექტარი?\r\nმინიშნება: რა უნდა დაუმატოთ \nთითოეულ რიცხვს იმისთვის, რომ მისი მომდევნო რიცხვი მიიღოთ?"
       NEW Course 4 Bee For Loops 9_instruction: თუ თქვენი ციკლი კლებადობით ითვლის, ყოველ ციკლში თქვენს მთვლელს გარკვეული სიდიდე აკლდება. რა უნდა იყოს ეს სიდიდე, რომ შეგროვდეს15, 12, 9, 6 და შემდეგ 3 ნექტარი?
       NEW Course 4 Bee For Loops 95_instruction: 'დააკვირდით თქვენი "მიზნისთვის" ციკლის თითოეულ დეტალს.  ხვებით, რომელი რიცხვები უნდა გააორმაგოთ ამ თავსატეხის ამოსახსნელად? რატომ მუშაობს ეს მეთოდი?'
       NEW Course 4 Play Lab Params 11_instruction: 'თავისუფალი თამაშის დროა! გამოიყენეთ ყველა ბლოკი თქვენი ინსტრუმენტების ყუთიდან და გაერთეთ. '
@@ -1807,17 +1746,9 @@ ka:
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
+      Overworld Chop Tree_instruction: 'ხე ძალიან მნიშვნელოვანი რესურსია. ბევრი რამ შედგება მისგან. მიდით ხესთან და გამოიყენეთ "ბლოკის განადგურების" ბრძანება მის მოსაჭრელად.'
+      Overworld Chop Trees_instruction: სახლი მზის ჩასვლამდე უნდა ავაშენოთ. სახლებს ბევრი ხე სჭირდებათ. სამივე ხეა მოსაჭრელი.
+      Overworld Free Play 20x20_instruction: გილოცავთ! თქვენ დაასრულეთ ყველა ჩვენი თავსატეხი. ახლა მოიპოვეთ ნედლეული, ააშენეთ და შექმენით რამე უნიაკული მთელი შეძენილი ცოდნის გამოყენებით.
       Overworld Free Play_instruction: 'ეს ლანდშაფტი თქვენია - შეგიძლიათ ააშენოთ, რაც კი მოგესურვებათ.'
       Overworld House Frame - A_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
       Overworld House Frame - C_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
@@ -1827,23 +1758,11 @@ ka:
       Overworld House Frame Chosen_instruction: 'ააშენეთ სახლი ბოლომდე ნებისმიერი მასალით. "გამეორების" ბრძანება აქ ძალიან გამოგადგებათ.'
       Overworld House Frame_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
       Overworld Minecart Track_instruction: ისევ ზედაპირზე ხართ და გაქვთ უამრავი მიწისქვეშა რესურსი. ახლა უნდა ავაშენოთ გზა თქვენი სახლიდან ჭუჭყინი ბილიკის გასწვრივ. პირველ რიგში, უნდა გავასუფთავოთ ბილიკი. გაჰყევით ბილიკს და მოაშორეთ ხეები.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Move to Sheep_instruction: 'ცხვრამდე მისასვლელად დაამატეთ მეორე ""წინ გადაადგილების" ბრძანება.'
+      Overworld Place Wall_instruction: 'ყოველი სახლი იწყება კედლით. ააგეთ სახლის პირველი ნაწილი "დააყენე ან დადე" და "წინ გადაადგილება" ბრძანებების გამეორების ციკლში ჩასმით.'
+      Overworld Plant Crops_instruction: 'წინასწარ დაგეგმვა კარგია. დარგე მოსავალი წყლის ორივე მხარეს - ბოლოს რომ არ მოგშივდეს.'
+      Overworld Powered Minecart_instruction: მშვენიერი ნამუშევარია! უმრავი რესურსი მოიძიეთ და კარგი სახლიც ააშენეთ. ახლა დროა რუკის კიდიდან თქვენ სახლამდე ლიანდაგი დააგოთ.
+      Overworld Shear Sheep_instruction: 'ცხვრის გაკრეჭის დროა! გამოიყენეთ ბრძანება "გაკრეჭა" და მოიპოვეთ ცხვრის მატყლი.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2172,7 +2091,7 @@ ka:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2441,22 +2360,22 @@ ka:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -2465,7 +2384,7 @@ ka:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -2500,7 +2419,7 @@ ka:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -2652,8 +2571,9 @@ ka:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -3437,8 +3357,8 @@ ka:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -3508,6 +3428,41 @@ ka:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

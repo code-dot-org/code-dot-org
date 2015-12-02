@@ -464,9 +464,10 @@
       Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar esses materiais.
-    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney e Lucasfilm.
-      Todos os direitos reservados.<br />Frozen&#8482; &amp; &copy; %{current_year}
-      Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &amp; &copy;
+    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Todos
+      os direitos reservados.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney
+      e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &amp; &copy; %{current_year}
+      Disney. Todos os direitos reservados.<br />A era do gelo&#8482; &amp; &copy;
       %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482;
       &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos
       reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic
@@ -488,6 +489,9 @@
     privacy: Política de Privacidade
     secure: Versão Segura
     report_abuse: Reportar abuso
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas

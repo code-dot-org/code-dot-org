@@ -223,7 +223,7 @@ nl:
         calculate: Calculate Something
         applab: Maak een App
     user:
-      classroom: Leerkracht Home Page
+      classroom: Startpagina voor de leerkracht
       district_dashboard: District Ovezicht
       label: 'Hallo %{username}'
       stats: Code Studio
@@ -403,6 +403,9 @@ nl:
     privacy: Privacybeleid
     secure: Beveiligde versie
     report_abuse: Misbruik Melden
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Hulp nodig?
     subtitle: "Bekijk deze video's en hints"
