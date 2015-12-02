@@ -38,7 +38,7 @@
       url: urlToShare,
       related: 'codeorg',
       hashtags: 'HourOfCode', // TODO(bjordan): anon certs may not always be HoC
-      text: #{just_did_hoc_text}
+      text: #{@just_did_hoc_text}
     };
 
     return 'https://twitter.com/share?' + $.param(queryParams, true);
