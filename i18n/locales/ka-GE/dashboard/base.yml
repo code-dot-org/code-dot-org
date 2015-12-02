@@ -312,8 +312,8 @@ ka:
       section: სექცია
       example: მაგალითის ამოხსნა
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
-      submitted_on: 'Submitted on:'
-      unsubmit: Unsubmit
+      submitted_on: 'გაგზავნის თარიღი:'
+      unsubmit: ჩაბარების გაუქმება
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
@@ -388,7 +388,7 @@ ka:
     thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">მრჩევლებს განათლების დარგში</a> კოდის სტუდიის შექმნაში დახმარებისთვის.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br /> Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. <br/>Plants vs. Zombies&#8482; &amp; &copy;%{current_year} 2014 Electronic Arts Inc. ყველა უფლება დაცულია'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &amp; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio entertainment Ltd. ყველა უფლება რეზერვირებულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts inc. ყველა უფლება დაცულია'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
@@ -403,6 +403,9 @@ ka:
     privacy: კონფიდენციალურობის პოლიტიკა
     secure: დაცული ვერსია
     report_abuse: შეგვატყობინეთ დარღვევა
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -434,7 +437,7 @@ ka:
   pdf_download: გადმოიწერეთ PDF
   download_coming_soon: მალე ჩამოტვირთვაც შესაძლებელი გახდება.
   video_coming_soon: ვიდეო მალე დაემატება!
-  not_started: The student has not attempted this level.
+  not_started: მოსწავლეთ არ უცდია ამ დონის გავლა.
   share_code:
     title: 'დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა'
     bounce_og_title: ნახეთ ჩემი Bounce თამაში
@@ -483,7 +486,7 @@ ka:
       body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
     minecraft:
       title: მაინკრაფტი
-      body: Explore a Minecraft world through code.
+      body: შეისწავლეთ მაინკრაფტის სამყარო კოდით.
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
     students_made_these_with_code: მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!
@@ -623,16 +626,16 @@ ka:
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: შეგვატყობინეთ თქვენი ელ. ფოსტა
+          age: თუ შეიძლება, მიუთითეთ ასაკი
+          abuse_type: აგვიღწერეთ, როგორ არღვევს ეს კონტენტი სერვისის პირობებს
+          abuse_detail: თუ შეიძლება შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით
+        abusive_url: გასაჩივრებული კონტენტი URL
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
+          question: 'როგორ არღვევს ეს კონტენტი %{link_start}სერვისის პირობებს%{link_end}?'
+          harassment: მუქარები, კიბერ-ბულინგი, შეწუხება
           offensive: შეურაცხმყოფელი კონტენტი
-          infringement: Copyright Infringement
+          infringement: საავტორო უფლებების დარღვევა
           other: სხვა
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.
+        acknowledge: 'ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის პირობების%{link_end} თანახმად'

@@ -105,6 +105,8 @@
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Simulátor Internetu
+        Custom: Umělec
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: Bronz
@@ -508,61 +510,77 @@
           klávesami se dostat k Spacebotovi a varovat všechny ostatní
         studio_playlab_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
-        studio_iceage_1: Manny chce říci "Ahoj" - umíš mu pomoci?
-        studio_iceage_2: Diego (aktér1) a Babička (aktér 2) by si rádi navzájem řekli
-          "Ahoj". Umíš jim pomoci tím, že použiješ blok "say" dvakrát?
-        studio_iceage_3: Umíš pomoci Scrat dostat se k vlajce?
-        studio_iceage_4: Umíš pomoci Scrat (aktér 1) dostat se k babičce (aktér 22)
-          a přehrávat zvuk, když se tam dostaneš?
-        studio_iceage_5: Umíš pomoci Sidovi po klepnutí, aby řekl "pozdravy"? Nezapomeň
-          klepnout na něj a poté na Run
-        studio_iceage_6: Umíš pomoci Diegovi, aby se pohyboval pomocí šipek nahoru/dolů/vpravo/vlevo
-          dostat všechny příznaky?
-        studio_iceage_7: Blok "opakovat natrvalo" umožňuje nepřetržitý běh kódu. Lze
-          připojit bloky k tomu, abys pomohl Sidovi se pohyboval opakovaně doleva
-          a doprava?
-        studio_iceage_8: Umíš přidat bloků ke skórování bodu a přehrání zvuku, když
-          Sid narazí do Mannyho a potom jej přesuň pomocí šipek, dokud neskóruješ?
-        studio_iceage_9: Nastav pozadí pro dobu ledovou a pomoz Sid se dostat k babičce
-          rychleji změnou jeho rychlosti. Přesuň jej pomocí šipkových klávesnic, aby
-          dostal k Sidovi a varovat všechny ostatní.
-        studio_iceage_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
+        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
+          you help him say "hello" by dragging the `say` block out into the work area
+          and typing the word "hello" inside?
+        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
+          him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: Anais chce mít nějaké nové přátele. Pomůžeš jí, aby
+          řekla "Ahoj" přetažením bloku "say" do pracovní oblasti se zadáním uvnitř
+          slova "hello"?
+        studio_gumball_hello2: Darwin (aktér1) a jeho bratr Gumball (aktér 2) míří
+          do školy.  Pomož jim se pozdravit navzájem s použitím dvakrát bloku "aktor
+          say".
+        studio_gumball_move_to_flag: Banánový Joe je vyhrát závod smlsne!  Pomoz mu
+          jít posledních 200 pixelů pomocí bloku "move".
+        studio_gumball_move_to_actor: Gumball (aktér1) a Darwin (aktér 2) jsou pozdě
+          na polní den! Pomoz Gumballovi se dostat o 200 pixelů dolů k Darwinovi pomocí
+          bloku "move actor".  Dále připoj blok k události "when actor touches" přehrát
+          zvuk, když se najdou navzájem.
+        studio_gumball_repeat: Blok "repeat forever" umožňuje, aby kód běžel nepřetržitě.  Umíš
+          připojit bloky k tomu, abys pomohl Gumballovi, aby se zahřál opakovaně pohybem  vlevo
+          a vpravo?
+        studio_gumball_click_hello: 'Umíš pomoci Antonovi, aby oznámil zahájení závodu
+          slovy: "Ready, set, go!"? Chceš-li si vyzkoušet program, nezapomeň klepnout
+          Antona po klepnutí Run!'
+        studio_gumball_move_events: Darwin je vlajka shromáždění soutěž! Pomoz mu
+          běhat kolem připojením "move" bloku ke každé události. Když jsi hotov, klepni
+          na Run a snaž se sesbírat všechny vlajky.
+        studio_gumball_sound_and_points: Poskytli jsme většinu kódu, který drží Antona
+          (aktér 2) neustále pohybovat vlevo a vpravo, stejně jako kód Banana Joe
+          (aktér 1) pohybovat po obrazovce.  Můžeš dokončit kód a přidat bloky k události
+          "when actor touches" tak, aby vám oboje přehrát zvuk a skórovat bod, když
+          Banana Joe a Anton se srazí?  Stiskni  Runk přehrání hry.
+        studio_gumball_warn_food_fight: Darwin právě utekl z potravinového boje! Změň
+          pozadí k "characters" a nastav Darwinovy rychlost na rychle, pak stiskni
+          tlačítko Run a přesuň jej k Penny, abys jí varoval.
+        studio_gumball_join_food_fight: Připoj se k potravinovému boji! Použij povel
+          "actor throw item right", aby jí měl Banana Joe (herec 1) k hození jídla
+          na Antona (aktér 2)! Nastav náladu Antonovi, aby se zlobil, když jej zasáhne.
+        studio_gumball_free_play: Vytvoř si vlastní hru nebo příběh. Až budeš hotov,
+          klepni na tlačítko Finish, aby si přátele zkusili tvou hru na jejich mobilech,
+          tabletech nebo počítačích!
         studio_full_sandbox: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni
           na Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
         studio_k1_1: Umíš udělat, aby tento pes řekl "hello world"?
@@ -741,21 +759,21 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Budování Galaxy s kódem - úvod'
-        starwars_typing: 'Star Wars: Budování Galaxy s kódem - JavaScript'
-        starwars_events: 'Star Wars: Budování Galaxy s kódem - události'
-        starwars_congrats: 'Star Wars: Budování Galaxy s kódem - blahopřejeme'
-        starwars_blocks_intro: 'Star Wars: Budování Galaxy s kódem - úvod'
-        starwars_blocks_events: 'Star Wars: Budování Galaxy s kódem - události'
-        starwars_blocks_congrats: 'Star Wars: Budování Galaxy s kódem - blahopřejeme'
+        starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
+        starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
+        starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
+        starwars_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        starwars_blocks_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
+        starwars_blocks_events: 'Hvězdné války: Budování Galaxy s kódem - události'
+        starwars_blocks_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
         mc_intro: Minecraft - Úvod
         mc_repeat: Minecraft - opakování
         mc_if_statements: Minecraft - if příkazy
         mc_congrats_share: Minecraft - Gratulujeme
         mc_congrats_no_share: Minecraft - Gratulujeme
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        gumball_intro: Gumballova Hodina kódu - úvod
+        gumball_events: Gumballova Hodina kódu - události
+        gumball_repeat: Gumballova Hodina kódu - Opakovací příkazy
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

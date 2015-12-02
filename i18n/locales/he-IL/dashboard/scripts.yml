@@ -18,11 +18,11 @@ he:
           "Artist 1: Intro": 'אמן 1: מבוא'
           Artists 2: אמנים 2
           Spelling Bee: תחרות איות
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee not blockly: תחרות האיות ללא blockly
           "Bee 1: Intro": 'דבורה 1: מבוא'
           "Maze 2: Loops": 'מבוך 2: לולאות'
           "Bee 2: Loops": 'דבורה 2: לולאות'
-          Multi & Match: 'Multi & Match'
+          Multi & Match: התאמה ורב בחירה
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
           title: קורס 1
@@ -1348,6 +1348,10 @@ he:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1468,14 +1472,14 @@ he:
           description: 'למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה...'
           Hour of Code 2015: שעה של קוד 2015
         minecraft:
-          title: Minecraft
+          title: מיינקראפט
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: 'שעת הקוד: גרסת מיינקראפט'
           description_short: גלה את העולם של מיינקראפט באמצעות קוד
-          description: תשתמשו בבלוקים של קודים כדי לקחת את סטיב או אלכס להרפתקה בעולם של מיינקראפט
+          description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של מיינקראפט
           Hour of Code 2015: שעה של קוד 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

@@ -121,7 +121,7 @@ fi:
         video: C2_digital_footprint
       ComputationalThinking:
         title: Laskennallinen ajattelu
-        desc: Oppilaat käyttävät automaatioajattelun vaiheita (osiin jakaminen, mallien havainnointi, abstraktio, algoritmi) päätelläkseen kuinka pelata peliä, jonka mukana ei olekaan ohjeita.
+        desc: Oppilaat käyttävät automatisointiajattelun vaiheita (osiin jakaminen, mallien havainnointi, abstraktio, algoritmi) päätelläkseen kuinka pelata peliä, jonka mukana ei tulekaan ohjeita.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Funktionaaliset auringonkerääjät

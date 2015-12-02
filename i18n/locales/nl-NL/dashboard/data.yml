@@ -105,6 +105,8 @@ nl:
         StudioEC: Speel Lab
         Applab: App Lab
         NetSim: Internet Simulator
+        Custom: Kunstenaar
+        CustomStudio: Speel Lab
     trophy:
       name:
         Bronze: Brons
@@ -313,16 +315,18 @@ nl:
         studio_playlab_8: kan je een blok toevoegen om een punt te scoren en een geluid af te spelen wanneer de eenhoorn de tovenaar raakt en deze vervolgens besturen met de pijltjestoetsen totdat je scoort?
         studio_playlab_9: Stel de achtergrond in voor deze alien invasie en help Spacebot om sneller bij de alien invasie te raken door zijn snelheid te veranderen. Beweeg hem met de pijltjes-toetsen om bij de Spacebot te raken en iedereen te waarschuwen
         studio_playlab_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_iceage_1: 'Manny wil "hallo" zeggen - kan jij hem helpen?'
-        studio_iceage_2: 'Diego (acteur 1) en Granny (acteur 2) willen "hallo" tegen elkaar zeggen. Kan je hen helpen door het "zeggen" (say) blok twee keer te gebruiken?'
-        studio_iceage_3: Kan je Scrat helpen bij de vlag te komen?
-        studio_iceage_4: Kan je Scrat (acteur 1) helpen bij Granny (acteur 2) te komen en een geluid laten afspelen als hij daar aankomt?
-        studio_iceage_5: 'Kan je Sid helpen om "gegroet" te zeggen wanneer er op geklikt wordt? Vergeet niet om er op te klikken nadat je op de "Run" knop hebt gedrukt'
-        studio_iceage_6: Kan je Diego helpen met rondlopen door de omhoog/omlaag/rechts/links pijltoetsen te gebruiken en zo alle vlaggen op te pakken?
-        studio_iceage_7: 'Het "herhaal eindeloos" (repeat forever) blok zorgt ervoor dat je code steeds door blijft gaan. Kan je daar blokken aan toevoegen zodat Sid steeds weer naar rechts en links blijft bewegen?'
-        studio_iceage_8: Kan je een blok toevoegen zodat je een punt scoort en een blok dat een geluid afspeelt wanneer Sid tegen Manny aanbeweegt, en daarna Sid met de pijltoetsen bewegen tot je gescoord hebt?
-        studio_iceage_9: "Stel de achtergrond in voor deze ijstijd en help Sid om sneller bij Granny te komen door z'n snelheid te veranderen. Beweeg hem daarna met de pijltoetsen om er te komen en iedereen te waarschuwen."
-        studio_iceage_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
+        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
         studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
         studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
@@ -509,7 +513,7 @@ nl:
         starwars_blocks_congrats: 'Star Wars: Bouw een sterrenstelsel met Code - Gefeliciteerd'
         mc_intro: 'Minecraft - Introductie'
         mc_repeat: 'Minecraft - Herhalen'
-        mc_if_statements: 'Minecraft - Als-statements'
+        mc_if_statements: 'Minecraft - Als-instructies'
         mc_congrats_share: 'Minecraft - Gefeliciteerd'
         mc_congrats_no_share: 'Minecraft - Gefeliciteerd'
         gumball_intro: 'Gumball Hour of Code - Introduction'
@@ -586,10 +590,10 @@ nl:
         Infinity_move_directions_callout_arrow: Gebruik deze pijlen om te sturen
         Infinity_move_collide_callout: Speel een geluid af wanneer deze gebeurtenis plaatsvindt.
         Infinity_repeat_callout: Zet hierin verplaats blokken
-        craft_run_button_callout: 'Klik "Uitvoeren" om het programma uit te proberen'
-        craft_drag_block_callout: 'Sleep een "moveForward();" blok en plaats het onder het andere blok'
-        craft_callout_preplaced: We hebben hier wat blokken geplaatst om je op weg te helpen
-        craft_inside_repeat: Herhaal acties door hier blokken te plaatsen
-        craft_callout_preplaced_house: Met deze code begin je met het bouwen van je huis. Kun jij het af maken?
-        craft_what_is_iron: Graaf dit blok ijzer!
-        craft_callout_moveforward: Deze code checkt voor lava, kun jij een commando toevoegen om vooruit te gaan?
+        craft_run_button_callout: 'Klik op "Run" om je programma te proberen'
+        craft_drag_block_callout: 'Sleep een "beweeg vooruit"- blok en klik het onder het andere blok'
+        craft_callout_preplaced: We hebben hier al wat blokken geplaatst om je op weg te helpen
+        craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
+        craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen. Kun jij het afmaken?
+        craft_what_is_iron: Delf dit ijzer!
+        craft_callout_moveforward: Deze code kijkt of er lava is, kun jij een opdracht toevoegen om vooruit te bewegen?

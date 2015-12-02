@@ -1,5 +1,5 @@
 "ar-SA":
-  hour_of_code: ساعة من البرمجة
+  hour_of_code: ساعة البرمجة
   hello: مرحباً بالعالم
   select_language: من فضلك اختر لغتك
   en: علوم الكمبيوتر
@@ -169,7 +169,7 @@
   studiobar_teacher_title: صنع من أجل المدرسين
   studiobar_teacher_body: يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل
     الدراسي الخاص بك
-  studiobar_frozen_title: ساعة من البرمجة
+  studiobar_frozen_title: ساعة البرمجة
   studiobar_frozen_body: أنجز شتاء العجائب مع انّا و إلزا
   studiobar_donate_title: تبرع
   studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
@@ -232,7 +232,7 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: اعرف المزيد
-  homepage_slot_text_title_hoc: ساعة من البرمجة
+  homepage_slot_text_title_hoc: ساعة البرمجة
   homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: جرب ساعة من البرمجة - "Hour of Code"
   homepage_slot_text_link_host: استضافة ساعة البرمجة
@@ -299,6 +299,10 @@
   class_submission_languages_other: اللغات الأخرى
   inspirational_videos_more: المزيد من <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     مقاطع الفيديو الملهمة</a> من المشاهير و الشخصيات
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: بناء مجرة باستعمال البرمجة
   starwars_javascript_title: جافا سكريبت
   starwars_javascript_description: استعمل تعنية سحب و اسقاط القطع و جافا سكريبت.
@@ -432,7 +436,7 @@
   dashboard_landing_new_beta: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية
     لطلاب K-5 .
   dashboard_landing_new_k5courses: جديد ! جرب دوراتنا للطلاب K-5.
-  dashboard_landing_useful_links: روابط مفيدة (باللغة الإنجليزية فقط)
+  dashboard_landing_useful_links: روابط أخرى مفيدة
   dashboard_landing_office_hours: اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات
     العمل شهريا .
   dashboard_landing_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
@@ -626,7 +630,7 @@
     في أسبوع واحد فقط:'
   stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
   dashboard_teacher: المدرس
-  dashboard_student: طالب
+  dashboard_student: الطالب
   dashboard_sections_email_question: هل جميع يتوفر التلاميد على عنوان بريد إلكتروني
     صحيح ؟
   dashboard_sections_account_creation_question: من قام بإنشاء حساب للطالب/التلميذ؟
@@ -649,7 +653,7 @@
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
-  learn_more: أعرف المزيد
+  learn_more: جرب الآن
   learn_sign_up_description: قم بالتسجيل للمشاركة في "ساعة البرمجة" خلال أسبوع تعليم
     علوم الحاسوب
   learn_sign_up_button: تسجيل
@@ -681,12 +685,16 @@
   carousel_heading_international: دروس تعليمية بلغتك
   carousel_heading_domestic: البرامج التعليمية المتوفرة باللغة الإنجليزية
   carousel_heading_beginners: دروس للمبتدئين
+  carousel_heading_beyond_beginners: دروس للمبتدئين
   carousel_heading_javascript: دروس تعليم جافا سكريبت
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: لا يوجد جهاز أو إنترت ؟ جرب علم الحاسوب "مفكوك"
   carousel_heading_devices: دروس تعليمية للهواتف والألواح
+  carousel_heading_beyond_devices: دروس تعليمية للهواتف والألواح
   carousel_heading_languages: دروس في لغات البرمجة الأخرى
+  carousel_heading_beyond_languages: دروس في لغات البرمجة الأخرى
   carousel_heading_apps_games: برمج ألعابك او تطبيقاتك الخاصة
-  carousel_heading_university: دروس جامعية على الإنترنت
+  carousel_heading_university: الدورات الجامعية على الإنترنت
   carousel_heading_webpages: تعلم انشاء صفحات الانترنت
   carousel_heading_robots: تعلم البرمجة مع الروبوتات
   carousel_heading_ide: منصات شعبية بين المعلمين
@@ -805,7 +813,7 @@
   scratch_platformtext: متصفحات الواب على الحواسيب (لا تشمل اللّوحات الرقميّة)
   lightbot_platformtext: جميع المتصفحات و iOS، اندرويد، أو محطة ألعاب
   thinkersmith_platformtext: غير مربوطة
-  condcards_platformtext: الغير موصولة
+  condcards_platformtext: غير مربوطة
   lightbotintl_platformtext: آي أو إس iOS، الأندرويد (أو متصفح ويب)
   codehs_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
   codecademy_platformtext: متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد
@@ -868,8 +876,8 @@
   flappy_shortdescription: برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة
   bitsbox_shortdescription: برمج سلسلة من التطبيقات للعب والمشاركة، باستخدام جافا
     سكريبت.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
+  makeschool_shortdescription: برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات الخاصة
+    بك للوحش !
   touchdevelop_shortdescription: 'حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على
     الهاتف الخاص بك. '
   appinventor_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
@@ -879,8 +887,8 @@
   kodableunplugged_shortdescription: تمارين ممتعة غير موصولة
   projguts_shortdescription: حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة
   hourofcode_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
-  frozen_shortdescription: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا,
-    و نستكشف سحر وجمال الجليد.
+  frozen_shortdescription: هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا في
+    رحلتهم لاستكشاف سحر وجمال الجليد.
   starwars_shortdescription: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
     مجرة بعيدة، بعيدة جدا.
   playlab_shortdescription: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
@@ -983,10 +991,10 @@
   bitsbox_longdescription: 'قم بتشخيص لوحتك الافتراضية الرقمية، ثم برمج مجموعة من
     التطبيقات للعب بها و مشاركتها. أمثلة بسيطة تمكن أي طفل برمجة جافا سكريبت، و كلما
     تحسنت أكثر كلما تقدّمت. '
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  makeschool_longdescription: تعلم البرمجة من خلال صنع لعبة للأيفون باستخدام لغة برمجة
+    جديدة وصديقة للمبتدئين تدعى سويفت! إنشئ  لعبة أكشن مستوحاة من بوكيمون وأكتب تعليمات
+    برمجية لتعليم الوحش حركات جديدة. سوف تتعلم كيفية استخدام المتغيرات والأساليب،
+    والأشياء لمساعدة وحشك على الفوز!
   touchdevelop_longdescription: 'محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز
     الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . '
   appinventor_longdescription: دروس فيديو مسلية وسريعة تمكنك من بناء ثلاثة تطبيقات
@@ -1037,7 +1045,7 @@
   edx_beyond_name: صف CS50 جامعة هارفارد
   coursera_beyond_name: صف CS 101 جامعة ستانفورد
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: الدورات الجامعية على الإنترنت
+  teachingtree_beyond_name: دروس جامعية على الإنترنت
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1142,7 +1150,7 @@
   groklearning_beyond_shortdescription: مقدمة أساسية لبرمجة بايثون PYTHON
   hacketyhack_beyond_shortdescription: تعلم روبي من الاساسيات
   robomind_beyond_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: تعلم صناعة لعبة أي فون في ساعة
   appinventor_beyond_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
   touchdevelop_beyond_shortdescription: برمج التطبيقات مباشرة على هاتفك, الألوح أو
     الحاسوب المحمول
@@ -1338,11 +1346,3 @@
   infinity_shortcode: inf
   playlab_shortcode: إلعب
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages

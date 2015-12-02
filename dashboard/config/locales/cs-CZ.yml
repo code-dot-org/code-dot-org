@@ -255,7 +255,7 @@
         calculate: Calculate Something
         applab: Vytvořit aplikaci
     user:
-      classroom: Domovská stránka pro učitele
+      classroom: Učitelská domovská stránka
       district_dashboard: Okresní řídicí panel
       label: Ahoj %{username}
       stats: Code studio
@@ -466,6 +466,9 @@
     privacy: Zásady ochrany osobních údajů
     secure: Zabezpečená verze
     report_abuse: Ohlásit urážlivý příspěvek
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Potřebujete pomoc?
     subtitle: Podívej se na tyto videa a tipy
