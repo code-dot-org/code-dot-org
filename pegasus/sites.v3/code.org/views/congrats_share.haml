@@ -58,7 +58,7 @@
       %iframe{allowtransparency: "true", frameborder: "0", scrolling: "no", src: "//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FCode.org&width=200&layout=standard&action=like&show_faces=true&share=true&height=80&appId=293113697493179", style: "border:none; overflow:hidden; width:200px; height:80px; vertical-align:top"}
 
     %span#share-twitter{:style=>"display:inline-block; margin-top: 10px"}
-      %a.window-popup{:id => "twitter-share-url", href=>"https://twitter.com/share?#{twitter.to_query}", onclick: "trackSocialEvent('twitter');"}<
+      %a.window-popup{:id => "twitter-share-url", :href=>"https://twitter.com/share?#{twitter.to_query}", onclick: "trackSocialEvent('twitter');"}<
         %button.button-color-share.share-button-twitter<
           %i{:class=>"fa fa-twitter"}<
           =I18n.t(:share_on_twitter)
