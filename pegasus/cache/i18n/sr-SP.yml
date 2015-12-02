@@ -347,7 +347,7 @@
     кроз овај Мајнкрафт свет.
   mc_shortdescription: Користите блокове кода да поведете Стива или Алексу у авантуру
     кроз овај Мајнкрафт свет.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft sat programiranja
@@ -1395,3 +1395,8 @@
   infinity_shortcode: inf
   playlab_shortcode: играј
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
