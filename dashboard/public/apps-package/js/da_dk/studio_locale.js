@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du skal få 20 Musedroider. Tjek at du bruger \"add a Mouse Droid\" kommandoen inden i \"when get Mouse Droid\" til at tilføje to eller flere Musedroider hver gang du rører en."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Sådan! Du har skrevet kode som tilføjer Musedroider. Du kan gå til næste øvelse eller prøve en gang til at få 20 Musedroider. Prøv at gøre det lettere ved at tilføje flere af dem! (Tryk og hold nede på piletasterne på dit tastatur (eller skærmen) for at bevæge dig hurtigere:)"},
 "failedChangeSettingTimeout":function(d){return "Nå frem til tre Rebel Pilots for at gå videre."},
-"failedChangeSettingSettings":function(d){return "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed."}};
+"failedChangeSettingSettings":function(d){return "Gør det til dit spil. For at gå videre, skal du ændre din droide og sætte dens hastighed."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

@@ -754,5 +754,11 @@
   "failedMultiplyCharactersTimeoutBlockly": "Potřebuješ dostat 20 Mouse Droidů. Použij povel \"add Mouse Droid\" uvnitř události \"when get Mouse Droid\" k přidání pokaždéd vou nebo více Mouse Droidů, když dostaneš jednoho.",
   "failedMultiplyCharactersTimeoutGotSome": "Blahopřejeme, přidal jsi kód, abys vytvořil Mouse Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Mouse Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)",
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
-  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."
+  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }

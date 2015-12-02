@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Devi raggiungere 20 Droidi-Topo. Usa il blocco \"aggiungi un Droide-Topo\" all'interno dell'evento \"quando raggiungi un Droide-Topo\" per aggiungere due o più Droidi-Topo ogni volta che ne raggiungi uno."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Complimenti, hai aggiunto il codice per far apparire i Droidi-Topo. Puoi passare al prossimo esercizio o provare di nuovo a prendere 20 Droidi-Topo. Più Droidi-Topo aggiungi e più sarà facile superare il livello! (Tieni premuti i tasti freccia della tastiera (o dello schermo) per muoverti più velocemente.)"},
 "failedChangeSettingTimeout":function(d){return "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello."},
-"failedChangeSettingSettings":function(d){return "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."}};
+"failedChangeSettingSettings":function(d){return "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

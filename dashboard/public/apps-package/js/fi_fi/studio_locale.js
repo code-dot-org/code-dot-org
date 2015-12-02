@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Tarvitset 20 hiiridroidia. Käytä komentoa \"Lisää Hiiridroidi\" tapahtuman \"Kerättäessä Hiiridroidi\" sisällä ja lisää sen avulla vähintään kaksi uutta hiiridroidia aina kun keräät niistä yhden."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Onnittelut, lisäsit koodia luodaksesi hiiridroideja. Voit siirtyä seuraavaan tehtävään tai kokeilla uudelleen saada 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)"},
 "failedChangeSettingTimeout":function(d){return "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin."},
-"failedChangeSettingSettings":function(d){return "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."}};
+"failedChangeSettingSettings":function(d){return "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

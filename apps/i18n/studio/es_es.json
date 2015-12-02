@@ -754,5 +754,11 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tú necesitas obtener 20 Droides Ratón. Usa el comando \"agregar un Droide Ratón\" dentro del evento \"cuando obtienes Droide Ratón\" para agregar dos o más Droides Ratón cada vez que obtienes uno.",
   "failedMultiplyCharactersTimeoutGotSome": "Felicitaciones, has agregado código para hacer Droides Ratón. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Ratónes Droide. Trata de hacerlo más fácil agregando más de ellos! (Presione y sostenga las teclas de tu teclado (o pantalla) para moverse más rápido.)",
   "failedChangeSettingTimeout": "Obten tres pilotos rebeldes para seguir adelante.",
-  "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."
+  "failedChangeSettingSettings": "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad.",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }

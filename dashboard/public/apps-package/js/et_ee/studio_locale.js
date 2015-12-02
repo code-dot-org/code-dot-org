@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Sul on vaja saada 20 hiirt. Kasuta sündmuses „kui saab hiire“ käsku „lisa hiir“, et lisada mõne hiire kättesaamisel kaks või rohkem hiirt juurde."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Tubli töö! Lisasid hiirte loomiseks koodi. Võid liikuda järgmise mõistatuse juurde või proovida uuesti saada 20 hiirt. Et asi oleks lihtsam, lisa neid juurde! (Kiiremaks liikumiseks vajuta pikalt klaviatuuril (või ekraanil) olevaid klahve.)"},
 "failedChangeSettingTimeout":function(d){return "Edasiliikumiseks hangi kolm pilooti."},
-"failedChangeSettingSettings":function(d){return "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse."}};
+"failedChangeSettingSettings":function(d){return "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};
