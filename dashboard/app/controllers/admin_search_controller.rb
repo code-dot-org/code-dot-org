@@ -14,7 +14,7 @@ class AdminSearchController < ApplicationController
 
   def search_for_teachers
     authorize! :read, :reports
-   
+
     SeamlessDatabasePool.use_persistent_read_connection do
       email_filter = "%#{params[:emailFilter]}%"
       address_filter = "%#{params[:addressFilter]}%"
