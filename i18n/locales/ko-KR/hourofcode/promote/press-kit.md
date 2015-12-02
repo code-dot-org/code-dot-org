@@ -15,17 +15,17 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * 이벤트를 개최하기 2주 전에 이메일로 미디어들을 보내드립니다. 처음에 연락이 닿지 않으면 이메일과 휴대폰으로 알림이 발송됩니다.
   * 학교 직원들이나 자원봉사자들에게 행사 사진을 찍어 온라인으로 공유하거나 언론에 보낼 수 있도록 도움을 요청하세요.
   * 여러분의 웹사이트와 홈페이지에 Hour of Code에 대한 글을 올리고, 학교 신문에도 게제하세요. 여러분이 진행한 이벤트의 상세한 내용, 학생들의 사진과 활동을 올리세요.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * 페이스북(Facebook)과 트위터(Twitter)에 여러분의 계획들을 업데이트하고 12월8일~14일까지 이벤트와 사진들을 올리세요. **#HourOfCode** 해쉬 태그를 사용해 Code.org가 여러분의 활동을 살펴보고 지원할 수 있도록 해주세요.
 
 ### 단계적 가이드:
 
 **1. 이벤트를 계획하세요.**
 
   * Hour of Code를 시작하기 위한 단계적 절차들을 계획하세요.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * 다음 [편지를](%= resolve_url('/promote/resources#sample-emails') %)부모님들께 보내주세요. 그리고 널리 알려달라고 요청해주세요.
+  * [이 편지를](<%= hoc_uri('/resources/#sample-emails') %>) 지역 시장, 시의원, 공무원, 지역 사업가들에게 보내 행사에 참여해서 학생들에게 강연할 수 있도록 해주세요.
   * 모둠 활동(언플러그드 프로그래밍 활동과 같은...)을 조직하거나, 학생들이 만들어낸 것들을 발표하고, 여러 가지 활동들을 이끌어내세요.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
+  * Code.org의 [Hour of Code 동영상](%= resolve_url('/') %) 이나, [다른 동영상들을 보여주시면서](%= resolve_url('/promote/resources#videos') %) 영감을 불어넣어 주세요.
 
 **2. 해당 지역 전문 리포터 등을 찾아 교육분야나 지역 이벤트에 관한 글을 써달라고 요청하세요.**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3. 지역 방송 매체에 연락하세요.**
 
-가장 쉽게는 이메일로 연락을 취할 수 있습니다. 내용은 짧으면서도 소통할 수 있어야 합니다. : 왜 다른 사람들이 이 이벤트 행사에 관심을 가져야 하는가? 이벤트를 위해 사이트에 방문하는 사람들을 위해서 연락처(휴대폰 번호 포함) 정보를 포함시켜 주세요. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %):**
+가장 쉽게는 이메일로 연락을 취할 수 있습니다. 내용은 짧으면서도 소통할 수 있어야 합니다. : 왜 다른 사람들이 이 이벤트 행사에 관심을 가져야 하는가? 이벤트를 위해 사이트에 방문하는 사람들을 위해서 연락처(휴대폰 번호 포함) 정보를 포함시켜 주세요. **이[샘플 보도 자료를 살펴봐주세요.](%= resolve_url('/promote/resources#sample-emails') %):**
 
 **4. 여러분의 학교 이벤트와 관련한 질문들에 대한 재치있는 답변들을 생각해 두세요. 예시 질문들은 다음과 같습니다.:**
 
@@ -47,17 +47,17 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 *왜 이런 이벤트 행사가 중요한가요?*
 
-중국에서는, 고등학교를 졸업하기 위해 모든 학생들이 컴퓨터과학(정보과학)을 이수해야 합니다. 미국에서 90%의 학교에서는 교육하지도 못하고 있습니다. 이제 우리가 21세기를 준비하며 따라잡을 시간입니다. 우리는 우리의 학생들이 자라나면서 무엇을 배우고, 제약, 사업, 정치, 예술 등 어떤 분야로 나아가던 간에 지금의 컴퓨터과학기술을 이해하고 직접 만들 수 있는 것이 학생들의 자신감을 키워주면서 성공하도록 하기 위한 방법이라는 것을 알고있습니다.
+In China, every student takes computer science to graduate high school. 미국에서 90%의 학교에서는 교육하지도 못하고 있습니다. 이제 우리가 21세기를 준비하며 따라잡을 시간입니다. 우리는 우리의 학생들이 자라나면서 무엇을 배우고, 제약, 사업, 정치, 예술 등 어떤 분야로 나아가던 간에 지금의 컴퓨터과학기술을 이해하고 직접 만들 수 있는 것이 학생들의 자신감을 키워주면서 성공하도록 하기 위한 방법이라는 것을 알고있습니다.
 
 **활용할 수 있는 더 많은 정보 및 전달사항**
 
-"Hour of Code는 코드를 쉽게 이해하고, 컴퓨터과학(정보과학)이 로켓-기술과 같지 어렵지 않다는 것을 널리 알리기 위해 설계되었으며, 누구라도 기초/개념/원리를 배울 수 있습니다." Hadi Partovi, Code.org 대표 "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"Hour of Code는 코드를 쉽게 이해하고, 컴퓨터과학(정보과학)이 로켓-기술과 같지 어렵지 않다는 것을 널리 알리기 위해 설계되었으며, 누구라도 기초/개념/원리를 배울 수 있습니다." Hadi Partovi, Code.org 대표 전세계 1억명 이상의 학생들이 이미 Hour of Code 를 경험해 보았습니다. 21세기와 관련된 컴퓨터과학(정보과학) 교육 요구는 모든 장벽을 넘고, 어떤 경계도 없습니다.
 
 **About Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Code.org 의 목표와 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울 수 있는 기회를 가질 수 있어야 한다는 것입니다. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. 더 많은 정보들은 다음 사이트를 방문해 주시기 바랍니다: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® 는 미국의 501c3 조항에 의한 비영리 조직으로, 인종, 성별과 관계없이 컴퓨터과학(정보과학) 교육을 확산하고 함께 나아가기 위해 조직되었습니다. Code.org 의 목표와 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울 수 있는 기회를 가질 수 있어야 한다는 것입니다. 2013년 처음 시작된 이후로, Code.org 는 Hour of Code 캠페인을 진행하고 있습니다. – 지금까지 1억명 이상의 학생들에게 소개되었으며 – 컴퓨터과학(정보과학) 프로그램들을 더 많게 하기 위해서 미국 전역의 70개 공립 교육청들과 협력하고 있습니다. Code.org는 기업, 재단 및 마이크로 소프트, 인포 재단, 미국, 발머 가족 주는, Omidyar 네트워크 등을 포함 한 관대 한 개인 자선 기부금에 의해 지원 됩니다. 더 많은 정보들은 다음 사이트를 방문해 주시기 바랍니다: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote') %).
+더 많은 정보와 샘플 메일들은 [여기에서](%= resolve_url('/promote') %) 살펴보세요..
 
 <%= view :signup_button %>

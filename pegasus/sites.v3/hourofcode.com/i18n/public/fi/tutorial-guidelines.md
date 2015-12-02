@@ -151,7 +151,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * Sisällytä myös suositeltu tietotekniikkatietämys luokkatasolla: alkeistaso, keskitaso tai edistynyt taso. Koodaustunti-sivusto korostaa aloittelijoille tarkoitetut oppitunnit kaikista näkyvimmin. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniset edellytykset: 
       * Tarkemman osallistumisen seuraamisen kannalta haluamme jokaisen kolmannen osapuolen opaskumppanien sisällyttävän yhden kuvapisteen seurantakuvat ensimmäiselle ja viimeiselle sivulle Koodaustunti-oppaissaan. Sijoita aloittava kuvapistekuva aloitussivulle ja viimeinen kuvapistekuva lopetussivulle. Älä sijoita kuvapisteitä välivaihesivuille. Katso Seurantakuvapiste-osio alla lisätietoja varten. 
-      * Kun käyttäjät saavat oppituntisi tehtyä, heidät tulisi ohjata sivulle: [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * Kun käyttäjät saavat oppituntisi tehtyä, heidät tulisi ohjata sivulle: [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) missä heidän tulisi pystyä: 
           * Jakamaan tieto sosiaalisen mediaan siitä, että he suorittivat Koodaustunnin
           * Saada todistus siitä, että he suorittivat Koodaustunnin
           * Nähdä pistetaulukot siitä, mitkä maat/kaupungit johtavat Koodaustuntiin osallistumisessa
@@ -215,13 +215,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names
+  4. No use of "Hour of Code" in app names.
 
 [**Palaa alkuun**](#top)
 

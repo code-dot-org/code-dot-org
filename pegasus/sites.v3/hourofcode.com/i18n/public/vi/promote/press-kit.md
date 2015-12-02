@@ -49,7 +49,7 @@ Chúng tôi hy vọng điều này sẽ NHÓM LÊN ngọn lửa đam mê học t
 
 *Tại sao điều này lại quan trọng?*
 
-Tại Trung Quốc, học sinh sử dụng môn tin học để tốt nghiệp cấp 3. Nhưng tại Mỹ, 90% các trường thậm chí không dạy về môn này. Đây là thời điểm để chúng ta bắt kịp thế kỉ 21. Ta hiểu rằng bất kể những học sinh sẽ làm gì khi chúng lớn lên, cho dù tham gia vào y học, kinh doanh, chính trị, hoặc nghệ thuật, thì việc biết cách xây dựng nên các phần mềm sẽ cung cấp cho chúng sự tự tin và hướng đến thành công.
+In China, every student takes computer science to graduate high school. Nhưng tại Mỹ, 90% các trường thậm chí không dạy về môn này. Đây là thời điểm để chúng ta bắt kịp thế kỉ 21. Ta hiểu rằng bất kể những học sinh sẽ làm gì khi chúng lớn lên, cho dù tham gia vào y học, kinh doanh, chính trị, hoặc nghệ thuật, thì việc biết cách xây dựng nên các phần mềm sẽ cung cấp cho chúng sự tự tin và hướng đến thành công.
 
 **Bạn có thể tìm hiểu chi tiết thêm trong các tài liệu.**
 

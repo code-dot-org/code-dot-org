@@ -45,6 +45,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -53,7 +57,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Prøv øvelserne:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -64,7 +68,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planlæg dit hardware behov - computere er ikke et krav
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -72,20 +76,20 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Tjek afslutningssiden** for at se hvad eleverne vil se, når de er færdige. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Plan ahead based on your technology available
+## 3) Planlæg ud fra den teknologi der er til rådighed
 
-  * **Har ikke nok computere og tablets?** Så bruge [parvis programmering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Har ikke nok computere og tablets?** Så bruge [parvis programmering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Når deltagerne teamer op, hjælper de hinanden og behøver mindre hjælp fra underviseren.
   * **Har du lav båndbredde?** Planlæg at vise videoerne i klassen først, så hver elev ikke behøver at downloade deres egne videoer. Eller prøv de unplugged / offline tutorials.
 
-## 4) Inspire students - show them a video
+## 4) Inspirere eleverne - vis dem først en video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Vis eleverne en inspirerende video i begyndelsen af Hour of Code timen. For eksempel:
 
-  * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjerne Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
+  * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-  * [Præsident Obama opfordring til alle elever om til at lære at kode](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [Præsident Obama opfordrer alle elever til at lære at programmere](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Opmuntre dine elever - giv dem en kort introduktion**
 
 <% else %>
 

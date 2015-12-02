@@ -215,13 +215,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 Одним из необходимых для этого условий является защита торговой марки "Hour Of Code" (Час Программирования), чтобы избежать путаницы. Многие из наших партнёров, пишущих уроки, использовали марку "Hour of Code" в своих веб-сайтах. Мы не хотим прекратить использование этой марки, но хотим убедиться, что оно отвечает нескольким требованиям:
 
-  1. Любые ссылки на Час Программирования должны использоваться не как ваше собственное название, а как отсылка к Часу Программирования как общественному движению. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Плохой пример: "Попробуйте Час Программирования от корпорации ACME"
-  2. Используйте надстрочный знак "TM" в самых видных местах при упоминании Часа Программирования как на веб-сайтах, так и в описании приложений
+  1. Любые ссылки на Час Программирования должны использоваться не как ваше собственное название, а как отсылка к Часу Программирования как общественному движению. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Включите в описание страницы абзац, включая ссылки на сайты Недели Образования в Информатике (CSEdWeek) и Code.org, содержащий следующую информацию:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names
+  4. No use of "Hour of Code" in app names.
 
 [**К началу**](#top)
 

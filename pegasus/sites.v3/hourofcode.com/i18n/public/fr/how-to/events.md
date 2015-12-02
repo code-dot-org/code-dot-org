@@ -56,7 +56,7 @@ Organisez un évènement Une Heure de Code au cours de la semaine de l'éducatio
 | 10:05-10:15 | Le proviseur faire une présentation pour expliquer l'importance de l'informatique. Utilisez ces [statistiques et infographies](<%= resolve_url('/promote/stats') %>) |
 | 10:15-10:30 | Invité spécial pour discuter de son parcours et de la manière dont les nouvelles technologies ont joué un rôle crucial dans leur vie quotidienne.                  |
 | 10:30-10:40 | Les étudiants font une démo Une heure de Code pour l'école. Moment sympa : les inviter à enseigner au principal, à un homme politique ou à d'autres étudiants.     |
-| 10:40-11:00 | Les étudiants font une démonstration d'activités hors connection et montrer comment l'informatique peut être enseigné sans utiliser d'ordinateur.                  |
+| 10:40-11:00 | Les étudiants font une démonstration d'activités hors connexion et montrer comment l'informatique peut être enseigné sans utiliser d'ordinateur.                   |
 | 11:00-11:05 | Les enseignants qui ont contribué à organiser l'évènement dans toute l'école donnent une allocution de clôture.                                                    |
 
 <%= view :signup_button %>

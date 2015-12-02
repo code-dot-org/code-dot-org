@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Cara mengajar Hour of Code di bimbel
+# How to teach one Hour of Code in after-school
 
 ## 1) Daftar
 
@@ -96,6 +96,7 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
   * [Cetak sertifikat](<%= resolve_url('https://code.org/certificates') %>) untuk siswa Anda.
   * [Cetak stiker "Aku sejam kode!"](<%= resolve_url('/promote/resources#stickers') %>).
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
   * Bagikan foto dan video acara Hour of Code Anda pada media sosial. Gunakan #HourOfCode dan @codeorg sehingga kita dapat menyoroti keberhasilan Anda juga!
 
 [col-33]
@@ -124,12 +125,16 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
   * Gunakan [template rencana pelajaran](/files/AfterschoolEducatorLessonPlanOutline.docx) ini untuk mengatur Hour of Code Anda.
   * Periksa [praktek-praktek terbaik](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) pengajar Hour of Code sebelumnya. 
-  * Hadiri [webinar panduan pendidik untuk Hour of Code](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845) kami.
+  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
   * Kunjungi [Forum Hour of Code](http://forum.code.org/c/plc/hour-of-code) untuk mendapatkan nasihat, wawasan dan dukungan dari penyelenggara lain. <% if @country == 'us' %>
   * Tinjau [FAQ Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Apa yang selanjutnya dilakukan setelah Hour of Code?
 
-The Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini, [dorong para peserta untuk belajar online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+
+  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

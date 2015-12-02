@@ -47,7 +47,7 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 *De ce este important acest lucru?*
 
-În China, fiecare elev studiaza la tehnologia computerelor pentru a absolvi liceul. În SUA, 90% din şcoli nici macar nu o predau. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştri atunci când cresc, indiferent dacă merg în medicină, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologie, le va da încrederea şi know-how-ul pentru a reuşi.
+In China, every student takes computer science to graduate high school. În SUA, 90% din şcoli nici macar nu o predau. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştri atunci când cresc, indiferent dacă merg în medicină, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologie, le va da încrederea şi know-how-ul pentru a reuşi.
 
 **Mai multe detalii şi un citat pe care îl puteţi utiliza în materiale**
 

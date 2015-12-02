@@ -9,6 +9,6 @@ layout: wide
 
 # اجعل مدرستك بالكامل تشارك
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+معلومات حول مشاركة المدارس بالكامل سوف تكون هنا.
 
 <%= view :signup_button %>

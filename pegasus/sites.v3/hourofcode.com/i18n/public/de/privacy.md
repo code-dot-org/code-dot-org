@@ -218,21 +218,21 @@ In the event that Code.org is acquired by, combined or merged with another entit
 
 ## Our Approach to Data Security
 
-### Website security is important to you, and to us
+### Die Sicherheit der Website ist wichtig für Sie und für uns
 
 To protect your privacy and security, we take reasonable steps to verify your identity before granting you account access or making corrections to your Personal Information. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. If you would like an SSL encrypted connection in or to encrypt the data that you input while using the Website, use the HTTPS protocol by visiting https://code.org/.
 
-### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
+### Wir versuchen sicherzustellen, dass unsere Website sowie an uns gesendete Informationen sicher sind – aber keine Sicherheitsmassnahmen sind absolut perfekt
 
 Code.org uses certain physical, managerial, and technical safeguards designed to preserve the integrity and security of your Personal Information and other information we maintain in connection with the Website. We cannot, however, ensure or warrant the security of any or all of the Personal Information and other information you transmit to Code.org, and you do so at your own risk. Once we receive your transmission of information, Code.org makes commercially reasonable efforts to ensure the security of our systems. However, please note that this is not a guarantee that such Personal Information may not be accessed, disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial safeguards.
 
 If we learn of a data security incident that compromises or appears to compromise your Personal Information, then we will attempt to notify you electronically so that you can take appropriate protective steps.
 
-### International visitors
+### Internationale Besucher
 
 Our Website is operated and managed on servers located within the United States. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 
-### Conditions of Use and Notices
+### Nutzungsbedingungen und Hinweise
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 

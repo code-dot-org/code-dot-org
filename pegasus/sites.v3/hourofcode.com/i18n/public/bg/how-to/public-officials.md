@@ -34,9 +34,9 @@ nav: how_to_nav
 
 ## Нека всяко училище да се включи, и всеки ученик да се научи!
 
-  1. **Информирайте местни училища и окръзи.** Използвайте [ този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) или [ този blurb](<%= resolve_url('/promote/stats') %>) като отправна точка и обърнете внимание на това [ ръководство](<%= resolve_url('/how-to') %>) за училища и квартали. Уведомете ги, **всеки** че всеки участващ учител ще получи [подарък](<%= resolve_url('/prizes') %>) и **от всеки щат**, едно от участващите училища ще спечели **$10,000 за закупуване на техника**!
+  1. **Информирайте местни училища и окръзи.** Използвайте [ този имейл](<%= resolve_url('/promote/resources#sample-emails') %>) или [ този blurb](<%= resolve_url('/promote/stats') %>) като отправна точка и обърнете внимание на това [ ръководство](<%= resolve_url('/how-to') %>) за училища и квартали. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. Организирането на събитието е чудесен начин за насърчаване на интереса към програмирането.
+  2. **Организирайте Hour of Code събитие.** Вижте нашите [ръководство, ](<%= resolve_url('/how-to/event') %>) примерен план на шоуто, информационен комплект за медиите и други ресурси за планиране на събития. Организирането на събитието е чудесен начин за насърчаване на интереса към програмирането.
 
   3. **Организирайте събитието по време на CsedWeek(<%= campaign_date('short') %>).** [ Намерете класни стаи и училища,](<%= resolve_url('/events') %>) участващи във Вашия район, град или щат.
 

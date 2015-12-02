@@ -9,6 +9,6 @@ layout: wide
 
 # Neka vaša škola učestvuje
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informacije o sudjelovanju cijele škole u Satu programiranja će ići ovdje.
 
 <%= view :signup_button %>

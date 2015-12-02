@@ -8,16 +8,6 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 # Prix Une Heure de Code 2015
 
-<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
-
-<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
-
-<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
-
-<p style="clear:both; height: 0px;">
-  &nbsp;
-</p>
-
 <% if @country == 'la' %>
 
 # Prix pour chaque organisateur
@@ -28,7 +18,7 @@ Chaque éducateur qui organise Une Heure de Code pour des étudiants, reçoit 10
 
 ## Des prix pour chaque organisateur
 
-**Chaque** éducateur qui organise Une Heure de Code peut recevoir **10 $ pour des achats sur Amazon.com ou Microsoft Windows Store** comme cadeau de remerciement !
+**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!*
 
 <img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
@@ -40,11 +30,126 @@ Chaque éducateur qui organise Une Heure de Code pour des étudiants, reçoit 10
   &nbsp;
 </p>
 
+*While supplies last
+
 <% if @country == 'us' %>
 
 ## 51 écoles gagneront un ensemble d'ordinateurs portables pour la classe (ou 10 000 $ pour des achats technologiques)
 
-Une école chanceuse dans *chaque* état américain (dont Washington D.C.) gagnera $ 10 000 o valoir sur l'achat de matériels technologiques. [Inscrivez-vous ici](%= resolve_url('/prizes/hardware-signup') %) pour être admissibles et [**découvrir les gagnants de l'an dernier**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Sign up for this prize is now closed. Check back to see this year's winners.
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
+
+<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
+
+<p style="clear:both; height: 0px;">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+<a id="video-chats"></a>
+
+## 30 classrooms will win a video chat with a guest speaker
+
+Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers.
+
+[col-33]
+
+![image](/images/fit-175/Kevin_Systrom.jpg)  
+Kevin Systrom   
+(co-founder and CEO of Instagram)   
+[Watch live Dec. 9 11 am PST](https://plus.google.com/events/cpt85j7p1ohaqu5e86m272aukn4)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Dao_Nguyen.jpg)  
+Dao Nguyen   
+(Publisher, Buzzfeed)   
+[Watch live Dec. 7 12 pm PST](https://plus.google.com/events/cag6mbpocahk8h8qr3hrd7h0skk)
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Aloe_Blacc.jpg)  
+Aloe Blacc   
+(Recording artist)   
+[Watch live Dec. 8 3 pm PST](https://plus.google.com/events/clir8qtd7t2fhh33n8d9o2m389g)
+
+[/col-33]
+
+  
+  
+
+
+[col-33]
+
+![image](/images/fit-175/Julie_Larson-Green.jpg)  
+Julie Larson-Green   
+(Chief Experience Officer, Microsoft)   
+
+
+[/col-33]
+
+[col-33]
+
+![image](/images/fit-175/Hadi-Partovi.jpg)  
+Hadi Partovi   
+(Code.org co-founder)   
+[Watch live Dec. 11 10 am PST](https://plus.google.com/events/c2e67fd7el3es36sits1fd67prc)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+## One lucky classroom will win an exclusive, behind-the-scenes “Making of Star Wars” experience in San Francisco with Disney and Lucasfilm
+
+One lucky classroom will win the grand prize – a trip to San Francisco, CA for an exclusive, behind-the-scenes “Making of Star Wars” experience with the visual effects team who worked on Star Wars: The Force Awakens. The grand prize is courtesy of [ILMxLAB](http://www.ilmxlab.com/), a new laboratory for immersive entertainment, combining the talents of Lucasfilm, Industrial Light & Magic and Skywalker Sound.
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/star-wars-prize1.jpg" />
+
+<img style="float: left; padding-right: 25px; padding-bottom: 10px;" src="/images/fill-260x200/star-wars-prize2.png" />
+
+<p style="clear:both; height: 0px;">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+## 100 classrooms will win programmable robots including a BB-8 droid robot by Sphero
+
+In honor of Hour of Code tutorial "Star Wars: Building a Galaxy with Code," 100 participating classrooms in the United States or Canada will a set of four Sphero 2.0 robots plus a BB-8™ App-enabled Droid that students can program. Sign up your Hour of Code event to qualify. [Learn more about BB-8 from Sphero](http://sphero.com/starwars) and [about Sphero education](http://sphero.com/education).
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-220x160/bb8.png" />
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-200x160/bb8-girl.jpg" />
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png" />
+
+<p style="clear:both; height: 0px;">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'ro' %>
+
+Organizatorii evenimentelor Hour of Code în România vor beneficia de un premiu din partea Bitdefender România, constand intr-o solutie de securitate online.
 
 <% end %>
 
@@ -52,7 +157,7 @@ Une école chanceuse dans *chaque* état américain (dont Washington D.C.) gagne
 
 ## Est-ce que tous les organisateurs sont admissibles pour recevoir le cadeau de remerciement ?
 
-Les organisateurs américains et internationaux qui ne le sont pas sont admissibles pour recevoir le cadeau de remerciement. Cependant, les 10K $ de matériels informatiques sont limités aux résidents américains.
+Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is limited to US residents only.
 
 ## Y a-t-il une date limite pour s'inscrire et recevoir le cadeau de remerciement pour les organisateurs ?
 
@@ -64,7 +169,7 @@ Nous vous contacterons en décembre après la semaine de l'éducation des scienc
 
 ## Est-ce que je peux obtenir plusieurs cadeaux de remerciement ?
 
-Non. Les cadeaux de remerciement sont limités à un par l'organisateur. Nous vous contacterons en décembre après La semaine d'éducation des sciences informatiques avec avec les prochaines étapes sur la façon d'acquérir votre cadeau de remerciement.
+No. Thank-you gifts are limited to one per organizer while supplies last. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
 
 <% if @country == 'us' %>
 
@@ -84,14 +189,22 @@ Nous serions ravis d'aider de la même façon les enseignants dans les écoles p
 
 Pour être admissible, vous devez remplir le [formulaire de demande de matériel](%= resolve_url('/prizes/hardware-signup') %) avant le 16 novembre 2015. Une école, par état américain, recevra un ensemble d'ordinateurs portables. Code.org sélectionnera et contactera les gagnants par courriel vers le 1er décembre 2015.
 
-<% end %>
-
 ## Si mon école ne peut pas faire l'Heure de Code au cours de la semaine de l'éducation des sciences informatiques (<%= campaign_date('short') %>), est-ce que je peux toujours être admissible pour les prix ?
 
 Oui, dans le [formulaire de demande de matériel](%= resolve_url('/prizes/hardware-signup') %) incluez les dates auxquelles toute votre école participera.
 
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Vidéoconférence avec un invité:
+
+L'attribution des prix s'avère limitée aux classes d'élémentaires et secondaires aux États-Unis et au Canada seulement. Code.org déterminera les classes gagnantes, établira une période pour la séance de clavardage et travaillera de concert avec l'enseignant afin de mettre en place les détails technologiques. Votre école, dans son ensemble, n'a pas besoin de postuler pour être admissible à ce prix. Both public and private schools are eligible to win.
+
+<% end %>
+
 ## Je ne suis pas aux États-Unis. Suis-je éligible pour les prix ?
 
-Oui, tous les organisateurs, américains ou non, sont admissibles pour recevoir le cadeau de remerciement pour les organisateurs. Cependant, ce n'est pas le cas pour les 10K $ de prix pour l'achat de matériel.
+Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
 <% end %> <%= view :signup_button %>

@@ -9,6 +9,6 @@ layout: wide
 
 # השתתפות של בית הספר כולו
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+מידע לגבי השתתפות של כל בית הספר ב"שעה של קוד" יתפרסם כאן.
 
 <%= view :signup_button %>
