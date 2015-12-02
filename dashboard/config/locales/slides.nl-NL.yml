@@ -720,18 +720,18 @@
         text: Om het daar te krijgen omcirkel je de richting die het op moet.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: Maak je algoritme door pijlen te plakken naast de kaart die je probeert
+          op te lossen. De tweede is hetzelfde, maar gaat naar beneden.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: Het is zoals programmeren met papier. Dat is alles!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Debuggen is het vinden en oplossen van problemen. Er zijn veel manieren
+          om problemen te debuggen. Een van de makkelijkste is om stap voor stap te
+          gaan tot je iets vindt dat verkeerd gaat. Hier probeer ik een achterwaartse
+          radslag op de balk te doen, maar blijf er af vallen.
       2:
         image: notes/C1_maze_debugging_2.png
         text: I walked through each part step by step and realized where my mistake
@@ -2800,167 +2800,168 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Mijn naam is Jens Bergensten, maar ik ben beter bekend als Jeb. Ik ben
+          de hoofdontwikkelaar van Minecraft, hier bij Mojang in Stockholm. Volgens
+          mij was ik elf of misschien twaalf toen ik begon met programmeren omdat
+          ik games wilde maken. Een vriend van mijn vader zei dat ik om games te kunnen
+          maken moest leren programmeren. Zo ben ik begonnen. Ik houd van ontwerpen
+          en onderzoeken hoe games in elkaar zitten. Dat vind ik echt het leukste
+          aan Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: In het komende uur leer je de basis van informatica door te programmeren
+          hoe Alex of Steve zich moeten bewegen door een gesimuleerd stuk van een
+          Minecraft-wereld.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: 'Meestal programmeer je met behulp van tekst, maar vandaag gebruiken
+          we blockly: een systeem met blokken die je kunt slepen en plaatsen om programma''s
+          te schrijven. Onder het oppervlak schrijf je JavaScript-code.'
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: De concepten die je leert worden elke dag door computerprogrammeurs
+          gebruikt en vormen de basis van de informatica. Hier bij Mojang, gebruiken
+          we dezelfde concepten om Minecraft te laten werken.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Voordat je begint, moet je een personage kiezen. Ik kies Alex. Laten
+          we code maken voor een programma dat haar helpt over het scherm te bewegen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Je scherm is in drie hoofddelen gesplitst. Links bevindt zich de Minecraft-ruimte
+          waar je programma draait. De instructies voor elk level worden eronder geschreven.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Dit middelste gebied is de gereedschapskist en elk van deze blokken
+          is een commando dat Alex' acties bepaalt.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Als we het "beweeg vooruit"-blok naar onze werkruimte slepen en op Run
+          klikken, wat gebeurt er dan? Alex beweegt een vakje vooruit in het raster.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: En wat als we iets willen doen nadat ze één vakje vooruit heeft bewogen?
+          Dan kunnen we een ander blok toevoegen aan ons programma. Ik kies het "draai
+          rechts"-blok en sleep het onder mijn "beweeg vooruit"-blok tot deze oranje
+          lijn verschijnt. Dan laat ik het los en de twee blokken klikken in elkaar.
+          Als we weer op Run klikken, voert Alex de commando's uit die van boven naar
+          beneden zijn gestapeld in onze werkruimte.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: En als je ooit een blok wilt wissen, sleep je het gewoon van de stapel
+          terug naar de gereedschapskist.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: Om veranderingen ongedaan te maken en terug te gaan naar het begin,
+          gebruik je de Start Over-knop rechtsboven in de werkruimte. Nog één ding,
+          zie je dat driehoekje op de draaiblokken? Als je zo'n driehoekje ziet, betekent
+          dit dat je een andere optie kunt kiezen. Laten we beginnen met programmeren!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Ik ben Lydia Winters, Mojangs merkdirecteur, en we hebben een spelletje
+          gemaakt dat Minecraft heet.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: In Minecraft ga ik het liefst verkennen. Ik ga graag op avontuur in
+          grotten om te zien wat ik er kan vinden. Omdat ik geen programmeur ben,
+          vind ik het echt spannend om de Minecraft-lessen te volgen en zelf een beetje
+          te leren programmeren.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: In het laatste level waren veel "beweeg vooruit"-blokken nodig. Het
+          zou makkelijker zijn als we de computer gewoon konden zeggen het commando
+          beweeg vooruit vier of vijf keer te gebruiken. Gelukkig voor ons, zijn computers
+          erg goed in het herhalen van commando's in herhalingsloops.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Bij het maken van Minecraft gebruikten we herhalingsloops voor het plaatsen
+          van alle basismaterialen voor een nieuwe wereld. Dat zijn duizenden blokken.
+          We gebruiken loops ook op kleinere manieren, bijvoorbeeld om Alex' voeten
+          heen en weer te laten bewegen tijdens het lopen. Herhalingsloops zijn een
+          krachtig onderdeel van programmeren.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: De nacht komt eraan, dus gaan we in de volgende levels een huis bouwen
+          om veilig te blijven. Met het herhalingsblok wordt dit heel makkelijk.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Om een muur van ons huis te bouwen, kunnen we Alex vier keer de opdrachten
+          "beweeg vooruit" en plaats een plank geven, of één keer de opdrachten "beweeg
+          vooruit" en plaats een plank geven, en dan het herhalingsblok gebruiken
+          om haar de actie vaker uit te laten voeren. Nu klikken we op het herhalingsblok
+          en zeggen we hoe vaak we willen dat ze deze actie uitvoert. Laten we nu
+          ons huis bouwen, voor de nacht valt! Veel plezier.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Nu gaan we wat leren over als-instructies. Als-instructies zijn van
+          groot belang als je wilt leren programmeren. Ze helpen een computer beslissingen
+          maken.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Alle computers gebruiken als-instructies, inclusief mijn telefoon. Als
+          ik bijvoorbeeld mijn telefoon ontgrendel, zegt het programma dat mijn telefoon
+          pas wordt geopend als ik het wachtwoord correct heb ingevoerd. Anders verschijnt
+          er een foutmelding.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Je kunt als-instructies in je code gebruiken om te zorgen dat Steve
+          en Alex reageren op wat ze zien in de wereld. Als ze bijvoorbeeld een steen
+          op hun pad vinden, kunnen ze naar links draaien. Of naar rechts als ze tegen
+          een boom op lopen.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In dit geval willen we niet in de lava vallen. Het is makkelijk om de
+          lava te ontwijken. We zien de lava op het scherm. Maar wat doen we met de
+          lava die we niet kunnen zien, onder de steen?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Als we de steen hebben gedolven, moeten we kijken of er op die plek
+          geen lava is voordat we verdergaan. Als er lava is, willen we een steen
+          voor ons personage plaatsen, zodat we verder vooruit kunnen bewegen. Zo
+          kunnen we veilig onze weg vervolgen. Tijd om verder door de mijn te gaan!
+          En vergeet niet de als-instructies om veilig te blijven.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
+          geleerd.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
+          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
+          je wilt. Je mag zelf kiezen.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
+          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
+          We hebben een huis van wol gemaakt!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Als je creatie is voltooid, kun je delen kiezen voor een link om met
+          je vrienden te delen. Veel plezier!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
+          geleerd.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
+          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
+          je wilt. Je mag zelf kiezen.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
+          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
+          We hebben een huis van wol gemaakt!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Nu kun je maken wat je maar wilt. Veel plezier!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2991,8 +2992,7 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

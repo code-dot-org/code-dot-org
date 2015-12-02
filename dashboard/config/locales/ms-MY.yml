@@ -474,6 +474,9 @@
     privacy: Dasar privasi
     secure: Versi Dilindungi
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Perlukan bantuan?
     subtitle: Lihat video dan petunjuk ini
@@ -714,7 +717,7 @@
     really_delete: Padam?
     delete_yes: Ya
     delete_no: Tidak
-    saved: Saved
+    saved: Disimpan di dalam galeri!
     not_saved: Not saved
     cancel: Batal
     delete_confirm_title: Are you sure you want to delete this project?

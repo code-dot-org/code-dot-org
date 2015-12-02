@@ -65,7 +65,7 @@ fr:
     need_confirmation: "Vous n'avez pas reçu les instructions de confirmation ?"
     need_unlock: "Vous n'avez pas reçu les instructions de déverrouillage ?"
   signup_form:
-    student_count: '%{count} étudiants ont déjà signé.'
+    student_count: '%{count} élèves se sont déjà enregistrés.'
     teacher_count: '%{count} enseignants se sont déjà inscrits.'
     overview_student: |-
       Crée ton compte pour suivre tes progrès. Ton adresse email sera utilisée essentiellement utilisé pour te permettre de te connecter et pour récupérer ton mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique de confidentialité</a>.
@@ -91,8 +91,8 @@ fr:
     valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères
     mismatch_password: Les deux mots de passe ne correspondent pas
-    student_terms: "J'accepte d'être lié par les Code.org <a href='http://code.org/tos'> conditions de service</a>. Si j'ai moins de 13 ans, je confirme par ce formulaire que j'ai une autorisation provenant d'un de mes parent ou tuteur légal pour pouvoir utiliser les services de Code.org. <br/>Pour les utilisateurs de moins de 13 ans, les adresses e-mail ne sont pas stockées sous une forme qui nous permettra de communiquer avec eux."
-    teacher_terms: "J'accepte les <a href='http://code.org/tos'>termes et conditions</a> du service Code.org."
+    student_terms: "J'accepte d'être lié par les Code.org <a href='http://code.org/tos'>Conditions Générales d'Utilisation</a>. Si j'ai moins de 13 ans, je confirme par ce formulaire que j'ai une autorisation provenant d'un de mes parent ou tuteur légal pour pouvoir utiliser les services de Code.org. <br/>Pour les utilisateurs de moins de 13 ans, les adresses e-mail ne sont pas stockées sous une forme qui nous permettra de communiquer avec eux."
+    teacher_terms: "J'accepte les <a href='http://code.org/tos'>Conditions Générales d'Utilisation</a> du service Code.org."
     additional_information: Nous avons besoin de quelques informations supplémentaires pour continuer votre inscription.
   signin_form:
     title: Vous avez déjà un compte ? Connectez-vous
@@ -140,7 +140,7 @@ fr:
       username_in_use: "Le nom d'utilisateur %{username} est déjà pris, veuillez en choisir un autre"
       no_teacher: "Impossible de trouver quelqu'un de connecté avec « %{teacher_email_or_code} ». Veuillez leur demander de s'inscrire ici, puis retenter de les ajouter"
       section_not_found: 'Impossible de trouver une section avec le code “%{section_code}”.'
-      blank_code: Veuillez entrer un code de section
+      blank_code: Veuillez entrer un section de code
       cant_join_own_section: Vous ne pouvez pas intégrer votre propre section.
     mail:
       invite_student:
@@ -190,18 +190,18 @@ fr:
     msg:
       choose: 'Choisis un prix :'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Vous avez remporté un prix ! (Elèves américains uniquement)
+      earned: Vous avez remporté un prix ! (Élèves américains uniquement)
       not_earned_title: Terminer le tutoriel, obtenez des récompenses (uniquement pour les élèves américains)
       not_earned: "Apprenez tous les concepts de l'informatique, remportez l'ensemble des %{num_trophies} trophées, et gagnez des vrais prix. Vous pouvez choisir entre 10 Go de stockage gratuit sur Dropbox, 10 $ en crédits Skype, et des téléchargements gratuits de jeux. NOTE : offre valable uniquement pour les élèves américains, et dans la limite des stocks disponibles."
       teacher:
-        earned: "15 étudiants ou plus ont remporté l'ensemble des %{num_trophies} trophées. Vous avez gagné un prix d'enseignant ! (Enseignants américains uniquement)"
+        earned: "15 élèves ou plus ont remporté l'ensemble des %{num_trophies} trophées. Vous avez gagné un prix d'enseignant ! (Enseignants américains uniquement)"
         not_earned_title: |-
           Enseignez ce cours et gagnez jusqu'à 1 000 $ en crédits sur <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (Enseignants ou instructeurs américains seulement)
         not_earned: |-
           Pour vous récompenser, nouveaux enseignants en informatique, vous pouvez gagner jusqu'à 1 000 $ en crédits de <a href="http://DonorsChoose.org">DonorsChoose.org</a> pour avoir accompagné une classe à suivre le cours d'introduction destiné aux écoles primaires. Pour être éligibles, vous devez prendre en charge avec succès une classe d'au moins 15 élèves et suivre tout le cours d'introduction destiné aux écoles primaires, avec ces 15 élèves (ou plus) terminant tous les tutoriels et remportant chacun des %{num_trophies} trophées. Si 7 ou plus des étudiants qui gagnent tous les trophées sont des filles, votre récompense est de 1 000 $ en crédits de <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Dans le cas contraire, votre récompense est de 750 $ en crédits de <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Les crédits <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> sont utilisables uniquement par les enseignants ou instructeurs d'écoles publiques américaines.
         bonus:
           not_earned_title: 'Vous pouvez toujours gagner 250 $ en crédits supplémentaires pour <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (Enseignants/Instructeurs américains seulement)'
-          earned: '7 étudiants ou plus ayant remporté les %{num_trophies} trophées sont des filles. Vous avez gagné un prix supplémentaire ! (Enseignants ou instructeurs américains seulement)'
+          earned: '7 élèves ou plus ayant remporté les %{num_trophies} trophées sont des filles. Vous avez gagné un prix supplémentaire ! (Enseignants ou instructeurs américains seulement)'
           not_earned: 'Si au moins 7 de vos élèves qui remportent les %{num_trophies} trophées sont des filles, votre récompense sera une prime de 250 $ de crédits sur <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Les crédits de <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> sont utilisables uniquement par les enseignants ou instructeurs  des écoles publiques américaines.'
   crud:
     new_model: 'Nouveau %{model}'
@@ -245,7 +245,7 @@ fr:
       puzzle_map: Étapes
       prizes: 'Remporte les %{total_trophies} trophées et gagne des prix!'
       prize_earned: 'Les %{total_trophies} trophées ont été remportés. Prix gagné !'
-      prize_us_only: (Elèves états-uniens seulement)
+      prize_us_only: (Élèves états-uniens seulement)
       prizes_link: "Plus d'informations"
   teacher:
     answer: Réponse
@@ -255,7 +255,7 @@ fr:
       other: 'Vos enseignants :'
     remove: "(supprimer l'enseignant)"
     confirm:
-      remove: Es-tu sûr de vouloir supprimer cet enseignant ?
+      remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
     tools: "Outils de gestion pour l'enseignant"
     followers:
       section: 'Section :'
@@ -292,7 +292,7 @@ fr:
       section: Section
       students: Élèves
       section_code: Section de code
-      add_section_code: Ajoutez le code-section des élèves
+      add_section_code: Ajouter les sections de code des élèves
       secret: Type de secret
       grade: Niveau
       course: Cours
@@ -314,8 +314,8 @@ fr:
       try_it_yourself: Essayez-le vous-même
       section: Section
       example: Exemple de Solution
-      example_with_number: 'Exemple Solution %{solution_number}'
-      submitted_on: 'Présenté le %{date}'
+      example_with_number: 'Exemple de Solution %{solution_number}'
+      submitted_on: 'Soumis le %{date}:'
       unsubmit: Ne plus soumettre le travail
   user:
     email_confirm_needed: "L'adresse email n'a pas été confirmée :"
@@ -370,7 +370,7 @@ fr:
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de Grande Section à CM2 (fin Maternelle à Ecole Primaire)
     use_as_teacher: "Utiliser ce site en tant qu'enseignant"
     heading_hoc2014: "<h2>L'Heure du Code pour</h2><h1>tous les âges</h1>"
-    heading_elementary: '<h2>20 heures de cours pour</h2><h1>Débutants (tous les âges)</h1>'
+    heading_elementary: '<h2>20 heures de cours pour</h2><h1>Débutants en informatique (tous les âges)</h1>'
     heading_apps: '<h2>Amusant pour</h2><h1>Tout le monde</h1>'
     heading_legacy: '<h2>Nos cours pour</h2><h1>Tous les âges</h1>'
     your_gallery: Galerie
@@ -379,7 +379,7 @@ fr:
     print_certificate: Imprimer le certificat
   share:
     title: Apprendre avec Code Studio
-    description: "N'importe qui peut apprendre informatique. Faire des jeux, des apps et de l'art avec du code."
+    description: "N'importe qui peut apprendre l'informatique. Faire des jeux, des apps et de l'art avec du code."
   gender:
     male: Masculin
     female: Femme
@@ -392,28 +392,31 @@ fr:
       Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, notre <a href="https://code.org/about/team"> équipe étendue</a>, notre casting vidéo et nos <a href="https://code.org/about/advisors"> conseillers d'éducation</a> pour leur soutien dans la création de Code Studio.
     help_from_html: "Nous tenons particulièrement à remercier les ingénieurs de Google, Microsoft, Facebook, Twitter et beaucoup d'autres qui ont contribué à créer ces matériaux."
     help_from_html_old: "Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer cette plateforme d'apprentissage."
-    art_from_html: 'Angry Birds ™ & © 2009-2014 Rovio Entertainment Ltd. Tous droits réservés. <br/> Plantes vs Zombies ™ & © 2014 Electronic Arts Inc. Tous droits réservés.'
+    art_from_html: 'Minecraft &#8482; &amp; © %{current_year} Microsoft. Tous droits réservés. < br / &gt; Star Wars &#8482; &amp; © %{current_year} Disney et Lucasfilm. Tous droits réservés. < br / &gt; surgelés &#8482; &amp; © %{current_year} Disney. Tous droits réservés. < br / &gt; Age de glace &#8482; &amp; © %{current_year} 20th Century Fox. Tous droits réservés. < br / &gt; Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. < br / &gt; Plants vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc. Tous droits réservés'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. < br/>Plants vs. Zombies &#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés'
     powered_by_aws: Fourni par Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi que Heures de Code&reg; sont des marques déposées de Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi que Heures de Code&reg; sont des marques commerciales de Code.org.'
     copyright: Copyright
     more: Plus
     feedback: Envoyer un commentaire
     translate: Aidez-nous à traduire dans votre langue
     support: Assistance
     support_url: http://support.code.org
-    tos_short: Conditions générales
-    tos: Conditions
+    tos_short: Conditions Générales
+    tos: "Conditions Générales d'Utilisation"
     privacy: Politique de confidentialité
     secure: Version sécurisée
     report_abuse: Signaler un abus
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: "Besoin d'aide ?"
     subtitle: Voir ces vidéos et conseils
     teacher: Voir la solution
     auth_error: "Vous n'êtes pas autorisé à voir la solution."
     submit: "Mettre à jour la Position de l'Artiste"
-    direction: Direction au début (en degrés)
+    direction: Direction au départ (en degrés)
   video:
     tab: Vidéo.
     notes: Pas de vidéo ? Voir le texte de la vidéo.
@@ -423,7 +426,7 @@ fr:
   compatability:
     working:
       header: Les travaux de prise en charge de votre navigateur sont en cours.
-      message: "Code.org utilise des technologies web modernes. Cela rend le site plus rapide à utiliser. Votre navigateur ne prend pas en charge toutes les caractéristiques requises, et vous pouvez rencontrer des problèmes lors de l'utilisation de cette partie du site. S'il vous plaît, Aidez-nous en <a href='%{report_issue_url}'>signalant des problèmes que vous trouvez</a>. Vous pouvez également <a href='%{supported_browsers_url}'>mettre à niveau votre navigateur vers une version prise en charge</a>."
+      message: "Code.org utilise des technologies web modernes. Cela rend le site plus rapide à utiliser. Votre navigateur ne prend pas en charge toutes les caractéristiques requises, et vous pourriez rencontrer des problèmes lors de l'utilisation de cette partie du site. S'il vous plaît, aidez-nous en <a href='%{report_issue_url}'>signalant des problèmes que vous trouvez</a>. Vous pouvez également <a href='%{supported_browsers_url}'>mettre à niveau votre navigateur sur une version prise en charge</a>."
       hide_this_warning: Masquer cet avertissement
     upgrade:
       header: Merci de mettre à jour votre navigateur.
@@ -432,16 +435,16 @@ fr:
   slow_loading: "Cela prend plus de temps que d'habitude..."
   try_reloading: Essaie de recharger la page
   next_stage: "Terminé ! Passer à l'étape suivante"
-  download_pdf: Ouvrir le plan de la leçon
-  lesson_plan: Plan de leçon
+  download_pdf: Ouvrir le plan du cours
+  lesson_plan: Plan de cours
   view_lesson_plan: Voir le plan de cours
   pdf_download: Télécharger le PDF
   download_coming_soon: Activité téléchargeable prochainement.
   video_coming_soon: Vidéo à venir bientôt !
-  not_started: "L'étudiant n'a pas tenté ce niveau."
+  not_started: "L'élève n'a pas tenté ce niveau."
   share_code:
     title: Clique sur « Démarrer » pour voir mon programme en action
-    bounce_og_title: Regarde mon jeu Bounce
+    bounce_og_title: Regarde mon jeu de casse brique
     flappy_og_title: Regarde mon jeu Flappy Bird
     studio_og_title: Consulte mon application Play Lab
     check_out_what_i_made: "Découvre ce que j'ai fait"
@@ -464,7 +467,7 @@ fr:
   upsell:
     hoc:
       title: Heure de Code
-      body: "Lancez-vous dans la découverte des bases de l'informatique. Des millions de personnes ont essayé l'aventure."
+      body: "Lancez-vous dans la découverte des bases de l'informatique. Des millions de personnes ont tenté l'aventure."
     flappy:
       title: "Flappy l'oiseau"
       body: "Vous voulez développer votre propre jeu vidéo en moins de 10 minutes ? C'est par ici!"
@@ -489,10 +492,10 @@ fr:
       title: Minecraft
       body: Explore un monde Minecraft avec du code.
   gallery:
-    students_drew_these_with_code: Les élèves les ont dessinés avec du code !
+    students_drew_these_with_code: Les élèves les ont dessiné avec du code !
     students_made_these_with_code: Les élèves ont réalisé ceci avec du code !
     picture_count: 'Ces <b>%{days}</b> derniers jours, les élèves ont dessiné <b>%{count}</b> images en écrivant leurs propres programmes informatiques. Cliquez sur les images pour voir chaque programme en action.'
-    activity_count: "Durant les derniers <b>%{days}</b> jours, les élèves ont créé <b>%{count}</b> applications et photos en écrivant leurs propres programmes. Cliquez sur les images et les captures d'écran pour voir chaque programme en action."
+    activity_count: "Durant les derniers <b>%{days}</b> jours, les élèves ont créé <b>%{count}</b> applications et images en écrivant leurs propres programmes. Cliquez sur les images et les captures d'écran pour voir chaque programme en action."
     want_to_make_your_own: Tu veux créer le tien ?
     more: 'Plus &rarr;'
     caption_by_name_age: 'par %{name}, âge %{age}'
@@ -607,7 +610,7 @@ fr:
     name: Nom
     updated: Mis à jour
     project_type: Type de projet
-    help_text: "Cliquez sur <strong>faire une application</strong> ou <strong>Dessiner quelque chose</strong> ci-dessous pour faire un nouveau projet de laboratoire de jeu ou d'artiste ! <br/>Vous pouvez y revenir et travailler sur vos projets à tout moment."
+    help_text: "Clique sur <strong>Faire une application</strong> ou <strong>Dessiner quelque chose</strong> ci-dessous pour faire un nouveau projet de laboratoire de jeu ou d'artiste ! <br/>Tu peux y revenir et travailler sur tes projets à tout moment."
     need_help: "Besoin d'aide pour démarrer ?"
     really_delete: Voukez-vous vraiment supprimer ?
     delete_yes: Oui
@@ -622,22 +625,22 @@ fr:
     click_to_remix: Clique sur «Remix» pour créer ta propre version!
     edit_project: Editer le Projet
     abuse:
-      tos: "Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>conditions d'utilisation</a> de Code.org, et ne peut donc pas être partagé avec d'autres."
+      tos: "Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>Conditions Générales d'Utilisation</a> de Code.org, et ne peut donc pas être partagé avec d'autres."
       contact_us: "Si vous pensez qu'il s'agit d'une erreur, <a href='https://code.org/contact'> contactez-nous.</a> s'il vous plaît"
-      go_to_code_studio: Aller au Studio du Code
+      go_to_code_studio: Aller au Code Studio
       report_abuse_form:
         intro: "Si vous avez rencontré un contenu offensant, des menaces, de l'intimidation, du harcèlement ou que vous possédez des droits d'auteur pour le contenu créé à l'aide d'applications construites sur Code Studio, veuillez remplir le formulaire ci-dessous. Nous étudierons votre rapport avec sérieux pour prendre les mesures appropriées."
         validation:
-          email: "S'il vous plaît donnez une adresse e-mail"
+          email: Veuillez donnez une adresse e-mail
           age: Merci de donner votre âge
-          abuse_type: "S'il vous plaît, précisez comment ce contenu viole les conditions du Service"
+          abuse_type: "Veuillez précisez comment ce contenu viole les Conditions Générales d'Utilisation"
           abuse_detail: Veuillez donner des précisions au sujet du contenu que vous signalez
         abusive_url: URL du contenu signalé
         abuse_type:
-          question: 'Pourquoi ce contenu ne viole pas la %{link_start}Terms de Service%{link_end} ?'
+          question: "Pourquoi ce contenu ne viole pas les %{link_start}Conditions Générales d'Utilisation%{link_end} ?"
           harassment: Menaces, intimidation, harcèlement
           offensive: Contenu offensant
           infringement: "Violation du droit d'auteur"
           other: Autres
         detail: Veuillez fournir autant de détails que possible au sujet du contenu que vous signalez.
-        acknowledge: "En soumettant ces informations, vous reconnaissez qu'il est traitée selon les termes de la %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}"
+        acknowledge: "En soumettant ces informations, vous reconnaissez qu'elles sont traitée selon les termes de la %{link_start_privacy}Politique de Confidentialité%{link_end} et des %{link_start_tos}Conditions Générales d'Utilisation%{link_end}"

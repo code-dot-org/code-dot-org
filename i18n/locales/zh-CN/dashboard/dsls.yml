@@ -11,7 +11,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: 将图章和跳舞动作配对。
+        Match the button combination to the dance moves.: 用按键组合完成跳舞动作。
         Matching: 匹配
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -24,7 +24,7 @@ zh:
         <strong>P</strong>: '<strong>P</strong>'
         <strong>Q</strong>: '<strong>Q</strong>'
         Matching: 匹配
-        Use the key to match each code to its letter: 使用关键来匹配每个代码与其字母
+        Use the key to match each code to its letter: 将每个代码与其字母相匹配
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -32,7 +32,7 @@ zh:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: 将网格与程序配对。
+        Match the grid to the program.: 将右边的程序与正确的格子相匹配。
         Matching: 匹配
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -42,9 +42,9 @@ zh:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: 拖动块来匹配。
+        Drag the blocks to match.: 拖动模块到合适的位置。
         Instructions: 说明
-        Match the puzzles to the blocks: 匹配拼圖塊
+        Match the puzzles to the blocks: 将右边的程序模块拖放到正确的格子中
         Maze Match: 迷宫比赛
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -53,7 +53,7 @@ zh:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: 匹配网格和程序
+        Match the grid to the program: 将右边的程序放到正确的格子中。
         Matching: 匹配
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -64,8 +64,8 @@ zh:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: 藝術家循環相配之一
-        Match the loop to the shape: 匹配到循环的形状
+        Artist Loops Matching One: 将艺术家的图画与右边的循环代码配对。
+        Match the loop to the shape: 将循环与形状配对
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -75,8 +75,8 @@ zh:
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: 匹配的艺术家
-        Match the shape with the blocks that complete it.: 找到和形状匹配的块组.
+        Artist Matching: 艺术家配对
+        Match the shape with the blocks that complete it.: 找到和形状相对应的代码块完成匹配.
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -88,8 +88,8 @@ zh:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: 彈跳匹配
-        Match the events with the actions: 配合动作和事件
+        Bounce Matching: 反弹球配对游戏
+        Match the events with the actions: 为事件配上动作
         Matching: 匹配
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
@@ -98,7 +98,7 @@ zh:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Flappy匹配之一
+        Flappy Matching One: Flappy配对游戏
         Match the events with the actions: 配合动作和事件
         Matching: 匹配
       2-3 maze match 1:
@@ -111,14 +111,14 @@ zh:
         Match the puzzles to the blocks: 匹配拼圖塊
         Maze Match One: 迷宫比赛一
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1）</h4>'
+        <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>添加玩家 1 摇骰比分到总分</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>添加玩家 1 的比分到总分</h4>'
         <h4>Compare player scores to see who wins</h4>: '<h4>比較玩家的分數，看看谁胜谁负</h4>'
         <h4>Player 1 rolls die</h4>: '<h4>玩家 1 滚动骰子</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>设置玩家 1 评分为 0</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>设置玩家 1 分数为 0</h4>'
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 匹配骰子游戏比赛的步骤及他们在算法中应该出现的顺序.
         Matching: 匹配
       4-5 Computational Thinking Match 1:
@@ -126,11 +126,11 @@ zh:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>车轮/侧： 2 <br/>Windows/侧： 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>车轮/侧： 2 <br/>Windows/侧： 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>车轮/侧： 2 <br/>Windows/侧： 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>车轮/侧： 3 <br/>Windows/侧： 2</h3>'
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: 这些车每辆已被分解成更小的碎片. 匹配每辆车与其分解的列表.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>每侧车轮数量： 3 <br/>每侧窗户数量： 2</h3>'
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: 这些车辆已被分解成更小的部分. 匹配每辆车与其分解的列表.
         Matching: 匹配
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
@@ -142,7 +142,7 @@ zh:
         <h4>STACK</h4>: '<h4>STACK</h4>'
         <h4>STAMP</h4>: '<h4>STAMP</h4>'
         <h4>STAR</h4>: '<h4>STAR</h4>'
-        Match each program to the word it makes, using the provided group of skills.: 使用所提供的群技能,匹配每個程序和它输出的单词.
+        Match each program to the word it makes, using the provided group of skills.: 按照左侧程序的顺序思考，并匹配出正确的单词。
         Matching: 匹配
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
@@ -160,7 +160,7 @@ zh:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/> <br/> 以上'
+        <br/><br/>above: '<br/> <br/> 上面'
         <br/><br/>below: '<br/> <br/> 下面'
         <br/><br/>next to: '<br/> <br/> 旁边'
         Is the square next to, above, or below the ball?: 这个方形是在球的旁边, 上方, 或下方?
@@ -174,7 +174,7 @@ zh:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: 使用基于类型来匹配形状。
+        Match the shapes based on type.: 里用类型来匹配形状。
         Matching: 匹配
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
@@ -194,7 +194,7 @@ zh:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        Match the code to the stairs it draws.: 匹配代码与它绘制的楼梯。
+        Match the code to the stairs it draws.: 将代码与其能绘制的楼梯相匹配。
         Matching: 匹配
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
@@ -205,7 +205,7 @@ zh:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: 匹配这些块
+        Match the blocks: 匹配方块
         Matching: 匹配
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -215,7 +215,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: 将图章和跳舞动作配对。
+        Match the button combination to the dance moves.: 用按键组合完成跳舞动作。
         Matching: 匹配
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -233,7 +233,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: 匹配地图和箭头让Flurb得到宝藏
+        Match the Map to the arrow that gets the Flurb to the treasure: 匹配地图和箭头让福乐波得到宝藏。
         Matching: 匹配
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -247,7 +247,7 @@ zh:
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: 拖动块来匹配。
         Instructions: 说明
-        Match the puzzles and blocks: 匹配谜题和块
+        Match the puzzles and blocks: 匹配关卡和模块
         Matching: 匹配
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
@@ -256,7 +256,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: 匹配地图和算法让Flurb取到花.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: 匹配地图和算法让福乐波取到花.
         Matching: 匹配
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -291,7 +291,7 @@ zh:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: '从一个正方形开始<br/>在正方形上面放置一个平行四边形<br/>在平行四边形右边放置一个三角形'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: '从一个正方形开始<br/>在正方形上放置一个三角形<br/>再在正方形下放置一个三角形'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: '从一个正方形开始<br/>在正方形下面放置一个三角形<br/>在三角形右边放置一个平行四边形'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: '从一个三角形开始<br/>在正方形右边放一个三角形<br/>在正方形下面放一个平行四边形<br/>在平行四边形右边放一个三角形'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: '从一个正方形开始<br/>在正方形右边放置一个三角形<br/>在正方形下面放置一个平行四边形<br/>在平行四边形右边放置一个三角形'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -299,7 +299,7 @@ zh:
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: 多项选择
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: '从一个三角形开始<br/>在三角形下面放置一个正方形<br/>在正方形下面放置一个三角形'
-        Which image does <em>not</em> follow this algorithm?: '<em>用到了一种</em>没有用到的算法，请问是哪一种？'
+        Which image does <em>not</em> follow this algorithm?: '哪个图像<em>不</em>符合算法？'
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
@@ -321,7 +321,7 @@ zh:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: 你将如何简化这个序列循环？
+        How would you simplify this sequence with loops?: 你将如何用循环来简化这个序列？
         Multiple Choice: 多项选择
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -336,8 +336,8 @@ zh:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Maze Multiple Choice: 迷宫倍数选择
-        Which blocks work?: 哪一个方块正常运行？
+        Maze Multiple Choice: 迷宫的多项选择
+        Which blocks work?: 哪一个模块能正确运行？
       2-3 Relay Programming Multi 1:
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
@@ -350,21 +350,21 @@ zh:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: 多项选择
-        Which image-program combo does not contain mistakes?: 哪一组图像或者程序有问题？
+        Which image-program combo does not contain mistakes?: 哪一组图像-程序没有问题？
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
-        Artist Debugging Multiple Choice One: 画板调试：选择题一
-        Why won't this circle go all the way around?: 为什么这个圆圈不走完它周围的所有道路？
+        Artist Debugging Multiple Choice One: 艺术家调试：多选题一
+        Why won't this circle go all the way around?: 为什么这个圆圈不会到处乱跑？
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice One: 艺术家函数：选择题一
+        Artist Functions Multiple Choice One: 艺术家函数：多选题一
         Pick the correct blocks to draw this image using the given functions: 用给定的函数在正确的方块上画出这个图像
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
@@ -372,7 +372,7 @@ zh:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: 艺术家循环：选择题
+        Artist Loops Multiple Choice: 艺术家循环：多选题
         Which shape is made by this loop?: 哪个形状是由这个循环做的呢？
       2-3 artist loops multi 2:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
@@ -650,7 +650,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: 你将如何简化这个序列循环？
+        How would you simplify this sequence with loops?: 你将如何用循环来简化这个序列？
         Multiple Choice: 多项选择
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
@@ -659,7 +659,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Multiple Choice: 多项选择
-        Which arrow gets the Flurb to the treasure?: 哪个箭头让Flurb得到宝藏？
+        Which arrow gets the Flurb to the treasure?: 哪个箭头让会让福乐波得到宝藏？
       K-1 Keep it Private Multi 1:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
@@ -703,7 +703,7 @@ zh:
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
         Multiple Choice: 多项选择
-        Which algorithm gets the Flurb to the flowers?: 那种算法使Flurb能到花那里？
+        Which algorithm gets the Flurb to the flowers?: 哪种算法使福乐波能到花那里？
       K-1 Plant a Seed Multi 1:
         /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png

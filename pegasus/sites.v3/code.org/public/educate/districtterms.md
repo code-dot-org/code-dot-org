@@ -76,16 +76,14 @@ If accepted into the Code.org program the following terms will apply.
 	- How the district will implement specific programs
 	- How the district will promote the program to teachers and students
 	- Support for the partnership within the district and local community
-	- How the district will fund the stipends
 <br/>
 <br/>
 - Participate in Code.org’s Professional Development Program:
 	- Guarantee that each teacher participating in Code.org’s professional development will teach the appropriate course in the upcoming school year
-	- High School Teachers -Four phases over 15 months, approximately 100 hours (50% of stipends provided)
-	- Middle School Teachers -Three phases over 12 months, approximately 55 hours (50% of stipends provided)
-	- Elementary School -Handled through Code.org’s Elementary School Affiliate Program or a District-Based Affiliate (no stipends provided)
-	- Counselors and principals from participating high school in Code.org’s Counselor/Administrator Professional Development
-	- Program (full stipends provided)
+	- High School Teachers -Four phases over 15 months, approximately 100 hours
+	- Middle School Teachers -Three phases over 12 months, approximately 55 hours
+	- Elementary School -Handled through Code.org’s Elementary School Affiliate Program or a District-Based Affiliate
+	- Counselors and principals from participating high school in Code.org’s Counselor/Administrator Professional Development Program
 	- Allow PD to satisfy district hourly requirements for annual professional development
 <br/>
 <br/>

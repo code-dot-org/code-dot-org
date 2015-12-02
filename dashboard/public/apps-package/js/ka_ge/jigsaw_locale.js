@@ -158,7 +158,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "გილოცავთ! თქვენ დაასრულეთ ეს თავსატეხი."},
 "no":function(d){return "არა"},
 "numBlocksNeeded":function(d){return "ამ თავსატეხის ამოსახსნელად საჭიროა %1 ბლოკი."},
-"reinfFeedbackMsg":function(d){return "შეგიძლიათ დააწვე \"სცადე ხელახლა\" ღილაკს და განაგრძო თქვენი თამაში."},
+"reinfFeedbackMsg":function(d){return "შეგიძლიათ დააწვეთ \"სცადეთ ხელახლა\" ღილაკს და განაგრძოთ თქვენი თამაში."},
 "share":function(d){return "გაზიარება"},
 "shareGame":function(d){return "გააზიარეთ თქვენი თამაში:"},
 "yes":function(d){return "დიახ"}};

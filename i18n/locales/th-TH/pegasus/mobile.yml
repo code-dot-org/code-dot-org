@@ -287,6 +287,10 @@ th-TH:
   class_submission_level_vocational: อาชีวศึกษา
   class_submission_languages_other: ภาษาอื่น ๆ
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -577,10 +581,14 @@ th-TH:
   carousel_heading_international: ฝึกฝนในภาษาของคุณ
   carousel_heading_domestic: การสอนเป็นภาษาอังกฤษ
   carousel_heading_beginners: บทเรียนสำหรับผู้เริ่มต้น
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: บทเรียนที่สอน JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: ไม่มีอุปกรณ์ หรือ อินเทอร์เน็ตใช่หรือไม่? ให้ลองเรียน วิทยาการคอมพิวเตอร์สำหรับผู้ไม่มีคอมพิวเตอร์
   carousel_heading_devices: บทเรียนแอปพลิเคชันสำหรับโทรศัพท์มือถือและแท็บเล็ต
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: บทเรียนภาษาโปรแกรมอื่น ๆ
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: สร้างแอปหรือเกม ของคุณเอง
   carousel_heading_university: หลักสูตรมหาวิทยาลัยออนไลน์
   carousel_heading_webpages: เรียนรู้การทำเว็บเพจ

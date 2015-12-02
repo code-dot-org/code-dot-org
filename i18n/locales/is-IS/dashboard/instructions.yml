@@ -384,7 +384,7 @@ is:
       Artist - Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       Artist - Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að ljúka teikningunni.
       Auto Open Function Editor_instruction: 'Þú getur kallað á föll innan úr öðrum föllum! Notaðu "form" fallið þitt sem grunn og búðu til 3 hús sem byrja með lengdina 50 og stækka um 20 í hvert sinn. Hér gæti verið gagnlegt að nota lykkju með teljara. '
-      Bee Recommended Blocks test_instruction: 'Fjólublá blóm geta haft 1 eða 0 af blómasafa, en þú veist ekki hvaða blóm! Gættu þess að safna ekki safa frá blómi ef það hefur engan. Athugaðu hvort safinn er 1 með því að nota "ef" kubbinn.'
+      Bee Recommended Blocks test_instruction: 'Fjólublá blóm geta haft 1 eða 0 af blómasafa, en þú veist ekki hvaða blóm! Gættu þess að safna ekki safa frá fjólubláu blómi ef það hefur engan. Athugaðu hvort safinn er 1 með því að nota "ef" kubbinn.'
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -399,13 +399,13 @@ is:
       Big Game Animation 2_instruction: 'Fallið "update-target" (uppfæra-mark) tekur núverandi x gildi marksins og skilar uppfærðu gildi. Ljúktu við fallið "update-target" svo að það bæti við x gildið í hvert skipti sem kallað er á það. Því meira sem bætt er við x, því hraðar fer markið.'
       Big Game Animation 3_instruction: 'Fallið "update-danger" (uppfæra-hættu) ætti að virka alveg eins og fallið "update-target" (uppfæra-mark), nema hvað hættan á að færast frá hægri hlið yfir til vinstri. Ljúktu við fallið "update-danger" svo að hættan fljúgi yfir skjáinn.'
       Big Game Animation 4_instruction: 'Á þessu stigi í leiknum ætti hættan (danger) að hreyfast yfir skjáinn frá hægri til vinstri og markið (target) ætti að hreyfast frá vinstri til hægri. Eftir að hafa yfirgefið skjáinn koma þeir aldrei til baka, en við leysum það síðar. Gakktu úr skugga um að leikurinn virki eins og þú vilt og smelltu svo á "Ljúka" til að halda áfram.'
-      Big Game Booleans 1_instruction: 'Síðast þegar við unnum með leikinn fóru leikverurnar mark (target) og hætta (danger) yfir skjáinn, en þær komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.'
-      Big Game Booleans 2_instruction: 'Nú þegar "on-screen?" fallið athugar "safe-left?" og "safe-right?" getum við klárað þau föll. Farðu í Föll í verkfærakassanum og ljúktu við "safe-left?" fallið svo að það skili "true" ef x-hnit leikverunnar er hærra en -50. Ef þetta heppnast, ættir þú að sjá hættuna fara út vinstra megin og birtast aftur hægra megin.'
+      Big Game Booleans 1_instruction: 'Síðast þegar við unnum með leikinn fengum við leikverurnar mark (target) og hætta (danger) til að fljúga yfir skjáinn, en þær koma aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.'
+      Big Game Booleans 2_instruction: 'Farðu í Föll í verkfærakassanum og ljúktu við "safe-left?" fallið svo að það skili "true" ef x-hnit leikverunnar er hærra en -50. Ef þetta heppnast, ættir þú að sjá hættuna fara út vinstra megin og birtast aftur hægra megin.'
       Big Game Booleans 3_instruction: 'Nú þegar "safe-left?" er klár skulum við ljúka við "safe-right?" Þetta fall á að taka x hnit leikveru og skila "true" ef hnitið er minna en 450. Þegar "safe-right?" er búið, ætti markið að fara út af skjánum hægra megin og birtast aftur vinstra megin.'
       Big Game Booleans 4_instruction: 'Hér færðu tóm föll fyrir "safe-left?" (öruggt-vinstri?) og "safe-right?" (öruggt-hægri?). Þú þarft fyrst að ljúka við fallið "on-screen?" (á-skjá?) svo að það athugi hvort bæði "safe-left?" og "safe-right?" gefa útkomuna "true". Vísbending: jafnvel eftir að þú bætir þessum föllum við, snúa leikverurnar ekki aftur á skjáinn - hvers vegna heldur þú að það sé?'
-      Big Game Booleans 5_instruction: 'Á þessu stigi ætti hættan (danger) að fara yfir skjáinn frá hægri til vinstri, markið (target) frá vinstri til hægri og bæði ættu að fara aftur til mótstæðrar hliðar, og endurtaka það. Gakktu úr skugga um að leikurinn virki eins og ætlast er til og smelltu á "Ljúka" til að halda áfram.'
+      Big Game Booleans 5_instruction: 'Á þessu stigi ætti hættan (danger) að fara yfir skjáinn frá hægri til vinstri, markið (target) frá vinstri til hægri og bæði ættu að birtast aftur á mótstæðri hlið, aftur og aftur. Gakktu úr skugga um að leikurinn virki eins og ætlast er til og smelltu á "Ljúka" til að halda áfram.'
       Big Game Collision 1 (copy 1)_instruction: 'Síðast þegar við unnum með leikinn fóru leikverurnar mark (target) og hætta (danger) yfir skjáinn, en þær komu aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Smelltu svo á "Ljúka" til að vinna að því að láta verurnar birtast aftur.'
-      Big Game Collision 1_instruction: 'Á þessu stigi hefur þú forritað tölvuleik með hreyfanlegu marki (target) og hættu (danger), sem bæði snúa aftur á skjáinn eftir að hafa yfirgefið hann, og leikmann (player) sem bregst við inntaki frá lyklaborði. Smelltu á keyra til að sjá hvernig leikurinn virkar nú. Síðan skulum við takast á við síðasta hlutann sem enn vantar - skynjun árekstra!'
+      Big Game Collision 1_instruction: 'Á þessu stigi hefur þú forritað tölvuleik með hreyfanlegu marki (target) og hættu (danger), sem bæði snúa aftur á skjáinn eftir að hafa yfirgefið hann, og leikara (player) sem bregst við inntaki frá lyklaborði. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú. Síðan skulum við takast á við síðasta hlutann sem enn vantar - skynjun árekstra!'
       Big Game Collision 2_instruction: 'Til að færa leikmanninn upp og niður, munum við þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu "update-player" (uppfæra leikmann) svo að það færi leikmanninn upp þegar ýtt er á örina upp og niður þegar ýtt er á örina niður.'
       Big Game Collision 3_instruction: Lögum þetta fall fyrir fjarlægð svo að skynjun árekstra virki rétt. Notaðu fjarlægðarformúluna svo að hún skili fjarlægðinni á milli miðjuhnita leikmanns (px, py) og miðjuhnita annarrar leikveru (cx, cy). Þú færð tilbúið fall fyrir lengd línu til að hjálpa þér.
       Big Game Collision 4_instruction: |
@@ -479,7 +479,7 @@ is:
       Calc Design Recipe 4_instruction: 'Notaðu föllin "sales" og "cost" til að skrifa fallið "profit" (gróði), sem tekur inn fjöldann af seldum kökum og skilar gróðanum af sölunni að teknu tilliti til kostnaðarins við að baka kökurnar.'
       Calc Free Play_instruction: 'Frjáls æfing: Skrifaðu föll og algrím eftir eigin höfði!'
       Calc Rocket 1 (copy 1)_instruction: "Í síðustu þraut skrifaðir þú samning fyrir fallið \"rocket-height\" (hæð-flaugar), sem segir að sviðið sé Tala, gildamengið Tala og að það eigi að skila hæð flaugar, sem flýgur á 15 m/s, eftir tiltekinn fjölda sekúndna. Skrifum nú dæmi fyrir hæð flaugar eftir 3 sekúndur.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n"
-      Calc Rocket 1_instruction: "Í síðustu þraut skrifaðir þú samning fyrir fallið \"rocket-height\" (hæð-flaugar), sem segir að sviðið sé Tala, gildamengið Tala og að það eigi að skila hæð flaugar, sem flýgur á 15 m/s, eftir tiltekinn fjölda sekúndna. Skrifum nú dæmi fyrir hæð flaugar eftir 3 sekúndur.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Calc Rocket 1_instruction: 'Í síðustu þraut skrifaðir þú samning fyrir fallið "rocket-height" (hæð-flaugar), sem segir að sviðið sé Tala, gildamengið Tala og að það eigi að skila hæð flaugar, sem flýgur á 15 m/s, eftir tiltekinn fjölda sekúndna. Skrifum nú dæmi fyrir hæð flaugar eftir 3 sekúndur.'
       Calc Rocket 2_instruction: 'Þetta er fínt, en bætum öðru dæmi við áður en við skrifum fallið - hver ætti hæð flaugarinnar að vera eftir 30 sekúndur?'
       Calc Vars 1.1_instruction: |
         Hér höfum við sett 17 ár í breytuna "age".
@@ -528,7 +528,7 @@ is:
       Course 2 Maze Loops 1_instruction: Getur þú komið mér til svínsins með 5 kubbum?
       Course 4 2_instruction: Nú vill býflugan bara blómasafa. Gættu þess að hún reyni aðeins að safna safa á blómum.
       Course 4 Artist 1_instruction: 'Hjálpaðu mér að teikna kassa. (Hver lína er 200 díla löng) '
-      Course 4 Artist 10_instruction: "Smelltu hér til að sjá vísbendingarnar aftur!\r\n\r\nHér er kóði fyrir áhugavert form. Hvað gerist þegar þú endurtekur hann? Taktu eftir að hornin í forminu eru samanlagt 420, sem þýðir að þegar listamaðurinn er búinn að teikna þá snýr hann í aðra átt en í byrjun. Þessi nýja átt er nákvæmlega 60 gráðum til hægri frá upphafinu."
+      Course 4 Artist 10_instruction: "Smelltu hér til að sjá vísbendingarnar aftur!\r\n\r\nHér er kóði fyrir áhugavert form. Hvað gerist þegar þú endurtekur hann mörgum sinnum og snýrð í hvert sinn? Taktu eftir að hornin í forminu eru samanlagt 420, sem þýðir að þegar listamaðurinn er búinn að teikna þá snýr hann í aðra átt en í byrjun. Þessi nýja átt er nákvæmlega 60 gráðum til hægri frá upphafinu."
       Course 4 Artist 11_instruction: Hér er áskorun! Þetta er hönnun sem notar aðeins kubba sem þú hefur séð áður. Getur þú endurskapað þetta? Ekki hika við að prófa þig áfram. Það er engin krafa um að þú leysir þetta í fyrstu atrennu. Viltu fá fleiri vísbendingar? Smelltu hér!
       Course 4 Artist 12_instruction: "Viltu kíkja aftur á fyrirmyndina eða vísbendingarnar? Smelltu hér!\r\n\r\nAnnars skaltu bara búa til þína eigin mynd!"
       Course 4 Artist 13_instruction: Enn að spila? Hér er auður flötur þar sem þú getur hannað hvað sem þú vilt!
@@ -560,12 +560,12 @@ is:
       Course 4 Artist For  Functions 11_instruction: 'Hér er aðeins erfiðara: Getur þú teiknað stjörnu með fallinu "teikna röð ferninga"? Gangi þér vel!'
       Course 4 Artist For Loops 1_instruction: 'Teiknaðu þennan þríhyrning sem er 50 díla breiður. Vísbending: Notaðu endurtekningarkubb.'
       Course 4 Artist For Loops 10_instruction: Frjáls æfing! Skemmtu þér við að teikna með kubbunum sem þú hefur lært að nota
-      Course 4 Artist For Loops 11_instruction: 'Manstu 6. áfanga þar sem við notuðum breytu til að stjórna fjölda hliða á formi? Við ætlum nú að gera það sama með teljarabreytuna. Mynstrið byrjar á þríhyrningi og bætir við einni hlið í einu þar til hliðarnar eru orðnar 10. Hver hlið á að vera 100 dílar. Vísbending: 360 deilt með fjölda hliðanna er gráðufjöldinn sem þarf að snúa um.'
+      Course 4 Artist For Loops 11_instruction: 'Manstu eftir fyrri áfanga þar sem við notuðum breytu til að stjórna fjölda hliða á formi? Við ætlum nú að gera það sama með teljarabreytuna "counter". Mynstrið byrjar á þríhyrningi og bætir við einni hlið í einu þangað til það teiknar tíhyrning (10 hliðar). Hver hlið á að vera 100 dílar. Vísbending: 360 deilt með fjölda hliða á formi er gráðufjöldinn sem þarf að snúa um.'
       Course 4 Artist For Loops 11a_instruction: "Setjum þetta allt saman! Notaðu kunnáttu þína með frá lykkjur og teljara til að búa til þessa teikningu þar sem hvert form hefur tvær fleiri hliðar en formið á undan. Gættu þess að hver hlið forms sé 10 sinnum fjöldi hliða á forminu.\r\n\r \nÞú færð mjög lítinn kóða gefins."
       Course 4 Artist For Loops 12_instruction: 'Þetta leit vel út, en nú vil ég teikna hvert form við hlið þess síðasta. Í þetta sinn er hver hlið 20 dílar. Notaðu "hoppa" kubb til fara fram um 40 díla eftir hvert form. '
       Course 4 Artist For Loops 13_instruction: Hmmm, þessi form fara sístækkandi! Vorum við ekki búin að leysa þetta vandamál með breytum? Hvernig getum við notað teljarann til að stytta hliðarnar eftir því sem þeim fjölgar? Jú með því að deila með honum. Í stað þess að færa áfram um fasta stærð skulum við nú færa áfram um (100 / teljari) díla.
-      Course 4 Artist For Loops 14_instruction: Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. Prófaðu að nota kóðann úr síðasta áfanga, en snúa um 89 gráður til að búa til þennan spíral úr ferningum.
-      Course 4 Artist For Loops 15_instruction: "Frjáls æfing! Prófaðu að búa til eigin teikningar með \"frá\" lykkjum. Við höfum bætt við nokkrum almennum breytum sem þú getur notað.\r\n\r\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að við þurfum að flokka þá aftur. Smelltu á flokkana til að uppgötva alla kubbana sem þú getur notað í þessum áfanga."
+      Course 4 Artist For Loops 14_instruction: Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. Prófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum.
+      Course 4 Artist For Loops 15_instruction: 'Frjáls æfing! Prófaðu að búa til eigin teikningar með "frá" lykkjum. Við höfum líka bætt við nokkrum gagnlegum breytum sem þú getur notað.'
       Course 4 Artist For Loops 2_instruction: 'Ég hef sett kóða fyrir þríhyrning inn í "frá" lykkju sem telur frá 50 til 100 um 10. Athugaðu: Gættu þess að lesa kóðann yfir áður en þú smellir á "Keyra".'
       Course 4 Artist For Loops 3_instruction: |
         Það sem þú gerðir í síðustu þraut hjálpar þér að klára þessa. Minnsti þríhyrningurinn hefur 20 díla hliðar, sá stærsti 200, og hver þríhyrningur er 20 dílum stærri en næsti á undan.
@@ -633,9 +633,9 @@ is:
       Course 4 Artist Vars 5_instruction: 'Notaðu breytuna "hliðar" til að stjórna því hve oft þessi lykkja er endurtekin.'
       Course 4 Artist Vars 6_instruction: "Hér er kóði sem getur teiknað hvaða reglulegan marghyrning sem er. Það er ný breyta sem nefnist \"hliðar\" og í henni er gildið 4. Getur þú notað breytuna \"hliðar\" (ásamt reikningskubbi) til að tryggja að ég snúi um réttan gráðufjölda alveg sama hve margar hliðar eru í marghyrningnum?\r\n\r\nSmelltu hér til að fara aftur í vísbendinguna!"
       Course 4 Artist Vars 7_instruction: "Notaðu það sem þú lærðir í síðustu þraut til að búa til þennan sexhyrning með breytunni \"lengd\".\r\n\r\nSérðu hvernig þú gætir breytt aðeins einu gildi til að teikna þríhyrning, ferning, fimmhyrning eða átthyrning?"
-      Course 4 Artist Vars 8_instruction: 'Frjáls æfing: Gerðu tilraunir með fjölda hliða á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formsins haldist svipuð sama hversu margar hliðar það hefur? Vísbending: Þú gætir þurft að nota reikningskubba (360 deilt með "hliðar") á tveimur stöðum í þetta sinn.'
+      Course 4 Artist Vars 8_instruction: 'Frjáls æfing: Gerðu tilraunir með fjölda hliða á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formsins haldist svipuð sama hversu margar hliðar það hefur? Vísbending: Ef þú deilir upphaflegu lengdinni með fjölda hliða, mun lengd hverrar hliðar styttast þegar hliðunum fjölgar.'
       Course 4 Artist Vars 9_instruction: 'Breyttu þessu algrími svo það noti breytuna "hliðar" í stað fastrar tölu til að teikna þríhyrning. Ekki gleyma að nota "stilla hliðar" kubbinn.'
-      Course 4 Bee 1_instruction: 'Býflugan veit ekki hvað er undir skýinu! Notaðu fyrst "ef" kubbinn til að athuga hvort það er blóm eða bú. Safnaðu ekki blómasafa nema það sé blóm. '
+      Course 4 Bee 1_instruction: 'Býflugan veit ekki hvað er undir skýinu! Notaðu "ef" kubbinn til að athuga hvort það er blóm undir skýinu og safnaðu ekki blómasafa nema það sé blóm. '
       Course 4 Bee 2_instruction: 'Notaðu "ef/annars" kubbinn til að athuga hvort hver hlutur er blóm eða bú. Ef hann er blóm, á að safna blómasafa, annars á að búa til hunang!'
       Course 4 Bee 3_instruction: 'Óþekkti hluturinn er annað hvort blóm eða býflugnabú. Notaðu "ef/annars" kubbinn til að safna blómasafa ef þetta er blóm, annars búa til hunang (því þá er þetta bú).'
       Course 4 Bee 4_instruction: 'Þetta fjólubláa blóm gæti innihaldið 3, 2 eða 1 af blómasafa. Hér er "ef-annars" kubbur settur í annan "ef-annars" kubb til að búa til "ef/annars-ef/annars" yrðingu. Ljúktu við lausnina til að safna óþekktu magni af safa.'
@@ -685,11 +685,11 @@ is:
       Course 4 Binary 8_instruction: Þú getir teiknað mestalla myndina með því að endurtaka 5 bita tvíundartölu. Síðan þarftu eina 4 bita tölu í viðbót til að komast í hornið neðst til hægri.
       Course 4 EC 1a_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 EC 1b_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
-      Course 4 EC 2a_instruction: '**Erfið áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
-      Course 4 EC 2b_instruction: '**Erfið áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
-      Course 4 EC 2c_instruction: '**Erfið áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
+      Course 4 EC 2a_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
+      Course 4 EC 2b_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
+      Course 4 EC 2c_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
       Course 4 EC 3_instruction: 'Notaðu það sem þú lærðir í síðasta borði til að teikna svona mynd. Athugasemd: Kóðinn verður einfaldari ef þú notar stika. '
-      Course 4 EC 3a_instruction: '**Erfið áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
+      Course 4 EC 3a_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar. Bara áskorunin!'
       Course 4 Maze 1_instruction: Láttu reiða fuglinn ná svíninu!
       Course 4 Maze 2_instruction: Gættu þín á TNT!
       Course 4 Maze 3_instruction: 'Forritaðu reiða fuglinn svo hann nái svíninu. '
@@ -725,7 +725,7 @@ is:
       Course 4 Play Labs For Loops 4_instruction: Nú höfum við breytt aukanum sem talning breytist um, en talningin er enn línuleg (aukinn er alltaf eins). Hvað ef við vildum láta sjálfan aukann breytast? Getur þú haft þessa lykkju óbreytta, en látið hana telja 1, 4, 9, 16, 25... (teljarinn í öðru veldi)?
       Course 4 Play Labs For Loops 4a_instruction: "Nú skulum við nota breyturnar úr borði 7 með \"counter\" breytunni þinni til að fremja galdur. \r\n\r\nÍ þessari þraut mun Hundur telja frá 0 til 1000 um \"increment\" aukann. Settu 10 í \"increment\" breytuna fremst í kóðanum til að sjá hvað gerist."
       Course 4 Play Labs For Loops 5_instruction: 'Í síðustu þraut töldum við með teljaranum í öðru veldi. Breyttu nú "teljari ^ 2" í "teljari ^3" til að telja með teljaranum í þriðja veldi (1, 8, 27, 64, 125, 216, 343...)'
-      Course 4 Play Labs For Loops 5a_instruction: "Í þessari þraut verður Hundur tímavörður.\r\n\r\nHundur mun telja frá 0 til 30 um \"increment\" aukann. \"Increment\" breytan byrjar með gildið 1.\r\n\r\nGetur þú hagað því svo að í hvert sinn sem þú smellir á Hund þá hækki aukinn um 2? Smelltu á áfram örina til að keyra frá lykkjuna.\r\n\r\nEndurtaktu nokkrum sinnum að smella á hund og keyra lykkjuna."
+      Course 4 Play Labs For Loops 5a_instruction: "Í þessari þraut verður Hundur tímavörður.\r\n\r\nHundur mun telja frá 0 til 30 um \"increment\" aukann. \"Increment\" breytan byrjar með gildið 1.\r\n\r\nGetur þú hagað því svo að í hvert sinn sem þú smellir á Hund þá hækki aukinn um 2? Smelltu á \"áfram\" örina til að keyra \"frá\" lykkjuna.\r\n\r\nEndurtaktu nokkrum sinnum að smella á hund og keyra lykkjuna."
       Course 4 Play Labs For Loops 6_instruction: 'Þú manst ef vill að prímtala er sérhver heil tala sem er deilanleg aðeins með sjálfri sér og 1. Notaðu fallið "er_prímtala" til að segja aðeins prímtölur frá 1 til 100.'
       Course 4 Play Labs For Loops 6a_instruction: "Hundur mun ennþá passa tímann með því að telja með \"frá\" lykkjunni um \"increment\" aukann, en í þetta sinn ætlum við að bæta Vitkanum við. Getur þú breytt kóðanum svo að \"increment\" hækki um 2 í hvert sinn sem smellt er á Vitkann?\r\n\r\nGættu þín! Vitkinn hreyfist hratt!"
       Course 4 Play Labs For Loops 7_instruction: 'Gætir þú notað "frá" lykkju til að hjálpa mér að segja röðina 1, 4, 7, 10, 13, 16, 19, 22, 25?'
@@ -733,8 +733,8 @@ is:
       Course 4 Play Labs For Loops 8_instruction: "Hjálpaðu leikmönnum að hreyfast um leið og þeir telja.\r\n\r\nHundur á að hreyfast og bæta 2 við (teljari + 2) í hvert skipti. Köttur á að hreyfast og margfalda með 2 (teljari * 2) í hvert skipti. Mörgæs á að hreyfast og telja í 2. veldi (teljari ^ 2) í hvert skipti. Hver verður fyrstur til að ná sínu flaggi?"
       Course 4 Play Labs For Loops 8a_instruction: "Til að ljúka leiknum þurfum við að nota \"increment\" breytuna aftur. Við skulum tengja hana við áfanga í leiknum.\r\n\r\n1) Ef smellt er á Vitkann skal telja það.\r\n2) Ef smellt er að minnsta kosti 10 sinnum á Vitkann áður en Hundur telur upp í 30, skal hækka \"increment\" um 1 og byrja aftur.\r\n3) Ef ekki er smellt á Vitkann a.m.k. 10 sinnum er leiknum lokið."
       Course 4 SCF 1_instruction: Notaðu föllin sem hér eru til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig röðunum með jafna tölu er hliðrað til hægri?
-      Course 4 SCF 1a_instruction: Getur þú fundið út hvernig þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
-      Course 4 SCF 1b_instruction: Getur þú fundið út hvernig þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
+      Course 4 SCF 1a_instruction: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
+      Course 4 SCF 1b_instruction: Getur þú fundið út hvernig öllum þessum blómasafa verður safnað með sem fæstum mögulegum kubbum?
       Course 4 SCF 2_instruction: 'Notaðu það sem þú lærðir í síðasta borði til að teikna svona mynd. Athugasemd: Kóðinn verður einfaldari ef þú notar stika. '
       Course 4 SCF 3 Fail 1_instruction: Getur þú fundið út hvernig á að...
       Course 4 SCF 3 Fail 2_instruction: Getur þú fundið út hvernig á að...
@@ -763,7 +763,19 @@ is:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1080,7 +1092,7 @@ is:
       NEW Course 4 Artist Functions 10_instruction: 'Smelltu á "breyta" til að vinna með kubbana í skilgreiningu fallsins svo það teikni 40 díla ferning.'
       NEW Course 4 Artist Functions 11_instruction: "Nú viljum búa til nýtt fall \"teikna röð ferninga\"´sem teiknar sex ferninga í röð. Getur þú búið til þetta fall með því að nota \"teikna ferning 20\" fallið sem við höfum þegar búið til? Taktu eftir að við höfum breytt pennanum svo hann er mun fínni. Smelltu á \"breyta\" á \"teikna ferning 20\" fallinu til að sjá hvernig!\r"
       NEW Course 4 Artist Functions 12_instruction: 'Notaðu fallið "teikna röð ferninga" úr síðustu þraut til að teikna þetta mynstur.'
-      NEW Course 4 Artist Functions 13_instruction: 'Getur þú teiknað stjörnuform með því að nota fallið "teikna röð ferninga"? Vísbending: Í hverri umferð þarft þú að færa áfram um tiltekinn fjölda díla og snúa um 144 gráður.'
+      NEW Course 4 Artist Functions 13_instruction: 'Getur þú teiknað stjörnuform með því að nota fallið "teikna röð ferninga"? Vísbending: Breyttu fallinu "teikna röð ferninga" svo þú þurfir ekki að kalla á það tvisvar. Taktu eftir að þú þarft að færa áfram um tiltekinn fjölda díla og snúa um 144 gráður.'
       NEW Course 4 Artist Functions 14_instruction: 'Frjáls æfing! '
       NEW Course 4 Artist Functions 2_instruction: 'Getur þú teiknað 3 ferninga með 20 díla millibili? Vísbending: Hver ferningur er 100 dílar á stærð'
       NEW Course 4 Artist Functions 3_instruction: 'Hér er ný tegund af kubbi. Þetta er fallkubbur eða fall (enska: function). Smelltu á "breyta" og settu í hann kóða til að teina ferning með 100 díla hliðar. Smelltu svo á "loka" til að fara aftur í forritið.'
@@ -1097,7 +1109,7 @@ is:
       NEW Course 4 Artist Params 11_instruction: 'Geturðu fundið út hvernig þetta form er teiknað? Breyttu fallinu svo að það noti stikann "hliðar".'
       NEW Course 4 Artist Params 12_instruction: Geturðu lokið við þessa teikningu? Hliðar allra formanna eru 100 dílar á lengd.
       NEW Course 4 Artist Params 12a_instruction: 'Þessi mynd er svipuð þeirri síðustu. Getur þú notað "frá lykkju" með fallinu þínu til að búa þetta til?'
-      NEW Course 4 Artist Params 13_instruction: 'Breytum þessu "teikna marghyrning" falli. Það er þegar með stikann "lengd". Nú skulum við bæta við stikanum "hliðar". Mundu að snúningshorn forms er 360 deilt með fjölda hliða sem formið hefur. Vísbending: Ummál hvers forms er 200 dílar á lengd. Manstu jöfnuna sem lætur form halda sömu stærð þó að fjöldi hliða breytist?'
+      NEW Course 4 Artist Params 13_instruction: "Breytum þessu \"teikna marghyrning\" falli. Það er þegar með stikann \"hliðar\". Nú skulum við bæta við stikanum \"lengd\". \r\nVísbending: Ummál hvers forms er 200 dílar á lengd. Manstu jöfnuna sem lætur form halda sömu stærð þó að fjöldi hliða breytist?"
       NEW Course 4 Artist Params 14_instruction: 'Breyttu fallinu "teikna spíral" svo það hafi stikana "lengd" og "hliðar" og búðu svo til þessi form.'
       NEW Course 4 Artist Params 15_instruction: 'Frjáls æfing: Hér eru föllin sem þú hefur skrifað og nokkur í viðbót til að leika með. Teiknaðu eitthvað ofurflott! Leiktu með breidd pennans til að sjá hvernig það breytir teikningunni!'
       NEW Course 4 Artist Params 2_instruction: Búðu til frá grunni fall sem teiknar þríhyrning með 50 díla hliðar
@@ -1128,7 +1140,7 @@ is:
       NEW Course 4 Bee For Loops 5_instruction: 'Þú getur líka notað "frá" lykkju til að telja niður. Reyndu að safna þessum blómasafa með því að telja niður frá 5 til 1 um 1.'
       NEW Course 4 Bee For Loops 6_instruction: 'Síðasta talan í "frá" lykkjunni er kölluð "aukinn" (enska: increment). Í hverri umferð lykkjunnar breytist innihald teljarans um aukann. Prófaðu að safna úr þessum blómum með aukann 2.'
       NEW Course 4 Bee For Loops 7_instruction: "Nú skulum við nota reikningskubb með teljarabreytunni! Hvernig getur þú notað teljarann til að fara í gegnum garðinn með sem allra fæstum kubbum? Hvað þarftu að gera til að safna 3, 6, 9, 12, 15 af blómasafa í þetta sinn? Svarið felst í teljarabreytunni!\r\n\r\nMundu: Ef lykkjan telur upp á við, er aukanum bætt við teljarabreytuna í hverri umferð lykkjunnar."
-      NEW Course 4 Bee For Loops 8_instruction: "Þú hefur náð þessu! Hver ætti aukinn að vera til að safna 3, 6, 9, 12, 15 af safa?\r\n"
+      NEW Course 4 Bee For Loops 8_instruction: "Þú hefur náð þessu! Hver ætti aukinn að vera til að safna 3, 6, 9, 12, 15 af safa?\r\nVísbending: Hverju þarftu að bæta við hverja tölu til að fá næstu tölu á eftir?"
       NEW Course 4 Bee For Loops 9_instruction: Ef lykkja telur niður, er aukinn dreginn frá teljarabreytunni í hverri umferð. Hver ætti aukinn að vera til að safna 9, síðan 6 og svo 3 af blómasafa?
       NEW Course 4 Bee For Loops 95_instruction: 'Skoðaðu hvern þátt í "frá" lykkjunni sem þú varst að búa til. Geturðu séð hvaða tölur þarf að tvöfalda til að leysa þrautina? Hvers vegna virkar það?'
       NEW Course 4 Play Lab Params 11_instruction: 'Frjáls æfing! Skemmtu þér við að nota alla kubbana í verkfærakassanum. '
@@ -1159,7 +1171,7 @@ is:
       Overworld Avoid Monsters_instruction: |
         Það er ekki góð hugmynd að rekast á laumupúka. 
         Farðu varlega framhjá þeim til að komast í öryggi heimilisins.
-      Overworld Chop Tree_instruction: 'Viður er mjög mikilvæg auðlind. Alls konar hlutir eru búnir til úr viði. Gakktu að trénu og notaðu "eyða blokk" skipunina til að höggva það niður.'
+      Overworld Chop Tree_instruction: 'Viður er mjög mikilvægt hráefni. Alls konar hlutir eru búnir til úr viði. Gakktu að trénu og notaðu "eyða blokk" skipunina til að höggva það niður.'
       Overworld Chop Trees_instruction: Við þurfum að byggja hús áður en sólin sest. Hús þurfa mikið af viði. Höggðu niður öll 3 trén.
       Overworld Free Play 20x20_instruction: Til hamingju! Þú hefur lokið við allar þrautirnar okkar! Nú getur þú grafið, byggt og búið til eitthvað sérstakt með því að nota allt sem þú hefur lært hingað til.
       Overworld Free Play_instruction: Þetta landslag er fyrir þig að leika þér með. Þú ræður hvað þú byggir.
@@ -1170,11 +1182,11 @@ is:
       Overworld House Frame C_instruction: Einn veggur er búinn. Klárum húsið með því að fylgja grunnteikningunni þinni! Þú þarft að endurtaka þig heilmikið hér.
       Overworld House Frame Chosen_instruction: 'Byggðu afganginn af húsinu úr hvaða efni sem þú vilt. "Endurtaka" skipunin kemur að góðu gagni.'
       Overworld House Frame_instruction: Byggjum okkar eigið hús! Þessi staður er álitlegur. Byggðu undirstöðu á moldarblokkunum.
-      Overworld Minecart Track_instruction: Þú ert aftur uppi á yfirborðinu með fullt af neðanjarðarefnivið. Nú ætlum við að leggja teina eftir moldarslóðinni frá húsinu. Fyrst er að hreinsa slóðina. Fylgdu slóðinni og fjarlægðu trén.
-      Overworld Move to Sheep_instruction: 'Bættu annarri "færa áfram" skipun til að ná til kindarinnar.'
+      Overworld Minecart Track_instruction: Þú ert aftur uppi á yfirborðinu með fullt af neðanjarðarhráefni. Nú ætlum við að leggja teina eftir moldarslóðinni frá húsinu. Fyrst er að hreinsa slóðina. Fylgdu slóðinni og fjarlægðu trén.
+      Overworld Move to Sheep_instruction: 'Bættu við annarri "færa áfram" skipun til að ná til kindarinnar.'
       Overworld Place Wall_instruction: 'Sérhvert hús byrjar með vegg. Byggðu fyrsta hluta hússins með því að láta "setja" og "færa áfram" skipanir inn í "endurtaka" lykkju.'
       Overworld Plant Crops_instruction: Það er gott að hugsa fram í tímann. Gróðursettu jurtir báðum megin við vatnið til að forða hungri seinna.
-      Overworld Powered Minecart_instruction: Vel af sér vikið! Þú hefur safnað heilmiklu af auðlindum og skapað lítið heimili. Nú áttu að leggja teina frá jaðri kortsins til dyra hússins.
+      Overworld Powered Minecart_instruction: Vel af sér vikið! Þú hefur safnað heilmiklu af hráefni og skapað lítið heimili. Nú áttu að leggja teina frá jaðri kortsins til dyra hússins.
       Overworld Shear Sheep_instruction: 'Nú þarf að rýja rollur! Notaðu "rýja" skipunina til safna ull af báðum kindunum.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
@@ -1323,7 +1335,7 @@ is:
       Sam the Butterfly 1_instruction: 'Þessi leðurblaka heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Smelltu á "Keyra" og notaðu svo örvarlyklana til að færa Samma um garðinn sinn. Taktu eftir hnitum Samma á mismunandi stöðum. Smelltu á "Ljúka" þegar þú vilt halda áfram.'
       Sam the Butterfly 2_instruction: 'Móðir Samma vill vera viss um að hún sjái að minnsta kosti eitthvað af honum. Skrifum nú föll sem hjálpa til að hann fari ekki of langt út úr garðinum. Hér er fall sem heitir "safe-left?" (öruggt-vinstri?). Það á að hafa sem gildamengi tölu sem táknar x-hnit Samma og skila útkomunni "true" ef hann er alveg sýnilegur á skjánum. Ef fallið þitt virkar á Sammi ekki að geta yfirgefið garðinn vinstra megin.'
       Sam the Butterfly 3_instruction: 'Í síðustu þraut hindruðum við Samma í að fara út vinstra megin. Gerum nú það sama fyrir hægri hliðina. Ljúktu við fallið "safe-right?" (öruggt-hægri) til að tryggja að Sammi fari ekki út af skjánum hægra megin.'
-      Sam the Butterfly 4_instruction: 'Nú getum við haldið Samma inni vinstra megin EÐA hægra megin, en hvernig getum við gert það báðum megin? Prófaðu að nota "AND" kubbinn til að forrita fallið "on-screen?" (á-skjá), sem athugar hvort Sammi er öruggur vinstra megin OG öruggur hægra megin?'
+      Sam the Butterfly 4_instruction: 'Nú getum við haldið Samma inni vinstra megin EÐA hægra megin, en hvernig getum við gert það báðum megin? Prófaðu að nota "AND" kubbinn til að forrita fallið "on-screen?" (á-skjá), sem athugar hvort Sammi er öruggur vinstra megin (safe-left?) OG öruggur hægra megin (safe-right?)?'
       Sam the Butterfly 5_instruction: 'Frjáls æfing: Vel gert. Nú getur Sammi ekki yfirgefið garðinn til vinstri eða til hægri! Notaðu þessa æfingu til að gera tilraunir með föllin þín og endurbæta "on-screen" fallið frekar.'
       Sam the Butterfly 6_instruction: 'Við höfum bætt við nýjum stika "y" við fallið "á-skjá?". Uppfærðu fallið "á-skjá?" svo það athugi hvort "öruggt-v?" OG " öruggt-h?" OG "öruggt-u?" eru öll sönn. Prófaðu svo fallið með því að reyna að fara út fyrir vinstri, hægri og efri hlið garðsins.'
       Sam the Butterfly 7_instruction: 'Nú þarf að tryggja neðri hliðina! Búðu til fallið "öruggt-n?" og uppfærðu "á-skjá?" fallið svo að það athugi uppi, niðri, vinstri og hægri.'
@@ -1427,7 +1439,7 @@ is:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -1696,22 +1708,22 @@ is:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -1720,7 +1732,7 @@ is:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -1755,7 +1767,7 @@ is:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -1907,8 +1919,9 @@ is:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -2040,14 +2053,14 @@ is:
         full instructions)
       U3L03 choose your own drawing_instruction: 'Nú getur þú valið! Veldu eina af teikningunum þremur sem sýndar eru og reyndu svo að búa hana til. Taktu skynsamlegar ákvarðanir um hvernig er best að skipta verkefninu í endurnýtanleg föll. Þú ferð svo yfir vinnu þína með félaga samkvæmt aðferðum sem lýst er undir "stefjuyfirferð með félaga". GIF: U3L3-ProceduresChooseOne.png'
       U3L03 Creating Procedures 1_instruction: 'Skrifaðu fallið turnAround() og notaðu það til að láta skjaldbökuna hreyfast eins og sýnt er. Sjá: U3L03-turnAndDown.gif'
-      U3L03 Define and use turnAround_instruction: Skrifaðu fallið turnAround() og notaðu það til að láta skjaldbökuna hreyfast eins og sýnt er.
+      U3L03 Define and use turnAround_instruction: Skrifaðu fallið turnAround og notaðu það til að láta skjaldbökuna hreyfast eins og sýnt er. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
         to draw a rectangle, as shown below. (Click to see full instructions)
-      U3L03 Draw a T using turnAround_instruction: Nú færðu fallið turnAround() gefið í kóðanum. Notaðu fallið til að teikna T eins og sýnt er.
-      U3L03 draw diamond_instruction: "Notaðu einhver eða öll föllin, sem þú skrifaðir áður, til að teikna tígullaga form eins og myndin sýnir.\r\r Athugaðu: Þetta er svolítið snúið. Fjórar hliðar tígulsins eru teiknaðar í 3 þrepum með aðrar hreyfingar inn á milli. Vísbending: Það gæti verið gagnlegt að búa til annað fall sem teiknar bara eina hlið tígulsins. "
-      U3L03 Three Steps_instruction: 'Teiknaðu 3 "þrep" upp og til hægri. Taktu eftir mynstrinu í hreyfingunni. Þú ættir að skilgreina fallið drawStep() sem teiknar eitt þrep og kalla svo á það þrisvar til að ná markmiðinu.'
+      U3L03 Draw a T using turnAround_instruction: Teiknaðu plús merki með gefna fallinu turnAround(). (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L03 draw diamond_instruction: Búðu til fallið drawDiamond() (teiknaDemant) sem notar fyrri vinnu þína til að teikna heilan demant. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L03 Three Steps_instruction: Skilgreindu fallið drawSide() (teiknaHlið), sem teiknar þrjú þrep og færir pennann í stöðu fyrir næstu hlið (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L04 - 3 by 3 with functions_instruction: |
         Make the 3x3 square as efficiently
         as you can. (Click to see full instructions)
@@ -2065,13 +2078,13 @@ is:
         Use the parameterized versions of
         the turtle commands to create a triangle with sides 100 pixels long. (Click
         to see full instructions)
-      U3L06 Challenge 2 purple square_instruction: Í þetta sinn ætlum við að læra aðeins um það að breyta penna skjaldbökunnar. Lestu gegnum skjölunina fyrir penWidth() og penColor() og teiknaðu svo fjólubláa ferninginn sem sýndur er.
-      U3L06 Challenge 3 fill pink_instruction: 'Nú skulum við reyna að fylla allan bakgrunn skjásins. Til að gera það auðveldara getum við upplýst að liturinn sem við völdum er einn af 140 litum með heiti. Ef þú þekkir ekki heitin, skaltu lesa skjölunina fyrir penColor(). Vísbending: þú þarft að nota dot().'
-      U3L06 Challenge 4 bullseye_instruction: 'Prófum þetta einu sinni enn. Í þetta sinn eru litirnir EKKI litir með heitum og þú þarft að nota hex-gildi til að stilla litinn. Svo þú sért ekki að giska út í bláinn getum við sagt þér að sérhver litur í myndinni er í eftirfarandi lista: #00ABDC, #CC4400, #1188CC, #006699, #11CC00. Þú gætir giskað rétt ef þú notar það sem þú veist um RGB liti.'
+      U3L06 Challenge 2 purple square_instruction: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður en þú notar þau til að teikna bláa ferninginn.
+      U3L06 Challenge 3 fill pink_instruction: Fylltu bakgrunn skjásins með uppáhalds lit. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 4 bullseye_instruction: Búðu til miðju marksins með hexkóðum lita og fallinu dot(). (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 5 overlapping circles_instruction: Þessi mynd er búin til eingöngu með því að nota dot() og penColor(), en hvernig fáum við hringana svona gegnsæja? Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!
-      U3L06 Challenge 6 squiggles_instruction: 'Næst ætlum við bæta sveigum við teikninguna. Lestu skjölunina fyrir "arc" skipanirnar og teiknaðu svo sveigana eins og sýnt er. Hér er vísbending: allir stikarnir eru margfeldi af 10 og litirnir eru úr eftirfarandi lista yfir nefnda liti: PowderBlue, lightBlue, Indigo, Purple, Magenta.'
-      U3L06 Challenge 7 smiley face_instruction: Til að teikna þennan broskall þarf þú að lesa skjölunina fyrir move() fallið og nota það svo með öðrum skipunum sem þú hefur lært. Þú getur giskað á litina.
-      U3L06 Challenge 8 make your own_instruction: Notaðu tækin sem þú lærðir á í dag til að búa til teikningu eftir eigin höfði. Ef tími er til getur þú skorað á vini þína að reyna að endurgera þína mynd. Við ætlum að sýna þér teikninguna sem við gerðum fyrir okkur. Þú getur reynt að endurgera hana ef þú vilt, annars skaltu bara skemmta þér við að gera þína eigin!
+      U3L06 Challenge 6 squiggles_instruction: 'Lestu skjölunina til skipanirnar "arcLeft" (vinstriBogi) og "arcRight" (hægriBogi) og teiknaðu svo línurnar sem sjást. '
+      U3L06 Challenge 7 smiley face_instruction: Notaðu turnTo() og moveTo() til að hjálpa að teikna broskall. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L06 Challenge 8 make your own_instruction: Búðu til teikningu eftir eigin höfði. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L07 - allSeaGrass_instruction: |
         Add 50 pieces of seagrass to the image by
         writing drawAllSeagrass with a loop. (Click to see full instructions)
@@ -2182,7 +2195,7 @@ is:
       U3L12 Chaser Template_instruction: This is a project template!
       U3L13 - Button with ID_instruction: 'Dragðu hnapp út á skjáinn og settu í hann textann "Sæktu fram!". Keyrðu forritið til að vera viss um að hnappurinn sjáist.'
       U3L13 - Debug Id plus logic problem_instruction: "Síðasta verkefni var dæmi um ritháttarvillu. App smiðjan skildi ekki á hvaða hlut hún ætti að vera að hlusta eftir \"smell\" atviki svo að hún birti villuskilaboð í vinnuglugganum til að segja þér það. Önnur tegund villu er rökvilla - forritið er rétt skrifað, en gerir ekki það sem til er ætlast.\r\n\r\nÞetta forrit hefur 2 villur. Eina (lúmska) ritháttarvillu og eina rökvillu. Finndu þær og lagaðu svo að forritið virki sem skyldi."
-      U3L13 - Debug Id Problem_instruction: Það er eitthvað að þessu forriti! Getur fundið út hvað það er? Keyrðu forritið og athugaðu hvort villuboðin í vinnuglugganum geta hjálpað þér að finna hvað er að. Það er ekki mikill kóði svo ef til vill geturðu fundið út úr því bara með því að lesa hann. Gerðu breytingu svo forritið virki eins og til er ætlast.
+      U3L13 - Debug Id Problem_instruction: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L13 - Debugging 1_instruction: |
         Debug the program by verifying your IDs are
         being referenced properly. (Click to see full instructions)
@@ -2199,7 +2212,7 @@ is:
         Create a "turtle driver" that
         includes buttons to move the turtle forward and turn it left and right. (Click
         to see full instructions)
-      U3L13 - Turtle move with button_instruction: 'Dragðu hnapp út á skjáinn og settu í hann textann "Sæktu fram!". Bættu við atvikastjóra fyrir hnappinn sem lætur skjaldbökuna færast áfram. Keyrðu forritið til að vera viss um að það virki. '
+      U3L13 - Turtle move with button_instruction: Bættu við hnappi sem lætur skjaldbökuna hreyfast. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L13 eventsDetails_instruction: |
         Add an event handler to the button to move
         the turtle forward. (Click to see full instructions)
@@ -2534,7 +2547,7 @@ is:
       U3L2 Using Simple Commands (no tooltips)_instruction: |
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
-      U3L2 Using Simple Commands_instruction: Teiknaðu ferning ofan við og hægra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
+      U3L2 Using Simple Commands_instruction: Teiknaðu 1x1 ferning ofan við og vinstra megin við upphafsstað skjaldbökunnar. Smelltu til að sjá ítarlegar leiðbeiningar.
       U3L23 Chatbot Conditionals 1_instruction: |
         Add if, else if, and else statements
         to detect the movie genres Comedy, Romance, Action, and Horror. (Click to
@@ -2621,8 +2634,8 @@ is:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -2686,7 +2699,42 @@ is:
         activity guide. As you add features to your digital assistant, track them
         on the next level.
       U3L2_Turtle3by3Grid_instruction: Teiknaðu 3x3 grind fyrir ofan og hægra megin við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Skjaldbakan á að enda á upphaflega staðnum og snúa í upphaflega átt. (Smelltu til að sjá ítarlegar leiðbeiningar)
-      U3L2_TurtleSquare_right_instruction: Teiknaðu ferning OFAN VIÐ og HÆGRA megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U3L2_TurtleSquare_right_instruction: Teiknaðu ferning framan við og hægra megin við upphafsstaðinn. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

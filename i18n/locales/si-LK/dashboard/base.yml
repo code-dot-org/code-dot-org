@@ -404,6 +404,9 @@ si:
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: උදව්වක් අවශ්‍යද?
     subtitle: See these videos and hints
@@ -608,7 +611,7 @@ si:
     really_delete: Delete?
     delete_yes: ඔව්
     delete_no: නැහැ
-    saved: Saved
+    saved: ගැලරියට සුරකින් ලදී!
     not_saved: Not saved
     cancel: අවලංගු කරන්න
     delete_confirm_title: Are you sure you want to delete this project?

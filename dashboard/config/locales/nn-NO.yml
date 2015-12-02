@@ -420,7 +420,7 @@
     test_videos_help: Prøv den nye videospelaren på skulen din
     try_beta_courses: Nyheit! Prøv betaversjonar av kursa våre for elevar på barnetrinnet
     use_as_teacher: Bruk denne nettsida som lærar
-    heading_hoc2014: <h2>Kodetimen for</h2><h1>Alle Aldre</h1>
+    heading_hoc2014: <h2>Kodetimen for</h2><h1>Alle aldre</h1>
     heading_elementary: <h2>20-timers kurs for</h2><h1>nybyrjarar (alle aldre)</h1>
     heading_apps: <h2>Moro for</h2><h1>Alle</h1>
     heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>
@@ -459,7 +459,7 @@
     copyright: Opphavsrett
     more: Meir
     feedback: Gi tilbakemelding
-    translate: Hjelpe oss med å omsetje til ditt språk
+    translate: Hjelp oss med å omsetje til ditt språk
     support: Brukarstøtte
     support_url: http://support.code.org/
     tos_short: Vilkår for bruk
@@ -467,11 +467,14 @@
     privacy: Personvern
     secure: Sikker versjon
     report_abuse: Rapporter misbruk
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
     teacher: Sjå løysinga
-    auth_error: Du er ikkje autorisert å sjå løysinga.
+    auth_error: Du er ikkje autorisert til å sjå løysinga.
     submit: Endre startposisjonen for artisten
     direction: Startkurs (i grader)
   video:
@@ -503,8 +506,8 @@
   try_reloading: Last sida på nytt
   next_stage: Ferdig! Fortsett til neste nivå
   download_pdf: Åpne lista over oppgåver
-  lesson_plan: Plan over leksjonar
-  view_lesson_plan: Vis oversyn over leksjonar
+  lesson_plan: Plan over oppgåver
+  view_lesson_plan: Vis oversyn over oppgåver
   pdf_download: Last ned PDF
   download_coming_soon: Nedlastbare aktivitetar kjem snart.
   video_coming_soon: Video kjem snart!
@@ -535,10 +538,10 @@
   upsell:
     hoc:
       title: Kodetimen
-      body: Prøv grunnleggjande i datavitskap. Millionar andre har prøvd.
+      body: Prøv grunnleggjande informatikk. Millionar andre har prøvd.
     flappy:
       title: Flakse-kode
-      body: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen i
+      body: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa i
         Flaksekode!
     20-hour:
       title: Framskunda kurs
@@ -565,9 +568,9 @@
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!
-    picture_count: I løpet av dei siste <b>%{days}</b> dagane har elvevar teikna  <b>%{count}</b>
+    picture_count: I løpet av dei siste <b>%{days}</b> dagane har elevar teikna <b>%{count}</b>
       bilder ved å skrive sine eigne dataprogram. Klikk på bilda for å sjå kvart program
-      køyre!
+      køyre.
     activity_count: De siste <b>%{days}</b> dagane har elevar laga <b>%{count}</b>
       apps og bilder ved å skrive sine egne program. Klikk på bilda og skjermbilda
       for å sjå kvart program i aksjon.
@@ -647,7 +650,7 @@
           description: ''
         flappy:
           title: Flakse-kode
-          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen
+          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa
             i Flaksekode!
         jigsaw:
           title: Puslespill
@@ -721,7 +724,7 @@
         for bruk</a> og kan ikkje bli delt med andre.
       contact_us: Om du trur dette er ein feil, kan du <a href='https://code.org/contact'>kontakte
         oss.</a>
-      go_to_code_studio: Gå til kodestudioet
+      go_to_code_studio: Gå til Code Studio
       report_abuse_form:
         intro: Om du har funne støytande innhald, truslar, nettmobbing, trakassering
           eller brot på opphavsretten for innhald du eig medan du har brukt appar

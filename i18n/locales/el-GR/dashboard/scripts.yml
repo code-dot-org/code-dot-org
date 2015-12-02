@@ -1348,6 +1348,10 @@ el:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1458,12 +1462,12 @@ el:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα'
+          title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           Hour of Code 2015: Ώρα του Κώδικα 2015
         starwarsblocks:
-          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα'
+          title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           Hour of Code 2015: Ώρα του Κώδικα 2015

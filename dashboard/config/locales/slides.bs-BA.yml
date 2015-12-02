@@ -3,353 +3,351 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Welcome to your first hour of code! Let's dive right into your first
-          taste of programming.
+        text: Dobrodošao/la na svoj prvi sat kodiranja! Hajde da se bacimo na tvoje
+          prvo iskustvo programiranja.
       2:
         image: notes/hoc1_2.jpg
-        text: We'll be using Blockly, a visual programming language where you drag
-          and drop blocks to write code.
+        text: Koristićemo Blockly, vizuelni programski jezik u kojem se vuku i spuštaju
+          blokovi koji čine programski kod.
       3:
         image: notes/hoc1_3.jpg
-        text: Most code is typed, but Blockly is visual. Each blocks corresponds to
-          a line of "real" code.
+        text: Programski kodovi se uglavnom pišu, ali Blockly je vizuelan. Svaki blok
+          odgovara jednoj liniji "stvarnog" koda.
       4:
         image: notes/hoc1_4.jpg
-        text: You'll learn the foundations of computer science, concepts which are
-          used anywhere from making apps to controlling the Mars rover.
+        text: Naučiti ćeš osnove računarstva, pojmove koji se koriste od pravljenja
+          aplikacija do kontrole robotskog vozila na Marsu.
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: Program sačinjava niz naredbi koje tvoj kompjuter redom izvršava.
       6:
         image: notes/hoc1_6.jpg
-        text: The goal of your first program is to get an Angry Bird through a maze
-          to hit a Green Pig.
+        text: Cilj tvog prvog programa je da provedeš Ljutu Pticu kroz labirint i
+          udari Zelenu Svinju.
       7:
         image: notes/hoc1_7.jpg
-        text: The left side is the maze where your program is run. The instructions
-          for each puzzle are below the maze.
+        text: Na lijevoj strani je labirint gdje se tvoj program izvršava. Upute za
+          svaki zadatak se nalaze ispod labirinta.
       8:
         image: notes/hoc1_8.jpg
-        text: The middle toolbox has the commands for the Angry Bird. You'll use these
-          to build your code.
+        text: Središnja alatna traka sadrži komande za Ljutu Pticu. Ove komande ćeš
+          koristiti za pisanje svog koda.
       9:
         image: notes/hoc1_9.jpg
-        text: On the right is your workspace where you'll drag blocks from the toolbox
-          to build your program. To delete a block, drag it to the trash in the corner.
+        text: Na desnoj strani je tvoja radna površina u koju ćeš za pravljene tvog
+          programa dovlačiti blokove iz alatne trake. Za brisanje određenog bloka,
+          odvuci ga u kantu smeća u uglu.
       10:
         image: notes/hoc1_10.jpg
-        text: Each block is one instruction. If you drag a "move forward" block to
-          your workspace and press "Run Program", the bird moves one space on the
-          maze.
+        text: Svaki blok je jedna naredba. Ako dovučeš "idi naprijed" blok na tvoju
+          radnu površinu i pritisneš "Pokreni Program", ptica će se pomaknuti za jedno
+          mjesto u labirintu.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: Da bi odradio/la više od jedne akcije, možeš dovući mnogo blokova na
+          tvoju radnu površinu i spojiti ih zajedno. Ptica će izvršavati naredbe of
+          vrha prema dnu.
       12:
         image: notes/hoc1_12.jpg
-        text: If you run a program and want to fix it and try again, press the "Reset"
-          button.
+        text: Ako pokreneš svoj program i želiš ga popraviti i probati ponovo, pritisni
+          dugme "Resetuj".
       13:
         image: notes/hoc1_13.jpg
-        text: Let's go get those pigs!
+        text: Hajde da sredimo ove svinje!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
+        text: Zdravo, ja sam JR! Svaki trkaći tim automobila treba informatičare za
+          pobjedu. Oni analiziraju podatke iz automobila da bi ga ubrzali.
       2:
         image: notes/stage5_2.jpg
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
+        text: U ovim zadacima ćeš biti umjetnik koji će crtati linije iza sebe gdje
+          god da ide.
       3:
         image: notes/stage5_3.jpg
-        text: This block says "move forward by 100 pixels." Pixels are just really
-          tiny dots on your screen.
+        text: Ovaj blok kaže "idi naprijed za 100 piksela". Pikseli su zapravo sićušne
+          tačke na tvom ekranu.
       4:
         image: notes/stage5_4.jpg
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
+        text: Ovaj blok kaže "okreni desno za 90 stepeni.". Ova komanda će okrenuti
+          tvog umjetnika za isti ugao kao i "okreni" blokovi u zadatku sa labirintom.
       5:
         image: notes/stage5_5.jpg
-        text: Click on the arrow in either of these blocks to change the amount the
-          artist moves forward or turns. Play around to get familiar with these new
-          blocks.
+        text: Klikni na strelicu u bilo kojem od ovih blokova da promijeniš za koliko
+          se umjetnik kreće naprijed ili se okreće. Poigraj se malo da bi se upoznao
+          sa ovim novim blokovima.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hi, I'm Paola! In these puzzles, you're a farmer who has to get her
-          field completely flat to start planting crops.
+        text: Zdravo, ja sam Paola! U ovim zadacima, biti ćeš farmer koji mora potpuno
+          poravnati svoje polje da bi mogao početi sijati usjeve.
       2:
         image: notes/stage9_2.jpg
-        text: You have to help her remove all the piles of dirt and fill in all the
-          holes.
+        text: Moraš joj pomoći ukloniti sve hrpe zemlje i popuniti sve rupe.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: Novi blokovi uklanjaju jednu lopatu zemlje iz hrpe i pune jednu lopatu
+          zemlje u rupe.
       4:
         image: notes/stage9_4.jpg
-        text: The piles and holes are different sizes, so you have to tell the farmer
-          how many shovelfuls to use.
+        text: Hrpe i rupe su različite veličine, tako moraš reći farmeru koliko lopata
+          mora koristiti.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: Zdravo, ja sam Katie! Jedna od najuzbudljivijih stvari u računarstvu
+          je da kompjuterski program može biti interaktivan.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Kada god netko pritisne ili dotakne tipku na kompjuteru ili telefonu,
+          to stvara DOGAĐAJ, i određeni kod odlučuje što napraviti kad se dogodi DOGAĐAJ.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'Na primjer, možeš imati UPRAVITELJA DOGAĐAJA koji kaže "kad se klikne
+          miš, pusti zvuk" '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: Jesi ikad čuo/la za igricu FlappyBird? Koristeći upravitelje Događajima,
+          naučit ćemo kako programirati našu vlastitu verziju igrice FlappyBird!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: Kod koji ćeš napisati uključuje povlačenje i ispuštanje blokova koji
+          predstavljaju naredbe za kompjuter. Zapravo, svaki od ovih blokova predstavlja
+          pravi kod.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'Ako pogledaš radnu površinu, vidjeti ćeš zelene blokove koji su već
+          popunjeni - to su "upravitelji događajima" '
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: Ako želiš da ptica MAHNE kad KLIKNEŠ mišem, možeš to ostvariti tako
+          da prikačiš blok "MAHNI" na odgovarajući upravitelj događajima. Tada će
+          u tvojoj igri kad god klikneš mišem ptica mahnuti krilima.
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: U svakom ćemo zadatku ove aktivnosti uvesti novi tip događaja u obliku
+          zelenog bloka na radnoj površini. Ti ćeš odlučiti koji su odgovarajući blokovi
+          i dodati ih kao odgovore na te događaje.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: Kada vidiš strelicu padajućeg izbornika poput ove, to znači da možeš
+          mijenjati postavke - recimo kao koji zvuk se treba čuti kada ptica padne
+          na zemlju.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: U zadnjem zadatku ćeš moći napraviti vlastitu igricu i podijeliti je
+          sa svojim prijateljima. Uživaj!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer
-          to repeat any set of actions over and over, thousands or even billions of
-          times.
+        text: Zdravo, ja sam Mark. Naučimo sada petlje. Koristeći petlje možeš reći
+          kompjuteru da ponavlja bilo koju grupu radnji iznova i iznova, hiljadu ili
+          čak milijardu puta.
       2:
         image: notes/hoc2_2.jpg
-        text: In this puzzle, we want to make the bird move forward 5 spaces to get
-          to the pig.
+        text: U ovom zadatku želimo da se ptica pomakne naprijed za 5 mjesta da bi
+          došla do svinje.
       3:
         image: notes/hoc2_3.jpg
-        text: We can use the new "repeat" block to help us out.
+        text: Za pomoć možemo koristiti novi "ponovi" blok.
       4:
         image: notes/hoc2_4.jpg
-        text: Instead of dragging out 5 "move forward" blocks...
+        text: Umjesto korištenja 5 "idi naprijed" blokova...
       5:
         image: notes/hoc2_5.jpg
-        text: We can put the "move forward" block inside the "repeat" block and write
-          a number in the block to tell it how many times to repeat.
+        text: Možemo staviti blok "idi naprijed" unutar bloka "ponovi" i upisati broj
+          koji kaže koliko se puta to treba ponoviti.
       6:
         image: notes/hoc2_6.jpg
-        text: 'And this is important: you can put more than one command inside a "repeat"
-          block.'
+        text: 'I ovo je važno: moguće je umetnuti više od jedne naredbe u blok "ponovi".'
       7:
         image: notes/hoc2_7.jpg
-        text: Enjoy using your new "repeat" block!
+        text: Uživaj koristeći novi blok "ponovi"!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
-          to study Computer Science. Let's try our new block, the "repeat until" block.
+        text: Zdravo, ja sam Chris. Prije dolaska u Miami Heat, išao sam na Georgia
+          Tech na studij računarstva. Isprobajmo naš novi blok "ponavljaj dok".
       2:
         image: notes/hoc3_2.jpg
-        text: What if we didn't know how far the bird had to move to get to the pig?
+        text: Što da nismo znali koliko daleko ptica treba ići dok ne dođe do svinje?
       3:
         image: notes/hoc3_3.jpg
-        text: If we put a "move forward" block inside the "repeat until" block, the
-          bird will move forward UNTIL it reaches the pig (or crashes into a wall).
+        text: Ako stavimo blok "idi naprijed" unutar bloka "ponavljaj dok ne bude",
+          ptica će se kretati naprijed DOK NE stigne do svinje (ili ne udari u zid).
       4:
         image: notes/hoc3_4.jpg
-        text: 'And this is important: just like before, we can put multiple blocks
-          inside the "repeat until" block, and they will all be repeated.'
+        text: 'I ovo je važno: baš kao i prije, možemo staviti više blokova unutar
+          bloka "ponavljaj dok ne bude" i oni će se svi ponavljati.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Hi, I''m Bill! Let''s learn a new fundamental concept: "If" statements.
-          This is how computers make decisions.'
+        text: 'Zdravo, ja sam Bill! Hajde da naučimo novi osnovni pojam: naredbu "Ako".
+          To je način na koji računala donose odluke.'
       2:
         image: notes/hoc4_2.jpg
-        text: You use "If" statements yourself everday. Before you go outside each
-          morning, you say IF it's raining outside, I need to wear my jacket.
+        text: '"Ako" naredbu koristiš svakodnevno. Svako jutro prije nego izađeš iz
+          kuće kažeš: AKO vani pada kiša, moram obući jaknu.'
       3:
         image: notes/hoc4_3.jpg
-        text: We can tell the zombie to check IF there's path to the left, and if
-          he finds a path to the left, we can have him turn in that direction.
+        text: Možemo reći zombiju da provjeri ima li staze s lijeve strane, a AKO
+          nađe stazu lijevo, možemo ga okrenuti u tom smjeru.
       4:
         image: notes/hoc4_4.jpg
-        text: To write the code for this, let's drag out our "if" block and put a
-          "turn left" block inside it.
+        text: Da bismo napisali kôd za to, dovucimo blok "ako" i stavimo blok "okreni
+          lijevo" unutar njega.
       5:
         image: notes/hoc4_5.jpg
-        text: Now, if we put a "move forward" block above it and a "repeat" block
-          around everything, each time the zombie moves, he'll check if there's a
-          path to the left and turn. The "repeat" command is critical, to check for
-          a turn at every step.
+        text: Sada, ako stavimo blok "idi naprijed" iznad njega i blok "ponovi" oko
+          svega toga, svaki put kad se zombi pomakne, provjeriti će postoji li staza
+          lijevo i okrenuti se. Naredba "ponovi" je veoma važna kojom zombi nakon
+          svakog koraka provjeri treba li se okrenuti.
       6:
         image: notes/hoc4_6.jpg
-        text: If statements are really important in computer science. One of the first
-          programs I wrote was a tic-tac-toe game, and there was a If statement that
-          said IF the other person is about to win, block the spot that lets them
-          win.
+        text: '"Ako" naredbe su veoma važne u računarstvu. Jedan od prvih programa
+          koji sam napisao je bila igra iks-oks. Tu je bila ta naredba koja je rekla:
+          AKO je protivnik blizu pobjede, blokiraj kvadratić koji bi mu donijeo pobjedu.'
       7:
         image: notes/hoc4_7.jpg
-        text: Have fun using the "if" block!
+        text: Zabavi se koristeći "ako" blok!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: Zdravo, zovem se Saloni. Koristim kompjutere pri rješavanju problema
+          zdravlja i medicine. Hajdemo proučiti "ako-inače" blok. Izgleda kao "ako"
+          blok, ali ima dodatni dio na kraju koji kaže "inače".
       2:
         image: notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: Ako stavim blok "idi naprijed" na mjesto koje kaže "radi" i ako stavim
+          blok "okreni lijevo" gdje kaže "inače" to znači da će zombi odabrati između
+          dvije mogućnosti. AKO je staza ispred njega, nastaviti će ići ravno, a INAČE
+          (ako nema staze ispred njega) okrenuti će lijevo.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: Poput "ako" bloka, možemo staviti "ako-inače" blok unutar bloka "ponovi".
+          Tako će se zombi nastaviti kretati, a zbog "ako-inače" bloka će i dalje
+          provjeravati treba li se okrenuti.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Stavimo te zombije tamo gdje pripadaju!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: Naredba "ako-inače" pravi odluku između dvije stvari. Hajdemo pogledati
+          kako je možemo koristiti s našim prijateljem vjevericom Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Ovaj blok izgleda isto kao i blok "ako", ali ima dodatni dio na dnu
+          koji kaže "inače". Ako stavim blok "idi naprijed" tamo gdje kaže "uradi",
+          a blok "okreni lijevo" u "inače", to znači da će vjeverica Scrat ići naprijed
+          ako ima staze ispred njega. Ako nema staze ispred njega, Scrat će se okrenuti
+          lijevo.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: To je donošenje odluke i izvođenje jedne od dvije radnji ovisno o toj
+          odluci. Isto kao i s blokom "ako", možeš staviti blok "ako-inače" unutar
+          "ponovi" blokova.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Hajdemo sada pomoći Scratu da dobije taj žir!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Hi, I'm Brina, an engineer at Instagram. A function is certain lines
-          of code that you want to use over and over again, so instead of writing
-          that code out everytime, you can just use one block.
+        text: Zdravo, ja sam Brina, inžinjerka u Instagramu. Funkcija je određeni
+          niz linija koda koje želiš koristiti iznova i iznova, pa umjesto da svaki
+          put pišeš isti kôd, možeš jednostavno koristiti samo jedan blok.
       2:
         image: notes/stage13_2.jpg
-        text: We're going to learn how to define functions. Function definitions have
-          a star in the corner. The name of the function is written on the top line.
+        text: Sada ćemo naučiti kako definirati funkcije. Definicije funkcija imaju
+          zvjezdicu u uglu. Ime funkcije se piše u najgornjem redu.
       3:
         image: notes/stage13_3.jpg
-        text: The blocks that go inside the definition tell us what it does. So this
-          function definition is called "fill 5" and it's made up of a "repeat" block
-          and a "fill" block.
+        text: Blokovi koje stavljamo unutar definicije kažu nam što ona radi. Tako
+          se ova funkcija zove "ispuni 5" i napravljena je od bloka "ponovi" i bloka
+          "ispuni".
       4:
         image: notes/stage13_4.jpg
-        text: The definition sits on the workspace, but our farmer won't run the function
-          until we drag out our "fill 5" function block from functions category.
+        text: Definicija se nalazi na radnoj površini, ali naš farmer neće izvršiti
+          funkciju sve dok ne dovučemo funkcijski blok "ispuni 5" iz kategorije funkcija.
       5:
         image: notes/stage13_5.jpg
-        text: 'Let''s put the "fun" back in "FUNction!" '
+        text: Zabavimo se sa funkcijama!
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+        text: Zdravo, ja sam Makinde! Hajdemo proučiti "dok" blok.
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: Blok "dok" će raditi sve ono što ti staviš unutar njega SVE DOK izraz
+          na vrhu ima vrijednost ISTINITO.
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: Na primjer, ako farmer stoji na hrpi zemlje, uklanjat će po 1 lopatu
+          zemlje DOK god ispod postoji hrpa.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
+        text: Zdravo, ja sam Trina. Radim za Pixar. Radila sam na mnoštvu filmova,
+          uključujući Shrek-a.
       2:
         image: notes/stage11_2.jpg
-        text: This is our new "counter" loop. It will perform actions over and over
-          again and you can make the actions change slightly each time.
+        text: Ovo je naša nova "brojač" petlja. Ona će ponavljati izvođenje naredbi,
+          a ti možeš napraviti da se akcije svaki put malo izmijene.
       3:
         image: notes/stage11_3.jpg
-        text: In this example, our "counter" loop says "count with counter from 50
-          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
-          "counter" block from the "Variables" section into the "length" spot.
+        text: U ovom primjeru, "brojač" petlja kaže "broji s brojačem od 50 do 90
+          sa pomakom 10", a unutar nje imamo poznati blok "nacrtaj kvadrat". Dovuci
+          blok "brojač" iz grupe "Varijable" na mjesto "dužina".
       4:
         image: notes/stage11_4.jpg
-        text: This means our artist is going to draw a square that has 50 pixel length
-          sides, then it will add 10 to that and draw a square with 60 pixel length
-          sides. Then it will keep adding 10 and drawing squares until it reaches
-          90. So we'll have squares of 50, 60, 70, 80, and 90.
+        text: To znači da će naš umjetnik nacrtati kvadrat sa stranicama dužine 50,
+          zatim će dodati 10 na to i nacrtati kvadrat sa stranicama dužine 60. Potom
+          će nastaviti dodavati po 10 i crtati kvadrate dok ne dođe do 90. Tako ćemo
+          imati kvadrate sa stranicama od 50, 60, 70, 80 i 90 piksela.
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+        text: Zdravo ja sam Janete, i ja sam inžinjer u Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths
-          be different sizes?
+        text: Što ako želimo nacrtati nekoliko trokutova sa stranicama različitih
+          dužina?
       3:
         image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with
-          parameters.
+        text: Možemo napisati sav taj kôd ručno ili možemo koristiti funkciju s parametrima.
       4:
         image: notes/stage15_4.jpg
-        text: To do this, click the blue star on the "draw a triangle" function definition.
-          Then drag "input name" into the "input" block.
+        text: Da bi to napravio/la, klikni na plavu zvjezdicu na definiciji funkcije
+          "nacrtaj trokut". Zatim dovuci "ime unosa" u blok "unos".
       5:
         image: notes/stage15_5.jpg
-        text: Then if you write "length" in the spot where it says "x" and press "Enter"
-          you'll create a length input for your function.
+        text: Zatim kad napišeš "dužina" na mjesto gdje piše "x" i pritisneš "Enter",
+          napraviti ćeš unos dužine za svoju funkciju.
       6:
         image: notes/stage15_6.jpg
-        text: Then click on the star. Now, you want to click on the variables category
-          and drag the "length" block into the "move forward" block of your function
-          definition. And drag away the old number block.
+        text: Zatim klikni na zvjezdicu. Sada trebaš kliknuti na varijable kategoriju
+          i dovući blok "dužina" u blok "idi naprijed" u svojoj definiciji funkcije.
+          Također, odvuci stari blok broja.
       7:
         image: notes/stage15_7.jpg
-        text: To use your function with parameters, click on the functions category
-          and drag out your "draw a triangle with length" function.
+        text: Da bi koristio/la svoju funkciju s parametrima, klikni na funkcije kategoriju
+          i izvuci svoju funkciju "nacrtaj trokut s dužinom".
       8:
         image: notes/stage15_8.jpg
-        text: Now you can use the math block to input different numbers to draw triangles
-          of different sizes.
+        text: Sad možeš koristiti matematički blok da uneseš različite brojeve za
+          crtanje trokutova raznih veličina.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Congratulations! With the last puzzle you solved, you just wrote code
-          that can tell ANY robot how to find it's way through a non-branching maze
-          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
-          even a self-driving car.
+        text: Čestitamo! U posljednjem riješenom zadatku si napisao/la kôd kojim možeš
+          BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez grananja puteva
+          ili tunela bilo koje dužine, bez obzira radi li se o zombiju, ptici, svemirskom
+          vozilu ili čak samovozećem automobilu.
       2:
         image: notes/hoc6_2.jpg
-        text: The basic concepts you used are at the heart of every program or app
-          you'll ever try.  We learned about repeat loops, repeat until statements,
-          if statements, and if else statements.
+        text: Osnovni pojmovi koje si koristio/la se nalaze u srcu svake aplikacije
+          koju ćeš ikada isprobati. Učili smo o petljama "ponovi", "ponavljaj dok
+          ne bude", naredbama "ako" i "ako-inače".
       3:
         image: notes/hoc6_3.jpg
         text: If you liked your first hour of code, visit code.org to continue your

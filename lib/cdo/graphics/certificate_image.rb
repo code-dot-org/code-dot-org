@@ -1,4 +1,8 @@
+# Utility methods for generating certificate images.
+# Note: requires pegasus_dir to be in scope.
+
 require 'rmagick'
+require_relative '../script_constants'
 
 def create_certificate_image2(image_path, name, params={})
   name = name.to_s.gsub(/@/,'\@').strip
@@ -24,18 +28,22 @@ def create_certificate_image2(image_path, name, params={})
   background
 end
 
-def create_course_certificate_image(name, course=nil, sponsor=nil)
+def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
 
-  if course == '20hours' || course == 'hoc' || course == '20-hour' || course == 'hourofcode' || course == 'starwars'
-    # only need to fill in name
-    image_file = (course == '20hours' || course == '20-hour') ? '20hours_certificate.jpg' : 'hour_of_code_certificate.jpg'
-    vertical_offset = course == '20hours' || course == '20-hour' ? -115 : -110
-    image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file), name, y: vertical_offset)
+  course ||= ScriptConstants::HOC_NAME
+
+  template_file = certificate_template_for(course)
+
+  if prefilled_title_course?(course)
+    # only need to fill in student name
+    vertical_offset = course == '20-hour' ? -115 : -110
+    image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file), name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
-    image_file = 'blank_certificate.png'
-    image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file)).first
+    course_title ||= fallback_course_title_for(course)
+
+    image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)).first
 
     # student name
     name_vertical_offset = 445
@@ -48,33 +56,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
       self.fill = 'rgb(118,101,160)' # purple
     end
 
-    # Take course name and convert it to a nicer full course name for the certificate
-    case course
-      when nil
-        full_course_name = ''
-      when 'artist'
-        full_course_name = 'Artist'
-      when 'course1'
-        full_course_name = 'Course 1'
-      when 'course2'
-        full_course_name = 'Course 2'
-      when 'course3'
-        full_course_name = 'Course 3'
-      when 'course4'
-        full_course_name = 'Course 4'
-      when 'frozen'
-        full_course_name = 'Frozen'
-      when 'playlab'
-        full_course_name = 'Play Lab'
-      when 'flappy'
-        full_course_name = 'Flappy Bird'
-      else
-        full_course_name = course
-    end
-
-    # course name
     course_vertical_offset = 610
-    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, full_course_name) do
+    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, course_title) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 60
       self.font_family = 'Helvetica'
@@ -101,9 +84,47 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
   image
 end
 
+def prefilled_title_course?(course)
+  ScriptConstants.hoc?(course) || ScriptConstants.twenty_hour?(course)
+end
+
+# Specify a fallback certificate title for a given non-HoC course ID. As of HoC
+# 2015 this fallback mapping is only ever hit on bulk /certificates pages.
+def fallback_course_title_for(course)
+  case course
+    when ScriptConstants::ARTIST_NAME
+      'Artist'
+    when ScriptConstants::COURSE1_NAME
+      'Course 1'
+    when ScriptConstants::COURSE2_NAME
+      'Course 2'
+    when ScriptConstants::COURSE3_NAME
+      'Course 3'
+    when ScriptConstants::COURSE4_NAME
+      'Course 4'
+    else
+      course
+  end
+end
+
+def certificate_template_for(course)
+  if ScriptConstants.hoc?(course)
+    if ScriptConstants.minecraft?(course)
+      'MC_Hour_Of_Code_Certificate.jpg'
+    else
+      'hour_of_code_certificate.jpg'
+    end
+  elsif ScriptConstants.twenty_hour?(course)
+    '20hours_certificate.jpg'
+  else
+    'blank_certificate.png'
+  end
+end
+
 # generate a url for a certificate image, given options:
 #   name: student name
-#   course: '20hours', 'hoc' or the course title
+#   course: course name
+#   course_title: course title
 #   sponsor: (optional)
 def certificate_image_url(opts = {})
   encoded = Base64.urlsafe_encode64(JSON.pretty_generate(opts))

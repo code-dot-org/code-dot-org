@@ -452,7 +452,8 @@
       Twitter, та багатьох інших, які допомогли створити ці матеріали.
     help_from_html_old: Інженери Google, Microsoft, Facebook та Twitter допомогли
       створити цей підручник.
-    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Всі права
+      захищені.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
       Всі права захищені.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
       Всі права захищені.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century
       Fox. Всі права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
@@ -475,6 +476,9 @@
     privacy: Політика конфіденційності
     secure: Безпечна версія
     report_abuse: Повідомити про порушення
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки

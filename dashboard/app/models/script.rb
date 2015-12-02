@@ -19,8 +19,12 @@
 #  index_scripts_on_wrapup_video_id  (wrapup_video_id)
 #
 
+require 'cdo/script_constants'
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
+  include ScriptConstants
+
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
@@ -35,27 +39,6 @@ class Script < ActiveRecord::Base
   include SerializedProperties
 
   serialized_attrs %w(pd admin_required)
-
-  # Names used throughout the code
-  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
-  EDIT_CODE_NAME = 'edit-code'
-  TWENTY_FOURTEEN_NAME = 'events'
-  JIGSAW_NAME = 'jigsaw'
-  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  STARWARS_NAME = 'starwars'
-  MINECRAFT_NAME = 'mc'
-  STARWARS_BLOCKS_NAME = 'starwarsblocks'
-  FROZEN_NAME = 'frozen'
-  PLAYLAB_NAME = 'playlab'
-  INFINITY_NAME = 'infinity'
-  ARTIST_NAME = 'artist'
-  ALGEBRA_NAME = 'algebra'
-  FLAPPY_NAME = 'flappy'
-  TWENTY_HOUR_NAME = '20-hour'
-  COURSE1_NAME = 'course1'
-  COURSE2_NAME = 'course2'
-  COURSE3_NAME = 'course3'
-  COURSE4_NAME = 'course4'
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -178,6 +161,7 @@ class Script < ActiveRecord::Base
     @@level_cache ||= {}.tap do |cache|
       script_level_cache.values.each do |script_level|
         level = script_level.level
+        next unless level
         cache[level.id] = level unless cache.has_key? level.id
       end
     end
@@ -244,17 +228,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    self.name == TWENTY_HOUR_NAME
+    ScriptConstants.twenty_hour?(self.name)
   end
 
   def hoc?
-    # Note that now multiple scripts can be an 'hour of code' script.
-    # If adding a script here, you must also update the Data_HocTutorials gsheet so the end of script API works
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME, STARWARS_NAME, STARWARS_BLOCKS_NAME, MINECRAFT_NAME].include? self.name
+    ScriptConstants.hoc?(self.name)
   end
 
   def flappy?
-    self.name == FLAPPY_NAME
+    ScriptConstants.flappy?(self.name)
+  end
+
+  def minecraft?
+    ScriptConstants.minecraft?(self.name)
   end
 
   def find_script_level(level_id)

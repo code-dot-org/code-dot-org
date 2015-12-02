@@ -694,7 +694,7 @@ ro:
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: 'Aceasta lectie este numita "Programarea graficului de hartie" si este vorba despre algoritmi. Astazi vom invata cum sa scriem programe care arata unul celuilalt cum sa recreezi imagini albe si negre, folosind doar sagetile trase de mana.'
+        text: 'Aceasta lectie este numita "Programarea graficului de hartie" si este numai despre algoritmi. Astazi vom invata cum sa scriem programe care arata unul celuilalt cum sa recreeze imagini alb-negru, folosind doar sagetile trase de mana.'
       2:
         image: notes/C2_graph_paper_2.png
         text: Un algoritm este o listă de instrucțiuni cu scopul de a completa o sarcină. Vom respecta acest set de instrucțiuni pentru a face castronul. Algoritmii sunt foarte utili când ai nevoie ca altcineva să ințeleagă cum să facă ceva.
@@ -1245,98 +1245,98 @@ ro:
         text: Cand, in sfarsit, am invatat putina programare, peretele acela alb s-a transformat intr-o serie de usi si le deschizi, si bineinteles, ceea ce gasesti in spatele lor este un alt hol plin de usi. Programarea este usoara si distractiva. Poti sa face orice vrea mintea ta sa faca. In final ajungi sa deschizi destule usi ca sa se faca lumina. Pentru mine, o programare finalizata e ca o structura plina de lumina. Toate colturile sunt luminate. Numarul de oameni pe care ii poti atinge si cu care poti interactiona este ceva ce lumea nu a mai cunoscut.
       4:
         image: notes/unplug1_4.png
-        text: "Our first lesson in this series is all about what computer science is, what a computer scientist does and how you can be more responsible in your use of technology. It's a very important lesson but it is a little text-heavy. At the end, you get to make your very own customized encoding using your initials. It's a fun activity and it's very empowering because binary is one of those things that feels very technical but once you understand it, it's like you speak a secret language."
+        text: Prima lectie din aceasta serie este despre ce este informatica, ce face un informatician si cum poti fi mai responsabil in utilizarea tehnologiei. Este o lectie foarte importanta dar este mai mult narativa. La final, poti sa iti faci propria codare customizata folosing initialele tale. Este o activitate distractiva si este foarte importanta pentru ca binarul este unul din acele lucruri care par a fi foarte tehnice, dar odata ce il intelegi, e ca si cum ai vorbi o limba secreta.
     unplug2:
       1:
         image: notes/unplug2_1.png
         text: Lectia de gandire computationala este destinata pentru a invata cum sa faci fata unei probleme mari, dificile si cum sa o desfaci in mai multe probleme simple. Scopul acestei lectie este scrierea unui set de instructiuni pe care cineva il poate urma pentru a desena unul din monstrii inclusi in planul lectiei.
       2:
         image: notes/unplug2_2.png
-        text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
+        text: 'Stundetii se vor imparti in echipe si vor scrie instructiuni, apoi vor face schimb cu un alt grup care va trebui sa deseneze monstrul. Grupurile vor trebui sa scrie instructiuni folosind cei patru pasi ai gandirii computationale: descompunerea, locatia model, scaderea si algoritmi.'
       3:
         image: notes/unplug2_3.png
-        text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
+        text: Primele grupuri vor descompune sarcina adica sa faca un plan de joc. Apoi, vor cauta sabloane printre monstrii din catalog. Cand vor gasi diferente intre monstri, le vor elimina. De exemplu, un monstru din catalog are ochi vegitas iar altul are ochi spritem. Dar amandoi au ochi deci putem scrie o linie in care sa spunem sa ambii monstii au ochi goi.
       4:
         image: notes/unplug2_4.png
-        text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."
+        text: Astfel elevii vor fi capabili sa scrie un set de instructiuni, numit algoritm, care sa noteze partile monstrilor cu campuri goale pentru cum ar trebui sa fie stilurile. Acest set de instructiuni o sa le trasmita altui elev pentru a recrea monstrul lor.
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: In programarea pe hartie grafica, explicam cum functioneaza codarea in incercarea de a-i ajuta pe oameni sa recreeze desene folosind numai sagetile si schite. unei persoane i se da un desen mic pe hartie grafica iar ea trebuie sa foloseasca numai anumite sageti si sa descrie felul in care se poate recrea acel desen.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one square forward, one square backward, move one square up, move one square down, change to next color, and fill in your square with color. Once we have that coded up, we can hand it off to another person who can read the code and try and recreate the picture.'
+        text: 'In aceasta activitate, singurele simboluri pe care le poti folosi sunt: "muta un patrat in fata", "muta un patrat in spate", "muta un patrat in sus", "muta un patrat in jos", " schimba catre culoarea urmatoare" si "umple patratul cu culoare". Odata ce acestea au fost codate, putem sa predam altei persoane care poate citi codarea si sa incerce sa recreeze desenul.'
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: In programarea pe hartie grafica, explicam cum functioneaza codarea in incercarea de a-i ajuta pe oameni sa recreeze desene folosind numai sagetile si schite. unei persoane i se da un desen mic pe hartie grafica iar ea trebuie sa foloseasca numai anumite sageti si sa descrie felul in care se poate recrea acel desen.
       2:
         image: notes/unplug4_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: In a doua jumatate a activitatii, intrebam elevii in cate moduri diferite se poate impaturi o bucata de hartie ca sa formeze saisprezece dreptunghiuri identice. Apoi veti discuta cum solutiile multiple pot sa conduca catre acelasi rezultat final si de ce anumite solutii sunt mai potrivite in anumite situatii.
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: In programarea pe hartie grafica, explicam cum functioneaza codarea in incercarea de a-i ajuta pe oameni sa recreeze desene folosind numai sagetile si schite. unei persoane i se da un desen mic pe hartie grafica iar ea trebuie sa foloseasca numai anumite sageti si sa descrie felul in care se poate recrea acel desen.
       2:
         image: notes/unplug5_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: In a doua jumatate a activitatii, intrebam elevii in cate moduri diferite se poate impaturi o bucata de hartie ca sa formeze saisprezece dreptunghiuri identice. Apoi veti discuta cum solutiile multiple pot sa conduca catre acelasi rezultat final si de ce anumite solutii sunt mai potrivite in anumite situatii.
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: "This activity is called coding with cards and it's great for any age. Like you learned with the if statements in earlier lessons,  during Blockly, if statements have a piece about them you have to evaluate to find out if it's true or false. That's the conditional and it can be used in lots of different ways."
+        text: 'Aceasta activitate se numeste codare cu carduri si este potrivita pentru orice varsta. Asa cum ai invatat in lectiile anterioare declaratia "if", in timpul Blockly, declaratia "if" are o componenta pe care trebuie sa o evaluezi pentru a afla daca este adevarata sau falsa. Asta este conditionalul si poate fi folosit in diverse moduri.'
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run using a random draw of playing cards. You might have an if statement that says something like if the card you draw is greater than 8, you get a point. Otherwise, your opponent gets a point. You can make it as simple or as complicated as you feel comfortable.
+        text: 'Profitam de aceasta prin crearea de programe pe hartie pe care poti sa le rulezi folosind o extragere oarecare cu carti de joc. Este posibil sa ai o declaratie:"if" care spune ca daca acea carte pe care o alegi este mai mare de 8, primesti un punct. Altfel, oponentul tau primeste punctul. Poti sa faci asta oricat de simplu sau de complicat iti este tie confortabil.'
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: "You know how when you look up the lyrics for a song and they define the chorus at the very beginning and then for the rest of the song, they just refer you back to the chorus? That's how you call a function."
+        text: Stii atunci cand te uiti peste versurile unei melodii, iar cel care le-a scris defineste refrenul la inceput, apoi pe tot parcursul melodiei pune doar o referinta catre refren? Asta folosesti o functie.
       2:
         image: notes/unplug7_2.png
-        text: "In this lesson, we define the chorus at the beginning of our song and then we sing through our song and go back and we notice that the class doesn't sing the word chorus, they automatically go up to the top where we define the chorus and sing through that. We use that as a great introduction to how to understand what a program is doing when it defines and calls a function."
+        text: 'In aceasta lectie, definim refrenul la inceputul cantecului nostru si apoi cantam in continuare melodia si ne intoarcem sa observam ca nu se canta cuvantul "refren", clasa merge direct la inceputul cantecului unde am definit refrenul si il canta de acolo. Folosim asta ca o introducere catre cum sa intelegi ce face un program cand defineste si foloseste o functie.'
       3:
         image: notes/unplug7_3.png
-        text: "We use familiar songs including Old Macdonald to talk about how a chorus is called over and over and how sometimes a chorus can change. When you have a song like Old Macdonald, where certain words change, that's a great place to introduce the idea of parameters. Passing certain words through so that you can send extra information to your function. Once we're sure everybody gets it, you can take your own familiar songs and break them up yourself. See if you can figure it out together."
+        text: 'Folosim cantece comune ca "Batranul Macdonald" pentru a vorbi despre cum un refren este numit iar si iar si cum uneori aceste se poate schimba. Cand ai un cantec ca Batranul Macdonald, unde anumite cuvinte se schimba, e contextul perfect ca sa introduci ideea de parametri. sa introduci anuminte cuvinte ca sa poti trimite informatii suplimentare la functie. Odata ce esti sigur ca toata lumea a inteles, poti sa iei propriile melodii si sa le desparti singur. Vezi daca poti sa te descurci singur.'
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where you basically insert a blank in a story that can be filled with lots of different words. We take that idea, challenge kids to come up with their own words for their own stories, and really explain the concept of abstraction.
+        text: Lectia noastra despre abstractie foloseste concepte familiare de lucruri lipsa, cand practic introduci o lipsa intr-o poveste astfel incat aceasta poate fi completata cu diverse cuvinte. Vorbim despre aceasta idee, indemnam copiii sa vina cu propriile lor cuvinte pentru propriile povesti si explicam conceptul abstractiei.
       2:
         image: notes/unplug8_2.png
-        text: "It's all about functions and how you can have a function, like in Old Macdonald, where you have a structure for your chorus but you have something little that changes and you abstract out that little thing that changes and you can fill it in with your own word every time through. But sometimes you have three words that change and so you fill those in with three parameters, that's still pretty helpful."
+        text: Este vorba de funcţii şi cum puteţi avea o funcţie, ca în Old Macdonald, unde aveţi o structură pentru refrenul dumneavoastră dar aveţi ceva mic care se schimbă şi faci abstractie de acel lucru mic, care se schimbă şi vă puteţi umple lipsul cu propriul cuvânt de fiecare dată. Dar, uneori, aveţi trei cuvinte care se schimba şi deci completaţi cei cu trei parametri, care sunt încă destul de utili.
       3:
         image: notes/unplug8_3.png
-        text: "You can have one function that handles lots of different problems. Lots of times people will write separate functions for all those problems, not realizing there's only one little difference. If they could just find a way to handle that one little difference, they could just reuse one function over and over again, instead of having 14 different functions."
+        text: Poti avea o functie care se ocupa cu o multime de probleme diferite. De multe ori, oamenii vor scrie functii separate pentru toate acele probleme, fara sa isi dea seama ca este o mica diferenta. Daca ei ar putea sa gaseasca o modalitate in care sa trateze acea mica diferenta, ei ar putea doar sa reutilizeze functia iar si iar, in schimbul celor 14 functii diferite.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science.
+        text: Programarea Relay este o lectie extrem de distractiva care prinde mai mult decat tehnologia computerului si programarea. Cateodata toata lumea devine un pic cam anxioasa si vrei sa ii pui pe picioare. Acest mod este unul excelent de a aduce putina distractie acestei stiinte.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step.
+        text: Desparti pe toate lumea in doua grupe unde ei vor sta in linie si vor rula un stil releu. Prima persoana, din fiecare grup, ruleaza in cealalta parte a camerei, unde vor avea un desen de hartie milimetrica si o bucata de hartie alba, care ii asteapta. Ei scriu primul pas in creearea acelei imagini, sa ruleze linia lor si sa eticheteze urmatorul jucator care va scrie urmatorul pas.
       3:
         image: notes/unplug9_3.png
-        text: "This is a great way to get across the idea of debugging, needing to proofread your own work, and needing to check the work of the people done before you. You'll quickly understand how important it is that you be careful in your coding when a whole team is depending on you."
+        text: Aceasta este o modalitate foarte buna de a obtine idee de depanarii, de care ai nevoie pt a corecta propriile ta munca si de care ai nevoie pentru a verifica munca oamenilor pe care au facut-o inainte ta. Vei intelege repede cat de important este sa ai grija in codificarea dumneavoastra atunci cand o intreaga echipa depine de tine.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+        text: Aceasta activitate explica intr-un mod usor de intels cum functioneaza internet. Noi explicam toata terminologia de care ai nevoie in termeni simpli atfel incat elevii pot simula transmiterea de mesaje, ca la un email.
       2:
         image: notes/unplug10_2.png
-        text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
+        text: Studentii vor transmite mesaje in timp ce pretind a fi una din cele trei metode de transmisie, internet wireless, DSL sau fibra optica. Studentii care reprezinta wi-fi vor avea sa poarte pe cap mesajul pe care il transmit pentru ca wi-fi este este cel mai probabil sa abandoneze unele informatii.
       3:
         image: notes/unplug10_3.png
-        text: "The students pretending to be DSL or cable will carry the message on the back of their hand, where they're slightly less likely to drop information. And the students representing fiber optic will get to carry them with both hands. This activity is a great way to understand something that many of us use every day."
+        text: Elevii ce pretind ca sunt DSL sau cablu vor duce mesajul in spatele mainii, unde e cel mai putin posibil sa piarda informatia. Si elevii ce reprezinta fibra optica vor duce informatia cu ambele maini. Aceasta activitate este un mod bun pentru a intelege ceva ce multi dintre noi folosesc in fiecare zi.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: "So now it's time to step back and take a birds eye view of everything you've done in these past nineteen lessons. This is a great time to call out to students that what they've just done is a huge achievement. They've learned more over these lessons than most adults know about computer science."
+        text: Acum este momentul sa te retragi si sa revizuiesti tot ceea ce ai facut in ultimele 19 lectii. Este momentul bun sa le spui elevilor ca ceea ce, tocmai au facut, este o realizare mareata. Ei au invatat mai multe in aceste lectii decat ceea ce stiu majoritatea adultilor despre informatica.
       2:
         image: notes/unplug11_2.png
-        text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
+        text: Discutati ca si clasa sau in grupuri mici despre lectiile lor favorite. Odata ce ati aruncat o privire la tot ceea ce ati invatat, aici poate straluci activitatea elevilor vostri. Impartiti elevii in grupe si pune-tii sa realizele o activitate fara calculator de unii singuri. Distribuiti fircarui grup un concept cheie cum ar fi functii sau sau algoritmi si multe materiale pentru ca ei sa le foloseasca. Fiecare grup trebuie sa isi prezinte noua activitate offline.
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: De la toti cei de aici, de la Code.org, speram ca v-ati SUPER distrat in timpul acestui curs. Chiar daca visul tau este sa creezi cea mai buna aplicatie, sa folosesti programarea pentru a vindeca boli sau doar vrei sa fii un rezolvator de probleme, acest curs va poate ajuta sa va impliniti aceste vise.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -1527,13 +1527,13 @@ ro:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Numele meu este Jens Bergensen dar sunt cunoscut mai bine ca Jeb. Eu sunt dezvoltatorul Minecraft, aici la Mojang in Stockholm. Cred ca aveam 11 sau poate 12 ani cand am inceput sa programez pentru ca voiam sa fac jocuri. Unul dintre prietenii tatalui meu mi-a spus ca pentru a putea face jocuri, trebuie sa invat sa programez. Asa am inceput. Imi place sa proiectez arhitectura jocurilor. Asta imi place cu adevarat la Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: In urmatoarea ora, vei invata bazele tehnologiei computerului programandu-i pe Alex sau Steve sa se deplaseze de-a lungul unei parti simulate din Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Programarea traditionala este, de obicei in text dar astazi vom folosi Blockly, un sistem ce utilizeaza blocuri vizuale pe care le poti trage si muta pentru a scris programe. Defapt, tu creezi cod Javascript.
       4:
         image: notes/mc_intro_4.JPG
         text: Conceptele pe care le vei invata sunt cele pe care programatorii le folosesc zi de zi si care sunt fundatia tehnologiei computerului si programarii. Aici la Mojang, noi folosim aceleasi concepte pentru a face Minecraft sa functioneze.
@@ -1625,53 +1625,51 @@ ro:
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: Daca vrei sa iti faci propriul joc, este foarte simplu. Tot ceea ce trebuie este sa stii cateva baze ale programarii si te poti juca jocul pe care l-ai creat.
       2:
         image: notes/gumball_intro_2.JPG
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Ai un joc video favorit? Vom face un pas inainte in crearea jocurilor la fel ca in PlayLab. Jocurile bune au cate o poveste iar fiecare poveste are personaje. Ele vor face lucruri ca vorbit, miscat si interactionat. Poate chiar vor aduna puncte pe baza regurilor jocului. Astazi vom inavata cum toate aceste lucruri unul cate unul impreuna cu personajele distractive va duce la construirea unui joc de la o schema ce poate fi distribuit sau jucat pe un telefon.
       3:
         image: notes/gumball_intro_3.JPG
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Astazi, vom invata cum toate aceste lucruri, unul cate unul, cu actori distractivi si apoi vor construi un joc dintr-o schema ce poate fi distribuita si jucata pe telefon.
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Ecranul tău este împărțit in 3 zone. În stânga este spațiul de joc unde jocul tău va funcționa. Instrucțiunile pentru fiecare nivel sunt scrise mai jos.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Aceasta zona de mijloc este caseta de instrumente si fiecare bloc este o bucata de cod.
       6:
         image: notes/gumball_intro_6.JPG
         text: Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom construi programul nostru.
       7:
         image: notes/gumball_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: 'Pentru a începe, vei avea nevoie să legi blocurile tale la blocul portocaliu "când rulezi". Poți lega mai multe blocuri împreună trăgându-le până când vezi o linie galbenă, iar ele se vor fixa.'
       8:
         image: notes/gumball_intro_8.JPG
-        text: |-
-          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+        text: 'In acest prim puzzle, vom face actorii sa spuna ceva legand blocul "Spune" de blocul "Cand ruleaza" si scriind mesajul tau. Odata ce ai blocurile in locurile corecte, apasa butonul "Ruleaza" pentru a vedea ce ai programat.'
       9:
         image: notes/gumball_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: Incepe si la sfarsit vei fi in stare sa creeze propriul joc cu tot felul de jucatori ce pot interactiona, aduna puncte, arunca lucruri si sa se lupte unul cu altul. Depinde doar de tine!
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: Acum vom invata despre ceva ce tot programatorii utilizeaza in fiecare zi. Sunt numite evenimente. Un eveniment ii spune programului tau sa asculte cand ceva se petrece si cand se intampla, jocul sa realizeze o actiune.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Cateva exemple de evenimente sunt ascultarea unui click de mouse sau o sageata sus sau jos sau chiar o atingere pe ecran.
       3:
         image: notes/gumball_events_3.JPG
-        text: |-
-          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+        text: 'Aici, il vom face pe personaj sa spuna ceva cand jucatorul apasa pe el. Vom folosi blocul "cand apesi" si atasa blocul "spune" de el. Cand jucatorul apasa, toate blocurile atasate blocului acesta vor fi rulate.'
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+        text: "Sunt, de asemenea si blocuri 'cand sageata'. Daca puteti conecta blocurile de miscare cu acestea, poti misca personajele in sus, jos, stanga, dreapta folosind sagetile. Incet, incet jocul tau va deveni mult mai interactiv."
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: Iti inchipui cum ar fi daca ar fi trebuit sa repeti ceva la nesfarsit? Din fericire nu va trebui sa faci asta pentru ca, calculatoarele se pricep foarte bine la a repeta lucruri.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: "Acesta este blocul 'repeta mereu'. Orice inauntrul acestui bloc se va intampla pentru totdeauna in joc. Daca vrem ca un personaj sa faca ceva in mod repetat fara ca jucatorul sa faca ceva, vom plasa aceste blocuri inauntrul blocului repeta mereu."
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: In puzzle-ul urmator, telul nostru este sa ajutam personajul sa faca o treaba constant. Invatand cum functioneaza comenzile de repetare, vei salva mult timp atunci cand iti vei construi propriul joc.

@@ -315,8 +315,8 @@
         Your students will need to choose usernames and passwords, but they WILL NOT
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
+      register: בקש מהתלמידים שלך לרשום את עצמם
+      vist: בקש מהתלמידים שלך לבוא לבקר
       section_code: 'and enter their section-code:'
       first_please: First, please %{add_section}
       for: בשביל
@@ -329,7 +329,7 @@
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: סוג סודי
-      grade: Grade
+      grade: כיתה
       course: קורס
       rename: שינוי שם
       edit: עריכה
@@ -352,8 +352,8 @@
       section: סעיף
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: הוגש ב-
+      unsubmit: בטל הגשה
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -362,10 +362,10 @@
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים
       שלך)
-    delete: Delete your account
+    delete: מחק את החשבון שלך
     delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
+    delete_text_teacher_note: 'שים לב: מחיקת החשבון שלך לא תגרום למחיקת חשבונות התלמידים
+      שלך.'
     delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: הושלם
@@ -403,7 +403,7 @@
     local_school: בה"ס מקומי
     online: באינטרנט
     see_details: ראה פרטים
-    view_course: View Course
+    view_course: צפה בקורס
     prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
     trynow: נסה עכשיו
@@ -424,8 +424,8 @@
     print_certificate: Print Certificate
   share:
     title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    description: כל אחד יכול ללמוד מדעי המחשב. ליצור משחקים, אפליקציות ואמנות בעזרת
+      קוד.
   gender:
     male: גבר
     female: אישה
@@ -451,17 +451,20 @@
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    copyright: זכויות יוצרים
     more: יותר
     feedback: משוב
     translate: עזרו לנו לתרגם לשפתך
     support: תמיכה
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: תנאים
     tos: תנאים
     privacy: הצהרת פרטיות
     secure: גרסה מאובטחת
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: צריך עזרה?
     subtitle: לראות את קטעי וידאו ורמזים
@@ -547,18 +550,18 @@
       title: גלריה
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: לשבור את הקרח
     starwars:
-      title: Star Wars
+      title: מלחמת הכוכבים
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
-      title: Minecraft
+      title: מיינקראפט
       body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: סטודנטים יצרו את זה עם קוד!
     picture_count: בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות
       בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד.
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
@@ -651,7 +654,7 @@
           title: Sample Level Builder
           description: ''
   age_interstitial:
-    age: Your age
+    age: הגיל שלך
     header: Account Information Update
     message: We're in the process of updating our experience to provide you with even
       stronger privacy protections. To do this, we need existing users to enter their
@@ -698,15 +701,15 @@
     really_delete: למחוק?
     delete_yes: כן
     delete_no: לא
-    saved: Saved
-    not_saved: Not saved
+    saved: נשמר
+    not_saved: לא נשמר
     cancel: בטל
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
       to view your project.
     view_all: View My Projects
-    remix: Remix
+    remix: רמיקס
     click_to_remix: Click 'Remix' to spin-off your own version!
     edit_project: Edit Project
     abuse:

@@ -56,7 +56,7 @@ et:
           Flappy: Flappy
           title: Kursus 2
           Bee Loops: Mesilane tsüklid
-          Artist Functions: Kunstink funktsioonid
+          Artist Functions: Kunstniku funktsioonid
           The Artist Debugging: Kunstnik vigade silumine
           Bee Debugging: Mesilane vigade silumine
           Bee Functions: Mesilane funktsioonid
@@ -88,7 +88,7 @@ et:
           "Studio: Create a Story": 'Play Lab: Kirjuta lugu'
           The Artist: Kunstnik
           title: Kursus 3
-          Artist Functions: Kunstink funktsioonid
+          Artist Functions: Kunstniku funktsioonid
           Artist For Loops: Kunstnik tsüklite jaoks
           Artist Nested Loops: Kunstnik korduvad tsüklid
           Bee Conditionals: Mesilane tingimuslaused
@@ -131,7 +131,7 @@ et:
           "Bee: Nested Loops2": 'Mesilane: korduvad tsüklid 2'
           "Bee: Debugging2": 'Mesilane: vigade silumine 2'
           "Artist: Patterns": 'Kunstnik: mustrid'
-          Songwriting: Songwriting
+          Songwriting: Laulude kirjutamine
           description_audience: Vanustele 8-18
           description_short: Kursus 3 on järg kursusele 2.
         playlab:
@@ -148,7 +148,7 @@ et:
           Maze: Labürint
           title: KoodiTund
           description: Proovi programmeerimise põhitõdesid Angry Birds, Plants vs. Zombies tegelaste ja Scratiga Jää-ajast!
-          description_short: Proovi programmeerimise põhitõdesid paljude lõbusade tegelsatega!
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate tegelastega!
         frozen:
           title: "Kirjuta koodi Anna ja Elsa'ga"
           description: "Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise ajal ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!"
@@ -156,7 +156,7 @@ et:
           description_short: Programmeerigem, et ühineda Anna ja Elsaga samal ajal, kui nad avastavad jää võlu ja ilu.
         course4:
           description_short: Õpilased, kes võtavad Kursus 4-ja peaksid enne olema läbinud Kursused 2 ja 3.
-          description: Kursus 4 on disainitud õpilastele, kes on võtnud Kursus 2 ja 3. Õpilased lähevad sügavamale programmeerimise teemadega, mida tutvustati eelmistes kursustes, et moodustada rohkem painduvamaid lahendusi rohkem kompleksemate probleemide jaoks. Selle kursuse lõpuks, õpilased moodustavad interaktiivseid lugusid ja mänge, mida nad saavad jaga kõigiga. Soovitatav kooliastmetele 4-8.
+          description: Kursus 4 on disainitud õpilastele, kes on võtnud Kursus 2 ja 3. Õpilased lähevad sügavamale programmeerimise teemadega, mida tutvustati eelmistes kursustes, et moodustada rohkem painduvamaid lahendusi rohkem komplekssemate probleemide jaoks. Selle kursuse lõpuks, õpilased moodustavad interaktiivseid lugusid ja mänge, mida nad saavad jaga kõigiga. Soovitatav kooliastmetele 4-8.
           "Artist: Variables": 'Kunstnik: Muutujad'
           "Bee: For Loops": 'Mesilane: For tsüklid'
           title: Kursus 4
@@ -183,9 +183,9 @@ et:
           Artist Binary: Kunstnik Binaar
           description_audience: Vanustele 10-18
           Super Challenge - Variables: 'Super väljakutse - muutujad'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - For Loops: 'Super väljakutse - For tsüklid'
+          Super Challenge - Functions and Parameters: 'Super väljakutse - funktsioonid ja parameetrid'
+          Extreme Challenge - Comprehensive: 'Ekstreemne väljakutse - kõikehõlmav'
         Course4pre:
           title: Kursuse 4 Ettevalmistus
           description_short: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele kes pole neid võtnud veel.
@@ -209,7 +209,7 @@ et:
           description: A selection of Course 4 levels for usability testing.
           Variables: Muutujad
           For Loops: For tsükkel
-          Binary: Binary
+          Binary: Binaarne
         potus:
           title: special
           description_short: special
@@ -220,7 +220,7 @@ et:
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: Binaarne
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -325,7 +325,7 @@ et:
           title: Kiire sissejuhatus CS kursusele
           description_audience: Vanustele 10-18
           description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
-          description_short: See 20-tunnine kursus hõlmab peamise arvutiteaduse ja progammeerimise kontseprsiooni kursustel 2-4.
+          description_short: See 20-tunnine kursus hõlmab peamise arvutiteaduse ja programmeerimise kontseptsiooni kursustel 2-4.
           Introduction to Computer Science: Sissejuhatus arvutiõpetusse
           The Maze: Labürint
           Computational Thinking: Arvutuslik mõtlemine
@@ -382,7 +382,7 @@ et:
         Hour of Code:
           title: KoodiTund 2013
           description: Proovi arvutiteadust Angry Birds and Plants vs Zombies tegelastega!
-          description_short: Proovi programmeerimise põhitõdesid paljude lõbusade tegelsatega!
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate tegelastega!
           Hour of Code 2013: KoodiTund 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -640,7 +640,7 @@ et:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: Loomisfunktsioonid
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -672,7 +672,7 @@ et:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: „Kui“ tsüklid
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -850,7 +850,7 @@ et:
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: Internet
+          The Internet: Internet on kõigi jaoks
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
           Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
@@ -1172,7 +1172,7 @@ et:
           Getting Loopy: Muutub tsükliliseks
           The Big Event: Suursündmus
           Binary Bracelets: Binaarsed käevõrud
-          Songwriting: Songwriting
+          Songwriting: Laulude kirjutamine
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1348,6 +1348,10 @@ et:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1399,10 +1403,10 @@ et:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Jääaja Play Lab
+          description_short: Loo lugu või mäng Jääaja Play Labiga!
+          description: Loo lugu või mäng Jääaja Play Labiga!
+          Ice Age Play Lab: Jääaja Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1433,7 +1437,7 @@ et:
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: „Kui“ tsüklid
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1453,19 +1457,19 @@ et:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumballi Play Lab
+          description_short: Loo lugu või mäng Gumballi Play Labiga!
+          description: Loo lugu või mäng Gumballi Play Labiga!
+          Gumball Play Lab: Gumballi Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Star Wars: galaktika loomine koodiga'
+          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
+          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           Hour of Code 2015: Kooditund 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Star Wars: galaktika loomine koodiga'
+          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
+          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           Hour of Code 2015: Kooditund 2015
         minecraft:
           title: Minecraft
@@ -1473,9 +1477,9 @@ et:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: Minecrafti KoodiTund
+          description_short: Uuri Minecrafti maailma koodi kaudu
+          description: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles Minecrafti maailmas
           Hour of Code 2015: Kooditund 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

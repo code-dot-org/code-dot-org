@@ -105,6 +105,8 @@
         StudioEC: Play Lab
         Applab: 앱 연구실
         NetSim: 인터넷 시뮬레이터
+        Custom: 화가
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: 동
@@ -386,58 +388,71 @@
           수 있도록 도와주세요. 그리고, 우주로봇이 외계인 캐릭터에 닿으면 모두에게 경고를 할 수 있게 해주세요.
         studio_playlab_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
           할 수 있습니다.
-        studio_iceage_1: 매니는 "hello" 라고 말하고 싶어요. 매니를 도와주실 수 있나요?
-        studio_iceage_2: 디에고(캐릭터 1) 와 그레니(캐릭터 2) 는 서로 "hello"라고 인사하고 싶습니다. "말하기" 블록을
-          두 번 사용해서 그들을 도와줄 수 있나요?
-        studio_iceage_3: 스크랫이 깃발을 얻을 수 있게 도와줄 수 있나요?
-        studio_iceage_4: 스크랫(캐릭터 1) 이 그레니(캐릭터 2) 에게 도착하게 하고, 도착했을 때 소리가 나도록 도와줄 수
-          있나요?
-        studio_iceage_5: 시드가 클릭되었을 때 "greetings"라고 말하도록 도와줄 수 있나요? 실행 버튼을 누르고 난 이후에
-          시드를 클릭했을 때 입니다.
-        studio_iceage_6: 위/아래/오른쪽/왼쪽 방향키를 이용해 디에고가 모든 깃발을 얻을 수 있게 도와줄 수 있나요?
-        studio_iceage_7: '"무한 반복(repeat forever)" 블록은 어떤 코드들을 계속해서 무한히 반복해서 실행하도록
-          할 수 있습니다. 시드가 왼쪽 오른쪽으로 계속 반복해서 움직일 수 있도록 블록들을 붙여주세요.'
-        studio_iceage_8: 시드가 매니한테 달려갈 때, 점수를 획득하도록 하는 블록과 소리를 재생하기 위한 블록을 추가하고 나서
-          점수를 얻을 때까지 방향키를 이용해 이동 시키세요.
-        studio_iceage_9: 이 아이스 에이지를 위해 배경을 설정하고, 시드가 그레니에게 더 빨리 도착할 수 있게 스피드를 변경해주세요.
-          그 다음에 방향키를 움직여 시드에게 도착하고 모두에게 경고하도록 이동시키세요.
-        studio_iceage_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
-          할 수 있습니다.
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
+        studio_iceage_hello1: Sid는 새로운 모험을 위해 사람들을 모으고 싶어합니다. "말하기" 블록을 작업 공간으로 드래그하고
+          블록 안에 "안녕?"이라고 입력하여 그가 "안녕?"이라고 말하도록 도와줄래요?
+        studio_iceage_hello2: Sid(배우 1) 는 Manny(배우 2) 를 발견하고 그를 모험에 초대하려고 합니다. "배우
+          말하기" 블록을 두 번 사용하여 서로 인사하도록 해 주세요.
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: |
+          아나이스가 새로운 친구들을 만들고 싶어합니다.
+          "말하기" 블록을 작업 영역에 드래그해서 넣어서 "안녕"이라고 말 할 수 있도록 해주세요. "안녕"이라고 입력하면 됩니다.
+        studio_gumball_hello2: |
+          다윈(캐릭터 1) 과 형제인 검볼(캐릭터 2) 가 학교에 가고 있습니다.
+          "캐릭터 말하기" 블록을 2번 사용해서 서로 인사하게 해보세요.
+        studio_gumball_move_to_flag: |
+          바나나조는 운동회 달리기를 하는 중입니다!
+          "이동하기" 블록을 이용해서 마지막 200 픽셀을 이동시켜 주세요.
+        studio_gumball_move_to_actor: 검볼 (캐릭터 1) 과 다윈 (캐릭터 2) 는 운동회에 늦었습니다! "캐릭터 움직이기"
+          블록을 이용해서, 검볼이 다윈 아래쪽 200 픽셀 거리로 움직이도록 해주세요. 그 다음에 "캐릭터가 닿으면" 이벤트를 다른 블록에
+          붙여서, 서로 닿으면 소리를 낼 수 있게 해주세요.
+        studio_gumball_repeat: '"무한 반복" 블록은 코드를 무한히 반복 실행 시켜줍니다. 블록들을 붙여서 검볼이 왼쪽 오른쪽으로
+          반복해서 움직이면서, 워밍업 할 수 있게 해주세요.'
+        studio_gumball_click_hello: |
+          "제자리에 서, 준비, 출발!" 라고 말하면서 달리기를 시작시킬 수 있도록 안톤을 도와주세요.
+          프로그램을 테스트해 보려면, 실행을 누른 후 안톤을 클릭하면 됩니다.
+        studio_gumball_move_events: |
+          다윈은 깃발 모으기 대회에 참가 중 입니다! 이벤트들에 "이동하기" 블록을 붙여서 돌아다닐 수 있게 해주세요.
+          실행 시킨 후, 모든 깃발들을 모으면 됩니다.
+        studio_gumball_sound_and_points: |
+          안톤 (캐릭터 2) 이 좌우로 움직이고, 바나나 조 (캐릭터 1) 이 화면을 돌아다니는 거의 모든 코드를 주었습니다.
+          "캐릭터가 닿으면" 이벤트에 다른 블록들을 붙여서 코드를 완성시키고, 바나나 조와 안톤이 서로 충돌하면 소리를 내고 점수를 올릴 수 있도록 해주세요. 게임을 실행시켜 보세요.
+        studio_gumball_warn_food_fight: |
+          다윈이 방금 푸드파이트 게임에서 나왔습니다! 배경을 "캐릭터들"로 바꾸고, 다윈의 속도를 빠르게 바꿔주세요.
+          프로그램을 실행시켜서, 페니에게 이동시켜서 경고 할 수 있게 해주세요.
+        studio_gumball_join_food_fight: 푸드파이트 게임에 참가하세요! "아이템 오른쪽으로 던지기" 명령으로, 바나나
+          조 (캐릭터 1) 가 안톤 (캐릭터 2) 에게 음식을 던질 수 있게 해주세요. 안톤이 음식에 맞으면 화난 표정으로 바꿔주세요.
+        studio_gumball_free_play: |
+          게임이나 이야기를 직접 만들어보세요.
+          다 만들고 나면, 친구들의 스마트폰, 태블릿, 컴퓨터에서 실행시켜 볼 수 있게 됩니다.
         studio_full_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
           할 수 있습니다.
         studio_k1_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
@@ -492,7 +507,7 @@
         C1_happy_maps_unplugged: 즐거운 맵
         C1_moveitmoveit_unplugged: 빨리 빨리 움직이자!
         C1_bigevent_unplugged: 큰 이벤트
-        C1_getting_loopy: 반복적으로 하기
+        C1_getting_loopy: 반복시키기
         C1_pair_programming: 페어 프로그래밍
         C1_maze_intro_sequencing: 미로 탐색 소개
         C1_maze_debugging: 미로 퍼즐 디버깅
@@ -510,7 +525,7 @@
         C2_artist_intro: 예술가 퍼즐 소개
         C2_zuck_repeat_loop: 미로 퍼즐 반복
         C2_artist_loops: 아티스트 반복
-        C2_artist_debugging: 예술가 디버깅
+        C2_artist_debugging: 화가 디버깅
         C2_bee_loops: 꿀벌 반복
         C2_bee_debugging: 꿀벌 디버깅
         C2_bee_conditionals: 꿀벌 조건선택
@@ -520,9 +535,9 @@
         C2_binary_bracelets: 2진 팔찌
         C2_relay_programming: 릴레이 프로그래밍
         C2_paper_airplanes: 종이 비행기
-        C2_digital_footprint: 디지털 개인정보 흔적
-        C2_digital_footprint_v2: 디지털 개인정보 흔적
-        C3_maze_level_4: 미로 퍼즐 반복
+        C2_digital_footprint: 당신의 디지털 흔적
+        C2_digital_footprint_v2: 당신의 디지털 흔적
+        C3_maze_level_4: 미로 반복
         C3_artist_intro: 예술가 퍼즐 소개
         C3_artist_functions: 예술가 함수
         C3_bee_functions: 꿀벌 함수
@@ -614,14 +629,14 @@
         starwars_blocks_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
         starwars_blocks_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
         starwars_blocks_congrats: '스타워즈: 코드로 은하계 건설하기 - 축하'
-        mc_intro: 마인크래프트 - 소개
-        mc_repeat: 마인크래프트 - 반복
-        mc_if_statements: 마인크래프트 - 반복문
-        mc_congrats_share: 마인크래프트 - 축하
-        mc_congrats_no_share: 마인크래프트 - 축하
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        mc_intro: Minecraft - 소개
+        mc_repeat: Minecraft - 반복
+        mc_if_statements: Minecraft - If문
+        mc_congrats_share: Minecraft - 축하
+        mc_congrats_no_share: Minecraft - 축하
+        gumball_intro: Hour of Code 껌볼 - 소개
+        gumball_events: Hour of Code 껌볼 - 이벤트
+        gumball_repeat: Hour of Code 껌볼 - 반복문
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -697,10 +712,10 @@
         Infinity_move_directions_callout_arrow: 이 화살표를 이용해서 조정하세요
         Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
         Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요
-        craft_run_button_callout: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
-        craft_drag_block_callout: '"moveForward();" 블록을 드래그해 다른 블록의 아래에 붙이세요.'
-        craft_callout_preplaced: 여러분이 시작하기 전에 몇 개의 블록들을 붙여두었습니다.
-        craft_inside_repeat: 블록들을 여기에 놓아서 작업들을 반복시키세요.
-        craft_callout_preplaced_house: 이 코드는 여러분의 집을 짓습니다. 끝낼 수 있겠어요?
-        craft_what_is_iron: 이 철 광석을 캐내자!
-        craft_callout_moveforward: 이 코드는 용암을 체크할 것입니다. 앞으로 움직이기 위한 명령을 추가해 주실 수 있나요?
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
+        craft_drag_block_callout: '"앞으로 이동" 블록을 드래그해서 다른 블록 아래에 끼우세요'
+        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
+        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+        craft_what_is_iron: 이 철을 채굴하세요!
+        craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?
