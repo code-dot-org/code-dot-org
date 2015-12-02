@@ -90,8 +90,10 @@ Feature: App Lab Scenarios
   # typing into a contenteditable div (which is what our Applab textareas are)
   # See https://code.google.com/p/selenium/issues/detail?id=4467
   # Also doesnt seem to be working for ie
+  # Also doesn't seem to be working for Firefox (Pivotal #107954030)
   @no_safari
   @no_ie
+  @no_firefox
   @no_ios
   Scenario: Can type in textarea on share page
     Given I switch to design mode
