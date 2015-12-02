@@ -128,6 +128,13 @@ module LevelsHelper
     set_channel if @level.channel_backed?
 
     view_options server_level_id: @level.id
+    if @script_level
+      view_options(
+        stage_position: @script_level.stage.position,
+        level_position: @script_level.position
+      )
+    end
+
 
     unless params[:share]
       # Set videos and callouts.
