@@ -312,6 +312,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -332,7 +333,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: বয়স 4-104
   mc_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -718,6 +719,10 @@
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -814,10 +819,10 @@
   projguts_gradelevel: বয়স 10-13
   hourofcode_gradelevel: বয়স 4-104
   frozen_gradelevel: বয়স 8 +
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: বয়স 4-104
   playlab_gradelevel: বয়স 4-104
   infinity_gradelevel: বয়স 4-104
-  artist_gradelevel: বয়স 4-104
+  artist_gradelevel: বয়স 8 +
   codeorg_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   codeintl_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   thinkersmithspanish_platformtext: Unplugged
