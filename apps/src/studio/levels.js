@@ -3553,7 +3553,7 @@ levels.hoc2015_blockly_14 = utils.extend(levels.js_hoc2015_change_setting,  {
       </next> \
      </block>',
   toolbox:
-    tb('<block type="studio_setSprite"><title name="VALUE">C-3PO</title></block> \
+    tb('<block type="studio_setSprite"><title name="VALUE">"c-3po"</title></block> \
         <block type="studio_setDroidSpeed"></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
