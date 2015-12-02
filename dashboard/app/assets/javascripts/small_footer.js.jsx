@@ -57,6 +57,7 @@ window.dashboard.footer = (function () {
       getInitialState: function () {
         return {
           menuState: MenuState.MINIMIZED,
+          copyrightStyle: null,
           copyrightScrollAreaStyle: null,
           moreMenuStyle: null
         };
@@ -66,6 +67,9 @@ window.dashboard.footer = (function () {
         var originalSetState = this.setState;
         var base = React.findDOMNode(this.refs.base);
         this.setState({
+          copyrightStyle: {
+            minWidth: base.offsetWidth
+          },
           copyrightScrollAreaStyle: {
             marginBottom: base.offsetHeight
           },
@@ -151,20 +155,20 @@ window.dashboard.footer = (function () {
             // subtract top/bottom padding from row height
             height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
           }),
-          copyright: {
+          copyright: $.extend({}, this.state.copyrightStyle, {
             display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
             position: 'absolute',
             bottom: 0,
             left: 0,
             width: 650,
             maxWidth: '50%',
-            minWidth: 300,
             paddingBottom: '0.5em'
-          },
+          }),
           copyrightScrollArea: $.extend({}, this.state.copyrightScrollAreaStyle, {
             overflowY: 'auto',
             maxHeight: 210,
-            padding: '0.8em'
+            padding: '0.8em',
+            borderBottom: 'solid thin #e7e8ea'
           }),
           moreMenu: $.extend({}, this.state.moreMenuStyle, {
             display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none'
