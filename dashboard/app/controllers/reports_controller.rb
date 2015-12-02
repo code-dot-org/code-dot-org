@@ -172,8 +172,8 @@ SQL
         :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
         :'Female Ratio' => f.to_f / (f + m),
       }
+      render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
     end
-    render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
   end
 
   private
