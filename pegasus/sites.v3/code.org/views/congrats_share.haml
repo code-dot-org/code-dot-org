@@ -40,7 +40,7 @@
       related: 'codeorg',
       // Add HoC hashtag if not present in i18n'd text
       hashtags: translatedText.indexOf('HourOfCode') < 0 ? '#HourOfCode' : '',
-      text: translatedText;
+      text: translatedText
     };
 
     return 'https://twitter.com/share?' + $.param(queryParams, true);
