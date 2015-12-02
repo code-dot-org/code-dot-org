@@ -41,11 +41,11 @@
   hoc2014_whatishoc: '"Код жазу Сағаты" деген не'
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Сіздің Код Жазу Сағатын тіркеңіз
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_placeholder: Кодтау Сағаты бастамасын табу
   csedweek_map_search_search: Іздеу
   csedweek_map_search_reset: қалпына келтіру
   csedweek_map_legend_title: Аңыз
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_event: Кодтау Сағатының бастамалары
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Sign up
   cded_try_it: Қолданып көріңіз
@@ -219,21 +219,21 @@
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Дүкен
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
+  homepage_action_text_hoc: Кодтау сағаты әр оқушыға.
+  homepage_action_text_num_served: Қызмет етілген саны
   homepage_action_text_join_us: Бізге қосыл
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Қолданып көріңіз
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Техникалық волонтер керек
   homepage_action_text_codevideo: Видеоны көріңіз
   homepage_action_text_teachervideo: Видеоны көріңіз
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Қызды шабыттандыр
   homepage_action_text_learn: Оқуды бастау
   homepage_action_text_signpetition: Қолдаухатқа қол қою
   homepage_signpetition_dropdown: Біздің қолдаухатқа қол қою &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: 'Кодтау сағаты қайтадан келе жатыр, 7-13 желтоқсан. '
+  homepage_banner_link_prizes: 'Тарихтағы ең ірі үйрену бастамасына қосыл. '
   homepage_banner_text_main: Информатика пәнін түрлендірді жақсарту үшін Code.org
     және колледж Кеңесімен альянс құру.
   homepage_banner_text_link: толығырақ білу
@@ -244,8 +244,8 @@
   homepage_slot_text_blurb_hoc: Барлығы үйрене алады. Бүгін бастаңыз
   homepage_slot_text_link_hoc: Код Сағатын қолданып көріңіз
   homepage_slot_text_link_host: Код Жазу Сағатын өткізу
-  homepage_slot_text_link_hocserved: '# served'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_slot_text_link_hocserved: Қызмет етілген саны
+  homepage_solot_text_link_volunteer: Кодтау сағатына волонтер бол
   homepage_slot_text_title_students: Students
   homepage_slot_text_blurb_students: Біздің барлық оқыту курстарымызды үйреніңіз
   homepage_slot_text_link_codestudio: Студия Кодын пайдаланып көріңіз
@@ -279,11 +279,12 @@
   class_submission_in_school: мектепте
   class_submission_in_school_daily_programming_course: Күнделікті бағдараламау курсы
   class_submission_in_school_ap_computer_science: Информатиканың бастапқы деңгейі
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
+  class_submission_in_school_full_university_cs_curriculum: Университет толық бағдарламалау
+    оқу жоспары
+  class_submission_in_school_robotics_club: Робототехника клубы
   class_submission_in_school_programming_integrated_in_other_classes: Басқа пәндер
     бағдарламасына қосылған бағдарламалау курстары (математика, және т.б.)
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
+  class_submission_in_school_summer_school_cs_program: Жазғы мектеп информатика бағдарламасы
   class_submission_in_school_exploring_computer_science: Информатика пәнін оқу
   class_submission_in_school_other: Мектепте
   class_submission_out_of_school: Мектептен тыс
@@ -303,12 +304,16 @@
   class_submission_level_college: Арнайы орта білім беру
   class_submission_level_vocational: Кәсіптік
   class_submission_languages_other: Басқа тілдер
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: Көбірек<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">мотивациялық
+    бейнелер</a>атақты азаматтардан
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  starwars_subtitle: Код арқылу Галактика құру
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_specs: Тек ағылшын тілінде | Жаңа браузерлер | 11+ жас аралығы
   starwars_javascript_start_button: Қазір қолданып көріңіз
   starwars_blocks_title: Блоктар
   starwars_blocks_description: Use drag-drop blocks.
@@ -317,10 +322,10 @@
   starwars_blocks_start_button: Қазір қолданып көріңіз
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_speak_languages: Басқа тілде сөйлейсіз бе?
+  starwars_help_translate: Басқа тілге аударуға көмектест
   starwars_platform_text: Заманауи браузерлер, смартфондар, планшеттер
-  mc_name: Minecraft Hour of Code
+  mc_name: Minecraft Кодтау Сағаты
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
@@ -328,7 +333,7 @@
   mc_gradelevel: Жас аралық 6+
   mc_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
+  minecraft_subtitle: Minecraft Кодтау Сағаты
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -423,7 +428,7 @@
   volunteer_engineer_submission_num_volunteers_5: 5 еріктілер
   volunteer_engineer_submission_num_volunteers_10: 10 еріктілер
   volunteer_engineer_submission_num_volunteers_25: 25 еріктілер
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_num_volunteers_50: 50 еріктілер
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -690,25 +695,29 @@
     for teaching one Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
     prizes for every educator.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Оқушыларды <a href="https://code.org/educate/inspire">мына
+    видео</a> көрсету арқылы шабыттандыру
   hoc2014_try_new_tutorials: Код Жазу Сағаты үшін арналған біздің жаңа оқу құралдарымызды
     қараңыз
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, және Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Code.org оқыту құралдары
+  carousel_heading_codeorg_any_device: Code.org оқыту құралдары(барлық құрылғыларға)
+  carousel_heading_3rd_party: 3-ші тараптардан оқыту құралдары
+  carousel_heading_third_party: Үшінші тараптардан оқыту құралдары
   carousel_heading_international: Сіздің тіліңіздегі оқыту нұсқаулығы
   carousel_heading_domestic: Оқыту құралдары ағылшын тілінде қолжетімді
   carousel_heading_beginners: Бастаушылар үшін оқулықтар
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: JavaScript тілін үйрену үшін арналған оқулықтар
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Желіге шығуға мүмкіндік жоқ па ? Онда "информатиканы
     оффлайн оқуды" пайдаланып көр
   carousel_heading_devices: Телефон және планшеттер үшін оқыту қосымшалары
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Басқа да бағдарламау тілдерінен оқу материалдары
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Өзіңнің қосымшаларыңды немесе ойындарыңды жаз
   carousel_heading_university: Университеттің онлайн курстары
   carousel_heading_webpages: Веб-парақтарды жасауды үйрен
@@ -1400,11 +1409,3 @@
   infinity_shortcode: inf
   playlab_shortcode: ойнау
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
