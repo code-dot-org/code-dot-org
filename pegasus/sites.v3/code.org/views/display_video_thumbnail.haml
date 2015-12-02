@@ -6,6 +6,7 @@
 - width ||= '100%'
 - image ||= "//i.ytimg.com/vi/#{video_code}/0.jpg"
 - play_button ||= 'center' # 'center' or 'caption'
+- fallback_player ||= false
 
 :scss
   .videothumbnail {
@@ -71,4 +72,4 @@
     %img.play{:src => "/shared/images/play-button.png"}
     .video_caption_link= caption
 
-= view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
+= view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path, fallback_player: fallback_player
