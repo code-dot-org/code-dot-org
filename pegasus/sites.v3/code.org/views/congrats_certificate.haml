@@ -73,14 +73,17 @@
   }
 
   function personalizeAnonymousCertificate() {
+    var baseCodeOrgUrl = "http://#{request.host_with_port}";
     var courseName = atob(getURLParameter('s'));
 
     var certificateData = btoa(JSON.stringify({name: $("#request-certificate-form #name").val(), course: courseName}))
-    $('#hoc-certificate-small a').attr('href', '/v2/hoc/certificate/' + certificateData + '.jpg');
-    $('#hoc-certificate-small img').attr('src', '/v2/hoc/certificate/' + certificateData + '.jpg');
+    var certURL = '/v2/hoc/certificate/' + certificateData + '.jpg';
+    $('#hoc-certificate-small a').attr('href', certURL);
+    $('#hoc-certificate-small img').attr('src', certURL);
 
     $("#certificate_form").hide();
     $("#certificate_thanks").show();
+    replaceShareURLs(baseCodeOrgUrl + certURL);
   }
 
 #certificate_body{:style=>"margin-top: 30px; margin-bottom: 30px;"}
