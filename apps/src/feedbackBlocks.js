@@ -1,5 +1,4 @@
 var constants = require('./constants');
-var readonly = require('./templates/readonly.html.ejs');
 
 var TestResults = constants.TestResults;
 
@@ -52,11 +51,8 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
 
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
-  this.div = document.createElement('div');
-  this.div.setAttribute('id', 'feedbackBlocksContainer');
-  this.html = readonly({
+  this.iframeOptions = {
     app: options.app,
-    assetUrl: studioApp.assetUrl,
     options: {
       readonly: true,
       locale: studioApp.LOCALE,
@@ -67,23 +63,31 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
       level: options.level,
       blocks: this.xml
     }
-  });
+  };
+
+  this.div = document.createElement('div');
+  this.div.setAttribute('id', 'feedbackBlocksContainer');
+
   this.iframe = document.createElement('iframe');
   this.iframe.setAttribute('id', 'feedbackBlocks');
   this.iframe.setAttribute('allowtransparency', 'true');
+
   this.div.appendChild(this.iframe);
 };
 
 module.exports = FeedbackBlocks;
 
+FeedbackBlocks.prototype.readonlyTemplateUrl_ = function () {
+  return '/readonly_template?app=' + this.iframeOptions.app + '&js_locale=' + this.iframeOptions.options.locale;
+};
+
 FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
-  }
+  var iframeOptions = this.iframeOptions;
+  var iframe = this.iframe;
+  iframe.setAttribute('src', this.readonlyTemplateUrl());
+  iframe.onload = function () {
+    this[iframeOptions.app + "Main"](iframeOptions.options);
+  }.bind(iframe.contentWindow);
 };
 
 FeedbackBlocks.prototype.hideDiv = function() {
