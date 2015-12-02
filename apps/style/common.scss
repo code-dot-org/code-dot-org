@@ -1296,23 +1296,31 @@ $workspace-header-button-margin: ($workspace-headers-height -
   font-size: 20px;
   color: $charcoal;
 
+  $image-width: 180px;
+  $image-height: $image-width;
+
   .feedback-image {
-    width: 180px;
-    height: 180px;
-    margin: 0 15px 0 0;
+    width: $image-width;
+    height: $image-height;
+    margin: 0;
     float: left;
     border: $lighter_gray;
     border-style: solid
   }
 
+  div {
+    margin: 10px 0;
+    &.sharing-content {
+      margin-left: $image_width + 15px;
+      &.no-image {
+        margin-left: 0;
+      }
+    }
+  }
+
   label {
     margin-top: 15px;
     font-size: 20px;
-    color: $charcoal;
-  }
-
-  div {
-    margin: 10px 0;
   }
 
   button {
@@ -1321,7 +1329,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
     font-size: 0.7em;
     min-width: 40px;
     text-align: center;
-    margin: 0;
+    margin: 2px 0;
 
     .disabled,
     &[disabled=disabled],
@@ -1335,6 +1343,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
       background-color: transparent;
       color: white;
       text-decoration: none;
+    }
+
+    #send-to-phone {
+      clear: both;
     }
   }
 
@@ -1360,7 +1372,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   input#phone {
     height: 30px;
     padding: 5px;
-    margin: 5px;
+    margin: 5px 0;
     font-size: 20px;
     width: 10em;
     font-family: sans-serif;
@@ -1503,4 +1515,3 @@ $see-examples-thick-underline-color: $yellow;
 .legacy-share-view #belowVisualization {
   display: none;
 }
-

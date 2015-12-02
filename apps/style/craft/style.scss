@@ -720,15 +720,18 @@ $height-to-width: 434 / 477;
     //margin-left: 110px; // TODO(bjordan): needed?
   }
 
-  .social-buttons a:hover {
-    background: none !important;
-    fill: white !important;
-  }
+  #sharing {
+    color: $lightest_gray;
 
-  #sharing button {
-    font-size: 20px;
-    height: 40px;
-    padding: 5px;
+    button {
+      font-size: 20px;
+      height: 40px;
+      padding: 5px;
+    }
+    .social-buttons a:hover {
+      background: none !important;
+      fill: white !important;
+    }
   }
 
   #puzzleRatingButtons a:hover.puzzle-rating-btn {
@@ -740,8 +743,8 @@ $height-to-width: 434 / 477;
     line-height: 27px;
     font-size: 24px;
     color: $lightest_gray;
-
   }
+
   p.congrats {
     margin-left: 69px;
   }

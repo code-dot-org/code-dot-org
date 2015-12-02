@@ -669,6 +669,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingInput, function() {
       sharingInput.focus();
       sharingInput.select();
+      document.execCommand('copy');
     });
 
     var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
@@ -676,6 +677,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       dom.addClickTouchEvent(sharingCopyButton, function() {
         sharingInput.focus();
         sharingInput.select();
+        document.execCommand('copy');
       });
     }
   }
