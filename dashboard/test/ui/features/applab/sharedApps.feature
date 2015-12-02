@@ -98,5 +98,6 @@ Feature: App Lab Scenarios
     And I drag a TEXT_AREA into the app
     When I navigate to the shared version of my project
     And I wait until element ".screen > #text_area1" is visible
+    And I press the first ".screen > #text_area1" element
     And I press keys "XYZZY" for element ".screen > #text_area1"
     Then element ".screen > #text_area1" contains text "XYZZY"
