@@ -12,14 +12,14 @@ nav: how_to_nav
 
 Visitez une salle de classe pour inspirer les élèves à continuer à apprendre l'informatique. [Pour une heure de bénévolat](https://code.org/volunteer/engineer).
 
-## 2. Assister à un webinar pour former les bénévoles
+## 2. Join a volunteer info session
 
-Nous allons organiser deux webinars pour expliquer à quoi ressemble une expérience de bénévole typique. Nous discuterons de la manière de vous coordonner avec des enseignants avant leur évènement Une Heure de Code, ainsi que vos missions lors de l'évènement afin de vous y préparer. S'il vous plait préparez vos questions ! Ces webinars se déroulera via Hangouts on Air, donc si vous ne pouvez y assister, vous pourrez toujours regarder l'enregistrement de la session plus tard.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Nous discuterons de la manière de vous coordonner avec des enseignants avant leur évènement Une Heure de Code, ainsi que vos missions lors de l'évènement afin de vous y préparer. S'il vous plait préparez vos questions ! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Date           | Heure                 |
-| -------------- | --------------------- |
-| Le 16 novembre | 22:00 - 22:30 à Paris |
-| Le 3 décembre  | 20:00 - 20:30 à Paris |
+| Date           | Heure                 | Link to info session                                                            |
+| -------------- | --------------------- | ------------------------------------------------------------------------------- |
+| Le 16 novembre | 22:00 - 22:30 à Paris | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| Le 3 décembre  | 20:00 - 20:30 à Paris | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
 ## 3. Passez 30 minutes à essayer les tutoriels au préalable
 
@@ -27,7 +27,7 @@ Essayez les tutoriels Une Heure de Code sur [code.org/learn](https://code.org/le
 
 ## 4. Recrutez vos collègues de travail pour être bénévoles
 
-Parlez à vos amis et collègues de travail d'Une Heure de Code. Des milliers de professeurs s'inscrivent et recherchent des ingénieurs bénévoles, donc demandez leur de [s'inscrire en tant que bénévole](https://code.org/volunteer/engineer).
+Parlez à vos amis et collègues de travail d'Une Heure de Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
 **Exemple d'email :**
 
@@ -57,7 +57,7 @@ La plupart des écoles n'enseignent pas encore informatique. La plupart des étu
 
 Constituez un groupe - dans votre église ou votre université, à la maison de retraite d'à côté ou votre association de quartier. Ou hébergez une petite fête de quartier Une Heure de Code pour vos voisins. [Envoyer cet e-mail](https://hourofcode.com/promote/resources#email).
 
-## 7. Lire l'ordre du jour suggéré ci-dessous, afin de savoir à quoi vous attendre lorsque vous accompagnez une salle de classe.
+## 7. Lisez l'ordre du jour suggéré ci-dessous, afin de savoir à quoi vous attendre lorsque vous accompagnez une salle de classe.
 
 # La journée d'un bénévole dans une salle de classe
 

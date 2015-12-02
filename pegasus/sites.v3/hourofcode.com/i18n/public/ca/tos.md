@@ -22,19 +22,19 @@ These Terms are subject to change. You are agreeing to be bound by such changes 
 
 Some Services may be subject to additional posted guidelines, rules or terms of service (“**Additional Terms**”) and your use of such Services will be conditioned on your agreement to the Additional Terms. If there is any conflict between these Terms and the Additional Terms, the Additional Terms will control for that Service, unless the Additional Terms expressly state that these Terms will control.
 
-### Children Under Age 13
+### Menors de 13 anys
 
 We take steps to minimize the collection of personal data from Users under the age of 13 as explained in the Code.org [privacy policy](http://code.org/privacy). If you are under the age of 13, we encourage you to get the approval of a parent or legal guardian before creating an account on Code.org. Code.org allows certain representatives of school districts and schools, such as teachers, administrators, counselors, and other educators (a “**Educator**”) to connect with students through the Services in order to provide tutorial, educational and similar services. If you are an Educator, you may register accounts on the Services for one or more of your students.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### El teu compte
 
 If you create an account for Services, you are responsible for the security of your account and for keeping your own password safe. If you are using an account assigned to you by an Educator, your Educator may be able to access and disable your account.
 
 Code.org may permit you to register an account for the Services through certain third party social networking services, such as Facebook Connect and Google (“**Authentication Service**”). By registering for the Services using an Authentication Service, you agree that Code.org may access your account information from the Authentication Service and you agree to any and all terms of use of the Authentication Service regarding your use of the Services via the Authentication Service. You are solely responsible for your interactions with the Authentication Service.
 
-### Privacy
+### Privacitat
 
 Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 
@@ -58,13 +58,13 @@ In addition, by submitting or distributing User Content through the Services, yo
 
 You are solely responsible for User Content you post to the Services and the consequences of posting or publishing them. By uploading, submitting, creating, or publishing your User Content to or through the Services, you represent, and warrant that: (1) you are the creator and owner of your User Content and that you have the authority to use or have the necessary licenses, rights, consents, and permissions to publish the User Content you submit; (2) your User Content does not and will not: (a) infringe, violate, or misappropriate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right or (b) slander, defame, libel, or invade the right of privacy, publicity or other property rights of any other person; (3) your User Content does not contain any viruses, adware, spyware, worms, or other malicious code.
 
-### Restrictions on Content and Use of the Services
+### Restriccions en contingut i utilització dels serveis
 
 We reserve the right at all times (but will not have an obligation) to remove or refuse to distribute any User Content on the Website and to suspend or terminate users, without liability to you. We also reserve the right to access, read, preserve, and disclose any information as we reasonably believe is necessary to (i) satisfy any applicable law, regulation, legal process or governmental request, (ii) enforce the Terms, including investigation of potential violations hereof, (iii) detect, prevent, or otherwise address fraud, security or technical issues, (iv) respond to user support requests, or (v) protect the rights, property or safety of Code.org, its users and the public.
 
 You may not do any of the following while accessing or using the Services: (i) access, tamper with, or use non-public areas of the Services, Code.org’s computer systems, or the technical delivery systems of Code.org’s providers; (ii) probe, scan, or test the vulnerability of any system or network or breach or circumvent any security or authentication measures; (iii) access or search or attempt to access or search the Services by any means (automated or otherwise) other than through currently available, published interfaces that are provided by Code.org (and only pursuant to those terms and conditions), unless you have been specifically allowed to do so in a separate agreement with Code.org (NOTE: crawling the Services is permissible if done in accordance with the provisions of the robots.txt file, however, scraping the Services without the prior consent of Code.org is expressly prohibited); (iv) forge any TCP/IP packet header or any part of the header information in any email or posting, or in any way use the Services to send altered, deceptive or false source-identifying information; or (v) interfere with, or disrupt, (or attempt to do so), the access of any user, host or network, including, without limitation, bullying or harassing, sending a virus, overloading, flooding, spamming, mail-bombing the Services, or by scripting the creation of Content in such a manner as to interfere with or create an undue burden on the Services.
 
-### Your License to Use Code.org Videos, Tutorials, Data, and APIs
+### La llicència d'ús Code.org vídeos, Tutorials, dades i APIs
 
 Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
@@ -80,11 +80,11 @@ The [Code.org JSON API and database of schools](http://code.org/learn/find-schoo
 
 Any data provided by The Conference Board is provided “as is” with no warranty whatsoever, and is protected by United States and International Copyright laws. The data displayed are provided for informational purposes only and may only be accessed, reviewed, published, and/or used in accordance with, and the permission of, The Conference Board consistent with the Terms of Use displayed at [www.conference-board.org](http://www.conference-board.org). Such data may not be extracted for use in a database, used to create a derivative work, or otherwise misused by any means without express written permission from The Conference Board, except that you may make limited non-commercial use as consistent with Fair Use under Section 107 of the Copyright Act of 1976. The Conference Board® and The Conference Board Help Wanted OnLine® are registered trademarks of The Conference Board. The Conference Board reserves all rights in and to its trademarks. Further information regarding The Conference Board Help Wanted OnLine® can be found [here](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### Política de copyright
 
 Code.org respects the intellectual property rights of others and expects users of the Services to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 
-### Digital Millennium Copyright Act
+### Digital Millenium Copyright Act
 
 It is Code.org’s policy to respond to notices of alleged copyright infringement that comply with the Digital Millennium Copyright Act.
 
@@ -102,7 +102,7 @@ The CODE® logo design is a registered trademark of Code.org. You may only use t
 
 Code.org does not represent or warrant that the Services will be error-free, free of viruses or other harmful components, or that defects will be corrected. We do not represent or warrant that the information available on or through the Services will be correct, accurate, timely or otherwise reliable. We may make changes to the features, functionality or content of the Services at any time. We reserve the right in our sole discretion to edit or delete any Content, information or other materials made available as a part of the Services.
 
-### Code.org Store and Support Forums
+### Botiga Code.org i fòrums de suport
 
 The Code.org store and Code.org support forums are operated by third parties. Please read the User Agreement and Privacy Policy for these sites separately before purchasing an item from the Code.org store or before posting a question or answer to the support forum. By accessing the Code.org store and support forums, you agree to be bound by the respective user agreement and privacy policy of these third parties.
 
@@ -110,7 +110,7 @@ The Code.org store and Code.org support forums are operated by third parties. Pl
 
 Code.org encourages software engineers to volunteer as mentors to assist teachers in computer science education. Code.org provides information about these potential volunteers without any warranty, references, or background checks. If you are an Educator who chooses to ask for the assistance of a volunteer sourced via Code.org’s database, it is entirely your responsibility to thoroughly check references or perform the necessary background checks. Code.org provides no warranty or information other than the ability to contact a potential volunteer, and all liability in any use of volunteers rests only with you. Code.org does not guarantee the accuracy or completeness of any information provided by volunteers and we neither adopt nor endorse, nor are we responsible for, the accuracy or reliability of any opinion, advice, or statement made by any party other than Code.org. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on information or other content posted on the Service or transmitted by others.
 
-### Pledges, Donations and Payments
+### Compromisos, donacions i pagaments
 
 A. Pledges and Donations. If you make a pledge or donation on this website, You agree to pay all pledges and donations specified.
 
@@ -138,7 +138,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE CODE.ORG ENTITIES SHALL N
 
 SOME STATES OR OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
 
-### General Terms
+### Condicions generals
 
 #### A. Waiver and Severability
 

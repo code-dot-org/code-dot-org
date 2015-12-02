@@ -49,7 +49,7 @@ Nadamo se da će nadahnuti učenike da nastave učiti. Istraživanja pokazuju da
 
 *Zašto je to važno?*
 
-U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. Poznato nam je da bez obzira na to što učenici žele biti kada odrastu, bez obzira na to da li ih zanima medicina, poduzetništvo, politika ili umjetnost, tehnološko znanje pružit će im samopouzdanje i vještine potrebne za uspijeh.
+In China, every student takes computer science to graduate high school. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. Poznato nam je da bez obzira na to što učenici žele biti kada odrastu, bez obzira na to da li ih zanima medicina, poduzetništvo, politika ili umjetnost, tehnološko znanje pružit će im samopouzdanje i vještine potrebne za uspijeh.
 
 **Više detalja i citat koji možete koristiti u materijalima**
 

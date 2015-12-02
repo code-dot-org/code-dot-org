@@ -16,7 +16,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 告诉你的朋友关于 #编程一小时
 
-## 2. 邀请你的学校加入编程一小时
+## 2. 邀请全校师生尝试编程一小时
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
