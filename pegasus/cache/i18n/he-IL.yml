@@ -35,7 +35,7 @@
   hoc2014_support: תמוך בו &#x25BE;
   hoc2014_whatishoc: מהו Hour of Code?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_signup: העלה את התכנות שלך
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: חפש
   csedweek_map_search_reset: אפס
@@ -296,6 +296,10 @@
   class_submission_languages_other: שפות אחרות
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: Javascript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
@@ -310,15 +314,15 @@
   starwars_speak_languages: האם אתם דוברים שפה נוספת?
   starwars_help_translate: עזרו לנו לתרגם
   starwars_platform_text: דפדפנים מודרנים, סמארטפונים, טאבלטים
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_name: 'שעת הקוד: גרסת מיינקראפט'
+  mc_longdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של
+    מיינקראפט.
+  mc_shortdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
+    של מיינקראפט.
   mc_gradelevel: לגילאי 6 ומעלה
   mc_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
+  minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -517,7 +521,7 @@
     את המשתמשים שלהם.
   dashboard_sections_table_section: סעיף
   dashboard_sections_table_secret: סוג התחברות
-  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_grade: כיתה
   dashboard_sections_table_course: קורס
   dashboard_sections_table_students: סטודנטים
   dashboard_sections_table_code: Section Code
@@ -673,10 +677,14 @@
   carousel_heading_international: הדרכות בשפה שלך
   carousel_heading_domestic: הדרכות בשפה האנגלית
   carousel_heading_beginners: הדרכות למתחילים
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: הדרכות שמלמדות JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: ללא התקן או אינטרנט? נסה "מדעי המחשב בלי חיבור לחשמל"
   carousel_heading_devices: אפליקציות לימוד לטלפונים וטבלטים
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: הדרכות בשפות תכנות אחרות
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: צרו משחקים ואפליקציות משלכם
   carousel_heading_university: קורסים אוניברסיטאים באינטרנט
   carousel_heading_webpages: למד ליצור דפי אינטרנט
@@ -1321,11 +1329,3 @@
   infinity_shortcode: inf
   playlab_shortcode: הפעל
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
