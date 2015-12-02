@@ -32,4 +32,12 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## ゲストで演説される方とのビデオ会話:
+
+賞品は米国およびカナダのK-12の教室に限っております。 Code.org は独自で学校を選考し、web会話の時間帯を提供し、コンピューターに詳しい先生と共に詳細の設定を行います。 学校全体でこの賞品の対象となるための申請をする必要はありません。 Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

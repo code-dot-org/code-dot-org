@@ -9,6 +9,6 @@ layout: wide
 
 # كل مدرسه‌ات را به شركت در برنامه دعوت كن
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+اطلاعات شرکت كل مدرسه در ساعت کدنويسي در اینجا قرار خواهد گرفت.
 
 <%= view :signup_button %>

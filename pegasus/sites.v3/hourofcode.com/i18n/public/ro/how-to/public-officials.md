@@ -34,11 +34,11 @@ nav: how_to_nav
 
 ## Implică fiecare școală in eveniment, fiecare elev trebuie sa invete!
 
-  1. **Recruteaza scolile locale si districtele.** Foloseste [acest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) sau [acest rezumat](<%= resolve_url('/promote/stats') %>)ca un punct de plecare si arunca o privire la asta[ghiduri](<%= resolve_url('/how-to') %>) pentru scoli si comunitati. Aduceti-le la cunostinta **fiecarui** profesor participant ca exista [un cadou de multumire](<%= resolve_url('/prizes') %>) si in **fiecare stat**, o scoala participanta va castiga **$10,000 in echipamente technologice**!
+  1. **Recruteaza scolile locale si districtele.** Foloseste [acest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) sau [acest rezumat](<%= resolve_url('/promote/stats') %>)ca un punct de plecare si arunca o privire la asta[ghiduri](<%= resolve_url('/how-to') %>) pentru scoli si comunitati. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. Gazduind un eveniment este un mod extraordinar de a promova Hour of Code si de a creste rata participantilor.
+  2. **Organizati un eveniment Hour of Code.** Vedeti [ghidul nostru](<%= resolve_url('/how-to/event') %>) pentru o privire de ansamblu, kit-ul pentru media si alte resurse de organizare a evenimentului. Gazduind un eveniment este un mod extraordinar de a promova Hour of Code si de a creste rata participantilor.
 
-  3. **Participa la un eveniment în timpul săptămânii educatiei in tehnologia computerelor (<%= campaign_date('short') %>)**[Găsiti săli de clasă şi şcoli](<%= resolve_url('/events') %>) participante în cartier, oras sau stat.</p></li> 
+  3. **Participa la un eveniment în timpul săptămânii educatiei in tehnologia computerelor (<%= campaign_date('short') %>).**[Găsiti săli de clasă şi şcoli](<%= resolve_url('/events') %>) participante în cartier, oras sau stat.</p></li> 
     
       * **Emite o proclamatie sau rezolutie.** Vezi aceasta [proba ](<%= resolve_url('resources/proclamation') %>) de sustinere a Saptamanii Educatiei in Stiintele calculatorului si a obiectivelor sale ce pot fi folosite de catre legislatorii de stat sau locali.
     

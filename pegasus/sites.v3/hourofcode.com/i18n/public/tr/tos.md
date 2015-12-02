@@ -22,25 +22,25 @@ Bu Şartlar değişime tabidir. Eğer Şartlar değiştikten sonra Hizmetler'i k
 
 Bazı Hizmetler bu Şartların yanı sıra başka kurallara, yönergelere veya kullanım şartlarına (“**Ek Şartlar**”) tabi olabilir. Bu Hizmetler'i kullanmanız Ek Şartlar'ı kabul etmenize bağlıdır. Eğer bu Şartlar ve Ek Şartlar arasında herhangi bir uyuşmazlık var ise ve Ek Şartlar'da buradaki Şartlar'ın geçerli olacağı açıkça belirtilmemişse, Ek Şartlar geçerli olacaktır.
 
-### Children Under Age 13
+### 13 Yaş Altı Çocuklar
 
 Code.org, [gizlilik şartları](http://code.org/privacy)'nda da belirtildiği gibi, 13 yaşının altındaki Kullanıcılardan toplanan kişisel veri miktarını en aza indirmek için adımlar atmaktadır. Eğer 13 yaşın altındaysanız, lütfen Code.org' da bir hesap oluşturmadan önce bir ebeveyninizin veya vasinizin onayını alınız. Code.org okul bölgelerinin ve okulların öğretmenler, yöneticiler, danışmanlar ve diğer eğitimciler gibi çeşitli temsilcilerinin (bir “**Eğitimci**”) Hizmetler aracılığıyla eğitim sağlamak için öğrencilerine bağlanmalarına izin verir. Eğer bir Eğitimci iseniz, Hizmetler'e bir veya birden fazla öğrenciniz için hesaplar açabilirsiniz.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Hesabınız
 
 Eğer Hizmetler için bir hesap oluşturursanız, hesabınızın ve şifrenizin güvenliğinden siz sorumlusunuz. Eğer size bir Eğitimci tarafından tahsis edilmiş bir hesabı kullanıyorsanız, Eğitimciniz hesabınıza erişebilir ve hesabınızı iptal edebilir.
 
 Code.org Hizmetlere belirli üçüncü parti sosyal ağ hizmetleri, örneğin Facebook Connect veya Google (“**Kimlik Doğrulama Servisi**”) aracılığıyla kaydolmanıza izin verebilir. Hizmetlere bir Kimlik Doğrulama Servisi aracılığıyla kaydolarak Code.org'a Kimlik Doğrulama Servisi'ndeki hesap bilgilerinize erişme izni verir ve Kimlik Doğrulama Servisinin aracılığıyla Hizmetleri kullanmanıza ilişkin Kimlik Doğrulama Servisi tarafından koşulan bütün şartları kabul edersiniz. Kimlik Doğrulama Servisi ile olan etkileşimlerinizden tamamen siz sorumlusunuz.
 
-### Privacy
+### Gizlilik
 
 Gizliliğiniz bizim için önemlidir. Code.org'un [Gizlilik Politikası](http://code.org/privacy) kişisel bilgilerinizi nasıl kullandığımızı açıklar ve çeşitli referanslarla bu Şartlara dahil edilmiştir. Code.org'un kişisel bilgilerinizi toplayışı, kullanışı ve yayınlayışıyla ilgili bilgi almak için lütfen Gizlilik Politikasını dikkatle okuyun.
 
 Eğer sizin için bir Eğitimci tarafından açılmış veya herhangi bir şekilde bir Eğitimciye bağlı olan bir hesabı kullanıyorsanız, Code.org' un bilgilerinizi hesabınızla bağlı olan Eğitimciye yayınlayabileceğini kabul edersiniz. Eğer bir Eğitimciyseniz, öğrencilerinize ilişkin Code.org' dan aldığınız bilgileri sınıfınızdaki, okulunuzdaki veya okul bölgenizdeki diğer yetkililer dışında hiç kimseyle paylaşmamayı kabul edersiniz.
 
-### User Generated Content - Management; License Grant; Representations and Warranties
+### Kullanıcı Tarafından Üretilen İçerik - Yönetimi; Linsanslaması; Teminatlar ve Garantiler
 
 Code.org şimdi veya gelecekte size ve diğer kullanıcılara Hizmete bilgisayar kodu (hem kaynak kodu hem de nesne kodu), bilgi, metin, grafikler, notlar, sorular, yorumlar, derecelendirmeler, değerlendirmeler, görüntüler, videolar veya başka içerikler (“**Kullanıcı İçeriği**”) koyma izni verebilir. You understand that whether or not such User Content is published, Code.org does not guarantee any confidentiality with respect to any submissions.
 

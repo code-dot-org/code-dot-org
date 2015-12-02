@@ -32,4 +32,12 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## 視頻聊天的特邀演講者：
+
+K 12 間教室在美國和加拿大只限于獎。 Code.org 將選擇獲獎教室、 網路聊天，為提供一段時間和工作適當的教師，以設置的技術詳細資訊。 你整個的學校不需要申請領取這一獎項。 Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>
