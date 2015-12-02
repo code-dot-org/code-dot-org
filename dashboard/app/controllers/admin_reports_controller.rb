@@ -94,58 +94,60 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
+      @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
 
-    @is_sampled = false
+      @is_sampled = false
 
-    output_data = {}
-    %w(Attempt Success).each do |key|
-      dimension = 'ga:eventLabel'
-      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
-      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter]
-        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+      output_data = {}
+      %w(Attempt Success).each do |key|
+        dimension = 'ga:eventLabel'
+        metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+        filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+        if params[:filter]
+          filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+        end
+        ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
+
+        @is_sampled ||= ga_data.data.contains_sampled_data
+
+        ga_data.data.rows.each do |r|
+          label = r[0]
+          output_data[label] ||= {}
+          output_data[label]["Total#{key}"] = r[1].to_f
+          output_data[label]["Unique#{key}"] = r[2].to_f
+          output_data[label]["Avg#{key}"] = r[3].to_f
+        end
       end
-      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-
-      @is_sampled ||= ga_data.data.contains_sampled_data
-
-      ga_data.data.rows.each do |r|
-        label = r[0]
-        output_data[label] ||= {}
-        output_data[label]["Total#{key}"] = r[1].to_f
-        output_data[label]["Unique#{key}"] = r[2].to_f
-        output_data[label]["Avg#{key}"] = r[3].to_f
+      output_data.each_key do |key|
+        output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
+        output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
+        output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+        output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
       end
-    end
-    output_data.each_key do |key|
-      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
-      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
-      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
-      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
-    end
 
-    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+      page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
 
-    data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      data_array = output_data.map do |key, value|
+        {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      end
+      require 'naturally'
+      data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+      headers = [
+        "Puzzle",
+        "Total\nAttempts",
+        "Total Successful\nAttempts",
+        "Avg. Success\nRate",
+        "Avg. #attempts\nper Completion",
+        "Unique\nAttempts",
+        "Unique Successful\nAttempts",
+        "Perceived Dropout",
+        "Avg. Unique\nSuccess Rate",
+        "Avg. Time\non Page"
+      ]
+      render locals: {headers: headers, data: data_array}
     end
-    require 'naturally'
-    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
-    headers = [
-      "Puzzle",
-      "Total\nAttempts",
-      "Total Successful\nAttempts",
-      "Avg. Success\nRate",
-      "Avg. #attempts\nper Completion",
-      "Unique\nAttempts",
-      "Unique Successful\nAttempts",
-      "Perceived Dropout",
-      "Avg. Unique\nSuccess Rate",
-      "Avg. Time\non Page"
-    ]
-    render locals: {headers: headers, data: data_array}
   end
 
   def pd_progress
@@ -217,50 +219,52 @@ class AdminReportsController < ApplicationController
     # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
     authorize! :read, :reports
 
-    # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
-    # We restrict by dates to avoid long trails of (inappropriate?) signups.
-    data_2014 = DB[:forms].
-        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
-        group(:name, :email).
-        # TODO(asher): Is this clumsy notation really necessary? Is Sequel
-        # really this stupid? Also below.
-        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-        order(:created_at_day).
-        all.
-        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
-    data_2015 = DB[:forms].
-        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
-        group(:name, :email).
-        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-        order(:created_at_day).
-        all.
-        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+    SeamlessDatabasePool.use_persistent_read_connection do
+      # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
+      # We restrict by dates to avoid long trails of (inappropriate?) signups.
+      data_2014 = DB[:forms].
+          where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
+          group(:name, :email).
+          # TODO(asher): Is this clumsy notation really necessary? Is Sequel
+          # really this stupid? Also below.
+          group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+          order(:created_at_day).
+          all.
+          map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+      data_2015 = DB[:forms].
+          where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
+          group(:name, :email).
+          group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+          order(:created_at_day).
+          all.
+          map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
 
-    # Construct the hash {MM-DD => [count2014, count2015]}.
-    # Start by constructing the key space as the union of the MM-DD dates for
-    # data_2014 and data_2015.
-    require 'set'
-    dates = Set.new []
-    data_2014.each do |day|
-      dates.add(day[0])
-    end
-    data_2015.each do |day|
-      dates.add(day[0])
-    end
-    # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
-    data_by_day = {}
-    dates.each do |date|
-      data_by_day[date] = [0, 0]
-    end
-    # Finally populate the values of our hash.
-    data_2014.each do |day|
-      data_by_day[day[0]][0] = day[1]
-    end
-    data_2015.each do |day|
-      data_by_day[day[0]][1] = day[1]
-    end
+      # Construct the hash {MM-DD => [count2014, count2015]}.
+      # Start by constructing the key space as the union of the MM-DD dates for
+      # data_2014 and data_2015.
+      require 'set'
+      dates = Set.new []
+      data_2014.each do |day|
+        dates.add(day[0])
+      end
+      data_2015.each do |day|
+        dates.add(day[0])
+      end
+      # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
+      data_by_day = {}
+      dates.each do |date|
+        data_by_day[date] = [0, 0]
+      end
+      # Finally populate the values of our hash.
+      data_2014.each do |day|
+        data_by_day[day[0]][0] = day[1]
+      end
+      data_2015.each do |day|
+        data_by_day[day[0]][1] = day[1]
+      end
 
-    render locals: {data_by_day: data_by_day.sort}
+      render locals: {data_by_day: data_by_day.sort}
+    end
   end
 
   # Use callbacks to share common setup or constraints between actions.
