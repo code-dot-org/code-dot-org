@@ -335,7 +335,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Navegadors moderns, mòbils i tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -1443,3 +1443,8 @@
   infinity_shortcode: inf
   playlab_shortcode: reprodueix
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
