@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "20 Mouse Droid behar dituzu. Erabili \"gehitu Mouse Droid bat\" komandoa \"Mouse Droid lortzean\" gertaeraren barnean bi Mouse Droid edo gehiago gehitzeko bat lortzen duzun bakoitzean."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Zorionak, Mouse Droid-ak gehitzeko kodea gehitu duzu. Hurrengo ariketarekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (Mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)"},
 "failedChangeSettingTimeout":function(d){return "Lortu hiru Rebel Pilot aurrera jarraitzeko."},
-"failedChangeSettingSettings":function(d){return "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."}};
+"failedChangeSettingSettings":function(d){return "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

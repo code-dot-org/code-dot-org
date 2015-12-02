@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Musisz złapać 20 Myszodroidów. Użyj polecenia \"dodaj Myszodroida\" wewnątrz zdarzenia \"gdy złapie Myszodroida\", by dodać dwa lub więcej Myszodroidy za każdym razem, gdy złapiesz jednego."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulacje, dodałeś kod, by utworzyć Myszodroidów. Możesz przejść do następnej łamigłówki lub ponownie zdobyć 20 Myszodroidów. Ułatwisz to sobie dodając ich więcej! (Naciskaj i przytrzymuj klawisze ze strzałkami na klawiaturze (lub na ekranie), by poruszać się szybciej.)"},
 "failedChangeSettingTimeout":function(d){return "Zdobądź trzech Pilotów Rebeliantów, aby kontynuować."},
-"failedChangeSettingSettings":function(d){return "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."}};
+"failedChangeSettingSettings":function(d){return "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

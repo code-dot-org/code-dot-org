@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)"},
 "failedChangeSettingTimeout":function(d){return "Arriba a tres Pilots Rebels per seguir endavant."},
-"failedChangeSettingSettings":function(d){return "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat."}};
+"failedChangeSettingSettings":function(d){return "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

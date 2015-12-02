@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Трябват още 20 мишки дроиди. Използвайте командата \"добави мишка дроид\" и я вмъкнете в Събитието \"когато взема мишка дроид\", за да добавите две или повече мишки дроиди всеки път, когато хванете една от тях."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Поздравления, добавихте код, за да направите мишка дроид. Можете да отидете на следващия пъзел или да се върнете на този и да заловите още 20 мишки дроиди. Направете го лесно като поставите още от тях. (Натиснете и задръжте стрелките на вашата клавиатура или екран, за да се движите по-бързо.)"},
 "failedChangeSettingTimeout":function(d){return "Стигни до трима Бунтовник пилоти, за да продължиш."},
-"failedChangeSettingSettings":function(d){return "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."}};
+"failedChangeSettingSettings":function(d){return "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

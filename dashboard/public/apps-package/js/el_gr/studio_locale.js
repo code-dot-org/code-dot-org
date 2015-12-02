@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Χρειάζεται να πάρεις 20 Ανδροειδή Ποντίκια. Χρησιμοποίησε την εντολή \"βάλε ένα Ανδροειδές Ποντίκι\" μέσα στο γεγονός \"όταν πάρεις Ανδροειδές Ποντίκι\" για να προσθέσεις δύο ή περισσότερα Ανδροειδή Ποντίκια κάθε φορά που παίρνεις ένα."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Συγχαρητήρια, έβαλες κώδικα για να κάνεις Ανδροειδή Ποντίκια. Μπορείς να πας στο επόμενο παζλ ή να δοκιμάσεις να πάρεις 20 Ανδροειδή Ποντίκια. Δοκίμασε να το κάνεις πιο εύκολο βάζοντας περισσότερα από αυτά (Πάτησε και κράτα πατημένα τα πλήκτρα στο πληκτρολόγιό σου (ή την οθόνη σου) για να κινηθείς ταχύτερα.)"},
 "failedChangeSettingTimeout":function(d){return "Πάρε τρεις Αντάρτες Πιλότους για να προχωρήσεις."},
-"failedChangeSettingSettings":function(d){return "Κάνε το δικό σου παιχνίδι. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του."}};
+"failedChangeSettingSettings":function(d){return "Κάνε το δικό σου παιχνίδι. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

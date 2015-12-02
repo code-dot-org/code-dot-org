@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "你需要抓到 20 滚轮机器人。当每次你抓到一个时，在”当抓到滚轮机器人时“事件里面使用\"添加一个滚轮机器人\"命令添加两个或更多的滚轮机器人。"},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "恭喜，您添加了制造抓到机器人的代码。你可以去下做一道题或再次尝试获得 20个 抓到机器人。通过添加更多来使其更容易!（按住键盘 (或屏幕) 的键不放移动得更快。）"},
 "failedChangeSettingTimeout":function(d){return "获得三名反叛飞行员来进入下一关。"},
-"failedChangeSettingSettings":function(d){return "制作你自己的游戏，要通过这一关，您需要更改您的机器人并设置它的速度。"}};
+"failedChangeSettingSettings":function(d){return "制作你自己的游戏，要通过这一关，您需要更改您的机器人并设置它的速度。"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

@@ -909,4 +909,10 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Você precisa pegar 20 Mouse Droids. Use o comando \"adicione um Mouse Droid\" dentro do evento \"quando pegar Mouse Droid\" para adicionar dois ou mais Mouse Droids sempre que você pegar um."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Parabéns, você adicionou código para criar Mouse Droids. Você pode ir para o próximo desafio ou tentar pegar 20 Mouse Droids novamente. Tente facilitar, adicionando mais deles! (Pressione e segure as teclas do seu teclado - ou tela - para se mover mais rápido)."},
 "failedChangeSettingTimeout":function(d){return "Pegue três Pilotos Rebeldes para seguir em frente."},
-"failedChangeSettingSettings":function(d){return "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."}};
+"failedChangeSettingSettings":function(d){return "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};
