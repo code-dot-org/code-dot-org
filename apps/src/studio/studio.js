@@ -471,11 +471,11 @@ var drawMap = function () {
     var touchDragIcon = document.createElementNS(SVG_NS, 'image');
     touchDragIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         studioApp.assetUrl('media/common_images/touch-drag.png'));
-    var touchIconSize = 120;
+    var touchIconSize = 300;
     touchDragIcon.setAttribute('width', touchIconSize);
     touchDragIcon.setAttribute('height', touchIconSize);
     touchDragIcon.setAttribute('x', (Studio.MAZE_WIDTH - touchIconSize) / 2);
-    touchDragIcon.setAttribute('y', (Studio.MAZE_HEIGHT - touchIconSize) / 2);
+    touchDragIcon.setAttribute('y', (Studio.MAZE_HEIGHT - touchIconSize) / 2 - 25);
     overlayGroup.appendChild(touchDragIcon);
   } else {
     var resetText = document.createElementNS(SVG_NS, 'text');
