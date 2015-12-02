@@ -49,7 +49,10 @@
     = view :learn_teacher_banner
 
 - if request.locale == "en-US"
-  = I18n.t(:learn_footer_all_tutorials)
+  .footer-banner
+    = I18n.t(:learn_footer_all_tutorials)
+  %br
+  %br
 
 - if variation == 'beyond'
   %br
