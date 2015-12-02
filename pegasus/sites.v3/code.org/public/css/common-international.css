@@ -294,19 +294,6 @@
   }
   .fullwidth-carousel .slide-shortdescription {
     width: 500px;
-  }  
-
-  .multi-item-carousel .carousel-inner .active.left {
-    left: -0% !important;
-  }
-  .multi-item-carousel .carousel-inner .active.right {
-    left: 0% !important;
-  }
-  .multi-item-carousel .carousel-inner .next {
-    left: 50% !important;
-  }
-  .multi-item-carousel .carousel-inner .prev {
-    left: -50% !important;
   }
 }
 

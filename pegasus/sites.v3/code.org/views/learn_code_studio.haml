@@ -64,6 +64,10 @@
       $("#banner-mc").fadeIn(1000);
     }
 
+    if ("#{request.locale}" != "en-US") {
+      $("#codeStudioCarousel").removeClass('slide');
+    }
+
     $("#codeStudioCarousel").swipe( {
       swipeLeft: function() {
         $(this).parent().carousel('next');
