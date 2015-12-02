@@ -3,7 +3,8 @@
   :javascript
     window.dashboard.isChrome34 = true;
 
-%div{style: 'display: none;'}= render partial: 'levels/reference_area'
+- unless @is_legacy_share
+  %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
 #codeApp
   .loading
