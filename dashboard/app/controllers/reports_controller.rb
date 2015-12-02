@@ -54,21 +54,23 @@ SQL
   def csp_pd_responses
     authorize! :read, :reports
 
-    @headers = ['Level ID', 'User Email', 'Data']
-    @response_limit = 100
-    @responses = {}
-    [3911, 3909, 3910, 3907].each do |level_id|
-      # Regardless of the level type, query the DB for teacher repsonses.
-      @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).joins(:activities).joins("INNER JOIN users ON activities.user_id = users.id").pluck(:level_id, :email, :data)
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @headers = ['Level ID', 'User Email', 'Data']
+      @response_limit = 100
+      @responses = {}
+      [3911, 3909, 3910, 3907].each do |level_id|
+        # Regardless of the level type, query the DB for teacher repsonses.
+        @responses[level_id] = LevelSource.limit(@response_limit).where(level_id: level_id).joins(:activities).joins("INNER JOIN users ON activities.user_id = users.id").pluck(:level_id, :email, :data)
 
-      # If the level type is multiple choice, get the text answers and replace
-      # the numerical responses stored with the corresponding text.
-      if [3911, 3909, 3910].include? level_id
-        level_properties = Level.where(id: level_id).pluck(:properties)
-        if level_properties.length > 0
-          level_answers = level_properties[0]["answers"]
-          @responses[level_id].each do |response|
-            response[2] = level_answers[response[2].to_i]["text"]
+        # If the level type is multiple choice, get the text answers and replace
+        # the numerical responses stored with the corresponding text.
+        if [3911, 3909, 3910].include? level_id
+          level_properties = Level.where(id: level_id).pluck(:properties)
+          if level_properties.length > 0
+            level_answers = level_properties[0]["answers"]
+            @responses[level_id].each do |response|
+              response[2] = level_answers[response[2].to_i]["text"]
+            end
           end
         end
       end
@@ -160,14 +162,17 @@ SQL
 
   def monthly_metrics
     authorize! :read, :reports
-    recent_users = User.where(current_sign_in_at: (Time.now - 30.days)..Time.now)
-    metrics = {
-      :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
-      :'Active Students' => recent_users.count,
-      :'Active Female Students' => (f = recent_users.where(gender: 'f').count),
-      :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
-      :'Female Ratio' => f.to_f / (f + m),
-    }
+
+    SeamlessDatabasePool.use_persistent_read_connection do
+      recent_users = User.where(current_sign_in_at: (Time.now - 30.days)..Time.now)
+      metrics = {
+        :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
+        :'Active Students' => recent_users.count,
+        :'Active Female Students' => (f = recent_users.where(gender: 'f').count),
+        :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
+        :'Female Ratio' => f.to_f / (f + m),
+      }
+    end
     render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
   end
 
