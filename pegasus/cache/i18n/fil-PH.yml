@@ -107,7 +107,7 @@
   leaderboards_for_hoc: Mga leaderboard para sa Hour of Code.
   support_url: http://support.code.org/
   country: Bansa
-  city: Lungsod
+  city: siyudad
   gender: Kasarian
   boys: Mga lalake
   girls: Mga babae
@@ -325,6 +325,10 @@
   class_submission_languages_other: Ibang (mga) wika
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -728,11 +732,15 @@
   carousel_heading_international: Mga tutorial sa iyong wika
   carousel_heading_domestic: Mga tutorial na magagamit sa Ingles
   carousel_heading_beginners: Mga tutorial para sa mga Beginner
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Mga tutorial na nagtuturo ng JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Walang device o internet? Subukan ang 'unplugged' na
     computer science
   carousel_heading_devices: Mga tutorial na app para sa mga telepono at mga tablet
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Mga tutorial sa ibang programming language
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Gumawa ng sarili mo na mga app o kaya laro
   carousel_heading_university: Mga kurso ng unibersidad na online
   carousel_heading_webpages: Matuto gumawa ng mga web page
@@ -1405,11 +1413,3 @@
   infinity_shortcode: inf
   playlab_shortcode: i-play
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
