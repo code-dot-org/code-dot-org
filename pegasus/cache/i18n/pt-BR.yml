@@ -325,10 +325,11 @@
   class_submission_languages_other: Outro(s) idioma(s)
   inspirational_videos_more: Mais <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">vídeos
     inspiradores</a> por modelos e celebridades
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Escolha seu tema do Laboratório
+  playlab_classic_title: Clássico
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Era do Gelo - em breve
+  playlab_iceage_title_live: Era do Gelo
   starwars_subtitle: Construindo uma galáxia com código
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use blocos de arrastar-soltar e JavaScript.
@@ -768,6 +769,10 @@
   carousel_heading_ide: Plataformas populares entre professores
   educator_notes: Observações do Educador
   teach_led_lesson_plans: Planos de aula da Hora do Código orientadas pelo professor
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Como ensinar a Hora do Código
   more_resources_educators: Mais recursos para professores e educadores
   beyond_submission: Quer enviar um tutorial para Além da Hora do Código? Veja os
@@ -865,7 +870,7 @@
   projguts_gradelevel: De 10 a 13 anos
   hourofcode_gradelevel: De 4 a 104 anos
   frozen_gradelevel: A partir de 8 anos
-  starwars_gradelevel: A partir de 6 anos
+  starwars_gradelevel: Idade 6+
   playlab_gradelevel: De 4 a 104 anos
   infinity_gradelevel: De 4 a 104 anos
   artist_gradelevel: De 4 a 104 anos
