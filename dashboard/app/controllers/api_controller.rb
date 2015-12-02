@@ -78,11 +78,11 @@ class ApiController < ApplicationController
 
     if current_user
       script = Script.get_from_cache(params[:script_name])
-      stage = script.stages[params[:stage_index].to_i]
-      level = stage.script_levels[params[:level_index].to_i].level
+      stage = script.stages[params[:stage_position].to_i - 1]
+      level = stage.script_levels[params[:level_position].to_i - 1].level
 
       last_activity = current_user.last_attempt(level)
-      level_source = last_activity.try(:level_source)
+      level_source = last_activity.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)
       if last_activity
