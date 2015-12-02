@@ -152,11 +152,19 @@ window.dashboard.footer = (function () {
             height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
           }),
           copyright: {
-            display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none'
+            display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: 650,
+            maxWidth: '50%',
+            minWidth: 300,
+            paddingBottom: '0.5em'
           },
           copyrightScrollArea: $.extend({}, this.state.copyrightScrollAreaStyle, {
             overflowY: 'auto',
-            maxHeight: 210
+            maxHeight: 210,
+            padding: '0.8em'
           }),
           moreMenu: $.extend({}, this.state.moreMenuStyle, {
             display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none'
