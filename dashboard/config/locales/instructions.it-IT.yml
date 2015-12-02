@@ -2105,7 +2105,17 @@
         \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
         all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: "Create an object with at\nleast
+        5 values including at least one string and one number. (Click to see\nfull
+        instructions) \n"
+      CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -3043,18 +3053,18 @@
         eyes and nose in any style you would like.
       October15 stars 1_instruction: Usa i cicli e il blocco "intero scelto a caso
         ..." per riempire la notte di stelle di varie forme e dimensioni.
-      Overworld Avoid Monsters_instruction: Incontrare un Creeper non è una buona
-        idea. Muoviti con attenzione tra i Creeper e mettiti al sicuro a casa tua.
-      Overworld Chop Tree_instruction: 'Il legno è una risorsa molto importante: serve
-        per costruire molte cose. Raggiungi l''albero e usa l''istruzione "distruggi
-        il blocco" per abbatterlo.'
-      Overworld Chop Trees_instruction: 'Devi costruire una casa prima che il sole
-        tramonti: ti serve molta legna. Abbatti tutti e tre gli alberi.'
-      Overworld Free Play 20x20_instruction: Complimenti! Hai completato tutti gli
-        esercizi! Ora estrai e costruisci quello che vuoi, creando qualcosa di unico.
-        Usa tutto ciò che imparato finora.
-      Overworld Free Play_instruction: Questo è il paesaggio con cui puoi giocare.
-        Scegli cosa costruire.
+      Overworld Avoid Monsters_instruction: Meglio evitare i creeper. Aggirali con
+        cautela e trova riparo dentro casa.
+      Overworld Chop Tree_instruction: Il legno è una risorsa preziosa. Permette di
+        creare molti oggetti. Avvicinati all'albero e usa il comando "distruggi blocco"
+        per abbatterlo.
+      Overworld Chop Trees_instruction: Dobbiamo costruire una casa prima che cali
+        il sole. Per farlo servirà molta legna. Abbatti tutti e tre gli alberi.
+      Overworld Free Play 20x20_instruction: Congratulazioni! Hai completato tutti
+        i nostri puzzle! Ora scava, costruisci e crea qualcosa di nuovo sfruttando
+        quanto appreso finora.
+      Overworld Free Play_instruction: In questo scenario hai piena libertà di azione.
+        Sei tu a scegliere cosa costruire.
       Overworld House Frame - A_instruction: Questo posto sembra buono per costruire
         la tua casa. Realizza le fondamenta sui blocchi di terra.
       Overworld House Frame - C_instruction: Questo posto sembra buono per costruire
@@ -3070,25 +3080,24 @@
         di volte.
       Overworld House Frame Chosen_instruction: Costruisci il resto della casa con
         qualunque materiale ti piace. Devi usare più volte il blocco "ripeti ... volte".
-      Overworld House Frame_instruction: Questo posto sembra buono per costruire la
-        tua casa. Realizza le fondamenta sui blocchi di terra.
-      Overworld Minecart Track_instruction: Sei tornato in superficie con un bel po'
-        di risorse del sottosuolo. Ora, costruiamo un percorso lungo il sentiero sterrato
-        che parte da casa tua. Il primo passo è quello di sgomberare il cammino. Poi,
-        segui il percorso ed elimina gli alberi.
-      Overworld Move to Sheep_instruction: Aggiungi una seconda istruzione “vai avanti”
+      Overworld House Frame_instruction: Costruiamo una casa! Questa sembra una buona
+        posizione. Erigi un'intelaiatura sui blocchi di terra.
+      Overworld Minecart Track_instruction: Hai riportato in superficie molte risorse
+        sotterranee. Ora costruiremo dei binari lungo il sentiero di terra che parte
+        da casa tua. Innanzitutto dovrai liberare il passaggio. Segui il percorso
+        e abbatti gli alberi.
+      Overworld Move to Sheep_instruction: Aggiungi un secondo comando "muovi avanti"
         per raggiungere la pecora.
-      Overworld Place Wall_instruction: Per costruire una casa devi iniziare con le
-        mura. Costruisci la prima parte della tua casa mettendo le istruzioni "metti
-        assi di ..." e "vai avanti" all'interno di un ciclo “ripeti … volte”.
-      Overworld Plant Crops_instruction: E' bene pensare al futuro. Semina del grano
-        su entrambi i lati dell'acqua così avrai di che sfamarti.
-      Overworld Powered Minecart_instruction: 'Ottimo lavoro! Hai raccolto un sacco
-        di risorse e hai costruito la tua casetta. Ora posa i binari dal bordo della
-        mappa fino alla porta di casa tua. (Se ti va prova anche la versione più difficile:
-        riesci a farcela usando solo 6 blocchi?)'
-      Overworld Shear Sheep_instruction: E' il momento di tosare le pecore! Usa l'istruzione
-        "tosa" per raccogliere la lana da entrambe le pecore.
+      Overworld Place Wall_instruction: Per costruire una casa devi partire da un
+        muro. Crea la prima parte del tuo rifugio inserendo nel loop i comandi "posiziona"
+        e "muovi avanti".
+      Overworld Plant Crops_instruction: La pianificazione è importante. Pianta delle
+        colture a entrambi i lati dell'acqua per non restare senza cibo.
+      Overworld Powered Minecart_instruction: Ottimo lavoro! Hai raccolto molte risorse
+        e costruito una casetta. Ora disponi i binari dal confine della mappa fino
+        alla porta di casa.
+      Overworld Shear Sheep_instruction: È il momento della tosatura! Usa il comando
+        "tosa" per recuperare lana da entrambe le pecore.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3478,7 +3487,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3749,22 +3758,22 @@
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3773,7 +3782,7 @@
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3808,7 +3817,7 @@
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3960,8 +3969,9 @@
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
         a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
@@ -4756,8 +4766,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4828,6 +4838,38 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4863,21 +4905,20 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: Sotto alcuni di questi blocchi c'è la
-        lava, che devi coprire per poter andare avanti. L'istruzione “se” ti è utile
-        in questi casi. Aggiungi un istruzione “vai avanti” nel posto giusto per estrarre
-        tutte le risorse disponibili.
-      Underground If Statements_instruction: Ora la situazione si fa un po' più difficile.
-        Estrai tre blocchi di pietrarossa, ma non cadere nella lava. Usa un'istruzione
-        “se” per posizionare delle lastre di pietra se scopri la lava.
-      Underground Iron_instruction: Passeggiare nella lava fusa non è una buona idea.
-        Posiziona delle lastre di pietra per creare un ponte, poi estrai almeno due
-        blocchi di ferro.
-      Underground Mine in a Circle_instruction: "Trova un modo per prendere 5 blocchi
-        di diamanti e 7 di pietrarossa! Prova ad usare l'istruzione \"ripeti ... volte\"
-        per camminare in un quadrato.\r\n"
-      Underground Mining Coal_instruction: Nel sottosuolo trovi le risorse più preziose,
-        ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
+      Underground Avoiding Lava_instruction: Sotto alcuni blocchi si nasconde la lava,
+        che dovrai coprire per avanzare. Qui tornerà utile il comando "se". Inserisci
+        un comando "muovi avanti" nella posizione giusta per scavare questi blocchi.
+      Underground If Statements_instruction: Ora le cose si complicano. Scava tre
+        pietre rosse senza cadere nella lava. Se trovi della lava, usa un comando
+        "se" per posarvi sopra dei ciottoli.
+      Underground Iron_instruction: Camminare sulla lava sarebbe una pessima idea.
+        Crea un ponte di ciottoli, quindi scava almeno due blocchi di ferro.
+      Underground Mine in a Circle_instruction: Trova il modo di recuperare cinque
+        diamanti e sette pietre rosse! Prova a usare un comando ripeti dentro un altro
+        comando ripeti per camminare in circolo.
+      Underground Mining Coal_instruction: Nel sottosuolo si nascondono risorse preziose,
+        ma c'è poca luce. Posiziona almeno due torce e scava almeno due blocchi di
+        carbone.
       Underground Test Level_instruction: Raccogli tutti i minerali!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

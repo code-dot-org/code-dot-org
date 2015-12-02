@@ -46,7 +46,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
+        Instructions: নির্দেশনা
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
@@ -168,7 +168,7 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
+        Instructions: নির্দেশনা
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       K-1 Artist 2 Match 1:
@@ -176,7 +176,7 @@
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
         <br/><br/>above: <br/><br/>above
-        <br/><br/>below: <br/><br/>below
+        <br/><br/>below: <br/> <br/> নিচে
         <br/><br/>next to: <br/><br/>next to
         Is the square next to, above, or below the ball?: Is the square next to, above,
           or below the ball?
@@ -264,7 +264,7 @@
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
+        Instructions: নির্দেশনা
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
       K-1 Move It Match 1:
@@ -288,7 +288,7 @@
         /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
         /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: Instructions
+        Instructions: নির্দেশনা
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:

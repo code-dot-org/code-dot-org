@@ -94,9 +94,7 @@ da:
       2-3 Artist Nested Loops 12_instruction: |
         Loop this code 12 times to complete
         the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
+      2-3 Artist Nested Loops 2_instruction: Nu skal du loope trekanten 6 gange. Efter hver trekant skal du dreje 60 grader før du tegner en ny.
       2-3 Artist Nested Loops 3_instruction: |
         You'll need to loop the triangle 12
         times to draw this pattern. Divide the number of degrees in a circle (360)
@@ -2003,7 +2001,19 @@ da:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2841,26 +2851,24 @@ da:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        At løbe ind i en Creeper er en dårlig idé.
-        Flyt forsigtigt forbi alle Creepers og kom hjem i sikkerhed.
-      Overworld Chop Tree_instruction: 'Træ er en vigtig ressource. Mange ting er bygget af træ. Gå hen til træet, og brug "ødelæg blok" kommandoen for at fælde det.'
-      Overworld Chop Trees_instruction: 'Vi skal bygge et hus før solen går ned. Der skal bruges meget træ til huse - fæld alle 3 træer.'
-      Overworld Free Play 20x20_instruction: Sådan! Du har løst alle opgaver! Brug nu alt det du har lært til at bygge og skabe noget helt unikt.
-      Overworld Free Play_instruction: Det her er dit helt eget landskab. Du bestemmer hvad der skal bygges.
+      Overworld Avoid Monsters_instruction: Det er en dårlig idé at løbe direkte ind i en sniger. Prøv i stedet at liste dig forbi dem, så du kan komme i sikkerhed i dit hus.
+      Overworld Chop Tree_instruction: 'Træ er en meget vigtig ressource. Det bliver brugt til mange ting. Gå hen til træet, og brug "ødelæg blok"-kommandoen for at hugge det i stykker.'
+      Overworld Chop Trees_instruction: Vi skal bygge et hus, inden solen går ned. Der skal bruges en masse træ til et hus. Hug alle tre træer i stykker.
+      Overworld Free Play 20x20_instruction: Tillykke! Du har gennemført alle vores hovedbrud! Nu skal du udvinde, bygge og skabe noget unikt ved at bruge alt det, du har lært indtil videre.
+      Overworld Free Play_instruction: Landskabet er din legeplads. Du bestemmer selv, hvad du vil bygge.
       Overworld House Frame - A_instruction: Lad os bygge vores eget hus! Her ser godt ud. Byg en ramme på jord-blokkene.
       Overworld House Frame - C_instruction: Lad os bygge vores eget hus! Her ser godt ud. Byg en ramme på jord-blokkene.
       Overworld House Frame B_instruction: Så er der en væg færdig. Lad os bygge resten af huset ved at følge din grundplan! Du skal gentage dig selv en del her.
       Overworld House Frame B2_instruction: Så er der en væg færdig. Lad os bygge resten af huset ved at følge din grundplan! Du skal gentage dig selv en del her.
       Overworld House Frame C_instruction: Så er der en væg færdig. Lad os bygge resten af huset ved at følge din grundplan! Du skal gentage dig selv en del her.
       Overworld House Frame Chosen_instruction: 'Byg resten af huset med de materialer du synes bedst om. "gentag"-kommandoen er nok ret smart her.'
-      Overworld House Frame_instruction: Lad os bygge vores eget hus! Her ser godt ud. Byg en ramme på jord-blokkene.
-      Overworld Minecart Track_instruction: Du er tilbage på overfladen med masser af underjordiske ressourcer. Nu skal vi bygge et spor langs grusstien fra dit hus. Det første skridt er at rydde stien. Følg stien og fjern træerne.
-      Overworld Move to Sheep_instruction: 'Tilføje en "flyt fremad"-blok mere for at komme hen til fårene.'
-      Overworld Place Wall_instruction: 'Ethvert hus starter med en væg. Byg den første del af dit hus, ved at putte "sæt" og "flyt fremad" kommandoer indeni "gentag"-løkken.'
-      Overworld Plant Crops_instruction: Det er godt at have en plan for fremtiden. Plant afgrøder på begge sider af vandet, så du ikke kommer til at sulte senere hen.
-      Overworld Powered Minecart_instruction: Godt gået! Du har samlet masser af ressourcer og bygget dig selv et hjem. Læg nu spor fra kanten af kortet til døren i dit hus.
-      Overworld Shear Sheep_instruction: 'Tid til fåreklipning! Brug "klip"-kommandoen til at samle uld fra begge får.'
+      Overworld House Frame_instruction: Lad os bygge vores eget hus! Denne plads ser god ud. Byg en ramme på jordblokkene.
+      Overworld Minecart Track_instruction: Du er tilbage på overfladen med masser af ressourcer fra undergrunden. Nu vil vi bygge et spor langs jordstien fra dit hus. Det første trin er at rydde stien. Følg stien, og ryd træerne.
+      Overworld Move to Sheep_instruction: 'Tilføj endnu en "ryk fremad"-kommando for at nå frem til fårene.'
+      Overworld Place Wall_instruction: 'Alle husbyggerier starter med en væg. Byg den første del af dit hus ved at placere "placér"- og "ryk fremad"-kommandoerne inde i gentagelsessløjfen.'
+      Overworld Plant Crops_instruction: Det er godt at lægge planer i forvejen. Plant afgrøder på begge sider af vandet, så du ikke bliver sulten senere.
+      Overworld Powered Minecart_instruction: Godt klaret! Du har samlet masser af ressourcer og bygget et beskedent hjem. Nu skal du lægge skinner fra kanten af kortet og frem til din fordør.
+      Overworld Shear Sheep_instruction: 'Nu skal der klippes får! Brug "klip"-kommandoen for at samle uld fra begge får.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3227,7 +3235,7 @@ da:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3496,22 +3504,22 @@ da:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3520,7 +3528,7 @@ da:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3555,7 +3563,7 @@ da:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3707,8 +3715,9 @@ da:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -4492,8 +4501,8 @@ da:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4563,6 +4572,41 @@ da:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 5
+        values including at least one string and one number. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
@@ -4589,11 +4633,11 @@ da:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: 'Der er lava under nogle af disse blokke, som du bliver nødt til at dække før du flytter dig fremad. En "hvis"-kommando er nyttig her. Tilføj en "flyt fremad"-kommando det rette sted for at udgrave disse blokke.'
-      Underground If Statements_instruction: 'Nu bliver det lidt tricky. Udgrav tre rødstensmalm-blokke, men undgå at falde i lavaen. Brug en "hvis"-kommando til at sætte brosten over lavaen.'
-      Underground Iron_instruction: Det er en skidt idé at gå ind i smeltet lava. Sæt brosten for at bygge en bro, og udgrav så mindst to af jernmalm-blokkene.
-      Underground Mine in a Circle_instruction: "Få fat i 5 diamant og 7 rødstensmalm! Prøv at bruge en \"gentag\"-kommando indeni en \"gentag\"-kommando, for at gå rundt i en firkant. \r\n"
-      Underground Mining Coal_instruction: Du finder de mest værdifulde ressourcer under jorden, men det kan blive mørkt. Placér mindst 2 fakler og udgrav mindst 2 kulblokke.
+      Underground Avoiding Lava_instruction: 'Under disse blokke er der lava, som vi skal have dækket til, inden vi kan fortsætte. Her får du brug for en "hvis"-kommando. Tilføj en "ryk fremad"-kommando på det rigtige sted for at udvinde disse blokke.'
+      Underground If Statements_instruction: 'Nu bliver det svært. Du skal udvinde tre rødsten, men du må ikke falde i lavaen. Brug en "hvis"-kommando til at lægge brosten over lavaen med.'
+      Underground Iron_instruction: Det er en dårlig idé at gå rundt på lava. Byg en bro af brosten, og udvind mindst to jernblokke.
+      Underground Mine in a Circle_instruction: 'Find en måde at få fem diamanter og syv rødsten på! Prøv at bruge en "gentag"-kommando inde i en anden "gentag"-kommando for at gå rundt i en firkant.'
+      Underground Mining Coal_instruction: Du finder de mest værdifulde ressourcer under jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker kul.
       Underground Test Level_instruction: Saml alle mineralerne!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

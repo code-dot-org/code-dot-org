@@ -108,7 +108,7 @@ zh:
         desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: '真實生活裡的演算法: 紙飛機'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:

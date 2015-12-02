@@ -41,7 +41,7 @@
   "CONTROLS_FOR_INPUT_FROM_TO_BY":"를 %1부터 %2까지, %3씩 더하면서",
   "CONTROLS_FOR_INPUT_WITH":"카운트 : ",
   "CONTROLS_FOR_TOOLTIP":"변수 %1 의 값을 변경하면서 반복 실행합니다. 변수에 저장되는 값은, 첫번째 수부터 두번째 수까지, 일정 값씩 늘어납니다.",
-  "CONTROLS_IF_ELSEIF_TOOLTIP":"\"만약\" 블럭에 조건 검사를 추가합니다.",
+  "CONTROLS_IF_ELSEIF_TOOLTIP":"\"만약\" 블록에 조건을 추가합니다.",
   "CONTROLS_IF_ELSE_TOOLTIP":"\"만약\" 블럭의 마지막에, 모든 검사 결과가 거짓인 경우 실행할 부분을 추가합니다.",
   "CONTROLS_IF_HELPURL":"http:\/\/code.google.com\/p\/blockly\/wiki\/If_Then",
   "CONTROLS_IF_IF_TOOLTIP":"\"만약\" 블럭의 내용을 추가, 삭제, 재구성 합니다.",

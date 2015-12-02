@@ -49,7 +49,7 @@ Kami harap ini akan memicu minat pelajar agar dapat terus belajar. Penelitian ju
 
 *Mengapa ini begitu penting?*
 
-Di China, setiap pelajar harus mengambil ilmu komputer untu lulus SMA. Di amerika, 90 persen dari sekolah bahkan tidak mengajarkannya. Jadi ini waktu bagi kita untuk menyusulnya pada abad 21 ini. Kami tahu terlepas dari apa yang para pelajar lakukan untuk tumbuh dewasa, apakah mereka memilih bidang pengobatan, bisnis, politik, atau seni, mengetahui bagaimana cara membangun teknologi akan memberikan mereka kepercayaan diri dan cara untuk berhasil.
+In China, every student takes computer science to graduate high school. Di amerika, 90 persen dari sekolah bahkan tidak mengajarkannya. Jadi ini waktu bagi kita untuk menyusulnya pada abad 21 ini. Kami tahu terlepas dari apa yang para pelajar lakukan untuk tumbuh dewasa, apakah mereka memilih bidang pengobatan, bisnis, politik, atau seni, mengetahui bagaimana cara membangun teknologi akan memberikan mereka kepercayaan diri dan cara untuk berhasil.
 
 **Rincian dan kutipan lain yang Anda dapat gunakan sebagai bahan-bahan**
 

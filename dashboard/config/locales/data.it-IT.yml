@@ -105,6 +105,8 @@
         StudioEC: Laboratorio
         Applab: Laboratorio per le App
         NetSim: Simulatore di Internet
+        Custom: 'Artista: Sequenze e Cicli'
+        CustomStudio: Laboratorio
     trophy:
       name:
         Bronze: Bronzo
@@ -572,42 +574,59 @@
           fino all'alieno ed avvisare tutti.
         studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_iceage_1: Manny vuole dire "ciao" - puoi aiutarlo?
-        studio_iceage_2: Diego (attore 1) e Nonnina (attore 2) vorrebbero dirsi "ciao".
-          Puoi aiutarli usando due volte il blocco "il personaggio ... dice"?
-        studio_iceage_3: Puoi aiutare Scrat a raggiungere la bandiera?
-        studio_iceage_4: Puoi aiutare Scrat (personaggio 1) a raggiungere Nonnina
-          (personaggio 2) e a riprodurre un suono quando la raggiunge?
-        studio_iceage_5: Puoi aiutare Sid a dire "salve" quando clicchi su di lui?
-          Dopo aver cliccato su "Esegui", ricordati di cliccare sul Sid!
-        studio_iceage_6: Puoi aiutare Diego a muoversi usando i tasti freccia in alto
-          / in basso / a sinistra / a destra per raggiungere tutte le bandiere?
-        studio_iceage_7: Il blocco "ripeti per sempre" permette di eseguire il codice
-          senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare Sid
-          in continuazione a destra e a sinistra?
-        studio_iceage_8: Aggiungi dei blocchi in modo che quando Sid si imbatte in
-          Manny si segna un punto e si riproduce un suono. Poi usa le frecce per spostare
-          Sid fino a che fai un punto.
-        studio_iceage_9: Imposta lo sfondo per questa era glaciale e aiuta Sid a raggiungere
-          più velocemente Nonnina modificando la propria velocità. Poi sposta Sid
-          con i tasti freccia per arrivare fino a Nonnina ed avvisare tutti.
-        studio_iceage_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
+          you help him say "hello" by dragging the `say` block out into the work area
+          and typing the word "hello" inside?
+        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
+          him on the adventure.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
+          and right repeatedly?
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
         studio_gumball_hello1: Anais wants to make some new friends. Can you help
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
+        studio_gumball_hello2: Darwin (personaggio 1) e suo fratello Gumball (personaggio
+          2) stanno andando a scuola. Puoi aiutarli a salutarsi usando il blocco "il
+          personaggio ... dice"?
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
+        studio_gumball_move_to_actor: Gumball (personaggio 1) e Darwin (personaggio
+          2) sono in ritardo per una giornata molto importante. Aiuta Gumball ad avvicinarsi
+          a Darwin di 200 pixel usando il blocco "sposta il personaggio". Poi unisci
+          un blocco all'evento "quando un personaggio tocca ..." per riprodurre un
+          suono quando si incontrano.
+        studio_gumball_repeat: Il blocco "ripeti per sempre" permette di eseguire
+          il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
+          Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra
+          e a sinistra?
         studio_gumball_click_hello: Can you help Anton announce the start of a race
           by saying "Ready, set, go!"? To test your program, don’t forget to click
           Anton after you click Run!
@@ -810,24 +829,28 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Costruisci una galassia con il codice - Introduzione'
-        starwars_typing: 'Star Wars: Costruisci una galassia con il codice - JavaScript'
-        starwars_events: 'Star Wars: Costruisci una galassia con il codice - Eventi'
-        starwars_congrats: 'Star Wars: Costruisci una galassia con il codice - Complimenti'
-        starwars_blocks_intro: 'Star Wars: Costruisci una galassia con il codice -
+        starwars_intro: 'Guerre Stellari: Costruisci una galassia con il codice -
           Introduzione'
-        starwars_blocks_events: 'Star Wars: Costruisci una galassia con il codice
-          - Eventi'
-        starwars_blocks_congrats: 'Star Wars: Costruisci una galassia con il codice
+        starwars_typing: 'Guerre Stellari: Costruisci una galassia con il codice -
+          JavaScript'
+        starwars_events: 'Guerre Stellari: Costruisci una galassia con il codice -
+          Eventi'
+        starwars_congrats: 'Guerre Stellari: Costruisci una galassia con il codice
           - Complimenti'
+        starwars_blocks_intro: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Introduzione'
+        starwars_blocks_events: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Eventi'
+        starwars_blocks_congrats: 'Guerre Stellari: Costruisci una galassia con il
+          codice - Complimenti'
         mc_intro: Minecraft - Introduzione
         mc_repeat: Minecraft - Ripetizione
         mc_if_statements: Minecraft - Istruzione "se"
         mc_congrats_share: Minecraft - Complimenti
         mc_congrats_no_share: Minecraft - Complimenti
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        gumball_intro: L'Ora del Codice di Gumball - introduzione
+        gumball_events: L'Ora del Codice di Gumball - Eventi
+        gumball_repeat: L'Ora del Codice di Gumball - Ripetizione
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -946,13 +969,13 @@
           evento.
         Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
           blocco di ripetizione
-        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
-        craft_drag_block_callout: Prendi il blocco "moveForward();" (vai avanti) e
-          attaccalo sotto l'altro blocco
-        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
-        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
-        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
-          casa. Riesci a finirla tu?
-        craft_what_is_iron: Estrai il ferro!
-        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
-          un comando per andare avanti?
+        craft_run_button_callout: Seleziona "Run" per provare il tuo programma
+        craft_drag_block_callout: Trascina un blocco "muovi avanti" e posizionalo
+          sotto l'altro blocco
+        craft_callout_preplaced: Qui trovi alcuni blocchi con cui iniziare
+        craft_inside_repeat: Posiziona qui i blocchi per ripetere le azioni
+        craft_callout_preplaced_house: Questo codice avvierà la costruzione della
+          tua casa. Riesci a completarla?
+        craft_what_is_iron: Scava il ferro!
+        craft_callout_moveforward: Questo codice individua la lava. Sapresti inserire
+          un comando per avanzare?

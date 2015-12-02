@@ -148,7 +148,7 @@ ro:
           description_short: Desenează poze şi proiecte mişto cu Artistul!
         hourofcode:
           Maze: Labirint
-          title: Oră de Cod
+          title: Oră de Programare
           description: Încercaţi bazele informaticii cu personaje din Angry Birds, Plants vs Zombies şi Scrat din Ice Age!
           description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
         frozen:
@@ -384,10 +384,10 @@ ro:
           description_short: '[șir gol]'
           Step: Pas
         Hour of Code:
-          title: Ora de cod 2013
+          title: Ora de Programare 2013
           description: '[șir gol]'
           description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
-          Hour of Code 2013: Ora de cod 2013
+          Hour of Code 2013: Ora de Programare 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -1033,7 +1033,7 @@ ro:
           title: Ora de cod 2015
           description_short: Utilizează Laboratorul de joacă pentru a crea o poveste sau un joc.
           description: Utilizează Laboratorul de joacă pentru a crea o poveste sau un joc.
-          Hour of Code: Oră de Cod
+          Hour of Code: Oră de Programare
           Hour of Code 2015: Ora de cod 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1352,6 +1352,10 @@ ro:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1478,7 +1482,7 @@ ro:
           Craft: Craft
         mc:
           title: Ora de Cod Minecraft
-          description_short: Exploreaza o lume Minecraft cu programarea
+          description_short: Explorează o lume Minecraft programând
           description: Folosim blocuri de instructiuni pentru a-l lua pe Steve sau Alex într-o aventură prin aceasta lume Minecraft
           Hour of Code 2015: Ora de cod 2015
         CSPPD3-Unit3-pt2:

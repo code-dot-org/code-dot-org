@@ -38,6 +38,14 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
+<% if @country == 'ie' %>
+
+# Ireland Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
+
+<% end %>
+
 <% if @country == 'in' %>
 
 # India Partners
@@ -84,7 +92,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Major Promotional Partners
+# Βασικοί Εταίροι Προώθησης
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
@@ -96,7 +104,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Συνεργάτες Σεναρίων
+# Συνεργάτες Εκπαιδευτικών Οδηγών
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

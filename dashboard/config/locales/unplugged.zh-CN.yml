@@ -9,20 +9,20 @@
         video: Unplug1
       Unplug2:
         title: 计算性思维
-        desc: 除了纸和笔不用带别的东西，学生将学习计算思维的四个步骤。经过简短的介绍，学生应分成的组，在那里他们将为其他已经选择了特定项目的学生（预先选定的怪物目录）创建规划。整个任务必须分解，然后团队将分析所有的项目，并外出目录、从项目中抽象的不同的细节，然后使用这些信息来创建算法
-          （规划），另一个团队去绘制某些特定的项目。团队将交换两组的算法然后依此制定项目。依据队伍的初衷绘制？
+        desc: 除了纸和笔不用带别的东西，学生将学习计算思维的四个步骤。简短的介绍后，学生应分成几个小组，在那里他们将为其他小组规划某个怪兽（从预先选定的怪兽目录里）的画法。整个任务必须分解，这样团队才能分析目录里所有怪兽的模式、提取出它们不同的细节，然后使用这些信息来创建算法
+          （规划），从而让另一个小组去绘制一个特定的怪兽。每个小组要和别的小组交换算法然后按照别的小组的算法来画怪兽。然后看看画出来的怪兽是不是和原先小组所想的一样？
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: 方格纸编程
-        desc: 编程就像是画画，学生开始去了解什么是编程真正含义。班里的学生在相互的指引下，根据已有的一张图自己在在图表上涂上颜色进行模仿。如果有更多的时间，课程允许学生自己的创作他们自己的作品。
+        desc: 编程就像是画画，学生开始去了解什么是编程真正含义。班里的学生在相互的指引下，能根据已有的一张图，在图表上涂上颜色进行模仿。如果有更多的时间，可允许学生创作他们自己的作品。
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: 算法
-        desc: 覆盖算法这一课。使用七巧板和方格纸，首先练习每一条指令要清晰，不含糊是很重要的。然后学生要探索有多少处方法，把纸拆成一个长方形，注意一下有那些方法可以得到更多或更少的拆痕。
+        desc: 这一课将介绍算法。通过使用七巧板和方格纸，第一个练习会展现出提供清晰的指令是多么的重要。然后会探索有多少种方法把把纸折成长方形，注意一下那些方法会得到更多或更少的折叠次数。
         pdfs:
         - unplug4
         video: Unplug4
@@ -42,7 +42,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: 條件
+        title: 条件
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -77,7 +77,7 @@
         video: Unplug9
       Unplug10:
         title: 互联网
-        desc: 在本课中，学生们会假装流通过互联网，都在学习有关 web 地址，ip 地址和 DNS。
+        desc: 在本课中，学生们会假装流过互联网，来学习有关 web 地址，ip 地址和 DNS。
         pdfs:
         - unplug10
         video: Unplug10
@@ -91,7 +91,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: 幸福地图
+        title: 快乐地图
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged

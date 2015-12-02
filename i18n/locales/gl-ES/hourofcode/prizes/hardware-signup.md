@@ -4,8 +4,8 @@ title: <%= hoc_s(:title_hardware_prize_form) %> layout: wide nav: prizes_nav
 
 * * *
 
-# Enter to win $10,000 worth of technology for your school
+# Entra para gañar material tecnolóxico por valor de $10.000 para o teu colexio
 
-If you plan for every student at your school to learn an Hour of Code, you can qualify to win $10,000 worth of technology to keep learning beyond one hour! One public, K-12 school will win in every US state. Complete the form below to be eligible.
+Se ten previsto que cada estudante da súa escola participe na Hora do Código, pode clasificarse para gañar $10.000 en tecnología e seguir aprendendo máis alá dunha hora! Unha escola pública gañará en cada estado de Estados Unidos. Completa o formulario seguinte para poder participar.
 
 <%= view :hardware_prizes_form %>

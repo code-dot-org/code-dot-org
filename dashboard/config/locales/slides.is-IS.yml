@@ -1720,13 +1720,13 @@
           mun býflugan gera þær aðgerðir sem þú settir í reitinn þar sem segir "annars".
       2:
         image: notes/C4_conditionals_2.png
-        text: Ef setningar eru aðferð tölvunnar til að taka ákvarðanir. Menn setja
+        text: 'Ef setningar eru aðferð tölvunnar til að taka ákvarðanir. Menn setja
           upp skilyrði fyrir tölvuna sem segja að ef tölvan finnur sig í vissum aðstæðum
-          þá geri hún þetta. Annars geri hún eitthvað annað. Efsti hluti ef/annars
+          þá geri hún eitthvað. Annars geri hún eitthvað annað. Efsti hluti ef/annars
           kubbsins segir "ef á blómi". En þessi efsti hluti gæti sagt eitthvað annað,
-          t.d. "ef blómasafi = 2" eða "ef slóð framundan", þá muni kubburinn gera
-          það sama. Að ef setningin efst er sönn, þá muni hann gera fyrri aðgerðaröðina.
-          En ef setningin efst er ósönn, þá muni hann gera seinni aðgerðaröðina.
+          t.d. "ef blómasafi = 2" eða "ef slóð framundan", þá mundi kubburinn gera
+          það sama. Að ef setningin efst er sönn, þá mun hann gera fyrri aðgerðaröðina.
+          En ef setningin efst er ósönn, þá mun hann gera seinni aðgerðaröðina. '
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
@@ -1810,9 +1810,9 @@
       2:
         image: notes/C4_function_create_2.png
         text: Eins og áður byrjar þú á að gefa fallinu heiti og skrifa lýsingu á því
-          sem fallið á að gera. Til dæmis á það að teikna ferning eða teikna þríhyrning
-          og dragðu síðan kubba úr verkfærakassanum inn á hvíta vinnusvæðið fyrir
-          neðan. Mundu að draga þessa kubba inn í græna kubbinn sem umlykur fallið.
+          sem fallið á að gera. Til dæmis á það að teikna ferning eða teikna þríhyrning?
+          Dragðu síðan kubba úr verkfærakassanum inn á hvíta vinnusvæðið fyrir neðan.
+          Mundu að draga þessa kubba inn í græna kubbinn sem umlykur fallið.
       3:
         image: notes/C4_function_create_3.png
         text: Þegar allt er klárt er smellt á vista og loka. Þetta færir þig aftur
@@ -1840,9 +1840,9 @@
           er að skrifa sama kóða og þú gerðir áður til að teikna ferning og setja
           hann í þetta fall. Til að gera þetta þarftu að smella á Breyta valkostinn
           á græna "Teikna ferning" kubbnum. Þetta opnar breytingaglugga fallsins.
-          Hann skiptist í þrennt. Stað til að gefa fallinu heiti. Það mun birtast
-          á græna kubbnum fyrir þetta fall. Skrifaðu svo stutta lýsingu á því hvað
-          fallið þitt á að gera.
+          Hann skiptist í þrjá hluta. Einn hluta til að gefa fallinu heiti. Það mun
+          birtast á græna kubbnum fyrir fallið. Skrifaðu svo stutta lýsingu á því
+          hvað fallið þitt á að gera.
       4:
         image: notes/C4_function_edit_4.png
         text: Í þessu tilfelli á það að teikna ferning. Hvíta svæðið fyrir neðan er
@@ -1856,26 +1856,26 @@
       1:
         image: notes/C4_function_parameters_1.png
         text: 'Hér er fall sem teiknar ferning með 50 díla hliðar. Það er ágætt en
-          hvað ef ég vildi teikna ferning með 50 díla hliðar og annan ferning með
-          100 díla hliðar? Við ættum ekki að þurfa búa til tvö aðskilin föll sem gera
+          hvað ef ég vildi teikna einn ferning með 50 díla hliðar og annan með 100
+          díla hliðar? Við ættum ekki að þurfa búa til tvö aðskilin föll sem gera
           næstum því það sama. Í stað þess getum við notað eitt fall með stika (enska:
           parameter).'
       2:
         image: notes/C4_function_parameters_2.png
-        text: Með stikum getum við sett gildi inn í fall, sem síðan er notað sem breyta
-          innan í fallinu. Prófum að bæta stika með heitinu "Lengd" inn í þetta fall
-          svo við getum notað það til að búa til ferninga í mismunandi stærðum. Í
-          breytingaglugga fallsins getur þú breytt heitinu og lýsingunni eins og áður,
-          en nú getur þú líka bætt við stika. Skrifaðu heiti stikans í reitinn og
-          smelltu á "Bæta við stika". Þetta mun búa til rauðan kubb með heiti stikans
-          sem þú bjóst til. Nú getum við fjarlægt "Færa fram um 100" kubbinn og sett
-          í staðinn stikan Lengd svo kubburinn færi áfram um Lengd.
+        text: Með stikum getum við sett gildi inn í fall, sem síðan eru notuð sem
+          breytur innan í fallinu. Prófum að bæta stika með heitinu "Lengd" inn í
+          þetta fall svo við getum notað það til að búa til ferninga í mismunandi
+          stærðum. Í breytingaglugga fallsins getur þú breytt heitinu og lýsingunni
+          eins og áður, en nú getur þú líka bætt við stika. Skrifaðu heiti stikans
+          í reitinn og smelltu á "Bæta við stika". Þetta mun búa til rauðan kubb með
+          heiti stikans sem þú bjóst til. Nú getum við fjarlægt "Færa fram um 100"
+          kubbinn og sett í staðinn stikan Lengd svo kubburinn færi áfram um Lengd.
       3:
         image: notes/C4_function_parameters_3.png
         text: Smelltu á Vista og loka og dragðu nýja Teikna ferning kubbinn úr flokknum
           Föll í verkfærakassanum. Taktu eftir að það er auður reitur við hlið Lengd
           því fallið vill vita hvaða gildi stikinn Lengd á að hafa. Dragðu talnakubb
-          úr flokknum Stærðfræði og sett í þennan reit. Sérðu hvernig þú getur notað
+          úr flokknum Reikningur og settu í þennan reit. Sérðu hvernig þú getur notað
           fallið aftur og aftur með mismunandi lengdum til að búa til misstóra ferninga?
           Prófaðu það!
     C4_intro:
@@ -1923,16 +1923,16 @@
         image: notes/C4_math_artist_2.png
         text: Að margfalda 50 með 2 í huganum er kannske ekki svo erfitt en tölvur
           eru mjög góðar í reikningi svo við ættum að láta þær sjá um það þegar það
-          er mögulegt. Ef ég nota bara eina breytu, Hæð, í staðinn, þá gæti ég breytt
-          Hæð í 50 og svo breytt algríminu mínu og sagt listamanninum að fara upp
-          um Hæð, snúa til hægri og fara svo áfram um Hæð sinnum 2, en það gefur okkur
-          rétthyrning sem er tvöfalt breiðari en hann er hár.
+          er mögulegt. Ef ég nota breytuna Hæð í staðinn, þá get ég breytt Hæð í 50
+          og svo breytt algríminu mínu og sagt listamanninum að fara upp um Hæð, snúa
+          til hægri og fara svo áfram um Hæð sinnum 2, sem gefur okkur rétthyrning
+          sem er tvöfalt breiðari en hann er hár.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: Þessi kennslustund heiti Tangram Algrím. Tangram er þraut með sjö stykki
-          sem er mögulegt að raða saman til að búa til önnur form. Þú munt nota algrím
-          til að útskýra fyrir félaga þínum hvernig á að raða þrautinni saman.
+        text: Þessi kennslustund heitir Tangram Algrím. Tangram er þraut með sjö stykki
+          sem er mögulegt að raða saman til að búa til alls konar form. Þú munt nota
+          algrím til að útskýra fyrir félaga þínum hvernig á að raða þrautinni saman.
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: Algrím er bara listi yfir skref sem þarf að taka til að ljúka verki.
@@ -1951,52 +1951,51 @@
       4:
         image: notes/C4_unplugged_algorithms_4.png
         text: Þetta er mjög nákvæmt svo að ég get fylgt leiðbeiningum og málverkið
-          mun verða frábært. Þetta er fínt algrím. Ef leiðbeiningarnar væru ekki nógu
-          nákvæmar, mundu úlfarnir mínir ekki líta eins vel út. Þegar maður virkilega
-          vill að eitthvað verði eins og til var ætlast, er best að vera ákaflega
-          nákvæmur.
+          verður flott. Þetta er fínt algrím. Ef leiðbeiningarnar væru ekki nógu nákvæmar,
+          mundu úlfarnir mínir ekki líta eins vel út. Þegar maður virkilega vill að
+          eitthvað verði eins og til var ætlast, er best að vera ákaflega nákvæmur.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: Hver hópur, manneskjan sem gefur fyrirmælin er sú sem heldur á blaðinu,
-          verður að finna út hvert tákn þeirra fyrir "af" verður og hvert tákn þeirra
+        text: Í hverjum hópi, þar sem fyrirmælin eru gefin af þeim sem heldur á blaðinu,
+          verður að finna út hvert tákn hópsins fyrir "af" verður og hvert tákn hans
           fyrir "á" verður. Í tvíundarkerfi er það svolítið eins og stafróf með tveimur
-          stöfum. Eins og að A og B væru allt stafrófið en þú hefur 0 og 1.
+          stöfum. Eins og að A og B væru allt stafrófið, en hér þú hefur 0 og 1.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: Algengasta notin fyrir tvíundir er í "ef" setningu. Þetta er klassískt
+        text: Algengustu notin fyrir tvíundir er í "ef" setningu. Þetta er klassískt
           í forritun. Forritið keyrir og í því segir að ef eitthvað er satt, þá eigi
-          að gera þetta. Eða það er ekki satt og þá á að gera eitthvað annað. Hvað
-          ef þú vilt gera eitthvað svolítið flóknara? Í stað "ef" setningar, viltu
-          vinna með til dæmis mynd eða hljóð í tölvunni.
+          að gera eitthvað. Eða það er ekki satt og þá á að gera eitthvað annað. En
+          hvað ef þú vilt gera eitthvað svolítið flóknara? Í stað "ef" setningar vilt
+          þú kannske vinna með mynd eða hljóð í tölvunni.
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: 'Tölva þekkir aðeins tvíundir en mynd, hún er ekki tvíundir, hún er
-          ekki 0 og 1 svo hvernig gerir maður það? Hér er dæmi: Þú ert með þessa fallegu
-          mynd. Nú er mynd í grunninn bara ein tegund upplýsinga. Allar upplýsingar
+        text: 'Tölva þekkir aðeins tvíundir, en mynd er ekki tvíundir, hún er ekki
+          0 og 1 svo hvernig leysir maður það? Hér er dæmi: Þú ert með þessa fallegu
+          mynd. Nú er mynd í grunninn bara tegund af upplýsingum. Allar upplýsingar
           er hægt að umkóða í tvíundum með einhverjum hætti, maður þarf bara að finna
           aðferð til þess.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: Ímyndum okkur að við setja grind yfir þennan pandabjörn og í hverjum
-          ferningi ætlum við að ákveða hvort ferningurinn er meira svartur eða meira
-          hvítur. Síðan ætlum við að lita hann þannig. Nú er  hvert hólf í grindinni
-          annaðhvort svart eða hvítt og fyrir svörtu ferningana segjum við að þeir
-          séu 0 (tvíund) og hvítu ferningarnir séu 1 (hin tvíundin). Í lokin hefur
-          maður bara safn af 0 og 1. Þannig getur þú táknað þessa mynd með tvíundum.
+        text: Ímyndum okkur að við setjum net yfir þennan pandabjörn og í hverjum
+          möskva ætlum við að ákveða hvort ferningurinn er meira svartur eða meira
+          hvítur. Síðan ætlum við að lita hann þannig. Nú er hver hver möskvi í netinu
+          annaðhvort svartur eða hvítur og látum svörtu möskvana vera 0 (tvíund) og
+          þá hvítu vera 1 (hina tvíundina). Í lokin hefur maður bara safn af 0 og
+          1. Þannig getur þú táknað þessa mynd með tvíundum.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: Þessi kennslustund heitir "Frá-lykkju gaman". Við munum nota tölu til
-          að spila leik með teningum. Hver leikmaður mun kasta þrisvar sinnum til
-          að ákveða upphafsgildi, lokagildi og bilið. Í hverri umferð, drögum við
-          hring um upphafsgildið og hvert gildi sem er jafnmörg skref áfram eins og
-          bilið segir til um. Sá leikmaður sem skorar hæst vinnur!
+        text: Þessi kennslustund heitir "Frá-lykkju gaman". Við munum nota talnalínu
+          til að spila leik með teningum. Hver leikmaður mun kasta þrisvar sinnum
+          til að ákveða upphafsgildi, lokagildi og bilið. Í hverri umferð, drögum
+          við hring um upphafsgildið og hvert gildi sem er jafnmörg skref áfram eins
+          og bilið segir til um. Sá leikmaður sem skorar hæst vinnur!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: Frá-lykkjur eru gagnlegar við margt og ef þú yrðir einhverntímann veðurfræðingur,
+        text: Frá-lykkjur eru gagnlegar við margt og ef þú yrðir einhverntíma veðurfræðingur,
           mundir þú alltaf vera að nota frá-lykkjur. Hæ, ég heiti Becky. Ég vinn hjá
-          EverPower Renewables sem vindveðurfræðingur. Ég spái fyrir um vindahraða
+          EverPower Renewables sem vindveðurfræðingur. Ég spái fyrir um vindhraða
           fyrir Columbia River Gorge gljúfrið þar sem fyrirtækið á vindorkubú.
       3:
         image: notes/C4_unplugged_forloops_3.png
@@ -2011,7 +2010,7 @@
         text: Við erum í landsstjórnstöðinni fyrir EverPower Renewables hér í Portland
           og það er hér sem upplýsingar koma inn frá öllum orkubúum okkar í landinu.
           Jafnvel öflugustu tölvur í dag geta ekki líkt eftir lofthvelinu alls staðar.
-          Í tölvuspálíkönum höfum við það sem köllum grind. Hver punktur í grindinni
+          Í tölvuspálíkönum höfum við það sem við köllum hnitanet. Hvert hnit í netinu
           er breiddargráða og lengdargráða. Við þurfum að reikna út eðlisfræðina og
           reyna að finna út vindhraðann, hitastigið, loftþrýstinginn, þess háttar
           hluti.
@@ -2034,17 +2033,17 @@
         image: notes/C4_unplugged_madlibs_2.png
         text: Í þessari kennslustund lærðum við líka að búa til útdregið sniðmát út
           frá 2 sögum sem höfðu verið búnar til áður. Útdráttur er listin að fjarlægja
-          það sem er ólíkt svo og smáatriði til að koma auga á hvernig ein lausn gæti
-          virkað fyrir mörg ólík verkefni. Hann er mjög gagnlegur í tölvunarfræði
+          það sem er ólíkt, svo og smáatriði til að koma auga á hvernig ein lausn
+          gæti virkað fyrir mörg ólík verkefni. Hann er mjög gagnlegur í tölvunarfræði
           því hann gerir mögulegt að búa til föll sem geta nýst við mismunandi aðstæður.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
         text: Þessi kennslustund heitir Lagasmíð með stikum. Við ætlum að skrifa nokkur
           sönglög hér. Stundum er viðlagið svolítið öðruvísi í hvert sinn sem við
-          syngjum það. Manstu eftir Old Macdonald Had a Farm? Viðlagið er er aðeins
-          öðruvísi fyrir hvert dýr. "And on that farm he had a cow, e-i-e-i-o." Þessa
-          litlu breytingu í hverju viðlagi er hægt að sýna með fyrirbæri sem við köllum
+          syngjum það. Manstu eftir Old Macdonald Had a Farm? Viðlagið er aðeins öðruvísi
+          fyrir hvert dýr. "And on that farm he had a cow, e-i-e-i-o." Þessa litlu
+          breytingu í hverju viðlagi er hægt að sýna með fyrirbæri sem við köllum
           "stika".
       2:
         image: notes/C4_unplugged_parameters_2.png
@@ -2061,7 +2060,7 @@
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: Þessi kennslustund heiti Breytur í umslögum. Við ætlum að læra hvernig
+        text: Þessi kennslustund heitir Breytur í umslögum. Við ætlum að læra hvernig
           við getum búið til setningar þó okkur vanti enn einhverja búta af upplýsingum.
           Flest okkar þekkja þá hugmynd að fylla í eyður. Við gerum það þegar við
           skrifum nafnið okkar á heimavinnuna. Stundum þarf að fylla út fleiri en
@@ -2078,8 +2077,8 @@
           setur þær inn. Við erum alltaf að nota breytur í vinnunni.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: Í hvert sinn sem þú þarft að geyma upplýsingar til að nota seinna, munum
-          við nota breytu. Segjum að við þurfum við telja hve oft notandi hefur tíst.
+        text: Í hvert sinn sem þarf að geyma upplýsingar til að nota seinna, munum
+          við nota breytu. Segjum að við þurfum telja hve oft notandi hefur tíst.
           Í hvert sinn sem þessi notandi tístir, þá bætum við einni við þá tölu og
           hvert sinn sem hann eyðir tísti, þá lækkum við töluna um einn. Þegar við
           þurfum að sjá hve oft þessi notandi hefur tíst, skoðum við bara þessa breytu.
@@ -2087,7 +2086,7 @@
       1:
         image: notes/C4_variables_artist_1.png
         text: Breyta er ílát sem maður getur geymt gildi í. Þegar breytan er notuð
-          í algrími, opna það ílátið og skoðar gildið sem er í því. Þetta gerir mögulegt
+          í algrími, opnar það ílátið og skoðar gildið sem er í því. Þetta gerir mögulegt
           að skrifa sniðugri algrím sem haga sér mismunandi eftir því hvaða gildi
           er geymt í breytunni.
       2:
@@ -2108,7 +2107,7 @@
       1:
         image: notes/C4_variables_playlab_1.png
         text: Breyta er ílát sem maður getur geymt gildi í. Þegar breytan er notuð
-          í algrími, opna það ílátið og skoðar gildið sem er í því. Þetta gerir mögulegt
+          í algrími, opnar það ílátið og skoðar gildið sem er í því. Þetta gerir mögulegt
           að skrifa sniðugri algrím sem haga sér mismunandi eftir því hvaða gildi
           er geymt í breytunni.
       2:
@@ -2160,16 +2159,16 @@
         image: notes/infinity_playlab_intro_3.png
         text: Ég heiti John Vechey. Ég er einn af stofnendum PopCap Games. Við búum
           til leiki eins og Plants vs. Zombies, Bejeweled og Peggle. Mikið í leikjum
-          snýst ekki um hve fullkominn kóðinn og ekki um hve fullkomin listin er,
+          snýst ekki um hve fullkominn kóðinn er, ekki um hve fullkomin listin er,
           heldur um hvaða tilfinningu leikur gefur og hve skemmtilegur hann er. Þú
           uppgötvar það aðeins með því að prófa, með því að gera, með því að læra
           og aðlaga og æfa eigin færni í að búa til leiki.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Áttu þér uppáhaldstölvuleik? Við ætlum að taka eitt skref í áttina að
-          því að búa til alveg eins leiki með því að nota Leikjasmiðjuna. Góðir leikir
-          hafa söguþráð og hver saga hefur leikendur. Leikarar gera hluti eins og
-          tala, hreyfast og eiga innbyrðis samskipti. Jafnvel skora stig í samræmi
+        text: Áttu þér uppáhalds tölvuleik? Við ætlum að taka eitt skref í áttina
+          að því að búa til alveg eins leiki með því að nota Leikjasmiðjuna. Góðir
+          leikir hafa söguþráð og hver saga hefur leikendur. Leikarar gera hluti eins
+          og tala, hreyfast og eiga innbyrðis samskipti. Jafnvel skora stig í samræmi
           við reglur leiksins. Í dag ætlum við að læra alla þessa hluti, einn í einu,
           með Disney persónum eins og Önnu, Elsu, Hiro, Baymax og Garðabrúðu. Við
           smíðum leik frá grunni sem svo er hægt að deila og spila í síma.
@@ -2186,7 +2185,7 @@
           keyrt" kubbinn. Þú getur tengt marga kubba saman með því að draga þá þar
           til þú sérð gulu röndina og þá munu þeir smella saman. Í þessari fyrstu
           þraut er Hiro leikari 1 og Baymax er leikari 2. Við þurfum að færa Hiro
-          til Baymaz með því að draga fram "færa til hægri" kubbinn og tengja hann
+          til Baymax með því að draga fram "færa til hægri" kubbinn og tengja hann
           við "þegar keyrt" kubbinn. Þegar kubbarnir eru komnir á sinn stað, ýtir
           þú á "Keyra" til að sjá hvað þú hefur forritað.
       7:
@@ -2200,7 +2199,7 @@
         image: notes/infinity_playlab_repeat_forever_1.png
         text: Geturðu ímyndað þér að þurfa að endurtaka eitthvað til eilífðarnóns?
           Vonandi þarftu þess aldrei vegna þess að tölvur er mjög góðar í að endurtaka
-          hluti. Þetta er "endurtaka endurlaust" kubburinn. Allt sem er innan í kubbnum
+          hluti. Þetta er "endurtaka endalaust" kubburinn. Allt sem er innan í kubbnum
           mun gerast að eilífu í leiknum.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
@@ -2264,7 +2263,7 @@
         image: notes/unplug1_2.png
         text: Tölvunarfræði er leið til að hafa áhrif í heiminum. Hún getur verið
           tónlistarmyndbönd, hún getur verið leikir, að finna út hvort einhver er
-          skyldur einhverjum öðrum eða ekki. Finna, skilurðu, vini fólks. Þú getur
+          skyldur einhverjum öðrum eða ekki. Finna, skilurðu, vini fólks. Maður getur
           gert alls konar aðra ótrúlega hluti sem geta raunverulega bjargað mannslífum.
           En maður þarf að hafa drifkraft, held ég. Fyrir mér er hún eins og málarapensill.
           Ég held að góð forritun sé ekki svo ólík góðri list.
@@ -2283,7 +2282,7 @@
         text: Fyrsta kennslustundin okkar í þessari röð er um það hvað tölvunarfræði
           er, hvað tölvunarfræðingur gerir og hvernig maður getur sýnt meiri ábyrgð
           í notkun tölvutækninnar. Þetta er mjög mikilvægt efni en nokkuð mikill texti.
-          Í lokin færð þú að búa til þina eigin sérsniðnu umkóðun með upphafsstöfunum
+          Í lokin færð þú að búa til þína eigin sérsniðnu umkóðun með upphafsstöfunum
           þínum. Það er skemmtilegt verkefni og eflandi vegna þess að tvíundir virka
           mjög tæknilegar en þegar maður skilur þær, þá er eins og maður tali leynilegt
           tungumál.
@@ -2441,8 +2440,8 @@
       1:
         image: notes/unplug10_1.png
         text: Þessi æfing útskýrir á auðskiljanlegan hátt hvernig internetið virkar.
-          Við munum útskýra allt orðfærið sem þú þarft á einföldum nótum svo að nemendur
-          geti líkt eftir því að senda skilaboð, t.d. tölvupóst.
+          Við munum útskýra allt orðfærið, sem þú þarft, á einföldum nótum svo að
+          nemendur geti líkt eftir því að senda skilaboð, t.d. tölvupóst.
       2:
         image: notes/unplug10_2.png
         text: Nemendur munu senda skilaboð og um leið þykjast vera ein af þremur sendingaraðferðum.
@@ -2465,11 +2464,11 @@
       2:
         image: notes/unplug11_2.png
         text: Ræðið sem bekkur eða í smærri hópum um hvað hafi verið mest gaman. Þegar
-          litið er til baka yfir allt sem hefur verið lært, er tími þegar sköpunargáfa
+          litið er til baka yfir allt sem hefur verið lært, það er þá sem sköpunargáfa
           nemenda getur fengið að njóta sín. Skiptu þeim í hópa og láttu þá búa til
           sína eigin kennslustund án tölvu. Láttu hvern hóp fá lykilhugtak, svo sem
           föll eða algrím, og hafðu nóg af handverksefni við hendina sem þau geta
-          notað. Láttu hvern hóp kynna nýju æfingarnar sitt eða taktu jafnvel frá
+          notað. Láttu hvern hóp kynna nýju æfingarnar sínar eða taktu jafnvel frá
           annan dag til að fara í eitthvað af æfingunum sem nemendur hafa skapað.
       3:
         image: notes/unplug11_3.png
@@ -2648,7 +2647,7 @@
           ég þessu? Yay!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: Þegar þú ert búinn með leikinn, veldu þá að deila til að fá tengil til
+        text: Þegar þú ert búinn með leikinn, veldu þá "Deila" til að fá tengil til
           að deila með vinum eða spila leikinn í símanum. Góða skemmtun!
     starwars_blocks_intro:
       1:
@@ -2768,7 +2767,7 @@
           ég þessu? Yay!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: Þegar þú ert búinn með leikinn, veldu þá að deila til að fá tengil til
+        text: Þegar þú ert búinn með leikinn, veldu þá "Deila" til að fá tengil til
           að deila með vinum eða spila leikinn í símanum. Góða skemmtun!
     mc_intro:
       1:
@@ -2936,84 +2935,87 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Ef þú vilt búa til þinn eigin leik þá er það mjög auðvelt. Allt sem
+          þú þarft er að kunna nokkur grunnatriði í forritun og þú getur farið að
+          spila leik sem er þín eigin sköpun.
       2:
         image: notes/gumball_intro_2.JPG
-        text: Do you have a favorite video game? We're going to take one step toward
-          creating games just like that in PlayLab. Good games have a story and every
-          story has actors. Actors that do things like speak, move and interact with
-          each other. Maybe even score points based on the rules of the game. Today,
-          we'll be learning how to do all these things one by one with fun actors
-          and then build a game from scratch that can be shared and played on a phone.
+        text: Áttu þér uppáhaldstölvuleik? Við ætlum að taka eitt skref í áttina að
+          því að búa til alveg eins leiki með því að nota Leikjasmiðjuna. Góðir leikir
+          hafa söguþráð og hver saga hefur leikendur. Leikarar gera hluti eins og
+          að tala, hreyfast og eiga innbyrðis samskipti. Jafnvel skora stig í samræmi
+          við reglur leiksins. Í dag ætlum við að læra að gera alla þessa hluti -
+          einn í einu - með skemmtilegum leikurum og smíða svo frá grunni leik sem
+          er hægt að deila og spila í síma.
       3:
         image: notes/gumball_intro_3.JPG
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
+        text: Í dag ætlum við að læra að gera alla þessa hluti - einn í einu - með
+          skemmtilegum leikurum og smíða svo frá grunni leik sem er hægt að deila
+          og spila í síma.
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er leiksvæðið þar
+          sem forritin þín munu keyra. Leiðbeiningar fyrir hvern áfanga birtast fyrir
+          neðan.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Þetta miðsvæði er verkfærakassinn og hver þessara kubba er bútur af
+          kóða.
       6:
         image: notes/gumball_intro_6.JPG
         text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
           byggja forritið okkar.
       7:
         image: notes/gumball_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: Til að byrja þarf að tengja kubba við appelsínugula "þegar keyrt" kubbinn.
+          Þú getur tengt saman marga kubba með því að draga þá fram þar til þú sérð
+          gulu línuna og þá munu þeir smella saman.
       8:
         image: notes/gumball_intro_8.JPG
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
+        text: Í þessari fyrstu þraut látum við leikarana segja eitthvað með því að
+          tengja "segja" kubbinn við "þegar keyrt" kubbinn og skrifa hvað á að segja.
+          Þegar kubbarnir eru á sínum stað, smellir þú á "Keyra" hnappinn til að sjá
+          hvað þú hefur forritað.
       9:
         image: notes/gumball_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Byrjaðu bara og í lokin munt þú geta búið til þinn eigin leik með alls
+          konar leikurum sem geta átt samskipti, skorað stig, kastað hlutum og látið
+          hvern annan hverfa. Þetta er í þínum höndum!
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: Nú ætlum við læra nokkuð sem allir leikjaforritarar nota daginn út og
+          inn. Þetta nokkuð er kallað atvik. Við segjum forriti að hlusta eftir einhverju
+          sem gerist og þegar það gerist, þá gerir forritið eitthvað.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: Dæmi um atvik eru að hlusta eftir músarsmelli eða upp eða niður örvarlykli
+          eða jafnvel að pikkað sé á skjáinn.
       3:
         image: notes/gumball_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: Hér ætlum við að láta leikarann segja eitthvað þegar spilarinn smellir
+          á hann. Við munum nota "þegar smellt" kubbinn og tengja "segja" kubbinn
+          við hann. Þegar spilarinn smellir, gerast allir kubbarnir sem eru tengdir
+          við "þegar smellt".
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: Það eru líka "þegar ör" kubbar. Ef þú tengir "færa" kubba við þá, getur
+          þú byrjað að færa leikarana upp, niður, vinstri, hægri með örvarlyklunum.
+          Smám saman er leikurinn þinn að verða gagnvirkari.
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: Geturðu ímyndað að þér að þurfa að endurtaka eitthvað til eilífðar?
+          Vonandi þarftu þess aldrei vegna þess að tölvur eru virkilega góðar í að
+          endurtaka hluti.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: Þetta er "endurtaka endalaust" kubburinn. Allt sem er í þessum kubb
+          mun gerast án enda í leiknum. Ef við viljum að leikari geri eitthvað endurtekið
+          án þess að spilarinn þurfi að koma nærri, þá setjum við kubba fyrir það
+          inn í "endurtaka endalaust" kubbinn.
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Í þessari næstu þraut er markmiðið að hjálpa leikaranum að gera eitthvað
+          í sífellu. Ef þú lærir hvernig "endurtaka" skipunin virkar, mun það spara
+          þér mikinn tíma þegar þú smíðar þinn eigin leik.

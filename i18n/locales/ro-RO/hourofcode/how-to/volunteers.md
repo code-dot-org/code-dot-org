@@ -10,14 +10,14 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 Vizitaţi o clasă locala pentru a inspira elevii sa continue sa invete tehnologia computerelor si programare. [ Fii voluntar pentru o oră](https://code.org/volunteer/engineer).
 
-## 2. Alatura-te unui webinar de formarea voluntarilor
+## 2. Join a volunteer info session
 
-Vom organiza doua webinare pentru a explica ce trebuie sa faca un voluntar tipic si cum va fi experienta sa. Vom discuta despre cum să se coordoneze cu profesorii înaintea evenimentului lor Hour of Code, şi, de asemenea, ceea ce trebuie să faceţi în ziua evenimentului pentru a va pregăti. Vă rugăm să veniti cu întrebările dumneavoastră! Aceste webinarii vor fi facute pe Hangouts on Air, daca il ratezi poti sa urmaresti sesiunea inregistrata.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Vom discuta despre cum să se coordoneze cu profesorii înaintea evenimentului lor Hour of Code, şi, de asemenea, ceea ce trebuie să faceţi în ziua evenimentului pentru a va pregăti. Vă rugăm să veniti cu întrebările dumneavoastră! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Dată         | Ora                     |
-| ------------ | ----------------------- |
-| 16 noiembrie | 1:00 pm - 1:30 pm PST   |
-| 7 decembrie  | 11:00 am - 11:30 am PST |
+| Dată         | Ora                     | Link to info session                                                            |
+| ------------ | ----------------------- | ------------------------------------------------------------------------------- |
+| 16 noiembrie | 1:00 pm - 1:30 pm PST   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| 7 decembrie  | 11:00 am - 11:30 am PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
 ## 3. Incercati tutorialele cu 30 de minute inainte
 
@@ -25,7 +25,7 @@ Vom organiza doua webinare pentru a explica ce trebuie sa faca un voluntar tipic
 
 ## 4. Recruteaza-ti colegii sa fie voluntari
 
-Spune-le prietenilor si colegilor despre Hour of Code. Avem mii de profesori ce se inregistreaza si cauta ingineri voluntari, asa ca spune-le sa [se inregistreze ca voluntar](https://code.org/volunteer/engineer).
+Spune-le prietenilor si colegilor despre Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
 **Exemple de email:**
 

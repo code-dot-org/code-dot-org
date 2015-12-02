@@ -32,4 +32,12 @@ Da pojasnimo, ovo nije nagrdna igra niti takmičenje gdje vam treba puka sreća.
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video zapis sa gostujućim govornikom:
+
+Ova nagrada je ograničena samo na osnovne škole u SAD-u i Kanadi. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

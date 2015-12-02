@@ -9,6 +9,6 @@ layout: wide
 
 # Získejte celou vaší školu k účasti
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informace, jak dostat celou školu k účasti v akci Hodina kódu. naleznete zde.
 
 <%= view :signup_button %>

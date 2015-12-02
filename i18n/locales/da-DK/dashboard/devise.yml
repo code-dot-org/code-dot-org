@@ -20,34 +20,34 @@ da:
       reset_password_instructions:
         subject: Instruktioner til at nulstille adgangskoden til Code.org
       unlock_instructions:
-        subject: Lås op instruktioner
+        subject: Oplåsningsinstruktioner
     omniauth_callbacks:
       failure: 'Kunne ikke godkende dig fra %{kind}, fordi "%{reason}".'
       success: 'Succesfuldt godkendt fra %{kind} konto.'
     passwords:
-      no_token: 'Du kan kun tilgå denne side via linket fra en "password reset e-mail". Kommer fra et sådant link, skal du sikre dig, at den fulde URL er benyttet.'
+      no_token: Du kan ikke få adgang til denne side uden at komme fra en password reset e-mail. Hvis du kommer fra en password reset e-mail, skal du sørge for at du brugte den fulde webadresse tildelt.
       send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du nulstiller din adgangskode om et par minutter.
-      send_paranoid_instructions: Hvis din e-mail-adresse findes i vores database, vil du om et par minutter modtage en e-mail indeholdende et link til gendannelse af adgangskode.
+      send_paranoid_instructions: Hvis din e-mail-adresse findes i vores database, vil du om et par minutter modtage en e-mail med et link til at lave en ny adgangskode.
       updated: Adgangskoden blev ændret succesfuldt. Du er nu logget på.
       updated_not_active: Adgangskoden blev ændret succesfuldt.
     registrations:
       destroyed: Farvel! Din konto blev annulleret. Vi håber at se dig igen snart.
-      signed_up: Velkommen! Du har tilmeldt dig succesfuldt.
-      signed_up_but_inactive: Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge dig på fordi din konto ikke er aktiveret endnu.
-      signed_up_but_locked: Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge dig fordi din konto er låst.
-      signed_up_but_unconfirmed: En e-mail, indeholdende et bekræftelses-link, er tilsendt din e-mailadresse. Åbn venligst linket for at aktivere din konto.
-      update_needs_confirmation: Du har opdateret din konto, men vi har behov for at bekræfte din nye e-mailadresse. Tjek venligst din e-mail, og tryk på bekræftelses-linket for at færdiggøre bekræftelsen af din nye e-mailadresse.
-      updated: Du opdaterede din konto succesfuldt.
+      signed_up: Velkommen! Du er nu tilmeldt.
+      signed_up_but_inactive: Du er nu tilmeldt, men vi kunne ikke logge dig ind, da din konto endnu ikke er aktiveret.
+      signed_up_but_locked: Du er nu tilmeldt. Vi kunne imidlertid ikke logge dig ind, da din konto er låst.
+      signed_up_but_unconfirmed: En besked med et bekræftelses link er sendt til din e-mailadresse. Åbn linket for at aktivere din konto.
+      update_needs_confirmation: Du opdaterede din konto, men vi har brug for at bekræfte din nye e-mail adresse. Kontroller din e-mail, og klik på bekræft linket for endeligt at bekræfte din nye e-mailadresse.
+      updated: Du har nu opdateret din konto.
     sessions:
       signed_in: ""
       signed_out: Logget ud.
     unlocks:
       send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter.
       send_paranoid_instructions: Hvis din konto findes, vil du modtage en e-mail med instruktioner om, hvordan du låser den op om et par minutter.
-      unlocked: Din konto er blevet låst op succesfuldt. Venligst log på for at fortsætte.
+      unlocked: Din konto er nu oplåst. Log venligst ind for at fortsætte.
   errors:
     messages:
-      already_confirmed: blev allerede bekræftet, prøv at logge ind
+      already_confirmed: er allerede blevet bekræftet. Forsøg venligst at logge ind
       confirmation_period_expired: 'skal bekræftes inden for %{period}, venligst anmod om en ny'
       expired: er udløbet, venligst anmod om en ny
       not_found: ikke fundet
@@ -58,19 +58,19 @@ da:
     invitations:
       send_instructions: 'En invitationse-mail er blevet tilsendt %{email}.'
       invitation_token_invalid: Den benyttede invitationspolet er ugyldig!
-      updated: Din adgangskode er indstillet. Du er nu logget ind.
+      updated: Adgangskoden blev ændret. Du er nu logget på.
       no_invitations_remaining: Ingen invitationer resterer
       invitation_removed: Din invitation blev fjernet.
       new:
         header: Send invitation
         submit_button: Afsend en invitation
       edit:
-        header: Indstil din adgangskode
-        submit_button: Indstil min adgangskode
+        header: Sæt din adgangskode
+        submit_button: Sæt min adgangskode
     mailer:
       invitation_instructions:
         subject: Invitationsinstruktioner
         hello: 'Hej %{email}'
         someone_invited_you: 'Nogen har inviteret dig til %{url}. Du kan acceptere den via linket nedenfor.'
         accept: Acceptér invitation
-        ignore: 'Ønsker du ikke at acceptere invitationen, ignorér da enligst denne e-mail. <br/>Din konto vil ikke blive oprettet, før du benytter linket ovenfor, og indstiller din adgangskode.'
+        ignore: 'Ønsker du ikke at acceptere invitationen, ignorér da venligst denne e-mail. <br/>Din konto vil ikke blive oprettet, før du benytter linket ovenfor, og opretter din adgangskode.'

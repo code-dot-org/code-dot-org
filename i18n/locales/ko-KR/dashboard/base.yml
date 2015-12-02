@@ -388,7 +388,7 @@ ko:
     thank_you: '우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors"> 기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team"> 확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의 지원에 감사 드립니다.'
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
     help_from_html_old: 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다.
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
@@ -403,6 +403,9 @@ ko:
     privacy: 개인정보보호 정책
     secure: 보안 버전
     report_abuse: 악용 사례 신고
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
@@ -466,7 +469,7 @@ ko:
       body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
     20-hour:
       title: 빠른 과정
-      body: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
+      body: 이 20시간 과정은 컴퓨터과학(정보과학) 에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
       body_short: 2-4 과정의 속진 과정에서 기본적인 컴퓨터 과학을 알아보십시오.
     hoc2014:
       try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
@@ -480,7 +483,7 @@ ko:
       title: 스타워즈
     infinity:
       title: 무한 Play Lab
-      body: 플레이 랩을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 스토리나 게임을 만드세요
+      body: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
     minecraft:
       title: 마인크래프트
       body: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
@@ -495,7 +498,7 @@ ko:
     caption_time_ago: '%{time_ago} 전에'
     header: 갤러리
     header_playlab: Play Lab
-    header_artist: 예술가
+    header_artist: 화가
   landing:
     prerelease: "이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의 코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."
     prerelease_hoc2014: "이 튜토리얼은 <span class='betatext'>beta</span> 테스트 중입니다. 여러분들의 피드백을 통해 개선됩니다."

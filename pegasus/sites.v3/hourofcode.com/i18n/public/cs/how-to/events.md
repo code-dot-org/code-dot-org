@@ -8,55 +8,55 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Jak organizovat událost Hodinu kódu
 
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (<%= campaign_date('short') %>) na oslavu informatiky a inspirujte další studenty, aby si to zkusili. Kdokoli, kdekoli může uspořádat událost Hodinu kódu.
 
-## 1) Prepare for your event
+## 1) Připravte se pro Vaši událost
 
-  * Determine a venue, date and time
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+  * Určete místo, datum a čas
+  * Pošlete [zvací dopis](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) pro starostu v místě, poslance, hejtmana nebo vlivného podnikatele k projevu.
+  * Pozvěte média/tisk. tj. lokální stanici, noviny, vzdělávací/technologické blogery. Viz náš [tisková souprava ](<%= resolve_url('/promote/press-kit') %>) pro pomoc.
 
-## 2) During your event
+## 2) Během vaší události
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+  * Odstartujte vaší událost s jedním z našich [inspiračních videí](<%= resolve_url('/promote/resources#videos') %>).
+  * Dát na úvod přehled významu informatiky pomocí těchto [statistik a infografiky](<%= resolve_url('/promote/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Ostatní myšlenky události: 
+      * Pozvěte představitele místního průmyslu, aby diskutovat o své práci práci zahrnující informatiku
+      * Pozvěte místního politika a studenti jej učí, jak se kóduje
+      * Skupina studentů ukáže nezapojenou činnost
+      * Skupina studentů naučí ředitele školy nebo skupinu učitelů, jak se kóduje
+      * Když vaše škola již vyučuje informatiku, studenti mají ukázkové projekty
 
-## 3) Share how it went
+## 3) Sdílejte, jak to dopadlo
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Sdílejte obrázků vaší události na Facebooku a Twitteru. 
+  * Využívejte **#HourofCode**
 
-## Example Event Plan
+## Vzorový plán události
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Událost:** Celoškolní Týden vzdělávání informatiky odstartovací souhrn
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Datum:** 7. prosince (začátek týdne vzdělávání informatiky)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Doba:** Během školního dne. Dopolední události upřednostněné. Přibližně 1 hodina.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Místo:** Školní aula (např. divadlo, tělocvična, jídelna)   
   
 
 
-## Run of Show
+## Spusťte show
 
-| Time             | Action                                                                                                                                          |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>) |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.           |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+| Čas            | Činnost                                                                                                                        |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00-10:05    | Otevřete jedno z našich [inspiračních videí](<%= resolve_url('/promote/resources#videos') %>)                                    |
+| 10:05-10:15    | Ředitel školy uvede přehledem významu informatiky. Použíje tyto [statistiky a infografiky](<%= resolve_url('/promote/stats') %>) |
+| 10:15-10:30    | Speciální host promluví zázemí a jak technologie a informatika hrají důležitou roli v jejich každodenním životě.               |
+| 10:30-10:40 am | Studenti demonstrují Hodinu kódu pro školu. Zábavný obrat: vyučují ředitele školy, politika nebo ostatní studenty.             |
+| 10:40-11:00 am | Studenti demonstrují nezapojenou aktivitu a jak lze učit informatiku bez použití počítačů.                                     |
+| 11:00-11:05 am | Učitel, který pomohl přinést celoškolní akci dává závěrečné poznámky.                                                          |
 
 <%= view :signup_button %>

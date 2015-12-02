@@ -1348,6 +1348,10 @@ tr:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1458,14 +1462,14 @@ tr:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Kod İle Galaksini İnşa Et'
-          description_short: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
-          description: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
+          description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           Hour of Code 2015: Kodlama saati 2015
         starwarsblocks:
-          title: 'Star Wars: Kod İle Galaksini İnşa Et'
-          description_short: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
-          description: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
+          description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           Hour of Code 2015: Kodlama saati 2015
         minecraft:
           title: Minecraft
@@ -1474,8 +1478,8 @@ tr:
           Craft: Craft
         mc:
           title: Minecraft Kod Saati
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Bir Minecraft dünyasını kodlamayla keşfet
+          description: "Bu Minecraft dünyasında Steve'i ya da Alex'i bir maceraya çıkarmak için kodlama bloklarını kullan"
           Hour of Code 2015: Kodlama saati 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

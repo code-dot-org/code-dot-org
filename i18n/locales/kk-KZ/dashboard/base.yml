@@ -404,6 +404,9 @@ kk:
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -586,7 +589,7 @@ kk:
     completed_courses: Completed courses
     all_courses: All courses
   project:
-    projects: Projects
+    projects: Жобалар
     create: Create Project
     create_a_project: 'Create a new project:'
     new: Create New
@@ -608,7 +611,7 @@ kk:
     really_delete: Өшіру?
     delete_yes: Иә
     delete_no: Жоқ
-    saved: Saved
+    saved: Галереяда сақталды!
     not_saved: Not saved
     cancel: Болдырмау
     delete_confirm_title: Are you sure you want to delete this project?

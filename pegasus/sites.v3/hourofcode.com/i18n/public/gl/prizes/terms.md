@@ -8,27 +8,35 @@ nav: prizes_nav
 
 <%= view :signup_button %>
 
-# Prizes - terms and conditions
+# Premios - términos e condicións
 
-## Amazon.com, iTunes and Windows Store credit:
+## Crédito en Amazon.com, iTunes e Windows Store:
 
-The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Limit one redemption per organizer.
+O crédito de Amazon.com, iTunes e Windows store limítase a mestres de ensinanzas primarias e secundarias, educadores de clubes e organizacións educativas. O crédito de $10 debe engadirse a unha conta existente, e devandito crédito expira despois dun ano. Limite un premio por organizador.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Todo organizador debe rexistrase para a Hora do Código para poder recibir o crédito de Amazon.com, iTunes ou Windows Store. Se todo o seu colexio participa na Hora do Código, cada docente debe rexistrarse individualmente como organizador para clasificarse.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
+Code.org poráse en contacto cos organizadores despois da Hora do Código (7-13 de Decembro) para darenlles instruccións para utilizar o crédito de Amazon.com, iTunes e Windows Store.
 
 <% if @country == 'us' %>
 
-## Class-set of laptops (or $10,000 for other technology):
+## Conjunto de ordenadores portátiles para una clase (o $10.000 para outro material tecnolóxico):
 
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
+Premio limitado a colexios públicos de ensino básico e medio dos Eua. Para poder participar, o seu colexio enteiro debe rexistrars para a Hora do Código antes do 16 de Novembro de 2015. Un colexio en cada estado recibirá un conjunto de ordenadores para su aula. Code.org seleccionará e notificará ós gañadores por email o día 1 de Decembro de 2015.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Debemos aclarar que esto non é un sorteo nin un concurso de azar.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) A solicitude non reporta ningún interese nen risco financierio, calquera colexio e clase pode participar, sen ter que realizar ningun pago a Code.org nin a ningunha outra organización
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Os gañadores serán seleccionados únicamente de entre os colexios donde toda unha clase (ou colexio) teña participado na Hora do código, o cual supón un reto para as habilidades colectivas tanto de mestres como de estudantes.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
 
 <% end %>
 

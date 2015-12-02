@@ -14,75 +14,84 @@ crwdns49186:0crwdne49186:0
 ## crwdns49191:0crwdne49191:0 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## crwdns49192:0crwdne49192:0
 
-crwdns49193:0crwdne49193:0 crwdns49194:0crwdne49194:0
+crwdns54897:0crwdne54897:0 crwdns54898:0crwdne54898:0
 
-**crwdns49195:0crwdne49195:0**
+**[crwdns54899:0crwdne54899:0](%= resolve_url("https://code.org/learn") %)**
 
   * crwdns49196:0crwdne49196:0
   * crwdns49197:0crwdne49197:0
+
+**[crwdns54900:0crwdne54900:0](%= resolve_url("https://code.org/educate/teacher-led") %)**
+
+  * crwdns54901:0crwdne54901:0
+  * crwdns54902:0crwdne54902:0
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
 ## crwdns49198:0crwdne49198:0
 
-crwdns49199:0crwdne49199:0
+crwdns54903:0crwdne54903:0
 
-  * crwdns49200:0crwdne49200:0
-  * crwdns49201:0crwdne49201:0
-  * crwdns49202:0crwdne49202:0 crwdns49203:0crwdne49203:0 crwdns49204:0crwdne49204:0
-  * crwdns49205:0crwdne49205:0
+  * crwdns54904:0crwdne54904:0
+  * crwdns54905:0crwdne54905:0
+  * crwdns54906:0crwdne54906:0 crwdns54907:0crwdne54907:0 crwdns54908:0crwdne54908:0
+  * crwdns54909:0crwdne54909:0
 
 ![](/images/fit-350/group_ipad.jpg)
 
 ## crwdns49206:0crwdne49206:0
 
-**crwdns49207:0crwdne49207:0**
+crwdns54910:0crwdne54910:0 crwdns54911:0crwdne54911:0
 
-**crwdns49208:0crwdne49208:0**
+[![](/images/fit-300/volunteer-map.png)](%= resolve_url('https://code.org/volunteer/local') %)
 
-  * crwdns49209:0crwdne49209:0
-  * crwdns50219:0crwdne50219:0 <% end %>
-  * [crwdns49211:0crwdne49211:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * crwdns49212:0crwdne49212:0.
+**crwdns54912:0crwdne54912:0**
 
-**crwdns49213:0crwdne49213:0**
+  * crwdns54913:0crwdne54913:0
+  * crwdns54914:0crwdne54914:0 <% end %>
+  * [crwdns54915:0crwdne54915:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * crwdns54916:0crwdne54916:0.
 
-  * crwdns49214:0crwdne49214:0
-  * crwdns49215:0crwdne49215:0
-  * crwdns50978:0crwdne50978:0.
+**crwdns54917:0crwdne54917:0**
 
-crwdns49217:0crwdne49217:0.
+  * crwdns54918:0crwdne54918:0
+  * crwdns54919:0crwdne54919:0
+  * crwdns54920:0crwdne54920:0.
 
-crwdns49218:0crwdne49218:0
+crwdns54921:0crwdne54921:0.
+
+crwdns54922:0crwdne54922:0
 
 ## crwdns49219:0crwdne49219:0
 
-**crwdns49220:0crwdne49220:0**
+**crwdns54923:0crwdne54923:0**
 
-  * crwdns49221:0crwdne49221:0
+  * crwdns54924:0crwdne54924:0
 
-**crwdns49222:0crwdne49222:0**
+**crwdns54925:0crwdne54925:0**
 
-  * crwdns49223:0crwdne49223:0
-  * crwdns49224:0crwdne49224:0
-  * crwdns49225:0crwdne49225:0
+  * crwdns54926:0crwdne54926:0
+  * crwdns54927:0crwdne54927:0
+  * crwdns54928:0crwdne54928:0
 
-**crwdns49226:0crwdne49226:0**
+**[crwdns54929:0crwdne54929:0](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-  * crwdns49227:0crwdne49227:0[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
-  * crwdns49228:0crwdne49228:0
+**crwdns54930:0crwdne54930:0**
 
-crwdns49229:0[col-33]crwdne49229:0
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-crwdns49230:0[/col-33]crwdne49230:0
+  * crwdns54931:0crwdne54931:0[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * crwdns54932:0crwdne54932:0
 
 crwdns49231:0[col-33]crwdne49231:0
 
-![](/images/fit-300/group_ar.jpg)
+![](/images/fit-250/highschoolgirls.jpeg)
 
 crwdns49232:0[/col-33]crwdne49232:0
+
+crwdns54933:0[col-33]crwdne54933:0
+
+![](/images/fit-300/group_ar.jpg)
+
+crwdns54934:0[/col-33]crwdne54934:0
 
 <p style="clear:both">
   &nbsp;
@@ -90,27 +99,28 @@ crwdns49232:0[/col-33]crwdne49232:0
 
 ## crwdns49233:0crwdne49233:0
 
-  * crwdns49234:0crwdne49234:0
-  * crwdns50260:0crwdne50260:0
-  * crwdns49236:0crwdne49236:0
-
-crwdns49237:0[col-33]crwdne49237:0
-
-![](/images/fit-250/celebrate2.jpeg)
-
-crwdns49238:0[/col-33]crwdne49238:0
+  * crwdns54935:0crwdne54935:0
+  * crwdns54936:0crwdne54936:0
+  * crwdns54937:0crwdne54937:0
+  * crwdns54938:0crwdne54938:0
 
 crwdns49239:0[col-33]crwdne49239:0
 
-![](/images/fit-260/highlight-certificates.jpg)
+![](/images/fit-250/celebrate2.jpeg)
 
 crwdns49240:0[/col-33]crwdne49240:0
 
 crwdns49241:0[col-33]crwdne49241:0
 
-![](/images/fit-300/boy-certificate.jpg)
+![](/images/fit-260/highlight-certificates.jpg)
 
 crwdns49242:0[/col-33]crwdne49242:0
+
+crwdns54939:0[col-33]crwdne54939:0
+
+![](/images/fit-300/boy-certificate.jpg)
+
+crwdns54940:0[/col-33]crwdne54940:0
 
 <p style="clear:both">
   &nbsp;
@@ -118,14 +128,18 @@ crwdns49242:0[/col-33]crwdne49242:0
 
 ## crwdns49243:0crwdne49243:0
 
-  * crwdns49244:0crwdne49244:0
-  * crwdns49245:0crwdne49245:0 
-  * crwdns49246:0crwdne49246:0.
-  * crwdns49247:0crwdne49247:0 <% if @country == 'us' %>
-  * crwdns49248:0crwdne49248:0 <% end %>
+  * crwdns54941:0crwdne54941:0
+  * crwdns54942:0crwdne54942:0 
+  * crwdns54943:0crwdne54943:0.
+  * crwdns54944:0crwdne54944:0
+  * crwdns54945:0crwdne54945:0 <% if @country == 'us' %>
+  * crwdns54946:0crwdne54946:0 <% end %>
 
 ## crwdns49249:0crwdne49249:0
 
-crwdns49250:0crwdne49250:0 crwdns49251:0crwdne49251:0.
+crwdns54947:0crwdne54947:0
+
+  * crwdns54948:0crwdne54948:0.
+  * crwdns54949:0crwdne54949:0 crwdns54950:0crwdne54950:0
 
 <%= view :signup_button %>

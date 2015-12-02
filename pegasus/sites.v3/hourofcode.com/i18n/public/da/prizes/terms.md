@@ -32,4 +32,12 @@ For lige at præcisere, så er dette ikke et lotteri eller en konkurrence, der i
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video-chat med en gæste-taler:
+
+Denne præmie er begrænset til klasser i USA og Canada (K-12). Code.org vil vælge de vindende klasser, og give et tidspunkt til web-chat og aftale med lærerne om de tekniske detaljer. Hele din skole behøver ikke at ansøge om at kvalificere sig til denne præmie. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

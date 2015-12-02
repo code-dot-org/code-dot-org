@@ -99,7 +99,7 @@
   leaderboards_for_hoc: Topplistor för Timmen med Kod.
   support_url: http://support.Code.org/
   country: Land
-  city: Stad
+  city: stad
   gender: Kön
   boys: Pojkar
   girls: Flickor
@@ -307,12 +307,16 @@
   class_submission_languages_other: Andra språk
   inspirational_videos_more: Fler <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspirerande videor</a> av förebilder och kändisar
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
   starwars_subtitle: Bygg en galax med kod
   starwars_javascript_title: Javascript
   starwars_javascript_description: Använd dra-och-släpp block och JavaScript.
-  starwars_javascript_specs: Endast på engelska | Moderna webbläsare | Åldrar 11 +
+  starwars_javascript_specs: Endast på engelska | Moderna webbläsare | Åldrar 11+
   starwars_javascript_start_button: Prova nu
-  starwars_blocks_title: Block
+  starwars_blocks_title: bitar
   starwars_blocks_description: Använd dra-och-släpp block.
   starwars_blocks_specs: Många språk (kommer snart) | Moderna webbläsare, smartphones,
     surfplattor | Åldrarna 6-10
@@ -323,10 +327,10 @@
   starwars_platform_text: Moderna webbläsare, smartphones, surfplattor
   mc_name: Minecraft Hour of Code
   mc_longdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr
-    genom denna Minecraft värld.
+    genom denna Minecraft-värld.
   mc_shortdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr
-    genom denna Minecraft värld.
-  mc_gradelevel: Ålder 6 +
+    genom denna Minecraft-värld.
+  mc_gradelevel: Ålder 6+
   mc_platformtext: Moderna webbläsare, smartphones, surfplattor
   mc_specs: Många språk (kommer snart) | Moderna webbläsare och surfplattor | Ålder
     6 +
@@ -353,9 +357,10 @@
   volunteer_engineer_submission_intro_signup: Ange följande information om du är en
     student i datavetenskap eller programvaru professionell. Fält markerade med en
     <span class="form-required-field"> *</span> måste fyllas i.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Inte ute efter för att vara volontär?
+    <a href="%{learn_more}"> Lär dig mer</a> om hur du organiserar din egen timme
+    av kod och hur du hitta lokala volontärer på vår <a href="%{volunteer_local}">
+    volontärkarta</a>.
   volunteer_engineer_submission_header_shared: Information som delas med lärare på
     en karta som visar var frivilliga finns
   volunteer_engineer_submission_field_name: Namn
@@ -672,7 +677,7 @@
     i ditt område.
   code_hoc_coming: Kodtimmen är här – 8-14 december!
   code_sign_up: Registrera dig för att kunna delta i CS utbildnings- vecka
-  learn_more: Lär dig mer
+  learn_more: Prova nu
   learn_sign_up_description: Registrera för att kunna delta i Hour of Code under CS
     Utbildningsvecka
   learn_sign_up_button: Registrera dig
@@ -683,16 +688,16 @@
   learn_educator_resources_button: Pedagog resurser
   learn_are_you_educator: Är du en lärare? Lär dig <a href="http://hourofcode.com/resources/how-to">hur
     man undervisar en Hour of Code</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local"> Hitta lokala volontärer</a>
+    som kan hjälpa dig under En timme av kod
+  learn_teacher_led_lesson_plans: Inspireras av <a href="https://code.org/teacher-led">
+    lektionsplaneringar för En timme av kod skapade av lärare</a>
+  learn_how_to_hoc: Följ vår <a href="https://hourofcode.com/how-to">steg-för-steg-guide</a>
+    för att undervisa En timme av kod
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lär dig mer</a> om priser
     for varje utlärare.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspirera elever genom att visa dem <a href="https://code.org/educate/inspire">
+    dessa videoklipp</a>
   hoc2014_try_new_tutorials: Prova våra nya Hour of Code övningar
   hoc2014_try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
   hoc2014_try_scrat: Angry Birds, PvZ och Scrat
@@ -704,10 +709,14 @@
   carousel_heading_international: Övningar på ditt språk
   carousel_heading_domestic: Övningar på engelska
   carousel_heading_beginners: Övningar för nybörjare
+  carousel_heading_beyond_beginners: Övningar för nybörjare
   carousel_heading_javascript: Övningar som lär JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Inga datorer eller internet? Prova "ouppkopplad" datavetenskap
   carousel_heading_devices: Appar med övningar för mobiler och sufplattor
+  carousel_heading_beyond_devices: Appar med övningar för mobiler och sufplattor
   carousel_heading_languages: Övningar i andra programmeringsspråk
+  carousel_heading_beyond_languages: Övningar i andra programmeringsspråk
   carousel_heading_apps_games: Gör dina egna appar eller spel
   carousel_heading_university: Universitetskurser på nätet
   carousel_heading_webpages: Lär dig göra webbsidor
@@ -768,10 +777,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sten, sax, påse
-  hourofcode_name: Platshållare för nya code.org/hoc
-  playlab_name: Play Lab
+  hourofcode_name: Skriv din första datorprogram
+  playlab_name: Spel-labb
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: Konstnären
   codeorg_gradelevel: Åldrarna 4-104
   codeintl_gradelevel: Åldrarna 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -811,7 +820,7 @@
   projguts_gradelevel: Åldrarna 10-13
   hourofcode_gradelevel: Åldrarna 4-104
   frozen_gradelevel: Åldrar 8 +
-  starwars_gradelevel: Ålder 6 +
+  starwars_gradelevel: Ålder 6+
   playlab_gradelevel: Åldrarna 4-104
   infinity_gradelevel: Åldrarna 4-104
   artist_gradelevel: Åldrarna 4-104
@@ -894,7 +903,7 @@
   flappy_shortdescription: Gör ditt eget spel - Flappy Bird, Haj eller Ubåt
   bitsbox_shortdescription: Koda en rad appar att spela och dela, med riktig Javascript-kod.
   makeschool_shortdescription: Gör ett iPhone spel! Lär dig genom att skriva kod som
-    lär ditt monster nya rörelser!
+    lära ditt monster nya rörelser!
   touchdevelop_shortdescription: 'Lösa pussel, skapa spel och lär kodning, allt på
     din smartphone. '
   appinventor_shortdescription: Gör din egen app! (Endast android)
@@ -907,11 +916,11 @@
   frozen_shortdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar
     isens magi och skönhet.
   starwars_shortdescription: Lär dig att programmera droider och skapa ditt eget Star
-    Wars spel i en galax långt, långt borta.
-  playlab_shortdescription: Skapa en berättelse eller gör ett spel med Play Lab!
+    Wars-spel i en galax långt, långt borta.
+  playlab_shortdescription: Skapa en berättelse eller gör ett spel med Spel-labbet!
   infinity_shortdescription: Använd Play Lab för att skapa en berättelse eller ett
     spel med Disney Infinity karaktärer i huvudrollen .
-  artist_shortdescription: Rita häftiga bilder och mönster med artisten!
+  artist_shortdescription: Rita häftiga bilder och mönster med konstnären!
   codeorg_longdescription: Lär dig grundläggande begrepp av datavetenskap med dra
     och släpp-programmering. Detta är en spel-liknande, självförklarande handledningar
     video föreläsningar med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs.
@@ -1024,7 +1033,7 @@
   makeschool_longdescription: Lär dig koda genom att skapa ett iPhone-spel som använder
     ett helt nytt och nybörjarvänligt programmeringsspråk som kallas Swift! Skapa
     ett Pok&eacute;mon-inspirerat actionspel och skriv kod för att lära ditt nya monster
-    nya rörelser. Du kommer att lära dig att använda variabler, metoder och objekt
+    nya rörelser. Du kommer att lära dig att använda variabler, metoobjekt  objekt
     för att hjälpa ditt monster vinna!
   touchdevelop_longdescription: 'Touch-vänlig redigerare hjälper dig att skapa pixel
     konst, lösa Björn pusslet eller bygga ditt egna  ''Jumping Bird'' spel. '
@@ -1053,7 +1062,7 @@
     isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning
     och skapa ett underbart vinterland som du kan dela med dina vänner!
   starwars_longdescription: Lär dig att programmera droider och skapa ditt eget Star
-    Wars spel i en galax långt, långt borta.
+    Wars-spel i en galax långt, långt borta.
   playlab_longdescription: Skapa en berättelse eller gör ett spel med Play Lab! Gör
     så att djur, zombies, pirater, ninjor, och många fler figurer rör på sig, låter,
     får poäng, och till och med kastar eldklot!
@@ -1388,11 +1397,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
