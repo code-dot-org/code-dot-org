@@ -159,6 +159,7 @@
   "goSprite": "go",
   "hello": "hello",
   "helloWorld": "Hello World!",
+  "playlab_lastLevel_continueText": "Done",
   "hoc2015_lastLevel_continueText": "Done",
   "hoc2015_reinfFeedbackMsg": "You can press the \"{backButton}\" button to go back to playing your game.",
   "hoc2015_shareGame": "Share your game:",
