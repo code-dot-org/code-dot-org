@@ -1,6 +1,6 @@
 * * *
 
-název: < % = hoc_s(:title_prizes) %> rozložení: široká nav: prizes_nav
+title: <%= hoc_s(:title_prizes) %> layout: wide nav: how_to_nav
 
 * * *
 

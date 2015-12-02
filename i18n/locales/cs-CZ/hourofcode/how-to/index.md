@@ -1,6 +1,6 @@
 * * *
 
-název: < % = hoc_s(:title_how_to) %> rozložení: široká nav: how_to_nav
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
@@ -48,7 +48,7 @@ Nejlépe si Hodinou kódu užijete s počítači připojenými k internetu. Nebu
 **Ukaž inspirující video:**
 
   * Původní video od Code.org, ukazující Billa Gates, Zuckerberga a NBA hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Hodina kódu 2013 spusťte video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or < % if @country == 'uk' %> [video Hodina kódu 2015 ](https://www.youtube.com/watch?v=7L97YMYqLHc) < % else %> [video Hodina kódu 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Hodina kódu 2013 spusťte video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or <% if @country == 'uk' %> [video Hodina kódu 2015 ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [video Hodina kódu 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama vyzývá všechny studenty, aby se učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Najít další inspirativní video [zde](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -1,6 +1,6 @@
 * * *
 
-název: < % = hoc_s(:title_how_to) %> rozložení: široká nav: how_to_nav
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 

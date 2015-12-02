@@ -43,6 +43,6 @@ Potřebujeme naverbovat více učitelů informatiky a podporovat profesionální
 
 Podle kanceláře statistiky práce, v roce 2020, zde bude 9.2 miliónů prácí v STEM oboru. Polovina těchto prácí - 4.6 miliónů - bude v počítačových nebo informatických technologiích. A informatika je více a více základní znalost pro 21. století. Kdo naplní tyto práce, pokuď naším dětem nebude dána šance získat zkušenosti, které potřebují?
 
-Tento týden, <%= datum_kampaně('full') %>, je týden informatiky. Ve školách skrze **[STATE]**, se naši studenti budou ůčastnit v národních Hodinách kódu, demystifikovat předmět informatiky, doufajíc, že je to namotivuje dostatečně k tomu, aby šli a naučili se více. Já se k nim připojím, a tímto vás zvu, abyste se také připojili. Každý by se měl naučit, jak kódovat. Navštivte https://hourofcode.com/<%= @country %> abyste se dozvěděli více a mohli začít. A podporujte naše úsilí, přinést informatiku do více škol v **[STATE]**.
+Tento týden, <%= campaign_date('full') %>, je týden informatiky. Ve školách skrze **[STATE]**, se naši studenti budou ůčastnit v národních Hodinách kódu, demystifikovat předmět informatiky, doufajíc, že je to namotivuje dostatečně k tomu, aby šli a naučili se více. Já se k nim připojím, a tímto vás zvu, abyste se také připojili. Každý by se měl naučit, jak kódovat. Navštivte https://hourofcode.com/<%= @country %> abyste se dozvěděli více a mohli začít. A podporujte naše úsilí, přinést informatiku do více škol v **[STATE]**.
 
 <%= view :signup_button %>
