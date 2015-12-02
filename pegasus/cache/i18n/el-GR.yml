@@ -316,10 +316,11 @@
   class_submission_languages_other: Άλλες γλώσσες
   inspirational_videos_more: Περισσότερα <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">βίντεο
     παρακίνησης</a> από πρότυπα και διασημότητες
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_choose_theme: Διαλέξτε το θέμα Play Lab
+  playlab_classic_title: Κλασικό
+  playlab_gumball_title: Τσιχλόμπαλα
+  playlab_iceage_title: Εποχή των Παγετώνων - Έρχεται σύντομα
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Χτίζοντας έναν Γαλαξία Με Κώδικα
   starwars_javascript_title: Javascript
   starwars_javascript_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε» και Javascript.
@@ -370,9 +371,10 @@
   volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
     αν είστε φοιτητής επιστήμης υπολογιστών ή επαγγελματίας λογισμικού. Τα πεδία με
     <span class="form-required-field"> *</span> είναι υποχρεωτικά.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Δεν θέλετε να γίνετε εθελοντής; <a href="%{learn_more}">Μάθετε
+    περισσότερα</a> για τη διοργάνωση της δικής σας εκδήλωσης της Ώρας του Κώδικα
+    και βρείτε εθελοντές από τον <a href="%{volunteer_local}">χάρτη εθελοντών</a>
+    μας.
   volunteer_engineer_submission_header_shared: Οι πληροφορίες μοιράζονται με τους
     καθηγητές στο χάρτη εθελοντή
   volunteer_engineer_submission_field_name: Όνομα
@@ -732,16 +734,16 @@
   learn_educator_resources_button: Πόροι για τους επιμορφωτές
   learn_are_you_educator: Είστε επιμορφωτἠς; Μάθετε <a href="http://hourofcode.com/resources/how-to">
     πώς να διδάξετε μια Ώρα του Κώδικα</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Βρείτε έναν τοπικό
+    εθελοντή</a> για να σας βοηθήσει στην Ώρα του Κώδικα
+  learn_teacher_led_lesson_plans: Εμπνευστείτε από τα <a href="https://code.org/teacher-led">σχέδια
+    για την Ώρα του Κώδικα με καθοδήγηση δασκάλου</a>
+  learn_how_to_hoc: Ακολουθήστε τον <a href="https://hourofcode.com/how-to">οδηγό
+    μας</a> για να διδάξετε μία Ώρα του Κώδικα
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Μάθετε περισσότερα</a>
     για τα βραβεία για κάθε εκπαιδευτικό.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Εμπνεύστε μαθητές δείχνοντάς τος <a href="https://code.org/educate/inspire">αυτά
+    τα βίντεο</a>
   hoc2014_try_new_tutorials: Δοκιμάστε τα νέα βοηθήματα εκμάθησης για την "Ώρα του
     Κώδικα"
   hoc2014_try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε
@@ -749,7 +751,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ και Scrat
   hoc2014_try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
   carousel_heading_codeorg: Οδηγοί από το Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Οδηγοί από την Code.org (για όλες τις συσκευές)
   carousel_heading_3rd_party: Οδηγοί από τρίτα μέρη
   carousel_heading_third_party: Οδηγοί από τρίτους
   carousel_heading_international: Σεμινάρια στη γλώσσα σας
@@ -757,7 +759,7 @@
   carousel_heading_beginners: Βοηθήματα εκμάθησης για αρχάριους
   carousel_heading_beyond_beginners: Βοηθήματα εκμάθησης για αρχάριους
   carousel_heading_javascript: Μαθήματα που διδάσκουν JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Οδηγοί που διδάσκουν JavaScript
   carousel_heading_unplugged: Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο;
     Δοκιμάστε  την 'unplugged' Επιστήμη της Πληροφορικής
   carousel_heading_devices: Εφαρμογές εκμάθησης για τηλέφωνα και tablets
@@ -771,6 +773,10 @@
   carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
   educator_notes: Σημειώσεις επιμορφωτή
   teach_led_lesson_plans: Σχέδια Μαθήματος για την Ώρα Κώδικα από το Teacher Led
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Πώς να διδάξετε μια ώρα του κώδικα
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
   beyond_submission: Θέλετε να υποβάλετε ένα σεμινάριο για την ενότητα Πέρα από μια

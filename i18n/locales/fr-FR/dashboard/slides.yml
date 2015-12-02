@@ -1113,7 +1113,7 @@ fr:
         text: "Quand tu utilises un bloc répéter pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc répéter cache en fait un morceau de code plus compliqué, appelé une boucle pour, qui compte depuis une valeur de départ jusqu'à une valeur de fin avec un pas spécifique."
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running. The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop.
+        text: "Par exemple, un bloc 'répète 3' compte de 1 à 3 de 1 en 1. A chaque fois qu'il compte 1, il exécute le code dans la boucle. La boucle 'for' sait combien de fois elle a été exécutée grâce à une variable compteur. Elle est initialisé à la valeur de départ avant d'entrer dans la boucle et est incrémentée à chaque fois que la boucle est exécutée. Dès que la variable compteur dépasse la valeur de fin, la boucle s'arrête. L'avantage d'utiliser une vrai boucle plutôt qu'un bloc 'répéter' est que tu peux voir la variable compteur et l'utiliser dans ta boucle."
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
@@ -1137,17 +1137,19 @@ fr:
         text: "Dans ce puzzle, nous avons déjà crée une fonction 'tracer un carré' pour toi. Tu la trouveras dans la boite à outils. C'est un bloc vert. Ce que tu va devoir faire, c'est d'écrire le même code que celui que tu viens juste d'écrire pour dessiner un carré et de le mettre dans cette fonction. Pour faire cela, Clique sur l'option 'éditer' du bloc vert 'tracer un carré'. Cela va ouvrir l'éditeur de fonction. L'éditeur de fonction a trois parties. Un endroit où tu nommes ta fonction. Le nom apparaîtra sur le bloc vert avant cette fonction. Ensuite, écris une courte description de ce que la fonction est censé faire."
       4:
         image: notes/C4_function_edit_4.png
-        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+        text: |-
+          Dans ce cas, il s'agit de dessiner un carré. L'espace blanc ci-dessous c'est l'espace de travail, qui fonctionne exactement comme l' espace de travail que vous avez déjà utilisé. Glissez et déposez les blocs de la boîte à outils dans cet espace de travail. N'oubliez pas de mettre les blocs qui créent un carré à l'intérieur du bloc vert qui encapsule le code de la fonction. Une fois que vous avez terminé, cliquez sur "enregistrer et quitter", ce qui vous ramène à l'espace de travail principal du puzzle. Désormais, vous pouvez utiliser le Bloc fonction "dessiner un carré" comme n'importe quel autre bloc pour terminer le puzzle.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
         text: "Voila une fonction qui dessine des carrés de 50 pixels de côté. C'est bien, mais si en fait je veux dessiner un carré de 50 pixels de côté et un autre carré de 100 pixels de côté ? Nous ne devrions pas avoir a créer deux fonctions distinctes qui font presque la même chose. A la place, nous pouvons utiliser une seule fonction avec un paramètre."
       2:
         image: notes/C4_function_parameters_2.png
-        text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
+        text: |-
+          Les paramètres permettent de transmettre à une fonction des valeurs qui sont utilisées à l'intérieur de la fonction comme des variables. Nous allons ajouter un paramètre "longueur" à cette fonction, pour créer des carrés de différentes tailles. Dans l'éditeur de fonction, vous pouvez modifier le nom et la description comme précédemment, mais vous pouvez également ajouter un paramètre. Écrivez le nom du paramètre dans l'emplacement idoine, puis cliquez sur" Ajouter un paramètre". Cela va créer un bloc rouge avec le nom du paramètre que vous venez de créer. Maintenant, vous pouvez utiliser ce paramètre pour modifier le bloc d'instructions "avancer de 100" afin qu'il devienne "avancer de la valeur de longueur".
       3:
         image: notes/C4_function_parameters_3.png
-        text: "Click save and close and drag out your new create a square block from the functions category in the toolbox. You'll notice there's an empty space next to length because the function wants to know what value the parameter Length should have. Drag a number block from the Math category and place it in this space. See how you can use the function again and again with different lengths to make squares of different sizes? Try it for yourself!"
+        text: "Clique sur 'Enregistrer et Fermer' et glisse ton nouveau bloc 'Créer un carré' depuis la catégorie 'Fonctions' de ta boite à outils. Tu remarqueras qu'il y a un espace vide à côté de 'Longueur' parce que la fonction veut savoir quelle valeur donner au paramètre 'Longueur'. Glisse un bloc nombre depuis la catégorie 'Math' et dépose le dans cet espace. Tu comprends maintenant comment créer des carrés de taille différente ? Alors vas-y, essaye !"
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1161,8 +1163,7 @@ fr:
           Si je fais glisser le bloc "avancer plus" dans notre espace de travail et que je cliques sur "Démarrer", que se passe-t-il ? L'oiseau se déplace vers l'avant d'une case sur la grille. Et si je veux que l'oiseau fasse quelque chose après qu'il se soit déplacé d'un case vers l'avant ? Je peux ajouter un autre bloc à notre programme.
       4:
         image: notes/C4_intro_4.png
-        text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+        text: "Je vais choisir un bloc 'tourne à droite' et je vais le glisser sous mon bloc 'déplace toi' jusqu'à ce que la flèche jaune apparaisse. Je vais le lâcher et les deux blocs vont s'accrocher ensemble. Lorsque j'appuierais sur 'Exécuter', l'oiseau jouera les commandes qui sont empilées dans notre espace de travail, du haut vers le bas."
       5:
         image: notes/C4_intro_5.png
         text: |-
@@ -1170,7 +1171,7 @@ fr:
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: "If I want to draw a rectangle 50 pixels tall and that is twice as wide as it is tall, how would I program the computer to do that? Well, I could tell the artist to go up fifty, turn right, and then go over 100 and move the whole thing twice. But then I'm doing the math for the computer."
+        text: "Si je veux dessiner un rectangle de 50 pixels de haut et qui soit deux fois plus large que haut, comment devrais-je programmer l'ordinateur pour qu'il le fasse ? Et bien je pourrais dire au dessinateur de monter de 50 pixels, de tourner à droite, d'aller à 100 pixels et de refaire ça dans l'autre sens mais là, c'est moi qui calcule pour l'ordinateur."
       2:
         image: notes/C4_math_artist_2.png
         text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
@@ -1745,7 +1746,7 @@ fr:
         text: "Peux-tu imaginer si tu avais à répéter quelque chose à l'infini? Heureusement tu n'auras jamais à le faire car les ordinateurs sont vraiment bons à répéter les choses."
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: "C'est le bloc 'répète à jamais'. Tout ce qui se trouve dans ce bloc se produira 'à jamais' dans le jeu. Si nous voulons qu'un élément fasse quelque chose de façon répétée, continuellement, sans que le joueur ai à intervenir, nous placerons ces blocs à l'intérieur du bloc 'répète à jamais'."
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: "Dans ce puzzle, notre objectif est d'aider l'élément à faire un travail en continu. Apprendre à utiliser la commande 'répéter' te permettras de gagner énormément de temps plus tard quand tu construiras ton propre jeu."

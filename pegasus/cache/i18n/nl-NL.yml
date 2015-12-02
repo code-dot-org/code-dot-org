@@ -327,6 +327,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bouw een Heelal met Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Gebruik klik-en-sleep-blokken en JavaScript.
@@ -740,6 +741,10 @@
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
   teach_led_lesson_plans: Uur Code-lesplannen voor leerkrachten
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Hoe les te geven met een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   beyond_submission: Wil je lessen indienen voor 'Meer dan een uur'? Bekijk de criteria

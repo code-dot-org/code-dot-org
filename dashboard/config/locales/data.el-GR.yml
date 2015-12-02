@@ -602,23 +602,26 @@
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
           when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
+        studio_iceage_repeat: Το μπλοκ "επανάλαβε για πάντα" σας επιτρέπει να εκτελείτε
+          τον κώδικά σας συνεχώς. Μπορείτε να συνδέσετε μπλοκ σε αυτό για να βοηθήσετε
+          τη Granny να κάνει λίγο εξάσκηση κινούμενη αριστερά και δεξιά συνεχώς;
+        studio_iceage_click_hello: Μπορείτε να βοηθήσετε τον Sid να καλέσει μία ύστατη
+          έκκληση για φίλους όταν του κάνετε κλικ; Μην ξεχάσετε να του κάνετε κλικ
+          αφού πατήσετε Εκτέλεση.
+        studio_iceage_move_events: Ο Scrat ψάχνει για βελανίδια! Βοηθήστε τον να τρέξει
+          τριγύρω βάζοντας το μπλοκ "κίνηση" σε καθένα από τα γεγονότα και αλλάζοντας
+          την κατεύθυνση ώστε να λειτουργεί με όλα τα βέλη. Όταν είστε έτοιμοι, πατήστε
+          Εκτέλεση και δοκιμάστε να μαζέψετε όλα τα βελανίδια.
+        studio_iceage_sound_and_points: Προσφέρουμε τον περισσότερο από τον κώδικα
+          που κάνει τη Granny να κινείται αριστερά και δεξιά, καθώς και τον κώδικα
+          για να κινείται ο Sid τριγύρω στην οθόνη. Μπορείτε να ολοκληρώσετε τον κώδικα
+          προσθέτοντας μπλοκ στο γεγονός "όταν ο ηθοποιός ακουμπήσει" για να το κάνετε
+          ώστε όταν συγκρούεται ο Sid και η Granny να παίζει έναν ήχο και να δίνει
+          βαθμό; Πατήστε Εκτέλεση για να παίξετε το παιχνίδι.
+        studio_iceage_warn_ice_age: Πρέπει όλοι να κινηθούν ταχύτερα γιατί πλησιάζει
+          η εποχή των παγετώνων! Αλλάξτε το φόντο σε "παγόβουνα" και βάλετε την ταχύτητα
+          του Sid στο γρήγορο, μετά πατήστε Εκτέλεση και κινήστε τον προς τον Diego
+          για να τον ειδοποιήσει.
         studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit

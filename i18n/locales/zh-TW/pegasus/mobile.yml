@@ -256,6 +256,7 @@ zh-TW:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: 用程式建立一個銀河系
   starwars_javascript_title: JavaScript
   starwars_javascript_description: 使用拖拉區塊及JavaScript.
@@ -561,6 +562,7 @@ zh-TW:
   carousel_heading_ide: 教師們的熱門平臺
   educator_notes: 教育者注意事項
   teach_led_lesson_plans: 一小時程式碼的教學計畫
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: 如何教an Hour of Code (一個小時的代碼)
   more_resources_educators: 給教師和教育工作者的更多資源
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
