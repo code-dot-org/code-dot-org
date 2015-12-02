@@ -529,6 +529,9 @@ en:
         'gumball_intro' : 'Gumball Hour of Code - Introduction'
         'gumball_events' : 'Gumball Hour of Code - Events'
         'gumball_repeat' : 'Gumball Hour of Code - Repeat statements'
+        'iceage_intro' : 'Ice Age Hour of Code - Introduction'
+        'iceage_events' : 'Ice Age Hour of Code - Events'
+        'iceage_repeat' : 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         # Keyed by #{callout.localization_key}
