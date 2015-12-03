@@ -52,13 +52,15 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
   var progressContainer = $('.progress_container');
+  var serverProgress = progressData.levels || {};
   stageData.levels.forEach(function(level, index, levels) {
     var status;
     if (dashboard.clientState.queryParams('user_id')) {
-      var serverProgressForStudent = progressData.levels || {};
-      status = activityCssClass((serverProgressForStudent[level.id] || {}).result);
+      // Show server progress only (the student's progress)
+      status = activityCssClass((serverProgress[level.id] || {}).result);
     } else {
-      status = activityCssClass(clientProgress[level.id]);
+      // Merge server progress with local progress
+      status = mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
     }
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
