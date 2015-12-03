@@ -4,7 +4,6 @@ layout: wide
 nav: promote_nav
 ---
 
-<%= view :signup_button %>
 
 # Blurbs and Useful Stats
 
@@ -16,5 +15,3 @@ Computers are everywhere, but fewer schools teach computer science than 10 years
 ## Infographics
 
 <%= view :stats_carousel %>
-
-<%= view :signup_button %>

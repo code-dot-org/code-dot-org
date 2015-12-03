@@ -4,7 +4,6 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 ## Inspire students and volunteer for the Hour of Code
@@ -130,5 +129,3 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## What comes after the Hour of Code?
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-
-<%= view :signup_button %>
