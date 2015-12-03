@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "你必需抓住20隻滾輪機器人(Mouse Droid)。在\"當抓到滾輪機器人\"事件中放入 \"新增滾輪機器人\"程式積木，讓你每次抓到滾輪機器人時會新增兩隻或兩隻以上的滾輪機器人。"},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "恭喜! 你已經完成新增程式碼來增加滾輪機器人(Mouse Droid) 。你可以繼續前往下一關，或是試著抓住這20隻滾輪機器人(Mouse Droid)。新增更多的滾輪機器人可以讓這個關卡更容易通過。(按住鍵盤(螢幕) 上的方向鍵不放可以讓角色移動的更快一點。)"},
 "failedChangeSettingTimeout":function(d){return "接觸3個反抗軍飛行員以便繼續。"},
-"failedChangeSettingSettings":function(d){return "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。"}};
+"failedChangeSettingSettings":function(d){return "開始設計你自己的遊戲。要完成這個關卡，你必須改變你的機器人並設置它的速度。"},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

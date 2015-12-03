@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Tú necesitas obtener 20 Droides Ratón. Usa el comando \"agregar un Droide Ratón\" dentro del evento \"cuando obtienes un Droide Ratón\" y asi podras adicionar dos o más Droides Ratón cada vez que obtienes uno."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Felicitaciones, haz agregado código para hacer Droides Ratón. Puedes ir al siguiente rompecabezas o intentar de nuevo conseguir 20 Ratónes Droide. Trata de hacerlo sencillos agregando más de ellos! (Presiona y sosten las teclas de tu teclado (o pantalla) para moverse más rápido.)"},
 "failedChangeSettingTimeout":function(d){return "Obten tres pilotos rebeldes para seguir adelante."},
-"failedChangeSettingSettings":function(d){return "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."}};
+"failedChangeSettingSettings":function(d){return "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

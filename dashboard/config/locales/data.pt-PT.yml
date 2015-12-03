@@ -555,12 +555,12 @@
           alertar a todos
         studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
+        studio_iceage_hello1: Sid quer reunir toda a gente para uma nova aventura.
+          Pode ajudá-lo a dizer "olá" arrastando o bloco "say" para a área de trabalho
+          e escrevendo a palavra "olá" dentro?
+        studio_iceage_hello2: Sid (ator 1) encontrou Manny (ator 2) e quer convidá-lo
+          para a aventura. Ajudá-os a encontrar-se usando o bloco "actor say" duas
+          vezes.
         studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
           last 200 pixels using the "move" block.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor

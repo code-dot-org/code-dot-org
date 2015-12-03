@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du behöver fånga 20 mus-droider. Använd kommandot \"Lägg till en mus-droid\" inuti händelsen \"när få mus-droid\" för att lägga till två eller flera mus-droider varje gång du fångat en."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Grattis, du har lagt till kod för att skapa mus-droider. Du kan gå till nästa pussel eller försöka igen för att fånga 20 mus-droider. Försök att göra det lättare genom att lägga till fler av dem! (Tryck och håll ner tangenterna på tangentbordet (eller skärmen) för att gå snabbare.)"},
 "failedChangeSettingTimeout":function(d){return "Få tre rebellpiloter att flytta på sig."},
-"failedChangeSettingSettings":function(d){return "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet."}};
+"failedChangeSettingSettings":function(d){return "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

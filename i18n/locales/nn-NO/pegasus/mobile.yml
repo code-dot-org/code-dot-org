@@ -274,6 +274,7 @@ nn-NO:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bygg ein galakse med kode
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slepp blokker og JavaScript.
@@ -290,7 +291,7 @@ nn-NO:
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
   mc_shortdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
-  mc_gradelevel: Alder 6 +
+  mc_gradelevel: 'Frå 4 - 104 år'
   mc_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   mc_specs: Mange språk (kommer snart) | Moderne nettlesere og nettbrett | Alder 6 +
   minecraft_subtitle: Kodetimen med Minecraft
@@ -579,6 +580,7 @@ nn-NO:
   carousel_heading_ide: Plattformer som er populære blant lærarar
   educator_notes: Lærarnotat
   teach_led_lesson_plans: Lærarrettleiing til Kodetimen
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Korleis undervisa ein Kodetime
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   beyond_submission: Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og innlevering skjemaet.
@@ -675,7 +677,7 @@ nn-NO:
   starwars_gradelevel: Alder 6 +
   playlab_gradelevel: 'Frå 4 - 104 år'
   infinity_gradelevel: 'Frå 4 - 104 år'
-  artist_gradelevel: 'Frå 4 - 104 år'
+  artist_gradelevel: Alderen 8+
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   thinkersmithspanish_platformtext: Straumlaust

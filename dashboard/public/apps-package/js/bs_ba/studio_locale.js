@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Trebaš dodati 20 Miš Droida. Upotrijebi \"dodaj Miš Droida\" komandu unutar \"kada je Miš Droid uzet\" događaj da bi se dodala dva ili više Miš Droida svaki put kada se uzme jedan."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Čestitamo, dodao/la si kod koji pravi Miš Droide. Možeš ići na slijedeći zadatak ili pokušati ponovo da uzmeš 20 Miš Droida. Pokušaj si olakšati dodavanjem više njih! (Pritisni i drži tipke na tvojoj tastaturi (ili ekranu) za brže kretanje.)"},
 "failedChangeSettingTimeout":function(d){return "Uzmi tri Pobunjenička Pilota za nastavak."},
-"failedChangeSettingSettings":function(d){return "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu."}};
+"failedChangeSettingSettings":function(d){return "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

@@ -280,10 +280,11 @@ cs-CZ:
   class_submission_level_vocational: Odborné
   class_submission_languages_other: Ostatní jazyky
   inspirational_videos_more: 'Další <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> inspirativní videa</a> vzory a celebritami'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_choose_theme: Vyber si téma Play Lab
+  playlab_classic_title: Klasické
+  playlab_gumball_title: Žvýkačku
+  playlab_iceage_title: 'Doba ledová - se blíží'
+  playlab_iceage_title_live: Doba ledová
   starwars_subtitle: Budování Galaxy s kódem
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Použij táhni-pusť bloky a JavaScript.
@@ -576,7 +577,7 @@ cs-CZ:
   carousel_heading_beginners: Kurzy pro začátečníky
   carousel_heading_beyond_beginners: Kurzy pro začátečníky
   carousel_heading_javascript: Kurzy, které učí Javascript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Kurzy, které učí Javascript
   carousel_heading_unplugged: 'Žádné zařízení nebo internet? Zkuste informatiku "unplugged"'
   carousel_heading_devices: Aplikace s kurzy pro telefony a tablety
   carousel_heading_beyond_devices: Aplikace s kurzy pro telefony a tablety
@@ -589,6 +590,7 @@ cs-CZ:
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
   educator_notes: Poznámky pro pedagogy
   teach_led_lesson_plans: Učitelské vedení rozvrhu cvičení Hodiny kódu
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Jak učit Hodinu kódu
   more_resources_educators: Další zdroje pro učitele
   beyond_submission: Chcete odeslat výuku za mimoškolní aktivitu? Viz kritéria a odesílací formulář.

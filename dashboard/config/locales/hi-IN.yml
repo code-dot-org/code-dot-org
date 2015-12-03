@@ -65,15 +65,17 @@
     windowslive: Microsoft खाता
     forgot_password: अपना पासवर्ड भूल गए?
     need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
-    need_unlock: Didn't receive unlock instructions?
+    need_unlock: खोलने के अनुदेश नही मिले?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: '%{count} छात्रों जिनहोने पहले ही साइन अप किया हैं'
+    teacher_count: '%{count} शिक्षकों जिनहोने पहले ही साइन अप किया हैं'
+    overview_student: अपनी प्रगति को मापने के लिए एक खाते के लिए साइन अप करें. आपका
+      ईमेल मुख्य रूप से आप में और पासवर्ड वसूली के लिए लॉग इन करने की अनुमति देने
+      के लिए प्रयोग किया जाता है. अधिक जानकारी के लिए, देखिए हमारी <a href="http://code.org/privacy">गोपनीयता
+      नीति</a>.
+    overview_teacher: एक खाते के लिए साइन अप करने से अपनी कक्षा में कंप्यूटर विज्ञान
+      पढाईए ।<p/> आप अपने छात्रों को जोड़ने और उनकी प्रगति को मापने में सक्षम हो सकते
+      हैं ।
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.

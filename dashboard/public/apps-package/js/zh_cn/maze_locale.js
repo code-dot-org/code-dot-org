@@ -158,7 +158,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "atFlower":function(d){return "在花里"},
 "avoidCowAndRemove":function(d){return "躲开牛并移除1"},
 "continue":function(d){return "继续"},
-"dig":function(d){return "移除1"},
+"dig":function(d){return "移除 1"},
 "digTooltip":function(d){return "移除1单位的土"},
 "dirE":function(d){return "东"},
 "dirN":function(d){return "北"},

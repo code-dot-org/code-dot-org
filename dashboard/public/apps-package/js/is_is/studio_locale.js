@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Þú þarft að ná 20 vélmúsum. Notaðu \"bæta við vélmús\" skipunina í \"þegar nær vélmús\" atviki til að bæta við tveimur eða fleiri vélmúsum í hvert skipti sem þú nærð einni."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Til hamingju, þú bættir við kóða sem býr til vélmýs. Þú getur farið áfram í næstu þraut eða reynt aftur að ná 20 vélmúsum. Prófaðu að auðvelda það með því að hafa fleiri! (Ýttu á og haltu niðri lyklunum á lyklaborðinu (eða skjánum) til að hreyfast hraðar.)"},
 "failedChangeSettingTimeout":function(d){return "Náðu þremur flugmönnum til að halda áfram."},
-"failedChangeSettingSettings":function(d){return "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess."}};
+"failedChangeSettingSettings":function(d){return "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

@@ -284,6 +284,7 @@ pl-PL:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Użyj bloków do przeciągania i upuszczania oraz JavaScript.
@@ -589,6 +590,7 @@ pl-PL:
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
   teach_led_lesson_plans: Plany lekcji do poprowadzenia Godziny Kodowania przez nauczyciela
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania? Zobacz kryteria i formularz zgłoszenia.

@@ -289,6 +289,7 @@ button.arrow:disabled {
   font-size: 14px;
   overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  direction: ltr;
 }
 
 #codeTextbox.pin_bottom {
@@ -1323,6 +1324,17 @@ $workspace-header-button-margin: ($workspace-headers-height -
     font-size: 20px;
   }
 
+  .social-buttons {
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      background-color: transparent;
+      text-decoration: none;
+      color: white;
+    }
+  }
+
   button {
     background-color: $purple;
     color: white;
@@ -1337,12 +1349,6 @@ $workspace-header-button-margin: ($workspace-headers-height -
       border: 1px solid $purple;
       background-color: $lighter_gray;
       box-shadow: none;
-    }
-
-    a, a:hover, a:link, a:visited {
-      background-color: transparent;
-      color: white;
-      text-decoration: none;
     }
 
     #send-to-phone {

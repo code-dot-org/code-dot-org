@@ -380,8 +380,8 @@
           description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής
             και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
             τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Αυτό το 20ωρο μάθημα καλύπτει τα βασικά των εννοιών της
+            επιστήμης των υπολογιστών και του προγραμματισμού στα μαθήματα 2-4.
           Introduction to Computer Science: Εισαγωγή στην Επιστήμη των Υπολογιστών
           The Maze: Ο Λαβύρινθος
           Computational Thinking: Αλγοριθμική Σκέψη
@@ -424,21 +424,23 @@
           title: Flappy κώδικα
           description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά;
             Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
+            λεπτά!
           Flappy Code: Flappy κώδικα
         jigsaw:
           title: Παζλ
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Δοκιμάστε τον οδηγό παζλ
+          description_short: Δοκιμάστε τον οδηγό παζλ
           Jigsaw: Παζλ
         step:
           title: Βήμα
-          description: ''
-          description_short: Step tutorial
+          description: Οδηγός με βήματα
+          description_short: Οδηγός με βήματα
           Step: Βήμα
         Hour of Code:
           title: Ώρα του Κώδικα 2013
-          description: ''
+          description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες
+            από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
           Hour of Code 2013: Ώρα του Κώδικα 2013
@@ -899,8 +901,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -979,8 +981,8 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Evaluation Blocks: Μπλοκ Αξιολόγησης
           Strings and Images: Strings και εικόνες
           Defining Variables: Ορίζοντας μεταβλητές
@@ -1027,8 +1029,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1085,8 +1087,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1150,8 +1152,8 @@
           Hour of Code 2015: Ώρα του Κώδικα 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1173,8 +1175,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Wrap-Up: συνοψίζω
           Review StarLogo Nova: Review StarLogo Nova
@@ -1190,8 +1192,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1212,8 +1214,8 @@
         sciencePD2b-iZone:
           Welcome!: Καλώς ήρθατε!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1222,8 +1224,8 @@
           Wrap-Up: συνοψίζω
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           0: |
             Unit 1, Days 1-2
@@ -1246,8 +1248,8 @@
           Wrap-up: συνοψίζω
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           0: |
             Unit 1, Days 1-2
@@ -1575,10 +1577,12 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Play Lab Εποχής των Παγετώνων
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
+            Play Lab της Εποχής των Παγετώνων!
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play
+            Lab της Εποχής των Παγετώνων!
+          Ice Age Play Lab: Play Lab Εποχής των Παγετώνων
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1633,10 +1637,12 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Play Lab Τσιχλόμπαλα
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
+            Play Lab της Τσιχλόμπαλας!
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play
+            Lab της Τσιχλόμπαλας!
+          Gumball Play Lab: Play Lab Τσιχλόμπαλα
         starwars:
           title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το

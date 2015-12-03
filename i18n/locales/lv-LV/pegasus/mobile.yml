@@ -297,6 +297,7 @@ lv-LV:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -313,7 +314,7 @@ lv-LV:
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Vecums no 4-104
   mc_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -602,6 +603,7 @@ lv-LV:
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Ko mācīt Programmēšanas stundā
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -695,10 +697,10 @@ lv-LV:
   projguts_gradelevel: Vecumā no 10-13
   hourofcode_gradelevel: Vecums no 4-104
   frozen_gradelevel: Vecumā no 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Vecums no 4-104
   playlab_gradelevel: Vecums no 4-104
   infinity_gradelevel: Vecums no 4-104
-  artist_gradelevel: Vecums no 4-104
+  artist_gradelevel: Vecumā no 8+
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   thinkersmithspanish_platformtext: Bezsaistē

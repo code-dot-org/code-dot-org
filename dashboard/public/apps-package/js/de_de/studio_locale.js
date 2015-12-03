@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du mußt 20 Maus-Droiden fangen. Benutze den Befehl \"Füge hinzu Maus-Droid\" im \"Wenn Maus-Droid erreicht\" Ereignis, um zwei oder mehr Maus-Droiden erscheinen zu lassen, immer wenn Du einen erreichst."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Glückwunsch, Du hast programmiert, Maus-Droiden zu erschaffen. Du kannst zum nächsten Level gehen oder nochmal versuchen, 20 Stück von ihnen zu fangen. Es wird leichter, wenn Du mehr von ihnen auf einmal hinzufügst. Halte die Pfeiltasten gedrückt, um Dich schneller zu bewegen."},
 "failedChangeSettingTimeout":function(d){return "Hol' Dir drei Rebellen-Piloten, um weiter zu kommen."},
-"failedChangeSettingSettings":function(d){return "Jetzt kannst Du das Spiel selbst gestalten. Um dieses Level zu schaffen, mußt Du das Aussehen und die Geschwindigkeit des Droiden einstellen."}};
+"failedChangeSettingSettings":function(d){return "Jetzt kannst Du das Spiel selbst gestalten. Um dieses Level zu schaffen, mußt Du das Aussehen und die Geschwindigkeit des Droiden einstellen."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

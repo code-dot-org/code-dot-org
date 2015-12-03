@@ -18,14 +18,18 @@
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
-      <button><a href='<%= options.facebookUrl %>' target="_blank" class="popup-window">
-        <i class="fa fa-facebook fa-lg"></i>
-      </a></button>
+      <a href='<%= options.facebookUrl %>' target="_blank" class="popup-window">
+        <button>
+          <i class="fa fa-facebook fa-lg"></i>
+        </button>
+      </a>
     <% } -%>
     <% if (options.twitterUrl) { -%>
-      <button><a href='<%= options.twitterUrl %>' target="_blank" class="popup-window">
-        <i class="fa fa-twitter fa-lg"></i>
-      </a></button>
+      <a href='<%= options.twitterUrl %>' target="_blank" class="popup-window">
+        <button>
+          <i class="fa fa-twitter fa-lg"></i>
+        </button>
+      </a>
     <% } -%>
     <% if (!options.onMainPage && !options.disablePrinting) { %>
       <button id="print-button">
@@ -51,9 +55,9 @@
   </div>
   <div id="send-to-phone" style="display: none">
     <label for="phone">Enter a US phone number:</label>
-    <input type="text" id="phone" name="phone" />
+    <input type="tel" id="phone" name="phone" />
     <button id="phone-submit" onClick="return false;">Send</button>
-    <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>
+    <div id="phone-charges">A text message will be sent via <a href="http://twilio.com" target="_blank">Twilio</a>. Charges may apply to the recipient.</div>
   </div>
 <% } %>
 

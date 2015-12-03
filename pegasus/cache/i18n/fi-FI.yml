@@ -35,14 +35,14 @@
   hoc2014_everyone: Kaikki
   hoc2014_support: Tue &#x25BE;
   hoc2014_whatishoc: Mikä on koodaustunti?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: '# CSEdWeek / Koodaustunti-tapahtumia ympäri maailmaa'
   csedweek_map_signup: Ilmoita tapahtumasi
   csedweek_map_search_placeholder: Etsi koodaustunteja
   csedweek_map_search_search: Haku
   csedweek_map_search_reset: Alusta
   csedweek_map_legend_title: Kartan selite
   csedweek_map_legend_event: Koodaustunti
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Tietojenkäsittelytieteen opetusviikko
   cded_sign_up: Luo käyttäjätunnus
   cded_try_it: Kokeile
   twentyhours_trynow: Kokeile nyt
@@ -69,18 +69,18 @@
   thank_you_: Kiitos!
   congratulations: Onneksi olkoon!
   congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
+  congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
+    <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
+    johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
   course_name_accelerated: Nopeutettu kurssi
   course_name_course1: Kurssi 1
   course_name_course2: Kurssi 2
   course_name_course3: Kurssi 3
   course_name_course4: Kurssi 4
-  congratulations_on_completing_course: Congratulations on completing %{course}
+  congratulations_on_completing_course: Onnittelut! Läpäisit kurssin %{course}
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
+    tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
   get_a_certificate_of_achievement: Hanki todistus suorituksesta
   enter_valid_age: Valitse oikea ikä
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
@@ -236,8 +236,8 @@
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
+  homepage_diversity_pledge: Tee monipuolisuuslupaus
+  homepage_banner_text_prizes: 'Koodaustunti on tulossa taas, joulukuussa 7-13. '
   homepage_banner_link_prizes: 'Liity historian suurimpaan oppimistapahtumaan. '
   homepage_banner_text_main: Code.org ja College Board liittoutuvat yhteen parantaakseen
     tietojenkäsittelytieteen moninaisuutta.
@@ -312,10 +312,11 @@
   class_submission_languages_other: Muu kieli(kielet)
   inspirational_videos_more: Lisää <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspiroivia videoita</a> roolimalleilta ja kuuluisuuksilta
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Valitse Pelilabra-teemasi
+  playlab_classic_title: Klassinen
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Ice Age - Tulossa pian
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Kasaa koodista Galaksi
   starwars_javascript_title: Javascript
   starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
@@ -723,6 +724,10 @@
   carousel_heading_ide: Opettajien keskuudessa suositut alustat
   educator_notes: Opettajan muistiinpanot
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Miten opettaa koodia tunnissa
   more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -819,10 +824,10 @@
   projguts_gradelevel: 10-13-vuotiaille
   hourofcode_gradelevel: 4-104-vuotiaille
   frozen_gradelevel: Ikä 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: 4-104-vuotiaille
   playlab_gradelevel: 4-104-vuotiaille
   infinity_gradelevel: 4-104-vuotiaille
-  artist_gradelevel: 4-104-vuotiaille
+  artist_gradelevel: Ikä 8+
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Tietokoneeton tekeminen

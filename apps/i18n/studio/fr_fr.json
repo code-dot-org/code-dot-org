@@ -754,5 +754,15 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tu dois obtenir 20 Droïdes Souris. Utilises la commande \"ajouter un Droïde Souris\" à l'évènement \"quand un Droïde Souris est atteint\" pour ajouter au moins deux Droïdes Souris à chaque fois que tu en atteins un.",
   "failedMultiplyCharactersTimeoutGotSome": "Félicitations, Tu as ajouté du code pour fabriquer des Droïdes Souris. Tu peux passer au prochain puzzle ou essayer à nouveau d'obtenir 20 Droïdes Souris. Essaye de le rendre plus facile en en ajoutant plus ! (Maintiens les touches du clavier (ou de l'écran) enfoncées pour aller plus vite.)",
   "failedChangeSettingTimeout": "Atteins trois Pilotes Rebelles pour continuer.",
-  "failedChangeSettingSettings": "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse."
+  "failedChangeSettingSettings": "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse.",
+  "tapToReset": "Tap to reset",
+  "tapToPlay": "Tap to play",
+  "swipeToMove": "Swipe to move",
+  "playlab_lastLevel_continueText": "Done",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }

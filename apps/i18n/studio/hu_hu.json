@@ -754,5 +754,15 @@
   "failedMultiplyCharactersTimeoutBlockly": "20 Egér Droidot kell szerezned. Használd az \"adj hozzá egy Egér Droid\" utasítást a \"ha elkapja az egér droidot\" eseményen belül, hogy még egy vagy két Egér Droidot hozzáadj akkor, amikor elkapsz egyet.",
   "failedMultiplyCharactersTimeoutGotSome": "Gratulálok, készítettél kódot Egér Droidok készítésére. Mehetsz a következő feladványra, vagy megpróbálhatsz ismét 20 Egér Droidot elkapni. Próbáld egyszerűbbé tenni több hozzáadásával! (Tartsd lenyomva a nyilakat a billentyűzeten vagy képernyőn a gyorsabb mozgáshoz)",
   "failedChangeSettingTimeout": "Három Lázadót kell elkapnod a továbbjutáshoz.",
-  "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét."
+  "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét.",
+  "tapToReset": "Tap to reset",
+  "tapToPlay": "Tap to play",
+  "swipeToMove": "Swipe to move",
+  "playlab_lastLevel_continueText": "Done",
+  "setBackgroundIcy1": "set icy 1 background",
+  "setBackgroundIcy2": "set icy 2 background",
+  "setBackgroundIcy3": "set icy 3 background",
+  "setBackgroundIcy4": "set icy 4 background",
+  "setBackgroundIcy5": "set icy 5 background",
+  "setBackgroundGround": "set ground background"
 }
