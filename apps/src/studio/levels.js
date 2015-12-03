@@ -587,6 +587,25 @@ levels.click_hello =  {
       return (Studio.sayComplete > 0 && this.successState.seenCmd);
     }
   },
+  'callouts': [
+    {
+      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'element_id': '#prompt-table',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutInstructions(),
+        },
+        'position': {
+          'my': 'bottom left',
+          'at': 'top right',
+          'adjust': {
+            'x': -40,
+            'y': 0
+          }
+        }
+      }
+    }
+  ],
   'timeoutFailureTick': 300,
   'toolbox':
     tb('<block type="studio_moveDistance"><title name="DIR">2</title></block>' +
