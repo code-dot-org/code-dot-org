@@ -1312,6 +1312,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
     margin: 10px 0;
     &.sharing-content {
       margin-left: $image_width + 15px;
+      margin-right: 25px;
       &.no-image {
         margin-left: 0;
       }
@@ -1360,10 +1361,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 
   #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 200px;
+    width: 100%;
     padding: 10px;
+    cursor: text;
   }
 
   #copy-button {
