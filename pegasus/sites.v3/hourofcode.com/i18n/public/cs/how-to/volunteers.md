@@ -12,14 +12,14 @@ nav: how_to_nav
 
 Navštivte třídu a inspirujte studenty, aby se věnovali počítačům. [Pomáhejte](https://code.org/volunteer/engineer).
 
-## 2. Join a volunteer info session
+## 2. připojte se do dobrovolnické info zasedání
 
-We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Budeme diskutovat, jak spolupracovat s učiteli před jejich Hodinou kódu a co na den, kdy bude probíhat, připravit. Přijďte s vašimi dotazy, prosím! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
+Budeme hostovat dvě info zasedání, abychom vysvětlili, jaký bude typický dobrovolnický zážitek. Budeme diskutovat, jak spolupracovat s učiteli před jejich Hodinou kódu a co na den, kdy bude probíhat, připravit. Přijďte s vašimi dotazy, prosím! Tyto info zasedání budou hostovány skrze Hangouty, takže pokuď zasedání nestihnete, stále se můžete podívat na záznam zasedání později. [podívejte se na denní program](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Datum         | Čas               | Link to info session                                                            |
+| Datum         | Čas               | Odkaz k info zasedání                                                           |
 | ------------- | ----------------- | ------------------------------------------------------------------------------- |
-| 16. listopadu | 13:00 - 13:30 PST | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
-| 3. prosince   | 11:00 - 11:30 PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
+| 16. listopadu | 13:00 - 13:30 PST | [Odkaz k nahrávce](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0)  |
+| 3. prosince   | 11:00 - 11:30 PST | [Odkaz k připojení](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0) |
 
 ## 3. Věnujte 30 minut před výukou
 
@@ -27,7 +27,7 @@ Vyzkoušej výkové programy na [code.org/learn](https://code.org/learn). Vybert
 
 ## 4. Získejte vaše spolupracovníky pro dobrovolnictví
 
-Pověz svým přátelům a spolupracovníkům o Hodině kódu. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
+Pověz svým přátelům a spolupracovníkům o Hodině kódu. Máme tisíce učitelů, kteří se připojují a hledají dobrovolníky, takže se jich zeptejte požádejte k [připojení jako dobrovolník](https://code.org/volunteer).
 
 **Vzorové emaily:**
 

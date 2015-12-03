@@ -10,19 +10,19 @@ nav: how_to_nav
 
 # Jak přivést Hodinu kódu do vaší společnosti
 
-## Inspire students and volunteer for the Hour of Code
+## Inspirujte studenty a nabídněte se pro Hodinu kódu
 
-**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+**Code.org nabízí zaměstnancům šanci k [připojení](<%= resolve_url('https://code.org/volunteer') %>) s lokálními třídami dělající Hodinu kódu, aby mohli sdílet svoje kariérní zkušenosti a inspirovali studenty k studování informatiky.**
 
-  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+  * [Připojte se](<%= resolve_url('https://code.org/volunteer') %>) jako dobrovolník.
+  * Pro více instrukcí, o připojování vašich zaměstnancům s třídami, konzultujte s naším [ průvodcem pro korporační partnery](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
-## Additional ways companies can support the Hour of Code:
+## Další způsoby jak můžou firmy podpořit Hodinu kódu:
 
   * Použijte náš [marketingový nástroj ](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) k vytvoření komunikační časové osy a sdílení propagačního obsahu.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [Viz tento email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+  * Zeptejte se svého výkonného ředitele, jestli by nemohl poslat celofiremní email, zdůrazňující důležitost informatiky a podporující zaměstnance k šíření. [Viz tento email](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Hostujte šťastnou hodinu Hodiny kódu s vašimi spolupracovníky, aby mohli vyzkoušet [cvičení](<%= resolve_url('https://code.org/learn') %>).
+  * Hostujte událost Hodiny kódu pro lokální třídy studentů nebo pro neziskové partnery, ať udělají Hodinu kódu ve kancelářích vaší firmy. Podívejte se na událost how-to průvodce níže.
 
 ## Jak uspořádat událost Hodiny kódu
 
@@ -32,9 +32,7 @@ nav: how_to_nav
   * Propagujte vaši [Hodinu kódu](<%= resolve_url('/promote') %>) a povzbuďte ostatní k jejímu hostování.
   * Povzbuďte **softwarové inženýry** ve vaší firmě k návštěvě třídy v místě, aby pomohli vést Hodinu kódu a inspirovat studenty ke studiu informatiky. Mohou se [přihlásit, ](<%= resolve_url('https://code.org/volunteer/engineer') %>) aby byli ve spojení s třídou.
 
-## 2) Prohlédni si toto video s návodem
-<iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-
+## 1) Prohlédni si toto video s návodem <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zvol si výukový kurz:
 
 Budeme hostovat řadu [zábavných jednohodinových výukových kurzů ](<%= resolve_url('https://code.org/learn') %>) pro účastníky všech věkových kategorií řadou různých partnerů. *Nové výukové kurzy přicházejí před odstartování Hodiny kódu <%= campaign_date('full') %>.* [Vyzkoušejte aktuální výukové kurzy.](<%= resolve_url("https://code.org/learn") %>)
@@ -108,7 +106,7 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
   * [Tisk certifikátů](<%= resolve_url('https://code.org/certificates') %>) pro účastníky.
   * [Tisk "Udělal jsem Hodinu kódu!"](<%= resolve_url('/promote/resources#stickers') %>) nálepek.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+  * [Objednejte si vlastní trička](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pro vaše zaměstnance.
   * Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
 [col-33]

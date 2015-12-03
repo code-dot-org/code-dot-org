@@ -1,4 +1,8 @@
 class PuzzleRatingsController < ApplicationController
+  # Don't require an authenticity token because we post to this controller
+  # from publicly cached level pages without valid tokens.
+  skip_before_action :verify_authenticity_token
+
   def create
     return head :unauthorized unless PuzzleRating.enabled?
 

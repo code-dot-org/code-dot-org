@@ -319,10 +319,11 @@
   class_submission_languages_other: Alte limbi
   inspirational_videos_more: Mai multe <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">clipuri
     inspirationale</a> cu modele consacrate si celebritati
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Alege tema ta Play Lab
+  playlab_classic_title: Clasic
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Epoca de gheata-In curand
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Programarea unei galaxii
   starwars_javascript_title: Javascript
   starwars_javascript_description: Utilizează blocuri drag-drop şi JavaScript.
@@ -759,6 +760,10 @@
   carousel_heading_ide: Platforme populare în rândul profesorilor
   educator_notes: Notițe pentru educatori
   teach_led_lesson_plans: Planuri de lectie pentru Ora de cod
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Cum să predai o Oră de Cod
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   beyond_submission: Vrei sa prezinti un tutorial mai lung de o ora? Verifica criteriile

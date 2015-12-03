@@ -300,6 +300,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: Javascript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
@@ -319,7 +320,7 @@
     מיינקראפט.
   mc_shortdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
     של מיינקראפט.
-  mc_gradelevel: לגילאי 6 ומעלה
+  mc_gradelevel: גילאי 4-104
   mc_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
@@ -692,6 +693,10 @@
   carousel_heading_ide: פלטפורמות פופולריות בקרב מורים
   educator_notes: הערות מורה
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: כיצד ללמד "שעה של קוד"
   more_resources_educators: משאבים נוספים עבור מורים ומחנכים
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -790,7 +795,7 @@
   starwars_gradelevel: לגילאי 6 ומעלה
   playlab_gradelevel: גילאי 4-104
   infinity_gradelevel: גילאי 4-104
-  artist_gradelevel: גילאי 4-104
+  artist_gradelevel: גילאי 8 +
   codeorg_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   thinkersmithspanish_platformtext: ללא חיבור
