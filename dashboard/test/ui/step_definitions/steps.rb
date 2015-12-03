@@ -146,7 +146,7 @@ When /^I press the last button with text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I open the small footer menu$/ do
+When /^I (?:open|close) the small footer menu$/ do
   menu_selector = 'div.small-footer-base a.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible

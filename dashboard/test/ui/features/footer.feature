@@ -8,10 +8,10 @@ Feature: Checking the footer appearance
     When I open my eyes to test "Desktop puzzle small footer appearance"
     Then I see no difference for "small footer"
 
-    When I press the first ".more-link" element
+    When I open the small footer menu
     And I wait for 0.25 seconds
     Then I see no difference for "footer menu"
-    And I press the first ".more-link" element
+    And I close the small footer menu
     And I wait for 0.25 seconds
 
     When I press the first ".copyright-link" element
@@ -24,15 +24,33 @@ Feature: Checking the footer appearance
     Then I see no difference for "smaller small footer"
     And I wait for 0.25 seconds
 
-    When I press the first ".more-link" element
+    When I open the small footer menu
     And I wait for 0.25 seconds
     Then I see no difference for "smaller footer menu"
-    And I press the first ".more-link" element
+    And I close the small footer menu
     And I wait for 0.25 seconds
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
     Then I see no difference for "smaller copyright flyout"
+    And I press the first ".copyright-link" element
+    And I wait for 0.25 seconds
+
+    # Now, variations where we resize while the flyouts are open, to make
+    # sure they update their size/position properly during the resize
+    When I open the small footer menu
+    And I wait for 0.25 seconds
+    Then I see no difference for "menu resize before"
+    When I drag the grippy by 400 pixels
+    Then I see no difference for "menu resize after"
+    And I close the small footer menu
+    And I wait for 0.25 seconds
+
+    When I press the first ".copyright-link" element
+    And I wait for 0.25 seconds
+    Then I see no difference for "copyright resize before"
+    When I drag the grippy by -400 pixels
+    Then I see no difference for "copyright resize after"
 
     Then I close my eyes
 
@@ -57,6 +75,8 @@ Feature: Checking the footer appearance
     Then I see no difference for "copyright flyout"
 
     Then I close my eyes
+
+  # TODO: Check footer appearance in "How it Works" scenario
 
   @eyes @dashboard_db_access @as_student
   Scenario: Desktop Applab share small footer appearance
@@ -94,11 +114,41 @@ Feature: Checking the footer appearance
     # We don't actually care about the running program (ignored in eyes test)
     # The timed delays give the popup time to fade out
     And I press "runButton"
-    And I wait for 1.5 second
+    And I wait for 1.5 seconds
     And I press "resetButton"
     And I wait for 0.5 seconds
 
     When I open my eyes to test "Mobile Star Wars share small footer appearance"
+    Then I see no difference for "small footer"
+
+    When I open the small footer menu
+    Then I see no difference for "footer menu"
+
+    When I press menu item "Copyright"
+    Then I see no difference for "copyright flyout"
+
+    Then I close my eyes
+
+  @eyes_mobile @dashboard_db_access @as_student
+  Scenario: Mobile Applab share small footer appearance
+    Given I rotate to landscape
+    And I start a new Applab project
+    And I navigate to the shared version of my project
+    And I rotate to portrait
+    And I wait until element ".small-footer-base" is visible
+
+    When I open my eyes to test "Mobile Applab share small footer appearance"
+
+    # This nonsense is to get the "Add to home screen" popup to fade out
+    And I open the small footer menu
+    And I wait for 2 seconds
+    And I close the small footer menu
+    And I wait for 2 seconds
+    And I open the small footer menu
+    And I wait for 2 seconds
+    And I close the small footer menu
+    And I wait for 2 seconds
+
     Then I see no difference for "small footer"
 
     When I open the small footer menu
