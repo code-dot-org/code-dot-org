@@ -2,13 +2,42 @@ require 'rmagick'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
-UNSAMPLED_HOC_COOKIE = 'HOC_UNSAMPLED'
+UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
+# Create a session row if the user is assigned to the sample set.
+# (as defined a random number vs. the hoc_activity_sample_proportion).
+# If the user is in the session, sets the hour of code cookie to the
+# session id, otherwise sets it to UNSAMPLED_HOC_COOKIE
+#
+# The "weight" encoded in the session row is set to 1/p, where p is the
+# proportion of sessions in the sample, so that reports can compute the
+# approximate number of actual sessions by multiplying by the weight.
+
+def create_session_row_unless_unsampled(row)
+  # We don't need to do anything if we've already decided this session is unsampled.
+  return if request.cookies['hour_of_code'] == UNSAMPLED_SESSION_ID
+
+  # Decide whether the session should be sampled.
+  p = DCDO.get('hoc_activity_sample_proportion', default: 1.0).to_f
+  p = 1.0 if p == 0.0  # Don't sample if the proportion is invalid.
+  if rand() < p
+    # If we decided to make the session sampled, create the session row and set the hoc cookie.
+    row = create_session_row(row, weight: 1.0 / p)
+  else
+    # Otherwise set the hoc cookie to make the session as unsampled.
+    set_hour_of_code_cookie_for_row(session: UNSAMPLED_SESSION_ID)
+    row = nil
+  end
+  row
+end
+
+# Creates a session row with the given weight and sets the hour of code cookie to contain
+# the session id.
 def create_session_row(row, weight: 1.0)
   retries = 3
 
   begin
-    row[:session] = SecureRandom.hex
+    row[:session] = create_session_id(weight)
     row[:id] = DB[:hoc_activity].insert(row)
   end while row[:id] == 0 && (retries -= 1) > 0
 
@@ -16,16 +45,18 @@ def create_session_row(row, weight: 1.0)
   set_hour_of_code_cookie_for_row(row[:session])
 end
 
-def create_session_row_if_in_sample(row)
-  p = DCDO.get('hoc_activity_sample_proportion', default: 1.0).to_f
-  p = 1.0 if p == 0.0  # Don't sample if the proportion is invalid.
-  if rand() < p
-    row = create_session_row(row, weight: 1.0 / p)
-  else
-    set_hour_of_code_cookie_for_row({session: HOC_UNSAMPLED})
-    row = nil
-  end
-  row
+# Create a session id that also encodes the weight of the session.
+# We should actually use a separate column for the weight, but need to defer adding
+# that column until after the hour of code. (hoc_activity currently has ~100M rows).
+def create_session_id(weight)
+  "_#{weight}_#{SecureRandom.hex}"
+end
+
+# Returns the session id for the current session if sampled, or
+# nil if unset or unsampled.
+def session_id
+  session_id = request.cookies['hour_of_code']
+  (session_id == UNSAMPLED_SESSION_ID) ? nil : session_id
 end
 
 def session_status_for_row(row)
@@ -48,16 +79,11 @@ def set_hour_of_code_cookie_for_row(row)
   response.set_cookie('hour_of_code', {value: row[:session], domain: '.code.org', path: '/api/hour/'})
 end
 
-def set_unsampled_hour_of_code_cookie
-  set_hour_of_code_cookie_for_row({session: HOC_UNSAMPLED})
-end
-
 def complete_tutorial(tutorial={})
-  hoc_cookie = request.cookies['hour_of_code']
   unless settings.read_only
     # We intentionally allow this DB write even when hoc_activity_writes_disabled
     # is set so we can generate personalized, shareable certificates.
-    row = DB[:hoc_activity].where(session: hoc_cookie).first unless
+    row = DB[:hoc_activity].where(session: session_id).first unless
     if row
       DB[:hoc_activity].where(id: row[:id]).update(
         finished_at: DateTime.now,
@@ -82,14 +108,14 @@ end
 
 def complete_tutorial_pixel(tutorial={})
   unless settings.read_only
-    row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
+    row = DB[:hoc_activity].where(session: session_id).first
     if row && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(
         pixel_finished_at: DateTime.now,
         pixel_finished_ip: request.ip,
       )
     else
-      row = create_session_row_if_in_sample(
+      create_session_row_unless_unsampled(
         referer: request.host_with_port,
         tutorial: tutorial[:code],
         pixel_finished_at: DateTime.now,
@@ -104,7 +130,7 @@ end
 
 def launch_tutorial(tutorial,params={})
   unless settings.read_only
-    row = create_session_row_if_in_sample(
+    create_session_row_unless_unsampled(
       referer: request.referer_site_with_port,
       tutorial: tutorial[:code],
       company: params[:company],
@@ -119,14 +145,14 @@ end
 
 def launch_tutorial_pixel(tutorial)
   unless settings.read_only || hoc_activity_writes_disabled
-    row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
+    row = DB[:hoc_activity].where(session: session_id).first
     if row && !row[:pixel_started_at] && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(
         pixel_started_at: DateTime.now,
         pixel_started_ip: request.ip,
       )
     else
-      row = create_session_row_if_in_sample(
+      create_session_row_unless_unsampled(
         referer: request.host_with_port,
         tutorial: tutorial[:code],
         company: params[:company],
