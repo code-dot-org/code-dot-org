@@ -4,10 +4,10 @@ require 'dynamic_config/gatekeeper'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
-# Create a session row if the user is assigned to the sample set.
-# (as defined a random number vs. the hoc_activity_sample_proportion).
-# If the user is in the session, sets the hour of code cookie to the
-# session id, otherwise sets it to UNSAMPLED_HOC_COOKIE
+# Creates a session row and sets the hour of code cookie to the session_id,
+# if the user is assigned to the sample set (as decided by a random choice
+# based on the hoc_activity_sample_proportion DCDO variable). If, however,
+# the user unsampled, returns nil and sets the cookie to UNSAMPLED_SESSION_ID.
 #
 # The "weight" encoded in the session row is set to 1/p, where p is the
 # proportion of sessions in the sample, so that reports can compute the
@@ -15,7 +15,7 @@ UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
 def create_session_row_unless_unsampled(row)
   # We don't need to do anything if we've already decided this session is unsampled.
-  return if request.cookies['hour_of_code'] == UNSAMPLED_SESSION_ID
+  return if unsampled_session?
 
   # Decide whether the session should be sampled.
   p = DCDO.get('hoc_activity_sample_proportion', default: 1.0).to_f
@@ -52,8 +52,7 @@ def create_session_id(weight)
   "_#{weight}_#{SecureRandom.hex}"
 end
 
-# Returns the session id for the current session if sampled, or
-# nil if unset or unsampled.
+# Returns the session id for the current session if sampled, or nil if unset or unsampled.
 def session_id
   session_id = request.cookies['hour_of_code']
   (session_id == UNSAMPLED_SESSION_ID) ? nil : session_id
