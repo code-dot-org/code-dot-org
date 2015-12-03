@@ -13,7 +13,8 @@ Feature: Legacy Share Remix
     Then I press "runButton"
     And I wait to see ".congrats"
     And I navigate to the share URL
-    And I wait until element "#runButton" is visible
+    And I select the "How it works" small footer item
+    And I wait until element ".project_remix" is visible
     And I press the first ".project_remix" element
     And I wait for 10 seconds
     And check that the URL contains "/projects/artist/"

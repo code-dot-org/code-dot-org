@@ -11,11 +11,11 @@
         "params": [
           "\"mytable\"",
           "{name: \"Alice\"}",
-          "function(){\nconsole.log(\"success\");\n}"
+          "function(){\nconsole.log(\"Success! Created Record.\");\n}"
         ],
         "paletteParams": [
-          "mytable",
-          "{name: \"Alice\"}",
+          "table",
+          "object",
           "callback"
         ]
       }
@@ -49,7 +49,10 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
