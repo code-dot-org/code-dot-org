@@ -1566,27 +1566,29 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
-  if (this.share && this.wireframeShare) {
-    if (dom.isMobile()) {
-      document.getElementById('visualizationColumn').className = 'chromelessShare';
-    } else {
-      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-      document.getElementById('visualizationColumn').className = 'wireframeShare';
-
-      var wireframeSendToPhoneClick = function() {
-        $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
-            .off('click', wireframeSendToPhoneClick);
-        dashboard.initSendToPhone('#wireframeSendToPhone');
-        $('#send-to-phone').show();
-      };
-
-      var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
-      wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
-      wireframeSendToPhone.click(wireframeSendToPhoneClick);
-      $('body').append(wireframeSendToPhone);
-    }
+  if (this.share) {
     document.body.style.backgroundColor = '#202B34';
-  // For share page, do not show this part.
+    if (this.wireframeShare) {
+      if (dom.isMobile()) {
+        document.getElementById('visualizationColumn').className = 'chromelessShare';
+      } else {
+        document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+        document.getElementById('visualizationColumn').className = 'wireframeShare';
+
+        var wireframeSendToPhoneClick = function () {
+          $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
+            .off('click', wireframeSendToPhoneClick);
+          dashboard.initSendToPhone('#wireframeSendToPhone');
+          $('#send-to-phone').show();
+        };
+
+        var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
+        wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
+        wireframeSendToPhone.click(wireframeSendToPhoneClick);
+        $('body').append(wireframeSendToPhone);
+      }
+    }
+    // For share page, do not show this part.
   } else if (!options.embed && !this.share) {
     // TODO - explore whether this block is now dead code that can be deleted after hoc
     var runButton = document.getElementById('runButton');
