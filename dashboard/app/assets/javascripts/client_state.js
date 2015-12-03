@@ -36,6 +36,11 @@ dashboard.clientState.reset = function() {
   sessionStorage.clear();
 };
 
+/**
+ * Get the URL querystring params
+ * @param name {string=} Optionally pull a specific param.
+ * @return {object|string} Hash of params, or param string if `name` is specified.
+ */
 dashboard.clientState.queryParams = function (name) {
   var pairs = location.search.substr(1).split('&');
   var params = {};
