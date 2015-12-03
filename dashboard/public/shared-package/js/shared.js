@@ -506,7 +506,7 @@ module.exports = function (callback) {
     }
   };
 
-  if (appOptions.publicCaching && !appOptions.channel) {
+  if (!appOptions.channel) {
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
