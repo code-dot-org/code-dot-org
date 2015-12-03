@@ -1737,6 +1737,10 @@ Studio.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   loadLevel();
 
   config.appMsg = studioMsg;
