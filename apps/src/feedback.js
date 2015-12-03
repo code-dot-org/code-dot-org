@@ -150,7 +150,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
   var finalLevel = (options.response &&
-                    (options.response.message == "no more levels"));
+    (options.response.message === "no more levels"));
 
   feedback.appendChild(
     this.getFeedbackButtons_({
@@ -553,7 +553,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
-            (options.response.message == "no more levels"));
+          (options.response.message === "no more levels"));
         var stageCompleted = null;
         if (options.response && options.response.stage_changing) {
           stageCompleted = options.response.stage_changing.previous.name;
