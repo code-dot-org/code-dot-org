@@ -31,7 +31,7 @@ social:
     %img.mc-img{src:"/images/fit-1940/mc/MC_Wide_Big_2_V4.jpg"}
 
 
-  .mc-tutorial{style: "left: 470px;"}
+  .mc-tutorial
     %h1.mc-h1= I18n.t(:hour_of_code)
     .tutorial-box
       .mc-tutorial-info
@@ -43,10 +43,10 @@ social:
 
 %div{style: "clear:both"}
 
-%h2
+%h2.mc-header2
   = I18n.t(:starwars_speak_languages)
   %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
 
 .mc-videos{style: "clear: both;"}
-  %h2= I18n.t(:starwars_watch_videos)
+  %h2.mc-header2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos

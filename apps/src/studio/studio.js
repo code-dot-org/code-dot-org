@@ -1737,6 +1737,10 @@ Studio.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   loadLevel();
 
   config.appMsg = studioMsg;
@@ -1945,7 +1949,7 @@ Studio.init = function(config) {
     return code;
   };
 
-  config.twitter = twitterOptions;
+  config.twitter = skin.twitterOptions || twitterOptions;
 
   // for this app, show make your own button if on share page
   config.makeYourOwn = config.share;
@@ -2473,7 +2477,7 @@ var displayFeedback = function() {
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
           !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
-      twitter: twitterOptions,
+      twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,

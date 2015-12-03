@@ -350,8 +350,8 @@ level 'U3 - Arrays - favThings Prev'
 level 'U3 - Arrays - favThings addItem'
 level 'U3 - Arrays - favThings bounds'
 level 'U3 - Arrays - favThings keepPlaying'
-level 'U3 - Arrays - Wrap Up 1'
-level 'U3 - Arrays - Wrap Up 2'
+assessment 'U3 - Arrays - Wrap Up 1'
+assessment 'U3 - Arrays - Wrap Up 2'
 
 #25
 stage 'Image Scroller with Key Events'
