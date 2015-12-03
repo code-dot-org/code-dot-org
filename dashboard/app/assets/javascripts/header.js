@@ -31,6 +31,8 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   stageData = stageData || {};
   progressData = progressData || {};
 
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
@@ -51,6 +53,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
+    var status = activityCssClass(clientProgress[level.id]);
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -59,7 +62,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     if (sectionId) {
       href += '&section_id=' + sectionId;
     }
-    var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link not_tried').text(level.title);
+    var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link').addClass(status).text(level.title);
 
     if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
