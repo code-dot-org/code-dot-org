@@ -204,15 +204,6 @@ a.video_link {
   top: -11px;
 }
 
-.hide-source #visualizationColumn {
-  width: 436px;
-}
-
-.hide-source #gameButtons {
-  // Temp: move up to avoid getting covered by footer
-  margin-bottom: -30px;
-}
-
 /**
  * Define a handful of media-query visualization size changes, the focus being:
  *
@@ -248,9 +239,6 @@ $height-to-width: 434 / 477;
   height: 677px !important;
   .legacy-share-view & {
     height: auto !important;
-  }
-  .hide-source & {
-    height: 475px !important;
   }
 }
 
