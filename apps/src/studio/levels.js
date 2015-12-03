@@ -589,7 +589,7 @@ levels.click_hello =  {
   },
   'callouts': [
     {
-      'id': 'playlab:js_hoc2015_win_lose:instructions',
+      'id': 'playlab:click_hello:instructions',
       'element_id': '#prompt-table',
       'qtip_config': {
         'content': {
