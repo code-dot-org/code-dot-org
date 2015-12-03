@@ -1149,8 +1149,13 @@ Studio.onTick = function() {
  * @param {boolean} Whether this is for the Y axis.  If false, then X axis.
  */
 function spriteCollisionDistance  (i1, i2, yAxis) {
-  var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
-  var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
+  var sprite1Width  = skin.spriteCollisionRectWidth  || Studio.sprite[i1].width;
+  var sprite1Height = skin.spriteCollisionRectHeight || Studio.sprite[i1].height;
+  var sprite2Width  = skin.spriteCollisionRectWidth  || Studio.sprite[i2].width;
+  var sprite2Height = skin.spriteCollisionRectHeight || Studio.sprite[i2].height;
+
+  var dim1 = yAxis ? sprite1Height : sprite1Width;
+  var dim2 = yAxis ? sprite2Height : sprite2Width;
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
@@ -1732,6 +1737,10 @@ Studio.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   loadLevel();
 
   config.appMsg = studioMsg;
@@ -1940,7 +1949,7 @@ Studio.init = function(config) {
     return code;
   };
 
-  config.twitter = twitterOptions;
+  config.twitter = skin.twitterOptions || twitterOptions;
 
   // for this app, show make your own button if on share page
   config.makeYourOwn = config.share;
@@ -2468,7 +2477,7 @@ var displayFeedback = function() {
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
           !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
-      twitter: twitterOptions,
+      twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,

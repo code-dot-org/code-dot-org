@@ -12,8 +12,8 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ja esi informātikas skolotājs, apskati citus CSEdWeek
     resursus</a>'
-  n_have_learned_an_hoc: <h1>Izmēģini</h1><h2>Programmēšanas stundu</h2><h3># jau
-    notikušas</h3>
+  n_have_learned_an_hoc: "<h1>Izmēģini</h1><h2>Programmēšanas stundu</h2><h3># jau
+    notikušas</h3>"
   anybody_can_learn: Jebkurš var iemācīties.
   learn_now: Mācīties tagad
   petition_message: Katram skolēnam katrā skolā būtu jābūt iespējai apgūt programmēšanu
@@ -38,7 +38,7 @@
   hoc2014_everyone: Visi
   hoc2014_support: Atbalsti &#x25BE;
   hoc2014_whatishoc: Kas ir "Programmēšanas stunda"?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
@@ -68,7 +68,7 @@
     ciklus, ja-tad nosacījumus un pamatalgoritmus.
   all_ages: Visu vecumu
   beginner: Iesācējs
-  n_participants: '# dalībnieki'
+  n_participants: "# dalībnieki"
   go: Sākt
   thank_you_: Paldies!
   congratulations: Apsveicu!
@@ -119,7 +119,7 @@
   beyond_an_hour: Pēc Programmēšanas stundas
   get_started: Sākt
   i_agree: es piekrītu
-  participant_select: -Izvēlēties-
+  participant_select: "-Izvēlēties-"
   participant_student: Students
   participant_parent: Vecāki
   participant_educator: Skolotājs
@@ -140,7 +140,7 @@
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
-  hoc_is_here: '#Programmēšanas_stunda ir šeit - pārbaudi @codeorg'
+  hoc_is_here: "#Programmēšanas_stunda ir šeit - pārbaudi @codeorg"
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   twitter_teach_cs: Kādēļ vairāk skolās nemāca datorzinības? Mēs to varam uzlabot.
     http://youtu.be/nKIu9yen5nc. Ieskaties http://code.org/ un uzzini vairāk.
@@ -152,11 +152,11 @@
   help_recruit_coders: Palīdzi mums papildnāt tavu sastāvu ar programmētājiem!
   help_recruit: Palīdzi mums papildināt sastāvu ar programmētājiem!
   lines_of_code: VAIRĀK NEKĀ <b># KODA RINDIŅAS</b> JAU UZRAKSTĪTAS.
-  lines_of_code_alt: <b>#</b> KODA RINDIŅAS UZRAKSTĪJUŠI SKOLĒNI
+  lines_of_code_alt: "<b>#</b> KODA RINDIŅAS UZRAKSTĪJUŠI SKOLĒNI"
   who_has_done_hoc: 'Kas ir veidojis #ProgrammesanasStundu? @codeorg'
   hoc_leaderboards: Programmēšanas stundas rezultātu saraksts
-  students_and_lines: '%{students} skolēni ir piedalījušies Programmēšanas stundā
-    un uzrakstījuši %{lines} rindas koda.'
+  students_and_lines: "%{students} skolēni ir piedalījušies Programmēšanas stundā
+    un uzrakstījuši %{lines} rindas koda."
   start_hoc: Sāc Programmēšanas stundu tagad
   contact_form_topic_press: Prese/mediji (intervija vai uzaicinājums sniegt runu)
   stats_nina: '"Katru dienu sasniedzu visaugstāko rezultātu&mdash; 100% atsaucību."
@@ -231,8 +231,8 @@
     &ldquo;Šī programma iesaistīja, iedvesmoja un
     lika piedalīties 100% manu skolēnu.&rdquo;
     Ādams, skolotājs
-  homepage_hero_text_stat_loc: '#loc rindiņas koda ir uzrakstījuši skolēni'
-  homepage_hero_text_stat_students: '#student_count skolēnu profili kodēšanas studijā'
+  homepage_hero_text_stat_loc: "#loc rindiņas koda ir uzrakstījuši skolēni"
+  homepage_hero_text_stat_students: "#student_count skolēnu profili kodēšanas studijā"
   homepage_hero_text_stat_served: 'Programmēšanas stundas: #served notikušas līdz
     šim'
   homepage_slot_text_hoc: Programmēšanas stunda
@@ -243,7 +243,7 @@
   homepage_slot_text_shop: Veikals
   homepage_slot_text_flappy: Flappy kods
   homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# notikušas'
+  homepage_action_text_num_served: "# notikušas"
   homepage_action_text_join_us: Join us
   homepage_action_text_sign_up: Piereģistrēties
   homepage_action_text_try_it: Izmēģini
@@ -267,7 +267,7 @@
   homepage_slot_text_blurb_hoc: Ikviens var mācīties. Sāc šodien
   homepage_slot_text_link_hoc: Izmēģini Programmēšanas stundu
   homepage_slot_text_link_host: Novadi programmēšanas stundu
-  homepage_slot_text_link_hocserved: '# notikušas'
+  homepage_slot_text_link_hocserved: "# notikušas"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Skolēni
   homepage_slot_text_blurb_students: Izpēti visas mūsu pamācības
@@ -291,7 +291,7 @@
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
-  contact_form_topic_outside_us: Ārpus ASV
+  contact_form_topic_outside_us: "Ārpus ASV"
   contact_form_topic_contribution: Ziedojumi
   contact_form_topic_partner: Sadarbības partneriem
   contact_form_topic_other: Citi
@@ -311,9 +311,9 @@
     programma
   class_submission_in_school_exploring_computer_science: Izpētot datordatorzinātni
   class_submission_in_school_other: Citi skolā
-  class_submission_out_of_school: Ārā no skolas
+  class_submission_out_of_school: "Ārā no skolas"
   class_submission_out_of_school_summer_camp: Vasaras nometne
-  class_submission_out_of_school_afterschool_program: Ārpusskolas programma
+  class_submission_out_of_school_afterschool_program: "Ārpusskolas programma"
   class_submission_out_of_school_all-day_workshop: Visas dienas darbnīca (līdz vienai
     nedēļai)
   class_submission_out_of_school_multi-week_workshop: Vairāku nedēļu darbnīca
@@ -356,16 +356,16 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Vecums no 4-104
   mc_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+    have signed up."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -430,7 +430,7 @@
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 stundu katru nedēļu
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 stundas katru nedēļu
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 stundas katru nedēļu
-  volunteer_engineer_submission_commitment_now_and_then: Šad un tad
+  volunteer_engineer_submission_commitment_now_and_then: "Šad un tad"
   volunteer_engineer_submission_commitment_annually: 2-3 times per year
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
@@ -482,12 +482,12 @@
     pamācībās
   dashboard_landing_video_player: Izmēģinat mūsu jauno video atskaņotāju savā skolā
   dashboard_landing_progress_title: Galveno klašu progress
-  dashboard_landing_progress_biggest: Šis ir tava lielākā koda progress.
+  dashboard_landing_progress_biggest: "Šis ir tava lielākā koda progress."
   dashboard_landing_view_progress: Aplūko %{biggest_section} progresu
   dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Pieejamie kursi
-  dashboard_landing_available_courses: Šeit atrodas kursi, kas ir pieejami tev un
-    taviem studentiem.
+  dashboard_landing_available_courses: "Šeit atrodas kursi, kas ir pieejami tev un
+    taviem studentiem."
   dashboard_landing_more_tutorials: Vēlies redzēt vēl pamācības?
   dashboard_landing_more_tutorials_desc: Šeit ir vēl pamācības <a href="/learn/beyond">
     kuras iesaka mūsu partneris.</a> Iemācies programmēt ar robotiem, veidot mājas
@@ -575,10 +575,10 @@
   dashboard_sections_name: Sadaļas nosaukums
   dashboard_sections_choose_secret: Ja vēlies piedāvāt kontus skolēniem, izvēlies
     slepenu <b>vārdu</b> vai <b>attēlu</b> šim nodalījumam.
-  dashboard_sections_secret_word: <b>Vārds</b> ļauj uzstādīt slepeno vārdu katram
-    skolēnam.
-  dashboard_sections_secret_picture: <b>Bilde</b> ļauj Tev uzstādīt slepeno bildi
-    katram skolēnam, piemērots jaunākiem skolēniem, kuri vēl nemāk rakstīt.
+  dashboard_sections_secret_word: "<b>Vārds</b> ļauj uzstādīt slepeno vārdu katram
+    skolēnam."
+  dashboard_sections_secret_picture: "<b>Bilde</b> ļauj Tev uzstādīt slepeno bildi
+    katram skolēnam, piemērots jaunākiem skolēniem, kuri vēl nemāk rakstīt."
   dashboard_sections_secret_none: Ja vēlies, lai skolēni var pārvaldīt paši savus
     kontus, tai skaitā izvēlēties savas paroles, izvēlies slepeno tipu <b>neviens</b>.
   dashboard_sections_print_secrets: Tad jūs varat izdrukāt lapiņas, kas satur informāciju
@@ -688,16 +688,16 @@
     skolēnus"
   dashboard_sections_sign_in_main: http://code.org un spied "Pieslēgties"
   dashboard_sections_password_account_creation: Skolēnu izveidotā parole
-  dashboard_sections_login_type_explanation: Šī tabula palīdz paskaidrot, kuru no
+  dashboard_sections_login_type_explanation: "Šī tabula palīdz paskaidrot, kuru no
     visiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties
-    sadaļai.
+    sadaļai."
   dashboard_faq: Biežāk uzdotie jautājumi
   dashboard_faq_k5: No bērnudārza līdz 5. klases līmeņa Biežāk Uzdotie Jautājumi
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
+  dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13."
   code_hoc_coming: 'Programmēšanas stunda ir klāt: no 8. līdz 14. decembrim!'
   code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   learn_more: Uzzini vairāk
@@ -1033,10 +1033,10 @@
   groklearning_longdescription: Ar programmēšanas valodu Python veido čata robotu
     "Eliza", kas attēlos robote0psihoterapeitu. Tu apmācīsi, ko un kad Elīzai teikt.
     Vai viņa apmuļķos tavus draugus, sakot, ka nav dators, bet gan cilvēks?
-  quorum_longdescription: Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
+  quorum_longdescription: "Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
     ar ekrāna lasītājiem. Pievienojies Mērijai ekskursijā pa bioloģijas laboratoriju
     un mācies programmēšanas valodu Quorum. Šajā pamācībā pieejami tiešsaistes aktivitātes
-    ar piemēriem.
+    ar piemēriem."
   codespark_longdescription: The Foos ir jautrs un bērniem draudzīgs vieds, kā apgūt
     programmēšanu. Programmē mīlīgus tēlus un saliec puzles, ko no virtuālās pasaules
     ienest reālajā. Spēle ir bez vārdiem, visi var spēlēt!
@@ -1328,12 +1328,12 @@
     spējas, gan ierobežojumus. CS 101 arī'sniedz vispārīgu ievadu par to, kas ir mūsdienu
     dators, kas ir aparatūra, programmatūra un internets. Nav nepieciešama iepriekšēja
     pieredze, izņemot prasme lietot tīmekļa pārlūku.
-  udacity_beyond_longdescription: Šajā kursā apgūsi datorzinību pamatjēdzienus un
+  udacity_beyond_longdescription: "Šajā kursā apgūsi datorzinību pamatjēdzienus un
     mācīsies, kā rakstīt savas datorprogrammas, sevišķi tīmekļa lietotnes. Uzsākot
     kursu nav nepieciešamas priekšzināšanas - aicināts ir katrs iesācējs! Kursa beigās
     būsi apguvis datorzinību pamatjēdzienus un pietiekami daudz programmēšanas prasmes
     , lai patstāvīgi izveidotu Python programmas, kas risina tevis izvirzītas problēmas.
-    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām.
+    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām."
   teachingtree_beyond_longdescription: TeachingTree ir atvērta platforma, kas ļauj
     organizēt mācību saturu. Mūsu mērķis ir ļaut skolēniem ātri piekļūst pie vajadzīgajiem
     klipiem, lai organizētu individuālo mācīšanos. Katrs ir aicināts pievienot video
@@ -1407,8 +1407,70 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
-  playlab_iceage_title_live: Ice Age
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
+  monstercoding_gradelevel: Ages 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Elementary
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modern web browsers
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modern web browsers
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Modern browsers, smartphones, tablets
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.

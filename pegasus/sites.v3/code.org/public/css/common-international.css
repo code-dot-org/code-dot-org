@@ -540,3 +540,42 @@
 .form-required-field {
   color: #f00;
 }
+
+/* Partner tutorial landing pages */
+@media screen and (min-width: 971px) {
+  .mc-container .mc-tutorial {
+    float: left !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    background-image: url(/images/mc/MC_Wide_Blank_V2.jpg) !important;
+    background-size: 595px 100px !important;
+  }
+
+  .starwars-container .starwars-tutorial {
+    width: 50% !important;
+    float: left !important;
+    height: 220px !important;
+    padding: 5px !important;
+    padding-top: 10px !important;
+    position: static !important;
+  }
+
+  .starwars-container .tutorial-box {
+    background-image: url(/images/fit-520/starwars_carousel_background.jpg) !important;
+  }
+
+  .starwars-container .starwars-heading {
+    top: 15px !important;
+    left: 290px !important;
+  }
+
+  .starwars-container .img-container {
+    padding: 0px 5px !important;
+  }
+}
+
+.starwars-tutorial {
+  margin-bottom: 10px !important;
+}

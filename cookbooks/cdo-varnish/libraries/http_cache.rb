@@ -76,6 +76,9 @@ class HttpCache
               /
               /learn*
               /congrats
+              /mc
+              /starwars
+              /playlab
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,
