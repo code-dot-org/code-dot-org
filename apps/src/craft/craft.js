@@ -281,6 +281,10 @@ Craft.init = function (config) {
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
       }
+
+      // Adjust visualizationColumn width.
+      var visualizationColumn = document.getElementById('visualizationColumn');
+      visualizationColumn.style.width = this.nativeVizWidth + 'px';
     },
     twitter: {
       text: "Share on Twitter",
