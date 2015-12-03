@@ -41,8 +41,10 @@ class TestCloudFront < Minitest::Test
     assert_output (<<STR) { AWS::CloudFront.create_or_update }
 pegasus distribution created!
 dashboard distribution created!
+hourofcode distribution created!
 pegasus distribution deployed!
 dashboard distribution deployed!
+hourofcode distribution deployed!
 STR
   end
 
@@ -60,8 +62,8 @@ STR
       :logging)
     ).merge(
       aliases: {
-        quantity: 2,
-        items: [CDO.pegasus_hostname, CDO.dashboard_hostname]
+        quantity: 3,
+        items: [CDO.pegasus_hostname, CDO.dashboard_hostname, CDO.hourofcode_hostname]
       }
     )
     Aws.config[:cloudfront][:stub_responses][:list_distributions] =
@@ -69,8 +71,10 @@ STR
     assert_output (<<STR) { AWS::CloudFront.create_or_update }
 pegasus distribution updated!
 dashboard distribution updated!
+hourofcode distribution updated!
 pegasus distribution deployed!
 dashboard distribution deployed!
+hourofcode distribution deployed!
 STR
   end
 

@@ -326,6 +326,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Membangun sebuah galaksi dengan kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Menggunakan blok drag-drop dan JavaScript.
@@ -755,6 +756,10 @@
   carousel_heading_ide: Sarana yang populer di kalangan guru
   educator_notes: Catatan pendidik
   teach_led_lesson_plans: Guru Dipimpin oleh rencana pembelajaran Hour of Code
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Cara Mengajarkan Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   beyond_submission: Hendak mengajukan tutorial yang lebih dari satu Jam? Lihat kriteria
@@ -1470,3 +1475,8 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

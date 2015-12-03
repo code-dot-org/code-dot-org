@@ -319,6 +319,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Galaxis építése kóddal
   starwars_javascript_title: Javascript
   starwars_javascript_description: Használd a mozgatható blokkokat és JavaScriptet.
@@ -339,7 +340,7 @@
     a Minecraft világában.
   mc_shortdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait
     a Minecraft világában.
-  mc_gradelevel: 'Korosztály: 6 +'
+  mc_gradelevel: 4-től 104 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
   mc_specs: 'Több nyelven is (hamarosan) | Modern böngészők és tabletek | Korosztály:
     6 +'
@@ -738,6 +739,10 @@
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Hogyan tarthatsz Kódolás óráját
   more_resources_educators: További segédletek tanárok és oktatók részére
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -838,7 +843,7 @@
   starwars_gradelevel: 'Korosztály: 6 +'
   playlab_gradelevel: 4-től 104 éves korig
   infinity_gradelevel: 4-től 104 éves korig
-  artist_gradelevel: 4-től 104 éves korig
+  artist_gradelevel: 8 éves kortól
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
   thinkersmithspanish_platformtext: Offline
@@ -1439,3 +1444,8 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

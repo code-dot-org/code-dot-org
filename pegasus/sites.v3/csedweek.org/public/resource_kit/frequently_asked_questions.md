@@ -85,7 +85,7 @@ Organize a family hour of code and let your kids teach you. You can use PCs, tab
 ---
 
 ## What day do I need to do my Hour of Code?
-You can do your Hour of Code on any day during CSEdWeek (December 8-14, 2014).
+You can do your Hour of Code on any day during CSEdWeek (December 7-13, 2015).
 
 ---
 
