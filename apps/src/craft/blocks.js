@@ -311,7 +311,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-          .appendTitle(i18n.blockTillSoil);
+          .appendTitle(i18n.blockTillSoil());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
