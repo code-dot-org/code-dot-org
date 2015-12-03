@@ -19,6 +19,17 @@ def create_session_row(row)
   row
 end
 
+def maybe_create_session_row(row)
+  # Fraction
+  sampling_proportion = DCDO.get('hoc_activity_sampling_proportion', default: 1).to_i
+  if sample_fraction > 0 || rand() <= sampling_proportion
+    weight = 1 / sample_rate
+
+
+  end
+end
+
+
 def session_status_for_row(row)
   row ||= {}
 
