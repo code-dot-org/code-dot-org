@@ -3154,8 +3154,8 @@ levels.js_hoc2015_event_free = {
           'text': msg.calloutFinishButton(),
         },
         'position': {
-          'my': 'top left',
-          'at': 'bottom right',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
@@ -3251,6 +3251,7 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   enableShowCode: true,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
+  callouts: null,
   requiredBlocks: [
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
@@ -3651,8 +3652,8 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
           text: msg.calloutFinishButton(),
         },
         position: {
-          my: 'top left',
-          at: 'bottom right',
+          my: 'center left',
+          at: 'center right',
         }
       }
     },
