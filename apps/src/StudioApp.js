@@ -271,7 +271,8 @@ StudioApp.prototype.init = function(config) {
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
-      app: config.app
+      app: config.app,
+      isLegacyShare: config.isLegacyShare
     });
   }
 
@@ -1567,7 +1568,9 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
   // Chrome-less share page.
   if (this.share) {
-    document.body.style.backgroundColor = '#202B34';
+    if (options.isLegacyShare || this.wireframeShare) {
+      document.body.style.backgroundColor = '#202B34';
+    }
     if (this.wireframeShare) {
       if (dom.isMobile()) {
         document.getElementById('visualizationColumn').className = 'chromelessShare';
