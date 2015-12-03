@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Da li ste učitelj informatike? Pogledajte i ostale CSEdWeek
     resurse</a>'
-  n_have_learned_an_hoc: <h1> Isprobaj </h1><h2>Sat Kodiranja</h2><h3># poslužen</h3>
+  n_have_learned_an_hoc: "<h1> Isprobaj </h1><h2>Sat Kodiranja</h2><h3># poslužen</h3>"
   anybody_can_learn: Svi mogu naučiti.
   learn_now: Nauči sad
   petition_message: Svaki učenik u svakoj školi ima šansu da uči računarske nauke
@@ -35,8 +35,8 @@
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
   hoc2014_support: Pružite podršku &#x25BE;
-  hoc2014_whatishoc: Šta je to Sat Kodiranja?
-  csedweek_map_header: '# CSEdWeek / Sat Kodiranja događaji širom svijeta'
+  hoc2014_whatishoc: "Šta je to Sat Kodiranja?"
+  csedweek_map_header: "# CSEdWeek / Sat Kodiranja događaji širom svijeta"
   csedweek_map_signup: Prijavi svoj događaj
   csedweek_map_search_placeholder: Potraži Sat Kodiranja događaje
   csedweek_map_search_search: Pretraži
@@ -66,11 +66,11 @@
     petlje za ponavljanje, "ako-onda" naredbe i osnovne algoritme.
   all_ages: Svi uzrasti
   beginner: Početnik
-  n_participants: '# učesnika'
+  n_participants: "# učesnika"
   go: Kreni
   thank_you_: Hvala!
-  congratulations: Čestitamo!
-  congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
+  congratulations: "Čestitamo!"
+  congratulations_on_completing_hoc: "Čestitamo na završetku jednog Sata Kodiranja"
   congratulations_volunteer: 'Čestitamo: Sada kada si probao/la Sat Kodiranja, <a
     href="https://code.org/volunteer"> prijavi se kao volonter u učionici </a> i pomozi
     učenicima da nauče Sat Kodiranja!'
@@ -79,7 +79,7 @@
   course_name_course2: Kurs 2
   course_name_course3: Kurs 3
   course_name_course4: Kurs 4
-  congratulations_on_completing_course: Čestitamo na kompletiranju %{course}
+  congratulations_on_completing_course: "Čestitamo na kompletiranju %{course}"
   congrats_next_tutorials_title: Probaj sada ove tutorijale
   congrats_next_tutorials_desc: Probaj ove kraće, tutorijale od 1 sat ili probaj <a
     href="%{current_path}/next">partnerski tutorijal</a>.
@@ -117,7 +117,7 @@
   beyond_an_hour: Nakon Sata Kodiranja
   get_started: Počni
   i_agree: Slažem se
-  participant_select: -Izaberi-
+  participant_select: "-Izaberi-"
   participant_student: Učenik
   participant_parent: Roditelj
   participant_educator: Nastavnik
@@ -138,7 +138,7 @@
   learn_next_level: Pređi na sljedeći nivo
   learn_online: Isprobaj druge online kurseve
   learn_classes: Pronađi lokalne nastave
-  hoc_is_here: '#HourOfCode je ovdje - provjeri! @codeorg'
+  hoc_is_here: "#HourOfCode je ovdje - provjeri! @codeorg"
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   twitter_teach_cs: Zašto se računarstvo ne predaje u više škola? Mi to možemo popraviti.
     http://youtu.be/2DxWIxec6yo. Posjeti http://code.org/ da naučiš više.
@@ -150,13 +150,13 @@
   help_recruit_coders: Pomogni nam regrutovati više programera u tvom timu!
   help_recruit: Pomozi nam da regrutujemo više programera!
   lines_of_code: PREKO <b># LINIJA KODA </b> NAPISANIH DO SADA.
-  lines_of_code_alt: <b>#</b> LINIJA KODA KOJE SU UČENICI NAPISALI
+  lines_of_code_alt: "<b>#</b> LINIJA KODA KOJE SU UČENICI NAPISALI"
   who_has_done_hoc: 'Ko je učestvovao u #HourOfCode? @codeorg'
   hoc_leaderboards: Hour of Code poredak
-  students_and_lines: '%{students} učenika je učestvovalo u Hour of Code i napisalo
-    %{lines} linija koda.'
+  students_and_lines: "%{students} učenika je učestvovalo u Hour of Code i napisalo
+    %{lines} linija koda."
   start_hoc: Započni sa Hour of Code sada
-  contact_form_topic_press: Štampa/mediji (intervju ili govor)
+  contact_form_topic_press: "Štampa/mediji (intervju ili govor)"
   stats_nina: '"Svaki dan je imao isti rezultat&mdash; 100%-tni angažman." - Nina
     Nichols Peery, Nastavnik'
   stats_student: '"Znao sam da ovo je <b>životna</b> prilika."-Mariana Alzate, učenik
@@ -181,8 +181,8 @@
   studiobar_shop_body: Razbij stereotipe. Nosi naš logo s ponosom.
   homepage_hero_text_malala: "&ldquo;Ja pozivam djevojke iz svake moguće države da
     nauče jedan Sat Kodiranja&rdquo; \nMalala, dobitnik Nobelove nagrade\n"
-  homepage_hero_text_susan: '&ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti
-    svijet.&rdquo; Susan, generalna direktorica YouTubea'
+  homepage_hero_text_susan: "&ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti
+    svijet.&rdquo; Susan, generalna direktorica YouTubea"
   homepage_hero_text_fistbump: |
     &ldquo;Nemoj se samo igrati na svom telefonu, programiraj ga.&rdquo;
     Predsjednik SAD-a, Barack Obama
@@ -202,8 +202,8 @@
   homepage_hero_text_student2: |
     &ldquo;Nikada, baš nikada nisam vidio svoje učenike toliko uzbuđene zbog učenja.&rdquo;
     Michael, učitelj
-  homepage_hero_text_student3: '&ldquo;Računarstvo je područje za koje ne možete znati
-    da li ga volite dok ga ne probate&rdquo; Jackson, 6th grade'
+  homepage_hero_text_student3: "&ldquo;Računarstvo je područje za koje ne možete znati
+    da li ga volite dok ga ne probate&rdquo; Jackson, 6th grade"
   homepage_hero_text_student4: "&ldquo;Programiranjem možete učiniti sve što vam padne
     napamet.&rdquo; \nMaya, 2nd grade\n"
   homepage_hero_text_student5: "&ldquo;Računarstvo nije za nekoga drugog. Ono je za
@@ -214,8 +214,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Ovaj program je učinio da 100% mojih učenika bude angažovano, uključeno i aktivno u sudjelovanju.&rdquo;
     Adam, učitelj
-  homepage_hero_text_stat_loc: '#loc linija koda napisano od strane učenika'
-  homepage_hero_text_stat_students: '#student_count učeničkih računa u Studiju Kodiranja'
+  homepage_hero_text_stat_loc: "#loc linija koda napisano od strane učenika"
+  homepage_hero_text_stat_students: "#student_count učeničkih računa u Studiju Kodiranja"
   homepage_hero_text_stat_served: 'Sat Kodiranja: #served posluženo'
   homepage_slot_text_hoc: Sat Kodiranja
   homepage_slot_text_frozen: Frozen sa Anna i Elsa
@@ -225,7 +225,7 @@
   homepage_slot_text_shop: Idi u kupovinu
   homepage_slot_text_flappy: Flappy kôd
   homepage_action_text_hoc: Sat Kodiranja za svakog učenika.
-  homepage_action_text_num_served: '# posluženo'
+  homepage_action_text_num_served: "# posluženo"
   homepage_action_text_join_us: Pridruži nam se
   homepage_action_text_sign_up: Registruj se
   homepage_action_text_try_it: Isprobaj
@@ -249,7 +249,7 @@
   homepage_slot_text_blurb_hoc: Svako može naučiti. Započni danas
   homepage_slot_text_link_hoc: Isprobaj Sat Kodiranja
   homepage_slot_text_link_host: Održite Sat Kodiranja
-  homepage_slot_text_link_hocserved: '# posluženo'
+  homepage_slot_text_link_hocserved: "# posluženo"
   homepage_solot_text_link_volunteer: Volonter Sata Kodiranja
   homepage_slot_text_title_students: Učenici
   homepage_slot_text_blurb_students: Pregledajte naše tutorijale
@@ -275,7 +275,7 @@
   contact_form_topic_teacher: Ja sam učitelj/edukator
   contact_form_topic_outside_us: Ja sam izvan SAD-a
   contact_form_topic_contribution: Dobrotvorni doprinos
-  contact_form_topic_partner: Želim biti partner
+  contact_form_topic_partner: "Želim biti partner"
   contact_form_topic_other: Ostalo
   contact_form_label_topic: Tema
   contact_form_label_email: Vaša e-mail adresa
@@ -343,9 +343,9 @@
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 nastavnika će ugostiti
     Sat Kodiranja u njihovoj učionici ove godine, Dec 7-13, 2015. Oni žele tvoju pomoć! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+    have signed up."
   volunteer_engineer_submission_intro_background: Sat Kodiranja je globalni pokret
     da bi se isprobao jedan sat uvoda u računarstvo i koji doseže desetke miliona
     učenika u 180+ zemalja. Zovemo vas da se priključite tokom Edukacijske Sedmice
@@ -437,10 +437,10 @@
   volunteer_engineer_submission_num_volunteers_10: 10 volontera
   volunteer_engineer_submission_num_volunteers_25: 25 volontera
   volunteer_engineer_submission_num_volunteers_50: 50 volontera
-  volunteer_engineer_submission_type_task_onsite: Želim da posjetiš moju učionicu
-    zbog tehničke pomoći i inspiracije
-  volunteer_engineer_submission_type_task_remote: Želim da putem Skype-a kažeš nekoliko
-    riječi inspiracije djeci u mojoj učionici
+  volunteer_engineer_submission_type_task_onsite: "Želim da posjetiš moju učionicu
+    zbog tehničke pomoći i inspiracije"
+  volunteer_engineer_submission_type_task_remote: "Želim da putem Skype-a kažeš nekoliko
+    riječi inspiracije djeci u mojoj učionici"
   volunteer_engineer_submission_type_task_mentor: Tražim mentora koji bi me pripremio/la
     za kodiranje sa mojim studentima
   petition_age: Starost
@@ -471,7 +471,7 @@
   dashboard_landing_print_progress: Napredak printanja
   dashboard_landing_available_title: Dostupni kursevi
   dashboard_landing_available_courses: Ovo su kursevi trenutno dostupni tvojim učenicima.
-  dashboard_landing_more_tutorials: Želiš li vidjeti još više tutorijala?
+  dashboard_landing_more_tutorials: "Želiš li vidjeti još više tutorijala?"
   dashboard_landing_more_tutorials_desc: Imamo još tutorijala <a href="/learn/beyond">
     naših partnera. </a> Nauči programirati sa robotima, napravi web stranice, napravi
     vlastitu aplikaciju ili istraži druge jezike kao C++, Ruby ili Python!
@@ -549,15 +549,15 @@
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_students: Učenici
-  dashboard_sections_table_code: Šifra odjeljenja
+  dashboard_sections_table_code: "Šifra odjeljenja"
   dashboard_sections_name: Ime Odjeljenja
   dashboard_sections_choose_secret: Ako želite napraviti račune za svoje učenike,
     odaberite tajnu<b>riječ</b> ili <b>sliku</b> za to odjeljenje.
-  dashboard_sections_secret_word: <b>Riječ</b> vam dopušta da postavite tajnu riječ
-    za svakog učenika.
-  dashboard_sections_secret_picture: <b>Slika</b> vam dopušta da postavite tajnu sliku
-    za svakog učenika, što je idealno za mlađe učenike koji još ne znaju pisati na
-    tastaturi.
+  dashboard_sections_secret_word: "<b>Riječ</b> vam dopušta da postavite tajnu riječ
+    za svakog učenika."
+  dashboard_sections_secret_picture: "<b>Slika</b> vam dopušta da postavite tajnu
+    sliku za svakog učenika, što je idealno za mlađe učenike koji još ne znaju pisati
+    na tastaturi."
   dashboard_sections_secret_none: Ako želite da učenici sami rukovode svojim računima,
     uključujući i odabir vlastite šifre, odaberite tajni tip<b>"nijedan"</b>.
   dashboard_sections_print_secrets: Možeš onda ispisati list s karticama koje sadrže
@@ -575,9 +575,9 @@
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: Žensko
+  dashboard_students_female: "Žensko"
   dashboard_students_secret: Tajna
-  dashboard_students_password: Šifra
+  dashboard_students_password: "Šifra"
   dashboard_students_username: 'Korisničko ime: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Završeni Nivoi
@@ -669,14 +669,14 @@
   dashboard_sections_password_account_creation: Tekstna šifra koju je napravio učenik
   dashboard_sections_login_type_explanation: Ova tabela objašnjava koji od načina
     prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.
-  dashboard_faq: Često Postavljana Pitanja
-  dashboard_faq_k5: Česta pitanja za mlađi uzrast (do petog razreda)
+  dashboard_faq: "Često Postavljana Pitanja"
+  dashboard_faq_k5: "Česta pitanja za mlađi uzrast (do petog razreda)"
   dashboard_announcements: Objave
   dashboard_announce_view_all: Pogledaj sve
-  dashboard_announce_hoc: '<b>Novembar 9, 2015</b>- Novi Sat Kodiranja tutorijal je
+  dashboard_announce_hoc: "<b>Novembar 9, 2015</b>- Novi Sat Kodiranja tutorijal je
     ovdje predstavljajući nadolazeći film Ratova Zvijezda: Buđenje Sile. Radi zajedno
     sa Ray da bi upravljao/la novim droidom, BB-8, kroz misiju. Onda se pridruži Leia
-    u pravljenju i dijeljenju tvoje vlastite igre u galaksiji daleko, daleko.'
+    u pravljenju i dijeljenju tvoje vlastite igre u galaksiji daleko, daleko."
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. Decembra!
   code_sign_up: Prijavite se za sudjelovanje u Sedmici Edukacije o Računarstvu
   learn_more: 'Nauči još '
@@ -732,8 +732,8 @@
     here.</a>
   how_to_teach_hoc: Kako Predavati Sat Kodiranja
   more_resources_educators: Dodatni resursi za nastavnike i edukatore
-  beyond_submission: Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume
-    i formu za podnošenje tutorijala.
+  beyond_submission: "Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume
+    i formu za podnošenje tutorijala."
   participants: učesnici
   teachers_notes: Bilješke Nastavnika
   teachers_notes_hoc: 'Nastavnici: pročitajte ovdje bilješke edukatora'
@@ -1404,8 +1404,70 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  playlab_iceage_title_live: Ice Age
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
+  monstercoding_gradelevel: Ages 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Elementary
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modern web browsers
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modern web browsers
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Modern browsers, smartphones, tablets
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
