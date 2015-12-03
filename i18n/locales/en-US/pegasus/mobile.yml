@@ -252,6 +252,11 @@ en-US:
   class_submission_level_vocational: crwdns5159:0crwdne5159:0
   class_submission_languages_other: crwdns5160:0crwdne5160:0
   inspirational_videos_more: crwdns51616:0crwdne51616:0
+  playlab_choose_theme: crwdns55176:0crwdne55176:0
+  playlab_classic_title: crwdns55177:0crwdne55177:0
+  playlab_gumball_title: crwdns55178:0crwdne55178:0
+  playlab_iceage_title: crwdns55179:0crwdne55179:0
+  playlab_iceage_title_live: crwdns55186:0crwdne55186:0
   starwars_subtitle: crwdns51617:0crwdne51617:0
   starwars_javascript_title: crwdns54483:0crwdne54483:0
   starwars_javascript_description: crwdns51619:0crwdne51619:0
@@ -541,10 +546,14 @@ en-US:
   carousel_heading_international: crwdns3831:0crwdne3831:0
   carousel_heading_domestic: crwdns23443:0crwdne23443:0
   carousel_heading_beginners: crwdns23317:0crwdne23317:0
+  carousel_heading_beyond_beginners: crwdns55180:0crwdne55180:0
   carousel_heading_javascript: crwdns25208:0crwdne25208:0
+  carousel_heading_beyond_javascript: crwdns55181:0crwdne55181:0
   carousel_heading_unplugged: crwdns23319:0crwdne23319:0
   carousel_heading_devices: crwdns23320:0crwdne23320:0
+  carousel_heading_beyond_devices: crwdns55182:0crwdne55182:0
   carousel_heading_languages: crwdns23321:0crwdne23321:0
+  carousel_heading_beyond_languages: crwdns55183:0crwdne55183:0
   carousel_heading_apps_games: crwdns23322:0crwdne23322:0
   carousel_heading_university: crwdns23323:0crwdne23323:0
   carousel_heading_webpages: crwdns23324:0crwdne23324:0
@@ -552,6 +561,7 @@ en-US:
   carousel_heading_ide: crwdns23326:0crwdne23326:0
   educator_notes: crwdns23327:0crwdne23327:0
   teach_led_lesson_plans: crwdns51647:0crwdne51647:0
+  learn_footer_all_tutorials: crwdns55187:0crwdne55187:0
   how_to_teach_hoc: crwdns27833:0crwdne27833:0
   more_resources_educators: crwdns23328:0crwdne23328:0
   beyond_submission: crwdns45367:0crwdne45367:0

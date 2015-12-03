@@ -105,6 +105,8 @@ hr:
         StudioEC: Laboratorij igara
         Applab: Laboratorij aplikacija
         NetSim: Internetski Simulator
+        Custom: Umjetnik
+        CustomStudio: Laboratorij igara
     trophy:
       name:
         Bronze: Bronca
@@ -311,18 +313,20 @@ hr:
         studio_playlab_8: Možeš li dodati blok za dodavanje boda i blok za puštanje zvuka kad jednorog natrči na čarobnjaka, a zatim ga pomicati pomoću tipki sa strelicama dok ne zaradiš bod?
         studio_playlab_9: Postavi pozadinu za ovu invaziju vanzemaljaca i pomogni Spacebotu da brže stigne do njih tako da mu promijeniš brzinu. Zatim ga pomoću tipki sa strelicama pomakni da dođe do njih i upozori ostale
         studio_playlab_10: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        studio_iceage_1: 'Manny želi reći "Bok" - možete li mu pomoći?'
-        studio_iceage_2: 'Diego (glumac 1) i baka (glumac 2) bi voljeli reći "bok" jedan drugome. Možeš li im pomoći tako da iskoristiš blok "reći" dvaput?'
-        studio_iceage_3: Možeš li pomoći Scrat da dođe do zastave?
-        studio_iceage_4: Možeš li pomoći Scratu (glumac 1) da dođe do bake (glumac 2) i pusti zvuk kada stigne?
-        studio_iceage_5: 'Možeš li pomoći Sidu da kaže "pozdrav" kada se klikne? Ne zaboravi ga kliknuti nakon što klikneš Pokreni'
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
-        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
-        studio_iceage_10: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
+        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
         studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
         studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'

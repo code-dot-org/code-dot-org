@@ -331,6 +331,11 @@
   class_submission_languages_other: Cita valoda(s)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -351,7 +356,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -728,10 +733,14 @@
   carousel_heading_international: Pamācības tavā valodā
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Pamācības tiem, kas māca JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Pamācības citās programēsanas valodās
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Izveido pats savas aplikācijas vai spēles
   carousel_heading_university: Universitāšu kursi tiešsaistē
   carousel_heading_webpages: Iemācies veidot mājas lapas
@@ -739,6 +748,10 @@
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Ko mācīt Programmēšanas stundā
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -835,10 +848,10 @@
   projguts_gradelevel: Vecumā no 10-13
   hourofcode_gradelevel: Vecums no 4-104
   frozen_gradelevel: Vecumā no 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Vecums no 4-104
   playlab_gradelevel: Vecums no 4-104
   infinity_gradelevel: Vecums no 4-104
-  artist_gradelevel: Vecums no 4-104
+  artist_gradelevel: Vecumā no 8+
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   thinkersmithspanish_platformtext: Bezsaistē
@@ -1394,11 +1407,8 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

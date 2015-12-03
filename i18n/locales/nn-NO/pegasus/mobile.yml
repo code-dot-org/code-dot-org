@@ -77,7 +77,7 @@ nn-NO:
   leaderboards_for_hoc: Resultatliste for Kodetimen.
   support_url: http://support.code.org/
   country: Land
-  city: By
+  city: by
   gender: Kjønn
   boys: Gutar
   girls: Jenter
@@ -270,6 +270,11 @@ nn-NO:
   class_submission_level_vocational: Videregåande (Yrkesfag)
   class_submission_languages_other: Andre språk
   inspirational_videos_more: 'Fleire <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> inspirerande videoar</a> av rollemodellar og kjendisar'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bygg ein galakse med kode
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slepp blokker og JavaScript.
@@ -286,7 +291,7 @@ nn-NO:
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
   mc_shortdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
-  mc_gradelevel: Alder 6 +
+  mc_gradelevel: 'Frå 4 - 104 år'
   mc_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   mc_specs: Mange språk (kommer snart) | Moderne nettlesere og nettbrett | Alder 6 +
   minecraft_subtitle: Kodetimen med Minecraft
@@ -297,7 +302,7 @@ nn-NO:
   volunteer_engineer_submission_intro_recruit: |-
     Disse lærerne vil gjerne ha noen <span style="font-family: 'Gotham 7r', sans-serif;">tekonologer</span> som kan hjelpe til i klasserommet, eller noe som kan <span style="font-family: 'Gotham 7r', sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat. Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a href="%{url}">Lær mer her</a>.
   volunteer_engineer_submission_intro_signup: 'Ver gild å oppgi følgjande informasjon om du er ein informatikkstudent eller jobbar med programmering. Felta markert med <span class="form-required-field">*</span> er obligatoriske.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Ser du ikke etter en frivillig? <a href="%{learn_more}"> Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.'
   volunteer_engineer_submission_header_shared: Informasjon vert delt med lærarar på eit kart over frivillige
   volunteer_engineer_submission_field_name: Namn
   volunteer_engineer_submission_field_name_placeholder: Fullt namn
@@ -544,11 +549,11 @@ nn-NO:
   learn_educator_resources_description: Lær om korleis du kan gjennomføra Kodetimen
   learn_educator_resources_button: Lærarressursar
   learn_are_you_educator: 'Er du lærar? Sjekk<a href="http://hourofcode.com/resources/how-to"> korleis du kan gjennomføra Kodetimen</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local"> Finn en lokal frivillig</a> å hjelpe deg under "Hour of Code"'
+  learn_teacher_led_lesson_plans: 'Bli inspirert av <a href="https://code.org/teacher-led"> lærer ledet "Hour of Code" timeplanlegging</a>'
+  learn_how_to_hoc: 'Følg <a href="https://hourofcode.com/how-to"> vår "how-to guide"</a> for undervisning av "Hour of Code"'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Lær meir</a> om premiane for kvar lærar.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Inspirere elevene ved å vise dem <a href="https://code.org/educate/inspire"> disse videoene</a>'
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-leksjonar
   hoc2014_try_new_tutorial: Prøv den nye Kodetime-leksjonen (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
@@ -560,10 +565,14 @@ nn-NO:
   carousel_heading_international: Leksjonar på ditt språk
   carousel_heading_domestic: Leksjonar tilgjengeleg på engelsk
   carousel_heading_beginners: Leksjonar for nybegynnarar
+  carousel_heading_beyond_beginners: Øvinger for nybegynnere
   carousel_heading_javascript: Leksjonar som lærer deg JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Ingen "dings" eller Internett? Prøv "fråkopla" koding'
   carousel_heading_devices: "Leksjons-app'ar for telefonar og nettbrett"
+  carousel_heading_beyond_devices: Øvings-apper for telefoner og nettbrett
   carousel_heading_languages: Leksjonar i andre programmeringsspråk
+  carousel_heading_beyond_languages: Øvinger i andre programmeringsspråk
   carousel_heading_apps_games: "Lag dine eigne app'ar eller spel"
   carousel_heading_university: Universitetskurs på nettet
   carousel_heading_webpages: Lær å lage Internett-sider
@@ -571,6 +580,7 @@ nn-NO:
   carousel_heading_ide: Plattformer som er populære blant lærarar
   educator_notes: Lærarnotat
   teach_led_lesson_plans: Lærarrettleiing til Kodetimen
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Korleis undervisa ein Kodetime
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   beyond_submission: Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og innlevering skjemaet.
@@ -667,7 +677,7 @@ nn-NO:
   starwars_gradelevel: Alder 6 +
   playlab_gradelevel: 'Frå 4 - 104 år'
   infinity_gradelevel: 'Frå 4 - 104 år'
-  artist_gradelevel: 'Frå 4 - 104 år'
+  artist_gradelevel: Alderen 8+
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   thinkersmithspanish_platformtext: Straumlaust
@@ -739,7 +749,7 @@ nn-NO:
   robomindnl_shortdescription: Skriv kode for ein virtuell robot
   flappy_shortdescription: 'Lag ditt eige spel - Flappy Bird, hai eller ubåt'
   bitsbox_shortdescription: Kode en rekke apper med ekte JavaScript som du både kan spille og dele.
-  makeschool_shortdescription: Lag et spill til iPhon! Lær å skrive kode for å lære monsteret ditt nye bevegelser!
+  makeschool_shortdescription: Lag et iPhone-spill! Lær ved å skrive kode for å lære monsteret ditt nye bevegelser!
   touchdevelop_shortdescription: 'Løs gåter, lag spill og lær koding på telefonen. '
   appinventor_shortdescription: Lag din eigen app! (Berre for Android)
   blockly_shortdescription: Last ned ei ZIP-fil for å lære utan å vere tilkopla Internett

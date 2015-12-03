@@ -323,6 +323,11 @@
   class_submission_languages_other: زبان (های) دیگر
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -343,7 +348,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -727,11 +732,15 @@
   carousel_heading_international: آموزش به زبان شما
   carousel_heading_domestic: آموزش به زبان انگلیسی
   carousel_heading_beginners: آموزش برای مبتدیان
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: آموزش جاوا اسکریپت
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: هیچ وسیله ای یا اینترنت ندارید؟ علوم کامپیوتر روی کاغذ
     را امتحان کنید
   carousel_heading_devices: برنامه های آموزشی برای تلفن های همراه و تبلت ها
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: آموزش ها به زبان های برنامه نویسی دیگر
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: بازی یا نرم افزار خود را بسازید
   carousel_heading_university: ' دوره های آنلاین دانشگاه'
   carousel_heading_webpages: یادگیری ساخت صفحات وب
@@ -739,6 +748,10 @@
   carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   educator_notes: یادداشت های آموزگار
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
   beyond_submission: می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد
@@ -835,10 +848,10 @@
   projguts_gradelevel: سنین 10-13
   hourofcode_gradelevel: سنین 4 تا 104
   frozen_gradelevel: سنین بالای 8
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: سنین 4 تا 104
   playlab_gradelevel: سنین 4 تا 104
   infinity_gradelevel: سنین 4 تا 104
-  artist_gradelevel: سنین 4 تا 104
+  artist_gradelevel: سنین بالای 8
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   thinkersmithspanish_platformtext: آنپلاگد
@@ -1436,11 +1449,8 @@
   infinity_shortcode: inf
   playlab_shortcode: بازی کن
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

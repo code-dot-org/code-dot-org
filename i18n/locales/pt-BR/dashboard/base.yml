@@ -388,7 +388,7 @@ pt-BR:
     thank_you: 'Agradecemos nossos <a href="https://code.org/about/donors">doadores</a>, <a href="https://code.org/about/partners">parceiros</a>, nossa <a href="https://code.org/about/team">equipe</a>, nosso pessoal de vídeo e nossos <a href="https://code.org/about/advisors">professores</a> por sua ajuda na criação do Code Studio.'
     help_from_html: Queremos agradecer principalmente os engenheiros da Google, Microsoft, Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar esses materiais.
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &amp; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Todos os direitos reservados.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Todos os direitos reservados.<br />A era do gelo&#8482; &amp; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
     art_from_html_old: 'AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
@@ -403,6 +403,9 @@ pt-BR:
     privacy: Política de Privacidade
     secure: Versão Segura
     report_abuse: Reportar abuso
+    built_on_code_studio: Criado no Code Studio
+    make_my_own_app: Criar meu próprio aplicativo
+    how_it_works: Como funciona
   reference_area:
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas

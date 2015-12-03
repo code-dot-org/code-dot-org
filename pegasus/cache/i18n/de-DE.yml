@@ -1,5 +1,5 @@
 "de-DE":
-  hour_of_code: Programmierstunde
+  hour_of_code: Stunde der Code
   hello: Hallo Welt
   select_language: Bitte wähle deine Sprache
   en: Informatik
@@ -177,7 +177,7 @@
   studiobar_flappy_body: Erstelle und teile dein eigenes Flappy-Spiel
   studiobar_teacher_title: Für Lehrer gemacht
   studiobar_teacher_body: Code-Studio in deinem Unterricht einführen
-  studiobar_frozen_title: Programmierstunde
+  studiobar_frozen_title: Stunde der Code
   studiobar_frozen_body: Erstelle ein Wintermärchen mit Anna und Elsa
   studiobar_donate_title: Spenden
   studiobar_donate_body: Ein Kind lernt, für jeden Euro den du spendest
@@ -248,7 +248,7 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Erfahre mehr
-  homepage_slot_text_title_hoc: Programmierstunde
+  homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
   homepage_slot_text_link_host: Organisiere eine Hour of Code
@@ -316,6 +316,11 @@
   class_submission_languages_other: Andere Sprache(n)
   inspirational_videos_more: Weitere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirierende
     Videos</a>, sortiert nach Rollen und Berühmtheiten
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Erbaue ein Galaxie mit Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Verwende Drag & Drop Blöcke und Javascript.
@@ -325,7 +330,7 @@
   starwars_blocks_description: Verwende Drag & Drop Blöcke.
   starwars_blocks_specs: Viele Sprachen (in Kürze) | Moderne Browser, Smartphones,
     Tablets | Alter 6-10
-  starwars_blocks_start_button: Probiere es jetzt aus
+  starwars_blocks_start_button: Erfahre mehr
   starwars_watch_videos: Bevor du loslegst, sieh dir eines dieser inspirierende Videos
     an
   starwars_speak_languages: Du sprichst eine andere Sprache?
@@ -362,9 +367,9 @@
   volunteer_engineer_submission_intro_signup: Bitte gib die folgenden Information
     ein, falls du ein Informatikstudent oder professioneller Entwickler bist. Felder
     mit <span class="form-required-field">*</span> sind pflicht.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Du suchst keine Freiwilligen? <a href="%{learn_more}">Lerne
+    mehr</a> darüber, wie Du Dein eigenes "Hour of Code"-Event organisierst und Freiwillige
+    in Deiner Nähe auf der <a href="%{volunteer_local}">Freiwilligenkarte</a> findest.
   volunteer_engineer_submission_header_shared: Mit Lehrern geteilte Informationen
     auf der Unterstützerkarte
   volunteer_engineer_submission_field_name: Name
@@ -660,7 +665,7 @@
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
-  dashboard_stage: Teil
+  dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
   dashboard_response: Antwort
@@ -705,16 +710,16 @@
   learn_educator_resources_button: Lehrmaterial
   learn_are_you_educator: Sind Sie ein Lehrer ? Lernen Sie <a href="http://hourofcode.com/resources/how-to">
     wie man Hour of Code</a> lehrt.
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Finde Freiwillige</a>,
+    diie Dir während Deines Hour of Code helfen.
+  learn_teacher_led_lesson_plans: Lass Dich von <a href="https://code.org/teacher-led">Lehrer-geführten
+    Hour-of-Code-Unterrichtskonzepten</a> inspirieren!
+  learn_how_to_hoc: Sieh Dir <a href="https://hourofcode.com/how-to">unsere HOWTO-Anleitung</a>
+    für den Unterricht einer Hour of Code an!
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Erfahre mehr</a> über
     die Preise für jeden Tutor.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspiriere Studenten, indem Du ihnen <a href="https://code.org/educate/inspire">diese
+    Videos</a> zeigst.
   hoc2014_try_new_tutorials: Probiere unsere neuen Anleitung für die Hour of Code
     aus
   hoc2014_try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde
@@ -728,11 +733,15 @@
   carousel_heading_international: Anleitungen in deiner Sprache
   carousel_heading_domestic: Anleitungen auf englisch
   carousel_heading_beginners: Anleitungen für Anfänger
+  carousel_heading_beyond_beginners: Anleitungen für Anfänger
   carousel_heading_javascript: Anleitungen für JavaScript
+  carousel_heading_beyond_javascript: Anleitungen für JavaScript
   carousel_heading_unplugged: Kein Computer oder Internet? Probiere "Offline"-Informatik
     aus
   carousel_heading_devices: Einführungen für Telefon und Tablet
+  carousel_heading_beyond_devices: Einführungen für Telefon und Tablet
   carousel_heading_languages: Einführungen in anderen Sprachen
+  carousel_heading_beyond_languages: Einführungen in anderen Sprachen
   carousel_heading_apps_games: Erstelle deine eigenen Anwendungen oder Spiele
   carousel_heading_university: Universitätskurse online
   carousel_heading_webpages: Lerne, Webseiten zu erstellen
@@ -740,6 +749,10 @@
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
   educator_notes: Notizen für Tutoren
   teach_led_lesson_plans: Hour of Code Lehranleitungen
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Anleitung zum Unterrichten einer "Hour of Code"
   more_resources_educators: Weitere Quellen für Lehrer und Tutoren
   beyond_submission: Du willst eine weiterführende Anleitung für Beyond an Hour einreichen?
@@ -786,14 +799,14 @@
   robomindnl_name: Programmiere einen virtuellen Roboter
   flappy_name: Erstelle ein Flappy-Spiel
   bitsbox_name: Bitsbox - baue ein Spiel
-  makeschool_name: Erstelle ein iPhone Spiel in deinem Browser!
+  makeschool_name: Bau ein iPhone-Spiel in deinem Browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Stunde des Codes
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  hourofcode_name: Platzhalter für neue code.org/hoc
+  hourofcode_name: Schreibe dein erstes Computerprogramm
   playlab_name: Play Lab
   infinity_name: Infinity Spiele Lab
   artist_name: Künstler
@@ -917,10 +930,10 @@
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickle dein eigenes Spiel - Flappy Bird, Shark oder
     Submarine
-  bitsbox_shortdescription: Programmiere eine Serie von Apps zum spielen und teilen,
+  bitsbox_shortdescription: Programmiere eine Serie von Apps zum Spielen und Teilen,
     indem du richtiges JavaScript benutzt.
-  makeschool_shortdescription: Entwickele ein iPhone-Spiel. Lerne in dem du Code erschaffst
-    um deinen Monstern neue Bewegungen beizubringen!
+  makeschool_shortdescription: Entwickele ein iPad-Spiel. Lerne dies durch die Programmierung
+    von Bewegungen Deines Monsters!
   touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren
     und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene App! (nur Android)
@@ -1302,12 +1315,12 @@
     durch die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett
     eigenständig mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps
     bei der Programmierung Übungen helfen. '
-  makeschool_beyond_longdescription: Kennst du dich ein bisschen mit "ObjectiveC"
-    aus? Wenn ja, kannst du bei uns lernen, ein iPhone-Spiel in einer Stunde zu entwickeln.
-    Wir führen dich durch den Ablauf der Entwicklung, der Tests und dem Probespielen,
-    ganz einfach im Browser. Anschließend kannst du das Spiel mit deinen Freunden
-    auf Facebook teilen! Du brauchst keine iPhone-Programmierkenntnisse, solltest
-    aber wissen, was Variablen, Methoden und Objekte sind.
+  makeschool_beyond_longdescription: Kennst Du Dich schon ein bisschen mit der Programmiersprache
+    "Objective C" aus? Wenn ja, kannst Du es bei uns lernen, ein iPhone Spiel in einer
+    Stunde zu entwickeln. Wir führen Dich durch den Ablauf der Entwicklung, des Tests
+    und Spiels, ganz einfach im Internet-Browser. Anschliessend kannst Du das Spiel
+    mit Deinen Freunden auf Facebook teilen. Du brauchst keine iPhone Programmierkenntnisse,
+    solltest aber wissen, was Variable, Methoden und Objekte sind.
   appinventor_beyond_longdescription: Unterhaltsame und schnelle Video-Anleitungen
     führen dich durch die Entwicklung von drei einfachen Apps für dein Android-Handy
     oder Tablet. Ob Anfänger oder Experte, diese Hour of Code bereitet dich darauf
@@ -1431,11 +1444,8 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

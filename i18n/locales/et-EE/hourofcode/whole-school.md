@@ -8,6 +8,6 @@ title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 # Kutsu oma terve kool osalema
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Teave selle kohta, kuidas terve kool saaks osaleda Koodi Tunnil, tuleb siia.
 
 <%= view :signup_button %>

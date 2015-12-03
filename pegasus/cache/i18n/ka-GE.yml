@@ -140,9 +140,9 @@
   learn_classes: იპოვეთ ადგილობრივი კლასები
   hoc_is_here: '#HourOfCode გელით - ეწვიეთ! @codeorg'
   just_did_hoc: 'ახლახან დავასრულე #HourOfCode - ნახე! @codeorg'
-  twitter_teach_cs: რატომ არ ისწავლება პროგრამირება ყველა სკოლაში? ჩვენ შეგვიძლია
-    ამის გამოსწორება. ttp://youtu.be/nKIu9yen5nc. ეწვიეთ საიტს http://code.org/ და
-    გაიგეთ მეტი.
+  twitter_teach_cs: რატომ არ ისწავლება პროგრამირება მეტ სკოლაში? ჩვენ შეგვიძლია ამის
+    გამოსწორება. ttp://youtu.be/nKIu9yen5nc. ეწვიეთ საიტს http://code.org/ და გაიგეთ
+    მეტი.
   learn_hoc: ისწავლეთ კოდის ერთი საათის განმავლობაში
   beyond_hoc: ერთი საათის შემდეგ
   what_gender: თქვენი სქესი?
@@ -308,16 +308,21 @@
   class_submission_languages_other: სხვა ენები
   inspirational_videos_more: მეტი <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     შთამაგონებელი ვიდეო</a> როლ-მოდელებისა და ცნობილი ადამიანების მონაწილეობით
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: გალაქტიკის შექმნა კოდით
   starwars_javascript_title: Javascript
   starwars_javascript_description: გამოიყენეთ ბლოკლი და JavaScript.
   starwars_javascript_specs: მხოლოდ ინგლისური | თანამედროვე ბრაუზერები | ასაკი 11+
-  starwars_javascript_start_button: სცადეთ ახლა
+  starwars_javascript_start_button: გაიგე მეტი
   starwars_blocks_title: ბლოკები
   starwars_blocks_description: გამოიყენეთ ბლოკლი.
   starwars_blocks_specs: ბევრი სხვადასხვა ენა (მალე იქნება) | თანამედროვე ბრაუზერები,
     სმარტფონები, ტაბლეტები | ასაკი 6-10
-  starwars_blocks_start_button: სცადეთ ახლა
+  starwars_blocks_start_button: გაიგე მეტი
   starwars_watch_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
   starwars_speak_languages: სხვა ენაზე ლაპარაკობთ?
   starwars_help_translate: დაგვეხმარეთ თარგმნაში
@@ -682,7 +687,7 @@
     ერთად.
   code_hoc_coming: გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!
   code_sign_up: დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში
-  learn_more: გაიგე მეტი
+  learn_more: სცადეთ ახლა
   learn_sign_up_description: დარეგისტრირდით და მიიღეთ მონაწილეობა კოდის ერთ საათიში
     CS საგანმანათლებლო კვირეულის ფარგლებში
   learn_sign_up_button: რეგისტრაცია
@@ -694,32 +699,37 @@
   learn_educator_resources_button: პედაგოგის რესურსები
   learn_are_you_educator: მასწავლებელი ხართ? გაიგეთ,<a href="http://hourofcode.com/resources/how-to">
     როგორ გაუძღვეთ კოდის ერთ საათს</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">იპოვეთ ადგილობრივი
+    მოხალისე</a> რომელიც დაგეხმარებათ კოდის ერთი საათის ჩატარებაში
+  learn_teacher_led_lesson_plans: იპოვეთ შთაგონება <a href="https://code.org/teacher-led">კოდის
+    ერთი საათის მასწავლებლების გეგმებში </a>
+  learn_how_to_hoc: მიჰყევით <a href="https://hourofcode.com/how-to">ჩვენს გაიდს</a>
+    და ჩაატარეთ კოდის ერთი საათი
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">გაიგეთ მეტი</a> მასწავლებლების
     პრიზების შესახებ.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: შთააგონეთ მოსწავლეები - აყურებინეთ <a href="https://code.org/educate/inspire">ეს
+    ვიდეოები</a>
   hoc2014_try_new_tutorials: ნახეთ ჩვენი ახალი კოდის ერთი საათის გაკვეთილები
   hoc2014_try_new_tutorial: ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
   hoc2014_try_frozen: ხატეთ "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად
   carousel_heading_codeorg: Code.org ტუტორიალები
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Code.org ტუტორიალები (ნებისმიერი მოწყობილობისთვის)
   carousel_heading_3rd_party: მესამე მხარის მიერ მოწოდებული ტუტორიალები
   carousel_heading_third_party: მესამე მხარის მიერ მოწოდებული ტუტორიალები
-  carousel_heading_international: ტუტორიალები მშობლიურ ენაზე
-  carousel_heading_domestic: ტუტორიალები მისაწვდომია ინგლისურად
-  carousel_heading_beginners: ტუტორიალები დამწყებთათვის
-  carousel_heading_javascript: JavaScript ტუტორიალები
+  carousel_heading_international: პარტნიორების ტუტორიალები მშობლიურ ენაზე
+  carousel_heading_domestic: ინგლისურ ენაზე მისაწვდომი ტუტორიალები პარტნიორებისგან
+  carousel_heading_beginners: პარტნიორების ტუტორიალები K-8 ასაკებისთვის
+  carousel_heading_beyond_beginners: ტუტორიალები დამწყებთათვის
+  carousel_heading_javascript: JavaScript ტუტორიალები პარტნიორებისგან
+  carousel_heading_beyond_javascript: JavaScript ტუტორიალები
   carousel_heading_unplugged: არ გაქვთ მოწყობილობა ან ინტერნეტი? სცადეთ ინფორმატიკა
     კომპიუტერის გარეშე
-  carousel_heading_devices: საგანმანათლებლო აპლიკაციები მობილურებისა და პლანშეტებისთვის
-  carousel_heading_languages: პროგრამირების სხვა ენების ტუტორიალები
+  carousel_heading_devices: პარტნიორების საგანმანათლებლო აპლიკაციები მობილურებისა
+    და პლანშეტებისთვის
+  carousel_heading_beyond_devices: საგანმანათლებლო აპლიკაციები მობილურებისა და პლანშეტებისთვის
+  carousel_heading_languages: პროგრამირების სხვა ენების ტუტორიალები პარტნიორებისგან
+  carousel_heading_beyond_languages: პროგრამირების სხვა ენების ტუტორიალები
   carousel_heading_apps_games: შექმენით საკუთარი აპლიკაციები და თამაშები
   carousel_heading_university: საუნივერსიტეტო კურსები ონლაინ
   carousel_heading_webpages: ვებ-გვერდების შექმნის სწავლა
@@ -727,6 +737,10 @@
   carousel_heading_ide: მასწავლებლებს შორის პოპულარული პლატფორმები
   educator_notes: მასწავლებლის ჩანაწერები
   teach_led_lesson_plans: კოდის ერთი საათის გაკვეთილების გეგმები მასწავლებლებისთვის
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: როგორ გავუძღვეთ კოდის ერთ საათს
   more_resources_educators: მეტი რესურსი მასწავლებლებისთვის
   beyond_submission: გინდათ კოდის ერთი საათის შემდგომი ტუტორიალის გამოგზავნა? ნახეთ
@@ -736,11 +750,11 @@
   teachers_notes_hoc: 'მასწავლებლებო: გაეცანით მნიშვნელოვან მინიშნებებს აქ'
   previous: წინა
   next: შემდეგი
-  older_systems: გაკვეთილები, რომლებიც ძველ სისტემებზეც მუშაობს
+  older_systems: პარტნიორების ტუტორიალები, რომლებიც ძველ სისტემებზეც მუშაობს
   older_systems_subheading: ესენი ძველ ვებ ბრაუზერებზეც იმუშავებს. ყველა ტუტორიალის
     სანახავად დააყენეთ <a href="http://browsehappy.com/" target="_blank">თანამედროვე
     ვებ ბრაუზერი.</a>
-  mobile_devices: ტუტორიალები მობილური მოწყობილობებისთვის
+  mobile_devices: პარტნიორების ტუტორიალები მობილური მოწყობილობებისთვის
   frozen_name: წერეთ კოდი ანასა და ელზასთან ერთად
   starwars_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით'
   codeorg_name: დაწერეთ თქვენი პირველი კომპიუტერული პროგრამა
@@ -766,7 +780,7 @@
   processing_name: ხატვა კოდით
   robomind_name: ვირტუალური რობოტის კოდის დაწერა
   groklearning_name: ელიზა - ექიმი შატერბოტი
-  quorum_name: ადაპტირებული პგორამირება (ეკრანიდან კითხვის მხარდაჭერით)
+  quorum_name: ადაპტირებული პროგრამირება (ეკრანიდან კითხვის მხარდაჭერით)
   codespark_name: The Foos (ბავშვებისთვის, რომელთაც ჯერ არ იციან კითხვა)
   kodable_name: Kodable (ბავშვებისთვის, რომელთაც ჯერ არ იციან კითხვა)
   tynkerapp_name: Tynker - პლანშეტების შესახებ
@@ -780,7 +794,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: ქვა, ქაღალდი, მაკრატელი
-  hourofcode_name: შემავსებელი ახალი code.org/hoc-ისთვის
+  hourofcode_name: დაწერეთ თქვენი პირველი კომპიუტერული პროგრამა
   playlab_name: თამაშების ლაბორატორია
   infinity_name: თამაშების ლაბორატორია Infinity
   artist_name: მხატვარი
@@ -911,8 +925,8 @@
     Submarine
   bitsbox_shortdescription: დაწერეთ სხვადასხვა აპლიკაციები ნადმვილი JavaScript-ის
     გამოყენებით.
-  makeschool_shortdescription: შექმენით iPhone თამაში! ისწავლეთ, როგორ შეასრულებინოთ
-    თქვენს მონსტრებს ახალი მოძრაობები კოდით!
+  makeschool_shortdescription: შექმენით iPhone თამაში! დაწერეთ კოდი და ასწავლეთ თქვენს
+    მონსტრებს ახალი მოძრაობები!
   touchdevelop_shortdescription: 'ამოხსენით თავსატეხები, შექმენით თამაშები და ისწავლეთ
     პროგრმირება თქვენს სმარტფონზე. '
   appinventor_shortdescription: შექმენით თქვენი საკუთარი აპლიკაცია! (მხოლოდ ანდროიდზე)
@@ -1004,7 +1018,7 @@
   processing_longdescription: შესავალი პროგრამირებაში ვიზუალური ხელოვნების კონტექსტში
     პროცესული პროგრამირების ენის გამოყენებით. მოკლე ვიდეო გაკვეთილებს შემდეგ გადახვალთ
     პროგრამირების დავალებებზე, რის შედეგადაც დაწერთ ხატვის ინტერაქტიულ პროგრამას
-  robomind_longdescription: 'მოსწავლეები სწავლობენ პგორამირებას თავიანთი ვირტუალური
+  robomind_longdescription: 'მოსწავლეები სწავლობენ პროგრამირებას თავიანთი ვირტუალური
     რობოტის მართვით. ოლაინ-კურსში შედის მოკლე პრეზენტაციები, ფილმები, თავსატეხები
     და დავალებების შესასრულებლად სასრგებლო მინიშნებები. '
   groklearning_longdescription: გამოიყენეთ პროგრამირების ენა Python და შექმენით ჩატბოტი
@@ -1025,7 +1039,7 @@
     დაწერეთ თამაშები და შექმენით ისტორიები: გამოიყენეთ გრაფიკა, 10-ზე მეტი სხვადასხვა
     ხელსაწყო და პერსონიფიცირებადი პერსონაჟები. ინტერნეტ-კავშირი აუცილებელი არ არის.
     თქვენი ნამუშევრების ნახვა ვებზეც შეგიძლიათ.'
-  robomindnl_longdescription: 'მოსწავლეები სწავლობენ პგორამირებას თავიანთი ვირტუალური
+  robomindnl_longdescription: 'მოსწავლეები სწავლობენ პროგრამირებას თავიანთი ვირტუალური
     რობოტის მართვით. ოლაინ-კურსში შედის მოკლე პრეზენტაციები, ფილმები, თავსატეხები
     და დავალებების შესასრულებლად სასრგებლო მინიშნებები. '
   flappy_longdescription: გამოიეყენეთ ვიზუალური პროგრამირება და შექმენით საკუთარი
@@ -1035,11 +1049,10 @@
     სხვადასხვა აპლიკაციები სათამაშოდ და გასაზიარებლად. მარტივი ინსტრუქციებით ბავშვებიც
     კი შეძლებენ ნამდვილი JavaScript-ით პროგრამირებას. შემდეგ კი, რაც მეტს ივარჯიშებთ,
     მით მეტი გამოგივათ.
-  makeschool_longdescription: ისწავლეთ პროგრამირება iPhone თამაშის შექმნით - გამოიყენეთ
-    ახალი, დამწყებებზე გათვლილი პროგრამირების ენა Swift! შექმნით თამაში პოკემონების
-    მონაწილეობით, დაწერეთ კოდი და ასწავლეთ თქვენს მონსტრებს ახალი მოძრაობები. თქვენ
-    ისწავლით, როგორ გამოიყენოთ ცვლადები, მეთოდები და ობიექტები თქვენი მონსტრების გამარჯვების
-    უზრუნველსაყოფად!
+  makeschool_longdescription: ისწავლეთ პროგრამირება iPhone თამაშის შექმნით ახალ, დამწყებთათვის
+    შექმნილ პროგრამირების ენაზე Swift! შექმენით პოკემონებით შთაგონებული თამაში და
+    ასწავლეთ მონსტრებს ახალი მოძრაობები. თქვენ ისწავლით ცვლადების, მეთოდებისა და ობიექტების
+    გამოყენებას - და თქვენი მონსტრები გაიმარჯვებენ!
   touchdevelop_longdescription: 'სენსორული რედაქტორი დაგეხმარებათ პიქსელური ნახატის
     შექმნაში, დათვის თავსატეხის ამოხსნაში ან თქვენი საკუთარი მხტუნავი ჩიტის თამაშის
     შექმნაში. '
@@ -1273,10 +1286,11 @@
     რობოტის მართვით სწავლობენ. ონლაინ-კურსი შეიცავს პრეზენტაციებს, ფილმებს, დავალებებს
     და სხვადასხვა მინიშნებებს - ეს ყველაფერი დაგეხმარებათ პროგრამირების დავალებების
     შესრულებაში. '
-  makeschool_beyond_longdescription: 'უკვე იცით, რა არის ObjectiveC? ისწავლეთ iPhone
-    თამაშის შექმნა ერთ საათში! ჩვენ გასწავლით პროცესს მთლიანად: კოდის შექმნა, ტესტირება,
-    თამაში და მისი გაზიარება Facebook ქსელში მეგობრებისთვის! iPhone დეველოპმენტის
-    გამოცდილება საჭირო არ არის. უნდა გესმოდეთ, რა არის ცვლადი, მეთოდები და ობიექტები.'
+  makeschool_beyond_longdescription: 'იცით, რა არის ObjectiveC? დაწერეთ iPhone თამაში
+    ერთ საათში! ერთად გავიაროთ ყველა ეტაპი: დაწერა, გატესტვა და თამაში - ეს ყველაფერი
+    ბრაუზერში. მერე კი გავუზიაროთ შედეგი მეგობრებს Facebook-ზე! არაუშავს, თუ არ გაქვთ
+    iPhone-ზე პროგრამირების გამოცდილება. მთავარია, გაიგოთ რა არის ცვლადები, მეთოდები
+    და ობიექტები.'
   appinventor_beyond_longdescription: მოკლე და დინამიკური ვიდეო-ტუტორიალები გასწავლით
     თქვენი Android ტელეფონისა ან პლანშეტისთვის სამი მარტივი აპლიკაციის შექმნას. გამოადგება
     როგორც დამწყებებს, ასევე ექსპერტებს, როგორც ინდივიდუალურ მოსწავლეებს, ასევე ჯგუფებს.
@@ -1390,11 +1404,8 @@
   infinity_shortcode: inf
   playlab_shortcode: თამაში
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

@@ -274,13 +274,18 @@ tr-TR:
   class_submission_level_vocational: Mesleki
   class_submission_languages_other: Diğer dil(ler)
   inspirational_videos_more: 'Rol modeller ve ünlülerden <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ilham verici videolar</a>'
-  starwars_subtitle: Kod İle Galaksi İnşa Edin
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
+  starwars_subtitle: Kod İle Bir Galaksi İnşa Etmek
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Sürükle bırak bloklar ve JavaScript kullan.
-  starwars_javascript_specs: Sadece İngilizce | Modern işletim sistemleri | 11+ Yaş
+  starwars_javascript_description: Sürükle-bırak blokları ve JavaScript kullan.
+  starwars_javascript_specs: Sadece İngilizce | Modern Web Tarayıcıları | 11+ Yaş
   starwars_javascript_start_button: Şimdi dene
   starwars_blocks_title: Bloklar
-  starwars_blocks_description: Sürükle-bırak blokları kullanın.
+  starwars_blocks_description: Sürükle-bırak blokları kullan.
   starwars_blocks_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6-10 yaş arası
   starwars_blocks_start_button: Şimdi dene
   starwars_watch_videos: Başlamadan önce bu ilham verici videolardan birini izle
@@ -290,7 +295,7 @@ tr-TR:
   mc_name: Minecraft Kod Saati
   mc_longdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
   mc_shortdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
-  mc_gradelevel: 6 yaş ve üzeri
+  mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6 yaş ve üzeri
   minecraft_subtitle: Minecraft Kod Saati
@@ -566,10 +571,14 @@ tr-TR:
   carousel_heading_international: Kendi dilinizde eğitimler
   carousel_heading_domestic: Eğitimlerin ingilizcesi mevcut
   carousel_heading_beginners: Yeni başlayanlar için dersler
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Javascript dersleri
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'İnternet bağlantınız veya cihazınız yok mu? "Enstrümansız" bilgisayar bilimlerini deneyin'
   carousel_heading_devices: Tabletler ve telefonlar için eğitim uygulamaları
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Diğer programlama dilleri için eğitimler
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Kendi oyununuzu ya da uygulamanızı yapın
   carousel_heading_university: Online üniversite dersleri
   carousel_heading_webpages: Nasıl web sayfası yapılacağını öğrenin
@@ -577,6 +586,7 @@ tr-TR:
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Bir Kod Saati Nasıl Öğretilir
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
   beyond_submission: '"Bir Saat"i aşan eğitim programları mı göndermek istiyorsunuz? Bkz: kriterler ve gönderme formu.'
@@ -589,7 +599,7 @@ tr-TR:
   older_systems_subheading: 'Bunların eski web tarayıcılarında çalışması gerekir. Tüm eğitimlere erişmek için, modern web tarayıcısına yükseltin <a href="http://browsehappy.com/" target="_blank"></a>'
   mobile_devices: Mobil cihazlar için eğitimler
   frozen_name: Anna ve Elsa ile kodlama yap
-  starwars_name: 'Star Wars: Kod ile bir Galaksi İnşa Et'
+  starwars_name: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
   codeorg_name: İlk bilgisayar programınızı yazın
   codeintl_name: İlk bilgisayar programınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -673,7 +683,7 @@ tr-TR:
   starwars_gradelevel: 6 yaş ve üzeri
   playlab_gradelevel: 4-104 Yaş
   infinity_gradelevel: 4-104 Yaş
-  artist_gradelevel: 4-104 Yaş
+  artist_gradelevel: 8 + Yaş grubu
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   thinkersmithspanish_platformtext: İnternetsiz
@@ -754,7 +764,7 @@ tr-TR:
   projguts_shortdescription: Taş/Kağıt/Makas kullanarak modelleme ve simulasyon deneyin
   hourofcode_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   frozen_shortdescription: "Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım."
-  starwars_shortdescription: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
+  starwars_shortdescription: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
   playlab_shortdescription: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
   infinity_shortdescription: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
   artist_shortdescription: Sanatçı ile harika resimler ve tasarımlar yap!
@@ -797,7 +807,7 @@ tr-TR:
   projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
   hourofcode_longdescription: Yeni code.org/hoc için placeholder
   frozen_longdescription: "Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!"
-  starwars_longdescription: Droidleri programlamayı ve çok uzaklardaki galaksinizi Star Wars oyunu ile yaratmayı öğrenin.
+  starwars_longdescription: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Bilgisayar Bilimlerine giriş (K-8. sınıflar)
   khan_beyond_name: Bilgisayar programlama öğrenin

@@ -1348,6 +1348,10 @@ pt:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1453,19 +1457,19 @@ pt:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Laboratório de jogo Gumball
+          description_short: Criar uma história ou faz um jogo com o Laboratório de jogo Gumball!
+          description: Criar uma história ou faz um jogo com o Laboratório de jogo Gumball!
+          Gumball Play Lab: Laboratório de jogo Gumball
         starwars:
           title: 'Star Wars: Construir uma Galáxia com Código'
-          description_short: Aprenda a programar dróides e crie o seu jogo Star Wars, numa galáxia muito, muito distante.
-          description: Aprenda a programar dróides e crie o seu jogo Star Wars, numa galáxia muito, muito distante.
+          description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
+          description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           Hour of Code 2015: Hora de Código 2015
         starwarsblocks:
           title: 'Star Wars: Construir uma Galáxia com Código'
-          description_short: Aprenda a programar dróides e crie o seu jogo Star Wars, numa galáxia muito, muito distante.
-          description: Aprenda a programar dróides e crie o seu jogo Star Wars, numa galáxia muito, muito distante.
+          description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
+          description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           Hour of Code 2015: Hora de Código 2015
         minecraft:
           title: Minecraft
@@ -1474,8 +1478,8 @@ pt:
           Craft: Craft
         mc:
           title: Hora do Código de Minecraft
-          description_short: Explore o mundo de Minecraft pelos códigos
-          description: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft
+          description_short: Explora um mundo Minecraft através do código
+          description: Utiliza blocos de código para levares o Steve ou a Alex numa aventura através deste mundo Minecraft
           Hour of Code 2015: Hora de Código 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

@@ -7,12 +7,20 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "createRecord": null
+      "createRecord": {
+        "params": [
+          "\"mytable\"",
+          "{name: \"Alice\"}",
+          "function(){\nconsole.log(\"success\");\n}"
+        ],
+        "paletteParams": [
+          "mytable",
+          "{name: \"Alice\"}",
+          "callback"
+        ]
+      }
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -77,7 +77,7 @@ sl-SI:
   leaderboards_for_hoc: Lestvica vodilnih za Uro za kodo.
   support_url: http://support.code.org/
   country: Država
-  city: Mesto
+  city: mesto
   gender: Spol
   boys: Fantje
   girls: Dekleta
@@ -284,6 +284,11 @@ sl-SI:
   class_submission_level_vocational: Poklicno izobraževanje
   class_submission_languages_other: Drugi jezik(-i)
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -300,7 +305,7 @@ sl-SI:
   mc_name: Minecraft Ura za kodo
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Starost 6+
+  mc_gradelevel: Starost 4-104
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Ura za kodo
@@ -574,10 +579,14 @@ sl-SI:
   carousel_heading_international: Vaje v vašem jeziku
   carousel_heading_domestic: Vaje na voljo v angleškem jeziku
   carousel_heading_beginners: Vaje za začetnike
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Vodiči, ki učijo JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Nimate naprave ali interneta? Poskusite "izštekano" računalništvo'
   carousel_heading_devices: Aplikacije z vajami za telefone in tablice
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Vaje v drugih programskih jezikih
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Izdelajte lastno aplikacijo ali igro
   carousel_heading_university: Univerzitetni tečaji na spletu
   carousel_heading_webpages: Naučite se izdelati spletne strani
@@ -585,6 +594,7 @@ sl-SI:
   carousel_heading_ide: Platforme, ki so priljubljena med učitelji
   educator_notes: Zapiski učitelja
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Kako poučevati Uro za kodo
   more_resources_educators: Več virov za učitelje in vzgojitelje
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -681,7 +691,7 @@ sl-SI:
   starwars_gradelevel: Starost 6+
   playlab_gradelevel: Starost 4-104
   infinity_gradelevel: Starost 4-104
-  artist_gradelevel: Starost 4-104
+  artist_gradelevel: Starost 8 +
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   thinkersmithspanish_platformtext: Izštekano

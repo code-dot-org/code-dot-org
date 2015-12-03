@@ -12,6 +12,7 @@ he:
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: צפה בסרטון החדש
   front_watch_regular_video: Watch the video
+  front_volunteers: Technical volunteers wanted
   header_menu_resources: מקורות
   header_menu_faq: שאלות ותשובות
   header_menu_prizes: פרסים
@@ -125,6 +126,7 @@ he:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -172,7 +174,7 @@ he:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -194,18 +196,22 @@ he:
   front_join_us_button: הצטרפו אלינו
   front_what_is_hoc: מהו Hour of Code?
   front_join_us_header: כל אחד יכול ללמוד את היסודות בכיף !
+  front_join_us_volunteer_header: Volunteers for the Hour of Code
   front_join_us_teacher: האם אתה מורה ?
   front_join_us_inspire: השראה את הסטודנטים בעזרת
   front_join_us_inspire_link: Hour of Code בכיתה.
   front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
+  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
   front_join_us_parent: האם אתה הורה?
   front_join_us_ask_link: תבקש מבית הספר המקומי שלך
   front_join_us_ask: לארח את Hour of Code.
   front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: אוהב מדעי המחשב?
+  front_join_us_cs_volunteer: Passionate about computer science education?
   front_join_us_spread: .תפיץ את זה בעולם.
   front_join_us_spread_word: Spread the word in your community
   front_join_us_spread_word_work: Spread the word in your community or workplace
+  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
   front_join_us_organize: או לארגן אירוע Hour of Code בעצמך.
   front_join_us_how_to_run: מידע אודות איך להפעיל Hour of Code
   front_join_us_help_promote: לסייע בקידום Hour of Code
@@ -233,6 +239,7 @@ he:
   signup_whole_school_flag_label: אירוע זה הוא עבור כל בית הספר
   signup_your_event: הירשם האירוע שלכם
   signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: שמך
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: לדוגמה, בית הספר תיכון לינקולן
@@ -254,10 +261,10 @@ he:
   map_search_reset: לאפס
   map_legend_title: Legend
   map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: CS Tech Jam
-  meta_tag_og_title: שעה של הקוד הוא כאן
+  map_legend_cs_tech_jam: Special Event
+  meta_tag_og_title: Hour of Code מגיע
   meta_tag_og_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
-  meta_tag_twitter_title: שעה של הקוד הוא כאן
+  meta_tag_twitter_title: Hour of Code מגיע
   meta_tag_twitter_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
   twitter_default_text: 'אני משתתפת בתערוכה של השנה #HourOfCode, האם אתה? @codeorg'
   hardware_prizes_form_name_label: שמך
@@ -288,8 +295,8 @@ he:
     "שעה של הקוד" היא שעה אחת של מבוא למדעי המחשב, שנועדו להסביר מה זה קוד ולהראות כי כל אחד יכול ללמוד את היסודות של מדעי המחשב. <a href='http://code.org/learn'> בדוק את הלימוד</a>.
   hoc_faq_last_year: נסה את חומר הלימוד
   hoc_faq_when_is_hoc_q: מתי הHour of Code?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
-  hoc_faq_why_cs_q: למה מדעי המחשב?
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_why_cs_q: De ce tehnologia computerelor?
   hoc_faq_why_cs_a: "<i>כל</i> תלמיד צריך את ההזדמנות ללמוד מדעי המחשב.  זה מסייעת לטפח מיומנויות לפתרון בעיות, לוגיקה ויצירתיות. על ידי התחלה מוקדמת, לתלמידים יהיה בסיס להצלחה בכל נתיב הקריירה המאה ה-21. ראה סטטיסטיקה ב- <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: כיצד ניתן להשתתף ב-לHour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
@@ -297,14 +304,14 @@ he:
   hoc_faq_behind_hoc_a: "שעה של הקוד מאורגן על ידי <a href='http://code.org'> Code.org</a>, a חברה הציבורית 501C3 ללא כוונת רווח מוקדשת להרחבת השתתפות במדעי המחשב על-ידי זמינותה בכמה שיותר בבתי ספר, הגדלת השתתפות על-ידי נשים וסטודנטים בעלי צבע עור שונה שאינם מיוצגים כראוי . <a href='http://code.org/about/partners'> קואליציה חסרת תקדים של שותפים</a> באים יחד כדי לתמוך ב-Hour of Code,  בתוחם &mdash; לרבות Microsoft, אפל, אמזון, בנים, בנות מועדונים של אמריקה, הנהלת המכללה."
   hoc_faq_host_q: אני לא יודע דבר אודות כתיבת קוד. . אני עדיין יכול לארח אירוע?
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: האם יש צורך מחשבים עבור כל משתתף?
   hoc_faq_need_computers_a: "לא.  יש לנו הדרכות של Hour of Code העובדות על מחשבים אישיים, טלפונים חכמים, טבליות, וכמה הדורשים אין מחשב בכלל! באפשרותך להצטרף בכל מקום שאתה נמצא, עם כל מה שיש לך. <p><i>להלן כמה אפשרויות:</i> <br><ul><li><b>עובדים בזוגות.</b> מחקרים מראים שתלמידים לומדים בצורה הטובה ביותר ב <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> תכנות זוגית</a>, חולקים מחשב ועבודים במשותף. לעודד את התלמידים שלך לחלוק חדר. <li><b>להשתמש המסך מוקרן.</b> אם יש לך מקרן ומסך עבור מחשב המחובר לאינטרנט, הקבוצה כולה שלך יכול לעשות שעה קוד ביחד. לצפות וידאו חלקים יחד וכל אחד בתורו לפתור חידות או לענות על שאלות. <li><b>ללכת מנותק.</b> אנו מציעים הדרכות שאינן הדורשות אין מחשב. </ul>"
   hoc_faq_international_q: 'אני ב<country>. כיצד ניתן להשתתף באירועה בינלאומי?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: איך אני יכול להכין חומרי הדרכה של Hour of Code?
   hoc_faq_tutorial_a: "אם אתה מעוניין להיות שותף להכנת חומרי לימוד, <a href='target-tutorial-guidelines'> ראה הנחיות והוראות שלנו</a>. נשמח לארח מגוון אפשרויות , אבל המטרה העיקרית היא למטב את חוויית עבור תלמידים ומורים שונים במדעי המחשב."
-  hoc_faq_more_questions_q: עדיין יש עוד שאלות?
-  hoc_faq_more_questions_a: "נסה למצוא תשובה <a href='http://support.code.org'> בפורום התמיכה  שלנו</a>."
   hoc_faq_account_q: האם סטודנטים צריכים להיכנס למערכת באמצעות חשבון אישי?
   hoc_faq_account_a: |-
     לא. הכניסה לצורך הכרות עם "שעה של קוד" ללא הרשמה . רוב <a href='http://code.org/learn/beyond'> הקורסים המשכית</a> מחייבים יצירת חשבון כדי להציל את התקדמות התלמיד.
@@ -316,9 +323,19 @@ he:
   hoc_faq_scratch_q: 'אני עושה Scratch ל"שעה של קוד", אבל מה אם התלמידים שלי יש iPads ולא מחשבים ניידים?'
   hoc_faq_scratch_a: "Scratch לא עובד על טאבלטים. אם התלמידים שלך הם צעירים, הם יוכלו להשתמש ScratchJR iPad app (עבור מוקדם-הקוראים). אם תעיינו בההדרכות באתר <a href='http://code.org/learn'> Code.org/learn</a>, תוכלו למצוא הדרכות העובדות על iPads - מ-Code.org, Tynker, Lightbot או CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: עדיין יש עוד שאלות?
+  hoc_faq_more_questions_a: "נסה למצוא תשובה <a href='http://support.code.org'> בפורום התמיכה  שלנו</a>."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: 'סטטיסטיקה של  Hour of Code 2013'
-  stats_growth: זה היה המהיר ביותר להגיע 15 מיליון משתמשים.
+  stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de utilizatori.
   stats_i18n: Students are learning in 40 languages
   stats_tumblr: Tumblr:3.5 ani
   stats_facebook: 'Facebook: 3 ani'
@@ -386,7 +403,7 @@ he:
   title_prizes: פרסים
   title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: מקורות
-  title_signup_thanks: 'תודה שנרשמת לארח את "שעה של קוד"!'
+  title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
   events_nav_title: Hour of Code Events

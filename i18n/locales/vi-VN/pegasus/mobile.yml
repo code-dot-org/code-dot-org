@@ -29,13 +29,13 @@ vi-VN:
   hoc2014_everyone: Tất cả mọi người
   hoc2014_support: 'Hỗ trợ nó &#x25BE;'
   hoc2014_whatishoc: Giờ Mã là gì?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: '# CSEdWeek / Các sự kiện Hour of Code trên toàn thế giới'
   csedweek_map_signup: Đăng ký sự kiện của bạn
   csedweek_map_search_placeholder: Tìm kiếm sự kiện Hour of Code
   csedweek_map_search_search: Tìm kiếm
   csedweek_map_search_reset: Thiết lập lại
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_title: Chú thích
+  csedweek_map_legend_event: Sự kiện Hour of Code
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
@@ -56,7 +56,7 @@ vi-VN:
   thank_you_: Cảm ơn bạn!
   congratulations: Chúc mừng!
   congratulations_on_completing_hoc: Chúc mừng bạn đã hoàn thành khóa học Một giờ lập trình
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  congratulations_volunteer: 'Xin chúc mừng: Bây giờ bạn đã cố gắng Hour of code, <a href="https://code.org/volunteer"> đăng ký tình nguyện trong một lớp học</a> và giúp học sinh tìm hiểu Hour of Code!'
   course_name_accelerated: Khóa học cấp tốc
   course_name_course1: Khóa học 1
   course_name_course2: Khóa học 2
@@ -267,6 +267,11 @@ vi-VN:
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -283,7 +288,7 @@ vi-VN:
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -557,10 +562,14 @@ vi-VN:
   carousel_heading_international: Các hướng dẫn bằng ngôn ngữ của bạn
   carousel_heading_domestic: Hướng dẫn có sẵn bằng tiếng Anh
   carousel_heading_beginners: Hướng dẫn cho người mới bắt đầu
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Hướng dẫn dạy JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Không có thiết bị hoặc internet? Thử rút khỏi khoa học máy tính
   carousel_heading_devices: Hướng dẫn viết ứng dụng cho điện thoại và máy tính bảng
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Các hướng dẫn trong các ngôn ngữ lập trình khác
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Làm ứng dụng hoặc trò chơi của riêng bạn
   carousel_heading_university: Các khóa Đại học trực tuyến
   carousel_heading_webpages: Tìm hiểu để làm trang web
@@ -568,6 +577,7 @@ vi-VN:
   carousel_heading_ide: Nền tảng phổ biến trong số các giáo viên
   educator_notes: Ghi chú Giáo dục
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Các dạy một Giờ lập trình
   more_resources_educators: Nhiều nguồn lực dành cho giáo viên và giáo dục
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -650,7 +660,7 @@ vi-VN:
   kodable_gradelevel: Tiểu học
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
+  flappy_gradelevel: Ages 6-106
   bitsbox_gradelevel: Tiểu học
   makeschool_gradelevel: Trung học phổ thông
   touchdevelop_gradelevel: Trung học phổ thông
@@ -659,12 +669,12 @@ vi-VN:
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
-  hourofcode_gradelevel: Ages 4-104
-  frozen_gradelevel: Ages 8+
-  starwars_gradelevel: Ages 6+
-  playlab_gradelevel: Ages 4-104
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
+  hourofcode_gradelevel: Ages 6-106
+  frozen_gradelevel: Ages 8-108
+  starwars_gradelevel: Ages 6-106
+  playlab_gradelevel: Ages 6-14
+  infinity_gradelevel: Ages 6-14
+  artist_gradelevel: Ages 8-108
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged

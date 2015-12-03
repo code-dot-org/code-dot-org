@@ -59,7 +59,7 @@ bs-BA:
   course_name_accelerated: Ubrzani Kurs
   course_name_course1: Kurs 1
   course_name_course2: Kurs 2
-  course_name_course3: Course 3
+  course_name_course3: Kurs 3
   course_name_course4: Kurs 4
   congratulations_on_completing_course: 'Čestitamo na kompletiranju %{course}'
   congrats_next_tutorials_title: Probaj sada ove tutorijale
@@ -276,6 +276,11 @@ bs-BA:
   class_submission_level_vocational: Strukovni
   class_submission_languages_other: Drugi jezik/jezici
   inspirational_videos_more: 'Više <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> inspirativnih videa </a> sa uzorima i poznatima'
+  playlab_choose_theme: Izaberite vaše ime za Play Lab temu
+  playlab_classic_title: Klasični
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ledeno doba - Uskoro'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Kreiranje Galaksije sa Kôdom
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Iskoristi povuci-ispusti blokove i JavaScript.
@@ -292,7 +297,7 @@ bs-BA:
   mc_name: Sata Kodiranja Minecraft-a
   mc_longdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
   mc_shortdescription: Iskoristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet.
-  mc_gradelevel: Uzrast 6+
+  mc_gradelevel: Dob 4-104
   mc_platformtext: Savremeni browser-i, mobiteli, tableti
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Sata Kodiranja Minecraft-a
@@ -566,10 +571,14 @@ bs-BA:
   carousel_heading_international: Tutorijali i na tvom jeziku
   carousel_heading_domestic: Tutorijali dostupni na engleskom
   carousel_heading_beginners: Tutorijali za početnike
+  carousel_heading_beyond_beginners: Tutorijali za početnike
   carousel_heading_javascript: JavaScript Tutorijali
+  carousel_heading_beyond_javascript: JavaScript Tutorijali
   carousel_heading_unplugged: "Nemate uređaj ili Internet? Isprobajte 'odspojeno' računarstvo"
   carousel_heading_devices: Tutorijalne aplikacije za mobitele i tablete
+  carousel_heading_beyond_devices: Poučne aplikacije za mobitele i tablete
   carousel_heading_languages: Tutorijali u drugim programskim jezicima
+  carousel_heading_beyond_languages: Tutorijali u drugim programskim jezicima
   carousel_heading_apps_games: Napravi svoje vlastite aplikacije ili igrice
   carousel_heading_university: Univerzitetski online kursevi
   carousel_heading_webpages: Nauči praviti web stranice
@@ -577,6 +586,7 @@ bs-BA:
   carousel_heading_ide: Platforme popularne među nastavnicima
   educator_notes: Bilješke Edukatora
   teach_led_lesson_plans: Nastavno vođeni Nastavni program Sata Kodiranja
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Kako Predavati Sat Kodiranja
   more_resources_educators: Dodatni resursi za nastavnike i edukatore
   beyond_submission: Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume i formu za podnošenje tutorijala.
@@ -673,7 +683,7 @@ bs-BA:
   starwars_gradelevel: Uzrast 6+
   playlab_gradelevel: Dob 4-104
   infinity_gradelevel: Dob 4-104
-  artist_gradelevel: Dob 4-104
+  artist_gradelevel: Dob 8+
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
   thinkersmithspanish_platformtext: Izvanmrežno
@@ -755,9 +765,9 @@ bs-BA:
   hourofcode_shortdescription: Nauči programirati s Markom Zuckerbergom i Angry Birds!
   frozen_shortdescription: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
   starwars_shortdescription: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  playlab_shortdescription: Napisati priču ili napraviti igru s Play Lab!
   infinity_shortdescription: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  artist_shortdescription: Crtanje cool slike i dizajn s Umjetnikom!
   codeorg_longdescription: 'Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.'
   codeintl_longdescription: 'Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti" programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.'
   thinkersmithspanish_longdescription: 'Korištenjem ugrađenog "Robotskog Rječnika" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu o nalaženju veze između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka.'

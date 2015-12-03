@@ -42,33 +42,33 @@ hi:
   more: अधिक
   less: कम
   beta: बीटा
-  try_hoc: 'Try the Hour of Code, click here >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'Already started? Resume here >> '
-  demos: 'Admin: All Demos'
+  try_hoc: 'ऑवर ऑफ़ कोड का प्रयास करे, यहाँ क्लिक करें >> '
+  try_k8intro: हमारा K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे) का प्रयास करें
+  k8intro: K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे)
+  already_started: 'पहले शुरू किया? पुनः आरम्भ करें >> '
+  demos: 'एडमिन: सारे प्रदर्शन'
   continue: जारी रखें
-  prize: prize
-  more_info: More info
+  prize: पुरस्कार
+  more_info: अधिक जानकारी
   auth:
-    sign_in_with: 'Sign in with %{provider}'
-    signed_in: Signed in!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
-    already_signedup: Already signed up?
-    notyet_signedup: "Haven't joined yet?"
+    sign_in_with: '%{provider} के साथ साइन इन करें'
+    signed_in: साइंगड इन!
+    signed_out: 'आपने <a href="%{url}"> Code.org</a> से साइन आउट कर दिया हैं'
+    sign_out_of: 'आपने %{provider} का इस्तेमाल साइन इन लिए किया था. <a href="%{url}"> क्लिक करें</a> %{provider} से साइन आउट करने के लिए'
+    already_signedup: पहले से पंजीकृत?
+    notyet_signedup: अभी तक शामिल नहीं हुए?
     google_oauth2: गूगल खाता
-    twitter: Twitter
-    facebook: Facebook
+    twitter: ट्विटर
+    facebook: फेसबुक
     windowslive: Microsoft खाता
     forgot_password: अपना पासवर्ड भूल गए?
     need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
-    need_unlock: "Didn't receive unlock instructions?"
+    need_unlock: खोलने के अनुदेश नही मिले?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    student_count: '%{count} छात्रों जिनहोने पहले ही साइन अप किया हैं'
+    teacher_count: '%{count} शिक्षकों जिनहोने पहले ही साइन अप किया हैं'
+    overview_student: 'अपनी प्रगति को मापने के लिए एक खाते के लिए साइन अप करें. आपका ईमेल मुख्य रूप से आप में और पासवर्ड वसूली के लिए लॉग इन करने की अनुमति देने के लिए प्रयोग किया जाता है. अधिक जानकारी के लिए, देखिए हमारी <a href="http://code.org/privacy">गोपनीयता नीति</a>.'
+    overview_teacher: 'एक खाते के लिए साइन अप करने से अपनी कक्षा में कंप्यूटर विज्ञान पढाईए ।<p/> आप अपने छात्रों को जोड़ने और उनकी प्रगति को मापने में सक्षम हो सकते हैं ।'
     no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
     teacher_educator_guide: See educator guide
     teacher_pitch: Teacher sign up for Code.org
@@ -404,6 +404,9 @@ hi:
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -542,7 +545,7 @@ hi:
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
           title: Hour of Code 2013

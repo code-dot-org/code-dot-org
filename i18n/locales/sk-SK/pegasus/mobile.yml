@@ -287,6 +287,11 @@ sk-SK:
   class_submission_level_vocational: Odborné
   class_submission_languages_other: Ostatné jazyky
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bloky presúvajte myšou spolu s JavaScript-om.
@@ -303,7 +308,7 @@ sk-SK:
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Vek 4-104
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -577,10 +582,14 @@ sk-SK:
   carousel_heading_international: Kurzy vo vašom jazyku
   carousel_heading_domestic: Kurzy dostupné v angličtine
   carousel_heading_beginners: Kurzy pre začiatočníkov
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Cvičenia na výuku JavaScriptu
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Žiadne zariadenie alebo internet? Skúste informatiku "unplugged"'
   carousel_heading_devices: Aplikácie s kurzami pre telefóny a tablety
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Kurzy iných programovacích jazykov
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Vytvorte si vlastné aplikácie alebo hry
   carousel_heading_university: Univerzitné kurzy online
   carousel_heading_webpages: Naučte sa robiť webové stránky
@@ -588,6 +597,7 @@ sk-SK:
   carousel_heading_ide: Platformy, ktoré sú populárne medzi učiteľmi
   educator_notes: Poznámky pedagógov
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: 'Ako učiť "Hodinu programovania"'
   more_resources_educators: Ďalšie zdroje pre učiteľov
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -681,10 +691,10 @@ sk-SK:
   projguts_gradelevel: Vek 10-13
   hourofcode_gradelevel: Vek 4-104
   frozen_gradelevel: Vek 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Vek 4-104
   playlab_gradelevel: Vek 4-104
   infinity_gradelevel: Vek 4-104
-  artist_gradelevel: Vek 4-104
+  artist_gradelevel: Vek 8+
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Unplugged

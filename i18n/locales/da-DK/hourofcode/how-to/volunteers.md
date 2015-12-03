@@ -1,6 +1,6 @@
 * * *
 
-title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
+titel: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
@@ -10,14 +10,14 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 Besøg en lokal klasse for at inspirere eleverne til at lære programmering. [Frivillige i en time](https://code.org/volunteer/engineer).
 
-## 2. Deltag i et trænings webinar for frivillige
+## 2. Join a volunteer info session
 
-Vi vil være vært for to webinarer, der forklare hvordan en typisk frivillig seance vil være. Vi vil komme ind på koordinationen med lærerne før deres Hour of Code begivenhed, samt hvad du bør gøre på selve dagen, for at være forberedt. Stil endelig spørgsmål! Webinarerne vil blive afholdt via Googles "Hangouts on Air" og kan derfor ses sener hvis du ikke når at være med.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. Vi vil komme ind på koordinationen med lærerne før deres Hour of Code begivenhed, samt hvad du bør gøre på selve dagen, for at være forberedt. Stil endelig spørgsmål! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Dato         | Tidspunkt             |
-| ------------ | --------------------- |
-| 16. november | 1:00pm - 1:30pm PST   |
-| 3. december  | 11:00am - 11:30am PST |
+| Dato         | Tidspunkt         | Link to info session                                                            |
+| ------------ | ----------------- | ------------------------------------------------------------------------------- |
+| 16. november | 13.00 - 13.30 PST | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| 3. december  | 11.00 - 11.30 PST | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
 ## 3. bruge 30 minutter på at prøve øvelserne på forhånd
 
@@ -25,9 +25,9 @@ Prøv Hour of Code guides på [code.org/learn](https://code.org/learn). Vælg et
 
 ## 4. Rekrutter dine kollegaer som frivillige
 
-Fortæl dine venner og kollegaer om Hour of Code. Vi har tusindvis af lærere der tilmelder sig og er på udkig efter frivillige udviklere, så bed dem om at [melde sig som frivillig](https://code.org/volunteer/engineer).
+Fortæl dine venner og kollegaer om Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Sample email:**
+**Eksempler på mails:**
 
 **Emne:**: Vær med som Hour of Code frivillig
 

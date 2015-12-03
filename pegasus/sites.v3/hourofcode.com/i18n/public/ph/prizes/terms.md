@@ -32,4 +32,12 @@ Upang linawin, ito ay hindi isang sweepstakes o paligsahan na kinakailangan ng s
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Maki-Video chat kasama ang guest speaker:
+
+Ang premyo ay limitado sa K-12 na mga silid-aralan sa US at Canada lamang. Ang Code.org ay pipili ng panalong silid-aralan, magbibigay ng oras para sa web chat, at makipagtulungan sa mga naaangkop na guro upang i-set up ang mga detalye ng teknolohiya. Ang iyong buong paaralan ay hindi kailangan mag-apply upang maging kuwalipikado para sa premyo. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

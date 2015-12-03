@@ -107,7 +107,7 @@ Sincerely,
 
 Dear Parents,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and fewer students are studying it than a decade ago.
 
 That’s why our entire school joined in on the largest education event in history: The Hour of Code. During Computer Science Education Week (Dec. 8-14), every one of our students will be amongst over 2 million worldwide spending one hour learning the basics.
 

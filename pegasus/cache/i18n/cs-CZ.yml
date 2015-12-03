@@ -311,6 +311,11 @@
   class_submission_languages_other: Ostatní jazyky
   inspirational_videos_more: Další <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspirativní videa</a> vzory a celebritami
+  playlab_choose_theme: Vyber si téma Play Lab
+  playlab_classic_title: Klasické
+  playlab_gumball_title: Žvýkačku
+  playlab_iceage_title: Doba ledová - se blíží
+  playlab_iceage_title_live: Doba ledová
   starwars_subtitle: Budování Galaxy s kódem
   starwars_javascript_title: Javascript
   starwars_javascript_description: Použij táhni-pusť bloky a JavaScript.
@@ -320,11 +325,11 @@
   starwars_blocks_description: Použij táhni-pusť bloky.
   starwars_blocks_specs: Mnoho jazyků (již brzy) | Moderní prohlížeče, smartphony,
     tablety | Věk 6-10
-  starwars_blocks_start_button: Vyzkoušej hned
-  starwars_watch_videos: Před zahájením práce, Prohlédněte si jedno z těchto inspirujících
+  starwars_blocks_start_button: Další informace
+  starwars_watch_videos: Před zahájením práce, prohlédni si jedno z těchto inspirujících
     videí
-  starwars_speak_languages: Mluvíš cizím jazykem?
-  starwars_help_translate: Pomozte nám s překladem
+  starwars_speak_languages: Mluvíš dalším jazykem?
+  starwars_help_translate: Pomoz nám s překladem
   starwars_platform_text: Moderní prohlížeče, smartphony, tablety
   mc_name: Hodina kódu Minecraftu
   mc_longdescription: Použij bloky kódu, abys vzal Steva nebo Alexe na dobrodružství
@@ -355,9 +360,9 @@
   volunteer_engineer_submission_intro_signup: Zadejte následující informace, pokud
     jste počítačové vědy student nebo software profesionál, prosím. Pole označená
     <span class="form-required-field"> *</span> jsou požadovaná.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Nehledáte dobrovolníkas? <a href="%{learn_more}">Dozvi
+    se více</a> o organizování tvé Hodiny kódu a nalezení dobrovolníka v místě na
+    naší <a href="%{volunteer_local}">mapě dobrovolníků</a>.
   volunteer_engineer_submission_header_shared: Informace sdílené s učiteli na dobrovolnické
     mapě
   volunteer_engineer_submission_field_name: Jméno
@@ -436,7 +441,7 @@
   volunteer_engineer_submission_type_task_mentor: Hledám mentora, aby mne pomohl připravit
     na kódování s mvými studenty
   petition_age: Věk
-  dashboard_landing_title: Domovská stránka pro učitele
+  dashboard_landing_title: Učitelská domovská stránka
   dashboard_landing_welcome: Vítáme vás na novém a vylepšeném řídicím panelu pro učitele.
   dashboard_landing_video: Podívejte se na toto video
   dashboard_landing_watch_video: pro prohlídku nových funkcí!
@@ -584,7 +589,7 @@
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
   dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
-  dashboard_students_secret_picture_title: Skrytý obrázek
+  dashboard_students_secret_picture_title: Tajný obrázek
   dashboard_students_secret_picture: Tato část používá  <b>obrázek</b>jako svůj tajný
     typ.  To znamená, že každý z vašich studentů má tajný obrázek místo hesla pro
     přihlášení.  Studenti měli použít symbol ve webové adrese k přihlášení.
@@ -644,8 +649,8 @@
   dashboard_progress_completed_too_many_blocks: dokončeno, až příliš mnoho bloků
   dashboard_progress_completed_perfect: dokončeno, perfektní
   dashboard_progress_furthest_level_attempted: pokus o další úroveň
-  dashboard_stage: fáze
-  dashboard_puzzle: Rébus
+  dashboard_stage: Fáze
+  dashboard_puzzle: Hádanka
   dashboard_question: Dotaz
   dashboard_response: Odpověď
   stats_hoc_2013_heading: 'Neuvěřitelná statistika z loňské Hodiny kódu. Během jediného
@@ -685,16 +690,16 @@
   learn_educator_resources_button: Pedagogické zdroje
   learn_are_you_educator: Jste pedagog? Zjistěte si na <a href="http://hourofcode.com/resources/how-to">
     jak vyučovat Hodinu kódu</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Najít dobrolníka
+    v místě</a> pro pomoc během tvé Hodiny kódu
+  learn_teacher_led_lesson_plans: Inspiruj se<a href="https://code.org/teacher-led">učitelem,
+    který vedl plány Hodiny kódu</a>
+  learn_how_to_hoc: Dodržuj<a href="https://hourofcode.com/how-to">nášeho průvodce
+    jak na to</a> pro výuku jedné Hodiny kódu
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Další informace</a> o
     ceny pro každého pedagoga.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspiruj studenty ukazováním<a href="https://code.org/educate/inspire">těchto
+    videí</a>
   hoc2014_try_new_tutorials: Vyzkoušejte naše nové návody pro Hodinu Kódu
   hoc2014_try_new_tutorial: Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi
   hoc2014_try_scrat: Angry Birds, PvZ a Scratch
@@ -706,10 +711,14 @@
   carousel_heading_international: Výuka ve tvém jazyce
   carousel_heading_domestic: Kurzy dostupné v angličtině
   carousel_heading_beginners: Kurzy pro začátečníky
+  carousel_heading_beyond_beginners: Kurzy pro začátečníky
   carousel_heading_javascript: Kurzy, které učí Javascript
+  carousel_heading_beyond_javascript: Kurzy, které učí Javascript
   carousel_heading_unplugged: Žádné zařízení nebo internet? Zkuste informatiku "unplugged"
   carousel_heading_devices: Aplikace s kurzy pro telefony a tablety
+  carousel_heading_beyond_devices: Aplikace s kurzy pro telefony a tablety
   carousel_heading_languages: Výukové programy v jiných programovacích jazycích
+  carousel_heading_beyond_languages: Výukové programy v jiných programovacích jazycích
   carousel_heading_apps_games: Vytvořte si vlastní aplikace nebo hry
   carousel_heading_university: Univerzitní kurzy online
   carousel_heading_webpages: Naučte se dělat webové stránky
@@ -717,6 +726,10 @@
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
   educator_notes: Poznámky pro pedagogy
   teach_led_lesson_plans: Učitelské vedení rozvrhu cvičení Hodiny kódu
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Jak učit Hodinu kódu
   more_resources_educators: Další zdroje pro učitele
   beyond_submission: Chcete odeslat výuku za mimoškolní aktivitu? Viz kritéria a odesílací
@@ -732,7 +745,7 @@
     target="_blank">moderní webový prohlížeč.</a>
   mobile_devices: Návody pro mobilní zařízení
   frozen_name: Kóduj s Annou a Elsou
-  starwars_name: 'Star Wars: Budování Galaxy s kódem'
+  starwars_name: 'Hvězdné války: Budování galaxie s kódem'
   codeorg_name: Napiš svůj první počítačový program
   codeintl_name: Napiš svůj první počítačový program
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -770,7 +783,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kámen, nůžky, papír
-  hourofcode_name: Zástupný symbol pro nový code.org/hoc
+  hourofcode_name: Napiš svůj první počítačový program
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Umělec
@@ -894,8 +907,8 @@
   robomindnl_shortdescription: Napište kód pro virtuálního robota
   flappy_shortdescription: Vytvořte si vlastní hru - Flappy Bird, Žralok nebo Ponorka
   bitsbox_shortdescription: Nakódujte několik aplikací za pomocí JavaScriptu.
-  makeschool_shortdescription: Vytvoř hru pro iPhone! Nauč se psaním kódu poučit tvou
-    příšeru novým pohybům!
+  makeschool_shortdescription: Vytvořte hru pro iPhone! Zkuste se psaním kódu naučit
+    vaši příšeru novým pohybům!
   touchdevelop_shortdescription: Řeš puzzle, tvoř hry a nauč se programovat prostřednictvím
     tvého mobilu.
   appinventor_shortdescription: Vytvořte si vlastní aplikaci! (Pouze pro Android)
@@ -909,8 +922,8 @@
     Birds!
   frozen_shortdescription: Připojme se pomocí kódu k Anně a Else, které zkoumají kouzlo
     a krásu ledu.
-  starwars_shortdescription: Nauč se programovat droidy a vytvořit si vlastní hru
-    Star Wars v galaxii daleko, daleko pryč.
+  starwars_shortdescription: Nauč se programovat droidy a vytvoř si vlastní hru Star
+    Wars v galaxii daleko, daleko pryč.
   playlab_shortdescription: Vytvoř příběh nebo udělej hru s Play Lab!
   infinity_shortdescription: Použij Play Lab k vytvoření příběhu nebo hry s Disney
     Infinity postavami.
@@ -1017,10 +1030,10 @@
   bitsbox_longdescription: Uprav si svůj vlastní virtuální tablet, pak programuj řadu
     herních aplikací a sdílej je. Jednoduché návody umožňují dokonce i malým  dětem
     programovat v opravdovém JavaScriptu.  Čím více toho umíš, tím dále můžeš dojít.
-  makeschool_longdescription: Nauč se kódovat při tvorbě hry na iPhone pomocí nového
-    a jednoduchého programovacího jazyku Swift! Vytvoř hru inspirovanou Poké&eacute;mony
-    a napiš kód, aby naučil své monstrum nové pohyby. Nauč se jak používat proměnné,
-    metody a objekty pomoci tvému monstru zvítězit!
+  makeschool_longdescription: Naučte se kódovat při tvorbě hry na iPhone pomocí nového
+    a jednoduchého programovacího jazyku Swift! Vytvořte hru inspirovanou Poké&eacute;mony
+    a napište kód abyste naučili své stvoření nové věci. Naučíte se jak pracovat s
+    proměnnými a způsoby jak pomoci vašemu stvoření zvítězit!
   touchdevelop_longdescription: 'Dotykově ovládatelný editor vás provede vytvářením
     pixel artu, řešením medvědích hádanek a tvorbou vaší vlastní hry se skákajícím
     ptáčkem. '
@@ -1046,7 +1059,7 @@
   frozen_longdescription: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí
     kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení a udělají
     zimní říši divů, kterou pak můžete sdílet se svými přáteli!
-  starwars_longdescription: Nauč se programovat droidy a vytvořit si vlastní hru Star
+  starwars_longdescription: Nauč se programovat droidy a vytvoř si vlastní hru Star
     Wars v galaxii daleko, daleko pryč.
   playlab_longdescription: Vytvoř příběh nebo hru v Play Labu! Tvoř zvířata, piráty,
     zombík, ninjy a spoustu dalších. Postavy se hýbou, vydávají zvuky, získávají body
@@ -1178,7 +1191,7 @@
   groklearning_beyond_shortdescription: Základní úvod do programování v Pythonu
   hacketyhack_beyond_shortdescription: Naučte se Ruby od základů
   robomind_beyond_shortdescription: Napište kód pro virtuálního robota
-  makeschool_beyond_shortdescription: Nauč se vytvořit hru pro iPhone za hodinu
+  makeschool_beyond_shortdescription: Naučte se vytvořit hru pro iPhone za hodinu
   appinventor_beyond_shortdescription: Vytvořte si vlastní aplikaci! (Pouze pro Android)
   touchdevelop_beyond_shortdescription: Programujte mobilní aplikace přímo ve vašem
     telefonu, tabletu nebo notebooku
@@ -1258,10 +1271,10 @@
     krátkými prezentacemi, filmy, kvízy, automatickým vedením a tipy na pomoc s programovacími
     cvičeními. '
   makeschool_beyond_longdescription: Znáte trochu ObjectiveC? Naučte se dělat hry
-    pro iPhone za hodinu! Provedeme vás procesem kódování, testování a zahraješ si
-    svou hru v prohlížeči a pak ji sdílej s tvými přáteli na Facebooku! Nepožaduje
-    se žádná předchozí zkušenost s vývojem pro iPhone. Musíš jenom chápat, co jsou
-    proměnné, metody a objekty.
+    pro iPhone za hodinu! Provedeme vás procesem nakódovat, otestovat a hrát svou
+    hru v prohlížeči a pak jej sdílet s vašimi přáteli na Facebooku! Nepožaduje se
+    žádná předchozí zkušenost s vývojem pro iPhone. Musíte jenom chápat, co jsou proměnné,
+    metody a objekty.
   appinventor_beyond_longdescription: Zábavné, rychlé video tutoriály tě provedou
     tvorbou třech jednoduchých aplikací pro tvůj Android telefon nebo tablet. Tato
     hodinka kódu, navrhnuta pro nováčky i experty, tě připraví na tvorbu tvých vlastních
@@ -1378,11 +1391,8 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

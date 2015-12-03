@@ -44,7 +44,7 @@
   csedweek_map_legend_title: Умовні позначення
   csedweek_map_legend_event: Заходи Години коду
   csedweek_map_legend_cs_tech_jam: Технічні студії
-  cded_sign_up: Зареєструватися
+  cded_sign_up: Реєстрація
   cded_try_it: Спробувати
   twentyhours_trynow: Спробувати
   california_heading: Попросіть свою школу викладати інформатику
@@ -172,7 +172,7 @@
   studiobar_flappy_body: Створіть та поділиться своєю власною грою Пурха
   studiobar_teacher_title: Створено для вчителів
   studiobar_teacher_body: Введіть студію коду в свій клас
-  studiobar_frozen_title: Година Коду
+  studiobar_frozen_title: Година коду
   studiobar_frozen_body: Створіть зимову казку з Анною та Ельзою
   studiobar_donate_title: Підтримати
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
@@ -237,7 +237,7 @@
   homepage_action_text_hoc: Година коду для кожного учня.
   homepage_action_text_num_served: '# вже спробували'
   homepage_action_text_join_us: Приєднуйтесь
-  homepage_action_text_sign_up: Зареєструватися
+  homepage_action_text_sign_up: Реєстрація
   homepage_action_text_try_it: Спробувати
   homepage_action_text_volunteers: Потрібні технічні волонтери
   homepage_action_text_codevideo: Переглянути відео
@@ -255,7 +255,7 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Дізнайтеся більше
-  homepage_slot_text_title_hoc: Година Коду
+  homepage_slot_text_title_hoc: Година коду
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_host: Провести Годину Коду
@@ -321,24 +321,29 @@
   class_submission_languages_other: Інші мови
   inspirational_videos_more: Більше <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">надихаючих
     відео</a> від рольових моделей та знаменитостей
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Закодуємо далеку Галактику
   starwars_javascript_title: Javascript
   starwars_javascript_description: На основі рухомих блоків та JavaScript.
   starwars_javascript_specs: Лише англійська | Сучасні браузери| Вік 11+
-  starwars_javascript_start_button: Спробувати
-  starwars_blocks_title: блоки
+  starwars_javascript_start_button: Спробувати зараз
+  starwars_blocks_title: Блоки
   starwars_blocks_description: На основі рухомих блоків.
   starwars_blocks_specs: Багато мов (скоро) | Сучасні браузери, смартфони, планшети|
     Вік 6-10
-  starwars_blocks_start_button: Спробувати
+  starwars_blocks_start_button: Спробувати зараз
   starwars_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
   starwars_speak_languages: Інша мова?
   starwars_help_translate: Допоможіть нам з перекладом
   starwars_platform_text: Сучасні браузери, смартфони, планшети
   mc_name: Година коду від Майнкрафт
-  mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх
+  mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
     пригодах у світі Майнкрафт.
-  mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх
+  mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
     пригодах у світі Майнкрафт.
   mc_gradelevel: Вік 6+
   mc_platformtext: Сучасні браузери, смартфони, планшети
@@ -362,9 +367,9 @@
   volunteer_engineer_submission_intro_signup: Вкажіть наступну інформацію, якщо ви
     студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span
     class="form-required-field">*</span> є обов'язковими для заповнення.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
+    більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
+    на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам
     на карті
   volunteer_engineer_submission_field_name: Ім’я
@@ -653,7 +658,7 @@
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально
   dashboard_progress_furthest_level_attempted: останній відкритий рівень
-  dashboard_stage: етап
+  dashboard_stage: Етап
   dashboard_puzzle: Завдання
   dashboard_question: Питання
   dashboard_response: Відповідь
@@ -679,16 +684,16 @@
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
   dashboard_announce_view_all: Переглянути всі
-  dashboard_announce_hoc: '<b>9 листопада 2015</b> - Новий підручник Години коду вже
-    тут, за участі нового фільму Зоряні війни: Пробудження сили. Попрацюємо з Реєм,
-    щоб запрограмувати нового дроїда BB-8 на виконання місії. А тоді приєднаємось
-    до Леї, щоб створити і поділитись власною грою у далекій-далекій галактиці.'
+  dashboard_announce_hoc: <b>23 листопада 2015</b> - Хочете допомогти інформатичній
+    освіті протягом Години коду? Більше 7000 волонтерів вже збираються надихати учнів,
+    відвідавши клас чи взявши участь у відео-чаті. Перегляньте карту, щоб зв'язатися
+    з місцевими волонтерами.
   code_hoc_coming: Година коду вже тут - 8-14 грудня!
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Спробувати зараз
   learn_sign_up_description: Зареєструйтесь для участі в Годині коду протягом тижня
     інформатики
-  learn_sign_up_button: Зареєструватися
+  learn_sign_up_button: Реєстрація
   learn_videos_watch: Перегляньте у класі ці відео для натхнення
   learn_videos_show: Покажіть ці відео своєму класу для натхнення
   learn_videos_before_hoc: Перегляньте у класі ці відео для натхнення перед Годиною
@@ -697,32 +702,36 @@
   learn_educator_resources_button: Ресурси для вчителів
   learn_are_you_educator: Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як
     провести Годину коду</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Знайдіть місцевого
+    волонтера</a> для допомоги протягом Години коду
+  learn_teacher_led_lesson_plans: Знайдіть натхнення <a href="https://code.org/teacher-led">у
+    планах занять Години коду для вчителів</a>
+  learn_how_to_hoc: Дотримуйтесь <a href="https://hourofcode.com/how-to">наших інструкцій</a>
+    з викладання Години коду
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Дізнатися більше</a> про
     призи для кожного вчителя.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Надихайте учнів, показуючи їи <a href="https://code.org/educate/inspire">ці
+    відео</a>
   hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
   hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
   hoc2014_try_frozen: Художник з Анною та Ельзою, із Крижаного серця
   carousel_heading_codeorg: Підручники від Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Підручники від Code.org (для будь-якого пристрою)
   carousel_heading_3rd_party: Підручники від інших учасників
   carousel_heading_third_party: Підручники від інших учасників
   carousel_heading_international: Підручники вашою мовою
   carousel_heading_domestic: Підручники англійською мовою
-  carousel_heading_beginners: Посібники для початківців
+  carousel_heading_beginners: Посібники для середніх класів від партнерів
+  carousel_heading_beyond_beginners: Посібники для початківців
   carousel_heading_javascript: Посібники з вивчення Javascript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Немає пристроїв або Інтернету? Спробуйте безмашинні
     вправи
   carousel_heading_devices: Підручники для телефонів та планшетів
+  carousel_heading_beyond_devices: Підручники для телефонів та планшетів
   carousel_heading_languages: Підручники інших мов програмування
+  carousel_heading_beyond_languages: Підручники інших мов програмування
   carousel_heading_apps_games: Створіть власні програми чи ігри
   carousel_heading_university: Курси університетів онлайн
   carousel_heading_webpages: Навчіться створювати веб-сторінки
@@ -730,6 +739,10 @@
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
   teach_led_lesson_plans: Плани уроків Години коду для вчителів
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Як викладати "Годину коду"
   more_resources_educators: Більше ресурсів для вчителів та освітян
   beyond_submission: Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте
@@ -783,7 +796,7 @@
   thinkersmith2_name: Двійкові дрібнички
   kodableunplugged_name: Безумна сімейка fuzzFamily
   projguts_name: Камінь, папір, ножиці
-  hourofcode_name: Бланк для нового code.org/hoc
+  hourofcode_name: Напишіть свою першу комп'ютерну програму
   playlab_name: Ігрова студія
   infinity_name: Ігрова лабораторія Infiinty
   artist_name: Художник
@@ -1398,11 +1411,8 @@
   infinity_shortcode: inf
   playlab_shortcode: грати
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

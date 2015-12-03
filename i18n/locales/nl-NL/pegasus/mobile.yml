@@ -36,7 +36,7 @@ nl-NL:
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Uur Code-evenement
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: Meld je aan
+  cded_sign_up: Aanmelden
   cded_try_it: Probeer het
   twentyhours_trynow: Probeer nu
   california_heading: Vraag je school om je computerkunde te leren
@@ -60,7 +60,7 @@ nl-NL:
   course_name_course1: Cursus 1
   course_name_course2: Cursus 2
   course_name_course3: Cursus 3
-  course_name_course4: Les 4
+  course_name_course4: Cursus 4
   congratulations_on_completing_course: 'Gefeliciteerd met het afronden van %{course}'
   congrats_next_tutorials_title: Probeer nu deze opdrachten
   congrats_next_tutorials_desc: 'Probeer deze kortere opdrachten van een uur of probeer een <a href="%{current_path}/next">opdracht van een partner</a>.'
@@ -77,7 +77,7 @@ nl-NL:
   leaderboards_for_hoc: "Highscores voor de 'Hour of Code'."
   support_url: http://support.code.org/
   country: Land
-  city: Plaats
+  city: stad
   gender: Geslacht
   boys: Jongens
   girls: Meisjes
@@ -141,7 +141,7 @@ nl-NL:
   studiobar_flappy_body: Maak en deel je eigen Flappy spel
   studiobar_teacher_title: Gemaakt voor leerkrachten
   studiobar_teacher_body: Introduceer Code Studio in je klaslokaal
-  studiobar_frozen_title: Een Uur Code
+  studiobar_frozen_title: Uur Code
   studiobar_frozen_body: Maak een winterlandschap met Anna en Elsa
   studiobar_donate_title: Doneren
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
@@ -191,13 +191,13 @@ nl-NL:
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten
   homepage_slot_text_studio: Al onze handleidingen
-  homepage_slot_text_course4: Cursus 4
+  homepage_slot_text_course4: Les 4
   homepage_slot_text_shop: winkel
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Een Uur Code voor elke student.
   homepage_action_text_num_served: '# bediend'
   homepage_action_text_join_us: Doe mee
-  homepage_action_text_sign_up: Meld je aan
+  homepage_action_text_sign_up: Aanmelden
   homepage_action_text_try_it: Probeer het
   homepage_action_text_volunteers: Technische vrijwilligers gezocht
   homepage_action_text_codevideo: Bekijk de video
@@ -213,7 +213,7 @@ nl-NL:
   homepage_banner_text_link: Leer meer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Leer meer
-  homepage_slot_text_title_hoc: Een Uur Code
+  homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
   homepage_slot_text_link_host: "Organiseer een 'Hour of Code'"
@@ -277,12 +277,17 @@ nl-NL:
   class_submission_languages_other: Andere taal(en)
   inspirational_videos_more: |-
     Meer <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirerende video's</a> van rolmodellen en beroemdheden
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bouw een Heelal met Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Gebruik klik-en-sleep-blokken en JavaScript.
   starwars_javascript_specs: Alleen Engels | Moderne browsers | Leeftijd 11+
   starwars_javascript_start_button: Probeer nu
-  starwars_blocks_title: blokken
+  starwars_blocks_title: Blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
   starwars_blocks_specs: Veel talen | Moderne browsers, smartphones, tablets | Leeftijd 6-10jr
   starwars_blocks_start_button: Probeer nu
@@ -360,7 +365,7 @@ nl-NL:
   volunteer_engineer_submission_type_task_remote: "Ik wil dat je met mijn klas Skype't om de kinderen te inspireren"
   volunteer_engineer_submission_type_task_mentor: Ik zoek een mentor om me te helpen voorbereiden om met mijn leerlingen te gaan programmeren
   petition_age: Leeftijd
-  dashboard_landing_title: Leerkracht Home Page
+  dashboard_landing_title: Startpagina voor de leerkracht
   dashboard_landing_welcome: Welkom bij de nieuwe en verbeterde leerkracht dashboard.
   dashboard_landing_video: Bekijk deze video
   dashboard_landing_watch_video: voor een rondleiding van de nieuwe functies!
@@ -422,7 +427,7 @@ nl-NL:
   dashboard_navigation_section_community: Help en Gemeenschap
   dashboard_navigation_section_pd: Professionele ontwikkeling
   dashboard_navigation_section_speakers: 'Informatica <br/> gastsprekers'
-  dashboard_navigation_all_sections: Studentenaccounts en vooruitgang
+  dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
   dashboard_navigation_view_progress: bekijk de vooruitgang
   dashboard_navigation_view_text_responses: Bekijk de tekstuele reacties
   dashboard_navigation_add_students: Leerlingen Toevoegen
@@ -433,7 +438,7 @@ nl-NL:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Nieuw onderdeel
   dashboard_sections_jumbotron_instruction: 'Maak nieuwe groepen aan en voeg er studenten aan toe. Groepen helpen u met het verdelen van studenten in kleinere groepen, zodat u makkelijker hun vorderingen kunt bijhouden en hun accounts  beheren.'
-  dashboard_sections_table_section: Onderdeel
+  dashboard_sections_table_section: Groep
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_grade: Cijfer
   dashboard_sections_table_course: Cursus
@@ -469,10 +474,10 @@ nl-NL:
   dashboard_students_reset_password: Wachtwoord resetten
   dashboard_students_share_section: 'Delen van de inlogpagina van de groep met uw leerlingen:'
   dashboard_students_print_info: Print de kaarten met inloggegevens van uw leerlingen.
-  dashboard_students_secret_picture_title: Geheime foto
+  dashboard_students_secret_picture_title: Geheime Foto
   dashboard_students_secret_picture: Geheime Foto
   dashboard_students_reset_picture: 'U kan  op elk moment de geheime afbeelding van een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe geheime afbeelding zal worden gegenereerd welke  gebruikt moet worden wanneer ze inloggen.'
-  dashboard_students_secret_word_title: Geheim woord
+  dashboard_students_secret_word_title: Wachtwoord
   dashboard_students_secret_word: Wachtwoord
   dashboard_students_reset_word: |
     U kan op elk moment de wachtwoord van een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe 
@@ -514,14 +519,14 @@ nl-NL:
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
   dashboard_new_password: Nieuw wachtwoord
-  dashboard_progress_not_started: niet begonnen
-  dashboard_progress_in_progress: mee bezig
+  dashboard_progress_not_started: niet gestart
+  dashboard_progress_in_progress: wordt uitgevoerd
   dashboard_progress_not_completed: niet voltooid
   dashboard_progress_completed_too_many_blocks: voltooid, teveel blokken
   dashboard_progress_completed_perfect: voltooid, perfect
-  dashboard_progress_furthest_level_attempted: hoogste niveau geprobeerd
-  dashboard_stage: level
-  dashboard_puzzle: Puzzel
+  dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
+  dashboard_stage: niveau
+  dashboard_puzzle: puzzel
   dashboard_question: Vraag
   dashboard_response: Antwoord
   stats_hoc_2013_heading: "Ongelooflijke statistieken voor de 'Hour of Code' van vorig jaar. In één week alleen al:"
@@ -545,9 +550,9 @@ nl-NL:
   dashboard_announce_hoc: '<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.'
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
-  learn_more: Leer meer
+  learn_more: Probeer nu
   learn_sign_up_description: Meld je aan om deel te nemen in het Uur Code tijdens de week van het informaticaonderwijs
-  learn_sign_up_button: Meld je aan
+  learn_sign_up_button: Aanmelden
   learn_videos_watch: Bekijk deze inspirerende video met je klas
   learn_videos_show: Laat deze inspirerende video zien aan je klas
   learn_videos_before_hoc: Bekijk een inspirerende video voor je Uur Code
@@ -560,9 +565,9 @@ nl-NL:
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Meer informatie</a> over prijzen voor iedere leerkracht.'
   learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: "Probeer onze nieuwe 'Hour of Code'-tutorials"
-  hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code-cursus in beta
+  hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code in beta
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
-  hoc2014_try_frozen: Kunst met Anna en Elsa van Frozen
+  hoc2014_try_frozen: Maak kunst met Anna en Elsa van Frozen
   carousel_heading_codeorg: Opdrachten van Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Opdrachten van andere partijen
@@ -570,10 +575,14 @@ nl-NL:
   carousel_heading_international: Opdrachten in jouw taal
   carousel_heading_domestic: Handleidingen beschikbaar in het Engels
   carousel_heading_beginners: Handleidingen voor Beginners
+  carousel_heading_beyond_beginners: Handleidingen voor Beginners
   carousel_heading_javascript: Handleidingen die je Javascript aanleren
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "Geen apparaat of internet? Probeer 'unplugged' informatica"
   carousel_heading_devices: Handleiding-apps voor telefoons en tabletten
+  carousel_heading_beyond_devices: Handleiding-apps voor telefoons en tabletten
   carousel_heading_languages: Handleidingen in andere programmeertalen
+  carousel_heading_beyond_languages: Handleidingen in andere programmeertalen
   carousel_heading_apps_games: Maak uw eigen apps of spelletjes
   carousel_heading_university: Online Universiteitscursussen
   carousel_heading_webpages: "Leer webpagina's te maken"
@@ -581,6 +590,7 @@ nl-NL:
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
   teach_led_lesson_plans: Uur Code-lesplannen voor leerkrachten
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Hoe les te geven met een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   beyond_submission: "Wil je lessen indienen voor 'Meer dan een uur'? Bekijk de criteria en het antwoordformulier."
@@ -597,18 +607,18 @@ nl-NL:
   codeorg_name: Schrijf je eerste computerprogramma
   codeintl_name: Schrijf je eerste computerprogramma
   thinkersmithspanish_name: Mijn Robotvriend
-  khan_name: Een inleiding tot JavaScript
-  khanes_name: Een inleiding tot JavaScript
-  khanpt_name: Een inleiding in JavaScript
+  khan_name: Een inleiding in JavaScript
+  khanes_name: Een inleiding in JavaScript
+  khanpt_name: Een inleiding tot JavaScript
   khanhe_name: Een inleiding in JavaScript
   khanfr_name: Een inleiding in JavaScript
   khanpl_name: Een inleiding in JavaScript
   tynker_name: Maak je eigen spel
   scratch_name: Wees creatief met programmeren
-  lightbot_name: Lightbot
+  lightbot_name: LightBot
   thinkersmith_name: My Robotic Friends
   condcards_name: Statements met Kaarten
-  lightbotintl_name: Lightbot
+  lightbotintl_name: LightBot
   codehs_name: Leren om te programmeren met Karel de hond
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
@@ -624,26 +634,26 @@ nl-NL:
   robomindnl_name: Programmeer een virtuele robot
   flappy_name: Maak een Flappy spel
   bitsbox_name: 'Bitsbox - Maak een spel'
-  makeschool_name: Maak een iPhone spel in je browser!
+  makeschool_name: Bouw een iPhonespel in je browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   thinkersmith2_name: Binaire kerstballen
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Blad, Steen, Schaar
-  hourofcode_name: Tijdelijke aanduiding voor nieuwe code.org/hoc
+  hourofcode_name: Schrijf je eerste computerprogramma
   playlab_name: Speel Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstenaar
   codeorg_gradelevel: Leeftijden 4-104
   codeintl_gradelevel: Leeftijden 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middelbare school +
-  khanes_gradelevel: Middelbare school +
-  khanpt_gradelevel: Onderbouw middelbare school +
+  khan_gradelevel: Onderbouw middelbare school +
+  khanes_gradelevel: Onderbouw middelbare school +
+  khanpt_gradelevel: Middelbare school +
   khanhe_gradelevel: Onderbouw middelbare school +
-  khanfr_gradelevel: Middelbare school +
-  khanpl_gradelevel: Middelbare school +
+  khanfr_gradelevel: Onderbouw middelbare school +
+  khanpl_gradelevel: Onderbouw middelbare school +
   tynker_gradelevel: Leeftijden 5-13
   scratch_gradelevel: Leeftijden 8 +
   lightbot_gradelevel: Alle leeftijden
@@ -652,13 +662,13 @@ nl-NL:
   lightbotintl_gradelevel: Alle leeftijden
   codehs_gradelevel: Middelbare school
   codecademy_gradelevel: Middelbare school
-  codecombat_gradelevel: Middelbare school +
-  codemonkey_gradelevel: Middelbare school +
-  codeavengers_gradelevel: Middelbare school +
+  codecombat_gradelevel: Onderbouw middelbare school +
+  codemonkey_gradelevel: Onderbouw middelbare school +
+  codeavengers_gradelevel: Onderbouw middelbare school +
   processing_gradelevel: Middelbare school
   robomind_gradelevel: Leeftijden 8-13
-  groklearning_gradelevel: Middelbare school +
-  quorum_gradelevel: Middelbare school +
+  groklearning_gradelevel: Onderbouw middelbare school +
+  quorum_gradelevel: Onderbouw middelbare school +
   codespark_gradelevel: Basis
   kodable_gradelevel: Basis
   tynkerapp_gradelevel: Leeftijden 5-13
@@ -667,7 +677,7 @@ nl-NL:
   bitsbox_gradelevel: Basis
   makeschool_gradelevel: Middelbare school
   touchdevelop_gradelevel: Middelbare school
-  appinventor_gradelevel: Middelbare school +
+  appinventor_gradelevel: Onderbouw middelbare school +
   blockly_gradelevel: Alle leeftijden
   thinkersmith2_gradelevel: Leeftijden 8 +
   kodableunplugged_gradelevel: Leeftijden 8-13
@@ -691,7 +701,7 @@ nl-NL:
   scratch_platformtext: Dit is alleen voor bureaublad webbrowsers (niet voor tabletten)
   lightbot_platformtext: ALLE browsers en iOS, Android, of Game Console
   thinkersmith_platformtext: Unplugged
-  condcards_platformtext: Unuplugged
+  condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (of een webbrowser)
   codehs_platformtext: Moderne browsers. (Vervolg cursus is betalend)
   codecademy_platformtext: Moderne webbrowsers. iOS, Android apps
@@ -749,7 +759,7 @@ nl-NL:
   robomindnl_shortdescription: Schrijf code voor een virtuele robot
   flappy_shortdescription: 'Maak je eigen spel - Flappy Bird, Shark, of Submarine'
   bitsbox_shortdescription: Coder een reeks apps om te spelen en te delen, met behulp van echt JavaScript.
-  makeschool_shortdescription: Maak een iPhone spel! Leer hoe je door code te schrijven je monster nieuwe zetten aanleert!
+  makeschool_shortdescription: Maak een iPhonespel! Leer je monster nieuwe bewegingen aan door het schrijven van code!
   touchdevelop_shortdescription: 'Los puzzels op, maak spelletjes en leer dit allemaal te coderen op je telefoon. '
   appinventor_shortdescription: Maak uw eigen app! (Alleen voor android)
   blockly_shortdescription: Download een ZIP-bestand om offline te leren
@@ -758,7 +768,7 @@ nl-NL:
   projguts_shortdescription: Probeer modellering en simulatie via Blad/Steen/Schaar
   hourofcode_shortdescription: Leer hoe je moet programmeren met Mark Zuckerberg en Angry Birds!
   frozen_shortdescription: Ga met Anna en Elsa mee op hun speurtocht naar de magie en schoonheid van ijs door middel van programma-code.
-  starwars_shortdescription: Leer hoe je droids moet programmeren en maak je eigen Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
+  starwars_shortdescription: Leer hoe je droids moet programmeren en maak je eigen Star Wars-spel en een heelal heel, heel ver weg.
   playlab_shortdescription: Maak een verhaal of een spel met Speel Lab!
   infinity_shortdescription: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol.
   artist_shortdescription: Teken coole plaatjes en ontwerpen met de Kunstenaar!
@@ -795,7 +805,7 @@ nl-NL:
   robomindnl_longdescription: 'Studenten leren de grondbeginselen van programmeren door het beheersen van hun eigen virtuele robot. De online cursus is volledig alleenstaand met korte presentaties, films, quizzen en automatische begeleiding/tips om te helpen met de programmeeroefeningen. '
   flappy_longdescription: gebruik sleep-en-zet neer programmering om je eigen Flappy Bird spel te maken en aan te passen om er anders uit te zien (Flappy Haai, Flappy Kerstman, om het even wat). Voeg het spel met 1 klik toe aan je telefoon.
   bitsbox_longdescription: Pas uw eigen virtuele tablet aan en programmeer vervolgens een serie van apps om te spelen en om te delen. Eenvoudige handleidingen maken het mogelijk om zelfs jonge kinderen echt Javascript te leren programmeren en hoe beter u wordt des te verder je kunt gaan.
-  makeschool_longdescription: 'Leer programmeren door een iPhone spel te maken met de gloednieuwe en beginnersvriendelijke programmeertaal Swift! Maak een Pok&eacute;mon-geïnspireerd actiespel en schrijf code om je monster nieuwe zetten aan te leren. Je leert hoe je variabelen, methoden en objecten gebruikt om je monster te helpen winnen!'
+  makeschool_longdescription: 'Leer programmeren door het maken van een iPhone spel met behulp van een gloednieuwe en beginners vriendelijke programmeertaal genaamd Swift! Maak een Pok&eacute;mon-geïnspireerd actiespel en schrijf code om uw nieuwe monster nieuwe moves te leren. U leert hoe variabelen, methoden en objecten  te gebruiken om uw monster te helpen winnen!'
   touchdevelop_longdescription: |-
     De aanraak-vriendelijke editor begeleidt je bij het maken van pixelkunst, het oplossen van de beer puzzel of bij het maken van je eigen "springende vogel' spel. 
   appinventor_longdescription: "Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android telefoon of tablet. Deze cursus is ontwikkeld voor zowel beginners als experts. Deze 'Hour of Code' maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuele leerlingen en voor in de klas."
@@ -805,7 +815,7 @@ nl-NL:
   projguts_longdescription: 'Deze "unplugged" activiteit helpt leerlinge hoe modellering en simulatie werkt door groepjes leerlingen verschillende versies van het spel Blad/Steen/Schaar te laten spelen en de resultaten te belikken als verschillende modellering experimenten.'
   hourofcode_longdescription: Tijdelijke aanduiding voor nieuwe code.org/hoc
   frozen_longdescription: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken en patronen te maken terwijl je schaatst en een een mooi winterlandschap maken dat je kan delen met je vrienden!
-  starwars_longdescription: Leer hoe je droids moet programmeren en maak je eigen Star Wars-spel en een heelal heel, heel ver weg.
+  starwars_longdescription: Leer hoe je droids moet programmeren en maak je eigen Star Wars-spel in een Melkweg heel, heel ver hier vandaan.
   playlab_longdescription: Maak een verhaal of speel een spel met Play Lab! Laat dieren, piraten, zombies, ninjas en nog veel meer bewegen, geluiden maken, punten scoren en zelfs vuurballen gooien!
   codeorg_beyond_name: Introductie Informatica (brugklas middelbare school)
   khan_beyond_name: Leer computer programmeren
@@ -845,20 +855,20 @@ nl-NL:
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Leeftijden 4-104
-  khan_beyond_gradelevel: Middelbare school +
+  khan_beyond_gradelevel: Onderbouw middelbare school +
   tynker_beyond_gradelevel: Leeftijden 5-13
   scratch_beyond_gradelevel: Leeftijden 8 +
   lightbot_beyond_gradelevel: Alle leeftijden
   codecademy_beyond_gradelevel: Middelbare school
   kodable_beyond_gradelevel: Basis
   scratchjr_beyond_gradelevel: Basis
-  hopscotch_beyond_gradelevel: Middelbare school +
-  pocketcode_beyond_gradelevel: Middelbare school +
-  groklearning_beyond_gradelevel: Middelbare school +
+  hopscotch_beyond_gradelevel: Onderbouw middelbare school +
+  pocketcode_beyond_gradelevel: Onderbouw middelbare school +
+  groklearning_beyond_gradelevel: Onderbouw middelbare school +
   hacketyhack_beyond_gradelevel: Middelbare school
   robomind_beyond_gradelevel: Leeftijden 8-13
   makeschool_beyond_gradelevel: Middelbare school
-  appinventor_beyond_gradelevel: Middelbare school +
+  appinventor_beyond_gradelevel: Onderbouw middelbare school +
   touchdevelop_beyond_gradelevel: Middelbare school
   codehs_beyond_gradelevel: Middelbare school
   udemy_beyond_gradelevel: Middelbare school +
@@ -871,15 +881,15 @@ nl-NL:
   cargobot_beyond_gradelevel: Leeftijden 8 +
   kidsruby_beyond_gradelevel: Leeftijd 12 +
   w3schools_beyond_gradelevel: Leeftijd 12 +
-  codeavengers_beyond_gradelevel: Middelbare school +
+  codeavengers_beyond_gradelevel: Onderbouw middelbare school +
   mozilla_beyond_gradelevel: Leeftijd 12 +
-  codecombat_beyond_gradelevel: Middelbare school +
+  codecombat_beyond_gradelevel: Onderbouw middelbare school +
   codea_beyond_gradelevel: Middelbare school +
-  lego_beyond_gradelevel: Middelbare school +
+  lego_beyond_gradelevel: Onderbouw middelbare school +
   finch_beyond_gradelevel: Leeftijden 8 +
   arduino_beyond_gradelevel: Middelbare school +
   processing_beyond_gradelevel: Middelbare school
-  alice_beyond_gradelevel: Middelbare school +
+  alice_beyond_gradelevel: Onderbouw middelbare school +
   sphero_beyond_gradelevel: Leeftijden 8 +
   codeorg_beyond_platformtext: Moderne browsers, tablets
   khan_beyond_platformtext: Moderne webbrowsers
@@ -931,7 +941,7 @@ nl-NL:
   groklearning_beyond_shortdescription: basis introductie in het python programmeren
   hacketyhack_beyond_shortdescription: Leer Ruby vanaf de basis
   robomind_beyond_shortdescription: Schrijf code voor een virtuele robot
-  makeschool_beyond_shortdescription: Leer een iPhone spel te maken in een uur
+  makeschool_beyond_shortdescription: Leren een iPhone spel te maken in een uur
   appinventor_beyond_shortdescription: Maak uw eigen app! (Alleen voor android)
   touchdevelop_beyond_shortdescription: programmeer mobiele apps rechtstreeks op uw telefoon, Tablet of laptop
   codehs_beyond_shortdescription: Leren JavaScript programmeren met een leuke visuele omgeving
@@ -969,7 +979,7 @@ nl-NL:
   groklearning_beyond_longdescription: Een introductiecursus voor mensen zonder programmeerervaring, waarbij de programmeertaal Python wordt gebruikt. Onze unieke combinatie van inleiding en uitdagingen zullen je een diepgaand begrip van Python, en van programmeren zelf geven. We hebben dit materiaal onderwezen aan leerlingen van verschillende leeftijden en met verschillende achtergronden, en we zijn er zeker van dat het ook bij jou past.
   hacketyhack_beyond_longdescription: "Hackety Hack leert je de absolute basis van programmeren, vanaf het allereerste begin. Er is helemaal geen ervaring met programmeren nodig! Met Hackety Hack leer je de programmeertaal Ruby. Ruby wordt voor allerlei soorten programma's gebruikt, inclusief desktop applicaties en websites. [Opmerking: Installatie op de computer is vereist]"
   robomind_beyond_longdescription: 'Leerlingen leren de basisprincipes van programmeren door hun eigen virtuele robot te besturen. De on-line cursus is volledig zelfondersteunend met korte presentaties, filmpjes, quizzen en automatische begeleiding/aanwijzingen om met de programmeeroefeningen te helpen. '
-  makeschool_beyond_longdescription: Ken je een beetje ObjectiveC? Leer een iPhone spel te maken in een uur! We helpen je met het programmeren, testen, en spelen van je spel in je browser, en het daarna op Facebook delen zodat je vrienden het kunnen uitproberen! Er is geen ervaring nodig met het ontwikkelen voor iPhone. Je moet wel begrijpen wat variabelen, methoden en objecten zijn.
+  makeschool_beyond_longdescription: Ken je wat ObjectiveC? Leer om in een uur een iPhone spel te maken! We zullen je helemaal begeleiden door het proces van coderen, testen en je spel in zijn geheel in de browser spelen om het vervolgens via Facebook te delen zodat je vrienden het kunnen uitproberen! Er is geen eerdere ervaring met het ontwikkelen voor iPhone nodig. Je moet begrijpen wat variabelen, methoden en objecten zijn.
   appinventor_beyond_longdescription: "Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android telefoon of tablet. Deze cursus is ontwikkeld voor zowel beginners als experts. Deze 'Hour of Code' maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuele leerlingen en voor in de klas."
   touchdevelop_beyond_longdescription: TouchDevelop laat je apps maken op een iPad, iPhone, Android, PC, Mac. Onze aanraakvriendelijke editor maakt coderen leuk, zelfs op je telefoon of tablet!
   codehs_beyond_longdescription: "Leer de basisprincipes van programmeren met Karel de Hond, een leuke, toegankelijke en visuele inleiding op coderen, waar het commando's geven aan een computer net zo is als het geven van commando's aan een hond. Deze cursus is geweldig als deze door een leraar begeleid wordt, maar kan ook individueel worden gedaan. [Opmerking: er moet voor worden betaald]"

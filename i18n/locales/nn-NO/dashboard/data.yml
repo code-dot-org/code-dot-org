@@ -105,6 +105,8 @@ nn:
         StudioEC: Spel-lab
         Applab: App Lab
         NetSim: Internettsimulator
+        Custom: Kunstnar
+        CustomStudio: Spel-lab
     trophy:
       name:
         Bronze: Bronse
@@ -137,11 +139,11 @@ nn:
         maze_2_11: Kjære person. Meg zombie. Meg sulten. Må... nå frem... til solsikke... Kan du få meg dit med berre 5 blokker?
         maze_2_12: Ok, denne er lik, men er litt forskjelleg. Klarer du denne med berre 5 blokker?
         maze_2_13: 'Bruk den nye "hvis"-blokka til å la meg avgjere når eg skal snu. Tips: du treng berre ei blokk til, men lær deg korleis vi skriver den inn, slik at dukan bruke den sjølv neste gong.'
-        maze_2_14: 'Ok, denne er akkurat som den førre oppgåva, men du må huske korleis du brukte "hvis"-blokken og "gjenta"-blokken saman.'
-        maze_2_15: 'Meg vil ha solsikke! Bruk ei "hvis"-blokk til å få meg dit med så få blokker du kan.'
+        maze_2_14: 'Ok, denne er akkurat som den førre oppgåva, men du må huske korleis du brukte "viss"-blokka og "gjenta"-blokka saman.'
+        maze_2_15: 'Meg vil ha solsikke! Bruk ei "viss"-blokk til å få meg dit med så få blokker du kan.'
         maze_2_16: 'Ok, la oss gjere det ein gong til - denne er ikkje så ulik, men pass deg for dei kjøttetande plantane!'
-        maze_2_17: '"Hvis-ellers"-blokken sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
-        maze_2_18: 'Ei siste øving med "hvis-ellers"-blokka. Klarer du å få det rett på første forsøk?'
+        maze_2_17: '"viss-elles"-blokka sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
+        maze_2_18: 'Ei siste øving med "viss-elles"-blokka. Klarer du å få det rett på første forsøk?'
         maze_2_19: Klarer du å hjelpe meg gjennom ein kompleks labyrint ved å legge til berre 3 blokker? Hvis du gjer det rett, så kan eg gå ein vilkårleg kronglete veg uansett kor lang den er.
         turtle_1_1: Hei, eg er ein kunstnar. Du kan skrive kode som får meg til å teikne alt mulig rart. Bruk nokre blokker til å få meg til å teikne på dei grå linjene på bildet.
         turtle_1_2: 'No kan du prøve å teikne ein firkant. PS! Vel favorittfargen din med "sett farge"-blokka.'
@@ -153,8 +155,8 @@ nn:
         turtle_1_8: 'Ok, prøv å finne ut kva som vil å skje hvis du køyrer denne koden (eller køyr den ved å trykke "Køyr"). Deretter, gjentar du dette heilt til bildet er ferdig. Fargane blir ulike kvar gong.'
         turtle_1_9: Ser du kva for tal du må erstatte spørjeteiknet med for å teikne ein sirkel?
         turtle_1_10: 'Du klarte det! No kan du teikne kva du vil. Her er nokre morosame idear: ein strekmann, snøfnugg eller ein spiral. Du kan også prøve den nye "set breidde"-blokka. Kos deg!'
-        turtle_4_1: 'Kan du teikne ein trekant (med kanter på 100 pixlar) med berre tre blokker? Hint: bruk ei "gjenta"-blokk.'
-        turtle_4_2: 'For å teikne desse treknatane, legg til ei "sving 90 grader til høyre"-blokk midt inne det programmet som alt ligg i arbeidsområdet.'
+        turtle_4_1: 'Kan du teikne ein trekant (med kanter på 100 pikslar) med berre tre blokker? Hint: bruk ei "gjenta"-blokk.'
+        turtle_4_2: 'For å teikne desse trekantane, legg til ei "sving 90 grader til høyre"-blokk midt inne det programmet som alt ligg i arbeidsområdet.'
         turtle_4_3: Ok, her er koden du skreiv for å teikne ein enkel trekant. Kan du legge til en gjenta-blokk og snubevegelse/ rotasjon-blokk for å lage ein vakker blomst?
         turtle_4_4: 'Her er den same koden som frå forrige oppgåve, men den snur berre 36 grader etter å ha teikna kvar trekant. Kor mange gonger må dette bli gjentatt? (Hint: Etter rotasjon på 360 grader vil tekninga ha fullført ein heil runde)'
         turtle_4_5: 'Her er den samme koden som frå forrige oppgåve, men den gjentar rotasjonen 36 gonger. Kor mange grader må kvar rotasjon vere? (Hint: Etter rotasjon på 360 grader vil tekninga ha fullført ei heil runde)'
@@ -173,7 +175,7 @@ nn:
         maze_karel_1_7: Wow, eg fann eit skikkelig djupt hol! Eg anar ikkje hvor mange spadetak med jord det rommar. Kan du lage eit program som fyller det heilt til bakken er flat?
         maze_karel_1_8: Hjelp meg med å fylle holet ved enden av åkeren, ved å nytte så få blokker som mulig.
         maze_karel_1_9: 'La meg fjerne alle desse haugane med jord. Prøv å bruke så få blokker som mulig. Tips: Prøv å bruke ei "så lenge"-blokk.'
-        maze_karel_1_10: 'Eg arbeider seint, så no er det mørkt ute og eg kan ikkje sjå kor store jordhaugane er. Eg har ikkej lenger alle mulighetene eg hadde før med "så lenge"-blokka. Flytt meg langs åkeren, og dersom eg støyter på ein jordhaug, fjern den!'
+        maze_karel_1_10: 'Eg arbeider seint, så no er det mørkt ute og eg kan ikkje sjå kor store jordhaugane er. Eg har ikkje lenger alle mulighetene eg hadde før med "så lenge"-blokka. Flytt meg langs åkeren, og dersom eg støyter på ein jordhaug, fjern den.'
         maze_karel_1_11: 'Det er framleis mørkt ute. Flytt meg langs åkeren. Dersom eg støyter på ein jordhaug, fjern den. Hvis eg støyter på eit hol, fyll det! Tips: bruk nedtrekksmenyen på "hvis"-blokka.'
         turtle_2_1: 'Hei. Meg zombie artist. Meg elsker å teikne! Hjelpe meg med å teikne ein firkant med ein spesiell farge. Viktig informasjon: du har tilgang til de samme blokkene, men no er dei omorganiserte i kategoriar.'
         turtle_2_2: 'Velkommen til å bruke funksjonar som let deg definerer nye blokker! Prøv den nye "teikne ein firkant" blokka, funnet i kategorien "Funksjonar" å teikne ei liten 50 x 50 grøn firkant.'
@@ -307,27 +309,29 @@ nn:
         studio_playlab_8: Kan du legge til ei blokk for å score eit poeng og ei blokk for å spele ein lyd når einhjørningen kjem borti trollmannen, og så flytte han rundt med pilene til du scorer?
         studio_playlab_9: Sett bakgrunn for denne rominvasjonen og hjelp Romroboten å komme til romvesenet raskare ved å endre hastigheita hans. Flytt han med piltastane for å komme til Romroboten slik at han kan advare alle andre
         studio_playlab_10: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
-        studio_iceage_1: 'Manny vil si "hei" - kan du hjelpe han?'
-        studio_iceage_2: 'Diego (figur 1) og Granny (figur 2) vil seie "hei" til kvarandre. Kan du hjelpe dei ved å bruke "sei"-blokka to gonger?'
-        studio_iceage_3: Kan du hjelpe Scrat med å kome seg til flagget?
-        studio_iceage_4: Kan du hjelpe Scrat (figur 1) med å kome seg til Granny (figur 2) og spele ein lyd når han kjem seg dit?
-        studio_iceage_5: 'Kan du hjelpe Sid med å seie "hallo" når han blir trykka på? Ikkje gløym å klikke på han etter at du har trykt Køyr'
-        studio_iceage_6: Kan du hjelpe Diego med å flytte seg rundt ved å bruke piltastane opp/ned/høgre/venstre for å kome seg til alle flagga?
-        studio_iceage_7: 'Blokka "gjenta for alltid" gjer slik at du kan køyre kode om igjen og om igjen. Kan du sette blokker i han slik at Sid kan flytte seg til høyre og venstre heile tida?'
-        studio_iceage_8: Kan du legge til ei blokk for å score eit poeng og ei blokk som spelar ein lyd når Sid løper inn i Manny, og så flytte han med pilene til du scorer?
-        studio_iceage_9: Set bakgrunnen for denne istida og hjelp Sid å kome seg til Granny raskare ved å endre farten. Bruk pilane for å kome til Sid og varsle alle andre.
-        studio_iceage_10: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Sid vil samle alle for eit nytt eventyr. Kan du hjelpe han med å seie "hallo" ved å dra "si"-blokka inn i arbeidsområdet og skrive "hallo" inni den?'
+        studio_iceage_hello2: 'Sid (spelar 1) fann Manny (spelar 2) og vil invitere han på eit eventyr. Hjelpe dei å helse på kvarandre ved å bruke "skodespelar sei"-blokka to gonger.'
+        studio_iceage_move_to_flag: 'Scrat er på jakt etter eikenøtten! Hjelp ham å gå dei siste 200 pikslane ved å bruke "Flytt"-blokken.'
+        studio_iceage_move_to_actor: 'Diego (figur 1) leitar etter Manny (figur 2). Hjelp Diego i å komme ned til Manny ved å bruke 200 pikslar i "Flytt figur" blokken. Så, koble ein blokk til hendinga "når figur er borti" for å spele ein lyd når dei finn kvarandre.'
+        studio_iceage_repeat: 'Med "Gjenta for alltid" blokken kan du køyre kode kontinuerleg. Kan du koble blokkar til den for å hjelpe Bestemor i å få litt mosjon ved å flytte frå venstre til høgre fleire gonger?'
+        studio_iceage_click_hello: Kan du hjelpe Sid til å gjere eit siste rop etter vennene når du klikker? Ikkje gløym å klikke på han etter at du har trykt Køyr.
+        studio_iceage_move_events: 'Scrat leitar framleis etter eikenøtter. Hjelp han å løpe rundt ved å koble "flytt" blokken til kvar einaste av hendingane og endre retninga til virke med piltastane. Når du er ferdig, klikk Køyr og prøv å samle alle eikenøttene.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: 'Alle treng å bevege seg raskare fordi ei istid kjem! Endre bakgrunnen til "isfjell" og sett Sid sin fart til rask, klikk Køyr og flytt han til Diego for å åtvare han.'
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: Tid for å lage ditt eige spel eller historie! Når du er ferdig, klikk Fullfør for å la vennane dine prøve spelet ditt på telefoner, nettbrett eller datamaskinar!
+        studio_gumball_hello1: 'Anais vil gjerne ha nokre nye vener. Kan du hjelpe ho med å seie "Hallo" ved å dra "si"-blokka til arbeidsområdet og skrive "hallo" inni?'
+        studio_gumball_hello2: 'Darwin (spelar 1) og bror hans Gumball (spelar 2) er på veg til skulen. Bruk "spelar sei"-blokka to gonger for å hjelpe dei med å helse på kvarandre.'
+        studio_gumball_move_to_flag: 'Banana Joe held på å vinne dagens løp! Hjelp han å gå dei 200 siste pikslane ved å bruke "flytt"-blokka.'
+        studio_gumball_move_to_actor: 'Gumball (spelar 1) og Darwin (spelar 2) er for seine til utflukta! Hjelp Gumball å gå 200 pikslar ned til Darwin ved hjelp av "flytt spelar"-blokka. Deretter kobler du ei blokk til "når spelar berører"-hendinga for å spele ein lyd når dei finn kvarandre.'
+        studio_gumball_repeat: '"Gjenta alltid"-blokka gjer at du kan kjøre kode kontinuerleg. Kan du legge til fleire blokker slik at Gumball varmar opp til løpet sitt ved å flytte frå venstre til høgre mange gonger?'
+        studio_gumball_click_hello: 'Kan du hjelpe Anton rope ut starten på eit løp ved å sei "Klar, ferdig, gå!"? Klikk Anton når du klikkar Kjør for å teste programmet!'
+        studio_gumball_move_events: 'Darwin er med i en konkurranse om å samle flagg! Hjelp han å løpe rundt ved å feste "Flytt" blokken til kvar hending. Når du er ferdig, klikk Køyr og prøv å samle alle flagga.'
+        studio_gumball_sound_and_points: 'Vi har lagt ved mesteparten av koden som holder Anton (skuespiller 2) i bevegelse til venstre og høyre, og koden for å flytte Banana Joe (skuespiller 1) rundt på skjermen.  Kan du fullføre koden og legge blokker til hendelsen "når skuespiller berører" å gjøre det slik at du både spiller av en lyd og scorer poeng når Banana Joe og Anton kolliderer?  Trykk Kjør spillet.'
+        studio_gumball_warn_food_fight: 'Darwin rømde nettopp frå matkrigen! Endre bakgrunnen til "karakterar" og sett Darwin sin fart til rask. Trykk Køyr og flytt han til Penny for å åtvare ho.'
+        studio_gumball_join_food_fight: 'Delta i matkrigen! Bruk kommandoen "aktør kaste element høgre" for at Banana Joe (figur 1) skal kaste mat på Anton (figur 2)! Sett humøret til Anton til "sint" når han blir treft.'
+        studio_gumball_free_play: Lag ditt eige spel eller historie. Når du er ferdig, klikk Fullfør for å la vennene dine prøve spelet på telefonen, nettbrettet eller datamaskinen!
         studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
         studio_k1_1: Kan du få denne hunden til å seie «hallo verda»?
         studio_k1_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
@@ -506,9 +510,9 @@ nn:
         mc_if_statements: 'Minecraft - Viss-setningar'
         mc_congrats_share: 'Minecraft - Gratulera'
         mc_congrats_no_share: 'Minecraft - Gratulera'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        gumball_intro: 'Gumball Kodetimen - Introduksjon'
+        gumball_events: 'Gumball Hour of Code - hendingar'
+        gumball_repeat: 'Gumball Kodetimen - Repeter argument'
     callout:
       text:
         drag_blocks: 'Dra ei "flytt"-blokk og fest den under den andre blokka'
@@ -518,8 +522,8 @@ nn:
         show_code_explanation: Klikk her for å sjå koden for programmet du lagar
         instructions_repeat_explanation: Instruksjonane for kvar oppgåve blir vist her
         category_explanation: Du har alle dei same blokkene, men dei har no blitt ordna i kategoriar
-        set_sprite_image: 'Fest ei "Set avatar"-blokk til "når historia startar"-blokka for å aktivere skodespelaren for denne historien'
-        studio_say_text: 'Skriv inn det du vil at din skodespelar skal sei mellom "-teikna'
+        set_sprite_image: 'Fest ei "Set avatar"-blokk til "når historia startar"-blokka for å aktivere spelaren for denne historien'
+        studio_say_text: 'Skriv inn det du vil at din spelar skal sei mellom "-teikna'
         jigsaw_click: Klikk på denne blokka!
         move_elsa_forward: Dra ei «Flytt framover»-blokk og fest den under «Når køyrt»-blokka for å få Elsa til å flytte framover
         turn_elsa: Bruk «Snu»-blokken for å få Elsa til å snu. Tallet i nedtrekks-lista avgjer kor mykje Elsa snur seg
@@ -546,7 +550,7 @@ nn:
         frozen_diamond_repeat: Bruk gjenta-blokka for å lage denne figuren.
         frozen_circle_function_in_circle_turn: Ikkje gløym å snu når du har laga kvar sirkel.
         frozen_circle_function_with_parameter_circle: 'Bruk "Lag ein sirkel"-blokka og endre størrelsen.'
-        frozen_snowflake_branch: 'Bruk "Lag ei snøfnugg-gren"-blokka'
+        frozen_snowflake_branch: 'Bruk "Lag ei snøfnugg-grein"-blokka'
         frozen_create_square: Legg til fleire blokker her for å lage eit kvadrat
         playlab_drag_say: 'Dra "si"-blokka hit og skriv "Hallo"'
         playlab_use_twice: Bruk denne blokka to ganger og hugs å endre spelarnummer
@@ -566,13 +570,13 @@ nn:
         write_draw_triangle_function: Dra blokker frå verktøykassa inn her for å teike eit kvadrat
         edit_add_parameter: Klikk Rediger for å legge til ein parameter i funksjonen din
         add_and_drag_parameter: 'Skriv inn namnet på parameteren din her, klikk på "Legg til" og dra den etter det til funksjonsdefinisjonen din'
-        fill_in_actor: Erstatt ??? med tall som samsvarar med kvar skodespelar (1, 2 og 3)
+        fill_in_actor: Erstatt ??? med tall som samsvarar med kvar spelar (1, 2 og 3)
         repeat: Sett blokker inni løkka for å gjenta kommandoar
         if_bee_nectar: 'Bruk "dersom"-blokka for å avgjere om bia skal få nektar'
         if_else_bee: 'Bruk "dersom/ellers"-blokka slik at bia får nektar frå ein blomster og lagar honning dersom det ikkje er ein blomster'
         repeat_full_circle: Angi kor mange gonger zombien må flytte for å lage ein full sirkel
         place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålsteikna
-        arrows_move_actor: Bruk pilene til å flytte skodespelaren
+        arrows_move_actor: Bruk pilene til å flytte spelaren
         right_arrow_fireball: Bruk pil-høyre til å skyte eldkuler
         name_function: Skriv namnet på funksjonen din her
         Infinity_move_right_runbutton: Legg til Flytt blokk her

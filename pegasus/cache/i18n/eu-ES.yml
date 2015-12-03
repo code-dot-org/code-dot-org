@@ -311,6 +311,11 @@
   class_submission_languages_other: Beste hizkuntza(k)
   inspirational_videos_more: <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspiratzeko
     bideo gehiago</a> jende ospetsuarekin
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Galaxia bat eraikitzen Coderen bitartez
   starwars_javascript_title: Javascript
   starwars_javascript_description: Erabili arrastatzeko blokeak eta JavaScript.
@@ -321,18 +326,18 @@
   starwars_blocks_description: Erabili arrastatzeko blokeak.
   starwars_blocks_specs: Hizkuntza batzuk (laster) | Nabigatzaile modernoak, eskuko
     telefonoak, tabletak | 6-10 urte bitartekoentzat
-  starwars_blocks_start_button: Saiatu orain
+  starwars_blocks_start_button: Gehiago ikasi
   starwars_watch_videos: Hasi baino lehen, ikus ezazu bideo hauetakoren bat, animatzeko
   starwars_speak_languages: Beste hizkuntza bat erabiltzen duzu?
   starwars_help_translate: Lagundu guri itzulpenak egiten
-  starwars_platform_text: Nabigatzaile modernoak, eskuko telefonoak, tabletak
+  starwars_platform_text: Nabigatzaile modernoak, smatphoneak, tabletak
   mc_name: Minecraft Kode Ordua
   mc_longdescription: Erabili kode blokeak Steve edo Alex eramateko abentura batera
     Minecraft mundu honetan.
   mc_shortdescription: Erabili kode blokeak Steve edo Alex eramateko abentura batera
     Minecraft mundu honetan.
   mc_gradelevel: 6 urtetik aurrera
-  mc_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
+  mc_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   mc_specs: Hizkuntza batzuk (laster) | Nabigatzaile modernoak eta tabletak | 6 urtetik
     aurrera
   minecraft_subtitle: Minecraft Kode Ordua
@@ -358,9 +363,10 @@
   volunteer_engineer_submission_intro_signup: Mesedez, informatika ikaslea edo programatzailea
     bazara hurrengo informazioa bete ezazu. <span class="form-required-field">*</span>
     batekin dauden eremuak beharrezkoak dira.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Ez zaudela begiratzen bolondres lana
+    egiteko? <a href="%{learn_more}">Ikasi gehiago</a> zure Kode Ordu propioa antolatzeari
+    buruz eta bertako bolondresak aurkitu gure <a href="%{volunteer_local}">bolondres
+    mapan</a>.
   volunteer_engineer_submission_header_shared: Informazioa bolondres mapan partekatua
     izango da irakasleekin
   volunteer_engineer_submission_field_name: Izena
@@ -454,12 +460,12 @@
   dashboard_landing_useful_links: Beste esteka erabilgarriak
   dashboard_landing_office_hours: Egin ezazu galdera bat! Ikus itzazu noiz egongo
     garen eskuragarri zuzenean laguntzeko.
-  dashboard_landing_print_certificates: Ikastaro hau bukatu duten ikasleen ziurtagiriak
-    inprimatu
-  dashboard_landing_educator_blog: Berriak eta gure materialaren eguneraketak irakurri
+  dashboard_landing_print_certificates: Inprimatu ikastaro hau bukatu duten ikasleen
+    ziurtagiriak
+  dashboard_landing_educator_blog: Irakurri berriak eta gure materialaren eguneraketak
     Hezitzaileen Blogean
-  dashboard_landing_smart_hints: Mesedez lagun gaitzazu iradokizun erabilgarriak gehitzen
-    Code.org tutorialetan
+  dashboard_landing_smart_hints: Mesedez, lagun gaitzazu iradokizun erabilgarriak
+    gehitzen Code.org tutorialetan
   dashboard_landing_video_player: Probatu gure bideo irakurgailu berria zure eskolan
   dashboard_landing_progress_title: Progresua gaiean
   dashboard_landing_progress_biggest: Hau da zure sekzio handienaren aurrerapena.
@@ -692,16 +698,16 @@
   learn_educator_resources_button: Irakaslearen baliabideak
   learn_are_you_educator: Irakaslea? Ikasi <a href="http://hourofcode.com/resources/how-to">nola
     irakatsi Kode Ordu bat</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Aurkitu bertako
+    bolondres bat</a> Kode Orduarekin lagunduko dizuna
+  learn_teacher_led_lesson_plans: Inspiratu zaitez <a href="https://code.org/teacher-led">
+    Kode Orduan irakasleek gidatutako ikasgai planekin</a>
+  learn_how_to_hoc: Jarrai ezazu <a href="https://hourofcode.com/how-to">gure nola
+    gida</a> Kode Ordua irakasteko
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Gehiago ikasi</a> hezitzaile
     bakoitzarentzat sariari buruz.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Ikasleak inspiratu <a href="https://code.org/educate/inspire">bideo
+    hauek</a> erakutsiz
   hoc2014_try_new_tutorials: Proba itzazu gure Kode ordu tutorial berriak
   hoc2014_try_new_tutorial: Probatu gure Kode Ordu berria beta bertsioan
   hoc2014_try_scrat: Angry Birds, PvZ, eta Scrat
@@ -713,18 +719,26 @@
   carousel_heading_international: Tutorialak zure hizkuntzan
   carousel_heading_domestic: Ingelesez eskuragarri dauden tutorialak
   carousel_heading_beginners: Hasiberrientzako tutorialak
+  carousel_heading_beyond_beginners: Hasiberrientzako tutorialak
   carousel_heading_javascript: JavaScript ikasteko tutorialak
+  carousel_heading_beyond_javascript: JavaScript ikasteko tutorialak
   carousel_heading_unplugged: Gailurik edo Internetik gabe? Probatu 'Lineaz kanpoko'
     informatika
   carousel_heading_devices: Sakelekoentzako edo tabletentzako tutorial aplikazioak
+  carousel_heading_beyond_devices: Sakelekoentzako edo tabletentzako tutorial aplikazioak
   carousel_heading_languages: Beste programazio lengoaietan tutorialak
+  carousel_heading_beyond_languages: Beste programazio lengoaietan tutorialak
   carousel_heading_apps_games: Egin zure app edo joko propioak
-  carousel_heading_university: Unibertsitate ikastaroak online
+  carousel_heading_university: Unibertsitatea ikastaroak online
   carousel_heading_webpages: Ikas webguneak egiten
   carousel_heading_robots: Ikasi errobotak programatzen
   carousel_heading_ide: Irakasleen artean arrakastatsuak diren plataformak
   educator_notes: Hezitzailearen oharrak
   teach_led_lesson_plans: Irakasleak gidatutako Kode Ordurako irakasgaien plangintza
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Nola irakatsi Kode ordua
   more_resources_educators: Irakasle eta hezitzaileentzako baliabide gehiago
   beyond_submission: Ordu bat baino gehiagoko tutorial bat bidali nahi duzu? Bidalketa
@@ -779,7 +793,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Harria, Papera, Gurizeak
-  hourofcode_name: Leku-marka code.org/hoc berri batentzat
+  hourofcode_name: Idatzi zure lehenengo programa informatkoa
   playlab_name: Jokoen Laborategia
   infinity_name: Infinity Jolas Laborategia
   artist_name: Artista
@@ -826,8 +840,8 @@
   playlab_gradelevel: 4-104 adinentzat
   infinity_gradelevel: 4-104 adinentzat
   artist_gradelevel: 4-104 adinentzat
-  codeorg_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
-  codeintl_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
+  codeorg_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
+  codeintl_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   thinkersmithspanish_platformtext: Haririk gabe
   khan_platformtext: Web nabigatzaile modernoak
   khanes_platformtext: Web nabigatzaile modernoak
@@ -855,7 +869,7 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad eta Android tabletak
   robomindnl_platformtext: Nabigatzaile berriak, web mugikorra
-  flappy_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
+  flappy_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   bitsbox_platformtext: Web nabigatzaile modernoak
   makeschool_platformtext: Nabigatzaile berriak
   touchdevelop_platformtext: Nabigatzaile modernoak, smartphoneak, gailu oro
@@ -864,10 +878,10 @@
   thinkersmith2_platformtext: Haririk gabe
   kodableunplugged_platformtext: Haririk gabe
   projguts_platformtext: Haririk gabe
-  hourofcode_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
+  hourofcode_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   frozen_platformtext: Nabigatzaile modernoak + tabletak
   starwars_platformtext: Nabigatzaile modernoak + tabletak
-  playlab_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
+  playlab_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   codeorg_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
   codeintl_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -1100,7 +1114,7 @@
   edx_beyond_name: Harvard CS50 klasea
   coursera_beyond_name: Stanford CS 101 klasea
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Unibertsitatea ikastaroak online
+  teachingtree_beyond_name: Unibertsitate ikastaroak online
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1408,11 +1422,8 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

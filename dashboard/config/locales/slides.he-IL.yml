@@ -2457,51 +2457,44 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'הי, שמי קתלין קנדי ואני המפיקה של הסרט "מלחמת הכוכבים: הכח מתעורר".
+          היום תעבדו עם אחד הכוכבים שלנו, BB-8. BB-8 הוא דרואיד כדורי, כל תנועה שלו
+          נשלטת על ידי תוכנת מחשב. מדעי המחשב משפיעים על כל התעשיות החל משיווק, דרך
+          רפואה ועד לקולנוע. למעשה, מאות מהנדסי תוכנה עבדו ביחד ליצור את הסרט "הכח
+          מתעורר".'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: היי שמי רייצ'ל רוז, אני מהנדסת בכירה ב-ILM ואני מובילה צוות פיתוח אנימציה
+          והיצורים. ב"הכוח מתעורר", אני אחראית על סיוע לאמנים לפתח תשתיתיות שהן חלק
+          מהדמויות שזזות וגורמות לדמויות להיראות אמינות מאוד בגלקסיה רחוק רחוק.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: בשעה הקרובה נבנה משחק "מלחמת הכוכבים" משלנו. נלמד אותכם מושגי יסוד בתכנות.
+          בדרך כלל תכנות נעשה על ידי כתיבה אבל אנחנו נשתמש בבלוקים ונגרור אותם על
+          מנת לכתוב את התוכניות. מאחורי הקלעים אתם עדיין יוצרים קוד. אחרי שתתנסו בדברים
+          בסיסיים עם בלוקים, נעביר אותכם לשפת JavaScript, אחת משפות התכנות הנפוצות
+          ביותר.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: בתחילה נעבוד עם ריי לתכנת את BB-8 ללכת ולאסוף את כל חלקי הגרוטאות. המסך
+          שלכם מחולק לשלושה חלקים. החלק השמאלי הוא אזור המשחק בו ירוץ הקוד שכתבתם.
+          ההוראות לכל רמה כתובות מתחת לאזור המשחק.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: החלק המרכזי מכיל את ארגז הכלים עם הפקודות ש BB-8 יכול להבין.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: לחלק הלבן מימין קוראים "סביבת העבודה" ושם נבנה את התוכנית.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: אם אני גורר את בלוק ;()moveLeft לסביבת העבודה שלנו ומריץ את התוכנית
+          (run), מה קורה? BB-8 זז צעד אחד שמאלה על הרשת.
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: ומה אם אני רוצה ש BB-8 יעשה משהו אחרי בלוק ;()moveLeft? אני יכול להוסיף
+          בלוק נוסף בתוכנית שלנו. אני הולך לבחור את בלוק ;()moveUp ואני אגרור אותו
+          אל מתחת ל ;()moveLeft שלי על להופעת ההדגשה של חיבור הבלוקים. כשאעזוב את
+          הבלוק שלי הבלוקים יתחברו ותישמע נקישה.
       9:
         image: notes/starwars_intro_9.JPG
         text: When I press run again, BB-8 will perform the commands that are stacked
@@ -2663,8 +2656,7 @@
           below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: החלק המרכזי מכיל את ארגז הכלים עם הפקודות ש BB-8 יכול להבין.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: The white space on the right is called the work space and this is where

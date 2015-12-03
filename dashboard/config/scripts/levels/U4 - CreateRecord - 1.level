@@ -135,9 +135,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Add a createRecord command and run the program. (Click to see full instructions)",
     "markdown_instructions": "# Permanent Data Storage\r\n\r\nContacts did not save\r\n\r\nCreate apps want to save data outside of app so that when it restarts still have data\r\n\r\nApp Lab data tools\r\n\r\n<img src=\"https://images.code.org/5d596107387e3edcb35aa3d317b0e9f5-image-1448992686641.46.54 PM.png\" style=\"width: 200px; float: right\">\r\n\r\ncreateRecord command\r\n\r\n\r\n# Do This\r\n\r\n* Add a `createRecord` command.\r\n* Run the program.",
