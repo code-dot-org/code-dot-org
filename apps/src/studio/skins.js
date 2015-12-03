@@ -24,6 +24,10 @@ function loadGumball(skin, assetUrl) {
   skin.spriteHeight = 110;
   skin.spriteWidth = 110;
 
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 60;
+  skin.spriteCollisionRectHeight = 60;
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
@@ -225,6 +229,10 @@ function loadIceAge(skin, assetUrl) {
 
   skin.spriteHeight = 130;
   skin.spriteWidth = 130;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 60;
+  skin.spriteCollisionRectHeight = 60;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
