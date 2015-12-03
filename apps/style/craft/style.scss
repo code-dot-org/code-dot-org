@@ -411,9 +411,13 @@ $height-to-width: 434 / 477;
     color: #e7e8ea;
   }
 
+
+  $house-outline-height: 168px;
+  $house-outline-width: 167px;
+
   .minecraft-house {
     float: left;
-    width: 150px;
+    width: $house-outline-width;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
@@ -424,21 +428,23 @@ $height-to-width: 434 / 477;
     margin-top: 8px;
   }
 
-  $house-outline-height: 182px;
-
   .house-outline-container {
-    border: 3px solid white;
+    @include pixelated();
+    background: url("#{$root}Sliced_Parts/House_Selection_Box.png") no-repeat;
     display: table;
     $margin-above: 23px;
     $margin-below: 16px;
     margin: $margin-above auto $margin-below;
-    $house-outline-width: 160px;
-    width: 160px;
+    width: $house-outline-width;
     height: $house-outline-height;
+
     @media screen and (max-height: 630px) {
-      width: $house-outline-width / 2;
       $fudge-factor-to-match-bottoms: 7px;
-      height: ($house-outline-height / 2) + $fudge-factor-to-match-bottoms;
+      $smaller-height: ($house-outline-height / 2) + $fudge-factor-to-match-bottoms;
+      $smaller-width: $house-outline-width / 2;
+      width: $smaller-width;
+      height: $smaller-height;
+      background-size: $smaller-width $smaller-height;
     }
   }
 
@@ -459,11 +465,13 @@ $height-to-width: 434 / 477;
     height: $height;
     $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
+    margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
       width: $width / 2;
       height: $height / 2;
       margin-top: $margin-above-photo / 2;
+      margin-bottom: -($margin-above-photo / 2);
     }
   }
   #house-c-picture {
@@ -474,11 +482,13 @@ $height-to-width: 434 / 477;
     height: $height;
     $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
+    margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
       width: $width / 2;
       height: $height / 2;
       margin-top: $margin-above-photo / 2;
+      margin-bottom: -($margin-above-photo / 2);
     }
   }
   #house-b-picture {
@@ -489,11 +499,13 @@ $height-to-width: 434 / 477;
     height: $height;
     $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
+    margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
       width: $width / 2;
       height: $height / 2;
       margin-top: $margin-above-photo / 2;
+      margin-bottom: -($margin-above-photo / 2);
     }
   }
 
