@@ -1588,6 +1588,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     document.body.style.backgroundColor = '#202B34';
   // For share page, do not show this part.
   } else if (!options.embed && !this.share) {
+    // TODO - explore whether this block is now dead code that can be deleted after hoc
     var runButton = document.getElementById('runButton');
     var buttonRow = runButton.parentElement;
     var openWorkspace = document.createElement('button');
