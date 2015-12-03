@@ -666,18 +666,11 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
-    var copySharingInput = function() {
+    dom.addClickTouchEvent(sharingInput, function() {
       sharingInput.focus();
       sharingInput.select();
-      document.execCommand('copy');
-    };
-
-    dom.addClickTouchEvent(sharingInput, copySharingInput);
-
-    var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
-    if (sharingCopyButton) {
-      dom.addClickTouchEvent(sharingCopyButton, copySharingInput);
-    }
+      sharingInput.setSelectionRange(0, 9999);
+    });
   }
 
   //  SMS-to-phone feature
