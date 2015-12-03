@@ -96,8 +96,14 @@ When /^I submit$/ do
 end
 
 When /^I rotate to landscape$/ do
-  if ENV['BS_AUTOMATE_OS'] == 'android'
+  if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
+  end
+end
+
+When /^I rotate to portrait$/ do
+  if ENV['BS_ROTATABLE'] == "true"
+    @browser.rotate(:portrait)
   end
 end
 

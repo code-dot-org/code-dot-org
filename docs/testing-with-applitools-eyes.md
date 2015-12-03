@@ -14,6 +14,11 @@ OR
 
 add your test to a new `.feature` file, annotating it with `@eyes`
 
+If you need to write an eyes test that is specific to a mobile device, make sure
+it is annotated with `@eyes_mobile` and not `@eyes`.  By default, `@eyes` tests
+will only run against Chrome 33 and `@eyes_mobile` tests will only run against
+iPhone.
+
 ## Run the test
 
 To run locally, you must have the Applitools secret key installed in your `locals.yml`.
@@ -34,10 +39,11 @@ You can find that key by [logging in](https://eyes.applitools.com/app/sessions/)
 
 ### Try it targeting BrowserStack
 
-1. `bundle exec ./runner.rb --eyes -c Chrome33Win7`
+1. `bundle exec ./runner.rb --eyes -c Chrome33Win7,iPhone`
 
 ## Watch for run on next deploy
 
-In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will be run (as of writing, currently only against the Chrome 33 browser).
+In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will
+be run (as of writing, currently only against the Chrome 33 browser and iPhone).
 
 Results are reported to HipChat.
