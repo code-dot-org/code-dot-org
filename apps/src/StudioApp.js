@@ -251,12 +251,10 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
-  if (config.isLegacyShare && config.controllerAction == 'show') {
+  if (config.isLegacyShare && config.hideSource) {
     $("body").addClass("legacy-share-view");
-    if (dom.isIOS()) {
-      if (!window.navigator.standalone) {
-        addToHome.show(true);
-      }
+    if (dom.isIOS() && !window.navigator.standalone) {
+      addToHome.show(true);
     }
   }
 

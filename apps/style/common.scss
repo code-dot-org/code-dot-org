@@ -1496,7 +1496,9 @@ $see-examples-thick-underline-color: $yellow;
   max-width: 100% !important;
 }
 
-.legacy-share-view #belowVisualization {
-  display: none;
+.legacy-share-view {
+  #belowVisualization, .hide-source #belowVisualization {
+    display: none;
+  }
 }
 
