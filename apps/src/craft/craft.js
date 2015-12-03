@@ -680,6 +680,10 @@ Craft.getTestResultFrom = function (success, studioTestResults) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
 
+  if (Craft.initialConfig.level.freePlay) {
+    return TestResults.FREE_PLAY;
+  }
+
   return studioTestResults;
 };
 
