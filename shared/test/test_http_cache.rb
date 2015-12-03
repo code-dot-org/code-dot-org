@@ -68,6 +68,11 @@ module Cdo
     # Keep in sync with Cdo::MockServer::Helpers.
     module Helpers
       include RackTest
+
+      # Stub
+      def init(*_)
+      end
+
       # Builds a URL with the provided prefix/suffix and a
       # universally unique identifier to ensure cache-freshness.
       def build_url(prefix='x', suffix='')
@@ -143,6 +148,6 @@ module Cdo
   end
 end
 
-$environment = rack_env
 # Load the shared http-cache test suite from the cdo-varnish cookbook.
 require_relative '../../cookbooks/cdo-varnish/test/shared/shared'
+HttpCacheTest.setup(rack_env, Cdo::RackMockServer::Helpers)
