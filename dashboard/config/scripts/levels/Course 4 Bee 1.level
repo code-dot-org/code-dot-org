@@ -33,7 +33,6 @@
     "markdown_instructions": "The bee can't tell what's under the cloud! Use the `if` block to check whether there is a flower under the cloud, then only gather nectar from it **if** it is a flower. ",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "false"
   }
 }]]></config>
