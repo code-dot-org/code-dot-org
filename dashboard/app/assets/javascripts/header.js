@@ -53,7 +53,13 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   var progressContainer = $('.progress_container');
   stageData.levels.forEach(function(level, index, levels) {
-    var status = activityCssClass(clientProgress[level.id]);
+    var status;
+    if (dashboard.clientState.queryParams('user_id')) {
+      var serverProgressForStudent = progressData.levels || {};
+      status = activityCssClass((serverProgressForStudent[level.id] || {}).result);
+    } else {
+      status = activityCssClass(clientProgress[level.id]);
+    }
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
