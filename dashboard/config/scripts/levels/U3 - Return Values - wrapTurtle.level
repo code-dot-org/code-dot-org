@@ -93,9 +93,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "start_blocks": "penUp();\r\nvar xloc = 160;\r\nvar yloc = 240;\r\n\r\nonEvent(\"screen1\", \"keydown\", function(event) {\r\n  if (event.key == \"Left\") {\r\n    xloc = xloc - 10;\r\n  } else if (event.key == \"Right\") {\r\n    xloc = xloc + 10;\r\n  } else if (event.key == \"Up\") {\r\n    yloc = yloc - 10;\r\n  } else if (event.key == \"Down\") {\r\n    yloc = yloc + 10;\r\n  }\r\n  \r\n  updateTurtle();\r\n});\r\n\r\nfunction updateTurtle() {\r\n  xloc = wrap(xloc,0,320);\r\n  yloc = wrap(yloc,0,450);\r\n  moveTo(xloc, yloc);\r\n}\r\n\r\nfunction wrap(input, low, high) {\r\n  var output;\r\n\r\n  //your code goes here\r\n  \r\n  return output;\r\n}",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "eXx5kOwdMjySZercvSo3aJ6hN0y6idV9NkGI85faCjiqyEFBJq3m0tU6VyIJ\n5HIc\n"
   }
 }]]></config>
   <blocks/>

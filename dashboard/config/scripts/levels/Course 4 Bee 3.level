@@ -32,7 +32,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "maze_data": null
+    "never_autoplay_video": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>
@@ -57,7 +59,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="maze_moveForward"/>
         <block type="pick_one">
           <statement name="PICK">
             <block type="bee_ifElseFlower">
@@ -70,9 +71,14 @@
             </block>
           </statement>
         </block>
+      </xml>
+    </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
         <block type="maze_honey"/>
         <block type="maze_nectar"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Karel>

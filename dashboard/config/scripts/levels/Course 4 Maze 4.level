@@ -28,7 +28,8 @@
     "disable_examples": "false",
     "markdown_instructions": "Try the `repeat` block to use fewer blocks when solving this puzzle...",
     "examples_required": "false",
-    "maze_data": null
+    "maze_data": null,
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>

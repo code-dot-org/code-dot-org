@@ -30,7 +30,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -66,7 +67,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
@@ -81,7 +82,7 @@
           <title name="VALUE" config="45,60,90,120,180">45</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="draw_turn_by_constant">
