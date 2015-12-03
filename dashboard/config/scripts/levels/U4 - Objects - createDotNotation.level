@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-10T16:26:46.000Z",
+  "created_at": "2015-12-01T20:03:52.000Z",
   "level_num": "custom",
-  "user_id": 155,
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -136,10 +136,12 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add key event functionality to your app! As you are doing so, keep an eye out for moments when you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how key events work, you can always go back to the example from earlier in this lesson.  You will need to add `if` statements to check for which keys were pressed, just as before.\r\n\r\n# Do This:\r\n\r\n* Add the ability to respond to **key events** to your app.\r\n\r\n* **Refactor your old code** to remove redundant portions.\r\n\r\n* Keeping adding to your program. What other features do you want to include?",
+    "instructions": "Update your code to add properties to your object one at a time using dot notation. (Click to see full instructions)",
+    "markdown_instructions": "# Creating Objects with Dot Notation\r\n\r\nIn the last exercise we created an object by adding every property in a single command. If you didn't notice **this style of creating objects requires a lot of syntax!** Additionally, for larger objects this can get very difficult to read. **A clearer way to create objects is to create an empty object and then individually add each property using dot notation**.\r\n\r\n![](https://images.code.org/1f7e0d6b6696d4c6a4b1bfe8b4b5b8a5-image-1449085564719.45.40 PM.png)\r\n\r\nThis pattern works because **setting the value of a new property will automatically add it to the object**. This will typically be our preferred way of creating and referencing objects. Notice that **property names are not placed in quotes when using dot notation**.\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates several student objects using the pattern shown above. The last student object is currently empty.\r\n\r\n* Use the pattern shown above to **complete the final student object for yourself**\r\n* Make sure your object **has the same property names as the other 4**.\r\n* Run the program to **display the contents of your objects**. Confirm the values you expected appear there.\r\n\r\n![](https://images.code.org/a7ceb3d7458850e0bd83f17408c33b58-image-1449091210306.19.55 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
+    "slider_speed": "1.0",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -152,23 +154,20 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "project_template_level_name": "U4L02 - Objects - Template1",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "submittable": "true",
-    "hide_view_data_button": "true",
-    "debugger_disabled": "false",
-    "slider_speed": "1.0",
-    "project_template_level_name": "U3 - Arrays - favThings Template",
-    "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
-    "encrypted_examples": "nU5ZBmISYMCtPZSntFE3cPjHKyjK41u/d5qa1SokNjTovI79y2G6xkcT5Ub/\n5Uwr\n"
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-11-10T16:26:46.000Z",
+  "created_at": "2015-12-02T18:49:25.000Z",
   "level_num": "custom",
-  "user_id": 155,
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -136,10 +136,12 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add key event functionality to your app! As you are doing so, keep an eye out for moments when you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how key events work, you can always go back to the example from earlier in this lesson.  You will need to add `if` statements to check for which keys were pressed, just as before.\r\n\r\n# Do This:\r\n\r\n* Add the ability to respond to **key events** to your app.\r\n\r\n* **Refactor your old code** to remove redundant portions.\r\n\r\n* Keeping adding to your program. What other features do you want to include?",
+    "instructions": "Update your code to add properties to your object one at a time using dot notation. (Click to see full instructions)",
+    "markdown_instructions": "# Arrays of Objects\r\n\r\nOnce you have many objects with the same properties you can start to do more interesting work to process that data. In order to do this, however, it is usually convenient to place your objects within a single data structure. In this instance an array makes a lot of sense since it will be storing **many similar and related pieces of information**.\r\n\r\n![](https://images.code.org/46bf33a97d4c6c89191bc15864891477-image-1449087125215.11.52 PM.png)\r\n\r\n# Do This\r\n\r\n**You code from the previous exercise** is provided.\r\n\r\n* Create an **empty array** called `students` to hold your student objects.\r\n* **Add** your student objects to `students` using `appendItem` .\r\n* **Display** the contents of `students` with a single `console.log` statement and confirm all of your student objects are now contained in a single array.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
+    "slider_speed": "1.0",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -152,23 +154,20 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "project_template_level_name": "U4L02 - Objects - Template1",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "submittable": "true",
-    "hide_view_data_button": "true",
-    "debugger_disabled": "false",
-    "slider_speed": "1.0",
-    "project_template_level_name": "U3 - Arrays - favThings Template",
-    "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
-    "encrypted_examples": "nU5ZBmISYMCtPZSntFE3cPjHKyjK41u/d5qa1SokNjTovI79y2G6xkcT5Ub/\n5Uwr\n"
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>
