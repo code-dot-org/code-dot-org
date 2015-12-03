@@ -204,7 +204,8 @@ button.arrow:disabled {
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
-  min-height: calc(50% - 16px) !important; }
+  min-height: calc(50% - 16px) !important;
+  direction: ltr; }
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd; }
@@ -1081,7 +1082,8 @@ input[type="radio"] {
   #sharing div {
     margin: 10px 0; }
     #sharing div.sharing-content {
-      margin-left: 195px; }
+      margin-left: 195px;
+      margin-right: 25px; }
       #sharing div.sharing-content.no-image {
         margin-left: 0; }
   #sharing label {
@@ -1110,10 +1112,10 @@ input[type="radio"] {
   #sharing button.saved-to-gallery {
     font-family: "Gotham 4i"; }
   #sharing #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 200px;
-    padding: 10px; }
+    width: 100%;
+    padding: 10px;
+    cursor: text; }
   #sharing #copy-button {
     max-width: 100px; }
   #sharing #sharing-phone i.fa {
@@ -1214,3 +1216,6 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 
 .droplet-hover-div {
   max-width: 100% !important; }
+
+.legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
+  display: none; }
