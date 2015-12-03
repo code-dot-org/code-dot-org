@@ -4,7 +4,7 @@ class SmsController < ApplicationController
   # put your own credentials here
   ACCOUNT_SID = CDO.twilio_sid
   AUTH_TOKEN = CDO.twilio_auth
-  SMS_FROM = CDO.twilio_phone
+  MESSAGING_SERVICE = CDO.twilio_messaging_service
 
   # set up a client to talk to the Twilio REST API
 
@@ -25,7 +25,7 @@ class SmsController < ApplicationController
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
     @client.messages.create(
-      :from => SMS_FROM,
+      :messaging_service_sid => MESSAGING_SERVICE,
       :to => phone,
       :body => "Check this out on Code Studio: #{link}. (reply STOP to stop receiving this)"
     )
