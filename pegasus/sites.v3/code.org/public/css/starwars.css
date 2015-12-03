@@ -38,6 +38,10 @@
   color: white;
 }
 
+.sw-header2 {
+  padding: 10px;
+}
+
 .sw-disabled {
   font-size: 18px;
   height: 40px;
