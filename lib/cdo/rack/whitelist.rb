@@ -20,7 +20,7 @@ module Rack
       def call(env)
         return [403, {}, ['Unsupported method.']] unless AWS::CloudFront::ALLOWED_METHODS.include?(env['REQUEST_METHOD'].upcase)
         request = Rack::Request.new(env)
-        path     = request.path
+        path = request.path
         behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
         # Filter whitelisted request headers.
