@@ -27,8 +27,7 @@
     "ideal": "9",
     "step_speed": "2",
     "instructions": "No rules. No clues. Just the challenge!",
-    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
-    "maze_data": null
+    "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!"
   }
 }]]></config>
   <blocks>
