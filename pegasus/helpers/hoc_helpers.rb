@@ -59,6 +59,10 @@ def session_id
   (session_id == UNSAMPLED_SESSION_ID) ? nil : session_id
 end
 
+def unsampled_session?
+  request.cookies['hour_of_code'] == UNSAMPLED_SESSION_ID
+end
+
 def session_status_for_row(row)
   row ||= {}
 
@@ -80,7 +84,7 @@ def set_hour_of_code_cookie_for_row(row)
 end
 
 def complete_tutorial(tutorial={})
-  unless settings.read_only
+  unless settings.read_only || unsampled_session?
     # We intentionally allow this DB write even when hoc_activity_writes_disabled
     # is set so we can generate personalized, shareable certificates.
     row = DB[:hoc_activity].where(session: session_id).first unless
@@ -107,7 +111,7 @@ def complete_tutorial(tutorial={})
 end
 
 def complete_tutorial_pixel(tutorial={})
-  unless settings.read_only
+  unless settings.read_only  || unsampled_session?
     row = DB[:hoc_activity].where(session: session_id).first
     if row && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(
@@ -129,7 +133,7 @@ def complete_tutorial_pixel(tutorial={})
 end
 
 def launch_tutorial(tutorial,params={})
-  unless settings.read_only
+  unless settings.read_only || unsampled_session?
     create_session_row_unless_unsampled(
       referer: request.referer_site_with_port,
       tutorial: tutorial[:code],
