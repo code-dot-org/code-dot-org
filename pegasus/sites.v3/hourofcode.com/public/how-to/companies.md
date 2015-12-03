@@ -22,8 +22,7 @@ nav: how_to_nav
 
 ## How to host an Hour of Code event
 
-## 1) Sign up
-- Register your [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %> event.
+## 1) Promote your Hour of Code
 - Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
 - Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 

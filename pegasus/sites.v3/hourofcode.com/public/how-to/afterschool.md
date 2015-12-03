@@ -7,9 +7,8 @@ nav: how_to_nav
 
 # How to teach one Hour of Code in after-school
 
-## 1) Sign up
-- Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-- Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+## 1) Promote your Hour of Code
+Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
