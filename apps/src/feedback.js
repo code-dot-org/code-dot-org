@@ -146,7 +146,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (options.appDiv) {
     feedback.appendChild(options.appDiv);
   }
-  
+
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
   feedback.appendChild(
@@ -659,7 +659,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
-  sharingDiv.setAttribute('style', 'display:inline-block');
+  sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
@@ -669,14 +669,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingInput, function() {
       sharingInput.focus();
       sharingInput.select();
-    });
-  }
-
-  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
-  if (sharingShapeways) {
-    dom.addClickTouchEvent(sharingShapeways, function() {
-      $('#send-to-phone').hide();
-      $('#shapeways-message').show();
+      sharingInput.setSelectionRange(0, 9999);
     });
   }
 
@@ -686,8 +679,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
-        $('#shapeways-message').hide();
-        sendToPhone.setAttribute('style', 'display:inline-block');
+        $(sendToPhone).show();
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
@@ -724,6 +716,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
               trackEvent("SendToPhone", "error");
             });
         });
+      } else { // not hidden, hide
+        $(sendToPhone).hide();
       }
     });
   }

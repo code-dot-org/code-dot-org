@@ -2,7 +2,7 @@
   hour_of_code: „Programavimo valanda“
   hello: Sveikas, pasauli
   select_language: Pasirinkite kalbą
-  en: Computer Science
+  en: Informatika
   computer_science_edweek: Programavimo švietimo savaitė
   csedweek_dates: 2014 m. gruodžio 8-14
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -40,7 +40,7 @@
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_search_search: Ieškoti
   csedweek_map_search_reset: Iš naujo
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
@@ -307,6 +307,11 @@
   class_submission_languages_other: Kita kalba(-os)
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -327,7 +332,7 @@
     šiame Minecraft pasaulyje.
   mc_shortdescription: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
     šiame Minecraft pasaulyje.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Ages 6+
   mc_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft programavimo valanda
@@ -696,11 +701,15 @@
   carousel_heading_international: Pamokos Jūsų kalba
   carousel_heading_domestic: Daugiau pamokėlių anglų kalba
   carousel_heading_beginners: Pamokos pradedantiesiems
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Pamokos, kurios moko JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Neturite kompiuterio ar interneto? Išmėginkite informatiką
     be kompiuterių
   carousel_heading_devices: Pamokėlės telefonams ir planšetėms
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Pamokėlės kitomis programavimo kalbomis
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Sukurkite savo programas ir žaidimus
   carousel_heading_university: Universiteto kursai internete
   carousel_heading_webpages: Išmokite sukurti interneto svetaines
@@ -708,6 +717,10 @@
   carousel_heading_ide: Populiaru tarp mokytojų
   educator_notes: Pedagogų pastabos
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Kaip mokyti „Programavimo valandą“
   more_resources_educators: Daugiau išteklių mokytojams ir švietimo atstovams
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -804,10 +817,10 @@
   projguts_gradelevel: Amžius 10-13
   hourofcode_gradelevel: Amžius 4-104
   frozen_gradelevel: Amžius 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Amžius 4-104
   playlab_gradelevel: Amžius 4-104
   infinity_gradelevel: Amžius 4-104
-  artist_gradelevel: Amžius 4-104
+  artist_gradelevel: Amžius 8+
   codeorg_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeintl_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   thinkersmithspanish_platformtext: Veikla be kompiuterių
@@ -1374,11 +1387,8 @@
   infinity_shortcode: inf
   playlab_shortcode: žaisti
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

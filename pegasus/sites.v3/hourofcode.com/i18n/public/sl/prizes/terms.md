@@ -32,4 +32,12 @@ Za pojasnitev, to ni nagradna igra ali tekmovanje, ki bi bilo v celoti naključn
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Klepet preko videa z gostujočim govorcem:
+
+Ta nagrada je omejena na osnovne šole v ZDA in Kanadi. Code.org bo izbrala zmagovalne razrede, priskrbela čas za spletni klepet in sodelovala z ustreznim učiteljem za ureditev tehnoloških podrobnosti. Ni potrebno, da se vaša šola prijavi, da se lahko kvalificirate za to nagrado. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

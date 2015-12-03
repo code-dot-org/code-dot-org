@@ -135,9 +135,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Change the table name in create record then check the Data Viewer to see the new table.",
     "markdown_instructions": "# Data Viewer\r\n\r\nWhere did that data go?\r\n\r\nData Viewer button\r\n\r\nTable List View\r\n\r\nTable View\r\n\r\n# Do This\r\n\r\n* Look at the Table View of the data you added on the last level\r\n* Change the code to create a record in a table with a different name\r\n* Run the app\r\n* Check the Data Viewer to make sure it worked",

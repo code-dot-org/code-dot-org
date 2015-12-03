@@ -26,30 +26,38 @@ social:
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Děkujeme za přihlášení k hostování akce Hodina kódu!
+# Děkujeme, že jste nabízíte hostování akce Hodina kódu!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+Dáváte šanci všem studentům po celém světě se zúčastnit Hodiny kódu, která může *změnit zbytek jejich života*, during <%= campaign_date('full') %>. Ozveme se ohledně cen, nových tutoriálů a dalších důležitých novinek. Co můžete udělat dále?
 
 ## 1. Povídejte o tom
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Právě jste se připojili do akce Hodina kódu. Povězte to přátelům hashtagem **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
+## 2. Najděte lokálná dobrovolníky, aby vám pomohli s vaší událostí.
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[ Prohledejte naší mapu dobrovolníku](<%= resolve_url('https://code.org/volunteer/local') %>) pro dobrovolníky, kteří můžou navštívit vaší učebnu nebo video chat na dálku, aby mohli inspirovat vaše studenty škálou možností s počítačovými vědami.
 
-## 4. Přesvědčete svého zaměstnavatele, aby se zapojil
+## 2. Požádejte, aby celá vaše škola nabídla akci Hodinu kódu
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Poslat tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašemu řediteli školy a vyzvat každou třídu ve škole se přihlásit.
 
-## 4. Promote Hour of Code in your community
+## 4. Požádejte svého zaměstnavatele, aby se zapojil
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Pošlete tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašemu nadřízenému nebo řediteli společnosti.
 
-## 5. Požádejte místní politiky pro podporu akce Hodina kódu
+## 5. Propagujte akci Hodina kódu ve vaší komunitě
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Získejte místní skupinu](<%= resolve_url('/promote/resources#sample-emails') %>)— chlapecké/dívčí kluby, církev, univerzity, veteránské spolky, odboráře, nebo dokonce některé přátelé. Nemusíte být ve škole, abyste se naučili nové dovednosti. Používejte tyto [plakáty, banery, nálepky, videa a další](<%= resolve_url('/promote/resources') %>) pro vaši vlastní událost.
+
+## 6. Požádejte místní politity, aby podpořili akci Hodina kódu
+
+[Pošlete tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašim místním politikům, městské radě nebo školní radě a pozvěte je k návštěvě vaší školy pro Hodinu kódu. Může to pomoci rozvoji informatiky ve vašem regionu za jednu hodinu.
+
+## 7. Naplánujte svojí Hodinu kódu
+
+Vyberte aktivitu Hodiny kódu a [ prohlédněte si tento how-to průvodce](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>

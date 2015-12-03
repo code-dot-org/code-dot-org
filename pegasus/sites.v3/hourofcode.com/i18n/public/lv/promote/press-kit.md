@@ -49,7 +49,7 @@ Mēs ceram, ka tas rosinās skolēnos interesi turpināt mācīties. Pētījumi 
 
 *Kāpēc tas ir svarīgi?*
 
-Ķīnā ikvienam skolēnam ir jāmācas datormācība, lai pabeigtu vidusskolu. ASV 90 procenti skolu to nemaz nemāca. Ir pienācis laiks panākt 21.gadsimtu. Mēs visi zinām, ka neskatoties uz to, ko mūsu skolēni izvēlas darīt, kad izaug, vai tā būtu medicīna, bizness, politika vai māksla, prasme veidot tehnoloģijas sniegs tiem pašapziņu un zināšanas, kā gūt panākumus.
+In China, every student takes computer science to graduate high school. ASV 90 procenti skolu to nemaz nemāca. Ir pienācis laiks panākt 21.gadsimtu. Mēs visi zinām, ka neskatoties uz to, ko mūsu skolēni izvēlas darīt, kad izaug, vai tā būtu medicīna, bizness, politika vai māksla, prasme veidot tehnoloģijas sniegs tiem pašapziņu un zināšanas, kā gūt panākumus.
 
 **Vairāk detaļas un citātus tu vari izmantot materiālos**
 

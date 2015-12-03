@@ -228,13 +228,13 @@
   homepage_hero_text_stat_loc: '#loc baris kode ditulis oleh para pelajar'
   homepage_hero_text_stat_students: '#student_count akun pelajar pada kode Studio'
   homepage_hero_text_stat_served: 'Hour of Code: #served disediakan'
-  homepage_slot_text_hoc: Jam kode
+  homepage_slot_text_hoc: Jam Kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
   homepage_slot_text_teacher: Dashboard untuk Guru
   homepage_slot_text_studio: Semua panduan kami
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Belanja
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: Kode Flappy
   homepage_action_text_hoc: Hour of Code untuk setiap pelajar.
   homepage_action_text_num_served: '# disajikan'
   homepage_action_text_join_us: Bergabung dengan kami
@@ -322,17 +322,22 @@
   class_submission_languages_other: Bahasa Lainnya
   inspirational_videos_more: Selebihnya <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video
     inspiratif</a> oleh para role model dan selebriti
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Membangun sebuah galaksi dengan kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Menggunakan blok drag-drop dan JavaScript.
   starwars_javascript_specs: Hanya dalam bahasa Inggris | Browser modern | Usia 11
     +
   starwars_javascript_start_button: Coba sekarang
-  starwars_blocks_title: blok
+  starwars_blocks_title: Blok
   starwars_blocks_description: Gunakan blok drag-drop.
   starwars_blocks_specs: Berbagai bahasa (akan segera datang) | Browser modern, smartphone,
     tablet | Usia 6-10
-  starwars_blocks_start_button: Coba sekarang
+  starwars_blocks_start_button: Pelajari lebih banyak
   starwars_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif ini
   starwars_speak_languages: Berbicara dengan bahasa lain?
   starwars_help_translate: Bantuk kami menerjemahkan
@@ -452,7 +457,7 @@
   volunteer_engineer_submission_type_task_mentor: Saya mencari mentor untuk membantu
     mempersiapkan diri saya untuk koding dengan murid-murid saya
   petition_age: Umur
-  dashboard_landing_title: Beranda Guru
+  dashboard_landing_title: Beranda guru
   dashboard_landing_welcome: Selamat datang di dasbot guru yang baru dan termutakhir.
   dashboard_landing_video: Tonton video ini
   dashboard_landing_watch_video: untuk melihat fitur-fitur baru!
@@ -613,7 +618,7 @@
     kapan saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang
     rahasia</b>. Gambar rahasia baru akan dibuat bagi pelajar tersebut untuk digunakan
     ketika mereka masuk.
-  dashboard_students_secret_word_title: kata Rahasia
+  dashboard_students_secret_word_title: Kata sandi
   dashboard_students_secret_word: Kata sandi
   dashboard_students_reset_word: 'Anda dapat menyetel ulang kata rahasia siswa kapan
     saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang rahasia</b>.
@@ -667,7 +672,7 @@
   dashboard_progress_completed_too_many_blocks: selesai, terlalu banyak blok
   dashboard_progress_completed_perfect: selesai, sempurna
   dashboard_progress_furthest_level_attempted: tingkat terjauh yang dicoba
-  dashboard_stage: tahapan
+  dashboard_stage: Tahap
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan
   dashboard_response: Respon
@@ -675,7 +680,7 @@
     lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
   dashboard_teacher: Guru
-  dashboard_student: siswa
+  dashboard_student: Siswa
   dashboard_sections_email_question: Apakah semua murid memiliki alamat email yang
     berlaku?
   dashboard_sections_account_creation_question: Siapa yang membuat akun murid-murid?
@@ -735,18 +740,26 @@
   carousel_heading_international: Tutorial dalam bahasa Anda
   carousel_heading_domestic: Pedoman tersedia dalam Bahasa Inggris
   carousel_heading_beginners: Pedoman untuk pemula
+  carousel_heading_beyond_beginners: Pedoman untuk pemula
   carousel_heading_javascript: Pedoman yang mengajarkan Javascript
+  carousel_heading_beyond_javascript: Pedoman yang mengajarkan Javascript
   carousel_heading_unplugged: Tidak ada perangkat atau internet? Coba ilmu komputer
     luring (offline)
   carousel_heading_devices: Aplikasi pedoman untuk ponsel dan tablet
+  carousel_heading_beyond_devices: Aplikasi pedoman untuk ponsel dan tablet
   carousel_heading_languages: Pedoman dalam bahasa pemrograman lain
+  carousel_heading_beyond_languages: Pedoman dalam bahasa pemrograman lain
   carousel_heading_apps_games: Buatlah aplikasi atau permainan Anda sendiri
-  carousel_heading_university: Kursus universitas daring
+  carousel_heading_university: Kursus universitas online
   carousel_heading_webpages: Belajar membuat halaman web
   carousel_heading_robots: Belajar pemrogaman bersama robot-robot
   carousel_heading_ide: Sarana yang populer di kalangan guru
   educator_notes: Catatan pendidik
   teach_led_lesson_plans: Guru Dipimpin oleh rencana pembelajaran Hour of Code
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Cara Mengajarkan Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
   beyond_submission: Hendak mengajukan tutorial yang lebih dari satu Jam? Lihat kriteria
@@ -800,7 +813,7 @@
   thinkersmith2_name: Baubles biner
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Batu, kertas, gunting
-  hourofcode_name: Pengganti untuk code.org/hoc yang baru
+  hourofcode_name: Tulis program komputer pertama anda
   playlab_name: Play Lab/Lab Permainan
   infinity_name: Play Lab tak tebatas
   artist_name: Artis
@@ -877,7 +890,7 @@
   robomindnl_platformtext: Web browser modern, Mobile web
   flappy_platformtext: Browser modern, smartphone, tablet
   bitsbox_platformtext: Web browser modern
-  makeschool_platformtext: Browser Web modern
+  makeschool_platformtext: Web browser modern
   touchdevelop_platformtext: Browser modern, smartphone, semua perangkat
   appinventor_platformtext: Browser modern + Android
   blockly_platformtext: Hanya browser modern
@@ -1128,7 +1141,7 @@
   edx_beyond_name: Harvard kelas CS50
   coursera_beyond_name: Stanford kelas CS 101
   udacity_beyond_name: Ilmu Komputer Dasar 101
-  teachingtree_beyond_name: Kursus universitas online
+  teachingtree_beyond_name: Kursus universitas daring
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1181,7 +1194,7 @@
   alice_beyond_gradelevel: Sekolah menengah
   sphero_beyond_gradelevel: Usia 8 +
   codeorg_beyond_platformtext: Browser modern, tablet
-  khan_beyond_platformtext: Browser Web modern
+  khan_beyond_platformtext: Web browser modern
   tynker_beyond_platformtext: Web browser modern ($$ diperlukan)
   scratch_beyond_platformtext: Browser
   lightbot_beyond_platformtext: iOS, Android (atau web browser)
@@ -1193,7 +1206,7 @@
   groklearning_beyond_platformtext: Web browser modern
   hacketyhack_beyond_platformtext: Instalasi desktop
   robomind_beyond_platformtext: Web browser modern, Mobile web
-  makeschool_beyond_platformtext: Browser Web modern
+  makeschool_beyond_platformtext: Web browser modern
   appinventor_beyond_platformtext: Browser modern + Android
   touchdevelop_beyond_platformtext: Browser modern, smartphone, semua perangkat
   codehs_beyond_platformtext: Browser modern ($$ diperlukan)
@@ -1206,9 +1219,9 @@
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Instalasi desktop
-  w3schools_beyond_platformtext: Browser Web modern
-  codeavengers_beyond_platformtext: Browser Web modern
-  mozilla_beyond_platformtext: Browser Web modern
+  w3schools_beyond_platformtext: Web browser modern
+  codeavengers_beyond_platformtext: Web browser modern
+  mozilla_beyond_platformtext: Web browser modern
   codecombat_beyond_platformtext: Berbasis web (Firefox, Chrome, Safari, IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Pembelian robot
@@ -1462,11 +1475,8 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

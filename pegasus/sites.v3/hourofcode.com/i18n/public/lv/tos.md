@@ -28,13 +28,13 @@ We take steps to minimize the collection of personal data from Users under the a
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Jūsu konts
 
 Jūs esat atbildīgs par sava konta drošību un apņematies neizpaust savus autorizācijas datus trešām personām. Ja Jūs izmantojas kontu, ko Jums ir piešķiris mācībspēks, tad Jūsu mācībspēkam ir tiesības piekļūt un/vai bloķēt Jūsu kontu.
 
 Code.org var atļaut Jums reģistrēt kontu pakalpojumiem izmantojot sociālos tīklus, piemēram, Facebook Connect vai Google (“**Autentifikācijas serviss**”). By registering for the Services using an Authentication Service, you agree that Code.org may access your account information from the Authentication Service and you agree to any and all terms of use of the Authentication Service regarding your use of the Services via the Authentication Service. Jūs esat pilnībā atbildīgs par savu rīcību izmantojot autentifikācijas servisu.
 
-### Privacy
+### Konfidencialitāte
 
 Jūsu konfidencialitāte mums ir svarīga. Code.org [Konfidencialitātes politika](http://code.org/privacy) apraksta to kā mēs apstrādājam un uzglabājam personu identificējošus datus un šajā dokumentā tiek izmanta atsauce. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 

@@ -40,7 +40,9 @@ def set_hour_of_code_cookie_for_row(row)
 end
 
 def complete_tutorial(tutorial={})
-  unless settings.read_only || hoc_activity_writes_disabled
+  unless settings.read_only
+    # We intentionally allow this DB write even when hoc_activity_writes_disabled
+    # is set so we can generate personalized, shareable certificates.
     row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
     if row
       DB[:hoc_activity].where(id: row[:id]).update(

@@ -413,6 +413,11 @@ class User < ActiveRecord::Base
       index_by(&:level_id)
   end
 
+  def user_progress_by_stage(stage)
+    levels = stage.script_levels.map(&:level_id)
+    user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
+  end
+
   def user_level_for(script_level)
     user_levels.find_by(script_id: script_level.script_id,
                         level_id: script_level.level_id)

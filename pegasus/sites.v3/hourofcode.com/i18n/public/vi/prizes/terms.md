@@ -32,4 +32,12 @@ Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối �
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## Giải thưởng 2: Chat video với người hướng dẫn:
+
+Giải thưởng này chỉ giới hạn cho lớp K-12 ở Mỹ và Canada . Code.org sẽ chọn ra lớp học thắng cuộc , cung cấp thời gian để nói chuyện qua mạng và làm việc với giáo viên phù hợp để thiết lập nên chi tiết kỹ thuật. Trường của bạn không cần đăng kí kiểm tra chất lượng cho giải này Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

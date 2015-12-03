@@ -16,7 +16,7 @@ Code.org® is a non-profit dedicated to expanding participation in computer scie
 
 Please read this Privacy Policy (“**Privacy Notice**”) carefully before accessing or using the Website.
 
-## Code.org Privacy Principles
+## "Code.org" məxfilik prinsipləri
 
 Our Privacy Notice is fueled by our commitment to the following Privacy Principles:
 
@@ -27,7 +27,7 @@ Our Privacy Notice is fueled by our commitment to the following Privacy Principl
   5. Any student academic data provided by school district partners to 3rd party evaluators for the purpose of evaluating our courses in meeting our mission will be anonymous / de-identified (per standard industry practice). 
   6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
 
-## Privacy Notice
+## Məxfilik barədə bildiriş
 
 We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. As a not-for-profit, 501(c)(3) organization, we use the data we receive only insofar as it helps our mission of providing a great computer science education for every student who wants it. We established ourselves as a not-for-profit organization so that a for-profit motive will not interfere with our mission of providing a trusted educational resource.
 
@@ -232,7 +232,7 @@ If we learn of a data security incident that compromises or appears to compromis
 
 Our Website is operated and managed on servers located within the United States. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 
-### Conditions of Use and Notices
+### İstifadə şərtləri və bildirişlər
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
