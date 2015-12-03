@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Ceny za Hodinu kódu 2015
 
@@ -209,4 +208,4 @@ Cena pouze pro K-12 třídy v Usa a Kanada. Code.org vybere výherní třídy, p
 
 Ano, všem pořadatelům, USA a non USA, mají nárok na všechny pořadatele poděkování dar zásob poslední. Jen cena $10K hardwaru je pro USA.
 
-<% end %> <%= view :signup_button %>
+<% end %> 
