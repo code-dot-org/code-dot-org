@@ -1,3 +1,5 @@
+/* global trackEvent */
+
 /*jshint -W061 */
 // We use eval in our code, this allows it.
 // @see https://jslinterrors.com/eval-is-evil
@@ -145,6 +147,7 @@ Craft.init = function (config) {
 
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
+          trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
           trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
           Craft.updateUIForCharacter(selectedPlayer);
@@ -153,6 +156,7 @@ Craft.init = function (config) {
         });
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
         Craft.showHouseSelectionPopup(function(selectedHouse) {
+          trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             $.extend(config.level, houseLevels[selectedHouse]);
 
