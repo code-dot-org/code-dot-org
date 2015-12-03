@@ -85,7 +85,7 @@ STR
     %i(pegasus dashboard).each do |app|
       # +1 to include the default cache behavior in the count.
       behavior_count = AWS::CloudFront.config(app)[:cache_behaviors][:quantity] + 1
-      assert behavior_count <= 25, "#{app} has #{behavior_count} cache behaviors (max is 25)"
+      assert behavior_count <= 50, "#{app} has #{behavior_count} cache behaviors (max is 50)"
     end
   end
 
