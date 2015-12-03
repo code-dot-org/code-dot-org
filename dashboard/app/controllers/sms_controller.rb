@@ -27,7 +27,7 @@ class SmsController < ApplicationController
     @client.messages.create(
       :from => SMS_FROM,
       :to => phone,
-      :body => "Check this out on Code Studio: #{link}. (reply STOP to stop receiving this)"
+      :body => "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
     )
     render status: :ok, nothing: true
   end
