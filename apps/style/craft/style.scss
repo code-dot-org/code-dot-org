@@ -410,7 +410,7 @@ $height-to-width: 434 / 477;
 
 
   $house-outline-height: 168px;
-  $house-outline-width: 160px;
+  $house-outline-width: 167px;
 
   .minecraft-house {
     float: left;
@@ -432,7 +432,7 @@ $height-to-width: 434 / 477;
     $margin-above: 23px;
     $margin-below: 16px;
     margin: $margin-above auto $margin-below;
-    width: 167px;
+    width: $house-outline-width;
     height: $house-outline-height;
 
     @media screen and (max-height: 630px) {
