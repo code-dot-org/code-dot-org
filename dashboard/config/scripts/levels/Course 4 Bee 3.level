@@ -33,7 +33,6 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "false"
   }
 }]]></config>
