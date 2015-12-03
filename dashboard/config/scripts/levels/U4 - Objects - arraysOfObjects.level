@@ -137,7 +137,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Update your code to add properties to your object one at a time using dot notation. (Click to see full instructions)",
-    "markdown_instructions": "# Arrays of Objects\r\n\r\nOnce you have many objects with the same properties you can start to do more interesting work to process that data. In order to do this, however, it is usually convenient to place your objects within a single data structure. In this instance an array makes a lot of sense since **it will be storing many similar and related pieces of information**.\r\n\r\n# Do This\r\n\r\n**You code from the previous exercise** is provided.\r\n\r\n* Create **three more student objects**. Make sure you include a variety of values for each property.\r\n* Create an **empty array** called `students`.\r\n* **Add** your student objects to your array using `appendItem`\r\n* **Display** the contents of `students` with `console.log` and confirm the values you expected appear there.",
+    "markdown_instructions": "# Arrays of Objects\r\n\r\nOnce you have many objects with the same properties you can start to do more interesting work to process that data. In order to do this, however, it is usually convenient to place your objects within a single data structure. In this instance an array makes a lot of sense since it will be storing **many similar and related pieces of information**.\r\n\r\n![](https://images.code.org/46bf33a97d4c6c89191bc15864891477-image-1449087125215.11.52 PM.png)\r\n\r\n# Do This\r\n\r\n**You code from the previous exercise** is provided.\r\n\r\n* Create an **empty array** called `students` to hold your student objects.\r\n* **Add** your student objects to `students` using `appendItem` .\r\n* **Display** the contents of `students` with a single `console.log` statement and confirm all of your student objects are now contained in a single array.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,7 +167,10 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

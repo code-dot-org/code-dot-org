@@ -9,10 +9,24 @@
     "skin": "birds",
     "instructions": "Guide me to the green evilness! (Watch out for TNT)",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "6"
+    "ideal": "6",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -27,7 +41,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveForward"/>
         <block type="maze_turn">
@@ -37,6 +51,6 @@
           <title name="DIR">turnRight</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>

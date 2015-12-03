@@ -9,11 +9,25 @@
     "skin": "birds",
     "instructions": "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\". ",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",
-    "video_key": "C2_maze_intro"
+    "video_key": "C2_maze_intro",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -28,10 +42,10 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveForward"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>
