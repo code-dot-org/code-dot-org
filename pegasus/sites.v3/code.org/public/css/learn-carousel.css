@@ -44,7 +44,7 @@
 #quicklinks {
   float: left;
   display: inline-block;
-  width: 200px;
+  width: 190px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
