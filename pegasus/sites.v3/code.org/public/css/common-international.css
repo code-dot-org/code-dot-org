@@ -554,7 +554,6 @@
   }
 
   .starwars-container .starwars-tutorial {
-    width: 50% !important;
     float: left !important;
     height: 220px !important;
     padding: 5px !important;
@@ -578,4 +577,19 @@
 
 .starwars-tutorial {
   margin-bottom: 10px !important;
+}
+
+.starwars-js-tutorial {
+  /* Hide the js tutorial in non-EN */
+  display: none;
+}
+
+.starwars-blocks-tutorial {
+  /* When we hide the js tutorial, make the blockly tutorial take up whole width */
+  width: 100% !important;
+}
+
+.tutorial-box {
+  /* Ensure background doesn't repeat in the wider box */
+  background-size: cover;
 }
