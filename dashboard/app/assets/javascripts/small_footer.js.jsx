@@ -57,26 +57,21 @@ window.dashboard.footer = (function () {
       getInitialState: function () {
         return {
           menuState: MenuState.MINIMIZED,
-          copyrightStyle: null,
-          copyrightScrollAreaStyle: null,
-          moreMenuStyle: null
+          baseWidth: 0,
+          baseHeight: 0
         };
       },
 
       componentDidMount: function () {
-        var originalSetState = this.setState;
+        this.captureBaseElementDimensions();
+        window.addEventListener('resize', this.captureBaseElementDimensions);
+      },
+
+      captureBaseElementDimensions: function () {
         var base = React.findDOMNode(this.refs.base);
         this.setState({
-          copyrightStyle: {
-            minWidth: base.offsetWidth
-          },
-          copyrightScrollAreaStyle: {
-            marginBottom: base.offsetHeight
-          },
-          moreMenuStyle: {
-            bottom: base.offsetHeight,
-            width: base.offsetWidth,
-          }
+          baseWidth: base.offsetWidth,
+          baseHeight: base.offsetHeight
         });
       },
 
@@ -155,23 +150,27 @@ window.dashboard.footer = (function () {
             // subtract top/bottom padding from row height
             height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
           }),
-          copyright: $.extend({}, this.state.copyrightStyle, {
+          copyright: {
             display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
             position: 'absolute',
             bottom: 0,
             left: 0,
             width: 650,
-            maxWidth: '50%'
-          }),
-          copyrightScrollArea: $.extend({}, this.state.copyrightScrollAreaStyle, {
+            maxWidth: '50%',
+            minWidth: this.state.baseWidth
+          },
+          copyrightScrollArea: {
             overflowY: 'auto',
             maxHeight: 210,
             padding: '0.8em',
-            borderBottom: 'solid thin #e7e8ea'
-          }),
-          moreMenu: $.extend({}, this.state.moreMenuStyle, {
-            display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none'
-          }),
+            borderBottom: 'solid thin #e7e8ea',
+            marginBottom: this.state.baseHeight
+          },
+          moreMenu: {
+            display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none',
+            bottom: this.state.baseHeight,
+            width: this.state.baseWidth
+          },
           listItem: {
             height: this.props.rowHeight,
             // account for padding (3px on top and bottom) and bottom border (1px)
