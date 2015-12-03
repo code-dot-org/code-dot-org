@@ -24,7 +24,7 @@ social:
 %div{style: "clear:both"}
 
 .playlab-container
-  %h1= I18n.t(:playlab_choose_theme)
+  %h1.header= I18n.t(:playlab_choose_theme)
   %div.image-collection
     %a.white-link{href: "/api/hour/begin/playlab"}
       %div.choice
@@ -44,9 +44,10 @@ social:
 
 %div{style: "clear:both"}
 
-.inspire-videos{style: "clear: both;"}
-  %h2= I18n.t(:starwars_watch_videos)
-  =view :inspirational_videos
+%h2.header
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/starwars"}= I18n.t(:starwars_help_translate)
 
-%span= I18n.t(:starwars_speak_languages)
-%a{href: "/translate"}= I18n.t(:starwars_help_translate)
+.inspire-videos{style: "clear: both;"}
+  %h2.header= I18n.t(:starwars_watch_videos)
+  =view :inspirational_videos
