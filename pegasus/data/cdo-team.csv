@@ -1,138 +1,139 @@
 name_s,title_s,url_s,description_t,kind_s*
-Hadi Partovi,"Co-founder, CEO",/about/leadership/hadi_partovi,"Code.org CEO Hadi Partovi is an entrepreneur and angel investor.  Hadi was on the founding teams of Tellme and iLike, and was an investor or early advisor to numerous startups including <a href=""http://www.facebook.com/"">Facebook</a>, <a href=""http://www.dropbox.com/"">Dropbox</a>, <a href=""http://www.zappos.com"">Zappos</a>, and <a href=""http://www.airbnb.com/"">airbnb</a>. His full bio is available <a href=""/about/leadership/hadi_partovi"">here</a>.",team
-Cameron Wilson,COO & VP of Government Affairs,https://www.linkedin.com/in/cameronpwilson,"Cameron was previously Director of Public Policy for the Association for Computing Machinery. In 2010, he launched the Computing in the Core coalition to bring attention to K-12 CS education.  At Code.org he manages operations (school district outreach, professional development workshops), as well as government affairs and policy work.",team
-Pat Yongpradit,Chief Academic Officer,http://patyongpradit.com/,"Pat is a former high school computer science teacher who specialized in creating authentic, project-based learning experiences. He has worked as a curriculum consultant for Microsoft, for Pearson, and also as a curriculum team lead for Montgomery County Public Schools. At Code.org he is responsible for creating (or curating) curriculum and professional development, to provide rich computer science opportunities to every school in the nation.",team
-Sarah Filman,VP of Curriculum,,"Sarah works on the Code.org K-12 curriculum. Before joining Code.org, Sarah was a Program Manager at Microsoft working on OneDrive. Passionate about encouraging kids (especially girls) to learn Computer Science, she has also been a teacher for Girls Who Code's Summer Immersion Program, as well as a TEALS teacher at Cleveland High School in Seattle. ",team
-Michelle Page,VP of Finance & Administration,https://www.linkedin.com/in/michellepage1,"Michelle is a non-profit veteran, skilled in fundraising and organizational development. She was previously a successful grant writing consultant and the Executive Director of Technically Learning, a non-profit which brought robotics-based professional development to Seattle area elementary and middle school teachers. Michelle oversees Code.org's Finance, Administration, Human Resource, and Legal functions.",team
+Aimee Lynch,Accounts Payable & Receivable,,Aimee supports the finance and human resource departments.,team
+Alexandra Vlachakis,District Manager,,"Alexandra establishes partnerships with districts in the Southeast to promote Computer Science at all grade levels. She taught technology courses for 19 years in Georgia and South Florida including AP Computer Science, web design/development and animation. Alexandra has facilitated writing new Animation, Gaming and Computer Science standards and courses for the Georgia Department of Education.",team
 Alice Steinglass,VP of Product & Marketing ,https://www.linkedin.com/in/alicesteinglass,"Alice runs the product, design and marketing teams. Before Code.org, she managed the PM team for the UX Platform on HoloLens, designed APIs and developer client libraries for Xbox 360, ran an ecosystem outreach and UX team for Windows and built project management tools. Outside of work, she's volunteered teaching computer science, literacy and English to students and refugees. ",team
+Amy Hirotaka,Director of State Government Affairs,http://www.linkedin.com/in/amyhirotaka,"Amy works on state policy and advocacy issues for Code.org. Previously, she managed outreach activities for a Seattle-area nonprofit, focusing on increasing the number of women and girls pursuing careers in science, technology, engineering, and math. ",team
+Andrew Oberhardt,Software Engineer,https://www.linkedin.com/pub/andrew-oberhardt/89/44a/986,"A younger Andrew originally learned coding for fun, and he fondly recalls the reward of using software to solve problems and build things. He was pleasantly surprised to turn his hobby into a career, and is excited to share his passion with others who may not have the same access or inclination. He previously worked at Microsoft and AWS.",team
+Asher Kach,Data Engineer,,"In a past life Asher was a professional mathematician, doing research (in computability theory) and teaching (both undergraduate and graduate students) at various universities around the world. Most recently, Asher was a software engineer at Google Chicago. Now he is excited about being a data engineer for Code.org. Outside of work, Asher is triathlete, a juggler, an uncle to twins, and an enthusiast of the outdoors.",team
+Baker Franke,Education Program Manager,,"Baker is a former high school CS teacher from the University of Chicago Laboratory Schools. He previously served on the leadership team of the Chicago CSTA in efforts to make computer science a requirement in Chicago Public Schools. At Code.org, Baker works primarily on the CS Principles project and evaluation of educational programs.",team
+Bow Jones,Videographer,http://bowjones.com/,"Bow Jones is a jack-of-all-trades video shooter, editor and graphics animator living in the Seattle area. He has produced videos with TED, Edutopia and Storytellers For Good.",team
+Brad Buchanan,Software Engineer,,"Brad lives to build great experiences. Following Entertainment Technology studies at Carnegie Mellon University, he worked on the Plants vs Zombies franchise at PopCap Games. Brad now works on the Code.org K-12 Computer Science curriculum.",team
+Brendan Reville,Software Engineer,http://brendanreville.com/,"Brendan is a software engineer who loves building user experiences.  Since moving to Seattle from Sydney, he has worked at Microsoft on the Xbox 360, volunteered in a low-income after-school tutoring program, and played some ice hockey.",team
+Brent Van Minnen,Software Engineer,,"Brent is a software engineer working on the Code.org tutorials, including the Flappy Bird creator.  Previously, he worked for six years on Microsoft Office.",team
+Brian Jordan,Software Engineer,http://bcjordan.com,"Brian is a software engineer working on the Code.org K-12 Computer Science curriculum. He has prototyped games at PopCap SF, studied CS at Tufts University, and interned at TripAdvisor and One Laptop per Child.",team
+Brook Osborne,Education Program Manager,,"Brook Osborne comes from Duke University where she teaches a service-learning robotics course. She has co-authored several publications related to outreach, robotics, and CS Principles.",team
+Cameron Wilson,COO & VP of Government Affairs,https://www.linkedin.com/in/cameronpwilson,"Cameron was previously Director of Public Policy for the Association for Computing Machinery. In 2010, he launched the Computing in the Core coalition to bring attention to K-12 CS education.  At Code.org he manages operations (school district outreach, professional development workshops), as well as government affairs and policy work.",team
+Carina Box,Operations Manager,https://www.linkedin.com/in/carinabox,"Carina keeps the ship sailing for Code.org's education team. Previously, she taught 6th grade in Phoenix, AZ and worked at a large consulting firm training clients on new technology.",team
+Carly Gliva,Operations Coordinator,,"Carly coordinates teacher professional development workshops and helps run logistics for events around the country. In college she studied at Western Washington University in her home town of Bellingham, Washington and recently relocated to Seattle. She is excited to be part of the operations team and loves working with such a dynamic group.",team
+Cody Edmonds,Operations Coordinator,,Cody works to provide current data for teacher professional development and various other tasks. He’s a nerd about maps and navigated to Code.org by way of Google Maps contracting. ,team
+Dani McAvoy,Education Program Manager,,"Dani comes from Worcester Academy where she was a Computer Science, Math and Design Teacher. She graduated from Bowdoin College with a B.A in Computer Science and Math Education. At Code.org, Dani works with the education team creating innovative curriculum material for the high school level.",team
 Dave Bailey,Software Engineer,http://www.linkedin.com/in/davidsbailey,"Dave is a software engineer working on the Code.org K-12 Computer Science curriculum. Previously, he worked at Google on Gmail and Contact Manager.",team
 David Bernier,District Manager,,"David works with school districts and other partners to bring computer science learning opportunities to all students. He brings extensive experience in education, having worked as a teacher, curriculum specialist, researcher, project director, and coordinator at the K-12 and university levels. As a district manager, David focuses on developing and supporting partnerships in California and the southwest.",team
-Jake Baskin,Director of District Management,https://www.linkedin.com/in/jakebaskin,Jake is a former high school computer science teacher and professional development provider.  As a teacher he focused on increasing access to computing for underrepresented groups and more than doubled female enrollment in introductory computer science classes. ,team
-Trevor Berg,Software Engineer,,"Trevor is a software engineer at Code.org. Previously, he worked on web and server infrastructure at Dropbox.",team
-Phil Bogle,Tech Lead,,"Phil is the tech lead for the Code.org team. He was previously a staff software engineer and tech lead at Google, CTO and co-founder at Jobster, and an engineer at iLike, Avogadro, and Microsoft. He was also an early volunteer at Code.org and is thrilled at the opportunity to contribute full-time.",team
-Carina Box,Operations Manager,https://www.linkedin.com/in/carinabox,"Carina keeps the ship sailing for Code.org's education team. Previously, she taught 6th grade in Phoenix, AZ and worked at a large consulting firm training clients on new technology.",team
-Brad Buchanan,Software Engineer,,"Brad lives to build great experiences. Following Entertainment Technology studies at Carnegie Mellon University, he worked on the Plants vs Zombies franchise at PopCap Games. Brad now works on the Code.org K-12 Computer Science curriculum.",team
-Josh Caldwell,Education Program Manager,,"Before coming to Code.org, Josh was a Middle School teacher outside Seattle. He developed and taught a full spectrum of Computer Science and Robotics courses with a focus on using project based learning to connect CS to students' interests and local issues. At Code.org, Josh develops curriculum that brings the beauty of Computer Science to K-8 students. ",team
-Malorie Carlini,Operations Coordinator,https://www.linkedin.com/in/maloriecarlini,Malorie supports the education operations team in coordinating teacher professional development workshops across the country. She is a former community college workforce advisor who provided guidance for at-risk students. ,team
-Reena Chaudhary,Accountant,,"Reena is an Accountant who loves working with and analyzing numbers. Prior to joining Code.org, she worked in many different industries and roles as a Finance professional. At Code.org her main function is reconciling and analyzing all of the numbers that are the core of the financial statements.",team
-Maria Choi,Head of Fundraising,https://www.linkedin.com/in/mariaschoi,"Maria develops partnerships with generous people, companies and organizations to support Code.org's mission. Maria also collaborates on marketing projects to drive awareness, growth and impact of Code.org's education programs. Previously, Maria worked for brands like Sesame Workshop, NFL, and UNICEF. Her other passion is volunteering for a non profit social enterprise called <a href=""http://www.nominetwork.org"">Nomi Network</a>. ",team
-Cody Edmonds,Operations Coordinator,,Cody works to provide current data for teacher professional development and various other tasks. He’s a nerd about maps and navigated to Code.org by way of Google Maps contracting. ,team
-Roxanne Emadi,Social and Communications Manager,http://www.linkedin.com/in/roxanneemadi,"Roxanne writes, tells stories, and tweets for Code.org, working on grassroots marketing efforts. She's previously worked in media and policy.",team
-Laurel Fan,Software Engineer,http://www.linkedin.com/in/laurel,"Laurel is a software engineer working on the part of the site that keeps track of user accounts, student progress and classrooms. She previously worked on 43 Things at the Robot Co-op. In her free time she implements gradient ascent algorithms to seek local maxima.",team
-Baker Franke,Education Program Manager,,"Baker is a former high school CS teacher from the University of Chicago Laboratory Schools. He previously served on the leadership team of the Chicago CSTA in efforts to make computer science a requirement in Chicago Public Schools. At Code.org, Baker works primarily on the CS Principles project and evaluation of educational programs.",team
-Jenna Garcia,District Manager,http://www.linkedin.com/in/jennalgarcia,"Jenna comes to Code.org from years of experience in both the tech and education industries.  Over the past decade, she has skillfully kept one foot in each sector while working at Deloitte, NYC Public Schools, Chicago Public Schools and BigMachines/Oracle.  At Code.org, Jenna is the liaison for all things Chicago.",team
-Melissa Glenn,Executive Assistant,http://www.linkedin.com/in/melissadglenn,"Melissa supports the administrative needs of the Code.org offices. Specifically, she handles scheduling for Leadership Team members Hadi, Cameron and Sarah.",team
-Carly Gliva,Operations Coordinator,,"Carly coordinates teacher professional development workshops and helps run logistics for events around the country. In college she studied at Western Washington University in her home town of Bellingham, Washington and recently relocated to Seattle. She is excited to be part of the operations team and loves working with such a dynamic group.",team
-Megan Godwin,Human Resources,https://www.linkedin.com/profile/view?id=49247685,"Megan manages recruiting, hiring, onboarding, and HR for the Code.org team. With a background in both startups and sales management, Megan is passionate about growing, supporting, and developing a successful team.",team
-Nimisha Ghosh Roy,NW District Manager,,"Nimisha is a project manager and educator with experience in teaching youth and adults in formal and informal environments, curriculum development with an equity lens, cross cultural communication and developing collaborative partnerships. She is a Seattle-native and is active in the local Indian dance/performing arts community.",team
-Lian Halbert,Administrative Assistant,https://www.linkedin.com/pub/lian-halbert/a7/710/24,"Lian is a recent History graduate from the University of Washington. She supports administrative needs to keep Code.org running smoothly. Her role includes scheduling for Leadership Team members Pat, Michelle and Alice.",team
 Elijah Hamovitz,Software Engineer,,"Elijah fell in love with programming with his first ""Hello, World!"" and he hasn't looked back. He's been making websites professionally since 2010. He particularly enjoys exploring the constantly-advancing cutting edge of the web and finding new ways to turn all the tools, languages, frameworks, and platforms out there into some really, really cool websites.",team
-Katie Hendrickson,Advocacy and Policy Manager,,Katie works on state policy and advocacy issues for Code.org. She is a former secondary mathematics teacher and 2014-2015 Albert Einstein Distinguished Educator Fellow. She has led inquiry-based teacher professional development and served as a leader in Ohio during the state’s transition to new standards.,team
-Amy Hirotaka,Director of State Government Affairs,http://www.linkedin.com/in/amyhirotaka,"Amy works on state policy and advocacy issues for Code.org. Previously, she managed outreach activities for a Seattle-area nonprofit, focusing on increasing the number of women and girls pursuing careers in science, technology, engineering, and math. ",team
-Bow Jones,Videographer,http://bowjones.com/,"Bow Jones is a jack-of-all-trades video shooter, editor and graphics animator living in the Seattle area. He has produced videos with TED, Edutopia and Storytellers For Good.",team
-Melissa Jones,Community Development Manager,https://www.linkedin.com/in/openclssrm,"Melissa focuses on creating scalable interventions to help K-12 educators leverage coding to achieve their teaching and learning goals. Melissa comes to code.org from Adobe, where she led world wide education programs. Before that, Melissa worked as an English teacher in New York City and later as the National Director of Education for College Summit.",team
-Brian Jordan,Software Engineer,http://bcjordan.com,"Brian is a software engineer working on the Code.org K-12 Computer Science curriculum. He has prototyped games at PopCap SF, studied CS at Tufts University, and interned at TripAdvisor and One Laptop per Child.",team
-Will Jordan,Software Engineer,http://linkedin.com/in/wgjordan,"Will works on the Code.org K-12 Computer Science curriculum. He recently completed a PhD in Comparative Literature at the University of California, Irvine, and previously worked as a software engineer for PopCap.",team
-Asher Kach,Data Engineer,,"In a past life Asher was a professional mathematician, doing research (in computability theory) and teaching (both undergraduate and graduate students) at various universities around the world. Most recently, Asher was a software engineer at Google Chicago. Now he is excited about being a data engineer for Code.org. Outside of work, Asher is triathlete, a juggler, an uncle to twins, and an enthusiast of the outdoors.",team
-Laura Kline,Marketing & Product Manager,http://www.linkedin.com/in/lkline/,"Laura manages marketing and partnerships for the Hour of Code campaign. Beyond the annual campaign, Laura oversees the operations, outreach and marketing for Code.org's K-5 Professional Development Program which trains over 2,000 elementary school teachers a month.",team
-Josh Lory,Software Engineer,https://www.linkedin.com/in/joshlory,"Josh works on the Code.org K-12 Computer Science curriculum.  Previously, he worked for two years at Microsoft.",team
-Aimee Lynch,Accounts Payable & Receivable,,Aimee supports the finance and human resource departments.,team
-Maddie Mador,Operations Coordinator,https://www.linkedin.com/in/madelinemador,Maddie works on the operations team to plan and execute the professional development workshops. She previously studied Women's Studies at The George Washington University and comes to Code.org with event planning and travel coordination experience. She is a life-long tap dancer and plays rugby with Seattle's local women's club. ,team
-Mary Magellan,Fundraising Manager ,https://www.linkedin.com/in/marymagellan,"Mary focuses on sustainable development by writing and managing donor content, strengthening donor stewardship, and forming strategic partnerships. She brings a passion for collaboration, facilitation, and achieving equal human rights for all. Previously, Mary was the Development Writer at Global Fund for Women and a Technical Software Instructor at LearniT!",team 
-Dani McAvoy,Education Program Manager,,"Dani comes from Worcester Academy where she was a Computer Science, Math and Design Teacher. She graduated from Bowdoin College with a B.A in Computer Science and Math Education. At Code.org, Dani works with the education team creating innovative curriculum material for the high school level.",team
-Andrew Oberhardt,Software Engineer,https://www.linkedin.com/pub/andrew-oberhardt/89/44a/986,"A younger Andrew originally learned coding for fun, and he fondly recalls the reward of using software to solve problems and build things. He was pleasantly surprised to turn his hobby into a career, and is excited to share his passion with others who may not have the same access or inclination. He previously worked at Microsoft and AWS.",team
-Brook Osborne,Education Program Manager,,"Brook Osborne comes from Duke University where she teaches a service-learning robotics course. She has co-authored several publications related to outreach, robotics, and CS Principles.",team
-Tanya Parker,Product Manager,http://www.linkedin.com/in/tcparker,"Tanya is a recent Computer Science graduate from the University of Southern California. She works on the Contributors program, curriculum translations, and internationalization and localization.",team
-Rachel Phillips,Director of Evaluation,,Rachel received her doctorate in the Learning Sciences from the University of Washing in 2011. Her research has generally focused on underserved youth in the STEM fields. She will be responsible for research and evaluation at Code.org.,team
-Kiki Prottsman,Education Program Manager,,"Prior to her role at Code.org, Kiki was Founder and Executive Director of Thinkersmith, a non-profit on the cutting edge of K-8 Computer Science Education. As a champion for responsible computing and equity in both CS employment and education, Kiki works with many organizations to improve the experience of girls and women in STEM. Kiki works with the education team to develop innovative middle school and out-of-school-time curriculum.",team
-Brendan Reville,Software Engineer,http://brendanreville.com/,"Brendan is a software engineer who loves building user experiences.  Since moving to Seattle from Sydney, he has worked at Microsoft on the Xbox 360, volunteered in a low-income after-school tutoring program, and played some ice hockey.",team
-Mehal Shah,Software Engineer,,"Mehal is a software engineer who enjoys building big systems that help people learn. In his spare time, he enjoys hiking, photography, and competitive puzzle solving.",team
-Josh Schulte,Customer Support,,"Josh is a graduate of the University of Iowa where he studied computer science and psychology. Before joining Code.org, he worked for eBay, Cracked.com, Phoenix Capital Management, and as IT Director for KRUI 98.7 FM in Iowa City. Josh is way too into music and has traveled around the country and across two oceans just to see his favorite bands play.",team
-Ryan Sloan,Product Manager,,"Ryan is a Product Manager at Code.org. After growing up in small town Kentucky, he was motivated to help bring Computer Science to every student. Prior to joining Code.org, Ryan worked as Program Director at Coding with Kids, and as a Program Manager for the Microsoft Office User Experience. While at Microsoft, he found his passion for education through the TEALS and Hunt the Wumpus programs.",team
+Hadi Partovi,Founder and CEO,/about/leadership/hadi_partovi,"Code.org CEO Hadi Partovi is an entrepreneur and angel investor.  Hadi was on the founding teams of Tellme and iLike, and was an investor or early advisor to numerous startups including <a href=""http://www.facebook.com/"">Facebook</a>, <a href=""http://www.dropbox.com/"">Dropbox</a>, <a href=""http://www.zappos.com"">Zappos</a>, and <a href=""http://www.airbnb.com/"">airbnb</a>. His full bio is available <a href=""/about/leadership/hadi_partovi"">here</a>.",team
 Jael Topek,Videographer,,"Jael specializes in all aspects of video production with a special love for animation and design. Since the turn of the century he's worked on projects for SNL, Valve, AT&T, Microsoft, Shutterstock and too many political campaigns, startups and non-profits to enumerate here.",team
-Brent Van Minnen,Software Engineer,,"Brent is a software engineer working on the Code.org tutorials, including the Flappy Bird creator.  Previously, he worked for six years on Microsoft Office.",team
-Alexandra Vlachakis,District Manager,,"Alexandra establishes partnerships with districts in the Southeast to promote Computer Science at all grade levels. She taught technology courses for 19 years in Georgia and South Florida including AP Computer Science, web design/development and animation. Alexandra has facilitated writing new Animation, Gaming and Computer Science standards and courses for the Georgia Department of Education.",team
-Avid Larizadeh,,http://www.crunchbase.com/person/avid-larizadeh,"COO & co-founder, Boticca",extended_active
-Della Cronin,,http://wpllc.net/della-b-cronin/,"Vice President for Legislative and Public Affairs, Washington Partners, LLC",extended_active
-Kate Brunette,,https://www.linkedin.com/in/brunettekate,Partnerships and Campaign Coordinator,extended_active
-Linnette Attai,,http://playwell-llc.com/,"Founder, Playwell LLC",extended_active
-Madeline Burton,,,Curriculum Writer,extended_active
-Matt Bauer,,,Curriculum Writer,extended_active
-Ross Hogin,,http://www.hogin.com/,"Graphic Designer, Branding/Re-design of code.org",extended_active
-Irina Lee,,,Graphic Designer,extended_active
-Trent Kay Maverick,,,Curriculum Writer,extended_active
-Jessie Opaleski,,,Education Team Intern,extended_active
-Monica Parsons,,,Videographer,extended_active
-Patricia Phillips,,,Curriculum Writer,extended_active
-Thi Phomprida,,,Customer Support,extended_active
-Nicole Reitz-Larsen,,https://www.linkedin.com/in/nicolereitzlarsen,District Manager,extended_active
-Brittany Scheuch,,,Operations Team Intern,extended_active
-Jael Topek,,,Vidoegrapher,extended_active
-GT Wrobel ,,,Curriculum Writer,extended_active
-Dorsey Whitney,,http://www.dorsey.com/,Legal Advice,extended_active
-Foster Pepper,,http://www.foster.com/,Legal Team,extended_active
-Daniel Apone,,http://www.linkedin.com/in/apone,Technically Learning Board Member,extended_inactive
-Katie Apone,,https://www.linkedin.com/profile/view?id=14777792,Program Manager ,extended_inactive
-Scott Bailey,,https://www.linkedin.com/profile/view?id=4992746,Audio Producer / Sound Design,extended_inactive
-Joe Basirico,,http://whoisjoe.com,Technically Learning Board Member,extended_inactive
-Nichol Bradford,,,,extended_inactive
-Nat Brown,,http://www.crunchbase.com/person/nat-brown,"Founder, An Engineering Guild",extended_inactive
-Beth Boatright,,,Technically Learning Board Member,extended_inactive
-Stephanie Chiang,,http://www.linkedin.com/pub/stephanie-chiang/13/59b/112,"Program Manager, Google",extended_inactive
-Lesley Chilcott,,http://www.imdb.com/name/nm2026261/,Filmmaker,extended_inactive
-Sarah Chow,,,Customer Support and Fundraising Associate ,extended_inactive
-Rebecca Deutsch,,http://www.linkedin.com/in/deutschrebecca,Technically Learning Board Member,extended_inactive
-Charles Dick,,,,extended_inactive
-Nicole Ehrlich,,http://www.imdb.com/name/nm2021837/,Producer,extended_inactive
-Susan Evans,,,,extended_inactive
-Aydin Ghajar,,http://www.linkedin.com/in/aydinghajar,Branding/Design for original code.org Website,extended_inactive
-James Gwertzman,,http://www.linkedin.com/pub/james-gwertzman/0/9/362/,Evangelist,extended_inactive
-Eric Hilton,,,Technically Learning Board Member,extended_inactive
-Stacy Hsu,,http://stacyhsu.com/,Graphic Designer,extended_inactive
-Scott Isaacs,,,Amazon,extended_inactive
-Elaine Kao,,,"Senior Program Manager, Google",extended_inactive
-Katie Kurtz,,http://www.linkedin.com/in/misskatiek,Grant Writer,extended_inactive
-Jeffrey Loppert,,,MathWorks,extended_inactive
-Eric Oemig,,,Technically Learning Board Member,extended_inactive
-Matt Oshry,,,24/7 Inc.,extended_inactive
-Brad Porter,,,Amazon,extended_inactive
-Erin Purcell,,,Accountant,extended_inactive
-Lauren Selig,,http://www.imdb.com/name/nm0783147/,Producer,extended_inactive
-Jon Smith,,,Manager,extended_inactive
-Andre Stackhouse,,,Software Engineer,extended_inactive
-Stephen Styrchak,,,,extended_inactive
-Adriel Tam,,http://www.linkedin.com/in/adrieltam,Technically Learning Board Member,extended_inactive
-Phil Wagner,,,"Instructional Designer, Google",extended_inactive
-Marc Wautier,,,,extended_inactive
+Jake Baskin,Director of District Management,https://www.linkedin.com/in/jakebaskin,Jake is a former high school computer science teacher and professional development provider.  As a teacher he focused on increasing access to computing for underrepresented groups and more than doubled female enrollment in introductory computer science classes. ,team
+Jenna Garcia,District Manager,http://www.linkedin.com/in/jennalgarcia,"Jenna comes to Code.org from years of experience in both the tech and education industries.  Over the past decade, she has skillfully kept one foot in each sector while working at Deloitte, NYC Public Schools, Chicago Public Schools and BigMachines/Oracle.  At Code.org, Jenna is the liaison for all things Chicago.",team
+Josh Caldwell,Education Program Manager,,"Before coming to Code.org, Josh was a Middle School teacher outside Seattle. He developed and taught a full spectrum of Computer Science and Robotics courses with a focus on using project based learning to connect CS to students' interests and local issues. At Code.org, Josh develops curriculum that brings the beauty of Computer Science to K-8 students. ",team
+Josh Lory,Software Engineer,https://www.linkedin.com/in/joshlory,"Josh works on the Code.org K-12 Computer Science curriculum.  Previously, he worked for two years at Microsoft.",team
+Josh Schulte,Customer Support,,"Josh is a graduate of the University of Iowa where he studied computer science and psychology. Before joining Code.org, he worked for eBay, Cracked.com, Phoenix Capital Management, and as IT Director for KRUI 98.7 FM in Iowa City. Josh is way too into music and has traveled around the country and across two oceans just to see his favorite bands play.",team
+Katie Hendrickson,Advocacy and Policy Manager,,Katie works on state policy and advocacy issues for Code.org. She is a former secondary mathematics teacher and 2014-2015 Albert Einstein Distinguished Educator Fellow. She has led inquiry-based teacher professional development and served as a leader in Ohio during the state’s transition to new standards.,team
+Kiki Prottsman,Education Program Manager,,"Prior to her role at Code.org, Kiki was Founder and Executive Director of Thinkersmith, a non-profit on the cutting edge of K-8 Computer Science Education. As a champion for responsible computing and equity in both CS employment and education, Kiki works with many organizations to improve the experience of girls and women in STEM. Kiki works with the education team to develop innovative middle school and out-of-school-time curriculum.",team
+Laura Kline,Marketing & Product Manager,http://www.linkedin.com/in/lkline/,"Laura manages marketing and partnerships for the Hour of Code campaign. Beyond the annual campaign, Laura oversees the operations, outreach and marketing for Code.org's K-5 Professional Development Program which trains over 2,000 elementary school teachers a month.",team
+Laurel Fan,Software Engineer,http://www.linkedin.com/in/laurel,"Laurel is a software engineer working on the part of the site that keeps track of user accounts, student progress and classrooms. She previously worked on 43 Things at the Robot Co-op. In her free time she implements gradient ascent algorithms to seek local maxima.",team
+Lian Halbert,Administrative Assistant,https://www.linkedin.com/pub/lian-halbert/a7/710/24,"Lian is a recent History graduate from the University of Washington. She supports administrative needs to keep Code.org running smoothly. Her role includes scheduling for Leadership Team members Pat, Michelle and Alice.",team
+Maddie Mador,Operations Coordinator,https://www.linkedin.com/in/madelinemador,Maddie works on the operations team to plan and execute the professional development workshops. She previously studied Women's Studies at The George Washington University and comes to Code.org with event planning and travel coordination experience. She is a life-long tap dancer and plays rugby with Seattle's local women's club. ,team
+Malorie Carlini,Operations Coordinator,https://www.linkedin.com/in/maloriecarlini,Malorie supports the education operations team in coordinating teacher professional development workshops across the country. She is a former community college workforce advisor who provided guidance for at-risk students. ,team
+Maria Choi,Head of Fundraising,https://www.linkedin.com/in/mariaschoi,"Maria develops partnerships with generous people, companies and organizations to support Code.org's mission. Maria also collaborates on marketing projects to drive awareness, growth and impact of Code.org's education programs. Previously, Maria worked for brands like Sesame Workshop, NFL, and UNICEF. Her other passion is volunteering for a non profit social enterprise called <a href=""http://www.nominetwork.org"">Nomi Network</a>. ",team
+Mary Pelfrey,Operations Coordinator,,"Mary comes from the Bureau of Education & Research where she worked with districts in the USA and Canada to ensure successful professional development workshops. At Code.org, she coordinates computer science trainings for educators across the country. ",team
+Mary Magellan,Fundraising Manager ,https://www.linkedin.com/in/marymagellan,"Mary focuses on sustainable development by writing and managing donor content, strengthening donor stewardship, and forming strategic partnerships. She brings a passion for collaboration, facilitation, and achieving equal human rights for all. Previously, Mary was the Development Writer at Global Fund for Women and a Technical Software Instructor at LearniT!",team 
+Megan Godwin,Human Resources,https://www.linkedin.com/profile/view?id=49247685,"Megan manages recruiting, hiring, onboarding, and HR for the Code.org team. With a background in both startups and sales management, Megan is passionate about growing, supporting, and developing a successful team.",team
+Mehal Shah,Software Engineer,,"Mehal is a software engineer who enjoys building big systems that help people learn. In his spare time, he enjoys hiking, photography, and competitive puzzle solving.",team
+Melissa Glenn,Executive Assistant,http://www.linkedin.com/in/melissadglenn,"Melissa supports the administrative needs of the Code.org offices. Specifically, she handles scheduling for Leadership Team members Hadi, Cameron and Sarah.",team
+Melissa Jones,Community Development Manager,https://www.linkedin.com/in/openclssrm,"Melissa focuses on creating scalable interventions to help K-12 educators leverage coding to achieve their teaching and learning goals. Melissa comes to code.org from Adobe, where she led world wide education programs. Before that, Melissa worked as an English teacher in New York City and later as the National Director of Education for College Summit.",team
+Michelle Page,VP of Finance & Administration,https://www.linkedin.com/in/michellepage1,"Michelle is a non-profit veteran, skilled in fundraising and organizational development. She was previously a successful grant writing consultant and the Executive Director of Technically Learning, a non-profit which brought robotics-based professional development to Seattle area elementary and middle school teachers. Michelle oversees Code.org's Finance, Administration, Human Resource, and Legal functions.",team
+Nimisha Ghosh Roy,NW District Manager,,"Nimisha is a project manager and educator with experience in teaching youth and adults in formal and informal environments, curriculum development with an equity lens, cross cultural communication and developing collaborative partnerships. She is a Seattle-native and is active in the local Indian dance/performing arts community.",team
+Pat Yongpradit,Chief Academic Officer,http://patyongpradit.com/,"Pat is a former high school computer science teacher who specialized in creating authentic, project-based learning experiences. He has worked as a curriculum consultant for Microsoft, for Pearson, and also as a curriculum team lead for Montgomery County Public Schools. At Code.org he is responsible for creating (or curating) curriculum and professional development, to provide rich computer science opportunities to every school in the nation.",team
+Phil Bogle,Tech Lead,,"Phil is the tech lead for the Code.org team. He was previously a staff software engineer and tech lead at Google, CTO and co-founder at Jobster, and an engineer at iLike, Avogadro, and Microsoft. He was also an early volunteer at Code.org and is thrilled at the opportunity to contribute full-time.",team
+Rachel Phillips,Director of Research and Evaluation,,Rachel received her doctorate in the Learning Sciences from the University of Washing in 2011. Her research has generally focused on underserved youth in the STEM fields. She will be responsible for research and evaluation at Code.org.,team
+Reena Chaudhary,Accountant,,"Reena is an Accountant who loves working with and analyzing numbers. Prior to joining Code.org, she worked in many different industries and roles as a Finance professional. At Code.org her main function is reconciling and analyzing all of the numbers that are the core of the financial statements.",team
+Roxanne Emadi,Social and Communications Manager,http://www.linkedin.com/in/roxanneemadi,"Roxanne writes, tells stories, and tweets for Code.org, working on grassroots marketing efforts. She's previously worked in media and policy.",team
+Ryan Sloan,Product Manager,,"Ryan is a Product Manager at Code.org. After growing up in small town Kentucky, he was motivated to help bring Computer Science to every student. Prior to joining Code.org, Ryan worked as Program Director at Coding with Kids, and as a Program Manager for the Microsoft Office User Experience. While at Microsoft, he found his passion for education through the TEALS and Hunt the Wumpus programs.",team
+Sarah Filman,VP of Curriculum,,"Sarah works on the Code.org K-12 curriculum. Before joining Code.org, Sarah was a Program Manager at Microsoft working on OneDrive. Passionate about encouraging kids (especially girls) to learn Computer Science, she has also been a teacher for Girls Who Code's Summer Immersion Program, as well as a TEALS teacher at Cleveland High School in Seattle. ",team
+Tanya Parker,Product Manager,http://www.linkedin.com/in/tcparker,"Tanya is a recent Computer Science graduate from the University of Southern California. She works on the Contributors program, curriculum translations, and internationalization and localization.",team
+Trevor Berg,Software Engineer,,"Trevor is a software engineer at Code.org. Previously, he worked on web and server infrastructure at Dropbox.",team
+Will Jordan,Software Engineer,http://linkedin.com/in/wgjordan,"Will works on the Code.org K-12 Computer Science curriculum. He recently completed a PhD in Comparative Literature at the University of California, Irvine, and previously worked as a software engineer for PopCap.",team
 Adel Kassah,,https://plus.google.com/+ADELKASSAH,Arabic Translator / ICT Teacher,translator
+Adriel Tam,,http://www.linkedin.com/in/adrieltam,Technically Learning Board Member,extended_inactive
 Ahmad Jamshid Hashimi,,http://www.jamshidhashimi.com,Co-Founder at CodeZone,translator
 Alin Chiriac,,https://ro.linkedin.com/in/alinchiriac,Founder & CEO of Adfaber,translator
 Ander Rivas,,https://www.linkedin.com/pub/ander-rivas/a8/766/695,Entrepreneur and Software Developer Fanatic,translator
+Andre Stackhouse,,,Software Engineer,extended_inactive
 Araz Yusubov,,,Azerbaijan ACM Chapter / ADA University,translator
 Areg Harutyunyan,,http://mission1701.com/,Software Engineer,translator
 Arnout Engelen,,http://arnout.engelen.eu,Dutch Translator,translator
+Avid Larizadeh,,http://www.crunchbase.com/person/avid-larizadeh,"COO & co-founder, Boticca",extended_active
+Aydin Ghajar,,http://www.linkedin.com/in/aydinghajar,Branding/Design for original code.org Website,extended_inactive
 Bahriddin Abdiev,,https://www.linkedin.com/profile/view?id=AAMAABBcqFgBHEsc8Xn5jwvO2dhiqagzAZWnpAA&trk=hp-identity-name,Uzbek Translator,translator
+Beth Boatright,,,Technically Learning Board Member,extended_inactive
+Brad Porter,,,Amazon,extended_inactive
+Brittany Scheuch,,,Operations Team Intern,extended_active
+Charles Dick,,,,extended_inactive
+Daniel Apone,,http://www.linkedin.com/in/apone,Technically Learning Board Member,extended_inactive
+Della Cronin,,http://wpllc.net/della-b-cronin/,"Vice President for Legislative and Public Affairs, Washington Partners, LLC",extended_active
+Dorsey Whitney,,http://www.dorsey.com/,Legal Advice,extended_active
 EduCare Georgia,,https://www.facebook.com/educaregeorgia,Localisation of educational project in Georgian,translator
+Elaine Kao,,,"Senior Program Manager, Google",extended_inactive
 Enrico Nardelli,,http://www.consorzio-cini.it/,Italian Translator,translator
+Eric Hilton,,,Technically Learning Board Member,extended_inactive
+Eric Oemig,,,Technically Learning Board Member,extended_inactive
+Erin Purcell,,,Accountant,extended_inactive
+Foster Pepper,,http://www.foster.com/,Legal Team,extended_active
 Franklin Weng,,https://www.linkedin.com/in/fweng322,Chinese (Traditional) Translator,translator
 Gonçalo Matos,,http://linkedin.com/in/goncalomatos,Portuguese Translator,translator
+GT Wrobel ,,,Curriculum Writer,extended_active
 Hakan Atas,,https://tr.linkedin.com/pub/hakan-atas/3b/714/8b6/,Turkish Translator / Educational Technology Integrator,translator
 Hieu Hoang,,https://www.facebook.com/stemcodelab,Vietnamese Translator,translator
 Hossein Shojaeifar,,http://lnkd.in/bQp5ewT,Persian Translator,translator
 Howard Ding (丁浩),,http://cn.linkedin.com/pub/howard-ding/32/38/7,IT Management Specialist,translator
 Hyun Seok Jeon,,https://crowdin.com/profile/melongist,Korean Translator,translator
+Irina Lee,,,Graphic Designer,extended_active
 Irma Ravkic,,https://www.linkedin.com/in/irmaravkic,Bosnian translator / PhD candidate in CS,translator
+James Gwertzman,,http://www.linkedin.com/pub/james-gwertzman/0/9/362/,Evangelist,extended_inactive
+Jeffrey Loppert,,,MathWorks,extended_inactive
+Jessie Opaleski,,,Education Team Intern,extended_active
+Joe Basirico,,http://whoisjoe.com,Technically Learning Board Member,extended_inactive
 Jon Georgsson,,http://lnkd.in/dcg6jpw,Icelandic Translator,translator
+Jon Smith,,,Manager,extended_inactive
 Josef Neumann,,,Czech Translator,translator
+Kate Brunette,,https://www.linkedin.com/in/brunettekate,Partnerships and Campaign Coordinator,extended_active
+Katie Apone,,https://www.linkedin.com/profile/view?id=14777792,Program Manager ,extended_inactive
+Katie Kurtz,,http://www.linkedin.com/in/misskatiek,Grant Writer,extended_inactive
+Lauren Selig,,http://www.imdb.com/name/nm0783147/,Producer,extended_inactive
+Lesley Chilcott,,http://www.imdb.com/name/nm2026261/,Filmmaker,extended_inactive
+Linnette Attai,,http://playwell-llc.com/,"Founder, Playwell LLC",extended_active
 Maciej Syslo,,http://godzinakodowania.pl,Polish Translator,translator
+Madeline Burton,,,Curriculum Writer,extended_active
+Marc Wautier,,,,extended_inactive
 Mariana Casetto Vieira da Cruz Grando,,https://www.linkedin.com/pub/mariana-casetto-v-cruz-grando/22/750/6b0,Brazilian Portuguese Translator,translator
+Matt Bauer,,,Curriculum Writer,extended_active
+Matt Oshry,,,24/7 Inc.,extended_inactive
+Megan Sullivan,,,Student Intern,extended_active
+Monica Parsons,,,Videographer,extended_active
 Muhammad Nazimuddaula,,https://medium.com/@nazimuddaula,"Co-Founder & CEO, G&R",translator
 Naoko Hasegawa Wilkes,,http://azultech.com/,Web Developer,translator
+Nat Brown,,http://www.crunchbase.com/person/nat-brown,"Founder, An Engineering Guild",extended_inactive
+Nichol Bradford,,,,extended_inactive
+Nicole Ehrlich,,http://www.imdb.com/name/nm2021837/,Producer,extended_inactive
+Nicole Reitz-Larsen,,https://www.linkedin.com/in/nicolereitzlarsen,District Manager,extended_active
 Oksana Pasichnyk,,http://ua.linkedin.com/pub/oksana-pasichnyk/4a/3a0/183/en,"CS Teacher at Skyhvska gymnasium, Lviv",translator
 Oleksandr Komarevych,,https://it.linkedin.com/pub/oleksandr-komarevych/22/722/15,Ukrainian Translator,translator
+Patricia Phillips,,,Curriculum Writer,extended_active
+Phil Wagner,,,"Instructional Designer, Google",extended_inactive
+Rebecca Deutsch,,http://www.linkedin.com/in/deutschrebecca,Technically Learning Board Member,extended_inactive
 Ridvan Aliu,,http://almooc.com/,Albanian Translator,translator
+Ross Hogin,,http://www.hogin.com/,"Graphic Designer, Branding/Re-design of code.org",extended_active
+Sarah Chow,,,Customer Support and Fundraising Associate ,extended_inactive
+Scott Bailey,,https://www.linkedin.com/profile/view?id=4992746,Audio Producer / Sound Design,extended_inactive
+Scott Isaacs,,,Amazon,extended_inactive
 Song Chi,,,Chinese Simplified Translator,translator
+Stacy Hsu,,http://stacyhsu.com/,Graphic Designer,extended_inactive
 Stephan Scholz,,https://twitter.com/stephan112358,Web Developer,translator
+Stephanie Chiang,,http://www.linkedin.com/pub/stephanie-chiang/13/59b/112,"Program Manager, Google",extended_inactive
+Stephen Styrchak,,,,extended_inactive
+Susan Evans,,,,extended_inactive
 Takis Pournaras,,https://twitter.com/DrAnax,Greek Translator,translator
 Tatok Prayoga,,https://www.linkedin.com/in/tatokprayoga,Indonesian Translator,translator
 Tero Toivanen,,http://www.teromakotero.fi/,Master of Arts in Education and Special Education Teacher,translator
+Thi Phomprida,,,Customer Support,extended_active
+Trent Kay Maverick,,,Curriculum Writer,extended_active
