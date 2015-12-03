@@ -25,6 +25,8 @@ module ScriptConstants
   COURSE3_NAME = 'course3'
   COURSE4_NAME = 'course4'
 
+  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
+
   def ScriptConstants.twenty_hour?(name)
     name == TWENTY_HOUR_NAME
   end
