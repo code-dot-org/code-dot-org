@@ -30,8 +30,9 @@ module.exports = function (callback) {
   };
 
   var isViewingSolution = (dashboard.clientState.queryParams('solution') === 'true');
+  var isViewingStudentAnswer = !!dashboard.clientState.queryParams('user_id');
 
-  if (!appOptions.channel && !isViewingSolution) {
+  if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
