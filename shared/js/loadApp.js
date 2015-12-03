@@ -29,7 +29,7 @@ module.exports = function (callback) {
     }
   };
 
-  if (!appOptions.channel && appOptions.publicCaching) {
+  if (appOptions.publicCaching && !appOptions.channel) {
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
@@ -86,7 +86,6 @@ module.exports = function (callback) {
     }).then(callback);
   } else {
     loadLastAttemptFromSessionStorage();
-    callback();
   }
 };
 
