@@ -140,14 +140,26 @@ When /^I press the last button with text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
-  menu_selector = 'div#page-small-footer a.more-link'
-  menu_item_selector = "div#page-small-footer a:contains(#{menuItemText})"
+When /^I open the small footer menu$/ do
+  menu_selector = 'div.small-footer-base a.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible
     And I click selector "#{menu_selector}"
-    And I wait until element "#{menu_item_selector}" is visible
+  }
+end
+
+When /^I press menu item "([^"]*)"$/ do |menuItemText|
+  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+  steps %{
+    Then I open the small footer menu
+    And I press menu item "#{menuItemText}"
   }
 end
 
