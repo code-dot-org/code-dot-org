@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-12-02T18:49:25.000Z",
+  "created_at": "2015-12-03T15:32:18.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -136,8 +136,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create an array called \"students\" and add all 5 student objects to the array. (Click to see full instructions)",
-    "markdown_instructions": "# Arrays of Objects\r\n\r\nOnce you have many objects with the same properties you can start to do more interesting work to process that data. In order to do this, however, it is usually convenient to place your objects within a single data structure. In this instance an array makes a lot of sense since it will be storing **many similar and related pieces of information**.\r\n\r\n![](https://images.code.org/46bf33a97d4c6c89191bc15864891477-image-1449087125215.11.52 PM.png)\r\n\r\n# Do This\r\n\r\n**You code from the previous exercise** is provided.\r\n\r\n* Create an **empty array** called `students` to hold your student objects.\r\n* **Add** your student objects to `students` using `appendItem` .\r\n* **Display** the contents of `students` with a single `console.log` statement and confirm all of your student objects are now contained in a single array.\r\n\r\n![](https://images.code.org/b0e08217f5c87194feda9d48cee89090-image-1449152727737.22.28 AM.png)",
+    "instructions": "Loop over your array of students and print the name and grade of every student. (Click to see full instructions)",
+    "markdown_instructions": "# Looping with Arrays of Objects: Multiple Properties\r\n\r\nLet's display more information about our students. This time when you loop through you should display both the name and the grade of each student. Use the syntax from the previous exercise as reference.\r\n\r\n# Do This\r\n\r\n**You code from the previous exercise** is provided.\r\n\r\n* Add code to the `for` loop from the previous exercise so that both the name and grade of each student is displayed.\r\n\r\n![](https://images.code.org/82d42710c76e556c20e82e598c09866c-image-1449157086594.37.46 AM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
