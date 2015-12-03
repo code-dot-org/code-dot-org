@@ -231,6 +231,7 @@ function loadGumball(skin, assetUrl) {
 }
 
 function loadIceAge(skin, assetUrl) {
+  skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'icy1';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
