@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Prix Une Heure de Code 2015
 
@@ -209,4 +208,4 @@ L'attribution des prix s'avère limitée aux classes d'élémentaires et seconda
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
-<% end %> <%= view :signup_button %>
+<% end %> 

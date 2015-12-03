@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Níže je ukázka řešení podporující Týden informatiky a jeho cíle, které by mohly být využity státními a místními zákonodárci.
 
@@ -55,4 +54,3 @@ Bylo vyřešeno, že [SENÁT, STÁT, KRAJ, MĚSTO NEBO ŠKOLNÍ RADA] --
 
 (5) podporuje možnosti zapojení/uplatnění žen a minorit v oblasti informatiky pomocí existujících programů.
 
-<%= view :signup_button %>

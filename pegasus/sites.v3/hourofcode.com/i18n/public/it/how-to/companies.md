@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -135,4 +134,3 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 L'Ora del Codice è soltanto il primo passo di un viaggio per imparare di più su come la tecnologia funziona e su come si creano gli applicativi software. Per continuare questo viaggio, [incoraggia i tuoi partecipanti ad imparare online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

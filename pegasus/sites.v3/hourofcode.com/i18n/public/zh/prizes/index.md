@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # 2015 Hour of Code prizes
 
@@ -209,4 +208,4 @@ K 12 間教室在美國和加拿大只限于獎。 Code.org 將選擇獲獎教�
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
-<% end %> <%= view :signup_button %>
+<% end %> 

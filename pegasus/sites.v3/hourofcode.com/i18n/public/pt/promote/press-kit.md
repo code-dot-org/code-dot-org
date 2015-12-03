@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Como atrair a mídia para sua Hora do Código
 
@@ -62,4 +61,3 @@ A Code.org® é uma instituição pública sem fins lucrativos dedicada a promov
   
 Encontre mais recursos e exemplos de e-mail [aqui](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>
