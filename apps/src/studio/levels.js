@@ -898,11 +898,31 @@ levels.playlab_7 = {
 levels.iceage_repeat = utils.extend(levels.playlab_7, {
   background: 'icy1',
   firstSpriteIndex: 4,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
   background: 'dots',
   firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
@@ -1459,7 +1479,7 @@ levels.gumball_join_food_fight = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16, 0, 0, 0, 0, 0, 16, 0],
+    [16, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
