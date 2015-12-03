@@ -29,7 +29,7 @@ module.exports = function (callback) {
     }
   };
 
-  if (!appOptions.channel) {
+  if (!appOptions.channel && dashboard.clientState.queryParams('solution') !== 'true') {
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};

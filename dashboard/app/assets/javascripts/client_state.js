@@ -36,6 +36,22 @@ dashboard.clientState.reset = function() {
   sessionStorage.clear();
 };
 
+dashboard.clientState.queryParams = function (name) {
+  var pairs = location.search.substr(1).split('&');
+  var params = {};
+  pairs.forEach(function (pair) {
+    var split = pair.split('=');
+    if (split.length === 2) {
+      params[split[0]] = split[1];
+    }
+  });
+
+  if (name) {
+    return params[name];
+  }
+  return params;
+};
+
 /**
  * Returns the client-cached copy of the level source for the given script
  * level, if it's newer than the given timestamp.
