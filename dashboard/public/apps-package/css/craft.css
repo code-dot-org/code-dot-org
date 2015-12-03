@@ -1217,6 +1217,9 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 .droplet-hover-div {
   max-width: 100% !important; }
 
+.legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
+  display: none; }
+
 body {
   background-color: #646464; }
 
@@ -1479,6 +1482,8 @@ a.video_link {
 
 #visualization {
   height: 677px !important; }
+  .legacy-share-view #visualization {
+    height: auto !important; }
 
 #craft-popup-player-selection {
   background-color: transparent;

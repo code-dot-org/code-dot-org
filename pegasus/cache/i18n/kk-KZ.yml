@@ -1,10 +1,10 @@
 "kk-KZ":
-  hour_of_code: Код жазу Сағаты
-  hello: Сәлем, әлем
-  select_language: Тілді таңдаңыз
-  en: Информатика
-  computer_science_edweek: Компьютерлік технологияның білім беру апталығы
-  csedweek_dates: Желтоқсан 8-14, 2014
+  hour_of_code: "Код жазу Сағаты"
+  hello: "Сәлем, әлем"
+  select_language: "Тілді таңдаңыз"
+  en: "Информатика"
+  computer_science_edweek: "Компьютерлік технологияның білім беру апталығы"
+  csedweek_dates: "Желтоқсан 8-14, 2014"
   csedweek_banner_hoc: '''<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">"Код жазу Сағаты"</a> жақындап келе жатыр. Барлық оқытушылар
     мен ұйымдастырушыларды шақырамыз, <a href="http://hourofcode.com" style="color:
@@ -14,296 +14,297 @@
     text-decoration: none; font-weight: 400">Сіз информатика пәнінің оқытушысыз ба?
     ИнформатикаEdWeek-тің басқа да ресурстарын қарап көріңіз</a>'''
   n_have_learned_an_hoc: <h2>"Код жазу Сағатын" </h2><h1>қарап көріңіз</h1><h3>#</h3>
-  anybody_can_learn: Бұны бәрі игере алады.
-  learn_now: Оқуды бастау
-  petition_message: Әрбір оқушы әрбір мектепте информатика пәнін оқи алатын жағдайы
-    болуы керек
-  petition_sign_message: 'Егер сіз келіссеңіз, өзіңіздің атыңызды жазыңыз. #Жазылғандарға
-    қосылыңыз.'
-  petition_sign_message_support: 'Егер сіз бізді қолдасаңыз, өзіңіздің атыңызды жазыңыз.  #Басқаларға
-    қосылыңыз.'
-  petition_join_others: '#Басқаларға қосылыңыз'
-  name: Атыңыз
-  email: Электронды пошта
-  zipcode: Пошталық индекс немесе мемлекет аты
-  submit: Жіберу
-  twentyhours_heading: 'Біздің курсты қолданып көріңіз: информатикаға кіріспе'
+  anybody_can_learn: "Бұны бәрі игере алады."
+  learn_now: "Оқуды бастау"
+  petition_message: "Әрбір оқушы әрбір мектепте информатика пәнін оқи алатын жағдайы
+    болуы керек"
+  petition_sign_message: "Егер сіз келіссеңіз, өзіңіздің атыңызды жазыңыз. #Жазылғандарға
+    қосылыңыз."
+  petition_sign_message_support: "Егер сіз бізді қолдасаңыз, өзіңіздің атыңызды жазыңыз.
+    \ #Басқаларға қосылыңыз."
+  petition_join_others: "#Басқаларға қосылыңыз"
+  name: "Атыңыз"
+  email: "Электронды пошта"
+  zipcode: "Пошталық индекс немесе мемлекет аты"
+  submit: "Жіберу"
+  twentyhours_heading: "Біздің курсты қолданып көріңіз: информатикаға кіріспе"
   twentyhours_text: Бірінші "Код жазу Сағатын" аяқтадыңыз ба? Информатика және бағдарламалау
     ұғымы туралы толығырақ келесі курста біліңіз.
   hoc2014_heading: 8-14 желтоқсан 2014 ж. <br/><a href="http://hourofcode.com">"Код
     жазу Сағатына"</a> қатысыңыз <br/>'
-  hoc2014_students: Оқушылар
-  hoc2014_try: Қолданып көріңіз
-  hoc2014_teachers: Оқытушылар
-  hoc2014_host: Ұйымдастырып көріңіз
-  hoc2014_everyone: Барлығы
-  hoc2014_support: Қолдаңыз &#x25BE;
+  hoc2014_students: "Оқушылар"
+  hoc2014_try: "Қолданып көріңіз"
+  hoc2014_teachers: "Оқытушылар"
+  hoc2014_host: "Ұйымдастырып көріңіз"
+  hoc2014_everyone: "Барлығы"
+  hoc2014_support: "Қолдаңыз &#x25BE;"
   hoc2014_whatishoc: '"Код жазу Сағаты" деген не'
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Сіздің Код Жазу Сағатын тіркеңіз
-  csedweek_map_search_placeholder: Кодтау Сағаты бастамасын табу
-  csedweek_map_search_search: Іздеу
-  csedweek_map_search_reset: қалпына келтіру
-  csedweek_map_legend_title: Аңыз
-  csedweek_map_legend_event: Кодтау Сағатының бастамалары
+  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_signup: "Сіздің Код Жазу Сағатын тіркеңіз"
+  csedweek_map_search_placeholder: "Кодтау Сағаты бастамасын табу"
+  csedweek_map_search_search: "Іздеу"
+  csedweek_map_search_reset: "қалпына келтіру"
+  csedweek_map_legend_title: "Аңыз"
+  csedweek_map_legend_event: "Кодтау Сағатының бастамалары"
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: Тіркелу
-  cded_try_it: Қолданып көріңіз
-  twentyhours_trynow: Қазір қолданып көріңіз
-  california_heading: Өзіңіздің мектебіңізді информатика пәнін оқытуды сұрап көріңіз
-  california_text: Кез келген оқытушы біздің <a href='http://studio.code.org/'>тегін
+  cded_sign_up: "Тіркелу"
+  cded_try_it: "Қолданып көріңіз"
+  twentyhours_trynow: "Қазір қолданып көріңіз"
+  california_heading: "Өзіңіздің мектебіңізді информатика пәнін оқытуды сұрап көріңіз"
+  california_text: "Кез келген оқытушы біздің <a href='http://studio.code.org/'>тегін
     курстарымызды</a> ұсына алады.  Кез келген бастауыш мектеп <a href='http://code.org/educate/k5'>информатика
     пәнін оқыта алады</a>. Мектептерге бізбен <a href='http://code.org/educate/districts'>
-    ынтымақтасуды</a> ұсыныңыз.
-  california_button: Толығырақ
-  flappy_heading: Көптен күтілген Code.org туған күні
+    ынтымақтасуды</a> ұсыныңыз."
+  california_button: "Толығырақ"
+  flappy_heading: "Көптен күтілген Code.org туған күні"
   flappy_text: Code.org сайтына 1 жыл болды. <br/><br/> Өзіңіздің <b>керемет</b> ойындарыңызды
     жасап, бізбен бірге атап өтіңіз. Өзіңіздің ережелеріңізді бағдарламалаңыз және
     достарыңызбен бірге ойнаңыз!
-  view_english_site: Сайтты ағылшын тілінде көру
-  non_english_tutorials: 'Оқыту құралдары келесі тілдерге аударылған:'
-  write_your_first_program: Бірінші компьютерлік бағдарламаны жазу
+  view_english_site: "Сайтты ағылшын тілінде көру"
+  non_english_tutorials: "Оқыту құралдары келесі тілдерге аударылған:"
+  write_your_first_program: "Бірінші компьютерлік бағдарламаны жазу"
   learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
     programming. This is a game-like tutorial starring video lectures by Bill Gates,
     Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
     statements, and basic algorithms.
-  all_ages: Кез келген жастағыларға
-  beginner: Бастаушы
-  n_participants: '# қатысушы'
-  go: Бастау
-  thank_you_: Рахмет!
-  congratulations: Құттықтаймыз!
-  congratulations_on_completing_hoc: Код Жазу Сағатының бір бөлімінің бітуімен құттықтаймыз
+  all_ages: "Кез келген жастағыларға"
+  beginner: "Бастаушы"
+  n_participants: "# қатысушы"
+  go: "Бастау"
+  thank_you_: "Рахмет!"
+  congratulations: "Құттықтаймыз!"
+  congratulations_on_completing_hoc: "Код Жазу Сағатының бір бөлімінің бітуімен құттықтаймыз"
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  course_name_accelerated: Жеделдетілген курс
+  course_name_accelerated: "Жеделдетілген курс"
   course_name_course1: Course 1
   course_name_course2: Course 2
   course_name_course3: Course 3
   course_name_course4: Course 4
-  congratulations_on_completing_course: '%{course} бітіруіңізбен құттықтаймыз'
-  congrats_next_tutorials_title: Келесі
+  congratulations_on_completing_course: "%{course} бітіруіңізбен құттықтаймыз"
+  congrats_next_tutorials_title: "Келесі"
   congrats_next_tutorials_desc: 1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің
     сабақтарын</a> өтіп көріңіз.
-  get_a_certificate_of_achievement: Бітіру туралы сертификат алу
-  enter_valid_age: Өтінеміз, жасыңызды дұрыс көрсетіңіз
-  enter_valid_email: Өтінеміз, электрондық поштаңызды дұрыс көрсетіңіз
-  get_a_certificate_message: Біз сізге сертификатты және <a href='/learn/beyond'>Оқуды
-    жалғастыру!</a> туралы ақпаратты жібереміз
-  get_a_certificate_message_after: Жүктеу немесе басып шығару үшін сертификат суретіңе
+  get_a_certificate_of_achievement: "Бітіру туралы сертификат алу"
+  enter_valid_age: "Өтінеміз, жасыңызды дұрыс көрсетіңіз"
+  enter_valid_email: "Өтінеміз, электрондық поштаңызды дұрыс көрсетіңіз"
+  get_a_certificate_message: "Біз сізге сертификатты және <a href='/learn/beyond'>Оқуды
+    жалғастыру!</a> туралы ақпаратты жібереміз"
+  get_a_certificate_message_after: "Жүктеу немесе басып шығару үшін сертификат суретіңе
     шертіңіз. Ал енді оқуды біздің <a href='http://studio.code.org'>басқа да курстарымызбен
     жалғастырыңыз</a> немесе <a href='/learn/beyond'>Бір Сағатта Үйренудің</a> артықшылықтарын
-    байқап көріңіз.
-  thanks_for_submitting: Алғыс айтамыз, сіздің сұранымыңыз жіберілді!
-  if_you_enjoyed: Егер сізге оқу барысы ұнаса, онда достарыңызды да шақырыңыз! Біз
-    барлық әлем үйренгенің қалаймыз.
-  personalize_certificate: Сертификатыңызды толтырыңыз
-  share_achievement: Жетістіктеріңізбен бөлісіңіз
-  beyond_hour_message: Оқуды біздің <a href='http://studio.code.org'>басқа да курстарымызбен
+    байқап көріңіз."
+  thanks_for_submitting: "Алғыс айтамыз, сіздің сұранымыңыз жіберілді!"
+  if_you_enjoyed: "Егер сізге оқу барысы ұнаса, онда достарыңызды да шақырыңыз! Біз
+    барлық әлем үйренгенің қалаймыз."
+  personalize_certificate: "Сертификатыңызды толтырыңыз"
+  share_achievement: "Жетістіктеріңізбен бөлісіңіз"
+  beyond_hour_message: "Оқуды біздің <a href='http://studio.code.org'>басқа да курстарымызбен
     жалғастырыңыз</a> немесе <a href='/learn/beyond'>Бір Сағатта Үйренудің</a> артықшылықтарын
-    байқап көріңіз.
-  leaderboards_for_hoc: Код Жазу Сағаты үздіктерінің тақтасы.
+    байқап көріңіз."
+  leaderboards_for_hoc: "Код Жазу Сағаты үздіктерінің тақтасы."
   support_url: http://support.сode.org
-  country: Мемлекет
-  city: Қала
-  gender: Жынысы
-  boys: Ұл балалар
-  girls: Қыз балалар
-  give_my_hour: 'Менің Сағатымды жіберу:'
-  girls_team: Қыздар тобы
-  boys_team: Ұлдар тобы
-  tell_the_world: Достарыңызға айтыңыз!
-  thanks_for_voting: Дауыс бергеніңізге рахмет!
+  country: "Мемлекет"
+  city: "Қала"
+  gender: "Жынысы"
+  boys: "Ұл балалар"
+  girls: "Қыз балалар"
+  give_my_hour: "Менің Сағатымды жіберу:"
+  girls_team: "Қыздар тобы"
+  boys_team: "Ұлдар тобы"
+  tell_the_world: "Достарыңызға айтыңыз!"
+  thanks_for_voting: "Дауыс бергеніңізге рахмет!"
   share_on_facebook: Facebook-те бөлісу
   share_on_twitter: Twitter-те бөлісу
-  beyond_an_hour: Бағдарламалау Сағатынан басқасы
-  get_started: Бастау
-  i_agree: Мен келісемін
-  participant_select: '- Таңдау -'
-  participant_student: Оқушы
-  participant_parent: Ата-ана
-  participant_educator: Мұғалім
-  participant_engineer: Бағдарламалаушы
-  participant_other: Жоғарыда көрсетілгеннен басқасы
-  print_all: Барлығын басып шығару
-  print_ice_art: Өзімнің керемет жазылған туындыларымды басып шығару
-  create_art_with_zombie: немесе зомбимен озық туынды құру
-  i_am_a: Мен
-  never_spam: Біз сізге ешқашан спам жібермейміз
-  enter_country: АҚШ-нан болмасаңыз мемлекетті таңдаңыз
-  used_infrequent_updates: Сирек жаңартулар үшін қолданылады
-  privacy_practices_children: Балаларға арналған біздің құпиялылық саясатымызды қараңыз
-  petition_thankyou: Қолдаухатқа қол қойғаныңыз үшін рахмет
-  continue_learning_header: Оқуды жалғастырыңыз
-  continue_learning_body: Оқудың көптеген түрлері бар. Сіз онлайн, немесе жергілікті
-    мектепте немесе жаздық лагерде оқи аласыз.
-  learn_next_level: Келесі деңгейге өту
-  learn_online: Біздің басқа да онлайн курстарымызды көріңіз
-  learn_classes: Бағдарламалауды үйрететін ұйымдарды іздеу
-  hoc_is_here: '#HourOfCode осы жерде - көріңіз! @codeorg'
-  just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
+  beyond_an_hour: "Бағдарламалау Сағатынан басқасы"
+  get_started: "Бастау"
+  i_agree: "Мен келісемін"
+  participant_select: "- Таңдау -"
+  participant_student: "Оқушы"
+  participant_parent: "Ата-ана"
+  participant_educator: "Мұғалім"
+  participant_engineer: "Бағдарламалаушы"
+  participant_other: "Жоғарыда көрсетілгеннен басқасы"
+  print_all: "Барлығын басып шығару"
+  print_ice_art: "Өзімнің керемет жазылған туындыларымды басып шығару"
+  create_art_with_zombie: "немесе зомбимен озық туынды құру"
+  i_am_a: "Мен"
+  never_spam: "Біз сізге ешқашан спам жібермейміз"
+  enter_country: "АҚШ-нан болмасаңыз мемлекетті таңдаңыз"
+  used_infrequent_updates: "Сирек жаңартулар үшін қолданылады"
+  privacy_practices_children: "Балаларға арналған біздің құпиялылық саясатымызды қараңыз"
+  petition_thankyou: "Қолдаухатқа қол қойғаныңыз үшін рахмет"
+  continue_learning_header: "Оқуды жалғастырыңыз"
+  continue_learning_body: "Оқудың көптеген түрлері бар. Сіз онлайн, немесе жергілікті
+    мектепте немесе жаздық лагерде оқи аласыз."
+  learn_next_level: "Келесі деңгейге өту"
+  learn_online: "Біздің басқа да онлайн курстарымызды көріңіз"
+  learn_classes: "Бағдарламалауды үйрететін ұйымдарды іздеу"
+  hoc_is_here: "#HourOfCode осы жерде - көріңіз! @codeorg"
+  just_did_hoc: "Мен #HourOfCode бітірдім- көріңіз! @codeorg"
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more.
-  learn_hoc: Код жазу Сағатымен бағдарламалауды үйреніңіз
-  beyond_hoc: Бірінші сағаттан кейін
-  what_gender: Сіздің жынысыңыз қандай?
-  girl: Қыз бала
-  boy: Ұл бала
-  help_recruit_coders: Біздің топқа көбірек бағдарламаушыларды жинауға көмектесіңіз!
-  help_recruit: Бізге көбірек бағдарламаушыларды жинауға көмектесіңіз!
-  lines_of_code: <b># ЖОЛДАН АСА КОД </b> ЖАЗЫЛДЫ.
-  lines_of_code_alt: ОҚЫШУЛАРДЫҢ ЖАЗҒАН <b>#</b> ЖОЛ КОДЫ
-  who_has_done_hoc: 'Кім code.org сайтында #HourOfCode-ды орындады?'
-  hoc_leaderboards: Код Жазу Сағатының үздіктер кестесі
-  students_and_lines: '%{students}% оқушы Код Жазу Сағатын бітірді және %{lines} жол
-    код жазды.'
-  start_hoc: Код Жазу Сағатына кірісу
-  contact_form_topic_press: Баспасөз/БАҚ (қатысушылардың сұхбат беруі және сөз сөйлеулері)
+  learn_hoc: "Код жазу Сағатымен бағдарламалауды үйреніңіз"
+  beyond_hoc: "Бірінші сағаттан кейін"
+  what_gender: "Сіздің жынысыңыз қандай?"
+  girl: "Қыз бала"
+  boy: "Ұл бала"
+  help_recruit_coders: "Біздің топқа көбірек бағдарламаушыларды жинауға көмектесіңіз!"
+  help_recruit: "Бізге көбірек бағдарламаушыларды жинауға көмектесіңіз!"
+  lines_of_code: "<b># ЖОЛДАН АСА КОД </b> ЖАЗЫЛДЫ."
+  lines_of_code_alt: "ОҚЫШУЛАРДЫҢ ЖАЗҒАН <b>#</b> ЖОЛ КОДЫ"
+  who_has_done_hoc: "Кім code.org сайтында #HourOfCode-ды орындады?"
+  hoc_leaderboards: "Код Жазу Сағатының үздіктер кестесі"
+  students_and_lines: "%{students}% оқушы Код Жазу Сағатын бітірді және %{lines} жол
+    код жазды."
+  start_hoc: "Код Жазу Сағатына кірісу"
+  contact_form_topic_press: "Баспасөз/БАҚ (қатысушылардың сұхбат беруі және сөз сөйлеулері)"
   stats_nina: '"Күнде сайын бір нәтиже - &mdash; 100% қатысу." - Nina Nichols Peery,
     Оқытушы'
   stats_student: '"Мен бұл мүмкіндіктін <b>өмірімде жалғыз</b> екенін білдім." - Mariana
     Alzate, бесінші сынып оқушысы'
   stats_michael: '"Мен ешқашан оқушыларымның оқуға мұндай қызығушылық танытқандарын<b>
     көрмедім</b>." - Майкл Кларк, оқытушы'
-  studiobar_title: <a href='http://studio.code.org'>Код Студиясын</a> Зертте
-  studiobar_title_nolink: Код Студиясын Зертте
-  studiobar_elementary_title: Бастапқы курстар
-  studiobar_elementary_body: Біздің K&#8209;5 арналған жаңа үш курс
-  studiobar_hoc_title: Код Жазу Сағаты
+  studiobar_title: "<a href='http://studio.code.org'>Код Студиясын</a> Зертте"
+  studiobar_title_nolink: "Код Студиясын Зертте"
+  studiobar_elementary_title: "Бастапқы курстар"
+  studiobar_elementary_body: "Біздің K&#8209;5 арналған жаңа үш курс"
+  studiobar_hoc_title: "Код Жазу Сағаты"
   studiobar_hoc_body: Angry Birds-пен код жазуды үйрен
-  studiobar_flappy_title: Қанат Қағу Коды
+  studiobar_flappy_title: "Қанат Қағу Коды"
   studiobar_flappy_body: Flappy ойынын жаса және бөліс
-  studiobar_teacher_title: Оқытушылар үшін жасалған
-  studiobar_teacher_body: Сыныбыңызды Студия Кодымен таныстырыңыз
-  studiobar_frozen_title: Код Жазу Сағаты
-  studiobar_frozen_body: Анна және Эльзамен қысқы ертегіні жаса
-  studiobar_donate_title: Қайырымдылақ жасау
-  studiobar_donate_body: Әрбір қайырымдылық доллары үшін, бір бала оқу үшін мүмкіндік
-    алады
-  studiobar_shop_title: Дүкен
-  studiobar_shop_body: Көзқарасты өзгерт. Біздің логотипті мақтанышпен киіп жүр.
-  homepage_hero_text_malala: «Мен барлық әлем қыздарын Код Жазу Сағатын оқуға шақырамын»,
-    - Малала, Нобель сыйлығының лауреаты
-  homepage_hero_text_susan: «Егер сіз технологияларды өзгерте алсаңыз, онда сіз әлемді
-    өзгерте аласыз», - Сьюзен, YouTube-тің Бас директоры
-  homepage_hero_text_fistbump: «Өз телефоныңызда тек қана ойын ойнап қоймай, оған
-    бағдарлама да жазыңыз», - Барак Обама, Президент
-  homepage_hero_text_sheryl: «Біздің балалар - соның ішінде қыздарымызға - информатика
-    пәнін оқуға мүмкіндік болуы керек.» Sheryl, Facebook-тің бас операциялық директоры
-  homepage_hero_text_satya: «Информатика пәні әлемнің жақсы жағын ашуға мүмкіндік
-    береді», - Сатья, Microsoft-тің Бас директоры
-  homepage_hero_text_bosh: «Егер сіз бағдарлама жазсаңыз, онда сіз өміріңіздің бағытың
-    таңдай аласыз», - Крис Бош
+  studiobar_teacher_title: "Оқытушылар үшін жасалған"
+  studiobar_teacher_body: "Сыныбыңызды Студия Кодымен таныстырыңыз"
+  studiobar_frozen_title: "Код Жазу Сағаты"
+  studiobar_frozen_body: "Анна және Эльзамен қысқы ертегіні жаса"
+  studiobar_donate_title: "Қайырымдылақ жасау"
+  studiobar_donate_body: "Әрбір қайырымдылық доллары үшін, бір бала оқу үшін мүмкіндік
+    алады"
+  studiobar_shop_title: "Дүкен"
+  studiobar_shop_body: "Көзқарасты өзгерт. Біздің логотипті мақтанышпен киіп жүр."
+  homepage_hero_text_malala: "«Мен барлық әлем қыздарын Код Жазу Сағатын оқуға шақырамын»,
+    - Малала, Нобель сыйлығының лауреаты"
+  homepage_hero_text_susan: "«Егер сіз технологияларды өзгерте алсаңыз, онда сіз әлемді
+    өзгерте аласыз», - Сьюзен, YouTube-тің Бас директоры"
+  homepage_hero_text_fistbump: "«Өз телефоныңызда тек қана ойын ойнап қоймай, оған
+    бағдарлама да жазыңыз», - Барак Обама, Президент"
+  homepage_hero_text_sheryl: "«Біздің балалар - соның ішінде қыздарымызға - информатика
+    пәнін оқуға мүмкіндік болуы керек.» Sheryl, Facebook-тің бас операциялық директоры"
+  homepage_hero_text_satya: "«Информатика пәні әлемнің жақсы жағын ашуға мүмкіндік
+    береді», - Сатья, Microsoft-тің Бас директоры"
+  homepage_hero_text_bosh: "«Егер сіз бағдарлама жазсаңыз, онда сіз өміріңіздің бағытың
+    таңдай аласыз», - Крис Бош"
   homepage_hero_text_student1: «Бұл дағдылар қызық болуымен қатар, менің өмірімді
     де өзгертті." Luna, 7-сынып оқушысы
-  homepage_hero_text_student2: «Бұрын менің балаларымның оқуға деген мұндай қызығушылықтарын
-    байқамадым.» Майкл, мұғалім
-  homepage_hero_text_student3: «Информатика — бұл үлкен сала, және оны байқап көрмей
-    Сізге ол ұнайды ма, ұнамайды ма оны біле алмайсыз» Джексон, 6-сынып оқушысы
-  homepage_hero_text_student4: «Бағдарламаудың көмегімен Сіз ойыңызға келген барлық
-    нәрсені жасай аласыз.» Майя, 2-сынып оқушысы
+  homepage_hero_text_student2: "«Бұрын менің балаларымның оқуға деген мұндай қызығушылықтарын
+    байқамадым.» Майкл, мұғалім"
+  homepage_hero_text_student3: "«Информатика — бұл үлкен сала, және оны байқап көрмей
+    Сізге ол ұнайды ма, ұнамайды ма оны біле алмайсыз» Джексон, 6-сынып оқушысы"
+  homepage_hero_text_student4: "«Бағдарламаудың көмегімен Сіз ойыңызға келген барлық
+    нәрсені жасай аласыз.» Майя, 2-сынып оқушысы"
   homepage_hero_text_student5: «Информатика - бұл ғылым біреу үшін емес. Бұл білім
     саласы сіз үшін, осы жерде және қазір." Geraldo, оқытушы
-  homepage_hero_text_teacher1: «Код жазу кезінде шығармашылықтың, шабыт және инновацияның
-    ұшқыны пайда болады - бұл кез келген мансап үшін маңызды.» Floresa, мұғалім
-  homepage_hero_text_teacher2: '|&ldquo; Бұл бағдарлама менің оқушыларыма 100% ұнады.
-    Олар бұған қатысқылары келді. &ldquo; Адам, мұғалім'
-  homepage_hero_text_stat_loc: 'Студенттердің жазған #loc код жолы'
-  homepage_hero_text_stat_students: 'Студия Кодына тіркелген #student_count студент'
-  homepage_hero_text_stat_served: 'Код Жазу Сағатын: #served байқап көрді'
-  homepage_slot_text_hoc: Код Жазу Сағаты
-  homepage_slot_text_frozen: Анна және Эльзамен Суық жүрек бағдарламасы
+  homepage_hero_text_teacher1: "«Код жазу кезінде шығармашылықтың, шабыт және инновацияның
+    ұшқыны пайда болады - бұл кез келген мансап үшін маңызды.» Floresa, мұғалім"
+  homepage_hero_text_teacher2: "|&ldquo; Бұл бағдарлама менің оқушыларыма 100% ұнады.
+    Олар бұған қатысқылары келді. &ldquo; Адам, мұғалім"
+  homepage_hero_text_stat_loc: "Студенттердің жазған #loc код жолы"
+  homepage_hero_text_stat_students: "Студия Кодына тіркелген #student_count студент"
+  homepage_hero_text_stat_served: "Код Жазу Сағатын: #served байқап көрді"
+  homepage_slot_text_hoc: "Код Жазу Сағаты"
+  homepage_slot_text_frozen: "Анна және Эльзамен Суық жүрек бағдарламасы"
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: Біздің барлық оқулықтарымыз
+  homepage_slot_text_studio: "Біздің барлық оқулықтарымыз"
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Дүкен
-  homepage_slot_text_flappy: Қанат Қағу Коды
-  homepage_action_text_hoc: Кодтау сағаты әр оқушыға.
-  homepage_action_text_num_served: Қызмет етілген саны
-  homepage_action_text_join_us: Бізге қосыл
-  homepage_action_text_sign_up: Тіркелу
-  homepage_action_text_try_it: Қолданып көріңіз
-  homepage_action_text_volunteers: Техникалық волонтер керек
-  homepage_action_text_codevideo: Видеоны көріңіз
-  homepage_action_text_teachervideo: Видеоны көріңіз
-  homepage_action_text_girlvideo: Қызды шабыттандыр
-  homepage_action_text_learn: Оқуды бастау
-  homepage_action_text_signpetition: Қолдаухатқа қол қою
-  homepage_signpetition_dropdown: Біздің қолдаухатқа қол қою &#x25BE;
+  homepage_slot_text_shop: "Дүкен"
+  homepage_slot_text_flappy: "Қанат Қағу Коды"
+  homepage_action_text_hoc: "Кодтау сағаты әр оқушыға."
+  homepage_action_text_num_served: "Қызмет етілген саны"
+  homepage_action_text_join_us: "Бізге қосыл"
+  homepage_action_text_sign_up: "Тіркелу"
+  homepage_action_text_try_it: "Қолданып көріңіз"
+  homepage_action_text_volunteers: "Техникалық волонтер керек"
+  homepage_action_text_codevideo: "Видеоны көріңіз"
+  homepage_action_text_teachervideo: "Видеоны көріңіз"
+  homepage_action_text_girlvideo: "Қызды шабыттандыр"
+  homepage_action_text_learn: "Оқуды бастау"
+  homepage_action_text_signpetition: "Қолдаухатқа қол қою"
+  homepage_signpetition_dropdown: "Біздің қолдаухатқа қол қою &#x25BE;"
   homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'Кодтау сағаты қайтадан келе жатыр, 7-13 желтоқсан. '
-  homepage_banner_link_prizes: 'Тарихтағы ең ірі үйрену бастамасына қосыл. '
-  homepage_banner_text_main: Информатика пәнін түрлендірді жақсарту үшін Code.org
-    және колледж Кеңесімен альянс құру.
-  homepage_banner_text_link: толығырақ білу
+  homepage_banner_text_prizes: "Кодтау сағаты қайтадан келе жатыр, 7-13 желтоқсан. "
+  homepage_banner_link_prizes: "Тарихтағы ең ірі үйрену бастамасына қосыл. "
+  homepage_banner_text_main: "Информатика пәнін түрлендірді жақсарту үшін Code.org
+    және колледж Кеңесімен альянс құру."
+  homepage_banner_text_link: "толығырақ білу"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: толығырақ білу
-  homepage_slot_text_title_hoc: Код Жазу Сағаты
-  homepage_slot_text_blurb_hoc: Барлығы үйрене алады. Бүгін бастаңыз
-  homepage_slot_text_link_hoc: Код Сағатын қолданып көріңіз
-  homepage_slot_text_link_host: Код Жазу Сағатын өткізу
-  homepage_slot_text_link_hocserved: Қызмет етілген саны
-  homepage_solot_text_link_volunteer: Кодтау сағатына волонтер бол
-  homepage_slot_text_title_students: Оқушылар
-  homepage_slot_text_blurb_students: Біздің барлық оқыту курстарымызды үйреніңіз
-  homepage_slot_text_link_codestudio: Студия Кодын пайдаланып көріңіз
-  homepage_slot_text_link_local: Жергілікті сыныпты іздеңіз
-  homepage_slot_text_link_othercourses: Басқа да онлайн курстар
-  homepage_slot_text_title_educators: Оқытушылар
-  homepage_slot_text_blurb_educators: Оқушыларыңызды үйретіңіз
-  homepage_slot_text_link_k5: Балаларға арналған курс
-  homepage_slot_text_link_fullcurriculum: Біздің толық оқыту курсымызды қараңыз
-  homepage_slot_text_link_pd: Кәсіби бағдарламалау
-  homepage_slot_text_title_advocates: Пікірлестер
-  homepage_slot_text_blurb_advocates: Біздің жұмысты қолдаңыз
-  homepage_slot_text_link_stats: Статистиканы қарау
-  homepage_slot_text_link_buy: Қатысу
-  homepage_slot_text_link_donate: Қайырымдылақ жасау
-  homepage_header_codestudio: Студия Коды оқушыларының шығармашылық жұмыстары
+  homepage_banner_privacy_link: "толығырақ білу"
+  homepage_slot_text_title_hoc: "Код Жазу Сағаты"
+  homepage_slot_text_blurb_hoc: "Барлығы үйрене алады. Бүгін бастаңыз"
+  homepage_slot_text_link_hoc: "Код Сағатын қолданып көріңіз"
+  homepage_slot_text_link_host: "Код Жазу Сағатын өткізу"
+  homepage_slot_text_link_hocserved: "Қызмет етілген саны"
+  homepage_solot_text_link_volunteer: "Кодтау сағатына волонтер бол"
+  homepage_slot_text_title_students: "Оқушылар"
+  homepage_slot_text_blurb_students: "Біздің барлық оқыту курстарымызды үйреніңіз"
+  homepage_slot_text_link_codestudio: "Студия Кодын пайдаланып көріңіз"
+  homepage_slot_text_link_local: "Жергілікті сыныпты іздеңіз"
+  homepage_slot_text_link_othercourses: "Басқа да онлайн курстар"
+  homepage_slot_text_title_educators: "Оқытушылар"
+  homepage_slot_text_blurb_educators: "Оқушыларыңызды үйретіңіз"
+  homepage_slot_text_link_k5: "Балаларға арналған курс"
+  homepage_slot_text_link_fullcurriculum: "Біздің толық оқыту курсымызды қараңыз"
+  homepage_slot_text_link_pd: "Кәсіби бағдарламалау"
+  homepage_slot_text_title_advocates: "Пікірлестер"
+  homepage_slot_text_blurb_advocates: "Біздің жұмысты қолдаңыз"
+  homepage_slot_text_link_stats: "Статистиканы қарау"
+  homepage_slot_text_link_buy: "Қатысу"
+  homepage_slot_text_link_donate: "Қайырымдылақ жасау"
+  homepage_header_codestudio: "Студия Коды оқушыларының шығармашылық жұмыстары"
   homepage_header_donors: Code.org сайты өздерінің көмекшілеріне алғыс айтады
-  homepage_donors_seall: Барлығын қарау
-  homepage_donors_donate: Қайырымдылақ жасау
-  contact_form_topic_student: Мен оқушымын
-  contact_form_topic_parent: Мен ата-анамын
-  contact_form_topic_teacher: Мен оқытушы/тәрбиеші
-  contact_form_topic_outside_us: Мен АҚШ-нан басқа жерде тұрамын.
-  contact_form_topic_contribution: Қайырымдылық төлем жасау
-  contact_form_topic_partner: Әріптес болғым келеді
-  contact_form_topic_other: Басқасы
-  contact_form_label_topic: Тақырып
-  contact_form_label_email: Сіздің электрондық поштаңыз
-  contact_form_label_message: Хабарлама
-  contact_form_label_submit: Хабарлама жіберу
-  class_submission_in_school: мектепте
-  class_submission_in_school_daily_programming_course: Күнделікті бағдараламау курсы
-  class_submission_in_school_ap_computer_science: Информатиканың бастапқы деңгейі
-  class_submission_in_school_full_university_cs_curriculum: Университет толық бағдарламалау
-    оқу жоспары
-  class_submission_in_school_robotics_club: Робототехника клубы
-  class_submission_in_school_programming_integrated_in_other_classes: Басқа пәндер
-    бағдарламасына қосылған бағдарламалау курстары (математика, және т.б.)
-  class_submission_in_school_summer_school_cs_program: Жазғы мектеп информатика бағдарламасы
-  class_submission_in_school_exploring_computer_science: Информатика пәнін оқу
-  class_submission_in_school_other: Мектепте
-  class_submission_out_of_school: Мектептен тыс
-  class_submission_out_of_school_summer_camp: Жаздық лагерь
-  class_submission_out_of_school_afterschool_program: Қосымша оқу
-  class_submission_out_of_school_all-day_workshop: Толық күндізгі курс (1 аптаға дейін)
-  class_submission_out_of_school_multi-week_workshop: Көп-апталық курс
-  class_submission_out_of_school_other: Тағы да сабақтан тыс
-  class_submission_online: Онлайн
-  class_submission_online_programming_class: Онлайн бағдарламалау сабақтары
-  class_submission_online_teacher_resource: Оқытушының онлайн оқулықтары
-  class_submission_online_other: Тағы да онлайн
-  class_submission_level_preschool: Мектепалды білім алу
-  class_submission_level_elementary: Бастауыш сыныптары
-  class_submission_level_middle_school: Орта мектеп
-  class_submission_level_high_school: Жоғарғы сынып
-  class_submission_level_college: Арнайы орта білім беру
-  class_submission_level_vocational: Кәсіптік
-  class_submission_languages_other: Басқа тілдер
+  homepage_donors_seall: "Барлығын қарау"
+  homepage_donors_donate: "Қайырымдылақ жасау"
+  contact_form_topic_student: "Мен оқушымын"
+  contact_form_topic_parent: "Мен ата-анамын"
+  contact_form_topic_teacher: "Мен оқытушы/тәрбиеші"
+  contact_form_topic_outside_us: "Мен АҚШ-нан басқа жерде тұрамын."
+  contact_form_topic_contribution: "Қайырымдылық төлем жасау"
+  contact_form_topic_partner: "Әріптес болғым келеді"
+  contact_form_topic_other: "Басқасы"
+  contact_form_label_topic: "Тақырып"
+  contact_form_label_email: "Сіздің электрондық поштаңыз"
+  contact_form_label_message: "Хабарлама"
+  contact_form_label_submit: "Хабарлама жіберу"
+  class_submission_in_school: "мектепте"
+  class_submission_in_school_daily_programming_course: "Күнделікті бағдараламау курсы"
+  class_submission_in_school_ap_computer_science: "Информатиканың бастапқы деңгейі"
+  class_submission_in_school_full_university_cs_curriculum: "Университет толық бағдарламалау
+    оқу жоспары"
+  class_submission_in_school_robotics_club: "Робототехника клубы"
+  class_submission_in_school_programming_integrated_in_other_classes: "Басқа пәндер
+    бағдарламасына қосылған бағдарламалау курстары (математика, және т.б.)"
+  class_submission_in_school_summer_school_cs_program: "Жазғы мектеп информатика бағдарламасы"
+  class_submission_in_school_exploring_computer_science: "Информатика пәнін оқу"
+  class_submission_in_school_other: "Мектепте"
+  class_submission_out_of_school: "Мектептен тыс"
+  class_submission_out_of_school_summer_camp: "Жаздық лагерь"
+  class_submission_out_of_school_afterschool_program: "Қосымша оқу"
+  class_submission_out_of_school_all-day_workshop: "Толық күндізгі курс (1 аптаға
+    дейін)"
+  class_submission_out_of_school_multi-week_workshop: "Көп-апталық курс"
+  class_submission_out_of_school_other: "Тағы да сабақтан тыс"
+  class_submission_online: "Онлайн"
+  class_submission_online_programming_class: "Онлайн бағдарламалау сабақтары"
+  class_submission_online_teacher_resource: "Оқытушының онлайн оқулықтары"
+  class_submission_online_other: "Тағы да онлайн"
+  class_submission_level_preschool: "Мектепалды білім алу"
+  class_submission_level_elementary: "Бастауыш сыныптары"
+  class_submission_level_middle_school: "Орта мектеп"
+  class_submission_level_high_school: "Жоғарғы сынып"
+  class_submission_level_college: "Арнайы орта білім беру"
+  class_submission_level_vocational: "Кәсіптік"
+  class_submission_languages_other: "Басқа тілдер"
   inspirational_videos_more: Көбірек<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">мотивациялық
     бейнелер</a>атақты азаматтардан
   playlab_choose_theme: Choose your Play Lab theme
@@ -311,37 +312,37 @@
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Код арқылу Галактика құру
+  starwars_subtitle: "Код арқылу Галактика құру"
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: Тек ағылшын тілінде | Жаңа браузерлер | 11+ жас аралығы
-  starwars_javascript_start_button: Қазір қолданып көріңіз
-  starwars_blocks_title: Блоктар
+  starwars_javascript_specs: "Тек ағылшын тілінде | Жаңа браузерлер | 11+ жас аралығы"
+  starwars_javascript_start_button: "Қазір қолданып көріңіз"
+  starwars_blocks_title: "Блоктар"
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones,
     tablets | Ages 6-10
-  starwars_blocks_start_button: Қазір қолданып көріңіз
+  starwars_blocks_start_button: "Қазір қолданып көріңіз"
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
-  starwars_speak_languages: Басқа тілде сөйлейсіз бе?
-  starwars_help_translate: Басқа тілге аударуға көмектест
-  starwars_platform_text: Заманауи браузерлер, смартфондар, планшеттер
+  starwars_speak_languages: "Басқа тілде сөйлейсіз бе?"
+  starwars_help_translate: "Басқа тілге аударуға көмектест"
+  starwars_platform_text: "Заманауи браузерлер, смартфондар, планшеттер"
   mc_name: Minecraft Кодтау Сағаты
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Жас аралығы 4-14
-  mc_platformtext: Заманауи браузерлер, смартфондар, планшеттер
+  mc_gradelevel: "Жас аралығы 4-14"
+  mc_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Кодтау Сағаты
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
     volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -359,69 +360,69 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and find a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_header_shared: Ақпарат еріктілер картасында мұғалімдерге
-    көрінеді
-  volunteer_engineer_submission_field_name: Атыңыз
-  volunteer_engineer_submission_field_name_placeholder: Толық аты-жөніңіз
-  volunteer_engineer_submission_field_company: Компания (немесе Университет)
-  volunteer_engineer_submission_field_company_placeholder: Компания (немесе Университет)
-  volunteer_engineer_submission_field_experience_level: Тәжірибелік деңгей
-  volunteer_engineer_submission_field_location: Тұрғылықты жер
-  volunteer_engineer_submission_field_location_desc: Егер сіз мекен-жайыңызды көрсетсеңіз
-    біз оны басқаларға жарияламаймыз, тек қана картада белгі ретінде көрсетеміз.
-  volunteer_engineer_submission_field_location_placeholder: Пошталық индекс, қала
-    және штат/мемлекет, немесе көше атауы
-  volunteer_engineer_submission_field_location_flexibility: Мен Код Жазу Сағатына
-    осы уақыт аралығында көмек көрсете аламын... (керектілерін таңдаңыз)
-  volunteer_engineer_submission_checkbox_after_hoc: Код Жазу Сағатынан кейін ерікті
-    болуды қалаймын
-  volunteer_engineer_submission_field_time_commitment: Код Жазу Сағатынан кейін уақыт
-    бөлу
+  volunteer_engineer_submission_header_shared: "Ақпарат еріктілер картасында мұғалімдерге
+    көрінеді"
+  volunteer_engineer_submission_field_name: "Атыңыз"
+  volunteer_engineer_submission_field_name_placeholder: "Толық аты-жөніңіз"
+  volunteer_engineer_submission_field_company: "Компания (немесе Университет)"
+  volunteer_engineer_submission_field_company_placeholder: "Компания (немесе Университет)"
+  volunteer_engineer_submission_field_experience_level: "Тәжірибелік деңгей"
+  volunteer_engineer_submission_field_location: "Тұрғылықты жер"
+  volunteer_engineer_submission_field_location_desc: "Егер сіз мекен-жайыңызды көрсетсеңіз
+    біз оны басқаларға жарияламаймыз, тек қана картада белгі ретінде көрсетеміз."
+  volunteer_engineer_submission_field_location_placeholder: "Пошталық индекс, қала
+    және штат/мемлекет, немесе көше атауы"
+  volunteer_engineer_submission_field_location_flexibility: "Мен Код Жазу Сағатына
+    осы уақыт аралығында көмек көрсете аламын... (керектілерін таңдаңыз)"
+  volunteer_engineer_submission_checkbox_after_hoc: "Код Жазу Сағатынан кейін ерікті
+    болуды қалаймын"
+  volunteer_engineer_submission_field_time_commitment: "Код Жазу Сағатынан кейін уақыт
+    бөлу"
   volunteer_engineer_submission_field_linkedin: LinkedIn-дегі профиль
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook-тегі профиль
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Сипаттама
-  volunteer_engineer_submission_field_description_desc: Өзіңіздің информатика пәнінен
+  volunteer_engineer_submission_field_description: "Сипаттама"
+  volunteer_engineer_submission_field_description_desc: "Өзіңіздің информатика пәнінен
     тәжірибеңізді және жергілікті жердің оқытушыларына ерікті ретінді қалай көмек
-    көрсете аласыз, сол туралы жазыңыз.
-  volunteer_engineer_submission_field_description_placeholder: Тәжірибе және/немесе
-    қатысу туралы анықтама
-  volunteer_engineer_submission_header_private: Ақпарат құпия сақталынады және ешқашан
-    жарияланбайды
-  volunteer_engineer_submission_field_email: Электронды поштаңыз
-  volunteer_engineer_submission_field_email_desc: Сіздің электрондық поштаңыз ешқашан
-    жарияланбайды, бірақ біз мұғалімдерден болған сұранымдарды сізге жібереміз.
-  volunteer_engineer_submission_field_email_placeholder: Электронды поштаңыз
-  volunteer_engineer_submission_final_paragraph: Жергілікті мұғалімдер сізбен Код
+    көрсете аласыз, сол туралы жазыңыз."
+  volunteer_engineer_submission_field_description_placeholder: "Тәжірибе және/немесе
+    қатысу туралы анықтама"
+  volunteer_engineer_submission_header_private: "Ақпарат құпия сақталынады және ешқашан
+    жарияланбайды"
+  volunteer_engineer_submission_field_email: "Электронды поштаңыз"
+  volunteer_engineer_submission_field_email_desc: "Сіздің электрондық поштаңыз ешқашан
+    жарияланбайды, бірақ біз мұғалімдерден болған сұранымдарды сізге жібереміз."
+  volunteer_engineer_submission_field_email_placeholder: "Электронды поштаңыз"
+  volunteer_engineer_submission_final_paragraph: "Жергілікті мұғалімдер сізбен Код
     Жазу Сағаты немесе ерікті болу жайында байланысуы үшін картада белгіленесіз. Біз
     сіздің электрондық адресіңізді және тұрғылықты жеріңізді ЕШҚАШАН жарияламаймыз.
     Бірақ басқа ақпарат (соның ішінде шамамен орналасқан жеріңіз) жергілікті мұғалімдер
-    үшін көрінетін болады.
-  volunteer_engineer_submission_checkbox_contact: 'Мен оқытушылардың ерікті болу жайында
-    менімен байланысуына келісемін (Ескерту: сіздің электрондық адресіңіз жарияланбайды)'
-  volunteer_engineer_submission_submit: Жіберу
-  volunteer_engineer_submission_thankyou: Ақпаратты толтырып жібергеніңіз үшін рахмет.
-  volunteer_engineer_submission_commitment_uncertain: Белгісіз
-  volunteer_engineer_submission_commitment_one_hr_per_week: Аптасына 1 сағат
-  volunteer_engineer_submission_commitment_three_hrs_per_week: Аптасына 3 сағат
-  volunteer_engineer_submission_commitment_five_hrs_per_week: Аптасына 5 сағат
-  volunteer_engineer_submission_commitment_now_and_then: Кейде
-  volunteer_engineer_submission_commitment_annually: Жылына 2-3 рет
-  volunteer_engineer_submission_commitment_monthly: Айына бір-екі сағат
-  volunteer_engineer_submission_commitment_weekly: Аптасына бір-екі сағат
-  volunteer_engineer_submission_commitment_more: Тағы да
-  volunteer_engineer_submission_location_flexibility_onsite: Мектептегі дайындық
-  volunteer_engineer_submission_location_flexibility_remote: Қашықтықтан оқыту (мұғалімдер
-    немесе оқушылар)
+    үшін көрінетін болады."
+  volunteer_engineer_submission_checkbox_contact: "Мен оқытушылардың ерікті болу жайында
+    менімен байланысуына келісемін (Ескерту: сіздің электрондық адресіңіз жарияланбайды)"
+  volunteer_engineer_submission_submit: "Жіберу"
+  volunteer_engineer_submission_thankyou: "Ақпаратты толтырып жібергеніңіз үшін рахмет."
+  volunteer_engineer_submission_commitment_uncertain: "Белгісіз"
+  volunteer_engineer_submission_commitment_one_hr_per_week: "Аптасына 1 сағат"
+  volunteer_engineer_submission_commitment_three_hrs_per_week: "Аптасына 3 сағат"
+  volunteer_engineer_submission_commitment_five_hrs_per_week: "Аптасына 5 сағат"
+  volunteer_engineer_submission_commitment_now_and_then: "Кейде"
+  volunteer_engineer_submission_commitment_annually: "Жылына 2-3 рет"
+  volunteer_engineer_submission_commitment_monthly: "Айына бір-екі сағат"
+  volunteer_engineer_submission_commitment_weekly: "Аптасына бір-екі сағат"
+  volunteer_engineer_submission_commitment_more: "Тағы да"
+  volunteer_engineer_submission_location_flexibility_onsite: "Мектептегі дайындық"
+  volunteer_engineer_submission_location_flexibility_remote: "Қашықтықтан оқыту (мұғалімдер
+    немесе оқушылар)"
   volunteer_engineer_submission_location_flexibility_curriculum: Open-source оқыту
     бағдарламаларына атсалысу
-  volunteer_engineer_submission_experience_unspecified: Көрсетілмеген
+  volunteer_engineer_submission_experience_unspecified: "Көрсетілмеген"
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: Университет
-    студент (немесе ғылыми)
-  volunteer_engineer_submission_experience_software_professional: Кәсіби бағдарламалық
-    жабдықтама
+  volunteer_engineer_submission_experience_university_student_or_researcher: "Университет
+    студент (немесе ғылыми)"
+  volunteer_engineer_submission_experience_software_professional: "Кәсіби бағдарламалық
+    жабдықтама"
   volunteer_engineer_submission_distance_8: 5 миля
   volunteer_engineer_submission_distance_16: 10 миля
   volunteer_engineer_submission_distance_24: 15 миля
@@ -436,60 +437,62 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
-  petition_age: Жасы
-  dashboard_landing_title: Оқытушының жеке парақшасы
-  dashboard_landing_welcome: Оқытушының жетілдірілген басқару панеліне қош келдіңіз.
-  dashboard_landing_video: мына видеоны көріңіз!
-  dashboard_landing_watch_video: Жаңа мүмкіндіктермен таныс болу үшін
-  dashboard_landing_view_as_student: Бұл сайтты оқушы ретінде көру
-  dashboard_landing_students_title: Сіздің оқушыларыңыз
-  dashboard_landing_students_manage: Оқушыларыңызды көру және басқару
-  dashboard_landing_news_title: Мектепке дейінгі және бастауыш білім беру ресурстары
-    (тек ағылшын тілінде)
-  dashboard_landing_new_beta: Жаңа! 5-сынып оқушыларына арналған бета-курсымызды көріңіз.
-  dashboard_landing_new_k5courses: Жаңа! 5-сынып оқушыларына арналған курсымызды көріңіз.
-  dashboard_landing_useful_links: Басқа да пайдалы сілтемелер (тек ағылшын тілінде)
-  dashboard_landing_office_hours: Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды
-    көріңіз.
-  dashboard_landing_print_certificates: Осы курсты бітірген оқушылардың сертификаттарын
-    басып шығару
-  dashboard_landing_educator_blog: Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар
-    жайында оқыңыз
-  dashboard_landing_smart_hints: Өтінеміз бізге Code.org сабақтарына көмексөздерді
-    қосуға көмектесіңіз
-  dashboard_landing_video_player: Біздің жаңа видео ойнатқышты сыныбыңызда тексеріп
-    көріңіз
-  dashboard_landing_progress_title: Сыныптың басты жетістіктері
-  dashboard_landing_progress_biggest: Бұл сіздің үлкен бөліміңіздің жетістіктері.
-  dashboard_landing_view_progress: '%{biggest_section} Ілгерілеуін көру '
-  dashboard_landing_print_progress: Прогресіңізді басып шығару
-  dashboard_landing_available_title: Қолжетімді курстар
-  dashboard_landing_available_courses: Сізге және сіздің оқушыларыңызға қолжетімді
-    курстар.
-  dashboard_landing_more_tutorials: Бұдан да көбірек сабақ көргіңіз келе ме?
+  petition_age: "Жасы"
+  dashboard_landing_title: "Оқытушының жеке парақшасы"
+  dashboard_landing_welcome: "Оқытушының жетілдірілген басқару панеліне қош келдіңіз."
+  dashboard_landing_video: "мына видеоны көріңіз!"
+  dashboard_landing_watch_video: "Жаңа мүмкіндіктермен таныс болу үшін"
+  dashboard_landing_view_as_student: "Бұл сайтты оқушы ретінде көру"
+  dashboard_landing_students_title: "Сіздің оқушыларыңыз"
+  dashboard_landing_students_manage: "Оқушыларыңызды көру және басқару"
+  dashboard_landing_news_title: "Мектепке дейінгі және бастауыш білім беру ресурстары
+    (тек ағылшын тілінде)"
+  dashboard_landing_new_beta: "Жаңа! 5-сынып оқушыларына арналған бета-курсымызды
+    көріңіз."
+  dashboard_landing_new_k5courses: "Жаңа! 5-сынып оқушыларына арналған курсымызды
+    көріңіз."
+  dashboard_landing_useful_links: "Басқа да пайдалы сілтемелер (тек ағылшын тілінде)"
+  dashboard_landing_office_hours: "Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды
+    көріңіз."
+  dashboard_landing_print_certificates: "Осы курсты бітірген оқушылардың сертификаттарын
+    басып шығару"
+  dashboard_landing_educator_blog: "Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар
+    жайында оқыңыз"
+  dashboard_landing_smart_hints: "Өтінеміз бізге Code.org сабақтарына көмексөздерді
+    қосуға көмектесіңіз"
+  dashboard_landing_video_player: "Біздің жаңа видео ойнатқышты сыныбыңызда тексеріп
+    көріңіз"
+  dashboard_landing_progress_title: "Сыныптың басты жетістіктері"
+  dashboard_landing_progress_biggest: "Бұл сіздің үлкен бөліміңіздің жетістіктері."
+  dashboard_landing_view_progress: "%{biggest_section} Ілгерілеуін көру "
+  dashboard_landing_print_progress: "Прогресіңізді басып шығару"
+  dashboard_landing_available_title: "Қолжетімді курстар"
+  dashboard_landing_available_courses: "Сізге және сіздің оқушыларыңызға қолжетімді
+    курстар."
+  dashboard_landing_more_tutorials: "Бұдан да көбірек сабақ көргіңіз келе ме?"
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond"> Біздің әріптестеріміздің
     </a> сабақтары. Роботтарды бағдарламалауды, веб-парақтар жасау, қосымшалар жасау
     және C++, Ruby немесе Python сияқты бағдарламалау тілдерін үйреніңіз!
-  dashboard_hoc_courses: Бағдарламалау Сағаты барлығы үшін
-  dashboard_hoc_courses_desc: Студенттеріңізбен кез келген қысқа сабақтарды орындап
-    көріңіз!
+  dashboard_hoc_courses: "Бағдарламалау Сағаты барлығы үшін"
+  dashboard_hoc_courses_desc: "Студенттеріңізбен кез келген қысқа сабақтарды орындап
+    көріңіз!"
   dashboard_hoc_courses_desc_and_cta: Студенттеріңізбен кез келген қысқа сабақтарды
     орындап көріңіз. Информатика Білім Апталығында <a href="https://hourofcode.com">Код
     Жазу Сағаты қозғалысына қосылыңыз</a>.
-  dashboard_k5_courses: Балабақша баларынан бастап 5-сыныпқа дейінгі оқушыларға арналған
-    20-сағаттық курстар
+  dashboard_k5_courses: "Балабақша баларынан бастап 5-сыныпқа дейінгі оқушыларға арналған
+    20-сағаттық курстар"
   dashboard_k5_courses_desc: Бұл курстар компьюердің көмегінсіз өзін-өзі бақылайтын
     онлайн оқумен қатар қолданылады. Әрбір курс 20 сабақтан тұрады және олар бір кіріп-шығу
     кезінде немесе бір семестр бойы орындалады. Тіпті әріп танымайтын мектепке дейінгі
     жастағы балалар да қатыса алады. Сізге бастау үшін АҚШ-тың сапалы, біліктілікті
     арттыру бағдарламаларын тегін ұсынамыз. <a href="/professional-development-workshops">Жақын
     жерден табу!</a>
-  dashboard_middle_courses: Орта мектеп оқушыларына арналған 20-сағаттық курстар
+  dashboard_middle_courses: "Орта мектеп оқушыларына арналған 20-сағаттық курстар"
   dashboard_middle_courses_desc: Біздің орта мектепке арналған бағдарламамыз информатика
     мен бағдарламалауды орта мектеп математикасы мен ғылымы аясында қолданады. Кәсіби
     жетілуге қатысты сұрақтар бойынша семинарға тіркелу үшін, Code.org-тан <a href="/educate/districts">өзіңіздің
     ауданыңызда</a> өтініш қалдырыңыз.
-  dashboard_high_courses: Жоғары мектеп оқушылары үшін бір жылдық курстар
+  dashboard_high_courses: "Жоғары мектеп оқушылары үшін бір жылдық курстар"
   dashboard_high_courses_desc: Біздің жоғарғы сынып оқушыларына арналған бағдарламамыз,
     мектеп аудандарына, оқытушылар құрамын жаңа деңгейге дайындау арқылы, информатикадан
     жылдық бағдарлама ұсынады. Кәсіби жетілуге қатысты сұрақтар бойынша семинарға
@@ -502,192 +505,192 @@
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
-  dashboard_course_ecs: Информатика пәнін оқу
+  dashboard_course_ecs: "Информатика пәнін оқу"
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
-  dashboard_landing_loading: ЖҮКТЕЛУДЕ...
-  dashboard_action_edit: Өзгерту
-  dashboard_action_save: Сақтау
-  dashboard_action_save_all: Барлығын сақтау
-  dashboard_action_cancel: Болдырмау
-  dashboard_action_delete: Өшіру
-  dashboard_action_delete_yes: Иә
-  dashboard_action_delete_no: Жоқ
-  dashboard_action_confirm: Өшіру?
-  dashboard_action_remove: Өшіру
-  dashboard_action_remove_confirm: Өшіру?
-  dashboard_action_done: Дайын
-  dashboard_action_required: қажет
-  dashboard_navigation_home_page: Оқытушының жеке парақшасы
-  dashboard_navigation_section_student_progress: Студенттің тіркелу және ілгерілеуі
-    туралы
-  dashboard_navigation_section_teacher_progress: Сенің оқудағы ілгерілеуін
-  dashboard_navigation_section_lesson_plans: Сабақ жоспары мен оқу материалдары
-  dashboard_navigation_section_community: Көмек сұрау және қауымдастық
-  dashboard_navigation_section_pd: Кәсіби бағдарламалау
-  dashboard_navigation_section_speakers: Информатика <br/> шақырылған ораторлар
-  dashboard_navigation_all_sections: Студенттің тіркелу және ілгерілеуі туралы
-  dashboard_navigation_view_progress: Орындалу барысын көру
-  dashboard_navigation_view_text_responses: Жауаптарды қарау
-  dashboard_navigation_add_students: Оқушыларды қосу
-  dashboard_navigation_manage_students: Оқушыларды басқару
-  dashboard_navigation_lesson_plans_resources: Сабақ жоспары мен оқу материалдары
-  dashboard_navigation_view_stats: Статистика
-  dashboard_navigation_section: 'Бөлім: %{section_name}'
-  dashboard_navigation_student: 'Оқушы: %{student_name}'
-  dashboard_sections_new_section: Жаңа бөлім
-  dashboard_sections_jumbotron_instruction: Жаңа бөлім құрыңыз және оған оқушыларды
+  dashboard_landing_loading: "ЖҮКТЕЛУДЕ..."
+  dashboard_action_edit: "Өзгерту"
+  dashboard_action_save: "Сақтау"
+  dashboard_action_save_all: "Барлығын сақтау"
+  dashboard_action_cancel: "Болдырмау"
+  dashboard_action_delete: "Өшіру"
+  dashboard_action_delete_yes: "Иә"
+  dashboard_action_delete_no: "Жоқ"
+  dashboard_action_confirm: "Өшіру?"
+  dashboard_action_remove: "Өшіру"
+  dashboard_action_remove_confirm: "Өшіру?"
+  dashboard_action_done: "Дайын"
+  dashboard_action_required: "қажет"
+  dashboard_navigation_home_page: "Оқытушының жеке парақшасы"
+  dashboard_navigation_section_student_progress: "Студенттің тіркелу және ілгерілеуі
+    туралы"
+  dashboard_navigation_section_teacher_progress: "Сенің оқудағы ілгерілеуін"
+  dashboard_navigation_section_lesson_plans: "Сабақ жоспары мен оқу материалдары"
+  dashboard_navigation_section_community: "Көмек сұрау және қауымдастық"
+  dashboard_navigation_section_pd: "Кәсіби бағдарламалау"
+  dashboard_navigation_section_speakers: "Информатика <br/> шақырылған ораторлар"
+  dashboard_navigation_all_sections: "Студенттің тіркелу және ілгерілеуі туралы"
+  dashboard_navigation_view_progress: "Орындалу барысын көру"
+  dashboard_navigation_view_text_responses: "Жауаптарды қарау"
+  dashboard_navigation_add_students: "Оқушыларды қосу"
+  dashboard_navigation_manage_students: "Оқушыларды басқару"
+  dashboard_navigation_lesson_plans_resources: "Сабақ жоспары мен оқу материалдары"
+  dashboard_navigation_view_stats: "Статистика"
+  dashboard_navigation_section: "Бөлім: %{section_name}"
+  dashboard_navigation_student: "Оқушы: %{student_name}"
+  dashboard_sections_new_section: "Жаңа бөлім"
+  dashboard_sections_jumbotron_instruction: "Жаңа бөлім құрыңыз және оған оқушыларды
     қосыңыз. Бөлімдер - оқушылардың оқу барысын және тіркеу жазбасын қадағалау үшін
-    кішкене топтарға бөлуге көмектеседі.
-  dashboard_sections_table_section: Секция
-  dashboard_sections_table_secret: Кіру түрі
-  dashboard_sections_table_grade: Сынып
-  dashboard_sections_table_course: Курс
-  dashboard_sections_table_students: Оқушылар
-  dashboard_sections_table_code: Секция Коды
-  dashboard_sections_name: Бөлім атауы
-  dashboard_sections_choose_secret: Егер оқушыларыңызға тіркелу жазбаларын таратқыңыз
-    келсе, онда берілген бөлімдегі құпия <b>сөзді</b> немесе <b>сурет</b> түрін таңдаңыз.
-  dashboard_sections_secret_word: <b>Сөз</b> әрбір оқушы үшін құпия сөз қоюға мүмкіндік
-    береді.
-  dashboard_sections_secret_picture: <b>Сурет</b> әрбір оқушы үшін құпия сурет қоюға
-    мүмкіндік береді. Бұл әлі жазу білмейтін кіші жастағы оқушыларға дәл келеді.
+    кішкене топтарға бөлуге көмектеседі."
+  dashboard_sections_table_section: "Секция"
+  dashboard_sections_table_secret: "Кіру түрі"
+  dashboard_sections_table_grade: "Сынып"
+  dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_students: "Оқушылар"
+  dashboard_sections_table_code: "Секция Коды"
+  dashboard_sections_name: "Бөлім атауы"
+  dashboard_sections_choose_secret: "Егер оқушыларыңызға тіркелу жазбаларын таратқыңыз
+    келсе, онда берілген бөлімдегі құпия <b>сөзді</b> немесе <b>сурет</b> түрін таңдаңыз."
+  dashboard_sections_secret_word: "<b>Сөз</b> әрбір оқушы үшін құпия сөз қоюға мүмкіндік
+    береді."
+  dashboard_sections_secret_picture: "<b>Сурет</b> әрбір оқушы үшін құпия сурет қоюға
+    мүмкіндік береді. Бұл әлі жазу білмейтін кіші жастағы оқушыларға дәл келеді."
   dashboard_sections_secret_none: Егер сіз оқушыларыңыздың тіркелу жазбаларын, сонымен
     қатар құпия сөздерін өздері басқарғаның қаласаңыз, онда құпиялылықтың <b>"жоқ"</b>
     түрін таңдаңыз.
-  dashboard_sections_print_secrets: Содан кейін сіз тіркелу жазбасы бар парақтарды
-    басып шығарып, жеке тарата аласыз.
-  dashboard_sections_switch_section: 'Бөлімді ауыстыру:'
-  dashboard_students_add_student: Оқушыны қосу
-  dashboard_students_add_students: Бірнеше оқушыны қосу
-  dashboard_students_add_multiple: 'Оқушыларыңыздың есімін жолға біртіндеп жазыңыз
-    немесе қойыңыз:'
-  dashboard_students_new_section: 'Сіз жаңа бөлім құрдыңыз! Енді жоғарыдағы батырманы
-    басып оқушыларыңызды қосыңыз: <b>Оқушыны қосу</b> және <b>Бірнеше оқушыны қосу</b>.'
-  dashboard_students_placeholder_name: Оқушының аты
-  dashboard_students_name: Атыңыз
-  dashboard_students_progress: Ілгерілеуі
-  dashboard_students_age: Жасы
-  dashboard_students_gender: Жынысы
-  dashboard_students_male: Ер
-  dashboard_students_female: Әйел
-  dashboard_students_secret: Құпия
-  dashboard_students_password: Құпия сөз
-  dashboard_students_username: 'Қолданушы аты: %{student_username}'
+  dashboard_sections_print_secrets: "Содан кейін сіз тіркелу жазбасы бар парақтарды
+    басып шығарып, жеке тарата аласыз."
+  dashboard_sections_switch_section: "Бөлімді ауыстыру:"
+  dashboard_students_add_student: "Оқушыны қосу"
+  dashboard_students_add_students: "Бірнеше оқушыны қосу"
+  dashboard_students_add_multiple: "Оқушыларыңыздың есімін жолға біртіндеп жазыңыз
+    немесе қойыңыз:"
+  dashboard_students_new_section: "Сіз жаңа бөлім құрдыңыз! Енді жоғарыдағы батырманы
+    басып оқушыларыңызды қосыңыз: <b>Оқушыны қосу</b> және <b>Бірнеше оқушыны қосу</b>."
+  dashboard_students_placeholder_name: "Оқушының аты"
+  dashboard_students_name: "Атыңыз"
+  dashboard_students_progress: "Ілгерілеуі"
+  dashboard_students_age: "Жасы"
+  dashboard_students_gender: "Жынысы"
+  dashboard_students_male: "Ер"
+  dashboard_students_female: "Әйел"
+  dashboard_students_secret: "Құпия"
+  dashboard_students_password: "Құпия сөз"
+  dashboard_students_username: "Қолданушы аты: %{student_username}"
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Аяқталған деңгейлер
-  dashboard_students_total_lines: Код жолдары
-  dashboard_students_show_secret: Құпия сөзді көрсету
-  dashboard_students_auto_generated: Автоматты генерацияланған
-  dashboard_students_reset_secret: Құпиялылық түрін ауыстыру
-  dashboard_students_reset_password: Құпия сөзді ауыстыру
-  dashboard_students_share_section: 'Бұл бөлімге кіру үшін, оқушыларыңызбен осы парақты
-    бөлісіңіз:'
-  dashboard_students_print_info: Оқушылардың кіруі үшін картаны басып шығару.
-  dashboard_students_secret_picture_title: Құпия сурет
-  dashboard_students_secret_picture: Құпия сурет
-  dashboard_students_reset_picture: Сіз оқушының құпия суретін кез келген уақытта
+  dashboard_students_completed_levels: "Аяқталған деңгейлер"
+  dashboard_students_total_lines: "Код жолдары"
+  dashboard_students_show_secret: "Құпия сөзді көрсету"
+  dashboard_students_auto_generated: "Автоматты генерацияланған"
+  dashboard_students_reset_secret: "Құпиялылық түрін ауыстыру"
+  dashboard_students_reset_password: "Құпия сөзді ауыстыру"
+  dashboard_students_share_section: "Бұл бөлімге кіру үшін, оқушыларыңызбен осы парақты
+    бөлісіңіз:"
+  dashboard_students_print_info: "Оқушылардың кіруі үшін картаны басып шығару."
+  dashboard_students_secret_picture_title: "Құпия сурет"
+  dashboard_students_secret_picture: "Құпия сурет"
+  dashboard_students_reset_picture: "Сіз оқушының құпия суретін кез келген уақытта
     өзгерте аласыз. Ол үшін <b>Құпиялылықты көрсету</b>, одан кейін <b>Құпиялылықты
-    өзгертуді</b> таңдаңыз. Оқушы үшін жаңа құпия сурет генерацияланатын болады.
-  dashboard_students_secret_word_title: Құпия сөз
-  dashboard_students_secret_word: Құпия сөз
-  dashboard_students_reset_word: Сіз оқушының құпия сөзді кез келген уақытта алып
+    өзгертуді</b> таңдаңыз. Оқушы үшін жаңа құпия сурет генерацияланатын болады."
+  dashboard_students_secret_word_title: "Құпия сөз"
+  dashboard_students_secret_word: "Құпия сөз"
+  dashboard_students_reset_word: "Сіз оқушының құпия сөзді кез келген уақытта алып
     тастай аласыз. Ол үшін <b>Құпиялылықты көрсету</b> және одан кейін <b>Құпиялылықты
     алып тастау</b> басыңыз. Оқушының кіру уақытында жаңа құпия сөз генерацияланатын
-    болады.
-  dashboard_students_join_link: Оқушыларға өздері тіркелу жазбаларын құрып, сіздің
-    бөліміңізге тіркелу керектігі жайында айтыңыз.
-  dashboard_students_no_email: Егер оқушыларыңызда электрондық пошталары болмаса немесе
-    сіз оларға өзіңіз тіркелу жазбасын құрғыңыз келсе, онда бұл бөлімнің құпиялылық
-    түрін <b>сөз</b> немесе <b>суретке</b> ауыстырыңыз.
-  dashboard_students_print_page: Бетті басып шығару
-  dashboard_students_url: Сілтеме
+    болады."
+  dashboard_students_join_link: "Оқушыларға өздері тіркелу жазбаларын құрып, сіздің
+    бөліміңізге тіркелу керектігі жайында айтыңыз."
+  dashboard_students_no_email: "Егер оқушыларыңызда электрондық пошталары болмаса
+    немесе сіз оларға өзіңіз тіркелу жазбасын құрғыңыз келсе, онда бұл бөлімнің құпиялылық
+    түрін <b>сөз</b> немесе <b>суретке</b> ауыстырыңыз."
+  dashboard_students_print_page: "Бетті басып шығару"
+  dashboard_students_url: "Сілтеме"
   dashboard_privacy_document_link: Біздің құпиялылық саясатымызды басып шығару немесе
     <a href="/privacy/student-privacy", target="_blank">осы жерде</a> бөлісіңіз.
-  dashboard_curriculum_k5_title: Балабақшадан бастап, 5-сынып оқушысының мұғалімдері
-    үшін оқыту материалдары
-  dashboard_curriculum_middle_title: Орта мектеп мұғалімдері үшін оқыту материалдары
-  dashboard_curriculum_high_title: Жоғарғы сынып мұғалімдері үшін оқыту материалдары
-  dashboard_lesson_plans: Сабақтар жоспары
-  dashboard_view_all_lesson_plans: Барлық сабақтың жоспарын көру
+  dashboard_curriculum_k5_title: "Балабақшадан бастап, 5-сынып оқушысының мұғалімдері
+    үшін оқыту материалдары"
+  dashboard_curriculum_middle_title: "Орта мектеп мұғалімдері үшін оқыту материалдары"
+  dashboard_curriculum_high_title: "Жоғарғы сынып мұғалімдері үшін оқыту материалдары"
+  dashboard_lesson_plans: "Сабақтар жоспары"
+  dashboard_view_all_lesson_plans: "Барлық сабақтың жоспарын көру"
   dashboard_course1: '1 Курс:'
   dashboard_course2: '2 Курс:'
   dashboard_course3: '3 Курс:'
   dashboard_course4: '4 Курс (бета-нұсқа): '
-  dashboard_curriculum: Оқу бағдарламасы
-  dashboard_curriculum_overview: Мектепке дейінгі және бастауыш мектеп оқушылары үшін
-    бағдарламаны шолу
-  dashboard_overview: Қысқаша шолу
+  dashboard_curriculum: "Оқу бағдарламасы"
+  dashboard_curriculum_overview: "Мектепке дейінгі және бастауыш мектеп оқушылары
+    үшін бағдарламаны шолу"
+  dashboard_overview: "Қысқаша шолу"
   dashboard_sequence: Sequence
-  dashboard_framework: Құрылым
-  dashboard_standards: Стандарттар
-  dashboard_implementation_guide: Іске асыру туралы нұсқаулық
-  dashboard_glossary: Терминдер сөздігі
-  dashboard_classroom_strategies: Мұғалімдердің оқыту тәсілдері
-  dashboard_debugging: 'Бағдарламаны дұрыстау:'
-  dashboard_puzzle_solving: 'Басқатырғыштарды шешу:'
-  dashboard_student_worksheet: Студент парағы
-  dashboard_teacher_worksheet: Оқытушы парағы
+  dashboard_framework: "Құрылым"
+  dashboard_standards: "Стандарттар"
+  dashboard_implementation_guide: "Іске асыру туралы нұсқаулық"
+  dashboard_glossary: "Терминдер сөздігі"
+  dashboard_classroom_strategies: "Мұғалімдердің оқыту тәсілдері"
+  dashboard_debugging: "Бағдарламаны дұрыстау:"
+  dashboard_puzzle_solving: "Басқатырғыштарды шешу:"
+  dashboard_student_worksheet: "Студент парағы"
+  dashboard_teacher_worksheet: "Оқытушы парағы"
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Информатика пәнін оқу:'
-  dashboard_grade_k: Балабақша
-  dashboard_grade_other: Басқасы
-  dashboard_login_word: Сөз
-  dashboard_login_picture: Сурет
-  dashboard_login_none: Электронды пошта
-  dashboard_new_password: жаңа құпия сөз
-  dashboard_progress_not_started: басталмады
-  dashboard_progress_in_progress: оқу барысында
-  dashboard_progress_not_completed: Аяқталмаған
-  dashboard_progress_completed_too_many_blocks: аяқталды, тым көп бөлімдер
-  dashboard_progress_completed_perfect: аяқталды, тамаша
-  dashboard_progress_furthest_level_attempted: жетілген ең жоғарғы деңгей
-  dashboard_stage: Деңгей
-  dashboard_puzzle: Басқатырғыш
-  dashboard_question: Сұрақ
-  dashboard_response: Жауап
-  stats_hoc_2013_heading: 'Өткен жылғы Код Жазу Сағытының таңқалдырар сараптамасы.
-    Бір аптаның өзінде:'
-  stats_hoc_2013_image_alt: Код Жазу Сағытының 2013 жылға арналған сараптамасы
-  dashboard_teacher: Мұғалім
-  dashboard_student: Оқушы
-  dashboard_sections_email_question: Барлық оқушыларыңызда қолданыстағы электрондық
-    поштасы бар ма?
-  dashboard_sections_account_creation_question: Кім оқушыларды тіркейді?
+  dashboard_curriculum_ecs: "Информатика пәнін оқу:"
+  dashboard_grade_k: "Балабақша"
+  dashboard_grade_other: "Басқасы"
+  dashboard_login_word: "Сөз"
+  dashboard_login_picture: "Сурет"
+  dashboard_login_none: "Электронды пошта"
+  dashboard_new_password: "жаңа құпия сөз"
+  dashboard_progress_not_started: "басталмады"
+  dashboard_progress_in_progress: "оқу барысында"
+  dashboard_progress_not_completed: "Аяқталмаған"
+  dashboard_progress_completed_too_many_blocks: "аяқталды, тым көп бөлімдер"
+  dashboard_progress_completed_perfect: "аяқталды, тамаша"
+  dashboard_progress_furthest_level_attempted: "жетілген ең жоғарғы деңгей"
+  dashboard_stage: "Деңгей"
+  dashboard_puzzle: "Басқатырғыш"
+  dashboard_question: "Сұрақ"
+  dashboard_response: "Жауап"
+  stats_hoc_2013_heading: "Өткен жылғы Код Жазу Сағытының таңқалдырар сараптамасы.
+    Бір аптаның өзінде:"
+  stats_hoc_2013_image_alt: "Код Жазу Сағытының 2013 жылға арналған сараптамасы"
+  dashboard_teacher: "Мұғалім"
+  dashboard_student: "Оқушы"
+  dashboard_sections_email_question: "Барлық оқушыларыңызда қолданыстағы электрондық
+    поштасы бар ма?"
+  dashboard_sections_account_creation_question: "Кім оқушыларды тіркейді?"
   dashboard_sections_password_question: Оқушылар "құпия сөз" ретінде нені қолданды?
   dashboard_sections_picture_account_creation: Code.org-қа тағайындалған сурет
   dashboard_sections_word_account_creation: Code.org-қа тағайындалған жай сөз
-  dashboard_sections_sign_in_question: Оқушылар қайда кіреді?
+  dashboard_sections_sign_in_question: "Оқушылар қайда кіреді?"
   dashboard_sections_sign_in_unique: '"Студенттерді Басқару" қосымша бетінде көрсетілген
     бірегей веб-парақ'
   dashboard_sections_sign_in_main: http://code.org және «Кіру» батырмасын шертіңіз
-  dashboard_sections_password_account_creation: Оқушыңың құрған мәтіндік құпия сөзі
-  dashboard_sections_login_type_explanation: Бұл кесте сізге <b>сурет, сөз, немесе
-    электрондық пошта</b> сияқты кіру түрлерінен сізге қажеттісін дұрыс таңдауға көмектеседі.
-  dashboard_faq: Жиі қойылатын сұрақтар
+  dashboard_sections_password_account_creation: "Оқушыңың құрған мәтіндік құпия сөзі"
+  dashboard_sections_login_type_explanation: "Бұл кесте сізге <b>сурет, сөз, немесе
+    электрондық пошта</b> сияқты кіру түрлерінен сізге қажеттісін дұрыс таңдауға көмектеседі."
+  dashboard_faq: "Жиі қойылатын сұрақтар"
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
-  dashboard_announcements: Хабарландыру
-  dashboard_announce_view_all: Барлығын көру
-  dashboard_announce_hoc: <b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында
-    басталады! Бүкіләлемдік тарихи оқу шарасына қатыс.
+  dashboard_announcements: "Хабарландыру"
+  dashboard_announce_view_all: "Барлығын көру"
+  dashboard_announce_hoc: "<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында
+    басталады! Бүкіләлемдік тарихи оқу шарасына қатыс."
   code_hoc_coming: '"Код Жазу Сағаты" - 8-14 желтоқсанда басталады!'
-  code_sign_up: Информатика Апталығына қатысу үшін тіркеліңіз
-  learn_more: Қазір қолданып көріңіз
-  learn_sign_up_description: Информатика Апталығында Код Жазу Сағатына қатысу үшін
-    тіркеліңіз
-  learn_sign_up_button: Тіркелу
+  code_sign_up: "Информатика Апталығына қатысу үшін тіркеліңіз"
+  learn_more: "Қазір қолданып көріңіз"
+  learn_sign_up_description: "Информатика Апталығында Код Жазу Сағатына қатысу үшін
+    тіркеліңіз"
+  learn_sign_up_button: "Тіркелу"
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Код Жазу Сағатында қалай сабақ беру керек
-    жайында оқыңыз
-  learn_educator_resources_button: Оқытушы материалдары
+  learn_educator_resources_description: "Код Жазу Сағатында қалай сабақ беру керек
+    жайында оқыңыз"
+  learn_educator_resources_button: "Оқытушы материалдары"
   learn_are_you_educator: Сіз оқытушысыз ба? <a href="http://hourofcode.com/resources/how-to">Код
     Жазу Сағатында қалай сабақ беру керек</a> жайында оқыңыз
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
@@ -700,57 +703,57 @@
     prizes for every educator.
   learn_inspirational_videos: Оқушыларды <a href="https://code.org/educate/inspire">мына
     видео</a> көрсету арқылы шабыттандыру
-  hoc2014_try_new_tutorials: Код Жазу Сағаты үшін арналған біздің жаңа оқу құралдарымызды
-    қараңыз
-  hoc2014_try_new_tutorial: Біздің жаңа Код Жазу Сағаты сабағын бета нұсқасында көріңіз
+  hoc2014_try_new_tutorials: "Код Жазу Сағаты үшін арналған біздің жаңа оқу құралдарымызды
+    қараңыз"
+  hoc2014_try_new_tutorial: "Біздің жаңа Код Жазу Сағаты сабағын бета нұсқасында көріңіз"
   hoc2014_try_scrat: Angry Birds, PvZ, және Scrat
-  hoc2014_try_frozen: Мұзды жүрек кейіпкерлері, Анна және Эльзамен суретші бол
+  hoc2014_try_frozen: "Мұзды жүрек кейіпкерлері, Анна және Эльзамен суретші бол"
   carousel_heading_codeorg: Code.org оқыту құралдары
   carousel_heading_codeorg_any_device: Code.org оқыту құралдары(барлық құрылғыларға)
   carousel_heading_3rd_party: 3-ші тараптардан оқыту құралдары
-  carousel_heading_third_party: Үшінші тараптардан оқыту құралдары
-  carousel_heading_international: Сіздің тіліңіздегі оқыту нұсқаулығы
-  carousel_heading_domestic: Оқыту құралдары ағылшын тілінде қолжетімді
-  carousel_heading_beginners: Бастаушылар үшін оқулықтар
+  carousel_heading_third_party: "Үшінші тараптардан оқыту құралдары"
+  carousel_heading_international: "Сіздің тіліңіздегі оқыту нұсқаулығы"
+  carousel_heading_domestic: "Оқыту құралдары ағылшын тілінде қолжетімді"
+  carousel_heading_beginners: "Бастаушылар үшін оқулықтар"
   carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: JavaScript тілін үйрену үшін арналған оқулықтар
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Желіге шығуға мүмкіндік жоқ па ? Онда "информатиканы
     оффлайн оқуды" пайдаланып көр
-  carousel_heading_devices: Телефон және планшеттер үшін оқыту қосымшалары
+  carousel_heading_devices: "Телефон және планшеттер үшін оқыту қосымшалары"
   carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Басқа да бағдарламау тілдерінен оқу материалдары
+  carousel_heading_languages: "Басқа да бағдарламау тілдерінен оқу материалдары"
   carousel_heading_beyond_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Өзіңнің қосымшаларыңды немесе ойындарыңды жаз
-  carousel_heading_university: Университеттің онлайн курстары
-  carousel_heading_webpages: Веб-парақтарды жасауды үйрен
-  carousel_heading_robots: Роботтарды бағдарламалауды үйрен
-  carousel_heading_ide: Оқытушылар арасындағы танымал платформалар
-  educator_notes: Мұғалім жазбалары
+  carousel_heading_apps_games: "Өзіңнің қосымшаларыңды немесе ойындарыңды жаз"
+  carousel_heading_university: "Университеттің онлайн курстары"
+  carousel_heading_webpages: "Веб-парақтарды жасауды үйрен"
+  carousel_heading_robots: "Роботтарды бағдарламалауды үйрен"
+  carousel_heading_ide: "Оқытушылар арасындағы танымал платформалар"
+  educator_notes: "Мұғалім жазбалары"
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
     here.</a>
-  how_to_teach_hoc: Код Жазу Сағатына қалай үйретуге болады
-  more_resources_educators: Мұғалімдер мен оқытушылар үшін көбірек ресурстар
-  beyond_submission: Бір Сағаттық сабақтарыңызды жібергіңіз келеді ме? Онда талаптар
-    мен жіберу формасын толтыру мысалын көріңіз
-  participants: қатысушылар
-  teachers_notes: Мұғалім жазбалары
-  teachers_notes_hoc: 'Мұғалімдерге: ұстаздарға қажетті жазбаларды осы жерден оқып,
-    танысыңыз'
-  previous: Алдыңғы
-  next: Келесі
-  older_systems: Ескі жүйедегі қолжетімді сабақтар
+  how_to_teach_hoc: "Код Жазу Сағатына қалай үйретуге болады"
+  more_resources_educators: "Мұғалімдер мен оқытушылар үшін көбірек ресурстар"
+  beyond_submission: "Бір Сағаттық сабақтарыңызды жібергіңіз келеді ме? Онда талаптар
+    мен жіберу формасын толтыру мысалын көріңіз"
+  participants: "қатысушылар"
+  teachers_notes: "Мұғалім жазбалары"
+  teachers_notes_hoc: "Мұғалімдерге: ұстаздарға қажетті жазбаларды осы жерден оқып,
+    танысыңыз"
+  previous: "Алдыңғы"
+  next: "Келесі"
+  older_systems: "Ескі жүйедегі қолжетімді сабақтар"
   older_systems_subheading: Бұл сабақтар ескі нұсқадағы браузерлерде де жұмыс істеуі
     қажет. Барлық сабақтарға қол жеткізу үшін, <a href="http://browsehappy.com/" target="_blank">браузердің
     жаңа нұсқасын</a> орнатыңыз.
-  mobile_devices: Мобильді құралдар үшін оқулықтар
+  mobile_devices: "Мобильді құралдар үшін оқулықтар"
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Бірінші компьютерлік бағдарламаны жазу
-  codeintl_name: Бірінші компьютерлік бағдарламаны жазу
+  codeorg_name: "Бірінші компьютерлік бағдарламаны жазу"
+  codeintl_name: "Бірінші компьютерлік бағдарламаны жазу"
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript-ке Кіріспе
   khanes_name: JavaScript-ке Кіріспе
@@ -758,125 +761,126 @@
   khanhe_name: JavaScript-ке Кіріспе
   khanfr_name: JavaScript-ке Кіріспе
   khanpl_name: JavaScript-ке Кіріспе
-  tynker_name: Өзіңіздің жеке ойыныңызды жазыңыз
-  scratch_name: Бағдарламалау барысында шығармашылығыңызды танытыңыз
+  tynker_name: "Өзіңіздің жеке ойыныңызды жазыңыз"
+  scratch_name: "Бағдарламалау барысында шығармашылығыңызды танытыңыз"
   lightbot_name: Lightbot
-  thinkersmith_name: Менің Достарым Роботтар
-  condcards_name: Картаға қатысты шартты белгілер
+  thinkersmith_name: "Менің Достарым Роботтар"
+  condcards_name: "Картаға қатысты шартты белгілер"
   lightbotintl_name: Lightbot
-  codehs_name: Карел атты Итпен код жазуды үйрен
+  codehs_name: "Карел атты Итпен код жазуды үйрен"
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: Бағдарламалаушы Маймыл
+  codemonkey_name: "Бағдарламалаушы Маймыл"
   codeavengers_name: JavaScript-пен ойын жасаңыз
-  processing_name: Кодтың көмегімен сурет салу
-  robomind_name: Виртуальды роботты бағдарламаңыз
-  groklearning_name: Элиза - Дәрігер Chatterbot
-  quorum_name: Түсінікті бағдарламалау (экраннан оқуды қолдау)
+  processing_name: "Кодтың көмегімен сурет салу"
+  robomind_name: "Виртуальды роботты бағдарламаңыз"
+  groklearning_name: "Элиза - Дәрігер Chatterbot"
+  quorum_name: "Түсінікті бағдарламалау (экраннан оқуды қолдау)"
   codespark_name: The Foos (сәлемдесу)
   kodable_name: Kodable (сәлемдесу)
   tynkerapp_name: Tynker - планшетттер туралы
-  robomindnl_name: Виртуальды роботты бағдарламаңыз
+  robomindnl_name: "Виртуальды роботты бағдарламаңыз"
   flappy_name: Flappy ойының жасаңыз
   bitsbox_name: Bitsbox - ойынды жаса
   makeschool_name: iPhone ойының браузеріңізде жасаңыз!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Код Жазу Сағаты
-  blockly_name: Блокты
+  blockly_name: "Блокты"
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Тас, қайшы, қағаз
-  hourofcode_name: Жаңадан тіркелушілерге code.org/hoc
+  projguts_name: "Тас, қайшы, қағаз"
+  hourofcode_name: "Жаңадан тіркелушілерге code.org/hoc"
   playlab_name: Play Lab
-  infinity_name: Шексіз Ойын Лабораториясы
+  infinity_name: "Шексіз Ойын Лабораториясы"
   artist_name: Artist
-  codeorg_gradelevel: Жас аралығы 4-14
-  codeintl_gradelevel: Жас аралығы 4-14
+  codeorg_gradelevel: "Жас аралығы 4-14"
+  codeintl_gradelevel: "Жас аралығы 4-14"
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Орта мектеп +
-  khanes_gradelevel: Орта мектеп +
-  khanpt_gradelevel: Орта мектеп +
-  khanhe_gradelevel: Орта мектеп +
-  khanfr_gradelevel: Орта мектеп +
-  khanpl_gradelevel: Орта мектеп +
-  tynker_gradelevel: Жас аралығы 5-13
-  scratch_gradelevel: Жасы 8 +
-  lightbot_gradelevel: Кез келген жастағыларға
-  thinkersmith_gradelevel: Кез келген жастағыларға
-  condcards_gradelevel: Жас аралығы 8-12
-  lightbotintl_gradelevel: Кез келген жастағыларға
-  codehs_gradelevel: Жоғарғы сынып
-  codecademy_gradelevel: Жоғарғы сынып
-  codecombat_gradelevel: Орта мектеп +
-  codemonkey_gradelevel: Орта мектеп +
-  codeavengers_gradelevel: Орта мектеп +
-  processing_gradelevel: Жоғарғы сынып
-  robomind_gradelevel: Жас аралығы 8-13
-  groklearning_gradelevel: Орта мектеп +
-  quorum_gradelevel: Орта мектеп +
-  codespark_gradelevel: Бастауыш сыныптары
-  kodable_gradelevel: Бастауыш сыныптары
-  tynkerapp_gradelevel: Жас аралығы 5-13
-  robomindnl_gradelevel: Жас аралығы 8-13
-  flappy_gradelevel: Жас аралығы 4-14
-  bitsbox_gradelevel: Бастауыш сыныптары
-  makeschool_gradelevel: Жоғарғы сынып
-  touchdevelop_gradelevel: Жоғарғы сынып
-  appinventor_gradelevel: Орта мектеп +
-  blockly_gradelevel: Кез келген жастағыларға
-  thinkersmith2_gradelevel: Жасы 8 +
-  kodableunplugged_gradelevel: Жас аралығы 8-13
-  projguts_gradelevel: Жас аралығы 10-13
-  hourofcode_gradelevel: Жас аралығы 4-14
-  frozen_gradelevel: Жасы 8 +
-  starwars_gradelevel: Жас аралық 6+
-  playlab_gradelevel: Жас аралығы 4-14
-  infinity_gradelevel: Жас аралығы 4-14
-  artist_gradelevel: Жасы 8 +
-  codeorg_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  codeintl_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  thinkersmithspanish_platformtext: Оффлайн
-  khan_platformtext: Заманауи веб-браузерлер
-  khanes_platformtext: Заманауи веб-браузерлер
-  khanpt_platformtext: Заманауи веб-браузерлер
-  khanhe_platformtext: Заманауи веб-браузерлер
-  khanfr_platformtext: Заманауи веб-браузерлер
-  khanpl_platformtext: Заманауи веб-браузерлер
-  tynker_platformtext: Заманауи веб-браузерлер
-  scratch_platformtext: Компьютерге арналған браузерлер (планшеттер үшін емес)
-  lightbot_platformtext: БАРЛЫҚ браузерлер және iOS, Android немесе Ойын консолі
-  thinkersmith_platformtext: Оффлайн
-  condcards_platformtext: Оффлайн
+  khan_gradelevel: "Орта мектеп +"
+  khanes_gradelevel: "Орта мектеп +"
+  khanpt_gradelevel: "Орта мектеп +"
+  khanhe_gradelevel: "Орта мектеп +"
+  khanfr_gradelevel: "Орта мектеп +"
+  khanpl_gradelevel: "Орта мектеп +"
+  tynker_gradelevel: "Жас аралығы 5-13"
+  scratch_gradelevel: "Жасы 8 +"
+  lightbot_gradelevel: "Кез келген жастағыларға"
+  thinkersmith_gradelevel: "Кез келген жастағыларға"
+  condcards_gradelevel: "Жас аралығы 8-12"
+  lightbotintl_gradelevel: "Кез келген жастағыларға"
+  codehs_gradelevel: "Жоғарғы сынып"
+  codecademy_gradelevel: "Жоғарғы сынып"
+  codecombat_gradelevel: "Орта мектеп +"
+  codemonkey_gradelevel: "Орта мектеп +"
+  codeavengers_gradelevel: "Орта мектеп +"
+  processing_gradelevel: "Жоғарғы сынып"
+  robomind_gradelevel: "Жас аралығы 8-13"
+  groklearning_gradelevel: "Орта мектеп +"
+  quorum_gradelevel: "Орта мектеп +"
+  codespark_gradelevel: "Бастауыш сыныптары"
+  kodable_gradelevel: "Бастауыш сыныптары"
+  tynkerapp_gradelevel: "Жас аралығы 5-13"
+  robomindnl_gradelevel: "Жас аралығы 8-13"
+  flappy_gradelevel: "Жас аралығы 4-14"
+  bitsbox_gradelevel: "Бастауыш сыныптары"
+  makeschool_gradelevel: "Жоғарғы сынып"
+  touchdevelop_gradelevel: "Жоғарғы сынып"
+  appinventor_gradelevel: "Орта мектеп +"
+  blockly_gradelevel: "Кез келген жастағыларға"
+  thinkersmith2_gradelevel: "Жасы 8 +"
+  kodableunplugged_gradelevel: "Жас аралығы 8-13"
+  projguts_gradelevel: "Жас аралығы 10-13"
+  hourofcode_gradelevel: "Жас аралығы 4-14"
+  frozen_gradelevel: "Жасы 8 +"
+  starwars_gradelevel: "Жас аралық 6+"
+  playlab_gradelevel: "Жас аралығы 4-14"
+  infinity_gradelevel: "Жас аралығы 4-14"
+  artist_gradelevel: "Жасы 8 +"
+  codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
+  codeintl_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
+  thinkersmithspanish_platformtext: "Оффлайн"
+  khan_platformtext: "Заманауи веб-браузерлер"
+  khanes_platformtext: "Заманауи веб-браузерлер"
+  khanpt_platformtext: "Заманауи веб-браузерлер"
+  khanhe_platformtext: "Заманауи веб-браузерлер"
+  khanfr_platformtext: "Заманауи веб-браузерлер"
+  khanpl_platformtext: "Заманауи веб-браузерлер"
+  tynker_platformtext: "Заманауи веб-браузерлер"
+  scratch_platformtext: "Компьютерге арналған браузерлер (планшеттер үшін емес)"
+  lightbot_platformtext: "БАРЛЫҚ браузерлер және iOS, Android немесе Ойын консолі"
+  thinkersmith_platformtext: "Оффлайн"
+  condcards_platformtext: "Оффлайн"
   lightbotintl_platformtext: iOS және Android операциялық жүйелері (немесе веб-браузер)
-  codehs_platformtext: Заманауи браузерлер (тереңірек оқу үшін $$ қажет)
-  codecademy_platformtext: Заманауи веб-браузерлер. iOS және Android операциялық жүйелері
-    үшін қосымша
-  codecombat_platformtext: Заманауи веб-браузерлер (тереңірек оқу үшін $$ қажет)
-  codemonkey_platformtext: Заманауи веб-браузерлер
-  codeavengers_platformtext: Заманауи веб-браузерлер
-  processing_platformtext: Заманауи веб-браузерлер
-  robomind_platformtext: Заманауи веб-браузерлер, мобильді интернет
-  groklearning_platformtext: Заманауи веб-браузерлер
-  quorum_platformtext: Заманауи веб-браузерлер. Экраннан оқуды қолдайды
+  codehs_platformtext: "Заманауи браузерлер (тереңірек оқу үшін $$ қажет)"
+  codecademy_platformtext: "Заманауи веб-браузерлер. iOS және Android операциялық
+    жүйелері үшін қосымша"
+  codecombat_platformtext: "Заманауи веб-браузерлер (тереңірек оқу үшін $$ қажет)"
+  codemonkey_platformtext: "Заманауи веб-браузерлер"
+  codeavengers_platformtext: "Заманауи веб-браузерлер"
+  processing_platformtext: "Заманауи веб-браузерлер"
+  robomind_platformtext: "Заманауи веб-браузерлер, мобильді интернет"
+  groklearning_platformtext: "Заманауи веб-браузерлер"
+  quorum_platformtext: "Заманауи веб-браузерлер. Экраннан оқуды қолдайды"
   codespark_platformtext: iOS және Android операциялық жүйелері (немесе веб-браузер)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android планшеттер
-  robomindnl_platformtext: Заманауи веб-браузерлер, мобильді интернет
-  flappy_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  bitsbox_platformtext: Заманауи веб-браузерлер
-  makeschool_platformtext: Заманауи веб-браузерлер
-  touchdevelop_platformtext: Заманауи браузерлер, смартфондар, барлық құрылғылар
-  appinventor_platformtext: Заманауи браузерлер + Android
-  blockly_platformtext: Тек Заманауи браузерлер
-  thinkersmith2_platformtext: Оффлайн
-  kodableunplugged_platformtext: Оффлайн
-  projguts_platformtext: Оффлайн
-  hourofcode_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  frozen_platformtext: Заманауи браузерлер + планшеттер
-  starwars_platformtext: Заманауи браузерлер + планшеттер
-  playlab_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  codeorg_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды үйреніңіз!
-  codeintl_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды үйреніңіз!
+  robomindnl_platformtext: "Заманауи веб-браузерлер, мобильді интернет"
+  flappy_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
+  bitsbox_platformtext: "Заманауи веб-браузерлер"
+  makeschool_platformtext: "Заманауи веб-браузерлер"
+  touchdevelop_platformtext: "Заманауи браузерлер, смартфондар, барлық құрылғылар"
+  appinventor_platformtext: "Заманауи браузерлер + Android"
+  blockly_platformtext: "Тек Заманауи браузерлер"
+  thinkersmith2_platformtext: "Оффлайн"
+  kodableunplugged_platformtext: "Оффлайн"
+  projguts_platformtext: "Оффлайн"
+  hourofcode_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
+  frozen_platformtext: "Заманауи браузерлер + планшеттер"
+  starwars_platformtext: "Заманауи браузерлер + планшеттер"
+  playlab_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
+  codeorg_shortdescription: "Марк Цукерберг және Angry Birds-пен бағдарламалауды үйреніңіз!"
+  codeintl_shortdescription: "Марк Цукерберг және Angry Birds-пен бағдарламалауды
+    үйреніңіз!"
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: JavaScript-те сурет салуды үйреніңіз
   khanes_shortdescription: JavaScript-те сурет салуды үйреніңіз
@@ -884,116 +888,117 @@
   khanhe_shortdescription: JavaScript-те сурет салуды үйреніңіз
   khanfr_shortdescription: JavaScript-те сурет салуды үйреніңіз
   khanpl_shortdescription: JavaScript-те сурет салуды үйреніңіз
-  tynker_shortdescription: Қызықты басқатырғыштарды шеше отырып бағдарламалауды үйреніңіз
-    және өзіңіздің ойыныңызды мобильді құрылғылар үшін жасаңыз.
-  scratch_shortdescription: Интерактивті ойындар, әңгімелер мен анимациялар жасаңыз.
-  lightbot_shortdescription: Басқатырғыштарды шешу үшін Lightbot-қа циклдер мен орындалу
-    тәртібінің көмегімен бағдарлама жазыңыз!
-  thinkersmith_shortdescription: Құрылғылары жоқ оқушыларға арналған оффлайн сабақтар
-  condcards_shortdescription: Карта колодасымен алгоритмдерді үйреніңіз
-  lightbotintl_shortdescription: Код жазу қағидасын түсінуге арналған ойын
-  codehs_shortdescription: Карел атты Итпен - қызықты да визуалды бағдарламалауды
-    бастаңыз!
-  codecademy_shortdescription: Веб-браузерде JavaScript тілінде бағдараламауды үйреніңіз
+  tynker_shortdescription: "Қызықты басқатырғыштарды шеше отырып бағдарламалауды үйреніңіз
+    және өзіңіздің ойыныңызды мобильді құрылғылар үшін жасаңыз."
+  scratch_shortdescription: "Интерактивті ойындар, әңгімелер мен анимациялар жасаңыз."
+  lightbot_shortdescription: "Басқатырғыштарды шешу үшін Lightbot-қа циклдер мен орындалу
+    тәртібінің көмегімен бағдарлама жазыңыз!"
+  thinkersmith_shortdescription: "Құрылғылары жоқ оқушыларға арналған оффлайн сабақтар"
+  condcards_shortdescription: "Карта колодасымен алгоритмдерді үйреніңіз"
+  lightbotintl_shortdescription: "Код жазу қағидасын түсінуге арналған ойын"
+  codehs_shortdescription: "Карел атты Итпен - қызықты да визуалды бағдарламалауды
+    бастаңыз!"
+  codecademy_shortdescription: "Веб-браузерде JavaScript тілінде бағдараламауды үйреніңіз"
   codecombat_shortdescription: Python немесе JavaScript тілін үйрену үшін эпикалық
     ойында құбыжықтарды жеңіңіз!
-  codemonkey_shortdescription: Оқушылар маймылдың бананды ұстап алуы үшін бағдарлама
-    жазады.
-  codeavengers_shortdescription: Веб-браузерде JavaScript тілінде бағдараламауды үйреніңіз
-  processing_shortdescription: Деректерді өңдеуге арналған Сағаттық сабақтар
-  robomind_shortdescription: Виртуалды робот үшін код жазыңыз
+  codemonkey_shortdescription: "Оқушылар маймылдың бананды ұстап алуы үшін бағдарлама
+    жазады."
+  codeavengers_shortdescription: "Веб-браузерде JavaScript тілінде бағдараламауды
+    үйреніңіз"
+  processing_shortdescription: "Деректерді өңдеуге арналған Сағаттық сабақтар"
+  robomind_shortdescription: "Виртуалды робот үшін код жазыңыз"
   groklearning_shortdescription: '"Элиза" - әңгімелесуші-роботты Сіздің достарыңыз
     адам деп ойлап қалуы үшін бағдарлама жазыңыз!'
   quorum_shortdescription: Quorum-де бағдарламауды үйренетін Мэридің саяхатына қосылыңыз.
-  codespark_shortdescription: Бағдарламалауға үйрететін балаларға арналған - The Foos
-    қызықты ойыны.
-  kodable_shortdescription: Бағдарламалау негіздерін үйрену үшін iPad-қа арналған
-    қызықты ойындар
-  tynkerapp_shortdescription: Қызықты басқатырғыштарды шеше отырып бағдарламалауды
-    үйреніңіз.
-  robomindnl_shortdescription: Виртуалды робот үшін код жазыңыз
-  flappy_shortdescription: Қанаттарын қағатын Құс, Акула, немесе Су асты Кеме ойындарын
-    жасаңыз
-  bitsbox_shortdescription: Шынайы JavaScript-ті пайдаланып ойнауға және достарыңызбен
-    бөлісе алатын бірнеше қосымша жазыңыз.
+  codespark_shortdescription: "Бағдарламалауға үйрететін балаларға арналған - The
+    Foos қызықты ойыны."
+  kodable_shortdescription: "Бағдарламалау негіздерін үйрену үшін iPad-қа арналған
+    қызықты ойындар"
+  tynkerapp_shortdescription: "Қызықты басқатырғыштарды шеше отырып бағдарламалауды
+    үйреніңіз."
+  robomindnl_shortdescription: "Виртуалды робот үшін код жазыңыз"
+  flappy_shortdescription: "Қанаттарын қағатын Құс, Акула, немесе Су асты Кеме ойындарын
+    жасаңыз"
+  bitsbox_shortdescription: "Шынайы JavaScript-ті пайдаланып ойнауға және достарыңызбен
+    бөлісе алатын бірнеше қосымша жазыңыз."
   makeschool_shortdescription: iPhone-ға ойын жасаңыз! Құбыжықтарды жаңа іс-қимылға
     үйретіңіз!
-  touchdevelop_shortdescription: Мобильді телефонда - басқатырғыштарды шеш, ойын жаса
-    және бағдарламалауды үйрен.
-  appinventor_shortdescription: Өзіңіздің қосымшаңызды жасаңыз! (Тек Android үшін
-    ғана)
-  blockly_shortdescription: Оффлайн оқу үшін ZIP-файлды жүктеп алыңыз
-  thinkersmith2_shortdescription: Ақпаратты тану үшін компьютерлер нөл мен бірліктерді
-    қалай қолданатынын біліңіз
-  kodableunplugged_shortdescription: Компьютерсіз қызықты жаттығулар
+  touchdevelop_shortdescription: "Мобильді телефонда - басқатырғыштарды шеш, ойын
+    жаса және бағдарламалауды үйрен."
+  appinventor_shortdescription: "Өзіңіздің қосымшаңызды жасаңыз! (Тек Android үшін
+    ғана)"
+  blockly_shortdescription: "Оффлайн оқу үшін ZIP-файлды жүктеп алыңыз"
+  thinkersmith2_shortdescription: "Ақпаратты тану үшін компьютерлер нөл мен бірліктерді
+    қалай қолданатынын біліңіз"
+  kodableunplugged_shortdescription: "Компьютерсіз қызықты жаттығулар"
   projguts_shortdescription: '"Тас - қайшы - қағаз" ойыны арқылы модельдеуді байқап
     көріңіз'
-  hourofcode_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды
-    үйреніңіз!
-  frozen_shortdescription: Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін
-    көрсететін кодты пайдаланайық.
+  hourofcode_shortdescription: "Марк Цукерберг және Angry Birds-пен бағдарламалауды
+    үйреніңіз!"
+  frozen_shortdescription: "Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін
+    көрсететін кодты пайдаланайық."
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
   artist_shortdescription: Draw cool pictures and designs with the Artist!
-  codeorg_longdescription: Информатика негіздерін drag-and-drop бағдарламасы көмегімен
+  codeorg_longdescription: "Информатика негіздерін drag-and-drop бағдарламасы көмегімен
     үйреніңіз. Бұл өзіндік оқу Билл Гейтс, Марк Цукерберг, Angry Birds және Plants
     vs. Zombies видеодәрістері ойынына ұқсас. Циклдерді, шартты операторлар және негізгі
-    алгоритмдерді үйреніңіз. 34 тілде қолжетімді.
-  codeintl_longdescription: Информатика негіздерін drag-and-drop бағдарламасы көмегімен
+    алгоритмдерді үйреніңіз. 34 тілде қолжетімді."
+  codeintl_longdescription: "Информатика негіздерін drag-and-drop бағдарламасы көмегімен
     үйреніңіз. Бұл өзіндік оқу Билл Гейтс, Марк Цукерберг, Angry Birds және Plants
     vs. Zombies видеодәрістері ойынына ұқсас. Циклдерді, шартты операторлар және негізгі
-    алгоритмдерді үйреніңіз. 34 тілде қолжетімді.
+    алгоритмдерді үйреніңіз. 34 тілде қолжетімді."
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
-  khanes_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
-  khanpt_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
-  khanhe_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
-  khanfr_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
-  khanpl_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
-  tynker_longdescription: Өздеріңіздін ойындарыңызды жасаңызда, достарымен бөліс!
+  khan_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
+  khanes_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
+  khanpt_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
+  khanhe_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
+  khanfr_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
+  khanpl_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
+  tynker_longdescription: "Өздеріңіздін ойындарыңызды жасаңызда, достарымен бөліс!
     Қызықты жұмбақтар шешіп, информатиканы жаңа деңгейде оқыңыз. Өз ойыныңызды фигуралармен,
     әр түрлі деңгейлермен және көркем декорациялармен ерекше істеңіз. Физика арқылы
     өз ойыныңызды шын өмірдегіге ұқсатыңыз. Бағдарламалау тілін блоктар арқылы немесе
     JavaScript түрінде көруге болады. Айпадпен Андроидты планшеттерге мобильді нұсқасын
-    жасаңыз. Өте көп түрлерден таңдай аласыз.
-  scratch_longdescription: Со Scratch арқылы сіз өзіңіздін интерактивті ойыныңызды,
+    жасаңыз. Өте көп түрлерден таңдай аласыз."
+  scratch_longdescription: "Со Scratch арқылы сіз өзіңіздін интерактивті ойыныңызды,
     хикаяларыңызды, &mdash анимацияларын жасай аласыз; және достарымен бөлісе аласыз.
-    Өз атыңыздын анимациясынан бастаңыз, құттықтау хатын жасаңыз немесе ойын істеңіз.
-  lightbot_longdescription: Жарықроботына көкілдір плиткаларды жарық түсіруге көмектесіңіз!
+    Өз атыңыздын анимациясынан бастаңыз, құттықтау хатын жасаңыз немесе ойын істеңіз."
+  lightbot_longdescription: "Жарықроботына көкілдір плиткаларды жарық түсіруге көмектесіңіз!
     Жарықробот бұл ойын-ребус, мұнда компьютерлік ойындарды құрастыру логикасы мен
     ойыншыларды бағдарламалаудын практикалық негізіне үйретеді. Ретімен орындалатын
     нұсқайлар жасауға, процедуралар жасауға немесе циклдарды қолданып жаңа деңгейге
-    өтуге үйреніңіз. Барлық жастарларға түсінікті.
+    өтуге үйреніңіз. Барлық жастарларға түсінікті."
   thinkersmith_longdescription: Алдын ала құрастырылған "Робототехника сөздігі" арқылы  оқушылар
     алдын ала талқылау, нақты тапсырмаларды орындауға бір-біріне көмектесуге үйренеді.
     Осы сабақ оқушыларға символмен іс әрекет арасындағы байланысты түсіндіреді және
     қателікті табумен түзіту қыбілетіне үйретеді. "Менің роботехникалық достарым"
     сабағын топпен өткізген дұрыс. Мұғалімнің сыныпта қолданатын жұмыс дәптері бар.
-  condcards_longdescription: Алгоритм қағидаларымен шартты сөйлемдерді қарт колодасы
+  condcards_longdescription: "Алгоритм қағидаларымен шартты сөйлемдерді қарт колодасы
     арқылы үйренініз. Алгоритм қағидаларымен шартты сөйлемдерді қарт колодасы арқылы
-    үйренініз. Тапсырма бұйрық арқылы орындалады. Әр бұйрыққа бір колода қарт керек.
+    үйренініз. Тапсырма бұйрық арқылы орындалады. Әр бұйрыққа бір колода қарт керек."
   lightbotintl_longdescription: iOS немесе Android (немесе веб браузер) операциялық
     жүйелерін пайдаланып бағдарламалаудын мәнін түсін, 4 жастағы балаларға арналған
     бағдарламалау негіздерінен баста. Бұйрық тізбектерін қалай реттеу керегін, паттерн
     анықтталуын, процедуралар және циклдар қолданылуын біліп ал!
-  codehs_longdescription: Бағдарламалаудын компьютерге бұйрық беруі, итке бұйрық беруге
-    ұқсайды. Карел&mdash итімен кодтауды үйрен; Бұл бағдарламалаумен қызықты, қолжетімді
-    және көрнекті танысу, бағдарламалауды жаңа бастаған адамдарға ең маңыздысына үйретеді
-    - функциямен бұйрықтарға. Сабақтар оқушыларға арналған, бірақ мұғалімдерде оқушылардын
-    бағаларын қарау үшін тіркеле алады!
+  codehs_longdescription: "Бағдарламалаудын компьютерге бұйрық беруі, итке бұйрық
+    беруге ұқсайды. Карел&mdash итімен кодтауды үйрен; Бұл бағдарламалаумен қызықты,
+    қолжетімді және көрнекті танысу, бағдарламалауды жаңа бастаған адамдарға ең маңыздысына
+    үйретеді - функциямен бұйрықтарға. Сабақтар оқушыларға арналған, бірақ мұғалімдерде
+    оқушылардын бағаларын қарау үшін тіркеле алады!"
   codecademy_longdescription: Codecademy - бұл дүние жүзінде миллиондаған адамдар
     пайдаланатын, информатиканын негіздеріне үйрететін интерактивті кіріспе курс,
     мұнда студенттерді JavaScript арқылы бағдарламалау негіздеріне, бағадарламалу
@@ -1010,57 +1015,57 @@
     арналған екіөлшемді ойын жаса. Содан соң достарыңа тест құрастырып бағдарламалау
     негіздерін (айнымалылармен шарттар) үйренудегі оқуынды жалғастыр.  Жұмыс барысында
     рейтингте барлығынан күшті болу үшін ұпай жина.
-  processing_longdescription: Визуалды өнер мәнінде бағдарламалауға Processing бағдарламалау
+  processing_longdescription: "Визуалды өнер мәнінде бағдарламалауға Processing бағдарламалау
     тілінде кіріспе. Шағын бейнесабақтар сізді сурет салу бағдарламасының интерактивті
-    жобалау жаттығулармен таныстырады.
-  robomind_longdescription: Оқушылар бағдарламалау негізін өздерінің виртуалды роботомен
+    жобалау жаттығулармен таныстырады."
+  robomind_longdescription: "Оқушылар бағдарламалау негізін өздерінің виртуалды роботомен
     басқару арқылы үйренеді. Бұл онлайн сабақта шағын презентациялар, фильмдер, тесттер
-    және бағдарламалау жаттығуларына арналған автоматты кеңестер бар.
+    және бағдарламалау жаттығуларына арналған автоматты кеңестер бар."
   groklearning_longdescription: Python бағдарламалау тілін қолданып "Элиза" сұқбаттасу
     роботын психотерапевт ретінде жаса.  Элиза не айтумен, қайлай айтуды үйретеді.
     Ол робот емес адам деп ойлап қалатындай сенің достарынды алдай ала ма?
-  quorum_longdescription: Бұл оқулық көздері жаман көретін адамдарға арналған; ол
+  quorum_longdescription: "Бұл оқулық көздері жаман көретін адамдарға арналған; ол
     экраннан оқитын программалармен жұмыс істейді. Биологиялық лаббороториядағы Мэри
     экскурсиясына қосыл және Quorum бағдарламалау тілін оқы. Бұл оқулықта онлайн жаттығулар
-    бар және ол өзбетінше жұмысқа арналған.
+    бар және ол өзбетінше жұмысқа арналған."
   codespark_longdescription: '"The Foos" - бағдарламалауды оқуға қызықты және қолжетімді
     әдіс. Сүйкімді кейіпкерлерге басқатырғыш шығара алатындай код жазыңыз және виртуалды
     өмірді жандандырыңыз! Бұл ойында сөз жоқ, сондықтан бұл ойынды барлығы ойнай алады!'
   kodable_longdescription: Kodable - бұл 5 жастан жоғары балаларға бағдарламалау негізін
     үйрететін iPad ойны. Мұғаліммен ата-ананың қасында болуы міндетті емес, бірақ
     құттарлы іс.
-  tynkerapp_longdescription: Бағдарламалауды қызықты басқатырғыштарды шеше үйреніңіз.
+  tynkerapp_longdescription: "Бағдарламалауды қызықты басқатырғыштарды шеше үйреніңіз.
     Ойындармен хикаяны тақырыптық графика арқылы оңай жасаңыз, 10 - нан аса ойындық
     комплект және өзгертілетін кейіпкерлер. Интернетке қосылу қажет емес. Сіздің нәтижелеріңізді
-    интернет арқылы көруге болады.
-  robomindnl_longdescription: Оқушылар бағдарламалау негізін өздерінің виртуалды роботомен
-    басқару арқылы үйренеді. Бұл онлайн сабақта шағын презентациялар, фильмдер, тесттер
-    және бағдарламалау жаттығуларына арналған автоматты кеңестер бар.
-  flappy_longdescription: Блоктарды жылжыту арқылы Самғаған құс ойнын жаса. Сіз басқа
+    интернет арқылы көруге болады."
+  robomindnl_longdescription: "Оқушылар бағдарламалау негізін өздерінің виртуалды
+    роботомен басқару арқылы үйренеді. Бұл онлайн сабақта шағын презентациялар, фильмдер,
+    тесттер және бағдарламалау жаттығуларына арналған автоматты кеңестер бар."
+  flappy_longdescription: "Блоктарды жылжыту арқылы Самғаған құс ойнын жаса. Сіз басқа
     кейіпкер таңдай аласыз (акула, Аяз ата, немесе басқа біреуді). Ойынды өз телефоныңызға
-    оңай қоса аласыз.
-  bitsbox_longdescription: Өзіңіздін виртуалды планшет арқылы сіз бірнеше ойын бағдарламаласын
+    оңай қоса аласыз."
+  bitsbox_longdescription: "Өзіңіздін виртуалды планшет арқылы сіз бірнеше ойын бағдарламаласын
     жасап, бөлісе аласыз. Қарапайым нұсқаулар кішкентай баланыда Javascript тіліне
-    үйрете алады, жақсырақ оқысаңыз, көп нәрсеге қол жеткізесіз.
-  makeschool_longdescription: Бастаушыларғада қолдануға оңай болатын Swift бағдарламалау
+    үйрете алады, жақсырақ оқысаңыз, көп нәрсеге қол жеткізесіз."
+  makeschool_longdescription: "Бастаушыларғада қолдануға оңай болатын Swift бағдарламалау
     тілі арқылы айфон ойынының кодын жазуға үйрен! Pok&eacute ойынын жаса;қызықты
     шытырман ойын, құбыжықтарды жаңа қозғалыстарға кодтауға үйретеді . Сіздің құбыжықтарыңыз
-    жеңу үшін сіз айнымалыларды, әдістерді және объектілерді қолдануға үйренесіз!
-  touchdevelop_longdescription: Сенсорлы редактор сізге нүктелерден сурет жасауға,
+    жеңу үшін сіз айнымалыларды, әдістерді және объектілерді қолдануға үйренесіз!"
+  touchdevelop_longdescription: "Сенсорлы редактор сізге нүктелерден сурет жасауға,
     аю туралы басқатырғышты шешуге немесе өзіңіздің секіріп жүретін құс ойының жасауға
-    көмектеседі.
-  appinventor_longdescription: Көңіл көтеретін қысқа видео-сабақтар сізге Android
+    көмектеседі."
+  appinventor_longdescription: "Көңіл көтеретін қысқа видео-сабақтар сізге Android
     телефонына немесе планшетіне үш қарапайым қосымша жасауды үйретеді. Бұл сабақтар
     бастаушыларға, сонымен қатар тәжірибелі оқушыларға да арналған. Код Жазу Сағатының
     бұл сабақтары қосымшаны бағдарламалауды үйретеді. Сонымен қатар жасаған туындыларыңызды
     достарыңызбен бөлісе аласыз! Бұл сабақтарды жалғыз немесе топ болып мұғаліммен
-    бірге оқуға болады..
-  blockly_longdescription: Интернетке қосылуы жай (немесе қосылмаған) ДК бар ма? Code.org
-    оқулықтарының алғашқысы болған Blockly оқулықтарын жүктеп ал, - 3MB ZIP-файлды
-    кез келген компьютерге жүктеп алуға немесе жад картасынан қолдануға болады
-  thinkersmith2_longdescription: Оқушылар символдардың екілік жүйеде сақталуын және
+    бірге оқуға болады.."
+  blockly_longdescription: "Интернетке қосылуы жай (немесе қосылмаған) ДК бар ма?
+    Code.org оқулықтарының алғашқысы болған Blockly оқулықтарын жүктеп ал, - 3MB ZIP-файлды
+    кез келген компьютерге жүктеп алуға немесе жад картасынан қолдануға болады"
+  thinkersmith2_longdescription: "Оқушылар символдардың екілік жүйеде сақталуын және
     де ҚОСУ мен ӨШІРУ функцияларын түсінеді. Сабақ соңында оқушылар өздерінің аты-жөндерінің
-    бірінші әріптерін кодтап үйлеріне алады.
+    бірінші әріптерін кодтап үйлеріне алады."
   kodableunplugged_longdescription: fuzzFamily Frenzy жаттығуы кәдімгі қағазда қолдану
     үшін жасалған, және 5 жастан асқан балалар үшін алгоритм логикасына кіріспе ретінде
     пайдаланылады. Мұғалім ойын ережесін түсіндіруі қажет, ал оқушылар кедергілерден
@@ -1068,173 +1073,173 @@
   projguts_longdescription: Бұл курс компьютердің көмегінсіз оқушыларға модельдеуді,
     "тас-қайшы-қағаз" ойынының әртүрлі нұсқаларын жасау және эксперимент нәтижелерін
     бақылау арқылы таныстырады.
-  hourofcode_longdescription: Жаңадан тіркелушілерге code.org/hoc
+  hourofcode_longdescription: "Жаңадан тіркелушілерге code.org/hoc"
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   starwars_longdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
-  playlab_longdescription: Ойын Лабораториясымен әңгіме немесе ойын құрыңыз ! Аңдар,
+  playlab_longdescription: "Ойын Лабораториясымен әңгіме немесе ойын құрыңыз ! Аңдар,
     зомби, ниндзя, және басқа да көптеген кейіпкерлер сөйлейтін, ұпай жинайтын, тіпті
-    аузынан от шашатын бағдарлама жазыңыз!
-  codeorg_beyond_name: Информатикаға кіріспе (8-сынып оқушыларына)
-  khan_beyond_name: Компьютерлік бағдарламалауды үйреніңіз
-  tynker_beyond_name: Бағдарламалауды үйіңізде оқыңыз
-  scratch_beyond_name: Бағдарламалау барысында шығармашылығыңызды танытыңыз
+    аузынан от шашатын бағдарлама жазыңыз!"
+  codeorg_beyond_name: "Информатикаға кіріспе (8-сынып оқушыларына)"
+  khan_beyond_name: "Компьютерлік бағдарламалауды үйреніңіз"
+  tynker_beyond_name: "Бағдарламалауды үйіңізде оқыңыз"
+  scratch_beyond_name: "Бағдарламалау барысында шығармашылығыңызды танытыңыз"
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: Әлі де оқып үйренбеген балаларға арналған ScratchJR
-  hopscotch_beyond_name: 'Классикалық ойын: iPad-та бағдарламалаңыз'
+  scratchjr_beyond_name: "Әлі де оқып үйренбеген балаларға арналған ScratchJR"
+  hopscotch_beyond_name: "Классикалық ойын: iPad-та бағдарламалаңыз"
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: Питонда бағдарламалаумен таныс болыңыз
-  hacketyhack_beyond_name: Рубимен таныс болыңыз
-  robomind_beyond_name: Виртуальды роботты бағдарламаңыз
+  groklearning_beyond_name: "Питонда бағдарламалаумен таныс болыңыз"
+  hacketyhack_beyond_name: "Рубимен таныс болыңыз"
+  robomind_beyond_name: "Виртуальды роботты бағдарламаңыз"
   makeschool_beyond_name: iPhone ойының браузеріңізде жасаңыз!
   appinventor_beyond_name: AppInventor Код Жазу Сағаты
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Карел атты Итпен код жазуды үйрен
-  udemy_beyond_name: Бағдарламалаудың онлайн-курстары
-  lynda_beyond_name: Бағдарламалаудың онлайн-курстары
-  edx_beyond_name: Гарвард университетінің Информатика 50 курсы
-  coursera_beyond_name: Стэнфорд университетінің Информатика 101 курсы
+  codehs_beyond_name: "Карел атты Итпен код жазуды үйрен"
+  udemy_beyond_name: "Бағдарламалаудың онлайн-курстары"
+  lynda_beyond_name: "Бағдарламалаудың онлайн-курстары"
+  edx_beyond_name: "Гарвард университетінің Информатика 50 курсы"
+  coursera_beyond_name: "Стэнфорд университетінің Информатика 101 курсы"
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Университеттердің онлайн курстары
+  teachingtree_beyond_name: "Университеттердің онлайн курстары"
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: HTML-ді үйреніңіз
-  codeavengers_beyond_name: Веб-сайттарға код жазуды үйрен
+  codeavengers_beyond_name: "Веб-сайттарға код жазуды үйрен"
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Микроконтроллерлі Arduino
-  processing_beyond_name: Өңдеуге болатын бағдарлама
+  arduino_beyond_name: "Микроконтроллерлі Arduino"
+  processing_beyond_name: "Өңдеуге болатын бағдарлама"
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Жас аралығы 4-14
-  khan_beyond_gradelevel: Орта мектеп +
-  tynker_beyond_gradelevel: Жас аралығы 5-13
-  scratch_beyond_gradelevel: Жасы 8 +
-  lightbot_beyond_gradelevel: Кез келген жастағыларға
-  codecademy_beyond_gradelevel: Жоғарғы сынып
-  kodable_beyond_gradelevel: Бастауыш сыныптары
-  scratchjr_beyond_gradelevel: Бастауыш сыныптары
-  hopscotch_beyond_gradelevel: Орта мектеп +
-  pocketcode_beyond_gradelevel: Орта мектеп +
-  groklearning_beyond_gradelevel: Орта мектеп +
-  hacketyhack_beyond_gradelevel: Жоғарғы сынып
-  robomind_beyond_gradelevel: Жас аралығы 8-13
-  makeschool_beyond_gradelevel: Жоғарғы сынып
-  appinventor_beyond_gradelevel: Орта мектеп +
-  touchdevelop_beyond_gradelevel: Жоғарғы сынып
-  codehs_beyond_gradelevel: Жоғарғы сынып
-  udemy_beyond_gradelevel: Орта мектеп +
-  lynda_beyond_gradelevel: Орта мектеп +
-  edx_beyond_gradelevel: Университет
-  coursera_beyond_gradelevel: Университет
-  udacity_beyond_gradelevel: Университет
-  teachingtree_beyond_gradelevel: Университет
-  kodu_beyond_gradelevel: Жасы 8 +
-  cargobot_beyond_gradelevel: Жасы 8 +
-  kidsruby_beyond_gradelevel: Жасы 12+
-  w3schools_beyond_gradelevel: Жасы 12+
-  codeavengers_beyond_gradelevel: Орта мектеп +
-  mozilla_beyond_gradelevel: Жасы 12+
-  codecombat_beyond_gradelevel: Орта мектеп +
-  codea_beyond_gradelevel: Орта мектеп +
-  lego_beyond_gradelevel: Орта мектеп +
-  finch_beyond_gradelevel: Жасы 8 +
-  arduino_beyond_gradelevel: Орта мектеп +
-  processing_beyond_gradelevel: Жоғарғы сынып
-  alice_beyond_gradelevel: Орта мектеп +
-  sphero_beyond_gradelevel: Жасы 8 +
-  codeorg_beyond_platformtext: Заманауи браузерлер және планшеттер
-  khan_beyond_platformtext: Заманауи веб-браузерлер
-  tynker_beyond_platformtext: Заманауи веб-браузерлер ($$ қажет)
-  scratch_beyond_platformtext: Кез келген браузер
+  codeorg_beyond_gradelevel: "Жас аралығы 4-14"
+  khan_beyond_gradelevel: "Орта мектеп +"
+  tynker_beyond_gradelevel: "Жас аралығы 5-13"
+  scratch_beyond_gradelevel: "Жасы 8 +"
+  lightbot_beyond_gradelevel: "Кез келген жастағыларға"
+  codecademy_beyond_gradelevel: "Жоғарғы сынып"
+  kodable_beyond_gradelevel: "Бастауыш сыныптары"
+  scratchjr_beyond_gradelevel: "Бастауыш сыныптары"
+  hopscotch_beyond_gradelevel: "Орта мектеп +"
+  pocketcode_beyond_gradelevel: "Орта мектеп +"
+  groklearning_beyond_gradelevel: "Орта мектеп +"
+  hacketyhack_beyond_gradelevel: "Жоғарғы сынып"
+  robomind_beyond_gradelevel: "Жас аралығы 8-13"
+  makeschool_beyond_gradelevel: "Жоғарғы сынып"
+  appinventor_beyond_gradelevel: "Орта мектеп +"
+  touchdevelop_beyond_gradelevel: "Жоғарғы сынып"
+  codehs_beyond_gradelevel: "Жоғарғы сынып"
+  udemy_beyond_gradelevel: "Орта мектеп +"
+  lynda_beyond_gradelevel: "Орта мектеп +"
+  edx_beyond_gradelevel: "Университет"
+  coursera_beyond_gradelevel: "Университет"
+  udacity_beyond_gradelevel: "Университет"
+  teachingtree_beyond_gradelevel: "Университет"
+  kodu_beyond_gradelevel: "Жасы 8 +"
+  cargobot_beyond_gradelevel: "Жасы 8 +"
+  kidsruby_beyond_gradelevel: "Жасы 12+"
+  w3schools_beyond_gradelevel: "Жасы 12+"
+  codeavengers_beyond_gradelevel: "Орта мектеп +"
+  mozilla_beyond_gradelevel: "Жасы 12+"
+  codecombat_beyond_gradelevel: "Орта мектеп +"
+  codea_beyond_gradelevel: "Орта мектеп +"
+  lego_beyond_gradelevel: "Орта мектеп +"
+  finch_beyond_gradelevel: "Жасы 8 +"
+  arduino_beyond_gradelevel: "Орта мектеп +"
+  processing_beyond_gradelevel: "Жоғарғы сынып"
+  alice_beyond_gradelevel: "Орта мектеп +"
+  sphero_beyond_gradelevel: "Жасы 8 +"
+  codeorg_beyond_platformtext: "Заманауи браузерлер және планшеттер"
+  khan_beyond_platformtext: "Заманауи веб-браузерлер"
+  tynker_beyond_platformtext: "Заманауи веб-браузерлер ($$ қажет)"
+  scratch_beyond_platformtext: "Кез келген браузер"
   lightbot_beyond_platformtext: iOS және Android операциялық жүйелері (немесе веб-браузер)
-  codecademy_beyond_platformtext: Заманауи веб-браузерлер. iOS және Android операциялық
-    жүйелері үшін қосымша
+  codecademy_beyond_platformtext: "Заманауи веб-браузерлер. iOS және Android операциялық
+    жүйелері үшін қосымша"
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: Мобильді телефон үшін қосымша
-  groklearning_beyond_platformtext: Заманауи веб-браузерлер
-  hacketyhack_beyond_platformtext: Күнделікі пайдалану үшін орнату
-  robomind_beyond_platformtext: Заманауи веб-браузерлер, мобильді интернет
-  makeschool_beyond_platformtext: Заманауи веб-браузерлер
-  appinventor_beyond_platformtext: Заманауи браузер + Android
-  touchdevelop_beyond_platformtext: Заманауи браузерлер, смартфондар, барлық құрылғылар
-  codehs_beyond_platformtext: Заманауи браузерлер ($$ қажет)
-  udemy_beyond_platformtext: Онлайн-технологиялар негізінде
-  lynda_beyond_platformtext: Онлайн-технологиялар негізінде ($$ қажет)
-  edx_beyond_platformtext: Заманауи браузерлер
-  coursera_beyond_platformtext: Заманауи браузерлер
-  udacity_beyond_platformtext: Заманауи браузерлер
-  teachingtree_beyond_platformtext: Онлайн-технологиялар негізінде
+  pocketcode_beyond_platformtext: "Мобильді телефон үшін қосымша"
+  groklearning_beyond_platformtext: "Заманауи веб-браузерлер"
+  hacketyhack_beyond_platformtext: "Күнделікі пайдалану үшін орнату"
+  robomind_beyond_platformtext: "Заманауи веб-браузерлер, мобильді интернет"
+  makeschool_beyond_platformtext: "Заманауи веб-браузерлер"
+  appinventor_beyond_platformtext: "Заманауи браузер + Android"
+  touchdevelop_beyond_platformtext: "Заманауи браузерлер, смартфондар, барлық құрылғылар"
+  codehs_beyond_platformtext: "Заманауи браузерлер ($$ қажет)"
+  udemy_beyond_platformtext: "Онлайн-технологиялар негізінде"
+  lynda_beyond_platformtext: "Онлайн-технологиялар негізінде ($$ қажет)"
+  edx_beyond_platformtext: "Заманауи браузерлер"
+  coursera_beyond_platformtext: "Заманауи браузерлер"
+  udacity_beyond_platformtext: "Заманауи браузерлер"
+  teachingtree_beyond_platformtext: "Онлайн-технологиялар негізінде"
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Күнделікі пайдалану үшін орнату
-  w3schools_beyond_platformtext: Заманауи веб-браузерлер
-  codeavengers_beyond_platformtext: Заманауи веб-браузерлер
-  mozilla_beyond_platformtext: Заманауи веб-браузерлер
-  codecombat_beyond_platformtext: Онлайн-технологиялар негізінде (Firefox, Chrome,
-    Safari, IE9 +)
+  kidsruby_beyond_platformtext: "Күнделікі пайдалану үшін орнату"
+  w3schools_beyond_platformtext: "Заманауи веб-браузерлер"
+  codeavengers_beyond_platformtext: "Заманауи веб-браузерлер"
+  mozilla_beyond_platformtext: "Заманауи веб-браузерлер"
+  codecombat_beyond_platformtext: "Онлайн-технологиялар негізінде (Firefox, Chrome,
+    Safari, IE9 +)"
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Роботты сатып алу
-  finch_beyond_platformtext: Роботты сатып алу
-  arduino_beyond_platformtext: Веб-браузер, содан кейін робот жиынтығын сатып алу
-  processing_beyond_platformtext: Заманауи веб-браузерлер
+  lego_beyond_platformtext: "Роботты сатып алу"
+  finch_beyond_platformtext: "Роботты сатып алу"
+  arduino_beyond_platformtext: "Веб-браузер, содан кейін робот жиынтығын сатып алу"
+  processing_beyond_platformtext: "Заманауи веб-браузерлер"
   alice_beyond_platformtext: Windows немесе Mac (орнату қажет)
-  sphero_beyond_platformtext: Роботты сатып алу
-  codeorg_beyond_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды
-    үйреніңіз!
+  sphero_beyond_platformtext: "Роботты сатып алу"
+  codeorg_beyond_shortdescription: "Марк Цукерберг және Angry Birds-пен бағдарламалауды
+    үйреніңіз!"
   khan_beyond_shortdescription: JavaScript-те сурет салуды үйреніңіз
   tynker_beyond_shortdescription: 4-8 - сынып оқушылары үшін көңілді де қызықты курс
-  scratch_beyond_shortdescription: Интерактивті ойындар, әңгімелер мен анимациялар
-    жасаңыз.
-  lightbot_beyond_shortdescription: Код жазу қағидасын түсінуге арналған ойын
-  codecademy_beyond_shortdescription: Веб-браузерде JavaScript тілінде бағдараламауды
-    үйреніңіз
-  kodable_beyond_shortdescription: Бағдарламалау негіздерін үйрену үшін iPad-қа арналған
-    қызықты ойындар
+  scratch_beyond_shortdescription: "Интерактивті ойындар, әңгімелер мен анимациялар
+    жасаңыз."
+  lightbot_beyond_shortdescription: "Код жазу қағидасын түсінуге арналған ойын"
+  codecademy_beyond_shortdescription: "Веб-браузерде JavaScript тілінде бағдараламауды
+    үйреніңіз"
+  kodable_beyond_shortdescription: "Бағдарламалау негіздерін үйрену үшін iPad-қа арналған
+    қызықты ойындар"
   scratchjr_beyond_shortdescription: ScratchJr-мен интерактивті әңгімелер және ойындар
     құрыңыз.
   hopscotch_beyond_shortdescription: iPad-та визуалды бағдарламалауды үйреніңіз
-  pocketcode_beyond_shortdescription: Смартфонға ойын жаз да достарыңмен бөліс!
-  groklearning_beyond_shortdescription: Питон тілінде бағдарламалауға кіріспе
+  pocketcode_beyond_shortdescription: "Смартфонға ойын жаз да достарыңмен бөліс!"
+  groklearning_beyond_shortdescription: "Питон тілінде бағдарламалауға кіріспе"
   hacketyhack_beyond_shortdescription: Ruby-ді нөлдік деңгейден бастаңыз
-  robomind_beyond_shortdescription: Виртуалды робот үшін код жазыңыз
+  robomind_beyond_shortdescription: "Виртуалды робот үшін код жазыңыз"
   makeschool_beyond_shortdescription: iPhone-ға ойын жазуды бір сағатта үйреніңіз
-  appinventor_beyond_shortdescription: Өзіңіздің қосымшаңызды жасаңыз! (Тек Android
-    үшін ғана)
-  touchdevelop_beyond_shortdescription: Мобильді қосымшаға телефоныңызда, планшетте
-    немесе ноутбукте код жазыңыз
+  appinventor_beyond_shortdescription: "Өзіңіздің қосымшаңызды жасаңыз! (Тек Android
+    үшін ғана)"
+  touchdevelop_beyond_shortdescription: "Мобильді қосымшаға телефоныңызда, планшетте
+    немесе ноутбукте код жазыңыз"
   codehs_beyond_shortdescription: JavaScript тілінде бағдарламалауды қызықты ортада
     бастаңыз
-  udemy_beyond_shortdescription: Бағдарламалаудан ондаған онлайн-курстар
-  lynda_beyond_shortdescription: Бағдарламалаудан ондаған онлайн-курстар
-  edx_beyond_shortdescription: Гарвард университетінің ең танымал курсы
-  coursera_beyond_shortdescription: Оқуды Информатика 101 курсынан бастаңыз
-  udacity_beyond_shortdescription: Оқуды Информатика 101 курсынан бастаңыз
-  teachingtree_beyond_shortdescription: 'Онлайн білім алу: тез және шектеусіз'
-  kodu_beyond_shortdescription: Үш өлшемді ойын әлемін жасау
+  udemy_beyond_shortdescription: "Бағдарламалаудан ондаған онлайн-курстар"
+  lynda_beyond_shortdescription: "Бағдарламалаудан ондаған онлайн-курстар"
+  edx_beyond_shortdescription: "Гарвард университетінің ең танымал курсы"
+  coursera_beyond_shortdescription: "Оқуды Информатика 101 курсынан бастаңыз"
+  udacity_beyond_shortdescription: "Оқуды Информатика 101 курсынан бастаңыз"
+  teachingtree_beyond_shortdescription: "Онлайн білім алу: тез және шектеусіз"
+  kodu_beyond_shortdescription: "Үш өлшемді ойын әлемін жасау"
   cargobot_beyond_shortdescription: iPad-та роботтың қолын бағдарламалау
   kidsruby_beyond_shortdescription: Ruby тілімен бағдарламалауды үйреніңіз
-  w3schools_beyond_shortdescription: Веб-сайттар жасауды үйреніңіз
-  codeavengers_beyond_shortdescription: Веб-сайттар мен ойындарға код жазуды үйреніңіз
-  mozilla_beyond_shortdescription: Веб-парақ жасаңыз және бөлісіңіз
-  codecombat_beyond_shortdescription: Жеңу үшін ойын ойнап JavaScript тілін үйреніңіз
+  w3schools_beyond_shortdescription: "Веб-сайттар жасауды үйреніңіз"
+  codeavengers_beyond_shortdescription: "Веб-сайттар мен ойындарға код жазуды үйреніңіз"
+  mozilla_beyond_shortdescription: "Веб-парақ жасаңыз және бөлісіңіз"
+  codecombat_beyond_shortdescription: "Жеңу үшін ойын ойнап JavaScript тілін үйреніңіз"
   codea_beyond_shortdescription: iPad-та қосымша жасаңыз
-  lego_beyond_shortdescription: Робот құрастырып оған бағдарлама жазыңыз
-  finch_beyond_shortdescription: Информатиканы үйрену үшін арналған робот
-  arduino_beyond_shortdescription: Бағдарламалауға болатын компьютер - Arduino-ны
-    үйреніңіз.
-  processing_beyond_shortdescription: Деректерді өңдеуге арналған тілдерді оқыңыз
-  alice_beyond_shortdescription: Үш өлшемді ортада бағдарламалауға үйретіңіз
+  lego_beyond_shortdescription: "Робот құрастырып оған бағдарлама жазыңыз"
+  finch_beyond_shortdescription: "Информатиканы үйрену үшін арналған робот"
+  arduino_beyond_shortdescription: "Бағдарламалауға болатын компьютер - Arduino-ны
+    үйреніңіз."
+  processing_beyond_shortdescription: "Деректерді өңдеуге арналған тілдерді оқыңыз"
+  alice_beyond_shortdescription: "Үш өлшемді ортада бағдарламалауға үйретіңіз"
   sphero_beyond_shortdescription: SPRK сабақтары балаларға роботтарды бағдарламалаудың
     жедетілген курстарын өтуге мүмкіндік береді. Сонымен қатар нақты ғылым мен математикалық
     дағдыларын арттырады.
@@ -1244,17 +1249,17 @@
     Марк Цукерберг, Angry Birds ("Ашулы құстар") және Plants vs. Zombies ("Өсімдіктер
     зомбиге қарсы") қатысқан видеодәрістерден тұратын 15-20 сабақ берілген. Цикл,
     шартты оператор, функция және алгоритм негіздерімен таныс болыңыз.
-  khan_beyond_longdescription: Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
-    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!
+  khan_beyond_longdescription: "Кодыңызбен күлкілі суреттерді салу барысында, бағдарламалау
+    негіздерін JavaScript-те үйреніңіз. Жеке немесе сыныптастарыңызбен оқыңыз!"
   tynker_beyond_longdescription: Tynker бағдарламалауды оңай әрі қызықты және визуалды
     өткізеді. Балалар кодтар блогын пайдаланып ойын және мобильді қосымша жасайды.
     Бұл бағдарламалау синтаксисін оқуды қажет етпейді. Балалар бірден өздерінің ойындағыларын
     анимациялық әңгімелер және математикалық өрнектер арқылы көрсетеді - бұл оқуда
     ілгерілеуге септігін тигізеді. Tynker негіздерін оқу балаларды сонымен синтаксистік
     бағдарламалаудың негіздерін түсінуге де көмектеседі.
-  scratch_beyond_longdescription: Со Scratch арқылы сіз өзіңіздін интерактивті ойыныңызды,
+  scratch_beyond_longdescription: "Со Scratch арқылы сіз өзіңіздін интерактивті ойыныңызды,
     хикаяларыңызды, &mdash анимацияларын жасай аласыз; және достарымен бөлісе аласыз.
-    Өз атыңыздын анимациясынан бастаңыз, құттықтау хатын жасаңыз немесе ойын істеңіз.
+    Өз атыңыздын анимациясынан бастаңыз, құттықтау хатын жасаңыз немесе ойын істеңіз."
   lightbot_beyond_longdescription: iOS немесе Android (немесе веб браузер) операциялық
     жүйелерін пайдаланып бағдарламалаудын мәнін түсін, 4 жастағы балаларға арналған
     бағдарламалау негіздерінен баста. Бұйрық тізбектерін қалай реттеу керегін, паттерн
@@ -1274,9 +1279,9 @@
   hopscotch_beyond_longdescription: Hopscotch бағдарламалау тіліндегі iPad-қа арналға
     оқулық. Оқушылар жалғыз немесе топтаса (бір құралға 3 оқушы) жұмыс істей отырып,
     планшетте ойындар мен бағдарламалар жазады.
-  pocketcode_beyond_longdescription: Қалта коды көмегімен смартфонға ойын жазыңыз!
+  pocketcode_beyond_longdescription: "Қалта коды көмегімен смартфонға ойын жазыңыз!
     Десантшы Стивке сәлемдемені жеткізуге көмектесіңіз. Сіз ойыныңызбен басқа қолданушылар
-    және достарыңызбен бөлісе аласыз!
+    және достарыңызбен бөлісе аласыз!"
   groklearning_beyond_longdescription: Python тілінді бағдарламалауға кіріспе курсы
     тәжірибесі жоқтар үшін. Біздің негізгі материалдардың қызықты тапсырмалармен берілуі
     Python тілі мен жалпы бағдарламалауға қатыстыны үйренуге көмектеседі. Бұл оқу
@@ -1287,55 +1292,56 @@
     сіз әртүрлі бағдарлама түрлерін жасау кезінде, соның ішінде жұмыс компьютерге
     арналған бағдарламалар мен веб-сайттар жасау үшін пайдаланатын Ruby тілін үйренесіз.
     [Ескерту: бағдарлама орнату қажет]'
-  robomind_beyond_longdescription: Оқушылар виртуальды роботтарын басқару арқылы бағдарлама
-    негіздерін үйренеді. Бұл онлайн сабақ қысқаша слайдтар, фильмдер, тесттер және
-    бағдарламалау тапсырмаларын орындау кезінде автоматты шығатын кеңестерден тұрады.
+  robomind_beyond_longdescription: "Оқушылар виртуальды роботтарын басқару арқылы
+    бағдарлама негіздерін үйренеді. Бұл онлайн сабақ қысқаша слайдтар, фильмдер, тесттер
+    және бағдарламалау тапсырмаларын орындау кезінде автоматты шығатын кеңестерден
+    тұрады."
   makeschool_beyond_longdescription: Objective C-ден хабарыңыз бар ма? Бір сағат ішінде
     iPhone-ға ойын жазуды үйрен! Біз сізді код жазу, тестілеу және ойынды браузерде
     ойнап көріп, достарыңызбен Facebook-те бөлісуге болатын сатылардан өткіземіз!
     iPhone-ға код жазудан ешқандай тәжірибе талап етілмейді. Сіз тек қана айнымалылар,
     методтар және объектілерді білуіңіз қажет.
-  appinventor_beyond_longdescription: Көңіл көтеретін қысқа видео-сабақтар сізге Android
-    телефонына немесе планшетіне үш қарапайым қосымша жасауды үйретеді. Бұл сабақтар
-    бастаушыларға, сонымен қатар тәжірибелі оқушыларға да арналған. Код Жазу Сағатының
-    бұл сабақтары қосымшаны бағдарламалауды үйретеді. Сонымен қатар жасаған туындыларыңызды
-    достарыңызбен бөлісе аласыз! Бұл сабақтарды жалғыз немесе топ болып мұғаліммен
-    бірге оқуға болады..
+  appinventor_beyond_longdescription: "Көңіл көтеретін қысқа видео-сабақтар сізге
+    Android телефонына немесе планшетіне үш қарапайым қосымша жасауды үйретеді. Бұл
+    сабақтар бастаушыларға, сонымен қатар тәжірибелі оқушыларға да арналған. Код Жазу
+    Сағатының бұл сабақтары қосымшаны бағдарламалауды үйретеді. Сонымен қатар жасаған
+    туындыларыңызды достарыңызбен бөлісе аласыз! Бұл сабақтарды жалғыз немесе топ
+    болып мұғаліммен бірге оқуға болады.."
   touchdevelop_beyond_longdescription: TouchDevelop iPad, iPhone, Android, PC, Mac,
     Windows Phone-ға код жазуға мүмкіндік береді. Біздің сенсорлы редакторымыз бағдарламалауды
     үйренуді телефон немесе планшетте де қызықты етеді!
-  codehs_beyond_longdescription: 'Карел атты Итпен бағдарламалау негіздерін үйреніңіз
+  codehs_beyond_longdescription: "Карел атты Итпен бағдарламалау негіздерін үйреніңіз
     - бұл қызықты, қолжетімді және бағдарламалауға визуалды кіріспе. Компьютерге берілетін
     командалар итке берілетін бұйрықтар сияқты орындалады. Бұл сабақты мұғаліммен
-    өткен дұрыс, бірақ өз бетінше оқуға да болады. [Назар аударыңыз: төлем жасау керек]'
-  udemy_beyond_longdescription: 'Сіз өміріңізде бір жол болсын код жазып көрмедіңіз,
+    өткен дұрыс, бірақ өз бетінше оқуға да болады. [Назар аударыңыз: төлем жасау керек]"
+  udemy_beyond_longdescription: "Сіз өміріңізде бір жол болсын код жазып көрмедіңіз,
     немесе керісінше бағдарлама жазу сіздің жұмысыңыз болса да, Udemy-де сіз үшін
     оқуға курс табылады. Бұл жерде тәжірибелі оқытушылар сабақ береді. [Назар аударыңыз:
-    төлем жасау керек]'
-  lynda_beyond_longdescription: 'Объектіге бағытталған бағдарламалау негіздерін қолданып,
+    төлем жасау керек]"
+  lynda_beyond_longdescription: "Объектіге бағытталған бағдарламалау негіздерін қолданып,
     C, С++ және Java тілдерінде код және веб-қосымшалар жазуды үйреніңіз. Біздің сабақтар
     сізді мобильді қосымшалар жасауды, PHP және MySQL мәліметтер қорымен жұмыс істеуді,
     мәліметті статистикалық өңдеудің R тілімен және тағы да басқалармен таныстырады.
-    [Назар аударыңыз: төлем жасау керек]'
-  edx_beyond_longdescription: Информатика 50x - бұл Гарвард Колледжінің әрсаладағы
+    [Назар аударыңыз: төлем жасау керек]"
+  edx_beyond_longdescription: "Информатика 50x - бұл Гарвард Колледжінің әрсаладағы
     студенттер үшін, информатиканың интеллектуальды саласына және бағдарламалау өнеріне
     кіріспе курсы. Курс абстрация, алгоритмдер, мәліметтер құрылымы, инкапсуляция,
     ресурстарды басқару, қауіпсіздік, бағдарлама және веб-қосымша жасау сияқты тақырыптарды
     қамтиды. C, PHP және JavaScript тілдер, және де SQL, CSS және HTML қолданылады.
-    Информатика 50x іштей оқу курсы - Гарвардтың екінші танымал курсы болып табылады.
-  coursera_beyond_longdescription: 'Стэнфорд университетінің Информатика 101 курсында
+    Информатика 50x іштей оқу курсы - Гарвардтың екінші танымал курсы болып табылады."
+  coursera_beyond_longdescription: "Стэнфорд университетінің Информатика 101 курсында
     Ник Парлан дәріс оқиды (тегін!). Информатика 101 курсы - информатика негіздерінен
     алдын ала дайындығы жоқ аудитория үшін жасалған. Кодтың кішкене бөліктерімен тәжірибе
     жасауға және компьютердің мүмкіндіктері мен шектеулерін зерттеуге болады. Информатика
     101 курсы заманауи компьютерлік техниканың жалпыалама негіздерімен таныстырады:
     компьютер дегеніміз не, оны аппараттық және бағдарламалық қамтамасыз ету, интернет
-    дегеніміз не. Курс браузерді қолдану тәжірибесінен басқасын талап етпейді.'
-  udacity_beyond_longdescription: Бұл курста информатика негіздерін және барлаушы
+    дегеніміз не. Курс браузерді қолдану тәжірибесінен басқасын талап етпейді."
+  udacity_beyond_longdescription: "Бұл курста информатика негіздерін және барлаушы
     робот мысалында бағдарлама жазуды үйренесіз. Оқу үшін бағдарламалаудан алдын ала
     ешқандай тәжірибе талап етілмейді. Бастаушылар қош келдіңіздер! Курс аяқталған
     соң, сіз информатика негіздерін үйренесіз және Python тілінде бағдарлама жаза
     алатын боласыз. Бұл курс бұдан да қиын информатика тақырыптарын оқу үшін бастама
-    болады.
+    болады."
   teachingtree_beyond_longdescription: TeachingTree ашық платформа болып табылады,
     онда оқу құралдарын ұйымдастыруға болады. Біздің мақсат оқушылардың информатиканың
     кейбір жеке ұғымдарын оқуы үшін қолжетімді материалдар жасау. Біз барлық оқушыларды
@@ -1350,25 +1356,25 @@
     үйрететін басқатырғыш. Істеу аса қиын емес сияқты, солай ма? Бұл жерде 36 қиын
     тапсырма, құлақ құрышын қандыратын музыка және тамаша графика бар. Сіз тіпті достарыңызбен
     бөлісу үшін шешіміңізді жазып, YouTube сайтына жариялай аласыз.
-  kidsruby_beyond_longdescription: 'Ойындар жасаңыз, көңіл көтеріңіз, немесе Рубимен
+  kidsruby_beyond_longdescription: "Ойындар жасаңыз, көңіл көтеріңіз, немесе Рубимен
     үй жұмысын орындауды жеңілдетіңіз! Тек ата-анаңызға және ұстаздарыңызға Ruby тілінде
     бағдарламалауды үйреніп жатқаныңызды айтыңыз... ;) Бұл тегін және барлық компьютерде
-    жұмыс істейді. [Ескерту: бағдарлама орнату қажет]'
-  w3schools_beyond_longdescription: Компьютеріңізде веб-сайттар жасауды үйреніңіз.
+    жұмыс істейді. [Ескерту: бағдарлама орнату қажет]"
+  w3schools_beyond_longdescription: "Компьютеріңізде веб-сайттар жасауды үйреніңіз.
     Серверлермен жұмыс істеу негіздерін бір сағат ішінде оқыңыз. Мәліметтер базасын
-    веб-сайтпен байланыстыруды үйреніңіз
-  codeavengers_beyond_longdescription: Ойындар, қосымша және веб-сайттар жасаңыз.
+    веб-сайтпен байланыстыруды үйреніңіз"
+  codeavengers_beyond_longdescription: "Ойындар, қосымша және веб-сайттар жасаңыз.
     Бастаушылар үшін сарапшылардың асқан шеберлікпен құрастырған курстары, түсінікті
     нұсқаулықтар мен керекті көмек көрсету құралдары. Біздің HTML, CSS және JavaScript
     курстарымыз оқуды барлық жастағыларға қызықты өткізу үшін, код жазу тапсырмалары
-    мен қайталауға арналған кодтардан құралған.
+    мен қайталауға арналған кодтардан құралған."
   mozilla_beyond_longdescription: Thimble веб-сайтты жасауды өте оңай етеді. Браузеріңізде
     HTML және CSS-ті жазыңыз немесе өзгертіңіз, және жасалған жұмысты дәл жасалу уақытында
     көріңіз. Аяқталған жұмысты бір ғана шертумен бөлісіңіз немесе басты бетіңізге
     орналастырыңыз. Бастаушылар мен тәжірибелі оқушылар үшін таптырмас шешім.
-  codecombat_beyond_longdescription: Кодты пайдаланып (дуа) Сиқыршы рөлін ойнаңыз.
+  codecombat_beyond_longdescription: "Кодты пайдаланып (дуа) Сиқыршы рөлін ойнаңыз.
     Кейіпкерлеріңізді басқарып, лабиринт ішінде қозғалып, құбыжықтарды жеңіп, қарсыластарды
-    шатастыр да достарыңды құтқар! Осы HTML5 веб-ойынында JavaScript тілін үйреніңіз.
+    шатастыр да достарыңды құтқар! Осы HTML5 веб-ойынында JavaScript тілін үйреніңіз."
   codea_beyond_longdescription: Codea - iPad үшін ойын жасауға және &mdash; симуляциясын
     немесе кез келген визуалды идеяны жасауға мүмкіндік береді. Ойыңыздағы идеяны
     iPad-тың мультитач және акселерометр сияқты мүмкіншіліктерін пайдаланатын интерактивті
@@ -1396,28 +1402,90 @@
     құралына айналды. Қазіргі таңда ондаған мың оқушылар, студенттер, суретшілер,
     дизайнерлер, зерттеушілер, және қызығушылық танытқандар Processing-ті оқу барысында,
     прототип жасау үшін және жобаларда пайдаланады.
-  alice_beyond_longdescription: Инновациялық бағдарламалау ортасын пайдаланып 3D-анимация
+  alice_beyond_longdescription: "Инновациялық бағдарламалау ортасын пайдаланып 3D-анимация
     құрыңыз. Alice жобасы есептеу қабілетін үйрету үшін, құралдары мен оқу материалдарын
-    әртүрлі жастағылар мен деңгейдегі оқушыларға ұсынады.
-  sphero_beyond_longdescription: Сіз мұғалім немесе ата-ана болсаңыз да, SPRK сабақтары
+    әртүрлі жастағылар мен деңгейдегі оқушыларға ұсынады."
+  sphero_beyond_longdescription: "Сіз мұғалім немесе ата-ана болсаңыз да, SPRK сабақтары
     бүлдіршіндерге роботтарды бағдарламалаудың жедетілген курсын өтуге мүмкіндік береді
-    және де олардың математика мен нақты ғылым дағдыларын арттырады.
-  compatibility_https_header: Өтінеміз, Code.org үшін HTTPS-ті қосыңыз.
-  compatibility_https_message: Қауіпсіздікті арттыру үшін біз %{https_date} - ден
+    және де олардың математика мен нақты ғылым дағдыларын арттырады."
+  compatibility_https_header: "Өтінеміз, Code.org үшін HTTPS-ті қосыңыз."
+  compatibility_https_message: "Қауіпсіздікті арттыру үшін біз %{https_date} - ден
     HTTPS-ке көштік. Сіз Code.org сайтына көрсетілген уақыттан кейін кіре алмайсыз.
     Code.org сайтында HTTPS-ті қосу туралы білу үшін <a href='%{it_requirements_url}'>
-    осы жерге басыңыз</a>
-  compatibility_https_hide_this_warning: Бұл ескертуді жасыру
+    осы жерге басыңыз</a>"
+  compatibility_https_hide_this_warning: "Бұл ескертуді жасыру"
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: қанат қағу
+  flappy_shortcode: "қанат қағу"
   infinity_shortcode: inf
-  playlab_shortcode: ойнау
+  playlab_shortcode: "ойнау"
   artist_shortcode: art
-  playlab_iceage_title_live: Ice Age
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
+  monstercoding_gradelevel: Ages 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Elementary
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modern web browsers
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modern web browsers
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Modern browsers, smartphones, tablets
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.

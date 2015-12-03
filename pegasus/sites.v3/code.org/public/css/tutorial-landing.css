@@ -23,6 +23,8 @@
   text-align: center;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blue {
@@ -42,8 +44,19 @@
   border-radius: 8px;
 }
 
+.header {
+  padding: 10px;
+}
+
+@media screen and (min-width: 513px) and (max-width: 600px) {
+  .choice {
+    padding: 10px;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 512px) {
   .choice {
-    width: 70%;
+    width: 100%;
+    padding: 10px;
   }
 }

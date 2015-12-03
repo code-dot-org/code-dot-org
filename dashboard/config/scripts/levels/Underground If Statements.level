@@ -33,7 +33,8 @@
     "embed": "false",
     "free_play": "false",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "ideal": "9"
   }
 }]]></config>
   <blocks>
