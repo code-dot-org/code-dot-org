@@ -22,6 +22,7 @@ class HttpCache
     whitelisted_cookies = [
       'hour_of_code',
       'language_',
+      'partner',
       'progress',
       'lines',
       'scripts',

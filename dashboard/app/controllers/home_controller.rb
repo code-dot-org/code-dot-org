@@ -10,6 +10,7 @@ class HomeController < ApplicationController
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
+    set_partner_cookie(params['partner']) if params['partner']
     if params[:i18npath]
       redirect_to "/#{params[:i18npath]}"
     elsif params[:return_to]
