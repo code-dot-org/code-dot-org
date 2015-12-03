@@ -21,7 +21,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   Then I simulate a mousedown on the svg
   And ensure Flappy gameState is ACTIVE
 
-  When I press "open-workspace"
+  And I select the "How it works" small footer item
   And I wait for 5 seconds
   And ensure Flappy gameState is WAITING
   When I press "runButton"
