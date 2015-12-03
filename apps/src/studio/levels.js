@@ -422,7 +422,7 @@ levels.playlab_3 = {
   ]
 };
 levels.iceage_move_to_flag = utils.extend(levels.playlab_3, {
-  background: 'icy2',
+  background: 'icy3',
   firstSpriteIndex: 2,
 });
 levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
@@ -900,7 +900,7 @@ levels.iceage_repeat = utils.extend(levels.playlab_7, {
   firstSpriteIndex: 4,
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
-  background: 'graffiti',
+  background: 'dots',
   firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
 });
@@ -1467,7 +1467,7 @@ levels.gumball_join_food_fight = {
   ],
   toolbox:
     tb(
-      blockOfType('studio_whenSpriteCollided', {SPRITE1: 2, SPRITE2: 'anything'}) +
+      blockOfType('studio_whenSpriteCollided', {SPRITE1: 1, SPRITE2: 'anything'}) +
       blockOfType('studio_setSpriteEmotion', {SPRITE: 1}) +
       blockOfType('studio_throw', {SPRITE: 0, DIR: 2}) +
       blockOfType('studio_playSound') +
@@ -1544,8 +1544,16 @@ levels.sandbox =  {
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
 levels.playlab_10 = utils.extend(levels.sandbox, {});
-levels.iceage_free_play = utils.extend(levels.playlab_10, {});
-levels.gumball_free_play = utils.extend(levels.playlab_10, {});
+levels.iceage_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
+levels.gumball_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {

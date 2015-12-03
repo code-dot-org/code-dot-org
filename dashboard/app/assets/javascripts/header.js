@@ -27,7 +27,7 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName, stageIndex) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
   progressData = progressData || {};
 
@@ -72,22 +72,6 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
       div.addClass('last');
     }
     progressContainer.append(div).append('\n');
-  });
-
-  $.ajax('/api/user_progress/' + scriptName + '/' + stageIndex).done(function (data) {
-    // Merge progress from server (loaded via AJAX)
-    var serverProgress = data || {};
-    Object.keys(serverProgress).forEach(function (levelId) {
-      if (serverProgress[levelId] !== clientProgress[levelId]) {
-        var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
-
-        // Clear the existing class and replace
-        $('#header-level-' + levelId).attr('class', 'level_link ' + status);
-
-        // Write down new progress in sessionStorage
-        dashboard.clientState.trackProgress(null, null, serverProgress[levelId], scriptName, levelId);
-      }
-    });
   });
 
   $('.level_free_play').qtip({
