@@ -38,6 +38,25 @@ $original-background-color: #F2F2F2;
   -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
 
+@mixin mc-x-close-button() {
+  $button-centering-offset: 35px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
+  background-size: 100% auto;
+  top: -$button-centering-offset;
+  right: -$button-centering-offset;
+  width: 50px;
+  height: 50px;
+
+  html[dir=rtl] & {
+    right: auto;
+    left: -$button-centering-offset;
+  }
+}
+
 body {
   background-color: $below-header-background;
 }
@@ -148,7 +167,14 @@ body {
   $frame-width: 434;
   $native-game-width: 400;
   $game-offset-x: (($frame-width - $native-game-width) / 2);
-  margin-left: $game-offset-x * 1px;
+  $game-margin-side: $game-offset-x * 1px;
+
+  margin-left: $game-margin-side;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $game-margin-side;
+  }
+
   margin-top: 61px; // asset pixel distance from frame top to game top
   display: inline-block;
 }
@@ -262,6 +288,9 @@ $height-to-width: 434 / 477;
 
   .modal-content.no-modal-icon {
     margin-left: 0;
+    html[dir=rtl] & {
+      margin-right: 0;
+    }
   }
 
   .minecraft-big-yellow-header {
@@ -339,15 +368,7 @@ $height-to-width: 434 / 477;
   }
 
   #close-character-select {
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
-    background-size: 100% auto;
-    top: -35px;
-    right: -35px;
-    width: 50px;
-    height: 50px;
+    @include mc-x-close-button();
   }
 
   .choose-character-button {
@@ -396,6 +417,9 @@ $height-to-width: 434 / 477;
 
   .modal-content {
     margin-left: 0;
+    html[dir=rtl] & {
+      margin-right: 0;
+    }
   }
 
   .minecraft-big-yellow-header {
@@ -522,15 +546,7 @@ $height-to-width: 434 / 477;
   }
 
   #close-house-select {
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
-    background-size: 100% auto;
-    top: -35px;
-    right: -35px;
-    width: 50px;
-    height: 50px;
+    @include mc-x-close-button();
   }
 
   .choose-house-button {
@@ -700,21 +716,17 @@ $height-to-width: 434 / 477;
 
   .modal-image {
     margin-left: -21px;
+    html[dir=rtl] & {
+      margin-left: 0;
+      margin-right: -32px;
+    }
+
     margin-top: -100px;
     width: auto;
   }
 
   .x-close {
-    @include pixelated();
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
-    background-size: 100% auto;
-    top: -35px;
-    right: -35px;
-    width: 50px;
-    height: 50px;
+    @include mc-x-close-button();
   }
 
   .modal-content .lines-of-code-message {
@@ -723,6 +735,10 @@ $height-to-width: 434 / 477;
 
   #show-code, #feedbackButtons, #puzzleRatingButtons, #sharing {
     margin-left: -100px;
+    html[dir=rtl] & {
+      margin-right: -100px;
+      margin-left: 0;
+    }
   }
 
   .modal-content {
