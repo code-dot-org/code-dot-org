@@ -186,11 +186,14 @@ class DashboardSection
            where("hidden = 0").
            select(:id, :name).
            all.
-           map { |c| [c[:id], c[:name]]}.
-           map do |array|
-             array[1] == ScriptConstants::MINECRAFT_NAME ?
-               [array[0], ScriptConstants::MINECRAFT_TEACHER_DASHBOARD_NAME] :
-               array
+           map do |course|
+             name = course[:name]
+             if name == ScriptConstants::MINECRAFT_NAME
+               name = ScriptConstants::MINECRAFT_TEACHER_DASHBOARD_NAME
+             elsif name == ScriptConstants::HOC_NAME
+               name = ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
+             end
+             [course[:id], name]
            end
         ]
   end

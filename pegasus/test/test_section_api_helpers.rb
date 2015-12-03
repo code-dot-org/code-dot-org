@@ -37,7 +37,12 @@ class SectionApiHelperTest < Minitest::Test
     describe 'valid courses' do
       before do
         # mock scripts (the first query to the db gets the scripts)
-        @fake_db.fetch = [{id: 1, name: 'Foo', hidden: '0'}, {id: 3, name: 'Bar', hidden: '0'}, {id: 4, name: 'mc', hidden: '0'}]
+        @fake_db.fetch = [
+            {id: 1, name: 'Foo', hidden: '0'},
+            {id: 3, name: 'Bar', hidden: '0'},
+            {id: 4, name: 'mc', hidden: '0'},
+            {id: 5, name: 'hourofcode', hidden: '0'}
+        ]
       end
 
       it 'accepts valid course_ids' do
@@ -51,9 +56,9 @@ class SectionApiHelperTest < Minitest::Test
         assert !DashboardSection.valid_course_id?('invalid!!')
       end
 
-      it 'rewrites mc as minecraft' do
-        course = DashboardSection.valid_courses[4]
-        assert_equal 'minecraft', course
+      it 'rewrites mc as minecraft, hourofcode as classicmaze' do
+        assert_equal 'minecraft', DashboardSection.valid_courses[4]
+        assert_equal 'classicmaze', DashboardSection.valid_courses[5]
       end
     end
 
