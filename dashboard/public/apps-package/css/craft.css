@@ -142,6 +142,7 @@ div.droplet-palette-group-header-selected.orange {
       display: none; } }
 
 .share-code-spacer {
+  clear: both;
   min-height: 25px; }
 
 button.arrow {
@@ -203,7 +204,8 @@ button.arrow:disabled {
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
-  min-height: calc(50% - 16px) !important; }
+  min-height: calc(50% - 16px) !important;
+  direction: ltr; }
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd; }
@@ -1043,37 +1045,11 @@ input[type="radio"] {
   border: 1px solid #7665a0;
   margin: 0px;
   color: white;
-  width: 48.5%;
   font-size: 13px;
   text-align: center; }
   #save-to-gallery-button:disabled {
     color: #7665a0;
     background-color: lightgrey; }
-
-#print-button {
-  background-color: #7665a0;
-  border: 1px solid #7665a0;
-  color: white;
-  margin: 0px;
-  width: 48.5%;
-  font-size: 13px;
-  text-align: center; }
-
-#shapeways-print-go-button {
-  margin-bottom: 10px; }
-
-#shapeways-message-body {
-  font-size: 15px;
-  margin-bottom: 7px;
-  line-height: 26px; }
-
-#shapeways-message-body-disclaimer {
-  font-size: 11px;
-  margin-bottom: -11px; }
-
-#shapeways-message {
-  display: block;
-  text-align: center; }
 
 .hide {
   display: none; }
@@ -1091,36 +1067,67 @@ input[type="radio"] {
 .hide-source #bubble {
   display: none; }
 
-.sharing {
-  float: left;
-  margin-top: 15px;
+#sharing {
+  clear: both;
+  margin-top: 25px;
   font-size: 20px;
   color: #5b6770; }
-  .sharing label {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #5b6770; }
-  .sharing div {
-    margin-bottom: 15px; }
-  .sharing .saved-to-gallery {
-    width: 48.5%;
-    font-size: 13px;
-    margin: 0px;
-    border: 1px solid #7665a0; }
-  .sharing .social-buttons a:hover {
-    text-decoration: none; }
-  .sharing #sharing-input {
-    cursor: copy;
+  #sharing .feedback-image {
+    width: 180px;
+    height: 180px;
     margin: 0;
-    width: 260px; }
-  .sharing input#phone {
+    float: left;
+    border: #c6cacd;
+    border-style: solid; }
+  #sharing div {
+    margin: 10px 0; }
+    #sharing div.sharing-content {
+      margin-left: 195px;
+      margin-right: 25px; }
+      #sharing div.sharing-content.no-image {
+        margin-left: 0; }
+  #sharing label {
+    margin-top: 15px;
+    font-size: 20px; }
+  #sharing .social-buttons a,
+  #sharing .social-buttons a:hover,
+  #sharing .social-buttons a:link,
+  #sharing .social-buttons a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: white; }
+  #sharing button {
+    background-color: #7665a0;
+    color: white;
+    font-size: 0.7em;
+    min-width: 40px;
+    text-align: center;
+    margin: 2px 0; }
+    #sharing button .disabled, #sharing button[disabled=disabled], #sharing button:disabled {
+      border: 1px solid #7665a0;
+      background-color: #c6cacd;
+      box-shadow: none; }
+    #sharing button #send-to-phone {
+      clear: both; }
+  #sharing button.saved-to-gallery {
+    font-family: "Gotham 4i"; }
+  #sharing #sharing-input {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    cursor: text; }
+  #sharing #copy-button {
+    max-width: 100px; }
+  #sharing #sharing-phone i.fa {
+    font-size: 24px; }
+  #sharing input#phone {
     height: 30px;
     padding: 5px;
-    margin: 5px;
+    margin: 5px 0;
     font-size: 20px;
     width: 10em;
     font-family: sans-serif; }
-  .sharing div#phone-charges {
+  #sharing div#phone-charges {
     font-size: 10px;
     margin-top: 0px;
     color: #c00; }
@@ -2040,11 +2047,17 @@ a.video_link {
     height: 50px; }
   .dash_modal .modal-content .lines-of-code-message {
     color: #c6cacd; }
-  .dash_modal #show-code, .dash_modal #feedbackButtons, .dash_modal #puzzleRatingButtons {
+  .dash_modal #show-code, .dash_modal #feedbackButtons, .dash_modal #puzzleRatingButtons, .dash_modal #sharing {
     margin-left: -100px; }
-  .dash_modal .social-buttons a:hover {
-    background: none !important;
-    fill: white !important; }
+  .dash_modal #sharing {
+    color: #e7e8ea; }
+    .dash_modal #sharing button {
+      font-size: 20px;
+      height: 40px;
+      padding: 5px; }
+    .dash_modal #sharing .social-buttons a:hover {
+      background: none !important;
+      fill: white !important; }
   .dash_modal #puzzleRatingButtons a:hover.puzzle-rating-btn {
     background: none !important;
     fill: white !important; }

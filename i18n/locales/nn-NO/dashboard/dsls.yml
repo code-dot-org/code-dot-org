@@ -98,7 +98,7 @@ nn:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Flappy Set saman par
+        Flappy Matching One: Flappy-samansetjing
         Match the events with the actions: Set saman hendingane med handlingane
         Matching: Samansetting
       2-3 maze match 1:
@@ -109,13 +109,13 @@ nn:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
         Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
-        Maze Match One: Labyring Set saman par
+        Maze Match One: Labyrint-samansetjing
       4-5 Algorithms Match 1:
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Legg Splar 1 sitt resultat til totalscore</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Legg Spelar 1 sitt resultat til totalscore</h4>'
         <h4>Compare player scores to see who wins</h4>: '<h4>Samanlign poengsummane til spelarane for å sjå kven som vinn</h4>'
         <h4>Player 1 rolls die</h4>: '<h4>Spelar 1 kastar terning</h4>'
         <h4>Set Player 1 score to 0</h4>: '<h4>Set Spelar 1 sin poengsum til 0</h4>'

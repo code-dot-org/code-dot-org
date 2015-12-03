@@ -252,10 +252,11 @@ ko-KR:
   class_submission_level_vocational: 직업관련
   class_submission_languages_other: 다른 프로그래밍언어
   inspirational_videos_more: '더 많은 <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">영감을 주는 동영상들</a> 에는 다양한 직업과 유명인들이 나옵니다.'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_choose_theme: 플레이 랩 테마 선택
+  playlab_classic_title: 클래식
+  playlab_gumball_title: 검볼
+  playlab_iceage_title: '아이스 에이지 - 출시 예정'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: 코드로 은하계 건설하기
   starwars_javascript_title: 자바스크립트
   starwars_javascript_description: 끌어서 놓기 블록들과 자바스크립트를 사용하세요.
@@ -548,7 +549,7 @@ ko-KR:
   carousel_heading_beginners: K-8(유치원-초1) 학생들을 위한 협찬 튜토리얼
   carousel_heading_beyond_beginners: 처음하는 사람들을 위한 튜토리얼
   carousel_heading_javascript: Javascript 를 교육할 수 있는 협찬 튜토리얼들
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Javascript 를 교육할 수 있는 튜토리얼들
   carousel_heading_unplugged: 적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요.
   carousel_heading_devices: 스마트폰과 태블릿들을 위한 협찬 튜토리얼 앱들
   carousel_heading_beyond_devices: 스마트폰과 패드를 위한 튜토리얼 앱
@@ -561,6 +562,7 @@ ko-KR:
   carousel_heading_ide: 선생님들이 자주 사용하는 양식들
   educator_notes: 교육자 참고사항들
   teach_led_lesson_plans: 교사 주도 Hour of Code 수업 계획
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: "'Hour of Code' 가르치는 방법"
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   beyond_submission: Beyond an Hour 튜토리얼에 제출하고 싶으세요? 기준 및 제출 양식을 보세요.

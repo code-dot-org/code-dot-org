@@ -412,9 +412,9 @@ fi:
     privacy: Yksityisyyskäytäntö
     secure: Turvallinen versio
     report_abuse: Ilmoita väärinkäytöksestä
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Rakennettu Koodistudiossa
+    make_my_own_app: Tee oma sovellukseni
+    how_it_works: Miten se toimii
   reference_area:
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet

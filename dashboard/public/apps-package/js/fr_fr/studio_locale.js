@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Tu dois obtenir 20 Droïdes Souris. Utilises la commande \"ajouter un Droïde Souris\" à l'évènement \"quand un Droïde Souris est atteint\" pour ajouter au moins deux Droïdes Souris à chaque fois que tu en atteins un."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Félicitations, Tu as ajouté du code pour fabriquer des Droïdes Souris. Tu peux passer au prochain puzzle ou essayer à nouveau d'obtenir 20 Droïdes Souris. Essaye de le rendre plus facile en en ajoutant plus ! (Maintiens les touches du clavier (ou de l'écran) enfoncées pour aller plus vite.)"},
 "failedChangeSettingTimeout":function(d){return "Atteins trois Pilotes Rebelles pour continuer."},
-"failedChangeSettingSettings":function(d){return "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse."}};
+"failedChangeSettingSettings":function(d){return "Fais ton propre jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

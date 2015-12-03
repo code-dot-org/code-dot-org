@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Potřebuješ dostat 20 Mouse Droidů. Použij povel \"add Mouse Droid\" uvnitř události \"when get Mouse Droid\" k přidání pokaždéd vou nebo více Mouse Droidů, když dostaneš jednoho."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Blahopřejeme, přidal jsi kód, abys vytvořil Mouse Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Mouse Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)"},
 "failedChangeSettingTimeout":function(d){return "Dostaň tři Rebel Piloty k posunu dál."},
-"failedChangeSettingSettings":function(d){return "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."}};
+"failedChangeSettingSettings":function(d){return "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "אתם צריכים להשיג 20 דרואידים עכבריים. השתמשו בפקודת \"add a Mouse Droid\" בתוך אירוע \"when get Mouse Droid\" על מנת להוסיף שניים או יותר דרואידים עכבריים בכל פעם שאתם משיגים אחד."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "כל הכבוד, הוספתם קוד על מנת לייצר דרואידים עכבריים. כעת תוכלו לעבור לשלב הבא, או לנסות שוב על מנת להשיג 20 דרואידים עכבריים. יהיה לכם קל יותר אם תוסיפו יותר מהם! (הקישו והחזיקו את מקשי החצים במקלדת או המסך שלכם על מנת לנוע מהר יותר)"},
 "failedChangeSettingTimeout":function(d){return "השיגו שלושה טייסי מחתרת על מנת להמשיך הלאה."},
-"failedChangeSettingSettings":function(d){return "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו."}};
+"failedChangeSettingSettings":function(d){return "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

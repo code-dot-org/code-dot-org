@@ -1508,153 +1508,167 @@
           από αυτά τα δομικά στοιχεία.
       2:
         image: notes/C3_bee_functions_2.png
-        text: We do this all the time in sports. For example, in basketball, you start
-          by learning how to dribble, how to do a lay-up, how to rebound. Once you've
-          learned these really basic moves, you learn new moves and put together these
-          building blocks, like a pick and roll or give and go. You can then go from
-          there to do more complex plays. Once you learn that play and give it a name,
-          everybody on the team knows how to do it.
+        text: Το κάνουμε αυτό συνεχώς στα αθλήματα. Για παράδειγμα, στο μπάσκετ, ξεκινάτε
+          μαθαίνοντας πως να κάνετε τρίπλες, πως να κάνετε lay-up ή ριμπάουντ. Όταν
+          μάθετε αυτές τις βασικές κινήσεις, μαθαίνετε νέες κινήσεις και βάζετε μαζί
+          όλα αυτά τα δομικά στοιχεία. Από εκεί μπορείτε να προχωρήσετε σε πιο περίπλοκες
+          κινήσεις. Μόλις μάθετε μια κίνηση και της δώσετε όνομα, όλοι στην ομάδα
+          γνωρίζουν πως να την εκτελέσουν.
       3:
         image: notes/C3_bee_functions_3.png
-        text: Similarly once you've taught a computer how to do an action once using
-          these sequences of commands, you can make up your own name for that action
-          so it's easy to repeat it later. When you define your own command and give
-          it a name, that's called a function. Now we're going to use functions to
-          help the bee.
+        text: Ομοίως μόλις μάθετε έναν υπολογιστή πως να κάνει μια ενέργεια για μια
+          φορά με αυτές τις ακολουθίες εντολών, μπορείτε να τους δώσετε το δικό σας
+          όνομα γι' αυτή την ενέργεια ώστε να είναι εύκολο να την επαναλάβετε αργότερα.
+          Όταν ορίζετε τη δική σας εντολή και της δίνετε όνομα, αυτό ονομάζεται συνάρτηση.
+          Τώρα θα χρησιμοποιήσουμε συναρτήσεις για να βοηθήσουμε τη μέλισσα.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: Σε αυτό το παράδειγμα, η συνάρτησή μας ονομάζετε πάρε 2 νέκταρ, αυτό
+          το πράσινο μπλοκ ακριβώς εδώ. Ξέρουμε τι κάνει το πάρε 2 νέκταρ κοιτώντας
+          στο γκρι κουτί που είναι ο ορισμός της συνάρτησης. Αν κοιτάξουμε μέσα εκεί,
+          το πάρε 2 νέκταρ θα πάρει νέκταρ και μετά θα πάρει νέκταρ ξανά. Πάντα να
+          κοιτάτε τι βρίσκεται μέσα στο γκρι κουτί ώστε να ξέρετε τι μπορούν να κάνουν
+          αυτά τα πράσινα μπλοκ συναρτήσεων.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: Τώρα θα χρησιμοποιήσουμε ένθετους βρόχους με τη μέλισσα. Μας δίδεται
+          κάποιος αρχικός κώδικας ο οποίος λέει στη μέλισσα να κινηθεί μπροστά και
+          να πάρει νέκταρ τρεις φορες και μετά να στρίψει δεξιά. Ας πάρουμε όλον αυτόν
+          τον κώδικα και να τον βάλουμε μέσα σε ένα άλλο μπλοκ επανάληψης και να το
+          ορίσουμε να επαναλάβει τρεις φορές. Έτοιμο!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: Θα δημιουργήσετε το δικό σας παιχνίδι αναπήδησης και θα μπορέσετε να
+          το μοιραστείτε με τους φίλους σας. Πολύ καλό!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Για να ξεκινήσουμε, πρέπει να συνδέσουμε τον έλεγχο της ρακέτας με τα
+          βέλη στο πληκτρολόγιό μας.
       3:
         image: notes/C3_bounce_3.png
-        text: We can do this by linking the when left arrow block to the move left
-          block and the when right arrow block to the move right block. Give it a
-          go and you'll be programming your own bounce game in no time!
+        text: Μπορούμε να το κάνουμε αυτό συνδέοντας το μπλοκ όταν πάνω βέλος με το
+          μπλοκ πήγαινε αριστερά και το μπλοκ όταν δεξί βέλος με το μπλοκ πήγαινε
+          δεξιά. Δοκιμάστε το και θα έχετε φτιάξει το δικό σας παιχνίδι αναπήδησης
+          στο φτερό!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: This lesson is computational thinking. Sometimes learning a new game
-          can be tough, right? At first it might seem really confusing and sometimes,
-          there's no one there to teach you the rules, so you have to figure it out
-          on your own.
+        text: Αυτό το μάθημα αφορά στην υπολογιστική σκέψη. Κάποιες φορές η εκμάθηση
+          ενός νέου παιχνιδιού μπορεί να είναι δύσκολη, σωστά; Αρχικά φαίνεται να
+          προκαλεί σύγχυση και κάποιες φορές, δεν υπάρχει κάποιος να σας διδάξει τους
+          κανόνες, έτσι πρέπει να τους βρείτε μόνοι σας.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: The good news is that you can get better at figuring things out on your
-          own when you know a few thinking tricks. These tricks are unique ways for
-          looking at and solving problems. In this lesson, you'll learn about four
-          tricks and practice them with your friends to figure out the rules to a
-          game.
+        text: Τα καλά νέα είναι ότι μπορείτε να γίνετε καλύτεροι στην κατανόηση των
+          πραγμάτων μόνοι σας, όταν γνωρίζετε μερικά κόλπα. Αυτά τα κόλπα είναι μοναδικοί
+          τρόποι για αναγνώριση και επίλυση προβλημάτων. Σε αυτό το μάθημα θα μάθετε
+          τέσσερα κόλπα και θα κάνετε εξάσκηση σε αυτά με τους φίλους σας για να βρείτε
+          τους κανόνες ενός παιχνιδιού.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: When you break down a big problem into smaller pieces, you're using
-          your brain to decompose the big problem. Once we've decomposed the big problem
-          into several smaller problems, we can go on to our next trick, which is
-          called pattern match.
+        text: Όταν κατατμήσετε ένα πρόβλημα σε μικρότερα μέρη, χρησιμοποιείτε το μυαλό
+          σας για να αποσυνθέσετε το μεγάλο πρόβλημα. Μόλις κάνουμε αποσύνθεση του
+          μεγάλου προβλήματος σε μικρότερα προβλήματα, μπορούμε να προχωρήσουμε στο
+          επόμενο κόλπο, που ονομάζεται αναγνώριση μοτίβου.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: That's when we look for similarities between things. Once I find the
-          things that are the same, I can figure out what things are different. When
-          I remove those differences, that's called abstraction.
+        text: Αυτό είναι όταν ψάχνουμε ομοιότητες μεταξύ πραγμάτων. Μόλις βρω τα πράγματα
+          που είναι όμοια, μπορώ να βρω ποια πράγματα είναι διαφορετικά. Όταν αφαιρώ
+          αυτές τις διαφορές, αυτό ονομάζεται αφαίρεση.
       5:
         image: notes/C3_computational_thinking_5.png
-        text: After I have figured out the steps to solving a problem, I can put those
-          steps in a specific order called an algorithm so that anyone can use my
-          directions to solve that problem. We're going to use these four steps to
-          figure out how to play the game with no rules. By the end of the game, you'll
-          be able to play something that looks like this!
+        text: Αφού έχω βρει τα βήματα για την επίλυση ενός προβλήματος, βάζω αυτά
+          τα βήματα σε συγκεκριμένη σειρά που ονομάζεται αλγόριθμος ώστε οποιοσδήποτε
+          να μπορεί να χρησιμοποιήσει τις οδηγίες μου για να λύσει αυτό το πρόβλημα.
+          Θα χρησιμοποιήσουμε αυτά τα τέσσερα βήματα για να βρούμε πώς θα παίξουμε
+          ένα παιχνίδι χωρίς τους κανόνες. Στο τέλος του παιχνιδιού θα μπορείτε να
+          παίξετε κάτι που μοιάζει με αυτό!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: This lesson is called crowdsourcing. In this lesson we'll use a deck
-          of cards to learn about how much easier some things can be to do in groups
-          instead of trying to do them all alone. So grab some friends and make something
-          awesome. Crowdsourcing is getting help from a large group of people to finish
-          something faster.
+        text: Αυτό το μάθημα καλείται βοήθεια από το κοινό. Σε αυτό το μάθημα θα χρησιμοποιήσουμε
+          μία τράπουλα για να μάθουμε πόσο πιο εύκολα μπορούν να γίνουν κάποια πράγματα
+          όταν τα κάνουμε σε ομάδα, αντί να προσπαθούμε να τα κάνουμε μόνοι μας. Έτσι,
+          πάρτε μερικούς φίλους και φτιάξτε κάτι καταπληκτικό. Η βοήθεια από το κοινό
+          είναι η λήψη βοήθειας από μία μεγάλη ομάδα ανθρώπων για την ολοκλήρωση κάποιου
+          πράγματος ταχύτερα.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of
-          amateurs and professionals link their computers together to search through
-          billions and billions of pieces of information. Looking for things like
-          the next Marsenne prime number, or even possible alien communications.
+        text: Στην επιστήμη των υπολογιστών, χρησιμοποιούμε τη βοήθεια από το κοινό
+          συνεχώς. Χιλιάδες ερασιτέχνες και επαγγελματίες συνδέουν τους υπολογιστές
+          τους μεταξύ τους για να βρουν μέσα από δισεκατομμύρια πληροφορίες αυτό που
+          αναζητούν. Η αναζήτηση πραγμάτων, όπως ο επόμενος πρώτος αριθμός Μερσέν
+          ή ακόμη και πιθανή επικοινωνία με εξωγήινους.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: When you see a movie, each second of the movie is 24 individual pictures,
-          we call those frames. So every one of those pictures needs to be created
-          and rendered and put all together. My team and I, we're all software developers.
-          We all work together to create a piece of software that actually creates
-          an image, creates the final image that you see on screen. That's a tool
-          that artists and other developers can use as part of their teamwork and
-          their process to be able to create the images that they want on screen.
+        text: Όταν βλέπετε μία ταινία, κάθε δευτερόλεπτο της ταινίας είναι 24 εικόνες,
+          που τα ονομάζουμε καρέ. Έτσι κάθε μία από αυτές τις εικόνες πρέπει να δημιουργηθεί
+          και να αποδοθεί και να τις βάλουμε όλες μαζί. Η ομάδα μου κι εγώ, είμαστε
+          όλοι προγραμματιστές. Εργαζόμαστε μαζί για να δημιουργήσουμε ένα πρόγραμμα
+          που στην πραγματικότητα δημιουργεί μία εικόνα, δημιουργεί την τελική εικόνα
+          που βλέπετε στην οθόνη σας. Αυτό είναι ένα εργαλείο που οι καλλιτέχνες και
+          άλλοι προγραμματιστές μπορούν να χρησιμοποιήσουν ως μέρος της ομαδικής τους
+          εργασίας και των διαδικασιών τους για να μπορέσουν να δημιουργήσουν τις
+          εικόνες που θέλουν στην οθόνη.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: For example, in Finding Nemo, when Crush and Squirt and all their friends
-          are flying through the East Australian Current. You're seeing images of
-          water flowing by, you're seeing the colors on the back of the turtle, you're
-          seeing the sides of the fish. All of those things are generated through
-          math and computer programs that we write, that we then give to the artist
-          and they take that to create that final image and tweak it and make it look
-          beautiful and look fun.
+        text: Για παράδειγμα, στο Ψάχνοντας τον Νέμο, όταν ο Crush και ο Squirt και
+          όλοι οι φίλοι τους κολυμπούν μέσα από το Ανατολικό Αυστραλιανό Ρεύμα. Βλέπετε
+          εικόνες νερού που κυλά, βλέπετε τα χρώματα στο πίσω μέρος της χελώνας, βλέπετε
+          τις πλευρές του ψαριού. Όλα αυτά τα πράγματα δημιουργούνται από μαθηματικά
+          και προγράμματα υπολογιστών που έχουμε φτιάξει και στη συνέχεια τα δίνουμε
+          στον καλλιτέχνη και με αυτά δημιουργούν την τελική εικόνα και τη διορθώνουν
+          και την κάνουν να φαίνεται όμορφη και διασκεδαστική.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: This lesson is called dice race. Almost everyone likes to play computer
-          games. Have you ever thought about how computer programmers turn the steps
-          of a game into a program? The first step in creating computer games and
-          in solving any problem requires thinking and planning.
+        text: Αυτό το μάθημα καλείται αγώνας ζαριών. Σχεδόν σε όλους αρέσει να παίζουν
+          παιχνίδια στον υπολογιστή. Έχετε σκεφτεί πως οι προγραμματιστές υπολογιστών
+          μετατρέπουν τα βήματα ενός παιχνιδιού σε πρόγραμμα; Το πρώτο βήμα στη δημιουργία
+          παιχνιδιών σε υπολογιστή και στην επίλυση οποιουδήποτε προβλήματος απαιτεί
+          σκέψη και σχεδιασμό.
       2:
         image: notes/C3_dice_race_2.png
-        text: The thinking step of problem solving produces an algorithm, which is
-          a step by step plan for solving a problem or finishing a task. In this lesson,
-          you'll create an algorithm for a dice race game. Then you'll ask your friends
-          to try out your plan to see if they can follow the steps to play the game.
-          After the programmer is sure the steps are correct, it's time to translate
-          the algorithm into a program with language that the computer can understand.
+        text: Το βήμα της σκέψης ενός προβλήματος παράγει έναν αλγόριθμο, που είναι
+          ένα σχέδιο βήμα προς βήμα για την επίλυση ενός προβλήματος ή την ολοκλήρωση
+          μιας εργασίας. Σε αυτό το μάθημα θα δημιουργήσετε έναν αλγόριθμο για ένα
+          παιχνίδι αγώνα ζαριών. Μετά θα ζητήσετε από τους φίλους σας να δοκιμάσουν
+          το πλάνο σας για να δουν αν μπορούν να ακολουθήσουν τα βήματα για να παίξουν
+          το παιχνίδι. Μόλις ο προγραμματιστής βεβαιωθεί ότι τα βήματα είναι σωστά,
+          είναι ώρα να μεταφράσει τον αλγόριθμο σε πρόγραμμα με γλώσσα που ο υπολογιστής
+          καταλαβαίνει.
       3:
         image: notes/C3_dice_race_3.png
-        text: Almost everything we do every day requires an algorithm, a list of steps
-          you can follow to finish a task. Think about getting ready for school or
-          planning a fun day with your friends or fixing a snack. To complete any
-          of those tasks, you'll need to break it down into smaller steps and sometimes
-          the steps must be in a specific order.
+        text: Σχεδόν οτιδήποτε κάνουμε καθημερινά απαιτεί έναν αλγόριθμο, έναν κατάλογο
+          βημάτων που μπορείτε να ακολουθήσετε για να ολοκληρώσετε μία εργασία. Σκεφτείτε
+          την προετοιμασία για το σχολείο ή τον σχεδιασμό μίας διασκεδαστικής μέρας
+          με τους φίλους σας ή την ετοιμασία ενός σνακ. Για να ολοκληρώσετε οποιαδήποτε
+          από αυτές τις εργασίες, πρέπει να την κατατμήσετε σε μικρότερα βήματα και
+          κάποιες φορές αυτά τα βήματα πρέπει να είναι σε συγκεκριμένη σειρά.
       4:
         image: notes/C3_dice_race_4.png
-        text: Think about making a sandwich. It doesn't matter which ingredient you
-          get out of the cabinet first. But you can't spread the peanut butter until
-          you open the jar. Computers need algorithms and programs to show them how
-          to do even simple things that we can do without thinking about it.
+        text: Σκεφτείτε τη δημιουργία ενός σάντουιτς. Δεν έχει σημασία τι υλικά θα
+          βγάλετε από το ντουλάπι πρώτα. Αλλά δεν μπορείτε να απλώσετε το βούτυρο
+          πριν ανοίξετε το κουτί του. Οι υπολογιστές χρειάζονται τους αλγόριθμος και
+          τα προγράμματα για να τους δείξουν πως να κάνουν ακόμη και απλά πράγματα
+          τα οποία εμείς μπορούμε να κάνουμε χωρίς σκέψη.
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program
-          is the actual instructions given to the computer to make it happen. An algorithm
-          has to be translated into a program before a computer can run it. Breaking
-          a task into steps called an algorithm is sometimes difficult. But like any
-          new skill, it gets easier and easier with practice.
+        text: Ένας αλγόριθμος είναι η σκέψη πίσω από αυτό που πρέπει να γίνει ενώ
+          το πρόγραμμα είναι οι πραγματικές οδηγίες που δίνονται στον υπολογιστή για
+          να συμβεί αυτό. Ένας αλγόριθμος πρέπει να μεταφραστεί σε πρόγραμμα πριν
+          μπορέσει να το εκτελέσει ένας υπολογιστής. Η κατάτμηση μίας εργασίας σε
+          μικρότερα βήματα μπορεί συχνά να είναι δύσκολη. Αλλά όπως κάθε καινούρια
+          δεξιότητα, γίνεται ολοένα και πιο εύκολη με την εξάσκηση.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While loops are pretty similar to what you do in everyday life. Imagine
-          you are washing your car, you'll keep scrubbing until it's clean. While
-          it's not clean, continue to scrub. You're evaluating these things all the
-          time.
+        text: Οι βρόχοι "ενώ" είναι παρόμοιοι με αυτό που κάνετε καθημερινά. Φανταστείτε
+          ότι πλένετε το αυτοκίνητό σας, θα συνεχίσετε να το τρίβετε μέχρι να καθαρίσει.
+          Ενώ δεν είναι καθαρό, συνεχίστε να τρίβετε. Κάνετε αξιολόγηση αυτών των
+          πραγμάτων όλη των ώρα.
       2:
         image: notes/C3_farmer_while_2.png
         text: Έχουμε έναν νέο βρόχο για να βοηθήσουμε τον αγρότη σας. Ονομάζεται μπλοκ
@@ -1755,36 +1769,39 @@
           δηλώσεις ΑΝ όπου λαμβάνονται αποφάσεις.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: The if block helps the zombie make a decision. It checks something.
-          For example, let's use the block that says if there's a path to the left,
-          and put a turn left command inside it. We're telling the zombie to check
-          its surroundings, see if there's a path on the left and if so, make that
-          turn.
+        text: Το μπλοκ "αν" βοηθά το ζόμπι να πάρει μια απόφαση. Ελέγχει κάτι. Για
+          παράδειγμα, ας χρησιμοποιήσουμε το μπλοκ που λέει ότι αν υπάρχει μονοπάτι
+          στα αριστερά, και να του βάλουμε μέσα μία εντολή αριστερής στροφής. Λέμε
+          στο ζόμπι να ελέγξει το περιβάλλον του, να δει αν υπάρχει μονοπάτι στα αριστερά
+          και αν βρει, να στρίψει.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: Then we use the move forward block inside this repeat to get it to keep
-          moving forward as long as it just wants to go straight. Then when there's
-          a turn, the if block will tell it to make that turn to the left. You can
-          see that if we do that, if we take the turn to the left and otherwise moving
-          forward, we'll achieve our goal.
+        text: Μετά χρησιμοποιούμε το μπλοκ μπροστινής κίνησης μέσα σε αυτή την επανάληψη
+          για να το κάνουμε να κινείται μπροστά όσο θέλει να προχωρά σε ευθεία. Μετά,
+          αν υπάρχει στροφή, το μπλοκ "αν" θα του πει να στρίψει αριστερά. Μπορείτε
+          να δείτε ότι αν το κάνουμε αυτό, αν στρίψουμε αριστερά και στις άλλες περιπτώσεις
+          προχωρούμε ευθεία, θα φτάσουμε το στόχο μας.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: It's an example of using an if statement which is really a fundamental
-          concept in computer programming. One of the first things I learned was how
-          to write a program that played tic-tac-toe. I had if statements to say,
-          ok, if the other person is about to win, go ahead and block that spot. Have
-          fun learning how to use if statements, it's a key concept.
+        text: Είναι ένα παράδειγμα χρήσης της δήλωσης "αν" που είναι πραγματικά μία
+          θεμελιώδης έννοια στον προγραμματισμό. Ένα από τα πρώτα πράγματα που έμαθα
+          είναι πως να φτιάξω ένα πρόγραμμα που παίζει τρίλιζα. Έπρεπε να χρησιμοποιήσω
+          δηλώσεις "αν" για να πω, εντάξει, αν το άλλο άτομο πρόκειται να νικήσει,
+          μπλόκαρε αυτό το σημείο. Διασκεδάστε χρησιμοποιώντας τις δηλώσεις "αν",
+          πρόκειται για έννοια-κλειδί.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could
-          use five move forward blocks or we could tell the computer to move forward
-          and repeat five times using the one repeat block.
+        text: Σε αυτό το παράδειγμα, ο στόχος σας είναι να κάνετε το ζόμπι να φτάσει
+          στον ηλίανθο. Θα μπορούσαμε να χρησιμοποιήσουμε πέντε μπλοκ κίνησης εμπρός
+          ή μπορούμε να πούμε στον υπολογιστή να προχωρήσει μπροστά και να το επαναλάβει
+          πέντε φορές χρησιμοποιώντας ένα από τα μπλοκ επανάληψης.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move
-          forward block inside the repeat block. Hit run and the zombie will move
-          forward five times to the yummy sunflower.
+        text: Αυτό μας γλυτώνει χρόνο και κάνει τα πράγματα πιο εύκολα. Για να το
+          χρησιμοποιήσετε, απλά βάλτε το μπλοκ κίνησης εμπρός μέσα στο μπλοκ επανάληψης.
+          Πατήστε εκτέλεση και το ζόμπι θα κινηθεί μπροστά πέντε φορές προς τον νόστιμο
+          ηλίανθο.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -1799,147 +1816,159 @@
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program.
-          The written notes and words tell the singer exactly what to do. Some parts
-          of music are used over and over again.
+        text: Αυτό είναι το μάθημα συγγραφής τραγουδιού. Η μουσική μοιάζει πολύ με
+          ένα πρόγραμμα υπολογιστή. Οι νότες και οι λέξεις λένε στον τραγουδιστή ακριβώς
+          τι να κάνει. Κάποια μέρη της μουσικής χρησιμοποιούνται ξανά και ξανά.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program
-          that are used over and over again are called functions. When you read song
-          lyrics and it says the word chorus, do you sing the word chorus? No, you
-          look at the top of the page to see what words make up the chorus.
+        text: Αυτό το αποκαλούμε ρεφρέν. Σε ένα πρόγραμμα υπολογιστή, τα μέρη του
+          προγράμματος που χρησιμοποιούνται ξανά και ξανά ονομάζονται συναρτήσεις.
+          Όταν διαβάζετε τους στίχους του τραγουδιού και λέει τη λέξη ρεφρέν, τραγουδάτε
+          τη λέξη ρεφρέν; Όχι, κοιτάτε στο επάνω μέρος της σελίδας να δείτε ποιους
+          στίχους έχει το ρεφρέν.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: In this lesson, you'll learn a silly little song called little bunny
-          foo foo. The song has a chorus that you will sing several times over and
-          over again. A function is a piece of code that you can call and use over
-          and over again. It makes programming easier and more efficient so you don't
-          have to write out the steps of your function over and over again. You can
-          just write it once!
+        text: Σε αυτό το μάθημα, θα μάθετε ένα σαχλό τραγουδάκι που ονομάζεται λαγουδάκι
+          φου φου. Το τραγούδι έχει ένα ρεφρέν που θα τραγουδήσετε πολλές φορές ξανά
+          και ξανά. Μία συνάρτηση είναι ένα κομμάτι κώδικα που μπορείτε να καλείτε
+          και να χρησιμοποιείτε ξανά και ξανά. Κάνει τον προγραμματισμό ευκολότερο
+          και πιο αποτελεσματικό γιατί δε χρειάζεται να γράφετε τα βήματα της συνάρτησής
+          σας ξανά και ξανά. Χρειάζεται να τη γράψετε μόνο μία φορά!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: Αυτό είναι ένα μπλοκ υπόθεσης. Λέει αν είσαι στο λουλούδι ή την κυψέλη,
+          τότε κάνε κάτι. Αυτό είναι χρήσιμο αν δεν ξέρουμε πόσο μέλι ή νέκταρ να
+          πάρουμε όπως βλέπουμε εδώ με αυτό το ερωτηματικό.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: Σε αυτό το παράδειγμα, θα πούμε, αν είναι ένα λουλούδι, πάρε όλο το
+          νέκταρ και μετά θα χρησιμοποιήσουμε ένα ακόμη να πούμε, αν είναι μία κυψέλη,
+          φτιάξε μέλι. Τα-ντααα!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: Έχουμε ένα νέο μπλοκ που ονομάζεται αν/αλλιώς μπλοκ. Είναι μία δήλωση
+          υπόθεσης, όπως το μπλοκ "αν" που χρησιμοποιήσατε στα προηγούμενα παζλ. Αλλά
+          τώρα υπάρχει ένα νέο μέρος στο τέλος που λέει "αλλιώς". Το μπλοκ αν/αλλιώς
+          αφήνει τη μέλισσα να πάρει μία απόφαση μεταξύ δύο συνόλων ενεργειών. Αν
+          η μέλισσα είναι σε λουλούδι, θα κάνει το σύνολο των ενεργειών που θα βάλετε
+          στο πρώτο μέρος εκεί που λέει κάνε. Αν η μέλισσα δεν είναι σε λουλούδι,
+          η μέλισσα θα κάνει το σετ των ενεργειών που θα βάλετε στη θέση που λέει
+          αλλιώς.
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: Η δήλωση "αν" είναι ο τρόπος με τον οποίο οι υπολογιστές λαμβάνουν αποφάσεις.
+          Οι άνθρωποι ορίζουν συνθήκες για τον υπολογιστή που λένε αν παρουσιάσουμε
+          στον υπολογιστή κάποια κατάσταση τότε κάνε αυτό. Αλλιώς, που σημαίνει διαφορετικά,
+          κάνε εκείνο. Το επάνω μέρος του μπλοκ αν/αλλιώς λέει αν σε λουλούδι. Αλλά
+          το κάτω μέρος του μπλοκ μας θα μπορούσε να λέει άλλα πράγματα, όπως αν νέκταρ
+          ισούται 2 ή αν υπάρχει μονοπάτι μπροστά, το μπλοκ μας θα συμπεριφερθεί με
+          τον ίδιο τρόπο. Δηλαδή αν η δήλωση "αν" στο επάνω μέρος είναι αληθής τότε
+          θα κάνει το πρώτο σύνολο ενεργειών. Αλλά αν η δήλωση στο επάνω μέρος είναι
+          ψευδής, θα κάνει το δεύτερο σύνολο ενεργειών.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Όταν χρησιμοποιείτε ένα μπλοκ επανάληψης στον κώδικά σας, πως γνωρίζει
+          ο υπολογιστής ότι τον επανέλαβε αρκετές φορές; Το μπλοκ επανάληψης κρύβει
+          στην πραγματικότητα ένα πιο εξελιγμένο κομμάτι κώδικα που καλείται βρόχος
+          "για" που μετράει από μία αρχική τιμή μέχρι μία τελική τιμή με συγκεκριμένο
+          βήμα.
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: Για παράδειγμα, ένα μπλοκ επανάληψης τρία μετράει από το 1 στο 3 με
+          βήμα 1. Κάθε φορά που μετράει, εκτελεί τον κώδικα μέσα στο βρόχο. Ο βρόχος
+          "για" γνωρίζει πόσες φορές πρέπει να εκτελεστή χρησιμοποιώντας μία μεταβλητή
+          ως μετρητή που ορίζεται στην αρχική τιμή στην αρχή του βρόχου και έχει μία
+          προσαύξηση που προστίθεται σε αυτήν κάθε φορά που εκτελείται ο βρόχος. Μόλις
+          ο μετρητής γίνει μεγαλύτερος από την τελική τιμή, ο βρόχος σταματά να εκτελείται.
       3:
         image: notes/C4_for_loops_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Το πλεονέκτημα της χρήσης ενός πραγματικού βρόχου αντί για το μπλοκ
+          επανάληψης είναι ότι μπορείτε να δείτε τη μεταβλητή του μετρητή και να την
+          χρησιμοποιήσετε στο βρόχο σας. Για παράδειγμα, αν έχει μία σειρά από λουλούδια
+          και το πρώτο έχει ένα νέκταρ, το δεύτερο έχει δύο νέκταρ και το τρίτο έχει
+          τρία, μπορώ να χρησιμοποιήσω το βρόχο για να πω στη μέλισσα να μαζέψει 'μετρητή'
+          νέκταρ κάθε φορά, που σημαίνει ένα για το πρώτο λουλούδι, δύο για το δεύτερο
+          και τρία για το τρίτο.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Επίσης σε ένα βρόχο "για", μπορείτε να αυξάνετε το μετρητή κατά έναν
+          αριθμό διαφορετικό από το ένα κάθε φορά. Μπορείτε να μετράτε ανά 2, 4 ή
+          ακόμη και ανά ένα ποσό που αλλάζει κάθε φορά.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Όταν χρησιμοποιείτε ένα μπλοκ επανάληψης στον κώδικά σας, πως γνωρίζει
+          ο υπολογιστής ότι τον επανέλαβε αρκετές φορές; Το μπλοκ επανάληψης κρύβει
+          στην πραγματικότητα ένα πιο εξελιγμένο κομμάτι κώδικα που καλείται βρόχος
+          "για" που μετράει από μία αρχική τιμή μέχρι μία τελική τιμή με συγκεκριμένο
+          βήμα.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: Για παράδειγμα, ένα μπλοκ επανάληψης τρία μετράει από το 1 στο 3 με
+          βήμα 1. Κάθε φορά που μετράει, εκτελεί τον κώδικα μέσα στο βρόχο. Ο βρόχος
+          "για" γνωρίζει πόσες φορές πρέπει να εκτελεστή χρησιμοποιώντας μία μεταβλητή
+          ως μετρητή που ορίζεται στην αρχική τιμή στην αρχή του βρόχου και έχει μία
+          προσαύξηση που προστίθεται σε αυτήν κάθε φορά που εκτελείται ο βρόχος. Μόλις
+          ο μετρητής γίνει μεγαλύτερος από την τελική τιμή, ο βρόχος σταματά να εκτελείται.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Το πλεονέκτημα της χρήσης ενός πραγματικού βρόχου αντί για το μπλοκ
+          επανάληψης είναι ότι μπορείτε να δείτε τη μεταβλητή του μετρητή και να την
+          χρησιμοποιήσετε στο βρόχο σας. Για παράδειγμα, αν έχει μία σειρά από λουλούδια
+          και το πρώτο έχει ένα νέκταρ, το δεύτερο έχει δύο νέκταρ και το τρίτο έχει
+          τρία, μπορώ να χρησιμοποιήσω το βρόχο για να πω στη μέλισσα να μαζέψει 'μετρητή'
+          νέκταρ κάθε φορά, που σημαίνει ένα για το πρώτο λουλούδι, δύο για το δεύτερο
+          και τρία για το τρίτο.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Επίσης σε ένα βρόχο "για", μπορείτε να αυξάνετε το μετρητή κατά έναν
+          αριθμό διαφορετικό από το ένα κάθε φορά. Μπορείτε να μετράτε ανά 2, 4 ή
+          ακόμη και ανά ένα ποσό που αλλάζει κάθε φορά.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: Όταν χρησιμοποιείτε ένα μπλοκ επανάληψης στον κώδικά σας, πως γνωρίζει
+          ο υπολογιστής ότι τον επανέλαβε αρκετές φορές; Το μπλοκ επανάληψης κρύβει
+          στην πραγματικότητα ένα πιο εξελιγμένο κομμάτι κώδικα που καλείται βρόχος
+          "για" που μετράει από μία αρχική τιμή μέχρι μία τελική τιμή με συγκεκριμένο
+          βήμα.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: Για παράδειγμα, ένα μπλοκ επανάληψης τρία μετράει από το 1 στο 3 με
+          βήμα 1. Κάθε φορά που μετράει, εκτελεί τον κώδικα μέσα στο βρόχο. Ο βρόχος
+          "για" γνωρίζει πόσες φορές πρέπει να εκτελεστή χρησιμοποιώντας μία μεταβλητή
+          ως μετρητή που ορίζεται στην αρχική τιμή στην αρχή του βρόχου και έχει μία
+          προσαύξηση που προστίθεται σε αυτήν κάθε φορά που εκτελείται ο βρόχος. Μόλις
+          ο μετρητής γίνει μεγαλύτερος από την τελική τιμή, ο βρόχος σταματά να εκτελείται.
+          Το πλεονέκτημα της χρήσης ενός πραγματικού βρόχου αντί για το μπλοκ επανάληψης
+          είναι ότι μπορείτε να δείτε τη μεταβλητή του μετρητή και να την χρησιμοποιήσετε
+          στο βρόχο σας.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: Now that you've edited function blocks, it's time to create a new function
-          block from scratch. It's really simple. You'll see the toolbox has a category
-          called functions. If you click on this, you'll see an orange button called
-          create a function. Clicking on this brings up the function editor that you've
-          already used to edit existing function blocks.
+        text: Τώρα που έχετε επεξεργαστεί μπλοκ συνάρτησης, είναι καιρός να δημιουργήσουμε
+          ένα νέο μπλοκ συνάρτησης από το μηδέν. Είναι πραγματικά απλό. Θα δείτε ότι
+          η εργαλειοθήκη έχει μία κατηγορία που ονομάζεται συναρτήσεις. Αν κάνετε
+          κλικ σε αυτήν, θα δείτε ένα πορτοκαλί κουμπί που ονομάζεται συνάρτηση. Κάνοντας
+          κλικ σε αυτό φέρνει τον επεξεργαστή συνάρτησης που ήδη χρησιμοποιήσατε για
+          να επεξεργαστείτε το υπάρχον μπλοκ συνάρτησης.
       2:
         image: notes/C4_function_create_2.png
-        text: Just like before, you started by naming your function, writing down
-          a description for what the function is supposed to do. For instance, it's
-          supposed to draw a square or draw a triangle and then drag blocks from the
-          toolbox into the white work space below. Remember to drag these blocks inside
-          the green wrapping block for the function.
+        text: Όπως και πριν, ξεκινάτε ονομάζοντας τη συνάρτησή σας, γράφοντας μία
+          περιγραφή του τι υποτίθεται ότι κάνει η συνάρτηση. Για παράδειγμα, υποτίθεται
+          ότι σχεδιάζει ένα τετράγωνο ή ένα τρίγωνο και μετά σύρετε μπλοκ από την
+          εργαλειοθήκη στο λευκό χώρο από κάτω. Θυμηθείτε να σέρνετε αυτά τα μπλοκ
+          μέσα στο πράσινο μπλοκ της συνάρτησης.
       3:
         image: notes/C4_function_create_3.png
-        text: Once you're done, click on save and exit. This will take you back to
-          the main puzzle work space. The new function you created will show up as
-          a green block in the function category in your toolbox. Drag and drop this
-          into the main work space and use it like any other block to solve the puzzle.
+        text: Μόλις τελειώσετε, πατήστε στο αποθήκευση και έξοδος. Αυτό θα σας πάει
+          πάλι πίσω στον κύριο χώρο εργασίας του παζλ. Η νέα συνάρτηση που δημιουργήσατε
+          θα εμφανισθεί ως ένα πράσινο μπλοκ στην κατηγορία συναρτήσεις στην εργαλειοθήκη
+          σας. Σύρετέ το στον κύριο χώρο εργασίας και χρησιμοποιήστε το όπως όλα τα
+          άλλα μπλοκ για να λύσετε το παζλ.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
@@ -1949,47 +1978,54 @@
           πραγματικότητα σαν να επεκτείνετε τη γλώσσα.
       2:
         image: notes/C4_function_edit_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code and it will get
-          done for us. We've added that concept to our programming language.
+        text: Στο πρόγραμμα που κατασκευάσαμε, μάθαμε πώς να σχεδιάζουμε ένα τετράγωνο
+          κινούμενοι και στρίβοντας τέσσερις φορές. Μπορούμε να τα βάλουμε αυτά σε
+          μία συνάρτηση και να της δώσουμε ένα όνομα, σχεδίασε ένα τετράγωνο ώστε
+          κάθε φορά που θέλουμε να το κάνουμε αυτό, να λέμε απλά σχεδίασε ένα τετράγωνο
+          και το πρόγραμμα θα καλεί αυτή τη συνάρτηση, αυτόν τον κώδικα και θα το
+          κάνει για μας. Και προσθέσαμε αυτή την έννοια στη γλώσσα προγραμματισμού
+          μας.
       3:
         image: notes/C4_function_edit_3.png
-        text: In this puzzle, we have already created a draw a square function for
-          you. You'll see it in the toolbox as a green block. What you'll need to
-          do is write the same code you wrote before to draw a square and put it in
-          this function. To do that, click on the edit option in the green draw a
-          square block. This will open up the function editor. The function editor
-          has three parts. A place where you name your function. This will appear
-          on the green block before that function. Then write out a short description
-          of what your function is supposed to do.
+        text: Σε αυτό το παζλ, έχουμε ήδη δημιουργήσει μία συνάρτηση που σχεδιάζει
+          τετράγωνο για εσάς. Θα την δείτε στην εργαλειοθήκη ως ένα πράσινο μπλοκ.
+          Αυτό που πρέπει να κάνετε είναι γράψετε τον ίδιο κώδικα που γράψατε πριν
+          για να σχεδιάσετε ένα τετράγωνο και να τον τοποθετήσετε μέσα στη συνάρτηση.
+          Για να το κάνετε αυτό, κάντε κλικ στην επιλογή επεξεργασία στο πράσινο μπλοκ
+          σχεδίασε τετράγωνο. Αυτό θα ανοίξει τον επεξεργαστή συνάρτησης. Ο επεξεργαστής
+          συνάρτησης έχει τρία μέρη. Ένα μέρος όπου ονοματίζετε τη συνάρτησή σας.
+          Αυτό θα εμφανιστεί στο πράσινο μπλοκ πριν τη συνάρτηση. Ύστερα γράψτε μία
+          σύντομη περιγραφή του τι υποτίθεται ότι κάνει η συνάρτησή σας.
       4:
         image: notes/C4_function_edit_4.png
-        text: In this case, it's supposed to draw a square. The white space below
-          this is the work space and works just like the work space you've already
-          been using. Drag and drop blocks from the toolbox into this work space.
-          Remember to put the blocks that create a square inside the green wrapping
-          block for the function. Once you're done, click on save and exit. This will
-          take you back to the main puzzle work space. Now you can use the draw the
-          square function block just like any other block to solve the puzzle.
+        text: Σε αυτή την περίπτωση, υποτίθεται ότι σχεδιάζει ένα τετράγωνο. Ο λευκός
+          χώρος από κάτω είναι ο χώρος εργασίας και λειτουργεί όπως ο χώρος εργασίας
+          που ήδη χρησιμοποιείτε. Σύρετε μπλοκ από την εργαλειοθήκη στο χώρο εργασίας.
+          Θυμηθείτε να βάζετε τα μπλοκ που δημουργούν ένα τετράγωνο μέσα στο πράσινο
+          μπλοκ της συνάρτησης. Όταν είστε έτοιμοι, πατήστε στο αποθήκευση και έξοδος.
+          Αυτό θα σας επιστρέψει πίσω στον κύριο χώρο εργασίας του παζλ. Τώρα μπορείτε
+          να χρησιμοποιήσετε το μπλοκ συνάρτησης σχεδίασε τετράγωνο όπως όλα τα άλλα
+          μπλοκ για να λύσετε το παζλ.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: Ορίστε μία συνάρτηση που σχεδιάζει ένα τετράγωνο με πλευρά 50 εικονοστοιχεία.
+          Είναι σπουδαίο αλλά τι γίνεται αν ήθελα να σχεδιάσω ένα τετράγωνο με πλευρά
+          50 εικονοστοιχεία και ένα άλλο τετράγωνο με πλευρά 100 εικονοστοιχεία; Δεν
+          θα έπρεπε να φτιάξουμε δύο διαφορετικές συναρτήσεις που κάνουν σχεδόν το
+          ίδιο πράγμα. Αντί γι' αυτό, θα χρησιμοποιήσουμε μία συνάρτηση με μία παράμετρο.
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: Οι παράμετροι μας επιτρέπουν να περνάμε τιμές στη συνάρτηση, οι οποίες
+          χρησιμοποιούνται ως μεταβλητές μέσα στη συνάρτηση. Ας δοκιμάσουμε να προσθέσουμε
+          μία παράμετρο που ονομάζεται Μήκος σε αυτή τη συνάρτηση ώστε να μπορούμε
+          να τη χρησιμοποιήσουμε για να δημιουργούμε τετράγωνα με διαφορετικές πλευρές.
+          Στον επεξεργαστή συνάρτησης, μπορείτε να επεξεργαστείτε το όνομα και την
+          περιγραφή όπως πριν αλλά τώρα μπορείτε ακόμη να προσθέσετε μία παράμετρο.
+          Γράψτε το όνομα της παραμέτρου σας στον κενό χώρο και κάντε κλικ στο Πρόσθεση
+          Παραμέτρου. Αυτό θα δημιουργήσει ένα κόκκινο μπλοκ με το όνομα της παραμέτρου
+          που μόλις δημιουργήσατε. Τώρα μπορούμε να αντικαταστήσουμε το μπλοκ κίνηση
+          μπροστά κατά 100 με την παράμετρο Μήκος ώστε να κινηθεί μπροστά κατά Μήκος.
       3:
         image: notes/C4_function_parameters_3.png
         text: Πατήστε αποθήκευση και κλείσιμο και σύρετε το νέο σας μπλοκ δημιουργίας
@@ -2018,16 +2054,17 @@
           θα κατασκευάσουμε το πρόγραμμά μας.
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Αν σύρω το μπλοκ κίνησης στο χώρο εργασίας μας και πατήσω εκτέλεση τι
+          συμβαίνει; Το πουλί κινείται μπροστά κατά ένα κουτί στο πλέγμα. Και αν θέλω
+          το πουλί να κάνει κάτι αφού κινηθεί μπροστά κατά ένα κουτί; Μπορώ να προσθέσω
+          ένα άλλο μπλοκ στο πρόγραμμά μας.
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Θα επιλέξω το μπλοκ "στροφή δεξιά" και θα το σύρω κάτω από το μπλοκ
+          κίνησης μέχρι να εμφανιστεί το κίτρινο βέλος. Μετά θα το αφήσω και τα δύο
+          μπλοκ θα κολλήσουν μεταξύ τους. Όταν πατήσω "Εκτέλεση" ξανά, το πουλί θα
+          εκτελέσει αυτές τις εντολές που είναι στοιβαγμένες από πάνω μέχρι κάτω στο
+          χώρο εργασίας μας.
       5:
         image: notes/C4_intro_5.png
         text: Αν θελήσετε να διαγράψετε ένα μπλοκ, απλά αφαιρέστε το από τη στοίβα
@@ -2037,24 +2074,28 @@
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: If I want to draw a rectangle 50 pixels tall and that is twice as wide
-          as it is tall, how would I program the computer to do that? Well, I could
-          tell the artist to go up fifty, turn right, and then go over 100 and move
-          the whole thing twice. But then I'm doing the math for the computer.
+        text: Αν θέλω να σχεδιάσω ένα παραλληλόγραμμο 50 εικονοστοιχεία ψηλό και δύο
+          φορές πιο πλατύ απ' ότι ψηλό, πως θα προγραμμάτιζα τον υπολογιστή να το
+          κάνει αυτό; Λοιπόν, θα μπορούσα να πω στον καλλιτέχνη να πάει επάνω πενήντα,
+          να στρίψει δεξιά, και μετά να προχωρήσει 100 και να το κάνω αυτό δύο φορές.
+          Αλλά τότε κάνω τις πράξεις στη θέση του υπολογιστή.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers
-          are really good at doing math so we should leave it to them whenever possible.
-          If I just used a variable called height instead, then I could easily change
-          height to fifty and then change my algorithm to tell the artist to go up
-          by height, turn right and then go over by height times 2, which gives us
-          a rectangle that is twice as wide as it is tall.
+        text: Ο πολλαπλασιασμός πενήντα επί δύο με το μυαλό σας μπορεί να μην είναι
+          τόσο δύσκολο αλλά οι υπολογιστές είναι πραγματικά καλοί στο να κάνουν πράξεις
+          και έτσι θα έπρεπε να τους αφήνουμε να τις κάνουν όποτε είναι δυνατόν. Αν
+          αντ' αυτού χρησιμοποιούσα μία μεταβλητή που να ονομάζεται ύψος, θα μπορούσα
+          εύκολα να αλλάξω το ύψος σε πενήντα και μετά να αλλάξω τον αλγόριθμό μου
+          ώστε να λέει στον καλλιτέχνη να πάει επάνω κατά ύψος, να στρίψει δεξιά και
+          μετά να πάει κατά ύψος επί 2, που μας δίνει ένα παραλληλόγραμμο δύο φορές
+          πιο πλατύ απ' ότι ψηλό.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: This lesson is called Tangram Algorithms. A tangram is a puzzle with
-          seven pieces that can be put together to make other shapes. You'll be using
-          an algorithm to explain to your partner how to put the puzzle together.
+        text: Αυτό το μάθημα καλείται Αλγόριθμοι Τάγκραμ. Το τάγκραμ είναι ένα παζλ
+          με επτά κομμάτια που μπορούμε να ενώσουμε για να φτιάξουμε άλλα σχήματα.
+          Θα χρησιμοποιήσετε έναν αλγόριθμο που θα εξηγεί στο συμπαίκτη σας πως να
+          βάλει τα κομμάτια.
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: An algorithm is just a of list steps that you can take to complete a
@@ -2976,39 +3017,40 @@
           είναι γραμμένες ακριβώς από κάτω.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Αυτή η μεσαία περιοχή είναι η εργαλειοθήκη και καθένα από αυτά τα μπλοκ
+          είναι μία εντολή που κατευθύνει τις ενέργειες της Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Ο λευκός χώρος στα δεξιά καλείται χώρος εργασίας και είναι εκεί όπου
+          θα φτιάξουμε το πρόγραμμά μας.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Αν σύρουμε το μπλοκ moveForward(); στο χώρο εργασίας μας και μετά πατήσουμε
+          εκτέλεση τι συμβαίνει; Η Alex κινείται μπροστά ένα τετράγωνο στο πλέγμα.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Και αν θέλουμε να κάνουμε κάτι αφού κινηθεί μπροστά ένα τετράγωνο; Μπορούμε
+          να προσθέσουμε ένα ακόμη μπλοκ στο πρόγραμμά μας. Θα επιλέξω το μπλοκ turnRight();
+          και θα το σύρω κάτω από το μπλοκ moveForward(); μέχρι να εμφανιστεί αυτή
+          η πορτοκαλί γραμμή. Μετά θα το αφήσω και τα δύο μπλοκ θα κολλήσουν μεταξύ
+          τους. Όταν πατήσουμε εκτέλεση ξανά, η Alex θα εκτελέσει τις εντολές που
+          είναι στοιβαγμένες από πάνω προς τα κάτω στο χώρο εργασίας μας.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Αν ποτέ θελήσετε να διαγράψετε ένα μπλοκ, απλά σύρετέ το από τη στοίβα
+          πίσω στην εργαλειοθήκη.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: 'Για να αναιρέσετε τις αλλαγές σας και να πάτε πίσω στην έναρξη του
+          επιπέδου, χρησιμοποιήστε την επιλογή Από την Αρχή στην πάνω δεξιά γωνία
+          στο χώρο εργασίας. Ένα ακόμη πράγμα: βλέπετε ένα μικρό τρίγωνο στα μπλοκ
+          στροφής; Κάθε φορά που βλέπετε αυτά τα τρίγωνα σημαίνει ότι μπορείτε να
+          επιλέξετε διαφορετική επιλογή. Ας ξεκινήσουμε τον προγραμματισμό!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Είμαι η Lydia Winters, διευθύντρια εμπορικού της Mojang και φτιάξαμε
+          ένα παιχνιδάκι που ονομάζεται Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
         text: Η αγαπημένη μου ασχολία στο Minecraft είναι η εξερεύνηση. Λατρεύω την
@@ -3023,93 +3065,99 @@
           επανάληψη εντολών με βρόχους επανάληψης.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Όταν φτιάχνουμε το Minecraft, χρησιμοποιούμε βρόχους επανάληψης για
+          να βάλουμε όλα τα αρχικά υλικά για τη δημιουργία ενός κόσμου. Αυτά είναι
+          χιλιάδες μπλοκ. Θα χρησιμοποιήσουμε βρόχους σε κάποια σημεία, για παράδειγμα
+          για να βοηθήσουμε την Alex να κινηθεί πίσω και εμπρός καθώς περπατάει. Οι
+          βρόχοι επανάληψης είναι ένα ισχυρό σημείο του προγραμματισμού.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Η νύχτα έρχεται γι' αυτό στα επόμενα επίπεδα, θα φτιάξουμε ένα σπίτι
+          για να είμαστε ασφαλείς. Θα χρησιμοποιήσουμε το μπλοκ επανάληψης για να
+          το κάνουμε αυτό πολύ εύκολα.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Για να φτιάξουμε έναν τοίχο στο σπίτι μας, μπορούμε είτε να πούμε στην
+          Alex moveForward(); και να βάλει σανίδες τέσσερις φορές ή να της πούμε moveForward();
+          και βάλε μία σανίδα και μετά αν πάρουμε αυτή την εντολή και να χρησιμοποιήσουμε
+          ένα μπλοκ επανάληψης για να την κάνουμε να εκτελέσει την ενέργεια πολλές
+          φορές. Τώρα θα κάνουμε κλικ στο μπλοκ επανάληψης και θα της πούμε πόσες
+          φορές θέλουμε να εκτελέσει αυτή την ενέργεια. Τώρα ας φτιάξουμε το σπίτι
+          πριν νυχτώσει! Καλή διασκέδαση.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Τώρα θα μάθουμε για τις δηλώσεις "αν". Οι δηλώσεις "αν" είναι θεμελιώδες
+          κομμάτι της εκμάθησης προγραμματισμού. Βοηθούν τον υπολογιστή να παίρνει
+          αποφάσεις.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Όλοι οι υπολογιστές χρησιμοποιούν δηλώσεις "αν", συμπεριλαμβανομένου
+          και του τηλεφώνου μου. Για παράδειγμα, όταν ξεκλειδώνω το τηλέφωνό μου,
+          εκτελεί κάποιον κώδικα που λέει αν βάλω τον κωδικό μου σωστά, τότε ξεκλείδωσε
+          το τηλέφωνο. Διαφορετικά, δείχνει ένα μήνυμα σφάλματος.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Μπορείτε να χρησιμοποιείτε δηλώσεις "αν" στον κώδικά σας για να κάνετε
+          τον Steave και την Alice να αντιδρούν σε αυτό που βλέπουν στον κόσμο. Για
+          παράδειγμα, αν υπάρχει ένας βράχος μπροστά τους, μπορούν να στρίψουν αριστερά.
+          Ή να στρίψουν δεξιά, αν φτάσουν σε ένα δέντρο.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Σε αυτή την περίπτωση, δε θέλουμε να πέσουμε στη λάβα. Είναι εύκολο
+          να κάνουμε πλάνο για τη λάβα. Μπορούμε να τη δούμε στην οθόνη. Αλλά τι συμβαίνει
+          με αυτήν κάτω από την πέτρα που δεν μπορούμε να δούμε;
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Αφού σκάψουμε την πέτρα, θα πρέπει να ελέγξουμε αν υπάρχει λάβα σε αυτή
+          τη θέση πριν προχωρήσουμε μπροστά. Αν υπάρχει λάβα εκεί, θέλουμε να βάλουμε
+          μία πέτρα μπροστά από το χαρακτήρα μας πριν προχωρήσουμε μπροστά. Με αυτό
+          τον τρόπο μπορούμε να προχωρήσουμε με ασφάλεια. Ώρα για περισσότερο σκάψιμο!
+          Και θυμηθείτε να χρησιμοποιήσετε τη δήλωση "αν" για να προσέχετε τα βήματά
+          σας.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Συγχαρητήρια! Μόλις μάθατε τα βασικά δομικά στοιχεία της επιστήμης των
+          υπολογιστών.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Τώρα μπορείτε να χρησιμοποιήσετε αυτά τα μπλοκ για να φτιάξετε τη δική
+          σας δημιουργία. Δεν υπάρχουν άλλες οδηγίες και άλλα παζλ να λύσετε. Μπορείτε
+          να φτιάξετε ό,τι θέλετε. Εσείς επιλέγετε.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[μαθητές μιλούν] Πρόκειται να γίνει πραγματικότητα. Ωραία. Έφτιαξα
+          ένα σχήμα L με δαυλούς. Έφτιαξα ένα Α από σανίδες σημύδας. Δούλεψε, δούλεψε.
+          Φτιάξαμε ένα σπίτι από μαλλί!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Όταν ολοκληρώσετε τη δημιουργία σας, επιλέξτε διαμοιρασμός για να πάρετε
+          ένα σύνδεσμο και να την μοιραστείτε με τους φίλους σας. Καλή διασκέδαση!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Συγχαρητήρια! Μόλις μάθατε τα βασικά δομικά στοιχεία της επιστήμης των
+          υπολογιστών.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Τώρα μπορείτε να χρησιμοποιήσετε αυτά τα μπλοκ για να φτιάξετε τη δική
+          σας δημιουργία. Δεν υπάρχουν άλλες οδηγίες και άλλα παζλ να λύσετε. Μπορείτε
+          να φτιάξετε ό,τι θέλετε. Εσείς επιλέγετε.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[μαθητές μιλούν] Πρόκειται να γίνει πραγματικότητα. Ωραία. Έφτιαξα
+          ένα σχήμα L με δαυλούς. Έφτιαξα ένα Α από σανίδες σημύδας. Δούλεψε, δούλεψε.
+          Φτιάξαμε ένα σπίτι από μαλλί!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Τώρα μπορείτε να φτιάξετε ό,τι θέλετε. Καλή διασκέδαση!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Αν θέλετε να φτιάξετε το δικό σας παιχνίδι, είναι πραγματικά εύκολο.
+          Το μόνο που χρειάζεστε είναι λίγες βασικές γνώσεις προγραμματισμού και μπορείτε
+          να ξεκινήσετε να παίζετε το παιχνίδι που φτιάξατε.
       2:
         image: notes/gumball_intro_2.JPG
         text: Έχετε ένα αγαπημένο βιντεοπαιχνίδι; Θα πάμε να κάνουμε ένα βήμα προς
@@ -3122,9 +3170,9 @@
           ένα παιχνίδι μπορείτε να μοιράσετε και να παίξετε σε ένα κινητό.
       3:
         image: notes/gumball_intro_3.JPG
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
+        text: Σήμερα, θα μάθουμε πως να κάνουμε όλα αυτά τα πράγματα ένα προς ένα
+          με διασκεδαστικούς ηθοποιούς και να φτιάξουμε ένα παιχνίδι από την αρχή
+          που θα μπορούμε να μοιραστούμε με άλλους ή να το παίξουμε στο κινητό.
       4:
         image: notes/gumball_intro_4.JPG
         text: Η οθόνη σας είναι χωρισμένη σε τρία μέρη. Αριστερά είναι ο χώρος παιχνιδιού

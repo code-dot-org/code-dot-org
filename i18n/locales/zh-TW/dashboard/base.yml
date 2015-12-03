@@ -70,7 +70,7 @@ zh:
     overview_student: '註冊一個帳戶可以保存您的進度。您的電子郵件是主要用來讓您登錄和重設密碼。請參閱我們的 <a href="HTTP://code.org/privacy">隱私政策</a>說明以取得更多詳情。'
     overview_teacher: '通過註冊帳號開始在您的教室裡教資訊科學。 <p/>您將能夠將學生加入，並追蹤他們的學習進度。'
     no_signup_message: '您可以從 <a target="_blank"href="HTTP://learn.code.org"> 瀏覽各個階段和關卡</a>，但您需要註冊一個帳號來保存您的進度。'
-    teacher_educator_guide: 請參閱教育者指南
+    teacher_educator_guide: 請參閱教師指南
     teacher_pitch: 教師註冊Code.org
     teacher_title: 教師註冊
     student_pitch: 學生註冊Code.org
@@ -90,8 +90,8 @@ zh:
     valid_password: 有效的密碼 ！
     invalid_password: 密碼必須要 6 個字元以上
     mismatch_password: 您輸入的兩次密碼不一樣
-    student_terms: "我同意 Code.org <a href='HTTP://code.org/tos'> 的服務條款</a> 的約束。如果我年齡是 13 歲以下的，我通過提交這份表格確認，我有我的父母或法定監護人的許可，使用 Code.org 服務。 <br/>對於使用者 13歲以下，電子郵件地址不存儲在一個允許我們與他們聯繫的表單，。"
-    teacher_terms: "我同意 Code.org <a href='HTTP://code.org/tos'> 的服務條款</a> 的約束。"
+    student_terms: "我同意 Code.org <a href='http://code.org/tos'> 的服務條款</a> 的約束。如果我年齡是 13 歲以下的，我通過提交這份表格確認，我有我的父母或法定監護人的許可，使用 Code.org 服務。 <br/>對於使用者 13歲以下，電子郵件地址將不會被存起來，因此我們將不會與他們聯繫。"
+    teacher_terms: "我同意 Code.org <a href='http://code.org/tos'> 的服務條款</a> 的約束。"
     additional_information: 我們還需要一些其他資訊來完成你的註冊
   signin_form:
     title: 你已經有一個帳號了嗎？請登入
@@ -101,8 +101,8 @@ zh:
     submit: 登入
   signin:
     try_heading: 想要在還沒註冊之前就先試試寫程式嗎？
-    try_hoc: 第一次嘗試一小時編程
-    try_20hours: 嘗試我們的：電腦科學簡介--20 小時 版本
+    try_hoc: 先試試一小時的程式設計課程
+    try_20hours: 試試我們的課程：20 小時介紹資訊科學
   signinsection:
     welcome: '歡迎來到%{section_name}'
     name: 選取你的名字
@@ -122,11 +122,11 @@ zh:
   welcome_email:
     subject: 加入我(在 Code.org)的班級
     body: |
-      點選下方的超連結來報名參加在 Code.org 的電腦科學課程(我將成為你的"老師")：
+      點選下方的連結來報名參加在 Code.org 的資訊科學課程（我會是你的老師）：
       
       %{link}
       
-      這是一個絕對會引起你注意的有趣課程，透過遊戲式的簡易引導，你將學會有關電腦科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐柏克(Mark Zuckerberg)、奮怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
+      這是一個絕對會引起你注意的有趣課程。透過遊戲式的簡易引導，你將學會有關資訊科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐克伯(Mark Zuckerberg)、憤怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
       
       %{name}
   follower:
@@ -134,20 +134,20 @@ zh:
     added_teacher: '%{name} 已新增為你的老師'
     registered: '你已經用 %{section_name}註冊。'
     error:
-      signed_in: 請在登出後在進行操作
+      signed_in: 請先登出後再進行操作
       username_not_found: '使用者名稱 %{username}找不到'
       username_in_use: '%{username} 已經被使用了，請重新挑選一個。'
       no_teacher: '找不到以 %{teacher_email_or_code}註冊的使用者。請邀請他們到這註冊，然後再嘗試新增他們。'
       section_not_found: '找不到代碼是 %{section_code} 的班級。'
       blank_code: 請輸入班級代碼
-      cant_join_own_section: 抱歉, 你不能加入你自己創建的班級
+      cant_join_own_section: 抱歉, 你不能加入你自己的班級
     mail:
       invite_student:
         subject: '加入%{teacher_name}老師在Code.org的班級。'
       student_disassociated:
-        subject: 'Code.org 通知： %{student_name} 將你從教師名單中移除。'
+        subject: 'Code.org 通知： %{student_name} 已不再是你的學生。'
       teacher_disassociated:
-        subject: 'Code.org 通知： %{teacher_name} 與您不再是師生關係了。'
+        subject: 'Code.org 通知： %{teacher_name} 已不再是你的老師。'
   reports:
     error:
       access_denied: 您不能讀取此人的統計資訊
@@ -306,28 +306,28 @@ zh:
     user_not_found: 無法找到該名老師或學生
     cant_remove_student_no_email: '因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name} 從你的學生中移除'
     cant_remove_teacher_no_email: '因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}'
-    student_teacher_disassociated: '%{student_name}的老師%{teacher_name}已經被移除'
+    student_teacher_disassociated: '%{teacher_name}已經從%{student_name}的老師名單中移除'
     panel:
       answer_viewer: 答案檢視器
       student: '學生 '
-      viewing_solution: 查看解決方案
+      viewing_solution: 查看解答
       try_it_yourself: 自己試試
       section: 班級
       example: 解答範例
       example_with_number: '解答範例 %{solution_number}'
-      submitted_on: '%{date} 已送出'
+      submitted_on: 提交時間：
       unsubmit: 不提交
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
     email_confirm_needed_required: '您的電子位址 %{email} 尚未被確認：'
     email_confirm_wrong_email: (錯誤的電子郵件位址？)
-    email_resend_confirm: 重新發送確認指令
+    email_resend_confirm: 重新發送確認說明
     new_password_hint: （如果你不想變更它就保留空白）
     current_password_hint: （我們需要您現在的密碼以確認您的更改）
-    delete: 刪除您的帳戶
-    delete_text: 按一下下面的按鈕將刪除您的帳戶。
-    delete_text_teacher_note: 請注意： 刪除您的帳戶並不會刪除您的學生的帳戶。
-    delete_confirm: 是否確定要刪除您的帳戶？
+    delete: 刪除您的帳號
+    delete_text: 按一下下面的按鈕將刪除您的帳號。
+    delete_text_teacher_note: 請注意： 刪除您的帳號並不會刪除您的學生的帳號。
+    delete_confirm: 是否確定要刪除您的帳號？
   user_level:
     completed: 已完成
     tried: 已試過
@@ -337,7 +337,7 @@ zh:
     classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
-    description: Code.org 建立的所有線上課程，通通位在程式碼工作室中。
+    description: Code.org 建立的所有線上課程，通通放在 Code Studio 中。
     lines_of_code: '%{lines_count} 行程式碼由學生撰寫'
     lines_of_code_linebreak: '由 %{students_count} 百萬學生所撰寫的 <br/>%{lines_count} 行程式碼'
     all_courses: 課程 1, 2, 及 3 導論
@@ -406,9 +406,9 @@ zh:
     privacy: 隱私權政策
     secure: 安全版本
     report_abuse: 濫用回報
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: 在 Code Studio 上建立
+    make_my_own_app: 製作自己的 app
+    how_it_works: 它是如何運作的
   reference_area:
     title: 需要幫忙嗎？
     subtitle: 看看這些影片和提示
@@ -431,7 +431,7 @@ zh:
       header: 請升級您的瀏覽器。
       message: "Code.org 使用較先進的網路技術，使網站能以較快的速度運行操作。很不幸的是你現在所使用的瀏覽器無法支援所需的所有的功能。<br/><br/> 安裝支援列表中的任何一種瀏覽器然後繼續操作。或是你也可以<a href='#'>試著觀看這個網頁</a>，但是部份功能可能會無法運作。"
       button: 將我轉向至”受支援的瀏覽器清單“
-  slow_loading: 請在等等，這次讀取的時間比較久一點.......
+  slow_loading: 請再等等，這次讀取的時間比較久一點.......
   try_reloading: 請嘗試重新載入網頁
   next_stage: 完成 ！繼續邁向下一個階段
   download_pdf: 開啟教學計畫
@@ -439,30 +439,30 @@ zh:
   view_lesson_plan: 檢視教案
   pdf_download: 下載 PDF
   download_coming_soon: 可下載的活動內容也即將完成。
-  video_coming_soon: 視頻快將推出 ！
+  video_coming_soon: 影片即將推出 ！
   not_started: 學生尚未試過這個關卡。
   share_code:
     title: '按下"執行"來看看我的程式如何運作'
     bounce_og_title: 看看我的彈跳遊戲
-    flappy_og_title: 快來嘗試我設計的Flappy Game
+    flappy_og_title: 看看我的 Flappy 遊戲
     studio_og_title: 看看我的遊玩實驗室 App
     check_out_what_i_made: 看看我做了什麼
     og_description: 我用 Code.org寫了自己的程式碼
-    phone_number_not_allowed: 它看起來像是一組電話號碼。請嘗試將它從文字內容移掉。
-    address_not_allowed: 它看起來像是一個地址。請嘗試將它從文字內容移掉。
-    email_not_allowed: 它看起來像是一個電子郵件。請嘗試將它從文字內容移掉。
-    profanity_not_allowed: 它看起來像是一些不雅的文字。請嘗試將它從文字內容移掉。
+    phone_number_not_allowed: 看起來裡面有一組電話號碼。請試著改變文字。
+    address_not_allowed: 看起來裡面有一組地址。請試著改變文字。
+    email_not_allowed: 看起來裡面有一組電子郵件地址。請試著改變文字。
+    profanity_not_allowed: 看起來裡面有一些不雅的文字。請試著改變文字。
   builder:
-    created: 您創建了一個新的腳本。
-    destroyed: 你毀了一個腳本。
+    created: 您建立了一個新的腳本。
+    destroyed: 你刪除了一個腳本。
     manage: 建立關卡
     view: 檢視
     back: 返回腳本
     success: 你已經成功地編輯程式積木
     level:
-      create: 建立新水準
-      current: 當前水平
-      unused: 未使用狀態
+      create: 建立新關卡
+      current: 目前的關卡
+      unused: 未使用的關卡
   upsell:
     hoc:
       title: 一小時的程式設計課程

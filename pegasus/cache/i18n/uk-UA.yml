@@ -325,6 +325,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Закодуємо далеку Галактику
   starwars_javascript_title: Javascript
   starwars_javascript_description: На основі рухомих блоків та JavaScript.
@@ -738,6 +739,10 @@
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
   teach_led_lesson_plans: Плани уроків Години коду для вчителів
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Як викладати "Годину коду"
   more_resources_educators: Більше ресурсів для вчителів та освітян
   beyond_submission: Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте
@@ -1406,3 +1411,8 @@
   infinity_shortcode: inf
   playlab_shortcode: грати
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

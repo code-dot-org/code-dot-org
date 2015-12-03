@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du må få 20 musedroider. Bruk \"legg til en musedroide\"-kommandoen i \"når har fått musedroide\"-eventet for å legge til to eller flere musedroider hver gang du får tak i en."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulerer, du lagt til kode for å lage musedroider. Du kan gå til neste nivå eller prøve på nytt å få 20 musedroider. Prøve å gjøre det enklere ved å legge til flere av dem! (Trykk og hold inne tastene på tastaturet (eller skjermen) for å bevege deg raskere.)"},
 "failedChangeSettingTimeout":function(d){return "Ta tre opprørspiloter for å gå videre."},
-"failedChangeSettingSettings":function(d){return "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten."}};
+"failedChangeSettingSettings":function(d){return "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og angi hastigheten."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

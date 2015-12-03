@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Precisas apanhar 20 Mouse Droids. Usa o comando \"add a Mouse Droid\" dentro do evento \"when get Mouse Droid\" para adicionares dois ou mais Mouse Droids de cada vez que apanhas um."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Parabéns, adicionaste código para fazer Mouse Droids. Podes continuar para o próximo puzzle ou tentar novamente obter 20 Mouse Droids. Tenta torná-lo mais fácil adicionando mais deles! (Pressiona e segura as teclas do teu teclado (ou ecrã) para te moveres mais rápido.)"},
 "failedChangeSettingTimeout":function(d){return "Consegue três Pilotos Rebeldes para seguires em frente."},
-"failedChangeSettingSettings":function(d){return "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade."}};
+"failedChangeSettingSettings":function(d){return "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

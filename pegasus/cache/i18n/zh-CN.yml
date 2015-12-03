@@ -142,7 +142,7 @@
   stats_student: '"我知到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   stats_michael: “我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师
   studiobar_title: 探讨我们的 <a href='http://studio.code.org'>《编程工作室》</a>
-  studiobar_title_nolink: 探讨我们的 编程工作室
+  studiobar_title_nolink: 探索我们的 编程工作室
   studiobar_elementary_title: 初级课程
   studiobar_elementary_body: 为 K&#8209;5 所制的三个新课程
   studiobar_hoc_title: 编程一小时
@@ -270,12 +270,13 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: 用代码来建立一个星系
   starwars_javascript_title: Javascript
   starwars_javascript_description: 使用拖放块和 JavaScript。
   starwars_javascript_specs: 英语 | 现代浏览器 | 11岁以上
   starwars_javascript_start_button: 现在就试试
-  starwars_blocks_title: 块
+  starwars_blocks_title: 模块
   starwars_blocks_description: 使用拖放块。
   starwars_blocks_specs: 各国语言 (即将推出) | 现代浏览器、 智能手机、 平板电脑 | 年龄在 6-10岁之间
   starwars_blocks_start_button: 现在就试试
@@ -283,7 +284,7 @@
   starwars_speak_languages: 另一种语言?
   starwars_help_translate: 帮我们翻译
   starwars_platform_text: 最新的浏览器，智能手机，平板电脑
-  mc_name: 《我的世界》编程一小时
+  mc_name: 我的世界 编程一小时
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
@@ -318,13 +319,12 @@
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: 姓名
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_name_placeholder: 姓名
+  volunteer_engineer_submission_field_company: 公司 (或大学)
+  volunteer_engineer_submission_field_company_placeholder: 公司 (或大学)
+  volunteer_engineer_submission_field_experience_level: 经验水平
+  volunteer_engineer_submission_field_location: 所在地区
+  volunteer_engineer_submission_field_location_desc: 您所在的位置将被用作教师寻找附近志愿者的参考，并且会以大头针的形式标注在地图上。如果您很在意隐私问题，请使用您工作或者学校的地址，亦或只使用城市名称。
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
     or street address
   volunteer_engineer_submission_field_location_flexibility: I can help during the
@@ -374,14 +374,14 @@
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: 大学计算机科学专业的学生
   volunteer_engineer_submission_experience_software_professional: 软件专业人士
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: 5 英里
+  volunteer_engineer_submission_distance_16: 10 英里
+  volunteer_engineer_submission_distance_24: 15 英里
+  volunteer_engineer_submission_distance_32: 20 英里
+  volunteer_engineer_submission_num_volunteers_5: 5 名志愿者
+  volunteer_engineer_submission_num_volunteers_10: 10 名志愿者
+  volunteer_engineer_submission_num_volunteers_25: 25 名志愿者
+  volunteer_engineer_submission_num_volunteers_50: 50 名志愿者
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -404,7 +404,7 @@
   dashboard_landing_print_certificates: 为完成此课程的学生打印证书
   dashboard_landing_educator_blog: 阅读有关新闻和我们在教育家博客的材料的更新
   dashboard_landing_smart_hints: 请帮助我们将智能提示添加到 Code.org 教程
-  dashboard_landing_video_player: 在你的学校测试我们新的视频播放器
+  dashboard_landing_video_player: 在你的学校测试我们新的视频。
   dashboard_landing_progress_title: 主要课程进度
   dashboard_landing_progress_biggest: 这是您主要课程的进度。
   dashboard_landing_view_progress: 查看%{biggest_section}的进度
@@ -452,7 +452,7 @@
   dashboard_action_save_all: 全部保存
   dashboard_action_cancel: 取消
   dashboard_action_delete: 刪除
-  dashboard_action_delete_yes: 是
+  dashboard_action_delete_yes: 对
   dashboard_action_delete_no: 不
   dashboard_action_confirm: 要删除吗？
   dashboard_action_remove: 移除
@@ -477,12 +477,12 @@
   dashboard_navigation_student: 学生：%{student_name}
   dashboard_sections_new_section: 新的学习小组
   dashboard_sections_jumbotron_instruction: 创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。
-  dashboard_sections_table_section: 节点
+  dashboard_sections_table_section: 单元
   dashboard_sections_table_secret: 登录类型
   dashboard_sections_table_grade: 年级
   dashboard_sections_table_course: 课程：
   dashboard_sections_table_students: 学生
-  dashboard_sections_table_code: 节代码
+  dashboard_sections_table_code: 单元代码
   dashboard_sections_name: 学习小组名称
   dashboard_sections_choose_secret: 如果您想要给您的学生提供帐户，请为那个学习小组选择一种 <b>单词</b> 或 <b>图片</b>
     的密码类型。
@@ -514,12 +514,13 @@
   dashboard_students_reset_password: 重置密码
   dashboard_students_share_section: 与您的学生共享此学习小组的登录页面：
   dashboard_students_print_info: 打印出包含学生登录信息的卡片
-  dashboard_students_secret_picture_title: 密码图片
+  dashboard_students_secret_picture_title: 秘密图片
   dashboard_students_secret_picture: 这一节使用 <b>图片</b> 作为密钥的类型。 即您的每位学生都有一张密钥图片来代替密码用于登录。
     学生需要它来完成上面的登录。
   dashboard_students_reset_picture: 您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的秘密图片。该学生再次登录时系统将生成新的秘密图片供其使用。
   dashboard_students_secret_word_title: 密语
-  dashboard_students_secret_word: 密语
+  dashboard_students_secret_word: 这一节使用 <b>图片</b> 作为密钥的类型。 即您的每位学生都有一张密钥图片来代替密码用于登录。
+    学生需要它来完成上面的登录。
   dashboard_students_reset_word: '您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的密语。该学生再次登录时系统将生成新的一对单词密语供其使用。 '
   dashboard_students_join_link: 告诉您的学生来创建他们自己的账号并在此加入您的学习小组
   dashboard_students_no_email: 如果您的学生没有电子邮件地址，或您想为其创建帐户，请将学习小组的密钥类型更改为 <b>单词</b> 或
@@ -546,16 +547,16 @@
   dashboard_glossary: 词汇表
   dashboard_classroom_strategies: 教师的课堂策略
   dashboard_debugging: 调试：
-  dashboard_puzzle_solving: 解决谜题：
+  dashboard_puzzle_solving: 解决难题：
   dashboard_student_worksheet: 学生工作表
   dashboard_teacher_worksheet: 教师工作表
   dashboard_curriculum_csina: '代数中的计算机科学:'
   dashboard_curriculum_csins: '科学中的计算机科学:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
-  dashboard_grade_k: 幼儿园
+  dashboard_grade_k: 学前
   dashboard_grade_other: 其他
-  dashboard_login_word: 词
+  dashboard_login_word: 单词
   dashboard_login_picture: 图片
   dashboard_login_none: 电子邮件
   dashboard_new_password: 新密码
@@ -569,8 +570,8 @@
   dashboard_puzzle: 谜题
   dashboard_question: 问题
   dashboard_response: Response
-  stats_hoc_2013_heading: 在去年的Hour of Code活动中的惊人数据。在一周之内：
-  stats_hoc_2013_image_alt: 2013年Hour of Code统计数据
+  stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
+  stats_hoc_2013_image_alt: 2013年编程一小时统计数据
   dashboard_teacher: 老师
   dashboard_student: 学生
   dashboard_sections_email_question: 所有的学生都有一个有效的电子邮件地址吗？
@@ -582,7 +583,7 @@
   dashboard_sections_sign_in_unique: 在“管理学生”选项卡上列出的单独的网页
   dashboard_sections_sign_in_main: http://code.org 之后单击 "登录"
   dashboard_sections_password_account_creation: 学生创建的文本密码
-  dashboard_sections_login_type_explanation: 此表可以帮助解释您想要为学习小组选择那种登录类型，<b>图片，词语或电子邮件</b>。
+  dashboard_sections_login_type_explanation: 此表可以帮助解释您想要为学习小组选择哪种登录类型，<b>图片，词语或电子邮件</b>。
   dashboard_faq: 常见的问题
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
@@ -591,7 +592,7 @@
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
-  code_sign_up: 注册以便在CS教育周期间参加
+  code_sign_up: 注册以便在计算机科学教育周期间参加
   learn_more: 现在就试试
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
@@ -614,7 +615,7 @@
     videos</a>
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
   hoc2014_try_new_tutorial: 试试我们新的beta 版的一小时代码教程
-  hoc2014_try_scrat: 愤怒的小鸟、PvZ和Scrat
+  hoc2014_try_scrat: 愤怒的小鸟、植物大战僵尸和斯奎特
   hoc2014_try_frozen: 來自冰雪奇缘的艺术家安娜及爱莎。
   carousel_heading_codeorg: Code.org 提供的教程
   carousel_heading_codeorg_any_device: Code.org 的教程(适合所有的设备!)
@@ -622,7 +623,7 @@
   carousel_heading_third_party: 第三方教程
   carousel_heading_international: 中文教程
   carousel_heading_domestic: 英文教程可用
-  carousel_heading_beginners: 初学者教程
+  carousel_heading_beginners: K-8教程
   carousel_heading_beyond_beginners: 初学者教程
   carousel_heading_javascript: 教 JavaScript 的教程
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
@@ -638,7 +639,11 @@
   carousel_heading_ide: 在教师中流行的平台
   educator_notes: 教育家笔记
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  how_to_teach_hoc: 如何教授一小代码
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
+  how_to_teach_hoc: 如何教授代码一小时
   more_resources_educators: 给教师和教育工作者们的更多资源
   beyond_submission: 想要提交一小时学编程的教程吗? 请参阅标准和提交表单。
   participants: 参与者
@@ -651,7 +656,7 @@
     最新的网页浏览器。</a>
   mobile_devices: 用于移动设备的教程
   frozen_name: Code with Anna and Elsa
-  starwars_name: '星球大战: 建立一个充满代码的星系'
+  starwars_name: '星球大战: 用代码构建一个星系'
   codeorg_name: 编写你的第一个计算机程序
   codeintl_name: 编写你的第一个计算机程序
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -860,14 +865,14 @@
   tynkerapp_longdescription: 通过解决有趣的代码谜题来学习编程。 使用主题图案，10个以上的游戏包和可自定义的角色来轻松地创作游戏和故事。不需要连接互联网。你也可以在网页上查看你的作品。
   robomindnl_longdescription: '学生用控制自己的虚拟机器人来学习编程的基础知识. 在线课程是完全独立的短演示,电影,测验和 自动导引/提示来帮助编程练习. '
   flappy_longdescription: 使用拖放式的程式语言设计你自己Flappy游戏，并可自订它不同的外观（Flappy鲨鱼、Flappy圣诞老人、或任何角色）。只要点击一下，就可将游戏加到您的手机中。
-  bitsbox_longdescription: 定制您自己的虚拟平板电脑，然后编写一系列的Apps来使用及分享。让非常小的孩子透过简单体验来使用真正JAVAscript
+  bitsbox_longdescription: 定制您自己的虚拟平板电脑，然后编写一系列的Apps来使用及分享。让非常小的孩子透过简单体验来使用真正Javascript
     ，成为可能的事，您会达到比您想到还远。
   makeschool_longdescription: 学习如何使用适合初学者的一门新编程语言——Swift来制作一个iPhone游戏！开发一个以博&eacute;宝贝为背景的动作类游戏，并通过编写代码来教你的小怪兽新的招式。你将学会如何使用变量，函数和对象来帮助你的怪兽赢得胜利！
   touchdevelop_longdescription: '这个触摸屏友好的编辑器将引导您创建像素艺术品、解决小熊谜题，或者创作你自己的跳跳鸟游戏。 '
   appinventor_longdescription: 娱乐、 简短的影片教案引导您在您的Andr​​oid 手机或平板电脑上完成建立三个简单的APPs程式。它设计给新手和专家，此Hour
     of Code活动让你开始建构自己的Apps，在你了解它之前。想像一下与朋友分享您自己创造的应用程式！这些活动适合个人自学和教师带领的班级课程。
-  blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载Blockly 的自学教案，Code.org 教案的前辈元老—
-    — 一个3 MB ZIP 档案可以载入到任何一台电脑上或存在一个随身碟上使用。
+  blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载布洛克里的自学教案，Code.org 教案的前辈元老— —
+    一个3兆字节的压缩文件档案可以载入到任何一台电脑上或存在一个U盘上使用。
   thinkersmith2_longdescription: 学生以打开和关闭的功能学习如何在二进位档案中表示和储存字母。结束时，此课程获取自己名字的编码带回家。
   kodableunplugged_longdescription: '使用普通纸的设计，fuzzFamily Frenzy教导5 岁以上的孩子的程式设计逻辑。老师应解释这个游戏，然后学生作伴来完成一个简单的障碍课程。 '
   projguts_longdescription: 这次"不插电"活动由一群学生玩不同版本的剪刀/ 石头/ 布的游戏，以协助学生学习如何建模与模拟运作原理，并查看不同的模型的实验结果。
@@ -1101,3 +1106,8 @@
   infinity_shortcode: inf
   playlab_shortcode: 玩
   artist_shortcode: art
+  playlab_iceage_title_live: Ice Age
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>

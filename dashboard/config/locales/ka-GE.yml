@@ -733,11 +733,10 @@
         დაგვიკავშირდით.</a>
       go_to_code_studio: გადადით კოდის სტუდიაში
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: თუ შეურაცხმყოფელ კონტენტს, მუქარებს, ბულინგს ან საავტორო უფლებების
+          დამრღვევ კონტენტს გადააწყდით, შეავსეთ ქვემოთ მოცემული ფორმა. ჩვენ სერიოზულად
+          ვეკიდებით მომხმარებლების ჩივილებს, საგულდაგულოდ ვიკვლევთ ყველა სიტუაციას
+          და შესაბამის ზომებს მივმართავთ.
         validation:
           email: შეგვატყობინეთ თქვენი ელ. ფოსტა
           age: თუ შეიძლება, მიუთითეთ ასაკი

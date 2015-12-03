@@ -294,6 +294,7 @@ sr-SP:
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Izgradi Galaksiju sa Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -310,7 +311,7 @@ sr-SP:
   mc_name: Minecraft sat programiranja
   mc_longdescription: Користите блокове кода да поведете Стива или Алексу у авантуру кроз овај Мајнкрафт свет.
   mc_shortdescription: Користите блокове кода да поведете Стива или Алексу у авантуру кроз овај Мајнкрафт свет.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft sat programiranja
@@ -599,6 +600,7 @@ sr-SP:
   carousel_heading_ide: Платформе популарне са учитељима
   educator_notes: Белешке за едукаторе
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Како предавати Сат програмирања
   more_resources_educators: Више ресурса за учитеље и едукаторе
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -681,7 +683,7 @@ sr-SP:
   kodable_gradelevel: Основна школа (од 1. до 4. разреда)
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
+  flappy_gradelevel: Ages 6-106
   bitsbox_gradelevel: Основна школа (од 1. до 4. разреда)
   makeschool_gradelevel: Средња школа
   touchdevelop_gradelevel: Средња школа
@@ -690,12 +692,12 @@ sr-SP:
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
-  hourofcode_gradelevel: Ages 4-104
-  frozen_gradelevel: Ages 8+
-  starwars_gradelevel: Ages 6+
-  playlab_gradelevel: Ages 4-104
-  infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
+  hourofcode_gradelevel: Ages 6-106
+  frozen_gradelevel: Ages 8-108
+  starwars_gradelevel: Ages 6-106
+  playlab_gradelevel: Ages 6-14
+  infinity_gradelevel: Ages 6-14
+  artist_gradelevel: Ages 8-108
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged

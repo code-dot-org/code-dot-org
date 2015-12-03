@@ -322,17 +322,17 @@ et:
         studio_iceage_throw_hearts: |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
         studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_hello1: 'Anais otsib uusi sõpru. Aita tal öelda "tere", selleks lohista plokk "ütle" tööruumi ja kirjuta sellesse sõna "tere".'
+        studio_gumball_hello2: 'Darwin (tegelane 1) ja tema vend Gumball (tegelane 2) on teel kooli. Aita neil üksteist tervitada, kasutades kaks korda plokki "tegelaskuju ütleb".'
+        studio_gumball_move_to_flag: 'Banana Joe võidab kohe spordipäeva võidujooksu! Aita tal läbida viimased 200 pikslit, kasutades plokki "liiguta".'
+        studio_gumball_move_to_actor: 'Gumball (tegelane 1) ja Darwin (tegelane 2) jäävad spordipäevale hiljaks! Aita Gumballil läbida 200 pikslit Darwinini, kasutades plokki "liiguta tegelaskuju".  Seejärel ühenda plokk sündmusega "kui tegelane puudutab", et mängida heli, kui nad üksteist leiavad.'
+        studio_gumball_repeat: 'Ploki "korda igavesti" abil saad koodi pidevalt käitada. Kas oskad kinnitada plokid nii, et Gumball teeks võidujooksu jaoks soojendust, liikudes korduvalt vasakule ja paremale?'
+        studio_gumball_click_hello: 'Aita Antonil anda võidujooksu stardikorraldus: "Tähelepanu, valmis, läks!" Programmi katsetamiseks ära unusta klõpsata Antonil pärast nupu "Käivita" klõpsamist.'
+        studio_gumball_move_events: 'Darwin osaleb lipukogumisvõistlusel. Aita tal liikuda, kinnitades iga sündmuse külge plokk "liiguta". Kui oled valmis, klõpsa nuppu "Käivita" ja proovi koguda kokku kõik lipud.'
+        studio_gumball_sound_and_points: 'Siin on suurem osa koodist, mis aitab Antonil (tegelane 2) liikuda vasakule ja paremale ning samuti kood, mis paneb Banana Joe (tegelane 1) ekraanil liikuma. Kas oskad koodi lõpuni koostada ja lisada plokke sündmusele "kui tegelane puudutab", et siis, kui Banana Joe ja Anton kokku põrkavad, kostab heli ja saad punkti? Mängimiseks vajuta nuppu "Käivita".'
+        studio_gumball_warn_food_fight: 'Darwin pääses just toidusõjast. Määra taustaks "tegelased" ja sea Darwini liikumiskiirus kiireks ja siis vajuta nuppu "Käivita" ning liiguta ta Penny juurde, et teda hoiatada.'
+        studio_gumball_join_food_fight: 'Löö kaasa toidusõjas. Kasuta käsklust "tegelaskuju viskab eseme paremale", et Banana Joe (tegelane 1) loobiks Antonit (tegelane 2) toiduga. Kui Anton saab pihta, sea ta vihasesse meeleollu.'
+        studio_gumball_free_play: 'Loo oma mäng või lugu. Kui oled valmis, vajuta nuppu "Valmis" ja lase sõpradel telefonis, tahvelarvutis või arvutis lugu proovida.'
         studio_full_sandbox: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja lase sõpradel telefonis lugu proovida.
         studio_k1_1: 'Kas oskad panna koera ütlema "tere maailm"?'
         studio_k1_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks kass midagi?
@@ -511,9 +511,9 @@ et:
         mc_if_statements: Minecraft – „kui“-laused
         mc_congrats_share: Minecraft – palju õnne
         mc_congrats_no_share: Minecraft – palju õnne
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        gumball_intro: 'Gumballi KoodiTund - Sissejuhatus'
+        gumball_events: 'Gumballi KoodiTund - Sündmused'
+        gumball_repeat: 'Gumballi KoodiTund - "Korda" laused'
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

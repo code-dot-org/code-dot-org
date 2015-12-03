@@ -909,4 +909,14 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Je hebt 20 Mouse Droids nodig. Gebruik de 'voeg een Mouse Droid toe' in de 'als je een Mouse Droid krijgt' gebeurtenis om twee of meer Mouse Droids toe te voegen als je er een te pakken krijgt."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gefeliciteerd, je hebt een code toegevoegd om Mouse Droids te maken. Je kan naar de volgende puzzel gaan of opnieuw proberen 20 ervan te krijgen. Probeer het makkelijk te maken door meer ervan toe te voegen! (Hou de pijltoetsen op je toetsenbord (of scherm) om sneller te bewegen.)"},
 "failedChangeSettingTimeout":function(d){return "Pak drie Rebel Pilots om verder te gaan."},
-"failedChangeSettingSettings":function(d){return "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen."}};
+"failedChangeSettingSettings":function(d){return "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen."},
+"tapToReset":function(d){return "Tap to reset"},
+"tapToPlay":function(d){return "Tap to play"},
+"swipeToMove":function(d){return "Swipe to move"},
+"playlab_lastLevel_continueText":function(d){return "Done"},
+"setBackgroundIcy1":function(d){return "set icy 1 background"},
+"setBackgroundIcy2":function(d){return "set icy 2 background"},
+"setBackgroundIcy3":function(d){return "set icy 3 background"},
+"setBackgroundIcy4":function(d){return "set icy 4 background"},
+"setBackgroundIcy5":function(d){return "set icy 5 background"},
+"setBackgroundGround":function(d){return "set ground background"}};

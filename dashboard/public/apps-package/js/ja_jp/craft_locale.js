@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "\"プレイを続ける\" を押せば、ゲームに戻れます。"},
 "replayButton":function(d){return "リプレイ"},
 "selectChooseButton":function(d){return "選択"},
-"tooManyBlocksFail":function(d){return "パズル "+craft_locale.v(d,"puzzleNumber")+" をクリアしました。おめでとうございます! なお、これは "+craft_locale.p(d,"numBlocks",0,"ja",{"one":"1 ブロック","other":craft_locale.n(d,"numBlocks")+" 個のブロックでもクリアできます。"})}};
+"tooManyBlocksFail":function(d){return "パズル "+craft_locale.v(d,"puzzleNumber")+" を解きました。おめでとうございます! ちなみにブロック "+craft_locale.p(d,"numBlocks",0,"ja",{"one":"1 つ","other":craft_locale.n(d,"numBlocks")+" 個"})+" でも解くことができます。"}};

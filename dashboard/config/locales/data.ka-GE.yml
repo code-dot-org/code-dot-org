@@ -535,11 +535,11 @@
           around by attaching the "move" block to each of the events and changing
           the direction to work for each arrow key. When you’re done, click Run and
           try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
+        studio_iceage_sound_and_points: კოდის უმეტესობა უკვე დაწერილია - გრენი მოძრაობს
+          მარჯვნივ და მარცხნივ, სიდი კი მოძრაობს მთელ ეკრანზე. შეგიძლიათ დაასრულოთ
+          კოდი და დაუმატოთ "როცა პერსონაჟი ეხება" მოვლენას ისეთი ბლოკები, რომ როცა
+          გრენი და სიდი ერთმანეთს დაეხაჯებიან, პროგრამამ ხმაც დაუკარას და ქულაც დააგროვოს.
+          თამაშის დასაწყებას დააჭირეთ "გაშვებას".
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
           is coming! Change the background to "icebergs" and set Sid’s speed to fast,
           then press Run and move him to Diego to warn him.
