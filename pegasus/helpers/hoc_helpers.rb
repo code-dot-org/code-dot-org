@@ -20,6 +20,8 @@ def create_session_row_unless_unsampled(row)
 
   # Decide whether the session should be sampled.
   p = DCDO.get('hoc_activity_sample_proportion', 1.0).to_f
+  # don't sample for cartoon network
+  p = 1 if row[:company] == 'CN'
   p = 0 if p < 0 # Negative proportions aren't meaningful, so just treat them as disabling logging.
   if Kernel.rand < p  # If p=0, no sessions are in the sample.
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
