@@ -86,9 +86,10 @@ end
 
 def complete_tutorial(tutorial={})
   unless settings.read_only
-    # We intentionally allow this DB write even when hoc_activity_writes_disabled
-    # is set so we can generate personalized, shareable certificates.
-    row = DB[:hoc_activity].where(session: session_id).first unless
+    # We intentionally allow this DB write even for otherwise unsampled sessions so we can
+    # generate personalized, shareable certificates. Only a fraction of users reach the end
+    # so its OK to write here.
+    row = DB[:hoc_activity].where(session: session_id).first
     if row
       DB[:hoc_activity].where(id: row[:id]).update(
         finished_at: DateTime.now,
@@ -149,7 +150,7 @@ def launch_tutorial(tutorial,params={})
 end
 
 def launch_tutorial_pixel(tutorial)
-  unless settings.read_only || hoc_activity_writes_disabled
+  unless settings.read_only || unsampled_session?
     row = DB[:hoc_activity].where(session: session_id).first
     if row && !row[:pixel_started_at] && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(
