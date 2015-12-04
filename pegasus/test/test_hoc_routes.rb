@@ -9,6 +9,7 @@ class HocRoutesTest < Minitest::Test
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @mock_session = Rack::MockSession.new(MockPegasus.new, 'studio.code.org')
       @pegasus = Rack::Test::Session.new(@mock_session)
+      Gatekeeper.set('hoc_activity_writes_disabled', value: false)
     end
 
     it 'redirects to tutorial via shortcode' do
@@ -112,6 +113,29 @@ class HocRoutesTest < Minitest::Test
       after_end_row = get_session_hoc_activity_entry
       assert_datetime_within(after_end_row[:started_at], before_began_time, after_began_time)
       assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
+    end
+
+    it 'starts and ends given tutorial, with HoC writes disabled' do
+      Gatekeeper.set('hoc_activity_writes_disabled', value: true)
+
+      before_start_row = get_session_hoc_activity_entry
+      assert_nil before_start_row
+
+      assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+      after_start_row = get_session_hoc_activity_entry
+      assert_nil after_start_row
+
+      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
+      after_end_row = get_session_hoc_activity_entry
+      assert after_end_row[:session]
+    end
+
+    it 'goes to cert page with HoC writes disabled' do
+      Gatekeeper.set('hoc_activity_writes_disabled', value: true)
+
+      cert_id = make_certificate
+      assert cert_id
+      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")
     end
 
     private
