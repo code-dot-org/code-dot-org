@@ -132,4 +132,3 @@ See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
 हितयसि, [NAME], [TITLE]
 
-<%= view :signup_button %>

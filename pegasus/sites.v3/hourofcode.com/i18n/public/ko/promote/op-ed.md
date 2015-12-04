@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### 아래는 컴퓨터과학교육주간(Computer Science Education Week)과 그 목표들을 지지하는 특집 사설의 예시로서, 주의원, 지역의원, 비즈니스 리더 등에 의해 활용될 수 있습니다.
 
@@ -47,4 +46,3 @@ nav: promote_nav
 
 이번 주, <%= campaign_date('full') %>, 는 컴퓨터과학교육주간(Computer Science Education Week) 입니다. **[STATE]** 지역의 학교들을 통해서, 우리 학생들이 전세계적으로 진행되는 Hour of Code 행사에 참여하게 될 것입니다. Hour of Code 는 컴퓨터과학의 주제들을 이해하기 쉽게 설명하고, 희망적으로 흥미를 북돋우며 관심과 공부를 지속하게 할 수 있습니다. 저는 함께 참여할 것입니다. 저는, 함께 참여해 주실 수 있도록 여러분들도 초청하고 싶습니다. 우리 모두가 코딩을 배워야 합니다. Https://hourofcode.com/ 를 방문해서 <%= @country %>자세한 내용을 살펴보고 시작하세요. 그리고 **[STATE]**의 더 많은 학교들이 컴퓨터과학(정보과학) 과목을 가르칠 수 있도록 하는 우리의 노력에 함께 동참해 주세요..
 
-<%= view :signup_button %>

@@ -132,4 +132,3 @@ Hour of Code由非營利組織 Code.org 和 超過100 多個夥伴單位舉辦�
 
 此致， \[姓名\] \[職稱\]
 
-<%= view :signup_button %>
