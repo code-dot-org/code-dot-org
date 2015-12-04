@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Faydalı statistik məlumatlar
 
@@ -20,4 +19,3 @@ Kompüterlər artıq hər yerdə var, amma informatikanın tədris olunduğu mə
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

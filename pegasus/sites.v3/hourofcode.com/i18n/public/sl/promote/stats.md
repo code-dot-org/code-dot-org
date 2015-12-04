@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Dejstva in uporabna statistika
 
@@ -20,4 +19,3 @@ nav: promote_nav
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

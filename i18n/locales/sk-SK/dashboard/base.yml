@@ -462,7 +462,7 @@ sk:
       unused: Nepoužité úrovne
   upsell:
     hoc:
-      title: Hodina kódovania
+      title: Classic Maze
       body: Skúste základy informatiky. Milióny jej dali šancu.
     flappy:
       title: Flappy Code

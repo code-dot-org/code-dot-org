@@ -320,7 +320,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "Έχεις ασύνδετα μπλοκ."},
 "extraTopBlocksWhenRun":function(d){return "Έχεις ασύνδετα μπλοκ. Μήπως εννοείς να τα συνδέσεις στο μπλοκ \"όταν τρέχει\";"},
 "finalStage":function(d){return "Συγχαρητήρια! τέλειωσες το τελικό στάδιο."},
-"finalStageTrophies":function(d){return "Συγχαρητήρια! Τέλειωσες το τελευταίο στάδιο και κέρδισες "+common_locale.p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":common_locale.n(d,"numTrophies")+" τράπαια"})+"."},
+"finalStageTrophies":function(d){return "Συγχαρητήρια! Τέλειωσες το τελευταίο στάδιο και κέρδισες "+common_locale.p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":common_locale.n(d,"numTrophies")+" τρόπαια"})+"."},
 "finish":function(d){return "Τερματισμός"},
 "generatedCodeInfo":function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"},
 "hashError":function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με κανένα αποθηκευμένο πρόγραμμα."},

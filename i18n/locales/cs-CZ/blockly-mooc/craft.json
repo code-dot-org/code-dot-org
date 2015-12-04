@@ -74,7 +74,7 @@
   "level5FailureMessage":"Postav zeď položením bloků na pruh hlíny. Růžový příkaz „opakuj“ opakovaně provádí příkazy v něm umístěné, například „polož blok“ a „jdi vpřed“.",
   "level6FailureMessage":"Pro vyřešení úkolu polož bloky na hliněný obrys domu.",
   "level7FailureMessage":"Použij příkaz „zasaď plodinu“ k umístění plodin na každý čtvereček tmavé hlíny.",
-  "level8FailureMessage":"Když se dotkneš Creepera, exploduje. Proklouzni kolem nich a vejdi do svého domu.",
+  "level8FailureMessage":"Když se dotkneš creepera, exploduje. Proklouzni kolem nich a vejdi do svého domu.",
   "level9FailureMessage":"Nezapomeň umístit 2 louče k osvětlení cesty, a natěžit aspoň 2 kusy uhlí.",
   "minecraftBlock":"blok",
   "nextLevelMsg":"Hádanka {puzzleNumber} dokončena. Blahopřejeme!",

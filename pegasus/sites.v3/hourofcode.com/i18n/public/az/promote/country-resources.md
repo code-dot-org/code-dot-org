@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Kod Saatına start vermək üçün şagirdlərinizə ruhlandırıcı bir video g
 
 <% end %>
 
-<%= view :signup_button %>
