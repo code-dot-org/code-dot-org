@@ -966,6 +966,18 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_nil response['level_source']
   end
 
+  test 'sharing when gatekeeper has disabled sharing for some other script still works' do
+    Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
+
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
+
+    assert_nil response['share_failure']
+    assert response['level_source'].match(/^http:\/\/test.host\/c\//)
+  end
+
   test 'milestone changes to next stage in default script' do
     last_level_in_stage = @script_level.script.script_levels.select{|x|x.level.game.name == 'Artist'}.last
     post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
