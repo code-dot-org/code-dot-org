@@ -3,6 +3,8 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 
+ENV['RACK_ENV'] = 'test'
+
 class HocRoutesTest < Minitest::Test
   describe 'HOC Routes' do
     before do
