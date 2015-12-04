@@ -282,9 +282,11 @@ Craft.init = function (config) {
         Craft.initializeAppLevel(config.level);
       }
 
-      // Adjust visualizationColumn width.
-      var visualizationColumn = document.getElementById('visualizationColumn');
-      visualizationColumn.style.width = this.nativeVizWidth + 'px';
+      if (studioApp.hideSource) {
+        // Set visualizationColumn width in share mode so it can be centered
+        var visualizationColumn = document.getElementById('visualizationColumn');
+        visualizationColumn.style.width = this.nativeVizWidth + 'px';
+      }
     },
     twitter: {
       text: "Share on Twitter",
