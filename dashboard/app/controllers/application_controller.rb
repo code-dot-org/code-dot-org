@@ -208,6 +208,10 @@ class ApplicationController < ActionController::Base
     cookies[:language_] = { value: locale, domain: :all, expires: 10.years.from_now}
   end
 
+  def set_partner_cookie(partner)
+    cookies[:partner] = {value: partner, domain: :all, path: '/'}
+  end
+
   def require_levelbuilder_mode
     unless Rails.application.config.levelbuilder_mode
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')

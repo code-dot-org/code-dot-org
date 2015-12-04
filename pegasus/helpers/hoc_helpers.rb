@@ -108,6 +108,7 @@ def complete_tutorial(tutorial={})
     destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
     destination += "&co=#{row[:company]}" unless row[:company].blank?
     destination += "&s=#{Base64.urlsafe_encode64(tutorial[:code])}" unless tutorial[:code].blank?
+    destination += "&partner=#{request.cookies['partner']}" if request.cookies['partner']
   end
 
   dont_cache
