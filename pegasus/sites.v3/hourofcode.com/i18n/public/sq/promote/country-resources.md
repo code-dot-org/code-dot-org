@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Shfaqju studentëve një video inspiruese për të nisur Orën e Kodimit. Shembu
 
 <% end %>
 
-<%= view :signup_button %>

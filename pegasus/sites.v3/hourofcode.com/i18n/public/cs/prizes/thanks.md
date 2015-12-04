@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Děkujeme, že jste se přihlásili k šanci o výhru $10,000 v hardwarových cenách
 
@@ -32,4 +31,3 @@ Naverbujte lokální skupinu - chlapecké/holčičí skautské kluby, kostely, u
 
 [pošlete tento email](<%= resolve_url('/promote/resources#politicians') %>) vašemu starostovi, městké radě nebo školní radě a přizvite je k návštěvě vaší školy.
 
-<%= view :signup_button %>

@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire school district.
 
@@ -24,4 +23,3 @@ nav: how_to_nav
 
   6. **More [prizes](<%= resolve_url('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. In iedere staat, zal één deelnemende school voor $10,000 aan technologie winnen voor hun school!
 
-<%= view :signup_button %>

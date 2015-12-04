@@ -132,4 +132,3 @@ Lūdzu sazinieties ar mani izmantojot [E-PASTS VAI TELEFONS]. Ar nepacietību ga
 
 Ar cieņu, [NAME], [TITLE]
 
-<%= view :signup_button %>

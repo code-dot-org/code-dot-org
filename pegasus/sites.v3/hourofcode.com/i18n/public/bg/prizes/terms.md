@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Награди - правила и условия
 
@@ -40,4 +39,3 @@ Code.org ще се свърже с организаторите след Hour of
 
 <% end %>
 
-<%= view :signup_button %>

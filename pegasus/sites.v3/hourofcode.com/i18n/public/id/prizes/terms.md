@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Hadiah - syarat dan ketentuan
 
@@ -40,4 +39,3 @@ Hadiah terbatas hanya pada kelas K-12 di U.S dan Kanada. Code.org akan secara ac
 
 <% end %>
 
-<%= view :signup_button %>
