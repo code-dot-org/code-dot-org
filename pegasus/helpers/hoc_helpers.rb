@@ -24,7 +24,7 @@ def create_session_row_unless_unsampled(attrs)
   # Decide whether the session should be sampled.
   weight = DCDO.get('hoc_activity_sample_weight', 1).to_i
 
-  # don't sample for cartoon network
+  # Don't sample for cartoon network since we always need to create a session row.
   weight = 1 if attrs[:company] == CARTOON_NETWORK
 
   if weight > 0 && Kernel.rand < (1.0 / weight)
@@ -104,7 +104,9 @@ def complete_tutorial(tutorial={})
         finished_ip: request.ip,
       )
     else
-      # Use weight of 0 for unsampled session so we don't double count.
+      # Use weight of 0 for unsampled sessions so that we don't double count.
+      # Otherwise, use a weight of 1 so that we count the user. This happens only
+      # in the corner case when a user skips to the end without going to the beginning.
       weight = (unsampled_session?) ? 0 : 1
       row = create_session_row({
         referer: request.host_with_port,
