@@ -465,7 +465,7 @@ de:
       unused: Unbenutzte Levels
   upsell:
     hoc:
-      title: Programmierstunde
+      title: Classic Maze
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben es schon probiert.
     flappy:
       title: Flappy Code

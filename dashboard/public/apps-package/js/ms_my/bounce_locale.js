@@ -240,7 +240,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleSpeedRandom":function(d){return "Tetapkan kelajuan pedal rawak"},
 "setPaddleSpeedVerySlow":function(d){return "menetapkan kelajuan kayuhan yang perlahan"},
 "setPaddleSpeedSlow":function(d){return "menetapkan kelajuan perlahan"},
-"setPaddleSpeedNormal":function(d){return "set normal paddle speed"},
+"setPaddleSpeedNormal":function(d){return "tetapkan kelajuan dayung yang normal"},
 "setPaddleSpeedFast":function(d){return "set fast paddle speed"},
 "setPaddleSpeedVeryFast":function(d){return "set very fast paddle speed"},
 "setPaddleSpeedTooltip":function(d){return "Sets the speed of the paddle"},

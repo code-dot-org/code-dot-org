@@ -475,6 +475,9 @@ ko:
         infinity_playlab_intro: '플레이 랩 - 소개'
         infinity_playlab_events: '플레이 랩 - 이벤트'
         infinity_playlab_repeat_forever: '플레이 랩 - 무한 반복'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -528,6 +531,9 @@ ko:
         gumball_intro: 'Hour of Code 껌볼 - 소개'
         gumball_events: 'Hour of Code 껌볼 - 이벤트'
         gumball_repeat: 'Hour of Code 껌볼 - 반복문'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

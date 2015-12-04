@@ -165,7 +165,7 @@
   "extraTopBlocks":"你有一些流浪在外的區塊。",
   "extraTopBlocksWhenRun":"你有一些在外面流浪的區塊喔。你是不是要讓它們回到「當按下執行時」的積木身邊？",
   "finalStage":"恭喜你 ！你已完成最後關卡的挑戰。",
-  "finalStageTrophies":"恭喜! 你已完成最後關卡並且贏得了 {numTrophies, plural, one {1 個獎盃} other {# 個獎盃}}。",
+  "finalStageTrophies":"恭喜! 你已完成最後關卡並且贏得 {numTrophies, plural, one {一個獎盃} other {# 獎盃}}.",
   "finish":"完成 ",
   "generatedCodeInfo":"就連頂尖大學也使用程式積木來進行程式教學（例如： {berkeleyLink}, {harvardLink}）。但是藏在底下的是，你所組裝的每個程式積木都可以用 JavaScript 語法（世界上使用最廣的程式語言之一）來表示：",
   "hashError":"對不起，'%1' 無法對應任何已儲存的程式。",

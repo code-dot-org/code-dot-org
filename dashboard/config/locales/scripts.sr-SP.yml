@@ -1634,8 +1634,8 @@
         mc:
           title: Minecraft sat programiranja
           description_short: Истражите Мајнкрафт свет кроз кôд
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          description: Користите блокове кода да поведете Стива или Алекс у авантуру
+            кроз овај Мајнкрафт свет
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

@@ -462,7 +462,7 @@ pt:
       unused: Níveis por utilizar
   upsell:
     hoc:
-      title: Hora de Código
+      title: Classic Maze
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
     flappy:
       title: Flappy Bird
