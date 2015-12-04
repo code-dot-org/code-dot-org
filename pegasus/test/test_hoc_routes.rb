@@ -246,7 +246,7 @@ class HocRoutesTest < Minitest::Test
     # Extracts the sampling weight from a hoc_activity row. We would like to add
     # a separate column for maintaining this but this is too expensive/risky before
     # Hour of Code 2015, so it is current embedded in the session id. For example,
-    # _2_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.0.
+    # _2_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.
     def get_sampling_weight(row)
       row[:session].split('_')[1].to_i
     end
