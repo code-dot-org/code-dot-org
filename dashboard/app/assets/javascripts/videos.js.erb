@@ -39,6 +39,7 @@ function createVideo(options) {
 //   onClose - actions to take after closing the video dialog, or immediately
 //             if the video isn't shown.
 function showVideoDialog(options, forceShowVideo) {
+  options['force_fallback'] = true;
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
@@ -148,18 +149,6 @@ function showVideoDialog(options, forceShowVideo) {
   $(video).height(divHeight);
 
   notesDiv.height(divHeight);
-
-  if (window.YT && window.YT.loaded) {
-    onYouTubeIframeAPIReady();
-  } else {
-    // Use the official YouTube IFrame Player API to load the YouTube video.
-    // Ref: https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    // calls window.onYouTubeIframeAPIReady
-  }
 
   dialog.show();
 
