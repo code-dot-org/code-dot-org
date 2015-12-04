@@ -27,7 +27,6 @@ get '/api/hour/begin/:code' do |code|
   company = request.GET['company']
   # Pass through the company param to the congrats page only if an entry exists in the forms,
   # or for the special case of cartoon network, where we need the company to add a customized link.
-  CARTOON_NETWORK = 'CN'
   unless company.nil? || company == CARTOON_NETWORK
     company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
   end
