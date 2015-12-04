@@ -95,7 +95,7 @@ body {
   background-color: transparent !important;
 }
 
-.small-footer-base {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: $footer-background;
   color: $footer-text–and-arrow;
   & a:hover {
