@@ -917,11 +917,31 @@ levels.playlab_7 = {
 levels.iceage_repeat = utils.extend(levels.playlab_7, {
   background: 'icy1',
   firstSpriteIndex: 4,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
   background: 'dots',
   firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
@@ -1478,7 +1498,7 @@ levels.gumball_join_food_fight = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16, 0, 0, 0, 0, 0, 16, 0],
+    [16,0, 0, 0, 0, 16,0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1562,7 +1582,11 @@ levels.sandbox =  {
 };
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
-levels.playlab_10 = utils.extend(levels.sandbox, {});
+levels.playlab_10 = utils.extend(levels.sandbox, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
 levels.iceage_free_play = utils.extend(levels.playlab_10, {
   appStringsFunctions: {
     continueText: msg.playlab_lastLevel_continueText
