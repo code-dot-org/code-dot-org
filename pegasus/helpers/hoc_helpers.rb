@@ -6,24 +6,25 @@ UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
 # Creates a session row and sets the hour of code cookie to the session_id,
 # if the user is assigned to the sample set (as decided by a random choice
-# based on the hoc_activity_sample_proportion DCDO variable).
+# based on the reciprocoal of the hoc_activity_sample_weight DCDO variable).
 #
 # If, however, the user is not in the sample, returns nil and sets the cookie
 # to UNSAMPLED_SESSION_ID.
 #
-# The "weight" encoded in the session row is set to 1/p, where p is the
-# proportion of sessions in the sample, so that reports can compute the
-# approximate number of actual sessions by summing over the weights.
-def create_session_row_unless_unsampled(row)
+# The "weight" encoded in the session row is set to hoc_activity_sample_weight
+# and the probability that a given sample will be in the session is
+# 1 / weight, so that reports can compute the approximate number of actual sessions
+# by summing over the weights. A weight of 0 is defined to mean nothing should be
+# sampled, as is a negative weight.
+def create_session_row_unless_unsampled(attrs)
   # We don't need to do anything if we've already decided this session is unsampled.
   return if unsampled_session?
 
   # Decide whether the session should be sampled.
-  p = DCDO.get('hoc_activity_sample_proportion', 1.0).to_f
-  p = 0 if p < 0 # Negative proportions aren't meaningful, so just treat them as disabling logging.
-  if Kernel.rand < p  # If p=0, no sessions are in the sample.
+  weight = DCDO.get('hoc_activity_sample_weight', 1).to_i
+  if weight > 0 && Kernel.rand < (1.0 / weight)
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
-    row = create_session_row(row, weight: 1.0 / p)
+    row = create_session_row(attrs, weight: weight)
   else
     # Otherwise set the hoc cookie to make the session as unsampled.
     set_hour_of_code_cookie_for_row(session: UNSAMPLED_SESSION_ID)
@@ -53,7 +54,7 @@ end
 def create_session_id(weight)
   # Round to 6 digits after the decimal place to ensure the don't exceed the maximum length (50)
   # of the session column in the database.
-  "_#{weight.round(6)}_#{SecureRandom.hex}"
+  "_#{weight}_#{SecureRandom.hex}"
 end
 
 # Returns the session id for the current session if sampled, or nil if unset or unsampled.
@@ -98,11 +99,14 @@ def complete_tutorial(tutorial={})
         finished_ip: request.ip,
       )
     else
-      row = create_session_row(
+      # Use weight of 0 for unsampled session so we don't double count.
+      weight = (unsampled_session?) ? 0 : 1
+      row = create_session_row({
         referer: request.host_with_port,
         tutorial: tutorial[:code],
         finished_at: DateTime.now,
-        finished_ip: request.ip,
+        finished_ip: request.ip},
+        weight: weight
       )
     end
     destination = "http://#{row[:referer]}/congrats?i=#{row[:session]}"
