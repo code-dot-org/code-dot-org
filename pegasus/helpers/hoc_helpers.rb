@@ -57,8 +57,6 @@ end
 # We should actually use a separate column for the weight, but need to defer adding
 # that column until after the hour of code. (hoc_activity currently has ~100M rows).
 def create_session_id(weight)
-  # Round to 6 digits after the decimal place to ensure the don't exceed the maximum length (50)
-  # of the session column in the database.
   "_#{weight}_#{SecureRandom.hex}"
 end
 
