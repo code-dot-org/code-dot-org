@@ -44,6 +44,10 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=VjFQeG97a9E"><strong>Time to code is now (1 min)</strong></a>
 
+<br/><br/>
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg"/>
+
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد  نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
