@@ -565,11 +565,14 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          var reinfFeedbackMsg = (options.appStrings &&
+              options.appStrings.reinfFeedbackMsg) || '';
+
           if (options.level.disableFinalStageMessage) {
-            message = options.appStrings.reinfFeedbackMsg;
+            message = reinfFeedbackMsg;
           } else {
-            message = finalLevel ? msg.finalStage(msgParams) : '';
-            message = message + ' ' + options.appStrings.reinfFeedbackMsg;
+            message = finalLevel ? (msg.finalStage(msgParams) + ' ') : '';
+            message = message + reinfFeedbackMsg;
           }
         } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
