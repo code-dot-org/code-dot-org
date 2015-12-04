@@ -242,6 +242,7 @@ html, body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  position: relative;
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
