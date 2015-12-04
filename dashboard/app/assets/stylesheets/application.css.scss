@@ -2111,3 +2111,21 @@ $width: 400px;
     margin-left: $width;
   }
 }
+
+div#tryHoc {
+  font-size: 20px;
+  padding: 10px 15px;
+  text-align: right;
+  margin:0;
+  right: 0;
+  a {
+    color: #999;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  img#hocLogo {
+    width:40px;
+  }
+}

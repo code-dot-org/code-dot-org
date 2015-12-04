@@ -253,6 +253,12 @@ StudioApp.prototype.init = function(config) {
 
   if (config.isLegacyShare && config.hideSource) {
     $("body").addClass("legacy-share-view");
+    if (dom.isMobile()) {
+      var tryHoc = document.getElementById("tryHoc");
+      if (tryHoc) {
+        tryHoc.style.display = 'none';
+      }
+    }
     if (dom.isIOS() && !window.navigator.standalone) {
       addToHome.show(true);
     }
