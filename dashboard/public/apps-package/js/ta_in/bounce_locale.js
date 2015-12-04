@@ -186,7 +186,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveLeftTooltip":function(d){return "Move the paddle to the left."},
 "moveRight":function(d){return "move right"},
 "moveRightTooltip":function(d){return "Move the paddle to the right."},
-"moveUp":function(d){return "move up"},
+"moveUp":function(d){return "மேலே நகர்"},
 "moveUpTooltip":function(d){return "Move the paddle up."},
 "nextLevel":function(d){return "வாழ்த்துக்கள்! நீங்கள் இந்த புதிர் தீர்த்துவிட்டீர்கள்."},
 "no":function(d){return "இல்லை"},
