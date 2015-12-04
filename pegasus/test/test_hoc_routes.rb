@@ -3,7 +3,15 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 
-ENV['RACK_ENV'] = 'test'
+
+# Set up the rack environment to be test and recreate the Gatekeeper and DCDO in that mode.
+CDO.rack_env = 'test'
+def redefine_const_without_warning(const, value)
+  self.class.send(:remove_const, const)
+  self.class.const_set(const, value)
+end
+redefine_const_without_warning :Gatekeeper, GatekeeperBase.create
+redefine_const_without_warning :DCDO, DCDOBase.create
 
 class HocRoutesTest < Minitest::Test
   describe 'HOC Routes' do
@@ -11,6 +19,8 @@ class HocRoutesTest < Minitest::Test
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @mock_session = Rack::MockSession.new(MockPegasus.new, 'studio.code.org')
       @pegasus = Rack::Test::Session.new(@mock_session)
+      DCDO.clear
+      Gatekeeper.clear
     end
 
     it 'redirects to tutorial via shortcode' do
@@ -69,54 +79,68 @@ class HocRoutesTest < Minitest::Test
     end
 
     it 'starts and ends given tutorial, tracking company and tutorial' do
-      with_test_company 'testcompany'
+      DB.transaction(rollback: :always) do
+        with_test_company 'testcompany'
 
-      before_start_row = get_session_hoc_activity_entry
-      assert_nil before_start_row
+        before_start_row = get_session_hoc_activity_entry
+        assert_nil before_start_row
 
-      assert_redirects_from_to '/api/hour/begin_company/testcompany',
-                               '/learn?company=testcompany'
-      assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
-                               '/mc'
+        assert_redirects_from_to '/api/hour/begin_company/testcompany',
+                                 '/learn?company=testcompany'
+        assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
+                                 '/mc'
 
-      after_start_row = get_session_hoc_activity_entry
-      assert_equal 'testcompany', after_start_row[:company]
-      assert_equal 'mc', after_start_row[:tutorial]
-      assert after_start_row[:started_at]
+        after_start_row = get_session_hoc_activity_entry
+        assert_equal 'testcompany', after_start_row[:company]
+        assert_equal 'mc', after_start_row[:tutorial]
+        assert after_start_row[:started_at]
 
-      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
-      assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
-      assert_includes @pegasus.last_request.url, '&co=testcompany'
+        assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
+        assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
+        assert_includes @pegasus.last_request.url, '&co=testcompany'
 
-      after_end_row = get_session_hoc_activity_entry
-      assert_equal 'testcompany', after_end_row[:company]
-      assert_equal 'mc', after_end_row[:tutorial]
-      assert after_end_row[:finished_at]
-
-      remove_test_company 'testcompany'
+        after_end_row = get_session_hoc_activity_entry
+        assert_equal 'testcompany', after_end_row[:company]
+        assert_equal 'mc', after_end_row[:tutorial]
+        assert after_end_row[:finished_at]
+      end
     end
 
     it 'starts and ends given tutorial, tracking time' do
-      before_start_row = get_session_hoc_activity_entry
-      assert_nil before_start_row
+      DB.transaction(rollback: :always) do
 
-      before_began_time = now_in_sequel_datetime
-      assert_redirects_from_to '/api/hour/begin/mc', '/mc'
-      after_began_time = now_in_sequel_datetime
+        before_start_row = get_session_hoc_activity_entry
+        assert_nil before_start_row
 
-      after_start_row = get_session_hoc_activity_entry
-      assert_datetime_within(after_start_row[:started_at], before_began_time, after_began_time)
-      assert_nil after_start_row[:finished_at]
+        before_began_time = now_in_sequel_datetime
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        after_began_time = now_in_sequel_datetime
 
-      before_ended_time = now_in_sequel_datetime
-      assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
-      after_ended_time = now_in_sequel_datetime
-      after_end_row = get_session_hoc_activity_entry
-      assert_datetime_within(after_end_row[:started_at], before_began_time, after_began_time)
-      assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
+        after_start_row = get_session_hoc_activity_entry
+
+        assert_equal 1.0, get_sampling_weight(after_start_row)
+        assert_datetime_within(after_start_row[:started_at], before_began_time, after_began_time)
+        assert_nil after_start_row[:finished_at]
+
+        before_ended_time = now_in_sequel_datetime
+        assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
+        after_ended_time = now_in_sequel_datetime
+        after_end_row = get_session_hoc_activity_entry
+        assert_datetime_within(after_end_row[:started_at], before_began_time, after_began_time)
+        assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
+      end
     end
 
     private
+
+    # Extracts the sampling weight from a hoc_activity row. We would like to add
+    # a separate column for maintaining this but this is too expensive/risky before
+    # Hour of Code 2015, so it is current embedded in the session id. For example,
+    # _2.0_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.0.
+    def get_sampling_weight(row)
+      row[:session].split('_')[1].to_f
+    end
+
     def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
       assert (before_begin_time..after_begin_time).cover?(after_start_time)
     end
