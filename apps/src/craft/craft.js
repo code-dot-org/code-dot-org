@@ -718,6 +718,7 @@ Craft.reportResult = function (success) {
         feedbackType: testResultType,
         response: response,
         level: Craft.initialConfig.level,
+        defaultToContinue: Craft.shouldDefaultToContinue(testResultType),
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
@@ -731,6 +732,12 @@ Craft.reportResult = function (success) {
       });
     }
   });
+};
+
+Craft.shouldDefaultToContinue = function(testResultType) {
+  var isFreePlay = testResultType === TestResults.FREE_PLAY;
+  var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+  return isSuccess && !isFreePlay;
 };
 
 Craft.replayTextForResult = function (testResultType) {
