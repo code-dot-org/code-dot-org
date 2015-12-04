@@ -462,7 +462,7 @@ pl:
       unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: Godzina kodowania
+      title: Classic Maze
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
     flappy:
       title: Flappy Code

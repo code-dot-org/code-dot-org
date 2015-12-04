@@ -321,7 +321,7 @@ bg:
         studio_iceage_throw_hearts: 'Сид иска да каже на Грани, че я обича. Използвайте командата "актьор хвърля", за да може Сид (актьор 1) да хвърли сърца на Грани (актьор 2)! Задайте на Грани щастливо настроение, когато тя получи сърцата.'
         studio_iceage_free_play: Време е да създадете своя собствена игра или история! Когато сте готови, щракнете върху Готово, за да споделите с приятели, за да опитат играта на техните телефони, таблети или компютри!
         studio_gumball_hello1: 'Анаис иска да си намери нови приятели. Можете ли да ѝ помогнете да каже "Здравей"? Плъзнете блок за думи в работната област и напишете думата "Здравей" вътре.'
-        studio_gumball_hello2: 'Дарвин (актьор 1) и неговия брат Гъмбол (актьор 2) отиват на училище.  Помогни им да се поздравяват взаимно с помощта на два "актьор казва" блока.'
+        studio_gumball_hello2: 'Дарвин (актьор 1) и неговия брат Гъмбол (актьор 2) отиват на училище.  Помогни им да се поздравяват взаимно с помощта на два блока за текст.'
         studio_gumball_move_to_flag: 'Банана Джо е на път да спечели състезанието!  Помогнете му да измине последните 200 пиксела с използване на блок за движение.'
         studio_gumball_move_to_actor: 'Гъмбол (актьор 1) и Дарвин (актьор 2) са закъснели за състезанието! Помогнете на Гъмбол да извърви 200 пиксела до Дарвин. Използвайте "премести актьор" блок.  После свържете блок за звук със събитието "когато актьор докосва". Когато се намерят ще прозвучи звук.'
         studio_gumball_repeat: 'Блокът "повтаряй завинаги" позволява да се стартира код непрекъснато.  Може ли да прикачите блокове към него, за да помогнете на Гъмбол да се движи много пъти наляво и надясно по време на състезанието?'
@@ -459,6 +459,9 @@ bg:
         infinity_playlab_intro: 'Игрална лаборатория - Въведение'
         infinity_playlab_events: 'Игрална лаборатория - Събития'
         infinity_playlab_repeat_forever: 'Игрална Лаборатория - повторение завинаги'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -512,6 +515,9 @@ bg:
         gumball_intro: 'Гъмбол Hour of Code - Въведение'
         gumball_events: 'Гъмбол Hour of Code - Събития'
         gumball_repeat: 'Гъмбол Hour of Code - повторение на отчети'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
