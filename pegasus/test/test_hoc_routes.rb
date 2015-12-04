@@ -178,12 +178,12 @@ class HocRoutesTest < Minitest::Test
         assert_successful_png_get '/api/hour/begin_mc.png'
         row = get_session_hoc_activity_entry
         session = row[:session]
-        assert_equal 2, get_sampling_weight(row)
+        assert_in_delta 2.0, get_sampling_weight(row)
 
         assert_successful_png_get '/api/hour/finish_mc.png'
         after_end_row = get_session_hoc_activity_entry
         assert_equal session, row[:session]
-        assert_equal 2, get_sampling_weight(row)
+        assert_in_delta 2.0, get_sampling_weight(row)
       end
     end
 
@@ -203,7 +203,7 @@ class HocRoutesTest < Minitest::Test
         assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
       end
     end
-    
+
     private
 
     # Extracts the sampling weight from a hoc_activity row. We would like to add
