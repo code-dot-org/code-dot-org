@@ -699,11 +699,16 @@ Craft.reportResult = function (success) {
 
   var keepPlayingText = Craft.replayTextForResult(testResultType);
 
+  var image = Craft.initialConfig.level.freePlay ?
+      Craft.gameController.getScreenshot() : null;
+  var encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
+
   studioApp.report({
     app: 'craft',
     level: Craft.initialConfig.level.id,
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
+    image: encodedImage,
     program: encodeURIComponent(
         Blockly.Xml.domToText(
             Blockly.Xml.blockSpaceToDom(
@@ -726,7 +731,7 @@ Craft.reportResult = function (success) {
           tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
           generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
-        feedbackImage: Craft.initialConfig.level.freePlay ? Craft.gameController.getScreenshot() : null,
+        feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay
       });
     }
