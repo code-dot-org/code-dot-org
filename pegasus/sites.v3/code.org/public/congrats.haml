@@ -26,10 +26,11 @@ max_age: 60
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
 -company_param = params[:co]
--# Our partnership with cartoon network piggy-backs on our company profile infrastructure.
--# Do not show company profile sections for cartoon network, even if someone accidentally
--# creates an entry for them in the forms table.
--form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param && company_param != 'CN'
+-# Do not show company profile sections for the cartoon network, even if someone
+-# accidentally creates an entry for them in the forms table. (Our partnership
+-# with cartoon network piggy-backs on our company profile infrastructure.)
+-CARTOON_NETWORK = 'CN'
+-form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param && company_param != CARTOON_NETWORK
 -@company = company = JSON.parse(form[:data]) if form
 -if company
   %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
@@ -53,7 +54,7 @@ max_age: 60
     %h1=I18n.t :congratulations_on_completing_hoc
 
 
-  -if company_param == 'CN' && cert_script == 'gumball'
+  -if company_param == CARTOON_NETWORK && cert_script == 'gumball'
     -if request.locale == 'ar-SA'
       -# Users who started at https://code.org/api/hour/begin/gumball?company=CN&lang=ar
       -# should see this block when they finish.
