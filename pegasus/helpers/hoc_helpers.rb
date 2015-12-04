@@ -6,7 +6,7 @@ UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
 # Creates a session row and sets the hour of code cookie to the session_id,
 # if the user is assigned to the sample set (as decided by a random choice
-# based on the reciprocoal of the hoc_activity_sample_weight DCDO variable).
+# based on the reciprocal of the hoc_activity_sample_weight DCDO variable).
 #
 # If, however, the user is not in the sample, returns nil and sets the cookie
 # to UNSAMPLED_SESSION_ID.

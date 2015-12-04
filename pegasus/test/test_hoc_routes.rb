@@ -171,6 +171,30 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
+    it 'handles 0 sampling weight correctly' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_weight', 0)
+        Kernel.stubs(:rand).returns(0.1)
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+
+        row = get_session_hoc_activity_entry
+        assert_nil row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+      end
+    end
+
+    it 'handles negative sampling weight correctly' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_weight', -1)
+        Kernel.stubs(:rand).returns(0.1)
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+
+        row = get_session_hoc_activity_entry
+        assert_nil row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+      end
+    end
+
     it 'records weight for tracking pixel in sample' do
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 2)
