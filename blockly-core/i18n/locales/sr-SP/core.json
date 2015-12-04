@@ -370,7 +370,7 @@
   "TEXT_TEXT_HELPURL": "http://en.wikipedia.org/wiki/String_(computer_science)",
   "TEXT_TEXT_TOOLTIP": "Слово, реч, линија текста.",
   "TEXT_TRIM_HELPURL": "https://code.google.com/p/blockly/wiki/Text#Trimming_%28removing%29_spaces",
-  "TEXT_TRIM_OPERATOR_BOTH": "скратити простор са обе стране",
+  "TEXT_TRIM_OPERATOR_BOTH": "уклони размак са обе стране",
   "TEXT_TRIM_OPERATOR_LEFT": "уклони размак са леве стране",
   "TEXT_TRIM_OPERATOR_RIGHT": "уклони размак са десне стране",
   "TEXT_TRIM_TOOLTIP": "Враћа копију текста са уклоњеним размацима са почетка и/или краја текста.",
