@@ -170,7 +170,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
-  var onlyContinue = continueButton && !againButton && !previousLevelButton;
+  var hasNeitherBackButton = !againButton && !previousLevelButton;
+  var onlyContinue = continueButton && (hasNeitherBackButton || options.defaultToContinue);
 
   var onHidden = onlyContinue ? options.onContinue : null;
   var icon;
