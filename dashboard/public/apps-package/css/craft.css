@@ -1848,6 +1848,67 @@ a.video_link {
   color: #f1f1f1 !important;
   font-size: 26px;
   font-family: "Gotham 5r", sans-serif !important; }
+  .dash_modal button.mc-share-button, .minecraft button.mc-share-button {
+    border-style: solid !important;
+    border-width: 3px 3px 5px 5px !important;
+    image-rendering: optimizeSpeed;
+    /* Legal fallback */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox        */
+    image-rendering: -o-crisp-edges;
+    /* Opera          */
+    image-rendering: -webkit-optimize-contrast;
+    /* Safari         */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed  */
+    image-rendering: crisp-edges;
+    /* CSS4 Proposed  */
+    image-rendering: pixelated;
+    /* CSS4 Proposed  */
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE8+           */
+    -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .dash_modal button.mc-share-button > div, .minecraft button.mc-share-button > div {
+      font-size: 24px;
+      color: white !important;
+      text-shadow: 2px 2px #5A5A5A !important; }
+    .dash_modal button.mc-share-button:hover, .minecraft button.mc-share-button:hover {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    .dash_modal button.mc-share-button:active, .minecraft button.mc-share-button:active {
+      outline: none;
+      border-style: solid !important;
+      border-width: 5px 4px 3px 3px !important;
+      image-rendering: optimizeSpeed;
+      /* Legal fallback */
+      image-rendering: -moz-crisp-edges;
+      /* Firefox        */
+      image-rendering: -o-crisp-edges;
+      /* Opera          */
+      image-rendering: -webkit-optimize-contrast;
+      /* Safari         */
+      image-rendering: optimize-contrast;
+      /* CSS3 Proposed  */
+      image-rendering: crisp-edges;
+      /* CSS4 Proposed  */
+      image-rendering: pixelated;
+      /* CSS4 Proposed  */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE8+           */
+      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+    .dash_modal button.mc-share-button > div, .minecraft button.mc-share-button > div {
+      margin: 0; }
   .dash_modal button#runButton, .minecraft button#runButton {
     min-width: 139px;
     padding-top: 6px;
@@ -1875,37 +1936,9 @@ a.video_link {
     -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
     border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important; }
     .dash_modal button#runButton > div, .minecraft button#runButton > div {
-      margin-top: 4px;
       font-size: 24px;
       color: white !important;
-      text-shadow: 2px 2px #5A5A5A !important;
-      margin-left: 2px;
-      margin-right: 18px; }
-    .dash_modal button#runButton .run26, .minecraft button#runButton .run26 {
-      background: url("/blockly/media/craft/Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
-      width: 16px;
-      height: 34px;
-      margin-left: 6px;
-      margin-right: 3px;
-      margin-top: -2px;
-      margin-bottom: -1px;
-      padding-right: 13px;
-      image-rendering: optimizeSpeed;
-      /* Legal fallback */
-      image-rendering: -moz-crisp-edges;
-      /* Firefox        */
-      image-rendering: -o-crisp-edges;
-      /* Opera          */
-      image-rendering: -webkit-optimize-contrast;
-      /* Safari         */
-      image-rendering: optimize-contrast;
-      /* CSS3 Proposed  */
-      image-rendering: crisp-edges;
-      /* CSS4 Proposed  */
-      image-rendering: pixelated;
-      /* CSS4 Proposed  */
-      -ms-interpolation-mode: nearest-neighbor;
-      /* IE8+           */ }
+      text-shadow: 2px 2px #5A5A5A !important; }
     .dash_modal button#runButton:hover, .minecraft button#runButton:hover {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
@@ -1934,6 +1967,35 @@ a.video_link {
       -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
       -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
       border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+    .dash_modal button#runButton > div, .minecraft button#runButton > div {
+      margin-top: 4px;
+      margin-left: 2px;
+      margin-right: 18px; }
+    .dash_modal button#runButton .run26, .minecraft button#runButton .run26 {
+      background: url("/blockly/media/craft/Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
+      width: 16px;
+      height: 34px;
+      margin-left: 6px;
+      margin-right: 3px;
+      margin-top: -2px;
+      margin-bottom: -1px;
+      padding-right: 13px;
+      image-rendering: optimizeSpeed;
+      /* Legal fallback */
+      image-rendering: -moz-crisp-edges;
+      /* Firefox        */
+      image-rendering: -o-crisp-edges;
+      /* Opera          */
+      image-rendering: -webkit-optimize-contrast;
+      /* Safari         */
+      image-rendering: optimize-contrast;
+      /* CSS3 Proposed  */
+      image-rendering: crisp-edges;
+      /* CSS4 Proposed  */
+      image-rendering: pixelated;
+      /* CSS4 Proposed  */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE8+           */ }
   .dash_modal button#resetButton, .minecraft button#resetButton {
     min-width: 139px;
     padding-top: 6px;
