@@ -614,8 +614,8 @@
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
         studio_gumball_hello2: Darwin (personaggio 1) e suo fratello Gumball (personaggio
-          2) stanno andando a scuola. Puoi aiutarli a salutarsi usando il blocco "il
-          personaggio ... dice"?
+          2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il
+          blocco "il personaggio ... dice"?
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
         studio_gumball_move_to_actor: Gumball (personaggio 1) e Darwin (personaggio
@@ -790,6 +790,9 @@
         infinity_playlab_intro: Laboratorio - Introduzione
         infinity_playlab_events: Laboratorio - Eventi
         infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -851,6 +854,9 @@
         gumball_intro: L'Ora del Codice di Gumball - introduzione
         gumball_events: L'Ora del Codice di Gumball - Eventi
         gumball_repeat: L'Ora del Codice di Gumball - Ripetizione
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -969,13 +975,13 @@
           evento.
         Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
           blocco di ripetizione
-        craft_run_button_callout: Seleziona "Run" per provare il tuo programma
-        craft_drag_block_callout: Trascina un blocco "muovi avanti" e posizionalo
-          sotto l'altro blocco
-        craft_callout_preplaced: Qui trovi alcuni blocchi con cui iniziare
-        craft_inside_repeat: Posiziona qui i blocchi per ripetere le azioni
-        craft_callout_preplaced_house: Questo codice avvierà la costruzione della
-          tua casa. Riesci a completarla?
-        craft_what_is_iron: Scava il ferro!
-        craft_callout_moveforward: Questo codice individua la lava. Sapresti inserire
-          un comando per avanzare?
+        craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
+        craft_drag_block_callout: Prendi il blocco "vai avanti" e attaccalo sotto
+          l'altro blocco
+        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
+        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
+          casa. Riesci a finirla tu?
+        craft_what_is_iron: Estrai il ferro!
+        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
+          un comando per andare avanti?

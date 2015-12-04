@@ -61,7 +61,7 @@ ka:
           Bee Debugging: ფუტკრის ბაგების გამოსწორება
           Bee Functions: ფუტკრის ფუნქციები
           Maze Loops: ლაბირინთის ციკლები
-          Graph Paper Programming: გრაფიკული პროგრამირება
+          Graph Paper Programming: გრაფიკული პროგრამირება ქაღალდზე
           "Real-life Algorithms: Paper Planes": 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
           Getting Loopy: ჩაციკლვა
           Relay programming: პროგრამირება ცვლაში
@@ -146,7 +146,7 @@ ka:
           description_short: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
         hourofcode:
           Maze: ლაბირინთი
-          title: კოდის ერთი საათი
+          title: Classic Maze
           description: სცადეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ის და Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ის Scrat-თან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო პერსონაჟთან ერთად!
         frozen:
@@ -329,7 +329,7 @@ ka:
           Introduction to Computer Science: ინფორმატიკის შესავალი
           The Maze: ლაბირინთი
           Computational Thinking: გამოთვლითი აზროვნება
-          Graph Paper Programming: გრაფიკული პროგრამირება
+          Graph Paper Programming: გრაფიკული პროგრამირება ქაღალდზე
           The Artist: მხატვარი
           Algorithms: ალგორითმები
           The Artist 2: მხატვარი 2
@@ -1167,7 +1167,7 @@ ka:
           Happy Maps: ბედნიერი რუკები
           Move it, Move it: ვისწავლოთ გადაადგილება
           "Real-life Algorithms: Plant a Seed": 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
-          Graph Paper Programming: გრაფიკული პროგრამირება
+          Graph Paper Programming: გრაფიკული პროგრამირება ქაღალდზე
           Building a Foundation: ფუნდამენტის აშენება
           Getting Loopy: ჩაციკლვა
           The Big Event: დიდი მოვლენა

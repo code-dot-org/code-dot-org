@@ -594,7 +594,7 @@
           и напишете думата "Здравей" вътре.
         studio_gumball_hello2: Дарвин (актьор 1) и неговия брат Гъмбол (актьор 2)
           отиват на училище.  Помогни им да се поздравяват взаимно с помощта на два
-          "актьор казва" блока.
+          блока за текст.
         studio_gumball_move_to_flag: Банана Джо е на път да спечели състезанието!  Помогнете
           му да измине последните 200 пиксела с използване на блок за движение.
         studio_gumball_move_to_actor: Гъмбол (актьор 1) и Дарвин (актьор 2) са закъснели
@@ -765,6 +765,9 @@
         infinity_playlab_intro: Игрална лаборатория - Въведение
         infinity_playlab_events: Игрална лаборатория - Събития
         infinity_playlab_repeat_forever: Игрална Лаборатория - повторение завинаги
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -823,6 +826,9 @@
         gumball_intro: Гъмбол Hour of Code - Въведение
         gumball_events: Гъмбол Hour of Code - Събития
         gumball_repeat: Гъмбол Hour of Code - повторение на отчети
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

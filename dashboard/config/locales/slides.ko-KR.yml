@@ -1565,22 +1565,17 @@
           2진 체계를 이용해 여러 가지 형태로 저장될 수 있습니다. 어떻게 그렇게 할 수 있는지 이해할 수 있을 것입니다.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: You imagine that we're going to put a grid over this panda bear and
-          for each square, we're going to decide whether that square is more black
-          or more white. And then we're going to color it that way. Now each cell
-          on the grid is either black or white and then the black squares we say those
-          are zeros (binary digit) and the white squares are ones, the other binary
-          digit. At the end, you're left with just a bunch of ones and zeros. That's
-          how you represent this image in binary.
+        text: 이제 여러분은 팬더곰위에 작은 사각형들이 있는 격자가 있다고 상상해보세요. 그리고 우리는 사각형이 검정색이 많은지 흰 색이
+          많은지 결정하게 될 것입니다. 그리고나서 우리는 그 방법으로 색을 칠하게 될 것입니다. 이제 격자위에 있는 각각의 셀은 검정색이거나
+          흰색입니다. 우리는 검정색 사각형은 이진수의 0이라고 부를 것이고, 흰색은 이진수의 1이라고 부를 것입니다. 결과적으로 여러분은
+          다수의 1과 0을 남겨 놓게 됩니다. 그것이 여러분들이 이진수로 그림을 표현하는 방법입니다.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: This lesson is called for loop fun. In this lesson, we'll use a number
-          line to play a dice game. Each player will roll three times to assign a
-          starting value, a stopping value, and our interval. During each turn, we
-          circle our starting value, and every value that is the same number of steps
-          forward as our interval value. We stop circling when we get to our stopping
-          value. The person with the highest score wins!
+        text: 이번 학습은 루프라고 불립니다. 이번 학습에서 우리는 주사위 게임을 하기 위해 많은 라인을 사용하게 될 것입니다. 각 플레이어들은
+          초기값, 종료값 그리고 interval value를 설정하기 위해 주사위를 세번 던질 것입니다. 각각의 순서가 진행되는 동안 우리는
+          우리의 초기값과 모든 변수로 원을 만들 것입니다. 그것은 우리의 interval value와 같은 단계를 갖계 됩니다. 우리는 우리가
+          종료값에 달했을 때 반복을 멈출 것입니다. 그리고 가장 높은 점수를 얻는 사람이 이기게 됩니다!
       2:
         image: notes/C4_unplugged_forloops_2.png
         text: For 반복 구조는 여러 곳에서 편리하게 사용될 수 있습니다. 기상학자가 되고 싶어하는 사람들은 for 반복 구조를 항상
@@ -1690,10 +1685,8 @@
           있습니다. 변수를 사용하면 변수에 저장되어있는 값에 따라서 다르게 움직이는 똑똑한 알고리즘을 만들 수 있습니다.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: Now you're going to try playlab where you are given different games
-          and you can change the values of variables like speed, height, score, in
-          order to change the game. You won't have to change the algorithm of the
-          game to change how it plays, just the variable.
+        text: 이제 여러분은 여러분이 받은 다른 게임인 playlab을 시도해 볼 것입니다. 그리고 여러분은 속도, 높이, 점수 등과 같은
+          변수값을 바꿀 수 있습니다. 여러분은 변수가 어떻게 동작하는지 바꿔보기 위해 위해 게임의 알고리즘을 바꿀 필요가 없습니다.
       3:
         image: notes/C4_variables_playlab_3.png
         text: In my work for Kindle and on X-ray for books, we apply variables in
@@ -2062,12 +2055,10 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: 우리가 사용해 온 블록들의 내부는 자바스크립트 명령어로 되어 있습니다. 자바스크립트는 오늘날 전문 개발자들에게 가장 인기있는
+          프로그래밍 언어입니다. 블록은 코딩 학습을 시작하는 아주 좋은 방법이며 사실 하버드나 버클리 같은 최고의 대학들도 이 방법으로 가르치기
+          시작했습니다. 그러나 한 번 기초를 배우고 나면 엔지니어들은 명령어를 입력함으로써 코드를 작성합니다. 왜냐하면 그것이 더 빠르기
+          때문입니다.
       2:
         image: notes/starwars_typing_2.JPG
         text: 우리는 도구상자에서 그것을 찾거나 끌어내지 않고도 수백 개의 명령어를 입력할 수 있습니다. 여러분은 이제 막 배우고 있기
@@ -2448,3 +2439,87 @@
         image: notes/gumball_repeat_3.JPG
         text: 이 다음 퍼즐에서 우리의 목표는 주인공이 일을 계속하도록 돕는 것입니다. 반복문이 어떻게 동작하는지에 대한 학습은 여러분이
           자신의 게임을 만들 때 아주 많은 양의 시간을 절약해 줄 것입니다.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

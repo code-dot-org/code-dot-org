@@ -201,10 +201,10 @@
   .fullwidth-carousel .slide {
     padding-left: 0px;
     padding-right: 0px;
-  }  
+  }
 }
 
-@media screen and (min-width: 320px) and (max-width: 599px) { 
+@media screen and (min-width: 320px) and (max-width: 599px) {
   #learnCodeStudio .active > div { display:none; }
   #learnCodeStudio .active > div:first-child { display:block; }
 
@@ -239,7 +239,7 @@
 
   .fullwidth-carousel .slide .slide-img {
     height: 220px;
-    padding-left: 0px; 
+    padding-left: 0px;
     padding-right: 0px;
   }
 }
@@ -249,7 +249,7 @@
   #learnCodeStudio .active > div:first-child { display:block; }
   #learnCodeStudio .active > div:first-child + div { display:block; }
 
-  #codeStudioCarousel .col-md-4 { 
+  #codeStudioCarousel .col-md-4 {
     width: 50%;
   }
 
@@ -258,6 +258,10 @@
   }
 
   #quicklinks {
+    width: 170px !important;
+  }
+
+  #quicklinks a {
     width: 170px !important;
   }
 
@@ -554,7 +558,6 @@
   }
 
   .starwars-container .starwars-tutorial {
-    width: 50% !important;
     float: left !important;
     height: 220px !important;
     padding: 5px !important;
@@ -578,4 +581,19 @@
 
 .starwars-tutorial {
   margin-bottom: 10px !important;
+}
+
+.starwars-js-tutorial {
+  /* Hide the js tutorial in non-EN */
+  display: none;
+}
+
+.starwars-blocks-tutorial {
+  /* When we hide the js tutorial, make the blockly tutorial take up whole width */
+  width: 100% !important;
+}
+
+.tutorial-box {
+  /* Ensure background doesn't repeat in the wider box */
+  background-size: cover;
 }

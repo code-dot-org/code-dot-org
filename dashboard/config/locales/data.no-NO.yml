@@ -504,12 +504,11 @@
         studio_c3_game_7: Lag ditt eget spill. Når du er ferdig, trykk Fullør for
           å la vennene dine prøve spillet på sine mobiler.
         studio_playlab_1: Pinvinen ønsker å si "hei" - kan du hjelpe ham?
-        studio_playlab_2: Hulegutt (skuespiller 1) og Hulejente (skuespiller 2) ønsker
-          å si "hei" til hverandre. Kan du hjelpe dem ved å bruke "si"-blokken to
-          ganger?
+        studio_playlab_2: Hulegutt (figur 1) og Hulejente (figur 2) ønsker å si "hei"
+          til hverandre. Kan du hjelpe dem ved å bruke "si"-blokken to ganger?
         studio_playlab_3: Kan du hjelpe Tennisjenta med å få tak i flagget?
-        studio_playlab_4: Kan du hjelpe Tennisgutt (skuespiller 1) med å få Tennisjente
-          (skuespiller 2) til å spille av en lyd når han kommer dit?
+        studio_playlab_4: Kan du hjelpe Tennisgutt (figur 1) med å få Tennisjente
+          (figur 2) til å spille av en lyd når han kommer dit?
         studio_playlab_5: Kan du hjelpe Rombot til å si "hilsner jordboere" når den
           blir klikket på? Ikke glem å klikke på den etter du trykker Kjør
         studio_playlab_6: Kan du hjelpe heksa med å flytte seg rundt ved å bruke piltastene
@@ -525,54 +524,56 @@
           med piltastene for å komme til Romboten og advare alle andre
         studio_playlab_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for
           å la vennene dine prøve spillet på sine mobiler.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_hello1: Sid ønsker å samle alle sammen til et nytt eventyr.
+          Kan du hjelpe ham med å si "hei"? Dra "si"-brikken ut i arbeidsområdet og
+          skrive inn ordet "hei" inni den?
+        studio_iceage_hello2: Sid (figur 1) fant Manfred (figur 2) og har lyst til
+          å invitere han med på eventyret. Hjelp dem med å hilse på hverandre ved
+          å bruke "figur si"-brikken to ganger.
+        studio_iceage_move_to_flag: Scrat leter etter eikenøtta si! Hjelp ham med
+          å gå de siste 200 pikslene ved å bruke "flytt"-brikken.
+        studio_iceage_move_to_actor: Diego (figur 1) leter etter Manfred (figur 2).
+          Hjelp Diego med å gå 200 piksler ned til Manfred ved å bruke "flytt figur"-brikken.
+          Så setter du på en "når figur berører"-hendelse for å spille av en lyd når
+          de finner hverandre.
+        studio_iceage_repeat: Brikken "gjenta alltid" tillater deg å kjøre kode om
+          og om igjen. Kan du sette brikker på den slik at Granny flytter seg til
+          venstre og til høyre igjen og igjen, for å få litt mosjon?
+        studio_iceage_click_hello: Kan du hjelpe Sid med å rope noen siste hilsner
+          til sine venner når han blir trykket på? Ikke glem å trykke på han etter
+          du har trykket Kjør.
+        studio_iceage_move_events: Scrat leter fortsatt etter eikenøtter! Hjelp ham
+          med å fare avsted ved å feste "flytt"-brikken på hver av hendelsene og endre
+          retning når man trykker på piltastene. Når du er ferdig, trykk på Kjør og
+          prøv å samle alle eikenøttene.
+        studio_iceage_sound_and_points: Vi har gitt deg mesteparten av koden som får
+          Granny til å bevege seg til venstre og høyre, i tillegg til koden for å
+          flytte Sid rundt på skjermen. Kan du fullføre koden og legge til brikker
+          på "når figur berører"-hendelsen slik at du spiller av en lyd og scorer
+          et poeng når Sid og Granny går inn i hverandre? Trykk Kjør for å spille
+          spillet.
+        studio_iceage_warn_ice_age: Alle trenger å bevege seg raskere fordi en istid
+          er på vei! Endre bakgrunnen til "isfjell" og sett Sids hastighet til rask.
+          Trykk Kjør og flytt ham bort til Diego for å advare ham.
+        studio_iceage_throw_hearts: Sid vil fortelle bestemoren sin, Granny, at han
+          er glad i henne. Bruk "figur kast"-kommandoen for å få Sid (figur 1) til
+          å kaste hjerter på Granny (figur 2)! Sett Grannys humør til glad når hun
+          blir truffet av hjerter.
+        studio_iceage_free_play: Nå er det tid for å lage ditt eget spill eller din
+          egen historie! Når du er ferdig, trykk Fullfør for å la vennene dine prøve
+          spillet på sine telefoner, nettbrett eller datamaskiner!
         studio_gumball_hello1: Anais ønsker å få noen nye venner. Kan du hjelpe henne
           å si "hallo" ved å dra "si" blokken til arbeidsområdet og å skrive ordet
           "hallo" inne?
-        studio_gumball_hello2: Darwin (skuespiller 1) og hans bror Gumball (skuespiller
-          2) er på vei til skolen.  Hjelp dem å hilse på hverandre ved hjelp av "skuespiller
-          si" blokken to ganger.
+        studio_gumball_hello2: Darwin (figur 1) og hans bror Gumball (figur 2) er
+          på vei til skolen.  Hjelp dem å hilse på hverandre ved hjelp av "figur si"
+          blokken to ganger.
         studio_gumball_move_to_flag: Banan Joe er om å vinne et felt dag løp!  Hjelpe
           ham å gå de siste 200 pikslene ved hjelp av "Flytt"-blokk.
-        studio_gumball_move_to_actor: Gumball (skuespiller 1) og Darwin (skuespiller
-          2) er sent ute til utflukten! Hjelp Gumball å gå 200 piksler ned til Darwin
-          ved hjelp av "Flytt aktør"-blokk.  Så koble en blokk til hendelsen "når
-          skuespiller berører" for å spille en lyd når de finner hverandre.
+        studio_gumball_move_to_actor: Gumball (figur 1) og Darwin (figur 2) er sent
+          ute til utflukten! Hjelp Gumball å gå 200 piksler ned til Darwin ved hjelp
+          av "flytt figur"-blokk.  Så koble en blokk til hendelsen "når figur berører"
+          for å spille en lyd når de finner hverandre.
         studio_gumball_repeat: Med "gjenta alltid" blokken kan du kjøre kode kontinuerlig.  Kan
           du knytte blokker for å hjelpe Gumball varme opp til løpet ved å flytte
           til venstre og høyre flere ganger?
@@ -583,17 +584,17 @@
           løpe rundt ved å feste "Flytt" blokken til hver hendelse. Når du er ferdig,
           klikk Kjør, og prøv å samle alle flaggene.
         studio_gumball_sound_and_points: Vi har lagt ved mesteparten av koden som
-          holder Anton (skuespiller 2) i bevegelse til venstre og høyre, og koden
-          for å flytte Banana Joe (skuespiller 1) rundt på skjermen.  Kan du fullføre
-          koden og legge blokker til hendelsen "når skuespiller berører" å gjøre det
-          slik at du både spiller av en lyd og scorer poeng når Banana Joe og Anton
-          kolliderer?  Trykk Kjør spillet.
+          holder Anton (figur 2) i bevegelse til venstre og høyre, og koden for å
+          flytte Banana Joe (figur 1) rundt på skjermen.  Kan du fullføre koden og
+          legge blokker til hendelsen "når figur berører" å gjøre det slik at du både
+          spiller av en lyd og scorer poeng når Banana Joe og Anton kolliderer?  Trykk
+          Kjør spillet.
         studio_gumball_warn_food_fight: Darwin rømte nettopp fra en mat kamp! Endre
           bakgrunnen til "karakterer" og angi hastigheten til Darwin til rask. Trykk
           Kjør og flytte ham til Penny for å advare henne.
-        studio_gumball_join_food_fight: Delta i mat kampen! Bruk kommandoen "skuespiller
-          kaste element høyre" for at Banana Joe (skuespiller 1) skal kaste mat på
-          Anton (skuespiller 2)! Angi humøret til Anton til sint når han blir truffet.
+        studio_gumball_join_food_fight: Delta i mat kampen! Bruk kommandoen "figur
+          kast element høyre" for at Banana Joe (figur 1) skal kaste mat på Anton
+          (figur 2)! Angi humøret til Anton til sint når han blir truffet.
         studio_gumball_free_play: Lag ditt eget spill eller historie. Når du er ferdig,
           klikk Fullfør for å la venner prøve spillet på telefoner, tablets eller
           datamaskiner!
@@ -734,6 +735,9 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -787,6 +791,9 @@
         gumball_intro: Gumball Hour of Code - introduksjon
         gumball_events: Gumball Hour of Code - hendelser
         gumball_repeat: Gumball Hour of Code - Repeter argument
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken
@@ -798,9 +805,9 @@
         instructions_repeat_explanation: Instruksjonene for hver oppgave vises her
         category_explanation: Du har alle de samme blokker, men de har nå blitt ordnet
           i kategorier
-        set_sprite_image: Fest en "Angi kostyme"-blokk til "når historien starter"-blokken
-          for å aktivere skuespilleren for denne historien
-        studio_say_text: Skriv inn hva du vil at din skuespiller skal si mellom "-tegnene
+        set_sprite_image: Fest en "angi figur til bilde"-blokk til "når historien
+          starter"-blokken for å aktivere figuren for denne historien
+        studio_say_text: Skriv inn hva du vil at din figur skal si mellom "-tegnene
         jigsaw_click: Klikk denne blokken!
         move_elsa_forward: Dra en «Flytt Frammover» blokk og fest den under «Når Kjørt»
           blokk for å få Elsa til å flytte framover
@@ -869,8 +876,7 @@
           din
         add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på
           Legg til og dra den deretter til funksjonsdefinisjonen din
-        fill_in_actor: Erstatt ??? med tall som passer for hver skuespiller (1, 2
-          og 3)
+        fill_in_actor: Erstatt ??? med tall som passer for hver figur (1, 2 og 3)
         repeat: Sett blokker inni gjenta-løkken for å gjenta kommandoer
         if_bee_nectar: Bruke "Hvis"-blokken for å avgjøre om bien skal få nektar
         if_else_bee: Bruk "if/else" blokken slik at bien får nektar fra en blomst
@@ -878,7 +884,7 @@
         repeat_full_circle: Angi hvor mange ganger zombien må flytte for å lage en
           full sirkel
         place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålstegnene
-        arrows_move_actor: Bruk pilene til å flytte skuespilleren
+        arrows_move_actor: Bruk pilene til å flytte figuren
         right_arrow_fireball: Bruk pil-høyre til å skyte ildkuler
         name_function: Skriv navnet på funksjonen din her
         Infinity_move_right_runbutton: Legg til Flytt blokk her

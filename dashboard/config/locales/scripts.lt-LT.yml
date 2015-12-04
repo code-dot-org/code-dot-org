@@ -1607,17 +1607,17 @@
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+            žaidimą tolimoje galaktikoje.
+          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą
+            tolimoje galaktikoje.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
+          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+            žaidimą tolimoje galaktikoje.
+          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą
+            tolimoje galaktikoje.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1627,8 +1627,8 @@
         mc:
           title: Minecraft programavimo valanda
           description_short: Tyrinėkite Minecraft pasaulį per kodą
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
+            šiame Minecraft pasaulyje
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

@@ -36,7 +36,7 @@ zh-CN:
   csedweek_map_legend_title: 图例
   csedweek_map_legend_event: 编程一小时活动
   csedweek_map_legend_cs_tech_jam: 计算机技术展会
-  cded_sign_up: 登录
+  cded_sign_up: 注册
   cded_try_it: 体验一下
   twentyhours_trynow: 现在就试试
   california_heading: 邀请您的学校开展计算机科学教育。
@@ -57,10 +57,10 @@ zh-CN:
   congratulations_on_completing_hoc: 恭喜你完成编程一小时。
   congratulations_volunteer: '恭喜你： 现在你已经尝试了编程一小时，<a href="https://code.org/volunteer"> 在教室里报名做志愿者</a>，帮助学生了解编程一小时！'
   course_name_accelerated: 加速课程
-  course_name_course1: '课程 1:'
-  course_name_course2: 课程2
-  course_name_course3: 课程 3：
-  course_name_course4: 第4课
+  course_name_course1: 课程 1
+  course_name_course2: 课程 2
+  course_name_course3: 课程 3
+  course_name_course4: 课程 4
   congratulations_on_completing_course: '祝贺您完成 %{course}'
   congrats_next_tutorials_title: 接下来尝试这些教程
   congrats_next_tutorials_desc: '尝试这些简短的1 小时教程，或尝试 <a href="%{current_path}/next"> 合作伙伴教程</a>。'
@@ -131,7 +131,7 @@ zh-CN:
   stats_nina: '"每一天学生们都如此 &mdash; 100%的参与."-尼娜尼科尔斯佩里，老师'
   stats_student: '"我知到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   stats_michael: '“我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师'
-  studiobar_title: "探讨我们的 <a href='http://studio.code.org'>《编程工作室》</a>"
+  studiobar_title: "探索我们的 <a href='http://studio.code.org'>《编程工作室》</a>"
   studiobar_title_nolink: 探索我们的 编程工作室
   studiobar_elementary_title: 初级课程
   studiobar_elementary_body: '为 K&#8209;5 所制的三个新课程'
@@ -167,14 +167,14 @@ zh-CN:
   homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: 我们的所有教程
-  homepage_slot_text_course4: 第4课
+  homepage_slot_text_course4: 课程 4
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: 飞扬的代码
   homepage_action_text_hoc: 编程一小时提供给每一个学生
   homepage_action_text_num_served: '# 服务'
   homepage_action_text_join_us: 加入我们
-  homepage_action_text_sign_up: 登录
-  homepage_action_text_try_it: 体验一下
+  homepage_action_text_sign_up: 注册
+  homepage_action_text_try_it: 试一试
   homepage_action_text_volunteers: 我们需要技术志愿者
   homepage_action_text_codevideo: 观看视频
   homepage_action_text_teachervideo: 观看视频
@@ -255,7 +255,7 @@ zh-CN:
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title: 冰河世纪-即将推出
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: 用代码来建立一个星系
   starwars_javascript_title: JavaScript
@@ -264,7 +264,7 @@ zh-CN:
   starwars_javascript_start_button: 现在就试试
   starwars_blocks_title: 模块
   starwars_blocks_description: 使用拖放块。
-  starwars_blocks_specs: 各国语言 (即将推出) | 现代浏览器、 智能手机、 平板电脑 | 年龄在 6-10岁之间
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: 现在就试试
   starwars_watch_videos: 在开始之前，看一段鼓舞人心的视频
   starwars_speak_languages: 另一种语言?
@@ -275,7 +275,7 @@ zh-CN:
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: 6岁以上
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: 我的世界 编程一小时
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -363,7 +363,7 @@ zh-CN:
   dashboard_landing_available_title: 可用课程
   dashboard_landing_available_courses: 这些是目前可供您和您的学生使用的课程。
   dashboard_landing_more_tutorials: 想看更多教程吗？
-  dashboard_landing_more_tutorials_desc: '有更多教程<a href="/learn/beyond">由我们的合作伙伴提供</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探讨其他语言如C++，Ruby，Python！'
+  dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！'
   dashboard_hoc_courses: 《代码一小时》适合所有年龄的人。
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
@@ -498,7 +498,7 @@ zh-CN:
   dashboard_progress_completed_perfect: 完美完成
   dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
   dashboard_stage: 阶段
-  dashboard_puzzle: 谜题
+  dashboard_puzzle: 关卡
   dashboard_question: 问题
   dashboard_response: Response
   stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
@@ -520,11 +520,12 @@ zh-CN:
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在计算机科学教育周期间参加
   learn_more: 现在就试试
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
-  learn_sign_up_button: 登录
+  learn_sign_up_button: 注册
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -537,7 +538,7 @@ zh-CN:
   learn_hoc_prizes: 了解更多关于每个教育者的奖项
   learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
-  hoc2014_try_new_tutorial: 试试我们新的beta 版的一小时代码教程
+  hoc2014_try_new_tutorial: 试试我们新的测试版的编程一小时教程
   hoc2014_try_scrat: 愤怒的小鸟、植物大战僵尸和斯奎特
   hoc2014_try_frozen: 來自冰雪奇缘的艺术家安娜及爱莎。
   carousel_heading_codeorg: Code.org 提供的教程
@@ -561,7 +562,7 @@ zh-CN:
   carousel_heading_robots: 学习使用机器人进行编程
   carousel_heading_ide: 在教师中流行的平台
   educator_notes: 教育家笔记
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Teacher Led Lesson Plans
   learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: 如何教授代码一小时
   more_resources_educators: 给教师和教育工作者们的更多资源
@@ -576,8 +577,8 @@ zh-CN:
   mobile_devices: 用于移动设备的教程
   frozen_name: Code with Anna and Elsa
   starwars_name: '星球大战: 用代码构建一个星系'
-  codeorg_name: 编写你的第一个计算机程序
-  codeintl_name: 编写你的第一个计算机程序
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 简介
   khanes_name: JavaScript 简介
@@ -594,31 +595,38 @@ zh-CN:
   codehs_name: 同小狗卡莱尔一起学编程
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: CodeMonkey
+  codemonkey_name: 代码猴
   codeavengers_name: 用JavaScript创建一个游戏
   processing_name: 用代码来画画
-  robomind_name: 给一个虚拟机器人编程
+  robomind_name: 用程序设计出虚拟机器人
   groklearning_name: 聊天机器人医生爱丽莎
-  quorum_name: 合宜程序设计(用屏幕阅读器帮扶)
-  codespark_name: The Foos (初学读者欢迎)
-  kodable_name: Kodable (初学读者欢迎)
-  tynkerapp_name: 'Tynker - 平板电脑版'
-  robomindnl_name: 给一个虚拟机器人编程
+  quorum_name: 无障碍程序设计(使用屏幕阅读器来辅助)
+  codespark_name: The Foos (欢迎学龄前读者)
+  kodable_name: Kodable (欢迎学龄前读者)
+  tynkerapp_name: 'Tynker - 用于平板电脑'
+  robomindnl_name: 用程序设计出虚拟机器人
   flappy_name: 制作一个Flappy类游戏
-  bitsbox_name: 'Bitsbox - 做个游戏'
+  bitsbox_name: 'Bitsbox - 制作游戏'
   makeschool_name: 在您的浏览器中创建一个iPhone游戏！
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor 编程一小时
+  appinventor_name: 应用发明者 编程一小时
   blockly_name: 模块化
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 石头、剪子、布
-  hourofcode_name: 编写你的第一个计算机程序
+  hourofcode_name: Classic Maze
   playlab_name: 游戏实验室
   infinity_name: 无限发挥游戏实验室
   artist_name: 艺术家
-  codeorg_gradelevel: 年龄鉴于4至104
-  codeintl_gradelevel: 年龄鉴于4至104
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
+  codeorg_gradelevel: 适合年龄 4 岁以上
+  codeintl_gradelevel: 适合年龄 4 岁以上
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: 中学及以上
   khanes_gradelevel: 中学及以上
@@ -626,11 +634,11 @@ zh-CN:
   khanhe_gradelevel: 中学及以上
   khanfr_gradelevel: 中学及以上
   khanpl_gradelevel: 中学及以上
-  tynker_gradelevel: 年龄 5-13
-  scratch_gradelevel: 年龄 8 +
+  tynker_gradelevel: 适合年龄 5-13
+  scratch_gradelevel: 适合年龄 8 岁以上
   lightbot_gradelevel: 所有年龄
   thinkersmith_gradelevel: 所有年龄
-  condcards_gradelevel: 年龄 8-12 岁
+  condcards_gradelevel: 适合年龄 8-12 岁
   lightbotintl_gradelevel: 所有年龄
   codehs_gradelevel: 高中
   codecademy_gradelevel: 高中
@@ -638,59 +646,66 @@ zh-CN:
   codemonkey_gradelevel: 中学及以上
   codeavengers_gradelevel: 中学及以上
   processing_gradelevel: 高中
-  robomind_gradelevel: 8-13岁
+  robomind_gradelevel: 适合年龄 8-13岁
   groklearning_gradelevel: 中学及以上
   quorum_gradelevel: 中学及以上
   codespark_gradelevel: 小学
   kodable_gradelevel: 小学
-  tynkerapp_gradelevel: 年龄 5-13
+  tynkerapp_gradelevel: 适合年龄 5-13
   robomindnl_gradelevel: 8-13岁
-  flappy_gradelevel: 年龄鉴于4至104
+  flappy_gradelevel: 适合年龄6 岁以上
   bitsbox_gradelevel: 小学
   makeschool_gradelevel: 高中
   touchdevelop_gradelevel: 高中
   appinventor_gradelevel: 中学及以上
   blockly_gradelevel: 所有年龄
-  thinkersmith2_gradelevel: 年龄 8 +
-  kodableunplugged_gradelevel: 8-13岁
-  projguts_gradelevel: 10-13岁
-  hourofcode_gradelevel: 年龄鉴于4至104
-  frozen_gradelevel: 年龄 8 +
+  thinkersmith2_gradelevel: 适合年龄 8 岁以上
+  kodableunplugged_gradelevel: 适合年龄 8-13岁
+  projguts_gradelevel: 适合年龄10-13岁
+  hourofcode_gradelevel: 6岁以上
+  frozen_gradelevel: 适合年龄 8 岁以上
   starwars_gradelevel: 6岁以上
-  playlab_gradelevel: 年龄鉴于4至104
-  infinity_gradelevel: 年龄鉴于4至104
-  artist_gradelevel: 年龄鉴于4至104
+  playlab_gradelevel: 适合年龄 6 岁以上
+  infinity_gradelevel: 适合年龄 6 岁以上
+  artist_gradelevel: 适合年龄 8 岁以上
+  monstercoding_gradelevel: 适合年龄 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: 小学
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: 最新的浏览器，智能手机，平板电脑
   codeintl_platformtext: 最新的浏览器，智能手机，平板电脑
-  thinkersmithspanish_platformtext: 离线的
-  khan_platformtext: 现代的Web浏览器
-  khanes_platformtext: 现代的Web浏览器
-  khanpt_platformtext: 现代的Web浏览器
-  khanhe_platformtext: 现代的Web浏览器
-  khanfr_platformtext: 现代的Web浏览器
-  khanpl_platformtext: 现代的Web浏览器
-  tynker_platformtext: 现代的Web浏览器
-  scratch_platformtext: 台式机仅 web 浏览器 （不能在平板电脑用）
+  thinkersmithspanish_platformtext: 不用电脑的
+  khan_platformtext: 现代网络浏览器
+  khanes_platformtext: 现代网络浏览器
+  khanpt_platformtext: 现代网络浏览器
+  khanhe_platformtext: 现代网络浏览器
+  khanfr_platformtext: 现代网络浏览器
+  khanpl_platformtext: 现代网络浏览器
+  tynker_platformtext: 现代网络浏览器
+  scratch_platformtext: 仅用于桌面网络浏览器 （不能在平板电脑用）
   lightbot_platformtext: 所有浏览器及iOS，安卓系统或游戏主机
   thinkersmith_platformtext: 离线的
   condcards_platformtext: 离线的
   lightbotintl_platformtext: iOS，Android（或浏览器）
   codehs_platformtext: 现代的浏览器。（后续课程需要 $$）
-  codecademy_platformtext: 现代的Web浏览器。iOS，Android应用程序
-  codecombat_platformtext: 现代的Web浏览器。（后续课程需要 $$）
-  codemonkey_platformtext: 现代的Web浏览器
-  codeavengers_platformtext: 现代的Web浏览器
-  processing_platformtext: 现代的Web浏览器
-  robomind_platformtext: 现代的Web浏览器，移动网络
-  groklearning_platformtext: 现代的Web浏览器
+  codecademy_platformtext: 现代的网络浏览器。iOS，安卓应用程序
+  codecombat_platformtext: 现代的网络浏览器。（后续课程需要 $$）
+  codemonkey_platformtext: 现代网络浏览器
+  codeavengers_platformtext: 现代网络浏览器
+  processing_platformtext: 现代网络浏览器
+  robomind_platformtext: 现代的网络浏览器，移动网络
+  groklearning_platformtext: 现代网络浏览器
   quorum_platformtext: 支持最新的网页浏览器，屏幕阅读器
-  codespark_platformtext: iOS，Android（或浏览器）
+  codespark_platformtext: iOS，安卓（或网络浏览器）
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad，安卓平板电脑
-  robomindnl_platformtext: 现代的Web浏览器，移动网络
+  robomindnl_platformtext: 现代的网络浏览器，移动网络
   flappy_platformtext: 最新的浏览器，智能手机，平板电脑
-  bitsbox_platformtext: 现代的Web浏览器
-  makeschool_platformtext: 现代的Web浏览器
+  bitsbox_platformtext: 现代网络浏览器
+  makeschool_platformtext: 现代的网络浏览器
   touchdevelop_platformtext: 现代的浏览器，智能手机，所有的设备
   appinventor_platformtext: 最新的浏览器 + 安卓系统
   blockly_platformtext: 仅限最新的浏览器
@@ -701,10 +716,17 @@ zh-CN:
   frozen_platformtext: 最新的浏览器 + 平板电脑
   starwars_platformtext: 最新的浏览器 + 平板电脑
   playlab_platformtext: 最新的浏览器，智能手机，平板电脑
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: 现代网络浏览器
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: 现代网络浏览器
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: 最新的浏览器，智能手机，平板电脑
   codeorg_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
   codeintl_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: 学习如何在JavaScript中作画
+  khan_shortdescription: 学习如何用JavaScript绘画
   khanes_shortdescription: 学习如何在JavaScript中作画
   khanpt_shortdescription: 学习如何在JavaScript中作画
   khanhe_shortdescription: 学习如何在JavaScript中作画
@@ -712,40 +734,47 @@ zh-CN:
   khanpl_shortdescription: 学习如何在JavaScript中作画
   tynker_shortdescription: 通过解决有趣的谜题和创造你自己的移动端游戏来学习编程。
   scratch_shortdescription: 创造互动游戏、故事和动画。
-  lightbot_shortdescription: 对Lightbot编程以使用步骤和循环来解决谜题！
+  lightbot_shortdescription: 对Lightbot编程以使用过程和循环来通过关卡！
   thinkersmith_shortdescription: 为没有设备的小组设计的离线教程
   condcards_shortdescription: 用一副扑克学习算法
   lightbotintl_shortdescription: 用一个游戏来教授编程概念
-  codehs_shortdescription: 与小狗卡莱尔一起开始编程，一个对编程的有趣的视觉化介绍！
+  codehs_shortdescription: 与小狗卡莱尔一起开始编程，一个有趣的编程介绍！
   codecademy_shortdescription: 在网页浏览器中学习JavaScript编程
   codecombat_shortdescription: 在这个史诗般的编程游戏中打败食人魔来学会Python或JavaScript！
   codemonkey_shortdescription: 学生们编写一只抓住香蕉的猴子
   codeavengers_shortdescription: 在网页浏览器中学习JavaScript编程
-  processing_shortdescription: 一个关于Processing语言的一小时教程
+  processing_shortdescription: 一个关于语言处理的一小时教程
   robomind_shortdescription: 为一个虚拟机器人编写代码
-  groklearning_shortdescription: 教聊天机器人“爱丽莎”如何聊天来让你的朋友们误认为她是真人！
+  groklearning_shortdescription: 教聊天机器人“爱丽莎”如何聊天来让你的朋友们认为她是真人！
   quorum_shortdescription: 加入玛丽学习Quorum编程语言的引导学习之旅。
   codespark_shortdescription: The Foos是一种有趣的，孩子也能玩的学习编程的游戏。
   kodable_shortdescription: 一个有趣的、教授计算机编程概念的iPad游戏
   tynkerapp_shortdescription: '通过解决有趣的代码谜题来学习编程。 '
   robomindnl_shortdescription: 为一个虚拟机器人编写代码
-  flappy_shortdescription: '制作你自己的游戏 - Flappy Bird、Shark、或Submarine'
+  flappy_shortdescription: 用Flappy鸟、鲨鱼、或潜艇制作你自己的游戏
   bitsbox_shortdescription: 使用真正JavaScript代码写 一连串的应用程序来玩和共享.
   makeschool_shortdescription: 写一个iPhone游戏! 学习编写代码来教你的怪物做新的动作!
   touchdevelop_shortdescription: '在您的手机上解谜，编写游戏，和学习编程。 '
-  appinventor_shortdescription: 让你自己的 (Android) 应用程序 !
-  blockly_shortdescription: 下载一个ZIP文件，离线学习。
+  appinventor_shortdescription: 制作你自己的安卓应用程序!
+  blockly_shortdescription: 下载一个压缩文件，离线学习。
   thinkersmith2_shortdescription: 了解计算机如何使用 0 和 1 来表示信息
-  kodableunplugged_shortdescription: 一个有趣的Unplugged活动
+  kodableunplugged_shortdescription: 一个有趣的不用电脑的活动
   projguts_shortdescription: 尝试用石头、剪子、布来建模和模拟
   hourofcode_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
-  frozen_shortdescription: 让我们用代码同安娜和艾尔莎一起去探寻冰雪的魔力与美丽。
+  frozen_shortdescription: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
   starwars_shortdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
   playlab_shortdescription: 通过游戏实验室创建故事或制作游戏！
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
   artist_shortdescription: Draw cool pictures and designs with the Artist!
-  codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。了解重复，循环，条件和基本算法。提供34种语言。
-  codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。了解重复，循环，条件和基本算法。提供34种语言。
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
+  codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。
+  codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
   khanes_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
@@ -753,46 +782,53 @@ zh-CN:
   khanhe_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
   khanfr_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
   khanpl_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
-  tynker_longdescription: 建立你自己的游戏并与朋友分享 ！解决有趣的编码谜题，学习各个阶段的编程概念。以动画人物，多层次的丰富的道具来个性化你的游戏。应用物理概念让你的游戏更加真实。代码可以同时以模块或 Javascript 的形式呈现。在 iPad 或 Android 平板电脑上玩你的游戏。有十多个有趣的活动可供选择 ！
-  scratch_longdescription: '通过 Scratch 平台，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！'
-  lightbot_longdescription: 引导Lightbot点亮所有蓝色瓷砖！ Lightbot是一个益智游戏，应用程序设计的游戏机制，让玩家获得基本编码的实际理解。学会顺控指令，写程序，并利用循环来解决级别。适合所有年龄。
+  tynker_longdescription: 建立你自己的游戏并与朋友分享 ！解决有趣的编码谜题，学习各个阶段的编程概念。以动画人物，多层次的丰富的道具来个性化你的游戏。应用物理概念让你的游戏更加真实。代码可以同时以模块或 Javascript 的形式呈现。在 iPad 或 安卓平板电脑上玩你的游戏。有十多个有趣的活动可供选择 ！
+  scratch_longdescription: '从头开始，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！'
+  lightbot_longdescription: 引导Lightbot点亮所有蓝色瓷砖！ Lightbot是一个益智游戏，通过编程的游戏机制，让玩家获得基本编码的实际理解。学会顺序控制，编写过程，并利用循环来通过关卡。适合所有年龄。
   thinkersmith_longdescription: '使用预先定义的"机器人词汇"学生可不需事先讨论，就能理解如何引导对方完成特定任务。这门课教孩子符号和行为之间的关联，以及非常宝贵的调试技能。 "我的机器人朋友"以分组进行活动是最佳的，其包括课堂使用的教师手册。'
   condcards_longdescription: '在这个"不插电"的活动中，使用一副扑克牌学习演算法和条件式叙述。学生以团队模式进行这项活动，每一团队需要一副牌.'
   lightbotintl_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，作业系统可使用iOS 或android 系统(或Web 浏览器)。学习如何排列命令、 找出模式、 使用程序与利用循环！
-  codehs_longdescription: '程式设计的概念就是给予一台电脑命令，就像给一只狗的命令一般。用Karel狗&mdash;学习如何编写程式码; 用有趣、 易懂及视觉化介绍方式来教授没有任何基础的初学者基本程式设计概念，例如命令、功能等。自学教案是针对学生设计，但教师可以注册以使用教师工具并追踪学生的成效!'
-  codecademy_longdescription: Codecademy 透过JavaScript ，以互动式，学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了无麻烦的Hour of Code经验，附测验、 幻灯片，及给学生一个完整的专案为结束。
+  codehs_longdescription: '程式设计的概念就是给予一台电脑命令，就像给一只狗的命令一般。用卡莱尔&mdash;学习如何编写程式码; 用有趣、 易懂及视觉化介绍方式来教授没有任何基础的初学者基本程式设计概念，例如命令、功能等。自学教案是针对学生设计，但教师可以注册以使用教师工具并追踪学生的成效!'
+  codecademy_longdescription: Codecademy 透过JavaScript ，以互动式，学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了简单的“编程一小时”经验，最后附上了测验、 幻灯片，及一个给学生完整的学习项目。
   codecombat_longdescription: 在这个史诗般的编程游戏中打败食人魔来学会Python或JavaScript！
-  codemonkey_longdescription: 'CodeMonkey 是一个线上的游戏，用真正的程式语言教授程式码编写！学生设计程式让一只猴子抓住香蕉，而它在每个级别会稍微增加复杂程度。他们在解决问题时获得星星分数并点击一下就可以分享. '
+  codemonkey_longdescription: '代码猴是一个线上的游戏，用真正的程式语言教授程式码编写！学生设计程式让一只猴子抓住香蕉，而它在每个级别会稍微增加复杂程度。他们在解决问题时获得星星分数并点击一下就可以分享. '
   codeavengers_longdescription: 使用JavaScrip语言建立的2 个玩家、 10 个简短任务的二维由上而下的游​​戏。当您建立一个问答游戏与朋友分享时，能持续学习程式设计的一些基础知识(变量和如果语句） 。在到达班级排行榜榜首的过程中赚取积分和徽章。
   processing_longdescription: 使用程式语言处理器，在视觉艺术的情境中介绍程式设计。简短的影片课程介绍引导设计互动式绘图程式的编写程式码练习
   robomind_longdescription: '学生用控制自己的虚拟机器人来学习编程的基础知识. 在线课程是完全独立的短演示,电影,测验和 自动导引/提示来帮助编程练习. '
-  groklearning_longdescription: '使用Python 程式设计语言来构建称为"伊丽莎"Eliza"聊天机器人扮演一个精神治疗医师。你将教导伊丽莎如何说话和说正确的事情。她可以愚弄你的朋友们，让他们误以为她是一个人不是一台电脑吗？'
-  quorum_longdescription: 本教案可供视障人士透过辅助器阅读与流览。与玛丽以一名程式设计师加入生物学实验室，并学习Quorum程式语言。本教案包含线上示例活动的学生引导式课程。
+  groklearning_longdescription: '使用Python 程式设计语言来构建叫做"伊丽莎"的聊天机器人，并让她扮演一个精神治疗医师。你将教导伊丽莎如何说话和说正确的内容。她可以误导你的朋友，让他们误以为她是一个人而不是一台电脑吗？'
+  quorum_longdescription: 本教案可供视障人士透过辅助器阅读与流览。玛丽是一名生物学实验室的程序设计师，与她一起学习Quorum程序语言。本教案包含在线示例活动的自学式课程。
   codespark_longdescription: '示例是有趣的，孩子们能明白的方式来学习程序设计的方法。设计可爱的人物来解决难题，并为生活带来一个虚拟的世界。这场比赛是"不需言语的"，所以任何人都可以玩！'
-  kodable_longdescription: Kodable 是一个自我引导的iPad 游戏，为5 岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
+  kodable_longdescription: Kodable 是一个自学的iPad 游戏，为5 岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
   tynkerapp_longdescription: 通过解决有趣的代码谜题来学习编程。 使用主题图案，10个以上的游戏包和可自定义的角色来轻松地创作游戏和故事。不需要连接互联网。你也可以在网页上查看你的作品。
   robomindnl_longdescription: '学生用控制自己的虚拟机器人来学习编程的基础知识. 在线课程是完全独立的短演示,电影,测验和 自动导引/提示来帮助编程练习. '
   flappy_longdescription: 使用拖放式的程式语言设计你自己Flappy游戏，并可自订它不同的外观（Flappy鲨鱼、Flappy圣诞老人、或任何角色）。只要点击一下，就可将游戏加到您的手机中。
   bitsbox_longdescription: 定制您自己的虚拟平板电脑，然后编写一系列的Apps来使用及分享。让非常小的孩子透过简单体验来使用真正Javascript ，成为可能的事，您会达到比您想到还远。
   makeschool_longdescription: '学习如何使用适合初学者的一门新编程语言——Swift来制作一个iPhone游戏！开发一个以博&eacute;宝贝为背景的动作类游戏，并通过编写代码来教你的小怪兽新的招式。你将学会如何使用变量，函数和对象来帮助你的怪兽赢得胜利！'
-  touchdevelop_longdescription: '这个触摸屏友好的编辑器将引导您创建像素艺术品、解决小熊谜题，或者创作你自己的跳跳鸟游戏。 '
-  appinventor_longdescription: 娱乐、 简短的影片教案引导您在您的Andr​​oid 手机或平板电脑上完成建立三个简单的APPs程式。它设计给新手和专家，此Hour of Code活动让你开始建构自己的Apps，在你了解它之前。想像一下与朋友分享您自己创造的应用程式！这些活动适合个人自学和教师带领的班级课程。
-  blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载布洛克里的自学教案，Code.org 教案的前辈元老— — 一个3兆字节的压缩文件档案可以载入到任何一台电脑上或存在一个U盘上使用。
-  thinkersmith2_longdescription: 学生以打开和关闭的功能学习如何在二进位档案中表示和储存字母。结束时，此课程获取自己名字的编码带回家。
-  kodableunplugged_longdescription: '使用普通纸的设计，fuzzFamily Frenzy教导5 岁以上的孩子的程式设计逻辑。老师应解释这个游戏，然后学生作伴来完成一个简单的障碍课程。 '
+  touchdevelop_longdescription: '这个触屏编辑器将引导您创建像素艺术品、解决小熊谜题，或者创作你自己的跳跳鸟游戏。 '
+  appinventor_longdescription: 娱乐、 简短的影片教案引导您在您的安卓手机或平板电脑上完成建立三个简单的应用程序。它为新手和专家设计的，《编程一小时》活动让你在了解编程以前，就能开始建构自己的应用程序。想像一下与朋友分享您自己创造的应用程序！这些活动适合个人自学和教师带领的班级课程。
+  blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载模块化的自学教案，Code.org 教案的前辈元老— — 一个3兆字节的压缩文件档案可以载入到任何一台电脑上或存在一个U盘上使用。
+  thinkersmith2_longdescription: 学生以学习如何在二进位档案中表示和储存字母。结束时，他们可以把自己名字的编码带回家。
+  kodableunplugged_longdescription: '使用普通纸的设计，fuzzFamily Frenzy教导5 岁以上的孩子的程式设计逻辑。老师应解释这个游戏，然后学生结伴来完成一个简单的障碍课程。 '
   projguts_longdescription: '这次"不插电"活动由一群学生玩不同版本的剪刀/ 石头/ 布的游戏，以协助学生学习如何建模与模拟运作原理，并查看不同的模型的实验结果。'
   hourofcode_longdescription: 新 code.org/hoc 的占位符
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
   starwars_longdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
   playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
-  codeorg_beyond_name: 介绍电脑科学 (学龄前到8 年级）
-  khan_beyond_name: 学习电脑程式设计
-  tynker_beyond_name: 学习电脑程式设计
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
+  codeorg_beyond_name: 介绍电脑科学 (8 年级）
+  khan_beyond_name: 学习电脑程序设计
+  tynker_beyond_name: 在家学习电脑程序设计
   scratch_beyond_name: 用编程发挥创意
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR 预读者
+  scratchjr_beyond_name: ScratchJR适合学龄前读者
   hopscotch_beyond_name: Hopscotch:在你的 iPad 上设计程式
   pocketcode_beyond_name: Pocket程式码
   groklearning_beyond_name: 学习 Python 程式设计
@@ -802,8 +838,8 @@ zh-CN:
   appinventor_beyond_name: AppInventor 编程一小时
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: 同小狗卡莱尔一起学编程
-  udemy_beyond_name: 线上程式设计课程
-  lynda_beyond_name: 线上程式设计课程
+  udemy_beyond_name: 在线程序设计课程
+  lynda_beyond_name: 在线编程课程
   edx_beyond_name: 哈佛大学 CS50 课堂
   coursera_beyond_name: 斯坦福大学 CS 101 课程
   udacity_beyond_name: CS 101
@@ -812,20 +848,20 @@ zh-CN:
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: 学习 HTML
-  codeavengers_beyond_name: 学习网站程式设计
+  codeavengers_beyond_name: 学习网站程序设计
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino与Sparkfun
-  processing_beyond_name: 处理常式
+  processing_beyond_name: 处理过程
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: 年龄鉴于4至104
+  codeorg_beyond_gradelevel: 适合年龄 4 岁以上
   khan_beyond_gradelevel: 中学及以上
-  tynker_beyond_gradelevel: 年龄 5-13
-  scratch_beyond_gradelevel: 年龄 8 +
+  tynker_beyond_gradelevel: 适合年龄 5-13
+  scratch_beyond_gradelevel: 适合年龄 8 岁以上
   lightbot_beyond_gradelevel: 所有年龄
   codecademy_beyond_gradelevel: 高中
   kodable_beyond_gradelevel: 小学
@@ -845,8 +881,8 @@ zh-CN:
   coursera_beyond_gradelevel: 大学
   udacity_beyond_gradelevel: 大学
   teachingtree_beyond_gradelevel: 大学
-  kodu_beyond_gradelevel: 年龄 8 +
-  cargobot_beyond_gradelevel: 年龄 8 +
+  kodu_beyond_gradelevel: 适合年龄 8 岁以上
+  cargobot_beyond_gradelevel: 适合年龄 8 岁以上
   kidsruby_beyond_gradelevel: 年龄 12 岁或以上
   w3schools_beyond_gradelevel: 年龄 12 岁或以上
   codeavengers_beyond_gradelevel: 中学及以上
@@ -854,51 +890,51 @@ zh-CN:
   codecombat_beyond_gradelevel: 中学及以上
   codea_beyond_gradelevel: 高中或以上
   lego_beyond_gradelevel: 中学及以上
-  finch_beyond_gradelevel: 年龄 8 +
+  finch_beyond_gradelevel: 适合年龄 8 岁以上
   arduino_beyond_gradelevel: 高中或以上
   processing_beyond_gradelevel: 高中
   alice_beyond_gradelevel: 中学及以上
-  sphero_beyond_gradelevel: 年龄 8 +
+  sphero_beyond_gradelevel: 适合年龄 8 岁以上
   codeorg_beyond_platformtext: 现代的浏览器，平板电脑
-  khan_beyond_platformtext: 现代的Web浏览器
-  tynker_beyond_platformtext: 现代浏览器 （必须 $$）
+  khan_beyond_platformtext: 现代网络浏览器
+  tynker_beyond_platformtext: 现代网络浏览器 （需要 $$）
   scratch_beyond_platformtext: 任何浏览器
   lightbot_beyond_platformtext: iOS，Android（或浏览器）
-  codecademy_beyond_platformtext: 现代的Web浏览器。iOS，Android应用程序
+  codecademy_beyond_platformtext: 现代网络浏览器。iOS，安卓应用程序
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: 移动应用程序
-  groklearning_beyond_platformtext: 现代的Web浏览器
+  groklearning_beyond_platformtext: 现代网络浏览器
   hacketyhack_beyond_platformtext: 桌面安装
-  robomind_beyond_platformtext: 现代的Web浏览器，移动网络
-  makeschool_beyond_platformtext: 现代的Web浏览器
-  appinventor_beyond_platformtext: 现代浏览器 + Android
+  robomind_beyond_platformtext: 现代的网络浏览器，移动网络
+  makeschool_beyond_platformtext: 现代的网络浏览器
+  appinventor_beyond_platformtext: 现代浏览器 + 安卓
   touchdevelop_beyond_platformtext: 现代的浏览器，智能手机，所有的设备
   codehs_beyond_platformtext: 现代的浏览器 (需要 $$)
-  udemy_beyond_platformtext: 基于Web的
-  lynda_beyond_platformtext: 基于Web的 (需要 $$)
+  udemy_beyond_platformtext: 基于网络的
+  lynda_beyond_platformtext: 基于网络的 (需要 $$)
   edx_beyond_platformtext: 现代的浏览器
   coursera_beyond_platformtext: 现代的浏览器
   udacity_beyond_platformtext: 现代的浏览器
-  teachingtree_beyond_platformtext: 基于Web的
+  teachingtree_beyond_platformtext: 基于网络的
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: 桌面安装
-  w3schools_beyond_platformtext: 现代的Web浏览器
-  codeavengers_beyond_platformtext: 现代的Web浏览器
-  mozilla_beyond_platformtext: 现代的Web浏览器
-  codecombat_beyond_platformtext: 基于 web 的 (Firefox，Chrome，Safari，IE9 +)
+  w3schools_beyond_platformtext: 现代的网络浏览器
+  codeavengers_beyond_platformtext: 现代的网络浏览器
+  mozilla_beyond_platformtext: 现代的网络浏览器
+  codecombat_beyond_platformtext: 基于网络的 (Firefox，Chrome，Safari，IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: 机器人购买
   finch_beyond_platformtext: 机器人购买
-  arduino_beyond_platformtext: Web 浏览器，然后购买套件
-  processing_beyond_platformtext: 现代的Web浏览器
+  arduino_beyond_platformtext: 网络浏览器，然后购买套件
+  processing_beyond_platformtext: 现代网络浏览器
   alice_beyond_platformtext: Windows 或 Mac (需要安装)
   sphero_beyond_platformtext: 机器人购买
   codeorg_beyond_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
   khan_beyond_shortdescription: 学习如何在JavaScript中作画
-  tynker_beyond_shortdescription: 一个有趣和配合4-8 年级学生的课程
+  tynker_beyond_shortdescription: 一个有趣的4-8 年级学生的课程
   scratch_beyond_shortdescription: 创造互动游戏、故事和动画。
   lightbot_beyond_shortdescription: 用一个游戏来教授编程概念
   codecademy_beyond_shortdescription: 在网页浏览器中学习JavaScript编程
@@ -907,19 +943,19 @@ zh-CN:
   hopscotch_beyond_shortdescription: 在 iPad 上学习可视化编程
   pocketcode_beyond_shortdescription: 在你的智能手机上创建一个游戏，并与朋友分享！
   groklearning_beyond_shortdescription: 基本的 python 编程简介
-  hacketyhack_beyond_shortdescription: 從基础学习Ruby
+  hacketyhack_beyond_shortdescription: 从基础学习Ruby
   robomind_beyond_shortdescription: 为一个虚拟机器人编写代码
   makeschool_beyond_shortdescription: 学会在一小时内做一个iPhone游戏
-  appinventor_beyond_shortdescription: 让你自己的 (Android) 应用程序 !
+  appinventor_beyond_shortdescription: 做你自己的安卓应用程序!
   touchdevelop_beyond_shortdescription: 直接在你的手机、 平板电脑或笔记本电脑上写应用程序
-  codehs_beyond_shortdescription: 使用一个有趣的视觉环境来学习 JavaScript 编程与
-  udemy_beyond_shortdescription: 几十个在线程序设计程的课程
+  codehs_beyond_shortdescription: 使用一个有趣的视觉环境来学习 JavaScript 编程
+  udemy_beyond_shortdescription: 几十个在线程序设计的课程
   lynda_beyond_shortdescription: 几十个在线程序设计程的课程
   edx_beyond_shortdescription: 哈佛大学最受欢迎的课程
   coursera_beyond_shortdescription: 以 CS101 开头
-  udacity_beyond_shortdescription: 以 CS101 开头
+  udacity_beyond_shortdescription: 从 CS101 开始
   teachingtree_beyond_shortdescription: 在线知识： 快速、 不受约束
-  kodu_beyond_shortdescription: 设计一个 3D 的游戏世界
+  kodu_beyond_shortdescription: 设计一个三维的游戏世界
   cargobot_beyond_shortdescription: 在你的iPad上写一个机器人手臂的程序
   kidsruby_beyond_shortdescription: 学习使用 Ruby 编程
   w3schools_beyond_shortdescription: 学习做网站
@@ -928,60 +964,60 @@ zh-CN:
   codecombat_beyond_shortdescription: 玩游戏和学习 JavaScript 来取胜
   codea_beyond_shortdescription: 在你的 iPad 上创建应用程序
   lego_beyond_shortdescription: 构建和编程一个机器人
-  finch_beyond_shortdescription: 为计算机科学教育的机器人
+  finch_beyond_shortdescription: 为计算机科学教育用的机器人
   arduino_beyond_shortdescription: 使用Sparkfun 的数字沙盘来 学习Arduino。
   processing_beyond_shortdescription: 学习处理语言
-  alice_beyond_shortdescription: 在3D环境里教编程
-  sphero_beyond_shortdescription: SPRK课程給孩子们一個有趣的機器人編程速成班，同时銳化數學和科學技能。
-  codeorg_beyond_longdescription: '学习计算机科学的基本概念与拖放编程. 3个完整 的课程，每课包含15-20节课, 混合"Unplugged"的课堂活动, 自我指导教程的愤怒小鸟和植物大战僵尸游戏, 跟由比尔•盖茨和马克•扎克伯格主演的视频教程. 了解重复循环、 条件、 基本算法、 函数和变量.'
+  alice_beyond_shortdescription: 在三维环境里教编程
+  sphero_beyond_shortdescription: SPRK课程给孩子们提供了一个有趣的机器人编程速成班，同时也会提高数学和科学技能。
+  codeorg_beyond_longdescription: 通过拖放编程来学习计算机科学的基本概念。这里有3个完整的课程，每课包含15-20个章节, 有些是不用电脑的课堂活动。这些像游戏一样的自学课程，有由比尔•盖茨和马克•扎克伯格主演的视频教程，还有愤怒的小鸟和植物大战僵尸的场景。从中你可以学到重复循环、 条件、 基本算法、 函数和变量.
   khan_beyond_longdescription: 在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！
-  tynker_beyond_longdescription: 'Tynker使学习编程轻松有趣.  它利用视觉. 孩子们安排代码块来建造游戏和移动应用程序.它删除需要了解编程语法. 孩子们马上把想法转变为动画的故事和数学艺术.它促进了渐进式学习. 当孩子们学习基础知识, Tynker引入更先进的概念，包括语法驱动编程.'
+  tynker_beyond_longdescription: Tynker使学习编程轻松有趣. 它让代码变成了可视化的图像。孩子们通过排列模块来创造游戏和手机应用程序。通过它，不需要了解编程语法，孩子们马上就可以吧把想法转变为动画的故事和数学艺术。它也是渐进式学习。当孩子们学习了基础知识，Tynker会引入更高级的概念，包括语法驱动编程.
   scratch_beyond_longdescription: '通过 Scratch 平台，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！'
-  lightbot_beyond_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，作业系统可使用iOS 或android 系统(或Web 浏览器)。学习如何排列命令、 找出模式、 使用程序与利用循环！
-  codecademy_beyond_longdescription: Codecademy 透过JavaScript ，以互动式，学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了无麻烦的Hour of Code经验，附测验、 幻灯片，及给学生一个完整的专案为结束。
+  lightbot_beyond_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，操作系统可使用iOS 或安卓系统(或网络浏览器)。学习如何排列命令、 找出模式、 使用过程与利用循环！
+  codecademy_beyond_longdescription: Codecademy 透过JavaScript ，以互动式，学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了简单的《编程一小时》经验，附测验、 幻灯片，及给学生一个完整的专案为结束。
   kodable_beyond_longdescription: Kodable 是一个自我引导的iPad 游戏，为5 岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
-  scratchjr_beyond_longdescription: ScratchJr是一个入门的编程语言块，使年轻的儿童能够创建他们自己的互动故事和游戏。儿童扣合在一起的图形化编程块，使人物移动，跳跃，舞蹈，唱歌
-  hopscotch_beyond_longdescription: '在iPad的学生引导"Hopscotch"编程语言教程.  學生在他們的iPad上為自己的iPad將建立遊戲和應用程序. 学生可以单独或与朋友合作 (每iPad最多3名學生用).'
-  pocketcode_beyond_longdescription: '用 "Pocket Code" 在你的智能手机上创建你自己的游戏! 帮助跳伞史蒂夫交付他的包裹。你可以与朋友和其他用户试用分享！'
-  groklearning_beyond_longdescription: 给没有编程经验的人的Python编程语言入门课程. 我们独特搭配介绍和挑战的内容将带给你对Python编程一个透彻的了解. 我们教这些内容给来自不同背景和不同年龄的学生.我们相信它会适合你。
-  hacketyhack_beyond_longdescription: 'Hackety哈克将教你入门编程的绝对基础。不需要有编程经验的！使用Hackety哈克，你将学习Ruby编程语言.  Ruby是用于各种计算机程序，包括桌上型电脑应用程序和网站. [注：需要桌上型电脑安装]'
-  robomind_beyond_longdescription: '学生用控制自己的虚拟机器人来学习编程的基础知识. 在线课程是完全独立的短演示,电影,测验和 自动导引/提示来帮助编程练习. '
-  makeschool_beyond_longdescription: 懂一点ObjectiveC吗? 学在一个小时内做一个iPhone游戏！我们将引导你完成整个过程，编码，测试, 并在浏览器玩你的游戏, 然后在Facebook上给朋友们去尝试！无需有事先的iPhone开发经验。你必须明白什么是变量，方法和对象.
-  appinventor_beyond_longdescription: 娱乐、 简短的影片教案引导您在您的Andr​​oid 手机或平板电脑上完成建立三个简单的APPs程式。它设计给新手和专家，此Hour of Code活动让你开始建构自己的Apps，在你了解它之前。想像一下与朋友分享您自己创造的应用程式！这些活动适合个人自学和教师带领的班级课程。
-  touchdevelop_beyond_longdescription: TouchDevelop可以让你在 iPad，iPhone，安卓，PC，苹果机，Windows手机上创建应用程序。我们触摸友善的编辑器，使编码有乐趣，即使在您的手机或平板电脑上！
+  scratchjr_beyond_longdescription: ScratchJr是一个入门的编程语言块，使儿童能够创建他们自己的互动故事和游戏。儿童扣合在一起的图形化编程块，使人物移动，跳跃，舞蹈，唱歌。
+  hopscotch_beyond_longdescription: 'iPad上的"Hopscotch"自学编程语言教程. 学生们能够在iPad上创建自己的游戏。不仅可以自己独立学习，每个iPad上也可以最多三个人一起学习。'
+  pocketcode_beyond_longdescription: '用 "口袋代码" 在你的智能手机上创建你自己的游戏! 帮助跳伞员史蒂夫交付他的包裹。你可以与朋友和其他用户试用分享！'
+  groklearning_beyond_longdescription: 给没有编程经验的人的Python编程语言入门课程. 我们独特搭配介绍和挑战的内容将带给你对Python编程一个透彻的了解. 我们给来自不同背景和不同年龄的学生教这些内容. 我们相信它会适合你。
+  hacketyhack_beyond_longdescription: '哈克将教你入门编程的基础。不需要有编程经验！使用哈克，你将学习到Ruby编程语言. Ruby是一种用于各种计算机程序，包括桌上型电脑应用程序和网站. [注：需要电脑安装软件]'
+  robomind_beyond_longdescription: '学生通过控制虚拟机器人来学习编程的基础知识. 在线课程包括完全独立的短演示, 电影, 测验和自动导引、提示来帮助编程练习. '
+  makeschool_beyond_longdescription: 懂一点ObjectiveC吗? 学在一个小时内做一个iPhone游戏！我们将引导你完成整个过程，编码，测试, 并在浏览器玩你的游戏, 然后在Facebook上给朋友们去尝试！无需有事先的iPhone开发经验。你必须明白什么是变量，方法和对象。
+  appinventor_beyond_longdescription: 娱乐、 简短的影片教案引导您在您的安卓手机或平板电脑上完成建立三个简单的应用程序。它设计给新手和专家，此《编程一小时》活动让你在你了解编程之前，开始建构自己的应用程序。想像一下与朋友分享您自己创造的应用程序！这些活动适合个人自学和教师带领的班级课程。
+  touchdevelop_beyond_longdescription: TouchDevelop可以让你在 iPad，iPhone，安卓，PC，苹果机，Windows手机上创建应用程序。即使在您的手机或平板电脑上，我们用可触摸的编辑器使编码有乐趣！
   codehs_beyond_longdescription: '与卡雷尔小狗学习编程，一个有趣，方便和直观的编码基础知识介绍，給一台電腦命令就像給一隻狗命令. 最好由一名教师主导, 但也可以独立完成.[注：需要付款]'
   udemy_beyond_longdescription: '无论你从来没有见过一行代码，或者你以代码为生，Udemy有一个适合你，由专业导师教的课程.[注：需要付款]'
-  lynda_beyond_longdescription: '学习如何编写，创建和构建Web应用程序，从面向对象编程基础的C和C++中，到如何编写Java.  我们的开发教程，可以帮助你学习，发展和创造移动应用程序，用PHP和MySQL数据库，开始使用统计处理咒骂R, 等等. [注：需要付款]'
-  edx_beyond_longdescription: CS50x 是哈佛大学的基础计算机学课程，主要目的是为了把计算机学和编程领域介绍给所有学生们，包括非修读计算机学和对于编程领域毫无经验的人士。课程包括以下主题：抽象化、算法、数据结构、封装、资源管理、安全系统、软件工程，和网络开发。学生们也会学习软件语言，例如 C 、PHP 和 JavaScript 加 SQL、CSS、和 HTML。在哈佛校园内，CS50x 是大学中人数第二大的课程。
+  lynda_beyond_longdescription: '学习如何编写，创建和构建Web应用程序，从面向对象编程基础的C和C++中，到如何编写Java. 我们的开发教程，可以帮助你学习，发展和创造移动应用程序，用PHP和MySQL数据库，开始使用统计处理语言R, 等等. [注：需要付款]'
+  edx_beyond_longdescription: CS50x 是哈佛大学的基础计算机学课程，主要目的是为了把计算机学和编程领域介绍给所有学生们，包括非修读计算机学和对于编程领域毫无经验的人士。课程包括以下主题：抽象化、算法、数据结构、封装、资源管理、安全系统、软件工程，和网络开发。学生们也会学习软件语言，例如 C 、PHP 和 JavaScript 加 SQL、CSS、和 HTML。在哈佛校园内，CS50x 是大学中人数第二多的课程。
   coursera_beyond_longdescription: 斯坦福大学的 CS 101（免费！）课堂的导师是尼克 • 帕兰蒂 。CS101 专门向毫无经验的学生们教导计算机学的根本概念。您可以通过玩和试探简短的代码来领悟到计算机的潜能和限度。通过 CS 101，您也能够意识到今日计算机界的背景，了解什么叫计算机，什么叫硬件、什么叫软件、和什么叫互联网。参与这趟课程除了懂得使用浏览器之外无需任何经验，。
   udacity_beyond_longdescription: |
-    在这个过程中，你会学到计算机科学的关键概念，并学习如何编写自己的计算机程序在构建网络爬虫的情况下.
-    这门课程不需要事先编程知识. 初学者欢迎！在这个课程结束时，你会学到计算机科学和足够的编程关键概念去能够编写Python程序来解决你自己的问题。本课程将准备你升到中级计算的课程.
+    在这个过程中，你会学到计算机科学的关键概念，并学习如何构建网络爬虫，编写自己的计算机程序.
+    这门课程不需要事先编程知识. 欢迎初学者！在这个课程结束时，你会学到计算机科学和足够的编程关键概念来编写Python程序来解决你自己的问题。本课程将会让你准备好升到中级计算的课程.
   teachingtree_beyond_longdescription: 'TeachingTree是一个开放的平台，任何人都可以组织教育内容. 我们的目标是为学生快速存取他们所需要的精确的剪辑，以便了解各个概念.  鼓励每个人帮助添加视频或标记概念.'
-  kodu_beyond_longdescription: Kodu让孩子们通过一个简单的可视化编程语来言创建PC和Xbox上的游戏。Kodu可以用来教创造力，解决问题，讲故事，以及编程。任何人都可以使用Kodu制作游戏，幼儿以及成人，没有设计或编程技能。PC的Kodu可免费下载。Xbox的Kudo也是在美国的Xbox市场有售，约5美元在独立游戏频道里面.
-  cargobot_beyond_longdescription: Cargo-Bot 是一种益智游戏，你教机器人如何移动箱子。听起来很简单，对不对？它拥有36个恶魔般巧妙的谜题，困扰音乐和令人惊叹的视网膜图形。你甚至可以记录您的解决方案，并在YouTube上和你的朋友分享.
+  kodu_beyond_longdescription: Kodu让孩子们通过一个简单的可视化编程语来言创建PC和Xbox上的游戏。Kodu可以用来教创造力，解决问题，讲故事，以及编程。任何人都可以使用Kodu制作游戏，幼儿以及成人，没有设计或编程技能。PC的Kodu可免费下载。Xbox的Kudo也是在美国的Xbox市场有售，在独立游戏频道里面约需要5美元.
+  cargobot_beyond_longdescription: Cargo-Bot 是一种益智游戏，你教机器人如何移动箱子。听起来很简单，对不对？它拥有36个巧妙复杂的关卡，魔幻的音乐和令人惊叹的图形。你甚至可以录下解决方案，并在视频网站上和你的朋友分享。
   kidsruby_beyond_longdescription: |
-    有乐趣和做游戏，或使用Ruby来破解你的功课！只要告诉你的父母或老师你正在学习Ruby编程...;)
-    免费和可以在任何计算机上使用. [注：需要桌面安装]
-  w3schools_beyond_longdescription: 学在自己的计算机上创建的网站。在一天内了解服务器的基础. 学添加数据库到您的网站上.
+    做出有趣的游戏，或使用Ruby来做作业！只用告诉你的父母或老师你正在学习Ruby编程...;)
+    可以免费在任何计算机上使用. [注：需要安装桌面软件]
+  w3schools_beyond_longdescription: 学西在自己的计算机上创建的网站。在一天内了解服务器的基础支持。学习如何添加数据库到您的网站上。
   codeavengers_beyond_longdescription: 了解如何编写游戏程序，应用程序和网站. 通过专家设计对初学者难度适当的水平, 简单易懂的说明，当你需要时并有很大的帮助. 我们的HTML，CSS和JavaScript课程包括代码的挑战和修改游戏，让学习变得有趣和有效, 合适所有年龄的人.
-  mozilla_beyond_longdescription: Thimble使创建和分享你自己做的网页简单得可笑. 在您的浏览器里撰写和编辑HTML和CSS，那么即时可以预览您的工作. 只需点击一下就可以托管和分享你完成的项目. 适合初学者和专家.
-  codecombat_beyond_longdescription: '扮演一个巫师, 使用代码（法术）来控制你的英雄，导航迷宫，打败食人魔，诱骗敌人，拯救盟友!  这个HTML 5 网站游戏让初学者学习 JavaScript.'
+  mozilla_beyond_longdescription: Thimble使创建和分享你自己做的网页非常简单. 在您的浏览器里撰写和编辑HTML和CSS，并且可以随时预览结果. 只需点击一下就可以托管和分享你完成的项目. 适合初学者和专家.
+  codecombat_beyond_longdescription: 像一个巫师一样，使用代码来像法术一样控制你的英雄来走出迷宫，打败食人魔，诱骗敌人，拯救盟友! 这个HTML 5 网站游戏让初学者学习 JavaScript。
   codea_beyond_longdescription: 'iPad上的Codea可以让你创建游戏和模拟&mdash; 或是你的任何可视化想法. 使用iPad的功能, 如多点触摸及加速度, 来把你的想法变成交互式创作. 我们认为Codea是最美丽的代码编辑器，而且很容易用. Codea的设计目的是让你触摸你的代码。想要更改号码吗？只需点击并拖动它。颜色，或图像呢? 触碰启动可视化编辑器，让你看到你想要的效果。'
   lego_beyond_longdescription: 使用LEGO块来创建可定制和可编程的机器人.
-  finch_beyond_longdescription: '芬奇是计算机科学教育的新机器人.  它的设计是在卡耐基梅隆大学创建实验室进行四年研究的结果. 芬奇的設計目的是提供一個引人入勝的編程藝術介紹節目. 它能支持超過一打的編程語言和環境, 包括一些適合年僅八歲學生的環境. 芬奇的目的是让学生写丰富的互动编程。'
-  arduino_beyond_longdescription: Arduino是一个流行的平台, 设计让艺术家和设计师使用真正传感器，LED灯，蜂鸣器, 等等. Sparkfun的虚拟沙箱会教你在浏览器中写Arduino代码.
-  processing_beyond_longdescription: 'Processing 是一种编程语言，开发环境和在线社区. 自2001年以来，Processing提升了视觉艺术的软件文化和技术内的视觉艺术文化.  最初创建作为一个软件速写本和可视范围内教计算机编程基础，Processing 演变成一个专业人士的开发工具. 今天，有数以万计的学生，艺术家，设计师，研究者和爱好者使用Processing 来学习，原型和生产.'
-  alice_beyond_longdescription: 采用创新的编程环境，以支持创建3D动画，爱丽丝项目提供教学和学习计算思维的工具和材料，解决问题，和计算机编程, 跨越年龄和年级的频谱。
+  finch_beyond_longdescription: 芬奇是一个用于计算机科学教育的新机器人。它的是卡耐基梅隆大学创建实验室四年研究的结果. 芬奇的设计目的是提供一个吸引人的编程艺术介绍. 它支持超过始终编程语言和环境，包括一些适合年仅8岁学生的编程环境。达芬奇的设计也让学生能够用它写出丰富的互动程序。
+  arduino_beyond_longdescription: Arduino是一个流行的平台, 让艺术家和设计师使用真实的传感器，LED灯，蜂鸣器, 等等. Sparkfun的虚拟环境会教你在浏览器中写出Arduino代码.
+  processing_beyond_longdescription: Processing 是一种编程语言，也包括开发环境和在线社区。自2001年以来，通过可视化的技术，Processing提升了软件代码的可读性。最初创建时，它作为一个软件的草稿本和可视化计算机编程教学，现在Processing 演变成了一个专业人士的开发工具。今天，有数以万计的学生，艺术家，设计师，研究者和爱好者使用Processing 来学习，制造原型和产品。
+  alice_beyond_longdescription: 采用创新的编程环境，以支持创建三维动画，爱丽丝项目提供教学和学习计算思维的工具和材料，适合不同年龄和年级来学习如何解决问题和计算机编程。
   sphero_beyond_longdescription: 无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。
   compatibility_https_header: 请为 Code.org 启用 HTTPS。
   compatibility_https_message: "为了提高安全性，我们在%{https_date}之后使用HTTPS技术。在这一天之后您将无法访问 Code.org. <a href='%{it_requirements_url}'>点击这里</a>了解如何为 Code.org 启用HTTPS。"
   compatibility_https_hide_this_warning: 隐藏此警告
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: 拍翅膀
   infinity_shortcode: inf
-  playlab_shortcode: 玩
+  playlab_shortcode: lab
   artist_shortcode: art

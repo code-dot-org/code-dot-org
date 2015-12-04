@@ -464,6 +464,9 @@ cs:
         infinity_playlab_intro: 'Play Lab - Úvod'
         infinity_playlab_events: 'Play Lab - události'
         infinity_playlab_repeat_forever: Play Lab trvalé opakování
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -517,6 +520,9 @@ cs:
         gumball_intro: 'Gumballova Hodina kódu - úvod'
         gumball_events: 'Gumballova Hodina kódu - události'
         gumball_repeat: 'Gumballova Hodina kódu - Opakovací příkazy'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Přetáhni blok "posunout vpřed" pod ten druhý blok'

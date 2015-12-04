@@ -146,7 +146,7 @@ az:
           description_short: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           Maze: Labirint
-          title: Kod Saatı
+          title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!
         frozen:

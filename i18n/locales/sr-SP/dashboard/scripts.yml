@@ -146,7 +146,7 @@ sr:
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: Лавиринт
-          title: Час кода
+          title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
         frozen:
@@ -1479,7 +1479,7 @@ sr:
         mc:
           title: Minecraft sat programiranja
           description_short: Истражите Мајнкрафт свет кроз кôд
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
