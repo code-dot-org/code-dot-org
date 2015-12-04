@@ -2,6 +2,10 @@
   width: 970px;
 }
 
+.video-smalltext {
+  padding: 10px;
+}
+
 .course-carousel {
   opacity: 0.4;
 }
