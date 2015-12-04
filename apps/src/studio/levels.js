@@ -1582,7 +1582,11 @@ levels.sandbox =  {
 };
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
-levels.playlab_10 = utils.extend(levels.sandbox, {});
+levels.playlab_10 = utils.extend(levels.sandbox, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
 levels.iceage_free_play = utils.extend(levels.playlab_10, {
   appStringsFunctions: {
     continueText: msg.playlab_lastLevel_continueText
