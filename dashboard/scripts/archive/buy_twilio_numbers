@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+# This script uses the Twilio API to bulk-purchase numbers for load-balancing SMS via the Messaging Service.
+require_relative '../../config/environment'
+require 'twilio-ruby'
+require 'set'
+
+# credentials
+ACCOUNT_SID = CDO.twilio_sid
+AUTH_TOKEN = CDO.twilio_auth
+
+@client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
+
+# print some available numbers
+numbers = Set.new
+NUMBER_TO_BUY = 50
+while numbers.length < NUMBER_TO_BUY
+  CDO.log.info 'Requesting available phone numbers...'
+  @numbers = @client.available_phone_numbers.get('US').local.list(
+    exclude_all_address_required: true,
+    sms_enabled: true,
+    contains: '***2633' # (XXX)XXX-CODE
+  )
+  CDO.log.info  "Found #{@numbers.length} numbers"
+  break if @numbers.empty?
+  @numbers.each do |num|
+    if numbers.length < NUMBER_TO_BUY
+      number = num.phone_number
+      numbers.add(number)
+      @client.incoming_phone_numbers.create(phone_number: number)
+      CDO.log.info "Purchased #{number}"
+    end
+  end
+end
+
+# Copy/paste this list of numbers into the "Bulk Add Existing Numbers" form in the Messaging Service console.
+CDO.log.info "Purchased #{numbers.length} Numbers:\n#{numbers.to_a.join("\n")}"
