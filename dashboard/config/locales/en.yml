@@ -400,6 +400,7 @@ en:
   share:
     title: "Learn on Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."
+    try_hour_of_code: 'Try an Hour of Code!'
   gender:
     male: 'Male'
     female: 'Female'
@@ -429,6 +430,7 @@ en:
     built_on_code_studio: 'Built on Code Studio'
     make_my_own_app: 'Make my own app'
     how_it_works: 'How it works'
+    try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
