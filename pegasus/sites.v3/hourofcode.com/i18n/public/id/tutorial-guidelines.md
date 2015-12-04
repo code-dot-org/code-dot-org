@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Panduan tata cara untuk Hour of Code dan Pekan Edukasi Ilmu Komputer
 
@@ -264,3 +265,4 @@ Jika Anda membuat sebuah tutorial yang dirancang untuk ganguan-penglihatan, kami
 
 [**Kembali ke atas**](#top)
 
+<%= view :signup_button %>

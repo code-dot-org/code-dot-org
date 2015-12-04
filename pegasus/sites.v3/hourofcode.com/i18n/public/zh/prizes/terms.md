@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # 獎品-條款及條件
 
@@ -39,3 +40,4 @@ K 12 間教室在美國和加拿大只限于獎。 Code.org 將選擇獲獎教�
 
 <% end %>
 
+<%= view :signup_button %>

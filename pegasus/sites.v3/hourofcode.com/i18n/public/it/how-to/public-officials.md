@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Come portare l'Ora del Codice nella tua comunità.
 
@@ -54,3 +55,4 @@ nav: how_to_nav
 
   8. **Connettiti.** Visita [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) per saperne di più sull'insegnamento dell'informatica nel tuo stato. Firma la petizione e riceverai aggiornamenti da Code.org riguardo tutti gli sforzi fatti.
 
+<%= view :signup_button %>

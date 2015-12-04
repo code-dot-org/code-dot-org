@@ -71,11 +71,6 @@
   height:40px;
 }
 
-.header-banner {
-  border-radius: 5px;
-  width: 100%
-}
-
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .starwars-tutorial {
     width: 50%;
@@ -126,22 +121,5 @@
   .tutorial-box {
     /* Ensure background doesn't repeat in the wider box */
     background-size: cover;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 600px) {
-  .padded-header {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-
-  .padded-smalltext {
-    padding: 10px;
-  }
-
-  .header-banner {
-    border-radius: 15px;
-    padding: 10px;
   }
 }

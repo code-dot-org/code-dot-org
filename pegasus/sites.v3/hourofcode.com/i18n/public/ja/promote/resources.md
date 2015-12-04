@@ -132,3 +132,4 @@ Hour of Code は[学校名] が21世紀を生きるご子息の皆様に必須�
 
 敬具 [名前]、[肩書]
 
+<%= view :signup_button %>

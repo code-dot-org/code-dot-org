@@ -32,10 +32,8 @@ var MAX_LINES_TO_SAVE = 1000;
 var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
 
 dashboard.clientState.reset = function() {
-  try {
-    $.removeCookie('lines', {path: '/'});
-    sessionStorage.clear();
-  } catch (e) {}
+  $.removeCookie('lines', {path: '/'});
+  sessionStorage.clear();
 };
 
 /**

@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Hour of Code 행사와, 컴퓨터과학(정보과학) 교육 주간을 위한 튜토리얼 가이드라인
 
@@ -265,3 +266,4 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**맨 위로**](#top)
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Materiais de divulgação e estatísticas úteis
 
@@ -19,3 +20,4 @@ Os computadores estão em toda parte, mas menos escolas ensinam ciência da comp
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

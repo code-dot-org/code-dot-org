@@ -44,3 +44,4 @@ Conte aos seus amigos sobre a **#HoraDoCodigo**!
 
 [Envie este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola durante a Hora do Código. Isso pode ajudar a criar um suporte para a ciência da computação em sua área além de uma hora de programação.
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Fakta a užitečné statistiky
 
@@ -19,3 +20,4 @@ Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu by
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

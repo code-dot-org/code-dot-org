@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Prêmios da Hora do Código de 2015
 
@@ -208,4 +209,4 @@ Prêmio limitado para turmas do ensino fundamental e médio dos EUA e Canadá. A
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
-<% end %> 
+<% end %> <%= view :signup_button %>

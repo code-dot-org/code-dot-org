@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # 引言和有用的統計資訊
 
@@ -19,3 +20,4 @@ nav: promote_nav
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

@@ -132,3 +132,4 @@ nav: promote_nav
 
 Искрено Ваш/а, [NAME], [TITLE]
 
+<%= view :signup_button %>

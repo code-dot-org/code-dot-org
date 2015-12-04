@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Flapteksten en nuttige Stats
 
@@ -19,3 +20,4 @@ Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geled
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

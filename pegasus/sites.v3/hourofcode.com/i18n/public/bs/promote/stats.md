@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Blurbs and Useful Stats
 
@@ -19,3 +20,4 @@ Računari su posvuda, ali danas manje škola podučava informatiku nego prije 10
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

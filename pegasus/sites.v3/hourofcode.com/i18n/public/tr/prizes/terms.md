@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Ödüller - Şartlar ve Koşullar
 
@@ -39,3 +40,4 @@ Para ödülü Amerika ve Kanada'daki K-12 derslikleri ile sınırlıdır. Code.o
 
 <% end %>
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### abajo hay una muestra de resolución de apoyo a la semana de Ciencias de la computación y sus objetivos que puedan ser utilizados por el estado y los legisladores locales.
 
@@ -54,3 +55,4 @@ Resuelta, que la [casa o Senado, Estado, Condado, Ciudad o junta escolar]...
 
 (5) anima oportunidades, incluso a través de los programas existentes, para mujeres y minorías subrepresentadas en Ciencias de la computación.
 
+<%= view :signup_button %>

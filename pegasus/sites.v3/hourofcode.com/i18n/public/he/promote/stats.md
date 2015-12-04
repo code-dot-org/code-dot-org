@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Blurbs and Useful Stats
 
@@ -19,3 +20,4 @@ Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acu
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

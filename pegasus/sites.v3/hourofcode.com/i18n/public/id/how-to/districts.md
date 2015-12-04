@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Bagaimana untuk membawa Hour of Code ke seluruh distrik sekolah Anda.
 
@@ -30,3 +31,4 @@ The Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
+<%= view :signup_button %>

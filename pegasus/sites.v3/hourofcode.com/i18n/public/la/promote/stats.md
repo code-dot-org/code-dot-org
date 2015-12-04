@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Reseñas y estadisticas útiles
 
@@ -19,3 +20,4 @@ Las computadoras están en todas partes, pero hoy, menos escuelas enseñan cienc
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Cum puteti aduce evenimentul Hour of Code in intreaga comunitate.
 
@@ -54,4 +55,4 @@ nav: how_to_nav
     
       * **Conectati-va local** Viziteaza [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pentru a afla mai multe despre tehnologia computerelor in zona ta. Semneaza petita si vei primi actualizari din partea Code.org privind eforturile lor de advocacy locale, statale si federale.</ol> 
     
-    
+    <%= view :signup_button %>

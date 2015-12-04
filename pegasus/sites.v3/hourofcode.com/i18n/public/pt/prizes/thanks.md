@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Obrigado por se cadastrar para concorrer a US$10.000 em hardware
 
@@ -31,3 +32,4 @@ Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de ve
 
 [Envie esse e-mail](<%= resolve_url('/promote/resources#politicians') %>) para o prefeito, para a Câmara Municipal, ou para o conselho escolar e convide-os a visitar sua escola para acompanhar a Hora do Código.
 
+<%= view :signup_button %>

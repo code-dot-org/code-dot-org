@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Jak vyučovat jednu Hodinu kódu v mimoškolní aktivitě
 
@@ -136,3 +137,4 @@ Hodina kódu je jen prvním krokem k poznání, jak fungují technologie a jak v
   * Povzbuďte studenty v pokračování [učit se online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Nvštivte](<%= resolve_url('https://code.org/professional-development-workshops') %>) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
 
+<%= view :signup_button %>

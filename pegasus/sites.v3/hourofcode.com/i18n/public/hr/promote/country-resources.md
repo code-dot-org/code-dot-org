@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Pokaži studentima inspirativni video da započnete Sat kodiranja. Primjeri:
 
 <% end %>
 
+<%= view :signup_button %>

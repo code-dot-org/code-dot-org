@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to organize an Hour of Code event
 
@@ -58,3 +59,4 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 | 10:40 - 11:00 am | Los estudiantes hacen una demostración de una actividad sin conexión y como las ciencias de la computación pueden enseñarse sin usar ordenadores.                                      |
 | 11:00 - 11:05 am | El profesor que organizó el evento para toda la escuela dará la charla de cierre.                                                                                                      |
 
+<%= view :signup_button %>

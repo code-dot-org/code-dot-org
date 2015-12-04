@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Mostra da nota de prensa para os representantes políticos
 
@@ -48,3 +49,4 @@ Para máis información sobre [**EVENTO/PROGRAMA/ETC**], visite [**INSERTE SITIO
   
 
 
+<%= view :signup_button %>

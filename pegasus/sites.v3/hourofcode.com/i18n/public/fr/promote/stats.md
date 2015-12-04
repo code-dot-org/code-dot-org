@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Présentation et statistiques utiles
 
@@ -19,3 +20,4 @@ Les ordinateurs sont partout, mais les écoles enseignent moins l'informatique q
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

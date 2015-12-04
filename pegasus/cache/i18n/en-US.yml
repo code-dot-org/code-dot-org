@@ -291,7 +291,7 @@
   starwars_javascript_start_button: "Try now"
   starwars_blocks_title: "Blocks"
   starwars_blocks_description: "Use drag-drop blocks."
-  starwars_blocks_specs: "Many languages | Modern browsers, smartphones, tablets | Ages 6-106"
+  starwars_blocks_specs: "Many languages | Modern browsers, smartphones, tablets | Ages 6-10"
   starwars_blocks_start_button: "Try now"
   starwars_watch_videos: "Before you get started, watch one of these inspirational videos"
   starwars_speak_languages: "Speak another language?"
@@ -302,7 +302,7 @@
   mc_shortdescription: "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world."
   mc_gradelevel: "Ages 6-106"
   mc_platformtext: "Modern browsers, smartphones, tablets"
-  mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
+  mc_specs: "Many languages | Modern browsers and tablets | Ages 6+"
   minecraft_subtitle: "Minecraft Hour of Code"
   volunteer_engineer_submission_title: "Inspire students and volunteer for the Hour of Code."
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '

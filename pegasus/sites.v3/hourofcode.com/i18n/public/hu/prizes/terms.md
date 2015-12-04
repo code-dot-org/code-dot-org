@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Díjak - általános szerződési feltételek
 
@@ -39,3 +40,4 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will sele
 
 <% end %>
 
+<%= view :signup_button %>

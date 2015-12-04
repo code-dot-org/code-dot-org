@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Faleminderit që u regjistruat për mundësinë e fitimit të 10.000$ Çmime Hardware
 
@@ -31,3 +32,4 @@ Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organiz
 
 [Dërgoje këtë email](<%= resolve_url('/promote/resources#politicians') %>) tek kryetari yt i bashkisë, këshilli i qytetit ose bordi shkollës.
 
+<%= view :signup_button %>

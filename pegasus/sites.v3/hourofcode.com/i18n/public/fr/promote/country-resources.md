@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Montrez aux élèves une vidéo inspirante pour démarrer l'Heure de Code. Exemp
 
 <% end %>
 
+<%= view :signup_button %>

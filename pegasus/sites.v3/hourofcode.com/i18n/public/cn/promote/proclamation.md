@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### 以下是关于支持计算机科学教育周的示例分析，其目的是让其可用于州和地方立法。
 
@@ -54,3 +55,4 @@ Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper
 
 （5）鼓励通过现有方案，为女性和少数族裔在学习计算机科学方面创造机会。
 
+<%= view :signup_button %>

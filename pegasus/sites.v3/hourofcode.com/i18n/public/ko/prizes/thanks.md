@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # $10,000에 달하는 하드웨어 상품을 얻을 수 있는 기회에 응모해 주셔서 감사합니다.
 
@@ -31,3 +32,4 @@ nav: prizes_nav
 
 시장, 지역의회 의원 또는 학교운영위원들에게 우리 학교를 방문해 달라는 [이메일 보내기](<%= resolve_url('/promote/resources#politicians') %>)
 
+<%= view :signup_button %>

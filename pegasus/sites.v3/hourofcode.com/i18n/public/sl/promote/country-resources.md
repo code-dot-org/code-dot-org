@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Pokažite učencem navdihujoč video za začetek Ure za kodo. Primeri:
 
 <% end %>
 
+<%= view :signup_button %>

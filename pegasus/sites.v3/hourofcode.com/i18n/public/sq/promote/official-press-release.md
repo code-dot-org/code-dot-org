@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Shembulli i njoftimit për shtyp për zyrtarët e zgjedhur
 
@@ -48,3 +49,4 @@ Për më shumë informacion mbi [**EVENTI/PROGRAMI/ETJ**], VIZITO [**VENDOS WEBS
   
 
 
+<%= view :signup_button %>

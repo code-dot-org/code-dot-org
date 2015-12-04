@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 
@@ -54,3 +55,4 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
+<%= view :signup_button %>

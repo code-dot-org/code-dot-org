@@ -1,4 +1,4 @@
-/* global trackEvent, appOptions */
+/* global trackEvent */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -628,8 +628,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     return null;
   }
 
-  // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
-  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
+  if (this.studioApp_.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;

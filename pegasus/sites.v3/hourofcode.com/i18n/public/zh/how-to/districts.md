@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire school district.
 
@@ -30,3 +31,4 @@ Hour of Code只是一段旅途，是瞭解科技如何運作以及如何創造�
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
+<%= view :signup_button %>

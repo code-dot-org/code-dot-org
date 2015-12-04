@@ -44,3 +44,4 @@ nav: promote_nav
 
 [このメール](<%= resolve_url('/promote/resources#sample-emails') %>)を地元選出の議員や教育委員会に送信して、学校で行うHour of Codeのイベントを見学して頂けるようにお願いしましょう。 これらの活動は、Hour of Codeの活動を超えてコンピュータサイエンスをあなたの地域の学校で盛んにするのを長期的に助けます。
 
+<%= view :signup_button %>

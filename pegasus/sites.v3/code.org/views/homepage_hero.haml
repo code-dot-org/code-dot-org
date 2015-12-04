@@ -114,10 +114,12 @@
             #title= I18n.t(entry[:text1_s])
           - elsif entry[:param1_s] == "num_served"
             #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          - elsif entry[:param1_s] == "signup_button"
+          - elsif entry[:param1_s] == "hoc_buttons"
             .buttongroup
-              %a{href: entry[:param2_s]}
+              %a{href: entry[:param3_s]}
                 %button.herohocbutton= I18n.t(entry[:text1_s])
+              %a{href: entry[:param4_s]}
+                %button.herohocbutton= I18n.t(entry[:param2_s])
             %div{style: "clear: both;"}
           - elsif entry[:param1_s] == "video"
             %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}

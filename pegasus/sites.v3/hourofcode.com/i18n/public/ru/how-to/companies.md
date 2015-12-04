@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -134,3 +135,4 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 "Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Modèle de communiqué de presse pour les élus
 
@@ -48,3 +49,4 @@ Pour plus d'informations sur [**Évènement/programme/etc.**], visitez [**INSERE
   
 
 
+<%= view :signup_button %>

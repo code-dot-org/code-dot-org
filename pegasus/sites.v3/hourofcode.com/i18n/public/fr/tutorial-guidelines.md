@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Instructions pour Hour of Code™ et la semaine de l'apprentissage des sciences informatiques
 
@@ -264,3 +265,4 @@ Si vous créez un tutoriel qui est conçu pour les malvoyants, nous aimerions su
 
 [**Retour en début de page**](#top)
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Ensenya als alumnes un vídeo inspirador per donar inici a l'Hora del Codi. Exem
 
 <% end %>
 
+<%= view :signup_button %>

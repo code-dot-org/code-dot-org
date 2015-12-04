@@ -128,3 +128,4 @@ Ik ben te bereiken op [TELEFOONNUMMER EN MAILADRES]. Ik kijk uit naar uw antwoor
 
 Met vriendelijke groet, [NAME], [TITLE]
 
+<%= view :signup_button %>

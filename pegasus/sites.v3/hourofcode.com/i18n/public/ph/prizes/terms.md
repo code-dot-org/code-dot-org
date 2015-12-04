@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Mga Premyo - mga tuntunin at kundisyon
 
@@ -39,3 +40,4 @@ Ang premyo ay limitado sa K-12 na mga silid-aralan sa US at Canada lamang. Ang C
 
 <% end %>
 
+<%= view :signup_button %>

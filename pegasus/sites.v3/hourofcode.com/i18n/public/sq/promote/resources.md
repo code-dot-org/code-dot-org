@@ -132,3 +132,4 @@ Ju lutem të kontaktoni në [NUMRI I TELEFONIT APO ADRESA E EMAILIT]. Në pritje
 
 Sinqërisht, [EMRI], [TITULLI]
 
+<%= view :signup_button %>

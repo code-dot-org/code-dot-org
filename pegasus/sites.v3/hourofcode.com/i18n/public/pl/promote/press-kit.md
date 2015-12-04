@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## Jak przyciągnąć uwagę mediów do twojej akcji "Godzina Kodowania"
 
@@ -61,3 +62,4 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
   
 Znajdź więcej zasobów i przykładowych e-mailów [tutaj](<%= resolve_url('/promote') %>).
 
+<%= view :signup_button %>

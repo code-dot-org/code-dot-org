@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Ci-dessous, vous trouverez un exemple de résolution favorable à la Semaine d'éducation des Sciences Informatiques et ses objectifs qui pourraient être utilisés par une région et vos législateurs locaux.
 
@@ -54,3 +55,4 @@ Résolu, que le [Assemblée Nationale ou Sénat, État, région, ville ou Commis
 
 (5) encourage les possibilités, y compris par le biais de programmes existants, pour les femmes et les minorités sous-représentées dans le domaine de l'informatique.
 
+<%= view :signup_button %>

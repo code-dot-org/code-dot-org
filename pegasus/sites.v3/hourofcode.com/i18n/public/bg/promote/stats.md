@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Отзиви и полезна статистика
 
@@ -19,3 +20,4 @@ nav: promote_nav
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

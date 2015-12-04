@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Esempio di comunicato stampa
 
@@ -48,3 +49,4 @@ Per ulteriori informazioni riguardanti [**EVENTO/PROGRAMMA/ECC**], visita [**SIT
   
 
 
+<%= view :signup_button %>

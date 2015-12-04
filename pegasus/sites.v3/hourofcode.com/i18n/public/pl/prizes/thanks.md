@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Dziękujemy za zarejestrowanie się, by mieć szansę wygrać $10,000 jako Hardware Prize
 
@@ -31,3 +32,4 @@ Zwerbuj lokalną grupę - chłopców i dziewczęta z klubu harcerskiego, kości�
 
 [Wyślij ten e-mail](<%= resolve_url('/promote/resources#politicians') %>) do swojego burmistrza, Rady Miejskiej czy Rady Szkoły i zaproś ich do odwiedzenia Twojej szkoły.
 
+<%= view :signup_button %>

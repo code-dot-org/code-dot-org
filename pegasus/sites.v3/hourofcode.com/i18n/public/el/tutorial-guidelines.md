@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Οδηγός σεναρίων εκμάθησης για την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής (CsedWeek)
 
@@ -265,3 +266,4 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**Επιστροφή στην κορυφή**](#top)
 
+<%= view :signup_button %>

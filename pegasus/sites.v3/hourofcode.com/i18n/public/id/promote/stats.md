@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Blurbs dan Statistik yang berguna
 
@@ -19,3 +20,4 @@ Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dar
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

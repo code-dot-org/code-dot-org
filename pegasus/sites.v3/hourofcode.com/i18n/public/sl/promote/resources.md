@@ -132,3 +132,4 @@ Prosimo vas, kontaktirajte me na [TELEFONSKA ŠTEVILKA ali e-poštni naslov]. Ve
 
 Najlepša hvala in lep pozdrav [NAME], [TITLE]
 
+<%= view :signup_button %>

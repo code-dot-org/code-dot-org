@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -134,3 +135,4 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 Ura za kodo je le prvi korak, če se želimo naučiti več o delovanju tehnologije in kako narediti aplikacije. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

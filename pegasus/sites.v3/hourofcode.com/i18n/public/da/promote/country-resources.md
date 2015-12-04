@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Vis eleverne en inspirerende video i begyndelsen af Hour of Code timen. For ekse
 
 <% end %>
 
+<%= view :signup_button %>

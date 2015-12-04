@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -264,3 +265,4 @@ Ja izveido pamācību, kas paredzēta tiem, kam ir redzes traucējumi, mēs labp
 
 [**Atgriezties sākumā**](#top)
 
+<%= view :signup_button %>

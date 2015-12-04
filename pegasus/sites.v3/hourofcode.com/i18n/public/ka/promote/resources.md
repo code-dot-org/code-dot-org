@@ -132,3 +132,4 @@ nav: promote_nav
 
 პატივისცემით, [NAME], [TITLE]
 
+<%= view :signup_button %>

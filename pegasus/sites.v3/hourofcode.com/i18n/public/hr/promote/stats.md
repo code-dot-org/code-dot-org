@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Reklamni tekst i korisni statistički podatci
 
@@ -19,3 +20,4 @@ Računala su posvuda, ali danas manje škola poučava informatiku no prije 10 go
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

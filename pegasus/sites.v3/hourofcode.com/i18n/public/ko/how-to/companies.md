@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Hour of Code 를 회사에서 진행하는 방법
 
@@ -134,3 +135,4 @@ nav: how_to_nav
 
 Hour of Code는 어떻게 컴퓨터과학기술이 작동하는지, 또 어떻게 앱들을 만드는지 배우는 첫 걸음입니다. 이 여행을 계속 하기 위해 [여러분의 학생들이 온라인 학습을 하도록 격려해 주세요.](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

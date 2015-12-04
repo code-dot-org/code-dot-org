@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Va mulțumim ca v-ati inscris pentru sansa de a castiga echipamente hardware in valoare de 10 000 de dolari
 
@@ -31,3 +32,4 @@ Recruteaza un grup local- un club mixt baieti/fete, Biserica, Universitatea, vet
 
 [Trimiteti acest e-mail](<%= resolve_url('/promote/resources#politicians') %>)catre primarul dvs, consiliului local sau inspectorilor scolari si oferiti-le invitatia de a va vizita scoala.
 
+<%= view :signup_button %>

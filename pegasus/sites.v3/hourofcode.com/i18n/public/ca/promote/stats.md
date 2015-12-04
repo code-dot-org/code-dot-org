@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Publicitat i estadístiques útils
 
@@ -19,3 +20,4 @@ Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 1
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

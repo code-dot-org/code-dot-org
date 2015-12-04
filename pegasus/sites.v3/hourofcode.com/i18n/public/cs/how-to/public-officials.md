@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Jak přiblížit Hodinu kódu celé vaší komunitě.
 
@@ -54,3 +55,4 @@ nav: how_to_nav
 
   8. **připojte se lokálně.** navštivte [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) abyste se mohli naučit více o výuce počítačových vědách ve vašem státě. Podepište petici tam a budete aktualizování od Code.org o jejich lokálním, státním a federálním advokátním úsilí.
 
+<%= view :signup_button %>

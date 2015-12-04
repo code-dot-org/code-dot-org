@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -21,12 +22,6 @@ p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del
 <
 
 p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
-
-<% elsif @country == 'al' %>
-
-## Video
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/AtVzbUZqZcI"><strong>Ora E Kodimit (5 min)</strong></a>
 
 <% elsif @country == 'ca' %>
 
@@ -102,3 +97,4 @@ Shfaqju studentëve një video inspiruese për të nisur Orën e Kodimit. Shembu
 
 <% end %>
 
+<%= view :signup_button %>

@@ -44,3 +44,4 @@ Parla ai tuoi amici di **#HourOfCode**!
 
 [Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#sample-emails') %>) agli Amministratori Locali, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
 
+<%= view :signup_button %>

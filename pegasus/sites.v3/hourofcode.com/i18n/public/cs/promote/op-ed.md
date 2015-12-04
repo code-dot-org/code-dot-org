@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Níže je vzor op-ed - podpory týdne informatiky a jeho cílů, která by mohla být použita státem, místními zákonodárci, šéfy firem, apod.
 
@@ -46,3 +47,4 @@ Podle kanceláře statistiky práce, v roce 2020, zde bude 9.2 miliónů prácí
 
 Tento týden, <%= campaign_date('full') %>, je týden informatiky. Ve školách skrze **[STATE]**, se naši studenti budou ůčastnit v národních Hodinách kódu, demystifikovat předmět informatiky, doufajíc, že je to namotivuje dostatečně k tomu, aby šli a naučili se více. Já se k nim připojím, a tímto vás zvu, abyste se také připojili. Každý by se měl naučit, jak kódovat. Navštivte https://hourofcode.com/<%= @country %> abyste se dozvěděli více a mohli začít. A podporujte naše úsilí, přinést informatiku do více škol v **[STATE]**.
 
+<%= view :signup_button %>

@@ -130,3 +130,4 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 Het Uur Code is slechts een eerste stap op een reis om meer te leren hoe technologie werkt en hoe je softwaretoepassingen kan maken. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

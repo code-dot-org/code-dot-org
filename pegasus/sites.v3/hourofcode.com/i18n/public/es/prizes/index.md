@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # 2015 Hour of Code prizes
 
@@ -95,4 +96,4 @@ Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
 
-<% end %> 
+<% end %> <%= view :signup_button %>

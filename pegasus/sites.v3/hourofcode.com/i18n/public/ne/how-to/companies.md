@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -134,3 +135,4 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 कसरी प्रविधिले काम गर्छ र कसरी सफ्टवेयरको एप्लिकेसनहरूको सिर्जना गर्ने भन्ने थप कुराको बारेमा सिक्न Hour of Code केबल पहिलो चरण मात्र हो। To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

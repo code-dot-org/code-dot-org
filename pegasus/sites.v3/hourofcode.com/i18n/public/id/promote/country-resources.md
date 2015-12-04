@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Menunjukkan kepada siswa video inspiratif untuk kick off jam kode. Contoh:
 
 <% end %>
 
+<%= view :signup_button %>

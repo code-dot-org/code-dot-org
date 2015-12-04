@@ -44,3 +44,4 @@ Tregoju miqve të tu rreth **#HourOfCode**!
 
 [Dërgo këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) te përfaqësuesit lokal, këshilli i qytetit ose bordi i shkollës dhe ftoji që të vizitojnë shkollën tuaj për Orën e Kodimit. Ajo mund të ndihmojë të ndërtosh mbështetje për shkencën kompjuterike në zonën tuaj përtej një ore.
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Cum poti aduce Hour of Code in scolile din cartierul tau.
 
@@ -30,3 +31,4 @@ Hour of Code este abia primul pas catre o lunga calatorie pentru a afla mai mult
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
+<%= view :signup_button %>

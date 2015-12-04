@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Veja abaixo um exemplo de artigo de opinião em apoio à Semana da Educação em Ciência da Computação e a suas metas, que pode ser usado pelos responsáveis pela legislação estadual ou local, por líderes empresariais etc.
 
@@ -46,3 +47,4 @@ De acordo com o Bureau of Labor Statistics (agência norte-americana que analisa
 
 Esta semana, <%= campaign_date('full') %>, é a Semana da Educação em Ciência da Computação. Em todas as escolas de **[ESTADO]**, nossos alunos participarão de uma Hora do Código nacional, desmitificando a ciência da computação e estimulando seu desejo de seguir em frente e aprender mais. Eu estarei junto deles, e convido você a se juntar a nós também. Todos deveriam aprender a programar. Acesse https://hourofcode.com/<%= @country %> para saber mais e começar a aprender. Não deixe de apoiar nossos esforços para levar a ciência da computação para mais escolas de **[ESTADO]**.
 
+<%= view :signup_button %>

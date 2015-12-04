@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## Comment attirer les médias à votre évènement Une Heure de Code ?
 
@@ -61,3 +62,4 @@ Code.org® est un organisme à but non lucratif dont le but est d'augmenter l'in
   
 Trouvez davantage d'information et d'exemples d'e-mails [ici](<%= resolve_url('/promote') %>).
 
+<%= view :signup_button %>

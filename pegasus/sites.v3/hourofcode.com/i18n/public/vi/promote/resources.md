@@ -132,3 +132,4 @@ Làm ơn liên hệ với chúng tôi theo số [SỐ ĐIỆN THOẠI HOẶC Đ�
 
 Trân trọng, [NAME], [TITLE]
 
+<%= view :signup_button %>

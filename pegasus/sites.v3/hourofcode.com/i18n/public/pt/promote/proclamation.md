@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Veja abaixo um exemplo de resolução em apoio à Semana da Educação em Ciência da Computação e às suas metas, que pode ser usado pelos responsáveis pela legislação estadual e local.
 
@@ -54,3 +55,4 @@ resolvido que [ASSEMBLEIA OU SENADO, ESTADO, REGIÃO, CIDADE OU CONSELHO ESCOLAR
 
 (5) incentiva oportunidades, entre elas os programas existentes de ciência da computação para representantes do sexo feminino e das minorias sociais.
 
+<%= view :signup_button %>

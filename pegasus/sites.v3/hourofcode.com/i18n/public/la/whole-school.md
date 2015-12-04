@@ -5,8 +5,10 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Haz que toda tu escuela participe
 
 La información referente a que escuelas enteras participen de la Hora del Código irá aquí.
 
+<%= view :signup_button %>

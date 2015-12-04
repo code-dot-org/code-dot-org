@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # 当选官员的样本新闻稿
 
@@ -48,3 +49,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
   
 
 
+<%= view :signup_button %>

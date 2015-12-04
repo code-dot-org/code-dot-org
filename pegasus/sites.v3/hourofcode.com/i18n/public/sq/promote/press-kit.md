@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## Si të tërheqësh mediat në eventin e Orës së Kodimit
 
@@ -61,3 +62,4 @@ Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgj
   
 Gjeni më shumë burime dhe shembuj emaili [këtu](<%= resolve_url('/promote') %>).
 
+<%= view :signup_button %>

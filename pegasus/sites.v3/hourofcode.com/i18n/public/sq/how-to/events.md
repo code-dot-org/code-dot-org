@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Si të organizosh ngjarjen e Orës së Kodimit
 
@@ -58,3 +59,4 @@ Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterik
 | 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
 | 11:00 - 11:05 paradite | Mësuesit që ndihmojnë në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                  |
 
+<%= view :signup_button %>

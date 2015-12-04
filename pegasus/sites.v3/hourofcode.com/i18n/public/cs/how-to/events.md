@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Jak organizovat událost Hodinu kódu
 
@@ -58,3 +59,4 @@ Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (<%= c
 | 10:40-11:00 am | Studenti demonstrují nezapojenou aktivitu a jak lze učit informatiku bez použití počítačů.                                     |
 | 11:00-11:05 am | Učitel, který pomohl přinést celoškolní akci dává závěrečné poznámky.                                                          |
 
+<%= view :signup_button %>

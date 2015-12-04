@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Насочващи уроци за Hour of Code и компютърните науки през образователната седмица
 
@@ -264,3 +265,4 @@ IMG SRC = [ http://code.org/api/hour/finish_appinventor.png](http://code.org/api
 
 [**Обратно към началото**](#top)
 
+<%= view :signup_button %>

@@ -130,3 +130,4 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 Kodetimen er bare første steg på en reise for å lære mer om hvordan teknologi fungerer og hvordan lage programmer. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

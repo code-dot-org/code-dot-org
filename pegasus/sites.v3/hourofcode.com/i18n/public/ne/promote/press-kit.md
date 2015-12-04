@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## तपाइँको Hour of Code को घटनामा मिडियालाई कसरी आकर्षित गर्ने
 
@@ -61,3 +62,4 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
+<%= view :signup_button %>

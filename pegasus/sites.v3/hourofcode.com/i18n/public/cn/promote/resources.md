@@ -132,3 +132,4 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 此致， [姓名]，[标题]
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Giải thưởng - Các điều khoản và điều kiện khi nhận giải
 
@@ -39,3 +40,4 @@ Giải thưởng này chỉ giới hạn cho lớp K-12 ở Mỹ và Canada . Co
 
 <% end %>
 
+<%= view :signup_button %>

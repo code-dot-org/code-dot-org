@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Blurbs and Useful Stats
 
@@ -19,3 +20,4 @@ Tölvur eru alls staðar, en í dag kenna færri skólar tölvunarfræði en ger
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

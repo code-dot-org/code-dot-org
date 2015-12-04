@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # როგორ შევქმნათ ტუტორიალები კოდის ერთი საათისა™ და კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის ფარგლებში
 
@@ -264,3 +265,4 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**ზემოთ დაბრუნება**](#top)
 
+<%= view :signup_button %>

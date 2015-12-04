@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Njoftime dhe Statistika të domosdoshme
 
@@ -19,3 +20,4 @@ Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike 
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

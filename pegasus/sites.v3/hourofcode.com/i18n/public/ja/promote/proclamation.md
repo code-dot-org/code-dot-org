@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### 以下はコンピューターサイエンス週間の支援のためのコンピュータサイエンスの目的に関係する例です。州議員、国会議員の方々に利用してもらうことを意図しています。
 
@@ -54,3 +55,4 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
 (5) 女性とマイノリティがコンピュータサイエンスを学ぶ機会を増やすことを、推奨します。
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to organize an Hour of Code event
 
@@ -58,3 +59,4 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:40 - 11:00 am | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.                                                              |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
 
+<%= view :signup_button %>

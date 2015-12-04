@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # جوایز - شرایط و ضوابط
 
@@ -39,3 +40,4 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 
 <% end %>
 
+<%= view :signup_button %>

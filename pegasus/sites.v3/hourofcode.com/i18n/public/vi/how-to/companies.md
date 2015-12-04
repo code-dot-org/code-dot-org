@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -134,3 +135,4 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 Hour of Cord là chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và cách để tạo các ứng dụng phần mềm. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

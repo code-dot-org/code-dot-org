@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to teach one Hour of Code in After-school
 
@@ -131,3 +132,4 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar udhëtimin, [inkurajo fëmijët e tu të mësojnë online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

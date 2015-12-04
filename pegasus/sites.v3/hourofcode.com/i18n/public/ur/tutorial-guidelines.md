@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # آور-آف-کوڈ اور کمپیوٹر سائنس ایجوکیشن ویک کی ٹیٹوریئل گائیڈ لائنز۔
 
@@ -264,3 +265,4 @@ If you create a tutorial that is designed for the vision-impaired, we’d love t
 
 [**Back to the top**](#top)
 
+<%= view :signup_button %>

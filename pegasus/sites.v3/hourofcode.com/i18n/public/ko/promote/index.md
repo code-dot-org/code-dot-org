@@ -44,3 +44,4 @@ nav: promote_nav
 
 지역대표, 시의회, 교육위원회, 교육청 등에 [이메일](<%= resolve_url('/promote/resources#sample-emails') %>)을 보내세요. 그리고 그들이 여러분 학교의 Hour of Code 행사를 방문할 수 있도록 초대하세요. 그렇게 하면 여러분 지역에서 한 시간의 Hour of Code 이후의 컴퓨터과학(정보과학) 수업이 이루어지는데 큰 도움이 될 수 있습니다.
 
+<%= view :signup_button %>

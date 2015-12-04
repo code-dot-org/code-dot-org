@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
 
@@ -61,3 +62,4 @@ Code.org® adalah organisasi publik non-profit 501c3 yang berdedikasi untuk meny
   
 Temukan lebih banyak sumber daya dan sampel email [di sini](<%= resolve_url('/promote') %>).
 
+<%= view :signup_button %>

@@ -44,3 +44,4 @@ Parlez-en à vos amis en utilisant **#HourOfCode**!
 
 [Envoyez cet email](<%= resolve_url('/promote/resources#sample-emails') %>) à vos représentants locaux, Conseil municipal ou Commission scolaire et invitez-les à visiter votre école durant votre Heure de Code. Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
 
+<%= view :signup_button %>

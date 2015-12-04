@@ -128,3 +128,4 @@ Por favor comuníquese conmigo al [teléfono número o dirección de correo elec
 
 Atentamente,[NOMBRE], [TITULO]
 
+<%= view :signup_button %>

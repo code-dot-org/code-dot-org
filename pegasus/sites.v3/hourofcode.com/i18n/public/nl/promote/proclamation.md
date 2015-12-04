@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Hieronder vindt u een voorbeeld resolutie die de informatica onderwijs week ondersteunt en de doelstellingen die door de staat en lokale wetgevers kunnen worden gebruikt.
 
@@ -54,3 +55,4 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
+<%= view :signup_button %>

@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -264,3 +265,4 @@ Als u een opdracht maakt die ontworpen is voor slechtzienden willen we deze graa
 
 [**Terug naar de top**](#top)
 
+<%= view :signup_button %>

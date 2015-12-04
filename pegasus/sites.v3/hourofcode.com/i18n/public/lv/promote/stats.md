@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Atslēgfrāzes un nodarīga statistika
 
@@ -19,3 +20,4 @@ Datori ir visur, bet daudz mazāk skolas māca datorzinātni nekā pirms desmit 
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

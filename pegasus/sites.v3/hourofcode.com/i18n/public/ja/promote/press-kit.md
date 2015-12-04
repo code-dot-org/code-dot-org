@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## メディアを Hour of Code イベントに惹きつけるには
 
@@ -61,3 +62,4 @@ Code.org は501(c)(3)法人です。コンピュータサイエンスに関わ�
   
 さらに多くの資料やサンプルメールを探すには以下を参照してください。 [here](<%= resolve_url('/promote') %>) .
 
+<%= view :signup_button %>

@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ## Hvordan kan du få medieopmærksomhed om dit Hour of Code arrangement
 
@@ -61,3 +62,4 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
+<%= view :signup_button %>

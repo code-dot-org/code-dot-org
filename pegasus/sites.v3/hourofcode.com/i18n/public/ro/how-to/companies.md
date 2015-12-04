@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Cum poti aduce evenimentul Hour of Code in compania dvs
 
@@ -134,3 +135,4 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 Hour of Code este abia primul pas catre o lunga calatorie pentru a afla mai multe despre cum functioneaza tehnologia si cum se pot crea aplicatiile software. Pentru a continua această călătorie, [încurajaţi-vă copiii să înveţe online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
+<%= view :signup_button %>

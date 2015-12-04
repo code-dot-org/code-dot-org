@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -43,11 +44,6 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
-
-<% elsif @country == 'nl' %>
-
-<br/><br/>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0hfb0d5GxSw" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/0hfb0d5GxSw"><strong>Friends of Technology Hour of Code (2 min)</strong></a>
 
 <% elsif @country == 'uk' %>
 
@@ -97,3 +93,4 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
+<%= view :signup_button %>

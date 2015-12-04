@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 ### Më poshtë është një shembull i një opinioni mbështetës për Javën Edukative të Shkencave Kompjuterike dhe qëllimeve të saj që mund të përdoret nga shteti, ligjvënësit lokal, liderat e biznesit etj.
 
@@ -46,3 +47,4 @@ Sipas Laboratorit Bureau të Statistikave, nga 2020, do të jenë 9.2 milion pun
 
 Këtë javë, <%= campaign_date('full') %>, është Java Edukative e Shkencave Kompjuterike. Në të gjitha shkollat e **[STATE]**, studentët tanë do të marrin pjesë në një Orë Kodimi kombëtar, çmitizojmë subjektin e shkencave kompjuterike dhe shpresojmë të nxisim dëshirën e tyre për të shkuar përpara dhe të mësojnë më shumë. Unë do bashkohem me ata, dhe të ftoj dhe ty të bashkohesh. Çdokush duhet të mësojë si të kodojë. Vizito https://hourofcode.com/<%= @country %> për të mësuar më shumë. Dhe mbështet përpjekjen tonë për të sjell shkencën kompjuterike në **[STATE]**.
 
+<%= view :signup_button %>

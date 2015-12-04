@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Nagrade - pravila i uvjeti
 
@@ -39,3 +40,4 @@ Ova nagrada je ograničena samo na osnovne škole u SAD-u i Kanadi. Code.org wil
 
 <% end %>
 
+<%= view :signup_button %>

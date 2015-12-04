@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Примерно съобщение за пресата за избрани длъжностни лица
 
@@ -48,3 +49,4 @@ nav: promote_nav
   
 
 
+<%= view :signup_button %>

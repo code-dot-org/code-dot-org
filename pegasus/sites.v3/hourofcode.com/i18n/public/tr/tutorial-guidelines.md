@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -264,3 +265,4 @@ Eğer görme engelliler için bir öğretici hazırladıysanız, ekran okuyucusu
 
 [**Başa dön**](#top)
 
+<%= view :signup_button %>

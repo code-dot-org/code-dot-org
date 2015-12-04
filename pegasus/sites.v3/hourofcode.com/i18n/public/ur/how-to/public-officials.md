@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # کس طرح آپ اپنے پورے اسکول ڈسٹرکٹ کے لیے آور-آف-کوڈ لاسکتے ہیں۔
 
@@ -54,3 +55,4 @@ nav: how_to_nav
 
   8. ** مقامی طور پر رابطے کریں۔** وزٹ کریں [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) تاکہ اپنی اسٹیٹ میں کمپیوٹر سائنس کے بارے میں مزید جان سکیں۔ Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
 
+<%= view :signup_button %>

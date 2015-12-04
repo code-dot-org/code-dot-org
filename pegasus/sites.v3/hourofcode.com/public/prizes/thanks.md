@@ -4,6 +4,7 @@ layout: wide
 nav: prizes_nav
 ---
 
+<%= view :signup_button %>
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
@@ -24,3 +25,4 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 ## 5. Ask a local elected official to support the Hour of Code
 [Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
+<%= view :signup_button %>

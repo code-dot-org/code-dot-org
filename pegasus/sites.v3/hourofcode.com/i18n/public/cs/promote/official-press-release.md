@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Ukázka tisková zprávy pro politiky
 
@@ -48,3 +49,4 @@ Pro více informací o [**UDÁLOST/PROGRAM/ATD**], navštivte [**VLOŽTE WEBOVOU
   
 
 
+<%= view :signup_button %>

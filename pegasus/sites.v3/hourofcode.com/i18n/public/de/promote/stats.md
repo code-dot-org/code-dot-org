@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Kurzinfos und hilfreiche Statistiken
 
@@ -19,3 +20,4 @@ Computer sind überall, aber weniger Schulen unterrichten Informatik als vor 10 
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

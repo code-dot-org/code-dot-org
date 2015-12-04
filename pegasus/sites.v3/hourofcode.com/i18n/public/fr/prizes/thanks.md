@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Merci de vous être inscrit pour avoir une chance de gagner 10 000 $ de matériel
 
@@ -31,3 +32,4 @@ Constituez un groupe - dans votre église ou votre université, à la maison de 
 
 [Envoyez cet email](<%= resolve_url('/promote/resources#politicians') %>) à votre maire, Conseiller municipal ou à la directions de votre école et invitez-les à participer à l'évènement.
 
+<%= view :signup_button %>

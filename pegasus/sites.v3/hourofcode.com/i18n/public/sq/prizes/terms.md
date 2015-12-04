@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Shpërblime - termat dhe kushtet
 
@@ -39,3 +40,4 @@ Shpërblime të dedikuara vetëm për nxënësit deri në klasë të 12-të në 
 
 <% end %>
 
+<%= view :signup_button %>

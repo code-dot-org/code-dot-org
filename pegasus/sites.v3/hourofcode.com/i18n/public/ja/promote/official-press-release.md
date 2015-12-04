@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # 選出された議員の皆様への、プレスリリースのサンプル
 
@@ -48,3 +49,4 @@ nav: promote_nav
   
 
 
+<%= view :signup_button %>

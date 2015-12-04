@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Visa elever en inspirerande video till starta kodtimmen. Exempel:
 
 <% end %>
 
+<%= view :signup_button %>

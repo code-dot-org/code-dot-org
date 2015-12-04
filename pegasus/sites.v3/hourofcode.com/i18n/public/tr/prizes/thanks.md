@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
@@ -31,3 +32,4 @@ Yerel bir grupla iletişime geçin - öğrenci kulüpleri, dernekler ve bu çeş
 
 [Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
+<%= view :signup_button %>

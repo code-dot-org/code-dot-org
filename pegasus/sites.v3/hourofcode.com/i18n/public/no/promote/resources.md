@@ -132,3 +132,4 @@ Vennligst kontakt meg på [telefon eller epost]. Jeg ser frem til å høre fra d
 
 Med vennlig hilsen [navn], [tittel]
 
+<%= view :signup_button %>

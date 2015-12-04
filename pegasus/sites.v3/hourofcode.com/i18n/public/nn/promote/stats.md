@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Fakta og nyttig statistikk
 
@@ -19,3 +20,4 @@ Datamaskiner er overalt, men færre skular underviser i programmering no enn for
 
 <%= view :stats_carousel %>
 
+<%= view :signup_button %>

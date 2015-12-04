@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Vis elevene en inspirerende video som "kick-off" for Kodetimen. Eksempler:
 
 <% end %>
 
+<%= view :signup_button %>

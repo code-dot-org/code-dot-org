@@ -128,3 +128,4 @@ nav: promote_nav
 
 Με εκτίμηση, [NAME],[TITLE]
 
+<%= view :signup_button %>

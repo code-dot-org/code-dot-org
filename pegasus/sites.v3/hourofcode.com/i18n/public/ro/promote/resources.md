@@ -132,3 +132,4 @@ Vă rugăm să mă contactaţi la [telefon număr sau adresă de E-mail]. Aştep
 
 Cu sinceritate, [NAME], [TITLE]
 
+<%= view :signup_button %>

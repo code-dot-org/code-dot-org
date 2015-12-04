@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Shpërblimet e Orës së Kodimit 2015
 
@@ -208,4 +209,4 @@ Shpërblime të dedikuara vetëm për nxënësit deri në klasë të 12-të në 
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
-<% end %> 
+<% end %> <%= view :signup_button %>

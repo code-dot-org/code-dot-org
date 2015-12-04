@@ -132,3 +132,4 @@ See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
 С уважением, [NAME], [TITLE]
 
+<%= view :signup_button %>

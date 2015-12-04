@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Como levar a Hora do Código para toda a sua comunidade.
 
@@ -54,3 +55,4 @@ nav: how_to_nav
 
   8. **Conecte-se localmente.** Acesse [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) para saber mais sobre a educação em ciência da computação em seu Estado. Assine a petição que está no site para receber atualizações da Code.org sobre seus esforços locais, estaduais e nacionais.
 
+<%= view :signup_button %>

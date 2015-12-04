@@ -6,6 +6,7 @@ nav: prizes_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Premios - términos y condiciones
 
@@ -31,3 +32,4 @@ Debemos aclarar, esto no es una lotería o un concurso de azar.
 
 <% end %>
 
+<%= view :signup_button %>

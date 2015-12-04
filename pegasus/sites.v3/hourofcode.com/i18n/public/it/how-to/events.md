@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Come organizzare un evento dell'Ora del Codice
 
@@ -58,3 +59,4 @@ Organizza un evento dell'Ora del Codice durante la Settimana di Educazione all'I
 | 10:40 - 11:00 am | Alcuni studenti mostrano un'attività tradizionale e come l'informatica possa essere insegnata senza l'uso di computer.                                                                                                 |
 | 11:00 - 11:05 am | L'insegnante che ha aiutato ad organizzare l'evento terrà il discorso conclusivo.                                                                                                                                      |
 
+<%= view :signup_button %>

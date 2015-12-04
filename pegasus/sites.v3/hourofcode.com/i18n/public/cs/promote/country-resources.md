@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -96,3 +97,4 @@ Ukažte studentům inspirativní video k zahájení hodinu kódu. Příklady:
 
 <% end %>
 
+<%= view :signup_button %>

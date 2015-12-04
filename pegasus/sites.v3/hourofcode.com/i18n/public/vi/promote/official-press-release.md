@@ -6,6 +6,7 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
 
 # Mẫu văn bản áp dụng giấy biên nhận cho viên chức dân cử
 
@@ -37,3 +38,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
   
 
 
+<%= view :signup_button %>

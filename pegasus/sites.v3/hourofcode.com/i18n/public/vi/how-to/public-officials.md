@@ -6,6 +6,7 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire community.
 
@@ -54,3 +55,4 @@ nav: how_to_nav
 
   8. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. Đăng đơn kiến nghị tại đây và bạn sẽ nhận được thông tin cập nhật từ Code.org về những nỗ lực vận động tại địa phương, tiểu bang và liên bang của họ.
 
+<%= view :signup_button %>

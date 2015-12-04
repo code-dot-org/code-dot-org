@@ -5,6 +5,7 @@ layout: wide
 
 ---
 
+<%= view :signup_button %>
 
 # Linee guida per i Corsi de "L'Ora del Codice" e per "La Settimana dell'Insegnamento dell'Informatica"
 
@@ -264,3 +265,4 @@ Se crei un corso progettato per gli ipovedenti, ci piacerebbe metterlo in eviden
 
 [**Torna all'inizio**](#top)
 
+<%= view :signup_button %>
