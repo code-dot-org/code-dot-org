@@ -11,7 +11,7 @@
     font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
-  n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
+  n_have_learned_an_hoc: <h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus
@@ -35,7 +35,7 @@
   hoc2014_everyone: Kaikki
   hoc2014_support: Tue &#x25BE;
   hoc2014_whatishoc: Mikä on koodaustunti?
-  csedweek_map_header: "# CSEdWeek / Koodaustunti-tapahtumia ympäri maailmaa"
+  csedweek_map_header: '# CSEdWeek / Koodaustunti-tapahtumia ympäri maailmaa'
   csedweek_map_signup: Ilmoita tapahtumasi
   csedweek_map_search_placeholder: Etsi koodaustunteja
   csedweek_map_search_search: Haku
@@ -64,7 +64,7 @@
     -lauseet ja perusalgoritmit.
   all_ages: Kaikenikäiset
   beginner: Aloittelija
-  n_participants: "# osallistujaa"
+  n_participants: '# osallistujaa'
   go: Mene
   thank_you_: Kiitos!
   congratulations: Onneksi olkoon!
@@ -114,7 +114,7 @@
   beyond_an_hour: Koodaustunnin jälkeen
   get_started: Aloita
   i_agree: Hyväksyn
-  participant_select: "- Valitse -"
+  participant_select: '- Valitse -'
   participant_student: Oppilas
   participant_parent: Vanhempi
   participant_educator: Opettaja
@@ -135,7 +135,7 @@
   learn_next_level: Jatka seuraavalle tasolle
   learn_online: Kokeile muita kursseja verkossa
   learn_classes: Etsi paikallisia oppitunteja
-  hoc_is_here: "#Koodaustunti on täällä - Tsekkaa! @codeorg"
+  hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
   twitter_teach_cs: Miksi usemmat koulut eivät opeta tietojenkäsittelytiedettä? Voimme
     korjata tämän. http://youtu.be/2DxWIxec6yo. Vieraile osoitteessa http://code.org/
@@ -148,11 +148,11 @@
   help_recruit_coders: Auta meitä hankkimaan lisää koodaajia joukkueeseesi!
   help_recruit: Auta meitä hankkimaan lisää koodaajia!
   lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
-  lines_of_code_alt: "<b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA"
+  lines_of_code_alt: <b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA
   who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
   hoc_leaderboards: Koodaustunnin pistetaulukot
-  students_and_lines: "%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
-    %{lines} riviä koodia."
+  students_and_lines: '%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
+    %{lines} riviä koodia.'
   start_hoc: Aloita Koodaustunti nyt
   contact_form_topic_press: Lehdistö/media (haastattelu- tai luentopyyntö)
   stats_nina: '"Joka ikinen päivä tuotti saman tuloksen &mdash; 100 % sitoutuminen."-Nina
@@ -177,8 +177,8 @@
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   studiobar_shop_title: Kauppa
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
-  homepage_hero_text_malala: "&ldquo;Haastan tytöt kaikista maista oppimaan yhden
-    koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja"
+  homepage_hero_text_malala: '&ldquo;Haastan tytöt kaikista maista oppimaan yhden
+    koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja'
   homepage_hero_text_susan: |
     &ldquo;Jos voit muuttaa teknologian, voit muuttaa maailman.&rdquo;
     Susan, YouTube:n toimitusjohtaja
@@ -214,8 +214,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Tämä ohjelma sai 100% opiskelijoistani sitoutuviksi, osallistuviksi ja mukaan.&rdquo;
     Adam, opettaja
-  homepage_hero_text_stat_loc: "#loc opiskelijoiden kirjoittamia koodirivejä"
-  homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
+  homepage_hero_text_stat_loc: '#loc opiskelijoiden kirjoittamia koodirivejä'
+  homepage_hero_text_stat_students: '#student_count opiskelijoiden tilejä Code Studio:ssa'
   homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
   homepage_slot_text_hoc: Koodaustunti
   homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
@@ -225,7 +225,7 @@
   homepage_slot_text_shop: Kauppa
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Koodaustunti jokaiselle opiskelijalle.
-  homepage_action_text_num_served: "# käyttäjää"
+  homepage_action_text_num_served: '# käyttäjää'
   homepage_action_text_join_us: Liity joukkoomme
   homepage_action_text_sign_up: Luo käyttäjätunnus
   homepage_action_text_try_it: Kokeile
@@ -249,7 +249,7 @@
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
   homepage_slot_text_link_host: Järjestä Koodaustunti
-  homepage_slot_text_link_hocserved: "# käyttäjää"
+  homepage_slot_text_link_hocserved: '# käyttäjää'
   homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
   homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
@@ -316,7 +316,7 @@
   playlab_classic_title: Klassinen
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Tulossa pian
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: Jääkausi
   starwars_subtitle: Kasaa koodista Galaksi
   starwars_javascript_title: Javascript
   starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
@@ -344,9 +344,9 @@
     Koodaustunnille.
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää
     Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers are looking
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
     for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up."
+    have signed up.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -553,11 +553,11 @@
   dashboard_sections_name: Ryhmän nimi
   dashboard_sections_choose_secret: Jos haluat antaa tunnukset oppilaillesi, valitse
     ryhmän salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b>.
-  dashboard_sections_secret_word: "<b>Sana</b> antaa sinun asettaa salaisen sanan
-    jokaiselle oppilaalle."
-  dashboard_sections_secret_picture: "<b>Kuva</b> antaa sinun asettaa salaisen kuvan
+  dashboard_sections_secret_word: <b>Sana</b> antaa sinun asettaa salaisen sanan jokaiselle
+    oppilaalle.
+  dashboard_sections_secret_picture: <b>Kuva</b> antaa sinun asettaa salaisen kuvan
     jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille, jotka eivät osaa
-    vielä kirjoittaa."
+    vielä kirjoittaa.
   dashboard_sections_secret_none: Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan,
     mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.
   dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi
@@ -671,10 +671,12 @@
   dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_hoc: "<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
+  dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
     on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
     uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja
-    jaa oma, kaukaiseen galaksiin sijoittuva, pelisi."
+    jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
@@ -785,6 +787,13 @@
   playlab_name: Pelilabra
   infinity_name: Infinity Pelilabra
   artist_name: Taiteilija
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   thinkersmithspanish_gradelevel: Por todos
@@ -828,6 +837,13 @@
   playlab_gradelevel: 4-104-vuotiaille
   infinity_gradelevel: 4-104-vuotiaille
   artist_gradelevel: Ikä 8+
+  monstercoding_gradelevel: 5-13-vuotiaille
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Ala-aste
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Tietokoneeton tekeminen
@@ -869,6 +885,13 @@
   frozen_platformtext: Modernit selaimet ja tablettitietokoneet
   starwars_platformtext: Modernit selaimet ja tablettitietokoneet
   playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Nykyaikaiset verkkoselaimet
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Nykyaikaiset verkkoselaimet
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -928,6 +951,19 @@
   infinity_shortdescription: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
     Disneyn Infinity-hahmot.
   artist_shortdescription: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla
     tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla
     (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds
@@ -1070,6 +1106,37 @@
   playlab_longdescription: Luo tarina tai tee peli PeliLabralla! Merirosvot, eläimet,
     ninjat, zombit ja monet muut hahmot liikkuvat, ääntelevät, keräävät pisteitä ja
     jopa heittävät tulipalloja!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Johdanto tietojenkäsittelytieteeseen (luokat 1.-8.)
   khan_beyond_name: Opi tietokoneohjelmointia
   tynker_beyond_name: Opi ohjelmointia kotona
@@ -1400,70 +1467,3 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
-  codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
-  monstercoding_gradelevel: Ages 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: Elementary
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
-  csfirst_platformtext: Modern web browsers
-  boxisland_platformtext: Android, iOS
-  codesters_platformtext: Modern web browsers
-  texasinstruments_platformtext: TI Calculators
-  teacherled_platformtext: Modern browsers, smartphones, tablets
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
