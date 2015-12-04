@@ -579,6 +579,7 @@ $height-to-width: 434 / 477;
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
   @include pixelated();
+
   -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
   -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
   -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
@@ -591,12 +592,12 @@ $height-to-width: 434 / 477;
   &:active {
     outline:none;
     border-style: solid !important;
-    border-width: 5px 4px 3px 3px !important;
+    border-width: 5px 5px 3px 3px !important;
     @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important;
+    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 fill stretch !important;
   }
 }
 
