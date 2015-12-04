@@ -20,7 +20,7 @@ action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,code.org,show,al
 action_num_served,action,homepage_action_text_num_served,num_served,,,,,,code.org,show,all
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,show,all
 action_starwars_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,nah,all
-action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,nah,all
+action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,show,all
 action_codevideo,action,homepage_action_text_codevideo,video,2DxWIxec6yo,,,,,code.org,nah,all
 action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,,,,,csedweek.org,show,all
 action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,all
