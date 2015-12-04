@@ -35,6 +35,9 @@ module.exports = function (callback) {
   if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
 
     if (appOptions.publicCaching) {
+      // Disable social share by default on publicly-cached pages, because we don't know
+      // if the user is underage until we get data back from /api/user_progress/ and we
+      // should err on the side of not showing social links
       appOptions.disableSocialShare = true;
     }
 
