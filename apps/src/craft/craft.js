@@ -126,8 +126,6 @@ Craft.init = function (config) {
     config.level.customSlowMotion = 0.1;
   }
 
-  config.level.disableFinalStageMessage = true;
-
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function() {
     return document.documentMode;
