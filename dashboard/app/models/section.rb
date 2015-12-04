@@ -57,7 +57,7 @@ class Section < ActiveRecord::Base
   end
 
   private
-  CHARS = ("A".."Z").to_a
+  CHARS = ("A".."Z").to_a - %w(A E I O U)
   def random_text(len)
     len.times.to_a.collect{ CHARS.sample }.join
   end
