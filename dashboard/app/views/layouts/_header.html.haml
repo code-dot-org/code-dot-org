@@ -34,10 +34,6 @@
               - else
                 = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
-              -# Very temporary beta notice
-              - if @script && (@script.name == "starwars" || @script.name == "starwarsblocks" || @script.name == "mc")
-                .beta-notice
-                  = t('beta')
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'
@@ -60,7 +56,7 @@
 
 - if script_level
   - view_as = @user || current_user
-  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, view_as, view_as == current_user).to_json
+  - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, view_as, view_as == current_user && @public_caching).to_json
 
   :javascript
     //<![CDATA[
