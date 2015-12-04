@@ -1593,43 +1593,28 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         wireframeSendToPhone.click(wireframeSendToPhoneClick);
         $('body').append(wireframeSendToPhone);
       }
+    } else if (!options.embed && !dom.isMobile()) {
+      var runButton = document.getElementById('runButton');
+      var buttonRow = runButton.parentElement;
+      var openWorkspace = document.createElement('button');
+      openWorkspace.setAttribute('id', 'open-workspace');
+      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+      dom.addClickTouchEvent(openWorkspace, function() {
+        // TODO: don't make assumptions about hideSource during init so this works.
+        // workspaceDiv.style.display = '';
+
+        // /c/ URLs go to /edit when we click open workspace.
+        // /project/ URLs we want to go to /view (which doesnt require login)
+        if (/^\/c\//.test(location.pathname)) {
+          location.href += '/edit';
+        } else {
+          location.href += '/view';
+        }
+      });
+
+      buttonRow.appendChild(openWorkspace);
     }
-    // For share page, do not show this part.
-  } else if (!options.embed && !this.share) {
-    // TODO - explore whether this block is now dead code that can be deleted after hoc
-    var runButton = document.getElementById('runButton');
-    var buttonRow = runButton.parentElement;
-    var openWorkspace = document.createElement('button');
-    openWorkspace.setAttribute('id', 'open-workspace');
-    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-    var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(this.feedback_.createSharingDiv({
-      response: {
-        level_source: window.location,
-        level_source_id: options.level_source_id,
-        phone_share_url: options.phone_share_url
-      },
-      sendToPhone: options.sendToPhone,
-      level: options.level,
-      twitter: options.twitter,
-      onMainPage: true
-    }));
-
-    dom.addClickTouchEvent(openWorkspace, function() {
-      // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.display = '';
-
-      // /c/ URLs go to /edit when we click open workspace.
-      // /project/ URLs we want to go to /view (which doesnt require login)
-      if (/^\/c\//.test(location.pathname)) {
-        location.href += '/edit';
-      } else {
-        location.href += '/view';
-      }
-    });
-
-    buttonRow.appendChild(openWorkspace);
   }
 };
 
