@@ -978,8 +978,8 @@ input[type="radio"] {
         text-decoration: underline; }
   .generated-code-container .generatedCode {
     font-size: 14px;
-    overflow: scroll;
-    max-height: 400px; }
+    overflow: auto;
+    max-height: 150px; }
 
 .light-yellow-background {
   background-color: #fff7df; }
