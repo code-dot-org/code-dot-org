@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Jak přiblížit Hodinu kódu celé vaší komunitě.
 
@@ -34,7 +33,7 @@ nav: how_to_nav
 
 ## Získejte, aby se každá škola zúčastnila, každý student učil!
 
-  1. **Získejte školy v místě a regiony.** Použijte[tento email](<%= resolve_url('/promote/resources#sample-emails') %>) nebo[this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Získejte školy v místě a regiony.** Použijte[tento email](<%= resolve_url('/promote/resources#sample-emails') %>) nebo[this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Dejte jim vědět, že **každý** zúčastněný vzdělávatel dostane [ děkovný dar](<%= resolve_url('/prizes') %>) dokuď jsou zásoby a v **každém státě** jedna zapojená škola vyhraje **$10,000 v technologiích**!
 
   2. **Hostujte událost Hodinu kódu.** Podívejte se na náš [průvodce událostí](<%= resolve_url('/how-to/event') %>) na ukázkové příklady, mediální informační sadu a jiné zdroje pro plánování události. Hostování události je skvělý způsob, jak podpořit Hodinu kódu a zvýšit účast.
 
@@ -53,6 +52,5 @@ nav: how_to_nav
 
   7. **Vydejte tiskovou zprávu.** Inspirujte se [tímto příkladem](<%= resolve_url('/promote/official-press-release') %>).
 
-  8. **připojte se lokálně.** navštivte [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) abyste se mohli naučit více o výuce počítačových vědách ve vašem státě. Podepište petici tam a budete aktualizování od Code.org o jejich lokálním, státním a federálním advokátním úsilí.</p></li> </ol> 
-    
-    <%= view :signup_button %>
+  8. **připojte se lokálně.** navštivte [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) abyste se mohli naučit více o výuce počítačových vědách ve vašem státě. Podepište petici tam a budete aktualizování od Code.org o jejich lokálním, státním a federálním advokátním úsilí.
+

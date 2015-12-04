@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Blurbs and Useful Stats
 
@@ -20,4 +19,3 @@ Bilgisayarlar her yerde, ancak artık 10 yıl öncesine kıyasla daha az okul bi
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

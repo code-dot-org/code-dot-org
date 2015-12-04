@@ -318,10 +318,11 @@
   class_submission_languages_other: Önnur tungumál
   inspirational_videos_more: Fleiri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">hvatningarmyndbönd</a>
     með fyrirmyndum og frægu fólki
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Veldu þema fyrir Leikjasmiðjuna
+  playlab_classic_title: Klassískt
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Ice Age - kemur brátt
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Gerð Vetrarbrautar með Kóða
   starwars_javascript_title: Javascript
   starwars_javascript_description: Notaðu færanlega kubba og JavaScript.
@@ -695,6 +696,8 @@
     kóðunar? Meira en 7.000 sjálfboðaliðar eru tilbúnir að veita nemendum hvatningu
     með því að heimsækja bekkinn þinn eða spjalla á netinu. Skoðaðu liðveislukortið
     til að ná sambandi við sjálfboðaliða á þínu svæði.
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Prófaðu núna
@@ -731,7 +734,7 @@
   carousel_heading_beginners: Kennsluefni samstarfsaðila fyrir 5.- 8. bekk
   carousel_heading_beyond_beginners: Kennsluefni fyrir byrjendur
   carousel_heading_javascript: Kennsluefni samstarfsaðila í JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Kennsluefni sem kennir JavaScript
   carousel_heading_unplugged: Án tölvu eða netsambands? Prófaðu tölvunarfræði með
     "verkefnum án tölvu"
   carousel_heading_devices: Kennsluforrit samstarfsaðila fyrir síma og spjaldtölvur
@@ -745,6 +748,10 @@
   carousel_heading_ide: Tækni vinsæl meðal kennara
   educator_notes: Minnispunktar leiðbeinenda
   teach_led_lesson_plans: Klukkustund kóðunar - handleiðsla kennara
+  learn_footer_all_tutorials: Skoðaðu <a href="https://code.org/educate/allhourofcode">listann
+    yfir allt kennsluefni fyrir Klukkustund kóðunar</a>. Viðmið okkar og leiðarvísi
+    um gerð kennsluefnis fyrir Klukkustund kóðunar <a href="https://hourofcode.com/tutorial-guidelines">má
+    finna hér.</a>
   how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   beyond_submission: Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond
@@ -802,6 +809,13 @@
   playlab_name: Leikjasmiðja
   infinity_name: Infinity leikjasmiðja
   artist_name: Listamaður
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Klukkustund kóðunar - handleiðsla kennara
   codeorg_gradelevel: 4-104 ára
   codeintl_gradelevel: 4-104 ára
   thinkersmithspanish_gradelevel: Por todos
@@ -830,7 +844,7 @@
   kodable_gradelevel: Grunnskólastig
   tynkerapp_gradelevel: 5-13 ára
   robomindnl_gradelevel: 8-13 ára
-  flappy_gradelevel: 4-104 ára
+  flappy_gradelevel: 6-106 ára
   bitsbox_gradelevel: Grunnskólastig
   makeschool_gradelevel: Framhaldsskólastig
   touchdevelop_gradelevel: Framhaldsskólastig
@@ -840,11 +854,18 @@
   kodableunplugged_gradelevel: 8-13 ára
   projguts_gradelevel: 10-13 ára
   hourofcode_gradelevel: 4-104 ára
-  frozen_gradelevel: 8+ ára
+  frozen_gradelevel: 8-108 ára
   starwars_gradelevel: Aldur 6+
-  playlab_gradelevel: 4-104 ára
+  playlab_gradelevel: 6-14 ára
   infinity_gradelevel: 4-104 ára
   artist_gradelevel: 4-104 ára
+  monstercoding_gradelevel: 5-13 ára
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Grunnskólastig
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
@@ -886,6 +907,13 @@
   frozen_platformtext: Fyrir nýjustu vafra, spjaldtölvur
   starwars_platformtext: Fyrir nýjustu vafra, spjaldtölvur
   playlab_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Nýjustu vafrar
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Nýjustu vafrar
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeorg_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   codeintl_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -943,6 +971,19 @@
   infinity_shortdescription: Nota Leikjasmiðjuna til að búa til sögu eða leik með
     Disney Infinity persónum.
   artist_shortdescription: Teiknaðu flottar myndir og mynstur með listamanninum!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
     koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies.
@@ -1088,6 +1129,37 @@
   playlab_longdescription: Búðu til sögu eða leik með Leikjasmiðjunni! Láttu dýr,
     sjóræningja, uppvakninga, ninjur og fleiri leikverur hreyfast, gefa frá sér hljóð,
     skora stig og jafnvel kasta eldhnöttum!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Kynning á tölvunarfræði (5 - 13 ára bekkir)
   khan_beyond_name: Lærðu tölvuforritun
   tynker_beyond_name: Lærðu forritun heima

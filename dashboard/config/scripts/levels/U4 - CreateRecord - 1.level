@@ -135,12 +135,9 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Add a createRecord command and run the program. (Click to see full instructions)",
-    "markdown_instructions": "# Permanent Data Storage\r\n\r\nContacts did not save\r\n\r\nCreate apps want to save data outside of app so that when it restarts still have data\r\n\r\nApp Lab data tools\r\n\r\n<img src=\"https://images.code.org/5d596107387e3edcb35aa3d317b0e9f5-image-1448992686641.46.54 PM.png\" style=\"width: 200px; float: right\">\r\n\r\ncreateRecord command\r\n\r\n\r\n# Do This\r\n\r\n* Add a `createRecord` command.\r\n* Run the program.",
+    "markdown_instructions": "# Permanent Data Storage\r\n\r\nUp to now all the data created in our apps disappears or gets lost each time we re-run the app.  You were probably frustrated, for example, that a new contact added by the user didn't save permenantly to the list.  We can change that!\r\n\r\n# App Lab's Data Tools\r\n<img src=\"https://images.code.org/5d596107387e3edcb35aa3d317b0e9f5-image-1448992686641.46.54 PM.png\" style=\"width: 100px; float: right\"> App Lab has a set of commands for storing data permenantly in a database! You can write code to save data, and then retrieve it later even if the app has been stopped and re-started.  All together we call this set of commands **App Lab's Data Tools** and they have their own toolbox called \"Data\".\r\n\r\nWhat's a database? Where is it? How do I use it?  It's easier to show you these things than explain it all at once.  So let's get started and we'll explain everything you need to know along the way.\r\n\r\n# Do This\r\n\r\n* **Drag out the `createRecord` command**\r\n\t* It has some default code provided.\r\n* **Run the program**\r\n * After a brief pause, you should see the message in the console: *Success! Created record.* \r\n\r\n**What happened? What was created? Where is it?**\r\n * After you've seen the \"success message\" click finish to move to the next level.  We'll explain there.\r\n\r\n![](https://images.code.org/fa1c0d6f399ba181d4179838205b93e3-image-1449164742176.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -169,7 +166,10 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>
