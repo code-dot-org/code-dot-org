@@ -3,7 +3,6 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 
-
 # Set up the rack environment to be test and recreate the Gatekeeper and DCDO in that mode.
 CDO.rack_env = 'test'
 def redefine_const_without_warning(const, value)
@@ -131,6 +130,80 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
+    it 'respects sample proportion and records weight for sessions in sample' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_proportion', 1 / 100.0)  # Sample 1/100 of the sessions.
+        Kernel.stubs(:rand).returns(1 / 1000.0)  # Pretend that the session is in the sample.
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        row = get_session_hoc_activity_entry
+        session = row[:session]
+        assert_in_delta 100.0, get_sampling_weight(row)
+
+        Kernel.stubs(:rand).returns(0.6)  # Once in the sample we should stay in the sample.
+        before_ended_time = now_in_sequel_datetime
+        assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
+        after_ended_time = now_in_sequel_datetime
+        after_end_row = get_session_hoc_activity_entry
+        assert_datetime_within(after_end_row[:finished_at], before_ended_time, after_ended_time)
+
+        after_end_row = get_session_hoc_activity_entry
+        assert_equal session, row[:session]
+        assert_in_delta 100.0, get_sampling_weight(after_end_row)
+      end
+    end
+
+    it 'does not write after start of sessions not in sample' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_proportion', 0.5)
+        Kernel.stubs(:rand).returns(0.75)  # Pretend that the session is not in the sample.
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+
+        # Make sure no row was written or session_id assigned
+        row = get_session_hoc_activity_entry
+        assert_nil row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+
+        # Despite not being in the sample, we *do* want to write a session row when
+        # they complete the course so that certificate generation works.
+        assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
+        after_end_row = get_session_hoc_activity_entry
+        assert_in_delta 1.0, get_sampling_weight(after_end_row)
+      end
+    end
+
+    it 'records weight for tracking pixel in sample' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_proportion', 0.5)
+        Kernel.stubs(:rand).returns(0.49)
+        assert_successful_png_get '/api/hour/begin_mc.png'
+        row = get_session_hoc_activity_entry
+        session = row[:session]
+        assert_equal 2, get_sampling_weight(row)
+
+        assert_successful_png_get '/api/hour/finish_mc.png'
+        after_end_row = get_session_hoc_activity_entry
+        assert_equal session, row[:session]
+        assert_equal 2, get_sampling_weight(row)
+      end
+    end
+
+    it 'does not write for start or end tracking pixel for session not in sample' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_proportion', 0.5)
+        Kernel.stubs(:rand).returns(0.51)
+        assert_successful_png_get '/api/hour/begin_mc.png'
+        row = get_session_hoc_activity_entry
+        assert_nil row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+
+        Kernel.stubs(:rand).returns(0.0)
+        assert_successful_png_get '/api/hour/finish_mc.png'
+        after_end_row = get_session_hoc_activity_entry
+        assert_nil after_end_row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+      end
+    end
+    
     private
 
     # Extracts the sampling weight from a hoc_activity row. We would like to add
