@@ -410,8 +410,8 @@ html[dir='rtl'] #codeWorkspace {
 
   html[dir="RTL"] & {
     -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
-    -ms-transform-origin: 0 0;
   }
 }
 
