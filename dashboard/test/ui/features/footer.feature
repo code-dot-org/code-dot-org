@@ -118,6 +118,7 @@ Feature: Checking the footer appearance
   Scenario: Desktop Minecraft share small footer
     Given I am on "http://learn.code.org/s/mc/stage/1/puzzle/14?noautoplay=true"
     And I close the dialog
+    And I wait for 2 seconds
     And I press "runButton"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
@@ -184,6 +185,10 @@ Feature: Checking the footer appearance
     And I navigate to the share URL
     And I wait until element ".small-footer-base" is visible
 
+    # Additional wait to let scroll position settle and possibly have the
+    # pin-to-home-screen popup go away
+    And I wait for 10 seconds
+
     When I open my eyes to test "Mobile Star Wars share small footer"
     Then I see no difference for "small footer"
 
@@ -207,6 +212,10 @@ Feature: Checking the footer appearance
     And I navigate to the share URL
     And I wait until element ".small-footer-base" is visible
 
+    # Additional wait to let scroll position settle and possibly have the
+    # pin-to-home-screen popup go away
+    And I wait for 10 seconds
+
     When I open my eyes to test "Mobile Minecraft share small footer"
     Then I see no difference for "small footer"
 
@@ -225,6 +234,10 @@ Feature: Checking the footer appearance
     And I navigate to the shared version of my project
     And I rotate to portrait
     And I wait until element ".small-footer-base" is visible
+
+    # Additional wait to let scroll position settle and possibly have the
+    # pin-to-home-screen popup go away
+    And I wait for 10 seconds
 
     When I open my eyes to test "Mobile Applab share small footer"
     Then I see no difference for "small footer"
