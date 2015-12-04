@@ -7,6 +7,7 @@
 
 var skinsBase = require('../skins');
 var msg = require('./locale');
+var commonMsg = require('../locale');
 var constants = require('./constants');
 var studioApp = require('../StudioApp').singleton;
 
@@ -15,8 +16,15 @@ var HIDDEN_VALUE = constants.HIDDEN_VALUE;
 var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
+// Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
+// Use to avoid "story" reference in share text for a given skin.
+var plainTwitterOptions = {
+  text: commonMsg.defaultTwitterText() + " @codeorg",
+  hashtag: 'HourOfCode'
+};
 
 function loadGumball(skin, assetUrl) {
+  skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'dots';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -223,6 +231,7 @@ function loadGumball(skin, assetUrl) {
 }
 
 function loadIceAge(skin, assetUrl) {
+  skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'icy1';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
@@ -555,6 +564,7 @@ function loadInfinity(skin, assetUrl) {
 }
 
 function loadHoc2015(skin, assetUrl) {
+  skin.twitterOptions = plainTwitterOptions;
   skin.preloadAssets = true;
 
   skin.hideIconInClearPuzzle = true;
