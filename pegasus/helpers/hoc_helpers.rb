@@ -1,6 +1,7 @@
 require 'rmagick'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
+require 'sinatra/base'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
@@ -18,7 +19,7 @@ def create_session_row_unless_unsampled(row)
   return if unsampled_session?
 
   # Decide whether the session should be sampled.
-  p = DCDO.get('hoc_activity_sample_proportion', default: 1.0).to_f
+  p = DCDO.get('hoc_activity_sample_proportion', 1.0)
   p = 1.0 if p == 0.0  # Don't sample if the proportion is invalid.
   if rand() < p
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
@@ -42,7 +43,8 @@ def create_session_row(row, weight: 1.0)
   end while row[:id] == 0 && (retries -= 1) > 0
 
   raise "Couldn't create a unique session row." if row[:id] == 0
-  set_hour_of_code_cookie_for_row(row[:session])
+  set_hour_of_code_cookie_for_row(row)
+  row
 end
 
 # Create a session id that also encodes the weight of the session.
@@ -83,7 +85,7 @@ def set_hour_of_code_cookie_for_row(row)
 end
 
 def complete_tutorial(tutorial={})
-  unless settings.read_only || unsampled_session?
+  unless settings.read_only
     # We intentionally allow this DB write even when hoc_activity_writes_disabled
     # is set so we can generate personalized, shareable certificates.
     row = DB[:hoc_activity].where(session: session_id).first unless
