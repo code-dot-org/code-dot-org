@@ -13,7 +13,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje
     CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>
+  n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki
@@ -68,7 +68,7 @@
     powtarzania, instrukcje warunkowe i podstawowe algorytmy.
   all_ages: Wszystkie grupy wiekowe
   beginner: Początkujący
-  n_participants: '# uczestników'
+  n_participants: "# uczestników"
   go: Idź
   thank_you_: Dziękujemy!
   congratulations: Gratulacje!
@@ -120,12 +120,12 @@
   beyond_an_hour: Poza Godziną Kodowania
   get_started: Start
   i_agree: Zgadzam się
-  participant_select: -Wybierz-
+  participant_select: "-Wybierz-"
   participant_student: Uczeń
   participant_parent: Rodzic
   participant_educator: Nauczyciel
   participant_engineer: Programista
-  participant_other: Żaden z powyższych
+  participant_other: "Żaden z powyższych"
   print_all: Drukuj wszystko
   print_ice_art: Drukuj swoje lodowe kompozycje
   create_art_with_zombie: lub utwórz zaawansowane kompozycje z zombie
@@ -141,7 +141,7 @@
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
+  hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić.
     http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
@@ -153,11 +153,11 @@
   help_recruit_coders: Pomóż nam przyjąć więcej programistów do Twojego zespołu!
   help_recruit: Pomóż nam przyjąć więcej programistów!
   lines_of_code: PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY.
-  lines_of_code_alt: <b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW
+  lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
   hoc_leaderboards: Panel godziny programowania (Hour of Code)
-  students_and_lines: '%{students} uczniów ukończyło godzinę programowania (Hour of
-    Code)  i napisało %{lines} linii kodu.'
+  students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of
+    Code)  i napisało %{lines} linii kodu."
   start_hoc: Rozpocznij teraz godzinę programowania (Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
   stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania."
@@ -181,7 +181,7 @@
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
-  studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
+  studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
     podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla\n"
   homepage_hero_text_susan: |
@@ -195,10 +195,10 @@
     &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
     potrzebują możliwości, by uczyć się informatyki.&rdquo;
     Sheryl, COO Facebook
-  homepage_hero_text_satya: '&ldquo;Informatyka może odblokować najlepsze możliwości
-    na świecie.&rdquo; Satya, CEO firmy Microsoft'
-  homepage_hero_text_bosh: '&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
-    swojego życia&rdquo; Chris Bosh'
+  homepage_hero_text_satya: "&ldquo;Informatyka może odblokować najlepsze możliwości
+    na świecie.&rdquo; Satya, CEO firmy Microsoft"
+  homepage_hero_text_bosh: "&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
+    swojego życia&rdquo; Chris Bosh"
   homepage_hero_text_student1: '"Te umiejętności zmieniły moją przyszłość. Nie wspominając,
     że jest to po prostu świetna zabawa." Luna, 7 klasa'
   homepage_hero_text_student2: '"Nigdy nie widziałem moich dzieci tak podekscytowanych
@@ -215,7 +215,7 @@
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
     \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel\n"
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
-  homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
+  homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
@@ -225,7 +225,7 @@
   homepage_slot_text_shop: Sklep
   homepage_slot_text_flappy: Kod Flappiego
   homepage_action_text_hoc: Godzina Kodowania dla każdego ucznia.
-  homepage_action_text_num_served: '# spróbowało'
+  homepage_action_text_num_served: "# spróbowało"
   homepage_action_text_join_us: Dołącz do nas
   homepage_action_text_sign_up: Zarejestruj się
   homepage_action_text_try_it: Wypróbuj
@@ -249,7 +249,7 @@
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
   homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
-  homepage_slot_text_link_hocserved: '# spróbowało'
+  homepage_slot_text_link_hocserved: "# spróbowało"
   homepage_solot_text_link_volunteer: Zostań wolontariuszem w Godzinie Kodowania
   homepage_slot_text_title_students: Uczniowie
   homepage_slot_text_blurb_students: Poznaj wszystkie nasze samouczki
@@ -347,10 +347,10 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
     Twojej pomocy! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} nauczycieli potrzebuje
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} nauczycieli potrzebuje
     ochotników-pasjonatów edukacji informatycznej do pomocy z Godziną Kodowania w
     grudniu. <br>%{num_volunteers} wolontariuszy już się zarejestrowało. Dołącz do
-    nich.'
+    nich."
   volunteer_engineer_submission_intro_background: Godzina Kodowania jest globalną
     inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
     milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
@@ -560,11 +560,11 @@
   dashboard_sections_name: Nazwa Sekcji
   dashboard_sections_choose_secret: Jeśli chciałbyś utworzyć konta dla swoich uczniów,
     wybierz typ tajny <b>słowo</b> lub <b>obrazek</b> dla tej sekcji.
-  dashboard_sections_secret_word: <b>słowo</b> umożliwia ustawienie każdemu uczniowi
-    tajnego słowa.
-  dashboard_sections_secret_picture: <b>obrazek</b> umożliwia ustawienie każdemu uczniowi
-    tajnego obrazka, idealne dla młodszych uczniów, którzy nie potrafią jeszcze pisać
-    na komputerze.
+  dashboard_sections_secret_word: "<b>słowo</b> umożliwia ustawienie każdemu uczniowi
+    tajnego słowa."
+  dashboard_sections_secret_picture: "<b>obrazek</b> umożliwia ustawienie każdemu
+    uczniowi tajnego obrazka, idealne dla młodszych uczniów, którzy nie potrafią jeszcze
+    pisać na komputerze."
   dashboard_sections_secret_none: Jeśli chciałbyś, aby Twoi uczniowie mieli własne
     konta, włącznie z wyborem własnego hasła, to wybierz typ utajniony <b>brak</b>.
   dashboard_sections_print_secrets: Możesz następnie wydrukować arkusz z kartami zawierającymi
@@ -664,7 +664,7 @@
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
   dashboard_stage: Etap
-  dashboard_puzzle: Łamigłówka
+  dashboard_puzzle: "Łamigłówka"
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania.
@@ -691,11 +691,11 @@
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_hoc: <b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata
+  dashboard_announce_hoc: "<b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata
     edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000
     wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę
     lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami
-    w Twojej okolicy.
+    w Twojej okolicy."
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -1467,8 +1467,70 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  playlab_iceage_title_live: Ice Age
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
+  monstercoding_gradelevel: Ages 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Elementary
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modern web browsers
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modern web browsers
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Modern browsers, smartphones, tablets
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.

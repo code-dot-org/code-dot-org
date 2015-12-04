@@ -7,7 +7,7 @@ module ScriptLevelsHelper
         response[:stage_changing] = {previous: {name: script_level.name}}
       end
     else
-      response[:message] = 'no more levels'
+      response[:message] = 'no more levels' # used by blockly to show a different feedback message on the last level
 
       if script_level.script.wrapup_video
         response[:video_info] = wrapup_video_then_redirect_response(

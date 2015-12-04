@@ -289,6 +289,7 @@ button.arrow:disabled {
   font-size: 14px;
   overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  direction: ltr;
 }
 
 #codeTextbox.pin_bottom {
@@ -1312,6 +1313,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
     margin: 10px 0;
     &.sharing-content {
       margin-left: $image_width + 15px;
+      margin-right: 25px;
       &.no-image {
         margin-left: 0;
       }
@@ -1360,10 +1362,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 
   #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 200px;
+    width: 100%;
     padding: 10px;
+    cursor: text;
   }
 
   #copy-button {
@@ -1516,3 +1518,10 @@ $see-examples-thick-underline-color: $yellow;
 .droplet-hover-div {
   max-width: 100% !important;
 }
+
+.legacy-share-view {
+  #belowVisualization, .hide-source #belowVisualization {
+    display: none;
+  }
+}
+

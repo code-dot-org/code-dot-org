@@ -38,6 +38,25 @@ $original-background-color: #F2F2F2;
   -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
 
+@mixin mc-x-close-button() {
+  $button-centering-offset: 35px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
+  background-size: 100% auto;
+  top: -$button-centering-offset;
+  right: -$button-centering-offset;
+  width: 50px;
+  height: 50px;
+
+  html[dir=rtl] & {
+    right: auto;
+    left: -$button-centering-offset;
+  }
+}
+
 body {
   background-color: $below-header-background;
 }
@@ -148,7 +167,14 @@ body {
   $frame-width: 434;
   $native-game-width: 400;
   $game-offset-x: (($frame-width - $native-game-width) / 2);
-  margin-left: $game-offset-x * 1px;
+  $game-margin-side: $game-offset-x * 1px;
+
+  margin-left: $game-margin-side;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $game-margin-side;
+  }
+
   margin-top: 61px; // asset pixel distance from frame top to game top
   display: inline-block;
 }
@@ -211,6 +237,9 @@ $height-to-width: 434 / 477;
 
 #visualization {
   height: 677px !important;
+  .legacy-share-view & {
+    height: auto !important;
+  }
 }
 
 @mixin reset-dialog {
@@ -259,6 +288,9 @@ $height-to-width: 434 / 477;
 
   .modal-content.no-modal-icon {
     margin-left: 0;
+    html[dir=rtl] & {
+      margin-right: 0;
+    }
   }
 
   .minecraft-big-yellow-header {
@@ -336,15 +368,7 @@ $height-to-width: 434 / 477;
   }
 
   #close-character-select {
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
-    background-size: 100% auto;
-    top: -35px;
-    right: -35px;
-    width: 50px;
-    height: 50px;
+    @include mc-x-close-button();
   }
 
   .choose-character-button {
@@ -393,6 +417,9 @@ $height-to-width: 434 / 477;
 
   .modal-content {
     margin-left: 0;
+    html[dir=rtl] & {
+      margin-right: 0;
+    }
   }
 
   .minecraft-big-yellow-header {
@@ -408,9 +435,13 @@ $height-to-width: 434 / 477;
     color: #e7e8ea;
   }
 
+
+  $house-outline-height: 168px;
+  $house-outline-width: 167px;
+
   .minecraft-house {
     float: left;
-    width: 150px;
+    width: $house-outline-width;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
@@ -421,21 +452,23 @@ $height-to-width: 434 / 477;
     margin-top: 8px;
   }
 
-  $house-outline-height: 182px;
-
   .house-outline-container {
-    border: 3px solid white;
+    @include pixelated();
+    background: url("#{$root}Sliced_Parts/House_Selection_Box.png") no-repeat;
     display: table;
     $margin-above: 23px;
     $margin-below: 16px;
     margin: $margin-above auto $margin-below;
-    $house-outline-width: 160px;
-    width: 160px;
+    width: $house-outline-width;
     height: $house-outline-height;
+
     @media screen and (max-height: 630px) {
-      width: $house-outline-width / 2;
       $fudge-factor-to-match-bottoms: 7px;
-      height: ($house-outline-height / 2) + $fudge-factor-to-match-bottoms;
+      $smaller-height: ($house-outline-height / 2) + $fudge-factor-to-match-bottoms;
+      $smaller-width: $house-outline-width / 2;
+      width: $smaller-width;
+      height: $smaller-height;
+      background-size: $smaller-width $smaller-height;
     }
   }
 
@@ -456,11 +489,13 @@ $height-to-width: 434 / 477;
     height: $height;
     $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
+    margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
       width: $width / 2;
       height: $height / 2;
       margin-top: $margin-above-photo / 2;
+      margin-bottom: -($margin-above-photo / 2);
     }
   }
   #house-c-picture {
@@ -471,11 +506,13 @@ $height-to-width: 434 / 477;
     height: $height;
     $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
+    margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
       width: $width / 2;
       height: $height / 2;
       margin-top: $margin-above-photo / 2;
+      margin-bottom: -($margin-above-photo / 2);
     }
   }
   #house-b-picture {
@@ -486,11 +523,13 @@ $height-to-width: 434 / 477;
     height: $height;
     $margin-above-photo: ($house-outline-height - $height) / 2 + $extra-offset-for-shadow;
     margin-top: $margin-above-photo;
+    margin-bottom: -$margin-above-photo;
 
     @media screen and (max-height: 630px) {
       width: $width / 2;
       height: $height / 2;
       margin-top: $margin-above-photo / 2;
+      margin-bottom: -($margin-above-photo / 2);
     }
   }
 
@@ -507,15 +546,7 @@ $height-to-width: 434 / 477;
   }
 
   #close-house-select {
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
-    background-size: 100% auto;
-    top: -35px;
-    right: -35px;
-    width: 50px;
-    height: 50px;
+    @include mc-x-close-button();
   }
 
   .choose-house-button {
@@ -539,6 +570,36 @@ $height-to-width: 434 / 477;
 
 }
 
+@mixin orange-button() {
+  & > div {
+    font-size: 24px;
+    color: white !important;
+    text-shadow: 2px 2px #5A5A5A !important;
+  }
+  border-style: solid !important;
+  border-width: 3px 3px 5px 5px !important;
+  @include pixelated();
+  -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+  -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+  border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important;
+
+  &:hover {
+    @include box-shadow(none);
+  }
+
+  &:active {
+    outline:none;
+    border-style: solid !important;
+    border-width: 5px 4px 3px 3px !important;
+    @include pixelated();
+    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important;
+  }
+}
+
 .dash_modal button, .minecraft button {
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
@@ -553,25 +614,32 @@ $height-to-width: 434 / 477;
   $reset-width: 40px;
   $run-left-margin: 6px;
 
+  &.mc-share-button {
+    @include orange-button();
+
+    & > div {
+      margin: 0;
+    }
+
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   &#runButton {
     min-width: 139px;
+
+    padding-top: 6px;
+    padding-bottom: 4px;
+
+    @include orange-button();
+
     & > div {
       margin-top: 4px;
-      font-size: 24px;
-      color: white !important;
-      text-shadow: 2px 2px #5A5A5A !important;
       margin-left: 2px;
       margin-right: 18px;
     }
-    padding-top: 6px;
-    padding-bottom: 4px;
-    border-style: solid !important;
-    border-width: 3px 3px 5px 5px !important;
-    @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important;
 
     .run26 {
       background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
@@ -585,20 +653,6 @@ $height-to-width: 434 / 477;
       @include pixelated();
     }
 
-    &:hover {
-      @include box-shadow(none);
-    }
-
-    &:active {
-      outline:none;
-      border-style: solid !important;
-      border-width: 5px 4px 3px 3px !important;
-      @include pixelated();
-      -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important;
-    }
   }
 
   &#resetButton {
@@ -685,21 +739,17 @@ $height-to-width: 434 / 477;
 
   .modal-image {
     margin-left: -21px;
+    html[dir=rtl] & {
+      margin-left: 0;
+      margin-right: -32px;
+    }
+
     margin-top: -100px;
     width: auto;
   }
 
   .x-close {
-    @include pixelated();
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    background: url("#{$root}Sliced_Parts/X_Button.png") no-repeat center center;
-    background-size: 100% auto;
-    top: -35px;
-    right: -35px;
-    width: 50px;
-    height: 50px;
+    @include mc-x-close-button();
   }
 
   .modal-content .lines-of-code-message {
@@ -708,6 +758,10 @@ $height-to-width: 434 / 477;
 
   #show-code, #feedbackButtons, #puzzleRatingButtons, #sharing {
     margin-left: -100px;
+    html[dir=rtl] & {
+      margin-right: -100px;
+      margin-left: 0;
+    }
   }
 
   .modal-content {
@@ -873,3 +927,4 @@ $height-to-width: 434 / 477;
   bottom: -66px !important;
   margin-left: -33px !important;
 }
+
