@@ -303,6 +303,13 @@ Craft.init = function (config) {
   interfaceImagesToLoad.forEach(function(url) {
     preloadImage(url);
   });
+
+  var shareButton = $('.mc-share-button');
+  if (shareButton.length) {
+    dom.addClickTouchEvent(shareButton[0], function () {
+      Craft.reportResult(true);
+    });
+  }
 };
 
 var preloadImage = function(url) {
@@ -546,6 +553,20 @@ Craft.runButtonClick = function () {
   studioApp.attempts++;
 
   Craft.executeUserCode();
+
+  if (Craft.level.freePlay && !studioApp.hideSource) {
+    var finishBtnContainer = $('#right-button-cell');
+
+    if (finishBtnContainer.length &&
+        !finishBtnContainer.hasClass('right-button-cell-enabled')) {
+      finishBtnContainer.addClass('right-button-cell-enabled');
+      studioApp.onResize();
+
+      var event = document.createEvent('Event');
+      event.initEvent('finishButtonShown', true, true);
+      document.dispatchEvent(event);
+    }
+  }
 };
 
 Craft.executeUserCode = function () {
@@ -630,6 +651,9 @@ Craft.executeUserCode = function () {
     }
   });
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
+    if (Craft.level.freePlay) {
+      return;
+    }
     this.reportResult(success);
 
     var tileIDsToStore = Craft.initialConfig.level.blocksToStore;
@@ -656,12 +680,12 @@ Craft.executeUserCode = function () {
 };
 
 Craft.getTestResultFrom = function (success, studioTestResults) {
-  if (Craft.initialConfig.level.freePlay) {
-    return TestResults.FREE_PLAY;
-  }
-
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
+  }
+
+  if (Craft.initialConfig.level.freePlay) {
+    return TestResults.FREE_PLAY;
   }
 
   return studioTestResults;
