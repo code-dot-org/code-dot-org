@@ -73,10 +73,26 @@ Feature: Checking the footer appearance
 
     When I press menu item "Copyright"
     Then I see no difference for "copyright flyout"
+    And I wait for 0.25 seconds
+    And I close the small footer menu
+
+    # While we're at it, check the footer on the "How it Works" page
+    When I select the "How it works" small footer item
+    And I wait for 2 seconds
+    And I wait until element "#runButton" is visible
+    Then I see no difference for "how it works small footer"
+
+    When I open the small footer menu
+    And I wait for 0.25 seconds
+    Then I see no difference for "how it works footer menu"
+    And I close the small footer menu
+    And I wait for 0.25 seconds
+
+    When I press the first ".copyright-link" element
+    And I wait for 0.25 seconds
+    Then I see no difference for "how it works copyright flyout"
 
     Then I close my eyes
-
-  # TODO: Check footer appearance in "How it Works" scenario
 
   @eyes @dashboard_db_access @as_student
   Scenario: Desktop Applab share small footer appearance
