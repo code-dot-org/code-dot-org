@@ -182,7 +182,7 @@ class HocRoutesTest < Minitest::Test
 
         assert_successful_png_get '/api/hour/finish_mc.png'
         after_end_row = get_session_hoc_activity_entry
-        assert_equal session, row[:session]
+        assert_equal session, after_end_row[:session]
         assert_in_delta 2.0, get_sampling_weight(row)
       end
     end
