@@ -1,26 +1,27 @@
 require 'rmagick'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
-require 'sinatra/base'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 
 # Creates a session row and sets the hour of code cookie to the session_id,
 # if the user is assigned to the sample set (as decided by a random choice
-# based on the hoc_activity_sample_proportion DCDO variable). If, however,
-# the user unsampled, returns nil and sets the cookie to UNSAMPLED_SESSION_ID.
+# based on the hoc_activity_sample_proportion DCDO variable).
+#
+# If, however, the user is not in the sample, returns nil and sets the cookie
+# to UNSAMPLED_SESSION_ID.
 #
 # The "weight" encoded in the session row is set to 1/p, where p is the
 # proportion of sessions in the sample, so that reports can compute the
-# approximate number of actual sessions by multiplying by the weight.
+# approximate number of actual sessions by summing over the the weights.
 
 def create_session_row_unless_unsampled(row)
   # We don't need to do anything if we've already decided this session is unsampled.
   return if unsampled_session?
 
   # Decide whether the session should be sampled.
-  p = DCDO.get('hoc_activity_sample_proportion', 1.0)
-  p = 1.0 if p == 0.0  # Don't sample if the proportion is invalid.
+  p = DCDO.get('hoc_activity_sample_proportion', 1.0).to_f
+  p = 1.0 if p == 0.0  # All sessions are in the sample if the proportion is invalid.
   if Kernel.rand < p
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
     row = create_session_row(row, weight: 1.0 / p)
