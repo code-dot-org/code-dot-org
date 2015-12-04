@@ -8,19 +8,16 @@
   campaign_date_start_long: "December 7"
   campaign_date_short: "Dec. 7-13"
   campaign_date_full: "December 7-13"
-
   front_header_banner: 'Join the largest learning event in history, Dec 7-13, 2015'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
   front_volunteers: 'Technical volunteers wanted'
-
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
   header_menu_prizes: 'Prizes'
   header_menu_how_to: 'How-To'
   header_menu_promote: 'Promote'
-
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -145,7 +142,6 @@
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-
   prizes_all: 'Prizes for every organizer'
   prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you, while supplies last.'
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
@@ -154,9 +150,7 @@
   prizes_brilliant: 'One school in each province and territory will receive $2000 for a Brilliant Project'
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: 'Details'
-
   nav_back_to_resources: "Back to Resources"
-
   how_to_nav_educators: "For educators"
   how_to_nav_after_school: "For after school"
   how_to_nav_parents: "For parents"
@@ -167,7 +161,6 @@
   how_to_nav_companies: "For companies"
   how_to_nav_afterschool_educators: "For after-school educators"
   how_to_nav_volunteers: "For volunteers"
-
   prizes_nav_title: "Prizes"
   prizes_nav_home: "All prizes"
   prizes_nav_hardware: "Hardware prize signup"
@@ -180,11 +173,9 @@
   prizes_nav_brilliant: "$2,000 Brilliant Labs project"
   prizes_nav_actua: "Actua workshop"
   prizes_nav_kids_code: "Kids Code Jeunesse"
-
   prizes_header: "Prizes for every educator"
   prizes_10k: "One public school in every US state (and Washington D.C.) will win $10,000 worth of technology"
   prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last."
-
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -193,7 +184,6 @@
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
   whats_next_try_button: 'Try tutorials'
-
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: 'Anybody can learn.'
   get_started: 'Start'
@@ -201,7 +191,6 @@
   register_now: 'Register Now'
   share_on_facebook: 'Share on Facebook'
   share_on_twitter: 'Share on Twitter'
-
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
   front_join_us_description_short: 'Computer science is a foundation for every student.'
@@ -237,7 +226,6 @@
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "For more information, please visit code.org"
   front_join_us_n_students_served: "# served"
-
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
@@ -253,23 +241,18 @@
   signup_your_event: 'Sign up your event'
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
   signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
-
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "For example, Lincoln High School"
   signup_event_location_placeholder: "Postal code and country OR full address.\r\n(We’ll use this to place a pin on our map)"
   signup_special_event_details_placeholder: 'Describe what makes this a special event'
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
-
   signup_event_type_in_school: 'In a school'
   signup_event_type_out_of_school: 'Outside of school'
-
   signup_submit_label: 'Sign up'
   signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
-
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
-
   map_header: '# Hour of Code events around the world'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
@@ -280,14 +263,11 @@
   map_legend_title: 'Legend'
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
-
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
   meta_tag_twitter_title: 'The Hour of Code is coming'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
-
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-
   hardware_prizes_form_name_label: 'Your name'
   hardware_prizes_form_name_placeholder: 'Your name'
   hardware_prizes_form_email_label: 'Your email'
@@ -310,7 +290,6 @@
   hardware_prizes_form_plan_file_label: 'Upload your Hour of Code logistics plan'
   hardware_prizes_form_plan_file_description: 'Submit a simple schedule of how you plan to organize every student to do the Hour of Code at your school. See a sample plan: #PDF# | #Word#'
   hardware_prizes_form_submit_label: 'Submit'
-
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
@@ -353,7 +332,6 @@
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
-
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
   stats_i18n: "Students are learning in 40 languages"
@@ -368,7 +346,6 @@
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-
   resources_how_to: How-to guide for teachers
   resources_how_to_events: Event how-to guide
   resources_how_to_districts: How-to guide for districts
@@ -391,23 +368,19 @@
   resources_nav_tutorials: 'Try the tutorials'
   resources_nav_promote: 'Spread the word'
   resources_nav_spread_word: 'How to get involved'
-
   resources_banner_promote_text: "Promote"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
   resources_banner_howto_text: "How-to"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
-
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
-
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
   videos_obama_cs: President Obama on computer science
   videos_anybody_can_learn: Anybody Can Learn (1 min)
-
   title_country_resources: Country Specific Resources
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
@@ -421,7 +394,6 @@
   title_press_kit: Press Kit
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
-
   title_partners: Partners
   title_prizes_faq: Prizes FAQ
   title_prizes_terms: Prizes Terms
@@ -432,7 +404,6 @@
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines
   title_whole_school: Whole School Participation
-
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
@@ -445,10 +416,8 @@
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events
-
   footer_copyright_message: 'Copyright 2015 Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
-
   footer_menu_partners: 'Partners'
   footer_menu_contact: 'Contact us'
   footer_menu_support: 'Support'
