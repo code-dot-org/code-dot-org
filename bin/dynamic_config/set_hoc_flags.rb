@@ -36,22 +36,23 @@ EOF
     when 'red'
       Gatekeeper.set('postMilestone', value: false)
       Gatekeeper.set('tracking_pixel_enabled', value: false)
-      Gatekeeper.set('puzzle_rating', value: false)
       DCDO.set('hoc_activity_sample_proportion', 0) # Do hoc_activity logging for no sessions .
+      Gatekeeper.set('puzzle_rating', value: false)
+      Gatekeeper.set('async_activity_writes', value: true)
       DCDO.set('activity_max_rate', 100)
     when 'yellow'
       Gatekeeper.set('postMilestone', value: true)
-      Gatekeeper.set('hoc_activity_writes_disabled', value: true)
-      Gatekeeper.set('async_activity_writes', value: true)
-      Gatekeeper.set('puzzle_rating', value: false)
+      Gatekeeper.set('tracking_pixel_enabled', value: true)
       DCDO.set('hoc_activity_sample_proportion', 0.1)  # Do hoc_activity logging for 1 in 10 sessions .
+      Gatekeeper.set('puzzle_rating', value: false)
+      Gatekeeper.set('async_activity_writes', value: true)
       DCDO.set('activity_max_rate', 3000)  # Max async op rate per queue processor.
     when 'green'
       Gatekeeper.set('postMilestone', value: true)
-      Gatekeeper.set('async_activity_writes', value: false)
       Gatekeeper.set('tracking_pixel_enabled', value: true)
-      Gatekeeper.set('puzzle_rating', value: true)
       DCDO.set('hoc_activity_sample_proportion', 1.0)  # Do hoc_activity logging for all sessions .
+      Gatekeeper.set('puzzle_rating', value: true)
+      Gatekeeper.set('async_activity_writes', value: false)
       DCDO.set('activity_max_rate', 0)  # No limit.
     else
       raise "Unexpected mode #{mode}"
