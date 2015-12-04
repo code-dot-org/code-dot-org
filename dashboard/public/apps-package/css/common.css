@@ -303,8 +303,8 @@ html[dir='rtl'] #codeWorkspace {
   transform-origin: 0 0; }
   html[dir="RTL"] #visualization.responsive > * {
     -webkit-transform-origin: 100% 0;
-    -ms-transform-origin: 100% 0;
-    transform-origin: 100% 0; }
+    transform-origin: 100% 0;
+    -ms-transform-origin: 0 0; }
 
 /* Make buttons, videos, etc. clickable. Otherwise, the scaled svg/canvas
  * obscures clicks on its original, unscaled position.  */
