@@ -17,6 +17,10 @@ nav: promote_nav
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_vq6Wpb-WyQ" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=vq6Wpb-WyQ"><strong>La Hora del Código en Chile (2 min)</strong></a>
 
+<% elsif @country == 'al' %>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/AtVzbUZqZcI"><strong>Ora E Kodimit (5 min)</strong></a>
+
 <% elsif @country == 'ca' %>
 
 ## Videos
