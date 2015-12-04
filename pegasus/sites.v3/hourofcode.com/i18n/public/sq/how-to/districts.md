@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire school district.
 
@@ -24,4 +23,3 @@ nav: how_to_nav
 
   6. **Më shumë [shpërblime](<%= resolve_url('/prizes') %>) për ÇDO organizator.**Çdo mësues pjesmarrës do të marrë dhurata falenderimi. Dhe në çdo shtet, një shkollë pjesmarrëse mund të fitojë $10,000 në teknologji për shkollën e tyre!
 
-<%= view :signup_button %>

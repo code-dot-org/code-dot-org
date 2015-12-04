@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Příručka ke cvičením v Hodině kódu a k Týdnu informatiky
 
@@ -265,4 +264,3 @@ Pokud vytvoříte výukový materiál pro nevidomé nebo slabozraké, rádi bych
 
 [**Zpět nahoru**](#top)
 
-<%= view :signup_button %>

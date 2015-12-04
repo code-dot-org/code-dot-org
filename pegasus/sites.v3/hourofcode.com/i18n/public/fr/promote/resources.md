@@ -132,4 +132,3 @@ Contactez moi au [numéro de téléphone ou adresse E-mail]. J'attends avec impa
 
 Sincèrement,[NAME], [TITLE]
 
-<%= view :signup_button %>

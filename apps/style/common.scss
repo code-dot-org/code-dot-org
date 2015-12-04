@@ -1183,8 +1183,8 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
   .generatedCode {
     font-size: 14px;
-    overflow: scroll;
-    max-height: 400px;
+    overflow: auto;
+    max-height: 150px;
   }
 }
 
@@ -1522,6 +1522,22 @@ $see-examples-thick-underline-color: $yellow;
 .legacy-share-view {
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
+  }
+
+  #visualizationColumn {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .small-footer-base {
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #more-menu, #copyright-flyout {
+    left: auto;
+    right: 0;
   }
 }
 

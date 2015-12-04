@@ -132,4 +132,3 @@ Venligst ta kontakt med meg på [telefon eller epost]. Eg ser fram til å høyre
 
 Med venleg helsing, [NAME], [TITLE]
 
-<%= view :signup_button %>
