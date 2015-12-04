@@ -44,4 +44,3 @@ Povězte svým přátelům o **#HourOfCode**!
 
 [Pošlete tento email](<%= resolve_url('/promote/resources#sample-emails') %>) vašim místním politikům, městské radě nebo školní radě a pozvěte je k návštěvě vaší školy pro Hodinu kódu. Může to pomoci rozvoji informatice ve vaší oblasti výměnou za jednu hodinu.
 
-<%= view :signup_button %>

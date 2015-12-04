@@ -978,8 +978,8 @@ input[type="radio"] {
         text-decoration: underline; }
   .generated-code-container .generatedCode {
     font-size: 14px;
-    overflow: scroll;
-    max-height: 400px; }
+    overflow: auto;
+    max-height: 150px; }
 
 .light-yellow-background {
   background-color: #fff7df; }
@@ -1219,6 +1219,19 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 
 .legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
   display: none; }
+
+.legacy-share-view #visualizationColumn {
+  margin: 0 auto;
+  padding: 20px 0; }
+
+.legacy-share-view .small-footer-base {
+  width: auto;
+  left: 0;
+  right: 0; }
+
+.legacy-share-view #more-menu, .legacy-share-view #copyright-flyout {
+  left: auto;
+  right: 0; }
 
 body {
   background-color: #646464; }

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
 
@@ -62,4 +61,3 @@ Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusio
   
 Puoi trovare altre risorse ed e-mail di esempio [qui](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

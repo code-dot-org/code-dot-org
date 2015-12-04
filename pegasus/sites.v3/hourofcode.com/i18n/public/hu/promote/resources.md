@@ -132,4 +132,3 @@ Kérjük, lépjen kapcsolatba velünk a következő [telefonszámon vagy E-mail 
 
 Tisztelettel, \[Név\] \[Cím\]
 
-<%= view :signup_button %>
