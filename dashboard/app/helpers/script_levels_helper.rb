@@ -64,7 +64,7 @@ module ScriptLevelsHelper
   end
 
   def tracking_pixel_url(script)
-    "https://code.org/api/hour/begin_static_#{script.name}.png"
+    "https://code.org/api/hour/begin_offline_#{script.name}.png"
   end
 
   def section_options
