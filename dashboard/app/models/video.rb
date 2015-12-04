@@ -35,7 +35,7 @@ class Video < ActiveRecord::Base
     transaction do
       reset_db
       CSV.read('config/videos.csv', { col_sep: "\t", headers: true }).each_with_index do |row, id|
-        create!(id: id + 1, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'])
+        create!(id: id + 11, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'])
       end
     end
     check_i18n_names
