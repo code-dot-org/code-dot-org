@@ -1249,10 +1249,10 @@ body {
 #bubble {
   background-color: transparent !important; }
 
-.small-footer-base {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #4E4E4E;
   color: #969292; }
-  .small-footer-base a:hover {
+  .small-footer-base a:hover, #copyright-flyout a:hover, #more-menu a:hover {
     color: white; }
 
 #codeApp {
@@ -1886,7 +1886,7 @@ a.video_link {
     .dash_modal button.mc-share-button:active, .minecraft button.mc-share-button:active {
       outline: none;
       border-style: solid !important;
-      border-width: 5px 4px 3px 3px !important;
+      border-width: 5px 5px 3px 3px !important;
       image-rendering: optimizeSpeed;
       /* Legal fallback */
       image-rendering: -moz-crisp-edges;
@@ -1903,10 +1903,10 @@ a.video_link {
       /* CSS4 Proposed  */
       -ms-interpolation-mode: nearest-neighbor;
       /* IE8+           */
-      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 fill stretch !important; }
     .dash_modal button.mc-share-button > div, .minecraft button.mc-share-button > div {
       margin: 0; }
   .dash_modal button#runButton, .minecraft button#runButton {
@@ -1946,7 +1946,7 @@ a.video_link {
     .dash_modal button#runButton:active, .minecraft button#runButton:active {
       outline: none;
       border-style: solid !important;
-      border-width: 5px 4px 3px 3px !important;
+      border-width: 5px 5px 3px 3px !important;
       image-rendering: optimizeSpeed;
       /* Legal fallback */
       image-rendering: -moz-crisp-edges;
@@ -1963,10 +1963,10 @@ a.video_link {
       /* CSS4 Proposed  */
       -ms-interpolation-mode: nearest-neighbor;
       /* IE8+           */
-      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 fill stretch !important; }
     .dash_modal button#runButton > div, .minecraft button#runButton > div {
       margin-top: 4px;
       margin-left: 2px;
