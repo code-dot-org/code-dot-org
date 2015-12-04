@@ -26,11 +26,7 @@ max_age: 60
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
 -company_param = params[:co]
--# Do not show company profile sections for the cartoon network, even if someone
--# accidentally creates an entry for them in the forms table. (Our partnership
--# with cartoon network piggy-backs on our company profile infrastructure.)
--CARTOON_NETWORK = 'CN'
--form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param && company_param != CARTOON_NETWORK
+-form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param
 -@company = company = JSON.parse(form[:data]) if form
 -if company
   %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
@@ -53,18 +49,10 @@ max_age: 60
   -else
     %h1=I18n.t :congratulations_on_completing_hoc
 
-
-  -if company_param == CARTOON_NETWORK && cert_script == 'gumball'
-    -if request.locale == 'ar-SA'
-      -# Users who started at https://code.org/api/hour/begin/gumball?company=CN&lang=ar
-      -# should see this block when they finish.
-      %h2
-        أنهيت ساعة البرمجة !      
-        %a{:href=>"http://click-and-share.com/hour_of_code/data-capture/"} العودة إلى كرتون نتورك
-    -else
-      %h2
-        I've finished my Cartoon Network Hour of Code.
-        %a{:href=>"http://click-and-share.com/hour_of_code/data-capture/"} Take me back to Cartoon Network.
+  -if request.locale == 'ar-SA'
+    %h2
+      أنهيت ساعة البرمجة ! العودة إلى
+      %a{:href=>"http://click-and-share.com/hour_of_code/data-capture/"} كرتون نتورك
 
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
