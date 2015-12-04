@@ -30,7 +30,6 @@ social:
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
-%script{type: "text/javascript", src: "/js/answer-dash.js"}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
@@ -46,6 +45,8 @@ social:
   }
 
 - imageheight = 590
+
+= view :answer_dash
 
 #top{style: "position: relative; width: 100%; overflow: hidden;"}
 
