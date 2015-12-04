@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Si ta sjellësh Orën e Kodimit në tërë komunitetin tuaj.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Lidhu në nivel lokal.** Vizito [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) të mësosh më shumë rreth edukimit në shkencën kompjuterike në shtetin tuaj. Nënshkruaj peticionin këtu dhe do të marrësh përditësimet nga Code.org për përpjekjet e tyre lokale, shtetërore dhe federale.
 
-<%= view :signup_button %>

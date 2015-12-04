@@ -281,9 +281,9 @@
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
 
-  meta_tag_og_title: 'The Hour of Code is coming'
+  meta_tag_og_title: 'The Hour of Code is here'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
-  meta_tag_twitter_title: 'The Hour of Code is coming'
+  meta_tag_twitter_title: 'The Hour of Code is here'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
@@ -352,7 +352,9 @@
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_posters_q: "Where are my posters?"
+  hoc_faq_posters_a: "We are so sorry to share that we ran out of posters to send everyone who requested them. We've more than tripled signups from last year which means we grossly underestimated how many posters to print for organizers. We are working to find a solution to distribute more. You can always print posters yourself on our <a href='/promote/resources'>resources page</a>."
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."

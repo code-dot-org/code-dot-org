@@ -53,7 +53,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
@@ -64,7 +64,7 @@
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

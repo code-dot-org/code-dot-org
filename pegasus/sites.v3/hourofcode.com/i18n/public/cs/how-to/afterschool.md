@@ -6,18 +6,15 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school
+# Jak vyučovat jednu Hodinu kódu v mimoškolní aktivitě
 
 ## 1) Přihlásit se
 
   * Přihlásit se k hostování [Hodiny kódu](<%= resolve_url('/') %>) během <%= campaign_date('short') %>.
   * Propagujte vaši [Hodinu kódu](<%= resolve_url('/promote') %>) a povzbuďte ostatní k hostování.
 
-## 2) Prohlédni si toto video s návodem
-<iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-
+## 2) Prohlédni si toto video s návodem <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zvol si výukový kurz:
 
 Budeme hostit řadu [zábavných jednohodinových výukových kurzů](<%= resolve_url('https://code.org/learn') %>) pro účastníky různých věkových kategorií vytvořené řadou partnerů. *Nové výukové kurzy přicházejí před odstartování Hodiny kódu <%= campaign_date('full') %>.* [Vyzkoušejte aktuální výukové kurzy.](<%= resolve_url("https://code.org/learn") %>)
@@ -98,7 +95,7 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
   * [Tisk certifikátů](<%= resolve_url('https://code.org/certificates') %>) pro vaše studenty.
   * [Tisk "Udělal jsem Hodinu kódu!"](<%= resolve_url('/promote/resources#stickers') %>) nálepek.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
+  * [Objednej podporující trička ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pro vaše studenty.
   * Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
 [col-33]
@@ -127,16 +124,15 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
   * Používejte tuto [šablonu plánu lekce ](/files/AfterschoolEducatorLessonPlanOutline.docx) k organizování Hodiny kódu.
   * Zkontrolujte si [nejlepší praxi organizátorů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) z minulých Hodin kódu. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
+  * Zhlédněte záznam nášeho webináře [Návod pro kouče Hodiny kódu](https://youtu.be/EJeMeSW2-Mw).
+  * [Navštivte live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) s naším zakladatelem, Hadi Partovi, abyste připravili Hodinu kódu.
   * Navštivte [fórum Hodinu kódu, ](http://forum.code.org/c/plc/hour-of-code) abyste získali rady, náhled a podporu od jiných organizátorů. <% if @country == 'us' %>
   * Zkontrolujte si [FAQ Hodiny kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co přijde po Hodině kódu?
 
-Hodina kódu je jen prvním krokem k poznání, jak fungují technologie a jak vytvářet software. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Hodina kódu je jen prvním krokem k poznání, jak fungují technologie a jak vytvářet software. K pokračování této cesty: - Hodina kódu je pouze prvním krokem na cestě k zjistění více o tom, jak funguje technologie a jak vytvářet softwarové aplikace. Pokračovat v této cestě:
 
-  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Povzbuďte studenty v pokračování [učit se online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Nvštivte](<%= resolve_url('https://code.org/professional-development-workshops') %>) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
 
-<%= view :signup_button %>

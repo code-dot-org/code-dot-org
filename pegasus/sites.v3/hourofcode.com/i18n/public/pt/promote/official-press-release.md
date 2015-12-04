@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Exemplo de comunicado de imprensa para representantes políticos
 
@@ -49,4 +48,3 @@ Para saber mais sobre o [**EVENTO/PROGRAMA/ETC.**], visite [**INSERIR SITE**] ou
   
 
 
-<%= view :signup_button %>

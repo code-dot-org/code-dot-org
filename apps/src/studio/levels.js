@@ -245,7 +245,7 @@ levels.playlab_1 = utils.extend(levels.dog_hello, {
 });
 
 levels.iceage_hello1 = utils.extend(levels.playlab_1, {
-  background: 'iceberg',
+  background: 'icy5',
   firstSpriteIndex: 1,
 });
 levels.gumball_hello1 = utils.extend(levels.playlab_1, {
@@ -331,7 +331,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   ],
 });
 levels.iceage_hello2 = utils.extend(levels.playlab_2, {
-  background: 'leafy',
+  background: 'icy1',
   firstSpriteIndex: 0,
 });
 levels.gumball_hello2 = utils.extend(levels.playlab_2, {
@@ -422,7 +422,7 @@ levels.playlab_3 = {
   ]
 };
 levels.iceage_move_to_flag = utils.extend(levels.playlab_3, {
-  background: 'icy',
+  background: 'icy3',
   firstSpriteIndex: 2,
 });
 levels.gumball_move_to_flag = utils.extend(levels.playlab_3, {
@@ -548,7 +548,7 @@ levels.playlab_4 = {
   ],
 };
 levels.iceage_move_to_actor = utils.extend(levels.playlab_4, {
-  background: 'icy',
+  background: 'icy3',
   avatarList: ['diego', 'manny']
 });
 levels.gumball_move_to_actor = utils.extend(levels.playlab_4, {
@@ -587,6 +587,25 @@ levels.click_hello =  {
       return (Studio.sayComplete > 0 && this.successState.seenCmd);
     }
   },
+  'callouts': [
+    {
+      'id': 'playlab:click_hello:instructions',
+      'element_id': '#prompt-table',
+      'qtip_config': {
+        'content': {
+          'text': msg.calloutInstructions(),
+        },
+        'position': {
+          'my': 'bottom left',
+          'at': 'top right',
+          'adjust': {
+            'x': -40,
+            'y': 0
+          }
+        }
+      }
+    }
+  ],
   'timeoutFailureTick': 300,
   'toolbox':
     tb('<block type="studio_moveDistance"><title name="DIR">2</title></block>' +
@@ -607,7 +626,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 levels.iceage_click_hello = utils.extend(levels.playlab_5, {
-  background: 'iceberg',
+  background: 'icy4',
   firstSpriteIndex: 1,
 });
 
@@ -760,7 +779,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   ],
 });
 levels.iceage_move_events = utils.extend(levels.playlab_6, {
-  background: 'tile',
+  background: 'icy5',
   firstSpriteIndex: 2,
   goalOverride: {} // This prevents the override from original playlab from being used
 });
@@ -896,13 +915,33 @@ levels.playlab_7 = {
   ],
 };
 levels.iceage_repeat = utils.extend(levels.playlab_7, {
-  background: 'iceberg',
+  background: 'icy1',
   firstSpriteIndex: 4,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 levels.gumball_repeat = utils.extend(levels.playlab_7, {
-  background: 'graffiti',
+  background: 'dots',
   firstSpriteIndex: 4,
   defaultEmotion: Emotions.NORMAL,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 16,0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
 });
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
@@ -1126,7 +1165,7 @@ levels.playlab_8 = {
 
 };
 levels.iceage_sound_and_points = utils.extend(levels.playlab_8, {
-  background: 'icy',
+  background: 'icy2',
   avatarList: ['sid', 'granny']
 });
 levels.gumball_sound_and_points = utils.extend(levels.playlab_8, {
@@ -1319,11 +1358,11 @@ levels.playlab_9 = {
 };
 
 levels.iceage_warn_ice_age = utils.extend(levels.playlab_9, {
-  background: 'flower',
+  background: 'ground',
   toolbox:
     tb(
       blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
-      blockOfType('studio_setBackground', {VALUE: '"icy"'}) +
+      blockOfType('studio_setBackground', {VALUE: '"icy5"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
@@ -1459,7 +1498,7 @@ levels.gumball_join_food_fight = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [16, 0, 0, 0, 0, 0, 16, 0],
+    [16,0, 0, 0, 0, 16,0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1467,7 +1506,7 @@ levels.gumball_join_food_fight = {
   ],
   toolbox:
     tb(
-      blockOfType('studio_whenSpriteCollided') +
+      blockOfType('studio_whenSpriteCollided', {SPRITE1: 1, SPRITE2: 'anything'}) +
       blockOfType('studio_setSpriteEmotion', {SPRITE: 1}) +
       blockOfType('studio_throw', {SPRITE: 0, DIR: 2}) +
       blockOfType('studio_playSound') +
@@ -1483,7 +1522,7 @@ levels.gumball_join_food_fight = {
 };
 
 levels.iceage_throw_hearts = utils.extend(levels.gumball_join_food_fight, {
-  background: 'icy',
+  background: 'icy3',
   avatarList: ['sid', 'granny'],
 });
 
@@ -1543,9 +1582,21 @@ levels.sandbox =  {
 };
 levels.c2_11 = utils.extend(levels.sandbox, {});
 levels.c3_game_7 = utils.extend(levels.sandbox, {});
-levels.playlab_10 = utils.extend(levels.sandbox, {});
-levels.iceage_free_play = utils.extend(levels.playlab_10, {});
-levels.gumball_free_play = utils.extend(levels.playlab_10, {});
+levels.playlab_10 = utils.extend(levels.sandbox, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
+levels.iceage_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
+levels.gumball_free_play = utils.extend(levels.playlab_10, {
+  appStringsFunctions: {
+    continueText: msg.playlab_lastLevel_continueText
+  },
+});
 
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
@@ -3146,8 +3197,8 @@ levels.js_hoc2015_event_free = {
           'text': msg.calloutFinishButton(),
         },
         'position': {
-          'my': 'top left',
-          'at': 'bottom right',
+          'my': 'center left',
+          'at': 'center right',
         }
       }
     }
@@ -3243,6 +3294,7 @@ levels.hoc2015_blockly_6 = utils.extend(levels.js_hoc2015_move_finale,  {
   enableShowCode: true,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
+  callouts: null,
   requiredBlocks: [
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
@@ -3643,8 +3695,8 @@ levels.hoc2015_blockly_15 = utils.extend(levels.js_hoc2015_event_free,  {
           text: msg.calloutFinishButton(),
         },
         position: {
-          my: 'top left',
-          at: 'bottom right',
+          my: 'center left',
+          at: 'center right',
         }
       }
     },

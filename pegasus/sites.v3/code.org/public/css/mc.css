@@ -34,6 +34,8 @@
 .mc-tutorial {
   position: absolute;
   top: 60px;
+  left: 470px;
+  width: 480px;
   line-height: 16px;
 }
 
@@ -46,6 +48,10 @@
   margin-top: 0px;
   margin-bottom: 10px;
   color: white;
+}
+
+.mc-header2 {
+  padding: 10px;
 }
 
 .mc-disabled {

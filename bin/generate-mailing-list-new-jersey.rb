@@ -100,7 +100,7 @@ def location_filter_query
   end
 end
 
-SOLR = Solr::Server.new(host: 'ec2-54-83-22-254.compute-1.amazonaws.com')
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 def csv_contacts(path, params={})
   fields = params[:fields] if params[:fields]

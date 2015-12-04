@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 
@@ -265,4 +264,3 @@ Se você criar um tutorial voltado para pessoas com deficiência visual, adorar�
 
 [**Voltar ao início**](#top)
 
-<%= view :signup_button %>

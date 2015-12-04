@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Guidelines for øvelser til Hour of Code™ og Computer Science Education Week
 
@@ -265,4 +264,3 @@ Hvis du opretter en øvelse, der er designet til de svagtseende, vil vi gerne fr
 
 [**Tilbage til toppen**](#top)
 
-<%= view :signup_button %>

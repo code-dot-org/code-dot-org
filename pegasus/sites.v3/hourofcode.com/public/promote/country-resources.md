@@ -4,7 +4,6 @@ layout: wide
 nav: promote_nav
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -37,6 +36,16 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=_C9odNcq3uQ"><strong>Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)</strong></a>
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
+<% elsif @country == 'nz' %>
+
+<br/><br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=VjFQeG97a9E"><strong>Time to code is now (1 min)</strong></a>
+
+<br/><br/>
+
+<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg"/>
 
 <% elsif @country == 'pk' %>
 
@@ -94,4 +103,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>
