@@ -45,7 +45,7 @@ EOF
       Gatekeeper.set('tracking_pixel_enabled', value: false)
       Gatekeeper.set('async_activity_writes', value: true)
       Gatekeeper.set('puzzle_rating', value: false)
-      DCDO.set('hoc_activity_sample_weight', 10)  # Sample 10% of sessions in hoc_activity.
+      DCDO.set('hoc_activity_sample_weight', 10)  # Sample 1/10 of sessions in hoc_activity.
       DCDO.set('activity_max_rate', 3000)  # Max async op rate per queue processor.
     when 'green'
       Gatekeeper.set('postMilestone', value: true)
