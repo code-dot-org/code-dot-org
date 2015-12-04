@@ -132,4 +132,3 @@ Prosím kontaktujte mě [ČÍSLO TELEFONU NEBO EMAILOVÁ ADRESA]. Těším se na
 
 S pozdravem, [NAME], [TITLE]
 
-<%= view :signup_button %>

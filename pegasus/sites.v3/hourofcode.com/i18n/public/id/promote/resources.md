@@ -132,4 +132,3 @@ Silakan hubungi saya di [Nomer Telpon atau EMAIL alamat]. Saya berharap respon b
 
 Hormat kami,[NAME], [TITLE]
 
-<%= view :signup_button %>

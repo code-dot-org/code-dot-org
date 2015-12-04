@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Simple comunicado de prensa para los funcionarios electos
 
@@ -49,4 +48,3 @@ Para obtener más información sobre [**Evento/programa/ETC**], visite [**Insert
   
 
 
-<%= view :signup_button %>
