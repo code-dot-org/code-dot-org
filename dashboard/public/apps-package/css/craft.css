@@ -1082,7 +1082,8 @@ input[type="radio"] {
   #sharing div {
     margin: 10px 0; }
     #sharing div.sharing-content {
-      margin-left: 195px; }
+      margin-left: 195px;
+      margin-right: 25px; }
       #sharing div.sharing-content.no-image {
         margin-left: 0; }
   #sharing label {
@@ -1111,10 +1112,10 @@ input[type="radio"] {
   #sharing button.saved-to-gallery {
     font-family: "Gotham 4i"; }
   #sharing #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 200px;
-    padding: 10px; }
+    width: 100%;
+    padding: 10px;
+    cursor: text; }
   #sharing #copy-button {
     max-width: 100px; }
   #sharing #sharing-phone i.fa {
@@ -1215,6 +1216,9 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 
 .droplet-hover-div {
   max-width: 100% !important; }
+
+.legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
+  display: none; }
 
 body {
   background-color: #646464; }
@@ -1329,6 +1333,9 @@ body {
   margin-left: 17px;
   margin-top: 61px;
   display: inline-block; }
+  html[dir=rtl] #phaser-game {
+    margin-left: 0;
+    margin-right: 17px; }
 
 #minecraft-frame {
   width: 434px;
@@ -1478,6 +1485,8 @@ a.video_link {
 
 #visualization {
   height: 677px !important; }
+  .legacy-share-view #visualization {
+    height: auto !important; }
 
 #craft-popup-player-selection {
   background-color: transparent;
@@ -1526,6 +1535,8 @@ a.video_link {
     background-color: #3C3C3C; }
   #craft-popup-player-selection .modal-content.no-modal-icon {
     margin-left: 0; }
+    html[dir=rtl] #craft-popup-player-selection .modal-content.no-modal-icon {
+      margin-right: 0; }
   #craft-popup-player-selection .minecraft-big-yellow-header {
     text-shadow: 2px 2px #565656 !important;
     color: #F4D00B;
@@ -1587,6 +1598,9 @@ a.video_link {
     right: -35px;
     width: 50px;
     height: 50px; }
+    html[dir=rtl] #craft-popup-player-selection #close-character-select {
+      right: auto;
+      left: -35px; }
   #craft-popup-player-selection .choose-character-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
@@ -1665,6 +1679,8 @@ a.video_link {
     background-color: #3C3C3C; }
   #craft-popup-house-selection .modal-content {
     margin-left: 0; }
+    html[dir=rtl] #craft-popup-house-selection .modal-content {
+      margin-right: 0; }
   #craft-popup-house-selection .minecraft-big-yellow-header {
     text-shadow: 2px 2px #565656 !important;
     color: #F4D00B;
@@ -1676,7 +1692,7 @@ a.video_link {
     color: #e7e8ea; }
   #craft-popup-house-selection .minecraft-house {
     float: left;
-    width: 150px;
+    width: 167px;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
@@ -1686,15 +1702,32 @@ a.video_link {
         padding-left: 5px;
         padding-right: 5px; } }
   #craft-popup-house-selection .house-outline-container {
-    border: 3px solid white;
+    image-rendering: optimizeSpeed;
+    /* Legal fallback */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox        */
+    image-rendering: -o-crisp-edges;
+    /* Opera          */
+    image-rendering: -webkit-optimize-contrast;
+    /* Safari         */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed  */
+    image-rendering: crisp-edges;
+    /* CSS4 Proposed  */
+    image-rendering: pixelated;
+    /* CSS4 Proposed  */
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE8+           */
+    background: url("/blockly/media/craft/Sliced_Parts/House_Selection_Box.png") no-repeat;
     display: table;
     margin: 23px auto 16px;
-    width: 160px;
-    height: 182px; }
+    width: 167px;
+    height: 168px; }
     @media screen and (max-height: 630px) {
       #craft-popup-house-selection .house-outline-container {
-        width: 80px;
-        height: 98px; } }
+        width: 83.5px;
+        height: 91px;
+        background-size: 83.5px 91px; } }
   #craft-popup-house-selection .house-photo {
     margin: 0px auto 10px auto;
     background-size: 100% auto;
@@ -1705,32 +1738,38 @@ a.video_link {
     background-image: url("/blockly/media/craft/Sliced_Parts/House_Option_A_v3.png");
     width: 112px;
     height: 111px;
-    margin-top: 40.5px; }
+    margin-top: 33.5px;
+    margin-bottom: -33.5px; }
     @media screen and (max-height: 630px) {
       #craft-popup-house-selection #house-a-picture {
         width: 56px;
         height: 55.5px;
-        margin-top: 20.25px; } }
+        margin-top: 16.75px;
+        margin-bottom: -16.75px; } }
   #craft-popup-house-selection #house-c-picture {
     background-image: url("/blockly/media/craft/Sliced_Parts/House_Option_B_v3.png");
     width: 127px;
     height: 129px;
-    margin-top: 31.5px; }
+    margin-top: 24.5px;
+    margin-bottom: -24.5px; }
     @media screen and (max-height: 630px) {
       #craft-popup-house-selection #house-c-picture {
         width: 63.5px;
         height: 64.5px;
-        margin-top: 15.75px; } }
+        margin-top: 12.25px;
+        margin-bottom: -12.25px; } }
   #craft-popup-house-selection #house-b-picture {
     background-image: url("/blockly/media/craft/Sliced_Parts/House_Option_C_v3.png");
     width: 98px;
     height: 152px;
-    margin-top: 20px; }
+    margin-top: 13px;
+    margin-bottom: -13px; }
     @media screen and (max-height: 630px) {
       #craft-popup-house-selection #house-b-picture {
         width: 49px;
         height: 76px;
-        margin-top: 10px; } }
+        margin-top: 6.5px;
+        margin-bottom: -6.5px; } }
   #craft-popup-house-selection #choose-house-container {
     display: table;
     margin: 0 auto;
@@ -1748,6 +1787,9 @@ a.video_link {
     right: -35px;
     width: 50px;
     height: 50px; }
+    html[dir=rtl] #craft-popup-house-selection #close-house-select {
+      right: auto;
+      left: -35px; }
   #craft-popup-house-selection .choose-house-button {
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
@@ -1806,6 +1848,67 @@ a.video_link {
   color: #f1f1f1 !important;
   font-size: 26px;
   font-family: "Gotham 5r", sans-serif !important; }
+  .dash_modal button.mc-share-button, .minecraft button.mc-share-button {
+    border-style: solid !important;
+    border-width: 3px 3px 5px 5px !important;
+    image-rendering: optimizeSpeed;
+    /* Legal fallback */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox        */
+    image-rendering: -o-crisp-edges;
+    /* Opera          */
+    image-rendering: -webkit-optimize-contrast;
+    /* Safari         */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed  */
+    image-rendering: crisp-edges;
+    /* CSS4 Proposed  */
+    image-rendering: pixelated;
+    /* CSS4 Proposed  */
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE8+           */
+    -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
+    border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .dash_modal button.mc-share-button > div, .minecraft button.mc-share-button > div {
+      font-size: 24px;
+      color: white !important;
+      text-shadow: 2px 2px #5A5A5A !important; }
+    .dash_modal button.mc-share-button:hover, .minecraft button.mc-share-button:hover {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+    .dash_modal button.mc-share-button:active, .minecraft button.mc-share-button:active {
+      outline: none;
+      border-style: solid !important;
+      border-width: 5px 4px 3px 3px !important;
+      image-rendering: optimizeSpeed;
+      /* Legal fallback */
+      image-rendering: -moz-crisp-edges;
+      /* Firefox        */
+      image-rendering: -o-crisp-edges;
+      /* Opera          */
+      image-rendering: -webkit-optimize-contrast;
+      /* Safari         */
+      image-rendering: optimize-contrast;
+      /* CSS3 Proposed  */
+      image-rendering: crisp-edges;
+      /* CSS4 Proposed  */
+      image-rendering: pixelated;
+      /* CSS4 Proposed  */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE8+           */
+      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
+      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+    .dash_modal button.mc-share-button > div, .minecraft button.mc-share-button > div {
+      margin: 0; }
   .dash_modal button#runButton, .minecraft button#runButton {
     min-width: 139px;
     padding-top: 6px;
@@ -1833,37 +1936,9 @@ a.video_link {
     -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
     border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 fill stretch !important; }
     .dash_modal button#runButton > div, .minecraft button#runButton > div {
-      margin-top: 4px;
       font-size: 24px;
       color: white !important;
-      text-shadow: 2px 2px #5A5A5A !important;
-      margin-left: 2px;
-      margin-right: 18px; }
-    .dash_modal button#runButton .run26, .minecraft button#runButton .run26 {
-      background: url("/blockly/media/craft/Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
-      width: 16px;
-      height: 34px;
-      margin-left: 6px;
-      margin-right: 3px;
-      margin-top: -2px;
-      margin-bottom: -1px;
-      padding-right: 13px;
-      image-rendering: optimizeSpeed;
-      /* Legal fallback */
-      image-rendering: -moz-crisp-edges;
-      /* Firefox        */
-      image-rendering: -o-crisp-edges;
-      /* Opera          */
-      image-rendering: -webkit-optimize-contrast;
-      /* Safari         */
-      image-rendering: optimize-contrast;
-      /* CSS3 Proposed  */
-      image-rendering: crisp-edges;
-      /* CSS4 Proposed  */
-      image-rendering: pixelated;
-      /* CSS4 Proposed  */
-      -ms-interpolation-mode: nearest-neighbor;
-      /* IE8+           */ }
+      text-shadow: 2px 2px #5A5A5A !important; }
     .dash_modal button#runButton:hover, .minecraft button#runButton:hover {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
@@ -1892,6 +1967,35 @@ a.video_link {
       -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
       -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
       border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+    .dash_modal button#runButton > div, .minecraft button#runButton > div {
+      margin-top: 4px;
+      margin-left: 2px;
+      margin-right: 18px; }
+    .dash_modal button#runButton .run26, .minecraft button#runButton .run26 {
+      background: url("/blockly/media/craft/Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
+      width: 16px;
+      height: 34px;
+      margin-left: 6px;
+      margin-right: 3px;
+      margin-top: -2px;
+      margin-bottom: -1px;
+      padding-right: 13px;
+      image-rendering: optimizeSpeed;
+      /* Legal fallback */
+      image-rendering: -moz-crisp-edges;
+      /* Firefox        */
+      image-rendering: -o-crisp-edges;
+      /* Opera          */
+      image-rendering: -webkit-optimize-contrast;
+      /* Safari         */
+      image-rendering: optimize-contrast;
+      /* CSS3 Proposed  */
+      image-rendering: crisp-edges;
+      /* CSS4 Proposed  */
+      image-rendering: pixelated;
+      /* CSS4 Proposed  */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE8+           */ }
   .dash_modal button#resetButton, .minecraft button#resetButton {
     min-width: 139px;
     padding-top: 6px;
@@ -2018,23 +2122,10 @@ a.video_link {
     margin-left: -21px;
     margin-top: -100px;
     width: auto; }
+    html[dir=rtl] .dash_modal .modal-image {
+      margin-left: 0;
+      margin-right: -32px; }
   .dash_modal .x-close {
-    image-rendering: optimizeSpeed;
-    /* Legal fallback */
-    image-rendering: -moz-crisp-edges;
-    /* Firefox        */
-    image-rendering: -o-crisp-edges;
-    /* Opera          */
-    image-rendering: -webkit-optimize-contrast;
-    /* Safari         */
-    image-rendering: optimize-contrast;
-    /* CSS3 Proposed  */
-    image-rendering: crisp-edges;
-    /* CSS4 Proposed  */
-    image-rendering: pixelated;
-    /* CSS4 Proposed  */
-    -ms-interpolation-mode: nearest-neighbor;
-    /* IE8+           */
     position: absolute;
     cursor: pointer;
     z-index: 1;
@@ -2044,10 +2135,16 @@ a.video_link {
     right: -35px;
     width: 50px;
     height: 50px; }
+    html[dir=rtl] .dash_modal .x-close {
+      right: auto;
+      left: -35px; }
   .dash_modal .modal-content .lines-of-code-message {
     color: #c6cacd; }
   .dash_modal #show-code, .dash_modal #feedbackButtons, .dash_modal #puzzleRatingButtons, .dash_modal #sharing {
     margin-left: -100px; }
+    html[dir=rtl] .dash_modal #show-code, html[dir=rtl] .dash_modal #feedbackButtons, html[dir=rtl] .dash_modal #puzzleRatingButtons, html[dir=rtl] .dash_modal #sharing {
+      margin-right: -100px;
+      margin-left: 0; }
   .dash_modal #sharing {
     color: #e7e8ea; }
     .dash_modal #sharing button {

@@ -280,6 +280,13 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 [Flocabulary On One Condition](https://www.flocabulary.com/lesson-plan-coding-conditionals/#introlesson)  
 **Ages 7-13. Programming, Language arts, Storytelling, Web-based.** Students will learn how to write conditional statements and complete an activity sequence where they generate their own conditionals, evaluate given conditionals to determine the outcome of a program. 
 
+[Codesters Dream Sequence](https://www.codesters.com/hoc-classroom/)  
+**Ages 11-16. Programming, Story Telling, Language Arts, Web-Based.**
+Students write a story using transition words while learning computer science in this Common Core aligned English language Arts project.
+
+[Codesters Transformation Puzzles](https://www.codesters.com/hoc-classroom/)  
+**Ages 11-16. Programming, Math (Coordinates, Geometry), Web-Based.**
+Students explore, identify, and perform transformations on the coordinate plane in this Common Core aligned Math project.
 
 ## High School
 
@@ -344,6 +351,14 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Globaloria MakeQuest](http://globaloria.com/courses-services/teacher-guides/)  
 **Ages 10-18. Programming, Game Design, English, Math, Creativity, Web-based.** Learn to edit and write JavaScript code to defeat the 'Evil 404,' as you explore computer science concepts like variables and functions. Lesson Plan includes subject-matter extension activities for English, Mathematics, Science, History and Arts classes.
+
+[Codesters Dream Sequence](https://www.codesters.com/hoc-classroom/)  
+**Ages 11-16. Programming, Story Telling, Language Arts, Web-Based.**
+Students write a story using transition words while learning computer science in this Common Core aligned English language Arts project.
+
+[Codesters Transformation Puzzles](https://www.codesters.com/hoc-classroom/)  
+**Ages 11-16. Programming, Math (Coordinates, Geometry), Web-Based.**
+Students explore, identify, and perform transformations on the coordinate plane in this Common Core aligned Math project.
 
 <br />
 <br />
