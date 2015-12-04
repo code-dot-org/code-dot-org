@@ -263,7 +263,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenPaddleCollidedTooltip":function(d){return "当球撞到球拍时，执行下面的操作"},
 "whenRight":function(d){return "当箭头向右"},
 "whenRightTooltip":function(d){return "执行下面按向右箭头键时采取的行动。"},
-"whenUp":function(d){return "当箭头向上"},
+"whenUp":function(d){return "当箭头键向上"},
 "whenUpTooltip":function(d){return "执行下面按向上箭头键时采取的行动。"},
 "whenWallCollided":function(d){return "当球撞到墙"},
 "whenWallCollidedTooltip":function(d){return "当球撞到墙时，执行下面的操作"},

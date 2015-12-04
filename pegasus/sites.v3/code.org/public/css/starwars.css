@@ -25,6 +25,14 @@
   top: 70px;
 }
 
+.starwars-js-tutorial {
+  right: 20px;
+}
+
+.starwars-blocks-tutorial {
+  right: 270px;
+}
+
 .tutorial-box {
   background-color: rgba(0, 0, 0, 0.4);
   color:white;
@@ -36,6 +44,10 @@
   margin-top: 0px;
   margin-bottom: 10px;
   color: white;
+}
+
+.sw-header2 {
+  padding: 10px;
 }
 
 .sw-disabled {
@@ -57,6 +69,11 @@
 .sw-try-button {
   font-size:18px;
   height:40px;
+}
+
+.header-banner {
+  border-radius: 5px;
+  width: 100%
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
@@ -94,5 +111,37 @@
     position: static;
     color: #00adbc;
     text-align: center;
+  }
+
+  .starwars-js-tutorial {
+    /* Hide the js tutorial when width too small */
+    display: none;
+  }
+
+  .starwars-blocks-tutorial {
+    /* When we hide the js tutorial, make the blockly tutorial take up whole width */
+    width: 100%;
+  }
+
+  .tutorial-box {
+    /* Ensure background doesn't repeat in the wider box */
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .padded-header {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .padded-smalltext {
+    padding: 10px;
+  }
+
+  .header-banner {
+    border-radius: 15px;
+    padding: 10px;
   }
 }

@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 # Jak organizovat událost Hodinu kódu
 
-Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (< % = campaign_date('short') %>) na oslavu informatiky a inspirujte další studenty, aby si to zkusili. Kdokoli, kdekoli může uspořádat událost Hodinu kódu.
+Hostěte událost Hodinu kódu během týdne vzdělávání v informatice (<%= campaign_date('short') %>) na oslavu informatiky a inspirujte další studenty, aby si to zkusili. Kdokoli, kdekoli může uspořádat událost Hodinu kódu.
 
 ## 1) Připravte se pro Vaši událost
 

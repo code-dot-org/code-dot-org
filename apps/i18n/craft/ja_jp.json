@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "\"プレイを続ける\" を押せば、ゲームに戻れます。",
   "replayButton": "リプレイ",
   "selectChooseButton": "選択",
-  "tooManyBlocksFail": "パズル {puzzleNumber} をクリアしました。おめでとうございます! なお、これは {numBlocks, plural, one {1 ブロック} other {# 個のブロックでもクリアできます。}}"
+  "tooManyBlocksFail": "パズル {puzzleNumber} を解きました。おめでとうございます! ちなみにブロック {numBlocks, plural, one {1 つ} other {# 個}} でも解くことができます。"
 }

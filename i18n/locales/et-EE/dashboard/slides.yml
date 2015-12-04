@@ -345,7 +345,7 @@ et:
         text: Keskmine ala on tööriistakast, milles on plokid mida sinu pusles vaja läheb. Iga plokk on jupike koodi. Valget ala vasakul kutsutakse tööruumiks, see on koht kus sa oma programmi ehitad.
       4:
         image: notes/playlab_intro_4.png
-        text: 'Alustuseks pead ühendama oma plokid oranži "kui käib" ploki külge. Saad ühendada mitu plokki üksteise külge lohistades neid tööruumi, teiste plokkide lähedusse kuni näed kollast joont, seejärel nad kinnituvad üksteise külge.'
+        text: 'Alustuseks pead ühendama oma plokid oranži "pärast käivitamist" ploki külge. Saad ühendada mitu plokki üksteise külge lohistades neid tööruumi, teiste plokkide lähedusse kuni näed kollast joont, seejärel nad kinnituvad üksteise külge.'
       5:
         image: notes/playlab_intro_5.png
         text: 'Selles esimeses pusles on meie tegelaseks pingviin ja me paneme ta ütlema "Tere!" Selleks lohista "ütle" plokk tööruumi ja ühenda see "pärast käivitamist" plokiga, seejärel kirjuta tekstikasti "Tere." Kui tahame siis saame pingviini liikuma ka panna. Pingviini liikumapanemiseks kasuta "liigu vasakule" ja "liigu paremale" plokke. Kui oled koodi kokku saanud vajuta "käivita" nuppu ja vaata mis sa programmeerisid.'
@@ -1198,7 +1198,7 @@ et:
         text: Sinu ekraan on jagatud kolme ossa. Vasakul on mänguruum, kus su programmi käitatakse. Allpool on kirjutatud iga taseme juhised. See keskmine osa on tööriistakast ja iga plokk siin on jupike koodi. Paremal pool asuvat valget ala kutsutakse tööruumiks ja siia ehitamegi sinu programmi.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: 'Alustuseks pead ühendama oma plokid oranži "pärast käivitamist" külge. Saad ühendada mitu plokki üksteise külge, lohistades neid välja, kuni näed kollast joont, seejärel nad kinnituvad üksteise külge. Esimeses pusles on Hiro tegelane nr 1 ja Baymax tegelane nr 2. Hiro tuleb viia Baymaxi juurde, lohistades „liigu paremale“ plokk välja ja ühendades selle „pärast käivitamist“. Kui plokid on paigas, vajuta nuppu „käivita“ ja vaata, mis sa programmeerisid.'
+        text: 'Alustuseks pead ühendama oma plokid oranži "pärast käivitamist" külge. Saad ühendada mitu plokki üksteise külge, lohistades neid välja, kuni näed kollast joont, seejärel nad kinnituvad üksteise külge. Esimeses pusles on Hiro tegelane nr 1 ja Baymax tegelane nr 2. Hiro tuleb viia Baymaxi juurde, lohistades „liigu paremale“ plokk välja ja ühendades selle „pärast käivitamist“. Kui plokid on paigas, vajuta nuppu „Käivita“ ja vaata, mis sa programmeerisid.'
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Hakka pihta ja programmi lõpuks lood sa ise oma mängu nende toredate tegelaste abil, kes suhtlevad, koguvad punkte, viskavad mikrobotte, kirsse, panne, sädemeid ja jääd... ja kaotavad üksteist ära. See kõik on sinu otsustada.
@@ -1599,53 +1599,104 @@ et:
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: Kui tahad teha oma mängu, siis see käib väga lihtsalt. Pead teadma vaid mõndasid programmeerimise põhitõdesid ja saadki hakata mängima enda loodud mängu.
       2:
         image: notes/gumball_intro_2.JPG
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Kas sul on oma lemmik videomäng? Liigume ühe sammu sellise mängu loomise suunas Play Labi abil. Heal mängul on lugu ja igal lool on näitlejad. Näitlejad räägivad, liiguvad ja suhtlevad üksteisega. Võib olla isegi koguvad mängureeglite järgi punkte. Täna vaatame ükshaaval, kuidas neid asju teha ja kasutades lõbusaid näitlejaid. Loome täitsa algusest mängu, mida saab jagada ning telefonis mängida.
       3:
         image: notes/gumball_intro_3.JPG
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Täna vaatame ükshaaval, kuidas neid asju teha ja kasutades lõbusaid näitlejaid. Loome täitsa algusest mängu, mida saab jagada ning telefonis mängida.
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul on mänguala, kus sinu programm jookseb. Juhised iga taseme jaoks on mänguala all.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Keskmine ala on tööriistakast ja iga plokk seal on jupike koodi.
       6:
         image: notes/gumball_intro_6.JPG
         text: Paremal asuv valge ala on tööala ja seal me oma programmi loomegi.
       7:
         image: notes/gumball_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: 'Alustuseks pead ühendama oma plokid oranži "pärast käivitamist" ploki külge. Saad ühendada mitu plokki üksteise külge lohistades neid tööruumi, teiste plokkide lähedusse kuni näed kollast joont, seejärel nad kinnituvad üksteise külge.'
       8:
         image: notes/gumball_intro_8.JPG
-        text: |-
-          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+        text: 'Selles esimeses pusles paneme tegelased midagi ütlema, selleks peame ühendama ploki "ütle" plokiga "pärast käivitamist" ja kirjutama sinna oma sõnumi. Kui oled plokid paika pannud, vajuta nuppu "Käivita", et näha oma programmi.'
       9:
         image: notes/gumball_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: Hakka pihta ja programmi lõpuks lood sa ise oma mängu igasuguste tegelastega, kes suhtlevad, koguvad punkte, viskavad asju ja kaotavad üksteist ära. See kõik on sinu otsustada.
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: Nüüd hakkame õppima midagi sellist, mida programmeerijad iga päev kasutavad. Neid kutsutakse sündmusteks. Sündmus ütleb programmile et tuleb jälgida kui midagi juhtub. Kui mingi asi juhtub siis rakendab mäng eelnevalt valitud käsu.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: 'Sündmusteks on näiteks hiireklõpsu, üles- või allanoolenupu või ekraani puudutamise jälgimine.'
       3:
         image: notes/gumball_events_3.JPG
-        text: |-
-          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+        text: 'Nüüd paneme tegelase midagi ütlema, kui mängija temal klõpsab. Kasutame plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle". Kui mängija klõpsab tegelasel, käivitatakse kõik tegevused, mis on ühendatud selle plokiga.'
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+        text: 'Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega saad tegelasi liigutada nooleklahvidega üles, alla, vasakule või paremale. Samm sammult muutub mäng niimoodi interaktiivsemaks.'
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: Kujuta ette, kui sa peaksid midagi igavesti kordama. Loodetavasti ei pea sa seda tegema, sest arvutitel õnnestub kordamine paremini.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: 'See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse mängu jooksul igavesti. Kui me tahame, et mõni tegelane midagi korduvalt teeks, ilma et mängija midagi peaks tegema, paneme me need plokid "korda igavesti" ploki sisse.'
       3:
         image: notes/gumball_repeat_3.JPG
+        text: Järgmises pusles pead aitama tegelasel teha ühte tööd korduvalt. Kui õpid selgeks, kuidas töötavad käskluste kordused, hoiad hiljem palju aega kokku ning see on kasulik ka siis, kui ise oma mängu ehitad.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Aratati-le elevilor un video inspirational pentru a excela in cadrul Hour of Cod
 
 <% end %>
 
-<%= view :signup_button %>

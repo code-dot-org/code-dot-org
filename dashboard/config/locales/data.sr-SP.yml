@@ -731,6 +731,9 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -778,12 +781,15 @@
         starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
         mc_intro: Мајнкрафт - увод
         mc_repeat: Мајнкрафт - понављај
-        mc_if_statements: Minecraft - If statements
+        mc_if_statements: Мајнкрафт - "ако" команда
         mc_congrats_share: Мајнкрафт - Честитамо
         mc_congrats_no_share: Мајнкрафт - Честитамо
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -885,13 +891,13 @@
         Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Play a sound when this event occurs.
         Infinity_repeat_callout: Place Move blocks inside here
-        craft_run_button_callout: Hit "Run" to try your program
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_run_button_callout: Да испробаш твој програм притисни "Покрени"
+        craft_drag_block_callout: Превуци "moveForward();" блок и прикачи га испод
+          другог блока
+        craft_callout_preplaced: Неки блокови су већ постављени за почетак
+        craft_inside_repeat: Понови команде постављањем блокова овде
+        craft_callout_preplaced_house: Овај кôд ће започети изградњу твоје куће. Можеш
+          ли га довршити?
+        craft_what_is_iron: Ископај ово гвожђе!
+        craft_callout_moveforward: Овај кôд ће проверити да ли има лаве, можеш ли
+          додати команду да се помери напред?

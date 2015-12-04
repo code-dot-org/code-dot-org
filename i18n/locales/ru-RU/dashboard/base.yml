@@ -457,7 +457,7 @@ ru:
       unused: Неиспользованные уровни
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
     flappy:
       title: Порхающий код

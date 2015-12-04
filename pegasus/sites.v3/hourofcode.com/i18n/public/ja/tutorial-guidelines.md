@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -265,4 +264,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**トップに戻る**](#top)
 
-<%= view :signup_button %>

@@ -408,7 +408,7 @@ de:
     report_abuse: Missbrauch melden
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
-    how_it_works: How it works
+    how_it_works: So funktioniert es
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -465,7 +465,7 @@ de:
       unused: Unbenutzte Levels
   upsell:
     hoc:
-      title: Programmierstunde
+      title: Classic Maze
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben es schon probiert.
     flappy:
       title: Flappy Code

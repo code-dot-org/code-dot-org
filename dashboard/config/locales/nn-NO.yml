@@ -447,9 +447,13 @@
       til med å lage denne guiden.
     help_from_html_old: Utviklarar frå Google, Microsoft, Facebook og Twitter har
       hjelpt til med å lage dette materialet.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Alle rettigheter reservert.
+    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Alle rettar
+      reserverte.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney og Lucasfilm.
+      Alle rettar reserverte.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
+      Alle rettar reserverte.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th
+      Century Fox. Alle rettar reserverte.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle rettar reserverte.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rettar reserverte
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Alle rettigheter
       tilhøyrer Rovio Entertainment Ltd. <br /> Plants vs. Zombies&#8482; &amp; &copy;
       %{current_year} Alle rettigheter tilhøyrer Electronic Arts Inc.
@@ -467,9 +471,9 @@
     privacy: Personvern
     secure: Sikker versjon
     report_abuse: Rapporter misbruk
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Bygd i Code Studio
+    make_my_own_app: Lag min eigen app
+    how_it_works: Slik virker det
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
@@ -515,7 +519,7 @@
   share_code:
     title: Klikk "Kjør" for å sjå programmet mitt i aksjon
     bounce_og_title: Sjekk ut sprette-spelet mitt
-    flappy_og_title: Sjekk ut Flappy-spelet mitt
+    flappy_og_title: Sjekk ut Flakse-spelet mitt
     studio_og_title: Sjekk ut Play Lab App'en min
     check_out_what_i_made: Sjekk ut det eg har laga
     og_description: Eg skreiv koden sjølv med Code.org

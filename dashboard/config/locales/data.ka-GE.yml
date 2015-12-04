@@ -514,14 +514,14 @@
           შემდეგ გადაადგილეთ იგი ისრებით და გააფრთხილეთ ყველა შემოსევის შესახებ
         studio_playlab_10: შექმენით საკუთარი თამაში. როცა მორჩებით, დააჭირეთ "დასრულებას"
           და ათამაშეთ მეგობრები.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
+        studio_iceage_hello1: სიდს უნდა რომ ყველა შეკრიბოს და ახალ თავგადასავლებზე
+          წავიდნენ. ამისთვის გადმოიტანეთ "თქმის" ბლოკი სამუშაო სივრცეში და ჩაწერეთ
+          შიგნით "გამარჯობა".
+        studio_iceage_hello2: სიდმა (პერსონაჟი 1) იპოვა მენი (პერსონაჟი 2) და მისი
+          თავგადასავლებზე გამოწვევა უნდა. გამოიყენეთ ორჯერ ბლოკი "პერსონაჟი ამბობს"
+          და მიასალმეთ ისინი ერთმანეთს.
+        studio_iceage_move_to_flag: სკრატი თავის რკოს ეძებს! დაემარეთ დაძლიოს ბოლო
+          200 პიქსელი "გადაადგილების" ბლოკის მეშვეობით.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
@@ -529,17 +529,16 @@
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
+        studio_iceage_click_hello: დაეხმარეთ სიდს დაუძახოს მეგობრებს დაკლიკვისას.
+          (არ დაგავიწყდეთ, დააჭიროთ სიდს გაშვების შემდეგ).
+        studio_iceage_move_events: 'სკრატი რკოებს ეძებს! დაეხმარეთ მას: მიუმაგრეთ
+          "გადაადგილების" ბლოკი ყოველ მოვლენას და შეცვალეთ მიმართულებები ისრების შესაბამისად.
+          როცა მორჩებით, დააჭირეთ გაშვებას და სცადეთ ყველა რკოს მოგროვება.'
+        studio_iceage_sound_and_points: კოდის უმეტესობა უკვე დაწერილია - გრენი მოძრაობს
+          მარჯვნივ და მარცხნივ, სიდი კი მოძრაობს მთელ ეკრანზე. შეგიძლიათ დაასრულოთ
+          კოდი და დაუმატოთ "როცა პერსონაჟი ეხება" მოვლენას ისეთი ბლოკები, რომ როცა
+          გრენი და სიდი ერთმანეთს დაეხაჯებიან, პროგრამამ ხმაც დაუკარას და ქულაც დააგროვოს.
+          თამაშის დასაწყებას დააჭირეთ "გაშვებას".
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
           is coming! Change the background to "icebergs" and set Sid’s speed to fast,
           then press Run and move him to Diego to warn him.
@@ -547,20 +546,20 @@
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
           with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_free_play: დროა შექმენათ თვენი საკუთარი თამაში ან ისტორია. როცა
+          მორჩებით, დააჭირეთ დასრულებას და გაუზიარეთ ქმნილება თქვენს მეგობრებს - რათა
+          მობილურებზე, პლანშეტებსა და კომპიუტერებზე ითამაშონ!
         studio_gumball_hello1: აინას ახალი მეგობრების შეძენა უნდა. შეგიძლიათ დაეხმაროთ?
           ამისთვის გადმოიტანეთ "თქმის" ბლოკი სამუშაო სივრცეში და ჩაწერეთ შიგნით "გამარჯობა".
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
+        studio_gumball_hello2: დარვინი (პერსონაჟი 1) და მისი ძმა გამბოლი (პერსონაჟი
+          2) სკოლაში მიდიან. გამოიყენეთ ორჯერ ბლოკი "პერსონაჟი ამბობს" და მიასალმეთ
+          ისინი ერთმანეთს.
         studio_gumball_move_to_flag: ბანანა ჯო ახლოსაა დღის რბოლის მოსაგებად! დაემარეთ
           დაძლიოს ბოლო 200 პიქსელი "გადაადგილების" ბლოკის მეშვეობით.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
+        studio_gumball_move_to_actor: გამბოლი (პერსონაჟი 1) და დარვინი (პერსონაჟი
+          2) აგვიანებენ! დაეხმარეთ გამბოლს წავიდეს დარვინიც მიმართულებით 200 პიქსელით  ბლოკით
+          "პერსონაჟის გადაადგილება". შემდეგ, მიუერთეთ მოვლენას "როცა პერსონაჟი შეეხება"
+          ისეთი ბლოკი, რომ პერსონაჟების შეხვედრისას გამოიცეს ხმა.
         studio_gumball_repeat: ბლოკი "გაიმეორე უსასრულოდ" გაძლევთ საშუალებას უწყვეტად
           გაუშვათ კოდი. როგორ უნდა დააკავშიროთ ბლოკები, რომ გრემბოლმი გახურდეს თავისი
           რბოლის წინ, მარჯვნივ-მარცხნივ უსასრულოდ მოძრაობით?
@@ -726,6 +725,9 @@
         infinity_playlab_intro: თამაშების ლაბორატორია - შესავალი
         infinity_playlab_events: თამაშების ლაბორატორია - მოვლენები
         infinity_playlab_repeat_forever: თამაშების ლაბორატორია - გამეორება უსასრულოდ
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -779,6 +781,9 @@
         gumball_intro: კოდის ერთი საათი Gumball - შესავალი
         gumball_events: Gumball კოდის ერთი საათი - მოვლენები
         gumball_repeat: კოდის ერთი საათი Gumball - ბრძანებების გამეორება
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

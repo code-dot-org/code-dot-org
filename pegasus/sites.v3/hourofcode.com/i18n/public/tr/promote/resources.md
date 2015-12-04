@@ -132,4 +132,3 @@ Lütfen [TELEFON NUMARASI VEYA E-POSTA ADRESİ]'den bana ulaşın. Cevabınızı
 
 Saygılarımla, [NAME],[TITLE]
 
-<%= view :signup_button %>

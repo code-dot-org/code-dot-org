@@ -403,9 +403,9 @@ da:
     privacy: Privatlivspolitik
     secure: Sikker Version
     report_abuse: Rapporter misbrug
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Bygget på Code Studio
+    make_my_own_app: Byg min egen app
+    how_it_works: Sådan fungerer det
   reference_area:
     title: Brug for hjælp?
     subtitle: Se disse videoer og tips
@@ -462,7 +462,7 @@ da:
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
     flappy:
       title: Flappy kode

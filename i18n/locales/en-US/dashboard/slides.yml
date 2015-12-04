@@ -1647,3 +1647,54 @@ en:
       3:
         image: crwdns54783:0crwdne54783:0
         text: crwdns54784:0crwdne54784:0
+    iceage_intro:
+      1:
+        image: crwdns55201:0crwdne55201:0
+        text: crwdns55202:0crwdne55202:0
+      2:
+        image: crwdns55203:0crwdne55203:0
+        text: crwdns55204:0crwdne55204:0
+      3:
+        image: crwdns55205:0crwdne55205:0
+        text: crwdns55206:0crwdne55206:0
+      4:
+        image: crwdns55207:0crwdne55207:0
+        text: crwdns55208:0crwdne55208:0
+      5:
+        image: crwdns55209:0crwdne55209:0
+        text: crwdns55210:0crwdne55210:0
+      6:
+        image: crwdns55211:0crwdne55211:0
+        text: crwdns55212:0crwdne55212:0
+      7:
+        image: crwdns55213:0crwdne55213:0
+        text: crwdns55214:0crwdne55214:0
+      8:
+        image: crwdns55215:0crwdne55215:0
+        text: crwdns55216:0crwdne55216:0
+      9:
+        image: crwdns55217:0crwdne55217:0
+        text: crwdns55218:0crwdne55218:0
+    iceage_events:
+      1:
+        image: crwdns55219:0crwdne55219:0
+        text: crwdns55220:0crwdne55220:0
+      2:
+        image: crwdns55221:0crwdne55221:0
+        text: crwdns55222:0crwdne55222:0
+      3:
+        image: crwdns55223:0crwdne55223:0
+        text: crwdns55224:0crwdne55224:0
+      4:
+        image: crwdns55225:0crwdne55225:0
+        text: crwdns55226:0crwdne55226:0
+    iceage_repeat:
+      1:
+        image: crwdns55227:0crwdne55227:0
+        text: crwdns55228:0crwdne55228:0
+      2:
+        image: crwdns55229:0crwdne55229:0
+        text: crwdns55230:0crwdne55230:0
+      3:
+        image: crwdns55231:0crwdne55231:0
+        text: crwdns55232:0crwdne55232:0

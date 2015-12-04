@@ -254,10 +254,11 @@ ru-RU:
   class_submission_level_vocational: Профессиональный
   class_submission_languages_other: Другие языки
   inspirational_videos_more: 'Ещё <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> вдохновляющие видео</a> с ролевыми моделями и знаменитостями'
-  playlab_choose_theme: Choose your Play Lab theme
+  playlab_choose_theme: Выберите вашу тему для Play Lab
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Создайте галактику, используя код
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Используйте переносные блоки и JavaScript.
@@ -265,7 +266,7 @@ ru-RU:
   starwars_javascript_start_button: Попробуйте сейчас
   starwars_blocks_title: Блоки
   starwars_blocks_description: Используйте переносные блоки.
-  starwars_blocks_specs: Множество языков (скоро) | Современные браузеры, смартфоны, планшеты | Возраст 6-10 лет
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Подробнее
   starwars_watch_videos: Прежде чем начать, посмотрите одно их этих вдовнохвляющих видео
   starwars_speak_languages: Говорите на другом языке?
@@ -276,16 +277,16 @@ ru-RU:
   mc_shortdescription: Используйте блоки кода, чтобы помочь Стиву или Алексе в их приключениях в мире Minecraft.
   mc_gradelevel: Возраст 6+
   mc_platformtext: Современные браузеры, смартфоны, планшеты
-  mc_specs: Множество языков (скоро) | Современные браузеры и планшеты | От 6 лет
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Час Кода Minecraft
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: 'Вдохновить учеников и волонтеров на участие в образовательной программе "Час кода".'
   volunteer_engineer_submission_subtitle_generic: '100 000 учителей, собираются провести Час Кода в своих классах в этом, 7-13 декабря 2015. Они хотят вашей помощи! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} учителей хотят, чтобы волонтеры, заинтересованные в поддержке мотивации к изучению информатики и программирования, помогли в проведении акции "Час кода" в декабре.<br>%{num_volunteers} волонтеров уже записались. Присоединяйся.'
   volunteer_engineer_submission_intro_background: 'Час Кода это глобальное движение, которое пробует за час ввести в информатику, и привлекло десятки миллионов студентов из более 180 стран. Пожалкйста, примите участие в "Неделе обучения информатике", 7-13 декабря.'
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+    Этим учителям очень хотелось бы, чтобы был кто-нибудь <span style="font-family: 'Gotham 7r', sans-serif;">, заинтересованный обучением информатикой, </span>кто мог помочь в классе, или <span style="font-family: 'Gotham 7r', sans-serif;">кто мог бы мотивировать</span>учеников рассказом о возможных перспективах, которые можно достичь изучая компьютерные науки (что можно сделать через видеочат).
   volunteer_engineer_submission_intro_signup: 'Пожалуйста заполните следующую информацию, если вы студент факультета компьютерных наук или профессиональный разработчик. Поля помеченные <span class="form-required-field">*</span> обязательны для заполнения.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Не полагаетесь на других? <a href="%{learn_more}">Узнайте больше</a> о том, как организовать собственный "Час кода" и найти волонтеров в нашей <a href="%{volunteer_local}">базе</a>.'
   volunteer_engineer_submission_header_shared: Информация распространяемая с учителями на карте волонтеров
   volunteer_engineer_submission_field_name: Имя
   volunteer_engineer_submission_field_name_placeholder: Полное имя
@@ -521,6 +522,7 @@ ru-RU:
   dashboard_announcements: Объявления
   dashboard_announce_view_all: Посмотреть все
   dashboard_announce_hoc: "<b>15 октября, 2015</b> - Час кода приближается &mdash; каждый участвующий организатор получит подарочную карту для Amazon.com или Microsoft's Windows Store как благодарственный подарок. Присоединяйтесь к классным комнатам по всему миру 7-13 декабря."
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: '"Час кода" наступает - 8-14 декабря!'
   code_sign_up: Зарегистрируйтесь для участия в Неделе Информатики
   learn_more: Подробнее
@@ -532,11 +534,11 @@ ru-RU:
   learn_educator_resources_description: Узнайте, как учить в Час Кода
   learn_educator_resources_button: Педагогические ресурсы
   learn_are_you_educator: 'Вы педагог? Узнайте, <a href="http://hourofcode.com/resources/how-to"> как научить Час Кода</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Найдите местных волонтеров</a>, которые помогут в организации акции "Час кода"'
+  learn_teacher_led_lesson_plans: 'Руководствуйтесь <a href="https://code.org/teacher-led">планами уроков для учителей</a>'
+  learn_how_to_hoc: 'Следуйте <a href="https://hourofcode.com/how-to">нашему практическому руководству</a>'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Узнайте больше</a> о призах для каждого педагога.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Покажите ученикам <a href="https://code.org/educate/inspire">мотивационные ролики</a>'
   hoc2014_try_new_tutorials: Попробуйте наши новые учебные материалы для Часа Кода
   hoc2014_try_new_tutorial: 'Попробуй наше новое пособие "Час кода" в бета-версии'
   hoc2014_try_scrat: Angry Birds, PvZ, и Scrat
@@ -563,6 +565,7 @@ ru-RU:
   carousel_heading_ide: Популярные среди преподавателей платформы
   educator_notes: Заметки педагога
   teach_led_lesson_plans: Планы уроков часа кода для учителей
+  learn_footer_all_tutorials: 'Посмотрите <a href="https://code.org/educate/allhourofcode">полный список учебных пособий</a>. Для того, чтобы посмотреть наши требования и правила оформления для учебных пособий <a href="https://hourofcode.com/tutorial-guidelines">нажмите здесь.</a>'
   how_to_teach_hoc: Как научить Часу Кода
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   beyond_submission: Хотите представить учебник за час? Просмотрите критерии и форму представления.
@@ -575,9 +578,9 @@ ru-RU:
   older_systems_subheading: 'Эти уроки должны работать в более старых браузерах. Для доступа ко всем урокам, установите <a href="http://browsehappy.com/" target="_blank">браузер новой версии.</a>'
   mobile_devices: Учебники для мобильных устройств
   frozen_name: Программируй с Анной и Эльзой
-  starwars_name: 'Звездные войны: Строя Галактику с Code'
-  codeorg_name: Написать первую компьютерную программу
-  codeintl_name: Написать первую компьютерную программу
+  starwars_name: 'Звездные войны: Стрим Галактику с Code.org'
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Введение в JavaScript
   khanes_name: Введение в JavaScript
@@ -613,10 +616,17 @@ ru-RU:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Камень, ножницы, бумага
-  hourofcode_name: Написать первую компьютерную программу
+  hourofcode_name: Classic Maze
   playlab_name: Лаборатория игр
   infinity_name: Лаборатория игр Infinity
   artist_name: Художник
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Планы уроков часа кода для учителей
   codeorg_gradelevel: Возраст 4-104
   codeintl_gradelevel: Возраст 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -660,6 +670,13 @@ ru-RU:
   playlab_gradelevel: Возраст 4-104
   infinity_gradelevel: Возраст 4-104
   artist_gradelevel: Возраст 4-104
+  monstercoding_gradelevel: Возраст 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Младшие классы
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
   thinkersmithspanish_platformtext: Офф-лайн
@@ -701,6 +718,13 @@ ru-RU:
   frozen_platformtext: Современные браузеры + планшеты
   starwars_platformtext: Современные браузеры + планшеты
   playlab_platformtext: Современные браузеры, смартфоны, планшеты
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Современные веб-браузеры
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Современные веб-браузеры
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Современные браузеры, смартфоны, планшеты
   codeorg_shortdescription: Учитесь программировать с Марком Цукербергом и Angry Birds!
   codeintl_shortdescription: Учитесь программировать с Марком Цукербергом и Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -744,6 +768,13 @@ ru-RU:
   playlab_shortdescription: Создай историю или игру с Лабораторией игр!
   infinity_shortdescription: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
   artist_shortdescription: Рисуйте картины и узоры вместе с Художником!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса, Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы и основные алгоритмы. Доступен на 34 языках.
   codeintl_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса, Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы и основные алгоритмы. Доступен на 34 языках.
   thinkersmithspanish_longdescription: |
@@ -789,6 +820,13 @@ ru-RU:
   frozen_longdescription: Давайте с помощью программирования кода присоединимся к Анне и Эльзе в их исследовании магии и красоты льда. Будем кататься на коньках и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим с друзьями!
   starwars_longdescription: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
   playlab_longdescription: Создайте историю или игру с помощью Лаборатории игр! Запрограммируйте животных, зомби, ниндзя, и многих других персонажей, чтобы они говорили, набирали очки, и даже бросали огненные шары!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Введение в информатику (для детей до 8-го класса)
   khan_beyond_name: Обучайтесь компьютерному программированию
   tynker_beyond_name: Обучайтесь программированию у себя дома
@@ -977,11 +1015,11 @@ ru-RU:
   compatibility_https_header: Пожалуйста, включите HTTPS для Code.org.
   compatibility_https_message: "Чтобы повысить безопасность, мы переходим на HTTPS с %{https_date}. Вы не сможете получить доступ к Code.org после этой даты. <a href='%{it_requirements_url}'> Нажмите здесь</a>, чтобы узнать как включить HTTPS для Code.org."
   compatibility_https_hide_this_warning: Скрыть это предупреждение
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: взмах крыльев
   infinity_shortcode: inf
-  playlab_shortcode: играть
+  playlab_shortcode: lab
   artist_shortcode: art

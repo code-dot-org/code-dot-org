@@ -16,6 +16,7 @@ window.craftMain = function(options) {
   var appHeight = 477;
   options.nativeVizWidth = appWidth;
   options.vizAspectRatio = appWidth / appHeight;
+  options.mobileNoPaddingShareWidth = options.nativeVizWidth;
 
   appMain(window.Craft, levels, options);
 };

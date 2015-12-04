@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Premii - termeni și condiții
 
@@ -40,4 +39,3 @@ Premiul se limitează la K-12 săli de clasă în SUA şi Canada numai. Code.org
 
 <% end %>
 
-<%= view :signup_button %>

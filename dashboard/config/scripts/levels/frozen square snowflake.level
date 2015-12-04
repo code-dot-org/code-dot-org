@@ -40,25 +40,28 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">4</title>
-          <statement name="DO">
-            <block type="draw_move_by_constant_dropdown">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE" config="50,100,150,200,300">100</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant_dropdown">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE" config="50,100,150,200,300">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
               <next>
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                  <title name="VALUE" config="36,45,60,90,120,180">???</title>
                 </block>
               </next>
-            </block>
-          </statement>
-          <next>
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="36,45,60,90,120,180">???</title>
             </block>
           </next>
         </block>
