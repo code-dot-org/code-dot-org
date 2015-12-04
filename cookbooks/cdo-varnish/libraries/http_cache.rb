@@ -22,7 +22,6 @@ class HttpCache
     whitelisted_cookies = [
       'hour_of_code',
       'language_',
-      'partner',
       'progress',
       'lines',
       'scripts',
@@ -76,10 +75,16 @@ class HttpCache
             path: %w(
               /
               /learn*
-              /congrats
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,
+          },
+          {
+            path: %w(
+              /congrats
+            ),
+            headers: LANGUAGE_HEADER,
+            cookies: %w(language_ pm partner),
           }
         ],
         # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.

@@ -49,7 +49,7 @@ max_age: 60
   -else
     %h1=I18n.t :congratulations_on_completing_hoc
 
-  -if params[:partner] == 'CN' && cert_script == 'gumball'
+  -if request.cookies['partner'] == 'CN' && cert_script == 'gumball'
     -if request.locale == 'ar-SA'
       %h2
         أنهيت ساعة البرمجة !      
