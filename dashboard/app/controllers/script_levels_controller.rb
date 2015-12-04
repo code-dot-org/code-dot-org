@@ -45,7 +45,8 @@ class ScriptLevelsController < ApplicationController
       client_state.reset
       reset_session
 
-      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+      @redirect_path = redirect_path
+      render 'levels/reset_and_redirect', formats: [:html], layout: false
     end
   end
 

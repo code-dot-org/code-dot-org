@@ -32,7 +32,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "// Fill an array with some random values\r\nvar testArray = [];\r\nfor (var i = 0; i < 10; i++) {\r\n  appendItem(testArray, randomNumber(0,10));\r\n}\r\nconsole.log(\"Original: \"+testArray);\r\n\r\n// Make a variable to count the 5s\r\nvar fiveCount = 0;\r\n\r\n// Process the array\r\nfor (var i = 0; i < testArray.length; i++) {\r\n  \r\n  //your code here\r\n\r\n}\r\n\r\nconsole.log(\"Number of Fives: \"+fiveCount);",
+    "start_blocks": "// Fill an array with some random values\r\nvar testArray = [];\r\nfor (var i = 0; i < 10; i++) {\r\n  appendItem(testArray, randomNumber(0,10));\r\n}\r\nconsole.log(\"Original: \" + testArray);\r\n\r\n// Make a variable to count the 5's\r\nvar fiveCount = 0;\r\n\r\n// Process the array\r\nfor (var i = 0; i < testArray.length; i++) {\r\n  \r\n  //your code here\r\n\r\n}\r\n\r\nconsole.log(\"Number of Fives: \" + fiveCount);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
