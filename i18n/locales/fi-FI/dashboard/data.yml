@@ -318,8 +318,8 @@ fi:
         studio_iceage_move_to_actor: "Diego (näyttelijä 1) etsii Mannya (näyttelijä 2). Auta Diegoa kulkemaan 200 pikseliä Mannyn luokse käyttämällä 'liikuta näyttelijää' lohkoa. Sitten, yhdistä lohko tapahtumaan 'kun näyttelijä koskee' saadaksesi äänen kuulumaan kun he löytävät toisensa."
         studio_iceage_repeat: "'Toista ikuisesti' komento antaa sinun toistaa koodia jatkuvasti. Voitko yhdistää lohkoja auttaaksesi isoäitiä kuntoilemaan liikkumalla oikeaan ja vasempaan toistuvasti?"
         studio_iceage_click_hello: "Voitko auttaa Sidiä tekemään viimeisen kutsun ystävilleen kun häntä klikataan? Älä unohda klikata häntä kun olet painanut 'Suorita'."
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_move_events: 'Scrat etsii vieläkin tammenterhoja! Auta häntä kipittämään ympäriinsä kiinnittämällä "liiku" lohkot jokaiseen tapahtumaan ja muuttamalla suuntaa johon hän liikkuu jokaisesta nuolinäppäimestä. Kun olet valmis, paina Suorita ja yritä kerätä kaikki tamenterhot.'
+        studio_iceage_sound_and_points: 'Meillä on suurin osa koodista, joka saa Isoäidin liikkumaan edestakaisin, kuten myös koodi joka saa Sidin liikkumaan ympäri näyttöä. Voitko tehdä koodista valmiin lisäämällä lohkoja "kun näyttelijä koskee" tapahtumaan, tehdäksesi siitä sellaisen, että kun Sid ja Isoäiti törmäävät, molemmat tekevät äänen ja saat yhden pisteen lisää. Paina Suorita pelataksesi peliä.'
         studio_iceage_warn_ice_age: 'Jokaisen täytyy liikkua nopeammin koska jääkausi on tulossa! Vaihda taustaksi "jäävuoret" ja aseta Sidin nopeus nopeaksi, sitten paina suorita ja siirrä hänet Diegon luo varoittaaksesi häntä.'
         studio_iceage_throw_hearts: |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
@@ -463,6 +463,9 @@ fi:
         infinity_playlab_intro: 'Pelilabra - Johdanto'
         infinity_playlab_events: 'Pelilabra - Tapahtumia'
         infinity_playlab_repeat_forever: 'Pelilabra - Ikuinen Toisto'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -516,6 +519,9 @@ fi:
         gumball_intro: 'Gumball -koodaustunti - Johdanto'
         gumball_events: 'Gumball -koodaustunti - Tapahtumat'
         gumball_repeat: 'Gumball -koodaustunti - Toistolauseet'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Koodaustunti - Tapahtumat'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'

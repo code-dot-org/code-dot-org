@@ -312,7 +312,7 @@ ka:
       section: სექცია
       example: მაგალითის ამოხსნა
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
-      submitted_on: 'გაგზავნის თარიღი:'
+      submitted_on: 'ჩაბარების თარიღი:'
       unsubmit: ჩაბარების გაუქმება
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
@@ -403,9 +403,9 @@ ka:
     privacy: კონფიდენციალურობის პოლიტიკა
     secure: დაცული ვერსია
     report_abuse: შეგვატყობინეთ დარღვევა
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: დაწერეთ კოდი კოდის სტუდიაში
+    make_my_own_app: ჩემი საკუთარი აპლიკაციის შექმნა
+    how_it_works: როგორ მუშაობს ეს სივრცე
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -462,7 +462,7 @@ ka:
       unused: გამოუყენებელი დონეები
   upsell:
     hoc:
-      title: კოდის ერთი საათი
+      title: Classic Maze
       body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
     flappy:
       title: Flappy კოდი

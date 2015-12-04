@@ -274,11 +274,11 @@ tr-TR:
   class_submission_level_vocational: Mesleki
   class_submission_languages_other: Diğer dil(ler)
   inspirational_videos_more: 'Rol modeller ve ünlülerden <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">ilham verici videolar</a>'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Oyun Laboratuvarınızın temasını seçin
+  playlab_classic_title: klasik
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: 'Buz Devri - yakında '
+  playlab_iceage_title_live: Buz Devri
   starwars_subtitle: Kod İle Bir Galaksi İnşa Etmek
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Sürükle-bırak blokları ve JavaScript kullan.
@@ -286,7 +286,7 @@ tr-TR:
   starwars_javascript_start_button: Şimdi dene
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Sürükle-bırak blokları kullan.
-  starwars_blocks_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6-10 yaş arası
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Şimdi dene
   starwars_watch_videos: Başlamadan önce bu ilham verici videolardan birini izle
   starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
@@ -297,7 +297,7 @@ tr-TR:
   mc_shortdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  mc_specs: Birçok dil desteği (yakında) | Modern tarayıcılar, akıllı telefonlar, tabletler | 6 yaş ve üzeri
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Kod Saati
   volunteer_engineer_submission_title: Hour of Code etkinliği için gönüllü ol ve öğrencilere ilham kaynağı ol.
   volunteer_engineer_submission_subtitle_generic: "Bu sene 7-13 Aralık'ta 100,000 öğretmen sınıflarında `Hour of Code` etkinliğini gerçekleştirecek. Unutmayın yardımınıza ihtiyaçları var! "
@@ -544,6 +544,7 @@ tr-TR:
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Kod Saati burada - Aralık 8-14!'
   code_sign_up: "CS Education Week' e katılmak için kaydolun."
   learn_more: Daha Fazla Bilgi Edinin
@@ -571,12 +572,12 @@ tr-TR:
   carousel_heading_international: Kendi dilinizde eğitimler
   carousel_heading_domestic: Eğitimlerin ingilizcesi mevcut
   carousel_heading_beginners: Yeni başlayanlar için dersler
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: Yeni başlayanlar için dersler
   carousel_heading_javascript: Javascript dersleri
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: 'JavaScript hakkındaki dersler '
   carousel_heading_unplugged: 'İnternet bağlantınız veya cihazınız yok mu? "Enstrümansız" bilgisayar bilimlerini deneyin'
   carousel_heading_devices: Tabletler ve telefonlar için eğitim uygulamaları
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Telefon ve tabletler için dersler
   carousel_heading_languages: Diğer programlama dilleri için eğitimler
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Kendi oyununuzu ya da uygulamanızı yapın
@@ -585,7 +586,7 @@ tr-TR:
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Teacher Led Lesson Plans
   learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Bir Kod Saati Nasıl Öğretilir
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
@@ -600,8 +601,8 @@ tr-TR:
   mobile_devices: Mobil cihazlar için eğitimler
   frozen_name: Anna ve Elsa ile kodlama yap
   starwars_name: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
-  codeorg_name: İlk bilgisayar programınızı yazın
-  codeintl_name: İlk bilgisayar programınızı yazın
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: "JavaScript'e giriş"
   khanes_name: "JavaScript'e giriş"
@@ -637,10 +638,17 @@ tr-TR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Taş,Kağıt, Makas
-  hourofcode_name: Yeni code.org/hoc için placeholder
+  hourofcode_name: Classic Maze
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
   artist_name: Aktör
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -684,6 +692,13 @@ tr-TR:
   playlab_gradelevel: 4-104 Yaş
   infinity_gradelevel: 4-104 Yaş
   artist_gradelevel: 8 + Yaş grubu
+  monstercoding_gradelevel: 5-13 yaş grubu
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: İlköğretim
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   thinkersmithspanish_platformtext: İnternetsiz
@@ -725,6 +740,13 @@ tr-TR:
   frozen_platformtext: Modern tarayıcılar + Tablet
   starwars_platformtext: Modern tarayıcılar + tabletler
   playlab_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modern Web tarayıcıları
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modern Web tarayıcıları
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeorg_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   codeintl_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -768,6 +790,13 @@ tr-TR:
   playlab_shortdescription: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
   infinity_shortdescription: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
   artist_shortdescription: Sanatçı ile harika resimler ve tasarımlar yap!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir.
   codeintl_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -809,6 +838,13 @@ tr-TR:
   frozen_longdescription: "Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!"
   starwars_longdescription: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Bilgisayar Bilimlerine giriş (K-8. sınıflar)
   khan_beyond_name: Bilgisayar programlama öğrenin
   tynker_beyond_name: Evde programlama öğren
@@ -997,11 +1033,11 @@ tr-TR:
   compatibility_https_header: "Lütfen HTTPS'i etkinleştirin."
   compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
   compatibility_https_hide_this_warning: Bu uyarıyı gizle
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: kanat çırp
   infinity_shortcode: inf
-  playlab_shortcode: oynat
+  playlab_shortcode: lab
   artist_shortcode: art

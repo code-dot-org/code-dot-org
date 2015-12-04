@@ -318,11 +318,8 @@
         studio_playlab_9: 为这次外星人入侵事件设置背景画面，并通过加快空间机器人的速度来使到达外星人。通过方向键来移动太空机器人，并警告其它人。
         studio_playlab_10: 创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。
         studio_iceage_hello1: 喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“语言”模块拖放到工作区，然后在里面输入"你好"。
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
+        studio_iceage_hello2: 喜得(角色1) 发现了曼尼(角色2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"演员 说"块两次。
+        studio_iceage_move_to_flag: 斯奎特正在找他的橡子！使用"移动"模块帮他移动到最后200像素位置。
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
@@ -466,8 +463,8 @@
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: 编程接力
         C2_paper_airplanes: 纸飞机
-        C2_digital_footprint: Your Digital Footprint
-        C2_digital_footprint_v2: Your Digital Footprint
+        C2_digital_footprint: 你的数字足迹
+        C2_digital_footprint_v2: 你的数字足迹
         C3_maze_level_4: 迷宫循环
         C3_artist_intro: 艺术家简介
         C3_artist_functions: 艺术家函数
@@ -515,6 +512,9 @@
         infinity_playlab_intro: 游戏实验室 -- 简介
         infinity_playlab_events: 游戏实验室 - 事件
         infinity_playlab_repeat_forever: 游戏实验室 - 不断重复
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -568,6 +568,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

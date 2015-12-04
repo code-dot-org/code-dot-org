@@ -312,29 +312,29 @@ el:
         studio_playlab_8: Μπορείς να προσθέσεις ένα μπλοκ ώστε να σκοράρεται ένας πόντος και ένα μπλοκ ώστε να ακούγεται ένας ήχος όταν ο μονόκερος πέσει πάνω στο μάγο, και μετά να τον μετακινείς με τα βελάκια μέχρι να σκοράρεις πόντο;
         studio_playlab_9: Φτιάξτε το φόντο για αυτή την εισβολή εξωγήινων και βοηθήστε το διαστημικό ρομπότ Spacebot να φτάσει γρηγορότερα στον εξωγήινο αλλάζοντας την ταχύτητά του. Μετά, μετακινήστε τον με τα βελάκια για να φτάσετε στο Spacebot και να ειδοποιήσετε όλους τους άλλους
         studio_playlab_10: 'Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_hello1: |-
+          Ο Sid θέλει να τους μαζέψει όλους για μία νέα περιπέτεια. Μπορείς να τον βοηθήσεις να πει "γεια" σέρνοντας το μπλοκ 'πες' στην επιφάνεια εργασίας και πληκτρολογώντας τη λέξη 'γεια' μέσα;
+        studio_iceage_hello2: 'Ο Sid (ηθοποιός 1) βρήκε τη Manny (ηθοποιός 2) και θέλει να την προσκαλέσει στην περιπέτειά του. Βοήθησέ τους να χαιρετήσουν ο ένας τον άλλο χρησιμοποιώντας το μπλοκ "ηθοποιός λέει" δύο φορές.'
+        studio_iceage_move_to_flag: 'Ο Scrat ψάχνει το βελανίδι του! Βοήθησέ τον να προχωρήσει τα τελευταία 200 εικονοστοιχεία χρησιμοποιώντας το μπλοκ "προχώρησε".'
+        studio_iceage_move_to_actor: 'Ο Diego (ηθοποιός 1) ψάχνει για τη Manny (ηθοποιός 2). Βοήθησε τον Diego να προχωρήσει 200 εικονοστοιχεία προς τη Manny χρησιμοποιώντας το μπλοκ "προχώρησε ηθοποιό". Μετά, σύνδεσε το μπλοκ στο γεγονός "όταν ηθοποιός ακουμπά" για να παίξεις έναν ήχο όταν βρεθούν.'
         studio_iceage_repeat: 'Το μπλοκ "επανάλαβε για πάντα" σας επιτρέπει να εκτελείτε τον κώδικά σας συνεχώς. Μπορείτε να συνδέσετε μπλοκ σε αυτό για να βοηθήσετε τη Granny να κάνει λίγο εξάσκηση κινούμενη αριστερά και δεξιά συνεχώς;'
         studio_iceage_click_hello: Μπορείτε να βοηθήσετε τον Sid να καλέσει μία ύστατη έκκληση για φίλους όταν του κάνετε κλικ; Μην ξεχάσετε να του κάνετε κλικ αφού πατήσετε Εκτέλεση.
         studio_iceage_move_events: 'Ο Scrat ψάχνει για βελανίδια! Βοηθήστε τον να τρέξει τριγύρω βάζοντας το μπλοκ "κίνηση" σε καθένα από τα γεγονότα και αλλάζοντας την κατεύθυνση ώστε να λειτουργεί με όλα τα βέλη. Όταν είστε έτοιμοι, πατήστε Εκτέλεση και δοκιμάστε να μαζέψετε όλα τα βελανίδια.'
         studio_iceage_sound_and_points: 'Προσφέρουμε τον περισσότερο από τον κώδικα που κάνει τη Granny να κινείται αριστερά και δεξιά, καθώς και τον κώδικα για να κινείται ο Sid τριγύρω στην οθόνη. Μπορείτε να ολοκληρώσετε τον κώδικα προσθέτοντας μπλοκ στο γεγονός "όταν ο ηθοποιός ακουμπήσει" για να το κάνετε ώστε όταν συγκρούεται ο Sid και η Granny να παίζει έναν ήχο και να δίνει βαθμό; Πατήστε Εκτέλεση για να παίξετε το παιχνίδι.'
         studio_iceage_warn_ice_age: 'Πρέπει όλοι να κινηθούν ταχύτερα γιατί πλησιάζει η εποχή των παγετώνων! Αλλάξτε το φόντο σε "παγόβουνα" και βάλετε την ταχύτητα του Sid στο γρήγορο, μετά πατήστε Εκτέλεση και κινήστε τον προς τον Diego για να τον ειδοποιήσει.'
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_throw_hearts: 'Ο Sid θέλει να πει στη γιαγιά του, τη Granny, ότι την αγαπά. Χρησιμοποίησε την εντολή "ηθοποιός ρίχνει" για να κάνεις τον Sid (ηθοποιός 1) να ρίξει καρδιές στη Granny (ηθοποιός 2)! Όρισε τη διάθεση της Granny σε χαρούμενη όταν την χτυπήσουν οι καρδιές.'
+        studio_iceage_free_play: Ώρα να φτιάξεις το δικό σου παιχνίδι ή τη δική σου ιστορία! Όταν τελειώσεις, πάτησε στο Ολοκλήρωση για να αφήσεις τους φίλους σου να δοκιμάσουν το παιχνίδι σου στα κινητά, τα tablet ή τους υπολογιστές τους!
         studio_gumball_hello1: 'Η Anais θέλει να κάνει νέους φίλους. Μπορείς να τη βοηθήσεις να πει "Γεια" σέρνοντας το block "say" στην περιοχή εργασίας και πληκτρολογώντας μέσα τη λέξη "Γεια";'
         studio_gumball_hello2: 'Darwin (ηθοποιός 1) και ο αδερφός του Gumball (ηθοποιός 2) κατευθύνονται στο σχολείο. Βοήθησέ τους να χαιρετηθούν χρησιμοποιώντας το block "actor say" δύο φορές.'
         studio_gumball_move_to_flag: 'Ο Banana Joe πρόκειται να κερδίσει τον αγώνα της ημέρας! Βοήθησέ τον να κάνει τα τελευταία 200 βήματα (pixels) χρησιμοποιώντας το block "move".'
         studio_gumball_move_to_actor: 'Η Τσιχλόμπαλα (ηθοποιός 1) και ο Δαρβίνος (ηθοποιός 2) έχουν αργήσει για την τιμητική τους ημέρα! Βοήθησε την τσιχλόμπαλα να πάρει 200 pixels κάτω τον Δαρβίνο χρησιμοποιώντας το μπλοκ «κίνηση ηθοποιός».  Στη συνέχεια, συνδέστε ένα μπλοκ στην εκδήλωση «όταν ηθοποιός αγγίζει» να παίξει έναν ήχο όταν βρίσκονται μεταξύ τους.'
         studio_gumball_repeat: 'Το «επανάλαβε για πάντα» μπλοκ σας επιτρέπει να εκτελέσετε κώδικα συνεχώς.  Μπορείτε να επισυνάψετε μπλοκ σε αυτό για να βοηθήσει την τσιχλόμπαλα να ζεσταθεί για τον αγώνα με την κίνηση αριστερά και δεξιά επανειλημμένα;'
         studio_gumball_click_hello: Μπορείς να βοηθήσεις τον Anton να ανακοινώσει την έναρξη ενός αγώνα, λέγοντας «Έτοιμο, που, πάμε!»; Για να ελέγξετε το πρόγραμμά σας, μην ξεχάσετε να πατήσετε τον Anton, μετά αφού κάνετε κλικ στο Run!
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_move_events: 'Ο Darwin βρίσκεται στο διαγωνισμό συγκέντρωσης σημαιών! Βοήθησέ τον να τρέξει τριγύρω βάζοντας το μπλοκ "προχώρησε" σε κάθε γεγονός. Όταν τελειώσεις, κάνε κλικ στο Εκτέλεση και δοκίμασε να μαζέψεις όλες τις σημαίες.'
+        studio_gumball_sound_and_points: 'Προσφέραμε το μεγαλύτερο μέρος του κώδικα που κάνει τον Anton (ηθοποιός 2) να κινείται δεξιά κι αριστερά, καθώς και τον κώδικα που κάνει τον Banana Joe (ηθοποιός 1) να κινείται στην οθόνη. Μπορείς να ολοκληρώσεις τον κώδικα και να προσθέσεις μπλοκ στο γεγονός "όταν ηθοποιός ακουμπά" ώστε να παίζουν και οι δύο έναν ήχο και να σκοράρουν έναν πόντο όταν ο Banana Joe και ο Anton συγκρούονται; Πάτησε Εκτέλεση για να παίξεις το παιχνίδι.'
+        studio_gumball_warn_food_fight: 'Ο Darwin μόλις γλύτωσε από φαγητοπόλεμο! Άλλαξε το φόντο σε "χαρακτήρες" και όρισε την ταχύτητα του Darwin σε γρήγορη, μετά πάτησε Εκτέλεση και κάνε τον να κινηθεί προς την Penny για να την προειδοποιήσει.'
+        studio_gumball_join_food_fight: 'Έλα στον φαγητοπόλεμο! Χρησιμοποίησε την εντολή "ηθοποιός ρίχνει το δεξί αντικείμενο" για να κάνεις τον Banana Joe (ηθοποιός 1) να ρίξει φαγητό στον Anton (ηθοποιός 2)! Όρισε τη διάθεση του Anton σε θυμωμένη όταν χτυπηθεί.'
+        studio_gumball_free_play: Δημιούργησε το δικό σου παιχνίδι ή τη δική σου ιστορία. Όταν τελειώσεις, πάτησε Ολοκλήρωση για να αφήσεις τους φίλους σου να δοκιμάσουν το παιχνίδι σου στα κινητά, τα tablet ή τους υπολογιστές τους!
         studio_full_sandbox: 'Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.'
         studio_k1_1: 'Μπορείς να κάνεις αυτό το σκυλί να λέει "Γεια χαραντάν κόσμε";'
         studio_k1_2: Μπορείς να βάλεις το σκυλί να λέει κάτι και μετά να λέει κάτι η γάτα;
@@ -464,6 +464,9 @@ el:
         infinity_playlab_intro: 'Εργαστηριακό παιχνίδι - Εισαγωγή'
         infinity_playlab_events: 'Εργαστηριακό παιχνίδι - Γεγονότα'
         infinity_playlab_repeat_forever: 'Εργαστηριακό παιχνίδι - Επανάλαβε Για πάντα'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -514,9 +517,12 @@ el:
         mc_if_statements: 'Minecraft - Δηλώσεις Αν'
         mc_congrats_share: 'Minecraft - Συγχαρητήρια'
         mc_congrats_no_share: 'Minecraft - Συγχαρητήρια'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        gumball_intro: 'Τσιχλόμπαλα Ώρα του Κώδικα - Εισαγωγή'
+        gumball_events: 'Τσιχλόμπαλα Ώρα του Κώδικα - Γεγονότα'
+        gumball_repeat: 'Τσιχλόμπαλα Ώρα του Κώδικα - Δηλώσεις επανάληψης'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: |-
