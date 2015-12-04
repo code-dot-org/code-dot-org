@@ -13,16 +13,14 @@ UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 #
 # The "weight" encoded in the session row is set to 1/p, where p is the
 # proportion of sessions in the sample, so that reports can compute the
-# approximate number of actual sessions by summing over the the weights.
-
+# approximate number of actual sessions by summing over the weights.
 def create_session_row_unless_unsampled(row)
   # We don't need to do anything if we've already decided this session is unsampled.
   return if unsampled_session?
 
   # Decide whether the session should be sampled.
   p = DCDO.get('hoc_activity_sample_proportion', 1.0).to_f
-  p = 1.0 if p == 0.0  # All sessions are in the sample if the proportion is invalid.
-  if Kernel.rand < p
+  if Kernel.rand < p  # If p=0, no sessions are in the sample.
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
     row = create_session_row(row, weight: 1.0 / p)
   else
