@@ -1,0 +1,9 @@
+%h1
+  Online PD Progress
+%h2
+  #{link_to 'Download CSV of All PD Scripts', {:format => :csv}}
+
+%br
+
+- @online_pd_data.each do |script, data|
+  = render 'pd_progress_by_script', data
