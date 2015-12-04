@@ -26,7 +26,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'script name instead of stage name in header for HOC' do
     self.stubs(:current_user).returns(nil)
     script_level = Script.find_by_name(Script::HOC_NAME).get_script_level_by_chapter 1
-    assert_equal 'Hour of Code', script_level.stage.summarize[:title]
+    assert_equal 'Classic Maze', script_level.stage.summarize[:title]
   end
 
   test 'show stage name in header for multi-stage script' do

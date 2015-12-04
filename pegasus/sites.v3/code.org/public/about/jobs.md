@@ -26,7 +26,7 @@ nav: about_nav
 
 **Job Summary:**
 
-Code.org is looking for an experienced Curriculum Writer to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. We are looking for someone to help develop curriculum as a full-time, long-term assignment (a one-to-two year term). 
+Code.org is looking for an experienced Curriculum Writer to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. We are looking for someone to help develop curriculum as a full-time, long-term assignment (a one-to-two year term). Part-time will be considered on a case-by-case basis.
 
 While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
 
