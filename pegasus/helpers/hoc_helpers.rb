@@ -21,7 +21,7 @@ def create_session_row_unless_unsampled(row)
   # Decide whether the session should be sampled.
   p = DCDO.get('hoc_activity_sample_proportion', 1.0)
   p = 1.0 if p == 0.0  # Don't sample if the proportion is invalid.
-  if rand() < p
+  if Kernel.rand < p
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
     row = create_session_row(row, weight: 1.0 / p)
   else
@@ -113,7 +113,7 @@ def complete_tutorial(tutorial={})
 end
 
 def complete_tutorial_pixel(tutorial={})
-  unless settings.read_only  || unsampled_session?
+  unless settings.read_only || unsampled_session?
     row = DB[:hoc_activity].where(session: session_id).first
     if row && !row[:pixel_finished_at] && !row[:finished_at]
       DB[:hoc_activity].where(id: row[:id]).update(
