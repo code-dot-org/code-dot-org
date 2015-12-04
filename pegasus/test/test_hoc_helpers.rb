@@ -1,7 +1,6 @@
-require 'minitest/autorun'
+require_relative '../src/env'
 require 'rack/test'
-require 'mocha/mini_test'
-require_relative 'fixtures/mock_pegasus'
+require 'minitest/autorun'
 
 class HocHelpersTest < Minitest::Test
   def test_complete_tutorial_without_code
