@@ -74,11 +74,25 @@ class ApiController < ApplicationController
   end
 
   def user_progress_for_stage
+    response = {}
+
     if current_user
-      render json: current_user.user_progress_by_stage(params[:script_name], params[:stage_index].to_i)
-    else
-      render json: {}
+      script = Script.get_from_cache(params[:script_name])
+      stage = script.stages[params[:stage_position].to_i - 1]
+      level = stage.script_levels[params[:level_position].to_i - 1].level
+
+      last_activity = current_user.last_attempt(level)
+      level_source = last_activity.try(:level_source).try(:data)
+
+      response[:progress] = current_user.user_progress_by_stage(stage)
+      if last_activity
+        response[:lastAttempt] = {
+          timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
+          source: level_source
+        }
+      end
     end
+    render json: response
   end
 
   def section_text_responses

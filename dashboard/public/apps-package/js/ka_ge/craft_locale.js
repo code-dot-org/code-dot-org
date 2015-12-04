@@ -194,7 +194,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeOreRedstone":function(d){return "წითელი ქვის მადანი"},
 "blockTypePlanksAcacia":function(d){return "აკაციის ფიცრები"},
 "blockTypePlanksBirch":function(d){return "არყის ხის ფიცრები"},
-"blockTypePlanksJungle":function(d){return "ჯუგლის ხის ფიცრები"},
+"blockTypePlanksJungle":function(d){return "ჯუნგლის ხის ფიცრები"},
 "blockTypePlanksOak":function(d){return "მუხის ფიცრები"},
 "blockTypePlanksSpruce":function(d){return "ნაძვის ფიცრები"},
 "blockTypeRail":function(d){return "რელსი"},
@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "დააჭირეთ ღილაკს \"განაგრძეთ თამაში\" და დაუბრუნდით თამაშს."},
 "replayButton":function(d){return "გამეორება"},
 "selectChooseButton":function(d){return "არჩევა"},
-"tooManyBlocksFail":function(d){return "Puzzle "+craft_locale.v(d,"puzzleNumber")+" completed. Congratulations! It is also possible to complete it with "+craft_locale.p(d,"numBlocks",0,"en",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "თავსატეხი #"+craft_locale.v(d,"puzzleNumber")+" დასრულებულია. გილოცავთ! მისი დასრულება ასევე შესაძლებელია "+craft_locale.p(d,"numBlocks",0,"en",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};

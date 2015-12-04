@@ -222,12 +222,8 @@ ca:
       4-5 Artist 8_instruction: "La línia del mig d'un camp de futbol és perpendicular a les bandes. Aquest camp té un perímetre de 800 píxels i fa 200 píxels de llarg. Quant fa d'ample? Dibuixa les línies de les vores i del mig del camp."
       4-5 Artist 9_instruction: "Dibuixa l'altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg."
       4-5 Artist Assessment 1_instruction: 'Avaluació: Usa un bucle per dibuixar el triangle equilàter. Cada costat és de 300 píxels.'
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
+      4-5 Artist For Loops 1_instruction: "Posa els números de l'1 al 10 en els blocs d'amplada i executa el codi."
+      4-5 Artist For Loops 11_instruction: 'Completar el bloc "per a" perquè compti 0, 20, 40, 60, 80... 200.'
       4-5 Artist For Loops 12_instruction: |
         What happens if you reverse the "from"
         and "to" numbers? Complete the "for" block so that it counts 200, 180,
@@ -250,10 +246,8 @@ ca:
       4-5 Artist For Loops 4_instruction: |
         Complete the "for" block so that it
         counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+      4-5 Artist For Loops 6_instruction: |-
+        Dibuixa quadrats amb costats de 50, 60, 70, 80 i 90 píxels. Hauràs d'utilitzar la funció "dibuixa un quadrat" cinc vegades.
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -266,7 +260,7 @@ ca:
         These circles are size 5, 10, 15, 20,
         25, 30, and 35. Draw the circles using a "for" block.
       4-5 Artist Free Draw 1_instruction: Dibuix lliure! Dibuixa el que et digui la inspiració.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+      4-5 Artist Functions 1_instruction: Utilitza un bucle de repetició per dibuixar aquest triangle.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
@@ -321,10 +315,7 @@ ca:
         Use the draw a square and triangle functions
         along with other blocks to create a house by adding them to the 'draw a house"
         function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
+      4-5 Artist Functions 7_instruction: 'Utilitza la funció "dibuixa una casa" per dibuixar cases que facin 100 píxels per 50 píxels. Les dues cases estan separades per 50 píxels.'
       4-5 Artist Functions 8_instruction: |
         The "draw a flower" function has a parameter
         that allows you to set the stem height.  Set it to 200 and see what happens.
@@ -361,12 +352,8 @@ ca:
         nested that whole block of code into another loop, but you need to get the
         artist back in place to draw the next line. Which of these code blocks can
         you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
+      4-5 Artist Patterns 4_instruction: Aquest diamant té 50 píxel per costat i angles de 60 i 120 graus. Utilitza un bucle per dibuixar-lo.
+      4-5 Artist Patterns 5.5_instruction: Quantes vegades cal repetir aquest bloc per dibuixar la graella completa de diamants?
       4-5 Artist Patterns 5_instruction: |
         Let's repeat that to make a row of 6 diamonds.
         Notice that we changed our diamond code to repeat 3 times instead of 2 - why
@@ -379,9 +366,7 @@ ca:
         to make this more complex pattern. Notice how the diamonds overlap now, try
         changing the first "jump backwards" from 100 to 50 (half as far) - now how
         far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
+      4-5 Artist Patterns 8_instruction: Utilitza un bucle per dibuixar aquest hexàgon amb 40 píxel per costats i angles de 60 graus.
       4-5 Artist Patterns 9.5_instruction: |
         Let's loop this code to draw two rows
         of hexagons. Notice how our second row is shifted to the right.
@@ -434,10 +419,7 @@ ca:
         2, or 1 nectar. Here an if-else block is combined with another if-else block
         to create an if, else-if, else block. Complete the solution to collect the
         unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
+      4-5 Bee Conditionals 7_instruction: 'Recorda que les flors liles poden tenir 1, 2 o 3 nèctars. Completa la funció "comprovar la flor lila" i utilitzar-la per recollir tots els nèctar de les flors.'
       4-5 Bee Conditionals 8_instruction: |
         Write inside the function "check flower
         make honey". Your function should check if the purple flower has 3, 2, or
@@ -3231,8 +3213,8 @@ ca:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -4466,14 +4448,37 @@ ca:
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -4483,8 +4488,8 @@ ca:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "

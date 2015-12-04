@@ -45,7 +45,8 @@ class ScriptLevelsController < ApplicationController
       client_state.reset
       reset_session
 
-      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+      @redirect_path = redirect_path
+      render 'levels/reset_and_redirect', formats: [:html], layout: false
     end
   end
 
@@ -69,6 +70,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     load_user
+    return if performed?
     load_section
 
     return if redirect_applab_under_13(@script_level.level)
@@ -166,6 +168,11 @@ class ScriptLevelsController < ApplicationController
 
   def load_user
     return if params[:user_id].blank?
+
+    if current_user.nil?
+      render text: 'Teacher view is not available for this puzzle', layout: true
+      return
+    end
 
     user = User.find(params[:user_id])
 

@@ -1001,21 +1001,21 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: Това е условен блок. Той казва, ако има нектар или мед, който е по-малък,
-          равен или по-голям от посочения, тогава направи нещо.
+        text: Това е блок условие. Той казва, ако има нектар или мед, който е по-малък,
+          равен или по-голям от посочения, тогава да се направи нещо.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем,
-          когато виждаме само този въпросителен знак.
+        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем
+          и виждаме само този въпросителен знак.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: В този пример ние ще да кажем Ако лилавото цвете има нектар по-голям
-          от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме нектар,
-          докато има. TA-даа!
+        text: В този пример, ние ще трябва да кажем Ако лилавото цвете има нектар
+          по-голям от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме
+          нектар, докато има. TA-даа!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: Това е урок за бинарни гривни. Ние ще създадем код на нашите инициали
+        text: Това е урок за бинарни гривни. Ние ще създадем код с нашите инициали
           на гривна, която можем да носим и показваме на всички наши приятели!
       2:
         image: notes/C2_binary_bracelets_2.png
@@ -1025,19 +1025,18 @@
           набор от противоположности.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: Здравейте аз съм Орион и аз програмирам роботи тук в Play-im. Всички
-          компютърни и роботски мозъци, на базово ниво са малки електронни порти.
-          Когато вратата е отворена, може свободно да преминава ток и когато тя е
-          затворена, електричество не преминава.
+        text: Здравейте аз съм Орион и програмирам роботи тук в Play-im. Всички компютърни
+          и роботски мозъци на базово ниво са малки електронни порти. Когато вратата
+          е отворена, може свободно да преминава ток, а когато тя е затворена, електричество
+          не преминава.
       4:
         image: notes/C2_binary_bracelets_4.png
         text: Пример за бинарност са очите на робота. Очите на робота са светодиоди
-          и те са светлини, които са включени или изключени. Това е бинарна система,
-          едното или другото. Можем да използваме осветлението да представяме двоични
-          числа. Ако имаме набор от роботи, можем да кажем, че първият робот е 1s
-          място и вторият робот е 2s място, третият робот е 4s място и така нататък.
-          Ето как вие можете да представите двоично число. Роботите ще го направят
-          с очите си и ще преброят за вас.
+          и светят, те са включени или изключени. Това е бинарна система-едно нещо
+          или друго. Можем да използваме осветлението, за да представяме двоични числа.
+          Ако имаме набор от роботи, първият робот ще е на първо място, вторият робот
+          на второ място и така нататък. Ето как вие можете да представите двоично
+          число. Роботите ще го направят с очите си и ще преброят за вас.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
@@ -1047,7 +1046,7 @@
         image: notes/C2_conditionals_with_cards_2.png
         text: Искам да отида в парка, но първо трябва да реша дали трябва да взема
           чадър или не. Така че, аз поглеждам през прозореца. Ако е облачно, ще взема
-          моя чадър. Иначе аз ще взема очила. Мисля, че ще взема чадър. Това, което
+          моя чадър. Иначе ще си взема очила. Мисля, че ще взема чадър. Това, което
           виждате и чувате определя какво ще вземете в парка.
       3:
         image: notes/C2_conditionals_with_cards_3.png
@@ -1076,8 +1075,8 @@
           е наред.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Нека да проследим този код като забавим скоростта и го гледаме, как
-          работи всеки блок - стъпка по стъпка.
+        text: Нека да проследим този код като забавим скоростта и гледаме как работи
+          всеки блок - стъпка по стъпка.
       3:
         image: notes/C2_artist_debugging_3.png
         text: О, там е проблемът! Котешките мустаци са 75 пиксела дълги, не 25.
@@ -1085,11 +1084,11 @@
       1:
         image: notes/C2_bee_debugging_1.png
         text: Чувал ли си някога за дебъгване на програма? Това е начина, по който
-          да разберете какво не работи. Когато поправяте код, Вие идентифицирате и
-          премахвате грешки.
+          да разбереш какво не работи. Когато поправяш код, ти идентифицираш и премахваш
+          грешки.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: Тук, ние сме поставили няколко блока в работното място. Ние ще да използваме
+        text: Тук, ние сме поставили няколко блока в работното поле. Ние ще да използваме
           "стъпка" бутона, за да проследим действието на блокове, стъпка по стъпка,
           за да разберем дали това е правилното решение и къде може да се наложи да
           го поправим.
@@ -1161,13 +1160,13 @@
       2:
         image: notes/C2_graph_paper_2.png
         text: Алгоритъм е списък с инструкции за изпълнение на задача. Ние ще следваме
-          този набор от инструкции, за да направи Купа. Алгоритмите са наистина полезни,
+          този набор от инструкции, за да направим купа. Алгоритмите са наистина полезни,
           когато трябва някой да разбере как да се направи нещо.
       3:
         image: notes/C2_graph_paper_3.png
-        text: Ако пишете алгоритъм за компютър, трябва да го разделяме до много малки
+        text: Ако пишем алгоритъм за компютър, трябва да го разделяме до много малки
           стъпки. Попълнете този ред и преминете към следващия, после следващия и
-          вие ще го направите.
+          ще го направите.
       4:
         image: notes/C2_graph_paper_4.png
         text: Аз използвам алгоритми в моята работа. Ако опиша всички стъпки ще мога
@@ -1400,26 +1399,26 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: Това е условен блок. Той казва, ако има нектар или мед, който е по-малък,
-          равен или по-голям от посочения, тогава направи нещо.
+        text: Това е блок условие. Той казва, ако има нектар или мед, който е по-малък,
+          равен или по-голям от посочения, тогава да се направи нещо.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем,
-          когато виждаме само този въпросителен знак.
+        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем
+          и виждаме само този въпросителен знак.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: В този пример ние ще да кажем Ако лилавото цвете има нектар по-голям
-          от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме нектар,
-          докато има. TA-даа!
+        text: В този пример, ние ще трябва да кажем Ако лилавото цвете има нектар
+          по-голям от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме
+          нектар, докато има. TA-даа!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Чувал ли си някога за дебъгване на програма? Това е начина, по който
-          да разберете какво не работи. Когато поправяте код, Вие идентифицирате и
-          премахвате грешки.
+          да разбереш какво не работи. Когато поправяш код, ти идентифицираш и премахваш
+          грешки.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: Тук, ние сме поставили няколко блока в работното място. Ние ще да използваме
+        text: Тук, ние сме поставили няколко блока в работното поле. Ние ще да използваме
           "стъпка" бутона, за да проследим действието на блокове, стъпка по стъпка,
           за да разберем дали това е правилното решение и къде може да се наложи да
           го поправим.
@@ -3056,6 +3055,90 @@
           forever block.
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.

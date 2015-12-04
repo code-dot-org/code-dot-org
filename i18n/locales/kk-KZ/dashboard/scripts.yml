@@ -146,7 +146,7 @@ kk:
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: Maze
-          title: Код Жазу Сағаты
+          title: Classic Maze
           description: Компьютер ғылымының негіздерін Энгри Бердс, Өсімдіктер Зомбилерге қарсы және Мұз Дәуіріндегі Скрат тәріздес кейіпкерлермен үйрен!
           description_short: Компьютер ғылымының негіздерін көптеген қызықты кейіпкерлермен үйрен!
         frozen:
@@ -347,9 +347,9 @@ kk:
           The Artist 5: Артист 5
           Wrap-up: Wrap-up
         edit-code:
-          title: Edit Code
-          description: Edit Code
-          description_short: Edit Code
+          title: Кодты өзгерту
+          description: Кодты өзгерту
+          description_short: Кодты өзгерту
           The Maze: The Maze
           Applab: Applab
           The Artist: Артист
@@ -365,10 +365,10 @@ kk:
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          title: Қанат Қағу Коды
+          description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің Қанат Қағу Коды сабағын байқап көріңіз!
           description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: Flappy Code
+          Flappy Code: Қанат Қағу Коды
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial
@@ -380,10 +380,10 @@ kk:
           description_short: Step tutorial
           Step: Қадам
         Hour of Code:
-          title: Hour of Code 2013
+          title: Код Жазу Сағаты 2013
           description: Компьютер ғылымының негіздерін Энгри Бердс және Өсімдіктер Зомбилерге қарсы кейіпкерлерімен үйрен!
           description_short: Компьютер ғылымының негіздерін көптеген қызықты кейіпкерлермен үйрен!
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: Код Жазу Сағаты 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -1332,7 +1332,7 @@ kk:
           "Data App Part 3: Code": 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: Құпиялылық саясаты
           "Debate: Privacy vs. Utility": 'Debate: Privacy vs. Utility'
           "Data App Part 4: App Permissions": 'Data App Part 4: App Permissions'
           "Data App Part 5: Clean Data": 'Data App Part 5: Clean Data'

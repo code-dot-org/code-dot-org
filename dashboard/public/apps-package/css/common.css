@@ -204,7 +204,8 @@ button.arrow:disabled {
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
-  min-height: calc(50% - 16px) !important; }
+  min-height: calc(50% - 16px) !important;
+  direction: ltr; }
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd; }
@@ -977,8 +978,8 @@ input[type="radio"] {
         text-decoration: underline; }
   .generated-code-container .generatedCode {
     font-size: 14px;
-    overflow: scroll;
-    max-height: 400px; }
+    overflow: auto;
+    max-height: 150px; }
 
 .light-yellow-background {
   background-color: #fff7df; }
@@ -1081,12 +1082,20 @@ input[type="radio"] {
   #sharing div {
     margin: 10px 0; }
     #sharing div.sharing-content {
-      margin-left: 195px; }
+      margin-left: 195px;
+      margin-right: 25px; }
       #sharing div.sharing-content.no-image {
         margin-left: 0; }
   #sharing label {
     margin-top: 15px;
     font-size: 20px; }
+  #sharing .social-buttons a,
+  #sharing .social-buttons a:hover,
+  #sharing .social-buttons a:link,
+  #sharing .social-buttons a:visited {
+    background-color: transparent;
+    text-decoration: none;
+    color: white; }
   #sharing button {
     background-color: #7665a0;
     color: white;
@@ -1098,19 +1107,15 @@ input[type="radio"] {
       border: 1px solid #7665a0;
       background-color: #c6cacd;
       box-shadow: none; }
-    #sharing button a, #sharing button a:hover, #sharing button a:link, #sharing button a:visited {
-      background-color: transparent;
-      color: white;
-      text-decoration: none; }
     #sharing button #send-to-phone {
       clear: both; }
   #sharing button.saved-to-gallery {
     font-family: "Gotham 4i"; }
   #sharing #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 200px;
-    padding: 10px; }
+    width: 100%;
+    padding: 10px;
+    cursor: text; }
   #sharing #copy-button {
     max-width: 100px; }
   #sharing #sharing-phone i.fa {
@@ -1211,3 +1216,6 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 
 .droplet-hover-div {
   max-width: 100% !important; }
+
+.legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
+  display: none; }

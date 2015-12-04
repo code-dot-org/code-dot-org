@@ -319,7 +319,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "examplesFailedOnClose":function(d){return "Satu atau lebih contoh Anda tidak cocok dengan definisi Anda. Periksa contoh Anda sebelum keluar"},
 "extraTopBlocks":function(d){return "Anda memiliki blok yang tak terpasang."},
 "extraTopBlocksWhenRun":function(d){return "Kamu memiliki blok yang belum terpasang. Apakah kamu bermaksud untuk memasang blok-blok ini dengan blok \"ketika dijalankan\"?"},
-"finalStage":function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir."},
+"finalStage":function(d){return "Bagus! Kamu berhasil menyelesaikan tahap akhir."},
 "finalStageTrophies":function(d){return "Horee! Anda berhasil menyelesaikan tahap akhir dan memenangkan "+common_locale.p(d,"numTrophies",0,"id",{"one":"piala","other":"piala "+common_locale.n(d,"numTrophies")})+"."},
 "finish":function(d){return "Selesai"},
 "generatedCodeInfo":function(d){return "Bahkan Universitas mengajar blok berbasis pengkodean (misalnya, "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Tetapi di bawah tenda, blok Anda telah berkumpul dapat juga ditunjukkan dalam JavaScript, dunia yang paling banyak digunakan pengkodean bahasa:"},

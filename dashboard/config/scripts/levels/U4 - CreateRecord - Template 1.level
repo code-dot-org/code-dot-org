@@ -7,12 +7,20 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "createRecord": null
+      "createRecord": {
+        "params": [
+          "\"mytable\"",
+          "{name: \"Alice\"}",
+          "function(){\nconsole.log(\"Success! Created Record.\");\n}"
+        ],
+        "paletteParams": [
+          "table",
+          "object",
+          "callback"
+        ]
+      }
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -41,7 +49,10 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

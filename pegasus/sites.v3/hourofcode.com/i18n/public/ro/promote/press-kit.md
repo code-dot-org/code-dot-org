@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Cum să atragi mass-media la evenimentul Hour of Code organizat de tine
 
@@ -62,4 +61,3 @@ Code.org® este o organizație non-profit dedicată extinderii educației cu pri
   
 Găsiţi mai multe resurse şi modele de e-mailuri [aici](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

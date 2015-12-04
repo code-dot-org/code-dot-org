@@ -551,48 +551,50 @@
           скорост. След това го преместeте  със стрелките, за да предупреди останалите
         studio_playlab_10: Създайте своя собствена игра. Когато сте готови, щракнете
           върху Финал, за да споделите с приятелите си играта за телефон.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_hello1: Сид иска да събере желаещи за ново приключение. Помогнете
+          му да каже "Здравей" като плъзнете "казва" блока в работната област и напишете
+          думата "Здравей" вътре.
+        studio_iceage_hello2: Сид (актьор 1) намери Мани (актьор 2) и иска да го покани
+          в приключението.  Помогнете им да се поздравяват помежду си с помощта на
+          два блока за диалог.
+        studio_iceage_move_to_flag: Scrat търси своя жълъд!  Помогнете му да измине
+          последните 200 пиксела като използвате  блок за движение.
+        studio_iceage_move_to_actor: Диего (актьор 1) търси Мани (актьор 2). Помогнете
+          на Диего да измине 200 пиксела надолу към Мани, използвайки блок за движение.
+          Свържете след това блок за звук към "когато актьор докосва" събитието, за
+          да се чуе звук когато те се намерят един друг.
+        studio_iceage_repeat: '"Повтаря завинаги" блока ви позволява да стартирате
+          код непрекъснато. Ще прикачите ли блокове, за да помогнете на Грани да се
+          раздвижи чрез многократно преместване наляво и надясно?'
+        studio_iceage_click_hello: Можете ли да помогнете на Сид да направи покана
+          за приятелите си, когато кликнете върху него? Не забравяйте да кликнете
+          върху него, след като натиснете Старт.
+        studio_iceage_move_events: Scrat все още се търси жълъди! Помогнете му да
+          бяга наоколо чрез поставяне на "блок за движение за всяко от събитията?
+          Променете посоката, за да работи със стрелките от компютъра. Когато сте
+          готови, щракнете върху Старт и се опитайте да съберете всички жълъди.
+        studio_iceage_sound_and_points: Ние сме дали по-голямата част от кода, която
+          помага на Грани да се движи наляво и надясно, както и кода, с който Сид
+          се движи на екрана. Можете ли да довършите кода като добавите блокове към
+          "когато актьор докосва" събитието, за да се чува звуков сигнал и да се дава
+          точка, когато Сид и Грани се сблъскат? Натиснете Старт, за да играете играта.
+        studio_iceage_warn_ice_age: Всички трябва да се движат по-бързо защото идва
+          Ледената епоха! Променете фона на "айсберги" и задайте бърза скорост на
+          Сид. След това натиснете бутона Старт и го преместете до Diego, за да го
+          предупреди.
+        studio_iceage_throw_hearts: Сид иска да каже на Грани, че я обича. Използвайте
+          командата "актьор хвърля", за да може Сид (актьор 1) да хвърли сърца на
+          Грани (актьор 2)! Задайте на Грани щастливо настроение, когато тя получи
+          сърцата.
+        studio_iceage_free_play: Време е да създадете своя собствена игра или история!
+          Когато сте готови, щракнете върху Готово, за да споделите с приятели, за
+          да опитат играта на техните телефони, таблети или компютри!
         studio_gumball_hello1: Анаис иска да си намери нови приятели. Можете ли да
           ѝ помогнете да каже "Здравей"? Плъзнете блок за думи в работната област
           и напишете думата "Здравей" вътре.
         studio_gumball_hello2: Дарвин (актьор 1) и неговия брат Гъмбол (актьор 2)
           отиват на училище.  Помогни им да се поздравяват взаимно с помощта на два
-          "актьор казва" блока.
+          блока за текст.
         studio_gumball_move_to_flag: Банана Джо е на път да спечели състезанието!  Помогнете
           му да измине последните 200 пиксела с използване на блок за движение.
         studio_gumball_move_to_actor: Гъмбол (актьор 1) и Дарвин (актьор 2) са закъснели
@@ -763,6 +765,9 @@
         infinity_playlab_intro: Игрална лаборатория - Въведение
         infinity_playlab_events: Игрална лаборатория - Събития
         infinity_playlab_repeat_forever: Игрална Лаборатория - повторение завинаги
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -821,6 +826,9 @@
         gumball_intro: Гъмбол Hour of Code - Въведение
         gumball_events: Гъмбол Hour of Code - Събития
         gumball_repeat: Гъмбол Hour of Code - повторение на отчети
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

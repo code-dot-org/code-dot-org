@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Как да промотирате Hour of Code в цялата общност.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Свържете се локално.** Посетете [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>), за да научите повече за CsedWeek във вашият щат. Подпишете петицията и вие ще получите актуализации от Code.org за техните местни, държавни и федерални застъпнически усилия.
 
-<%= view :signup_button %>

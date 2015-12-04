@@ -201,7 +201,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeSand":function(d){return "sand"},
 "blockTypeSandstone":function(d){return "sandsten"},
 "blockTypeStone":function(d){return "sten"},
-"blockTypeTnt":function(d){return "tnt"},
+"blockTypeTnt":function(d){return "TNT"},
 "blockTypeTree":function(d){return "træ"},
 "blockTypeWater":function(d){return "vand"},
 "blockTypeWool":function(d){return "uld"},

@@ -490,6 +490,9 @@
         infinity_playlab_intro: 遊戲實驗室-簡介
         infinity_playlab_events: 遊戲實驗室-事件
         infinity_playlab_repeat_forever: 遊戲實驗室-不斷重覆
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -543,6 +546,9 @@
         gumball_intro: 陶阿甘的一小時程式碼 - 簡介
         gumball_events: 陶阿甘的一小時程式碼 - 事件
         gumball_repeat: 陶阿甘的一小時程式碼 - 重複語法
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: 拖住一個"移動"積木，把它黏到其他積木下面

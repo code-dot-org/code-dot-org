@@ -3110,3 +3110,93 @@
           algo continuamente. Aprender sobre o funcionamento dos comandos de repetição
           vai ajudar você a economizar muito tempo no futuro, quando você criar seu
           próprio jogo.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Se você quiser fazer seu próprio jogo, isso é realmente fácil. Tudo
+          o que você precisa são alguns conceitos básicos de programação e você pode
+          começar a jogar o jogo que você criou.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Você tem um jogo favorito? Vamos dar um passo para a criação de jogos
+          como esse no laboratório. Bons jogos têm uma história, e toda história tem
+          personagens. Os personagens fazem coisas como falar, se mover e interagir
+          uns com os outros. Talvez até mesmo marcar pontos com base nas regras do
+          jogo. Hoje, vamos aprender como fazer todas essas coisas, uma a uma, com
+          personagens divertidos e vamos criar um jogo do zero, que pode ser compartilhado
+          e jogado em um celular.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Hoje, vamos aprender a fazer todas essas coisas, uma por uma, com personagens
+          divertidos e vamos criar um jogo do zero, que pode ser compartilhado e jogado
+          em um celular.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: Essa área do meio é a caixa de ferramentas e cada um desses blocos é
+          um trecho de código.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: O espaço em branco à direita é chamado de área de trabalho, e é onde
+          vamos construir nosso programa.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: Nesse primeiro desafio, vamos fazer os personagens dizerem algo conectando
+          o bloco "diga" ao bloco "quando executar" e digitando sua mensagem. Quando
+          você colocar os blocos no lugar, pressione o botão Executar e veja o que
+          programou.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Comece e, quando terminar, você via poder criar seu próprio jogo com
+          todos os tipos de jogadores que podem interagir, marcar pontos, jogar coisas
+          e fazer os outros desaparecerem. Você decide!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: 'Agora, vamos aprender um pouco sobre algo que todos os programadores
+          de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que
+          ele deve ouvir quando algo acontece e, quando essa coisa acontece, ele realiza
+          uma ação.'
+      2:
+        image: notes/iceage_events_2.JPG
+        text: 'Alguns exemplos de eventos são: detectar um clique do mouse, o toque
+          de uma tecla de direção ou um toque na tela.'
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Aqui, vamos fazer seu personagem dizer alguma coisa quando o jogador
+          clicar nele. Vamos usar o bloco "quando clicado" e o bloco "diga" anexado
+          a ele. Quando o jogador clicar, todos os blocos anexados a esse bloco serão
+          executados.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: Há também os blocos "quando a seta estiver pressionada". Se você conectar
+          os blocos "mova" a eles, você pode começar a mover seus personagens para
+          cima, para baixo, para esquerda e para a direita com as setas do teclado.
+          Pouco a pouco, seu jogo está ficando cada vez mais interativo.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Você consegue imaginar se tivesse que repetir algo para todo o sempre?
+          Você provavelmente nunca vai precisar fazer isso, porque os computadores
+          são realmente bons em repetir coisas.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: Esse é o bloco "repita infinitamente". Tudo dentro desse bloco vai acontecer
+          para sempre no jogo. Se queremos que um personagem faça algo repetidamente
+          sem que o jogador faça nada, vamos colocar esses blocos dentro do bloco
+          "repita infinitamente".
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: Nesse próximo desafio, nosso objetivo é ajudar o personagem a realizar
+          algo continuamente. Aprender sobre o funcionamento dos comandos de repetição
+          vai ajudar você a economizar muito tempo no futuro, quando você criar seu
+          próprio jogo.

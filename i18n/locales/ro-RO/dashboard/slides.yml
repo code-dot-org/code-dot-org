@@ -3,22 +3,22 @@ ro:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Bine ai venit la prima ta oră de cod! Hai să pătrundem direct în prima ta încercare de programare.
+        text: Bine ai venit la prima ta oră de programare! Hai să pătrundem direct în prima ta încercare de a programa.
       2:
         image: notes/hoc1_2.jpg
         text: Vom folosi Blockly, un limbaj de programare vizuală, în care muți blocuri cu drag și drop pentru a scrie un cod.
       3:
         image: notes/hoc1_3.jpg
-        text: 'Majoritatea codului e scris cu tastatura, dar Blockly e vizual. Fiecare bloc corespunde unei linii de cod "real".'
+        text: 'Majoritatea codului e scris cu tastatura, dar Blockly e vizual. Fiecare bloc corespunde unei linii de cod "reale".'
       4:
         image: notes/hoc1_4.jpg
         text: 'Vei învăța bazele informaticii, concepte care sunt folosite în orice domeniu de la crearea de aplicații până la controlul roboților trimiși pe Marte. '
       5:
         image: notes/hoc1_5.jpg
-        text: Un program este un set de instrucțiuni pe care calculatorul tău să le urmeze.
+        text: Un program este un set de instrucțiuni pe care calculatorul tău trebuie să le urmeze.
       6:
         image: notes/hoc1_6.jpg
-        text: Scopul primului tău program este să treci o Pasăre Furioasă printr-un labirint care să ajungă să lovească un Porcușor Verde.
+        text: Scopul primului tău program este să treci o Pasăre Furioasă printr-un labirint pentru a ajunge să lovească un Porcușor Verde.
       7:
         image: notes/hoc1_7.jpg
         text: Partea stângă este labirintul în care programul se execută. Instrucțiunile pentru fiecare puzzle se găsesc sub labirint.
@@ -30,7 +30,7 @@ ro:
         text: În dreapta este spațiul tău de lucru unde vei trage blocuri din cutia de instrumente pentru a îți construi programul. Ca să ștergi un bloc trage-l la gunoi în colț.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Fiecare bloc este o instrucție. Dacă tragi un bloc de tip "mută înainte" către spațiul tău de lucru și apeși pe "Execută Programul" pasărea se mută cu un spațiu pe labirint.'
+        text: 'Fiecare bloc este o instrucție. Dacă tragi un bloc de tip "mută înainte" către spațiul tău de lucru și apeși pe "Rulează Programul" pasărea se mută cu un spațiu pe labirint.'
       11:
         image: notes/hoc1_11.jpg
         text: Pentru a face mai multe acţiuni, puteţi trage mai multe blocuri în spaţiul de lucru atașându-le împreună. Pasărea va executa comenzile de sus în jos.
@@ -39,14 +39,14 @@ ro:
         text: 'Dacă rulezi un program și vrei să îl repari pentru ca apoi să-l încerci din nou, apasă pe butonul "Reset".'
       13:
         image: notes/hoc1_13.jpg
-        text: Hai să prindem porcii!
+        text: Hai să prindem acei porci!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
         text: Bună, eu sunt JR! Fiecare echipa de cursă auto are nevoie de informaticieni pentru a câştiga. Ei analizează datele din maşină pentru a o face să meargă mai repede.
       2:
         image: notes/stage5_2.jpg
-        text: În aceste puzzle-uri, vei fi un artist care desenează o linie în spatele lor indiferent unde ei merg.
+        text: În aceste puzzle-uri, vei fi un artist care desenează o linie în spatele lor indiferent unde merg ei.
       3:
         image: notes/stage5_3.jpg
         text: 'Acest bloc spune "mută înainte cu 100 pixeli." Pixelii sunt de fapt doar puncte foarte mici pe ecran.'
@@ -55,7 +55,7 @@ ro:
         text: 'Acest bloc spune "întoarce la dreapta cu 90 de grade." Acesta va roti artistul tău asemenea blocurilor "întoarce" din puzzle-urile de tip labirint.'
       5:
         image: notes/stage5_5.jpg
-        text: Dă clic pe săgeată în oricare din aceste blocuri în așa fel încât să modifici distanța cu care artistul va înainta sau unghiul cu care se va întoarce într-o direcție sau alta.
+        text: Dă clic pe săgeată în oricare din aceste blocuri în așa fel încât să modifici distanța cu care artistul va înainta sau unghiul cu care se va întoarce într-o direcție sau alta. Incearca aceste noi blocuri pentru a te familiariza cu ele.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
@@ -90,7 +90,7 @@ ro:
         text: 'Dacă te uiți la spațiul de lucru, există unele blocuri verzi, care sunt completate pentru tine - acestea sunt "gestionari de eveniment" '
       7:
         image: note/flappy07.jpg
-        text: 'Dacă dorești ca pasăre să ZBOARE când dai clic cu mouse-ul, poţi face asta ataşând blocul "ZBOARĂ" la gestionarul de eveniment corespunzătoare, şi de acum când te joci, ori de câte ori faci clic cu mouse-ul, pasărea va zbura.'
+        text: 'Dacă dorești ca pasăre să ZBOARE când dai clic cu mouse-ul, poţi face asta ataşând blocul "ZBOARĂ" la gestionarul de eveniment corespunzător, şi de acum când te joci, ori de câte ori faci clic cu mouse-ul, pasărea va zbura.'
       8:
         image: note/flappy08.jpg
         text: În fiecare puzzle din cadrul acestei activități vom introduce noi tipuri de evenimente sub forma blocurilor verzi din spațiul de lucru, şi tu poţi alege blocurile adecvate pe care le vei adauga în răspuns la aceste evenimente.
@@ -153,7 +153,7 @@ ro:
         text: 'Acum, dacă punem un bloc "mută înainte" deasupra lui și un bloc "repetă" în jurul tuturor obiectelor, de fiecare dată când un zombie se va mișca, va verifica dacă este o cale către stânga și se va întoarce.  Comanda "repetă" este critică, ca să verifice dacă există o cale alternativă la fiecare pas.'
       6:
         image: notes/hoc4_6.jpg
-        text: 'Afirmațiile de tip dacă sunt foarte importante în informatică. Unul din primele programe pe care le-am scris a fost un joc x și 0, și exista o afirmație de tipul "dacă", care spunea în felul următor programului de execuție : Dacă adversarul este pe cale să câștige, blochează locul care îi va permite să câștige.'
+        text: 'Afirmațiile de tip "Dacă" sunt foarte importante în informatică. Unul din primele programe pe care le-am scris a fost un joc x și 0, și exista o afirmație de tipul "Dacă", care spunea în felul următor programului de execuție: Dacă adversarul este pe cale să câștige, blochează locul care îi va permite să câștige.'
       7:
         image: notes/hoc4_7.jpg
         text: 'Distrează-te folosind blocul "dacă"!'
@@ -853,7 +853,7 @@ ro:
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: Vei crea propriul tau joc de sarituri pe care il vei impartasi cu prietenii tai. Cat de misto!
+        text: Vei crea propriul tau joc de sarituri pe care il vei impartasi cu prietenii tai. Cat de super!
       2:
         image: notes/C3_bounce_2.png
         text: Inainte de a incepe, trebuie sa unim controalele paleta la tastele cu sageti de la tastatura noastra.
@@ -1140,7 +1140,7 @@ ro:
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: Aceasta lectie se numeste compozitia cantecelor cu parametrii. Vom scrie aici cateva cantece. Cateodata refrenul este putin mai diferit decat fiecare data cand il canti. Mai tineti minte Batranul McDonald avea o ferma? Refrenul este cantat diferit pentru fiecare animal. Si in ferma lui avea o vaca, e-i-e-i-o. Mica diferenta din fiacer refren poate fi aratat cu ceva ce noi numim parametrii.
+        text: Aceasta lectie se numeste compozitia cantecelor cu parametrii. Vom scrie aici cateva cantece. Cateodata refrenul este putin mai diferit de fiecare data cand il canti. Mai tineti minte Batranul McDonald avea o ferma? Refrenul este cantat diferit pentru fiecare animal. Si in ferma lui avea o vaca, e-i-e-i-o. Mica diferenta din fiecare refren poate fi aratat cu ceva ce noi numim parametrii.
       2:
         image: notes/C4_unplugged_parameters_2.png
         text: Cateodata o functie are nevoie de un parametru. Un parametru este o pisa de informatie extra pe care o poti pasa catre o functie pe care sa o customizezi pentru o nevoie speciala. Cand faci inghetata cu prietenii tai, folosesti un proces similar parametrilor dintr-un program de computer.
@@ -1545,16 +1545,16 @@ ro:
         text: Ecranul este împărţit în trei părţi principale. In stanga este spatiul de joaca Minecraft unde programul tau va rula. Instructiunile pentru fiecare nivel sunt scrise mai jos.
       7:
         image: notes/mc_intro_7.JPG
-        text: Aceasta zona de mijloc este setul de instrumente şi fiecare dintre aceste blocuri este o comandă care il face pe Alex sa actioneze.
+        text: Aceasta zona de mijloc este setul de instrumente şi fiecare dintre aceste blocuri este o comandă care o face pe Alex sa actioneze.
       8:
         image: notes/mc_intro_8.JPG
         text: Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom construi programul nostru.
       9:
         image: notes/mc_intro_9.JPG
-        text: Daca tragi blocul moveForward(); in spatiul de lucru si dupa aperi run, ce se intampla? Alex se misca in fata cu un spatiu pe retea.
+        text: 'Daca tragi blocul moveForward(); in spatiul de lucru si dupa apesi "Ruleaza", ce se intampla? Alex se misca in fata cu un spatiu pe retea.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "Şi dacă vrem să facem ceva, după ce ea s-a mutat înainte un singur spaţiu? Putem adăuga un alt bloc la programul nostru. Am de gând să aleg blocul intoarce la dreapta(); şi il voi trage sub blocul mergi inainte(); până când apare această linie portocalie. Apoi o voi muta şi cele două blocuri se vor lipi. Atunci când am apăsaţi 'ruleaza' din nou, Alex va efectua comenzile care sunt scrise d ela inceput la sfarsit in spatiul nostru de lucru."
+        text: 'Şi dacă vrem să facem ceva, după ce ea s-a mutat înainte un singur spaţiu? Putem adăuga un alt bloc la programul nostru. Am de gând să aleg blocul intoarce la dreapta(); şi il voi trage sub blocul mergi inainte(); până când apare această linie portocalie. Apoi o voi muta şi cele două blocuri se vor lipi. Atunci când apasa "Ruleaza" din nou, Alex va efectua comenzile care sunt scrise de la inceput la sfarsit in spatiul nostru de lucru.'
       11:
         image: notes/mc_intro_11.JPG
         text: Daca vrei sa stergi un bloc, atunci treage-l din gramada inapoi in setul de instrumente.
@@ -1570,7 +1570,7 @@ ro:
         text: Imi place sa explorez in Minecraft. Imi face sa ma aventurez in pesteri si sa vad ce pot sa gasesc. Ca cineva care nu este programator, sunt foarte entuziasmat ca pot sa merg prin lectia Minecraft si sa aflu sa programez de unul singur.
       3:
         image: notes/mc_repeat_3.JPG
-        text: Acest ultim nivel foloseste multe blocuri de tipul mergi inainte (). Era mai usor daca doar puteam spune computerului sa realizeze comanda mergi inainte (); de 4 sau 5 ori. Din fericire pentru noi, computerele sunt foarte buna la repetarea comenzilor cu bucle.
+        text: Acest ultim nivel foloseste multe blocuri de tipul mergi inainte (). Era mai usor daca doar puteam spune computerului sa realizeze comanda mergi inainte(); de 4 sau 5 ori. Din fericire pentru noi, computerele sunt foarte bune la repetarea comenzilor cu bucle repetitive.
       4:
         image: notes/mc_repeat_4.JPG
         text: Cand consturim in Minecraft, folosim bucle de repetare pentru a plasa materialele initiale pentru a crea o noua lume. Acestea sunt sute si sute de blocuri. De asemenea, folosim buclele in moduri simple, de exemplu pentru a o face pe Alex sa mearga inainte si inapoi. Repetarea buclelor este o parte importanta din programare.
@@ -1579,43 +1579,43 @@ ro:
         text: Noaptea se apropie asa ca in urmatoarele nivele vom construi o casa pentru a sta in siguranta. Vom folosi blocul repeta pentru a face asta foarte repede.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "Pentru a construi un zid pentru casa noastra, ii putem spune lui Alex sa meraga inainte (); si sa plaseze placi de 4 ori sau ii putem spune sa mearga inainte (); si sa puna o placa, apoi sa luam aceasta comanda si sa folosim blocul repeta pentru a o face sa repete aceasta actiune de mai multe ori. Acum vom apasa pe blocul 'repeta' si ii vom spune de cate ori sa faca aceasta actiune. Haideti sa ne construim casa inainte de lasarea serii! Distractie placuta."
+        text: "Pentru a construi un zid pentru casa noastra, ii putem spune lui Alex sa meraga inainte(); si sa plaseze placi de 4 ori sau ii putem spune sa mearga inainte(); si sa puna o placa, apoi sa luam aceasta comanda si sa folosim blocul 'repeta' pentru a o face sa repete aceasta actiune de mai multe ori. Acum vom apasa pe blocul 'repeta' si ii vom spune de cate ori sa faca aceasta actiune. Haideti sa ne construim casa inainte de lasarea serii! Distractie placuta."
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
         text: 'Acum vom invata despre declaratiile de tip "Daca". Acestea reprezinta o parte fundamentala a invatarii programarii. Ele ajuta un calculator sa ia decizii.'
       2:
         image: notes/mc_if_statements_2.JPG
-        text: Toate computerele folosesc conditi daca, chiar si telefonul. De exemplu, cand imi deschid telefonul el apeleaza un cod care zice ca daca introduc parola corecta, imi deschide telefonul. Altfel, imi arata un mesaj de eroare.
+        text: Toate computerele folosesc conditii daca, inclusiv telefonul meu. De exemplu, cand imi deschid telefonul el ruleaza un cod care zice ca daca introduc parola corecta, imi deschide telefonul. Altfel, imi arata un mesaj de eroare.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: 'Puteti folosi declaratiile "daca" in codul tau pentru a-i face pe Steve si Alice sa reactioneze la ceea ce vad in lume. De exemplu, daca este o piatra in fata lor, o poti lua la stanga. Sau la dreapta daca ei intra intr-un copac.'
+        text: 'Puteti folosi declaratiile "daca" in codul tau pentru a-i face pe Steve si Alex sa reactioneze la ceea ce vad in lume. De exemplu, daca este o piatra in fata lor, ei pot sa se intoarca la stanga. Sau sa se intoarca la dreapta daca ei intra intr-un copac.'
       4:
         image: notes/mc_if_statements_4.JPG
         text: In acest caz nu vrem sa cadem in lava. Este usor sa planuiesti pentru lava. Putem sa o vedem pe ecran. Dar ce facem cu lava pe care nu putem sa o vedem sub roci?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "Dupa ce minam piatra, va trebui sa vedem daca este lava in acel loc inainte sa inaintam. Daca este lava acolo, vrem sa pozitionam o piatra in fata personajului inainte sa mergem inainte. Asa, putem inainta in siguranta. E timpul sa lucram in mina in continuare! Si amintiti-va sa folositi declaratia 'daca' pentru a vedea pe unde calcati."
+        text: "Dupa ce minam piatra, va trebui sa vedem daca este lava in acel loc inainte sa inaintam. Daca este lava acolo, vrem sa pozitionam o piatra in fata personajului inainte sa 'mergem inainte'. Asa, putem inainta in siguranta. E timpul sa lucram in mina in continuare! Si amintiti-va sa folositi declaratia 'daca' pentru a vedea pe unde calcati."
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
         text: Felicitari! Tocmai ai invatat bazele programarii cu blocuri.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Acum poti sa folosesti aceste blocuri ca sa construiesti proprile creati. Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti ce vrei. Poti sa alegi.
+        text: Acum poti sa folosesti aceste blocuri ca sa-ti construiesti propriile creatii. Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti ce vrei. Poti sa alegi.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: Suntem pe cale sa devenim seriosi. Foarte. Am facut un L din torte. Am facut un A din scanduri de mesteacan. A functionat, a functionat. Am facut o casa din lana!
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: Cand ai terminat sa-ti faci creatia, apasa share ca sa primesti link-ul ca sa sharuesti cu priteni tai. Distreaza-te!
+        text: Cand ai terminat sa-ti faci creatia, apasa share ca sa primesti link-ul ca sa distribui si prietenilor tai. Distreaza-te!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
         text: Felicitari! Tocmai ai invatat bazele programarii cu blocuri.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Acum poti sa folosesti aceste blocuri ca sa construiesti proprile creati. Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti ce vrei. Poti sa alegi.
+        text: Acum poti sa folosesti aceste blocuri ca sa-ti construiesti propriile creatii. Nu mai sunt nici intructiuni nici puzzeluri de rezolvat. Poti sa construiesti ce vrei. Poti sa alegi.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: Suntem pe cale sa devenim seriosi. Foarte. Am facut un L din torte. Am facut un A din scanduri de mesteacan. A functionat, a functionat. Am facut o casa din lana!
@@ -1673,3 +1673,56 @@ ro:
       3:
         image: notes/gumball_repeat_3.JPG
         text: In puzzle-ul urmator, telul nostru este sa ajutam personajul sa faca o treaba constant. Invatand cum functioneaza comenzile de repetare, vei salva mult timp atunci cand iti vei construi propriul joc.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
