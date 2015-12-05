@@ -193,12 +193,13 @@ Artist.prototype.init = function(config) {
     this.avatarHeight = 51;
   }
 
+  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
