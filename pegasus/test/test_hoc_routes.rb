@@ -152,19 +152,7 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
-    it 'always records hoc_activity for cartoon network' do
-      DB.transaction(rollback: :always) do
-        DCDO.set('hoc_activity_sample_proportion', 0)  # Pretend we're otherwise not sampling at all.
-        Kernel.stubs(:rand).returns(0.9)
-        assert_redirects_from_to '/api/hour/begin/gumball?company=CN&lang=ar', '/s/gumball/reset'
-        row = get_session_hoc_activity_entry
-        refute_nil row
-        assert_equal row[:company], CARTOON_NETWORK
-        assert_in_delta 1.0, get_sampling_weight(row)
-      end
-    end
-
-    it 'does not write at start of sessions not in sample' do
+    it 'does not write after start of sessions not in sample' do
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 2)
         Kernel.stubs(:rand).returns(0.75)  # Pretend that the session is not in the sample.
