@@ -126,8 +126,6 @@ Craft.init = function (config) {
     config.level.customSlowMotion = 0.1;
   }
 
-  config.level.disableFinalStageMessage = true;
-
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function() {
     return document.documentMode;
@@ -286,12 +284,6 @@ Craft.init = function (config) {
 
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
-      }
-
-      if (studioApp.hideSource) {
-        // Set visualizationColumn width in share mode so it can be centered
-        var visualizationColumn = document.getElementById('visualizationColumn');
-        visualizationColumn.style.width = this.nativeVizWidth + 'px';
       }
     },
     twitter: {
