@@ -130,14 +130,14 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
-    it 'respects sample proportion and records weight for sessions in sample' do
+    it 'respects sample weight and records weight for sessions in sample' do
       DB.transaction(rollback: :always) do
-        DCDO.set('hoc_activity_sample_proportion', 1 / 100.0)  # Sample 1/100 of the sessions.
+        DCDO.set('hoc_activity_sample_weight', 100)  # Sample 1/100 of the sessions.
         Kernel.stubs(:rand).returns(1 / 1000.0)  # Pretend that the session is in the sample.
         assert_redirects_from_to '/api/hour/begin/mc', '/mc'
         row = get_session_hoc_activity_entry
         session = row[:session]
-        assert_in_delta 100.0, get_sampling_weight(row)
+        assert_equal 100, get_sampling_weight(row)
 
         Kernel.stubs(:rand).returns(0.6)  # Once in the sample we should stay in the sample.
         before_ended_time = now_in_sequel_datetime
@@ -154,7 +154,7 @@ class HocRoutesTest < Minitest::Test
 
     it 'does not write after start of sessions not in sample' do
       DB.transaction(rollback: :always) do
-        DCDO.set('hoc_activity_sample_proportion', 0.5)
+        DCDO.set('hoc_activity_sample_weight', 2)
         Kernel.stubs(:rand).returns(0.75)  # Pretend that the session is not in the sample.
         assert_redirects_from_to '/api/hour/begin/mc', '/mc'
 
@@ -167,35 +167,60 @@ class HocRoutesTest < Minitest::Test
         # they complete the course so that certificate generation works.
         assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
         after_end_row = get_session_hoc_activity_entry
-        assert_in_delta 1.0, get_sampling_weight(after_end_row)
+        assert_equal 0, get_sampling_weight(after_end_row)
+      end
+    end
+
+    it 'handles 0 sampling weight correctly' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_weight', 0)
+        Kernel.stubs(:rand).returns(0.1)
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+
+        row = get_session_hoc_activity_entry
+        assert_nil row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+      end
+    end
+
+    it 'handles negative sampling weight correctly' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_weight', -1)
+        Kernel.stubs(:rand).returns(0.1)
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+
+        row = get_session_hoc_activity_entry
+        assert_nil row
+        assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
       end
     end
 
     it 'records weight for tracking pixel in sample' do
       DB.transaction(rollback: :always) do
-        DCDO.set('hoc_activity_sample_proportion', 0.5)
+        DCDO.set('hoc_activity_sample_weight', 2)
         Kernel.stubs(:rand).returns(0.49)
         assert_successful_png_get '/api/hour/begin_mc.png'
         row = get_session_hoc_activity_entry
         session = row[:session]
-        assert_in_delta 2.0, get_sampling_weight(row)
+        assert_equal 2, get_sampling_weight(row)
 
         assert_successful_png_get '/api/hour/finish_mc.png'
         after_end_row = get_session_hoc_activity_entry
         assert_equal session, after_end_row[:session]
-        assert_in_delta 2.0, get_sampling_weight(row)
+        assert_equal 2, get_sampling_weight(row)
       end
     end
 
     it 'does not write for start or end tracking pixel for session not in sample' do
       DB.transaction(rollback: :always) do
-        DCDO.set('hoc_activity_sample_proportion', 0.5)
+        DCDO.set('hoc_activity_sample_weight', 2)
         Kernel.stubs(:rand).returns(0.51)
         assert_successful_png_get '/api/hour/begin_mc.png'
         row = get_session_hoc_activity_entry
         assert_nil row
         assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
 
+        # Should remain unsampled regardless of subsequent random nubmers generated.
         Kernel.stubs(:rand).returns(0.0)
         assert_successful_png_get '/api/hour/finish_mc.png'
         after_end_row = get_session_hoc_activity_entry
@@ -209,9 +234,9 @@ class HocRoutesTest < Minitest::Test
     # Extracts the sampling weight from a hoc_activity row. We would like to add
     # a separate column for maintaining this but this is too expensive/risky before
     # Hour of Code 2015, so it is current embedded in the session id. For example,
-    # _2.0_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.0.
+    # _2_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.
     def get_sampling_weight(row)
-      row[:session].split('_')[1].to_f
+      row[:session].split('_')[1].to_i
     end
 
     def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)

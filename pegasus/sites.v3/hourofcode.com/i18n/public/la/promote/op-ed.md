@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### A continuación encuentras una muestra de artículo de opinión apoyando la semana de la educación en ciencias de la computación y sus objetivos que puede ser usada por legisladores locales y estatales, líderes empresariales, etc.
 
@@ -47,4 +46,3 @@ De acuerdo a la oficina de estadísticas laborales, para el año 2020 habrán 9.
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. En escuelas en todo **[ESTADO]**, nuestros estudiantes participarán en una Hora de Programación a nivel nacional, desmitificando el tema de las ciencias de la computación y esperamos que despertando su apetito para seguir y aprender más. Yo me uniré a ellos, y los invito a unirse también. Todos deberíamos aprender a programar. Visit https://hourofcode.com/<%= @country %> to learn more and get started. Y apoya nuestros esfuerzos para llevar las ciencias de la computación a más escuelas en **[STATE]**.
 
-<%= view :signup_button %>

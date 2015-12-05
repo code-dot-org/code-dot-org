@@ -4,7 +4,6 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 ## Inspire students and volunteer for the Hour of Code
@@ -23,8 +22,7 @@ nav: how_to_nav
 
 ## How to host an Hour of Code event
 
-## 1) Sign up
-- Register your [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %> event.
+## 1) Promote your Hour of Code
 - Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
 - Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 
@@ -130,5 +128,3 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## What comes after the Hour of Code?
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-
-<%= view :signup_button %>

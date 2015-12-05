@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## چگونه توجه رسانه‌ها را به رويداد ساعت كدنويسي خود جلب كنيد
 
@@ -62,4 +61,3 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

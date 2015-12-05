@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Δώρα - όροι και προϋποθέσεις
 
@@ -32,4 +31,3 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 
 <% end %>
 
-<%= view :signup_button %>

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Contoh siaran pers untuk pejabat terpilih
 
@@ -49,4 +48,3 @@ Untuk informasi lebih lanjut tentang [**EVENT/PROGRAM/ETC**], kunjungi [**Masukk
   
 
 
-<%= view :signup_button %>

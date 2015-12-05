@@ -4,13 +4,11 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
 # How to teach one Hour of Code in after-school
 
-## 1) Sign up
-- Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-- Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+## 1) Promote your Hour of Code
+Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -133,4 +131,3 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 - Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 - [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
