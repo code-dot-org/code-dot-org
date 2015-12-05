@@ -35,6 +35,12 @@ class HttpCache
       pegasus: {
         behaviors: [
           {
+            path: '/500.html',
+            headers: [],
+            cookies: 'none',
+            proxy: 'error'
+          },
+          {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
