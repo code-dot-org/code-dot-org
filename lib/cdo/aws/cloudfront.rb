@@ -157,7 +157,7 @@ module AWS
             },
             {
               id: 'error', # required
-              domain_name: 'cdo-error.s3-website-us-east-1.amazonaws.com', # required
+              domain_name: 'cdo-error.s3.amazonaws.com', # required
               origin_path: '',
               s3_origin_config: {
                 origin_access_identity: '', # required
@@ -185,7 +185,7 @@ module AWS
           end + redirect_error_codes.map do |error|
             {
               error_code: error,
-              response_code: '',
+              response_code: '200',
               response_page_path: '/500.html',
               error_caching_min_ttl: 0
             }
