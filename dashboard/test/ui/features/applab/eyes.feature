@@ -50,6 +50,16 @@ Scenario: Text area with multiple lines, radio button, checkbox
   Then I see no difference for "text area in upper left"
   Then I delete the current design mode element
 
+  Then I drag a TEXT_AREA into the app
+  And I press keys "This is a bunch of text" for element "#design-properties textarea"
+  And I press enter key
+  And I press enter key
+  And I press keys "Here is more text on a new line"
+  And I set input "xpos" to "0"
+  And I set input "ypos" to "0"
+  Then I see no difference for "text area in upper left"
+  Then I delete the current design mode element
+
   Then I drag a RADIO_BUTTON into the app
   And I set groupable input "xpos" to "0"
   And I set groupable input "ypos" to "0"
