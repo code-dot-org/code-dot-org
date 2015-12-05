@@ -36,6 +36,9 @@
     (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
 .field
+  = f.label :background, 'Starting background'
+  = f.select :background, options_for_select(@level.class.background_options, @level.background), {include_blank: true}
+.field
   = f.label :edge_collisions, 'Edge collisions'
   = boolean_check_box f, :edge_collisions
 .field
@@ -47,6 +50,38 @@
 .field
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
+.field
+  = f.label :wall_map_collisions, 'Enable walls'
+  = boolean_check_box f, :wall_map_collisions
+.field
+  = f.label :block_moving_into_walls, 'Prevent actors from moving into walls'
+  = boolean_check_box f, :block_moving_into_walls
+.field
+  = f.label :wall_map, 'Start with pre-built wall map'
+  %p Used to tell playlab we want to start with one of the pre-built wall maps (skin dependent).
+  = f.select :wall_map, options_for_select(@level.class.wall_map_options, @level.wall_map), {include_blank: true}
+.field
+  = f.label :sort_draw_order, 'Sort the draw order of sprites, items, and tiles so top to bottom is back to front'
+  = boolean_check_box f, :sort_draw_order
+
+-#    Fields to be added:
+-#
+-#    grid_aligned_movement
+-#    item_grid_aligned_movement
+-#    remove_items_when_actor_collides
+-#    slow_execution_factor
+-#    marker_height
+-#    marker_width
+-#    delay_completion
+-#    floating_score
+-#    goal_override
+-#    auto_arrow_steer
+-#    tap_svg_to_run_and_reset
+-#    msg_string_overrides
+-#    music
+-#    play_start_sound
+-#    show_timeout_rect
+-#    progress_conditions
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {

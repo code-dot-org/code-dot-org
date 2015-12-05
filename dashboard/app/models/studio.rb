@@ -43,16 +43,24 @@ class Studio < Grid
     code_functions
     sort_draw_order
     wall_map_collisions
+    wall_map
     block_moving_into_walls
     grid_aligned_movement
     item_grid_aligned_movement
     remove_items_when_actor_collides
-    slow_js_execution_factor
+    slow_execution_factor
     marker_height
     marker_width
     delay_completion
     floating_score
     goal_override
+    auto_arrow_steer
+    tap_svg_to_run_and_reset
+    msg_string_overrides
+    music
+    play_start_sound
+    show_timeout_rect
+    progress_conditions
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -63,7 +71,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio', 'infinity', 'hoc2015']
+    ['studio', 'infinity', 'hoc2015', 'hoc2015x', 'gumball', 'iceage']
   end
 
   def self.default_success_condition
@@ -76,6 +84,61 @@ class Studio < Grid
           // return Studio.tickCount > 50;
         }
     JS
+  end
+
+  def self.wall_map_options
+    [
+      ['Use custom map (default)', 'default'],
+      ['Blank', 'blank'],
+      ['Blobs (hoc2015 only)', 'blobs'],
+      ['Horizontal (hoc2015 only)', 'horizontal'],
+      ['Grid (hoc2015 only)', 'grid'],
+      ['Circle (hoc2015 only)', 'circle']
+    ]
+  end
+
+  def self.background_options
+    [
+      ['Hardcourt (studio only)', 'hardcourt'],
+      ['Black (studio only)', 'black'],
+      ['Cave (studio only)', 'cave'],
+      ['Night (studio only)', 'night'],
+      ['Cloudy (studio only)', 'cloudy'],
+      ['Underwater (studio only)', 'underwater'],
+      ['City (studio only)', 'city'],
+      ['Desert (studio only)', 'desert'],
+      ['Rainbow (studio only)', 'rainbow'],
+      ['Soccer (studio only)', 'soccer'],
+      ['Tennis (studio only)', 'tennis'],
+      ['Winter (studio only)', 'winter'],
+      ['Grid (studio only)', 'grid'],
+      ['Space (studio, gumball only)', 'space'],
+      ['Characters (gumball only)', 'characters'],
+      ['Checkers (gumball only)', 'checkers'],
+      ['Clouds (gumball only)', 'clouds'],
+      ['Cornered (gumball only)', 'cornered'],
+      ['Dots (gumball only)', 'dots'],
+      ['Graffiti (gumball only)', 'graffiti'],
+      ['Squares (gumball only)', 'squares'],
+      ['Stripes (gumball only)', 'stripes'],
+      ['Wood (gumball only)', 'wood'],
+      ['Icy 1 (iceage only)', 'icy1'],
+      ['Icy 2 (iceage only)', 'icy2'],
+      ['Icy 3 (iceage only)', 'icy3'],
+      ['Icy 4 (iceage only)', 'icy4'],
+      ['Icy 5 (iceage only)', 'icy5'],
+      ['Ground (iceage only)', 'ground'],
+      ['Main (hoc2015x only)', 'main'],
+      ['Hoth (hoc2015 only)', 'hoth'],
+      ['Endor (hoc2015 only)', 'endor'],
+      ['Starship (hoc2015 only)', 'starship'],
+      ['Circle (hoc2015 only)', 'circle'],
+      ['Leafy (infinity only)', 'leafy'],
+      ['Grassy (infinity only)', 'grassy'],
+      ['Flower (infinity only)', 'flower'],
+      ['Tile (infinity only)', 'tile'],
+      ['Icy (infinity only)', 'icy']
+    ]
   end
 
   def self.default_failure_condition
