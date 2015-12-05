@@ -1,5 +1,4 @@
 require 'cdo/user_helpers'
-require 'cdo/script_constants'
 require_relative '../helper_modules/dashboard'
 
 # TODO -- change the APIs below to check logged in user instead of passing in a user id
@@ -186,15 +185,7 @@ class DashboardSection
            where("hidden = 0").
            select(:id, :name).
            all.
-           map do |course|
-             name = course[:name]
-             if name == ScriptConstants::MINECRAFT_NAME
-               name = ScriptConstants::MINECRAFT_TEACHER_DASHBOARD_NAME
-             elsif name == ScriptConstants::HOC_NAME
-               name = ScriptConstants::HOC_TEACHER_DASHBOARD_NAME
-             end
-             [course[:id], name]
-           end
+           map { |c| [c[:id], c[:name]]}
         ]
   end
 
