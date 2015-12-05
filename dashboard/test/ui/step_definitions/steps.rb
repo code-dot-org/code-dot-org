@@ -584,6 +584,10 @@ When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
 end
 
+When /^I press enter key$/ do
+  @browser.action.send_keys(:return).perform
+end
+
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end
