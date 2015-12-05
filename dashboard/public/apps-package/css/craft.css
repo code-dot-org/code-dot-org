@@ -1249,10 +1249,10 @@ body {
 #bubble {
   background-color: transparent !important; }
 
-.small-footer-base {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #4E4E4E;
   color: #969292; }
-  .small-footer-base a:hover {
+  .small-footer-base a:hover, #copyright-flyout a:hover, #more-menu a:hover {
     color: white; }
 
 #codeApp {
