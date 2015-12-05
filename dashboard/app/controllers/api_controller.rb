@@ -85,12 +85,12 @@ class ApiController < ApplicationController
       level_source = last_activity.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)
+      response[:disableSocialShare] = current_user && current_user.under_13?
       if last_activity
         response[:lastAttempt] = {
           timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
-        response[:disableSocialShare] = current_user && current_user.under_13?
       end
     end
     render json: response
