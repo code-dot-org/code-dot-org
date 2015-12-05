@@ -242,7 +242,6 @@ html, body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
-  position: relative;
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
@@ -2110,23 +2109,5 @@ $width: 400px;
   }
   #visualizationEditorHeader.responsive {
     margin-left: $width;
-  }
-}
-
-div#tryHoc {
-  font-size: 20px;
-  padding: 10px 15px;
-  text-align: right;
-  margin:0;
-  right: 0;
-  a {
-    color: #999;
-  }
-  a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  img#hocLogo {
-    width:40px;
   }
 }

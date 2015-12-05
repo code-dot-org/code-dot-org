@@ -285,12 +285,6 @@ Craft.init = function (config) {
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
       }
-
-      if (studioApp.hideSource) {
-        // Set visualizationColumn width in share mode so it can be centered
-        var visualizationColumn = document.getElementById('visualizationColumn');
-        visualizationColumn.style.width = this.nativeVizWidth + 'px';
-      }
     },
     twitter: {
       text: "Share on Twitter",
