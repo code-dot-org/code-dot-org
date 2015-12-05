@@ -62,12 +62,12 @@ module AWS
     def self.sort_config!(config)
       config[:cache_behaviors][:items].sort_by!{|item| item[:path_pattern]}
       config[:cache_behaviors][:items].each do |item|
-        item[:forwarded_values][:headers][:items].sort!
+        item[:forwarded_values][:headers][:items].sort! if item[:forwarded_values][:headers][:items]
         name = item[:forwarded_values][:cookies][:whitelisted_names]
         name[:items].sort! if name
       end
       config[:aliases][:items].sort!
-      config[:origins][:items].sort!
+      config[:origins][:items].sort_by!{|o| o[:id]}
       config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
     end
 
@@ -143,7 +143,7 @@ module AWS
         },
         default_root_object: '',
         origins: {# required
-          quantity: 1, # required
+          quantity: 2, # required
           items: [
             {
               id: 'cdo', # required
@@ -155,6 +155,14 @@ module AWS
                 origin_protocol_policy: 'match-viewer', # required, accepts http-only, match-viewer
               },
             },
+            {
+              id: 'error', # required
+              domain_name: 'cdo-error.s3-website-us-east-1.amazonaws.com', # required
+              origin_path: '',
+              s3_origin_config: {
+                origin_access_identity: '', # required
+              }
+            }
           ],
         },
         default_cache_behavior: cache_behavior(config[:default]),
@@ -165,11 +173,20 @@ module AWS
         custom_error_responses: {}.tap do |hash|
           # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
           error_codes = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504]
-          hash[:items] = error_codes.map do |error|
+          # These codes instead respond with a static 500 page
+          redirect_error_codes = [502, 503, 504]
+          hash[:items] = (error_codes - redirect_error_codes).map do |error|
             {
               error_code: error,
               response_code: '',
               response_page_path: '',
+              error_caching_min_ttl: 0
+            }
+          end + redirect_error_codes.map do |error|
+            {
+              error_code: error,
+              response_code: '',
+              response_page_path: '/500.html',
               error_caching_min_ttl: 0
             }
           end
@@ -210,10 +227,13 @@ module AWS
     # Syntax reference: http://docs.aws.amazon.com/sdkforruby/api/Aws/CloudFront/Types/CacheBehavior.html
     # `behavior_config` contains `headers` and `cookies` whitelists.
     def self.cache_behavior(behavior_config, path=nil)
+      is_error = behavior_config[:proxy] == 'error'
       # Always explicitly include Host header in CloudFront's cache key, to match Varnish defaults.
-      headers = behavior_config[:headers] + ['Host']
+      headers = behavior_config[:headers]
+      # Don't include the original Host for s3 origin.
+      headers += ['Host'] unless is_error
       behavior = {# required
-        target_origin_id: 'cdo', # required
+        target_origin_id: is_error ? 'error' : 'cdo', # required
         forwarded_values: {# required
           query_string: true, # required
           cookies:

@@ -183,6 +183,8 @@ end
 # 'pegasus' or 'dashboard' are the only supported values.
 def process_proxy(behavior, app)
   proxy = (behavior[:proxy] || app).to_s
+  # TODO implement full 'proxy' support for cloudfront+varnish
+  proxy = app.to_s if proxy == 'error'
   unless %w(pegasus dashboard).include? proxy
     raise ArgumentError.new("Invalid proxy: #{proxy}")
   end

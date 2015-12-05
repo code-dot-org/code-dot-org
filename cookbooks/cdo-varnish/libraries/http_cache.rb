@@ -93,6 +93,12 @@ class HttpCache
       dashboard: {
         behaviors: [
           {
+            path: '/500.html',
+            headers: [],
+            cookies: 'none',
+            proxy: 'error'
+          },
+          {
             path: '/v3/assets/*',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
