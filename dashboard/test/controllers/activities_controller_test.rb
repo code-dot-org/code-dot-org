@@ -955,12 +955,27 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    Gatekeeper.set('sharingEnabled', where: {script_name: @script.name}, value: false)
+    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
 
-    response = post :milestone, @milestone_params
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
 
     assert_nil response['share_failure']
     assert_nil response['level_source']
+  end
+
+  test 'sharing when gatekeeper has disabled sharing for some other script still works' do
+    Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
+
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
+
+    assert_nil response['share_failure']
+    assert response['level_source'].match(/^http:\/\/test.host\/c\//)
   end
 
   test 'milestone changes to next stage in default script' do
