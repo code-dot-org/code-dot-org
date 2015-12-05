@@ -147,9 +147,6 @@ Solve puzzles, create games, and learn coding all on your phone.
 [Bitsbox](https://bitsbox.com/hoc)  
 **Middle school. Moder web browsers.** Build your own apps that run on real phones and tablets.
 
-[Codarica Inc.](http://dev.codarica.com/)  
-**Elementary. Web-based.** Program your own sidescroller game using a block based command system.
-
 [Vizwik Voter App](http://www.vizwik.com/hoc)  
 **Ages 13-18. Programming, App building.** Learn how to build your own mobile app (iOS and Android) to share with friends to vote on a question that is important to you.
 

@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to organize an Hour of Code event
 
@@ -59,4 +58,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:40 - 11:00 am | Nemendur sýna dæmi um verkefni án tölvu og hvernig hægt er að kenna tölvunarfræði án þess að nota tölvur.                                       |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
 
-<%= view :signup_button %>

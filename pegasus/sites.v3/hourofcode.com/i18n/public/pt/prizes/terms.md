@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Prêmios - termos e condições
 
@@ -40,4 +39,3 @@ Prêmio limitado para turmas do ensino fundamental e médio dos EUA e Canadá. A
 
 <% end %>
 
-<%= view :signup_button %>
