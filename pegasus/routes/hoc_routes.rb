@@ -25,16 +25,8 @@ get '/api/hour/begin/:code' do |code|
 
   # set company to nil if not a valid company
   company = request.GET['company']
-  # Pass through the company param to the congrats page only if an entry exists in the forms,
-  # or for the special case of cartoon network, where we need the company to add a customized link.
-  unless company.nil? || company == CARTOON_NETWORK
+  unless company.nil?
     company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
-  end
-
-  # The lang parameter is used only by the cartoon network integration.
-  lang = request.GET['lang']
-  if company == CARTOON_NETWORK && lang == 'ar'
-    response.set_cookie('language_', {value: lang, domain: ".code.org", path: '/', expires: Time.now + (365*24*3600)})
   end
 
   launch_tutorial(tutorial, company: company)
