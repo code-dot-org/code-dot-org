@@ -26,17 +26,17 @@
 
   .clear
 
-  - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
-    - if current_user
-      #user_hero
-        = render template: 'api/user_hero'
+  - if current_user
+    #user_hero
+      = render template: 'api/user_hero'
+    - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
       - current_user.unadvertised_user_scripts.each_slice(2) do |course_pair|
         .row
           - course_pair.each do |user_script|
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
 
-    - else # no logged in user
-      = render partial: 'home/sign_in_buttons'
+  - else # no logged in user
+    = render partial: 'home/sign_in_buttons'
 
   = render partial: 'home/all_courses'
 
