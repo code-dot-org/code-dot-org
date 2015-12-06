@@ -1,0 +1,25 @@
+-check_language ||= nil
+-international_layout ||= nil
+-subheading ||= nil
+-company = request.GET['company']
+
+-items = tutorials.find_with_tag(tag)
+
+-if items.count > 0
+
+  %div{style: "clear:both"}
+
+  %h2{style: "clear:both; margin-top: 40px"}=heading
+
+  -count = 0
+  -items.each_pair do |key, tutorial|
+    -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
+    -url = tutorials.launch_url_for(key,request.host_with_port)
+    -url = url + "?company=#{company}" if company
+    -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
+    -styling = ""  # "display:none" unless count == 0
+
+    %div{style: "float:left; width: 33%"}
+      %a{href: tutorial[:url], target: "_blank"}
+        %h3{style: "font-size: 18px;"}= tutorial[:name]
+        %img{:src=>tutorial[:image].sub("/images/", "/images/fill-520x391/").sub(".png", ".jpg"), style: "width: 90%"}

@@ -1,0 +1,76 @@
+---
+layout: none
+theme: none
+title: Hour of Code 2015
+---
+
+:css
+  h4 {
+    margin-bottom: 5px;
+    padding-top:40px;
+  }
+
+  h2 {
+    padding-top:30px;
+  }
+
+  h3 {
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+- tutorials = Tutorials.new(:tutorials)
+
+%a{href: "/mcstatic"}
+  %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
+%a{href: "/starwarsstatic"}
+  %img.banner{id: "banner-starwars", src: "/images/starwars_banner.jpg", style: "display: none;"}
+
+%img{src: "/images/logo.png", style: "float:left"}
+%h1{style: "float:left; padding-left:50px"} The Hour of Code 2015
+
+%div{style: "clear:both"}
+
+- code_tutorials = []
+- code_tutorials << {id:"starwars", url: "http://code.org/starwars"}
+- code_tutorials << {id:"mc", url: "http://code.org/mc"}
+- code_tutorials << {id:"frozen", url: "http://code.org/notsure"}
+- code_tutorials << {id:"hourofcode", url: "http://code.org/notsure"}
+- code_tutorials << {id:"flappy", url: "http://code.org/notsure"}
+- code_tutorials << {id:"infinity", url: "http://code.org/notsure"}
+- code_tutorials << {id:"playlab", url: "http://code.org/notsure"}
+- code_tutorials << {id:"artist", url: "http://code.org/notsure"}
+
+- code_tutorials.each do |tutorial|
+  %div{style: "float:left; width: 33%"}
+    %a{href: tutorial[:url], target: "_blank"}
+      %h3{style: "font-size: 18px; width: 90%"}= I18n.t(:"#{tutorial[:id]}_name")
+      %img{src: "/shared/images/courses/logo_tall_#{tutorial[:id]}.jpg", style: "width: 90%;"}
+
+
+
+- learn_categories = []
+- learn_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}
+- learn_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}
+- learn_categories << {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}
+- learn_categories << {tag:"Apps", name: I18n.t(:carousel_heading_devices)}
+- learn_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}
+- learn_categories << {tag:"Teacherled", name: I18n.t(:teach_led_lesson_plans)}
+
+#all-tutorials{:style=>'clear:both;'}
+  %br/
+  - learn_categories.each do |category|
+    - id = "collection-" + category[:tag]
+    = view :learn_carousel_static, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+
+
+#carousel-ie8{:style=>'clear:both'}
+  = view :learn_carousel_static, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
+
+#carousel-mobile{:style=>'clear:both'}
+  = view :learn_carousel_static, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile', :check_language=>true
+
+#carousel-international{:style=>'clear:both'}
+  = view :learn_carousel_static, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
