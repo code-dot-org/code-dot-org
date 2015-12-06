@@ -1,8 +1,5 @@
 - if current_user
   - role_class = current_user.user_type
-  - script = current_user.primary_script
-  - if script
-    - script_level = current_user.next_unpassed_progression_level(script)
 
   #contents
     #welcome{class: role_class}
@@ -11,23 +8,27 @@
         = link_to teacher_dashboard_url do
           %button.primary{class: 'teacherdashboard', style: "margin-left: 20px;"}= t('teacher.students.dashboard')
 
-    #body{class: role_class}
-      - if current_user.primary_script && script_level
-        #currentprogress
-          = t("data.script.name.#{current_user.primary_script.name}.title")
-          %br
-          .smalltext= script_level.stage.localized_title
-        #coursebuttons
-          = link_to build_script_level_url(script_level) do
-            %button.primary= t('continue')
-          = link_to script_url(current_user.primary_script) do
-            %button.primary= t('home.view_course')
-      - elsif current_user.all_advertised_scripts_completed?
-        #suggestcourse.smalltext!= t('home.student_finished', online_link: link_to(t('home.online'), 'http://code.org/learn/beyond'), local_school_link: link_to(t('home.local_school'), 'http://code.org/learn/local'))
-      - else
-        - if current_page?(root_url)  # Already at studio.code.org
-          #suggestcourse.smalltext= t('home.choose_next_course')
+    - if Gatekeeper.allows('logged_in_studio_hero', default: true)
+      #body{class: role_class}
+        - script = current_user.primary_script
+        - if script
+          - script_level = current_user.next_unpassed_progression_level(script)
+        - if script && script_level
+          #currentprogress
+            = t("data.script.name.#{current_user.primary_script.name}.title")
+            %br
+            .smalltext= script_level.stage.localized_title
+          #coursebuttons
+            = link_to build_script_level_url(script_level) do
+              %button.primary= t('continue')
+            = link_to script_url(current_user.primary_script) do
+              %button.primary= t('home.view_course')
+        - elsif current_user.all_advertised_scripts_completed?
+          #suggestcourse.smalltext!= t('home.student_finished', online_link: link_to(t('home.online'), 'http://code.org/learn/beyond'), local_school_link: link_to(t('home.local_school'), 'http://code.org/learn/local'))
         - else
-          #suggestcourse.smalltext= link_to t('home.no_primary_course'), root_url
+          - if current_page?(root_url)  # Already at studio.code.org
+            #suggestcourse.smalltext= t('home.choose_next_course')
+          - else
+            #suggestcourse.smalltext= link_to t('home.no_primary_course'), root_url
 
   #clearboth{ style: 'clear:both;' }
