@@ -3656,8 +3656,8 @@ ps:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -4891,14 +4891,37 @@ ps:
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -4908,8 +4931,8 @@ ps:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "

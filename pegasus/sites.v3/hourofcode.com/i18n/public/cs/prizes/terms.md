@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Podmínky cen
 
@@ -40,4 +39,3 @@ Cena pouze pro K-12 třídy v Usa a Kanada. Code.org vybere výherní třídy, p
 
 <% end %>
 
-<%= view :signup_button %>

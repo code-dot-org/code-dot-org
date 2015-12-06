@@ -293,7 +293,7 @@ id-ID:
   starwars_javascript_start_button: Coba sekarang
   starwars_blocks_title: Blok
   starwars_blocks_description: Gunakan blok drag-drop.
-  starwars_blocks_specs: Berbagai bahasa (akan segera datang) | Browser modern, smartphone, tablet | Usia 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Pelajari lebih banyak
   starwars_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif ini
   starwars_speak_languages: Berbicara dengan bahasa lain?
@@ -304,7 +304,7 @@ id-ID:
   mc_shortdescription: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
-  mc_specs: Berbagai bahasa (akan segera datang) | Browser modern dan tablet | Usia 6 +
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspirasi siswa dan relawan untuk Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh bantuan Anda! '
@@ -549,6 +549,7 @@ id-ID:
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
   dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi yang sangat jauh.'
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Hour of Code hadir disini - 8-14 Desember!'
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -605,8 +606,8 @@ id-ID:
   mobile_devices: Pedoman untuk ponsel
   frozen_name: Koding dengan Anna dan Elsa
   starwars_name: 'Star Wars: Dirikan sebuah galaksi dengan Code'
-  codeorg_name: Tulis program komputer pertama anda
-  codeintl_name: Tulis program komputer pertama anda
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Pengenalan JavaScript
   khanes_name: Pengenalan JavaScript
@@ -642,10 +643,17 @@ id-ID:
   thinkersmith2_name: Baubles biner
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Batu, kertas, gunting
-  hourofcode_name: Tulis program komputer pertama anda
+  hourofcode_name: Classic Maze
   playlab_name: Play Lab/Lab Permainan
   infinity_name: Play Lab tak tebatas
   artist_name: Artis
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Guru Dipimpin oleh rencana pembelajaran Hour of Code
   codeorg_gradelevel: Usia 4-104
   codeintl_gradelevel: Usia 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -689,6 +697,13 @@ id-ID:
   playlab_gradelevel: Usia 4-104
   infinity_gradelevel: Usia 4-104
   artist_gradelevel: Usia 4-104
+  monstercoding_gradelevel: Usia 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Sekolah Dasar
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
   thinkersmithspanish_platformtext: Dicabut
@@ -730,6 +745,13 @@ id-ID:
   frozen_platformtext: Browser modern + tablet
   starwars_platformtext: Browser modern + tablet
   playlab_platformtext: Browser modern, smartphone, tablet
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Web browser modern
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Web browser modern
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Browser modern, smartphone, tablet
   codeorg_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
   codeintl_shortdescription: Belajar kode dengan Mark Zuckerberg dan Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial untuk murid tanpa komputer
@@ -773,6 +795,13 @@ id-ID:
   playlab_shortdescription: Buat cerita atau buat permainan dengan Play Lab!
   infinity_shortdescription: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas.
   artist_shortdescription: Gambarlah gambar dan desain-desain yang keren dengan the Artist!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   codeintl_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   thinkersmithspanish_longdescription: 'Dengan menggunakan  "Kosakata Robot/ Vocabulary Robot" siswa akan mencari&aacute; cara untuk memandu satu sama lain untuk menyelesaikan tugas-tugas tertentu&iacute;  tanpa mendiskusikannya terlebih dahulu. Pelajaran ini&ntilde;  mengajarkan anak-anak hubungan&oacute;  antara simbol dan tindakan, &iacute; serta keterampilan yang sangat berharga dari debugging&oacute;.'
@@ -816,6 +845,13 @@ id-ID:
   frozen_longdescription: Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Kamu akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!
   starwars_longdescription: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
   playlab_longdescription: Membuat cerita atau membuat game dengan Play Lab! Membuat binatang, bajak laut, zombie, ninja, dan banyak lagi karakter bergerak, membuat suara, mencetak poin, dan bahkan melemparkan bola api!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Pengenalan ilmu komputer (Grade K-8)
   khan_beyond_name: Belajar pemrograman komputer
   tynker_beyond_name: Belajar pemrograman di rumah
@@ -1006,11 +1042,11 @@ id-ID:
   compatibility_https_header: Silakan aktifkan HTTPS untuk Code.org.
   compatibility_https_message: "Untuk meningkatkan keamanan, kita beralih ke HTTPS pada %{https_date}. Anda tidak akan dapat mengakses Code.org setelah tanggal ini. <a href='%{it_requirements_url}'> Klik di sini</a> untuk belajar bagaimana untuk mengaktifkan HTTPS untuk Code.org."
   compatibility_https_hide_this_warning: Sembunyikan peringatan
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: kepakkan
   infinity_shortcode: inf
-  playlab_shortcode: mainkan
+  playlab_shortcode: lab
   artist_shortcode: art

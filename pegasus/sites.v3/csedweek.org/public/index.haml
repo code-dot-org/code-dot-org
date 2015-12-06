@@ -2,9 +2,9 @@
 theme: responsive
 banner: null
 social:
-  "og:title": "The Hour of Code is coming"
+  "og:title": "The Hour of Code is here"
   "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104."
-  "og:image": "http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
   "og:image:width": "1200"
   "og:image:height": "627"
   "og:video:url": "http://youtubeeducation.com/v/2DxWIxec6yo"
@@ -14,10 +14,10 @@ social:
   "og:video:height": "360"
   "twitter:card": "player"
   "twitter:site": "@codeorg"
-  "twitter:url": "http://code.org/"
-  "twitter:title": "The Hour of Code is coming"
+  "twitter:url": "https://code.org/"
+  "twitter:title": "The Hour of Code is here"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104."
-  "twitter:image:src": "http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "twitter:image:src": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
   "twitter:player": "https://youtubeeducation.com/v/2DxWIxec6yo"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
@@ -58,11 +58,7 @@ social:
       #hoc2014
 
         .count{:style=>"font-family: 'Gotham 5r', sans-serif; margin-bottom:15px" }
-          -if locale_chapter_partner?
-            -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_decimals(fetch_hoc_metrics['started']).to_s)
-          -else
-
-            -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string
@@ -73,11 +69,8 @@ social:
 
         %div{:style=>'margin-bottom: 8px'}
           %a#trybutton{:href=>'/learn'}
-            %button.optionbutton
-              =I18n.t :cded_try_it
-          %a#trybutton{:href=>'https://hourofcode.com'}
-            %button.optionbutton
-              =I18n.t :cded_sign_up
+            %button.optionbutton{:style=>'min-width: 100px;'}
+              =I18n.t :get_started
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :homepage_action_text_volunteers
 

@@ -320,7 +320,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "คุณมีบล็อกที่ไม่ได้ต่อ"},
 "extraTopBlocksWhenRun":function(d){return "คุณมีบล็อกที่ไม่ได้ต่อ คุณต้องการเอามาต่อกับบล็อกเมื่อเรียกให้ทำงานหรือไม่"},
 "finalStage":function(d){return "ขอแสดงความยินดี ขั้นตอนสุดท้ายสำเร็จแล้ว."},
-"finalStageTrophies":function(d){return "ขอแสดงความยินดี คุณได้เสร็จสิ้นขั้นตอนสุดท้าย และชนะ "+common_locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
+"finalStageTrophies":function(d){return "ขอแสดงความยินดี คุณชนะ  ขั้นตอนสุดท้ายสำเร็จแล้ว"+common_locale.p(d,"numTrophies",0,"th",{"one":"a trophy","other":common_locale.n(d,"numTrophies")+" trophies"})+"."},
 "finish":function(d){return "เสร็จ"},
 "generatedCodeInfo":function(d){return "มหาวิทยาลัยชั้นนำสอนการเขียนโค้ดแบบ  บล็อกเบสต์   (e.g., "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+").  แต่ภายใต้กรอบสี่เหลี่ยมนั้น,  คุณต้องประมวลผลให้บล็อกของคุณแสดงใน ภาษาจาว่า, ซึ่งเป็นภาษาที่กว้าง และสำคัญของโลก."},
 "hashError":function(d){return "ขออภัย '%1' ไม่ตรงกับโปรแกรมที่บันทึกไว้."},

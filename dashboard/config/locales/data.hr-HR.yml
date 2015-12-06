@@ -84,7 +84,7 @@
         Farmer: Farmer
         Unplug6: Uvjeti
         Artist3: Umjetnik 3
-        Unplug7: Skladanje pjesmi
+        Unplug7: Skladanje pjesama
         Farmer2: Farmer 2
         Unplug8: Apstrakcija
         Artist4: Umjetnik 4
@@ -522,9 +522,9 @@
           pomoću tipki sa strelicama pomakni da dođe do njih i upozori ostale
         studio_playlab_10: Napravi svoju igricu. Kad si gotov, klikni na Kraj da omogućiš
           prijateljima da isprobaju tvoju igru na svojim mobitelima.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
+        studio_iceage_hello1: Sid želi sve okupiti za novu pustolovinu. Možeš li mu
+          pomoći s pozdravljanjem povlačenjem bloka 'reci' na radnu površinu i upisavanjem
+          riječi "Zdravo" unutar bloka?
         studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
           him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
@@ -735,6 +735,9 @@
         infinity_playlab_intro: Laboratorij igrara - Uvod
         infinity_playlab_events: Play Lab - događaji
         infinity_playlab_repeat_forever: Laboratorij igara - beskonačno ponavljanje
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -790,6 +793,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka

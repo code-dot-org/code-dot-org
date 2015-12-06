@@ -18,13 +18,13 @@ zh:
           "Artist 1: Intro": 艺术家 1： 简介
           Artists 2: 艺术家 2
           Spelling Bee: 拼字比赛
-          Spelling Bee not blockly: 拼字比赛不是布洛克里
+          Spelling Bee not blockly: 非模块化拼字比赛
           "Bee 1: Intro": 蜜蜂 1： 简介
           "Maze 2: Loops": 迷宫 2： 循环
           "Bee 2: Loops": 蜜蜂 2： 循环
           Multi & Match: '多重选择 & 匹配'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy Bird 不是布洛克里
+          Flappy non blockly: 非模块化Flappy鸟
           title: '课程 1:'
           Artist 2: 艺术家 2
           Happy Maps: 快乐地图
@@ -68,7 +68,7 @@ zh:
           Conditionals: 条件语句
           Binary Bracelets: Binary Bracelets
           The Big Event: 大事件
-          Your Digital Footprint: Your Digital Footprint
+          Your Digital Footprint: 你的数字足迹
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 迷宫： 序列
           "Artist: Sequence": 艺术家： 序列
@@ -146,14 +146,14 @@ zh:
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: 迷宫
-          title: 编程一小时
+          title: Classic Maze
           description: 和来自愤怒小鸟，植物大战僵尸，冰河世界中的角色一起来学习计算机科学的基础知识！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
         frozen:
           title: Code with Anna and Elsa
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
           Artist: 艺术家
-          description_short: 让我们用代码同安娜和艾尔莎一起去探寻冰雪的魔力与美丽。
+          description_short: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.

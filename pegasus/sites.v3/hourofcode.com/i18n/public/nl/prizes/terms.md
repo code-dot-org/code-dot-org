@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Prijzen - voorwaarden
 
@@ -32,4 +31,3 @@ Voor de duidelijkheid: dit is niet een trekking of een wedstrijd gebaseerd op pu
 
 <% end %>
 
-<%= view :signup_button %>
