@@ -21,5 +21,5 @@
 
     %div{style: "float:left; width: 33%"}
       %a{href: tutorial[:url], target: "_blank"}
-        %h3{style: "font-size: 18px;"}= tutorial[:name]
+        %h3= tutorial[:name]
         %img{:src=>tutorial[:image].sub("/images/", "/images/fill-520x391/").sub(".png", ".jpg"), style: "width: 90%"}

@@ -5,9 +5,9 @@ title: Hour of Code 2015
 ---
 
 :css
-  h4 {
-    margin-bottom: 5px;
-    padding-top:40px;
+
+  body {
+    font: 16px sans-serif;
   }
 
   h2 {
@@ -15,10 +15,16 @@ title: Hour of Code 2015
   }
 
   h3 {
-    margin-bottom: 0px;
+    font-size: 15px;
+    margin-bottom: 5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  h4 {
+    margin-bottom: 5px;
+    padding-top:40px;
   }
 
 - tutorials = Tutorials.new(:tutorials)
@@ -34,22 +40,21 @@ title: Hour of Code 2015
 %div{style: "clear:both"}
 
 - code_tutorials = []
-- code_tutorials << {id:"starwars", url: "http://code.org/starwars"}
-- code_tutorials << {id:"mc", url: "http://code.org/mc"}
-- code_tutorials << {id:"frozen", url: "http://code.org/notsure"}
-- code_tutorials << {id:"hourofcode", url: "http://code.org/notsure"}
-- code_tutorials << {id:"flappy", url: "http://code.org/notsure"}
-- code_tutorials << {id:"infinity", url: "http://code.org/notsure"}
-- code_tutorials << {id:"playlab", url: "http://code.org/notsure"}
-- code_tutorials << {id:"artist", url: "http://code.org/notsure"}
+- # Let's just have two "mc" entries, and we hide one of them (50% chance of which one) so that
+- # we have a random ordering of "mc" vs. "starwars"
+- code_tutorials << {div_id: "mc_before", tutorial_id:"mc", extratext: "", url: "http://hoc-static-all.s3-website-us-east-1.amazonaws.com/en-us/mc/1.html"}
+- code_tutorials << {div_id: "starwars", tutorial_id:"starwars", extratext: " (Blocks)", url: " http://hoc-static-all.s3-website-us-east-1.amazonaws.com/en-us/starwarsblocks/1.html"}
+- code_tutorials << {div_id: "starwarsblocks", tutorial_id:"starwars", extratext: " (JavaScript)", url: "http://hoc-static-all.s3-website-us-east-1.amazonaws.com/en-us/starwars/1.html "}
+- code_tutorials << {div_id: "mc_after", tutorial_id:"mc", extratext: "", url: "http://hoc-static-all.s3-website-us-east-1.amazonaws.com/en-us/mc/1.html"}
 
-- code_tutorials.each do |tutorial|
-  %div{style: "float:left; width: 33%"}
-    %a{href: tutorial[:url], target: "_blank"}
-      %h3{style: "font-size: 18px; width: 90%"}= I18n.t(:"#{tutorial[:id]}_name")
-      %img{src: "/shared/images/courses/logo_tall_#{tutorial[:id]}.jpg", style: "width: 90%;"}
-
-
+#code_tutorials{style: "opacity: 0"}
+  - code_tutorials.each do |tutorial|
+    %div{id: tutorial[:div_id], style: "float:left; width: 33%"}
+      %a{href: tutorial[:url], target: "_blank"}
+        %h3{style: "width: 90%"}
+          = I18n.t(:"#{tutorial[:tutorial_id]}_name")
+          = tutorial[:extratext]
+        %img{src: "/shared/images/courses/logo_tall_#{tutorial[:tutorial_id]}.jpg", style: "width: 90%;"}
 
 - learn_categories = []
 - learn_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}
@@ -74,3 +79,14 @@ title: Hour of Code 2015
 
 #carousel-international{:style=>'clear:both'}
   = view :learn_carousel_static, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+
+:javascript
+
+  window.onload = function() {
+    var id = Math.random() >= 0.5 ? "mc_before" : "mc_after";
+    var element = document.getElementById(id);
+    element.parentNode.removeChild(element);
+
+    document.getElementById("code_tutorials").style.opacity = "1";
+  }
+
