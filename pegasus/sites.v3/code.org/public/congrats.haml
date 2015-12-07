@@ -55,16 +55,17 @@ max_age: 60
 
 
   -if company_param == CARTOON_NETWORK && cert_script == 'gumball'
+    - return_to_cn_path = 'http://click-and-share.com/hour_of_code'
     -if request.locale == 'ar-SA'
       -# Users who started at https://code.org/api/hour/begin/gumball?company=CN&lang=ar
       -# should see this block when they finish.
       %h2
         أنهيت ساعة البرمجة !      
-        %a{:href=>"http://click-and-share.com/hour_of_code/data-capture/"} العودة إلى كرتون نتورك
+        %a{:href=>return_to_cn_path} العودة إلى كرتون نتورك
     -else
       %h2
         I've finished my Cartoon Network Hour of Code.
-        %a{:href=>"http://click-and-share.com/hour_of_code/data-capture/"} Take me back to Cartoon Network.
+        %a{:href=>return_to_cn_path} Take me back to Cartoon Network.
 
   #toprow
     #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
