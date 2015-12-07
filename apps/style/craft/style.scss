@@ -765,8 +765,12 @@ $height-to-width: 434 / 477;
     }
   }
 
-  .modal-content {
-    //margin-left: 110px; // TODO(bjordan): needed?
+  @media screen and (max-height: 630px) {
+    .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px;
+    }
   }
 
   #sharing {
