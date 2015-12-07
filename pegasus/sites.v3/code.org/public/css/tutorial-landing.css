@@ -49,7 +49,7 @@
 }
 
 @media screen and (min-width: 513px) and (max-width: 970px) {
-  .choice-label {
+  .tall {
     height: 48px;
   }
 }
