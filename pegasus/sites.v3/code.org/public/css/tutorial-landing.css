@@ -48,6 +48,12 @@
   padding: 10px;
 }
 
+@media screen and (min-width: 513px) and (max-width: 970px) {
+  .choice-label {
+    height: 48px;
+  }
+}
+
 @media screen and (min-width: 513px) and (max-width: 600px) {
   .choice {
     padding: 10px;
