@@ -96,6 +96,8 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE3_NAME)
     assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE4_NAME)
     assert_certificate_url_encodes user, Script.get_from_cache(Script::MINECRAFT_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::ARTIST_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::INFINITY_NAME)
   end
 
   test 'client state lines' do
