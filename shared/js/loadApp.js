@@ -3,7 +3,7 @@
 var renderAbusive = require('./renderAbusive');
 
 // Max milliseconds to wait for last attempt data from the server
-var LAST_ATTEMPT_TIMEOUT = 5000;
+var LAST_ATTEMPT_TIMEOUT = 3000;
 
 // Loads the given app stylesheet.
 function loadStyle(name) {
