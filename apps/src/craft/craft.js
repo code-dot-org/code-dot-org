@@ -734,6 +734,12 @@ Craft.reportResult = function (success) {
   });
 };
 
+/**
+ * Whether pressing "x" or pressing the backdrop of the "level completed" dialog
+ * should default to auto-advancing to the next level.
+ * @param {string} testResultType TestResults type of this level completion
+ * @returns {boolean} whether to continue
+ */
 Craft.shouldDefaultToContinue = function(testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
