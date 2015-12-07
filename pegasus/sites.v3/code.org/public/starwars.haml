@@ -23,6 +23,7 @@ social:
 
 %div{style: "clear:both"}
 
+-company = request.GET['company']
 %div.starwars-container
   %div.img-container
     %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
@@ -34,7 +35,9 @@ social:
       %div.sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
         %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
-      %a{:href => '/api/hour/begin/starwars', :target=>'_self'}
+      - url = "/api/hour/begin/starwars"
+      - url = url + "?company=#{company}" if company
+      %a{:href => url, :target=>'_self'}
         %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
 
   .col-25.starwars-tutorial.starwars-blocks-tutorial
@@ -43,7 +46,9 @@ social:
       %div.sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
         %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
-      %a{:href => '/api/hour/begin/starwarsblocks', :target=>'_self'}
+      - url = "/api/hour/begin/starwarsblocks"
+      - url = url + "?company=#{company}" if company
+      %a{:href => url, :target=>'_self'}
         %button.sw-try-button= I18n.t(:starwars_blocks_start_button)
 
 %div{style: "clear:both"}

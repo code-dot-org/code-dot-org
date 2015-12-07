@@ -23,20 +23,28 @@ social:
 
 %div{style: "clear:both"}
 
+-company = request.GET['company']
+
 .playlab-container
   %h1.header= I18n.t(:playlab_choose_theme)
   %div.image-collection
-    %a.white-link{href: "/api/hour/begin/playlab"}
+    - url = "/api/hour/begin/playlab"
+    - url = url + "?company=#{company}" if company
+    %a.white-link{href: url}
       %div.choice
         %div.choice-container
           %div.choice-label.purple= I18n.t(:playlab_classic_title)
           %img.character-img{src: "/images/playlab_original3.png"}
-    %a.white-link{href: "/api/hour/begin/gumball"}
+    - url = "/api/hour/begin/gumball"
+    - url = url + "?company=#{company}" if company
+    %a.white-link{href: url}
       %div.choice
         %div.choice-container
           %div.choice-label.blue= I18n.t(:playlab_gumball_title)
           %img.character-img{src: "/images/playlab_gumball.png"}
-    %a.white-link{href: "/api/hour/begin/iceage"}
+    - url = "/api/hour/begin/iceage"
+    - url = url + "?company=#{company}" if company
+    %a.white-link{href: url}
       %div.choice
         %div.choice-container
           %div.choice-label.green= I18n.t(:playlab_iceage_title_live)
