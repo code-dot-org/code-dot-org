@@ -10,11 +10,12 @@ class GalleryActivitiesController < ApplicationController
   INDEX_PER_PAGE = 30
   MAX_PAGE = 100
 
+  GALLERY_PROXY_MAX_AGE = 900 # 15 minutes
+  GALLERY_MAX_AGE = GALLERY_PROXY_MAX_AGE * 2
+
   def index
     if Gatekeeper.allows('public_caching_for_gallery')
-      max_age = DCDO.get('public_max_age', ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE)
-      proxy_max_age = DCDO.get('public_proxy_max_age', ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE)
-      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+      response.headers['Cache-Control'] = "public,max-age=#{GALLERY_MAX_AGE},s-maxage=#{GALLERY_PROXY_MAX_AGE}"
     end
 
     page = params[:page].to_i rescue 0
