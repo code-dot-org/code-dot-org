@@ -3,6 +3,7 @@ require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
+CARTOON_NETWORK = 'CN'
 
 # Creates a session row and sets the hour of code cookie to the session_id,
 # if the user is assigned to the sample set (as decided by a random choice
@@ -22,6 +23,9 @@ def create_session_row_unless_unsampled(attrs)
 
   # Decide whether the session should be sampled.
   weight = DCDO.get('hoc_activity_sample_weight', 1).to_i
+
+  # Don't sample for cartoon network since we always need to create a session row.
+  weight = 1 if attrs[:company] == CARTOON_NETWORK
 
   if weight > 0 && Kernel.rand < (1.0 / weight)
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
