@@ -70,9 +70,9 @@
     .clear
     .smalltext= body
     .clear
-    - if audience && showState
+    - if audience && current_user && showState
       .audiencebar.smalltext.audience= audience
-    - elsif audience && !showState
+    - elsif audience
       .bottombar.smalltext.audience= audience
 
     = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
