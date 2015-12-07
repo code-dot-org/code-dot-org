@@ -147,7 +147,7 @@
   "dropletBlock_whileBlock_signatureOverride":"while loop",
   "emptyBlockInFunction":"{name} ශ්‍රිතයේ ආදානයක් පුරවා නොමැත.",
   "emptyBlockInVariable":"{name} විචල්‍යයේ ආදානයක් සම්පුර්ණ කර නොමැත.",
-  "emptyBlocksErrorMsg":"The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
+  "emptyBlocksErrorMsg":"\"Repeat\" හෝ \"If\" ඛාණ්ඩය හරියට ක්‍රියාත්මක වීමට​ එය​ තුල වෙනත් ඛාණ්ඩයක් තිබිය යුතුය. ඇතුලත​ ඛාණ්ඩය නියම ලෙස පිටත ඛාණ්ඩය තුල ​ ඇතුලත් වී තිබෙදැයි බලන්න.",
   "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"The function block needs to have other blocks inside it to work.",
   "emptyFunctionalBlock":"ඔබ සතුව අසම්පූර්ණ ආදානයක් සහිත බ්ලොක් එකක් ඇත.",

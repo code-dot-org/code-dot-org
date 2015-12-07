@@ -226,7 +226,7 @@
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Butik
   homepage_slot_text_flappy: Flappy kode
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: An Hour of Code er programmering for alle elever.
   homepage_action_text_num_served: '# har prøvet'
   homepage_action_text_join_us: Slut dig til os
   homepage_action_text_sign_up: Tilmeld
@@ -238,9 +238,10 @@
   homepage_action_text_learn: Begynd at lære
   homepage_action_text_signpetition: Skriv under
   homepage_signpetition_dropdown: Jeg er enig &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: Afgiv et løfte om mangfoldighed
+  homepage_banner_text_prizes: 'The Hour Of Code kommer igen, nemlig d. 7.-13. december
+    2015. '
+  homepage_banner_link_prizes: 'Deltag i den største læringsbegivenhed i historien. '
   homepage_banner_text_main: Code.org og College Board har dannet en alliance, for
     at øge mangfoldigheden i computerundervisning.
   homepage_banner_text_link: Lær mere
@@ -252,7 +253,7 @@
   homepage_slot_text_link_hoc: Prøv Hour of Code
   homepage_slot_text_link_host: Hold selv en Hour of Code
   homepage_slot_text_link_hocserved: '# har prøvet'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Meld dig som frivillig til Hour Of Code
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
   homepage_slot_text_link_codestudio: Prøv Code Studio
@@ -310,13 +311,12 @@
   class_submission_level_college: Gymnasium
   class_submission_level_vocational: Faglig
   class_submission_languages_other: Andre sprog
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  inspirational_videos_more: Flere inspirationsvideoer af rollemodeller og berømtheder
+  playlab_choose_theme: Vælg dit Spil Lab tema
+  playlab_classic_title: Klassisk
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: Istid - kommer snart
+  playlab_iceage_title_live: Is-tid
   starwars_subtitle: Byg en galakse med kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Brug træk-slip blokke og JavaScript.
@@ -324,8 +324,8 @@
   starwars_javascript_start_button: Prøv nu
   starwars_blocks_title: Blokke
   starwars_blocks_description: Brug træk-slip blokke.
-  starwars_blocks_specs: Mange sprog (kommer snart) | Moderne browsere, smartphones,
-    tablets | Fra 6-10 år
+  starwars_blocks_specs: Mange sprog | Moderne browsere, smartphones, tablets | Alderstrin
+    6-10
   starwars_blocks_start_button: Lær mere
   starwars_watch_videos: Før du går i gang, kan du se en af vores inspirationsvideoer
   starwars_speak_languages: Taler du et andet sprog?
@@ -338,14 +338,17 @@
     i denne Minecraft-verden.
   mc_gradelevel: Alder 6+
   mc_platformtext: Moderne browsere, smartphones, tabletter
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Mange sprog | Moderne browsere og tablets | Alder 6+
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_title: Inspirer studerende og frivillge til Hour Of
+    Code.
+  volunteer_engineer_submission_subtitle_generic: '100.000 lærere vil være værter
+    i Hour Of Code i deres klasseværelser i år d. 7.-13. december 2015. De vil gerne
+    bede om din hjælp! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere vil gerne
+    have frivillige, som er dedikerede i deres interesse for uddannelse i tekniske
+    videnskaber, til at hjælpe med Hour of Code her i december. <br>%{num_volunteers}
+    frivillige har meldt sig. Slut dig til dem.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education

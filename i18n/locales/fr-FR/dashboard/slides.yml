@@ -1763,30 +1763,31 @@ fr:
         text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: "Ton écran se divise en trois parties. A la gauche, se trouve l'espace de jeu où le programme va s'exécuter. Les instructions pour chaque niveau sont écrites en dessous."
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Cette zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: "L'espace blanc à droite est appelé espace de travail : c'est là que nous allons créer notre programme."
       7:
         image: notes/iceage_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: |-
+          Pour commencer, tu devras relier tes blocs au bloc "lors du lancement". Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu voies la ligne jaune, et il s'emboiteront alors ensemble.
       8:
         image: notes/iceage_intro_8.JPG
         text: |-
           In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/iceage_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: "Commence, et d'ici à la fin, tu sera capable de créer ton propre jeu, avec toutes sortes de joueurs qui peuvent interagir, marquer des points, jeter des objets, et se faire disparaitre. Ça ne dépend que de toi !"
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: "Maintenant nous allons apprendre quelque chose que tous les programmeurs de jeu utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d'écouter jusqu’à ce qu'il ce passe quelque chose, et quand ça arrive, le jeu exécute une action."
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: "Des exemples d’événements sont l'écoute d'un clic de souris ou d'une touche flèche haut ou flèche bas, ou même une tape sur l'écran."
       3:
         image: notes/iceage_events_3.JPG
         text: |-
@@ -1797,10 +1798,10 @@ fr:
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: "Peux-tu imaginer si tu avais à répéter quelque chose à l'infini? Heureusement tu n'auras jamais à le faire car les ordinateurs sont vraiment bons à répéter les choses."
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: "C'est le bloc 'répète à jamais'. Tout ce qui se trouve dans ce bloc se produira 'à jamais' dans le jeu. Si nous voulons qu'un élément fasse quelque chose de façon répétée, continuellement, sans que le joueur ai à intervenir, nous placerons ces blocs à l'intérieur du bloc 'répète à jamais'."
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: "Dans ce puzzle, notre objectif est d'aider l'élément à faire un travail en continu. Apprendre à utiliser la commande 'répéter' te permettras de gagner énormément de temps plus tard quand tu construiras ton propre jeu."

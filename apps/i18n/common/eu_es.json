@@ -164,7 +164,7 @@
   "examplesFailedOnClose": "Zure adibideetako bat edo gehiago ez datoz bat zure definizioarekin. Begira zure adibideak itxi aurretik",
   "extraTopBlocks": "Erantsi gabeko blokeak dituzu.",
   "extraTopBlocksWhenRun": "Erantsi gabeko blokeak dituzu. Hauek \"martxan dagoenean\" blokera erantsi nahi dituzu?",
-  "finalStage": "Zorionak! Azkeneko eszenatokia osatu duzu.",
+  "finalStage": "Zorionak! Azkeneko ariketa osatu duzu.",
   "finalStageTrophies": "Zorionak! Azkeneko eszenatokia osatu duzu eta {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Amaitu",
   "generatedCodeInfo": "Goi mailako unibertsitateek (adib., {berkeleyLink}, {harvardLink}) ere blokeetan oinarritutako programazioa irakasten dute. Baina zuk erabilitako blokeen azpian munduan zehar erabilera zabalen duen programazio lengoaia dago, JavaScript:",

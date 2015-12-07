@@ -1655,53 +1655,51 @@ el:
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: Αν θέλετε να φτιάξετε το δικό σας παιχνίδι, είναι πραγματικά εύκολο. Το μόνο που χρειάζεστε είναι λίγες βασικές γνώσεις προγραμματισμού και μπορείτε να ξεκινήσετε να παίζετε το παιχνίδι που φτιάξατε.
       2:
         image: notes/iceage_intro_2.JPG
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Έχετε ένα αγαπημένο βιντεοπαιχνίδι; Θα πάμε να κάνουμε ένα βήμα προς τη δημιουργία παιχνιδιών όπως αυτό χρησιμοποιώντας το PlayLab. Τα καλά παιχνίδια έχουν μια ιστορία και κάθε ιστορία έχει ηθοποιούς. Οι ηθοποιοί κάνουν τα πράγματα όπως το να μιλούν, να κινούνται, και αλληλεπιδρούν. Ίσως ακόμη και να μαζεύουν βαθμούς με βάση τους κανόνες του παιχνιδιού. Σήμερα εμείς θα μάθουμε πώς να κάνουμε όλα αυτά τα πράγματα, ένα προς ένα, με χαρακτήρες της Disney όπως οι Anna, Elsa, Hiro, Baymax και η Rapunzel. Θα φτιάξουμε ένα παιχνίδι μπορείτε να μοιράσετε και να παίξετε σε ένα κινητό.
       3:
         image: notes/iceage_intro_3.JPG
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Σήμερα, θα μάθουμε πως να κάνουμε όλα αυτά τα πράγματα ένα προς ένα με διασκεδαστικούς ηθοποιούς και να φτιάξουμε ένα παιχνίδι από την αρχή που θα μπορούμε να μοιραστούμε με άλλους ή να το παίξουμε στο κινητό.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Η οθόνη σας είναι χωρισμένη σε τρία μέρη. Αριστερά είναι ο χώρος παιχνιδιού όπου θα εκτελεστεί το πρόγραμμά σας. Οι οδηγίες για κάθε επίπεδο είναι γραμμένες ακριβώς από κάτω.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Αυτή η μεσαία περιοχή είναι η εργαλειοθήκη και καθένα από αυτά τα μπλοκ είναι ένα κομμάτι κώδικα.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Ο λευκός χώρος στα δεξιά καλείται χώρος εργασίας και είναι εκεί όπου θα φτιάξουμε το πρόγραμμά μας.
       7:
         image: notes/iceage_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: Για να ξεκινήσετε, θα πρέπει να ενώσετε τα μπλοκ σας στον πορτοκαλί μπλοκ όταν εκτελείται. Μπορείτε να συνδέσετε πολλά μπλοκ μαζί, σέρνοντάς τα μέχρι να δείτε μία κίτρινη γραμμή και τότε θα ενωθούν μεταξύ τους.
       8:
         image: notes/iceage_intro_8.JPG
-        text: |-
-          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+        text: 'Σε αυτό το πρώτο παζλ, θα κάνουμε τους ηθοποιούς να που κάτι ενώνοντας το μπλοκ "πες" με το μπλοκ "όταν εκτελείται" και θα γράψετε το μήνυμά σας. Όταν βάλετε τα μπλοκ στη θέση τους, πατήστε το πλήκτρο εκτέλεσης και δείτε τι προγραμματίσατε.'
       9:
         image: notes/iceage_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: Ξεκινήστε και στο τέλος θα μπορείτε να φτιάξετε το δικό σας παιχνίδι με όλων των ειδών τους παίκτες που θα μπορούν να αλληλοεπιδρούν, να συλλέξουν πόντους, να πετάξουν αντικείμενα και να εξαφανιστούν. Είναι στο χέρι σας!
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: Τώρα, θα μάθουμε κάτι το οποίο όλοι οι προγραμματιστές παιχνιδιών χρησιμοποιούν καθημερινά. Θα μιλήσουμε για τα γεγονότα. Ένα γεγονός λέει στο πρόγραμμά σου να ακούει πότε συμβαίνει κάτι και όταν αυτό συμβεί, το παιχνίδι εκτελεί μια ενέργεια.
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Παραδείγματα γεγονότων είναι η αναμονή για ένα κλικ ποντικιού ή το πάτημα του πάνω ή του κάτω βέλους ή ακόμη και το άγγιγμα της οθόνης.
       3:
         image: notes/iceage_events_3.JPG
-        text: |-
-          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+        text: 'Εδώ, θα κάνουμε τον ηθοποιό να πει κάτι όταν ο παίκτης κάνει κλικ πάνω του. Θα χρησιμοποιήσουμε το μπλοκ "όταν γίνει κλικ και θα κολλήσουμε σε αυτό το μπλοκ "πες". Όταν ο παίκτης κάνει κλικ, όλα τα μπλοκ που κολλήσαμε σε αυτό το μπλοκ θα εκτελεστούν.'
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+        text: Υπάρχουν ακόμη τα μπλοκ όταν βέλος. Αν ενώσετε τα μπλοκ κίνησης σε αυτά, μπορείτε να κινείτε τους ηθοποιούς σας επάνω, κάτι, αριστερά, δεξιά, με τα βέλη. Σιγά σιγά το παιχνίδι σας γίνεται πιο διαδραστικό.
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: Μπορείτε να φανταστείτε εάν έπρεπε να επαναλάβετε κάτι για πάντα; Ας ελπίσουμε ότι δεν θα χρειαστεί ποτέ, γιατί οι υπολογιστές είναι πραγματικά καλοί στο να επαναλαμβάνουν πράγματα.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: Αυτό είναι ένα μπλοκ παντοτινής επανάληψης. Ο,τιδήποτε μέσα σε αυτό το μπλοκ θα συμβαίνει για πάντα στο παιχνίδι. Αν θέλουμε ένας ηθοποιός να κάνει κάτι επαναλαμβανόμενα, χωρίς να χρειάζεται να κάνει κάτι ο παίκτης, θα βάλουμε αυτά τα μπλοκ μέσα σε ένα μπλοκ παντοτινής επανάληψης.
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Στο επόμενο παζλ, στόχος μας είναι να βοηθήσουμε τον ηθοποιό να κάνει μία δουλειά συνεχώς. Μαθαίνοντας πως λειτουργούν οι εντολές επανάληψης θα σας γλυτώσει από πολύ χρόνο αργότερα, όταν θα φτιάχνετε το δικό σας παιχνίδι.

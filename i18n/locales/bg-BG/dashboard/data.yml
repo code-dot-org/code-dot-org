@@ -515,9 +515,9 @@ bg:
         gumball_intro: 'Гъмбол Hour of Code - Въведение'
         gumball_events: 'Гъмбол Hour of Code - Събития'
         gumball_repeat: 'Гъмбол Hour of Code - повторение на отчети'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Ледена епоха Hour of Code - Въведение'
+        iceage_events: 'Ледена епоха Hour of Code - събития'
+        iceage_repeat: 'Ледена епоха Hour of Code - повторение'
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

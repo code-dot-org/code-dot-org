@@ -619,11 +619,11 @@
           Прям как видео-игра наяву.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: An event is an action  that causes something to happen. It's like when
-          you click the button on a mouse and a webpage loads. That's an event. When
-          you touch your screen on a tablet to scroll, that's an event also. Events
-          are a great way of letting the user direct your program whenever they need
-          or want to.
+        text: Событие — это действие, которое вызывает результат. Это как когда вы
+          нажмете на кнопку мыши и загружается веб-страницу. Это событие. Когда вы
+          касаетесь экрана на полосу для прокрутки, это также событие . События являются
+          отличным способом позволить пользователям обращаться на прямую к вашей программе
+          всякий раз, когда они нуждаются.
       4:
         image: notes/C1_bigevent_unplugged_4.png
         text: Things happen that we all respond to. We feel hungry and we go to the
@@ -2553,45 +2553,44 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: Внутри блоков мы использовали JavaScript. Это самый популярный язык
+          для профессиональных разработчиков сегодня. Блоки - это лучший способ начать
+          изучать программирование. Ведущие университеты, такие как Гарвард и Беркли
+          начинают обучение таким же способом. Но как только вы изучили основы, инженеры
+          пишут код печатая текст, что позволяет им программировать быстрее.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Мы можем печатать тысячи команд без поиска их в панели инструментов
+          или необходимости переносить их оттуда. Когда вы учитесь печатать, сначала
+          это может быть медленно, но всё равно попробуйте.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: В верхнем правом углу рабочей области любой головоломки вы можете нажать
+          кнопку "показать текст", чтобы переключиться от блоков к тексту кода.
       4:
         image: notes/starwars_typing_4.JPG
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
+        text: В следующем уроке мы начнем печатать. Здесь вы можете перетаскивать
+          блоки из панели инструментов или вы можете вводить имя команды. При вводе,
+          вы увидите имена возможных команд внизу где вы печатаете. Вместо того, чтобы
+          вводить всю команду полностью, вы можете выбрать одну из них, чтобы двигаться
+          быстрее. В моей работе, я использую эту функцию автозаполнения всё время
+          при написании кода.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Когда вы печатаете код, вы должны быть очень точными. Вам нужно написать
+          имя команды правильно, использовать правильные заглавные и строчные буквы,
+          а также скобки и точки с запятой. Даже при небольшой опечатке, ВВ-8 не сможет
+          понять код и не сможет двигаться.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Если вы сделаете ошибку, текстовый редактор подчеркнёт эту строку, чтобы
+          вы могли её исправить.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Если вы застряли, нажмите начать сначала и переключитесь назад к блокам,
+          нажав кнопку в правом верхнем углу. Давайте попробуем напечатать! Если сделаете
+          ошибки - не расстраивайтесь. Каждый ученик должен сделать несколько попыток,
+          прежде чем получится правильно.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -2628,15 +2627,15 @@
           этому блоку. Так же мы заставим R2-D2 двигаться вниз.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Чтобы сделать это, мы используем команду когдаВверх(). Когда вы перенесёте
+          команду из панели инструментов, вы увидите, что она начинается и заканчивается
+          фигурной скобкой вместо точки с запятой. Это даёт вам место, чтобы разместить
+          ваши команды посередине. Каждая команда внутри этих скобок будет выполнена
+          когда игрок нажмёт кнопку со стрелкой вверх.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: Мы хотим, чтобы R2-D2 пошёл наверх, поэтому добавьте блок идтиВверх()
+          внутрь команды. Сделайте то же самое, чтобы R2-D2 пошёл вниз.
       9:
         image: notes/starwars_events_9.JPG
         text: А теперь вместо того, чтобы писать весь код управления дроидом заранее,
@@ -2752,14 +2751,15 @@
           чтобы он двигался. Игрок использует клавиши вверх/вниз или кнопки вверх/вниз.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Мы используем блок событий когдаВверх() и прикрепим к нему блок идтиВверх().
+          Когда игрок нажмёт на кнопку вверх, выполнится код прикреплённый к блоку
+          когдаВверх(). И мы сделаем то же самое, чтобы R2-D2 двигался вниз. Теперь,
+          вместо того, чтобы писать заранее весь код для управления дроидом, R2-D2
+          будет реагировать на события при нажатии кнопок, которые двигают его по
+          экрану.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Шаг за шагом, ваша игра становится более интерактивной.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -3064,8 +3064,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: 'Белое поле справа – это рабочее пространство, в котором мы пишем программу. '
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

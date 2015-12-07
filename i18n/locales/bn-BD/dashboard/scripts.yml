@@ -1477,7 +1477,7 @@ bn:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description_short: Explore a Minecraft world through code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hour of Code 2015

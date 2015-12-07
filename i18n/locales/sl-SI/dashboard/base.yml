@@ -497,8 +497,8 @@ sl:
     caption_by_name_age: 'po %{name}, %{age} starosti'
     caption_time_ago: 'pred %{time_ago}'
     header: Galerija
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Stories and games
+    header_artist: Code art
   landing:
     prerelease: "Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."
     prerelease_hoc2014: "Ta priročnik je <span class='betatext'>beta</span>.  To pomeni, da ni končna različica in ga bomo z vašo pomočjo še izboljševali."

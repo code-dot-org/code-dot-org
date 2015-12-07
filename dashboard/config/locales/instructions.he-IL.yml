@@ -1866,9 +1866,9 @@
       Course 4 EC 3a_instruction: |
         Extreme Challenge: No rules. No clues. Just the
         challenge!
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
+      Course 4 Maze 1_instruction: הבא את הציפור הכועסת אל החזיר!
       Course 4 Maze 2_instruction: Avoid the TNT!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
+      Course 4 Maze 3_instruction: 'תכנת את הציפור הכועסת להגיע לחזיר. '
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
@@ -2385,7 +2385,7 @@
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: עכשיו בואו ניצור 20 עיגולים חופפים,
         עם זווית של 18 מעלות בין כל עיגול.
-      frozen circle function with parameter_instruction: הנה בלוק " צור עיגול" שיכול
+      frozen circle function with parameter_instruction: הנה בלוק "צור עיגול" שיכול
         לייצר עיגולים בגדלים שונים. האם תוכלו להשתמש בו כדי ליצור עיגול קטן בגודל
         5 ועיגול גדול יותר בגודל 10?
       frozen circle function_instruction: השתמשו בבלוק "צור עיגול" החדש כדי ליצור
@@ -2396,48 +2396,37 @@
         90 נכנסים לתוך 360? רמז: זה מספר קטן מאד.'
       frozen cross rotate_instruction: כעת נסו לחזור על זה 10 פעמים. כמה מעלות עליך
         להסתובב בין כל שורה?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: שלבו בלוק "חזור" מסביב לפקודות על מנת ליצור סימן פלוס.
+        האם שמתם לב שאלזה יכולה לנוע קדימה ואחורה?
+      frozen diamond mini snowflake_instruction: האם ידעתם שכל פתית שלג הוא בעל צורה
+        שונה? בואו ניצור פתית שלג חדש באמצעות שימוש בבלוק "חזור" נוסף על מנת לצייר
+        מקבילית 4 פעמים, ונפנה 90 מעלות ימינה בין כל מקבילית ומקבילית.
       frozen diamond snowflake_instruction: כעת בואו ניצור פתית שלג חדש על ידי שימוש
-        בבלוק ה"חזור" כדי לחזור על מקבילית 10 פעמים, תוך סיבוב ימנה ב36 מעלות בין
-        כל אחת לשניה.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+        בבלוק ה"חזור" כדי לצייר מקבילית 10 פעמים, תוך סיבוב ימינה 36 מעלות בין כל
+        אחת לשניה.
+      frozen diamond_instruction: השתמשו ב"חזור" סביב הבלוקים הללו על מנת ליצור מקבילית.
+        מקבילית היא כמו ריבוע, אך יש לה זויות אחרות. למקבילית הזו יש זויות של 60 מעלות
+        ו-120 מעלות במקום זויות ישרות של 90 מעלות.
       frozen freeplay_instruction: רשמית הפכתם כעת לרב -אמן! צרו ארץ פלאים חורפית.
       frozen line_instruction: היי! אני אלזה מארנדל. עזרו לי ליצור שורה אחת.
       frozen perpendicular_instruction: עכשיו בואו נראה האם נוכל ליצור שתי שורות שנמצאות
         בזוית של 90 מעלות אחת לשניה. תצטרכו להשתמש בבלוק "סובב" כמו גם בבלוק "זוז".
-      frozen snowflake branch_instruction: נסה להשתמש בבלוק מסוג "צור ענף של פתיתי
+      frozen snowflake branch_instruction: נסו להשתמש בבלוק מסוג "צור ענף של פתיתי
         שלג" כדי ליצור שלושה ענפים, הציור יתחיל להראות כמו פתית שלג אמיתי.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
+      frozen snowflake full_instruction: כעת בואו נחזור על זה 8 פעמים כדי ליצור פתית
+        שלג יפהפה!
+      frozen snowflower_instruction: אפשר להשתמש בצורות פשוטות מאוד כדי ליצור ציורי
+        שלג מורכבים. האם תוכלו לייצר ציור בשלג באמצעות חמישה מעגלים בגודל 5 וחמישה
+        מעגלים בגודל 10?
+      frozen square iterative_instruction: נראה שאנחנו כבר בחצי הדרך ליצור מרובע.
+        בואו נחבר ארבעה קוים יחדיו וניצור אותו.
+      frozen square loop 3x_instruction: בואו ניצור שלושה מרובעים, ונפנה אחרי כל מרובע.
+        שימו לב שיש צורך לפנות 120 מעלות לפני כל מרובע חדש.
+      frozen square loop_instruction: הי, אני אנה מארנדל! בואו ניצור מרובע עם בלוק
+        ה"חזור", כדי להשתמש בפחות בלוקים. כמה פעמים צריך בלוק ה"חזור" להריץ את הבלוקים
+        שבתוכו על מנת ליצור מרובע?
+      frozen square snowflake_instruction: האם תוכלו ליצור פתית שלג באמצעות בלוק ה"חזור"?
+        יצרו מרובע עשר פעמים, כאשר אתם פונים 36 מעלות בין כל מרובע למרובע הבא?
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -3375,9 +3364,8 @@
       scrat 19_instruction: בוא נתרגל שוב את בלוק ה"if-else", האם תצליח בנסיון הראשון?
       scrat 20_instruction: האם תוכלו להוסיף 3 בלוקים כדי לעזור לי לפתור מבוך מסובך
         יותר? אם תצליח, אוכל ללכת בכל מסלול מפותל ולא משנה מה אורכו. הזדרז! הקרח נמס!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: הפכתם רשמית לרבי-אמנים! צרו את ארץ החורף הפלאית
+        שלכם.
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.

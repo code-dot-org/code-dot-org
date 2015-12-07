@@ -42,70 +42,67 @@
           'Maze: Loops': 迷宫： 循环
           'Bee: Loops': 蜜蜂： 循环
           'Studio: Create a Story': '游戏实验室: 创建一个故事'
-          'Artist: Loops': 'Artist: Loops'
+          'Artist: Loops': '艺术家: 循环'
           description_audience: 4 - 6岁
           description_short: 课程1是为较小的读者设计的。
         course2:
           The Maze: 迷宫
           Suzi: 苏茜
           The Artist: 艺术家
-          Artist Debugging: Artist Debugging
+          Artist Debugging: 艺术家： 调试
           Bounce: 跳
           'Studio: Create a Story': '游戏实验室: 创建一个故事'
           Artist Loops: 艺术家循环
-          Bee Conditionals: Bee Conditionals
+          Bee Conditionals: 蜜蜂：条件
           Flappy: Flappy Bird
           title: 课程2
           Bee Loops: 蜜蜂循环
           Artist Functions: 艺术家函数
-          The Artist Debugging: The Artist Debugging
+          The Artist Debugging: 艺术家： 调试
           Bee Debugging: 蜜蜂调试
           Bee Functions: 蜜蜂函数
           Maze Loops: 迷宫循环
           Graph Paper Programming: 方格纸编程
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+          'Real-life Algorithms: Paper Planes': '生活中的算法: 纸飞机'
           Getting Loopy: 越来越糊涂
-          Relay programming: Relay programming
+          Relay programming: 编程接力
           Conditionals: 条件语句
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: 二进制的手镯
           The Big Event: 大事件
           Your Digital Footprint: 你的数字足迹
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
+          description: 课程2适合可以阅读但是没有编程经验的学生。在这一课中，学生会通过程序来解决问题，开发交互游戏，或分享他们的故事。推荐2到5年级的学生学习。
           'Maze: Sequence': 迷宫： 序列
           'Artist: Sequence': 艺术家： 序列
           'Maze: Loops': 迷宫： 循环
-          'Artist: Loops': 'Artist: Loops'
+          'Artist: Loops': '艺术家: 循环'
           'Bee: Loops': 蜜蜂： 循环
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Debugging': '蜜蜂: 调试'
           'Artist: Debugging': 艺术家： 调试
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
+          'Bee: Conditionals': 蜜蜂：条件
+          'Artist: Sequence2': 艺术家： 序列2
+          'Maze: Sequence2': 迷宫： 序列2
           'Artist: Nested Loops': 'Artist: Nested Loops'
           description_audience: 6-18岁
-          description_short: Start with Course 2 for students who can read.
+          description_short: 课程2适合可以阅读但是没有编程经验的学生。
         course3:
           The Maze: 迷宫
           'Studio: Create a Story': '游戏实验室: 创建一个故事'
           The Artist: 艺术家
           title: 课程 3：
           Artist Functions: 艺术家函数
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
+          Artist For Loops: 循环的艺术家
+          Artist Nested Loops: 艺术家：嵌套循环
+          Bee Conditionals: 蜜蜂：条件
+          Bee Nested Loops: 蜜蜂：嵌套循环
+          Bee Debuggin: 蜜蜂：调试
           Bee Debugging: 蜜蜂调试
           Bee Functions: 蜜蜂函数
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: 艺术家：函数参数
           Bounce: 跳
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: 迷宫：条件
+          Artist Functions with Parameters: 艺术家：函数参数
           Computational Thinking: 计算性思维
-          Functional Suncatchers: Functional Suncatchers
+          Functional Suncatchers: 函数化的吊饰
           Songwriting Parameters: Songwriting Parameters
           Dice Race: 骰子比赛
           Internet: 互联网
@@ -122,14 +119,14 @@
           Artist: 艺术家
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 蜜蜂： 函数
-          'Bee: Conditionals': 'Bee: Conditionals'
+          'Bee: Conditionals': 蜜蜂：条件
           'Maze: Conditionals': 'Maze: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
+          'Bee: Debugging': '蜜蜂: 调试'
+          Maze2: 迷宫2
+          Artist2: 艺术家2
           'Artist: Functions2': 'Artist: Functions2'
           'Bee: Functions2': 'Bee: Functions2'
           'Bee: Conditionals2': 'Bee: Conditionals2'
@@ -154,7 +151,7 @@
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: 迷宫
-          title: 编程一小时
+          title: 经典迷宫
           description: 和来自愤怒小鸟，植物大战僵尸，冰河世界中的角色一起来学习计算机科学的基础知识！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
         frozen:
@@ -211,13 +208,13 @@
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 迷宫： 序列
           'Artist: Sequence': 艺术家： 序列
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Loops': '艺术家: 循环'
+          'Bee: Conditionals': 蜜蜂：条件
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Debugging': '蜜蜂: 调试'
         usability:
           Intro: 简介
           Variables and For Loops: Variables and For Loops
@@ -452,13 +449,13 @@
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 迷宫： 序列
           'Artist: Sequence': 艺术家： 序列
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Loops': '艺术家: 循环'
+          'Bee: Conditionals': 蜜蜂：条件
           'Artist: Nested Loops': 'Artist: Nested Loops'
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Debugging': '蜜蜂: 调试'
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -1282,7 +1279,7 @@
           Building a Foundation: 打基础
           Getting Loopy: 越来越糊涂
           The Big Event: 大事件
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: 二进制的手镯
           Songwriting: 写歌
         afterschool1:
           title: Afterschool 1

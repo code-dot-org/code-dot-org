@@ -161,7 +161,7 @@
             ერთად!
         hourofcode:
           Maze: ლაბირინთი
-          title: კოდის ერთი საათი
+          title: კლასიკური ლაბირინთი
           description: სცადეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ის და
             Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ის Scrat-თან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
@@ -1630,10 +1630,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball - თამაშების ლაბორატორია
-          description_short: შექმენით ისტორია ან თამაში Gumball თამაშების ლაბორატორიაში!
-          description: შექმენით ისტორია ან თამაში Gumball თამაშების ლაბორატორიაში!
-          Gumball Play Lab: Gumball - თამაშების ლაბორატორია
+          title: გამბოლი - თამაშების ლაბორატორია
+          description_short: შექმენით ისტორია ან თამაში გამბოლის თამაშების ლაბორატორიაში!
+          description: შექმენით ისტორია ან თამაში გამბოლის თამაშების ლაბორატორიაში!
+          Gumball Play Lab: გამბოლი - თამაშების ლაბორატორია
         starwars:
           title: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით'
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი

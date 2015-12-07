@@ -3192,46 +3192,35 @@
         зађе. За кућу је потребно доста дрва. Посеци сва три дрвета.
       Overworld Free Play 20x20_instruction: Честитамо! Решио си све мозгалице! Сада
         копај, гради и направи нешто јединствено помоћу свега што си научио до сад.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+      Overworld Free Play_instruction: Овај крај је твој да се слободно играш. Можеш
+        градити шта год пожелиш.
+      Overworld House Frame - A_instruction: Хајде да направимо нашу кућу! Ово место
+        изгледа одлично. Изгради оквир на блоковима од блата.
+      Overworld House Frame - C_instruction: Хајде да направимо нашу кућу! Ово место
+        изгледа одлично. Изгради оквир на блоковима од блата.
+      Overworld House Frame B_instruction: Један зид је завршен, хајде да изградимо
+        остатак куће пратећи твој нацрт. Овде ћеш морати доста да се понављаш.
+      Overworld House Frame B2_instruction: Један зид је завршен, хајде да изградимо
+        остатак куће пратећи твој нацрт. Овде ћеш морати доста да се понављаш.
+      Overworld House Frame C_instruction: Један зид је завршен, хајде да изградимо
+        остатак куће пратећи твој нацрт. Овде ћеш морати доста да се понављаш.
       Overworld House Frame Chosen_instruction: Сагради остатак своје куће од било
         ког материјала желиш. Команда "понови" ће ти бити корисна.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: Додај другу команду "напред" да дођеш до
-        овце.
+      Overworld House Frame_instruction: Хајде да направимо нашу кућу! Ово место изгледа
+        одлично. Изгради оквир на блоковима од блата.
+      Overworld Minecart Track_instruction: Вратили смо се на површину са доста ресурса
+        сакупљених испод земље. Сада ћемо да изградимо стазу дуж блатњавог пута од
+        твоје куће. Први корак је да очистимо пут. Прати пут и посеци сва стабла.
+      Overworld Move to Sheep_instruction: Додај другу команду "помери се напред"
+        да дођеш до овце.
       Overworld Place Wall_instruction: Свака кућа почиње од зида. Сагради први део
         своје куће стављајући "постави" и "помери се напред" команде унутар понављај
         петље.
       Overworld Plant Crops_instruction: Добро је планирати унапред. Посади усеве
         са обе стране воде, да касније не би огладнео.
-      Overworld Powered Minecart_instruction: Сјајан посао! Сакупио си многе ресурсе
-        и саградио скроман дом. Сада постави пругу од ивице мапе до врата своје куће.
+      Overworld Powered Minecart_instruction: Сјајно обављен посао! Сакупили смо многе
+        ресурсе и саградили скроман дом. Сада постави пругу од ивице мапе до врата
+        своје куће.
       Overworld Shear Sheep_instruction: Време је за шишање оваца! Користи команду
         "ошишај" да сакупиш вуну од обе овце.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
@@ -5081,13 +5070,13 @@
         3 црвена камена, али немој пасти у лаву. Користи команду "ако" да поставиш
         калдрму преко сваке лаве коју откријеш.
       Underground Iron_instruction: Улазак у растопљену лаву је лоша идеја. Постави
-        калдрму да креираш мост, а онда ископај бар два блока гвожђа.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
+        калдрму да направиш мост, а онда ископај бар два блока гвожђа.
+      Underground Mine in a Circle_instruction: "Снађи се како да сакупиш 5 диаманата
+        и 7 блокова црвеног камена! Покушај да користиш \"понови\" команду унутар
+        \"понови\" команде да постигнеш да ходаш по правоугаонику.\r\n"
       Underground Mining Coal_instruction: Највредније ресурсе ћеш пронаћи под земљом,
         али може постати мрачно. Постави најмање 2 бакље и ископај најмање 2 блока
         угља.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Test Level_instruction: Сакупи све минерале!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

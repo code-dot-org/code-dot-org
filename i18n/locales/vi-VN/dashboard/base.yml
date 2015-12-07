@@ -2,7 +2,7 @@ vi:
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
-      too_young: Nội dung này có giới hạn độ tuổi và không có sẵn cho học sinh nhỏ tuổi
+      too_young: Nội dung này không dành cho học sinh nhỏ tuổi
   activerecord:
     errors:
       messages:
@@ -22,7 +22,7 @@ vi:
         error:
           future: không thể trong tương lai
   hello: Xin chào thế giới
-  welcome_back: 'Chào mừng bạn trở lại, %{name}'
+  welcome_back: 'Chào mừng trở lại, %{name}'
   submit: Chấp nhận
   add_teacher_form:
     code:
@@ -30,7 +30,7 @@ vi:
       placeholder: Phần mã (ABCDEF)
     submit: Thêm giáo viên
   add_hint_form:
-    placeholder: Hãy nhập gợi ý của bạn ở đây
+    placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
     submit: Thêm gợi ý
   appname: Code.org
   stage: giai đoạn
@@ -39,11 +39,11 @@ vi:
   trophies: những danh hiệu
   courses: Các khóa học
   of: của
-  more: Nhiều hơn
-  less: Ít hơn
-  beta: Phiên bản beta
-  try_hoc: 'Thử Hour of Code, bấm vào đây >> '
-  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 hours)
+  more: NHIỀU HƠN
+  less: ÍT HƠN
+  beta: phiên bản thử nghiệm
+  try_hoc: 'Tham gia thử cuộc thi Hour of Code, bấm vào đây >> '
+  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 giờ)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
   already_started: 'Đã bắt đầu rồi à? Tiếp tục ở đây >> '
   demos: 'Admin: Tất cả các bản demo'
@@ -313,7 +313,7 @@ vi:
       example: Ví dụ
       example_with_number: 'Ví dụ giải pháp %{solution_number}'
       submitted_on: 'Gửi lên ngày:'
-      unsubmit: Unsubmit
+      unsubmit: Ngưng gửi
   user:
     email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
@@ -462,7 +462,7 @@ vi:
       unused: Không sử dụng cấp độ
   upsell:
     hoc:
-      title: Classic Maze
+      title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học các khóa này.
     flappy:
       title: Lập trình Flappy
@@ -480,7 +480,7 @@ vi:
     frozen:
       title: Bộ phim Frozen
     starwars:
-      title: Star Wars
+      title: Cuộc Chiến Giữa Các Vì Sao
     infinity:
       title: Phòng thí nghiệm Vui Chơi Bất Tận
       body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.

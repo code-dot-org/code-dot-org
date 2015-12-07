@@ -462,7 +462,7 @@ nn:
       unused: Ubrukte nivå
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klassisk labyrint
       body: Prøv grunnleggjande informatikk. Millionar andre har prøvd.
     flappy:
       title: Flakse-kode

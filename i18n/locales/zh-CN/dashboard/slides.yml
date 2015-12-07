@@ -935,16 +935,16 @@ zh:
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: 这一课叫做函数化的吊饰。你将会通过函数来创建漂亮的吊饰。这里有创建吊饰的步骤，有些步骤可能需要重复很多次。
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+        text: 简化创建过程的第一步，是要找出哪些步骤会重复多次。我们可以把这些步骤组合起来放到一个叫做函数的部分里。
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: 如果要创建一个漂亮的吊饰，不能仅仅是完全精确一样的步骤。有时候，我们需要创造新的改变珠子的颜色。通过使用不同的颜色，我们可以让每个吊饰都独一无二。
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: 当你学会使用叫做“珠子”的变量时，你就能让你的吊饰独一无二了。变量表示一个可以改变的东西，每个变量都有自己的名字。通过使用函数和变量，尽情发挥、做出美丽的吊饰吧！
     C3_internet:
       1:
         image: notes/C3_internet_1.png
@@ -1691,7 +1691,7 @@ zh:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 右边的空白区域称为工作区，是我们建立程序的地方。
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

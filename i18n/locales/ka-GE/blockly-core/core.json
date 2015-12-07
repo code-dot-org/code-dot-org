@@ -205,7 +205,7 @@
   "MATH_ARITHMETIC_TOOLTIP_MULTIPLY":"დააბრუნეთ ორი რიცხვის ნამრავლი.",
   "MATH_ARITHMETIC_TOOLTIP_POWER":"დააბრუნეთ პირველი რიხვი მეორე რიცხვის ხარისხად.",
   "MATH_CHANGE_HELPURL":"http:\/\/en.wikipedia.org\/wiki\/Programming_idiom#Incrementing_a_counter",
-  "MATH_CHANGE_INPUT_BY":"მიერ",
+  "MATH_CHANGE_INPUT_BY":"ამ მნიშვნელობით:",
   "MATH_CHANGE_TITLE_CHANGE":"შეცვალეთ",
   "MATH_CHANGE_TOOLTIP":"შეიყვანეთ რიცხვი ცვლადში '%1'.",
   "MATH_CONSTANT_HELPURL":"http:\/\/en.wikipedia.org\/wiki\/Mathematical_constant",

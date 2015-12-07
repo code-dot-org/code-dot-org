@@ -289,7 +289,7 @@ de-DE:
   starwars_javascript_start_button: Probiere es jetzt aus
   starwars_blocks_title: Bausteine
   starwars_blocks_description: 'Verwende Drag & Drop Blöcke.'
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Erfahre mehr
   starwars_watch_videos: Bevor du loslegst, sieh dir eines dieser inspirierende Videos an
   starwars_speak_languages: Du sprichst eine andere Sprache?
@@ -300,7 +300,7 @@ de-DE:
   mc_shortdescription: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken.
   mc_gradelevel: Ab 6 Jahren
   mc_platformtext: Moderne Browser, Smartphones, Tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspiriere Schüler und unterstütze Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer führen dieses Jahr eine Hour of Code mit ihren Klassen durch, 7. bis 13. Dezember 2015. Sie brauchen deine Hilfe! '
@@ -602,8 +602,8 @@ de-DE:
   mobile_devices: Anleitungen für mobile Geräte
   frozen_name: Programmiere mit Anna und Elsa
   starwars_name: 'Star Wars: Erbaue eine Galaxie mithilfe von Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassisches Labyrinth
+  codeintl_name: Klassisches Labyrinth
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Eine Einführung in JavaScript
   khanes_name: Eine Einführung in JavaScript
@@ -639,7 +639,7 @@ de-DE:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassisches Labyrinth
   playlab_name: Play Lab
   infinity_name: Infinity Spiele Lab
   artist_name: Künstler

@@ -210,14 +210,11 @@ hu:
       4-5 Artist Assessment 1_instruction: 'Értékelés: használj ciklust egy egyenlő oldalú háromszög rajzolásához! Minden oldal 300 képpont hosszú.'
       4-5 Artist For Loops 1_instruction: A számokat 1-től 10-ig írd be a hossza blokkokba és futtasd a kódot.
       4-5 Artist For Loops 11_instruction: 'Egészítsd ki a "for" blokkot úgy, hogy a következőképen számoljon: 0, 20, 40, 60, 80... 200.'
-      4-5 Artist For Loops 12_instruction: |
-        What happens if you reverse the "from"
-        and "to" numbers? Complete the "for" block so that it counts 200, 180,
-        160, 140, 120...0. 
+      4-5 Artist For Loops 12_instruction: 'Mi történik, ha megfordítjuk  a "honnan" és " a " számok  ? Töltsd ki a " A " blokkot úgy, hogy számít a 200 , 180 , 160 , 140 , 120 ... 0 .'
       4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
+        Ez a terv egy "for" ciklus nélkül indult és nagyon sok blokk-ból áll.
+        A "for" (mert) blokk segítségével fejezhetik be a spirált. 
+        Tipp: Az utólso vonal hossza 250 képpont
       4-5 Artist For Loops 14_instruction: |
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
@@ -1895,51 +1892,43 @@ hu:
       K-1 Artist Loops 1_instruction: Rajzold meg ezt a vonalat kelet felé haladva négyszer!
       K-1 Artist Loops 2_instruction: Meg tudnád rajzolni ugyanezt a vonalat egy ciklus használatával?
       K-1 Artist Loops 3_instruction: Bele tudod tenni ezeket az elemeket egy ciklusba, hogy 6 vonalat rajzoljon?
-      K-1 Artist Loops 4_instruction: |
-        Could a loop help us draw the top of this
-        castle?
-      K-1 Artist Loops 5_instruction: What can you loop 4 times to draw these stairs?
+      K-1 Artist Loops 4_instruction: Segíthet egy ciklus megrajzolni a vár tetejét?
+      K-1 Artist Loops 5_instruction: Meg tudod négyszer ismételni, hogy megrajzoljuk ezeket a csillagokat?
       K-1 Artist Loops 6_instruction: |
         This one needs two loops: one to go up the
         stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
-      K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
-      K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
-      K-1 Artist1 1_instruction: Draw the foot of the man with one line
+      K-1 Artist Loops 7_instruction: Két ciklussal be tudod fejezni ezt a mintát?
+      K-1 Artist Loops 8_instruction: Ezen a lépcsőn hosszabbak a lépcsőfokok.
+      K-1 Artist Loops 9_instruction: 'Értékelés: használd a ciklusokat, hogy megrajzold a csillagokat'
+      K-1 Artist Loops Free Play_instruction: Szabad játék, rajzolj valami mókásat!
+      K-1 Artist1 1_instruction: Rajzold meg az emberke lábát egy vonallal
       K-1 Artist1 10_instruction: |
         Draw and Jump to make the dashed path to the treasure
         X
-      K-1 Artist1 2_instruction: Draw the whisker on the cat with two lines!
-      K-1 Artist1 3_instruction: |
-        Draw two lines east and two lines north to finish
-        the house!
-      K-1 Artist1 4_instruction: Draw lines up, over, and down to complete the castle!
+      K-1 Artist1 2_instruction: Rajzold meg a cica bajszát két vonallal!
+      K-1 Artist1 3_instruction: Rajzolj egy vonalat keletre és egyet északra, hogy befejezd a házat!
+      K-1 Artist1 4_instruction: Rajzolj vonalat előre, fel, tovább és le, hogy befejezd a várat!
       K-1 Artist1 5.5_instruction: |
         Complete the third tower of the castle using
         short lines
-      K-1 Artist1 5_instruction: Draw the stem of this flower with two lines!
+      K-1 Artist1 5_instruction: Rajzold meg a virág szárát két vonallal!
       K-1 Artist1 6_instruction: 'Fejezd be a képet egy "ugrás" blokk használatával!'
-      K-1 Artist1 7_instruction: |
-        Use the jump block to move without drawing. Jump
-        up and draw a line.
+      K-1 Artist1 7_instruction: Használd az ugorj blokkot, hogy rajzolás nélkül tudj mozogni. Ugorj fel és rajzolj egy vonalat.
       K-1 Artist1 8_instruction: |
         Draw the dashed line by using both the jump and
         draw blocks
-      K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
+      K-1 Artist1 9_instruction: Rajzolj és ugorj, hogy szaggatott vonalat rajzolj
       K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
       K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
-      K-1 Artist2 1_instruction: Draw a square below the triangle.
-      K-1 Artist2 2_instruction: Jump and draw a square next to the house.
-      K-1 Artist2 3_instruction: Draw a square above the other square
-      K-1 Artist2 4_instruction: Draw a rectangle to complete the bridge.
-      K-1 Artist2 5_instruction: Draw a rectangle to complete the bridge supports
-      K-1 Artist2 6_instruction: Draw two squares to make a rectangle!
-      K-1 Artist2 Assessment1_instruction: |
-        Assessment: Draw a square next to the
-        other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
-      K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
+      K-1 Artist2 1_instruction: Rajzolj egy négyzetet a háromszög alá.
+      K-1 Artist2 2_instruction: Ugorj és rajzolj egy négyzetet a ház mellé.
+      K-1 Artist2 3_instruction: Rajzolj még egy négyzetet a másik mellé
+      K-1 Artist2 4_instruction: Rajzolj téglalapot, hogy befejezd a hidat.
+      K-1 Artist2 5_instruction: Rajzolj téglalapot, hogy befejezd a híd pillérét
+      K-1 Artist2 6_instruction: Rajzolj két négyzetet, hogy egy téglalapot alkossanak!
+      K-1 Artist2 Assessment1_instruction: 'Értékelés: rajzolj egy négyzetet a másik mellé.'
+      K-1 Artist2 Free Draw_instruction: Rajzolj bármit!
+      K-1 Artist2_7_instruction: Rajzolj egy téglalapot, hogy elkészüljön a fiókos szekrény legfölső fiókja!
       K-1 Bee 1_instruction: Menjünk oda a virághoz, gyűjtsük be a nektárt, majd menjünk tovább a mézsejthez és készítsünk mézet
       K-1 Bee 10_instruction: Gyűjts négy nektárt, majd készíts két mézet!
       K-1 Bee 11.5_instruction: Gyűjts négy nektárt, majd készíts négy mézet!
@@ -1973,39 +1962,30 @@ hu:
       K-1 Bee Loops Assessment 1_instruction: Gyűjts nektárt a méz készítéshez és használj ciklusokat a mozgáshoz!
       K-1 Bee Loops Assessment 2_instruction: Ciklusok segítségével gyűjts nektárt a méz készítéshez!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
-      K-1 Building a Foundation Assessment_instruction: |
-        Build a three level pyramid,
-        there are no other directions, so just play with the pieces until you get
-        it!
-      k-1 maze 1_instruction: Can you make me move West to get to the pig?
-      K-1 Maze 10_instruction: 'Go around the TNT to get me to the pig! '
+      K-1 Building a Foundation Assessment_instruction: Építsd meg a három emeletes piramist! Nincs más utasítás, csak játssz az elemekkel, amíg sikerrel nem jársz!
+      k-1 maze 1_instruction: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
+      K-1 Maze 10_instruction: 'Kerüljük el a TNT-t, hogy eljussak a malachoz! '
       K-1 Maze 11_instruction: |
         Trace the path and lead me to the silly pig. Avoid
         TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
-      K-1 Maze 5_instruction: Move me East to get me to the pig!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
+      K-1 Maze 2_instruction: Mozgass Keletre, hogy elkapjam a malacot!
+      K-1 Maze 3_instruction: Mozgass Délre, hogy elkapjam a malacot!
+      K-1 Maze 4_instruction: Mozgass Északra, hogy elkapjam a malacot!
+      K-1 Maze 5_instruction: Mozgass Keletre, hogy elkapjam a malacot!
+      K-1 Maze 6_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
+      K-1 Maze 7_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
+      K-1 Maze 8_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
+      K-1 Maze 9_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze Assessment 1_instruction: 'Assessment -- Get me to the pig!'
       K-1 Maze Assessment 12_instruction: Assessment Level
       K-1 Maze Assessment 13_instruction: Assessment Level
       K-1 Maze Assessment 2_instruction: 'Assessment -- Get me to the pig!'
-      K-1 maze debug 1_instruction: Change the code to get me to the pig!
+      K-1 maze debug 1_instruction: Változtasd meg a kódot, hogy elkapjam a malacot!
       K-1 maze debug 10_instruction: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 maze debug 11_instruction: "Ez egy teszt!\r\nKeresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Figure out what is missing and then REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
+      K-1 maze debug 2_instruction: Találd ki, mi hiányzik, egészítsd ki a kódot, és juttass el a malachoz!
+      K-1 maze debug 3_instruction: Találd ki, mi hiányzik, aztán TÁVOLÍTS EL blokkokat, hogy eljuttass a malachoz!
+      K-1 maze debug 4_instruction: Nézd át a blokkokat és keresd meg a hibát! Azt hiszem, rossz irányba megyek.
       K-1 maze debug 5_instruction: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 maze debug 6_instruction: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 maze debug 7_instruction: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
@@ -2013,23 +1993,19 @@ hu:
       K-1 maze debug 9_instruction: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 Maze debug Assessment 1_instruction: 'Értékelés -- Keresd meg a hibát és javítsd ki! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!'
       K-1 Maze Loops 1_instruction: Juttass el a malachoz!
-      K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
-      K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 10_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 11_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 12_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 2_instruction: Használd az Ismételd blokkot és juttass el a malachoz!
+      K-1 Maze Loops 3_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
       K-1 Maze Loops 4_instruction: Juttass el a malachoz!
-      K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 5_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 6_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 7_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 8_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
       K-1 Maze Loops 9_instruction: Juttass el a malachoz!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
+      K-1 Maze Loops Assessment 1_instruction: 'Értékelés: használj ciklusokat, hogy eljuttass a malachoz!'
+      K-1 Maze Loops Assessment 2_instruction: 'Értékelés: használj ciklusokat, hogy eljuttass a malachoz!'
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
       K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig"
@@ -4193,10 +4169,7 @@ hu:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-        
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

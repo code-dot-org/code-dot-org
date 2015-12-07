@@ -257,7 +257,7 @@
       classroom: Домашняя страница Преподавателя
       district_dashboard: Панель управления области
       label: Привет, %{username}
-      stats: Мои результаты
+      stats: '"Студия Кода"'
       settings: Моя регистрация
       prizes: Призы
       logout: Выйти
@@ -419,17 +419,18 @@
       школы
     use_as_teacher: Используйте этот сайт как учитель
     heading_hoc2014: <h2>Час Кода для</h2><h1>Для всех возрастов</h1>
-    heading_elementary: <h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>
+    heading_elementary: <h2>20-часовые курсы по</h2><h1>Основам Информатики (для всех
+      возрастов)</h1>ы
     heading_apps: <h2>Развлечения для</h2><h1>всех</h1>
     heading_legacy: <h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
-    no_primary_course: Попробуйте курс Студии Кода
-    choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
+    no_primary_course: Попробуйте курс "Студии Кода"
+    choose_next_course: Попробуйте курс "Студии Кода", выбрав один из вариантов ниже
     print_certificate: Распечатать сертификат
   share:
-    title: Учиться в Студии кода
+    title: Учиться в "Студии Кода"
     description: Любой человек может обучиться информатике. Создавайте игры, приложения
-      и искусство с помощью кода.
+      и произведения искусства с помощью программного кода.
   gender:
     male: Мужской
     female: Женский
@@ -438,15 +439,15 @@
     student: Ученик
     teacher: Учитель
   footer:
-    thank_you: Мы благодарим наших <a href="https://code.org/about/donors">доноров</a>,
-      <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team">
-      большую команду</a>, наши участников видеозаписей и наших <a href="https://code.org/about/advisors">
-      консультантов по вопросам образования</a> за их поддержку в создании Студии
-      Кода.
-    help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
-      этот учебник.
-    help_from_html_old: Инженеры из Google, Microsoft, Facebook, и Twitter помогли
-      с созданием этих материалов.
+    thank_you: Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает
+      нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>,
+      нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников
+      наших видеозаписей, а также наших <a href="https://code.org/about/advisors">
+      консультантов по вопросам образования</a> за поддержку в создании "Студии Кода".
+    help_from_html: Мы хотим особенно отметить инженеров компаний Google, Microsoft,
+      Facebook, Twitter и многих других, которые помогали нам в создании этих материалов.
+    help_from_html_old: При создании данных материалов нам помогали инженеры из компаний
+      Google, Microsoft, Facebook, и Twitter.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Все права защищены.
@@ -467,9 +468,9 @@
     privacy: Правила конфиденциальности
     secure: Защищенная версия
     report_abuse: Сообщить о нарушении
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Создать в "Студии Кода"
+    make_my_own_app: Создать собственное приложение
+    how_it_works: Как это работает
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -537,7 +538,7 @@
       unused: Неиспользованные уровни
   upsell:
     hoc:
-      title: Hour of Code
+      title: Классический лабиринт
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
     flappy:
       title: Порхающий код
@@ -730,7 +731,7 @@
         Code.org, о чем было уведомлено, связи с этим проектом нельзя поделиться.
       contact_us: Если вы считаете, что произошла ошибка, пожалуйста, <a href='https://code.org/contact'>свяжитесь
         с нами.</a>
-      go_to_code_studio: Перейти в студию кода
+      go_to_code_studio: Перейти в "Студию Кода"
       report_abuse_form:
         intro: Если вы столкнулись с оскорбительным содержанием, угрозой, киберзапугиванием,
           домогательством или нарушением вашего авторского права, во время работы

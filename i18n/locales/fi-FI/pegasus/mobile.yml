@@ -290,7 +290,7 @@ fi-FI:
   starwars_javascript_start_button: Kokeile nyt
   starwars_blocks_title: lohkot
   starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Monia kieliä | Modernit selaimet, älypuhelimet, tabletit | Ikävuodet 6-10
   starwars_blocks_start_button: Kokeile nyt
   starwars_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
   starwars_speak_languages: Puhutko muuta kieltä?
@@ -301,7 +301,7 @@ fi-FI:
   mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman.
   mc_gradelevel: 4-104-vuotiaille
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
   minecraft_subtitle: Minecraft Koodaustunti
   volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena Koodaustunnille.
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
@@ -603,8 +603,8 @@ fi-FI:
   mobile_devices: Oppaat mobiililaitteille
   frozen_name: Koodaa Annan ja Elsan kanssa
   starwars_name: 'Tähtien Sota: Kasaa koodista Galaksi'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassinen sokkelo
+  codeintl_name: Klassinen sokkelo
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Johdanto JavaScript kieleen
   khanes_name: Johdanto JavaScript kieleen
@@ -640,7 +640,7 @@ fi-FI:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassinen sokkelo
   playlab_name: Pelilabra
   infinity_name: Infinity Pelilabra
   artist_name: Taiteilija

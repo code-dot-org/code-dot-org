@@ -464,7 +464,7 @@ tr:
       unused: Kullanılmamış Seviyeler
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
     flappy:
       title: Flappy Kod

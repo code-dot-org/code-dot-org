@@ -161,7 +161,7 @@
           description_short: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           Maze: Labirent
-          title: Saat Kodu
+          title: Klasik Labirent
           description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden
             sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
@@ -1618,14 +1618,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           Hour of Code 2015: Kodlama saati 2015
         starwarsblocks:
-          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside

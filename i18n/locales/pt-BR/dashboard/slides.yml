@@ -1282,14 +1282,14 @@ pt-BR:
         text: 'Essa atividade se chama programação com cartas, e ela é ótima para todas as idades. Como você aprendeu com as lições anteriores, durante o conteúdo sobre o Blockly, as instruções "se" precisam ser avaliadas para sabermos se elas são verdadeiras ou falsas. Isso é condicional, e pode ser usado de várias formas diferentes.'
       2:
         image: notes/unplug6_2.png
-        text: 'Aproveitamo-nos disso formulando programas que podem ser executados usando uma compra de cartas de baralho. Você pode ter uma instrução "if" que diga algo como: "Se a carta comprada for maior que 8, você ganha um ponto. Do contrário, seu oponente ganha um ponto." É possível torná-la simples ou complexa conforme desejado.'
+        text: 'Tiramos vantagem disso criando programas em papel que você executa usando cartas escolhidas aleatoriamente. Você pode ter uma instrução "se" que diz algo como: "se a carta que você tirou for maior que 8, você ganha um ponto. Caso contrário, seu oponente ganha um ponto". Você pode fazer isso de formas mais simples ou mais complexas conforme você se sentir mais confortável.'
     unplug7:
       1:
         image: notes/unplug7_1.png
         text: Você sabe quando você procura a letra de uma música e eles definem o refrão logo no início e depois, para o resto da música, eles apenas fazem referência ao refrão? É assim que você chama uma função.
       2:
         image: notes/unplug7_2.png
-        text: 'Nessa lição, definimos o refrão no começo da música e então começamos a cantar, e percebemos que a classe não canta a palavra "refrão", eles automaticamente voltam para o início, onde definimos o refrão, e o cantam. Usamos isso como uma ótima introdução para entender o que um programa faz quando ele define e chama uma função.'
+        text: 'Nesta lição, definimos o refrão no começo da música e então começamos a cantar, e percebemos que a classe não canta a palavra "refrão", eles automaticamente voltam para o início, onde definimos o refrão, e o cantam. Usamos isso como uma ótima introdução para entender o que um programa faz quando ele define e chama uma função.'
       3:
         image: notes/unplug7_3.png
         text: Usamos músicas conhecidas, como Old Macdonald, para falar sobre como um refrão é chamado várias vezes e, às vezes, ele pode ser alterado. Quando temos uma música como Old Macdonald, na qual certas palavras mudam, temos uma ótima oportunidade de introduzir a ideia de parâmetros. Passando certas palavras, você pode enviar informações extras para a sua função. Quando você tiver certeza de que todos entenderam, você pode pegar suas próprias músicas e dividi-las você mesmo. Veja se, junto com toda a turma, vocês conseguem fazer isso.
@@ -1660,7 +1660,7 @@ pt-BR:
         text: Hoje, vamos aprender a fazer todas essas coisas, uma por uma, com personagens divertidos e vamos criar um jogo do zero, que pode ser compartilhado e jogado em um celular.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Sua tela está dividida em três partes principais. À esquerda está o espaço do jogo, onde seu programa será executado. As instruções para cada nível estão escritas abaixo.
       5:
         image: notes/iceage_intro_5.JPG
         text: Essa área do meio é a caixa de ferramentas e cada um desses blocos é um trecho de código.
@@ -1669,7 +1669,7 @@ pt-BR:
         text: O espaço em branco à direita é chamado de área de trabalho, e é onde vamos construir nosso programa.
       7:
         image: notes/iceage_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: 'Para começar, você terá que conectar seus blocos ao bloco laranja "quando executar". É possível conectar diversos blocos uns aos outros, arrastando-os até ver a linha amarela e, então, eles se encaixam.'
       8:
         image: notes/iceage_intro_8.JPG
         text: 'Nesse primeiro desafio, vamos fazer os personagens dizerem algo conectando o bloco "diga" ao bloco "quando executar" e digitando sua mensagem. Quando você colocar os blocos no lugar, pressione o botão Executar e veja o que programou.'

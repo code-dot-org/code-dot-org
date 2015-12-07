@@ -748,11 +748,11 @@
         starwars_blocks_intro: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד - מבוא'
         starwars_blocks_events: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד - אירועים'
         starwars_blocks_congrats: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד - מזל טוב'
-        mc_intro: Minecraft - מבוא
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        mc_intro: מיינקראפט - מבוא
+        mc_repeat: מיינקראפט - לולאות
+        mc_if_statements: מיינקראפט - אירועי אם ואז
+        mc_congrats_share: מיינקראפט - סיום
+        mc_congrats_no_share: מיינקראפט - סיום
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements

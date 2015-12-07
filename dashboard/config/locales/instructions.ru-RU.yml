@@ -1373,9 +1373,8 @@
         learned everything you need to know to make a pattern like this! If this\npicture
         inspires you, try to make something similar. Otherwise, create something\nall
         your own.\r\n\r\nNeed a hint? Click here."
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
+      Course 4 Artist Functions 1_instruction: Можешь нарисовать круг 100 точек в
+        длину, используя цикл?
       Course 4 Artist Functions 10_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?

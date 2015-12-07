@@ -515,7 +515,7 @@
         studio_playlab_1: Pingvinen vill säga "Hej" - kan du hjälpa honom?
         studio_playlab_2: Grottpojken (skådespelare 1) och grottflickan (skådespelare
           2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket
-          "säga" två gånger?
+          "säg" två gånger?
         studio_playlab_3: Kan du hjälpa Tennisflickan att komma till flaggan?
         studio_playlab_4: Kan du hjälpa Tennispojken (skådespelare 1) att komma till
           Tennisflickan (skådespelare 2) och spela upp ett ljud när han kommer dit?
@@ -536,14 +536,14 @@
           Rymdroboten och varna alla andra
         studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
+        studio_iceage_hello1: Sid vill samla alla för ett nytt äventyr. Kan du hjälpa
+          honom att säga "hej" genom att dra ett "säg"-block ut i arbetsytan och skriva
+          ordet "hej" inuti?
+        studio_iceage_hello2: Sid (figur 1) hittade Manny (figur 2) och vill bjuda
+          in honom till äventyret. Hjälp dem att hälsa på varandra genom att använda
+          blocket "figur säg" två gånger.
+        studio_iceage_move_to_flag: Scrat letar efter sitt ekollon! Hjälp honom att
+          gå de sista 200 pixlarna genom att använda blocket "flytta".
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
@@ -870,7 +870,7 @@
           ändra storleken.
         frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
         frozen_create_square: Lägg till fler block här för att skapa en kvadrat
-        playlab_drag_say: Dra blocket "säga" här och skriv "Hej"
+        playlab_drag_say: Dra blocket "säg" här och skriv "Hej"
         playlab_use_twice: Använda detta block två gånger och kom ihåg att ändra figur
           numret
         playlab_move_girl: Använda "flytta höger" blocket för att flytta tennis-flickan

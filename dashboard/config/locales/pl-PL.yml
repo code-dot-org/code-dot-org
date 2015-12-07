@@ -483,9 +483,9 @@
     privacy: Polityka prywatności
     secure: Bezpieczna wersja
     report_abuse: Zgłoś nadużycie
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Zbudowane w Code Studio
+    make_my_own_app: Stwórz własną aplikację
+    how_it_works: Jak to działa
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -553,7 +553,7 @@
       unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: Godzina kodowania
+      title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
     flappy:
       title: Flappy Code

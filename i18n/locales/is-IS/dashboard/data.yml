@@ -496,7 +496,7 @@ is:
         alg_14_biggame_booleans: 'TF í Algebru - Stórleikur, Boole gildi'
         alg_15_biggame_update_player: 'TF í Algebru - Stórleikur, uppfæra leikmann'
         alg_16_biggame_collision_detection: 'TF í Algebru - Stórleikur, skynjun árekstra'
-        alg_17_sambat_compound_booleans: 'TF í Algebru - Stórleikur, samsett Bool gildi'
+        alg_17_sambat_compound_booleans: 'TF í Algebru - Samsett Boole gildi'
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
@@ -515,9 +515,9 @@ is:
         gumball_intro: 'Klukkustund kóðunar með Gumball - Kynning'
         gumball_events: 'Klukkustund kóðunar með Gumball - Atvik'
         gumball_repeat: 'Klukkustund kóðunar með Gumball - Endurtekningar'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Klukkustund kóðunar með Ísöld - Kynning'
+        iceage_events: 'Klukkustund kóðunar með Ísöld - Atvik'
+        iceage_repeat: 'Klukkustund kóðunar með Ísöld - Endurtekningar'
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'

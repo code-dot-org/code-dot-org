@@ -278,7 +278,7 @@ es-MX:
   starwars_javascript_start_button: Probar ahora
   starwars_blocks_title: Bloques
   starwars_blocks_description: Arrastra los bloques.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Probar ahora
   starwars_watch_videos: Antes de empezar, mira uno de estos videos motivadores
   starwars_speak_languages: ¿Hablas otro idioma?
@@ -289,7 +289,7 @@ es-MX:
   mc_shortdescription: Utiliza bloques de código para llevar a Esteban o Ale en una aventura a través del mundo de Minecraft.
   mc_gradelevel: Edad 4-104
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft de la Hora del Código
   volunteer_engineer_submission_title: Inspirar a los estudiantes y voluntarios para la Hora del Código.
   volunteer_engineer_submission_subtitle_generic: 100.000 docentes van a realizar una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda!
@@ -591,8 +591,8 @@ es-MX:
   mobile_devices: Tutoriales para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
   starwars_name: 'Star Wars: construyendo una Galaxia con Código'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Laberinto clásico
+  codeintl_name: Laberinto clásico
   thinkersmithspanish_name: Mis amigos robóticos
   khan_name: Una introducción a JavaScript
   khanes_name: Una introducción a JavaScript
@@ -628,7 +628,7 @@ es-MX:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piedra, papel, tijera
-  hourofcode_name: Classic Maze
+  hourofcode_name: Laberinto clásico
   playlab_name: Laboratorio de Juegos
   infinity_name: Laboratorio de Juego Infinity
   artist_name: Artista

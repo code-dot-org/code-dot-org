@@ -227,8 +227,8 @@
         maze_3_2: Skriv et program til meg så jeg kan komme meg helt frem til grisen.
         maze_3_3: Hvordan skal jeg komme meg til grisen? Forsikre deg om at jeg ikke kommer borti boksen med TNT!
         maze_3_4: Argh! Skriv meg et program for å komme meg rundt sprengstoffet og helt frem til grisen.
-        bounce_1: Fest en blokk til «Når venstre pil» blokken og trykk «Kjør». Flytt åren ved å bruke venstre pil for å nå målet.
-        bounce_2: Fest en blokk til «når høyre pil» og «når venstre pil» blokkene. Flytt åren for å nå begge målene.
+        bounce_1: Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt åren ved å bruke venstre pil for å nå målet.
+        bounce_2: Fest en blokk til «når pil høyre» og «når pil venstre» blokkene. Flytt åren for å nå begge målene.
         bounce_3: Prøv noe lignende med «når opp pil» blokken. Flytt åren til målet på toppen.
         bounce_4: Denne gangen trenger du å legge til fire blokker. Flytt åren til alle fire mål for å fullføre denne oppgaven.
         bounce_5: Vi skal sende en ball flygende ned mot åren. Fest en blokk til «når en ball treffer åren» blokken for å være sikker på at ballen når mål.
@@ -418,9 +418,9 @@
         C3_bee_functions: Bie funksjoner
         C3_bee_conditionals: Bie Betingelser
         C3_maze_conditionals: Labyrint Betingelser
-        C3_artist_nested_loops: Nøstede Løkker
+        C3_artist_nested_loops: Løkker i løkker
         C3_farmer_while: Mens Løkker
-        C3_bee_nested_loops: Nøstede Løkker
+        C3_bee_nested_loops: Løkker i løkker
         C3_bee_debugging: Bie feilsøking
         C3_bounce: sprett
         C3_playlab_create_game: Spill-Lab – lage et spill

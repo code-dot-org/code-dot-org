@@ -297,7 +297,7 @@
   class_submission_out_of_school_other: স্কুল থেকে বাইরে অন্যান্য যারা
   class_submission_online: অনলাইনে
   class_submission_online_programming_class: অনলাইন প্রোগ্রামিং ক্লাস
-  class_submission_online_teacher_resource: অনলাইন শিক্ষক সংস্থান
+  class_submission_online_teacher_resource: অনলাইন শিক্ষকদের জন্য তথ্য
   class_submission_online_other: অন্যান্য অনলাইন
   class_submission_level_preschool: স্কুল শুরুর আগে
   class_submission_level_elementary: সাধারন
@@ -308,36 +308,37 @@
   class_submission_languages_other: অন্যান্য ভাষা
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  playlab_choose_theme: আপনার প্লেল্যাবের মূলভাব (থীম) বেছে নিন।
+  playlab_classic_title: কালজয়ী
+  playlab_gumball_title: গামবল
+  playlab_iceage_title: বরফযুগ - শীঘ্রই আসছে
+  playlab_iceage_title_live: বরফযুগ
+  starwars_subtitle: কোড দিয়ে একটি আকাশগঙ্গা (গ্যালাক্সি) নির্মাণ করুন।
+  starwars_javascript_title: জাভাস্ক্রিপ্ট
+  starwars_javascript_description: ড্র্যাগ-ড্রপ ব্লক এবং জাভাস্ক্রিপ্ট ব্যবহার করুন।
+  starwars_javascript_specs: কেবল ইংরেজি | আধুনিক ব্রাউজার | বয়সের 11 +
   starwars_javascript_start_button: এখন চেষ্টা করুন
   starwars_blocks_title: ব্লকসমূহ
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: ড্র্যাগ-ড্রপ ব্লক ব্যবহার করুন।
+  starwars_blocks_specs: অনেক ভাষা | আধুনিক ব্রাউজার, স্মার্টফোন, ট্যাবলেট | বয়সের
+    6-10
   starwars_blocks_start_button: এখন চেষ্টা করুন
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_speak_languages: অন্য ভাষায় কথা বলেন?
+  starwars_help_translate: আমাদের অনুবাদ সাহায্য করুন
   starwars_platform_text: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
-  mc_name: Minecraft Hour of Code
+  mc_name: মাইনক্র্যাফট এক ঘণ্টার কোড
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_gradelevel: বয়স 4-104
   mc_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  mc_specs: অনেক ভাষা | আধুনিক ব্রাউজার এবং ট্যাবলেট | বয়সের 6 +
+  minecraft_subtitle: মাইনক্র্যাফট এক ঘণ্টার কোড
+  volunteer_engineer_submission_title: ছাত্র এবং স্বেচ্ছাসেবকদের এক ঘন্টার কোডের জন্য
+    অনুপ্রাণিত করুন
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
@@ -360,8 +361,8 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and find a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_header_shared: স্বেচ্ছাসেবকদের মানচিত্রে শিক্ষকদের
+    সাথে তথ্য শেয়ার করা
   volunteer_engineer_submission_field_name: নাম
   volunteer_engineer_submission_field_name_placeholder: সম্পুন্ন নাম
   volunteer_engineer_submission_field_company: কোম্পানি (বা বিশ্ববিদ্যালয়)
@@ -370,25 +371,25 @@
   volunteer_engineer_submission_field_location: অবস্থান
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
+  volunteer_engineer_submission_field_location_placeholder: জিপ কোড, সিটি ও রাজ্য/দেশের
+    বা রাস্তার ঠিকানা
   volunteer_engineer_submission_field_location_flexibility: I can help during the
     Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_checkbox_after_hoc: ' এক ঘন্টার কোডের পর স্বেচ্ছাসেবক
+    হতে আগ্রহী'
+  volunteer_engineer_submission_field_time_commitment: এক ঘন্টা কোডের শেষেও সময় দেয়ার
+    প্রতিশ্রুতি
+  volunteer_engineer_submission_field_linkedin: লিঙ্কডইন প্রোফাইল
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/আপনার_নাম
   volunteer_engineer_submission_field_facebook: ফেইসবুক প্রোফাইল
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/আপনার_নাম
   volunteer_engineer_submission_field_description: বর্ণনা
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_header_private: তথ্য অপ্রকাশ্য রাখা হয় ও কখনো শেয়ার
+    করা হয় না
   volunteer_engineer_submission_field_email: ইমেইল ঠিকানা
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
@@ -409,8 +410,8 @@
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ঘন্টা প্রতি সপ্তাহে
   volunteer_engineer_submission_commitment_now_and_then: প্রায়শই
   volunteer_engineer_submission_commitment_annually: প্রতি বছরে 2 - 3 বার
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_monthly: প্রতি মাসে কয়েক ঘন্টার
+  volunteer_engineer_submission_commitment_weekly: প্রতি সপ্তাহে কয়েক ঘন্টার
   volunteer_engineer_submission_commitment_more: আরো
   volunteer_engineer_submission_location_flexibility_onsite: 'স্কুলের প্রাঙ্গণে '
   volunteer_engineer_submission_location_flexibility_remote: দূর থেকে শিক্ষা দেওয়া
@@ -418,19 +419,20 @@
   volunteer_engineer_submission_location_flexibility_curriculum: ওপেন-সোর্স কারিকুলাম
     প্রকল্পে অবদান রাখতে সহায়তা করার ইচ্ছা
   volunteer_engineer_submission_experience_unspecified: অনির্দিষ্ট
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: একটি কারিগরি কোম্পানিতে অপ্রকৌশলী
+    পদে কর্মরত
   volunteer_engineer_submission_experience_university_student_or_researcher: বর্তমান
     বিশ্ববিদ্যালয় ছাত্র (বা গবেষক)
   volunteer_engineer_submission_experience_software_professional: পেশাদার সফটওয়্যার
     বিসয়ক
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: ৫ মাইল
+  volunteer_engineer_submission_distance_16: ১০ মাইল
+  volunteer_engineer_submission_distance_24: ১৫ মাইল
+  volunteer_engineer_submission_distance_32: ২০ মাইল
+  volunteer_engineer_submission_num_volunteers_5: ৫ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_num_volunteers_10: ১০ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_num_volunteers_25: ২৫ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_num_volunteers_50: ৫০ জন স্বেচ্ছাসেবক
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -462,7 +464,7 @@
   dashboard_landing_progress_title: মূল শ্রেণী অগ্রগতি
   dashboard_landing_progress_biggest: এটি হল আপনার সবচেয়ে বড় অংশের অগ্রগতি।
   dashboard_landing_view_progress: '%{biggest_section} এর জন্য আপনার অগ্রগতি দেখুন'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: উন্নতি ছাপুন
   dashboard_landing_available_title: বিদ্যমান কোর্সসমূহ
   dashboard_landing_available_courses: এখানে  আপনার এবং আপনার ছাত্রদের জন্য বিদ্যমান
     কোর্সগুলো রয়েছে।
@@ -484,12 +486,12 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: 20 ঘন্টা মধ্যমিক স্কুলের কোর্স
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: বছর দীর্ঘ হাই স্কুলের কোর্স
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -497,7 +499,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: বিজ্ঞানে কম্পিউটার বিজ্ঞান
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -505,7 +507,7 @@
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp: এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: লোড হচ্ছে...
@@ -530,7 +532,7 @@
   dashboard_navigation_section_speakers: কম্পিউটার বিজ্ঞানের <br/> অতিথী বক্তারা
   dashboard_navigation_all_sections: শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি
   dashboard_navigation_view_progress: আগ্রগতি দেখুন
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: লিখিত জবাব দেখুন
   dashboard_navigation_add_students: ' শিক্ষার্থীদের যুক্ত করন'
   dashboard_navigation_manage_students: ' শিক্ষার্থীদের পরিচালনা করন'
   dashboard_navigation_lesson_plans_resources: পাঠ পরিকাল্পনা এবং তথ্য
@@ -559,7 +561,7 @@
     <b>none</b>.
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
+  dashboard_sections_switch_section: 'অধ্যায় অদল-বদল করুন:'
   dashboard_students_add_student: শিক্ষার্থী যুক্ত করুন
   dashboard_students_add_students: একাধিক শিক্ষার্থী যুক্ত করুন
   dashboard_students_add_multiple: 'প্রতি লাইনে একজন করে, শিক্ষার্থীদের নাম লিখুন
@@ -568,7 +570,7 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: শিক্ষার্থীর নাম
   dashboard_students_name: নাম
-  dashboard_students_progress: Progress
+  dashboard_students_progress: অগ্রগতি
   dashboard_students_age: বয়স
   dashboard_students_gender: লিঙ্গ
   dashboard_students_male: Male
@@ -586,12 +588,12 @@
   dashboard_students_share_section: 'পৃষ্ঠার এই সেকশনে চিহ্ন আপনার ছাত্রের সাথে শেয়ার
     করুন:'
   dashboard_students_print_info: আপনার ছাত্র যুক্ত হওয়ার তথ্য কার্ড মুদ্রন করুন
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: গোপন ছবি
   dashboard_students_secret_picture: গুপ্ত ছবি
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: গোপন শব্দ
   dashboard_students_secret_word: গুপ্ত শব্দ
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
@@ -605,18 +607,18 @@
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: কে-৫ শিক্ষকদের জন্য তথ্য
+  dashboard_curriculum_middle_title: মধ্যমিক স্কুলের শিক্ষকদের জন্য তথ্য
+  dashboard_curriculum_high_title: উচ্চ মধ্যমিক স্কুলের  শিক্ষকদের জন্য তথ্য
+  dashboard_lesson_plans: পাঠ পরিকল্পনা
   dashboard_view_all_lesson_plans: Lesson এর সকল পরিকল্পনাসমূহ প্রদর্শন করুন
   dashboard_course1: 'কোর্স 1:'
   dashboard_course2: 'কোর্স 2:'
   dashboard_course3: 'কোর্স 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'কোর্স ৪ (পরীক্ষামুলক):'
+  dashboard_curriculum: পাঠ্যক্রম
   dashboard_curriculum_overview: K-5 কারিকুলাম তথ্যাবলী
-  dashboard_overview: Overview
+  dashboard_overview: সংক্ষিপ্ত বিবরণ
   dashboard_sequence: অনুক্রম
   dashboard_framework: ফ্রেমওয়ার্ক
   dashboard_standards: মানের
@@ -627,10 +629,10 @@
   dashboard_puzzle_solving: 'ধাঁধা-সমাধান:'
   dashboard_student_worksheet: ছাত্র কর্মসূচি
   dashboard_teacher_worksheet: শিক্ষক কর্মসূচি
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: 'বীজগণিতে কম্পিউটার বিজ্ঞান:'
+  dashboard_curriculum_csins: 'বিজ্ঞানে কম্পিউটার বিজ্ঞান:'
+  dashboard_curriculum_csp: 'এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি:'
+  dashboard_curriculum_ecs: 'কম্পিউটার বিজ্ঞানের প্রসার করা হচ্ছে:'
   dashboard_grade_k: K
   dashboard_grade_other: অন্যান্য
   dashboard_login_word: শব্দ
@@ -639,14 +641,14 @@
   dashboard_new_password: নতুন পাসওয়ার্ড
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
+  dashboard_progress_not_completed: সম্পন্ন নয়
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_stage: ধাপ
   dashboard_puzzle: ধাঁধা
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: প্রশ্ন
+  dashboard_response: জবাব
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats
@@ -654,35 +656,36 @@
   dashboard_student: ছাত্র
   dashboard_sections_email_question: সকল ছাত্রের কি একটি বৈধ ই-মেইল ঠিকানা আছে?
   dashboard_sections_account_creation_question: কে ছাত্রের একাউন্ট তৈরি করে?
-  dashboard_sections_password_question: What do students use as a "password"?
+  dashboard_sections_password_question: '''পাসওয়ার্ড" হিসাবে ছাত্ররা কি ব্যবহার করেন?'
   dashboard_sections_picture_account_creation: Code.org কর্তৃক সংযুক্ত ছবি
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
-  dashboard_sections_sign_in_question: Where do students sign-in?
-  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
-  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
-  dashboard_sections_password_account_creation: Student-created text password
+  dashboard_sections_word_account_creation: Code.org, দ্বারা নিযুক্ত একটি সাধারণ শব্দ
+  dashboard_sections_sign_in_question: কোথায় ছাত্ররা সাইন-ইন করবেন?
+  dashboard_sections_sign_in_unique: '"ছাত্র নিয়ন্ত্রণ করুন" ট্যাব তালিকাভুক্ত স্বতন্ত্র
+    ওয়েব-পাতা'
+  dashboard_sections_sign_in_main: 'http://code.org যান এবং ''সাইন ইন'' ক্লিক করুন '
+  dashboard_sections_password_account_creation: ছাত্র-নির্মিত টেক্সট পাসওয়ার্ড
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
   dashboard_faq: বহুবার আলোচিত প্রশ্ন সমূহ
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_faq_k5: K-5 বহুল জিজ্ঞাসিত প্রশ্নসমূহ
+  dashboard_announcements: ঘোষণা
+  dashboard_announce_view_all: সব দেখুন
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
   dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
     Try out a tutorial, like the new Gumball and Ice Age Play Lab.
-  code_hoc_coming: The Hour of Code is here - December 8-14!
-  code_sign_up: Sign up to participate during CS Education Week
+  code_hoc_coming: এক ঘন্টা কোড এখানে-ডিসেম্বর 8-14
+  code_sign_up: CS শিক্ষা সপ্তাহ সময় অংশগ্রহণ করা সাইন আপ করুন
   learn_more: আরও জানুন
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: সাইন আপ
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
+  learn_videos_watch: আপনার শ্রেণীকক্ষে এই অনুপ্রেরণীয় ভিডিও দেখান
+  learn_videos_show: আপনার ক্লাসে এই অনুপ্রেরণীয় ভিডিও প্রদর্শন করুন
+  learn_videos_before_hoc: আপনার ঘন্টা এর কোড করার আগে অনুপ্রেরণীয় ভিডিও দেখুন
+  learn_educator_resources_description: শিক্ষা এক ঘন্টার কোড কিভাবে করতে হয় তা শিখুন
+  learn_educator_resources_button: শিক্ষকদের জন্য তথ্য
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
@@ -695,85 +698,86 @@
     শিক্ষাবিদের পুরস্কার সম্পর্কে।
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
-  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_new_tutorials: আমাদের নতুন এক ঘন্টা কোড টিউটোরিয়াল চেষ্টা করুন।
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, এবং Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Code.org টিউটোরিয়াল
+  carousel_heading_codeorg_any_device: Code.org-টিউটোরিয়াল (সমস্ত ডিভাইসের জন্য)
+  carousel_heading_3rd_party: তৃতীয় দলের করা টিউটোরিয়াল
+  carousel_heading_third_party: তৃতীয় পক্ষের করা টিউটোরিয়াল
   carousel_heading_international: নিজের ভাষায় টিউটোরিয়াল
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Grades K-8
-  carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_beyond_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
+  carousel_heading_domestic: সঙ্গী টিউটোরিয়াল ইংরেজিতে উপলভ্য।
+  carousel_heading_beginners: কে-৮ পর্যন্ত অংশীদারদের টিউটোরিয়াল
+  carousel_heading_beyond_beginners: প্রাথমিক শিক্ষার্থীর জন্য টিউটোরিয়াল
+  carousel_heading_javascript: জাভাস্ক্রিপ্ট শেখায় যে সহযোগী টিউটোরিয়াল
+  carousel_heading_beyond_javascript: জাভাস্ক্রিপ্ট শেখানোর টিউটোরিয়াল
+  carousel_heading_unplugged: কোন ডিভাইস বা ইন্টারনেট নেই? 'বিচ্ছিন্ন' কম্পিউটার বিজ্ঞান
+    চেষ্টা করুন।
+  carousel_heading_devices: ফোন এবং ট্যাবলেটের জন্য অংশীদার টিউটরিয়াল অ্যাপ
+  carousel_heading_beyond_devices: ফোন এবং ট্যাবলেট জন্য টিউটরিয়াল অ্যাপ
+  carousel_heading_languages: অন্য প্রোগ্রামিং ভাষায় অংশীদারদের টিউটরিয়াল
+  carousel_heading_beyond_languages: অন্য প্রোগ্রামিং ভাষার টিউটোরিয়াল
+  carousel_heading_apps_games: আপনার নিজের অ্যাপ বা গেম বানান
+  carousel_heading_university: অনলাইনে বিশ্ববিদ্যালয়ে কোর্স
   carousel_heading_webpages: ওয়েব পেজ তৈরি করতে শিখুন
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  carousel_heading_robots: রোবটের সাথে প্রোগ্রাম করতে শিখুন
+  carousel_heading_ide: শিক্ষকদের মধ্যে জনপ্রিয় প্ল্যাটফর্ম
+  educator_notes: শিক্ষকের টীকা
+  teach_led_lesson_plans: শিক্ষক পরিচালিত পাঠ পরিকল্পনা
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
     here.</a>
-  how_to_teach_hoc: How to Teach an Hour of Code
-  more_resources_educators: More resources for teachers and educators
+  how_to_teach_hoc: কিভাবে এক ঘন্টার কোড শিক্ষাবেন
+  more_resources_educators: শিক্ষক ও শিক্ষাবিদদের জন্য তথ্য
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
   participants: অংশগ্রহণকারী
-  teachers_notes: Teacher's Notes
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes: শিক্ষকদের টীকা
+  teachers_notes_hoc: 'শিক্ষকরা: এখানে গুরুত্বপূর্ণ শিক্ষাবিদ মন্তব্য পড়ুন'
   previous: পূর্ববর্তী
   next: পরবর্তী
-  older_systems: Tutorials that work on older systems
+  older_systems: পুরাতন সিস্টেমে যে অংশীদার টিউটরিয়াল কাজ করে
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  mobile_devices: মোবাইল ডিভাইসের জন্য অংশীদারদের টিউটোরিয়াল
   frozen_name: Code with Anna and Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'স্টার ওয়ার্স: কোড দিয়ে ছায়াপথ (গ্যালাক্সি বানান)'
   codeorg_name: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
   codeintl_name: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
-  khanpt_name: An introduction to JavaScript
-  khanhe_name: An introduction to JavaScript
-  khanfr_name: An introduction to JavaScript
-  khanpl_name: An introduction to JavaScript
-  tynker_name: Build your own game
-  scratch_name: Get creative with coding
+  khan_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanes_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanpt_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanhe_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanfr_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanpl_name: জাভাস্ক্রিপ্টের ভূমিকা
+  tynker_name: আপনার নিজস্ব খেলা তৈরি করুন
+  scratch_name: কোডিং মাধ্যমে সৃজনশীল পান
   lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
-  condcards_name: Conditionals with Cards
+  thinkersmith_name: আমার রোবোটিক্স বন্ধুরা
+  condcards_name: কার্ড সঙ্গে শর্ত
   lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  codehs_name: কুকুর ক্যারেল সাথে কোড শিখুন
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: CodeMonkey
-  codeavengers_name: Build a Game with JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: Eliza the Chatterbot Doctor
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable (pre-readers welcome)
-  tynkerapp_name: Tynker - on tablets
-  robomindnl_name: Program a virtual robot
-  flappy_name: Make a Flappy game
-  bitsbox_name: Bitsbox - make a game
-  makeschool_name: Build an iPhone game in your browser!
+  codemonkey_name: কোডবানর
+  codeavengers_name: জাভাস্ক্রিপ্ট দিয়ে একটি খেলা তৈরি করুন
+  processing_name: কোড দিয়ে ছবি আঁকা
+  robomind_name: একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন
+  groklearning_name: এলিজা কথপকথনকারী রোবট ডাক্তার
+  quorum_name: সুলভ প্রোগ্রামিং (স্ক্রীন রীডার সাপোর্ট সহ)
+  codespark_name: The Foos (প্রাক পাঠকদের স্বাগত)
+  kodable_name: Kodable (প্রাক পাঠকদের স্বাগত)
+  tynkerapp_name: Tynker - ট্যাবলেটে
+  robomindnl_name: একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন
+  flappy_name: ফ্লাপি গেম তৈরি করুন
+  bitsbox_name: Bitsbox - একটি খেলা বানান
+  makeschool_name: আপনার ব্রাউজার দিয়ে আইফোনের জন্য গেম তৈরী করুন!
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: অ্যাপইনভেন্টরে এক ঘন্টার কোড
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
@@ -782,13 +786,13 @@
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artist
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: রহস্য দ্বীপের কোডিং অনুসন্ধান
+  allcancode_name: পালাও মার্কো!
+  csfirst_name: সিএস প্রথমে
+  boxisland_name: বাক্স দ্বীপ
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
+  texasinstruments_name: 10 মিনিটের কোড
+  teacherled_name: শিক্ষক পরিচালিত পাঠ পরিকল্পনা
   codeorg_gradelevel: বয়স 4-104
   codeintl_gradelevel: বয়স 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -833,107 +837,113 @@
   infinity_gradelevel: বয়স 4-104
   artist_gradelevel: বয়স 8 +
   monstercoding_gradelevel: বয়স 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: বয়স 5-10
+  csfirst_gradelevel: বয়স 9-14
   boxisland_gradelevel: সাধারন
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: বয়স 12-14
+  texasinstruments_gradelevel: বয়স 13-16
+  teacherled_gradelevel: বয়স ৫+
   codeorg_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   codeintl_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
-  thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: Modern web browsers
-  khanes_platformtext: Modern web browsers
-  khanpt_platformtext: Modern web browsers
-  khanhe_platformtext: Modern web browsers
-  khanfr_platformtext: Modern web browsers
-  khanpl_platformtext: Modern web browsers
-  tynker_platformtext: Modern web browsers
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  thinkersmithspanish_platformtext: অসংযুক্ত
+  khan_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanes_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanpt_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanhe_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanfr_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanpl_platformtext: আধুনিক ওয়েব ব্রাউজার
+  tynker_platformtext: আধুনিক ওয়েব ব্রাউজার
+  scratch_platformtext: ডেস্কটপ-শুধুমাত্র ওয়েব ব্রাউজারে (ট্যাবলেটে না)
   lightbot_platformtext: সকল ব্রাউজারগুলি এবং iOS, Android, বা গেইম কনসোল
-  thinkersmith_platformtext: Unplugged
+  thinkersmith_platformtext: অসংযুক্ত
   condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: iOS, Android (or web browser)
-  codehs_platformtext: Modern browsers. (Follow-on course requires  $$)
-  codecademy_platformtext: Modern web browsers. iOS, Android apps
-  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
-  codemonkey_platformtext: Modern web browsers
-  codeavengers_platformtext: Modern web browsers
-  processing_platformtext: Modern web browsers
-  robomind_platformtext: Modern web browsers, Mobile web
-  groklearning_platformtext: Modern web browsers
-  quorum_platformtext: Modern web browsers. Screen-readers supported
-  codespark_platformtext: iOS, Android (or web browser)
+  lightbotintl_platformtext: আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)
+  codehs_platformtext: আধুনিক ব্রাউজার। (ফলো-অন কোর্স ডলার প্রয়োজন $)
+  codecademy_platformtext: আধুনিক ওয়েব ব্রাউজার। আইওস, অ্যান্ড্রয়েড অ্যাপস
+  codecombat_platformtext: আধুনিক ওয়েব ব্রাউজার (ফলো-অন কোর্স ডলার প্রয়োজন $)
+  codemonkey_platformtext: আধুনিক ওয়েব ব্রাউজার
+  codeavengers_platformtext: আধুনিক ওয়েব ব্রাউজার
+  processing_platformtext: আধুনিক ওয়েব ব্রাউজার
+  robomind_platformtext: আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব
+  groklearning_platformtext: আধুনিক ওয়েব ব্রাউজার
+  quorum_platformtext: আধুনিক ওয়েব ব্রাউজার। পর্দা-সমর্থিত পাঠক
+  codespark_platformtext: আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: iPad, Android tablets
-  robomindnl_platformtext: Modern web browsers, Mobile web
+  tynkerapp_platformtext: আইপ্যাড, অ্যান্ড্রয়েড ট্যাবলেট
+  robomindnl_platformtext: আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব
   flappy_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
-  bitsbox_platformtext: Modern web browsers
-  makeschool_platformtext: Modern Web browsers
-  touchdevelop_platformtext: Modern browsers, smartphones, all devices
-  appinventor_platformtext: Modern browsers + Android
-  blockly_platformtext: Modern browsers only
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
+  bitsbox_platformtext: আধুনিক ওয়েব ব্রাউজার
+  makeschool_platformtext: আধুনিক ওয়েব ব্রাউজার
+  touchdevelop_platformtext: আধুনিক ব্রাউজার, স্মার্টফোন, সকল ডিভাইস
+  appinventor_platformtext: আধুনিক ব্রাউজার + অ্যান্ড্রয়েড
+  blockly_platformtext: শুধু আধুনিক ব্রাউজার
+  thinkersmith2_platformtext: অসংযুক্ত
+  kodableunplugged_platformtext: অসংযুক্ত
+  projguts_platformtext: অসংযুক্ত
   hourofcode_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   frozen_platformtext: আধুনিক ব্রাউজার + ট্যাবলেট
   starwars_platformtext: আধুনিক ব্রাউজার + ট্যাবলেট
   playlab_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
-  csfirst_platformtext: Modern web browsers
-  boxisland_platformtext: Android, iOS
-  codesters_platformtext: Modern web browsers
-  texasinstruments_platformtext: TI Calculators
+  monstercoding_platformtext: আধুনিক ওয়েব ব্রাউজার, আইওস অ্যান্ডয়েড
+  allcancode_platformtext: আধুনিক ওয়েব ব্রাউজার, আইওস
+  csfirst_platformtext: আধুনিক ওয়েব ব্রাউজার
+  boxisland_platformtext: অ্যান্ড্রয়েড, আইওএস
+  codesters_platformtext: আধুনিক ওয়েব ব্রাউজার
+  texasinstruments_platformtext: TI ক্যালকুলেটর
   teacherled_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeorg_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
+    শিখুন!
+  codeintl_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
+    শিখুন!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  khanpt_shortdescription: Learn to draw in JavaScript
-  khanhe_shortdescription: Learn to draw in JavaScript
-  khanfr_shortdescription: Learn to draw in JavaScript
-  khanpl_shortdescription: Learn to draw in JavaScript
+  khan_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanes_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanpt_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanhe_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanfr_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanpl_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own
     mobile games.
-  scratch_shortdescription: Create interactive games, stories, and animations.
-  lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and
-    loops!
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: A game to teach coding concepts
+  scratch_shortdescription: পরস্পর ক্রিয়াশীল খেলা, গল্প এবং এনিমেশন তৈরি করুন।
+  lightbot_shortdescription: কার্যপ্রণালী এবং লুপ ব্যবহার করে লাইটবোটকে ধাঁধা সমাধান
+    করাতে প্রোগ্রাম করুন।
+  thinkersmith_shortdescription: অসংযুক্ত টিউটোরিয়াল যাদের কোন যন্ত্র নেই তাদের জন্য
+  condcards_shortdescription: এক বান্ডিল তাস দিয়ে অ্যালগোরিদম শিখুন
+  lightbotintl_shortdescription: কোডিং ধারণা শেখানোর একটি খেলা
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro
     to programming!
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
+  codecademy_shortdescription: ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন
   codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this
     epic programming game!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
+  codemonkey_shortdescription: ছাত্ররা প্রোগ্রাম করে বানরকে কলা ধরায়।
+  codeavengers_shortdescription: ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন
+  processing_shortdescription: প্রক্রিয়াকরণ ভাষায় এক ঘন্টা টিউটোরিয়াল
+  robomind_shortdescription: ভার্চুয়াল রোবটের জন্য কোড লিখুন
   groklearning_shortdescription: Teach "Eliza" the chatbot to fool your friends into
     thinking she's human!
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
     language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
     programming.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
-  robomindnl_shortdescription: Write code for a virtual robot
-  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
+  kodable_shortdescription: কম্পিউটার প্রোগ্রামিং এর ধারণা শিখানোর জন্য আইপ্যাডের
+    একটি মজার খেলা
+  tynkerapp_shortdescription: মজা কোডিং রহস্য উন্মোচন করতে করতে প্রোগ্রাম শিখুন।
+  robomindnl_shortdescription: ভার্চুয়াল রোবটের জন্য কোড লিখুন
+  flappy_shortdescription: নিজের গেম তৈরি করুন- ফ্লাপি পাখি, হাঙ্গর বা সাবমেরিন
   bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
     your monster new moves!
   touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all
     on your phone. '
-  appinventor_shortdescription: Make your own app! (Android-only)
-  blockly_shortdescription: Download a ZIP file to learn offline
-  thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
-  kodableunplugged_shortdescription: A fun unplugged exercise
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  appinventor_shortdescription: তৈরি করুন আপনার নিজস্ব অ্যাপ! (শুধু অ্যান্ড্রয়েডে)
+  blockly_shortdescription: অফলাইনে শিখার জন্য জিপ ফাইলটি ডাউনলোড করুন।
+  thinkersmith2_shortdescription: কীভাবে কম্পিউটার 1s ও 0s ব্যবহার করে তথ্য প্রকাশ
+    করে তা শিখুন
+  kodableunplugged_shortdescription: অসংযুক্ত মজার কাজ
+  projguts_shortdescription: পাথর/কাগজ/কাঁচি ব্যবহার করে প্রতিলিপি ও সিমুলেশন করা
+    চেষ্টা করুন
+  hourofcode_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
+    শিখুন!
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
@@ -942,17 +952,17 @@
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
   artist_shortdescription: Draw cool pictures and designs with the Artist!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
+  monsterocding_shortdescription: শিশুদের জন্য একটি রঙিন স্বনির্দেশিত প্রোগ্রামিং
+    ভ্রমণ।
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming
     language.
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add
     your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
+  boxisland_shortdescription: সাহসী বীরের সাথে বাক্স দ্বীপে কোডিং ভ্রমন করুন।
+  codesters_shortdescription: পাইথন ব্যবহার করে আপনার নিজস্ব গেমস, এনিমেশন ও নকশার
+    তৈরি করুন।
+  texasinstruments_shortdescription: মৌলিক কোডিং শিখুন TI-84&#8482;প্লাস ক্যালকুলেটর
+    ব্যবহার করে।
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with
     these lesson plans.
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
@@ -1084,7 +1094,7 @@
   projguts_longdescription: This "unplugged" activity helps students learn how modeling
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: code.org/hoc এর জন্য প্লেসহোল্ডার
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
@@ -1124,41 +1134,41 @@
     activities that teach the basics of computer science. To help teachers find inspiration,
     we collected and curated one-hour teacher-led lesson and activity plans designed
     for different subject areas for Hour of Code veterans.
-  codeorg_beyond_name: Intro Computer Science (grades K-8)
-  khan_beyond_name: Learn computer programming
-  tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Get creative with coding
+  codeorg_beyond_name: কম্পিউটার বিজ্ঞানের মৌলিক (K-8 শ্রেনী)
+  khan_beyond_name: কম্পিউটার প্রোগ্রামিং শিখুন
+  tynker_beyond_name: বাড়িতে প্রোগ্রামিং শিখুন
+  scratch_beyond_name: কোডিং মাধ্যমে সৃজনশীল পান
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
-  kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  kodable_beyond_name: কোডাবল
+  scratchjr_beyond_name: প্রাক পাঠকদের জন্য ScratchJR
+  hopscotch_beyond_name: 'Hopscotch: আপনার আইপ্যাডে এ প্রোগ্রামিং'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
-  makeschool_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: AppInventor Hour of Code
+  groklearning_beyond_name: পাইথন প্রোগ্রামিং শিখুন
+  hacketyhack_beyond_name: রুবি শিখুন
+  robomind_beyond_name: একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন
+  makeschool_beyond_name: আপনার ব্রাউজার দিয়ে আইফোনের জন্য গেম তৈরী করুন!
+  appinventor_beyond_name: অ্যাপইনভেন্টরে এক ঘন্টার কোড
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
-  udemy_beyond_name: Online Programming Courses
-  lynda_beyond_name: Online Programming Courses
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  codehs_beyond_name: কুকুর ক্যারেল সাথে কোড শিখুন
+  udemy_beyond_name: অনলাইন প্রোগ্রামিং কোর্স
+  lynda_beyond_name: অনলাইন প্রোগ্রামিং কোর্স
+  edx_beyond_name: হার্ভার্ড CS50 ক্লাস
+  coursera_beyond_name: স্ট্যানফোর্ড CS 101 ক্লাস
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: অনলাইনে বিশ্ববিদ্যালয়ে কোর্স
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  w3schools_beyond_name: HTML শিখুন
+  codeavengers_beyond_name: ওয়েবসাইটে কোড করতে শিখুন
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino with Sparkfun
-  processing_beyond_name: Program with Processing
+  arduino_beyond_name: Sparkfun সঙ্গে Arduino
+  processing_beyond_name: প্রোগ্রাম দ্বারা প্রক্রিয়াকরণ
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: বয়স 4-104
@@ -1178,102 +1188,106 @@
   appinventor_beyond_gradelevel: মাধ্যামিক স্কুল +
   touchdevelop_beyond_gradelevel: উচ্চ বিদ্যালয়
   codehs_beyond_gradelevel: উচ্চ বিদ্যালয়
-  udemy_beyond_gradelevel: High school +
-  lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
+  udemy_beyond_gradelevel: উচ্চ মাধ্যমিক +
+  lynda_beyond_gradelevel: উচ্চ মাধ্যমিক +
+  edx_beyond_gradelevel: বিশ্ববিদ্যালয়
+  coursera_beyond_gradelevel: বিশ্ববিদ্যালয়
+  udacity_beyond_gradelevel: বিশ্ববিদ্যালয়
+  teachingtree_beyond_gradelevel: বিশ্ববিদ্যালয়
   kodu_beyond_gradelevel: বয়স 8 +
   cargobot_beyond_gradelevel: বয়স 8 +
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
+  kidsruby_beyond_gradelevel: বয়সের ১২+
+  w3schools_beyond_gradelevel: বয়সের ১২+
   codeavengers_beyond_gradelevel: মাধ্যামিক স্কুল +
-  mozilla_beyond_gradelevel: Ages 12+
+  mozilla_beyond_gradelevel: বয়সের ১২+
   codecombat_beyond_gradelevel: মাধ্যামিক স্কুল +
-  codea_beyond_gradelevel: High school +
+  codea_beyond_gradelevel: উচ্চ মাধ্যমিক +
   lego_beyond_gradelevel: মাধ্যামিক স্কুল +
   finch_beyond_gradelevel: বয়স 8 +
-  arduino_beyond_gradelevel: High school +
+  arduino_beyond_gradelevel: উচ্চ মাধ্যমিক +
   processing_beyond_gradelevel: উচ্চ বিদ্যালয়
   alice_beyond_gradelevel: মাধ্যামিক স্কুল +
   sphero_beyond_gradelevel: বয়স 8 +
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers ($$ required)
-  scratch_beyond_platformtext: Any browser
-  lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  codeorg_beyond_platformtext: আধুনিক ব্রাউজার, ট্যাবলেট
+  khan_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  tynker_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার (ডলার প্রয়োজন $)
+  scratch_beyond_platformtext: কোন ব্রাউজার
+  lightbot_beyond_platformtext: আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)
+  codecademy_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার। আইওস, অ্যান্ড্রয়েড অ্যাপস
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: Mobile App
-  groklearning_beyond_platformtext: Modern web browsers
-  hacketyhack_beyond_platformtext: Desktop install
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makeschool_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers ($$ required)
-  udemy_beyond_platformtext: Web based
-  lynda_beyond_platformtext: Web based ($$ required)
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
-  teachingtree_beyond_platformtext: Web based
+  pocketcode_beyond_platformtext: মোবাইল আপ
+  groklearning_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  hacketyhack_beyond_platformtext: ডেস্কটপে সংস্থাপন করুন
+  robomind_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব
+  makeschool_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  appinventor_beyond_platformtext: আধুনিক ব্রাউজার + অ্যান্ড্রয়েড
+  touchdevelop_beyond_platformtext: আধুনিক ব্রাউজার, স্মার্টফোন, সকল ডিভাইস
+  codehs_beyond_platformtext: আধুনিক ব্রাউজার (ডলার প্রয়োজন $)
+  udemy_beyond_platformtext: ওয়েব ভিত্তিক
+  lynda_beyond_platformtext: ওয়েব ভিত্তিক (ডলার প্রয়োজন)
+  edx_beyond_platformtext: আধুনিক ব্রাউজার
+  coursera_beyond_platformtext: আধুনিক ব্রাউজার
+  udacity_beyond_platformtext: আধুনিক ব্রাউজার
+  teachingtree_beyond_platformtext: ওয়েব ভিত্তিক
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  kidsruby_beyond_platformtext: ডেস্কটপে সংস্থাপন করুন
+  w3schools_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  codeavengers_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  mozilla_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  codecombat_beyond_platformtext: ওয়েব ভিত্তিক (ফায়ারফক্স ক্রোম, সাফারি, আইই৯+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Robot purchase
-  finch_beyond_platformtext: Robot purchase
-  arduino_beyond_platformtext: Web browser, then Kit purchase
-  processing_beyond_platformtext: Modern web browsers
-  alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades
-    4-8
-  scratch_beyond_shortdescription: Create interactive games, stories, and animations.
-  lightbot_beyond_shortdescription: A game to teach coding concepts
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
-  hopscotch_beyond_shortdescription: Learn visual programming on an iPad
+  lego_beyond_platformtext: রোবট ক্রয়
+  finch_beyond_platformtext: রোবট ক্রয়
+  arduino_beyond_platformtext: ওয়েব ব্রাউজার, তারপর সাজসরঞ্জাম ক্রয়
+  processing_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  alice_beyond_platformtext: উইন্ডোজ বা ম্যাক (ইনস্টল করা প্রয়োজনীয়)
+  sphero_beyond_platformtext: রোবট ক্রয়
+  codeorg_beyond_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড
+    করতে শিখুন!
+  khan_beyond_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  tynker_beyond_shortdescription: ৪-৮ শ্রেনীর বাচ্চাদের জন্য একটি মজার এবং আকর্ষক
+    কোর্স
+  scratch_beyond_shortdescription: পরস্পর ক্রিয়াশীল খেলা, গল্প এবং এনিমেশন তৈরি করুন।
+  lightbot_beyond_shortdescription: কোডিং ধারণা শেখানোর একটি খেলা
+  codecademy_beyond_shortdescription: ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন
+  kodable_beyond_shortdescription: কম্পিউটার প্রোগ্রামিং এর ধারণা শিখানোর জন্য আইপ্যাডের
+    একটি মজার খেলা
+  scratchjr_beyond_shortdescription: ScratchJr ব্যবহার ইন্টারেক্টিভ গল্প এবং গেম তৈরি
+    করুন।
+  hopscotch_beyond_shortdescription: আইপ্যাডে  এ ভিজ্যুয়াল প্রোগ্রামিং শিখুন
   pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
     friends to try!
-  groklearning_beyond_shortdescription: Basic intro to python programming
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: Make your own app! (Android-only)
-  touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet
-    or laptop
-  codehs_beyond_shortdescription: Learn JavaScript programming with a fun visual environment
-  udemy_beyond_shortdescription: Dozens of online programming courses
-  lynda_beyond_shortdescription: Dozens of online programming courses
-  edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: Start with CS101
-  udacity_beyond_shortdescription: Start with CS101
-  teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
-  kodu_beyond_shortdescription: Design a 3D game world
-  cargobot_beyond_shortdescription: Program a robot arm on your iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
-  codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
-  codea_beyond_shortdescription: Make apps on your iPad
-  lego_beyond_shortdescription: Build and program a robot
-  finch_beyond_shortdescription: A robot for computer science education
-  arduino_beyond_shortdescription: Learn Arduino with Sparkfun's Digital Sandbox.
-  processing_beyond_shortdescription: Learn the Processing languages
-  alice_beyond_shortdescription: Teach programming in a 3D environment
+  groklearning_beyond_shortdescription: পাইথন প্রোগ্রামিং করার মৌলিক ধারনা
+  hacketyhack_beyond_shortdescription: শুরু থেকে রুবি শিখুন
+  robomind_beyond_shortdescription: ভার্চুয়াল রোবটের জন্য কোড লিখুন
+  makeschool_beyond_shortdescription: এক ঘণ্টায় আইফোনে খেলা (গেম) তৈরি শিখুন
+  appinventor_beyond_shortdescription: তৈরি করুন আপনার নিজস্ব অ্যাপ! (শুধু অ্যান্ড্রয়েডে)
+  touchdevelop_beyond_shortdescription: সরাসরি আপনার ফোন, ট্যাবলেট বা ল্যাপটপে মোবাইল
+    অ্যাপ কোড করুন
+  codehs_beyond_shortdescription: মজা রূপকল্প পরিবেশ দিয়ে জাভাস্ক্রিপ্ট  প্রোগ্রামিং
+    শিখুন
+  udemy_beyond_shortdescription: এক ডজন অনলাইন প্রোগ্রামিং কোর্স
+  lynda_beyond_shortdescription: এক ডজন অনলাইন প্রোগ্রামিং কোর্স
+  edx_beyond_shortdescription: হার্ভার্ড এ সবচেয়ে জনপ্রিয় ক্লাস
+  coursera_beyond_shortdescription: CS101 দিয়ে শুরু করুন
+  udacity_beyond_shortdescription: CS101 দিয়ে শুরু করুন
+  teachingtree_beyond_shortdescription: 'অনলাইন জ্ঞান: দ্রুত ও বাধ্যবাধকতাশূন্য'
+  kodu_beyond_shortdescription: 3D খেলার জগৎ পরিকল্পনা করুন
+  cargobot_beyond_shortdescription: আপনার আইপ্যাড দিয়ে রোবটের হাতে প্রোগ্রাম করুন
+  kidsruby_beyond_shortdescription: রুবি ব্যবহার করে প্রোগ্রাম করতে শিখুন
+  w3schools_beyond_shortdescription: ওয়েব সাইট তৈরি সম্বন্ধে জানুন
+  codeavengers_beyond_shortdescription: খেলা এবং ওয়েবসাইট কোড করা শিখুন
+  mozilla_beyond_shortdescription: ওয়েব পৃষ্ঠা তৈরি এবং শেয়ার করুন
+  codecombat_beyond_shortdescription: খেলা খেলুন ও জিততে জাভাস্ক্রিপ্ট শিখুন
+  codea_beyond_shortdescription: আপনার আইপ্যাডে অ্যাপ বানান
+  lego_beyond_shortdescription: রোবট তৈরী ও প্রোগ্রাম করুন
+  finch_beyond_shortdescription: কম্পিউটার বিজ্ঞান শিক্ষার জন্য রোবট
+  arduino_beyond_shortdescription: Sparkfun ডিজিটাল স্যান্ডবক্সের সঙ্গে Arduino শিখুন
+  processing_beyond_shortdescription: প্রসেসিং ভাষা শিখুন
+  alice_beyond_shortdescription: ত্রিমাত্রিক পরিবেশ প্রোগ্রামিং শিখান
   sphero_beyond_shortdescription: SPRK lessons give kids a fun crash course in programming
     robots while sharpening skills in math and science.
   codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
@@ -1438,7 +1452,7 @@
   sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
-  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_header: Code.org, জন্য HTTPS সক্রিয় করুন।
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.

@@ -680,26 +680,22 @@
         vain kuutta lohkoa?
       4-5 Maze 13_instruction: Hoida minut tuon possun luo!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
+      4-5 Maze 2 (copy 1)_instruction: Saa zombi auringonkukan luokse, mutta vältä
+        ahmijaa!
+      4-5 Maze 2_instruction: Saa zombie auringonkukan luo, mutta vältä ahmijaa!
       4-5 Maze 3 (copy 1)_instruction: Täytyy.. päästä... auringonkukalle.
       4-5 Maze 3_instruction: Täytyy.. päästä... auringonkukalle.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 4 (copy 1)_instruction: Kokeile "toista" lohkoa käyttääksesi vähemmän
+        lohkoja...
+      4-5 Maze 4_instruction: Kokeile "toista" lohkoa käyttääksesi vähemmän lohkoja...
+      4-5 Maze 5 (copy 1)_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän
+        mahdollisen määrän lohkoja?
+      4-5 Maze 5_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen
+        määrän lohkoja?
+      4-5 Maze 6 (copy 1)_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän
+        mahdollisen määrän lohkoja?
+      4-5 Maze 6_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen
+        määrän lohkoja?
       4-5 Maze 7_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 8_instruction: |
         Use the "repeat" block to get the zombie to the
@@ -1865,12 +1861,10 @@
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän
+        mahdollisen määrän lohkoja?
+      Course 4 Maze 6_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän
+        mahdollisen määrän lohkoja?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.

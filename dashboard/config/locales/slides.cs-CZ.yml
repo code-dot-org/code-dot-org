@@ -2906,84 +2906,80 @@
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co
+          potřebuješ je jen pár základů programování a můžeš začít hrát hru, kterou
+          jsi vytvořil.
       2:
         image: notes/iceage_intro_2.JPG
-        text: Do you have a favorite video game? We're going to take one step toward
-          creating games just like that in PlayLab. Good games have a story and every
-          story has actors. Actors that do things like speak, move and interact with
-          each other. Maybe even score points based on the rules of the game. Today,
-          we'll be learning how to do all these things one by one with fun actors
-          and then build a game from scratch that can be shared and played on a phone.
+        text: Máš oblíbenou videohru? Projdeme jeden krok k vytvoření hry, stejně
+          jako v PlayLab. Dobré hry mají příběh a každý příběh má aktéry. Aktéři dělají
+          věci jako mluví, pohybují se a komunikují. Možná dokonce skórují na základě
+          pravidel hry. Dnes se naučíme jak udělat všechny tyto věci jednu po druhé
+          se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet
+          a hrát na mobilu.
       3:
         image: notes/iceage_intro_3.JPG
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
+        text: Dnes se učíme, jak dělat všechny tyto věci jednu po druhé se zábavnými
+          aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrál na mobilu.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Tvá obrazovka je rozdělena na 3 hlavní části. Nalevo je herní prostor,
+          kde poběží program. Pokyny pro každou úroveň jsou napsané dole.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Ta střední oblast je panel nástrojů, a každý z těchto bloků je kus kódu.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme
+          stavět náš program.
       7:
         image: notes/iceage_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: Chceš-li začít, budeš potřebovat propojit bloky na oranžový blok "když
+          běží blok". Můžeš dohromady propojit více bloků jejich přetažením, dokud
+          se neuvidí žlutá čára, a pak se společně přichytí.
       8:
         image: notes/iceage_intro_8.JPG
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
+        text: V této první hádance uděláme, aby si aktéři si něco řekli propojením
+          bloku "say" při spuštění bloku se zadáním zprávy. Jakmile máte své bloky
+          na místě, stiskni tlačítko run, aby se ti zobrazilo, co jsi naprogramoval.
       9:
         image: notes/iceage_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Začněme a na konci jsi schopen si vytvořit vlastní hru se všemi druhy
+          hráčů, kteří umí komunikovat, skórovat, házet věcmi a zmizet jeden druhého.
+          Je to všechno jen na tobě!
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: Teď jsme se dozvěděli něco, co všichni programátoři her používají každý
+          den. Říká se tomu události. Událost povídá tvému programu, aby naslouchal
+          něco a když na stane, pak to udělá, hra provede akci.
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: Někteé příklady událostí jsou naslouchání klepnutí myší, nahoru nebo
+          dolů se šipkovou klávesou nebo dokonce dotyk na obrazovku.
       3:
         image: notes/iceage_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: Tady dělat, aby aktér něco řěkl, když hráč klepne na něj. Použijeme,
+          když klepneme blok s připojením blok "say" blok. Když hráč klepne, všechny
+          bloky připojenyé k tomuto bloku se provedou.
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: Existují bloky when arrows. Když propojíte bloky přesunu k těm, můžete
+          začít pohybovat s aktéry nahoru, dolů, vlevo, vpravo se šipkovými klávesami.
+          Kousek po kousku tvoje hra je stále více interaktivní.
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: Umíš si představit, kdybys něco měl opakovat navěky a navždy? Doufejme,
+          že to nikdy nebudeš muset, protože počítače jsou opravdu dobré na opakujících
+          se věcí.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád
+          ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč
+          musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě.
+          Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš
+          vlastní hru.

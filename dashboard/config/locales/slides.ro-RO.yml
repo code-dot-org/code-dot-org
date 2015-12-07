@@ -3133,84 +3133,84 @@
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Daca vrei sa iti faci propiul joc, este foarte usor. Tot ce trebuie
+          sa stii sunt cateva lucruri de baza in programare si poti incepe sa te joci
+          jocul pe care l-ai creat.
       2:
         image: notes/iceage_intro_2.JPG
-        text: Do you have a favorite video game? We're going to take one step toward
-          creating games just like that in PlayLab. Good games have a story and every
-          story has actors. Actors that do things like speak, move and interact with
-          each other. Maybe even score points based on the rules of the game. Today,
-          we'll be learning how to do all these things one by one with fun actors
-          and then build a game from scratch that can be shared and played on a phone.
+        text: Ai un joc video favorit? Noi v-om face un pas inainte in crearea jocurilor
+          in PlayLab. Jocurile bune au o poveste si fiecare poveste are actori. Actori
+          care fac lucruri ca vorbit, mers sau care interactioneaza intre ei. Poate
+          chiar sa castige puncte in functie de regulile jocului. Astazi, v-om invata
+          cum sa facem toate aceste lucruri unul cate unul cu actori amuzanti si apoi
+          sa facem un joc din bucati pe care il poti impartasi si juca pe un telefon.
       3:
         image: notes/iceage_intro_3.JPG
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
+        text: Astazi, vom invata cum toate aceste lucruri, unul cate unul, cu actori
+          distractivi si apoi vor construi un joc dintr-o schema ce poate fi distribuita
+          si jucata pe telefon.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Ecranul tău este împărțit in 3 zone. În stânga este spațiul de joc unde
+          jocul tău va funcționa. Instrucțiunile pentru fiecare nivel sunt scrise
+          mai jos.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Aceasta zona de mijloc este caseta de instrumente si fiecare bloc este
+          o bucata de cod.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom construi
+          programul nostru.
       7:
         image: notes/iceage_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: Pentru a începe, vei avea nevoie să legi blocurile tale la blocul portocaliu
+          "când rulezi". Poți lega mai multe blocuri împreună trăgându-le până când
+          vezi o linie galbenă, iar ele se vor fixa.
       8:
         image: notes/iceage_intro_8.JPG
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
+        text: In acest prim puzzle, vom face actorii sa spuna ceva legand blocul "Spune"
+          de blocul "Cand ruleaza" si scriind mesajul tau. Odata ce ai blocurile in
+          locurile corecte, apasa butonul "Ruleaza" pentru a vedea ce ai programat.
       9:
         image: notes/iceage_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Incepe si la sfarsit vei fi in stare sa creeze propriul joc cu tot felul
+          de jucatori ce pot interactiona, aduna puncte, arunca lucruri si sa se lupte
+          unul cu altul. Depinde doar de tine!
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: Acum vom invata despre ceva ce tot programatorii utilizeaza in fiecare
+          zi. Sunt numite evenimente. Un eveniment ii spune programului tau sa asculte
+          cand ceva se petrece si cand se intampla, jocul sa realizeze o actiune.
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: Cateva exemple de evenimente sunt ascultarea unui click de mouse sau
+          o sageata sus sau jos sau chiar o atingere pe ecran.
       3:
         image: notes/iceage_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: Aici, il vom face pe personaj sa spuna ceva cand jucatorul apasa pe
+          el. Vom folosi blocul "cand apesi" si atasa blocul "spune" de el. Cand jucatorul
+          apasa, toate blocurile atasate blocului acesta vor fi rulate.
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: Sunt, de asemenea si blocuri 'cand sageata'. Daca puteti conecta blocurile
+          de miscare cu acestea, poti misca personajele in sus, jos, stanga, dreapta
+          folosind sagetile. Incet, incet jocul tau va deveni mult mai interactiv.
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: Iti inchipui cum ar fi daca ar fi trebuit sa repeti ceva la nesfarsit?
+          Din fericire nu va trebui sa faci asta pentru ca, calculatoarele se pricep
+          foarte bine la a repeta lucruri.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: Acesta este blocul 'repeta mereu'. Orice inauntrul acestui bloc se va
+          intampla pentru totdeauna in joc. Daca vrem ca un personaj sa faca ceva
+          in mod repetat fara ca jucatorul sa faca ceva, vom plasa aceste blocuri
+          inauntrul blocului repeta mereu.
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: In urmator puzzel, misiunea noastra este sa ajutam actorul sa faca un
+          lucru constant. Invatand cum functioneaza comanda repeta vei salva o gramada
+          de timp mai tarziu cand iti vei construi propiul joc.

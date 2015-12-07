@@ -550,19 +550,19 @@
           kipittämään ympäriinsä kiinnittämällä "liiku" lohkot jokaiseen tapahtumaan
           ja muuttamalla suuntaa johon hän liikkuu jokaisesta nuolinäppäimestä. Kun
           olet valmis, paina Suorita ja yritä kerätä kaikki tamenterhot.
-        studio_iceage_sound_and_points: Meillä on suurin osa koodista, joka saa Isoäidin
+        studio_iceage_sound_and_points: Meillä on suurin osa koodista, joka saa Grannyn
           liikkumaan edestakaisin, kuten myös koodi joka saa Sidin liikkumaan ympäri
           näyttöä. Voitko tehdä koodista valmiin lisäämällä lohkoja "kun näyttelijä
-          koskee" tapahtumaan, tehdäksesi siitä sellaisen, että kun Sid ja Isoäiti
-          törmäävät, molemmat tekevät äänen ja saat yhden pisteen lisää. Paina Suorita
-          pelataksesi peliä.
+          koskee" tapahtumaan, tehdäksesi siitä sellaisen, että kun Granny ja Sid
+          törmäävät, kuuluu ääni ja saat yhden pisteen lisää? Paina Suorita pelataksesi
+          peliä.
         studio_iceage_warn_ice_age: Jokaisen täytyy liikkua nopeammin koska jääkausi
           on tulossa! Vaihda taustaksi "jäävuoret" ja aseta Sidin nopeus nopeaksi,
           sitten paina suorita ja siirrä hänet Diegon luo varoittaaksesi häntä.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
+        studio_iceage_throw_hearts: Sid haluaa kertoa isoäidilleen, Grannylle, rakastavansa
+          häntä. Käytä "hahmo heitä"-komentoa saadaksesi Sidin (näyttelijä 1) heittämään
+          sydämiä Grannya (näyttelijä 2) päin! Aseta Grannyn mieliala iloiseksi, kun
+          häneen osuu.
         studio_iceage_free_play: Aika tehdä sinun oma pelisi tai tarinasi! Kun olet
           valmis, paina Lopeta antaaksesi ystäviesi koettaa peliäsi heidän puhelimillaan,
           tableteillaan ja tietokoneillaan!
@@ -586,15 +586,15 @@
         studio_gumball_click_hello: Voitko auttaa Antonia ilmoittamaan kisan alkaneeksi
           sanomalla "Valmiina, paikalla, nyt!"? Testataksesi ohjelmaasi, älä unohda
           napauttaa Antonia, käynnistettyäsi ohjelman.
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
+        studio_gumball_move_events: Darwin on lipunkeräyskilpailussa! Auta häntä juoksemaan
+          ympäriinsä kiinnittämällä "liiku"-lohkot kaikkiin tapahtumiin. Kun olet
+          valmis, paina Suorita ja yritä kerätä kaikki liput.
+        studio_gumball_sound_and_points: Meillä on suurin osa koodista, joka saa Antonin
+          (näyttelijä 2) liikkumaan edestakaisin, kuten myös koodi joka saa Banana
+          Joen (näyttelijä 1) liikkumaan ympäri näyttöä. Voitko tehdä koodista valmiin
+          lisäämällä lohkoja "kun näyttelijä koskee" tapahtumaan, tehdäksesi siitä
+          sellaisen, että kun Anton ja Banana Joe törmäävät, kuuluu ääni ja saat yhden
+          pisteen lisää? Paina Suorita pelataksesi peliä.
         studio_gumball_warn_food_fight: Darwin pakeni juuri ruokasodasta! Vaihda taustaksi
           "hahmot" ja aseta Darwinin nopeudeksi nopea, sitten paina Suorita ja siirrä
           hänet Pennyn luokse varoittaaksesi häntä.
@@ -802,9 +802,9 @@
         gumball_intro: Gumball -koodaustunti - Johdanto
         gumball_events: Gumball -koodaustunti - Tapahtumat
         gumball_repeat: Gumball -koodaustunti - Toistolauseet
-        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_intro: Ice Age Koodaustunti - Esittely
         iceage_events: Ice Age Koodaustunti - Tapahtumat
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_repeat: Ice Age Koodaustunti - Toistolausekkeet
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan

@@ -484,9 +484,9 @@
     privacy: Privacybeleid
     secure: Beveiligde versie
     report_abuse: Misbruik Melden
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Gemaakt met Code Studio
+    make_my_own_app: Maak mijn eigen app
+    how_it_works: Hoe het werkt
   reference_area:
     title: Hulp nodig?
     subtitle: Bekijk deze video's en hints
@@ -555,7 +555,7 @@
       unused: Ongebruikte niveaus
   upsell:
     hoc:
-      title: Een Uur Code
+      title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
     flappy:
       title: Flappy Code

@@ -459,7 +459,7 @@ zh:
       unused: 未使用的关卡
   upsell:
     hoc:
-      title: Classic Maze
+      title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
     flappy:
       title: 飞扬的代码

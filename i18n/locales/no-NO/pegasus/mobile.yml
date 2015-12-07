@@ -274,10 +274,10 @@ no-NO:
   class_submission_languages_other: Andre språk
   inspirational_videos_more: 'Flere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> videoer </a>'
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Klassisk
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: 'Istid - kommer snart'
+  playlab_iceage_title_live: Istid
   starwars_subtitle: Skap en galakse med kode
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slipp blokker og JavaScript.
@@ -285,7 +285,7 @@ no-NO:
   starwars_javascript_start_button: Prøv nå
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slipp blokker.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Lær mer
   starwars_watch_videos: Før du starter, se en av disse videoene
   starwars_speak_languages: Snakker du et annet språk?
@@ -296,7 +296,7 @@ no-NO:
   mc_shortdescription: Bruk blokker med kode for å ta Steve eller Alex ut på et eventyr i Minecraft.
   mc_gradelevel: Passer for de som er 6 år og eldre
   mc_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Kodetimen med Minecraft
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærere skal holde en Kodetime i sitt klasserom i år, 7.-13. desember. De ønsker din hjelp! '
@@ -598,8 +598,8 @@ no-NO:
   mobile_devices: Øvinger for mobile enheter
   frozen_name: Kode med Anna og Elsa
   starwars_name: 'Star Wars: Skap en galakse med kode'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassisk labyrint
+  codeintl_name: Klassisk labyrint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduksjon til JavaScript
   khanes_name: En introduksjon til JavaScript
@@ -635,16 +635,16 @@ no-NO:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks papir
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassisk labyrint
   playlab_name: Spill-lab
   infinity_name: Infinity Spill-Lab
   artist_name: Kunstner
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
-  csfirst_name: CS First
+  csfirst_name: CS først
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutter med kode
   teacherled_name: Planlegging av Kodetimen
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104

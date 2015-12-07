@@ -159,7 +159,7 @@
           description_short: Начертайте готини картинки и дизайни с художника!
         hourofcode:
           Maze: Лабиринт
-          title: Час на Кодирането
+          title: Класически лабиринт
           description: Опитайте основите на програмирането с героите отAngry Birds,
             Plants vs. Zombies и Scrat от Ледена епоха!
           description_short: Опитайте основите на програмирането с много забавни герои!
@@ -1628,11 +1628,11 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Гъмбъл- игрална лаборатория
-          description_short: Създай история или си направи игра с Гъмбълl игрална
+          title: Гъмбол- игрална лаборатория
+          description_short: Създай история или си направи игра с Гъмбол в игралната
             лаборатория!
-          description: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          Gumball Play Lab: Гъмбъл- игрална лаборатория
+          description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          Gumball Play Lab: Гъмбол- игрална лаборатория
         starwars:
           title: 'Междузвездни войни: Изграждане на галактика с код'
           description_short: Научете се да програмирате дроиди и създайте своя собствена
