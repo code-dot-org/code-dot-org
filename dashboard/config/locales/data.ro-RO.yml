@@ -25,7 +25,7 @@
           Artist5: Etapa 19
           Unplug11: Etapa 20
         Hour of Code:
-          desc: Oră de Programare
+          desc: Ora de Programare
           Maze: Etapa 1
         Edit Code:
           desc: Editează codul (beta)
@@ -561,48 +561,50 @@
         studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
           pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_hello1: Sid vrea să adune pe toată lumea pentru o nouă aventură.
+          Poți să îl ajuți să spună "Bună ziua" glisând blocul "spune" în zona de
+          lucru şi tastând cuvintele "Bună ziua" în interiorul lui?
+        studio_iceage_hello2: Sid (actorul 1) l-a găsit pe Manny (actorul 2) şi vrea
+          să-l invite într-o aventură.  Ajută-i să se salute reciproc folosind blocul
+          "actorul spune" de două ori.
+        studio_iceage_move_to_flag: Scrat este în căutarea ghindei lui! Ajută-l să
+          parcurgă ultimii 200 de pixeli folosind blocul "mergi".
+        studio_iceage_move_to_actor: Diego (actorul 1) este în căutarea lui Manny
+          (actorul 2). Ajută-l pe Diego să meargă 200 pixeli în jos către Manny folosind
+          blocul "mutare actor". Apoi, conectează un bloc la evenimentul "când actorul
+          atinge" pentru a reda un sunet atunci când se vor găsi unul pe celălalt.
+        studio_iceage_repeat: Blocul "repetă la nesfârșit" iți permite să rulezi codul
+          în mod continuu. Poți atașa blocuri pentru a-l ajuta pe Granny să se antreneze
+          mișcându-se la stânga și la dreapta în mod repetat?
+        studio_iceage_click_hello: Poți să îl ajuți pe Sid să facă o ultimă strigare
+          pentru prieteni când faci click pe el? Nu uita să faci click pe el după
+          ce ai apăsat 'Rulează'.
+        studio_iceage_move_events: Scrat caută încă ghinde! Ajută-l să alerge prin
+          zonă atașând blocul "mută" la fiecare eveniment și schimbând direcția pentru
+          fiecare săgeată. Când ai terminat, fă clic pe 'Rulează' și încearcă să aduni
+          toate ghindele.
+        studio_iceage_sound_and_points: Am furnizat deja cea mai mare parte din codul
+          ce o menține pe Granny să se miște la stânga și dreapta, precum și codul
+          care îl mișcă pe Sid de-a lungul ecranului. Poți termina codul și adăuga
+          blocuri evenimentului "cand actorul atinge" pentru ca amandoi să emită un
+          sunet și să marcheze un punct atunci când Sid și Granny se lovesc? Apasă
+          'Rulează' pentru a juca jocul.
+        studio_iceage_warn_ice_age: Toată lumea trebuie să se mişte mai repede, pentru
+          că vine o epocă de gheaţă! Schimbă fundalul cu "ghețari" şi setează-i viteza
+          lui Sid la rapid, apoi apasă Rulează şi mută-l lângă Diego pentru a-l avertiza.
+        studio_iceage_throw_hearts: Sid vrea ca bunica lui, Granny, să știe că o iubește.
+          Folosește comanda "actorul aruncă" pentru a-l face pe Sid (actorul 1) să
+          arunce inimi către Granny (actorul 2)! Setează starea lui Granny la fericită
+          când este lovită cu inimi.
+        studio_iceage_free_play: E timpul să îți creezi propriul joc sau poveste!
+          Când termini, apasă 'Terminat' pentru a-i lăsa pe prietenii tăi să testeze
+          jocul tău pe telefoanele, tabletele sau calculatoarele lor!
         studio_gumball_hello1: Anais vrea sa isi faca noi prieteni. O poti ajuta sa
           spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru
           cuvantul "buna"?
-        studio_gumball_hello2: Darwin (actorul 1) si fratele sau Gumball (actorul
-          2) se indreapta catre scoala. Ajuta-i sa se salute reciproc folosind blocul
-          "actorul spune" de doua ori.
+        studio_gumball_hello2: Darwin (actorul 1) și fratele său, Gumball (actorul
+          2), se îndreaptă către școală. Ajută-i să se salute reciproc folosind blocul
+          "actorul spune" de două ori.
         studio_gumball_move_to_flag: Banana Joe este cat pe ce sa castige o cursa!
           Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".
         studio_gumball_move_to_actor: Gumball (actorul 1) si Darwin (actorul 2) au
@@ -780,6 +782,9 @@
         infinity_playlab_intro: Atelier de Joacă - Introducere
         infinity_playlab_events: Atelier de Joacă - Evenimente
         infinity_playlab_repeat_forever: Atelier de Joacă - Repetare la nesfârșit
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -833,6 +838,9 @@
         gumball_intro: Gumball Hour of Code - Introducere
         gumball_events: Gumball Hour of Code - Evenimente
         gumball_repeat: Gumball Hour of Code - Declaratiile de repetare
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

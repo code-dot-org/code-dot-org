@@ -1,9 +1,9 @@
 et:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Tere, olen kunstnik. Sa saad kirjutada koodi et panna mid peaaegu kõike joonistama. Kasuta mõndasid plokke et panna mind joonistama hallidele joontele mis on pildil. (Iga joon on 100 pikslit pikk)
+      2-3 Artist 1 new_instruction: Tere, olen kunstnik. Sa saad kirjutada koodi, et panna mind peaaegu kõike joonistama. Kasuta mõndasid plokke et panna mind joonistama hallidele joontele mis on pildil. (Iga joon on 100 pikslit pikk)
       2-3 Artist 11_instruction: 'Anna stopp-märgile ääred, tehes kaheksanurga, mille iga külg on 100 piksli pikkune. Mitu kraadi sa peaks pöörama? (Vihje: mis on 360 jagatud 8-ga?) '
-      2-3 Artist 12_instruction: 'Sea "korda korda" plokki nii et see teeb silmamunale ringi ja lõpeta silmamuna. Kui iga liigutus pöörab paermale ühe kraadi võrra, siis mitu korda sa pead seda tegevust kordama et tekiks täisring? 180? 360? 500?'
+      2-3 Artist 12_instruction: 'Sea "korda x korda" plokk nii, et see teeb silmamunale ringi ja lõpeta silmamuna. Kui iga liigutus pöörab paremale ühe kraadi võrra, siis mitu korda sa pead seda tegevust kordama et tekiks täisring? 180? 360? 500?'
       2-3 Artist 2 new_instruction: 'Sellel majal on üks pooleliolev sein. Iga külg on 100 aga pooleliolev on 50. Lõpeta sein. '
       2-3 Artist 2_instruction: 'Sellel majal on üks pooleliolev sein. Iga külg on 100 aga pooleliolev on 50. Lõpeta sein. '
       2-3 Artist 3.4_instruction: Hüppa plokk liigutab kunstnikku ilma et ta joonistaks. Joonista katkendlik joon kasutades hüppa ja joonista plokki.
@@ -23,7 +23,7 @@ et:
       2-3 Artist Debugging 2_instruction: 'Kood kolme vurru jaoks mida sa näed on vale. Vihje: iga vurr on 75 piksli pikkune. Paranda seda koodi, et joonistada vurrud.'
       2-3 Artist Debugging 3_instruction: 'Minu paadis on auk! Kas sa saad selle ära parandada muutes joone nurka? Vihje: viimane nurk on 15 kraadi paigast ära.'
       2-3 Artist Debugging 4_instruction: Millist pilti me proovime joonistada? Lõpeta joonis ühendades punktid õigete joonte ja nurkadega.
-      2-3 Artist Debugging 5_instruction: 'Kood mida sa aääre ja jalalaba jaoks näed on vale. Vihje: jalg on liiga pikk me võibolla peaksime ühe sammu ära võtma (vihje sisaldab tõlkimatut nalja)'
+      2-3 Artist Debugging 5_instruction: 'Kood mida sa sääre ja jalalaba jaoks näed on vale. Vihje: jalg on liiga pikk me võib olla peaksime ühe sammu ära võtma (vihje sisaldab tõlkimatut nalja)'
       2-3 Artist Debugging 6_instruction: Tundub et ma istun toolis millel on üks jalg puudu. Muuda plokke et toolile üks jalg juurde joonistada.
       2-3 Artist Debugging 7_instruction: Tundub et C on tagurpidi joonistatud. Kas sa saad C õigetpidi joonistada?
       2-3 Artist Debugging 8_instruction: Minu tuulelipp ei ole valmis. Mitu korda pean ma kordama, et seda lõpetada?
@@ -37,10 +37,10 @@ et:
       2-3 Artist Functions 12_instruction: 'Funktsioonid hõlbustavad oluliselt keeruliste kujutiste mitmekordset joonistamist. Kas te saate kasutada "joonista lill" funktsiooni, et täita kogu ülejäänud istutuskast? (Vihje: taimed on kõik üksteisest 100 piksli kaugusel)  '
       2-3 Artist Functions 13_instruction: 'Oleme andnud teile neli funktsiooni. Kasutage neid, nagu teile meeldib, ühe või mitme tsükli sees, et teha pilte, mida sõpradega jagada. Vajutage "käivita" ja vaadake näidist.'
       2-3 Artist Functions 2_instruction: 'Funktsioonide abil saate määratleda uued blokid! Me liigutasime blokke, et joonistada ruut funktsiooni nimega "joonista ruut". Kas te saate kasutada "joonista ruut" funktsiooni ja teha prillid? Väljakud on üksteisest 75 piksli kaugusel.'
-      2-3 Artist Functions 3_instruction: 'Muuda  funktsiooni et joonistada ruutu küljepikkusega 115 ja joonista suuremad prillid. Ruutude vahe on nüüd 45 pikslit.'
+      2-3 Artist Functions 3_instruction: Muuda funktsiooni et joonistada ruutu küljepikkusega 115 ja joonista suuremad prillid. Ruutude vahe on nüüd 45 pikslit.
       2-3 Artist Functions 4_instruction: 'Kasuta "korda" plokke et joonistada need 3 ruutu.'
       2-3 Artist Functions 7_instruction: 'Kasuta "joonista maja" funktsiooni et joonistada kaks erineva suurusega maja. (vihje: esimene maja on 100 pikslit).'
-      2-3 Artist Functions 9_instruction: 'See siin on lumehelbe funktsioon. Eksperimenteeri sellega et luua talve stseen! See on mängimise level, seega siin ei ole  vaja mingit puslet lahendada. Lõbutse!'
+      2-3 Artist Functions 9_instruction: See siin on lumehelbe funktsioon. Eksperimenteeri sellega et luua talve stseen! See on vaba mängimise tase, seega siin ei ole vaja mingit puslet lahendada. Lõbutse!
       2-3 Artist Loops 1_instruction: Kas te saate teha kuusnurga 100 piksli pikkuste külgedega, et lõpetada raku kujund? Pidage meeles, et teil on vaja pöörata vaid 60 kraadi!
       2-3 Artist Loops 10_instruction: Mis juhtub meie projektiga kui teeme oma viimase käigu edasi poole lühemaks?
       2-3 Artist Loops 11_instruction: 'Paneme nüüd *veel ühe* tsükli kogu meie koodi ümber! Ära unusta välimisele tsüklile nurka lõppu panna.'
@@ -49,7 +49,7 @@ et:
       2-3 Artist Loops 5_instruction: Teeme tsüklile väikesed muudatused ja vaatame kui erinev meie pilt tuleb.
       2-3 Artist Loops 6_instruction: Lisa tsüklisse veel üks liikumine ja veel üks pööramine ning vaata kuidas sinu töö muutub.
       2-3 Artist Loops 7_instruction: Me saame kasutada tsükleid et teha igasuguseid hulknurki. Kas suudad luua rombi selle kuusnurga sisse?
-      2-3 Artist Loops 8_instruction: Paneme mõnemad elemendid tsüklisse.
+      2-3 Artist Loops 8_instruction: Paneme mõlemad elemendid tsüklisse.
       2-3 Artist Loops 9_instruction: "Me hakkame samu elemente kordama aga nüüd lisame nende vahele natuke distantsi.\r  Kasuta sama koodi mida ennegi aga lisa tsükli lõppu samm edasi."
       2-3 Artist Loops New 1_instruction: Joonistame sellele roboti pea! Kas sa suudad teha ruudu mille küljed on 100 pikslit?
       2-3 Artist Loops New 10_instruction: Nüüd ühendame omavahel hulga V-e, joonistades neid korduvtsüklis.
@@ -106,13 +106,13 @@ et:
       2-3 Bee Debugging 8_instruction: Need blokid on veaga(vigadega). Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
       2-3 Bee Debugging 9_instruction: Need blokid on veaga(vigadega). Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
       2-3 Bee Debugging Assessment 1_instruction: 'Hindamine: Need blokid on veaga(vigadega). Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.'
-      2-3 Bee Functions 1_instruction: 'Funktsioonid on koodide blokid, mis ülesande täidavad. Kasutage "leia nektar (get 2 nectar)" funktsiooni et koguda õietolm igalt lillelt.'
+      2-3 Bee Functions 1_instruction: 'Funktsioonid on koodide blokid, mis ülesande täidavad. Kasuta "kogu 2 nektarit" ("get 2 nectar") funktsiooni et koguda õietolm igalt lillelt.'
       2-3 Bee Functions 10_instruction: Lilladel lilledel võib olla kas 1 või 0 nektarit. Koosta funktsioon, mis kogub nektarit ainult nendelt lilladelt lilledelt, millel on nektarit.
       2-3 Bee Functions 2_instruction: 'Funktsioonid on programmi plokid, mis täidavad mingit ülesannet. Kasuta "võta 5" funktsiooni, et koguda 5 nektarit korraga. Palun kasuta kordamist, et koostada ideaalne plokk.'
       2-3 Bee Functions 3_instruction: Kogu kogu nektar igalt lillelt.
       2-3 Bee Functions 4_instruction: 'Funktsioon "liiguta ja kogu nektarit" pöörab mesilast, kogub nektarit ja viib mesilase algpunkti tagasi. Kasuta seda funktsiooni kogu nektari kogumiseks.'
       2-3 Bee Functions 5_instruction: Nüüd on lilledes veelgi enam nektarit. Muuda funktsiooni nii, et see koguks 4 nektarit ning kasuta seda kogu nektari kogumiseks.
-      2-3 Bee Functions 6_instruction: Nüüd kasuta sama funktsiooni, et koguda nektarti kolmelt lillelt.
+      2-3 Bee Functions 6_instruction: Nüüd kasuta sama funktsiooni, et koguda nektarit kolmelt lillelt.
       2-3 Bee Functions 7_instruction: Lilled on nüüd kaugemalt. Muuda funktsiooni ja kasuta seda kõigilt lilledelt nektari kogumiseks.
       2-3 Bee Functions 8_instruction: Koosta oma funktsioon, mis kogub 7 nektarit, liigub edasi ja teeb 7 mett. Kasuta funktsiooni igalt lillelt nektari kogumiseks ning tee mett igas kärjes.
       2-3 Bee Functions 9_instruction: Koosta oma funktsioon, mis liigub mööda rada, kogub nektarit, teeb mett ning seejärel viib mesilase raja algusesse tagasi.
@@ -131,7 +131,7 @@ et:
       2-3 Bee Loops 3B_instruction: Nüüd kasuta uut korduse plokki, et koguda kogu nektar ning valmistada kogu mesi.
       2-3 Bee Loops 4_instruction: Kasuta sarnast kordust nagu eelmises pusles, kuid lisa pööre.
       2-3 Bee Loops 4A_instruction: Mis juhtub, kui kordate seda 3 korda? Ära unusta, et lõpus pead mett tegema!
-      2-3 Bee Loops 5_instruction: Kasuta kordust, et allpoole liikuda ja nektarit koguda.
+      2-3 Bee Loops 5_instruction: Kasuta kordust, et allapoole liikuda ja nektarit koguda.
       2-3 Bee Loops 6_instruction: Kasuta tsüklit et korjata igalt lillelt nektarit ja teha iga meekärje juures mett.
       2-3 Bee Loops 7_instruction: Pane need plokid kordusesse, et koguda nektarit igalt lillelt.
       2-3 Bee Loops 8_instruction: 'Nendel lilladel lilledel on teadmata arv nektarit. Kasuta "kui nektar" kordust, et koguda kokku kogu nektar. See kordus töötab siis, kui tingimus on õige, praegusel juhul >0.'
@@ -304,12 +304,12 @@ et:
       4-5 Maze 1 (copy 1)_instruction: Kallis inimene. Mina zombie. Pean.. jõudma... päevalilleni.
       4-5 Maze 1_instruction: Kallis inimene. Mina zombie. Pean.. jõudma... päevalilleni.
       4-5 Maze 10_instruction: Kas sa saad mind päevalilleni aidata, ainult nelja plokki kasutades?
-      4-5 Maze 11_instruction: Kas saad mind päevalilleni aidate vaid kuut plokki kasutades?
+      4-5 Maze 11_instruction: Kas saad mind päevalilleni aidata vaid kuut plokki kasutades?
       4-5 Maze 12_instruction: See on veidi erinev. Kas saad seda teha ainult kuue plokiga?
       4-5 Maze 13_instruction: Aita mind seani!
       4-5 Maze 14_instruction: 'Pean jõudma põrsani. Kasuta "korda kuni" plokki.'
       4-5 Maze 2 (copy 1)_instruction: Juhata zombie päevalille juurde, kuid hoidu taimede eest!
-      4-5 Maze 2_instruction: Aita zombiel jõuda päevalilleni, kuid hoidu taimede eest!
+      4-5 Maze 2_instruction: Juhata zombie päevalille juurde, kuid hoidu taimede eest!
       4-5 Maze 3 (copy 1)_instruction: Pean... jõudma... päevalilleni.
       4-5 Maze 3_instruction: Pean... jõudma... päevalilleni.
       4-5 Maze 4 (copy 1)_instruction: 'Proovi kasutada "kordus" plokki, et kasutada vähem plokke...'
@@ -991,7 +991,7 @@ et:
       Course 4 Maze 1_instruction: Aita vihane lind põrsa juurde!
       Course 4 Maze 2_instruction: Väldi TNT dünamiiti!
       Course 4 Maze 3_instruction: 'Koosta programm, mis viiks vihase linnu põrsa juurde. '
-      Course 4 Maze 4_instruction: 'Proovi "korduse" plokki, et kasutada vähem plokke mõistatuse lahedamisel...'
+      Course 4 Maze 4_instruction: 'Proovi "korduse" plokki, et kasutada vähem plokke mõistatuse lahendamisel...'
       Course 4 Maze 5_instruction: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       Course 4 Maze 6_instruction: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       Course 4 Play Lab For Loops 2_instruction: See kord proovime loendada paarisarve 1...100.
@@ -1322,7 +1322,7 @@ et:
       frozen freeplay_instruction: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       frozen line_instruction: Tere! Olen Elsa. Aita mul joonistada üks joon.
       frozen perpendicular_instruction: 'Nüüd vaatame, kas me saame luua kaks joont, mis on teineteise suhtes 90 kraadise nurga all. Sa pead kasutama "Keera", kui ka "Liigu" blokki.'
-      frozen snowflake branch_instruction: 'Proovi kasutades "Loo lumehelbe võrestik" blokki joonistada 3 võrestikku, mis hakkavad välja nägame nagu lumehelbed.'
+      frozen snowflake branch_instruction: 'Proovi kasutades "Loo lumehelbe võrestik" blokki joonistada 3 võrestikku, mis hakkavad välja nägema nagu lumehelbed.'
       frozen snowflake full_instruction: Nüüd kordame seda 8 korda, et luua imeilus lumehelves!
       frozen snowflower_instruction: Keerulisi lumemustreid saab luua väga lihtsate kujunditega. Kas sa oskad teha mustri joonistades 5 ringi suurusega 5 ja 5 ringi suurusega 10?
       frozen square iterative_instruction: Näib et me oleme poolel teel joonistamaks ruutu. Ühendame 4 joont omavahel, et valmiks ruut.
@@ -1677,8 +1677,8 @@ et:
       NEW Course 4 Bee For Loops 10a_instruction: Kas oled valmis väljakutseks? Kasuta tsüklite kohta õpitut, et proovida lahendada seda probleemi. Pea meeles, et võib-olla pead oma lahendust käivitama mitu korda, enne kui saad kõik vajalikud sammud valmis.
       NEW Course 4 Bee For Loops 11_instruction: Kas oskad kasutada tsükli muutujat, et juhtida liikumist ja nektari kogumist?
       NEW Course 4 Bee For Loops 2_instruction: Lisa vajalik kood, et mesilane koguks kindlasti kokku kogu nektari. Vaata, kui palju koodi on sul selle mõistatuse jaoks vaja! (Järgmises mõistatuses õpime lihtsama meetodi.)
-      NEW Course 4 Bee For Loops 3_instruction: 'Oh, kordus teeb selle palju lihtsamaks! Kogu kood mida sul vaja on on seal, vaata kuidas see kokku panna ja siis vajuta "Käivita" et näha kuidas see töötab. '
-      NEW Course 4 Bee For Loops 4 4_instruction: 'Kas sa saad aidata Mesilasel koguda ülejäänud mesi, kasutades seda kordust? '
+      NEW Course 4 Bee For Loops 3_instruction: 'Oh, kordus teeb selle palju lihtsamaks! Kogu kood, mida sul vaja on, on seal, vaata kuidas see kokku panna ja siis vajuta "Käivita" et näha kuidas see töötab. '
+      NEW Course 4 Bee For Loops 4 4_instruction: 'Nüüd peame liikuma edasi muutuja "loendur" arv kordi, siis võtma nektarit muutuja "loendur" arv kordi. Kas saad kasutada kahte tsüklit "kordus" selle ülesande lahendamiseks?'
       NEW Course 4 Bee For Loops 4_instruction: 'Asenda korduste arvu tsüklis ??? suurima nektarikogusega, mida mesilane peab koguma. '
       NEW Course 4 Bee For Loops 5 5_instruction: Kas sul on korduste arvu tsükli kasutamine juba selge? Aitame mesilasel kokku koguda ülejäänud nektari.
       NEW Course 4 Bee For Loops 5_instruction: Saad korduste arvu tsüklit kasutada ka kahanevaks loenduseks. Proovi nektarit koguda, loendades ühe kaupa 5...1.
@@ -2177,8 +2177,8 @@ et:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3412,14 +3412,37 @@ et:
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -3429,8 +3452,8 @@ et:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "

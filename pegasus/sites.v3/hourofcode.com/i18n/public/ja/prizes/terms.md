@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # 賞品 - 利用規約
 
@@ -40,4 +39,3 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 <% end %>
 
-<%= view :signup_button %>

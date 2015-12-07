@@ -132,4 +132,3 @@ Si us plau, contacteu amb mi en [telèfon o adreça de correu electrònic]. Espe
 
 Atentament,\[NAME\]\[TITLE\]
 
-<%= view :signup_button %>

@@ -39,7 +39,7 @@
   "blockTypeOreRedstone":"წითელი ქვის მადანი",
   "blockTypePlanksAcacia":"აკაციის ფიცრები",
   "blockTypePlanksBirch":"არყის ხის ფიცრები",
-  "blockTypePlanksJungle":"ჯუგლის ხის ფიცრები",
+  "blockTypePlanksJungle":"ჯუნგლის ხის ფიცრები",
   "blockTypePlanksOak":"მუხის ფიცრები",
   "blockTypePlanksSpruce":"ნაძვის ფიცრები",
   "blockTypeRail":"რელსი",
@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"დააჭირეთ ღილაკს \"განაგრძეთ თამაში\" და დაუბრუნდით თამაშს.",
   "replayButton":"გამეორება",
   "selectChooseButton":"არჩევა",
-  "tooManyBlocksFail":"Puzzle {puzzleNumber} completed. Congratulations! It is also possible to complete it with {numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail":"თავსატეხი #{puzzleNumber} დასრულებულია. გილოცავთ! მისი დასრულება ასევე შესაძლებელია {numBlocks, plural, one {1 block} other {# blocks}}."
 }

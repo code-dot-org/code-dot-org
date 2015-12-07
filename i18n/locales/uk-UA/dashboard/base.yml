@@ -403,9 +403,9 @@ uk:
     privacy: Політика конфіденційності
     secure: Безпечна версія
     report_abuse: Повідомити про порушення
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Створено у Студії коду
+    make_my_own_app: Створити власну програму
+    how_it_works: Як це працює
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки
@@ -462,7 +462,7 @@ uk:
       unused: Невикористані рівні
   upsell:
     hoc:
-      title: Година Коду
+      title: Classic Maze
       body: Спробуйте основи інформатики. Мільйони вже скористались цим шансом.
     flappy:
       title: Код Пурха

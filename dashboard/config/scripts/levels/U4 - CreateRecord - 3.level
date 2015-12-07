@@ -45,9 +45,6 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "start_blocks": "var mickeyMouse = {};\r\nmickeyMouse.name = \"Mickey Mouse\";\r\nmickeyMouse.gender = \"Male\";"
   }
 }]]></config>

@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Præmier - vilkår og betingelser
 
@@ -40,4 +39,3 @@ Denne præmie er begrænset til klasser i USA og Canada (K-12). Code.org vil væ
 
 <% end %>
 
-<%= view :signup_button %>

@@ -1,4 +1,8 @@
 class HintViewRequestsController < ApplicationController
+  # Don't require an authenticity token because we post to this controller
+  # from publicly cached level pages without valid tokens.
+  skip_before_action :verify_authenticity_token
+
   def create
     status_code = :unauthorized
     if HintViewRequest.enabled? && current_user

@@ -390,38 +390,30 @@
           할 수 있습니다.
         studio_iceage_hello1: Sid는 새로운 모험을 위해 사람들을 모으고 싶어합니다. "말하기" 블록을 작업 공간으로 드래그하고
           블록 안에 "안녕?"이라고 입력하여 그가 "안녕?"이라고 말하도록 도와줄래요?
-        studio_iceage_hello2: Sid(배우 1) 는 Manny(배우 2) 를 발견하고 그를 모험에 초대하려고 합니다. "배우
+        studio_iceage_hello2: Sid(캐릭터 1) 는 Manny(캐릭터 2) 를 발견하고 그를 모험에 초대하려고 합니다. "캐릭터
           말하기" 블록을 두 번 사용하여 서로 인사하도록 해 주세요.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_move_to_flag: Scrat은 그의 도토리를 찾고 있습니다! "이동" 블록을 사용하여 그가 마지막 200
+          픽셀을 갈 수 있도록 도와주세요.
+        studio_iceage_move_to_actor: Diego(캐릭터 1) 은 Manny(캐릭터 2) 를 찾고 있습니다. "캐릭터 이동"
+          블록을 사용하여 Diego를 200 픽셀 아래로 보내 Manny에게 갈 수 있도록 도와주세요. 그 다음, 그들이 서로를 발견했을
+          때 소리가 나도록 "캐릭터가 닿으면" 이벤트에 블록을 연결하세요.
+        studio_iceage_repeat: '"무한 반복" 블록은 코드를 계속해서 실행하도록 해 줍니다. 할머니가 왼쪽, 오른쪽으로 반복해서
+          움직이면서 약간의 운동을 하도록 하는 블록을 붙여보세요.'
+        studio_iceage_click_hello: Sid가 클릭되었을 때 마지막으로 친구들을 부르도록 도와줄래요? 실행한 후에 그를 클릭하는
+          것을 잊지마세요.
+        studio_iceage_move_events: Scrat은 여전히 도토리를 찾고 있어요! 각각의 이벤트에 "이동" 블록을 연결하고
+          각 방향키로 작업 방향을 변경함으로써 Scrat이 날쌔게 돌아다닐 수 있도록 도와주세요.
+        studio_iceage_sound_and_points: 우리는 할머니가 좌우로 움직이고, Sid가 화면을 돌아다니도록 하는 거의 모든
+          코드를 제공하였습니다. "캐릭터가 닿으면" 이벤트에 다른 블록들을 붙여서 코드를 완성시키고, Sid와 할머니가 서로 충돌하면 소리를
+          내고 점수를 올릴 수 있도록 해주세요. 게임을 실행시켜 보세요.
+        studio_iceage_warn_ice_age: 모두는 더 빠르게 이동해야 합니다. 왜냐하면 빙하의 시대가 오고 있기 때문입니다!
+          "빙산"으로 배경을 변경하고 Sid의 속도를 높여주세요. 그리고나서 실행 버튼을 누르고 Diego에게 경고할 수 있도록 이동시켜
+          주세요.
+        studio_iceage_throw_hearts: Sid는 그가 할머니를 사랑한다는 것을 할머니가 아시게 해드리고 싶습니다. "캐릭터
+          던지기" 명령을 사용하여 Sid(캐릭터 1) 가 할머니(캐릭터 2) 에게 하트를 던지도록 해 주세요. 그 하트를 받을 때 할머니의
+          기분이 행복해지도록 설정합니다.
+        studio_iceage_free_play: 게임이나 이야기를 직접 만들어보세요. 다 만들고 나면, 친구들의 스마트폰, 태블릿, 컴퓨터에서
+          실행시켜 볼 수 있게 됩니다.
         studio_gumball_hello1: |
           아나이스가 새로운 친구들을 만들고 싶어합니다.
           "말하기" 블록을 작업 영역에 드래그해서 넣어서 "안녕"이라고 말 할 수 있도록 해주세요. "안녕"이라고 입력하면 됩니다.
@@ -584,6 +576,9 @@
         infinity_playlab_intro: 플레이 랩 - 소개
         infinity_playlab_events: 플레이 랩 - 이벤트
         infinity_playlab_repeat_forever: 플레이 랩 - 무한 반복
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -637,6 +632,9 @@
         gumball_intro: Hour of Code 껌볼 - 소개
         gumball_events: Hour of Code 껌볼 - 이벤트
         gumball_repeat: Hour of Code 껌볼 - 반복문
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

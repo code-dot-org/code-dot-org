@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # 여러분 교육청지역 전체에 Hour of Code 행사를 진행하는 방법
 
@@ -31,4 +30,3 @@ Hour of Code는 어떻게 컴퓨터과학(정보과학) 기술이 작동하는�
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>

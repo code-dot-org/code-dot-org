@@ -1,4 +1,4 @@
-/* global trackEvent */
+/* global trackEvent, appOptions */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -149,6 +149,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
+  var finalLevel = (options.response &&
+    (options.response.message === "no more levels"));
+
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
@@ -157,7 +160,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
-      freePlay: options.level.freePlay
+      freePlay: options.level.freePlay,
+      finalLevel: finalLevel
     })
   );
 
@@ -390,7 +394,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: tryAgainText,
-      continueText: options.continueText || msg.continue(),
+      continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
       isK1: options.isK1,
@@ -549,7 +553,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
-            (options.response.message == "no more levels"));
+          (options.response.message === "no more levels"));
         var stageCompleted = null;
         if (options.response && options.response.stage_changing) {
           stageCompleted = options.response.stage_changing.previous.name;
@@ -561,7 +565,15 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
-          message = options.appStrings.reinfFeedbackMsg;
+          var reinfFeedbackMsg = (options.appStrings &&
+              options.appStrings.reinfFeedbackMsg) || '';
+
+          if (options.level.disableFinalStageMessage) {
+            message = reinfFeedbackMsg;
+          } else {
+            message = finalLevel ? (msg.finalStage(msgParams) + ' ') : '';
+            message = message + reinfFeedbackMsg;
+          }
         } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
@@ -616,7 +628,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     return null;
   }
 
-  if (this.studioApp_.disableSocialShare) {
+  // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
+  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -666,18 +679,11 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
-    var copySharingInput = function() {
+    dom.addClickTouchEvent(sharingInput, function() {
       sharingInput.focus();
       sharingInput.select();
-      document.execCommand('copy');
-    };
-
-    dom.addClickTouchEvent(sharingInput, copySharingInput);
-
-    var sharingCopyButton = sharingDiv.querySelector('#sharing-copy-button');
-    if (sharingCopyButton) {
-      dom.addClickTouchEvent(sharingCopyButton, copySharingInput);
-    }
+      sharingInput.setSelectionRange(0, 9999);
+    });
   }
 
   //  SMS-to-phone feature
@@ -723,6 +729,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
               trackEvent("SendToPhone", "error");
             });
         });
+      } else { // not hidden, hide
+        $(sendToPhone).hide();
       }
     });
   }

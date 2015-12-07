@@ -146,7 +146,7 @@ it:
           description_short: "Disegna fantastiche immagini e decorazioni con l'artista!"
         hourofcode:
           Maze: 'Labirinto: Sequenze e Cicli'
-          title: "L'Ora del Codice"
+          title: Classic Maze
           description: "Impara i concetti base dell'informatica con i personaggi di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!"
           description_short: "Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!"
         frozen:
@@ -1480,8 +1480,8 @@ it:
           Craft: Craft
         mc:
           title: "L'Ora del Codice con Minecraft"
-          description_short: Esplora un mondo di Minecraft con la programmazione
-          description: Usa blocchi di codice per guidare Steve o Alex in questo mondo di Minecraft
+          description_short: Esplora il mondo di Minecraft attraverso il codice
+          description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex
           Hour of Code 2015: "L'Ora del Codice 2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

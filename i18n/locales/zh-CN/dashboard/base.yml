@@ -385,7 +385,7 @@ zh:
     thank_you: '我们感谢 <a href="https://code.org/about/donors"> 捐助者</a>、 <a href="https://code.org/about/partners"> 合作伙伴</a>、 <a href="https://code.org/about/team"> 扩展团队</a>、视频演员、<a href="https://code.org/about/advisors"> 教育顾问</a>在创建代码工作室中给予的支持。'
     help_from_html: 特别感谢来自谷歌、 微软、 Facebook 和 Twitter 的工程师帮助创建了本教程。
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
-    art_from_html: '愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。'
+    art_from_html: '我的世界 &#8482; &amp; &copy; %{current_year} 微软版权所有。<br />星球大战 &#8482; &amp; &copy; %{current_year} 迪斯尼和卢卡斯影业版权所有。<br /> 冰雪奇缘 &#8482; &amp; &copy; %{current_year} 迪斯尼版权所有。<br /> 冰河世纪 &#8482; &amp; &copy; %{current_year} 20世纪福克斯版权所有。<br />愤怒的小鸟 &#8482; &amp; &copy; 2009年-%{current_year} Rovio 娱乐有限公司版权所有。 <br />植物与僵尸&#8482; &amp; &copy; %{current_year} 电子艺术公司保留所有的权利。'
     art_from_html_old: '愤怒的小鸟&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment Ltd. 版权所有。<br /> 植物大战僵尸&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. 版权所有'
     powered_by_aws: 由亚马逊网络服务
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
@@ -400,9 +400,9 @@ zh:
     privacy: 隐私政策
     secure: 安全版本
     report_abuse: 报告滥用
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: 在代码工作室中建立
+    make_my_own_app: 制作我自己的应用程序
+    how_it_works: 它是如何工作的
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
@@ -459,7 +459,7 @@ zh:
       unused: 未使用的关卡
   upsell:
     hoc:
-      title: 编程一小时
+      title: Classic Maze
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
     flappy:
       title: 飞扬的代码

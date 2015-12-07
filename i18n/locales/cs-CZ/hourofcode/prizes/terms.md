@@ -34,7 +34,7 @@ Aby bylo jasno, toto není loterie nebo soutěž s jistou výhrou.
 
 ## Video chat s pozvaným řečníkem:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
+Cena pouze pro K-12 třídy v Usa a Kanada. Code.org vybere výherní třídy, poskytne časový otvor pro web chat, a bude pracovat s danými učitely, k nastavení technologických detajlů. Celá škola není třeba uplatňovat nárok na tuto cenu. Veřejné a soukromé školy mají nárok na výhru.
 
 <% end %>
 
