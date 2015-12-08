@@ -23,7 +23,7 @@ social:
 
 %div{style: "clear:both"}
 
--company = request.GET['company']
+-company = URI.escape(request.GET['company']) if request.GET['company']
 %div.starwars-container
   %div.img-container
     %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}

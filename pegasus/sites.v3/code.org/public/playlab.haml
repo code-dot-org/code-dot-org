@@ -23,7 +23,7 @@ social:
 
 %div{style: "clear:both"}
 
--company = request.GET['company']
+-company = URI.escape(request.GET['company']) if request.GET['company']
 
 .playlab-container
   %h1.header= I18n.t(:playlab_choose_theme)

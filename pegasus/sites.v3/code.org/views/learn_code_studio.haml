@@ -1,5 +1,5 @@
 :ruby
-  company = request.GET['company']
+  company = URI.escape(request.GET['company'])
   page_mode = PageMode.get(request)
   if page_mode == "feature-starwars"
     first_tutorial = "starwars"
