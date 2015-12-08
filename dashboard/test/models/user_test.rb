@@ -43,6 +43,16 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "cannot create user with panda in name" do
+    user = User.create(@good_data.merge({name: panda_panda}))
+    assert user.errors.messages.length == 1
+  end
+
+  test "cannot create user with panda in email" do
+    user = User.create(@good_data.merge({email: "#{panda_panda}@panda.com"}))
+    assert user.errors.messages.length == 1
+  end
+
   test "cannot create user with invalid email" do
     user = User.create(@good_data.merge({email: 'foo@bar'}))
     assert user.errors.messages.length == 1

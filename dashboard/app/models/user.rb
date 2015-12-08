@@ -229,6 +229,7 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
   validates :name, length: {within: 1..70}, allow_blank: true
+  validates :name, no_utf8mb4: true
 
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -294,6 +295,7 @@ class User < ActiveRecord::Base
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
+  validates :email, no_utf8mb4: true
 
   def presence_of_email_or_hashed_email
     if email.blank? && hashed_email.blank?
@@ -398,9 +400,11 @@ class User < ActiveRecord::Base
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     if login = conditions.delete(:login)
+      return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
              { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
     elsif hashed_email = conditions.delete(:hashed_email)
+      return nil if hashed_email.utf8mb4?
       where(hashed_email: hashed_email).first
     else
       nil
