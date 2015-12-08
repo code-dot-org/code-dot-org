@@ -25,7 +25,7 @@ class CharsetTest < ActionDispatch::IntegrationTest
 
   test "attempting to create a user with utf8mb4 chars does not hit the db" do
     student_params = {name: "",
-                      password: "apassword",
+                      password: "password",
                       email: "a_student@somewhere.xx",
                       gender: 'F',
                       age: '15',
@@ -34,9 +34,9 @@ class CharsetTest < ActionDispatch::IntegrationTest
     # make sure all the classes are loaded
     post '/users', user: student_params
     assert_response :success
-    assert_select 'div.alert', 'Name must be present'
+    assert_select 'div#error_explanation', /Display Name is required/
 
-#    no_database
+    no_database
 
     post '/users', user: student_params.merge(name: panda_panda)
     assert_response :success
@@ -47,23 +47,21 @@ class CharsetTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation', /Email is invalid/
   end
 
-  def sign_in(user, password)
-    post '/users/sign_in', login: user.email, password: password
-    assert_response :success
+  def sign_in(user)
+    post '/users/sign_in', user: {login: user.email, password: '00secret'}
+    assert_response :redirect
   end
 
   test "attempting to update a user with utf8mb4 chars does not hit the db" do
-    password = 'password'
-    user = create :user, password: password
-    sign_in user, password
+    sign_in create(:user)
 
-#    no_database
+    no_database
 
-    post '/users', user: {name: panda_panda}
+    put '/users', user: {name: panda_panda}
     assert_response :success
     assert_select 'div#error_explanation', /Display Name is invalid/
 
-    post '/users', user: {email: "#{panda_panda}@panda.xx"}
+    put '/users', user: {email: "#{panda_panda}@panda.xx"}
     assert_response :success
     assert_select 'div#error_explanation', /Display Name is invalid/
 

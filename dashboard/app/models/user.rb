@@ -290,12 +290,10 @@ class User < ActiveRecord::Base
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
 
-  validate :email_and_hashed_email_must_be_unique
-
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
-  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
   validates :email, no_utf8mb4: true
+  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
 
   def presence_of_email_or_hashed_email
     if email.blank? && hashed_email.blank?
@@ -304,6 +302,9 @@ class User < ActiveRecord::Base
   end
 
   def email_and_hashed_email_must_be_unique
+    # skip the db lookup if email is already invalid
+    return if errors.on?(:email)
+
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
         other_user != self
