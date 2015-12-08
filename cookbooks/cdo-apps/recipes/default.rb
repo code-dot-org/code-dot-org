@@ -14,6 +14,7 @@ apt_package 'pdftk'
 apt_package 'enscript'
 apt_package 'libsqlite3-dev'
 
+include_recipe 'cdo-nginx'
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe 'cdo-apps::chef_credentials'

@@ -2,7 +2,7 @@ path = File.expand_path('../../deployment.rb', __FILE__)
 path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
 require path
 
-listen CDO.dashboard_port
+listen '/run/unicorn/dashboard.sock'
 worker_processes CDO.dashboard_workers
 pid "#{File.expand_path(__FILE__)}.pid"
 timeout 60

@@ -1,5 +1,5 @@
 require File.join(File.expand_path(__FILE__), '../../../deployment')
-listen CDO.pegasus_port
+listen '/run/unicorn/pegasus.sock'
 worker_processes CDO.pegasus_workers
 pid "#{File.expand_path(__FILE__)}.pid"
 timeout 60
