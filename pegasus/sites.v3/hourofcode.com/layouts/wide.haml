@@ -17,4 +17,10 @@
 %br/
 %br/
 
-= view :footer
+-if header['theme'] == 'responsive'
+  .desktop-feature
+    = view :footer
+  .mobile-headers.mobile-feature
+    = view :mobile_footer_responsive
+-else
+  = view :footer
