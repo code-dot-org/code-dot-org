@@ -135,6 +135,9 @@ module LevelsHelper
       )
     end
 
+    if @script
+      view_options script_name: @script.name
+    end
 
     unless params[:share]
       # Set videos and callouts.
