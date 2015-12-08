@@ -26,6 +26,7 @@ class LevelSource < ActiveRecord::Base
   has_many :activities
 
   validates_length_of :data, :maximum => 20000
+  validates :data, no_utf8mb4: true
 
   # This string used to sometimes appear in program XML.
   # We now strip it out, but it remains in some old LevelSource.data.

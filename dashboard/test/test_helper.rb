@@ -61,6 +61,10 @@ class ActiveSupport::TestCase
     set_env :test
   end
 
+  def panda_panda
+    "Panda\u{1F43C}"
+  end
+
   def set_env(env)
     Rails.env = env.to_s
     CDO.rack_env = env
