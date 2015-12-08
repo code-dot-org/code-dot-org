@@ -3537,14 +3537,22 @@ Studio.displayVictoryText = function() {
   if (dom.isMobile() || dom.isWindowsTouch()) {
     var resetTextA = document.getElementById('resetTextA');
     var resetTextB = document.getElementById('resetTextB');
-    resetTextB.textContent = studioMsg.tapToReset();
     resetTextA.setAttribute('visibility', 'hidden');
-    resetTextB.setAttribute('visibility', 'visible');
     $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
+    if (level.tapSvgToRunAndReset) {
+      resetTextB.textContent = studioMsg.tapToReset();
+      resetTextB.setAttribute('visibility', 'visible');
+    } else {
+      resetTextB.setAttribute('visibility', 'hidden');
+    }
   } else {
     var resetText = document.getElementById('resetText');
-    resetText.textContent = studioMsg.tapOrClickToReset();
-    resetText.setAttribute('visibility', 'visible');
+    if (level.tapSvgToRunAndReset) {
+      resetText.textContent = studioMsg.tapOrClickToReset();
+      resetText.setAttribute('visibility', 'visible');
+    } else {
+      resetText.setAttribute('visibility', 'hidden');
+    }
   }
 };
 
@@ -3703,7 +3711,7 @@ Studio.displayFloatingScore = function(changeValue) {
     return;
   }
 
-  var sprite = Studio.sprite[0];
+  var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
   var floatingScore = document.getElementById('floatingScore');
   floatingScore.textContent = changeValue > 0 ? ("+" + changeValue) : changeValue;
   floatingScore.setAttribute('x', sprite.x + sprite.width/2);
@@ -4087,10 +4095,10 @@ Studio.addItem = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // Create stationary, grid-aligned items when level.itemGridAlignedMovement,
   // otherwise, create randomly placed items travelling in a random direction.
-  // Assumes that sprite[0] is in use, and avoids placing the item too close
-  // to that sprite.
+  // Assumes that the protagonist sprite is in use, and avoids placing the item
+  // too close to that sprite.
 
   var generateRandomItemPosition = function () {
     // TODO (cpirich): check for edge collisions? (currently avoided by placing
@@ -4126,11 +4134,13 @@ Studio.addItem = function (opts) {
     // TODO (cpirich): just move within the map looking for open spaces instead
     // of randomly retrying random numbers
 
+    var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
+
     var numTries = 0;
     var minDistanceFromSprite = 100;
     while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
-           Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
-                              Studio.sprite[0].y + Studio.sprite[0].height/2,
+           Studio.getDistance(sprite.x + sprite.width/2,
+                              sprite.y + sprite.height/2,
                               item.x, item.y) < minDistanceFromSprite) {
       var newPos = generateRandomItemPosition();
       item.x = newPos.x;
@@ -4334,7 +4344,7 @@ Studio.setDroidSpeed = function (opts) {
   }
 
   opts.value = speedNumericVal;
-  opts.spriteIndex = Studio.protaganistSpriteIndex || 0;
+  opts.spriteIndex = Studio.protagonistSpriteIndex || 0;
   Studio.setSpriteSpeed(opts);
 };
 
