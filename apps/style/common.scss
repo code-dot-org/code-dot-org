@@ -441,6 +441,9 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px;
+  }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
@@ -1524,4 +1527,3 @@ $see-examples-thick-underline-color: $yellow;
     display: none;
   }
 }
-

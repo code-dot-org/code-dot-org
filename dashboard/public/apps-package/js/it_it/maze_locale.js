@@ -181,7 +181,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "honeyTooltip":function(d){return "Produce miele dal nettare"},
 "honeycombFullError":function(d){return "Il favo non ha più spazio per altro miele."},
 "ifCode":function(d){return "se"},
-"ifInRepeatError":function(d){return "Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se non ci riesci, prova di nuovo il livello precedente per vedere come funzionava."},
+"ifInRepeatError":function(d){return "Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se non ci riesci, prova di nuovo l'esercizio precedente per vedere come funzionava."},
 "ifPathAhead":function(d){return "se c'è strada in avanti"},
 "ifTooltip":function(d){return "Se c'è strada nella direzione specificata, allora esegue alcune azioni."},
 "ifelseTooltip":function(d){return "Se c'è strada nella direzione specificata, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo."},
