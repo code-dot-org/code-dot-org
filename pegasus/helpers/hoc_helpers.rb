@@ -21,12 +21,10 @@ def create_session_row_unless_unsampled(attrs)
   # We don't need to do anything if we've already decided this session is unsampled.
   return if unsampled_session?
 
-  # Decide whether the session should be sampled.
-  weight = DCDO.get('hoc_activity_sample_weight', 1).to_i
-
-  # Don't sample for cartoon network (or any company). We always need to create a
-  # session row in order to show the correct call to action on the congrats page.
-  weight = 1 unless attrs[:company].nil?
+  # Decide whether the session should be sampled. Don't sample for cartoon network
+  # (or any company). We always need to create a session row in order to show the
+  # correct call to action on the congrats page.
+  weight = attrs[:company].nil? ? DCDO.get('hoc_activity_sample_weight', 1).to_i : 1;
 
   if weight > 0 && Kernel.rand < (1.0 / weight)
     # If we decided to make the session sampled, create the session row and set the hoc cookie.
