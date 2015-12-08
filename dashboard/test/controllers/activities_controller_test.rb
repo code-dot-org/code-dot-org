@@ -541,7 +541,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
         level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+        save_to_gallery_url: "/gallery_save?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -578,7 +578,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
         level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+        save_to_gallery_url: "/gallery_save?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -606,7 +606,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
         level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+        save_to_gallery_url: "/gallery_save?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -636,7 +636,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
         level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+        save_to_gallery_url: "/gallery_save?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -666,7 +666,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
         level_source: "http://test.host/c/#{assigns(:level_source).id}",
-        save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+        save_to_gallery_url: "/gallery_save?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
