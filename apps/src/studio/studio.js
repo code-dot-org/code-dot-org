@@ -1374,15 +1374,19 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
 
-    handleActorCollisionsWithCollidableList(i,
-                                            iXCenter,
-                                            iYCenter,
-                                            Studio.projectiles);
-    handleActorCollisionsWithCollidableList(i,
-                                            iXCenter,
-                                            iYCenter,
-                                            Studio.items,
-                                            level.removeItemsWhenActorCollides);
+    if (level.projectileCollisions) {
+      handleActorCollisionsWithCollidableList(i,
+                                              iXCenter,
+                                              iYCenter,
+                                              Studio.projectiles);
+    }
+    if (level.itemCollisions || level.removeItemsWhenActorCollides) {
+      handleActorCollisionsWithCollidableList(i,
+                                              iXCenter,
+                                              iYCenter,
+                                              Studio.items,
+                                              level.removeItemsWhenActorCollides);
+    }
 
     handleEdgeCollisions(
         sprite,
@@ -1713,18 +1717,6 @@ Studio.initSprites = function () {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
-
-    if (level.projectileCollisions) {
-      blocks.enableProjectileCollisions(Blockly);
-    }
-
-    if (level.edgeCollisions) {
-      blocks.enableEdgeCollisions(Blockly);
-    }
-
-    if (level.allowSpritesOutsidePlayspace) {
-      blocks.enableSpritesOutsidePlayspace(Blockly);
-    }
   }
 };
 
@@ -2584,7 +2576,11 @@ var registerHandlersWithMultipleSpriteParams =
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'any_item');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'wall');
   }
 };
 
@@ -4047,7 +4043,10 @@ Studio.playSound = function (opts) {
  * @returns {Object} options object that can be passed to item constructor.
  */
 Studio.getItemOptionsForItemClass = function (itemClass) {
-  var classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
+  var classProperties = {};
+  if (skin.specialItemProperties) {
+    classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
+  }
   return {
     className: itemClass,
     image: skin[itemClass],

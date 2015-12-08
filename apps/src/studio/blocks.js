@@ -46,27 +46,12 @@ var generateSetterCode = function (opts) {
 
 // These are set to the default values, but may be overridden
 var spriteCount = 6;
-var projectileCollisions = false;
-var edgeCollisions = false;
-var allowSpritesOutsidePlayspace = false;
 var startAvatars = [];
 
 var customGameLogic = null;
 
 exports.setSpriteCount = function(blockly, count) {
   spriteCount = count;
-};
-
-exports.enableProjectileCollisions = function(blockly) {
-  projectileCollisions = true;
-};
-
-exports.enableEdgeCollisions = function(blockly) {
-  edgeCollisions = true;
-};
-
-exports.enableSpritesOutsidePlayspace = function(blockly) {
-  allowSpritesOutsidePlayspace = true;
 };
 
 exports.setStartAvatars = function (avatarList) {
@@ -93,6 +78,7 @@ function spriteNumberTextArray(stringGenerator) {
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
+  var level = blockInstallOptions.level;
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
   startAvatars = skin.avatarList.slice(0); // copy avatar list
@@ -442,13 +428,24 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdownArray2 = dropdownArray2.concat(
           spriteNumberTextArray(msg.whenSpriteCollidedWithN));
         dropdownArray2.unshift(this.GROUPINGS[1]);
-        if (projectileCollisions) {
+        if (level.projectileCollisions &&
+            this.PROJECTILES &&
+            this.PROJECTILES.length > 0) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
-        if (edgeCollisions) {
+        if (level.edgeCollisions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
           dropdownArray2 = dropdownArray2.concat(this.EDGES);
+        }
+        if (level.itemCollisions &&
+            this.ITEMS &&
+            this.ITEMS.length > 0) {
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[4]]);
+          dropdownArray2 = dropdownArray2.concat(this.ITEMS);
+        }
+        if (level.wallMapCollisions) {
+          dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[5]]);
         }
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
         this.appendDummyInput().appendTitle(dropdown1, 'SPRITE1');
@@ -470,9 +467,13 @@ exports.install = function(blockly, blockInstallOptions) {
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
        [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
-       [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
+       [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge'],
+       [msg.whenSpriteCollidedWithAnyItem(), 'any_item'],
+       [msg.whenSpriteCollidedWithObstacle(), 'wall']];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES = skin.whenProjectileCollidedChoices;
+
+  blockly.Blocks.studio_whenSpriteCollided.ITEMS = skin.whenItemCollidedChoices;
 
   blockly.Blocks.studio_whenSpriteCollided.EDGES =
       [[msg.whenSpriteCollidedWithTopEdge(), 'top'],
@@ -536,8 +537,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.addCharacter());
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      if (skin.itemChoices && skin.itemChoices.length > 0) {
+        this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      }
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -565,8 +568,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(new blockly.FieldDropdown(skin.activityChoices), 'TYPE');
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      if (skin.itemChoices && skin.itemChoices.length > 0) {
+        this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
+      }
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -604,8 +609,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
 
       this.appendDummyInput().appendTitle(msg.setItemSpeedSet());
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
+      if (skin.itemChoices && skin.itemChoices.length > 0) {
+        this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'CLASS');
+      }
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to slow
@@ -643,8 +650,10 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.throwSprite());
       }
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
+      if (skin.projectileChoices && skin.projectileChoices.length > 0) {
+        this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
+      }
       this.appendDummyInput()
         .appendTitle('\t');
       this.appendDummyInput()
@@ -694,8 +703,10 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      if (this.VALUES && this.VALUES.length > 0) {
+        this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+      }
       this.appendDummyInput()
         .appendTitle('\t');
       this.appendDummyInput()
@@ -725,7 +736,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       var dropdown;
-      if (allowSpritesOutsidePlayspace) {
+      if (level.allowSpritesOutsidePlayspace) {
         dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
         dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
       } else {
