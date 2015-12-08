@@ -18,6 +18,9 @@ require src_dir 'database'
 require 'cdo/properties'
 require_relative '../lib/analyze_hoc_activity_helper'
 
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)		
+PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+
 def main()
   return unless only_one_running?(__FILE__)
 
