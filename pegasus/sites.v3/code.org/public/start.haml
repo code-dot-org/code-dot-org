@@ -1,0 +1,58 @@
+---
+layout: simple_embedded
+---
+%link{href: "/css/mc.css", rel: "stylesheet"}
+:css
+  .tut-container {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+.tut-container
+  .mc-container
+    .img-container
+      %img.mc-img{src:"/images/fit-1940/mc/MC_Wide_Big_2_V4.jpg"}
+
+
+    .mc-tutorial
+      %h1.mc-h1= I18n.t(:hour_of_code)
+      .tutorial-box
+        .mc-tutorial-info
+          %h1.mc-h1-second-box= I18n.t(:mc_name)
+          %p.mc-tutorial-description= I18n.t(:mc_longdescription)
+          %p.mc-tutorial-specs= I18n.t(:mc_specs)
+        %a{:href => "/#{I18n.locale.downcase}/mc/1", :target=>'_self'}
+          %button= I18n.t(:starwars_javascript_start_button)
+
+  %div{style: "clear:both"}
+  <br/>
+  %link{href: "/css/starwars.css", rel: "stylesheet"}
+
+  %div{style: "clear:both"}
+
+  %div.starwars-container
+    %div.img-container
+      %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
+    %h1.starwars-heading= I18n.t(:starwars_subtitle)
+
+    .col-25.starwars-tutorial.starwars-js-tutorial
+      %div.tutorial-box
+        %h2.sw-h2= I18n.t(:starwars_javascript_title)
+        %div.sw-tutorial-info
+          %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
+          %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
+        %a{:href => "/#{I18n.locale.downcase}/starwars/1", :target=>'_self'}
+          %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
+
+    .col-25.starwars-tutorial.starwars-blocks-tutorial
+      %div.tutorial-box
+        %h2.sw-h2= I18n.t(:starwars_blocks_title)
+        %div.sw-tutorial-info
+          %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
+          %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
+        %a{:href => "/#{I18n.locale.downcase}/starwarsblocks/1", :target=>'_self'}
+          %button.sw-try-button= I18n.t(:starwars_blocks_start_button)
+
+  %div{style: "clear:both"}
+
+
