@@ -76,10 +76,10 @@ end
 
 # cronjobs that run on all instances in all environments go here:
 
-# Restart at ~02:00am PST (~ 9am UTC) as workaround for Rails 4.2 memory leak.
+# Restart at ~02:00am and ~17:00 PST as workaround for Rails 4.2 memory leak.
 # We will no longer need this as soon as we complete the Ruby 2.2 upgrade.
 # Leaving in for HOC week since we won't be pushing
-cronjob at:"#{rand(20)} 9 * * *", do:'service dashboard upgrade'
+cronjob at:"#{rand(20)} 1,9 * * *", do:'service dashboard upgrade && service pegasus upgrade'
 
 cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
