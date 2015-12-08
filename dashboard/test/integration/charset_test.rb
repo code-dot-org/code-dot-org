@@ -36,7 +36,7 @@ class CharsetTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'div#error_explanation', /Display Name is required/
 
-#    no_database
+    no_database
 
     post '/users', user: student_params.merge(name: panda_panda)
     assert_response :success

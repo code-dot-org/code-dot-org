@@ -240,7 +240,7 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, unless: 'errors[:name]'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
