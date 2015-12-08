@@ -14,8 +14,9 @@ class GalleryActivitiesController < ApplicationController
   GALLERY_MAX_AGE = GALLERY_PROXY_MAX_AGE * 2
 
   def index
+    request.session_options[:skip] = true
+
     if Gatekeeper.allows('public_caching_for_gallery')
-      request.session_options[:skip] = true
       response.headers['Cache-Control'] = "public,max-age=#{GALLERY_MAX_AGE},s-maxage=#{GALLERY_PROXY_MAX_AGE}"
     end
 
