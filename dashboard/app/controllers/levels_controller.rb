@@ -35,6 +35,8 @@ class LevelsController < ApplicationController
     if @level.is_a? Grid
       @level.maze_data = @level.class.unparse_maze(@level.properties)
     end
+
+    @level.assign_defaults_before_editing
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
@@ -232,11 +234,13 @@ class LevelsController < ApplicationController
       {poems: []},
       {concept_ids: []},
       {soft_buttons: []},
+      {music: []},
       {examples: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
+    params[:level][:music].delete_if(&:empty?) if params[:level][:music].is_a? Array
     permitted_params.concat(Level.serialized_properties.values.flatten)
     params[:level].permit(permitted_params)
   end
