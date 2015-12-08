@@ -78,3 +78,7 @@
 .search-letter {
   line-height: 120%;
   cursor: default; }
+
+/* fix transform-origin for IE / RTL in maze levels */
+html[dir="RTL"] div#visualization.responsive > svg {
+  -ms-transform-origin: 0 0; }
