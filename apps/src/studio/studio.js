@@ -2816,7 +2816,7 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
-    if (Studio.checkForBlocklyPreExecutionFailure()) {
+    if (Studio.checkForBlocklyPreExecutionFailure() || level.edit_blocks) {
       return Studio.onPuzzleComplete();
     }
 
@@ -3188,7 +3188,12 @@ Studio.drawTimeoutRect = function() {
       background.setAttribute('height', height);
       background.setAttribute('x', 0);
       background.setAttribute('y', Studio.MAZE_HEIGHT - height);
-      background.setAttribute('fill', level.showTimeoutRect);
+      var color = level.showTimeoutRect;
+      if (color === true) {
+        // If this was enabled as a boolean, use white 50% alpha as a default:
+        color = 'rgba(255, 255, 255, 0.5)';
+      }
+      background.setAttribute('fill', color);
       group.appendChild(background);
       svg.appendChild(group);
     }
@@ -5695,9 +5700,21 @@ var checkFinished = function () {
       Studio.testResults = TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
       Studio.progressConditionTestResult = true;
     }
-    var progressMessage = progressConditionResult.message;
+    var progressMessageKey = progressConditionResult.messageKey;
     if (studioApp.isUsingBlockly()) {
-      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+      progressMessageKey = progressConditionResult.blocklyMessageKey || progressMessageKey;
+    }
+    var progressMessage;
+    if (studioMsg[progressMessageKey]) {
+      // If messageKey/blocklyMessageKey is present, invoke its function from the
+      // studioMsg object. This allows level builders to use pre-defined localized strings,
+      // but those strings cannot contain substitutable parameters.
+      progressMessage = studioMsg[progressMessageKey]();
+    } else {
+      progressMessage = progressConditionResult.message;
+      if (studioApp.isUsingBlockly()) {
+        progressMessage = progressConditionResult.blocklyMessage || progressMessage;
+      }
     }
     Studio.message = utils.valueOr(progressMessage, null);
     Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);

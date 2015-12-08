@@ -27,6 +27,10 @@
   %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
   = f.text_area :failure_condition, rows: 4
 .field
+  = f.label :progress_conditions, 'Progress conditions'
+  %p Optional JSON array of conditions evaluated in order, until one of them is entirely satisfied, and then the result is acted upon.
+  = f.text_area :progress_conditions, rows: 8
+.field
   = f.label :soft_buttons, 'Controls buttons'
   %p
     Select
@@ -122,7 +126,6 @@
 -#    marker_width
 -#    goal_override
 -#    msg_string_overrides
--#    progress_conditions
 
 :javascript
   $('.select_all').click(make_selection_handler(true));
@@ -136,6 +139,11 @@
   });
   CodeMirror.fromTextArea($('#level_failure_condition').get(0), {
     mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });
+  CodeMirror.fromTextArea($('#level_progress_conditions').get(0), {
+    mode: 'application/json',
     viewportMargin: Infinity,
     matchBrackets: true
   });

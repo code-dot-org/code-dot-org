@@ -694,7 +694,7 @@
   "whenSpriteCollidedWithAnyEdge": "touches any edge",
   "whenSpriteCollidedWithAnyProjectile": "touches any projectile",
   "whenSpriteCollidedWithAnyItem": "touches any character",
-  "whenSpriteCollidedWithObstacle": "touches an obstacle",
+  "whenSpriteCollidedWithObstacle": "touches obstacle",
   "whenSpriteCollidedWithAnything": "touches anything",
   "whenSpriteCollidedWithN": "touches actor {spriteIndex}",
   "whenSpriteCollidedWithBlueFireball": "touches blue fireball",
