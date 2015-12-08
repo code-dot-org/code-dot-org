@@ -141,6 +141,32 @@ class Studio < Grid
     ]
   end
 
+  MusicTrack = Struct.new(:name, :value)
+  def self.music_options
+    [
+      MusicTrack.new('Song1 (hoc2015, hoc2015x only)', 'song1'),
+      MusicTrack.new('Song2 (hoc2015, hoc2015x only)', 'song2'),
+      MusicTrack.new('Song3 (hoc2015, hoc2015x only)', 'song3'),
+      MusicTrack.new('Song4 (hoc2015, hoc2015x only)', 'song4'),
+      MusicTrack.new('Song5 (hoc2015, hoc2015x only)', 'song5'),
+      MusicTrack.new('Song6 (hoc2015, hoc2015x only)', 'song6'),
+      MusicTrack.new('Song7 (hoc2015, hoc2015x only)', 'song7'),
+      MusicTrack.new('Song8 (hoc2015, hoc2015x only)', 'song8'),
+      MusicTrack.new('Song9 (hoc2015, hoc2015x only)', 'song9'),
+      MusicTrack.new('Song10 (hoc2015, hoc2015x only)', 'song10'),
+      MusicTrack.new('Song11 (hoc2015, hoc2015x only)', 'song11'),
+      MusicTrack.new('Song12 (hoc2015, hoc2015x only)', 'song12'),
+      MusicTrack.new('Song13 (hoc2015, hoc2015x only)', 'song13'),
+      MusicTrack.new('Song14 (hoc2015, hoc2015x only)', 'song14'),
+      MusicTrack.new('Song15 (hoc2015, hoc2015x only)', 'song15'),
+    ]
+  end
+
+  def assign_defaults_before_editing
+    self.play_start_sound = true if self.play_start_sound.nil?
+    super
+  end
+
   def self.default_failure_condition
     <<-JS.strip_heredoc.chomp
         function () {

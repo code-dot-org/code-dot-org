@@ -77,6 +77,10 @@ class Level < ActiveRecord::Base
   def toolbox(type)
   end
 
+  # Overriden by different level types.
+  def assign_defaults_before_editing
+  end
+
   def unplugged?
     game && game.unplugged?
   end
