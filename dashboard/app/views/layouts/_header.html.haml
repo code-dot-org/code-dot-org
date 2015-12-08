@@ -12,6 +12,13 @@
 - show_bug_links = (script_level && script.show_report_bug_link?) || (level && level.try(:is_project_level))
 
 .header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
+  - if current_user && script_level
+    #progresswarning
+      %a{href: "http://teacherblog.code.org/", target: "_blank"}
+        Due to very high traffic, your progress may not be saved.
+        %span.learnmore
+          Learn more
+
   - if show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
