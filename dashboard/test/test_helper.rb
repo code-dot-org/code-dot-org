@@ -62,6 +62,8 @@ class ActiveSupport::TestCase
   end
 
   def panda_panda
+    # this is the panda face emoji which is a 4 byte utf8 character
+    # (some of our db tables can't handle these)
     "Panda\u{1F43C}"
   end
 
