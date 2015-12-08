@@ -96,9 +96,18 @@ function getFallbackResponse(report) {
   if (!report.fallbackResponse) {
     return null;
   }
-  return report.pass ?
-            report.fallbackResponse.success :
-            report.fallbackResponse.failure;
+  var fallbackResponse = maybeParse(report.fallbackResponse);
+  return report.pass ? fallbackResponse.success : fallbackResponse.failure;
+}
+
+// TODO: sometimes fallback response is a string, not a parsed object
+function maybeParse(data) {
+  if (typeof data === 'string') {
+    try {
+      return JSON.parse(data);
+    } catch (e) {}
+  }
+  return data;
 }
 
 function reportComplete(report, response) {
