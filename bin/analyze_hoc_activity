@@ -15,7 +15,11 @@
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
+
+# Provides helper methods (add_count_to_hash, analyze_day_fast, and add_hashes) as well as the
+# *_DB_READONLY constants. 
 require_relative '../lib/analyze_hoc_activity_helper'
+
 
 def main()
   return unless only_one_running?(__FILE__)

@@ -5,6 +5,7 @@
 require src_dir 'database'
 require 'cdo/properties'
 
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
 
 def add_count_to_hash(hash, key, count)
