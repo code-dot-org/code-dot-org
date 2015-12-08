@@ -172,6 +172,17 @@ img.video_thumbnail {
 .header-wrapper {
   padding-top: 15px;
   min-height: 70px;
+
+  #progresswarning {
+    position: absolute;
+    font-size: 10px;
+    top: -1px;
+    left: 97px;
+
+    .learnmore {
+      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    }
+  }
 }
 
 .header {
