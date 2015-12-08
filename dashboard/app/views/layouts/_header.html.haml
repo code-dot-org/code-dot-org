@@ -14,7 +14,7 @@
 .header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
   - if current_user && script_level
     - post_milestone = script ? Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true) : true
-    - if ! post_milestone
+    - if !post_milestone
       #progresswarning
         %a{href: "http://teacherblog.code.org/", target: "_blank"}
           Due to very high traffic, your progress may not be saved.
