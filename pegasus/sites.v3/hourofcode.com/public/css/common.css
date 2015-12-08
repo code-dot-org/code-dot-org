@@ -224,6 +224,9 @@
   .btn-carousel-slide {
     right: 10px;
   }
+
+  .mobile-feature { }
+  .desktop-feature { display: none }
 }
 
 @media screen and (min-width: 600px) and (max-width: 969px) {
@@ -243,6 +246,8 @@
     height: 390px;
   }
 
+  .mobile-feature { }
+  .desktop-feature { display: none }
 }
 
 @media screen and (min-width: 970px) {
@@ -315,6 +320,9 @@
   }
   .course-carousel .btn-carousel-slide {
   }
+
+  .mobile-feature { display: none }
+  .desktop-feature { }
 }
 
 /* Datepicker customizations */
