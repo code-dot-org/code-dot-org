@@ -4,6 +4,7 @@
 - level = local_assigns[:level]
 - full_width = local_assigns[:full_width]
 
+
 - if browser.cdo_unsupported?
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
@@ -13,11 +14,13 @@
 
 .header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
   - if current_user && script_level
-    #progresswarning
-      %a{href: "http://teacherblog.code.org/", target: "_blank"}
-        Due to very high traffic, your progress may not be saved.
-        %span.learnmore
-          Learn more
+    - post_milestone = script ? Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true) : true
+    - if ! post_milestone
+      #progresswarning
+        %a{href: "http://teacherblog.code.org/", target: "_blank"}
+          Due to very high traffic, your progress may not be saved.
+          %span.learnmore
+            Learn more
 
   - if show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
