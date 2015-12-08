@@ -157,3 +157,7 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
   }
 }
 
+/* fix transform-origin for IE / RTL in playlab levels */
+html[dir="RTL"] div#visualization.responsive > svg {
+  -ms-transform-origin: 0 0;
+}
