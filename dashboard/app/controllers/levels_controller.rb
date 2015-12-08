@@ -111,6 +111,7 @@ class LevelsController < ApplicationController
       params[:level][:timeout_after_when_run] = true
       params[:level][:success_condition] = Studio.default_success_condition
       params[:level][:failure_condition] = Studio.default_failure_condition
+      params[:level][:progress_conditions] = Studio.default_progress_conditions
     end
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params.merge!(user: current_user)

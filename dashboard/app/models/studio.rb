@@ -70,9 +70,41 @@ class Studio < Grid
     level
   end
 
+  # Attributes that are stored as JSON strings but should be passed through to the app as
+  # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
+  # returns camelCase properties because of where it's used in the pipeline.
+  def self.json_object_attrs
+    %w(
+      progress_conditions
+    ).map{ |x| x.camelize(:lower) }
+  end
+
   # List of possible skins, the first is used as a default.
   def self.skins
     ['studio', 'infinity', 'hoc2015', 'hoc2015x', 'gumball', 'iceage']
+  end
+
+  def self.default_progress_conditions
+    <<-JS.strip_heredoc.chomp
+        [
+          // { "required": { "collectedSpecificItemsAtOrAbove": { "className": "mynock", "count": 8 } },
+          //   "result": { "success": true, "messageKey": "successCharacter1" } },
+          // { "required": {"timedOut": true, "collectedSpecificItemsAtOrAbove": { "className": "mynock", "count": 5 } },
+          //   "result": { "success": false, "canPass": true, "messageKey": "failedChainCharactersTimeoutGotSome" } },
+          // { "required": {
+          //     "collectedSpecificItemsAtOrAbove": { "className": "tauntaun", "count": 4 },
+          //     "createdSpecificItemsBelow": { "className": "mynock", "count": 5 }
+          //   },
+          //   "result": { "success": false, "messageKey": "failedChainCharactersTimeout" } },
+          // { "required": { "timedOut": true },
+          //   "result": { "success": false, "messageKey": "failedChainCharactersTimeout" } }
+          //
+          // All possible conditions:
+          // timedOut, collectedItemsAtOrAbove/collectedItemsBelow, collectedSpecificItemsAtOrAbove/collectedSpecificItemsBelow
+          // createdSpecificItemsAtOrAbove/createdSpecificItemsBelow, gotAllItems, touchedHazardsAtOrAbove
+          // currentPointsAtOrAbove/currentPointsBelow, allGoalsVisited, setMap, setSprite, setDroidSpeed, throwProjectile, setEmotion
+        ]
+    JS
   end
 
   def self.default_success_condition
