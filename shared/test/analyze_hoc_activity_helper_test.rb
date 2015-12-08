@@ -1,9 +1,9 @@
 require 'minitest/autorun'
 require 'rack/test'
 
-require_relative '../analyze_hoc_activity_functions'
+require_relative '../../lib/analyze_hoc_activity_helper'
 
-class AnalyzeHocActivityFunctionsTest < Minitest::Test
+class AnalyzeHocActivityHelperTest < Minitest::Test
   def test_add_count_to_hash_existing_key
     a = {'k' => 10}
     add_count_to_hash a, 'k', 1
