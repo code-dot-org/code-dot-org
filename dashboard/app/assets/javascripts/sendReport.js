@@ -44,7 +44,7 @@ var sendReport = function(report) {
   dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, appOptions.serverLevelId);
 
   //Post milestone iff the server tells us, or if we are on the last level and have passed
-  if (appOptions.postMilestone || (appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
+  if (appOptions.postMilestone || (appOptions.level.puzzle_number && appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
 
     var thisAjax = jQuery.ajax({
       type: 'POST',
