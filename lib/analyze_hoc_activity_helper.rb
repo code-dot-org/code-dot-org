@@ -29,7 +29,7 @@ def analyze_day_fast(date)
   finished_from_where = "FROM hoc_activity" +
     " WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
     "   OR (pixel_finished_at >= '#{day}' AND pixel_finished_at < '#{next_day}')"
- 
+
   tutorials = {}
   PEGASUS_REPORTING_DB_READONLY.fetch(
     "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
