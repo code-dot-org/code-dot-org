@@ -45,6 +45,9 @@
   = f.label :projectile_collisions, 'Projectile collisions'
   = boolean_check_box f, :projectile_collisions
 .field
+  = f.label :item_collisions, 'Item collisions'
+  = boolean_check_box f, :item_collisions
+.field
   = f.label :allow_sprites_outside_playspace, 'Allow sprites outside playspace'
   = boolean_check_box f, :allow_sprites_outside_playspace
 .field
@@ -107,13 +110,16 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
   = f.collection_select :music, @level.class.music_options, :value, :name, {selected: @level.music}, {multiple: true, :size => @level.class.music_options.length, :style => "width:300px;"}
+.field
+  = f.label :delay_completion, 'Delay completion'
+  %p Number of milliseconds to delay puzzle completion after it would normally be finished (due to progress conditions, goals, success/failure condition, or timeout).
+  = f.number_field :delay_completion
 
 
 -#    Fields to be added:
 -#
 -#    marker_height
 -#    marker_width
--#    delay_completion
 -#    goal_override
 -#    msg_string_overrides
 -#    progress_conditions

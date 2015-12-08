@@ -47,6 +47,7 @@ class Studio < Grid
     block_moving_into_walls
     grid_aligned_movement
     item_grid_aligned_movement
+    item_collisions
     remove_items_when_actor_collides
     slow_execution_factor
     marker_height
@@ -181,8 +182,18 @@ class Studio < Grid
 </category>
 <category name="Events">
   <block type="studio_whenArrow" />
+  <block type="studio_whenUp" />
+  <block type="studio_whenDown" />
+  <block type="studio_whenLeft" />
+  <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
+  <block type="studio_whenTouchCharacter" />
+  <block type="studio_whenTouchObstacle" />
+  <block type="studio_whenTouchGoal" />
+  <block type="studio_whenGetCharacter" />
+  <block type="studio_whenGetAllCharacters" />
+  <block type="studio_whenGetAllCharacterClass" />
 </category>
 <category name="Actions">
   <block type="studio_setSprite" />
@@ -259,6 +270,8 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_addPoints" />
+  <block type="studio_removePoints" />
   <block type="studio_saySprite">
     <title name="TEXT">type here</title>
   </block>
@@ -312,6 +325,7 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setDroidSpeed" />
   <block type="studio_setSpriteEmotion" />
   <block type="studio_setSpriteEmotionParams">
     <value name="SPRITE">
@@ -320,8 +334,9 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_setSpriteSize" />
   <block type="studio_showCoordinates" />
+  <block type="studio_setMap" />
+  <block type="studio_setSpriteSize" />
   <block type="studio_setSpriteSizeParams">
     <value name="SPRITE">
       <block type="math_number">
@@ -342,6 +357,7 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_endGame" />
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
