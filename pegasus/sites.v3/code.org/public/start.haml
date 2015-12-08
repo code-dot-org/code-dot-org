@@ -1,11 +1,26 @@
 ---
 layout: simple_embedded
 ---
+%link{href: "/css/starwars.css", rel: "stylesheet"}
 %link{href: "/css/mc.css", rel: "stylesheet"}
 :css
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   .tut-container {
     width: 970px;
     margin: 0 auto;
+  }
+  .mc-container {
+    padding: 0;
+  }
+  .tut-container .starwars-container {
+    padding-left: 0;
+  }
+  .starwars-img, .mc-img {
+    border-radius: 0;
   }
 
 .tut-container
@@ -25,8 +40,6 @@ layout: simple_embedded
           %button= I18n.t(:starwars_javascript_start_button)
 
   %div{style: "clear:both"}
-  <br/>
-  %link{href: "/css/starwars.css", rel: "stylesheet"}
 
   %div{style: "clear:both"}
 
