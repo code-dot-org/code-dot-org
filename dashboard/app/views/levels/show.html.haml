@@ -48,7 +48,7 @@
 
 - if tracking_pixel_enabled && @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
-  = image_tag(tracking_pixel_url(@script), size:'1x1')
+  = image_tag(tracking_pixel_url(@script), size:'1x1', alt: '')
 
 = render partial: 'levels/admin'
 
