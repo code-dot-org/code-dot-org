@@ -623,6 +623,30 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
   block.select();
 };
 
+Blockly.BlockSpace.prototype.pasteToNextSpot = function(blockXML) {
+  var xmlBlock = blockXML;
+
+  if (xmlBlock.getElementsByTagName('block').length >=
+      this.remainingCapacity()) {
+    return;
+  }
+  var newBlock = Blockly.Xml.domToBlock(this, xmlBlock);
+
+  var allBlocks = this.getAllBlocks();
+  for (var i = 0; i < allBlocks.length; i++) {
+    var block = allBlocks[i];
+    if (block === newBlock) {
+      continue;
+    }
+    var leafConnections = block.getLeafConnections_(null);
+    if (leafConnections) {
+      newBlock.previousConnection.connect(leafConnections[0]);
+      return;
+    }
+  }
+
+};
+
 /**
  * The number of blocks that may be added to the blockSpace before reaching
  *     the maxBlocks.

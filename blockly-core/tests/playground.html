@@ -431,6 +431,46 @@ h1 {
   </xml>
 
   <xml id="non-category-toolbox" style="display: none">
+    <block type="lists_setIndex">
+      <value name="LIST">
+        <block type="variables_get">
+          <title name="VAR">list</title>
+        </block>
+      </value>
+    </block>
+    <block type="text_append">
+      <value name="TEXT">
+        <block type="text"></block>
+      </value>
+    </block>
+    <block type="text_print"></block>
+    <block type="lists_setIndex">
+      <value name="LIST">
+        <block type="variables_get">
+          <title name="VAR">list</title>
+        </block>
+      </value>
+    </block>
+    <block type="text_append">
+      <value name="TEXT">
+        <block type="text"></block>
+      </value>
+    </block>
+    <block type="text_print"></block>
+    <block type="lists_setIndex">
+      <value name="LIST">
+        <block type="variables_get">
+          <title name="VAR">list</title>
+        </block>
+      </value>
+    </block>
+    <block type="text_append">
+      <value name="TEXT">
+        <block type="text"></block>
+      </value>
+    </block>
+    <block type="text_print"></block>
+
     <block type="controls_if"></block>
     <block type="logic_compare"></block>
     <block type="logic_operation"></block>
