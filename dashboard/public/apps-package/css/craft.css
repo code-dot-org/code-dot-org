@@ -2163,6 +2163,11 @@ a.video_link {
     html[dir=rtl] .dash_modal #show-code, html[dir=rtl] .dash_modal #feedbackButtons, html[dir=rtl] .dash_modal #puzzleRatingButtons, html[dir=rtl] .dash_modal #sharing {
       margin-right: -100px;
       margin-left: 0; }
+  @media screen and (max-height: 630px) {
+    .dash_modal .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px; } }
   .dash_modal #sharing {
     color: #e7e8ea; }
     .dash_modal #sharing button {

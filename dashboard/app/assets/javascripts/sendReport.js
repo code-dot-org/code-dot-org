@@ -44,7 +44,7 @@ var sendReport = function(report) {
   dashboard.clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, appOptions.serverLevelId);
 
   //Post milestone iff the server tells us, or if we are on the last level and have passed
-  if (appOptions.postMilestone || (appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
+  if (appOptions.postMilestone || (appOptions.level.puzzle_number && appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
 
     var thisAjax = jQuery.ajax({
       type: 'POST',
@@ -96,9 +96,18 @@ function getFallbackResponse(report) {
   if (!report.fallbackResponse) {
     return null;
   }
-  return report.pass ?
-            report.fallbackResponse.success :
-            report.fallbackResponse.failure;
+  var fallbackResponse = maybeParse(report.fallbackResponse);
+  return report.pass ? fallbackResponse.success : fallbackResponse.failure;
+}
+
+// TODO: sometimes fallback response is a string, not a parsed object
+function maybeParse(data) {
+  if (typeof data === 'string') {
+    try {
+      return JSON.parse(data);
+    } catch (e) {}
+  }
+  return data;
 }
 
 function reportComplete(report, response) {
