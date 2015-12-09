@@ -14,7 +14,7 @@
   end
   if request.GET['company']
     company = URI.escape(request.GET['company'])
-    response.set_cookie('company', {value: company, domain: ".code.org", path: '/', expires: Time.now + (365243600)})
+    response.set_cookie('company', {value: company, domain: ".code.org", path: '/', expires: Time.now + (365 * 24 * 3600)})
   end
 
 #banner-slideshow
