@@ -35,7 +35,7 @@ def analyze_day_fast(date)
     "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
   ).each do |row|
     next if row[:tutorial].nil_or_empty?
-    add_count_to_hash tutorials, row[:tutorial], row[:count]
+    add_count_to_hash tutorials, row[:tutorial], row[:count].to_i
   end
 
   countries = {}
