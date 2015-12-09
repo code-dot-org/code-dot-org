@@ -765,8 +765,12 @@ $height-to-width: 434 / 477;
     }
   }
 
-  .modal-content {
-    //margin-left: 110px; // TODO(bjordan): needed?
+  @media screen and (max-height: 630px) {
+    .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px;
+    }
   }
 
   #sharing {
@@ -903,7 +907,8 @@ $height-to-width: 434 / 477;
   transform: translateX($translateX) translateY($translateY) rotate($degrees);
 }
 
-// Rotate and tweak positioning of tip asset to line up at different orientations
+// Rotate and tweak positioning of tip asset to line up at different
+// orientations.
 
 .qtip-pos-lc .qtip-tip {
   @include translate-x-y-rotate(2px, 0, -90deg);

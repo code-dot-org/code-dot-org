@@ -355,10 +355,12 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-steve')[0], function () {
     selectedPlayer = CHARACTER_STEVE;
+    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-alex')[0], function () {
     selectedPlayer = CHARACTER_ALEX;
+    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   popupDialog.show();
@@ -386,14 +388,17 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-a')[0], function () {
     selectedHouse = "houseA";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-b')[0], function () {
     selectedHouse = "houseB";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-c')[0], function () {
     selectedHouse = "houseC";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
 
