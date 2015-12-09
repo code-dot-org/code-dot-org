@@ -90,8 +90,11 @@ class ApiController < ApplicationController
           timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
-        response[:disableSocialShare] = current_user && current_user.under_13?
+
       end
+      response[:disableSocialShare] = current_user.under_13?
+      response[:disablePostMilestone] =
+        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
     end
     render json: response
   end
