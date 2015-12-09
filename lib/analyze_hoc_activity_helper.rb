@@ -35,7 +35,7 @@ def analyze_day_fast(date)
     "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
   ).each do |row|
     next if row[:tutorial].nil_or_empty?
-    add_count_to_hash tutorials, row[:tutorial], row[:count]
+    add_count_to_hash tutorials, row[:tutorial], row[:count].to_i
   end
 
   countries = {}
@@ -43,7 +43,7 @@ def analyze_day_fast(date)
     "SELECT country, #{weighted_count} #{from_where} GROUP BY country ORDER BY count DESC"
   ).each do |row|
     row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
-    add_count_to_hash countries, row[:country], row[:count]
+    add_count_to_hash countries, row[:country], row[:count].to_i
   end
 
   states = {}
@@ -51,7 +51,7 @@ def analyze_day_fast(date)
     "SELECT state, #{weighted_count} #{from_where} GROUP BY state ORDER BY count DESC"
   ).each do |row|
     row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
-    add_count_to_hash states, row[:state], row[:count]
+    add_count_to_hash states, row[:state], row[:count].to_i
   end
 
   cities = {}
@@ -59,12 +59,12 @@ def analyze_day_fast(date)
     "SELECT city, #{weighted_count} #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
   ).each do |row|
     row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
-    add_count_to_hash cities, row[:city], row[:count]
+    add_count_to_hash cities, row[:city], row[:count].to_i
   end
 
-  started = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{from_where}").first[:count]
+  started = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{from_where}").first[:count].to_i
 
-  finished = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{finished_from_where}").first[:count]
+  finished = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{finished_from_where}").first[:count].to_i
 
   {
     'started'=>started,
