@@ -2056,9 +2056,11 @@ var preloadActorImages = function() {
 };
 
 var preloadMiscImages = function() {
-  var miscImages = skin.preloadMiscImages;
-  for (var i = 0; i < miscImages.length; i++) {
-    preloadImage(miscImages[i]);
+  if (skin.preloadMiscImages) {
+    var miscImages = skin.preloadMiscImages;
+    for (var i = 0; i < miscImages.length; i++) {
+      preloadImage(miscImages[i]);
+    }
   }
 };
 
