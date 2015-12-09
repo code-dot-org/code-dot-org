@@ -1,19 +1,7 @@
 #!/usr/bin/env ruby
 #
-# This script analyzes the activity that is launched from code.org/learn. We track outgoing clicks,
-# hidden image calls at the beginning and end of [3rd party] tutorials, and visits to our finish
-# page.
+# Helper methods for the analyze_hoc_activity cron job.
 #
-# There is a lot of HOC data so, for performance, the script caches the totals for each day and only
-# performs analysis on the remaining days. Deleting the cached results is an effective way to do
-# a complete re-count. EXCEPT for HourOfActivity_Totals_2014-12-05.json which is a summary of all
-# results for the year leading up to 12/05/2014.
-#
-# This script also caches values for the "about_stats" key in the Properties table. Unlike the HOC
-# data, it is computed from scratch every time.
-#
-require File.expand_path('../../pegasus/src/env', __FILE__)
-require 'cdo/hip_chat'
 require src_dir 'database'
 require 'cdo/properties'
 
@@ -27,71 +15,56 @@ end
 def analyze_day_fast(date)
   day = date.strftime('%Y-%m-%d')
   next_day = (date + 1).strftime('%Y-%m-%d')
-  froms = [
-    "FROM hoc_activity WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" +
-      " OR (pixel_started_at >= '#{day}' AND pixel_started_at < '#{next_day}')",
-  ]
 
-  finished_froms = [
-    "FROM hoc_activity WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
-      " OR (pixel_finished_at >= '#{day}' AND pixel_finished_at < '#{next_day}')",
-  ]
+  weighted_count = "SUM(" +
+    " IF(session LIKE '\_%\_%'," +
+    # Parses the session weight 'xyz' from the session '_xyz_abcdefghijk'.
+    "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
+    # The session does not specify the session weight, default to one.
+    "   1)" +
+    " ) AS count"
+  from_where = "FROM hoc_activity" +
+    " WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" +
+    "   OR (pixel_started_at >= '#{day}' AND pixel_started_at < '#{next_day}')"
+  finished_from_where = "FROM hoc_activity" +
+    " WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
+    "   OR (pixel_finished_at >= '#{day}' AND pixel_finished_at < '#{next_day}')"
 
-  #HipChat.log "Analyzing by <b>tutorial</b>..." if rack_env?(:production)
   tutorials = {}
-  froms.each do |from_where|
-    PEGASUS_REPORTING_DB_READONLY.fetch(
-      "SELECT tutorial, COUNT(id) as count #{from_where} GROUP BY tutorial ORDER BY count DESC"
-    ).each do |row|
-      next if row[:tutorial].nil_or_empty?
-      add_count_to_hash tutorials, row[:tutorial], row[:count]
-    end
+  PEGASUS_REPORTING_DB_READONLY.fetch(
+    "SELECT tutorial, #{weighted_count} #{from_where} GROUP BY tutorial ORDER BY count DESC"
+  ).each do |row|
+    next if row[:tutorial].nil_or_empty?
+    add_count_to_hash tutorials, row[:tutorial], row[:count]
   end
 
-  #HipChat.log "Analyzing by <b>country</b>..." if rack_env?(:production)
   countries = {}
-  froms.each do |from_where|
-    PEGASUS_REPORTING_DB_READONLY.fetch(
-      "SELECT country, COUNT(id) as count #{from_where} GROUP BY country ORDER BY count DESC"
-    ).each do |row|
-      row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
-      add_count_to_hash countries, row[:country], row[:count]
-    end
+  PEGASUS_REPORTING_DB_READONLY.fetch(
+    "SELECT country, #{weighted_count} #{from_where} GROUP BY country ORDER BY count DESC"
+  ).each do |row|
+    row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
+    add_count_to_hash countries, row[:country], row[:count]
   end
 
-  #HipChat.log 'Analyzing by <b>state</b>...' if rack_env?(:production)
   states = {}
-  froms.each do |from_where|
-    PEGASUS_REPORTING_DB_READONLY.fetch(
-      "SELECT state, COUNT(id) as count #{from_where} GROUP BY state ORDER BY count DESC"
-    ).each do |row|
-      row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
-      add_count_to_hash states, row[:state], row[:count]
-    end
+  PEGASUS_REPORTING_DB_READONLY.fetch(
+    "SELECT state, #{weighted_count} #{from_where} GROUP BY state ORDER BY count DESC"
+  ).each do |row|
+    row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
+    add_count_to_hash states, row[:state], row[:count]
   end
 
-  #HipChat.log 'Analyzing by <b>city</b>...' if rack_env?(:production)
   cities = {}
-  froms.each do |from_where|
-    PEGASUS_REPORTING_DB_READONLY.fetch(
-      "SELECT city, COUNT(id) AS count #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
-    ).each do |row|
-      row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
-      add_count_to_hash cities, row[:city], row[:count]
-    end
+  PEGASUS_REPORTING_DB_READONLY.fetch(
+    "SELECT city, #{weighted_count} #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
+  ).each do |row|
+    row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
+    add_count_to_hash cities, row[:city], row[:count]
   end
 
-  #HipChat.log 'Calculating total started...' if rack_env?(:production)
-  started = 0;
-  froms.each do |from_where|
-    started += PEGASUS_REPORTING_DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
-  end
+  started = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{from_where}").first[:count]
 
-  #HipChat.log 'Calculating total finished...' if rack_env?(:production)
-  finished = 0;
-  finished_froms.each do |from_where|
-    finished += PEGASUS_REPORTING_DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
-  end
+  finished = PEGASUS_REPORTING_DB_READONLY.fetch("SELECT #{weighted_count} #{finished_from_where}").first[:count]
 
   {
     'started'=>started,
