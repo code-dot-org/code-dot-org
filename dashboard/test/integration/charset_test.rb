@@ -29,7 +29,7 @@ class CharsetTest < ActionDispatch::IntegrationTest
   test "attempting to create a user with utf8mb4 chars does not hit the db" do
     student_params = {name: "",
                       password: "password",
-                      email: "a_student@somewhere.xx",
+                      email: "a_student#{rand(10000)}@somewhere.xx",
                       gender: 'F',
                       age: '15',
                       user_type: 'student'}
