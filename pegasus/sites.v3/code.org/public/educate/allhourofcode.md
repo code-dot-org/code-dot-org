@@ -69,6 +69,9 @@ Student-led tutorials are designed so they can be fun for a student working alon
 [CS First](http://cs-first.com/content/hour-code-students)  
 **Ages 9-14. Modern web-browsers.** Animate a story about two characters on the ocean. Add your own style!
 
+[Inside Out - Made With Code](https://www.madewithcode.com/projects/insideout)  
+**Ages 9-14. Modern web-browsers.** Help Riley from the Pixar animated movie Inside Out, write code to help her make it past some of the life challenges she experiences during the movie.
+
 [NCLab: Karel the Robot](http://hoc.nclab.com/karel/)  
 **Elementary. Web-based.** Learn basic concepts of Computer Science by typing programs for a robot.
 
