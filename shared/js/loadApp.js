@@ -84,6 +84,10 @@ module.exports = function (callback) {
           loadLastAttemptFromSessionStorage();
         }
       }
+
+      if (data.disablePostMilestone) {
+        $("#progresswarning").show();
+      }
     }).fail(loadLastAttemptFromSessionStorage);
 
     // Use this instead of a timeout on the AJAX request because we still want
