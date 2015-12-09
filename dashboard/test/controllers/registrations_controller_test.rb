@@ -124,6 +124,9 @@ class RegistrationsControllerTest < ActionController::TestCase
                       age: '15',
                       user_type: 'student'}
 
+    # don't ask the db for existing panda emails
+    User.expects(:find_by_email_or_hashed_email).never
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -207,9 +210,13 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     sign_in student
 
+    # don't ask the db for existing panda emails
+    User.expects(:find_by_email_or_hashed_email).never
+
     assert_does_not_create(User) do
       post :update, user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
     end
+
     assert_response :success # which actually means an error...
     assert_equal ['Email is invalid'], assigns(:user).errors.full_messages
     assert_select 'div#error_explanation', /Email is invalid/ # ... is rendered on the page
