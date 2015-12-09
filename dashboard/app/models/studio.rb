@@ -63,6 +63,15 @@ class Studio < Grid
     play_start_sound
     show_timeout_rect
     progress_conditions
+    markdown_instructions_with_classic_margins
+    instructions2
+    disable_printing
+    app_strings_functions
+    goal_override
+    default_emotion
+    ticks_before_face_south
+    grid_aligned_extra_pause_steps
+    param_restrictions
   )
 
   def self.create_from_level_builder(params, level_params)
