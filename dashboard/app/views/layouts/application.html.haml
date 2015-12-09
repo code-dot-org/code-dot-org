@@ -26,7 +26,7 @@
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - if view_options[:try_hoc_banner]
         %div{id: 'tryHoc'}
-          =image_tag(image_url('hour-of-code-logo.png'))
+          = image_tag(image_url('hour-of-code-logo.png'))
           %a{href:'https://code.org/learn'}
             = I18n.t('share.try_hour_of_code')
 
