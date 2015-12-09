@@ -34,6 +34,8 @@
         .row
           - course_pair.each do |user_script|
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+    #hoc_announcement
+      = render template: 'api/hoc_announcement'
 
   - else # no logged in user
     = render partial: 'home/sign_in_buttons'
