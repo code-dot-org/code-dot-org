@@ -39,7 +39,8 @@ class CharsetTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'div#error_explanation', /Display Name is required/
 
-    no_database
+    #    no_database
+    # this doesn't work because transactions
 
     post '/users', user: student_params.merge(name: panda_panda)
     assert_response :success
@@ -58,7 +59,8 @@ class CharsetTest < ActionDispatch::IntegrationTest
   test "attempting to update a user with utf8mb4 chars does not hit the db" do
     sign_in create(:user)
 
-    no_database
+    #    no_database
+    # this doesn't work because transactions
 
     put '/users', user: {name: panda_panda}
     assert_response :success
@@ -66,7 +68,7 @@ class CharsetTest < ActionDispatch::IntegrationTest
 
     put '/users', user: {email: "#{panda_panda}@panda.xx"}
     assert_response :success
-    assert_select 'div#error_explanation', /Display Name is invalid/
+    assert_select 'div#error_explanation', /Email is invalid/
 
   end
 
