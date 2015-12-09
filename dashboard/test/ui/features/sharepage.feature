@@ -22,7 +22,8 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   And ensure Flappy gameState is ACTIVE
 
   And I select the "How it works" small footer item
-  And I wait for 5 seconds
+  And I get redirected to "/edit" via "dashboard"
+  And I wait to see "#codeWorkspace"
   And ensure Flappy gameState is WAITING
   When I press "runButton"
   Then ensure Flappy gameState is WAITING
