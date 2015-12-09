@@ -1,4 +1,5 @@
 - short_code = I18n.t(:"#{id}_shortcode")
+- company = URI.escape(request.GET['company']) if request.GET['company']
 - short_url = "https://hourofcode.com/#{short_code}"
 - if id == "starwars"
   - if request.locale != "en-US"
@@ -9,6 +10,8 @@
   - launch_path = "/playlab"
 - else
   - launch_path = "/api/hour/begin/#{id}"
+
+- launch_path = launch_path + "?company=#{company}" if company
 
 .container-fluid
   .row-fluid
