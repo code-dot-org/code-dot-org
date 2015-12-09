@@ -257,7 +257,7 @@
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "For example, Lincoln High School"
-  signup_event_location_placeholder: "Postal code and country OR full address.\r\n(We’ll use this to place a pin on our map)"
+  signup_event_location_placeholder: "Postal code and country OR full address."
   signup_special_event_details_placeholder: 'Describe what makes this a special event'
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
 
