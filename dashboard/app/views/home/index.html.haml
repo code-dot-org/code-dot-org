@@ -27,6 +27,8 @@
   .clear
 
   - if current_user
+    #hoc_announcement{style: "margin-top: 10px;"}
+      = render template: 'api/hoc_announcement'
     #user_hero
       = render template: 'api/user_hero'
     - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
@@ -34,8 +36,6 @@
         .row
           - course_pair.each do |user_script|
             = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
-    #hoc_announcement
-      = render template: 'api/hoc_announcement'
 
   - else # no logged in user
     = render partial: 'home/sign_in_buttons'
