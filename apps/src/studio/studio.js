@@ -3337,7 +3337,7 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var spriteLayer = document.getElementById('backgroundLayer');
+  var backgroundLayer = document.getElementById('backgroundLayer');
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -3357,7 +3357,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        Studio.drawWallTile(spriteLayer, wallVal, row, col);
+        Studio.drawWallTile(backgroundLayer, wallVal, row, col);
       }
     }
   }
