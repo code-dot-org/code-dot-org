@@ -22,6 +22,7 @@
 
 class Studio < Grid
   serialized_attrs %w(
+    avatar_list
     first_sprite_index
     protaganist_sprite_index
     success_condition
@@ -127,6 +128,61 @@ class Studio < Grid
       ['Horizontal (hoc2015 only)', 'horizontal'],
       ['Grid (hoc2015 only)', 'grid'],
       ['Circle (hoc2015 only)', 'circle']
+    ]
+  end
+
+  AvatarItem = Struct.new(:name, :value)
+  def self.avatar_list_options
+    [
+      AvatarItem.new('dog (studio only)', 'dog'),
+      AvatarItem.new('cat (studio only)', 'cat'),
+      AvatarItem.new('penguin (studio only)', 'penguin'),
+      AvatarItem.new('dinosaur (studio only)', 'dinosaur'),
+      AvatarItem.new('octopus (studio only)', 'octopus'),
+      AvatarItem.new('witch (studio only)', 'witch'),
+      AvatarItem.new('bat (studio only)', 'bat'),
+      AvatarItem.new('bird (studio only)', 'bird'),
+      AvatarItem.new('dragon (studio only)', 'dragon'),
+      AvatarItem.new('squirrel (studio only)', 'squirrel'),
+      AvatarItem.new('wizard (studio only)', 'wizard'),
+      AvatarItem.new('alien (studio only)', 'alien'),
+      AvatarItem.new('ghost (studio only)', 'ghost'),
+      AvatarItem.new('monster (studio only)', 'monster'),
+      AvatarItem.new('robot (studio only)', 'robot'),
+      AvatarItem.new('unicorn (studio only)', 'unicorn'),
+      AvatarItem.new('zombie (studio only)', 'zombie'),
+      AvatarItem.new('knight (studio only)', 'knight'),
+      AvatarItem.new('ninja (studio only)', 'ninja'),
+      AvatarItem.new('pirate (studio only)', 'pirate'),
+      AvatarItem.new('caveboy (studio only)', 'caveboy'),
+      AvatarItem.new('cavegirl (studio only)', 'cavegirl'),
+      AvatarItem.new('princess (studio only)', 'princess'),
+      AvatarItem.new('spacebot (studio only)', 'spacebot'),
+      AvatarItem.new('soccergirl (studio only)', 'soccergirl'),
+      AvatarItem.new('soccerboy (studio only)', 'soccerboy'),
+      AvatarItem.new('tennisgirl (studio only)', 'tennisgirl'),
+      AvatarItem.new('tennisboy (studio only)', 'tennisboy'),
+      AvatarItem.new('anais (gumball only)', 'anais'),
+      AvatarItem.new('anton (gumball only)', 'anton'),
+      AvatarItem.new('bananajoe (gumball only)', 'bananajoe'),
+      AvatarItem.new('darwin (gumball only)', 'darwin'),
+      AvatarItem.new('gumball (gumball only)', 'gumball'),
+      AvatarItem.new('nicole (gumball only)', 'nicole'),
+      AvatarItem.new('penny (gumball only)', 'penny'),
+      AvatarItem.new('richard (gumball only)', 'richard'),
+      AvatarItem.new('manny (iceage only)', 'manny'),
+      AvatarItem.new('sid (iceage only)', 'sid'),
+      AvatarItem.new('scrat (iceage only)', 'scrat'),
+      AvatarItem.new('diego (iceage only)', 'diego'),
+      AvatarItem.new('granny (iceage only)', 'granny'),
+      AvatarItem.new('anna (infinity only)', 'anna'),
+      AvatarItem.new('elsa (infinity only)', 'elsa'),
+      AvatarItem.new('hiro (infinity only)', 'hiro'),
+      AvatarItem.new('baymax (infinity only)', 'baymax'),
+      AvatarItem.new('rapunzel (infinity only)', 'rapunzel'),
+      AvatarItem.new('r2-d2 (hoc2015 only)', 'r2-d2'),
+      AvatarItem.new('c-3po (hoc2015 only)', 'c-3po'),
+      AvatarItem.new('bb-8 (hoc2015x only)', 'bb-8'),
     ]
   end
 
