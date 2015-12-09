@@ -35,14 +35,14 @@ title: CS Principles Professional Learning Program
 	<h1 style="color: white;">9-12th grade teacher?</h1>
 	</div>
 	
-	<div>
-	<img width=100% src="/images/fit-600/plc/hs.jpg"/></div>
+	<div><img width=100% src="/images/fit-600/plc/hs.jpg"/></div>
 
-	<div style="padding:10px; text-align:left"><strong>Exploring Computer Science</strong> is an introductory high school experience, designed for students with no experience.<br><br> <strong>Computer Science Principles</strong> is an AP course that is a high school version of a CS for nonmajors course in college.</div>
-	
-	<div style="padding:10px; text-align:left"> 
-	<a href="/educate/plc/ecs-application"><button style="margin-bottom:10px;">Learn more about Exploring CS</button></a>
-	<a href="/educate/plc/csp"><button>Learn more about CS Principles</button></a>
+	<div style="padding:10px; text-align:left">
+	<strong>Exploring Computer Science</strong> is an introductory high school experience, designed for students with no experience.
+  <a href="/educate/plc/ecs-application"><button style="margin-top: 10px;">Learn more about Exploring CS</button></a>
+	<br><br>
+	<strong>Computer Science Principles</strong> is an AP course that is a high school version of a CS for nonmajors course in college.
+	<a href="/educate/plc/csp"><button style="margin-top: 10px;">Learn more about CS Principles</button></a>
 	</div>
 </div>
 </div>

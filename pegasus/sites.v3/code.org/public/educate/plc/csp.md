@@ -45,7 +45,7 @@ In-Person Summit: (June-August)
   - 5 days (30 hours) in person. Choose from three dates:
 	  - June 20-25 in Atlanta, GA
 	  - July 18-22 in Salt Lake City, UT
-	  - August 15-20 in Chicago, IL
+	  - August 8-12 in Chicago, IL
 
 Continuing Professional Development: (September - June)
 
