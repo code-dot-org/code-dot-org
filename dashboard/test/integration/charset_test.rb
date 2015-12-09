@@ -35,9 +35,9 @@ class CharsetTest < ActionDispatch::IntegrationTest
                       user_type: 'student'}
 
     # make sure all the classes are loaded
-    post '/users', user: student_params
-    assert_response :success
-    assert_select 'div#error_explanation', /Display Name is required/
+#    post '/users', user: student_params
+#    assert_response :success
+#    assert_select 'div#error_explanation', /Display Name is required/
 
     #    no_database
     # this doesn't work because transactions
