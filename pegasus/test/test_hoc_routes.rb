@@ -114,8 +114,7 @@ class HocRoutesTest < Minitest::Test
 
         @mock_session.cookie_jar['company'] = 'testcompany'
 
-        assert_redirects_from_to '/api/hour/begin/mc',
-                                 '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
 
         after_start_row = get_session_hoc_activity_entry
         assert_equal 'testcompany', after_start_row[:company]
