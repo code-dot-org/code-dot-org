@@ -236,12 +236,14 @@ class LevelsController < ApplicationController
       {concept_ids: []},
       {soft_buttons: []},
       {music: []},
+      {avatar_list: []},
       {examples: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
     params[:level][:music].delete_if(&:empty?) if params[:level][:music].is_a? Array
+    params[:level][:avatar_list].delete_if(&:empty?) if params[:level][:avatar_list].is_a? Array
     permitted_params.concat(Level.serialized_properties.values.flatten)
     params[:level].permit(permitted_params)
   end
