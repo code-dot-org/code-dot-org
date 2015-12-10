@@ -149,7 +149,7 @@
   lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: '%{elevs}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
+  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
@@ -536,7 +536,7 @@
   dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
   dashboard_navigation_view_stats: Se statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
-  dashboard_navigation_student: 'Student: %{elev_name}'
+  dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Ny seksjon
   dashboard_sections_jumbotron_instruction: Lag nye seksjoner og legg til elever.
     Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore
@@ -575,8 +575,8 @@
   dashboard_students_female: Kvinne
   dashboard_students_secret: Hemmelig
   dashboard_students_password: passord
-  dashboard_students_username: 'Brukernavn: %{elev_username}'
-  dashboard_students_email: 'Epost: %{elev_email}'
+  dashboard_students_username: 'Brukernavn: %{student_username}'
+  dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivåer
   dashboard_students_total_lines: Linjer med kode
   dashboard_students_show_secret: Vis hemmelig
