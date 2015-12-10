@@ -51,8 +51,8 @@ test:
                 cookbooks
         - ./bin/dashboard-server:
           background: true
-        - cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY
-        - until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done
+        - cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY:
+        - until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done:
         - ./runner.rb -c IE10Win7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 -f features/hourOfCodeFinish.feature:
           pwd:
             dashboard/test/ui
