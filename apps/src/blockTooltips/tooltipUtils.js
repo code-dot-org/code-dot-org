@@ -90,8 +90,15 @@ exports.findFunctionAndParamNumber = function (editor, position) {
           var isBeginningOfFunctionCall =
             seenCloserStack.length === 0 && currentOpener === '(';
           if (isBeginningOfFunctionCall) {
+            // if we have text "foo.bar(", funcName is foo.bar rather than just bar
+            var funcName = iterator.stepBackward().value;
+            var previousToken = iterator.stepBackward();
+            if (previousToken && previousToken.value === '.') {
+              funcName = iterator.stepBackward().value + '.' + funcName;
+            }
+
             return {
-              funcName: iterator.stepBackward().value,
+              funcName: funcName,
               currentParameterIndex: sameDepthPrecedingCommaCount
             };
           }
@@ -138,4 +145,3 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
   return null;
 };
-

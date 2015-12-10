@@ -9,7 +9,8 @@ def get_modified_files
 end
 
 def filter_grunt_jshint(modified_files)
-  modified_files.select { |f| f.end_with?(".js") || f.end_with?(".jsx") }
+  modified_files.select { |f| (f.end_with?(".js") || f.end_with?(".jsx")) &&
+    !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\/msg\//) || f.match(/apps\/lib\/blockly\//))}
 end
 
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile']

@@ -26,30 +26,39 @@ social:
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# ایک گھنٹے کے کوڈ کی میزبانی کے لئے شکریہ!
+# آور-آف-کوڈ کو ھوسٹ کرنے کے لیے سائن-اَپ کرنے کا شکریہ!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+آپ دنیا بھر کے تمام اسٹوڈینٹس کے لیے آور-آف-کوڈ کو سیکھنا ممکن بنا رہے ہیں جو کہ <%= campaign_date('full') %> کے دوران *ان کی باقی ماندہ تمام زندگی تبدیل کر دے گا۔* پرائیزز، نئے ٹیٹوریئلز اور دیگر دلچسپ اَپ-ڈیٹس کے لیے ہم رابطہ میں رہیں گے۔ اب آپ کیا کر سکتے ہیں؟
+
 
 ## 1. دوسروں تک بھجیں
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+آپ نے بالکل ابھی آور-آف-کوڈ کی مومنٹ (تحریک) جوئن کی ہے۔ اپنے دوستوں کو **#HourOfCode** کے بارے میں بتائیں۔!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
+## 2. Find a local volunteer to help you with your event.
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
+## 3۔ اپنے تمام اسکول سے کہیں کہ وہ آور-آف-کوڈ کے پروگرام پیش کریں
+
+[ یہ ای-میل بھیجیں](<%= resolve_url('/promote/resources#sample-emails') %>) اپنے پرنسپل کو اور اپنے اسکول میں ہر کلاس روم کے شوق کو بڑھانے کے لیے تاکہ وہ سائن-اَپ کریں۔
+
+## 4. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 4. Promote Hour of Code in your community
+## 5۔ اپنی کمیونٹی میں آور-آف-کوڈ کو پروموٹ کریں۔
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[ مقامی گروپ کو بھرتی کریں](<%= resolve_url('/promote/resources#sample-emails') %>) — مثلاً بوائے/گرلز اسکاؤٹس کلب، چرچ، یونیورسٹی، ویٹرنز گروپ، لیبر یونین، یا پھر چند دوست۔ آپ کو نئی اسکلز سیکھنے کے لیے کسی اسکول میں ہونا ضروری نہیں۔ ان [ پوسٹرز، بینرز، اسٹیکرز، ویڈیوز اور مزید کچھ](<%= resolve_url('/promote/resources') %>) خود اپنے ایونٹ کے لیے استعمال کریں۔
 
-## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
+## 6. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[ یہ ای-میل بھیجیں ](<%= resolve_url('/promote/resources#sample-emails') %>) اپنے مقامی نمائندگان کو، سٹی کونسل، یا اسکول بورڈ اور انہیں دعوت دیں کہ وہ آور-آف-کوڈ کے لیے آپ کے اسکول کا دورہ کرنے آئیں۔ یہ آپ کے علاقہ میں کمپیوٹر سائنس کے لیے سپورٹ بنانے میں ایک گھنٹہ سے بڑھ کر مددگار ہوگا۔
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>

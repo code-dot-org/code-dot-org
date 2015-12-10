@@ -49,7 +49,9 @@ Breakfast and lunch will be served.
 Building & Room TBD<br/>
 3301 College Ave.<br/>
 Fort Lauderdale, FL 33315](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
-
+ <br/>
+ <br/>
+ Please print this [parking pass](http://bit.ly/1jxj46f) for Saturday's workshop. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -209,7 +211,7 @@ Room 1048<br/>
 3301 College Ave<br/>
 Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
-Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](http://bit.ly/1jxj46f). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**

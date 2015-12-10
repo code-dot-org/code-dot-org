@@ -2,7 +2,7 @@ require_relative '../../pegasus/src/env'
 require 'cdo/solr'
 require src_dir 'database'
 
-SOLR = Solr::Server.new(host: 'ec2-54-83-22-254.compute-1.amazonaws.com')
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 def common_script_path(name)
   File.join(File.dirname(__FILE__), name)

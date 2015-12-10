@@ -97,7 +97,6 @@
 "et-EE":
   english: "Estonian"
   native: "Eesti"
-  debug: true
 
 "eu": "eu-ES"
 "eu-ES":
@@ -414,3 +413,9 @@
   english: "Chinese (Traditional)"
   native: "繁體字"
   webfonts: false
+
+"zu": "zu-ZA"
+"zu-ZA":
+  english: "Zulu"
+  native: "isiZulu"
+  debug: true

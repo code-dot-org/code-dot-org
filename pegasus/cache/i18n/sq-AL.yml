@@ -315,6 +315,11 @@
   class_submission_languages_other: Gjuhë të tjera
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -335,7 +340,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Moshat 4-104
   mc_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
@@ -688,6 +693,8 @@
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   learn_more: Mëso më Shumë
@@ -722,11 +729,15 @@
   carousel_heading_international: Mësimet në gjuhën tuaj
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
   carousel_heading_beginners: Tutoriale për Fillestarët
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorialet që mësojnë JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutoriale në gjuhë të tjera programimi
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
   carousel_heading_university: Kurse online të universitetit
   carousel_heading_webpages: Mëso të bësh faqe interneti
@@ -734,6 +745,10 @@
   carousel_heading_ide: Platformat popullore ndërmjet mësuesëve
   educator_notes: Shënimet e Edukatorit
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Si të mësosh një Orë Kodimi
   more_resources_educators: Më shumë burime për mësuesit dhe edukatorët
   beyond_submission: Dëshironi të paraqisni një turotial për Përtej Orës së Kodimit?
@@ -791,6 +806,13 @@
   playlab_name: Play Lab
   infinity_name: Laboratori i Pafundmë
   artist_name: Artisti
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: Moshat 4-104
   codeintl_gradelevel: Moshat 4-104
   thinkersmithspanish_gradelevel: Për të gjithë
@@ -830,10 +852,17 @@
   projguts_gradelevel: Moshat 10-13
   hourofcode_gradelevel: Moshat 4-104
   frozen_gradelevel: Moshat 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Moshat 4-104
   playlab_gradelevel: Moshat 4-104
   infinity_gradelevel: Moshat 4-104
-  artist_gradelevel: Moshat 4-104
+  artist_gradelevel: Moshat 8+
+  monstercoding_gradelevel: Moshat 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Shkolla fillore
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
   thinkersmithspanish_platformtext: Unplugged
@@ -876,6 +905,13 @@
   frozen_platformtext: Shfletuesit modernë + tabletat
   starwars_platformtext: Shfletuesit modernë + tabletat
   playlab_platformtext: Browserat e kohës, smartphones, tableta
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Shfletuesit modern të web-it
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Shfletuesit modern të web-it
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
   codeorg_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   codeintl_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial për një grup pa kompjutera
@@ -934,6 +970,19 @@
   infinity_shortdescription: Perdorni laboratorin e lojrave per te krijuar nje histori
     ose pafundesi personazhesh Disney.
   artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
@@ -1077,6 +1126,37 @@
   playlab_longdescription: Krijo një histori ose bëj një lojë me Play Lab! Bëj kafshë,
     piratë, zombi, ninxha, dhe shumë lëvizje të tjera karakteresh, bëj tinguj, shëno
     pikë dhe madje hidh topa zjarri!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Hyrje Shkenca Kompjuterike (klasat K-8)
   khan_beyond_name: Mëso programimin kompjuterik
   tynker_beyond_name: Mëso programimin në shtëpi

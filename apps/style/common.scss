@@ -220,7 +220,8 @@ div.droplet-palette-group-header-selected.orange {
 }
 
 .share-code-spacer {
-  min-height:25px;
+  clear: both;
+  min-height: 25px;
 }
 
 button.arrow {
@@ -288,6 +289,7 @@ button.arrow:disabled {
   font-size: 14px;
   overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  direction: ltr;
 }
 
 #codeTextbox.pin_bottom {
@@ -438,6 +440,9 @@ html[dir='rtl'] #codeWorkspace {
   }
   html[dir='rtl'] #codeWorkspace {
     right: $width;
+  }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px;
   }
   div#visualizationResizeBar {
     left: $width;
@@ -1262,43 +1267,12 @@ $workspace-header-button-margin: ($workspace-headers-height -
   border: 1px solid $purple;
   margin: 0px;
   color: white;
-  width: 48.5%;
   font-size: 13px;
   text-align: center;
   &:disabled {
     color: $purple;
     background-color: lightgrey;
   }
-}
-
-#print-button {
-  background-color: $purple;
-  border: 1px solid $purple;
-  color: white;
-  margin: 0px;
-  width: 48.5%;
-  font-size: 13px;
-  text-align: center;
-}
-
-#shapeways-print-go-button {
-  margin-bottom: 10px;
-}
-
-#shapeways-message-body {
-  font-size: 15px;
-  margin-bottom: 7px;
-  line-height: 26px;
-}
-
-#shapeways-message-body-disclaimer {
-  font-size: 11px;
-  margin-bottom: -11px;
-}
-
-#shapeways-message {
-  display: block;
-  text-align: center;
 }
 
 .hide {
@@ -1320,43 +1294,95 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
-.sharing {
-  float: left;
-  margin-top: 15px;
+#sharing {
+  clear: both;
+  margin-top: 25px;
   font-size: 20px;
   color: $charcoal;
+
+  $image-width: 180px;
+  $image-height: $image-width;
+
+  .feedback-image {
+    width: $image-width;
+    height: $image-height;
+    margin: 0;
+    float: left;
+    border: $lighter_gray;
+    border-style: solid
+  }
+
+  div {
+    margin: 10px 0;
+    &.sharing-content {
+      margin-left: $image_width + 15px;
+      margin-right: 25px;
+      &.no-image {
+        margin-left: 0;
+      }
+    }
+  }
 
   label {
     margin-top: 15px;
     font-size: 20px;
-    color: $charcoal;
   }
 
-  div {
-    margin-bottom: 15px;
-  }
-
-  .saved-to-gallery {
-    width: 48.5%;
-    font-size: 13px;
-    margin: 0px;
-    border: 1px solid $purple;
-  }
   .social-buttons {
-    a:hover {
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      background-color: transparent;
       text-decoration: none;
+      color: white;
     }
   }
+
+  button {
+    background-color: $purple;
+    color: white;
+    font-size: 0.7em;
+    min-width: 40px;
+    text-align: center;
+    margin: 2px 0;
+
+    .disabled,
+    &[disabled=disabled],
+    &:disabled {
+      border: 1px solid $purple;
+      background-color: $lighter_gray;
+      box-shadow: none;
+    }
+
+    #send-to-phone {
+      clear: both;
+    }
+  }
+
+  button.saved-to-gallery {
+    font-family: "Gotham 4i";
+  }
+
   #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 260px;
+    width: 100%;
+    padding: 10px;
+    cursor: text;
+  }
+
+  #copy-button {
+    max-width: 100px;
+  }
+
+  #sharing-phone i.fa {
+    font-size: 24px;
   }
 
   input#phone {
     height: 30px;
     padding: 5px;
-    margin: 5px;
+    margin: 5px 0;
     font-size: 20px;
     width: 10em;
     font-family: sans-serif;
@@ -1494,4 +1520,26 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-hover-div {
   max-width: 100% !important;
+}
+
+.legacy-share-view {
+  #belowVisualization, .hide-source #belowVisualization {
+    display: none;
+  }
+
+  #visualizationColumn {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .small-footer-base {
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #more-menu, #copyright-flyout {
+    left: auto;
+    right: 0;
+  }
 }

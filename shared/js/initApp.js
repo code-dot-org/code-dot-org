@@ -119,13 +119,6 @@ window.apps = {
     };
     $.extend(true, appOptions, baseOptions);
 
-    // Load locally cached version if it's newer than the version from the server.
-    var cachedProgram = dashboard.clientState.sourceForLevel(
-        appOptions.scriptName, appOptions.serverLevelId, appOptions.level.lastAttemptTimestamp);
-    if (cachedProgram !== undefined) {
-      appOptions.level.lastAttempt = cachedProgram;
-    }
-
     // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
     // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
     (function fixUpFunctions(node) {

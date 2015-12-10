@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Notki reklamowe i przydatne statystyki
 
@@ -20,4 +19,3 @@ Komputery są wszędzie, ale obecnie mniej szkół uczy informatyki niż nawet 1
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
+/* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
 
 /**
  * For the most part, we depend on dashboard providing us with React as a global.
@@ -251,6 +251,16 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
+  if (config.isLegacyShare && config.hideSource) {
+    $("body").addClass("legacy-share-view");
+    if (dom.isMobile()) {
+      $('#tryHoc').hide();
+    }
+    if (dom.isIOS() && !window.navigator.standalone) {
+      addToHome.show(true);
+    }
+  }
+
   this.setConfigValues_(config);
 
   this.configureDom(config);
@@ -264,7 +274,8 @@ StudioApp.prototype.init = function(config) {
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
-      app: config.app
+      app: config.app,
+      isLegacyShare: config.isLegacyShare
     });
   }
 
@@ -635,7 +646,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
+  return this.BASE_URL + path;
 };
 
 /**
@@ -1559,61 +1570,51 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
-  if (this.share && this.wireframeShare) {
-    if (dom.isMobile()) {
-      document.getElementById('visualizationColumn').className = 'chromelessShare';
-    } else {
-      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-      document.getElementById('visualizationColumn').className = 'wireframeShare';
-
-      var wireframeSendToPhoneClick = function() {
-        $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
-            .off('click', wireframeSendToPhoneClick);
-        dashboard.initSendToPhone('#wireframeSendToPhone');
-        $('#send-to-phone').show();
-      };
-
-      var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
-      wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
-      wireframeSendToPhone.click(wireframeSendToPhoneClick);
-      $('body').append(wireframeSendToPhone);
+  if (this.share) {
+    if (options.isLegacyShare || this.wireframeShare) {
+      document.body.style.backgroundColor = '#202B34';
     }
-    document.body.style.backgroundColor = '#202B34';
-  // For share page on mobile, do not show this part.
-  } else if (!options.embed && !(this.share && dom.isMobile())) {
-    var runButton = document.getElementById('runButton');
-    var buttonRow = runButton.parentElement;
-    var openWorkspace = document.createElement('button');
-    openWorkspace.setAttribute('id', 'open-workspace');
-    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-    var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(this.feedback_.createSharingDiv({
-      response: {
-        level_source: window.location,
-        level_source_id: options.level_source_id,
-        phone_share_url: options.phone_share_url
-      },
-      sendToPhone: options.sendToPhone,
-      level: options.level,
-      twitter: options.twitter,
-      onMainPage: true
-    }));
-
-    dom.addClickTouchEvent(openWorkspace, function() {
-      // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.display = '';
-
-      // /c/ URLs go to /edit when we click open workspace.
-      // /project/ URLs we want to go to /view (which doesnt require login)
-      if (/^\/c\//.test(location.pathname)) {
-        location.href += '/edit';
+    if (this.wireframeShare) {
+      if (dom.isMobile()) {
+        document.getElementById('visualizationColumn').className = 'chromelessShare';
       } else {
-        location.href += '/view';
-      }
-    });
+        document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+        document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-    buttonRow.appendChild(openWorkspace);
+        var wireframeSendToPhoneClick = function () {
+          $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
+            .off('click', wireframeSendToPhoneClick);
+          dashboard.initSendToPhone('#wireframeSendToPhone');
+          $('#send-to-phone').show();
+        };
+
+        var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
+        wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
+        wireframeSendToPhone.click(wireframeSendToPhoneClick);
+        $('body').append(wireframeSendToPhone);
+      }
+    } else if (!options.embed && !dom.isMobile()) {
+      var runButton = document.getElementById('runButton');
+      var buttonRow = runButton.parentElement;
+      var openWorkspace = document.createElement('button');
+      openWorkspace.setAttribute('id', 'open-workspace');
+      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+      dom.addClickTouchEvent(openWorkspace, function() {
+        // TODO: don't make assumptions about hideSource during init so this works.
+        // workspaceDiv.style.display = '';
+
+        // /c/ URLs go to /edit when we click open workspace.
+        // /project/ URLs we want to go to /view (which doesnt require login)
+        if (/^\/c\//.test(location.pathname)) {
+          location.href += '/edit';
+        } else {
+          location.href += '/view';
+        }
+      });
+
+      buttonRow.appendChild(openWorkspace);
+    }
   }
 };
 

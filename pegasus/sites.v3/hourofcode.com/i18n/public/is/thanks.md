@@ -36,20 +36,28 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Find a local volunteer to help you with your event.
 
-[Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til skólastjórans og skoraðu á hvern bekk í skólanum að skrá sig. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Ask your employer to get involved
+## 3. Biddu skólann þinn að bjóða Klukkustund kóðunar
+
+[Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til skólastjórans og skoraðu á hvern bekk í skólanum að skrá sig.
+
+## 4. Biddu vinnuveitanda þinn að taka þátt
 
 [Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til yfirmanns þíns eða forstjóra.
 
-## 4. Promote Hour of Code in your community
+## 5. Kynntu Klukkustund kóðunar í samfélaginu
 
 [Skráðu hóp í nágrenninu](<%= resolve_url('/promote/resources#sample-emails') %>)— skátaflokk, kirkjuhóp, háskóla, eldri borgara, stéttarfélag eða bara vinahóp. You don't have to be in school to learn new skills. Notaðu þessi [veggspjöld, borða, límmiða, myndbönd og fleira](<%= resolve_url('/promote/resources') %>) fyrir þinn eigin viðburð.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 6. Fáðu kjörinn fulltrúa á svæðinu til að styðja Klukkustund kóðunar
 
 [Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til þingmanna, bæjarfulltrúa eða menntamálanefndar og bjóddu þeim að heimsækja skólann þinn á Klukkustund kóðunar. It can help build support for computer science in your area beyond one hour.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>

@@ -31,6 +31,8 @@ h2 {
   font-size: 22px;
   font-family: 'Gotham 5r', sans-serif;
   line-height: 1.2em;
+  margin-top: 45px;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -124,7 +126,7 @@ body {
   font-size: 14px;
   font-family: 'Gotham 4r', sans-serif;
   color: dimgray;
-}     
+}
 
 .bluegradient {
   padding: 20px;
@@ -154,8 +156,8 @@ ul {
     margin:20px;
 }
 
-ul li { 
-    padding-left: 1em; 
+ul li {
+    padding-left: 1em;
     text-indent: -.7em;
 }
 
@@ -175,7 +177,7 @@ th {
   border-color: white;
   border-width: 1px;
   border-style: solid;
-  
+
   border-top-color: rgb(44, 175, 232);
   border-left-color: rgb(44, 175, 232);
   border-right-color: rgb(44, 175, 232);
@@ -199,13 +201,13 @@ td {
 }
 
 .grey_input {
-  font-size: 14px; 
-  background-color: rgb(226,228,227); 
-  border: none; padding: 5px; 
-  color: rgb(89,89,89); 
-  border-bottom-left-radius: 4px; 
-  border-bottom-right-radius: 4px; 
-  border-top-left-radius: 4px; 
+  font-size: 14px;
+  background-color: rgb(226,228,227);
+  border: none; padding: 5px;
+  color: rgb(89,89,89);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
@@ -229,7 +231,7 @@ td {
 }
 
 #index #video {
-  float:left; 
+  float:left;
 }
 
 #index #start {
@@ -410,17 +412,17 @@ a.about_list_item {
 
 #congrats h1 {
   margin-top:50px;
-  margin-bottom:30px;  
+  margin-bottom:30px;
 }
 
 #congrats h2 {
   margin-top:45px;
-  margin-bottom:25px;  
+  margin-bottom:25px;
 }
 
 #congrats h3 {
   margin-top:25px;
-  margin-bottom:12px;  
+  margin-bottom:12px;
 }
 
 #congrats .input_error {
@@ -467,7 +469,7 @@ a.about_list_item {
 #congrats .button_enabled {
   background-color: rgb(233, 0, 13) !important;
   border-color: rgb(233, 0, 13) !important;
-  color: white !important; 
+  color: white !important;
 }
 
 #congrats .color_boys {
@@ -483,21 +485,21 @@ a.about_list_item {
 }
 
 #congrats .backgroundcolor_girls {
-  background-color: rgb(255, 71, 90); 
+  background-color: rgb(255, 71, 90);
 }
 
 /* ..end congrats */
 
 .warning {
-  color:white; 
-  background-color:rgb(193, 43, 39); 
+  color:white;
+  background-color:rgb(193, 43, 39);
   padding: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .button-color-share {
-  background-color: rgb(85, 200, 24); 
+  background-color: rgb(85, 200, 24);
   border-color: rgb(85, 200, 24);
 }
 
@@ -590,8 +592,8 @@ button {
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
 .lines_of_code_header {
-  width: 100%; 
-  text-align: center; 
+  width: 100%;
+  text-align: center;
   font-size: 30px;
 }
 
@@ -602,10 +604,10 @@ a.lines_of_code_link {
 }
 
 #pagefooter {
-  width: 100%; 
+  width: 100%;
   height: 80px;
-  padding: 20px; 
-  overflow: hidden; 
+  padding: 20px;
+  overflow: hidden;
   background-color: rgb(4, 126, 188);
   box-sizing: border-box;
 }

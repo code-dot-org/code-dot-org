@@ -2,35 +2,24 @@
 
 title: <%= hoc_s(:title_prizes) %>
 layout: wide
-nav: prizes_nav
+nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# 2015 Hour of Code prizes
-
-<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
-
-<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
-
-<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
-
-<p style="clear:both; height: 0px;">
-  &nbsp;
-</p>
+# Ceny za Hodinu kódu 2015
 
 <% if @country == 'la' %>
 
 # Ocenění pro každého organizátora
 
-Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank-you gift!
+Každý, kdo bude pořádat Hodinu kódu pro studenty získá 10 GB místa na Dropbox jako dárek!
 
 <% else %>
 
-## Prizes for EVERY organizer
+## Ceny pro KAŽDÉHO organizátora
 
-**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!
+**Každý** organizátor Hodiny kódu dostane jako poděkování **$10 na Amazon.com, iTunes nebo Windows Store**!*
 
 <img style="float:left;" src="/images/fit-130/amazon_giftcards.png" />
 
@@ -42,58 +31,181 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
   &nbsp;
 </p>
 
+* Do vyčerpání zásob
+
 <% if @country == 'us' %>
 
-## 51 schools will win a class-set of laptops (or $10,000 for other technology)
+## 51 škol vyhraje notebooky pro celou třídu (nebo $10,000 na ostatní technologie)
 
-One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners).
+Přihlášení k této ceně je nyní uzavřeno. Zkontrolujte si zpětně letošní vítěze.
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize1.jpg" />
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize3.png" />
+
+<img styel="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/prize4.png" />
+
+<p style="clear:both; height: 0px;">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+<a id="video-chats"></a>
+
+## 30 tříd vyhraje video chat s hostujícím přednášejícím
+
+Šťastné třídy budou mít příležitost mluvit s hosty, kteří budou sdílet, jak informatika ovlivnila jejich životy a kariéry.
+
+[col-33]
+
+![obrázek](/images/fit-175/Kevin_Systrom.jpg)  
+Kevin Systrom   
+(spolu-zakladatel a CEO Instagram)   
+[sledujte live v 9. prosince 11 am PST](https://plus.google.com/events/cpt85j7p1ohaqu5e86m272aukn4)
+
+[/col-33]
+
+[col-33]
+
+![obrázek](/images/fit-175/Dao_Nguyen.jpg)  
+DAO Nguyen   
+(Vydavatel, Buzzfeed)   
+[sledujte 7. prosince 12 pm PST](https://plus.google.com/events/cag6mbpocahk8h8qr3hrd7h0skk)
+
+[/col-33]
+
+[col-33]
+
+![obrázek](/images/fit-175/Aloe_Blacc.jpg)  
+Aloe Blacc   
+(zpěvačka)   
+[sledujte 8. prosince 3 pm PST](https://plus.google.com/events/clir8qtd7t2fhh33n8d9o2m389g)
+
+[/col-33]
+
+  
+  
+
+
+[col-33]
+
+![obrázek](/images/fit-175/Julie_Larson-Green.jpg)  
+Julie Larson-Green   
+(Vedoucí odboru zkušeností, Microsoft)   
+
+
+[/col-33]
+
+[col-33]
+
+![obrázek](/images/fit-175/Hadi-Partovi.jpg)  
+Hadi Partovi   
+(spoluzakladatel Code.org)   
+[sledujte živě 11. prosince 10 am PST](https://plus.google.com/events/c2e67fd7el3es36sits1fd67prc)
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+## Jedna šťastná třída vyhraje exkluzivní výle do zákulisí "Dělání Hvězdných válek" v San Francisco, Disney a Lucasfilm
+
+Jedna šťastná třída vyhraje hlavní cenu – výlet do San Francisco, CA, protože exkluzivní pohled do zákulisí "Dělání Star Wars" zkušenosti týmu vizuálních efektů, který pracoval na Star Wars: Síla se probouzí. Hlavní cenou je s laskavým svolením [ILMxLAB](http://www.ilmxlab.com/), nová laboratoř pro rozšiřování zábavy kombinující talent Lucasfilm, Industrial Light & Magic a Skywalker Sound.
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-260x200/star-wars-prize1.jpg" />
+
+<img style="float: left; padding-right: 25px; padding-bottom: 10px;" src="/images/fill-260x200/star-wars-prize2.png" />
+
+<p style="clear:both; height: 0px;">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+## 100 tříd vyhraje programovatelné robotů, včetně BB-8 droid robot od Sphero
+
+Na počest Hodiny kódu kurzu "Star Wars: stavební Galaxy s kódem" 100 zúčastněných tříd ve Spojených státech a Kanadě dostane sadu čtyř robotů Sphero 2.0 plus BB-8 ™ aplikace umožňující Droida, aby studenti mohli programovat. Přihlaste se na Hodinu kódu události, aby ses kvalifikoval. [Další informace o BB-8 od Sphero](http://sphero.com/starwars) a [o Sphero vzdělávání](http://sphero.com/education).
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-220x160/bb8.png" />
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-200x160/bb8-girl.jpg" />
+
+<img style="float: left; padding-right: 10px; padding-bottom: 10px;" src="/images/fill-300x160/sphero-robot.png" />
+
+<p style="clear:both; height: 0px;">
+  &nbsp;
+</p>
+
+<% end %>
+
+<% if @country == 'ro' %>
+
+Organizatorii evenimentelor Hour of Code în România vor beneficia de un premiu din partea Bitdefender România, constand intr-o solutie de securitate online.
 
 <% end %>
 
 # FAQ - nejčastější dotazy
 
-## Who is eligible to receive the all organizer thank-you gift?
+## Kdo všechno může dostat dárek pro organizátory?
 
-Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift. The $10K hardware prize is limited to US residents only.
+Oba Us a mimo US organizátoři Hodiny kódu, mohou dostat děkovný dar, dokuď budou zásoby. $10K hardwarovou cenu mohou dostat pouze lidé žijící v US.
 
-## Is there a deadline to sign up to receive the all organizer thank-you gift?
+## Je zde nějaké deadline pro přihlášení se o dárek pro organizátory?
 
-You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
+Musíte se přihlásit **před** <%= campaign_date('start_long') %> aby jste mohli dostat dárek pro organizátora.
 
-## When will I receive my thank-you gift?
+## Kdy obdržím svůj dárek?
 
-We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
+Ozveme se v prosinci po Computer Science Education Week (<%= campaign_date('full') %>) s dalším postupem, abyste dostal svůj dárek.
 
-## Can I redeem all of the thank-you gift options?
+## Můžu si vybrat více možností dárku zároveň?
 
-No. Thank-you gifts are limited to one per organizer. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
+Ne. Poděkování ve formě daru jsou omezeny na jednoho organizátora do vyčerpání zásob. Budeme vás kontaktovat v prosinci po Týdnu vzdělávání informatiky s dalšími kroky, jak uplatnit dárek.
 
 <% if @country == 'us' %>
 
-## Musí do soutěže vstoupit celá škola aby vyhrála Hardware v hodnotě $10 000?
+## Musí do soutěže vstoupit celá škola, aby vyhrála Hardware v hodnotě $10 000?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes/hardware-signup') %>). Every teacher participating will need to [sign up](<%= resolve_url('/') %>) their classroom individually in order to receive the all organizer thank you gift.
+Ano. Vaše celá škoda se musí účastnit abyste mohli vyhrát cenu, ale jenom jedna osoba se musí zaregistrovat a odeslat přihlášku pro získání hardwarové ceny [zde](<%= resolve_url('/prizes/hardware-signup') %>). Každý učitel, který se účastní bude muset [přihlásit](<%= resolve_url('/') %>) jejich třídu individuálně, aby mohl získat dárek za organizaci.
 
-## Who is eligible to win the $10,000 in hardware?
+## Kdo může vyhrát hardware v hodnotě $10 000?
 
-Cena je omezená pouze na USA veřejné K-12 školy. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org will select and notify winners via email by December 1, 2015.
+Cena je omezená pouze na USA veřejné K-12 školy. Abyste se kvalifikovali, celá vaše škola se musí registrovat do Hodiny kódu před 16. listopadem 2015. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a ozve se vítězům emailem do 1. prosince, 2015.
 
-## Proč je cena Hardware v ceně $10 000 dostupná pouze veřejným školám?
+## Proč je hardwarová cena v hodnotě $10 000 dostupná pouze veřejným školám?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+Rádi pomáháme všem učitelům i na veřejných, i na soukromých školách, ale nyní to kvůli logistice nejde. Jsme partneři s [DonorsChoose.org](http://donorschoose.org), kteří zařizují ceny pro školy, ale pracují pouze s veřejnými, US K-12 školami. Podle organizace DonorsChoose.org, je snadnější získat přesná a spolehlivá data o veřejných školách.
 
-## When is the deadline to apply for the hardware prize?
+## Dokdy se musím přihlásit do soutěže o hardware?
 
-To qualify, you must complete the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) by November 16, 2015. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org will select and notify winners via email by December 1, 2015.
+Pro kvalifikaci do soutěže musíte vyplnit [přihlášku do soutěže o hardware](<%= resolve_url('/prizes/hardware-signup') %>) do 16. listopadu 2015. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a ozve se vítězům emailem do 1. prosince, 2015.
+
+## Pokud celá moje škola se nemůže účastnit Hodiny kódu během Computer Science Education Week (<%= campaign_date('short') %>), můžu stejně soutěžit o ceny?
+
+Ano, jenom do [přihlášky do soutěže o hardware](<%= resolve_url('/prizes/hardware-signup') %>) přidejte i datum, kdy se škola účastní.
 
 <% end %>
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
+<% if @country == 'us' || @country == 'ca' %>
 
-Yes, in the [Hardware Application form](<%= resolve_url('/prizes/hardware-signup') %>) include the dates that your whole school is participating.
+## Video chat s pozvaným řečníkem:
+
+Cena pouze pro K-12 třídy v Usa a Kanada. Code.org vybere výherní třídy, poskytne časový otvor pro web chat, a bude pracovat s danými učitely, k nastavení technologických detajlů. Celá škola není třeba uplatňovat nárok na tuto cenu. Veřejné a soukromé školy mají nárok na výhru.
+
+<% end %>
 
 ## Nejsem ze Spojených států. Mám nárok na ceny?
 
-Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift. The $10K hardware prize is US only.
+Ano, všem pořadatelům, USA a non USA, mají nárok na všechny pořadatele poděkování dar zásob poslední. Jen cena $10K hardwaru je pro USA.
 
-<% end %> <%= view :signup_button %>
+<% end %> 

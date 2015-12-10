@@ -57,6 +57,13 @@ class LevelSourceTest < ActiveSupport::TestCase
         create(:level_source, level_id: level3_id, data: @variant_data)
   end
 
+  test "should not create level source with utf8mb8" do
+    program = "<xml>#{panda_panda}</xml>"
+    level_source = LevelSource.find_identical_or_create(@level, program)
+    assert !level_source.valid?
+    assert_equal ['Data is invalid'], level_source.errors.full_messages
+  end
+
   test "should validate level_source factory for md5" do
     data = 'foo'
     level_source = create(:level_source, data: data)

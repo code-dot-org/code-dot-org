@@ -6,10 +6,12 @@
         =I18n.t(:dashboard_announce_view_all)
         >>
   %div.announce-content
-    %div.content-img-container
-      %img.content-img{:src=>"/images/fit-x108/volunteer-map.png"}
+    %a{:href=>"http://teacherblog.code.org/"}
+      %div.content-img-container
+        %img.content-img{:src=>CDO.shared_image_url("/hour-of-code-logo.png")}
     %div.content-text
-      =I18n.t(:dashboard_announce_hoc)
+      %b December 8, 2015 - 
+      Due to the record breaking number of users visiting our site for the Hour of Code, saving course progress, saving answers, and teacher dashboard views of progress have been temporarily suspended. This lets us keep the site up so that everyone can experience the Hour of Code. We are working hard to restore this functionality. Thank you for your patience during this exciting time.
   %div.announce-learn-more
-    %a{:href=>"/volunteer/local"}
-      %button!= I18n.t(:learn_more)
+    %a{:href=>"http://teacherblog.code.org/"}
+      %button=I18n.t(:homepage_banner_text_link)

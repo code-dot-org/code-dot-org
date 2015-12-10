@@ -149,7 +149,7 @@
   lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: '%{elevs}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
+  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
@@ -307,28 +307,33 @@
   class_submission_languages_other: Andre språk
   inspirational_videos_more: Flere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     videoer </a>
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Skap en galakse med kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Bruk dra-og-slipp blokker og JavaScript.
   starwars_javascript_specs: Bare Engelsk | Moderne nettlesere | For de som er 11
     år eller eldre
   starwars_javascript_start_button: Prøv nå
-  starwars_blocks_title: blokker
+  starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slipp blokker.
   starwars_blocks_specs: Mange språk (kommer snart) | Moderne nettlesere, smart-telefoner,
     nettbrett | Alderen 6-10
-  starwars_blocks_start_button: Prøv nå
+  starwars_blocks_start_button: Lær mer
   starwars_watch_videos: Før du starter, se en av disse videoene
   starwars_speak_languages: Snakker du et annet språk?
   starwars_help_translate: Hjelp oss å oversette
-  starwars_platform_text: Moderne nettlesere, smart-telefoner, nettbrett
+  starwars_platform_text: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   mc_name: Kodetimen med Minecraft
   mc_longdescription: Bruk blokker med kode for å ta Steve eller Alex ut på et eventyr
     i Minecraft.
   mc_shortdescription: Bruk blokker med kode for å ta Steve eller Alex ut på et eventyr
     i Minecraft.
   mc_gradelevel: Passer for de som er 6 år og eldre
-  mc_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  mc_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   mc_specs: Mange språk (kommer snart) | Moderne nettlesere og nettbrett | Alder 6
     +
   minecraft_subtitle: Kodetimen med Minecraft
@@ -353,9 +358,9 @@
   volunteer_engineer_submission_intro_signup: Angi følgende informasjon hvis du er
     en informatikkelev eller jobber med programmering. Feltene markert med en <span
     class="form-required-field">*</span> er obligatoriske.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Ser du ikke etter en frivillig? <a href="%{learn_more}">
+    Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal
+    frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.
   volunteer_engineer_submission_header_shared: Informasjon deles med lærere på frivillig-kartet
   volunteer_engineer_submission_field_name: Navn
   volunteer_engineer_submission_field_name_placeholder: Fullt navn
@@ -432,7 +437,7 @@
   volunteer_engineer_submission_type_task_mentor: Jeg ser etter en veileder som kan
     hjelpe meg med forberedelsene til Kodetimen
   petition_age: Alder
-  dashboard_landing_title: Lærerens startside
+  dashboard_landing_title: Hjemmeside for lærere
   dashboard_landing_welcome: Velkommen til det nye og forbedrede lærerdashboardet.
   dashboard_landing_video: Se denne videoen
   dashboard_landing_watch_video: for en omvisning i de nye funksjonene!
@@ -531,7 +536,7 @@
   dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
   dashboard_navigation_view_stats: Se statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
-  dashboard_navigation_student: 'Student: %{elev_name}'
+  dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Ny seksjon
   dashboard_sections_jumbotron_instruction: Lag nye seksjoner og legg til elever.
     Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore
@@ -570,8 +575,8 @@
   dashboard_students_female: Kvinne
   dashboard_students_secret: Hemmelig
   dashboard_students_password: passord
-  dashboard_students_username: 'Brukernavn: %{elev_username}'
-  dashboard_students_email: 'Epost: %{elev_email}'
+  dashboard_students_username: 'Brukernavn: %{student_username}'
+  dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivåer
   dashboard_students_total_lines: Linjer med kode
   dashboard_students_show_secret: Vis hemmelig
@@ -628,7 +633,7 @@
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
   dashboard_grade_k: K
   dashboard_grade_other: Andre
-  dashboard_login_word: Ord
+  dashboard_login_word: ord
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
   dashboard_new_password: nytt passord
@@ -666,6 +671,8 @@
     her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede
     nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele
     dine egne spill i en galakse langt, langt borte.'
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: Kodetimen er her - 8. til 14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
   learn_more: Lær mer
@@ -679,18 +686,18 @@
   learn_educator_resources_button: Lærerressurser
   learn_are_you_educator: Du er lærer? Sjekk<a href="http://hourofcode.com/resources/how-to">
     hvordan du kan gjennomføre Kodetimen</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/volunteer/local"> Finn en lokal
+    frivillig</a> å hjelpe deg under "Hour of Code"
+  learn_teacher_led_lesson_plans: Bli inspirert av <a href="https://code.org/teacher-led">
+    lærer ledet "Hour of Code" timeplanlegging</a>
+  learn_how_to_hoc: Følg <a href="https://hourofcode.com/how-to"> vår "how-to guide"</a>
+    for undervisning av "Hour of Code"
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lær mer</a> om premiene
     for hver lærer.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspirere elevene ved å vise dem <a href="https://code.org/educate/inspire">
+    disse videoene</a>
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-øvinger
-  hoc2014_try_new_tutorial: Prøv den nye Kodetime-veiledningen i beta
+  hoc2014_try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Kunstner med Anna og Elsa fra Frost
   carousel_heading_codeorg: Guider laget av Code.org
@@ -700,10 +707,14 @@
   carousel_heading_international: Gjennomganger på norsk
   carousel_heading_domestic: Øvinger tilgjengelig på engelsk
   carousel_heading_beginners: Øvinger for nybegynnere
+  carousel_heading_beyond_beginners: Øvinger for nybegynnere
   carousel_heading_javascript: Øvinger som underviser JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Ingen enhet eller Internett? Prøv 'frakoblet' koding
   carousel_heading_devices: Øvings-apper for telefoner og nettbrett
+  carousel_heading_beyond_devices: Øvings-apper for telefoner og nettbrett
   carousel_heading_languages: Øvinger i andre programmeringsspråk
+  carousel_heading_beyond_languages: Øvinger i andre programmeringsspråk
   carousel_heading_apps_games: Lag dine egne apper eller spill
   carousel_heading_university: Universitetskurs på nett
   carousel_heading_webpages: Lær hvordan å lage nettsider
@@ -711,6 +722,10 @@
   carousel_heading_ide: Plattformer som er populære blant lærere
   educator_notes: Lærernotater
   teach_led_lesson_plans: Planlegging av Kodetimen
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Hvordan lære bort en Kodetime
   more_resources_educators: Flere lærerressurser
   beyond_submission: Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
@@ -757,17 +772,24 @@
   robomindnl_name: Programmer ein virtuell robot
   flappy_name: Lag et Flappy spill
   bitsbox_name: Blitsbox - lag et spill
-  makeschool_name: Lag et spill til iPhone i nettleseren!
+  makeschool_name: Bygg eit iphone-spel i nettlesaren din!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kodetimen
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks papir
-  hourofcode_name: Plassholder for ny code.org/hoc
+  hourofcode_name: Skriv ditt første dataprogram
   playlab_name: Spill-lab
   infinity_name: Infinity Spill-Lab
   artist_name: Kunstner
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Planlegging av Kodetimen
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -811,8 +833,15 @@
   playlab_gradelevel: Alder 4-104
   infinity_gradelevel: Alder 4-104
   artist_gradelevel: Alder 4-104
-  codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
-  codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  monstercoding_gradelevel: Alderen 5 til 13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Grunnskole
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
+  codeorg_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
+  codeintl_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   thinkersmithspanish_platformtext: Frakobla
   khan_platformtext: Moderne nettlesere
   khanes_platformtext: Moderne nettlesere
@@ -824,7 +853,7 @@
   scratch_platformtext: Bare for PCer med nettleser (ikke nettbrett)
   lightbot_platformtext: ALLE nettlesere og iOS, Android eller Game Console
   thinkersmith_platformtext: Frakobla
-  condcards_platformtext: frakoblet
+  condcards_platformtext: Frakobla
   lightbotintl_platformtext: iOS, Android (eller nettleser)
   codehs_platformtext: Moderne nettlesere. (Oppfølgingskurset krever $$)
   codecademy_platformtext: Moderne nettlesere. iOS, Android apper
@@ -839,7 +868,7 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android-nettbrett
   robomindnl_platformtext: Moderne nettlesere, mobilt nett
-  flappy_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  flappy_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   bitsbox_platformtext: Moderne nettlesere
   makeschool_platformtext: Moderne nettlesere
   touchdevelop_platformtext: Moderne nettlesere, smarttelefoner, alle enheter
@@ -848,10 +877,17 @@
   thinkersmith2_platformtext: Frakobla
   kodableunplugged_platformtext: Frakobla
   projguts_platformtext: Frakobla
-  hourofcode_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  hourofcode_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   frozen_platformtext: Moderne nettlesere + nettbrett
   starwars_platformtext: Moderne nettlesere + nettbrett
-  playlab_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  playlab_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Moderne nettlesere
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Moderne nettlesere
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   codeintl_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -890,7 +926,7 @@
   flappy_shortdescription: Lag ditt eget spill - Flappy Bird, hai eller ubåt
   bitsbox_shortdescription: Kode en rekke apper med ekte JavaScript som du både kan
     spille og dele.
-  makeschool_shortdescription: Lag et spill til iPhon! Lær å skrive kode for å lære
+  makeschool_shortdescription: Lag et iPhone-spill! Lær ved å skrive kode for å lære
     monsteret ditt nye bevegelser!
   touchdevelop_shortdescription: 'Løs gåter, lag spill og lær koding på telefonen. '
   appinventor_shortdescription: Lag din egen app! (Kun Android)
@@ -908,6 +944,19 @@
   infinity_shortdescription: Bruk Spill-lab for å lage en historie eller spill med
     Disney Infinity figurer.
   artist_shortdescription: Tegn kule bilder og tegninger med Kunstneren!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
     Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
     Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
@@ -1048,6 +1097,37 @@
   playlab_longdescription: Lag en historie eller lag et spill med "Spill-Lab"! Få
     dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage
     lyder, få poeng, og til og med kaste flammekuler!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Introduksjon til koding (1.-8. trinn)
   khan_beyond_name: Lær koding
   tynker_beyond_name: Lær koding hjemme
@@ -1223,7 +1303,7 @@
     nettleser). Lær hvordan du sorterer kommandoer, identifiserer mønstre, bruker
     prosedyrer og løkker!
   codecademy_beyond_longdescription: Codecademy er en interaktiv, elevfokusert introduksjon
-    til grunnleggende CS gjennom JavaScript som brukes av millioner av elever over
+    til grunnleggende CS gjennom JavaScript som brukes av millioner av studenter over
     hele verden. Vi har utarbeidet en problemfri Kodetime-opplevelse med tilhørende
     quiz, presentasjoner og et fullført prosjekt for elever på slutten.
   kodable_beyond_longdescription: Kodable er et selvforklarende iPad-spill som introduserer

@@ -1,0 +1,14 @@
+!!! 5
+%html{dir: @locale_dir}
+  %head
+    = tag :meta, name: 'viewport', content: 'minimal-ui'
+    %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
+    %link{href: asset_path("css/#{@app}.css"), rel: 'stylesheet', type: 'text/css'}
+    %script{src: asset_path('js/blockly.js')}
+    %script{src: asset_path("js/#{@js_locale}/blockly_locale.js")}
+    %script{src: asset_path('js/common.js')}
+    %script{src: asset_path("js/#{@js_locale}/common_locale.js")}
+    %script{src: asset_path("js/#{@js_locale}/#{@app}_locale.js")}
+    %script{src: asset_path("js/#{@app}.js")}
+  %body.readonly
+    #codeWorkspace

@@ -22,13 +22,13 @@ Disse vilkår kan ændres. Du accepterer at være bundet af sådanne ændringer,
 
 Nogle tjenester kan være underlagt yderligere retningslinjer, regler eller Servicevilkår ("**Yderligere vilkår**") og din brug af sådanne tjenester vil være betinget af din accept af de yderligere vilkår. Hvis der er nogen modsigelse mellem disse betingelser og yderligere betingelser, så vil de yderligere vilkår være bestemmende for denne tjeneste, medmindre de yderligere vilkår udtrykker disse betingelser.
 
-### Children Under Age 13
+### Børn under 13 år
 
 Vi tager skridt til at minimere indsamling af personoplysninger fra brugere under 13 år, som der er forklaret i Code.org [fortrolighedspolitik](http://code.org/privacy). Hvis du er under 13 år, opfordrer vi dig til at få godkendelse af en forælder eller værge, inden du opretter en konto på Code.org. Code.org giver mulighed for at visse repræsentanter fra skolevæsnet og skoler, lærere, administratorer, rådgivere og andre undervisere (en "**lærer**") til at forbinde med elever via tjenesterne for at give tutorial, uddannelsesmæssige og lignende tjenester. Hvis du er lærer, kan du registrere kontoen for en eller flere af dine elever.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Din konto
 
 Hvis du opretter en konto for tjenester, er du ansvarlig for sikkerheden for din konto og at sikre din adgangskode mod misbrug. Hvis du bruger en konto, der er tildelt til dig af en lærer, skal denne lærer kunne få adgang til at deaktivere din konto.
 
@@ -40,7 +40,7 @@ Dit privatliv er vigtigt for os. Code.org's [Privacy Policy](http://code.org/pri
 
 Hvis du er elev, der bruger en konto registreret til dig af en lærer eller på anden måde forbundet til en lærer, accepterer du at Code.org kan videregive dine oplysninger til den lærer, der er tilknyttet din konto. Hvis du er lærer, accepterer du, at du ikke må dele de elevoplysninger som du modtager fra Code.org med andre end skolens ansatte, skolevæsnet eller anden uddannelsesvirksomhed som du repræsenterer.
 
-### User Generated Content - Management; License Grant; Representations and Warranties
+### Brugergenereret indhold - forvaltning; Licens Grant; Repræsentationer og garantier
 
 Code.org kan nu eller i fremtiden tillade, at du og andre brugere kan offentliggøre computerkode (herunder både kilden og objektet kode), oplysninger, tekst, grafik, noter, spørgsmål, kommentarer, ratings, anmeldelser, billeder og videoer eller anden kommunikation (kollektivt, "**bruger-indhold**") til tjenesterne. Du må være indforstået med, at uanset om sådant brugerindhold bliver offentliggjort, så garanterer Code.org ikke for nogen fortrolighed, med hensyn til eventuelle bemærkninger.
 
@@ -54,7 +54,7 @@ By submitting or distributing User Content through the Services or directly to C
 
 Derudover giver du, ved at indsende eller distribuere brugerindhold gennem tjenesterne, hermed tilladelse til at alle brugere af tjenesterne, en ikke-eksklusiv tilladelse til at få adgang til og bruge dit brugerindhold.
 
-### User Content Representations and Warranties
+### Brugerindholdets repræsentationer og garantier
 
 You are solely responsible for User Content you post to the Services and the consequences of posting or publishing them. By uploading, submitting, creating, or publishing your User Content to or through the Services, you represent, and warrant that: (1) you are the creator and owner of your User Content and that you have the authority to use or have the necessary licenses, rights, consents, and permissions to publish the User Content you submit; (2) your User Content does not and will not: (a) infringe, violate, or misappropriate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right or (b) slander, defame, libel, or invade the right of privacy, publicity or other property rights of any other person; (3) your User Content does not contain any viruses, adware, spyware, worms, or other malicious code.
 

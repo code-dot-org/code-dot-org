@@ -10,7 +10,7 @@ nav: about_nav
 
 ## Leadership Team
 
-<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'LT'), columns:3 %>
+<%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'LT'), columns:3 %>
 
 ## Advisory Board
 

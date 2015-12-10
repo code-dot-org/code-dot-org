@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire community.
 
@@ -34,7 +33,7 @@ nav: how_to_nav
 
 ## ყველა სკოლამ უნდა მიიღოს მონაწილეობა, ყველა მოსწავლემ - ისწავლოს!
 
-  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) and in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
   2. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/event') %>) for a sample run of show, media outreach kit and other event-planning resources. ღონისძიების ჩატარება კოდის ერთი საათის პოპულარიზებისა და მონაწილეთა რაოდენობის გაზრდის ეფექტური გზაა.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **დაამყარეთ კავშირი ადგილობრივად.** ეწვიეთ [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>)-ს რათა გაიგოთ მეტი თქვენს შტატში კომპიუტერული მეცნიერების განათლების შესახებ. მოაწერეთ ხელი პეტიციას და მიიღეთ Code.org-ისგან ინფრომაცია ადგილობრივი, შტატისა და ფედერალური ოლქის მასშტაბის ღონისძიებები შესახებ.
 
-<%= view :signup_button %>

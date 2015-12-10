@@ -1,16 +1,19 @@
 title 'Ice Age Play Lab'
 description_short "Create a story or make a game with Ice Age Play Lab!"
 description "Create a story or make a game with Ice Age Play Lab!"
-hidden 'true'
-login_required 'true'
+hidden 'false'
+login_required 'false'
 
 stage 'Ice Age Play Lab'
 skin 'iceage'
+video_key_for_next_level 'iceage_intro'
 level 'blockly:Studio:iceage_hello1'
 level 'blockly:Studio:iceage_hello2'
 level 'blockly:Studio:iceage_move_to_flag'
 level 'blockly:Studio:iceage_move_to_actor'
+video_key_for_next_level 'iceage_repeat'
 level 'blockly:Studio:iceage_repeat'
+video_key_for_next_level 'iceage_events'
 level 'blockly:Studio:iceage_click_hello'
 level 'blockly:Studio:iceage_move_events'
 level 'blockly:Studio:iceage_sound_and_points'

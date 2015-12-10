@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Model de comunicat de presa pentru functionarii alesi
 
@@ -49,4 +48,3 @@ Pentru mai multe informaţii despre [**Eveniment/PROGRAM/ETC**], vizitaţi [**IN
   
 
 
-<%= view :signup_button %>

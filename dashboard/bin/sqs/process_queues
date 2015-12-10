@@ -58,12 +58,15 @@ class QueueProcessorManager
 
   def run
     if argv.size < 1
-      puts "Usage: #{$0} CONFIG_FILE.json [UPDATE-INTERVAL]"
+      puts "Usage: #{$0} CONFIG_FILE.json.erb [UPDATE-INTERVAL]"
       exit 0
     end
     config_file = argv[0]
     logger.info "Reading config file #{config_file}"
-    json = File.open(config_file).read
+    erb = ERB.new(File.open(config_file).read)
+    erb.filename = config_file
+    json = erb.result
+    puts json
 
     update_interval = (argv.size >= 2) ? argv[1].to_i : 10
     update_interval = 1 if update_interval < 1  # Don't update too quickly.
