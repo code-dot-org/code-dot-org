@@ -10,21 +10,20 @@ dependencies:
   override:
     - sudo apt-get install libicu-dev
     - bundle install
-    - rake install:pegasus
     - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
     - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
     - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
     - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
-    - npm install:
-        pwd:
-            apps
-    - bash build_with_core.sh:
-        pwd:
-            apps
-    - bundle exec rake assets:precompile:
-        pwd:
-            dashboard
+    - 'echo "use_my_apps: true" >> locals.yml'
+    - 'echo "use_my_shared_js: true" >> locals.yml'
+    - 'echo "build_blockly_core: true" >> locals.yml'
+    - 'echo "build_apps: true" >> locals.yml'
+    - 'echo "build_shared_js: true" >> locals.yml'
+    - 'echo "build_dashboard: true" >> locals.yml'
+    - 'echo "build_pegasus: true" >> locals.yml'
+    - bundle exec rake install
+    - bundle exec rake build
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
@@ -61,7 +60,7 @@ test:
         - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
             background: true
         - "until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "./runner.rb -c IE10Win7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 -f features/hourOfCodeFinish.feature":
+        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 -f features/hourOfCodeFinish.feature":
             pwd:
                 dashboard/test/ui
 
