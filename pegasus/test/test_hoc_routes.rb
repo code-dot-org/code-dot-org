@@ -105,7 +105,7 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
-    it 'starts and ends given tutorial, tracking company and tutorial' do
+    it 'starts and ends given tutorial, tracking company and tutorial using cookie' do
       DB.transaction(rollback: :always) do
         with_test_company 'testcompany'
 
