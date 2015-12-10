@@ -10,7 +10,7 @@ def main()
   end
 
   Dir.chdir(dashboard_dir) do
-    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{run_cmd} -p #{CDO.dashboard_port}"
+    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{run_cmd} -e #{CDO.rack_env} -p #{CDO.dashboard_port}"
   end
 end
 
