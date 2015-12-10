@@ -43,10 +43,11 @@
       - unless view_options[:no_footer] || view_options[:small_footer]
         .push
 
-      - if view_options[:share_footer]
-        = render partial: 'layouts/share_footer'
-      - elsif view_options[:small_footer]
-        = render partial: 'layouts/small_footer'
+      - unless view_options[:no_footer]
+        - if view_options[:share_footer]
+          = render partial: 'layouts/share_footer'
+        - elsif view_options[:small_footer]
+          = render partial: 'layouts/small_footer'
 
     - unless view_options[:no_footer]
       - unless view_options[:share_footer] || view_options[:small_footer]
