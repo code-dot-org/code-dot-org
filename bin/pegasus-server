@@ -6,7 +6,7 @@ def main()
     rerun_cmd = "rerun -p '**/*.{rb,ru,yml}' -d'#{deploy_dir('lib')},#{deploy_dir('shared/middleware')},#{pegasus_dir}' --"
     "#{rerun_cmd} rackup"
   else
-    "unicorn -c #{pegasus_dir('config/unicorn.rb')}"
+    "unicorn -c #{pegasus_dir('config/unicorn.rb')} -E #{CDO.rack_env}"
   end
   Dir.chdir(pegasus_dir) do
     system "RAILS_ENV=#{CDO.rack_env} bundle exec #{run_cmd} -p #{CDO.pegasus_port}"
