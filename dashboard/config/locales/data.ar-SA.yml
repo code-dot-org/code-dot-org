@@ -105,6 +105,8 @@
         StudioEC: مختبر اللعب
         Applab: مختبر التطبيقات
         NetSim: محاكاة الإنترنت
+        Custom: الرسام
+        CustomStudio: مختبر اللعب
     trophy:
       name:
         Bronze: برونزية
@@ -498,61 +500,74 @@
           الأسهم للحصول على الكائن الفضائي وتنبيه الجميع
         studio_playlab_10: قم بانشاء اللعبة الخاصة بك. عند الانتهاء من ذلك، انقر فوق
           "إنهاء" للسماح لأصدقاءك بتجربة اللعبة الخاصة بك على هواتفهم.
-        studio_iceage_1: Manny wants to say "hello" - can you help him?
-        studio_iceage_2: Diego (actor 1) and Granny (actor 2) would like to say "hello"
-          to each other. Can you help them by using the "say" block twice?
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and
-          play a sound when he gets there?
-        studio_iceage_5: Can you help Sid say "greetings" when it is clicked? Don’t
-          forget to click it after you click Run
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_iceage_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Sid move right and left repeatedly?
-        studio_iceage_8: Can you add a block to score a point and a block to play
-          a sound when Sid runs into Manny, and then move him with the arrows until
-          you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
-          faster by changing its speed. Then move him with the arrow keys to get to
-          Sid and alert everyone else.
-        studio_iceage_10: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء"
-          للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
+        studio_iceage_hello1: سيد يريد جمع الجميع لمغامرة جديدة.هل يمكنك مساعدته ليقول
+          "مرحبا" بسحب كتلة 'يقول' إلى منطقة العمل وكتابة كلمة "hello" داخلها ؟
+        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
+          him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: تريد أناييس أن يكون لها بعض الأصدقاء الجدد. هل يمكنك
+          مساعدتها لتقول "مرحبا" بنقل كتلة "قل" إلى مساحة العمل وكتابة كلمة "مرحبا"
+          داخل الكتلة؟
+        studio_gumball_hello2: داروين (الممثل 1) وشقيقه غامبول (الممثل 2) يذهبان إلى
+          المدرسة. ساعدهم على تحية بعضهم البعض باستخدام كتلة "يقول الممثل" مرتين.
+        studio_gumball_move_to_flag: الموز "جو"  على وشك الفوز بسباق الحقل اليوم!  ساعده
+          على الذهاب آخر 200 بكسل باستخدام كتلة "تحريك".
+        studio_gumball_move_to_actor: غامبول (الممثل 1) و دارويين (الممثل 2) متأخرّان
+          ليوم الحقل! ساعد غامبول على التحرّك 200 بيكسل للوصول إلى داروين باستعمال
+          المقطع "تحريك الممثل". ثمّ، أربط مقطعا إلى الحدث "عندما الممثل يلمس" لتشغيل
+          صوت عندما يجدان بعضهم البعض.
+        studio_gumball_repeat: كتلة "التكرار إلى الأبد" يسمح لك بتشغيل التعليمات البرمجية
+          بشكل مستمر.  يمكن وضع كتل داخلها لمساعدة غامبول على الإحماء للسباق عن طريق
+          التحريك إلى اليسار واليمين مرارا وتكرارا؟
+        studio_gumball_click_hello: يمكنك مساعدة أنطون إعلان بدء السباق بقوله "إستعداد،
+          تثبيت، إنطلاق "؟ لاختبار البرنامج الخاص بك، لا تنسى أن تنقر على أنتون بعد
+          النقر فوق تشغيل!
+        studio_gumball_move_events: يشارك داروين في مسابقة جمع العلم! ساعده على التحرك
+          عن طريق إرفاق كتلة "تحريك" بكل واحد من الأحداث. عند الانتهاء من ذلك، انقر
+          فوق تشغيل، و حاول جمع جميع الأعلام.
+        studio_gumball_sound_and_points: لقد أعطيناك أغلب المقاطع البرمجيّة التي تجعل
+          أنتون (الممثل 2) يتحرك يمينا و يسارا، و المقاطع التي تحرك الموزة "جو" (الممثل
+          1) في أنحاء الشاشة. هل يمكنك إنهاء البرنامج و إضافة مقاطع إلى الحدث "عندما
+          الممثل يلمس" بحيث يتم تشغيل صوت و تسجيل نقطة عندما يلمس جو أنتون؟ أنقر على
+          تشغيل لتجربة اللّعبة.
+        studio_gumball_warn_food_fight: نجا داروين من معركة الغذاء! غيّر الخلفية إلى
+          "الشخصيّات" و عيّن سرعة داروين إلى سريعة، ثم انقر على تشغيل وانقله إلى بيني
+          لتحذيرها.
+        studio_gumball_join_food_fight: انضم الي معركة الطعام! استخدم امر "فاعل ارمِ
+          الشئ لليمين" ليرمي "جو الموزة" (الشخصية الأولي) الطعام علي "أنتون" الشخصية
+          الثانية, قم بتغيير مزاج "أنتون" الي غاضب عندما يتم ضربه.
+        studio_gumball_free_play: قم بانشاء اللعبة الخاصة بك. عند الانتهاء من ذلك،
+          انقرعلي "إنهاء" للسماح لأصدقاءك بتجربة اللعبة الخاصة بك على هواتفهم او حواسيبهم!.
         studio_full_sandbox: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق
           "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.
         studio_k1_1: يمكنك جعل هذا الكلب يقول "مرحبا العالم"؟
@@ -690,6 +705,9 @@
         infinity_playlab_intro: مختبر اللعب - المقدمة
         infinity_playlab_events: مختبر اللعب - الأحداث
         infinity_playlab_repeat_forever: مختبر الألعاب - تكرار إلى الأبد
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -735,14 +753,17 @@
         starwars_blocks_intro: 'حرب النجوم: بناء مجرة باستعمال  البرمجة --مقدمة'
         starwars_blocks_events: 'حرب النجوم: بناء مجرة باستعمال البرمجة --الأحداث'
         starwars_blocks_congrats: 'حرب النجوم: بناء مجرة باستعمال البرمجة --تهانينا'
-        mc_intro: ماين كرافت - مقدّمة
-        mc_repeat: ماين كرافت -تكرار
-        mc_if_statements: ماين كرفت - التركيب الشرطي إذا
-        mc_congrats_share: ماين كرافت -التهاني
-        mc_congrats_no_share: ماين كرافت -التهاني
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        mc_intro: Minecraft - مقدمة
+        mc_repeat: Minecraft - تكرار
+        mc_if_statements: Minecraft - عبارات شرطية
+        mc_congrats_share: Minecraft - تهانينا
+        mc_congrats_no_share: Minecraft - تهانينا
+        gumball_intro: ساعة البرمجة غامبول - مقدّمة
+        gumball_events: ساعة البرمجة غامبول - الأحداث
+        gumball_repeat: ساعة البرمجة غامبول - تركيب التكرار
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر
@@ -835,13 +856,13 @@
         Infinity_move_directions_callout_arrow: استخدم هذه الأسهم للتوجيه
         Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
         Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا
-        craft_run_button_callout: انقر على "نفذ" لتجربة برنامجك
-        craft_drag_block_callout: قم بسحب المقطع البرمجي "تحريك للأمام" و ركّبه اسفل
-          المقاطع الأخرى.
-        craft_callout_preplaced: لقد وضعنا بعض المقاطع البرمجية هنا للبدء
-        craft_inside_repeat: كرّر الأعمال عن طريق وضع المقاطع البرمجيّة هنا
-        craft_callout_preplaced_house: سيبدأ هذا الجزء من البرنامج ببناء منزلك. هل
-          يمكن إنهاء البرنامج لإتمام عمليّة البناء؟
-        craft_what_is_iron: إستخرج هذا الحديد!
-        craft_callout_moveforward: هذا الجزء من البرنامج سيتحقق من وجود الحمم البركانيّة،
-          هل يكنك إضافة مقطع برمجي للتقّدم للأمام؟
+        craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
+        craft_drag_block_callout: اسحب كتلة "moveForward();" وقم بمحاذاتها أسفل الكتلة
+          الأخرى
+        craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
+        craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
+        craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
+          منزلك. هل يمكنك الانتهاء من ذلك؟
+        craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
+        craft_callout_moveforward: ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
+          إضافة أمر للتقدم؟

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### U nastavku je uzorak op-ed podrške tjednu računarstva i njegovih ciljeva koje mogu koristiti država, lokalni zakonodavci poslovni ljudi itd.
 
@@ -47,4 +46,3 @@ Prema Uredu za poslovnu statistiku, do 2020, bit će 9,2 milijuna radnih mjesta 
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. U školama diljem **[STATE]**, naši učenici će sudjelovati u nacionalnom Satu kodiranja, skidajući veo misterije sa predmeta računarstva i uz malo dobro volje će im se otvoriti apetit da naučite još više. Sam ću im se pridružiti, i pozivam vas isto da se pridružite. Svatko treba naučiti kako kodirati. Visit https://hourofcode.com/<%= @country %> to learn more and get started. I podržite naše napore da donesemo više informatike u škole u **[STATE]**.
 
-<%= view :signup_button %>

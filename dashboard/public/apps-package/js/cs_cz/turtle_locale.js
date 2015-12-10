@@ -163,7 +163,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catTurtle":function(d){return "akce"},
 "catVariables":function(d){return "Proměnné"},
 "catLogic":function(d){return "Logika"},
-"colourTooltip":function(d){return "Změny barev tužky."},
+"colourTooltip":function(d){return "Změní barvu tužky."},
 "createACircle":function(d){return "vytvořte kružnici"},
 "createSnowflakeSquare":function(d){return "vytvořit vločku typu čtverec"},
 "createSnowflakeParallelogram":function(d){return "vytvořte vločku typu rovnoběžník"},

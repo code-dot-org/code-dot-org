@@ -29,12 +29,9 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
-  // Progress Data is only provided for signed in users. Otherwise, client gets progress data from cookie
-  if (progressData === null) {
-    progressData = getSummarizedProgressForAnonymousUser(scriptName);
-  }
+  progressData = progressData || {};
 
-  var levelProgress = progressData.levels || {};
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -55,8 +52,16 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
   var progressContainer = $('.progress_container');
+  var serverProgress = progressData.levels || {};
   stageData.levels.forEach(function(level, index, levels) {
-    var status = (levelProgress[level.id] || {}).status || 'not_tried';
+    var status;
+    if (dashboard.clientState.queryParams('user_id')) {
+      // Show server progress only (the student's progress)
+      status = activityCssClass((serverProgress[level.id] || {}).result);
+    } else {
+      // Merge server progress with local progress
+      status = mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+    }
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -65,7 +70,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     if (sectionId) {
       href += '&section_id=' + sectionId;
     }
-    var link = $('<a>').attr('href', href).addClass('level_link').addClass(status).text(level.title);
+    var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link').addClass(status).text(level.title);
 
     if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
@@ -76,6 +81,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     }
     progressContainer.append(div).append('\n');
   });
+
   $('.level_free_play').qtip({
     content: {
       attr: 'title'
@@ -415,35 +421,63 @@ dashboard.header.updateTimestamp = function () {
 };
 
 /**
- * Get the user progress for an anonymous user from the client side cookie.
- * @param {string} scriptName The script to get progress for.
- * @return Object that is a representation of the user's individual level progress.
+ * See ApplicationHelper#activity_css_class.
+ * @param result
+ * @return {string}
  */
-function getSummarizedProgressForAnonymousUser (scriptName) {
-  var summarizedProgress = {};
-  var levelProgress = {};
-
-  summarizedProgress.lines = dashboard.clientState.lines();
-
-  var scriptProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
-  for (var level in scriptProgress) {
-    levelProgress[level] = {};
-    var individualLevelProgress = scriptProgress[level] || -1;
-
-    if (individualLevelProgress >= 1000) {
-      levelProgress[level].status = 'submitted';
-    } else if (individualLevelProgress >= 30) {
-      levelProgress[level].status = 'perfect';
-    } else if (individualLevelProgress >= 20) {
-      levelProgress[level].status = 'passed';
-    } else if (individualLevelProgress > 0) {
-      levelProgress[level].status = 'attempted';
-    } else {
-      levelProgress[level].status = 'not attempted';
-    }
+function activityCssClass(result) {
+  if (!result) {
+    return 'not_tried';
   }
+  if (result >= 1000) {
+    return 'submitted';
+  }
+  if (result >= 30) {
+    return 'perfect';
+  }
+  if (result >= 20) {
+    return 'passed';
+  }
+  return 'attempted';
+}
 
-  summarizedProgress.levels = levelProgress;
+/**
+ * Returns the "best" of the two results, as defined in apps/src/constants.js.
+ * Note that there are negative results that count as an attempt, so we can't
+ * just take the maximum.
+ * @param {Number} a
+ * @param {Number} b
+ * @return {string} The result css class.
+ */
+function mergedActivityCssClass(a, b) {
+  return activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
+}
 
-  return summarizedProgress;
+function populateProgress(scriptName) {
+  // Render the progress the client knows about (from sessionStorage)
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  Object.keys(clientProgress).forEach(function (levelId) {
+    $('#level-' + levelId).addClass(activityCssClass(clientProgress[levelId]));
+  });
+
+  $.ajax('/api/user_progress/' + scriptName).done(function (data) {
+    // Merge progress from server (loaded via AJAX)
+    var serverProgress = (data || {}).levels || {};
+    Object.keys(serverProgress).forEach(function (levelId) {
+      if (serverProgress[levelId].result !== clientProgress[levelId]) {
+        var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
+
+        // Clear the existing class and replace
+        $('#level-' + levelId).attr('class', 'level_link ' + status);
+
+        // Write down new progress in sessionStorage
+        dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
+      }
+    });
+  });
+
+  // Highlight the current level
+  if (window.appOptions && appOptions.serverLevelId) {
+    $('#level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
+  }
 }

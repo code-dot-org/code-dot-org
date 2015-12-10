@@ -404,6 +404,9 @@ ur:
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -460,7 +463,7 @@ ur:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code

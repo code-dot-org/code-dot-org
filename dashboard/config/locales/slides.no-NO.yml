@@ -529,7 +529,7 @@
           utføres. Hva gjør ditt romvesen si?
       4:
         image: notes/playlab_events_4.png
-        text: Det finnes også "når pilen"-blokker. Hvis du kobler "Flytt"-blokker
+        text: Det finnes også "når pilen"-blokker. Hvis du kobler "flytt"-blokker
           til disse, kan du begynne å flytte aktører opp, ned, til venstre eller høyre.
           Trinnvis blir spillet ditt mer interaktiv.
     playlab_repeat_forever:
@@ -1395,11 +1395,11 @@
           det en funksjon. Nå skal vi bruke funksjoner for å hjelpe bien.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: I dette eksemplet kalles funksjonen få 2 nektar, denne grønne blokken
+          her. Vi vet hva få 2 nektar gjør ved å se på denne grå boksen som er funksjonensdefinisjonen.
+          Hvis vi ser inni den, ser vi at få 2 nektar får nektar og deretter får nektar
+          igjen. Se alltid på det som er i den grå boksen, slik at du vet hva disse
+          grønne funksjonsblokkene kan gjøre.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
@@ -1841,28 +1841,31 @@
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: Her er en funksjon som tegner en firkant med sider som er 50 piksler
+          lange. Det er flott, men hva om jeg ønsket å tegne en firkant med sider
+          på 50 piksler og en annen firkant med sider på 100 piksler? Vi bør ikke
+          måtte lage to separate funksjoner som gjør nesten det samme. I stedet kan
+          vi bruke en funksjon med et parameter.
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: Parametere gjør at vi kan sende verdier inn i en funksjon, som blir
+          brukt som variabler inne i funksjonen. La oss prøve å legge til en parameter
+          som heter lik til denne funksjonen, så vi kan bruke den til å lage firkanter
+          av forskjellige størrelser. I redigeringsprogrammet for funksjonen kan du
+          redigere navnet og beskrivelsen som før, men nå kan du også legge til et
+          parameter. Skriv navnet på parameteret du ønsker å lage i feltet og klikk
+          Legg til Parameter. Dette vil skape en rød blokk med navnet på parameteret
+          du nettopp opprettet. Nå kan vi erstatte gå 100 steg med parameteren Lengde,
+          så vil objektet flyttes frem med antallet i Lengde.
       3:
         image: notes/C4_function_parameters_3.png
-        text: Click save and close and drag out your new create a square block from
-          the functions category in the toolbox. You'll notice there's an empty space
-          next to length because the function wants to know what value the parameter
-          Length should have. Drag a number block from the Math category and place
-          it in this space. See how you can use the function again and again with
-          different lengths to make squares of different sizes? Try it for yourself!
+        text: Klikk Lagre og Lukk. Dra din nye opprett en firkant blokk fra kategorien
+          funksjoner i verktøykassen. Du vil legge merke til at det er en tom plass
+          ved siden av lengde fordi funksjonen vil vite hvilken verdi parameteren
+          lengden skal ha. Dra en nummerblokk fra kategorien matematikk og plasser
+          den på denne plassen. Ser du hvordan du kan bruke funksjonen igjen og igjen
+          med forskjellige lengder for å gjøre av forskjellige størrelser? Prøv det
+          selv!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -2770,167 +2773,163 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Mitt navn er Jens Bergensten, men jeg er mer kjent som Jeb. Jeg er sjefutvikler
+          for Minecraft her hos Mojang i Stockholm. Jeg begynte å programmere da jeg
+          var elleve eller tolv fordi jeg ville lage spill. En venn av faren min sa
+          at for å kunne lage spill måtte du lære å programmere. Slik var det jeg
+          kom i gang. Jeg liker å utforme og finne ut av arkitekturen til spill. Det
+          er det jeg virkelig liker med Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: I løpet av den neste timen, kommer du til å lære grunnleggende informatikk
-          ved å programmere Alex eller Steve til å bevege seg gjennom en simulert
-          stykke i en Minecraft verden.
+        text: I løpet av den neste timen vil du lære grunnleggende datavitenskap ved
+          å programmere Alex eller Steve til å bevege seg gjennom en simulert del
+          av en Minecraft-verden.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: Tradisjonell programmering skjer vanligvis med tekst, men i dag bruker
+          vi Blockly, et system som lar deg dra og slippe blokker for å skrive programmer.
+          Under det hele lager du kode i Javascript.
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: Konseptene som du skal lære, brukes av programmerere hver dag og utgjør
+          selve grunnlaget for datavitenskap. Her på Mojang bruker vi de samme konseptene
+          for å få Minecraft til å fungere.
       5:
         image: notes/mc_intro_5.JPG
-        text: Før du starter, så velger du deg din ønskede karakter. Jeg kommer til
-          å velge Alex. La oss kode et program som hjelper henne å gå rundt på skjermen.
+        text: Før du begynner, må du velge en figur. Jeg velger Alex. La oss bygge
+          kode til et program som hjelper henne rundt på skjermen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Skjermen er delt i tre hoveddeler. Til venstre er spillevinduet for
+          Minecraft, hvor programmet skal kjøre. Instruksjonene for hvert nivå står
+          skrevet under.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: I midten har du verktøykassen, og hver av blokkene er en kommando som
+          bestemmer hva Alex gjør.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
+          opp programmet.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Hva skjer hvis vi drar "flytt fremover"-blokken til arbeidsvinduet og
+          klikker på Kjør? Alex beveger seg én plass frem på rutenettet.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: Og hva om vi vil at hun skal gjøre noe etter at hun har flyttet seg
+          fremover? Da kan vi legge enda en blokk til programmet. Jeg velger "snu
+          mot høyre" og drar den under "flytt fremover" til denne oransje linjen dukker
+          opp. Deretter slipper jeg den, og så festes de to blokkene til hverandre.
+          Når vi klikker på Kjør igjen, utfører Alex kommandoene som er stablet oppå
+          hverandre i arbeidsvinduet.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til
+          verktøykassen.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: For å gjøre om endringer og tilbakestille nivået kan du bruke Begynn
+          på nytt-knappen øverst i hjørne av arbeidsvinduet. Ser du forresten den
+          lille trekanten på snu-blokkene? Hvis du ser en slik trekant, betyr det
+          at du kan velge et annet alternativ. La oss begynne å programmere!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Jeg er Lydia Winters, merkevaresjef hos Mojang, og vi har laget et lite
+          spill som heter Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: Det jeg liker best å gjøre i Minecraft er å utforske. Jeg elsker å dra
+          på eventyr i huler for å se hva jeg finner. Jeg jobber ikke som programmerer,
+          så det er spennende å ta del i Minecraft-timene og faktisk lære litt programmering
+          selv.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: I det siste nivået trengte vi mange "flytt fremover"-blokker. Det ville
+          ha vært lettere om vi bare kunne be datamaskinen om å utføre denne kommandoen
+          fire eller fem ganger. Heldigvis for oss er datamaskiner veldig flinke til
+          å gjenta kommandoer med gjenta-løkker.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Når vi bygger Minecraft, bruker vi gjenta-løkker for å plassere alle
+          utgangsmaterialene som trenges til en ny verden. Det innebærer tusenvis
+          av blokker. Vi bruker også løkker på små måter, som for å få føttene til
+          Alex til å bevege seg mens hun går. Gjenta-løkker er en viktig del av all
+          programmering.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: Det er snart natt, så i de neste par nivåene skal vi bygge et hus som
+          holder oss trygge. Vi bruker gjenta for å gjøre dette på enkleste måte.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: For å bygge en vegg til huset kan vi enten be Alex flytte seg fremover
+          og plassere planker fire ganger, eller så kan vi be henne flytte seg fremover
+          og plassere én planke, så tar vi denne kommandoen og bruker gjenta-blokken
+          til å få henne til å utføre handlingen flere ganger. Deretter klikker vi
+          på gjenta-blokken og forteller henne hvor mange ganger hun skal utføre denne
+          handlingen. La oss bygge huset før det blir natt! Ha det gøy!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Nå skal vi lære om hvis-kommandoer. Hvis-kommandoer er en viktig del
+          av det å lære å programmere. De hjelper datamaskinen med å ta beslutninger.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Alle datamaskiner bruker hvis-kommandoer, også telefonen min. Når jeg
+          skal låse opp telefonen, kjører den en kode som sier at den låses opp hvis
+          jeg skriver inn riktig passord. Hvis ikke viser den en feilmelding.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Med hvis-kommandoer kan du få Steve og Alex til å reagere på det de
+          ser i verdenen. Hvis det er en stein foran dem, kan de snu seg mot venstre.
+          Eller mot høyre hvis de går inn i et tre.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: Her har vi ikke lyst til å falle ned i lavaen. Det er lett å unngå lavaen.
+          Vi kan se den på skjermen. Men hva med lavaen som vi ikke kan se, den under
+          steinen?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Når vi har utvunnet steinen, må vi sjekke om det er noe lava der før
+          vi beveger oss fremover. Hvis det er lava der, må vi plassere en stein foran
+          figurene før vi fortsetter. Slik kan vi fortsette trygt på ferden. Tid for
+          mer utvinning! Og husk å bruke hvis-kommandoen for å passe på hvor du går.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gratulerer! Nå har du lært de grunnleggende byggeklossene i datavitenskap.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nå kan du bruke disse blokkene til å skape ting selv. Det er ingen flere
+          instruksjoner, og ingen flere oppgaver å løse. Du kan bygge alt du vil.
+          Det er du som velger.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
+          Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
+          hus av ull!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Når du er ferdig å bygge, kan du velge "Del" for å få en lenke å dele
+          med vennene dine. Ha det gøy!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gratulerer! Nå har du lært de grunnleggende byggeklossene i datavitenskap.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nå kan du bruke disse blokkene til å skape ting selv. Det er ingen flere
+          instruksjoner, og ingen flere oppgaver å løse. Du kan bygge alt du vil.
+          Det er du som velger.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: '[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
+          Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
+          hus av ull!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Nå kan du bygge alt du vil. Ha det gøy!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2961,8 +2960,8 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
+          opp programmet.
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -3012,6 +3011,90 @@
           forever block.
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.

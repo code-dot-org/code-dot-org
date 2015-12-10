@@ -180,7 +180,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "honeyAvailable":function(d){return "honey"},
 "honeyTooltip":function(d){return "Make honey from nectar"},
 "honeycombFullError":function(d){return "This honeycomb does not have room for more honey."},
-"ifCode":function(d){return "if"},
+"ifCode":function(d){return "má"},
 "ifInRepeatError":function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."},
 "ifPathAhead":function(d){return "if path ahead"},
 "ifTooltip":function(d){return "If there is a path in the specified direction, then do some actions."},

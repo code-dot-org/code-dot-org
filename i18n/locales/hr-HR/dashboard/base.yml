@@ -400,6 +400,9 @@ hr:
     privacy: Pravila privatnosti
     secure: Sigurna verzija
     report_abuse: Prijava zloupotrebe
+    built_on_code_studio: 'Izradio: Code Studio'
+    make_my_own_app: Izradi moju aplikaciju
+    how_it_works: Kako radi
   reference_area:
     title: Trebate pomoć?
     subtitle: Pogledajte ove videozapise i savjete
@@ -456,7 +459,7 @@ hr:
       unused: Neiskorišteni nivoi
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd
@@ -474,13 +477,13 @@ hr:
     frozen:
       title: Snježno kraljevstvo
     starwars:
-      title: Star Wars
+      title: Ratovi zvijezda
     infinity:
       title: Infinity Laboratorij igara
       body: Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Istražite Minecraft svijet preko koda.
   gallery:
     students_drew_these_with_code: Učenici su nacrtali ovo kodiranjem!
     students_made_these_with_code: Učenici su nacrtali ovo kodiranjem!

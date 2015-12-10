@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Refactoring Code\r\n\r\nOn the last level we copied a few lines of code to a different part of our program. **Hopefully warning bells went off in your head!** Any time you are copying portions of code from one area of your program to another, it's a good indication that you should write a function to capture that behavior in one place. \r\n\r\nWhen you add new features to your code **you will often create redundancies**. To keep your code readable and consistent you may need to rewrite old pieces of code. This process of restructuring existing code without changing its external behavior is called **refactoring**. It is an important process when developing software that improves code readability and reduces complexity. As a result code is much easier to maintain.\r\n\r\n# Do This\r\n\r\n* **Create function called `doUpArrow`**. \r\n* Move the code from the upArrow event handler to the function.\r\n* **Call `doUpArrow()`** from both your button and key event handlers)\r\n (The animation below shows the steps above).\r\n\r\n* Repeat the same process for the down arrow / button by creating a function called `doDownArrow`\r\n* Once you have **removed these redundancies from your code** test your app to make sure it still works!\r\n\r\n![](https://images.code.org/f47a98a8c9ca169848c682b3e61293cd-image-1448300634062.gif)",
+    "markdown_instructions": "# Refactoring Code\r\n\r\nOn the last level, we copied a few lines of code to a different part of our program. **Hopefully warning bells went off in your head!** Any time you are copying portions of code from one area of your program to another, it's a good indication that you should write a function to capture that behavior in one place. \r\n\r\nWhen you add new features to your code **you will often create redundancies**. To keep your code readable and consistent, you may need to rewrite old pieces of code. This process of restructuring existing code without changing its external behavior is called **refactoring**. It is an important process when developing software that improves code readability and reduces complexity. As a result, code is much easier to maintain.\r\n\r\n# Do This:\r\n\r\n* **Create function called `doUpArrow`**. \r\n* Move the code from the upArrow event handler to the function.\r\n* **Call `doUpArrow`** from both your button and key event handlers. (The animation below shows the steps above).\r\n* Repeat the same process for the down arrow / button by creating a function called `doDownArrow`.\r\n* Once you have **removed these redundancies from your code** test your app to make sure it still works!\r\n\r\n![](https://images.code.org/f47a98a8c9ca169848c682b3e61293cd-image-1448300634062.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,7 +167,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Keys - Template",
-    "instructions": "Write a doUpArrow and doDownArrow function and call the functions instead of duplicating the code. (Click to see full instructions)"
+    "instructions": "Write a doUpArrow and doDownArrow function and call the functions instead of duplicating the code. (Click to see full instructions)",
+    "encrypted_examples": "Tl6E+UUqGCoAffZpCe2/TeiOEzT6hBpDX3tBycKAa/TajPgFMpIKAPNGfJBC\nE2ZD\n"
   }
 }]]></config>
   <blocks/>

@@ -27,19 +27,22 @@
   .clear
 
   - if current_user
+    #hoc_announcement{style: "margin-top: 10px;"}
+      = render template: 'api/hoc_announcement'
     #user_hero
       = render template: 'api/user_hero'
-    - current_user.unadvertised_user_scripts.each_slice(2) do |course_pair|
-      .row
-        - course_pair.each do |user_script|
-          = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+    - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
+      - current_user.unadvertised_user_scripts.each_slice(2) do |course_pair|
+        .row
+          - course_pair.each do |user_script|
+            = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
 
   - else # no logged in user
     = render partial: 'home/sign_in_buttons'
 
   = render partial: 'home/all_courses'
 
-  - if current_user && !current_user.teacher?
+  - if current_user && !current_user.teacher? && Gatekeeper.allows('logged_in_studio_homepage', default: true)
     .row#edit_teachers
       .span12
         .padtopbottom
@@ -59,7 +62,7 @@
             -else
               = raw current_user.teachers.map{|t| t[:name]}.join(",")
 
-  - if current_user
+  - if current_user && Gatekeeper.allows('logged_in_studio_homepage', default: true)
     %br/
     %br/
     %br/

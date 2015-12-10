@@ -252,6 +252,11 @@ en-US:
   class_submission_level_vocational: crwdns5159:0crwdne5159:0
   class_submission_languages_other: crwdns5160:0crwdne5160:0
   inspirational_videos_more: crwdns51616:0crwdne51616:0
+  playlab_choose_theme: crwdns55176:0crwdne55176:0
+  playlab_classic_title: crwdns55177:0crwdne55177:0
+  playlab_gumball_title: crwdns55178:0crwdne55178:0
+  playlab_iceage_title: crwdns55179:0crwdne55179:0
+  playlab_iceage_title_live: crwdns55186:0crwdne55186:0
   starwars_subtitle: crwdns51617:0crwdne51617:0
   starwars_javascript_title: crwdns54483:0crwdne54483:0
   starwars_javascript_description: crwdns51619:0crwdne51619:0
@@ -259,7 +264,7 @@ en-US:
   starwars_javascript_start_button: crwdns51621:0crwdne51621:0
   starwars_blocks_title: crwdns51622:0crwdne51622:0
   starwars_blocks_description: crwdns51623:0crwdne51623:0
-  starwars_blocks_specs: crwdns54484:0crwdne54484:0
+  starwars_blocks_specs: crwdns55288:0crwdne55288:0
   starwars_blocks_start_button: crwdns51625:0crwdne51625:0
   starwars_watch_videos: crwdns51626:0crwdne51626:0
   starwars_speak_languages: crwdns51627:0crwdne51627:0
@@ -270,7 +275,7 @@ en-US:
   mc_shortdescription: crwdns51631:0crwdne51631:0
   mc_gradelevel: crwdns54485:0crwdne54485:0
   mc_platformtext: crwdns51633:0crwdne51633:0
-  mc_specs: crwdns54657:0crwdne54657:0
+  mc_specs: crwdns55289:0crwdne55289:0
   minecraft_subtitle: crwdns51634:0crwdne51634:0
   volunteer_engineer_submission_title: crwdns54486:0crwdne54486:0
   volunteer_engineer_submission_subtitle_generic: crwdns50838:0crwdne50838:0
@@ -514,6 +519,7 @@ en-US:
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
   dashboard_announce_hoc: crwdns50094:0crwdne50094:0
+  dashboard_announce_playlab: crwdns55290:0crwdne55290:0
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
   learn_more: crwdns23316:0crwdne23316:0
@@ -541,10 +547,14 @@ en-US:
   carousel_heading_international: crwdns3831:0crwdne3831:0
   carousel_heading_domestic: crwdns23443:0crwdne23443:0
   carousel_heading_beginners: crwdns23317:0crwdne23317:0
+  carousel_heading_beyond_beginners: crwdns55180:0crwdne55180:0
   carousel_heading_javascript: crwdns25208:0crwdne25208:0
+  carousel_heading_beyond_javascript: crwdns55181:0crwdne55181:0
   carousel_heading_unplugged: crwdns23319:0crwdne23319:0
   carousel_heading_devices: crwdns23320:0crwdne23320:0
+  carousel_heading_beyond_devices: crwdns55182:0crwdne55182:0
   carousel_heading_languages: crwdns23321:0crwdne23321:0
+  carousel_heading_beyond_languages: crwdns55183:0crwdne55183:0
   carousel_heading_apps_games: crwdns23322:0crwdne23322:0
   carousel_heading_university: crwdns23323:0crwdne23323:0
   carousel_heading_webpages: crwdns23324:0crwdne23324:0
@@ -552,6 +562,7 @@ en-US:
   carousel_heading_ide: crwdns23326:0crwdne23326:0
   educator_notes: crwdns23327:0crwdne23327:0
   teach_led_lesson_plans: crwdns51647:0crwdne51647:0
+  learn_footer_all_tutorials: crwdns55187:0crwdne55187:0
   how_to_teach_hoc: crwdns27833:0crwdne27833:0
   more_resources_educators: crwdns23328:0crwdne23328:0
   beyond_submission: crwdns45367:0crwdne45367:0
@@ -565,8 +576,8 @@ en-US:
   mobile_devices: crwdns23335:0crwdne23335:0
   frozen_name: crwdns23727:0crwdne23727:0
   starwars_name: crwdns51648:0crwdne51648:0
-  codeorg_name: crwdns21458:0crwdne21458:0
-  codeintl_name: crwdns23747:0crwdne23747:0
+  codeorg_name: crwdns55291:0crwdne55291:0
+  codeintl_name: crwdns55292:0crwdne55292:0
   thinkersmithspanish_name: crwdns21459:0crwdne21459:0
   khan_name: crwdns21460:0crwdne21460:0
   khanes_name: crwdns21461:0crwdne21461:0
@@ -602,10 +613,17 @@ en-US:
   thinkersmith2_name: crwdns21478:0crwdne21478:0
   kodableunplugged_name: crwdns21486:0crwdne21486:0
   projguts_name: crwdns23344:0crwdne23344:0
-  hourofcode_name: crwdns25915:0crwdne25915:0
+  hourofcode_name: crwdns55293:0crwdne55293:0
   playlab_name: crwdns26143:0crwdne26143:0
   infinity_name: crwdns54715:0crwdne54715:0
   artist_name: crwdns54716:0crwdne54716:0
+  monstercoding_name: crwdns55234:0crwdne55234:0
+  allcancode_name: crwdns55235:0crwdne55235:0
+  csfirst_name: crwdns55236:0crwdne55236:0
+  boxisland_name: crwdns55237:0crwdne55237:0
+  codesters_name: crwdns55238:0crwdne55238:0
+  texasinstruments_name: crwdns55239:0crwdne55239:0
+  teacherled_name: crwdns55240:0crwdne55240:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0
@@ -649,6 +667,13 @@ en-US:
   playlab_gradelevel: crwdns25922:0crwdne25922:0
   infinity_gradelevel: crwdns54717:0crwdne54717:0
   artist_gradelevel: crwdns54718:0crwdne54718:0
+  monstercoding_gradelevel: crwdns55241:0crwdne55241:0
+  allcancode_gradelevel: crwdns55242:0crwdne55242:0
+  csfirst_gradelevel: crwdns55243:0crwdne55243:0
+  boxisland_gradelevel: crwdns55244:0crwdne55244:0
+  codesters_gradelevel: crwdns55245:0crwdne55245:0
+  texasinstruments_gradelevel: crwdns55246:0crwdne55246:0
+  teacherled_gradelevel: crwdns55247:0crwdne55247:0
   codeorg_platformtext: crwdns21807:0crwdne21807:0
   codeintl_platformtext: crwdns23749:0crwdne23749:0
   thinkersmithspanish_platformtext: crwdns21808:0crwdne21808:0
@@ -690,6 +715,13 @@ en-US:
   frozen_platformtext: crwdns23732:0crwdne23732:0
   starwars_platformtext: crwdns51650:0crwdne51650:0
   playlab_platformtext: crwdns25931:0crwdne25931:0
+  monstercoding_platformtext: crwdns55248:0crwdne55248:0
+  allcancode_platformtext: crwdns55249:0crwdne55249:0
+  csfirst_platformtext: crwdns55250:0crwdne55250:0
+  boxisland_platformtext: crwdns55251:0crwdne55251:0
+  codesters_platformtext: crwdns55252:0crwdne55252:0
+  texasinstruments_platformtext: crwdns55253:0crwdne55253:0
+  teacherled_platformtext: crwdns55254:0crwdne55254:0
   codeorg_shortdescription: crwdns21545:0crwdne21545:0
   codeintl_shortdescription: crwdns23750:0crwdne23750:0
   thinkersmithspanish_shortdescription: crwdns21546:0crwdne21546:0
@@ -733,6 +765,13 @@ en-US:
   playlab_shortdescription: crwdns26144:0crwdne26144:0
   infinity_shortdescription: crwdns54719:0crwdne54719:0
   artist_shortdescription: crwdns54720:0crwdne54720:0
+  monsterocding_shortdescription: crwdns55255:0crwdne55255:0
+  allcancode_shortdescription: crwdns55256:0crwdne55256:0
+  csfirst_shortdescription: crwdns55257:0crwdne55257:0
+  boxisland_shortdescription: crwdns55258:0crwdne55258:0
+  codesters_shortdescription: crwdns55259:0crwdne55259:0
+  texasinstruments_shortdescription: crwdns55260:0crwdne55260:0
+  teacherled_shortdescription: crwdns55261:0crwdne55261:0
   codeorg_longdescription: crwdns21574:0crwdne21574:0
   codeintl_longdescription: crwdns23751:0crwdne23751:0
   thinkersmithspanish_longdescription: crwdns25939:0crwdne25939:0
@@ -774,6 +813,13 @@ en-US:
   frozen_longdescription: crwdns23738:0crwdne23738:0
   starwars_longdescription: crwdns51652:0crwdne51652:0
   playlab_longdescription: crwdns26145:0crwdne26145:0
+  monstercoding_longdescription: crwdns55262:0crwdne55262:0
+  allcancode_longdescription: crwdns55263:0crwdne55263:0
+  csfirst_longdescription: crwdns55264:0crwdne55264:0
+  boxisland_longdescription: crwdns55265:0crwdne55265:0
+  codesters_longdescription: crwdns55266:0crwdne55266:0
+  texasinstruments_longdescription: crwdns55267:0crwdne55267:0
+  teacherled_longdescription: crwdns55268:0crwdne55268:0
   codeorg_beyond_name: crwdns21603:0crwdne21603:0
   khan_beyond_name: crwdns21604:0crwdne21604:0
   tynker_beyond_name: crwdns21605:0crwdne21605:0
@@ -962,11 +1008,11 @@ en-US:
   compatibility_https_header: crwdns41674:0crwdne41674:0
   compatibility_https_message: 'crwdns41675:0%{https_date}crwdnd41675:0%{it_requirements_url}crwdne41675:0'
   compatibility_https_hide_this_warning: crwdns41676:0crwdne41676:0
-  starwars_shortcode: crwdns54721:0crwdne54721:0
+  starwars_shortcode: crwdns55294:0crwdne55294:0
   mc_shortcode: crwdns54722:0crwdne54722:0
   frozen_shortcode: crwdns54723:0crwdne54723:0
   hourofcode_shortcode: crwdns54724:0crwdne54724:0
   flappy_shortcode: crwdns54725:0crwdne54725:0
   infinity_shortcode: crwdns54726:0crwdne54726:0
-  playlab_shortcode: crwdns54727:0crwdne54727:0
+  playlab_shortcode: crwdns55295:0crwdne55295:0
   artist_shortcode: crwdns54728:0crwdne54728:0

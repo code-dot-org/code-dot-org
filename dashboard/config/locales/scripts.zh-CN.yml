@@ -5,7 +5,7 @@
         test:
           'Jigsaw: Learn to drag and drop': 拼图： 学习拖放
           The Maze: 迷宫
-          Multi: 多
+          Multi: 多个
           Match: 匹配
           Math Image: 数学图片
           title: 测试课程
@@ -18,16 +18,16 @@
           'Artist 1: Intro': 艺术家 1： 简介
           Artists 2: 艺术家 2
           Spelling Bee: 拼字比赛
-          Spelling Bee not blockly: blockly不是拼字比赛
+          Spelling Bee not blockly: 非模块化拼字比赛
           'Bee 1: Intro': 蜜蜂 1： 简介
           'Maze 2: Loops': 迷宫 2： 循环
           'Bee 2: Loops': 蜜蜂 2： 循环
           Multi & Match: 多重选择 & 匹配
           K-1 Flappy: K-1 小飞人
-          Flappy non blockly: Flappy Bird 不是 blockly
+          Flappy non blockly: 非模块化Flappy鸟
           title: '课程 1:'
           Artist 2: 艺术家 2
-          Happy Maps: 幸福地图
+          Happy Maps: 快乐地图
           Move it, Move it: 移动它，移动它
           'Real-life Algorithms: Plant a Seed': 真实算法： 播种一颗种子
           Building a Foundation: 打基础
@@ -41,17 +41,17 @@
           'Artist: Shapes': 艺术家： 形状
           'Maze: Loops': 迷宫： 循环
           'Bee: Loops': 蜜蜂： 循环
-          'Studio: Create a Story': 'Play Lab: 创建一个故事'
+          'Studio: Create a Story': '游戏实验室: 创建一个故事'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: 年龄 4 + （学前）
-          description_short: 课程1是为小朋友设计的
+          description_audience: 4 - 6岁
+          description_short: 课程1是为较小的读者设计的。
         course2:
           The Maze: 迷宫
           Suzi: 苏茜
           The Artist: 艺术家
           Artist Debugging: Artist Debugging
           Bounce: 跳
-          'Studio: Create a Story': 'Play Lab: 创建一个故事'
+          'Studio: Create a Story': '游戏实验室: 创建一个故事'
           Artist Loops: 艺术家循环
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy Bird
@@ -69,7 +69,7 @@
           Conditionals: 条件语句
           Binary Bracelets: Binary Bracelets
           The Big Event: 大事件
-          Your Digital Footprint: Your Digital Footprint
+          Your Digital Footprint: 你的数字足迹
           description: Start with Course 2 for students who can read and have no prior
             programming experience. In this course students will create programs to
             solve problems and develop interactive games or stories they can share.
@@ -85,11 +85,11 @@
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: 年龄 6-18岁
+          description_audience: 6-18岁
           description_short: Start with Course 2 for students who can read.
         course3:
           The Maze: 迷宫
-          'Studio: Create a Story': 'Play Lab: 创建一个故事'
+          'Studio: Create a Story': '游戏实验室: 创建一个故事'
           The Artist: 艺术家
           title: 课程 3：
           Artist Functions: 艺术家函数
@@ -140,13 +140,13 @@
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: 写歌
-          description_audience: 年龄 8-18 岁
+          description_audience: 8-18 岁
           description_short: Course 3 is a follow-up to Course 2.
         playlab:
-          title: 播放实验室
-          description: 创建一个故事或做游戏玩实验室！
-          Play Lab: 播放实验室
-          description_short: 创建一个故事或做游戏玩实验室！
+          title: 游戏实验室
+          description: 通过游戏实验室创建故事或制作游戏！
+          Play Lab: 游戏实验室
+          description_short: 通过游戏实验室创建故事或制作游戏！
         artist:
           title: 艺术家
           description: Draw cool pictures and designs with the Artist!
@@ -155,15 +155,15 @@
         hourofcode:
           Maze: 迷宫
           title: 编程一小时
-          description: 尝试计算机科学的基础知识与愤怒的小鸟人物，植物大战僵尸，和Scrat从冰河时代！
-          description_short: 尝试计算机科学的基础知识与许多有趣的人物！
+          description: 和来自愤怒小鸟，植物大战僵尸，冰河世界中的角色一起来学习计算机科学的基础知识！
+          description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
           Artist: 艺术家
-          description_short: 让我们用代码同安娜和艾尔莎一起去探寻冰雪的魔力与美丽。
+          description_short: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -196,7 +196,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: 年龄 10-18 岁
+          description_audience: 10-18 岁
           Super Challenge - Variables: Super Challenge - Variables
           Super Challenge - For Loops: Super Challenge - For Loops
           Super Challenge - Functions and Parameters: Super Challenge - Functions
@@ -272,7 +272,7 @@
           title: 播放实验室
           description_short: 创建一个故事或做游戏玩实验室！
           description: 创建一个故事或做游戏玩实验室！
-          Play Lab: 播放实验室
+          Play Lab: 游戏实验室
           Infinity: 无限
         algebrademo:
           title: Algebra Demo
@@ -351,14 +351,14 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: K-8计算机科学入门课程（15-25小时）
-          description_audience: 年龄 10-18 岁
+          description_audience: 10-18 岁
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
           Introduction to Computer Science: 计算机科学导论
           The Maze: 迷宫
-          Computational Thinking: 计算性思维
-          Graph Paper Programming: 方格纸编程
+          Computational Thinking: 计算式思维
+          Graph Paper Programming: 图纸上编程
           The Artist: 艺术家
           Algorithms: 算法
           The Artist 2: 艺术家 2
@@ -366,7 +366,7 @@
           The Farmer: 农夫
           Conditionals: 条件语句
           The Artist 3: 艺术家 3
-          Song Writing: 歌曲写作
+          Song Writing: 歌曲创作
           The Farmer 2: 农民 2
           Abstraction: 抽象化
           The Artist 4: 艺术家 4
@@ -382,14 +382,14 @@
           The Maze: 迷宫
           Applab: Applab
           The Artist: 艺术家
-          Play Lab: 播放实验室
+          Play Lab: 游戏实验室
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: 事件
           description: 事件
           description_short: 事件
-          Bounce: 跳
+          Bounce: 弹跳
           Studio: 工作室
           Calc: Calc
           Eval: Eval
@@ -409,40 +409,40 @@
           description_short: Step tutorial
           Step: 踏步
         Hour of Code:
-          title: 编程一小时2013
+          title: 《编程一小时 2013》
           description: ''
-          description_short: 尝试计算机科学的基础知识与许多有趣的人物！
-          Hour of Code 2013: 编程一小时2013
+          description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
+          Hour of Code 2013: 《编程一小时 2013》
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         Test - Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         How to do the Code Studio Puzzle Challenge:
           title: Test Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         Tutorial - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description_short: Challenge yourself!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not
@@ -520,7 +520,7 @@
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 发挥实验室： 布尔值
+          'Play Lab: Booleans': 游戏实验室： 布尔值
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
@@ -728,7 +728,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While循环
+          While Loops: 当循环
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -768,7 +768,7 @@
           title: Glenallan Career Day Demo
           description_short: Let's make some puzzles!
           description: Try out these fun coding puzzles. Do your best!
-          Puzzles: 谜题
+          Puzzles: 关卡
         ECSPD-NexTech:
           Introduction to PD: Introduction to PD
           What is ECS?: What is ECS?
@@ -863,7 +863,7 @@
           description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
-          Multi: 多
+          Multi: 多个
           Big Game: Big Game
           new stage: new stage
         sciencePD2:
@@ -916,7 +916,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: 互联网
+          The Internet: 每个人的互联网
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -974,8 +974,8 @@
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy Bird
-          Bounce: 跳
-          Multi: 多
+          Bounce: 弹跳
+          Multi: 多个
           Match: 匹配
           TextMatch: TextMatch
           CSinA: CSinA
@@ -1110,11 +1110,11 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: 编程一小时2015
+          title: 《编程一小时 2015》
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: 编程一小时
-          Hour of Code 2015: 编程一小时2015
+          Hour of Code 2015: 《编程一小时 2015》
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1275,10 +1275,10 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: 幸福地图
+          Happy Maps: 快乐地图
           Move it, Move it: 移动它，移动它
           'Real-life Algorithms: Plant a Seed': 真实算法： 播种一颗种子
-          Graph Paper Programming: 方格纸编程
+          Graph Paper Programming: 图纸上编程
           Building a Foundation: 打基础
           Getting Loopy: 越来越糊涂
           The Big Event: 大事件
@@ -1483,6 +1483,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1526,13 +1530,13 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 年龄 10-18 岁
+          description_audience: 10-18 岁
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 年龄 10-18 岁
+          description_audience: 10-18 岁
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
@@ -1575,7 +1579,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While循环
+          While Loops: 当循环
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1600,25 +1604,25 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: '星球大战: 建立一个充满代码的星系'
-          description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
-          description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
-          Hour of Code 2015: 编程一小时2015
+          title: '星球大战: 用代码来创造银河系。'
+          description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
+          description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
+          Hour of Code 2015: 《编程一小时 2015》
         starwarsblocks:
-          title: '星球大战: 建立一个充满代码的星系'
-          description_short: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
-          description: 学习如何对机器人编程，然后在一个遥远的星系中创造你自己的星球大战游戏。
-          Hour of Code 2015: 编程一小时2015
+          title: '星球大战: 用代码来创造银河系。'
+          description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
+          description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
+          Hour of Code 2015: 《编程一小时 2015》
         minecraft:
           title: 我的世界
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: 我的世界编程一小时
-          description_short: 用代码来探索Minecraft世界。
-          description: 使用代码块来让史蒂夫和亚历克丝在Minecraft的世界中探险
-          Hour of Code 2015: 编程一小时2015
+          title: 我的世界 编程一小时
+          description_short: 通过代码探索 我的世界 中的世界
+          description: 使用代码方块，带史蒂夫或艾莉克斯在 我的世界 的这个世界中，展开一场冒险
+          Hour of Code 2015: 《编程一小时 2015》
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges

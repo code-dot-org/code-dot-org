@@ -16,26 +16,22 @@ hero_student_girlsmile,widehero,homepage_hero_text_student4,41% 20%,student,bott
 hero_student_boycomputer,widehero,homepage_hero_text_student5,45% 31%,student,top,,,/images/homepage/boy3.jpg,both,nah,all
 hero_teacher_girl,widehero,homepage_hero_text_teacher1,24% 11%,teacher,bottom,,,/images/homepage/girl10.jpg,both,nah,all
 hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,teacher,bottom,,,/images/homepage/kids10.jpg,both,nah,all
-action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,code.org,show,en
-action_num_served,action,homepage_action_text_num_served,num_served,,,,,,code.org,show,en
-action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,show,en
-action_starwars_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,nah,en
-action_starwars_buttons_i18n,action,cded_sign_up,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,nah,not en
-action_hoc_title_i18n,action,homepage_slot_text_link_hoc,hoc_title,,,,,,code.org,show,not en
-action_num_served_i18n,action,homepage_slot_text_link_hocserved,num_served,,,,,,code.org,show,not en
-action_hoc_buttons_i18n,action,cded_sign_up,hoc_buttons,cded_try_it,https://hourofcode.com,/learn,,,code.org,show,not en
+action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,code.org,show,all
+action_num_served,action,homepage_action_text_num_served,num_served,,,,,,code.org,show,all
+action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,show,all
+action_starwars_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,nah,all
+action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,show,all
 action_codevideo,action,homepage_action_text_codevideo,video,2DxWIxec6yo,,,,,code.org,nah,all
-action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,en
-action_girlvideo_i18n,action,homepage_action_text_teachervideo,video,BvRvluhfzf0,,,,,code.org,show,not en
-action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,,,,csedweek.org,show,all
-action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,code.org,show,en
+action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,,,,,csedweek.org,show,all
+action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,all
+action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,code.org,show,all
 action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,all
 action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,show,all
 banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/,,,,,code.org,nah,all
 banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,/privacy,,,,,code.org,nah,en
 banner_hoc,banner,homepage_banner_text_prizes,homepage_banner_link_prizes,https://hourofcode.com,,,,,code.org,nah,all
 block_hoc_frozen,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_hoc.jpg,code.org,nah,en
-block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
+block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
 block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
 block_advocates,block,homepage_slot_text_title_advocates,homepage_slot_text_blurb_advocates,"185, 191, 21","209, 213, 103",/promote,,/shared/images/courses/logo_tall_map.jpg,code.org,show,en

@@ -105,6 +105,8 @@
         StudioEC: Jokoen Laborategia
         Applab: App laborategia
         NetSim: Internet simulagailua
+        Custom: Artista
+        CustomStudio: Jokoen Laborategia
     trophy:
       name:
         Bronze: Brontzea
@@ -542,62 +544,82 @@
           Mugiarazi gezien bidez beste guztiei abisatzeko
         studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
           zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_iceage_1: Mannyk "kaixo" esan nahi du - lagunduko diozu?
-        studio_iceage_2: Diegok (1. aktorea) eta Grannyk (2. aktorea) "kaixo" esan
-          nahi diote elkarri. Lagun diezaiekezu "esan" blokea bi aldiz erabiliz?
-        studio_iceage_3: Scrat lagundu dezakezu banderara iristen?
-        studio_iceage_4: Scrati (1. aktorea) lagundu diezaiokezu Grannyrengana (2.
-          aktorea) iristeko eta iristen denean soinu bat erreproduzitzeko?
-        studio_iceage_5: Lagundu diezaiokezu Sidi "agurrak" esaten klikatua denean?
-          Ez ahaztu klikatzeaz "Hasi" sakatu ondoren
-        studio_iceage_6: Lagundu diezaiokezu Diegori mugi dadin gora/behera/ezker/eskuin
-          gezi-teklak erabiliz, bandera guztiak har ditzan?
-        studio_iceage_7: '"Errepikatu betiko" blokeak ahalbidetzen dizu kodea etengabe
-          egikaritzea. Itsatsi bloke horri beste bloke batzuk Sid mugi dadin ezker-eskuin
-          etengabe'
-        studio_iceage_8: Gehitu dezakezu bloke bat puntu bat eskuratzeko eta beste
-          bloke bat soinu bat ateratzeko Sidek Manny harrapatzen duenean? Orduan,
-          mugi ezazu Sid gezi-teklen bidez, puntu bat lortu arte.
-        studio_iceage_9: Ezarri atzealde bat izotz-aldi honetarako eta lagundu Sidi
-          azkarrago joaten Grannyrenganaino, bere abiadura aldatuz. Orduan, mugi ezazu
-          Sid gezi-teklen bidez Grannyrenganaino iritsi eta beste guztiei abisua emateko.
-        studio_iceage_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
-          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_hello1: Sid-ek guztiak bildu nahi ditu abentura berri batean.
+          Lagundu diezaiokezu "kaixo" esaten, `esan` blokea lan-ermeuan arrastatu
+          eta barruan "kaixo" idatziz?
+        studio_iceage_hello2: Sid-ek (1 aktoreak) Manny (2 aktorea) topatu du eta
+          abenturara gonbidatu nahi du. Lagundu iezaiezu elkarri agurtzen "aktoreak
+          dio" blokea birritan erabiliz.
+        studio_iceage_move_to_flag: Scrat bere ezkurraren bila dabil! Lagundu iezaziozu
+          azken 200 pixeletan aurrera egiten "mugitu" blokea erabiliz.
+        studio_iceage_move_to_actor: Diego (1 aktorea) Manny-ren (2 aktorearen) bilda
+          dabil. Lagundu iezaiozu Diegori 200 pixel behera egiten Manny-rengana "mugitu
+          aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ikutzen
+          duenean" blokearekin elkar aurkitzen dutenean soinu bat jotzeko.
+        studio_iceage_repeat: '"errepikatu betirako" blokearen bidez zure kodea modu
+          jarraituan exekutatzen da. Elkartu al ditzakezu blokeak Granny-k ariketa
+          fisikoa egin dezan ezkerrera eta eskuinera etengabe mugituz?'
+        studio_iceage_click_hello: Lagundu al diezaiokezu Sid-i lagunei azkeneko deia
+          egiteko klik egiterakoan? Ez ahaztu klik egin behar duzula "Hasi" sakatu
+          ondoren.
+        studio_iceage_move_events: Scrat oraindik ezkurren bila dabil! Lagundu iezaiozu
+          noraezean ibiltzen "mugitu" blokea gertaera bakoitzari lotuz eta norabide
+          aldaketa eraginez gezidun tekla bakoitza sakatzerakoan, Amaitzen duzunean,
+          sakatu "Hasi" eta saiatu ezkur guztiak biltzen.
+        studio_iceage_sound_and_points: Granny ezker eta eskuinera mugitzeko, eta
+          Sid pantailan zehar mugitzeko behar den kode gehiena eman dizugu. Amaitu
+          dezakezu kodea eta "aktoreak ikutzen duenean" gertaerari blokeak gehitu,
+          Sid-ek eta Granny-k tupust egiten dutenean hots bat egin eta puntu bat eskuratzeko?
+          Sakatu Hasi jokatzeko.
+        studio_iceage_warn_ice_age: Guztiak mugitu behar dira azkar izotz aldia datorrelako!
+          Jarri "izozmendiak" atzealdea eta ezarri "Sid"-en abiadura azkarra, ondoren
+          sakatu Hasi eta mugitu Diegorengana jakinaren gainean jartzeko.
+        studio_iceage_throw_hearts: Sid-ek bere amona Granny-ri maite duela jakinarazi
+          nahi dio. Erabili "aktoreak bota" komandoa Sid-ek (1 aktoreak) Granny-ri
+          (2 aktoreari) bihotzak botatzeko! Ezarri Granny-ren aldartea onera bihotzekin
+          talka egiten duenean.
+        studio_iceage_free_play: Zure joko edo historioa sortzeko garaia! Amaitu duzunean,
+          sakatu "Amaitu" zure lagunei beraien telefono, tableta edo konputagailuetan
+          zure jokoa probatzeko aukera emateko!
+        studio_gumball_hello1: Anaisek lagun berriak egin nahi ditu. Lagundu diezaiokezu
+          "kaixo" esaten "esan" blokea arrastatuz lan eremura eta horren barruan "kaixo"
+          idazten?
+        studio_gumball_hello2: Darwin (1. aktorea) eta haren neba Gumball (2. aktorea)
+          eskolarako bidean doaz. Lagun iezaiezu elkarri agurtzen "aktoreak esan"
+          blokea bi aldiz erabiliz.
+        studio_gumball_move_to_flag: Banana Joe txango eguneko lasterketa irabazteko
+          zorian dago. Lagun iezaiozu azken 200 pixelak ibiltzen "mugitu" blokea erabiliz.
+        studio_gumball_move_to_actor: Gumball (1. aktorea) eta Darwin (2. aktorea)
+          berandu dabiltza txango egunerako. Lagun iezaiozu Gumballi 200 pixel hurbiltzen
+          Darwinengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke
+          bat "aktoreak ukitzean" gertaerari soinu bat ateratzeko bi aktoreak gerturatzen
+          direnean.
+        studio_gumball_repeat: '"errepikatu betirako" blokeak ahalbidetzen dizu kodea
+          etengabe exekutatzea. Beste bloke batzuk gehitu ditzakezu bloke horren barruan,
+          Gumballi laguntzeko lasterketarako beroketa ariketak egiten, etengabe ezker
+          eta eskuin mugitzen?'
+        studio_gumball_click_hello: Lagun diezaiokezu Antoni lasterketari hasiera
+          ematen "Gertu, adi, irten!"esanez? Zure programa probatzeko, ez ahaztu Antonen
+          gainean klikatu behar duzula "Hasi" sakatu ondoren!
+        studio_gumball_move_events: Darwin parte hartzen ari da banderak biltzeko
+          lehiaketan. Lagun iezaiozu korrika egiten "mugitu" blokea itsasten gertaera
+          bakoitzari. Bukatutakoan, klikatu "Hasi" eta saiatu bandera guztiak biltzen.
+        studio_gumball_sound_and_points: Eman dizugu Anton (2. aktorea) ezker-eskuin
+          mugitzeko behar den kode gehiena, eta baita Banana Joe (1. aktorea) pantailan
+          zehar mugitzeko behar dena ere. Kodea osatu dezakezu blokeak gehituz "aktoreak
+          ukitzean" gertaerari soinu bat erreproduzitzeko eta puntu bat eskuratzeko
+          Banana Joek eta Antonek talka egiten dutenean? Sakatu "Hasi" jolasteko.
+        studio_gumball_warn_food_fight: Darwinek ihes egin dio janariagatiko borroka
+          bati! Aldatu atzealdea "karaktereak" izan dadin eta ezarri Darwinen abiadura
+          azkarra izan dadin. Orduan, sakatu "Hasi" eta mugitu Darwin Pennyrengana,
+          honi abisatzeko.
+        studio_gumball_join_food_fight: Batu zaitez janariagatiko borrokara! Erabili
+          "aktoreak zerbait bota eskuinetik" agindua Banana Joek (1. aktorea) janaria
+          bota diezaiola Antoni (2. aktorea). Aldatu Antonen aldartea haserre egon
+          dadin janariak bere kontra jotzen duenean.
+        studio_gumball_free_play: Sortu zure joko edo istorio propioa. Bukatutakoan,
+          klikatu "Amaiera" zure lagunek probatu ahal izan dezaten zure jokoa haien
+          telefono, tablet edo ordenagailuetan!
         studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
           zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
         studio_k1_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
@@ -739,6 +761,9 @@
         infinity_playlab_intro: Jolas Laborategia - Sarrera
         infinity_playlab_events: Jolas Laborategia - Gertaerak
         infinity_playlab_repeat_forever: Jolas Laborategia - "Errepikatu Betirako"
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -793,9 +818,12 @@
         mc_if_statements: Minecraft - Baldintzapeko aginduak
         mc_congrats_share: Minecraft - Zorionak
         mc_congrats_no_share: Minecraft - Zorionak
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        gumball_intro: Gumballen Kode Ordua - Sarrera
+        gumball_events: Gumballen Kode Ordua - Gertaerak
+        gumball_repeat: Gumballen Kode Ordua - "errepikatu" aginduak
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

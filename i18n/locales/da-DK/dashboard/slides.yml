@@ -1353,56 +1353,56 @@ da:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: Hej, jeg er Kathleen Kennedy og jeg er producer på Star Wars, The Force Awakens. I dag skal du arbejde med en af vores stjerner, BB-8. BB-8 er en sfærisk droid. Alt, hvad han gør og hver bevægelse, som han gør styres af computerprogrammer. Computere påvirker alle brancher, fra markedsføring til sundhedspleje til film. Faktisk arbejdede hundredvis af computer ingeniører, sammen om at lave en film som The Force Awakens.
       2:
         image: notes/starwars_intro_2.JPG
-        text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
+        text: 'Hej jeg er Rachel Rose, jeg er en senior R&D ingeniør på ILM og jeg leder animation og væsen udviklingsteamet. I The Force Awakens, er jeg ansvarlig for at hjælpe kunstnere udvikle rigge, som er de dele af karakteren, som bevæger sig for at se meget troværdig ud i en galakse langt langt væk.'
       3:
         image: notes/starwars_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game. We'll teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so that we can drag and drop to write the programs. Under the hood, you're still creating code. After you try the basics with blocks, we'll switch you to JavaScript, one of the most popular programming languages on the web."
+        text: I den næste time vil vi bygge vores egen Star Wars spil. Vi vil lære dig de grundlæggende begreber i programmering. Normalt er programmering kun tekst, men vi vil bruge blokke her, så vi kan trække og slippe for at lave programmer. Under kølerhjelmen opretter du stadig kode. Når du har prøvet det grundlæggende med blokke, vil vi skifte til JavaScript, en af de mest populære programmeringssprog på nettet.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: Til at starte med, vil vi arbejde med Rey for at programmer BB-8 til at gå rundt og indsamle alle skrot delene. Skærmen er opdelt i tre dele. Til venstre er Star Wars spillerum, hvor koden kører. Instruktioner til hvert niveau er skrevet under spillerummet.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Denne miderste område er værktøjskassen og hver af disse blokke er en kommando, som BB-8 kan forstå.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Det tomme område til højre kaldes arbejdsområdet og det er hvor vi skal bygge vores program.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: Hvis jeg trækker moveLeft(); blok til vores arbejdsområde og tryk køre, hvad sker der så? BB-8 bevæger sig en trin til venstre på nettet.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: Og hvad hvis jeg vil have BB-8 til at gøre noget efter moveLeft(); blokken? Jeg kan tilføje en anden blok til vores program. Jeg vil vælge moveUp(); blokken, og jeg vil trække det under mit moveLeft(); blok indtil den lyser op. Derefter slipper jeg den og de to blokke vil klikke sammen.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Når jeg trykker på Kør igen, vil BB-8 udføre de kommandoer, der er stablet fra top til bund på vores arbejdsområde. Hvis du nogensinde vil slette en blok, kan du bare fjerne den fra stakken og trække den tilbage i værktøjskassen.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Efter du har trykket Kør, kan du altid trykke på nulstillingsknappen for at få BB-8 tilbage til start. Lad os nu rulle!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        text: Inden i de blokke vi har brugt er JavaScript-kommandoer. JavaScript er det mest populære programmeringssprog til professionelle udviklere i dag. Blokke er en fantastisk måde at komme i gang med at lære at kode og faktisk har top-universiteter som Berkeley og Harvard startet undervisning på denne måde. Men når vi har lært det grundlæggende, skriver programmørere kode ved at skrive fordi det er hurtigere.
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Vi kan skrive hundredvis af kommandoer uden at skulle finde dem i værktøjspanelet eller trække dem. Fordi du er ved at lære at skrive kan være langsommere, men vi vil prøve at give det en chance.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: I det øverste højre hjørne på din arbejdsplads, kan du klikke på knappen Vis tekst på hver puslespil at skifte fra blokke til at skrive koden som tekst.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: I næste lektion vil du starte i at skrive tilstand. Her kan du stadig trække blokken fra værktøjskassen eller du kan skrive kommandonavnet. Når du begynder at skrive, vil du se navne på mulige kommandoer vist nedenfor, hvor du skriver. I stedet for at skrive kommandonavnet helt ud, kan du vælge en af disse for at det går hurtigere. I mit job, jeg bruger denne auto-fuldføre funktion hele tiden når jeg skriver kode.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Når du skriver kode, har computeren brug for at du er meget præcis. Du skal stave og skrive kommandonavnet hel korrekt, herunder parenteser og semikolon. Selv med en lille skrive fejl, kan BB-8 ikke forstå koden og vil ikke være i stand til at flytte.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Når du laver en fejl på linjen, fremhæver programmet det for dig så at du kan prøve at ændre din tekst for at rette det.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Hvis du sidder fast, kan du altid starte forfra med start knappen og du kan skifte tilbage til bloktilstand når som helst ved at klikke i øverste højre hjørne. Ok, lad os prøve at skrive! Og hvis du laver fejl, blive ikke frustreret. Alle bruger et par forsøg for at få det rigtige.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -1462,7 +1462,7 @@ da:
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Denne miderste område er værktøjskassen og hver af disse blokke er en kommando, som BB-8 kan forstå.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."
@@ -1519,104 +1519,101 @@ da:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "Jeg hedder Jens Bergensten, men er mere kendt som Jeb. Jeg er chefudvikler på Minecraft her hos mojang. com. Jeg tror jeg var 11 eller måske 12, da jeg startede med at programmere, fordi jeg ville lave spil. En af min fars venner fortalte mig, at for at lave spil skal man lære at programmere. Så det var sådan jeg fik begyndt. Jeg kan lide at designe og finde ud af hvordan ting er bygget op. Det er det jeg rigtig godt kan li' ved Minecraft."
+        text: Jeg hedder Jens Bergensten, men jeg er bedre kendt som Jeb. Jeg er Lead Developer på Minecraft her hos Mojang i Stockholm. Jeg tror, at jeg var 11 eller måske 12, da jeg begyndte at programmere for at lave spil. En af min fars venner fortalte mig, at jeg skulle lære at programmere, hvis jeg ville lave spil. Så derfor kom jeg i gang. Jeg elsker at designe og planlægge opbygningen af spil. Det er det, jeg elsker ved Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: I den næste times tid skal du lære det grundlæggende i programmering, ved at kode Alex eller Steve til at flytte sig rundt i et simuleret stykke af en Minecraft verden.
+        text: I løbet af den næste time vil du lære grundlæggende datalogi ved at programmere Alex eller Steve, så de bevæger sig gennem en simuleret del af Minecrafts verden.
       3:
         image: notes/mc_intro_3.JPG
-        text: 'Normalt er programmering en masse tekst, men i dag vil vi bruge Blockly: et system som bruger blokke, som du kan trække og slippe, for at skrive programmer. I virkeligheden skriver du JavaScript-kode.'
+        text: 'Normalt programmerer man med tekst, men i dag bruger vi blockly: et system, der bruger blokke, som du kan trække og slippe for at lave programmer. Bag blokkene skaber du JavaScript-kode.'
       4:
         image: notes/mc_intro_4.JPG
-        text: Begreberne du skal lære er de samme som programmører bruger hver eneste dag, og er grundlaget for al programmering. Hos Mojang bruger vi de samme begreber, for at få Minecraft til at fungere.
+        text: De ting, du lærer, er nogle af de redskaber, som programmører bruger til daglig, og som udgør programmeringens fundament. Her hos Mojang bruger vi de samme principper for at få Minecraft til at fungere.
       5:
         image: notes/mc_intro_5.JPG
-        text: Før du begynder, skal du vælge din spiller. Jeg vælger Alex. Lad os bygge noget kode, som kan flytte hende rundt på skærmen.
+        text: Inden du går i gang, skal du vælge en figur. Jeg vælger Alex. Lad os bygge et program, der får hende til at bevæge sig rundt på skærmen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Din skærm er delt op i tre områder. Til venstre er Minecraft-spilområdet, hvor din kode vil køre. Der er en vejledning til hver opgave lige nedenfor.
+        text: Din skærm er delt op i tre områder. På venstre side ser du Minecraft-spilområdet, hvor programmet kører. Instruktionerne for hvert niveau står nedenfor.
       7:
         image: notes/mc_intro_7.JPG
-        text: I midten af skærmen er værktøjskassen, hvor hver blok er en kommando som får Alex til at udføre bestemte handlinger.
+        text: "I området i midten finder du værktøjskassen, og hver af blokkene udgør kommandoer, der styrer Alex' handlinger."
       8:
         image: notes/mc_intro_8.JPG
-        text: Det hvide område til højre er arbejdsområdet, hvor vi opbygger vores programmer.
+        text: Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program.
       9:
         image: notes/mc_intro_9.JPG
-        text: 'Hvis vi trækker en moveForward()-blok til arbejdsområdet, og så klikker på "Kør", hvad sker der mon så? Alex flytter et felt frem i spilområdet.'
+        text: 'Hvad sker der mon, hvis vi trækker "ryk fremad"-blokken hen til vores arbejdsområde og klikker på Kør? Alex bevæger sig et felt frem på feltnettet.'
       10:
         image: notes/mc_intro_10.JPG
-        text: 'Og hvis vi vil gøre mere bagefter? Så kan vi bare tilføje en blok mere til vores program. Jeg vælger turnRight()-blokken og trækker den hen under min moveForward()-blok indtil jeg kan se den orange markering. Så slipper jeg og de to blokke hænger sammen. Når vi trykker på "Kør" igen, vil Alex udføre alle kommandoerne i arbejdsområdet - fra top til bund.'
+        text: 'Men hvad nu, hvis vi gerne vil have hende til at gøre noget, når hun er gået et felt frem? Vi kan føje andre blokke til vores program. Jeg vælger "drej til højre"-blokken, og jeg trækker den ned under min "ryk fremad"-blok, indtil den orange linje dukker op. Så slipper jeg den, og de to blokke klikker sammen. Når jeg klikker på Kør igen, udfører Alex de handlinger, der er stablet fra øverst til nederst i vores arbejdsområde.'
       11:
         image: notes/mc_intro_11.JPG
-        text: Og hvis du får brug for at slette en blok, så træk den bare tilbage i værktøjskassen.
+        text: Hvis du vil slette en blok, skal du bare trække den ud af stakken og over i værktøjskassen.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'Hvis du vil fortryde og starte forfra, kan du bruge "Start forfra"-knappen øverst til højre i arbejdsområdet. Én ting mere: Kan du se den lille trekant på "drej"-blokkene? Når du ser sådan en trekant, kan du vælge mellem flere muligheder. Lad os komme i gang med at kode!'
+        text: 'Hvis du vil fortryde dine ændringer og nulstille banens udformning, skal du trykke på Start forfra-knappen i øverste højre hjørne i arbejdsområdet. Lige en ting til: Kan du se den lille trekant på drej-blokkene? Trekanterne symboliserer, at du kan vælge noget andet. Lad os komme i gang med at kode!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: 'Jeg hedder Lydia Winters - Mojangs brand director - og vi har lavet et lille spil, som hedder Minecraft.'
+        text: Jeg hedder Lydia Winters, og jeg er Mojangs Brand Director – og vi har lavet et lille spil, der hedder Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "Det jeg bedst kan li' i Minecraft er at udforske. Jeg elsker at gå på eventyr i huler og se hvad jeg kan finde. Som en der ikke selv er programmør, synes jeg det er vildt spændende at prøve Minecraft-øvelserne og faktisk lære lidt programmering selv."
+        text: Min yndlingsbeskæftigelse i Minecraft er at gå på opdagelse. Jeg elsker at tage på eventyr i huler for at se, hvad jeg kan finde. Jeg er ikke programmør, og derfor er det spændende for mig at prøve Minecraft-lektionerne, så jeg selv kan lære at programmere.
       3:
         image: notes/mc_repeat_3.JPG
-        text: 'Den sidste øvelse krævede masser af "flyt fremad"-blokke. Det ville være lettere hvis vi blot kunne fortælle computeren at den skullle udføre "flyt fremad"-kommandoen fire eller fem gange. Heldigvis er computere rigtig gode til at gentage kommandoer med "gentag"-løkker.'
+        text: 'I den forrige lektion skulle vi bruge masser af "ryk fremad"-blokke. Det ville være nemmere, hvis vi bare kunne fortælle computeren, at den skulle blive ved med at bruge "ryk fremad"-kommandoen fire eller fem gange. Heldigvis er computere rigtig gode til at gentage kommandoer med gentagelsessløjfer.'
       4:
         image: notes/mc_repeat_4.JPG
-        text: |-
-          Når vi bygger i Minecraft, bruger vi "gentag"-løkker til at placere alle materialerne der skaber en ny verden. Det er tusindvis af blokke. Vi bruger også løkker i andre sammenhænge - for eksempel til at få Alex' fødder til at bevæge sig frem og tilbage, når hun går. "Gentag"-løkker er en vigtig del af programmering.
+        text: "Når vi skaber verdener i Minecraft, bruger vi gentagelsessløjfer til at placere materialerne i omgivelserne med. Det er tusindvis af blokke. Vi bruger også sløjfer til mindre opgaver – fx for at få Alex' fødder til at bevæge sig frem og tilbage, når hun går. Gentagelsessløjfer er en effektiv del af programmering."
       5:
         image: notes/mc_repeat_5.JPG
-        text: 'Det er ved at blive aften, så i de næste øvelser skal vi bygge et hus, som vi trygt kan overnatte i. Vi vil bruge "gentag"-blokken til at gøre det meget let.'
+        text: Natten er ved at falde på, og i de næste par lektioner lærer vi at bygge et sikkert hus. Vi bruger gentag-blokken for at gøre det nemt.
       6:
         image: notes/mc_repeat_6.JPG
-        text: |
-          For at bygge en væg på huset, kan vi enten bede Alex om at flytte fremad og sætte en planke fire gange, eller vi kan bede hende om at flytte fremad og sætte en planke, og så gentage denne kommando flere gange ved hjælp af "gentag"-blokken. Nu klikker vi på "gentag"-blokken og fortæller hvor mange gange vi vil ha' hende til
-          at gentage handlingen. Lad os få bygget det hus, før det bliver mørkt! God fornøjelse.
+        text: 'Hvis vi skal have Alex til at bygge en væg til vores hus, kan vi enten bruge "ryk fremad"-blokken og placere planker fire gange, eller vi kan bruge "ryk fremad"-blokken, og få hende til at udføre handlingen flere gange. Nu klikker vi på gentag-blokken og fortæller hende, hvor mange gange hun skal udføre handlingen. Lad os så bygge dit hus, inden natten falder på! God fornøjelse.'
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: 'Nu skal vi lære om "hvis"-sætninger. "Hvis"-sætninger er en fundamental del af at lære at programmere. De hjælper computere med at træffe beslutninger.'
+        text: Nu skal vi lære noget om hvis-erklæringer. Hvis-erklæringer er et af de grundlæggende elementer af programmering. De hjælper computeren med at træffe beslutninger.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: 'Alle computere bruger "hvis"-sætninger, også min telefon. For eksempel, når jeg låser min telefon op, bliver der kørt noget kode som siger, at hvis jeg skriver den rigtige adgangskode, så lås telefonen op. Ellers skal den vise en fejl-meddelelse.'
+        text: Alle computere bruger hvis-erklæringer, fx min telefon. Hvis jeg vil låse op for min telefon, afvikler den et program, der kræver, at jeg indtaster min adgangskode korrekt, før telefonen bliver låst op. Ellers viser den en fejlmeddelelse.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: 'Du kan bruge "hvis"-sætninger i din kode for at få Steve og Alex til at reagere på hvad de ser undervejs. Hvis der for eksempel er en sten foran dem, kan de dreje til venstre. Eller dreje til højre, hvis de løber ind i et træ.'
+        text: Du kan bruge hvis-erklæringer i din kode for at få Steve og Alex til at reagere på det, de ser i omgivelserne. Hvis der fx ligger en sten foran dem, kan de lære at gå til venstre. Eller de kan gå til højre, hvis de går ind i et træ.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: Her vil vi gerne undgå at de falder ned i lavaen. Det er let at undgå lavaen. Vi kan se den på skærmen. Men hvad med den lava som vi ikke kan se under jorden?
+        text: I dette tilfælde skal vi undgå at falde ned i lavaen. Det er nemt at lægge en plan for lavaen. Vi kan se den på skærmen. Men hvad med den lava vi ikke kan se under stenene?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: 'Efter vi har udgravet stenen, blive vi nødt til at tjekke om der er lava under før vi flytter fremad. Hvis der er lava, vil vi sætte brosten før vi går videre. På den måde kan vi komme sikkert fremad. Tid til at grave videre! Og husk at brug en "hvis"-sætning til at komme sikkert videre.'
+        text: Når vi har udvundet stenene, skal vi undersøge, om der er lava på det sted, vi skal hen, inden vi fortsætter. Hvis der er lava derhenne, skal vi placere en sten foran vores figur, inden vi rykker fremad. Dermed kan vi roligt gå videre. Nu skal vi udvinde materialer! Og husk at bruge hvis-erklæringen, så du ikke kommer til skade.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Tillykke! Du har lært om de grundlæggende byggeblokke i programmering.
+        text: Tillykke! Du har lige lært grundlæggende programmering.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: 'Nu kan du bruge dem til at bygge dit eget mesterværk. Der er ikke flere instruktioner og øvelser at løse. Du kan bygge lige hvad du har lyst til - det er dit valg.'
+        text: Nu kan du bruge blokkene for at lave dine egne programmer. Der er ikke flere instruktioner eller hovedbrud, som du kan løse. Du kan bygge lige, hvad du vil. Du bestemmer.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[elever taler] Nu bliver det rigtigt. Jeg har lavet et L ud af fakler. Jeg har lavet et A af birkeplanker. Det virker, det virker. Vi har bygget et hus af uld!'
+        text: '[eleverne snakker] Nu er det alvor. Klip. Jeg lavede et L ud af fakler. Jeg lavede et A ud af birketræsplanker. Det virkede. Vi byggede et hus af uld!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: Når du er færdig med at bygge, kan du vælge at dele et link med dine venner. God fornøjelse!
+        text: Når du er færdigt med dit program, kan du vælge Del for at dele et link med dine venner. God fornøjelse!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Tillykke! Du har lært om de grundlæggende byggeblokke i programmering.
+        text: Tillykke! Du har lige lært grundlæggende programmering.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: 'Nu kan du bruge dem til at bygge dit eget mesterværk. Der er ikke flere instruktioner og øvelser at løse. Du kan bygge lige hvad du har lyst til - det er dit valg.'
+        text: Nu kan du bruge blokkene for at lave dine egne programmer. Der er ikke flere instruktioner eller hovedbrud, som du kan løse. Du kan bygge lige, hvad du vil. Du bestemmer.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[elever taler] Nu bliver det rigtigt. Jeg har lavet et L ud af fakler. Jeg har lavet et A af birkeplanker. Det virker, det virker. Vi har bygget et hus af uld!'
+        text: '[eleverne snakker] Nu er det alvor. Klip. Jeg lavede et L ud af fakler. Jeg lavede et A ud af birketræsplanker. Det virkede. Vi byggede et hus af uld!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Nu kan du bygge lige hvad du vil. God fornøjelse!
+        text: Nu kan du bygge lige, hvad du vil. God fornøjelse!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1635,7 +1632,7 @@ da:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: Det hvide område til højre er arbejdsområdet, hvor vi opbygger vores programmer.
+        text: Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program.
       7:
         image: notes/gumball_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
@@ -1669,4 +1666,57 @@ da:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

@@ -479,6 +479,9 @@
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Kailangan mo ba ng tulong?
     subtitle: See these videos and hints
@@ -724,7 +727,7 @@
     really_delete: I-delete?
     delete_yes: Oo
     delete_no: Hindi
-    saved: Saved
+    saved: Na-save sa gallery!
     not_saved: Not saved
     cancel: Kanselahin
     delete_confirm_title: Are you sure you want to delete this project?

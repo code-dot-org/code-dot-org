@@ -404,6 +404,9 @@ bn:
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -460,7 +463,7 @@ bn:
       unused: Unused Levels
   upsell:
     hoc:
-      title: এক ঘন্টার কোড
+      title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -563,7 +566,7 @@ bn:
           title: টুকরো কাঠের ধাঁধা
           description: ""
         step:
-          title: Step
+          title: ধাপ
           description: ""
         sample_level_builder:
           title: Sample Level Builder
@@ -608,7 +611,7 @@ bn:
     really_delete: বাদ দিবেন কি?
     delete_yes: '"হ্যাঁ"'
     delete_no: না
-    saved: Saved
+    saved: গ্যালারিতে সংরক্ষিত!
     not_saved: Not saved
     cancel: বাতিল করুন
     delete_confirm_title: Are you sure you want to delete this project?

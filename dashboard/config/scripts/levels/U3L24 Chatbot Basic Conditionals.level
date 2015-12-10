@@ -157,7 +157,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "oRwLxe1APtXYaxbs1GlVTk9dh7Olzg/SNbSlUlYYtkvFMEB4XY33tBQCiMdK\nbS+nhRtlrEM4dU/IYN7noYD6fW3qzymFPc1UG4fK07ocjbAD0mfiGw1PyOhU\nhqBjNX95oibyvJ1Elb1olVUah+RP2RCrLwjyY7fv4p7GqoCcbco=\n"
   }
 }]]></config>
   <blocks/>

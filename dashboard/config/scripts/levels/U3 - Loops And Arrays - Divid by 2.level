@@ -37,7 +37,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Divide every value in the array by 2. (Click to see full instructions)",
-    "markdown_instructions": "# Divide by 2\r\n\r\nIn the last exercise you updated every element in an array using a for loop. Let's get a little bit more practice with the pattern you used in the last exercise, this time creating the loop yourself.\r\n\r\n# Do This\r\n**Starter code** is provided which creates an array of random values\r\n\r\n* Create a for loop that **iterates over every index in the array**\r\n* Within your loop add code that **divides each value in the array by 2**\r\n* Use the provided `console.log` statements to **confirm your program runs as expected**. Below is an example of the expected outcome.\r\n\r\n![](https://images.code.org/04b09b795c30313c67b2242f1773b2f6-image-1447795598583.26.21 PM.png)",
+    "markdown_instructions": "# Divide by 2\r\n\r\nIn the last exercise, you updated every element in an array using a `for` loop. Let's get a little bit more practice with the pattern you used in the last exercise, this time creating the loop yourself.\r\n\r\n# Do This:\r\n**Starter code** is provided which creates an array of random values.\r\n\r\n* Create a `for` loop that **iterates over every index in the array**.\r\n\r\n* Within your loop, add code that **divides each value in the array by 2**.\r\n\r\n* Use the provided `console.log` statements to **confirm your program runs as expected**. Below is an example of the expected outcome.\r\n![](https://images.code.org/04b09b795c30313c67b2242f1773b2f6-image-1447795598583.26.21 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -67,7 +67,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original Array: \" + myArray);\r\n\r\n// You code goes here\r\n\r\nconsole.log(\"Final Array: \" + myArray);"
+    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original Array: \" + myArray);\r\n\r\n// You code goes here\r\n\r\nconsole.log(\"Final Array: \" + myArray);",
+    "encrypted_examples": "MauTtk4pBGuxoUpu9PqOFA/gVZujO1Xu/tprQ3YQkU3LNacGt7zrZMEbViYE\n6u48\n"
   }
 }]]></config>
   <blocks/>

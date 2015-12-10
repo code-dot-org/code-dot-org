@@ -31,12 +31,12 @@ ca-ES:
   hoc2014_support: 'Doneu-li suport &#x25BE;'
   hoc2014_whatishoc: "Què és l'Hora del Codi?"
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_signup: Registra el teu esdeveniment
+  csedweek_map_search_placeholder: "Cerca events de l'Hora del Codi"
+  csedweek_map_search_search: Cerca
   csedweek_map_search_reset: Reiniciar
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_title: Llegenda
+  csedweek_map_legend_event: "Event de l'Hora del Codi"
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: "Inscriure's"
   cded_try_it: Proveu-ho
@@ -57,14 +57,15 @@ ca-ES:
   thank_you_: Gràcies!
   congratulations: Felicitats!
   congratulations_on_completing_hoc: Felicitats per completar una Hora de Codi
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  congratulations_volunteer: |-
+    Felicitacions: ara que has provat l'Hora del Codi, <a href="https://code.org/volunteer"> registra't com a voluntari en una aula</a> i ajuda els alumnes a aprendre una Hora del Codi!
   course_name_accelerated: Curs Accelerat
   course_name_course1: Curs 1
   course_name_course2: Curs 2
   course_name_course3: Curs 3
   course_name_course4: Curs 4
-  congratulations_on_completing_course: 'Congratulations on completing %{course}'
-  congrats_next_tutorials_title: Try these tutorials next
+  congratulations_on_completing_course: 'Enhorabona per completar %{course}'
+  congrats_next_tutorials_title: Prova els següents tutorials
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: "Aconseguiu el certificat d'assoliment"
   enter_valid_age: Sisplau, tria una edat vàlida
@@ -193,21 +194,21 @@ ca-ES:
   homepage_slot_text_course4: Curs 4
   homepage_slot_text_shop: Botiga
   homepage_slot_text_flappy: Codi Flappy
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Una Hora del Codi per a cada alumne.
   homepage_action_text_num_served: '# servit'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Uneix-te
   homepage_action_text_sign_up: "Inscriure's"
   homepage_action_text_try_it: Proveu-ho
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Es busquen tècnics voluntaris
   homepage_action_text_codevideo: Mira el vídeo
   homepage_action_text_teachervideo: Mira el vídeo
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Inspira a una noia
   homepage_action_text_learn: Comença a aprendre
   homepage_action_text_signpetition: Signa la petició
   homepage_signpetition_dropdown: "Estic d'acord &#x25BE;"
   homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: "L'Hora del Codi s'acosta de nou, del 7 al 13 de desembre. "
+  homepage_banner_link_prizes: "Uneix-te a l'esdeveniment d'aprenentatge més gran de la història. "
   homepage_banner_text_main: Code.org i el College Board formen una aliança per millorar la diversitat en informàtica.
   homepage_banner_text_link: Aprèn més
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -217,7 +218,7 @@ ca-ES:
   homepage_slot_text_link_hoc: "Proveu l'Hora de programació"
   homepage_slot_text_link_host: "Amfitrió d'una hora de codi"
   homepage_slot_text_link_hocserved: '# servit'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: "Voluntari per a l'Hora del Codi"
   homepage_slot_text_title_students: Alumnes
   homepage_slot_text_blurb_students: Explora tots els nostres tutorials
   homepage_slot_text_link_codestudio: Prova el Code Studio
@@ -275,30 +276,35 @@ ca-ES:
   class_submission_level_vocational: Formació professional
   class_submission_languages_other: Altres idiomes
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Clàssic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_specs: Només en anglès | Navegadors moderns | Edats 11 +
   starwars_javascript_start_button: Intenteu-ho ara
   starwars_blocks_title: Blocs
   starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Intenteu-ho ara
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: "Abans de començar, mira un d'aquests vídeos d'inspiració"
+  starwars_speak_languages: Parles una altra llengua?
+  starwars_help_translate: "Ajuda'ns amb les traduccions"
   starwars_platform_text: Navegadors moderns, mòbils i tablets
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_name: Hora del Codi de Minecraft
+  mc_longdescription: "Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft."
+  mc_shortdescription: "Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft."
+  mc_gradelevel: Edat 4-104
   mc_platformtext: Navegadors moderns, mòbils i tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  minecraft_subtitle: Hora del Codi de Minecraft
+  volunteer_engineer_submission_title: "Inspira alumnes i voluntaris per a l'Hora del Codi."
+  volunteer_engineer_submission_subtitle_generic: '100.000 professors organitzaran una Hora del Codi a la seva aula enguany, del 7 al 13 de desembre de 2015. Ells volen la teva ajuda! '
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} mestres volen voluntaris apassionats de l'educació de les ciències de la informàtica per ajudar amb la seva Hora del Codi aquest mes de desembre. <br>%{num_volunteers} voluntaris ja s'han inscrit. Uneix-te a ells."
+  volunteer_engineer_submission_intro_background: "L'hora de codi és un moviment global per provar una introducció d'una hora a la informàtica, arribar a desenes de milions d'alumnes en és de 180 països. Si us plau, involucra't durant la setmana de l'educació en la informàtica, del 7 al 13 de desembre."
   volunteer_engineer_submission_intro_recruit: |-
     These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
@@ -542,6 +548,7 @@ ca-ES:
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació
@@ -569,17 +576,22 @@ ca-ES:
   carousel_heading_international: Tutorials en el teu idioma
   carousel_heading_domestic: Tutorials disponibles en anglès
   carousel_heading_beginners: Tutorials per a principiants
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials que ensenyen Javascript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Cap dispositiu o sense connexió a internet? Intenta informàtica "sense connexió"'
   carousel_heading_devices: "Tutorials d' aplicacions per a telèfons i tablets"
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials en altres llenguatges de programació
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Fes les teves pròpies apps o jocs
   carousel_heading_university: Cursos universitaris en línia
   carousel_heading_webpages: Aprèn a fer pàgines web
   carousel_heading_robots: Aprèn a programar amb robots
   carousel_heading_ide: Plataformes populars entre professors
   educator_notes: "Notes d'educador"
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Teacher Led Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Com ensenyar una Hora de Codi
   more_resources_educators: Més recursos per a mestres i educadors
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -594,8 +606,8 @@ ca-ES:
   mobile_devices: Tutorials per a dispositius mòbils
   frozen_name: Codi amb Anna i Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: "Escriu el teu primer programa d'ordinador"
-  codeintl_name: "Escriu el teu primer programa d'ordinador"
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Una introducció a JavaScript
   khanes_name: Una introducció a JavaScript
@@ -631,10 +643,17 @@ ca-ES:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, Paper, tisora
-  hourofcode_name: Contenidor per al nou code.org/hoc
+  hourofcode_name: Classic Maze
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artista
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -674,10 +693,17 @@ ca-ES:
   projguts_gradelevel: Edats de 10-13
   hourofcode_gradelevel: Edat 4-104
   frozen_gradelevel: Edat 8 +
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Edat 4-104
   playlab_gradelevel: Edat 4-104
   infinity_gradelevel: Edat 4-104
-  artist_gradelevel: Edat 4-104
+  artist_gradelevel: Edat 8 +
+  monstercoding_gradelevel: Edats 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Primària
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
   thinkersmithspanish_platformtext: Sense connexió
@@ -719,6 +745,13 @@ ca-ES:
   frozen_platformtext: Navegadors moderns + tablets
   starwars_platformtext: Navegadors moderns + tablets
   playlab_platformtext: Navegadors moderns, mòbils i tablets
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Navegadors moderns
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Navegadors moderns
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Navegadors moderns, mòbils i tablets
   codeorg_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   codeintl_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -762,6 +795,13 @@ ca-ES:
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
   infinity_shortdescription: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
   artist_shortdescription: "Dibuixar imatges estupendes i dissenys amb l'artista!"
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   codeintl_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -805,6 +845,13 @@ ca-ES:
   frozen_longdescription: "Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!"
   starwars_longdescription: "Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana."
   playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals, pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions i fins i tot llançar boles de foc!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Introducció a la programació (ESO)
   khan_beyond_name: Aprèn programació informàtica
   tynker_beyond_name: Aprendre programació des de casa
@@ -994,11 +1041,11 @@ ca-ES:
   compatibility_https_header: Si us plau accepta HTTPS per a Code.org.
   compatibility_https_message: "Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'> feu clic aquí</a> per aprendre com permetre HTTPS per Code.org."
   compatibility_https_hide_this_warning: Amaga aquest avís
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: aleteig
   infinity_shortcode: inf
-  playlab_shortcode: reprodueix
+  playlab_shortcode: lab
   artist_shortcode: art

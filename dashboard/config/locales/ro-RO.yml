@@ -43,7 +43,7 @@
   more: MAI MULT
   less: MAI PUŢIN
   beta: beta
-  try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
+  try_hoc: 'Încearcă Ora de Programare, faceți clic aici >> '
   try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
   already_started: Ai început deja? Rezumă aici >>
@@ -115,7 +115,7 @@
     submit: Loghează-te
   signin:
     try_heading: Dorești să încerci să programezi fără a te înregistra?
-    try_hoc: Încearcă prima dată o Oră de Cod
+    try_hoc: Încearcă prima dată o Oră de Programare
     try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
   signinsection:
     welcome: Bine ai venit la %{section_name}
@@ -263,7 +263,7 @@
     access_denied: Nu ai acces la această %{model}.
   nav:
     header:
-      finished_hoc: Am terminat Ora mea de Cod
+      finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
         playlab: Creează o aplicație
@@ -435,7 +435,7 @@
     try_beta_courses: Nou! Încearcă cursurile noastre beta pentru elevi de clasele
       1-5
     use_as_teacher: Foloseşte acest site în calitate de profesor
-    heading_hoc2014: <h2>Ora de Cod pentru</h2><h1>toate vârstele</h1>
+    heading_hoc2014: <h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>
     heading_elementary: <h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>
     heading_apps: <h2>Distracţie pentru</h2><h1>Toată lumea</h1>
     heading_legacy: <h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>
@@ -484,6 +484,9 @@
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
     report_abuse: Raportează abuz
+    built_on_code_studio: Construit pe Code Studio
+    make_my_own_app: Realizeaza propria mea aplicatie
+    how_it_works: Cum funcționează
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
@@ -553,7 +556,7 @@
       unused: Niveluri neutilizate
   upsell:
     hoc:
-      title: Oră de Cod
+      title: Oră de Programare
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
     flappy:
       title: Codul Flappy
@@ -567,7 +570,7 @@
       body_short: Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor
         2-4.
     hoc2014:
-      try_new_tutorial: Încearcă noul nostru tutorial Ora de programare în versiune
+      try_new_tutorial: Încearcă noul nostru tutorial Ora de Programare în versiune
         beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
     gallery:
@@ -657,7 +660,7 @@
             şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
-          title: Ora de cod 2013
+          title: Ora de Programare 2013
           description: '[șir gol]'
         edit-code:
           title: Editează Codul

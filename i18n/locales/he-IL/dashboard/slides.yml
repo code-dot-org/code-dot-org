@@ -1363,28 +1363,29 @@ he:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'הי, שמי קתלין קנדי ואני המפיקה של הסרט "מלחמת הכוכבים: הכח מתעורר". היום תעבדו עם אחד הכוכבים שלנו, BB-8. BB-8 הוא דרואיד כדורי, כל תנועה שלו נשלטת על ידי תוכנת מחשב. מדעי המחשב משפיעים על כל התעשיות החל משיווק, דרך רפואה ועד לקולנוע. למעשה, מאות מהנדסי תוכנה עבדו ביחד ליצור את הסרט "הכח מתעורר".'
       2:
         image: notes/starwars_intro_2.JPG
-        text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
+        text: |-
+          היי שמי רייצ'ל רוז, אני מהנדסת בכירה ב-ILM ואני מובילה צוות פיתוח אנימציה והיצורים. ב"הכוח מתעורר", אני אחראית על סיוע לאמנים לפתח תשתיתיות שהן חלק מהדמויות שזזות וגורמות לדמויות להיראות אמינות מאוד בגלקסיה רחוק רחוק.
       3:
         image: notes/starwars_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game. We'll teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so that we can drag and drop to write the programs. Under the hood, you're still creating code. After you try the basics with blocks, we'll switch you to JavaScript, one of the most popular programming languages on the web."
+        text: 'בשעה הקרובה נבנה משחק "מלחמת הכוכבים" משלנו. נלמד אותכם מושגי יסוד בתכנות. בדרך כלל תכנות נעשה על ידי כתיבה אבל אנחנו נשתמש בבלוקים ונגרור אותם על מנת לכתוב את התוכניות. מאחורי הקלעים אתם עדיין יוצרים קוד. אחרי שתתנסו בדברים בסיסיים עם בלוקים, נעביר אותכם לשפת JavaScript, אחת משפות התכנות הנפוצות ביותר.'
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: בתחילה נעבוד עם ריי לתכנת את BB-8 ללכת ולאסוף את כל חלקי הגרוטאות. המסך שלכם מחולק לשלושה חלקים. החלק השמאלי הוא אזור המשחק בו ירוץ הקוד שכתבתם. ההוראות לכל רמה כתובות מתחת לאזור המשחק.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: החלק המרכזי מכיל את ארגז הכלים עם הפקודות ש BB-8 יכול להבין.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: 'לחלק הלבן מימין קוראים "סביבת העבודה" ושם נבנה את התוכנית.'
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: אם אני גורר את בלוק ;()moveLeft לסביבת העבודה שלנו ומריץ את התוכנית (run), מה קורה? BB-8 זז צעד אחד שמאלה על הרשת.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: ומה אם אני רוצה ש BB-8 יעשה משהו אחרי בלוק ;()moveLeft? אני יכול להוסיף בלוק נוסף בתוכנית שלנו. אני הולך לבחור את בלוק ;()moveUp ואני אגרור אותו אל מתחת ל ;()moveLeft שלי על להופעת ההדגשה של חיבור הבלוקים. כשאעזוב את הבלוק שלי הבלוקים יתחברו ותישמע נקישה.
       9:
         image: notes/starwars_intro_9.JPG
         text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
@@ -1472,7 +1473,7 @@ he:
         text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: החלק המרכזי מכיל את ארגז הכלים עם הפקודות ש BB-8 יכול להבין.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: "The white space on the right is called the work space and this is where we're going to build our program."
@@ -1676,4 +1677,57 @@ he:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

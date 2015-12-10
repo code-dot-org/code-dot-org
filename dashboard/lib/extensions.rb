@@ -21,3 +21,19 @@ module CoreExtensions
 end
 
 I18n.send(:extend, CoreExtensions::I18n::En)
+
+module CoreExtensions
+  module String
+    module Utf8mb4
+      def utf8mb4?
+        chars.each do |char|
+          if char.bytes.length >= 4
+            return true
+          end
+        end
+        false
+      end
+    end
+  end
+end
+String.send(:include, CoreExtensions::String::Utf8mb4)

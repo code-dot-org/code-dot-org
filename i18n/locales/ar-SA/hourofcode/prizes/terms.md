@@ -30,4 +30,12 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## محادثة مرئية مع ضيف متحدث:
+
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

@@ -14,6 +14,21 @@ class ScriptLevelsController < ApplicationController
   # This is set to twice the proxy max-age because of a bug in CloudFront.
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
+  before_action :disable_session_for_cached_pages
+
+  def disable_session_for_cached_pages
+    if ScriptLevelsController.is_cachable_request?(request)
+      request.session_options[:skip] = true
+    end
+  end
+
+  # Return true if request is one that can be publicly cached.
+  def self.is_cachable_request?(request)
+    script_id = request.params[:script_id]
+    script = Script.get_from_cache(script_id) if script_id
+    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+  end
+
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
@@ -30,7 +45,8 @@ class ScriptLevelsController < ApplicationController
       client_state.reset
       reset_session
 
-      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+      @redirect_path = redirect_path
+      render 'levels/reset_and_redirect', formats: [:html], layout: false
     end
   end
 
@@ -54,6 +70,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     load_user
+    return if performed?
     load_section
 
     return if redirect_applab_under_13(@script_level.level)
@@ -152,6 +169,11 @@ class ScriptLevelsController < ApplicationController
   def load_user
     return if params[:user_id].blank?
 
+    if current_user.nil?
+      render text: 'Teacher view is not available for this puzzle', layout: true
+      return
+    end
+
     user = User.find(params[:user_id])
 
     # TODO this should use cancan/authorize
@@ -197,4 +219,10 @@ class ScriptLevelsController < ApplicationController
     }
     render 'levels/show', formats: [:html]
   end
+
+  # Don't try to generate the CSRF token for forms on this page because it's cached.
+  def protect_against_forgery?
+    return false
+  end
+
 end

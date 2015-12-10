@@ -1299,9 +1299,9 @@
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
       Course 4 Artist Params 3_instruction: "멋져요, 이 삼각형들을 새로운 함수로 만들어보세요.\n첫 번째는 20
         픽셀 크기이고, 두 번째는 50, 세 번째는 75 입니다. \n"
-      Course 4 Artist Params 4_instruction: '''사각형''이라는 새로운 함수를 추가할 수 있나요? 삼각형 함수와
-        같이 길이 매개 변수를 전달해야 합니다. 이번에는 100 픽셀 씩 떨어져 있는 길이가 25 픽셀, 50 픽셀, 75 픽셀인 세 개의
-        사각형을 그립니다.'
+      Course 4 Artist Params 4_instruction: |
+        사각형이라는 이름의 새로운 함수를 추가해주세요. 삼각형 함수와 같이 길이 매개 변수가 있어야 합니다.
+        이번에는 크기가 25, 50, 75 인 3개의 사각형을 100 픽셀 간격으로 그려보세요.
       Course 4 Artist Params 5_instruction: |
         새로운 함수들을 이용해서 모양을 그려보세요.
         쉽게 그리려면 "카운터" 매개 변수를 사용하는 반복 구조를 사용하면 됩니다.
@@ -1313,18 +1313,25 @@
       Course 4 Artist Params 8_instruction: |
         이 모양은 어떻게 그릴 수 있을까요?
         6개의 변을 가진 육각형을 만드는 새로운 함수에 대한 힌트가 여기 있습니다.
-      Course 4 Artist Params 9_instruction: 우리가 안쪽 루프를 제거한 카운터 루프를 사용했을 때를 기억하나요?
-        재미있는 놀이를 해 봅시다. "변"과 "길이" 매개변수를 가지는 "도형 그리기" 함수를 사용해 봅시다. 이 모양들을 만들 수 있나요?
-        이 사각형 카운터는 5/100/5가 되어야 하고, 삼각형 카운터는 10/100/10, 육각형 카운터는 2/100/2가 되어야 합니다.
-      Course 4 Artist Var 9_instruction: '삼각형을 그리는 알고리즘이 여기 있습니다. "변"이라는 변수를 대신 사용하도록
-        수정하세요. "변" 변수에 숫자 3을 대입하세요. 힌트: "변을 ~로 설정하기" 블록을 이용하세요.'
-      Course 4 Artist Vars 1_instruction: 제가 이등변 삼각형을 그리는 것을 도와줄래요? 양변의 길이가 정확히 100
-        픽셀이 되어야 합니다.
-      Course 4 Artist Vars 10_instruction: 여기 더 작은 삼각형의 바깥에 삼각형을 그리는 알고리즘이 있습니다. "변"
-        변수를 사용하여 각 삼각형을 그리도록 알고리즘을 수정할 수 있나요? 코드를 훑어보고 여러분이 숫자 3을 볼 때마다 그것을 "변" 변수로
-        바꿔보세요. "변 설정하기" 블록을 사용하는 것을 기억하세요.
-      Course 4 Artist Vars 11_instruction: 이것은 마지막 퍼즐로부터 동일한 개념을 사용한 좀 더 복잡한 코드입니다.
-        - 사각형들로 만들어진 이 그림을 그리기 위해 "변" 변수를 어떻게 설정해야 할까요?
+      Course 4 Artist Params 9_instruction: |
+        카운터를 이용한 반복 구조 안에서 그 안에 있는 반복 구조를 없앴을 때가 기억 나나요?
+        이번에는 "모양 그리기" 함수에 "면"과 "길이" 매개 변수를 이용해 보세요.
+        모양들을 다시 만들 수 있을까요? 사각형 카운터는 5/100/5 이어야 하고, 삼각형 카운터는
+        10/100/10, 육각형은 2/100/2 가 되어야 합니다.
+      Course 4 Artist Var 9_instruction: |
+        삼각형을 1개 그리는 알고리즘이 있는데, "변" 변수를 사용할 수 있도록 수정되어 있습니다.
+        3이라는 수를 "변" 변수로 바꿔보세요. 힌트: "변 설정" 블록을 사용하면 됩니다.
+      Course 4 Artist Vars 1_instruction: |
+        정삼각형을 그려보세요.
+        각 변의 길이는 정확히 100 픽셀이어야 합니다.
+      Course 4 Artist Vars 10_instruction: |
+        더 작은 삼각형들의 바깥쪽에 1개의 삼각형을 그리는 알고리즘이 있습니다.
+        이 알고리즘을 수정해서 삼각형들을 그리기 위한 "변" 변수를 사용할 수 있게 해주세요.
+        코드를 살펴보고, 3 이라는 수들을 "변" 변수로 바꿔보세요.
+        "변 설정" 블록을 함께 사용해야 합니다.
+      Course 4 Artist Vars 11_instruction: |
+        이전 퍼즐에서와 같은 개념들을 사용하는 좀 더 복잡한 코드입니다.
+        - 사각형들로 만들어진 이 그림을 그리기 위해서 "변" 변수를 어떻게 설정해야 할까요?
       Course 4 Artist Vars 12_instruction: |
         자 이제 "면" 변수를 살펴보세요.
         5. 이 알고리즘에 더 많은 면 개수를 추가하면 할 수록, 전체 패턴이 더 커집니다! 그리고 "길이"라는 변수가 더 있습니다. 그리고 이제 "앞으로 이동" 블록이 없어도 할 수 있습니다. 모양을 만들려면 "길이" 변수를 75로 설정하세요.
@@ -1407,40 +1414,49 @@
         "꽃꿀 3번 모으기" 를 이용해서 꽃꿀을 모두 모으기 위한 순서를 만들어 보세요.
       Course 4 Bee Params 2_instruction: '"꽃꿀 3번 모으기" 함수를 수정해서 꽃을 향해 왼쪽으로 도는 대신 오른쪽으로
         돌도록 해주세요.'
-      Course 4 Bee Params 3 (copy 1)_instruction: 지금 양쪽에 꽃들이 있습니다. 아마 여러분은 양쪽의 꽃들에
-        대해 같은 동작을 하는 함수의 매개변수를 사용할 수 있을 것입니다. 그 함수에 "방향"이라는 매개변수를 추가하였습니다. 만약에 "방향"
-        매개변수가 0이 되면 나는 좌회전을 할 것이고 만약 1이 되면 우회전을 할 것입니다.
-      Course 4 Bee Params 3_instruction: '지금 양쪽에 꽃들이 있습니다. 우리는 여러분이 사용하도록 "3개의 꿀 얻기"
-        함수에 "방향"이라는 매개변수를 추가했습니다. "왼쪽"과 "오른쪽" 변수가 함수에 전달될 때 꿀벌이 올바른 방향으로 회전하도록 "3개의
-        꿀 얻기" 함수를 편집하세요.  '
+      Course 4 Bee Params 3 (copy 1)_instruction: |
+        양쪽에 꽃들이 있네요!
+        양쪽 꽃들에 대해서 같은 함수를 사용하려면, 매개 변수를 1개 사용해야 합니다.
+        "방향" 매개 변수를 추가해 두었습니다.
+        "방향" 매개 변수의 값이 0이면 왼쪽으로 회전하고, 1이면 오른쪽으로 회전해야 합니다.
+      Course 4 Bee Params 3_instruction: "양쪽에 꽃들이 있네요!\n\"왼쪽\", \"오른쪽\" 이라는 변수와 \"방향\"이라는
+        매개변수를 \"꽃꿀 3번 얻기\" 함수에 붙여두었습니다.\n\"꽃꿀 3번 얻기\" 함수를 수정해서, \"왼쪽\" 또는 \"오른쪽\"
+        변수의 값이 전달될 때,\n지정한 방향으로 회전하도록 바꿔보세요.  \n"
       Course 4 Bee Params 4 (copy 1)_instruction: 모든 꽃들에서 수집하기 위해서 새로운 함수를 사용해보세요.
         0은 왼쪽, 1은 오른쪽입니다.
       Course 4 Bee Params 4 - Two WhenRun_instruction: 모든 꽃들에서 수집하기 위해서 새로운 함수를 사용해보세요.
         왼쪽/오른쪽 변수를 사용하세요.
-      Course 4 Bee Params 4 backup_instruction: 만약 우리가 하나의 함수로 모든 꿀을 수집할 수 있다면 얼마나
-        좋을까요? 여러분의 함수에 수집할 꿀의 양을 조절할 수 있는 "꿀"이라는 새로운 매개변수를 추가해 보세요. 여러분은 아마도 함수 이름도
-        변경하고 싶을 것입니다.
+      Course 4 Bee Params 4 backup_instruction: |
+        이 모든 꽃꿀들을 1개의 함수로 모을 수 있다면 얼마나 좋을까요?
+        "꽃꿀들"이라는 매개 변수를 함수에 추가해서, 뽑아낼 꽃꿀의 양을 제어해 보세요.
+        아마도 함수 이름을 바꾸고 싶기도 할 것입니다!
       Course 4 Bee Params 4_instruction: 꽃들에서 모든 꽃꿀을 수집하기 위해서 새로운 함수를 사용해보세요. 왼쪽/오른쪽
         변수를 사용하세요.
       Course 4 Bee Params 5_instruction: 시험삼아 해보세요. - 방향 변수를 이용해서 "꽃꿀 5번 모으기" 함수를
         만들어보세요.
       Course 4 Bee Params 6 (copy 1)_instruction: 모든 꽃꿀을 수집하기 위해서 새로운 함수를 사용해보세요.
-      Course 4 Bee Params 6_instruction: 만약 우리가 하나의 함수로 모든 꿀을 수집할 수 있다면 얼마나 좋을까요?
-        여러분의 함수에 수집할 꿀의 양을 조절할 수 있는 "꿀 단위"라는 새로운 매개변수를 추가해 보세요. 여러분은 아마도 함수 이름도 변경하고
-        싶을 것입니다.
+      Course 4 Bee Params 6_instruction: |
+        이 모든 꽃꿀들을 1개의 함수로 모을 수 있다면 얼마나 좋을까요?
+        "꽃꿀 개수"라는 매개 변수를 함수에 추가해서, 뽑아낼 꽃꿀의 양을 제어해 보세요.
+        아마도 함수 이름을 바꾸고 싶기도 할 것입니다!
       Course 4 Bee Params 7 (copy 1)_instruction: 모든 꽃꿀을 수집하기 위해서 새로운 함수를 사용해보세요.
       Course 4 Bee Params 7_instruction: 모든 꽃꿀을 수집하기 위해서 새로운 함수를 사용해보세요.
-      Course 4 Bee Params 8 Clone 2_instruction: 오, 지금도 역시 처리해야 할 꿀이 있습니다. 함수를 어떻게
-        변경해야 꿀을 가져올 뿐 아니라 꿀을 만들 수도 있을까요?
-      Course 4 Bee Params 8 clone 3_instruction: 오, 지금도 역시 처리해야 할 꿀이 있습니다. 함수를 어떻게
-        변경해야 꿀을 가져올 뿐 아니라 꿀을 만들 수도 있을까요?
-      Course 4 Bee Params 8 Clone_instruction: 오, 지금도 역시 처리해야 할 꿀이 있습니다. 함수를 어떻게 변경해야
-        꿀을 가져올 뿐 아니라 꿀을 만들 수도 있을까요?
-      Course 4 Bee Params 8 new_instruction: 오, 지금도 역시 처리해야 할 꿀이 있습니다. 함수를 어떻게 변경해야
-        꿀을 가져올 뿐 아니라 꿀을 만들 수도 있을까요?
-      Course 4 Bee Params 8_instruction: '도전: 오, 지금도 역시 처리해야 할 꿀이 있습니다. 꿀 단위의 개수와
-        꿀(?) 단위의 개수 둘 다 사용하여 함수를 다시 작성해 보세요. 여러분이 무엇을 해야할지를 결정하기 위해 이러한 숫자들을 어떻게 사용할
-        건가요?'
+      Course 4 Bee Params 8 Clone 2_instruction: |
+        으, 이번에도 다루어야 할 꿀들이 있네요.
+        어떻게 하면, 꽃꿀을 뽑을지, 꿀을 만들지 선택해서 함수가 실행되도록 할 수 있을까요?
+      Course 4 Bee Params 8 clone 3_instruction: |
+        으, 이번에도 다루어야 할 꿀들이 있네요.
+        어떻게 하면, 꽃꿀을 뽑을지, 꿀을 만들지 선택해서 함수가 실행되도록 할 수 있을까요?
+      Course 4 Bee Params 8 Clone_instruction: |
+        으, 이번에도 다루어야 할 꿀들이 있네요.
+        어떻게 하면, 꽃꿀을 뽑을지, 꿀을 만들지 선택해서 함수가 실행되도록 할 수 있을까요?
+      Course 4 Bee Params 8 new_instruction: |
+        으, 이번에도 다루어야 할 꿀들이 있네요.
+        어떻게 하면, 꽃꿀을 뽑을지, 꿀을 만들지 선택해서 함수가 실행되도록 할 수 있을까요?
+      Course 4 Bee Params 8_instruction: |
+        도전해보세요: 으, 이번에도 다루어야 할 꿀들이 있네요.
+        꿀의 개수와, 꽃꿀의 개수를 모두 사용하는 함수를 다시 만들어보세요.
+        2가지 가지 값들에 대해서 어떻게 해야할까요?
       Course 4 Bee Params Ex_instruction: 모든 꽃꿀을 수집하기 위해서 새로운 함수를 사용해보세요.
       Course 4 Binary 1_instruction: 여기에 1 또는 0 으로만 구성되어있는 2진 문자열을 입력하는 함수가 있습니다.
         왼쪽에서 오른쪽으로, 위에서 아래로 내려가면서 0인 곳에서 회전하도록 하는 함수입니다. 2진 표시를 통해 농부가 이미지를 어떻게 그려낼
@@ -1457,23 +1473,28 @@
       Course 4 Binary 7_instruction: 10번 반복시켜서 이 이미지를 만들 수 있는 2진 문자열은 어느 것 일까요?
       Course 4 Binary 8_instruction: 5 비트로 구성된 2진수를 반복시켜서 이 이미지의 대부분을 그려낼 수 있습니다.
         - 그리고 가장 오른쪽 아래로 이동시키기 위해서 4 비트의 수가 더 필요합니다.
-      Course 4 EC 1a_instruction: 규칙, 단서따위는 없습니다. 오직 도전만이 있을 뿐!
-      Course 4 EC 1b_instruction: 규칙, 단서따위는 없습니다. 오직 도전만이 있을 뿐!
-      Course 4 EC 2a_instruction: '**자유로운 도전** 규칙, 단서따위는 없습니다.'
-      Course 4 EC 2b_instruction: '**자유로운 도전** 규칙, 단서따위는 없습니다.'
-      Course 4 EC 2c_instruction: '**자유로운 도전** 규칙, 단서따위는 없습니다.'
+      Course 4 EC 1a_instruction: 규칙이 없습니다. 힌트도 없습니다. 도전해보세요!
+      Course 4 EC 1b_instruction: 규칙이 없습니다. 힌트도 없습니다. 도전해보세요!
+      Course 4 EC 2a_instruction: '**무한 도전** 규칙이 없습니다. 힌트도 없습니다. 도전해보세요!'
+      Course 4 EC 2b_instruction: '**무한 도전** 규칙이 없습니다. 힌트도 없습니다. 도전해보세요!'
+      Course 4 EC 2c_instruction: '**무한 도전** 규칙이 없습니다. 힌트도 없습니다. 도전해보세요!'
       Course 4 EC 3_instruction: '이런 이미지를 그려내기 위해서 이전 레벨에서 배웠던 것들을 사용해 보세요. 참고: 이
         코드는 매개변수들을 사용하면 더 간단하게 만들 수 있습니다. '
-      Course 4 EC 3a_instruction: '자유로운 도전: 규칙, 단서따위는 없습니다. 오직 도전만이 있을 뿐!'
-      Course 4 Maze 1_instruction: 화난 새가 돼지를 잡도록!
-      Course 4 Maze 2_instruction: TNT를 피하세요!
-      Course 4 Maze 3_instruction: '돼지를 잡기 위해서 앵그리 버드를 프로그래밍 하세요. '
-      Course 4 Maze 4_instruction: 이 퍼즐을 풀 때보다 더 적은 블록을 사용하도록 "반복" 블록을 사용해 보세요.
+      Course 4 EC 3a_instruction: '무한 도전: 규칙이 없습니다. 힌트도 없습니다. 도전해보세요!'
+      Course 4 Maze 1_instruction: 화난 새를 돼지에게 이동시켜주세요!
+      Course 4 Maze 2_instruction: TNT를 피해 움직이세요!
+      Course 4 Maze 3_instruction: '새를 돼지에게 이동시킬 수 있도록 프로그래밍 해보세요. '
+      Course 4 Maze 4_instruction: |
+        이 퍼즐을 풀기 위해서...
+        더 적은 블록들을 사용하는 "반복" 블록을 사용해보세요.
       Course 4 Maze 5_instruction: 블록을 최대한 적게 사용해서, 이 퍼즐을 해결해보세요.
       Course 4 Maze 6_instruction: 블록을 최대한 적게 사용해서, 이 퍼즐을 해결해보세요.
-      Course 4 Play Lab For Loops 2_instruction: 이번에는 1부터 100 사이의 홀수를 세어 봅시다.
-      Course 4 Play Lab Params 1_instruction: 여러분의 주인공이 100 픽셀씩 점프하도록 하는 "점프"라는 함수가
-        있습니다. 점프 함수를 이용하여 모든 깃발을 수집해 보세요.
+      Course 4 Play Lab For Loops 2_instruction: |
+        이번에는,
+        1부터 100까지 홀 수들만 카운팅 해보세요.
+      Course 4 Play Lab Params 1_instruction: |
+        "점프" 함수는 주 캐릭터가 100 픽셀 만큼 점프하도록 해줍니다.
+        점프 함수를 이용해서 모든 깃발들을 모아보세요.
       Course 4 Play Lab Params 10_instruction: "여러분을 위해서 함수를 하나더 추가했습니다.\r\n\r\n\"if\"
         명령어를 이용해서 \"player_score\" 가 일정 점수를 넘으면 \"level_up\" 함수가 실행되도록 프로그램을 만들어 보세요.\r\n\r\n예시:
         \"player_score\" > 6\r\n\r\n게임을 해보고, 레벨4를 통과해서 다음 퍼즐로 가보세요. "
@@ -1484,8 +1505,9 @@
       Course 4 Play Lab Params 3_instruction: "점프 함수에 다른 매개 변수를 더 추가해서, 다른 캐릭터들도 사용할
         수 있게 되었습니다.\n각각의 캐릭터들은 1부터 시작되는 수로 나타내져 있습니다.\n\"점프\" 함수를 수정해서 \"캐릭터\" 매개
         변수로 적당한 캐릭터가 점프하도록 만들어보세요. \n"
-      Course 4 Play Lab Params 4_instruction: '"순찰"이라는 함수가 있습니다. 고양이가 400 픽셀만큼 뛰어
-        오르고나서 400 픽셀만큼 내려오도록 이 함수를 수정해 보세요.'
+      Course 4 Play Lab Params 4_instruction: |
+        "순찰" 함수가 있습니다.
+        함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.
       Course 4 Play Lab Params 5_instruction: |
         "순찰" 함수에 "캐릭터" 매개변수를 추가해서, 원하는 캐릭터를 화면에 나타낼 수 있도록 해보세요.
         캐릭터들은 1, 2, 3 으로 선택할 수 있도록 해주세요.
@@ -1544,11 +1566,16 @@
         좋아요. 이제 게임의 마지막 단계를 만들어 보세요.
         - 플레이어가 승리(패) 하도록 설정해 보세요. 무한 반복을 이용해 점수 값을 확인하도록 하세요
         - 점수가 20 보다 크면 적이 사라지게 해주세요. 점수가 0 보다 작으면 플레이어가 사라지게 하면 됩니다.
-      Course 4 Play Labs For Loops 1_instruction: 강아지가 1부터 100까지 모든 숫자를 말하도록 해 봅시다.
-        for 반복문과 카운터 블록을 이용하여 반복문이 실행될 때마다 카운터를 말하도록 해 보세요.
-      Course 4 Play Labs For Loops 2_instruction: 이번에는 1부터 100 사이의 홀수를 세어 봅시다.
-      Course 4 Play Labs For Loops 3_instruction: 우리가 더 큰 숫자 단위로 센다면, 우리는 같은 시간 동안에
-        더 큰 수도 세게 됩니다. 강아지가 10부터 1000까지 10씩 세도록 해 보세요.
+      Course 4 Play Labs For Loops 1_instruction: |
+        강아지가 1부터 100까지 모든 자연수를 말하도록 해보세요.
+        1개의 반복 구조와 카운터 블록을 이용해서, 한 번 실행될 때마다 카운터 값을 말하도록 하면 됩니다.
+      Course 4 Play Labs For Loops 2_instruction: |
+        이번에는,
+        1부터 100까지 홀 수들만 카운팅 해보세요.
+      Course 4 Play Labs For Loops 3_instruction: |
+        더 큰 수 만큼씩 카운터 값을 올리면,
+        같은 시간에 더 큰 값 범위를 카운트 할 수 있습니다.
+        10 부터 1000 까지, 한 번에 10 만큼 씩 증가시키며, 카운트 할 수 있게 해보세요.
       Course 4 Play Labs For Loops 4_instruction: |
         증가 값을 바꾸는 것도 좋지만, 아직도 일정 값 만큼 변화를 주어 카운팅하고 있습니다.(각 값들은 바로 이전 값에서 똑같은 값 만큼 변합니다.)
         이 반복 구조를 변화시키지 않고, 지수적으로 카운트를 올리고 싶다면 어떻게 할 수 있을까요?
@@ -1565,8 +1592,9 @@
         click Dog, the increment increases by 2?  Click the forward arrow\nto run
         the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach
         one."
-      Course 4 Play Labs For Loops 6_instruction: 여러분은 아마도 오직 자기 자신과 1로만 나누어질 수 있는
-        어떤 정수인 소수를 떠올릴 것입니다. 1부터 100 사이의 소수만을 말하도록 "is_prime"이라는 함수를 사용해 보세요.
+      Course 4 Play Labs For Loops 6_instruction: |
+        소수(prime) 는 1 또는 자기 자신으로만 나누어 떨어지는 수라는 것을 알고 있을 것입니다.
+        "소수 판별" 함수를 이용해서 1부터 100까지의 자연수 중에서, 소수만 말하도록 해보세요.
       Course 4 Play Labs For Loops 6a_instruction: "이번에도 강아지는 \"증가 값\" 이 사용되는 \"반복\"
         을 이용해 카운트 하고 있습니다.\r\n\r\n자 그럼 이번에는 마법사를 추가해 넣어 보세요. 마법사를 클릭할 때마다 2만큼 커지도록
         \"증가 값\"을 바꿔주세요."
@@ -1635,7 +1663,17 @@
         \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
         all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: "Create an object with at\nleast
+        5 values including at least one string and one number. (Click to see\nfull
+        instructions) \n"
+      CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1915,10 +1953,13 @@
         그려보세요.
       frozen square loop 3x_instruction: 이제 3개의 사각형을 회전시켜 만들어 보세요! 새로운 사각형을 그리기 전에
         120도 만큼 회전하는 것을 잊지 마세요.
-      frozen square loop_instruction: 안녕, 나는 아렌델의 안나야, 이번에는 '반복' 블럭을 사용하여, 더 적은 블럭을
-        이용해서 사각형을 그려보려고 해. '반복' 블럭 안의 블럭들을 몇 번(???) 반복해야 사각형을 그릴 수 있을까?
-      frozen square snowflake_instruction: '''반복'' 블럭으로 10개의 사각형을 그려서 눈송이를 만들어 볼거야.
-        매번 사각형을 그리고 36도 회전 블럭을 이용하면 그릴 수 있을거야.'
+      frozen square loop_instruction: |
+        안녕하세요. 저는 아렌델의 안나입니다!
+        더 적은 블록들을 사용하는 "반복" 블록을 이용해서 사각형을 1개 만들어보세요.
+        사각형 1개를 만들기 위해서 "반복" 블록 안 (???) 값으로 얼마나 넣어야 할까요?
+      frozen square snowflake_instruction: |
+        "반복" 블록을 사용해서 사각형을 10번 만들어 보세요.
+        삼각형을 한 번씩 그릴 때마다, 회전 블록을 이용해서 36 도 만큼 씩 회전시켜주세요.
       Infinity_catch_instruction: 방향키를 이용해서 엘사("캐릭터 2") 가 안나를 잡아보세요.
       Infinity_finale_instruction: 원하는대로 만들고 친구들에게 공유해 보세요.
       Infinity_move_collide_instruction: |
@@ -1929,16 +1970,16 @@
         베이맥스를 다른 캐릭터 2개에 닿게 해보세요.
       Infinity_move_right_instruction: 히로는 "캐릭터 1" 입니다. 이동 블록을 사용해서 히로가 오른쪽 베이맥스에
         닿게 해보세요.
-      Infinity_repeat_instruction: '"무한 반복" 블록을 사용해 안나(Anna)가 400픽셀을 위 아래로 왔다갔다 하게
-        하세요.'
+      Infinity_repeat_instruction: |
+        "반복(무한)" 블록을 이용해서 안나가 400 픽셀 만큼 씩
+        위, 아래로 움직이도록 해보세요.
       Infinity_say_instruction: 말하기 블록을 이용해서 안나가 "안녕 여러분" 이라고 말하도록 해 보세요.
       Infinity_shoot_instruction: 베이맥스는 "캐릭터 2" 입니다. 베이맥스가 히로에게 로켓을 던지게 해보세요.
       Infinity_shoot_directions_instruction: 히로는 "캐릭터 3" 입니다. 히로가 4개의 캐릭터들에게 각각 발사체를
         하나씩 쏘도록 해주세요. 1초 간격으로 하나씩 쏘도록 해주세요.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: 더 많은 눈송이도 터치하세요.
-      Infinity_touch_four_instruction: 네 개의 눈송이를 각각을 터치하여 안나를 위로, 아래로, 왼쪽으로, 오른쪽으로
-        이동시키세요.
+      Infinity_touch_faster_instruction: 더 많은 눈송이들도 터치해보세요.
+      Infinity_touch_four_instruction: 안나를 위, 아래, 왼쪽, 오른쪽으로 움직여서 4개의 눈송이들을 터치해보세요.
       Infinity_touch_score_instruction: 안나가 눈송이에 닿으면 점수를 올리도록 만들어보세요. 그 다음에 "실행"을
         누르고 안나를 움직여 눈송이에 닿게 해보세요.
       jessie-test_instruction: Lots of instructions
@@ -1947,17 +1988,18 @@
       K-1 artist 1 level 10_instruction: 점프, 그리기 블록을 이용해서 파선(----) 을 그려보세요.
       K-1 artist 1 level 9_instruction: 세 개의 선을 이용하여 이것을 그려보세요.
       K-1 Artist Loops 1_instruction: 오른쪽으로 4번 이동해서 이 선을 그려보세요.
-      K-1 Artist Loops 2_instruction: 루프(반복문) 을 사용하여 똑같은 선을 그릴 수 있나요?
+      K-1 Artist Loops 2_instruction: 1개의 반복 구조를 이용해서 같은 선을 그려보세요.
       K-1 Artist Loops 3_instruction: 이 블록들을 반복시켜서 6개의 선을 그려보세요.
-      K-1 Artist Loops 4_instruction: 루프(반복문) 는 이 성의 꼭대기를 그리는 우리를 도울 수 있을까요?
-      K-1 Artist Loops 5_instruction: 이 계단을 그리기 위해 여러분은 무엇을 네 번 반복할 수 있나요?
-      K-1 Artist Loops 6_instruction: '이것은 두 개의 루프(반복문) 를 필요로 합니다: 하나는 계단을 오르기 위해
-        그리고 다른 하나는 계단을 내려가기 위해'
-      K-1 Artist Loops 7_instruction: 여러분은 두 개의 루프(반복문) 를 가지고 이 패턴을 끝낼 수 있나요?
+      K-1 Artist Loops 4_instruction: 반복 구조를 사용하면, 이 성의 꼭대기를 그리는데 도움이 될까요?
+      K-1 Artist Loops 5_instruction: 이 계단들을 그리기 위해서 4번 반복시켜보세요.
+      K-1 Artist Loops 6_instruction: |
+        2 개의 반복구조가 필요합니다: 하나는 위로 올라가는 것이고,
+        다른 하나는 아래로 내려가는 것입니다.
+      K-1 Artist Loops 7_instruction: 2개의 반복 구조를 이용해서 이 패턴을 완성해보세요.
       K-1 Artist Loops 8_instruction: 이번 계단은 더 많습니다.
-      K-1 Artist Loops 9_instruction: '평가: 루프(반복문) 를 사용하여 계단을 그리세요.'
-      K-1 Artist Loops Free Play_instruction: 자유 시간! 재미있는 것을 만들어 봐.
-      K-1 Artist1 1_instruction: 한 줄로 남자의 발을 그리세요.
+      K-1 Artist Loops 9_instruction: '형성평가: 반복 구조 1개를 사용해서 계단을 그려보세요.'
+      K-1 Artist Loops Free Play_instruction: 자유 시간입니다. 재미있는 것을 그려보세요!
+      K-1 Artist1 1_instruction: 1개의 선으로 남자의 발을 그려보세요.
       K-1 Artist1 10_instruction: 보물 X 까지 파선(----) 을 그려보세요.
       K-1 Artist1 2_instruction: 선 2개로 고양이 수염을 그려보세요!
       K-1 Artist1 3_instruction: 왼쪽으로 2개의 선을 그리고, 위쪽으로 2개의 선을 그려 집을 완성해보세요!
@@ -1984,7 +2026,7 @@
       K-1 Bee 1_instruction: |
         제가 꿀을 얻을 수 있게 꽃으로 데려다 주세요.
         그리고나서 벌집으로 이동해서, 꿀을 만들 수 있게 해주세요.
-      K-1 Bee 10_instruction: 네 개의 꿀즙을 가져와서 두 개의 꿀을 만드세요.
+      K-1 Bee 10_instruction: 4번 꽃꿀을 모은 후, 2번 꿀을 만드세요!
       K-1 Bee 11.5_instruction: 4개의 꿀을 만들기 위해서 4개의 꽃꿀을 모아보세요.
       K-1 Bee 11_instruction: 꽃꿀을 3개 모아 꿀을 만들어보세요.
       K-1 Bee 12_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요!
@@ -2003,42 +2045,44 @@
       K-1 Bee 7_instruction: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요!
       K-1 Bee 8_instruction: 꽃꿀을 2개 모은 후, 2개의 꿀을 만들어보세요!
       K-1 Bee 9_instruction: 꽃꿀을 2개 모은 후, 2개의 꿀을 만들어보세요!
-      K-1 Bee Assessment 1_instruction: 넥타를 얻어서 꿀을 만드세요!
-      K-1 Bee Assessment 2_instruction: 넥타를 얻어서 꿀을 만드세요!
-      K-1 Bee Loops 1_instruction: 넥타를 얻어서 꿀을 만드세요!
-      K-1 Bee Loops 10_instruction: 넥타를 얻고, 꿀을 만들고, 이동하기 위해서 루프를 사용하세요!
+      K-1 Bee Assessment 1_instruction: 꿀을 만들기 위해, 꽃꿀을 모으세요.
+      K-1 Bee Assessment 2_instruction: 꿀을 만들기 위해, 꽃꿀을 모으세요.
+      K-1 Bee Loops 1_instruction: 꿀을 만들기 위해, 꽃꿀을 모으세요.
+      K-1 Bee Loops 10_instruction: 반복 구조들을 사용해서, 꽃꿀과 꿀을 모으고, 이동해 보세요!
       K-1 Bee Loops 11_instruction: '형성평가: 반복 구조들을 이용해서 꽃꿀을 얻고, 꿀을 만들어보세요!'
       K-1 Bee Loops 12_instruction: '형성평가: 반복 구조들을 이용해서 꽃꿀을 얻고, 꿀을 만들고, 이동해보세요!'
-      K-1 Bee Loops 2_instruction: 루프를 사용해서 이동하고, 넥타를 얻고 꿀을 만드세요!
-      K-1 Bee Loops 3_instruction: 넥타를 얻고 꿀을 만들도록 루프를 사용하세요!
-      K-1 Bee Loops 4_instruction: 넥타를 얻고, 꿀을 만들고, 이동하도록 루프를 사용하세요!
-      K-1 Bee Loops 5_instruction: 넥타와 꿀을 얻기 위해서 루프를 사용하세요!
-      K-1 Bee Loops 6_instruction: 넥타를 얻고, 꿀을 만들고, 이동하기 위해서 루프를 사용하세요!
-      K-1 Bee Loops 7_instruction: 넥타를 얻고 꿀을 만들도록 루프를 사용하세요!
-      K-1 Bee Loops 8_instruction: 넥타와 꿀을 얻기 위해서 루프를 사용하세요!
-      K-1 Bee Loops 9_instruction: 넥타를 얻고, 꿀을 만들고, 이동하기 위해서 루프를 사용하세요!
-      K-1 Bee Loops Assessment 1_instruction: 꿀을 만들기 위한 넥타를 얻으세요, 이동하도록 루프를 사용하세요!
-      K-1 Bee Loops Assessment 2_instruction: 루프를 사용해서 꿀을 만들기 위한 넥타를 얻으세요!
+      K-1 Bee Loops 2_instruction: 1개의 반복 구조를 사용해서 이동한 후, 꽃꿀을 모으고, 꿀을 만드세요!
+      K-1 Bee Loops 3_instruction: 반복 구조들을 사용해서, 꽃꿀을 모으고 꿀을 만들어보세요!
+      K-1 Bee Loops 4_instruction: 반복 구조들을 사용해서, 꽃꿀을 모으고 꿀을 만들고, 이동해 보세요!
+      K-1 Bee Loops 5_instruction: 반복 구조들을 사용해서, 꽃꿀과 꿀을 모아보세요!
+      K-1 Bee Loops 6_instruction: 반복 구조들을 사용해서, 꽃꿀과 꿀을 모으고, 이동해 보세요!
+      K-1 Bee Loops 7_instruction: 반복 구조들을 사용해서, 꽃꿀을 모으고 꿀을 만들어보세요!
+      K-1 Bee Loops 8_instruction: 반복 구조들을 사용해서, 꽃꿀과 꿀을 모아보세요!
+      K-1 Bee Loops 9_instruction: 반복 구조들을 사용해서, 꽃꿀과 꿀을 모으고, 이동해 보세요!
+      K-1 Bee Loops Assessment 1_instruction: |
+        꿀을 만들기 위해서, 꽃꿀을 모으세요.
+        이동하기 위해서 반복 구조들을 사용하세요!
+      K-1 Bee Loops Assessment 2_instruction: 반복 구조들을 사용해서 꽃꿀을 모아 꿀을 만들어 주세요!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
       K-1 Building a Foundation Assessment_instruction: 3단계 피라미드를 만들어보세요. 한 조각 씩 그려
         완성해보세요!
       k-1 maze 1_instruction: 오른쪽 돼지에게 보내주세요.
-      K-1 Maze 10_instruction: '돼지를 잡도록 TNT 폭탄을 돌아가세요! '
+      K-1 Maze 10_instruction: 'TNT를 피해 돼지에게 이동시켜주세요! '
       K-1 Maze 11_instruction: '길을 따라가서 돼지를 잡게 해주세요. TNT를 피해가지 않으면 깃털들이 날리게 될 거에요!
         힌트: TNT는 내 아래에 있습니다.'
-      K-1 Maze 2_instruction: 돼지를 잡도록 나를 동쪽 방향으로 이동시키세요!
-      K-1 Maze 3_instruction: 돼지를 잡도록 나를 남쪽 방향으로 이동시키세요!
-      K-1 Maze 4_instruction: 돼지를 잡도록 나를 북쪽 방향으로 이동시키세요!
-      K-1 Maze 5_instruction: 돼지를 잡도록 나를 동쪽 방향으로 이동시키세요!
-      K-1 Maze 6_instruction: 돼지를 잡도록 한쪽 방향으로 이동시키고, 다른 방향으로 이동시키세요!
-      K-1 Maze 7_instruction: 돼지를 잡도록 한쪽 방향으로 이동시키고, 다른 방향으로 이동시키세요!
-      K-1 Maze 8_instruction: 돼지를 잡도록 한쪽 방향으로 이동시키고, 다른 방향으로 이동시키세요!
-      K-1 Maze 9_instruction: 돼지를 잡도록 한쪽 방향으로 이동시키고, 다른 방향으로 이동시키세요!
-      K-1 Maze Assessment 1_instruction: 평가 -- 돼지를 잡아라!
-      K-1 Maze Assessment 12_instruction: 평가 수준
-      K-1 Maze Assessment 13_instruction: 평가 수준
-      K-1 Maze Assessment 2_instruction: 평가 -- 돼지를 잡아라!
-      K-1 maze debug 1_instruction: 코드를 변경해서 돼지를 잡으세요!
+      K-1 Maze 2_instruction: 오른쪽으로 이동해서 돼지를 잡을 수 있게 해주세요!
+      K-1 Maze 3_instruction: 돼지를 잡을 수 있도록, 저를 아래쪽으로 보내주세요!
+      K-1 Maze 4_instruction: 돼지를 잡을 수 있도록, 저를 위쪽으로 보내주세요!
+      K-1 Maze 5_instruction: 오른쪽으로 이동해서 돼지를 잡을 수 있게 해주세요!
+      K-1 Maze 6_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
+      K-1 Maze 7_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
+      K-1 Maze 8_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
+      K-1 Maze 9_instruction: 돼지를 잡을 수 있도록, 한 쪽으로 가다가 다시 다른 쪽으로 움직여주세요!
+      K-1 Maze Assessment 1_instruction: 형성평가 -- 돼지에게 이동시켜주세요!
+      K-1 Maze Assessment 12_instruction: 형성평가 레벨
+      K-1 Maze Assessment 13_instruction: 형성평가 레벨
+      K-1 Maze Assessment 2_instruction: 형성평가 -- 돼지에게 이동시켜주세요!
+      K-1 maze debug 1_instruction: 코드를 수정해서 돼지를 잡을 수 있게 해주세요!
       K-1 maze debug 10_instruction: 돼지에게 갈 수 있도록 블록들을 추가하거나 다시 배치 해주세요.
       K-1 maze debug 11_instruction: "연습해보세요!\r\n돼지에게 갈 수 있도록 블록들을 추가하거나 다시 배치 해주세요."
       K-1 maze debug 2_instruction: 어떤 것이 빠졌는지 살펴본 후, 블록들을 추가해서 돼지에게 갈 수 있도록 해주세요!
@@ -2065,8 +2109,8 @@
       K-1 Maze Loops 9_instruction: 저를 돼지에게 이동시켜 주세요.
       K-1 Maze Loops Assessment 1_instruction: '형성평가: 돼지에게 갈 수 있도록 반복 구조들을 사용해보세요!'
       K-1 Maze Loops Assessment 2_instruction: '형성평가: 돼지에게 갈 수 있도록 반복 구조들을 사용해보세요!'
-      K-1 Maze Multi 14_instruction: 평가 수준
-      K-1 Maze Multi 15_instruction: 평가 수준
+      K-1 Maze Multi 14_instruction: 형성평가 레벨
+      K-1 Maze Multi 15_instruction: 형성평가 레벨
       K-1 Maze Sequence Assessment 1_instruction: "연습해보세요!\r\n한 방향으로 움직이다가 다른 방향으로
         움직여서 돼지에게 갈 수 있도록 해주세요."
       K-1 Maze Sequence Assessment 2_instruction: "연습해보세요!\r\n한 방향으로 움직이다가 다른 방향으로
@@ -2375,12 +2419,14 @@
         코드는 여기있으니, 어떻게 사용할지 살펴본 후에\n\"실행\"을 눌러 결과를 살펴보세요. \n"
       NEW Course 4 Bee For Loops 4 4_instruction: "이제 \"카운터\" 만큼 앞으로 이동시켜야 합니다.\n그
         다음에 \"카운터\" 만큼 꽃꿀을 얻으면 됩니다. 이 문제를 해결하기 위해서 \n2 개의 \"반복\" 블록을 사용하세요.\n"
-      NEW Course 4 Bee For Loops 4_instruction: '"for 반복문"에서 ??? 를 꿀벌이 수집해야 하는 가장
-        많은 양의 꽃꿀로 바꾸세요. '
-      NEW Course 4 Bee For Loops 5 5_instruction: '"for 반복문"을 사용하는 요령을 파악했나요? 꿀벌이
-        남은 꽃꿀을 얻을 수 있도록 도와줍시다.'
-      NEW Course 4 Bee For Loops 5_instruction: 카운트다운 "for 반복문"을 사용할 수도 있습니다. 이 꽃꿀을
-        5부터 1까지 카운트다운하면서 모아보세요.
+      NEW Course 4 Bee For Loops 4_instruction: '"반복(~인 동안)" 구조에서 ??? 부분에, 꿀벌이 모아야
+        하는 최대 꽃꿀의 양을 입력해 보세요. '
+      NEW Course 4 Bee For Loops 5 5_instruction: |
+        "반복(~인 동안)" 구조를 사용하기가 어렵나요?
+        나머지 꽃꿀을 모을 수 있도록, 꿀벌을 도와주세요.
+      NEW Course 4 Bee For Loops 5_instruction: |
+        카운트다운하는데 "반복(~인 동안)" 구조를 사용할 수도 있습니다.
+        이 꽃꿀을 5 부터 1 까지, 1씩 카운트다운하면서 모아보세요.
       NEW Course 4 Bee For Loops 6_instruction: |
         반복 함수의 마지막에 있는 수는 "증가값"이라고 부릅니다.
         반복 구조가 한 번 실행된 후에, 카운터에는 증가값만큼 더해집니다. 2만큼 증가시켜서
@@ -2402,8 +2448,8 @@
       NEW Course 4 Play Lab Params 5 5_instruction: |
         자! 도움없이 다시 한 번 해보세요.
         캐릭터들이 순찰하도록 하려면 어떻게 해야할까요?
-      NEW Course 4 Play Lab Vars 4 5_instruction: '"여러분은 이 코드가 무엇을 할 것이라고 생각하세요? 어떤
-        일이 일어날지 보려면 "실행" 버튼을 누르세요."'
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"이 코드가 어떤 작업을 하는 것일까요? 실행을 눌러 어떻게
+        움직이는지 살펴보세요."'
       NEW Course 4 Play Labs For Loops 7a_instruction: |
         지금까지 배웠던 것들을 이용해서,
         펭귄이 카운트할 때 마다 한 번씩 앞으로 가도록 해보세요.
@@ -2411,8 +2457,9 @@
         있는 모든 블록들을 이용해보세요. \n"
       NEW Course 4 Play Labs For Loops 8a_instruction: "도전과제: \"반복\" 구조를 사용해서 모든 캐릭터들이
         돌아다니면서 자신의 번호를 말하고 난 후,\n화면에서 사라지게 해보세요. \n"
-      New Play Lab Project_instruction: 여러분만의 이야기나 게임을 만들어 보세요! 여러분의 코드는 언제든지 다시 볼
-        수 있는 프로젝트로 저장됩니다.
+      New Play Lab Project_instruction: |
+        이야기나 게임을 만들어보세요!
+        여러분의 코드는 프로젝트로 저장되어있기 때문에, 아무때나 실행시켜 볼 수 있습니다.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame,
         and then figuring out how it works. You can use the arrow keys\nto move the
         ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
@@ -2441,22 +2488,21 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        크리퍼에게 가지마세요.
-        조심해서 크리퍼들을 피한 후, 안전하게 집으로 돌아가보세요.
-      Overworld Chop Tree_instruction: |
-        목재는 아주 중요한 자원으로 많은 것들을 만들어내기 위해서 필요합니다.
-        나무로 가서 "블록 파괴" 명령을 사용해서 목재를 구해보세요.
-      Overworld Chop Trees_instruction: 우리는 해가 지기 전에 집을 지어야 합니다. 집을 지으려면 많은 나무가 필요합니다.
-        세 그루의 나무 모두를 베세요.
-      Overworld Free Play 20x20_instruction: 축하합니다! 여러분은 모든 퍼즐을 완성했습니다! 이제 여러분이 지금까지
-        배운 모든 것을 활용하여 캐고, 짓고, 무언가를 만들어 보세요.
-      Overworld Free Play_instruction: 이 땅(풍경? 나라?) 은 여러분이 가지고 놀 여러분의 것입니다. 무엇을 지을지
-        선택하세요.
-      Overworld House Frame - A_instruction: 우리만의 집을 만들어 봅시다! 이 지점이 좋아 보이네요. 흙 블록으로
-        구조를 만들어 보세요.
-      Overworld House Frame - C_instruction: 우리만의 집을 만들어 봅시다! 이 지점이 좋아 보이네요. 흙 블록으로
-        구조를 만들어 보세요.
+      Overworld Avoid Monsters_instruction: 크리퍼와 마주치는 건 좋지 않습니다. 크리퍼를 조심스럽게 지나쳐서 안전한
+        집에 도달하세요.
+      Overworld Chop Tree_instruction: 나무는 매우 중요한 자원입니다. 나무로 많은 것들을 만들 수 있지요. 나무로
+        걸어간 후 "블록 부수기" 명령을 이용해 나무를 베세요.
+      Overworld Chop Trees_instruction: 해가 지기 전에 집을 지어야 해요. 집을 지으려면 나무가 많이 필요하죠. 나무
+        3그루를 모두 베세요.
+      Overworld Free Play 20x20_instruction: 축하해요! 모든 퍼즐을 완료했어요! 이제 여태까지 배운 모든 것을
+        이용해서 채굴하고 건설하며 무언가 독특한 것을 만들어보세요.
+      Overworld Free Play_instruction: 여러분은 이 배경에서 플레이하게 될 것입니다. 무엇을 지을지는 여러분이 선택하세요.
+      Overworld House Frame - A_instruction: |
+        우리의 집을 만들어보세요!
+        이 곳이 좋아 보이네요. 흙 블럭들 위에 집의 기본 구조를 만들어 보세요.
+      Overworld House Frame - C_instruction: |
+        우리의 집을 만들어보세요!
+        이 곳이 좋아 보이네요. 흙 블럭들 위에 집의 기본 구조를 만들어 보세요.
       Overworld House Frame B_instruction: |
         벽 하나가 완성되었습니다. 이제 바닥 만들기 계획에 따라서 나머지 집을 지어보세요!
         여기서 많이 반복해야 할 것 입니다.
@@ -2466,21 +2512,21 @@
       Overworld House Frame C_instruction: |
         벽 하나가 완성되었습니다. 이제 바닥 만들기 계획에 따라서 나머지 집을 지어보세요!
         여기서 많이 반복해야 할 것 입니다.
-      Overworld House Frame Chosen_instruction: 여러분이 좋아하는 재료로 집의 남은 부분을 완성하세요. "반복"
-        명령이 상당히 도움이 될 것입니다.
-      Overworld House Frame_instruction: 우리만의 집을 만들어 봅시다! 이 지점이 좋아 보이네요. 흙 블록으로 구조를
-        만들어 보세요.
-      Overworld Minecart Track_instruction: 여러분은 많은 양의 지하 자원이 있는 구역으로 돌아갑니다. 이제 여러분
-        집에서부터 흙길을 따라 트랙을 지을 것입니다. 첫 번째 단계는 길을 지우는 것입니다. 이 길을 따라와서 나무를 베어내세요.
-      Overworld Move to Sheep_instruction: 양에게 도착하기 위해 두 번째 "앞으로 전진" 명령문을 추가하십시오.
-      Overworld Place Wall_instruction: 모든 집은 벽을 짓는 것으로 시작합니다. 반복 루프 내부에 "장소"와 "앞으로
-        전진" 명령문을 넣어 여러분 집의 첫 번째 벽을 지으세요.
-      Overworld Plant Crops_instruction: 그것은 미리 계획하는 것이 좋습니다. 농작물은 물가 양쪽에 있으므로 여러분은
-        나중에 굶주리게 되지 않습니다.
-      Overworld Powered Minecart_instruction: 잘했습니다! 여러분은 많은 양의 자원을 모아서 평범한 주택을 지었습니다.
-        이제 지도의 끝에서부터 여러분 집의 문까지 레일(난간? 울타리?) 을 설치하세요.
-      Overworld Shear Sheep_instruction: 양털 깎기 시간입니다! "털 깎기" 명령을 사용하여 두 마리 양으로부터 양털을
-        모으세요.
+      Overworld House Frame Chosen_instruction: |
+        여러분이 원하는 재료를 이용해서, 집의 나머지 부분을 완성해보세요.
+        "repeat" 명령은 편리하게 사용할 수 있습니다.
+      Overworld House Frame_instruction: 집을 만들어 보아요! 여기가 좋겠군요. 흙 블록들 위에 뼈대를 세우세요.
+      Overworld Minecart Track_instruction: 땅속 자원을 많이 가지고 지상으로 돌아왔습니다. 이제 여러분의 집에서
+        난 흙길을 따라 트랙을 건설합니다. 첫 번째 단계는 길을 깨끗이 하는 거예요. 길을 따라서 나무를 정리하세요.
+      Overworld Move to Sheep_instruction: 두 번째 "앞으로 이동" 명령을 더해서 양에게 도달하세요.
+      Overworld Place Wall_instruction: 모든 집은 벽을 짓는 것부터 시작합니다. "놓기"와 "앞으로 이동" 명령을
+        반복문 안에 놓아서 집의 첫 번째 부분을 지어보세요.
+      Overworld Plant Crops_instruction: 미리 계획을 짜는 것이 좋습니다. 물의 양쪽에 작물을 심으면 나중에 배가
+        고프지 않아요.
+      Overworld Powered Minecart_instruction: 잘했어요! 많은 자원을 모으고 안정적인 집을 지었어요. 이제 지도
+        가장자리에서 여러분의 집 문까지 레일을 놓으세요.
+      Overworld Shear Sheep_instruction: 양털 깎기 시간이에요! 두 마리 양에게서 양털을 채집하려면, "털 깎기"
+        명령을 사용하세요.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2666,8 +2712,9 @@
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름
         아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
-      Ryan Test Locked Blocks_instruction: '"순찰"이라는 함수가 있습니다. 고양이가 400 픽셀만큼 뛰어 오르고나서
-        400 픽셀만큼 내려오도록 이 함수를 수정해 보세요.'
+      Ryan Test Locked Blocks_instruction: |
+        "순찰" 함수가 있습니다.
+        함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -2722,8 +2769,9 @@
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: 도토리! 도토리! 도토리! "만약" 블럭을 이용하고, 가장 적은 갯수의 블럭들을 이용해서 도토리가
-        있는 곳으로 보내주세요.
+      scrat 16_instruction: |
+        도토리! 도토리! 도토리! "만약" 블럭을 이용하면서,
+        블럭들을 최대한 적게 사용해서 도토리가 있는 곳으로 보내주세요.
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
@@ -2746,7 +2794,9 @@
         처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다.
         한 변의 길이는 정확히 100 픽셀이 되어야 합니다.
       Standalone_Artist_2_instruction: 120도, 60도의 각과 150 픽셀 만큼의 길이로 이 다이아몬드를 그려보세요.
-      Standalone_Artist_3_instruction: 100픽셀의 선과 60도 회전으로 육각형을 그릴 수 있나요?
+      Standalone_Artist_3_instruction: |
+        100 픽셀 길이의 선을 60 도 만큼 씩 회전해 그리면서
+        육각형을 그려보세요.
       Standalone_Artist_4_instruction: 이제 반복(loop) 이라는 새로운 블록을 이용할 수 있습니다. 이 블록은 원하는
         명령어들을 반복시켜줄 것입니다. 이 명령어들을 6번 반복하면 어떻게 될까요?
       Standalone_Artist_5.5_instruction: '다이아몬드 모양을 반복 블럭 안에 넣어서 회전시키면서 아주 쉽게 코드를
@@ -2848,7 +2898,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2965,8 +3015,8 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3119,22 +3169,22 @@
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3143,7 +3193,7 @@
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3178,7 +3228,7 @@
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3330,8 +3380,9 @@
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
         a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
@@ -4126,8 +4177,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4198,6 +4249,61 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4233,21 +4339,16 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: |
-        용암은 이 블록들 아래 어딘가에 있습니다. 그렇기 때문에 앞으로 이동하기 전에 먼저 확인해 봐야 합니다.
-        "if" 명령이 여기 있습니다. 이 블럭들에 "move forward" 을 정확히 추가해 보세요.
-      Underground If Statements_instruction: |
-        이제 좀더 복잡해졌습니다.
-        3개의 레드스톤을 구하되, 용암에 빠지지 마세요. "만약" 명령을 사용해서
-        용암을 발견하면 조약돌을 놓도록 하세요.
-      Underground Iron_instruction: |
-        녹은 암에 들어가지 마세요.
-        조약돌을 이용해 다리를 만든 다음에, 2개 이상의 철 블록들을 캐보세요.
-      Underground Mine in a Circle_instruction: "다섯 개의 다이아몬드와 7개의 레드스톤을 얻을 방법을 찾으세요!
-        반복문 내부에 반복문을 사용하여 사각형 안으로 들어가세요.\r\n"
-      Underground Mining Coal_instruction: |
-        지하에서 가장 비싼 자원들을 찾을 수 있지만, 어두워질 수 있습니다.
-        적어도 2개 이상의 횃불을 놓고 2개 이상의 석탄을 캐내세요.
-      Underground Test Level_instruction: 모든 광물을 수집하세요!
+      Underground Avoiding Lava_instruction: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야
+        해요. "if"(만약) 명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.
+      Underground If Statements_instruction: 퍼즐이 점점 더 어려워지고 있어요. 레드스톤 3개를 채굴하세요. 하지만
+        용암으로 떨어지지는 마세요. "if"(만약) 명령을 사용해서 발견한 용암 위에 조약돌을 놓으세요.
+      Underground Iron_instruction: 녹은 용암 속으로 걸어 들어가는 건 좋은 생각이 아니에요. 조약돌을 놓아서 다리를
+        만든 후 철 블록을 2개 이상 채굴하세요.
+      Underground Mine in a Circle_instruction: 다이아몬드 5개와 레드스톤 7개를 얻을 방법을 찾아보세요! 반복
+        명령 안에서 반복 명령을 사용해서 사각형으로 걸어보세요.
+      Underground Mining Coal_instruction: 가장 귀중한 자원은 땅속에서 찾을 수 있어요. 하지만, 땅속은 어두울
+        수 있지요. 횃불을 2개 이상 놓고 석탄을 2개 이상 채굴하세요.
+      Underground Test Level_instruction: 모든 광석을 모아주세요!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

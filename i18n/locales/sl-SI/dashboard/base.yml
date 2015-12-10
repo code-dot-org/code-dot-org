@@ -403,6 +403,9 @@ sl:
     privacy: Izjava o zasebnosti
     secure: Varna različica
     report_abuse: Prijavi zlorabo
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Potrebujete pomoč?
     subtitle: Poglejte si naslednje videe in namige
@@ -459,7 +462,7 @@ sl:
       unused: Neuporabljene stopnje
   upsell:
     hoc:
-      title: Ura kode
+      title: Classic Maze
       body: Preizkusite se v osnovah računalništva. Milijonom je že uspelo.
     flappy:
       title: Program za Plahutača (Flappyja)

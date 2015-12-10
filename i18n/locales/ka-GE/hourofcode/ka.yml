@@ -12,6 +12,7 @@ ka:
   front_intro_default: 'კოდის ერთი საათი არის გლობალური მოძრაობა რომელის აერთიანებს ათობით მილიონ სტუდენტს 180+ ქვეყნიდან. კოდის ერთი საათის ორგანიზება შეუძლია ნებისმიერ ადამიანს, ნებისმიერ ადგილას. ერთსაათიანი ტუტორიალები 40 ენაზეა მისაწვდომი. გამოცდილება საჭირო არ არის. <strong>ასაკი: 4 წლიდან 104 წლამდე.</strong>'
   front_watch_video: უყურეთ ახალ ვიდეოს
   front_watch_regular_video: უყურეთ ვიდეოს
+  front_volunteers: Technical volunteers wanted
   header_menu_resources: რესურსები
   header_menu_faq: ხშირად დასმული კითხვები
   header_menu_prizes: პრიზები
@@ -125,6 +126,7 @@ ka:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -172,7 +174,7 @@ ka:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_header: Prizes for every educator
   prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
+  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last.'
   whats_next_header: და შემდეგ?
   whats_next_description: "თქვენი ღონისძიებისთვის ჩვენ გამოგიგზავნით დამხმარე მასალებსა და სასარგებლო რჩევებს. 2015 წლის ახალი ტუტორიალები მალე დაიდება - და მათი გავლა შესაძლებელი იქნება ნებისმიერ ბრაუზერში, სმარტფონში - ან ყოველგვარი მოწყობილობის გარეშე! <a href='http://code.org/learn'>ნახეთ მიმდინარე ტუტორიალები</a>"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -194,18 +196,22 @@ ka:
   front_join_us_button: შემოგვიერთდით
   front_what_is_hoc: რა რის კოდის საათი?
   front_join_us_header: საწყისების მხირალურად სწავლა შეუძლია ყველას!
+  front_join_us_volunteer_header: Volunteers for the Hour of Code
   front_join_us_teacher: მასწავლებელი ხართ?
   front_join_us_inspire: შთააგონეთ სტუდენტებს
   front_join_us_inspire_link: კოდის საათი კლასში.
   front_join_us_teacher_link: შთააგონეთ მოსწავლეებს კლასში კოდის ერთი საათის მეშვეობით
+  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
   front_join_us_parent: მშობელი ხართ?
   front_join_us_ask_link: სთხოვეთ ადილობრივ სკოლას
   front_join_us_ask: ჩაატაროს კოდის საათი.
   front_join_us_parent_link: შესთავაზეთ თქვენს ადგილობრივ სკოლას კოდის ერთი საათის ჩატარება
   front_join_us_computer_science: უბრალოდ გიყვართ კომპიუტერული მეცნიერება?
+  front_join_us_cs_volunteer: Passionate about computer science education?
   front_join_us_spread: გაავრცელეთ ინფორმაცია.
   front_join_us_spread_word: გაავრცელეთ ხმა თქვენს საზოგადოებაში
   front_join_us_spread_word_work: Spread the word in your community or workplace
+  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
   front_join_us_organize: ან მოაწყვეთ კოდის ერთი საათი თქვენით.
   front_join_us_how_to_run: როგორ ჩავატაროთ კოდის ერთი საათი
   front_join_us_help_promote: დაგვეხმარეთ კოდის ერთი საათის ამბის გავრცელებაში
@@ -233,6 +239,7 @@ ka:
   signup_whole_school_flag_label: ეს ღონისძიება მთელი სკოლისთვისაა
   signup_your_event: დაარეგისტრირეთ თქვენი ღონისძიება
   signup_match_volunteer: მაპოვნინეთ ადგილობრივი პროგრამისტი, მოსწავლეებისთვის მაგალითის საჩვენებლად
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: თქვენი სახელი
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: მაგალითად, ლინკოლნის სახელობის სკოლა
@@ -254,7 +261,7 @@ ka:
   map_search_reset: გადატვირთვა
   map_legend_title: Legend
   map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: CS Tech Jam
+  map_legend_cs_tech_jam: Special Event
   meta_tag_og_title: კოდის საათი აქაა
   meta_tag_og_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა რომელის აერთიანებს ათობით მილიონ სტუდენტს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   meta_tag_twitter_title: კოდის საათი აქაა
@@ -296,14 +303,14 @@ ka:
   hoc_faq_behind_hoc_a: "კოდის ერთი საათი ორგანიზებულია <a href='http://code.org'>Code.org</a>-ის მიერ. Coge.org არის არამომგებიანი ორგანიზაცია, რომლის მიზანია ინფორმატიკის სწავლება მეტ სკოლაში გახდეს შესაძლებელი, გაიზარდოს ქალებისა და ფერადკანიანების წილი პროგრამირების მოსწავლეებს შორის. კოდის ერთი საათის ირგვლივ გაერთიანებულია <a href='http://code.org/about/partners'>უამრავი პარტნიორი</a>, მაგალითად Microsoft, Apple, Amazon, Boys and Girls Clubs of America და College Board."
   hoc_faq_host_q: პროგრამირების შესახებ არაფერი არ ვიცი. შეიძლება, რომ მაინც ვიყო ორგანიზატორი?
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: მჭირდება თუ არა კომპიუტერი ყოველი მონაწილისთვის?
   hoc_faq_need_computers_a: "არა. ჩვენ გვაქვს კოდის ერთი საათის ისეთი ტუტორიალები, რომლებიც მუშაობენ პერსონალურ კომპიუტერებე, სმარტფონებზე, პლანშეტებზე, ზოგს კი საერთოდ არ სჭირდება არანაირი მოწყობილობა! არა აქვს მნიშვნელობა სად ხართ და რა გაქვთ. <p><i> აი, რამდენიმე იდეა: </i> <br> <ul> <li><b>იმუშავეთ წყვილებად.</b>კვლევები გვაჩვენებს, რომ მოსწავლეები უკეთ სწავლობენ <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> თუ წყვილში წერენ კოდს</a> ერთი კომპიუტერის გამოყენებით. დაყავით თქვენი მოსწავლეები ორ-ორად. <li><b>გამოიყენეთ პროექტორი.</b> თუ გაქვთ წვდომა ინტერნეტზე და პროექტორი, კოდის ერთი საათის გავლა მთელ ჯგუფს ერთად შეუძლია. უყურეთ ვიდეოებს ერთად, ამოცანები კი რიგ-რიგობით გააკეთეთ.<li><b> ისწავლეთ ოფლაინ.</b> ჩვენ გვაქვს ისეთი ტუტორიალები, რომელთა გასავლელად საერთოდ არ არის საჭირო არანაირი მოწყობილობა.</ul>"
   hoc_faq_international_q: 'მე ვარ <country>ში. როგორ მივიღო მონაწილეობა?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: როგორ შევქმნა კოდის ერთი საათის ტუტორიალი?
   hoc_faq_tutorial_a: "თუ გინდათ გახდეთ ჩვენი პარტნიორი და შექმნათ ტუტორიალი,<a href='target-tutorial-guidelines'>გაეცანით ჩვენს რჩევებსა და ინსტრუქციებს</a>. ჩვენ სიამოვნებით მივიღებდით სხვადასხვა ფორმატის ტუტორიალებს, მაგრამ ჩვენი ძირითადი მიზანია მაქსიმალურად მარტივი და საინტერესო გავხადოთ სწავლა იმათთვის, ვინც პროგრამირებას პირველად კოდის ერთი საათის ფარგლებში შეეხება."
-  hoc_faq_more_questions_q: კიდევ გაქვთ კითხვები?
-  hoc_faq_more_questions_a: "სცადეთ იპოვოთ პასუხი <a href='http://support.code.org'>დახმარების ფორუმზე</a>."
   hoc_faq_account_q: სჭირდებათ თუ არა მოსწავლეებს ანგარიშის შექმნა და სადმე შესვლა?
   hoc_faq_account_a: "არა. რეგისტრაცია ან საიტზე შესვლა არ არის საჭირო მოსწავლეებისთვის კოდის ერთ საათში მონაწილეობის მისაღებად. <a href='http://code.org/learn/beyond'>განგრძობადი კურსების</a> უმეტესობა ანგარიშის შექმნას მოსწავლის შედეგების შესანახად მოითხოვს."
   hoc_faq_frozen_q: სად არის ანასა და ელზას ტუტორიალი?
@@ -313,7 +320,17 @@ ka:
   hoc_faq_scratch_q: კოდის ერთი საათისთვის სკრატჩის ტუტორიალი ავირჩიე, მაგრამ რა მოხდება, თუ ჩემს მოსწავლეებს ლეპტოპების მაგვირად პლანშეტები აქვთ?
   hoc_faq_scratch_a: "სკრატჩი არ მუშაობს პლანშეტებზე. თუ პატარა მოსწავლეები გყავთ, მათ შეუძლიათ გამოიყენონ ScratchJR iPad აპლიკაცია. თუ გადახევდავთ ტუტორიალებს აქ<a href='http://code.org/learn'>Code.org/learn</a>, იპოვით სხვა ტუტორიალებსაც, რომლებიც მუშაობს პლანშეტზე და შექმნილია Code.org, Tynker, Lightbot, ან CodeSpark-ის მიერ."
   hoc_faq_count_hoc_q: როგორ ვითვლით კოდის საათებს?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "კოდის ერთი საათის ტრეკეტი არ არის გაზომვის ზუსტი მოწყობილობა. ჩვენ ვერ აღვრიცხავთ უნიკალური მოსწავლეების ID-ების ზუსტად, იმიტომ რომ არ ვთხოვთ მათ რეგისტრაციას ან საიტზე შესვლას. შედეგად, ჩვენ ვითვლით როგორც მეტობით, ასევე ნაკლებობით ერთდროულად. დეტალებს გაეცანით <a href='http://code.org/loc'>აქ </a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: კიდევ გაქვთ კითხვები?
+  hoc_faq_more_questions_a: "სცადეთ იპოვოთ პასუხი <a href='http://support.code.org'>დახმარების ფორუმზე</a>."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: 2013 წლის კოდის ერთი საათის სტატისტიკა
   stats_growth: 15 მილიონი მოსწავლის მიღწევის უსწრაფესი შემთხვევა.
   stats_i18n: მოსწავლეები სწავლობენ 40 ენაზე

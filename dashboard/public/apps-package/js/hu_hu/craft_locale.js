@@ -209,7 +209,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockWhileXAheadDo":function(d){return "csináld"},
 "blockWhileXAheadWhile":function(d){return "amíg"},
 "generatedCodeDescription":function(d){return "A puzzle-darabok elhelyezésével igazából utasításokat adtál ki, melyek a JavaScript nevű programozási nyelven íródtak. Ez az utasítás-sorozat (programkód) mondja meg a számítógépnek, hogy mit és hogyan jelenítsen meg a képernyőn. Bármi, amit a Minecraftban látsz és csinálsz ilyen programkódban íródott."},
-"houseSelectChooseFloorPlan":function(d){return "Válassza ki a ház alaprajzát."},
+"houseSelectChooseFloorPlan":function(d){return "Válaszd ki a ház alaprajzát."},
 "houseSelectEasy":function(d){return "Könnyű"},
 "houseSelectHard":function(d){return "Kemény"},
 "houseSelectLetsBuild":function(d){return "Építsünk házat."},
@@ -232,11 +232,11 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level8FailureMessage":function(d){return "Ha hozzáérsz a kúszónövényekhez, azok fel fognak robbanni. Surranj el mellettük és osonj be a házadba."},
 "level9FailureMessage":function(d){return "Ne felejts el elhelyezni legalább 2 fáklyát ahhoz, hogy megvilágítsd az utadat ÉS kibányássz legalább 2 szenet."},
 "minecraftBlock":function(d){return "blokk"},
-"nextLevelMsg":function(d){return "A "+craft_locale.v(d,"puzzleNumber")+". puzzle befejeződött. Ügyes vagy!"},
+"nextLevelMsg":function(d){return "A "+craft_locale.v(d,"puzzleNumber")+". feladvány befejeződött. Ügyes vagy!"},
 "playerSelectChooseCharacter":function(d){return "Válaszd ki a karaktered."},
 "playerSelectChooseSelectButton":function(d){return "Válassz"},
 "playerSelectLetsGetStarted":function(d){return "Kezdjük is el."},
 "reinfFeedbackMsg":function(d){return "A \"Folytasd\" gomb megnyomásával tudod folytatni a játékod."},
 "replayButton":function(d){return "Visszajátszás"},
 "selectChooseButton":function(d){return "Válassz"},
-"tooManyBlocksFail":function(d){return "A "+craft_locale.v(d,"puzzleNumber")+". puzzle befejeződött. Ügyes vagy! Egyébként ennyi blokkal is meg lehet csinálni: "+craft_locale.p(d,"numBlocks",0,"hu",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "A(z) "+craft_locale.v(d,"puzzleNumber")+". feladvány befejeződött. Ügyes vagy! Egyébként ennyi blokkal is meg lehet csinálni: "+craft_locale.p(d,"numBlocks",0,"hu",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};

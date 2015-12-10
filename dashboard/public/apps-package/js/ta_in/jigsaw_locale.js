@@ -159,6 +159,6 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "no":function(d){return "இல்லை"},
 "numBlocksNeeded":function(d){return "இந்த புதிரை  %1 தொகுதிகள் கொண்டு தீர்க்க முடியும்."},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try Again\" button to go back to playing your game."},
-"share":function(d){return "பகிர்"},
+"share":function(d){return "பகிர்ந்துகொள்"},
 "shareGame":function(d){return "Share your game:"},
 "yes":function(d){return "ஆம்"}};

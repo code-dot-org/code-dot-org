@@ -6,15 +6,15 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Blurbs and Useful Stats
+# Estatísticas de difusión útiles
 
-## Use this short blurb in newsletters
+## Use esta breve presentación nos boletins informativos
 
-### Bring computer science to your school. Start with an Hour of Code
+### Leva a Informática o teu colexio ou empresa. Comeza cunha Hora do Código
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](%= resolve_url('/') %) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](%= resolve_url('/') %) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](%= resolve_url('/') %) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. Se escoitaches falar da [ Hora do Código](%= resolve_ur('/') %>) o ano pasado, xa sabes que fixo historia. Na primeira edición da Hora do Código, 15 millóns de estudantes probaron como programar. O ano pasado, ese número incrementouse ata os 60 millóns de estudantes! A [Hora do Código](%= resolve_ur('/') %), é unha hora de introducción a Informática e a programación, deseñada para desmitificar o que se pensa sobre a programación e demostrar que calquera pode aprender os conceptos básicos. [Rexistrate](%= resolve_url('/') %) para facer unha Hora de Código durante a Semana da Educación en Informática <%= fecha_campaña('completa') %>. Para engadir o teu colexio no mapa, vai a https://hourofcode.com/<%= @country %>
 
-## Infographics
+## Infografías
 
 <%= view :stats_carousel %>
 

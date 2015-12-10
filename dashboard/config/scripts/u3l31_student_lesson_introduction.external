@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 # Background
 
-When designing programs you will often discover new pieces of functionality you wish to add once you have completed a working prototype. Incorporating these new features will of course require writing new code, but it can also often require redesigning the parts of your program you have already written. In this lesson you will extend the "My Favorite Things" app you built in the previous lesson, continuing to practice using arrays in apps while learning how to approach the process of refactoring code.
+When designing programs, you will often discover new pieces of functionality you wish to add once you have completed a working prototype. Incorporating these new features will of course require writing new code, but it can also often require redesigning the parts of your program you have already written. In this lesson you will extend the "My Favorite Things" app you built in the previous lesson, continuing to practice using arrays in apps while learning how to approach the process of refactoring code.
 
 # Vocabulary
 

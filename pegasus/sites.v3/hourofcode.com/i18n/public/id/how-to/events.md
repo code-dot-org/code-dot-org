@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Bagaimana cara mengadakan event Hour of Code
 
@@ -59,4 +58,3 @@ Selenggarakan sebuah event Hour of Code selama Pekan Edukasi Ilmu Komputer (<%= 
 | 10:40-11:00 | Pelajar mendemostrasikan kegiatan tanpa komputer dan bagaimana ilmu komputer dapat diajarkan tanpa menggunakan komputer.                                |
 | 11:00-11:05 | Guru yang membantu mengadakan acara di sekolah memberikan pidato penutupan.                                                                             |
 
-<%= view :signup_button %>

@@ -146,7 +146,7 @@ ar:
           description_short: ارسم صور رائعة و صمم مع الرسام !
         hourofcode:
           Maze: المتاهة
-          title: ساعة من البرمجة
+          title: Classic Maze
           description: جرب تعلم مبادئ الحاسب الآلي من خلال شخصيات لعبة الطيور الغاضبة (Angry Birds) ، ولعبة المزروعات ضذ الزومبي (Plants vs. Zombies) ، وشخصية القنفذ سكارت من فيلم عصر الجليد (Ice Age) !
           description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات الممتعة!
         frozen:
@@ -1348,6 +1348,10 @@ ar:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1453,10 +1457,10 @@ ar:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: مختبر اللّعب غامبول
+          description_short: تخيّل قصة أو إصنع لعبة مع مختبر اللّعب غامبول!
+          description: تخيّل قصة أو إصنع لعبة مع مختبر اللّعب غامبول!
+          Gumball Play Lab: مختبر اللّعب غامبول
         starwars:
           title: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
           description_short: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة، بعيدة جدا.
@@ -1474,8 +1478,8 @@ ar:
           Craft: Craft
         mc:
           title: ساعة البرمجة ماين كرافت
-          description_short: إكتشف عالم ماين كرافت من خلال البرمجة.
-          description: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم ماين كرافت
+          description_short: اكتشف عالم Minecraft من خلال التعليمات البرمجية
+          description: استخدم كتل التعليمات البرمجية لاصطحاب Steve أو Alex في مغامرة من خلال عالم Minecraft
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

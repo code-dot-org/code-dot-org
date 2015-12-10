@@ -934,7 +934,7 @@ it:
       Course 4 Artist For Loops 4_instruction: 'Come puoi modificare quello che hai imparato sui triangoli per disegnare questi quadrati? Il quadrato più piccolo ha i lati di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni quadrato è di 15 pixel più grande del precedente. '
       Course 4 Artist For Loops 5_instruction: "Ottimo lavoro sull'ultimo puzzle!, Usiamo di nuovo il blocco con la variabile COUNTER per disegnare questa immagine. "
       Course 4 Artist For Loops 6_instruction: Spazio Libero! Prova ad usare un ciclo FOR per disegnare un modello di forma crescente a piacere.
-      Course 4 Artist For Loops 6a_instruction: "Fare tre piccole modifiche al codice dell'ultimo livello per arrivare a questo!"
+      Course 4 Artist For Loops 6a_instruction: "Fai tre piccole modifiche al codice dell'ultimo esercizio per arrivare a questo!"
       Course 4 Artist For Loops 7_instruction: Cosa succede se rimouvi il blocco RIPETI 3 da questo algoritmo, mantenendo i blocchi MUOVI e RUOTA nel ciclo RIPETI? In questo triangolo a spirale ogni lato è 20 pixels più lungo del precedente.
       Course 4 Artist For Loops 8_instruction: "Devi fare solo un piccolo cambiamento al codice dell'ultimo esercizio per disegnare questa figura. Riesci a capire di quale cambiamento si tratta?\r\n\r\nSuggerimento: devi eliminare qualcosa!"
       Course 4 Artist For Loops 8a_instruction: "Devi fare solo un piccolo cambiamento al codice dell'ultimo esercizio per disegnare questa figura. Riesci a capire di quale cambiamento si tratta?"
@@ -1093,7 +1093,7 @@ it:
       Course 4 EC 2a_instruction: '* * Sfida estrema: * * Nessuna regola. Nessun indizo. Solo la sfida!'
       Course 4 EC 2b_instruction: '* * Sfida estrema: * * Nessuna regola. Nessun indizo. Solo la sfida!'
       Course 4 EC 2c_instruction: '* * Sfida estrema: * * Nessuna regola. Nessun indizo. Solo la sfida!'
-      Course 4 EC 3_instruction: "Utilizza quello che hai imparato nel livello precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
+      Course 4 EC 3_instruction: "Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
       Course 4 EC 3a_instruction: Sfida estrema. Nessuna regola. Nessun indizio. Solo la sfida!
       Course 4 Maze 1_instruction: "Fai arrivare l'uccellino arrabbiato (Angry Bird) fino al maialino!"
       Course 4 Maze 2_instruction: Evita la dinamite (TNT)!
@@ -1106,7 +1106,10 @@ it:
       Course 4 Maze 6_instruction: Prova a risolvere questo esercizio usando meno blocchi possibile.
       Course 4 Play Lab For Loops 2_instruction: Questa volta prova a far dire al cane i numeri dispari da 1 a 100.
       Course 4 Play Lab Params 1_instruction: 'Qui abbiamo una funzione chiamata "salta" che consente al tuo personaggio principale di saltare di 100 pixel. Utilizza questa nuova funzione per raccogliere tutte le bandiere.'
-      Course 4 Play Lab Params 10_instruction: "Abbiamo aggiunto un'ultima funzione che puoi usare. \r\n\r\nProgramma il tuo gioco in modo tale da chiamare la funzione \"sali di un livello\" se la variabile \"punti del giocatore\"diventa maggiore di 10 (>10). \r\n\r \nLancia il gioco e supera il livello 4 per passare al prossimo esercizio. "
+      Course 4 Play Lab Params 10_instruction: |
+        Abbiamo aggiunto un'ultima funzione che puoi usare. <br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" se la variabile "punti del giocatore"diventa maggiore di 10 (>10).<br>
+        Lancia il gioco e supera il livello 4 per passare al prossimo esercizio. 
       Course 4 Play Lab Params 2_instruction: "Ora le bandiere sono troppo in alto per poterle raggiungere con la nostra funzione \"salta\"! Prova ad usare le frecce \"su\" e \"giù\" per poter avere salti di diverse altezze.  \r\n\r \nDobbiamo aggiungere un parametro \"altezza\" alla funzione \"salta\".  La freccia in su dovrebbe permettere al cane di fare un salto di 200 pixel e la freccia in giù un salto di soli 100 pixel. \r\nevi\r \nSuggerimento: devi cliccare su \"modifica\" per aggiornare la funzione \"salta\" e farle utilizzare il parametro \"altezza\"."
       Course 4 Play Lab Params 3_instruction: 'Dobbiamo aggiungere un altro parametro alla funzione "salta" in modo da poterla usare con diversi personaggi. Ogni personaggio è rappresentato da un numero, a partire da uno. Modifica la funzione "salta" in modo che la definizione includa il parametro "personaggio". '
       Course 4 Play Lab Params 4_instruction: |
@@ -1114,13 +1117,11 @@ it:
         Modificala per far muovere il gatto prima in su e poi in giù di 400 pixel.
       Course 4 Play Lab Params 5_instruction: 'Assegna un valore al parametro di ingresso "personaggio" in modo tale da poter chiamare la funzione "ricognizione" per ciascuno di loro. Ricorda che i personaggi corrispondono ai numeri 1, 2 e 3.'
       Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+        Aggiungi un altro parametro chiamato "speed" (velocità)
+        alla funzione "patrol". Provate a utilizzare il blocco "set speed" (imposta velocità) con il nuovo parametro "speed" per aiutare il pinguiono a predenre entrambe le bandiere prima che gli altri ne prendano una.
       Course 4 Play Lab Params 7_instruction: "Osserva il codice che ti è stato dato per vedere se riesci a capire cosa fa ogni blocco. \r\n\r\nQuando hai finito, utilizza i tasti freccia per far muovere il cane e raccogliere tutte le bandiere."
       Course 4 Play Lab Params 8_instruction: 'Utilizza un blocco "quando il personaggio ... tocca ..." per spostare il cane in alto a sinistra SOLO se il cane tocca uno qualsiasi degli altri personaggi.'
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe function so that a \"points\" parameter is added to the \"player_score\"\nvariable. \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Ecco il nostro gioco in uno stadio ancora più iniziale ma con la maggior parte del codice nascosta. Esiste una nuova funzione  «score_points ». \r\n \r\nModifica la funzione in modo che il parametro \"points\" sia aggiunto alla variabile  \"player_score\". \r\n\r\nLa variable \"player_score\" dovrà essre incrementata ogniqualvolta il che il cane tocca il gatto e diminuita ogni volta che il gatto tocca il cane. \r\n\r\nNota. Una volta concluso premi  \"Esegui \" per giocare.  Una volta che il cane ha raggiunto i 6 punti , si passa al  puzzle sseguente. "
       Course 4 Play Lab Vars 1_instruction: 'Non devi scrivere alcun codice. Devi solo premere "Esegui" per giocare! In questo gioco, sei il cane che sta cercando di raccogliere più bandiere del gatto. Utilizza la freccia verso il basso per controllare il cane. Premere "Fine" quando hai finito di giocare.'
       Course 4 Play Lab Vars 2_instruction: |-
         Quella dell'ultimo esercizio non è stata un bella gara! Modifica la variabile denominata "velocità del cane" per essere sicuro di poter raccogliere più bandiere del gatto. Il primo che raccoglie 10 bandiere vince!
@@ -1128,11 +1129,14 @@ it:
       Course 4 Play Lab Vars 4_instruction: |-
         Ora c'è una nuova variabile chiamata "altezza" che serve a controllare quanto in alto il cane può arrivare con un salto. Aggiorna la variabile "altezza" in modo che il cane possa saltare abbastanza in alto da arrivare a raggiungere tutte le bandiere.
       Course 4 Play Lab Vars 5_instruction: "Costruiamo un gioco! In primo luogo abbiamo bisogno di un punteggio. Ricostruisci il codice che hai visto nell'ultimo esercizio per impostare il punteggio a 10. "
-      Course 4 Play Lab Vars 6 (copy 1)_instruction: "Forte! Abbiamo ora una nostra variabile per il punteggio. Ma come possiamo rederla utile?  Che ne dite di aggiungere dei punti alla variabile ogni volta che colpite il nemico con una palla di fuoco ? Usate l'evento «quando l'attore 2 tocca qualsiasi cosa » per aggiornare la variabile quando la palla di fuoco colpisce il gatto. Potete incrementare il punteggio impostando score = score + 1. Fate in modo che il vostro punteggio arrivi a 10, incrementandolo di 1 alla volta, per passare il livello."
-      Course 4 Play Lab Vars 6_instruction: "Utilizza la freccia destra per lanciare cuori. \r \n\r\nNel nostro gioco, come dovremmo assegnare i punti? Aggiungi\n1 alla variabile \"punti\" ogni volta che il cane colpisce il gatto con un cuore. Usa la variabile \"quando il personaggio 2 tocca una cosa qualunque\" per attivare un aggiornamento del tuo punteggio. Puoi incrementare la tua variabile impostando \"punti = punti +1\". Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per superare il livello."
+      Course 4 Play Lab Vars 6 (copy 1)_instruction: "Forte! Abbiamo ora una nostra variabile per il punteggio. Ma come possiamo rederla utile?  Che ne dite di aggiungere dei punti alla variabile ogni volta che colpite il nemico con una palla di fuoco ? Usate l'evento «quando l'attore 2 tocca qualsiasi cosa » per aggiornare la variabile quando la palla di fuoco colpisce il gatto. Potete incrementare il punteggio impostando score = score + 1. Fate in modo che il vostro punteggio arrivi a 10, incrementandolo di 1 alla volta, per risolvere l'esercizio."
+      Course 4 Play Lab Vars 6_instruction: |
+        Utilizza la freccia destra per lanciare cuori.<br>
+        Nel nostro gioco, come dovremmo assegnare i punti? Aggiungi
+        1 alla variabile "punti" ogni volta che il cane colpisce il gatto con un cuore. Usa la variabile "quando il personaggio 2 tocca una cosa qualunque" per attivare un aggiornamento del tuo punteggio. Puoi incrementare la tua variabile impostando "punti = punti +1". Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per superare il livello.
       Course 4 Play Lab Vars 7_instruction: |
         Bello, ma ora facciamo in modo che questo gioco non sia troppo facile.
-        Ogni volta che il cane (personaggio 1) viene colpito da un cuore giallo lanciato dal gatto (personaggio 2), dovresti perdere un punto. Inizia con 10 punti così non è troppo difficile. Lascia che il tuo punteggio scenda da 10 fino a 0 per superare il livello.
+        Ogni volta che il cane (personaggio 1) viene colpito da un cuore giallo lanciato dal gatto (personaggio 2), dovresti perdere un punto. Inizia con 10 punti così non è troppo difficile. Lascia che il tuo punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |-
         Bene. Un'ultima cosa per questo gioco. Predisponiamolo in modo che il giocatore possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio. Quando il punteggio diventa maggiore di 20, fai scomparire il nemico. Quando il punteggio diventa 0, fai scomparire il giocatore. Clicca su "Termina" quando il gioco funziona come volevi tu.
       Course 4 Play Lab Vars 8_instruction: 'Predisponiamo ora il gioco in modo che il cane possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio. Quando il punteggio diventa maggiore di 20, fai scomparire il nemico (il gatto). Quando il punteggio diventa 0, fai scomparire il giocatore (il cane). Clicca su "Termina" quando il gioco funziona come volevi tu.'
@@ -1156,10 +1160,10 @@ it:
       Course 4 SCF 1_instruction: Utilizza le funzioni suggerite per disegnare quattro righe di esagoni. Vedi come le nostre righe numerate vengono spostate a destra?
       Course 4 SCF 1a_instruction: Può capire come raccogliere tutto questo nettare con il minor numero possibile di blocchi?
       Course 4 SCF 1b_instruction: Può capire come raccogliere tutto questo nettare con il minor numero possibile di blocchi?
-      Course 4 SCF 2_instruction: "Utilizza quello che hai imparato nel livello precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
+      Course 4 SCF 2_instruction: "Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
       Course 4 SCF 3 Fail 1_instruction: Puoi capire come...
       Course 4 SCF 3 Fail 2_instruction: Puoi capire come...
-      Course 4 SCF 3_instruction: "Utilizza quello che hai imparato nel livello precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
+      Course 4 SCF 3_instruction: "Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
       Course 4 SCFL 1_instruction: Risolvi il puzzle con il minor numero di blocchi possibile.
       Course 4 SCFL 1a_instruction: Puoi far arrivare Skrat alla sua ghianda usando meno blocchi possibile?
       Course 4 SCFL 1b_instruction: Puoi far arrivare Skrat alla sua ghianda usando meno blocchi possibile?
@@ -1184,7 +1188,19 @@ it:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1841,10 +1857,10 @@ it:
       October15 stars 1_instruction: 'Usa i cicli e il blocco "intero scelto a caso ..." per riempire la notte di stelle di varie forme e dimensioni.'
       Overworld Avoid Monsters_instruction: Incontrare un Creeper non è una buona idea. Muoviti con attenzione tra i Creeper e mettiti al sicuro a casa tua.
       Overworld Chop Tree_instruction: |-
-        Il legno è una risorsa molto importante: serve per costruire molte cose. Raggiungi l'albero e usa l'istruzione "distruggi il blocco" per abbatterlo.
+        Il legno è una risorsa molto importante: serve per costruire molte cose. Raggiungi l'albero e usa l'istruzione "distruggi" per abbatterlo.
       Overworld Chop Trees_instruction: 'Devi costruire una casa prima che il sole tramonti: ti serve molta legna. Abbatti tutti e tre gli alberi.'
       Overworld Free Play 20x20_instruction: Complimenti! Hai completato tutti gli esercizi! Ora estrai e costruisci quello che vuoi, creando qualcosa di unico. Usa tutto ciò che imparato finora.
-      Overworld Free Play_instruction: Questo è il paesaggio con cui puoi giocare. Scegli cosa costruire.
+      Overworld Free Play_instruction: Questo è lo scenario in cui puoi giocare. Scegli cosa costruire.
       Overworld House Frame - A_instruction: Questo posto sembra buono per costruire la tua casa. Realizza le fondamenta sui blocchi di terra.
       Overworld House Frame - C_instruction: Questo posto sembra buono per costruire la tua casa. Realizza le fondamenta sui blocchi di terra.
       Overworld House Frame B_instruction: "Un muro è finito, costruiamo il resto della casa partendo dal pian terreno! Devi ripetere le stesse azioni un bel po' di volte."
@@ -1852,11 +1868,11 @@ it:
       Overworld House Frame C_instruction: "Un muro è finito, costruiamo il resto della casa partendo dal pian terreno! Devi ripetere le stesse azioni un bel po' di volte."
       Overworld House Frame Chosen_instruction: 'Costruisci il resto della casa con qualunque materiale ti piace. Devi usare più volte il blocco "ripeti ... volte".'
       Overworld House Frame_instruction: Questo posto sembra buono per costruire la tua casa. Realizza le fondamenta sui blocchi di terra.
-      Overworld Minecart Track_instruction: "Sei tornato in superficie con un bel po' di risorse del sottosuolo. Ora, costruiamo un percorso lungo il sentiero sterrato che parte da casa tua. Il primo passo è quello di sgomberare il cammino. Poi, segui il percorso ed elimina gli alberi."
+      Overworld Minecart Track_instruction: "Sei tornato in superficie con un bel po' di risorse del sottosuolo. Ora, costruisci un percorso lungo il sentiero sterrato che parte da casa tua. Il primo passo è quello di sgomberare il cammino. Poi, segui il percorso ed elimina gli alberi."
       Overworld Move to Sheep_instruction: Aggiungi una seconda istruzione “vai avanti” per raggiungere la pecora.
       Overworld Place Wall_instruction: |-
         Per costruire una casa devi iniziare con le mura. Costruisci la prima parte della tua casa mettendo le istruzioni "metti assi di ..." e "vai avanti" all'interno di un ciclo “ripeti … volte”.
-      Overworld Plant Crops_instruction: "E' bene pensare al futuro. Semina del grano su entrambi i lati dell'acqua così avrai di che sfamarti."
+      Overworld Plant Crops_instruction: "È bene pensare al futuro. Semina del grano su entrambi i lati dell'acqua così avrai di che sfamarti."
       Overworld Powered Minecart_instruction: 'Ottimo lavoro! Hai raccolto un sacco di risorse e hai costruito la tua casetta. Ora posa i binari dal bordo della mappa fino alla porta di casa tua. (Se ti va prova anche la versione più difficile: riesci a farcela usando solo 6 blocchi?)'
       Overworld Shear Sheep_instruction: |-
         E' il momento di tosare le pecore! Usa l'istruzione "tosa" per raccogliere la lana da entrambe le pecore.
@@ -2195,7 +2211,7 @@ it:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2312,8 +2328,8 @@ it:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -2464,22 +2480,22 @@ it:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -2488,7 +2504,7 @@ it:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -2523,7 +2539,7 @@ it:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -2675,8 +2691,9 @@ it:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -3460,8 +3477,8 @@ it:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -3531,6 +3548,61 @@ it:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
@@ -3559,7 +3631,7 @@ it:
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
       Underground Avoiding Lava_instruction: "Sotto alcuni di questi blocchi c'è la lava, che devi coprire per poter andare avanti. L'istruzione “se” ti è utile in questi casi. Aggiungi un istruzione “vai avanti” nel posto giusto per estrarre tutte le risorse disponibili."
       Underground If Statements_instruction: "Ora la situazione si fa un po' più difficile. Estrai tre blocchi di pietrarossa, ma non cadere nella lava. Usa un'istruzione “se” per posizionare delle lastre di pietra se scopri la lava."
-      Underground Iron_instruction: Passeggiare nella lava fusa non è una buona idea. Posiziona delle lastre di pietra per creare un ponte, poi estrai almeno due blocchi di ferro.
+      Underground Iron_instruction: Camminare sulla lava non è una buona idea. Posiziona delle lastre di pietra per creare un ponte, poi estrai almeno due blocchi di ferro.
       Underground Mine in a Circle_instruction: "Trova un modo per prendere 5 blocchi di diamanti e 7 di pietrarossa! Prova ad usare l'istruzione \"ripeti ... volte\" per camminare in un quadrato.\r\n"
       Underground Mining Coal_instruction: Nel sottosuolo trovi le risorse più preziose, ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Test Level_instruction: Raccogli tutti i minerali!

@@ -930,30 +930,17 @@ de:
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 12_instruction: Benutze die Windrad-Funktion, um jede dieser Formen zu zeichnen! Die Seitenänge jedes Bildes ist 50.
+      Course 4 Artist Params 13_instruction: 'Freies Spiel: Hier sind die Funktionen, die Du geschrieben hast, und ein paar mehr für Dich, um damit zu spielen. Zeichne etwas Abgefahrenes!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: |
-        Awesome, can you draw each of these
-        triangles with that new function? The first is 25 pixels long, the second
-        is 50, and the third is 75. 
-      Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
-      Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
-        
+      Course 4 Artist Params 3_instruction: Überragend! Kannst Du jedes dieser Dreiecke mit dieser neuen Funktion zeichnen? Das erste ist 25 Pixel lang, das zweite ist 50, das dritte ist 75.
+      Course 4 Artist Params 4_instruction: 'Kannst Du eine neue Funktion "square" (Quadrat) hinzufügen? Sie sollte auch einen Längenparameter annehmen, wie das Dreieck. Dieses Mal zeichne 3 Quadrate, jeweils mit 25, 50 und 75 Pixeln Länge, mit 100 Pixeln Abstand zu einander.'
+      Course 4 Artist Params 5_instruction: 'Benutze Deine beiden neuen Funktionen, um das Bild zu zeichnen! Leichter geht es, wenn du eine Schleife mit dem Parameter "Zähler" ("counter").'
       Course 4 Artist Params 6_instruction: |
         Let's edit this "draw a shape" function.
         It already has a "length" parameter. Now, let's edit the function to also
@@ -986,12 +973,7 @@ de:
         Here’s more complicated code using the
         same concepts from the last puzzle - what should you set the "sides" variable
         to in order to draw this picture made of squares?
-      Course 4 Artist Vars 12_instruction: |
-        Let's set the "sides" variable to
-        5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Notice that there is another variable called "length". We can now
-        use that wherever we have a "move forward." Set the "length" variable
-        to 75 for this shape.
+      Course 4 Artist Vars 12_instruction: 'Setzen wir nun die Variable "sides" (Seiten) auf 5. Je mehr Seiten wir zu dem Algorithmus hinzufügen, desto größer wird das Muster. Beachte, dass es noch die Variable "length" (Länge) gibt. Wir können dies immer dort, wo wir ein "move forward" (Schritt vorwärts) haben. Setze die Variable für die Länge dieser Form auf 75!'
       Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the \"length\" variable, let's use a math block with the\n\"sides\" variable inside to make sure that each shape fits correctly. The\nperimeter of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: "Free Play: Check it out! Now your algorithm\nis nested within one more loop. Experiment with changing the values of your\ntwo variables to draw cool patterns.\r\n\r\nFor even more effect, try playing\nwith color!  Use random colors inside loops to see how it changes your design."
       Course 4 Artist Vars 2_instruction: |
@@ -1133,21 +1115,10 @@ de:
       Course 4 Bee Params 7_instruction: |
         Try using your new function to collect
         all of this nectar.
-      Course 4 Bee Params 8 Clone 2_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 clone 3_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 Clone_instruction: |
-        Oooh, now there's honey to deal
-        with too! How could you update your function to either get nectar or make
-        honey.
-      Course 4 Bee Params 8 new_instruction: |
-        Oooh, now there's honey to deal with
-        too! How could you update your function to either get nectar or make honey.
+      Course 4 Bee Params 8 Clone 2_instruction: Oooh, jetzt kümmern wir uns noch um Honig. Wie kannst Du Deine Funktion anpassen, um entweder Nektar zu bekommen oder Honig zu machen?
+      Course 4 Bee Params 8 clone 3_instruction: Oooh, jetzt kümmern wir uns noch um Honig. Wie kannst Du Deine Funktion anpassen, um entweder Nektar zu bekommen oder Honig zu machen?
+      Course 4 Bee Params 8 Clone_instruction: Oooh, jetzt kümmern wir uns noch um Honig. Wie kannst Du Deine Funktion anpassen, um entweder Nektar zu bekommen oder Honig zu machen?
+      Course 4 Bee Params 8 new_instruction: Oooh, jetzt kümmern wir uns noch um Honig. Wie kannst Du Deine Funktion anpassen, um entweder Nektar zu bekommen oder Honig zu machen?
       Course 4 Bee Params 8_instruction: |
         Challenge: Now there's honey to deal with
         too! Rewrite your function to use both the number of honey units and the number
@@ -1391,7 +1362,19 @@ de:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1781,19 +1764,17 @@ de:
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      k-1 maze 1_instruction: Can you make me move West to get to the pig?
-      K-1 Maze 10_instruction: 'Go around the TNT to get me to the pig! '
-      K-1 Maze 11_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
-      K-1 Maze 5_instruction: Move me East to get me to the pig!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
+      k-1 maze 1_instruction: Kannst Du mich nach Westen bewegen, damit ich zum Schwein komme?
+      K-1 Maze 10_instruction: Gehe um das TNT herum, um mich zum Schwein zu bringen!
+      K-1 Maze 11_instruction: 'Finde den Weg und führe mich zu dem albernen Schwein. Meide das TNT, sonst fliegen die Federn! Tipp: Es ist südlich von mir.'
+      K-1 Maze 2_instruction: Bewege mich nach Osten, um mich zum Schwein zu bringen!
+      K-1 Maze 3_instruction: Bewege mich nach Süden, um mich zum Schwein zu bringen!
+      K-1 Maze 4_instruction: Bewege mich nach Norden, um mich zum Schwein zu bringen!
+      K-1 Maze 5_instruction: Bewege mich nach Osten, um mich zum Schwein zu bringen!
+      K-1 Maze 6_instruction: Bewege mich in eine RIchtung, dann in eine andere, um mich zum Schwein zu bringen!
+      K-1 Maze 7_instruction: Bewege mich in eine RIchtung, dann in eine andere, um mich zum Schwein zu bringen!
+      K-1 Maze 8_instruction: Bewege mich in eine RIchtung, dann in eine andere, um mich zum Schwein zu bringen!
+      K-1 Maze 9_instruction: Bewege mich in eine RIchtung, dann in eine andere, um mich zum Schwein zu bringen!
       K-1 Maze Assessment 1_instruction: 'Assessment -- Get me to the pig!'
       K-1 Maze Assessment 12_instruction: Assessment Level
       K-1 Maze Assessment 13_instruction: Assessment Level
@@ -1850,7 +1831,7 @@ de:
         to the pig!
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig"
+      K-1 Maze Sequence Assessment 1_instruction: "Dies ist ein Test.\r\nGehe einen Weg, dann einen anderen, um zum Schwein zu kommen."
       K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen another to get me to the pig."
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
@@ -2222,10 +2203,7 @@ de:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
         It's Free Play
         time, have fun with all the blocks in your tool box. 
-      NEW Course 4 Play Labs For Loops 8a_instruction: |
-        Challenge: How would you
-        use the "for loop" to get every actor to go around and say their actor number,
-        then vanish from the screen? 
+      NEW Course 4 Play Labs For Loops 8a_instruction: 'Herausforderung: Wie würdest Du die "for"-Schleife verwenden, um jeden Schauspieler umherlaufen, seine Nummer sagen und dann vom Bildschirm verschwinden zu lassen?'
       New Play Lab Project_instruction: |
         Create your own story or game! Your code
         is saved as a project you can return to at any time.
@@ -2253,24 +2231,24 @@ de:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Mit einem Creeper zusammen zu stoßen ist keine gute Idee. Bewege dich vorsichtig um die Creepers herum, um sicher in dein Haus zu gelangen.
-      Overworld Chop Tree_instruction: 'Holz ist ein sehr wichtiger Rohstoff. Viele Dinge werden aus Holz hergestellt. Gehe zum Baum und benutze den Befehl "Block zerstören", um ihn zu fällen.'
-      Overworld Chop Trees_instruction: Wir müssen ein Haus bauen, bevor die Sonne untergeht. Häuser benötigen viel Holz. Fälle alle 3 Bäume.
-      Overworld Free Play 20x20_instruction: Herzlichen Glückwunsch! Du hast alle Aufgaben gelöst! Jetzt gewinne Rohstoffe, baue und kreiere etwas Einzigartiges mit allem, was du bisher gelernt hast.
-      Overworld Free Play_instruction: In dieser Landschaft kannst Du frei spielen. Du entscheidest, was Du baust.
+      Overworld Avoid Monsters_instruction: Auf einen Creeper zu treffen, ist nicht so gut. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres Zuhause.
+      Overworld Chop Tree_instruction: 'Holz ist ein sehr wichtiger Rohstoff. Daraus kann man vieles herstellen. Gehe zum Baum und benutze den Befehl "Block zerstören", um ihn zu fällen.'
+      Overworld Chop Trees_instruction: Wir müssen ein Haus bauen, bevor die Sonne untergeht. Für Häuser braucht man viel Holz. Fälle alle 3 Bäume.
+      Overworld Free Play 20x20_instruction: Glückwunsch! Du hast all unsere Rätsel gelöst! Jetzt baue ab, baue und erstelle etwas Einzigartiges, indem du alles bisher Gelernte anwendest.
+      Overworld Free Play_instruction: Diese Landschaft steht dir zur Verfügung. Du kannst auswählen, was du bauen willst.
       Overworld House Frame - A_instruction: Lasst uns unser eigenes Haus bauen! Dieser Fleck sieht gut aus. Baue einen Rahmen auf den Erdblöcken.
       Overworld House Frame - C_instruction: Lasst uns unser eigenes Haus bauen! Dieser Fleck sieht gut aus. Baue einen Rahmen auf den Erdblöcken.
       Overworld House Frame B_instruction: Eine Mauer ist fertig, lass uns den Rest des Hauses, in dem Du dem Grundriss folgst! Du musst Dich hier ziemlich häufig wiederholen.
       Overworld House Frame B2_instruction: Eine Mauer ist fertig, lass uns den Rest des Hauses, in dem Du dem Grundriss folgst! Du musst Dich hier ziemlich häufig wiederholen.
       Overworld House Frame C_instruction: Eine Mauer ist fertig, lass uns den Rest des Hauses, in dem Du dem Grundriss folgst! Du musst Dich hier ziemlich häufig wiederholen.
       Overworld House Frame Chosen_instruction: 'Baue den Rest deines Hauses aus einem Material deiner Wahl. Der "wiederhole"-Befehl ist dabei sehr nützlich.'
-      Overworld House Frame_instruction: Lasst uns unser eigenes Haus bauen! Dieser Fleck sieht gut aus. Baue einen Rahmen auf den Erdblöcken.
-      Overworld Minecart Track_instruction: Du bist zurück an der Oberfläche mit haufenweise Untergrundrohstoffen. Nun bauen wir eine Schienenstrecke entlang des Trampelpfads von Deinem Haus. Der erste Schritt ist, den Pfad frei zu räumen. Folge dem Pfad und befreie ihn von den Bäumen.
-      Overworld Move to Sheep_instruction: 'Füge einen zweiten "vorwärts bewegen"-Befehl hinzu, um das Schaf zu erreichen.'
-      Overworld Place Wall_instruction: 'Jedes Haus beginnt mit einer Mauer. Baue den ersten Teil deines Hauses, indem du die "platzieren"- und "vorwärts bewegen"-Befehle in die Schleife einfügst.'
-      Overworld Plant Crops_instruction: Es ist gut, voraus zu planen. Baue Feldfrüchte auf beiden Seiten des Wassers an, so dass du später nicht hungern musst.
-      Overworld Powered Minecart_instruction: Toll gemacht! Du hast haufenweise Rohstoffe gesammelt und ein bescheidenes Haus gebaut. Nun verlege Schienen vom Rand der Karte zum Eingang deines Hauses.
-      Overworld Shear Sheep_instruction: 'Zeit für die Schafschur! Benutze den "scheren"-Befehl, um Wolle von beiden Schafen einzusammeln.'
+      Overworld House Frame_instruction: Bauen wir unser eigenes Haus! Dieser Platz sieht gut aus. Baue auf den Erdblöcken einen Rahmen.
+      Overworld Minecart Track_instruction: Du bist wieder an der Oberfläche mit vielen unterirdischen Rohstoffen. Jetzt bauen wir Schienen entlang des Pfads, der von deinem Haus wegführt. Zuerst muss der Pfad freigeräumt werden. Folge dem Pfad und fälle die Bäume.
+      Overworld Move to Sheep_instruction: 'Füge einen zweiten "vorwärts"-Befehl hinzu, um zu den Schafen zu gelangen.'
+      Overworld Place Wall_instruction: 'Alle Häuser beginnen mit einer Wand. Baue den ersten Teil deines Hauses, indem du die "platzieren"- und "vorwärts"-Befehle in die Wiederholungsschleife platzierst.'
+      Overworld Plant Crops_instruction: Es ist gut, vorauszuplanen. Pflanze auf beiden Seiten des Wassers Getreide an, damit du später nicht hungrig wirst.
+      Overworld Powered Minecart_instruction: Gut gemacht! Du hast viele Rohstoffe gesammelt und ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis zur Tür deines Hauses.
+      Overworld Shear Sheep_instruction: 'Zeit zum Schafescheren! Benutze den Befehl "scheren", um Wolle von beiden Schafen zu sammeln.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2631,7 +2609,7 @@ de:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2748,8 +2726,8 @@ de:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -2900,22 +2878,22 @@ de:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -2924,7 +2902,7 @@ de:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -2959,7 +2937,7 @@ de:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3111,8 +3089,9 @@ de:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -3896,8 +3875,8 @@ de:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -3967,6 +3946,64 @@ de:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
@@ -3993,11 +4030,11 @@ de:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: 'Unter einigen der Blöcke versteckt sich Lava. Diese musst du erst mit Pflastersteinen abdecken, bevor du dich vorwärts bewegst. Ein "wenn"-Befehl ist hier nützlich. Füge an der richtigen Stelle einen "vorwärts bewegen"-Befehl ein, um diese Blöcke abzubauen.'
-      Underground If Statements_instruction: 'Jetzt wird es knifflig. Baue 3 rote Steine ab, aber falle nicht in die Lava. Benutze den "wenn"-Befehl, um freigelegte Lava mit Pflastersteinen abzudecken.'
-      Underground Iron_instruction: In geschmolzene Lava zu laufen, ist keine gute Idee. Platziere Pflastersteine, um eine Brücke zu bauen. Dann baue mindestens zwei Eisenblöcke ab.
-      Underground Mine in a Circle_instruction: "Finde einen Weg, um 5 Diamanten und 7 rote Felsen zu bekommen. Versuche es mit dem \"wiederhole\"-Befehl innerhalb eines \"wiederhole\"-Befehls, um im Quadrat zu laufen.\r\n"
-      Underground Mining Coal_instruction: Du wirst die wertvollsten Rohstoffe unter der Erde finden, aber es kann dunkel werden. Platziere mindestens 2 Fackeln und baue 2 Kohleblöcke ab.
+      Underground Avoiding Lava_instruction: 'Lava verbirgt sich unter einigen dieser Blöcke. Du musst sie erst abdecken, bevor du vorwärtsgehen kannst. Hier ist ein "wenn"-Befehl hilfreich. Füge einen "vorwärts"-Befehl an der richtigen Stelle hinzu, um diese Blöcke abzubauen.'
+      Underground If Statements_instruction: 'Jetzt wird es schwierig. Baue 3 Redstone ab, aber falle nicht in die Lava. Verwende den "wenn"-Befehl, um Bruchstein über Lava zu platzieren, die du entdeckst.'
+      Underground Iron_instruction: In geschmolzene Lava zu laufen, ist keine gute Idee. Platziere Bruchstein, um eine Brücke zu erstellen, und baue mindestens zwei Eisenblöcke ab.
+      Underground Mine in a Circle_instruction: 'Finde einen Weg, 5 Diamanten und 7 Redstone zu erhalten! Versuche, einen "wiederholen"-Befehl in einem "wiederholen"-Befehl anzuwenden, um im Quadrat zu laufen.'
+      Underground Mining Coal_instruction: Du wirst die wertvollsten Rohstoffe unter der Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und baue mindestens 2 Kohleblöcke ab.
       Underground Test Level_instruction: Sammle alle Mineralien!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

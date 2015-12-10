@@ -146,7 +146,7 @@
           description_short: Tegn kule bilder og tegninger med Kunstneren!
         hourofcode:
           Maze: Labyrint
-          title: Kodetimen
+          title: Classic Maze
           description: Prøv grunnleggende informatikk med figurene fra Angry Birds, planter mot zombies og Scrat fra Istid!
           description_short: Prøv grunnleggende informatikk med mange morsomme figurer!
         frozen:
@@ -1348,6 +1348,10 @@
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1475,7 +1479,7 @@
         mc:
           title: Kodetimen med Minecraft
           description_short: Utforsk en Minecraft-verden gjennom kode
-          description: Bruk kodeblokker til å ta med Steve eller Alex ut på et eventyr i denne Minecraft-verdenen
+          description: Bruk blokker med kode for å ta Steve eller Alex med på et eventyr gjennom denne Minecraft-verdenen
           Hour of Code 2015: Kodetimen 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

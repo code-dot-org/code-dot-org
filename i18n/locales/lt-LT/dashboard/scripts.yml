@@ -146,7 +146,7 @@ lt:
           description_short: Nupiešk šaunius piešinius ir ornamentus su menininku!
         hourofcode:
           Maze: Labirintas
-          title: „Programavimo valanda“
+          title: Classic Maze
           description: Išmėginkite programavimo pradmenis kartu su personažais iš Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
         frozen:
@@ -1348,6 +1348,10 @@ lt:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1459,13 +1463,13 @@ lt:
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
+          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
+          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1475,7 +1479,7 @@ lt:
         mc:
           title: Minecraft programavimo valanda
           description_short: Tyrinėkite Minecraft pasaulį per kodą
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

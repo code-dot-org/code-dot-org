@@ -193,7 +193,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackground":function(d){return "පසුතලයක් පිහිටුවන්න"},
 "setBackgroundRandom":function(d){return "අහඹු පසුතලයක් පිහිටුවන්න"},
 "setBackgroundFlappy":function(d){return "(දිවා) නගරයක පසුතලයක් පිහිටුවන්න"},
-"setBackgroundNight":function(d){return "(රත්‍රී) නගරයක පසුතලයක් පිහිටුවන්න"},
+"setBackgroundNight":function(d){return "(රාත්‍රී) නගරයක පසුතලයක් පිහිටුවන්න"},
 "setBackgroundSciFi":function(d){return "විද්‍යා ප්‍රබන්ධ පසුතලයක් පිහිටුවන්න"},
 "setBackgroundUnderwater":function(d){return "ජලය සහිත පසුතලයක් පිහිටුවන්න"},
 "setBackgroundCave":function(d){return "ගුහාවකට සමගාමි පසුතලයක් පිහිටුවන්න"},

@@ -47,7 +47,7 @@ Umuyoruz ki bu etkinlik öğrencilerde öğrenmeye devam etmek için bir ilgi uy
 
 *Bu neden önemli?*
 
-Çin'de, her öğrenci liseden mezun olabilmek için bilgisayar bilimi öğrenir. ABD'de, okulların %90'ı bunu öğretmiyor bile. Artık 21. yüzyıla yetişme vaktimiz geldi. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every student takes computer science to graduate high school. ABD'de, okulların %90'ı bunu öğretmiyor bile. Artık 21. yüzyıla yetişme vaktimiz geldi. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **Daha fazla detay ve materyallerinizde kullanabileceğiniz bir söz**
 

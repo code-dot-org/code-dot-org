@@ -3,7 +3,7 @@ require_relative '../../pegasus/src/env'
 require 'cdo/solr'
 require src_dir 'database'
 
-SOLR = Solr::Server.new(host: 'ec2-54-83-22-254.compute-1.amazonaws.com')
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 def export_contacts_to_csv(contacts, path)
   columns = nil

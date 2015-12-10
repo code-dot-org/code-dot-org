@@ -391,7 +391,7 @@ it:
     help_from_html: Siamo particolarmente riconoscenti agli ingegneri di Google, Microsoft, Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questi materiali.
     art_from_html: |
-      Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />
+      Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />
       Frozen&#8482; &amp; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />
       Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
       AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br />
@@ -410,6 +410,9 @@ it:
     privacy: Informativa sulla privacy
     secure: Versione sicura
     report_abuse: Segnala un abuso
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -441,7 +444,7 @@ it:
   pdf_download: Scarica il PDF
   download_coming_soon: La descrizione di questa attività è in corso di preparazione.
   video_coming_soon: Il video è in corso di preparazione!
-  not_started: Lo studente non ha provato questo livello.
+  not_started: Lo studente non ha provato questo esercizio.
   share_code:
     title: 'Clicca su "Esegui" per vedere il mio programma in azione'
     bounce_og_title: Prova la mia versione del Ping-Pong
@@ -461,12 +464,12 @@ it:
     back: Ritorna agli script
     success: Hai modificato correttamente i blocchi.
     level:
-      create: Crea un nuovo livello
+      create: Crea un nuovo esercizio
       current: Livelli correnti
       unused: LIvelli non usati
   upsell:
     hoc:
-      title: "L'Ora del Codice"
+      title: Labirinto Classico
       body: "Impara i concetti base dell'informatica. Milioni di persone l'hanno già fatto."
     flappy:
       title: Flappy
@@ -490,7 +493,7 @@ it:
       body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
     minecraft:
       title: Minecraft
-      body: Esplora il mondo di Minecraft con il codice.
+      body: Esplora il mondo di Minecraft attraverso il codice.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: "Gli studenti l'hanno creato scrivendo del codice!"
@@ -573,7 +576,7 @@ it:
           title: Passo
           description: ""
         sample_level_builder:
-          title: Costruttore di un livello di prova
+          title: Costruttore di un esercizio
           description: ""
   age_interstitial:
     age: La tua età
@@ -586,7 +589,7 @@ it:
     in_progress: in corso
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
-    furthest_level_attempted: livello più avanzato che è stato provato
+    furthest_level_attempted: esercizio più avanzato che è stato provato
     assessment: verifica
   studio:
     courses_working_on: Corsi su cui stai lavorando

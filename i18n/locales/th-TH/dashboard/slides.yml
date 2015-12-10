@@ -1543,101 +1543,101 @@ th:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: ชื่อของผมคือ Jens Bergensten แต่รู้จักกันในชื่อ Jeb มากกว่า ผมเป็นผู้นำนักพัฒนา Minecraft ที่ Mojang ในสตอกโฮล์ม ผมคิดว่าผมเริ่มเขียนโปรแกรมเพราะอยากที่จะสร้างเกมเมื่ออายุประมาณ 11 หรือ 12 ปี เพื่อนคนหนึ่งของพ่อบอกว่าหากต้องการสร้างเกม ผมจะต้องเรียนรู้วิธีการเขียนโปรแกรม นั่นเป็นสิ่งที่ผมเริ่มต้น ผมชอบการออกแบบและการคำนวณโครงสร้างของเกม นั่นคือสิ่งที่ผมชอบเกี่ยวกับ Minecraft
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: อีกหนึ่งชั่วโมงถัดไปคุณจะได้เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์โดยการเขียนโปรแกรมให้ Alex หรือ Steve เคลื่อนไหวผ่านโลก Minecraft ที่ได้จำลองขึ้นมา
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: การเขียนโปรแกรมแบบดั้งเดิมมักจะอยู่ในแบบข้อความ แต่วันนี้เราจะใช้ Blockly ระบบซึ่งใช้บล็อกภาพที่คุณสามารถลากและวางในการเขียนโปรแกรม ในสภาวะนี้ คุณกำลังสร้างโค้ด Javascript
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: 'แนวคิดที่คุณจะได้เรียนรู้คือสิ่งที่นักโปรแกรมคอมพิวเตอร์ใช้ทุกวันและเป็นรากฐานวิทยาศาสตร์คอมพิวเตอร์ ที่ Mojang เราใช้แนวคิดเดียวกันนี้ในการทำงานเกี่ยวกับ Minecraft '
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: ก่อนที่คุณจะเริ่มต้นคุณจะเลือกผู้เล่นของคุณ ผมจะเลือก Alex ลองสร้างโค้ดสำหรับโปรแกรมที่จะช่วยให้เธอเคลื่อนไหวไปรอบๆ หน้าจอ
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: หน้าจอของคุณถูกแบ่งออกเป็นสามส่วนหลัก ด้านซ้ายเป็นพื้นที่เล่นเกมใน Minecraft ที่โปรแกรมของคุณจะทำงาน คำแนะนำสำหรับแต่ละระดับจะเขียนไว้ที่ด้านล่าง
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: พื้นที่ตรงกลางนี้เป็นกล่องเครื่องมือและแต่ละบล็อกเหล่านี้เป็นคำสั่งที่นำการกระทำของ Alex
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: พื้นที่สีขาวที่อยู่ด้านขวาเรียกว่าพื้นที่ทำงานและนี่คือบริเวณที่เราจะสร้างโปรแกรม
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: จะเกิดอะไรขึ้นถ้าเราลากบล็อก moveForward(); ไปยังพื้นที่ทำงาน แล้วคลิก รัน Alex เคลื่อนที่ไปข้างหน้าหนึ่งช่องในเส้นตาราง
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: และหากเราต้องการที่จะทำอะไรบางอย่างหลังจากที่เธอเคลื่อนไหวไปข้างหน้าในพื้นที่หนึ่งหน่วย เราสามารถเพิ่มบล็อกอื่นๆ ในโปรแกรมของเราได้อีก ผมจะเลือกบล็อก turnRight(); และจะลากไปใต้บล็อก moveForward(); ของผมจนเส้นสีส้มนี้ปรากฏขึ้น จากนั้นผมจะวางลงและบล็อกทั้งสองบล็อกจะรวมเข้าด้วยกัน เมื่อเรากด รัน อีกครั้ง Alex จะทำตามคำสั่งที่ซ้อนกันจากบนลงล่างในพื้นที่ทำงานของเรา
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: หากคุณต้องการที่จะลบบล็อก เพียงลากบล็อกนั้นออกมาจากกองกลับไปที่กล่องเครื่องมือ
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'หากต้องการยกเลิกการเปลี่ยนแปลงและกลับไปดูว่าระดับได้เริ่มต้นอย่างไร ให้ใช้ปุ่ม เริ่มใหม่ ที่มุมขวาบนของพื้นที่ทำงาน อีกสิ่งหนึ่ง: คุณเห็นรูปสามเหลี่ยมเล็กๆ ในบล็อกย้อนกลับหรือไม่ เวลาที่คุณเห็นรูปสามเหลี่ยมเหล่านี้ หมายความว่าคุณสามารถเลือกตัวเลือกที่แตกต่างกันได้ เริ่มต้นการเขียนโค้ดกันเลย!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: ฉันชื่อ Lydia Winters ผู้อำนวยการแบรนด์ Mojang และเราสร้างเกมเล็กๆ ที่มีชื่อว่า Minecraft
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: สิ่งที่ฉันชอบทำใน Minecraft คือสำรวจ ฉันรักการผจญภัยในถ้ำและดูว่าฉันสามารถหาอะไรได้บ้าง ในฐานะที่ฉันไม่ได้เป็นนักเขียนโปรแกรม ฉันตื่นเต้นมากที่จะผ่านบทเรียน Minecraft และเรียนรู้การเขียนโปรแกรมด้วยตัวเองจริงๆ
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: ระดับที่ผ่านมาจำเป็นต้องใช้บล็อก moveForward(); จำนวนมาก จะง่ายขึ้นถ้าเราเพียงแค่จะบอกคอมพิวเตอร์เพื่อดำเนินการตามคำสั่ง moveForward(); สี่หรือห้าครั้ง โชคดีสำหรับเรา คอมพิวเตอร์สามารถทำงานผ่านคำสั่งซ้ำได้ดีมากด้วยการวนรอบ
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: เมื่อสร้าง Minecraft เราใช้การวนรอบในการวางวัสดุเริ่มต้นทุกอย่างในการสร้างโลกใหม่ ซึ่งได้สร้างเป็นพันๆ บล็อก เรายังใช้วนรอบในรูปแบบเล็กๆ เช่นเพื่อทำให้เท้าของ Alex ถอยกลับและไปข้างหน้าในเวลาเดิน การวนรอบเป็นส่วนหนึ่งของการเขียนโปรแกรมที่มีประสิทธิภาพ
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: 'ใกล้ค่ำแล้ว ดังนั้นในระดับต่อไปอีกสองสามระดับ เราจะสร้างบ้านเพื่อจะได้อยู่อย่างปลอดภัย เรากำลังจะใช้บล็อกซ้ำเพื่อสร้างบ้านได้ง่ายๆ '
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: ในการสร้างผนังบ้าน เราสามารถบอก Alex ให้ moveForward(); และวางไม้กระดานสี่ครั้ง หรือเราสามารถบอกเธอให้ moveForward(); และวางไม้กระดานหนึ่งแผ่น แล้วใช้คำสั่งนี้และใช้บล็อกซ้ำเพื่อให้เธอทำซ้ำหลายๆ ครั้ง ตอนนี้เราจะคลิกบนบล็อกซ้ำ และบอกเธอว่าเราต้องการให้เธอทำแบบนี้กี่ครั้ง ตอนนี้เรามาสร้างบ้านก่อนจะถึงเวลากลางคืนกันเถอะ! ขอให้สนุก
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: ตอนนี้เรากำลังจะได้เรียนรู้เกี่ยวกับข้อความที่มีคำว่า หากมี ข้อความที่มีคำว่า หากมี ป็นส่วนพื้นฐานของการเรียนรู้ในการเขียนโปรแกรม ข้อความนี้ช่วยคอมพิวเตอร์ในการตัดสินใจ
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: คอมพิวเตอร์ทุกเครื่องใช้ข้อความที่มีคำว่า หากมี รวมถึงโทรศัพท์ของฉัน ตัวอย่างเช่น เมื่อฉันปลดล็อกโทรศัพท์ โทรศัพท์จะเรียกใช้โค้ดบางอย่างที่บอกว่าฉันใส่รหัสผ่านถูกต้องแล้วหรือไม่ จากนั้นจึงปลดล็อกโทรศัพท์ มิฉะนั้นจะแสดงข้อความแสดงข้อผิดพลาด
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: คุณสามารถใช้ข้อความที่มีคำว่า หากมี ในโค้ดของคุณที่จะทำให้ Steve และ Alice ตอบสนองต่อสิ่งที่พวกเขาเห็นในโลก ตัวอย่างเช่น หากมีหินอยู่ด้านหน้า พวกเขาก็สามารถเเลี้ยวซ้าย หรือเลี้ยวขวาถ้าพวกเขาวิ่งไปที่ต้นไม้
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: ในกรณีนี้ เราไม่ต้องการที่จะตกลงไปในลาวา เป็นเรื่องง่ายที่จะวางแผนรับมือลาวา เราสามารถมองเห็นลาวาได้บนหน้าจอ แต่ลาวาที่อยู่ใต้หินซึ่งเรามองไม่เห็นล่ะ
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: หลังจากที่เราระเบิดหิน เราจะต้องตรวจดูว่ามีลาวาในบริเวณหรือไม่ก่อนที่จะเคลื่อนไหวไปข้างหน้า หากมีลาวาที่นั่น เราต้องการที่จะวางหินที่ด้านหน้าตัวละครของเราก่อนที่จะเคลื่อนไหวไปข้างหน้า ด้วยวิธีนี้เราสามารถเคลื่อนไหวไปข้างหน้าได้อย่างปลอดภัย ถึงเวลาสำหรับการระเบิดแร่อื่นๆ แล้ว! และอย่าลืมที่จะใช้ข้อความที่มีคำว่า หากมี เพื่อดูขั้นตอนของคุณ
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: ขอแสดงความยินดี! คุณเพิ่งเรียนรู้พื้นฐานในการสร้างบล็อกในวิทยาการคอมพิวเตอร์
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: ตอนนี้คุณสามารถใช้บล็อกเหล่านี้เพื่อการสร้างสรรค์ตามแบบของคุณ ไม่มีคำแนะนำเพิ่มเติมและไม่มีปริศนาที่จะแก้แล้ว คุณสามารถสร้างอะไรก็ได้ตามที่คุณต้องการ คุณเลือกได้
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[นักเรียนพูด] เป็นเรื่องของการสร้างให้เป็นจริง ตัดขน ฉันสร้าง L จากคบไฟ ฉันสร้าง A จากไม้กระดานต้นเบิช สิ่งที่ฉันทำ มันทำงานได้ ทำงานได้ เราสร้างบ้านจากขนแกะ!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: เมื่อเสร็จการสร้างสรรค์ของคุณแล้ว ให้เลือกแบ่งปันเพื่อรับการเชื่อมโยงเพื่อแบ่งปันกับเพื่อนของคุณ ขอให้สนุก!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: ขอแสดงความยินดี! คุณเพิ่งเรียนรู้พื้นฐานในการสร้างบล็อกในวิทยาการคอมพิวเตอร์
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: ตอนนี้คุณสามารถใช้บล็อกเหล่านี้เพื่อการสร้างสรรค์ตามแบบของคุณ ไม่มีคำแนะนำเพิ่มเติมและไม่มีปริศนาที่จะแก้แล้ว คุณสามารถสร้างอะไรก็ได้ตามที่คุณต้องการ คุณเลือกได้
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[นักเรียนพูด] เป็นเรื่องของการสร้างให้เป็นจริง ตัดขน ฉันสร้าง L จากคบไฟ ฉันสร้าง A จากไม้กระดานต้นเบิช สิ่งที่ฉันทำ มันทำงานได้ ทำงานได้ เราสร้างบ้านจากขนแกะ!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: ตอนนี้คุณสามารถสร้างอะไรก็ได้ตามที่คุณต้องการ ขอให้สนุก!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -1656,7 +1656,7 @@ th:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: พื้นที่สีขาวที่อยู่ด้านขวาเรียกว่าพื้นที่ทำงานและนี่คือบริเวณที่เราจะสร้างโปรแกรม
       7:
         image: notes/gumball_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
@@ -1690,4 +1690,57 @@ th:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

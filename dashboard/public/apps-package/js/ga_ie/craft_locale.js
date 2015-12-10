@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:(k=craft_loca
 s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).craft_locale = {
 "blockDestroyBlock":function(d){return "destroy block"},
-"blockIf":function(d){return "if"},
+"blockIf":function(d){return "má"},
 "blockIfLavaAhead":function(d){return "if lava ahead"},
 "blockMoveForward":function(d){return "move forward"},
 "blockPlaceTorch":function(d){return "place torch"},

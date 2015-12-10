@@ -388,7 +388,7 @@ uk:
     thank_you: 'Ми вдячні нашим <a href="https://code.org/about/donors">спонсорам</a>, <a href="https://code.org/about/partners">partners</a>, нашій<a href="https://code.org/about/team">розширеній команді</a>, нашим авторам відео, а також нашим <a href="https://code.org/about/advisors">освітнім консультантам</a> за підтримку створення Студії коду.'
     help_from_html: Ми особливо хочемо відзначити інженерів з Google, Microsoft, Facebook, Twitter, та багатьох інших, які допомогли створити ці матеріали.
     help_from_html_old: Інженери Google, Microsoft, Facebook та Twitter допомогли створити цей підручник.
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Всі права захищені.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Всі права захищені.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Всі права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всі права захищені'
+    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Всі права захищені.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Всі права захищені.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Всі права захищені.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Всі права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всі права захищені'
     art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всі права застережено.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всі права застережено'
     powered_by_aws: На потужностях Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE та Hour of Code&reg; з торговими марками Code.org.'
@@ -403,6 +403,9 @@ uk:
     privacy: Політика конфіденційності
     secure: Безпечна версія
     report_abuse: Повідомити про порушення
+    built_on_code_studio: Створено у Студії коду
+    make_my_own_app: Створити власну програму
+    how_it_works: Як це працює
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки
@@ -459,7 +462,7 @@ uk:
       unused: Невикористані рівні
   upsell:
     hoc:
-      title: Година Коду
+      title: Classic Maze
       body: Спробуйте основи інформатики. Мільйони вже скористались цим шансом.
     flappy:
       title: Код Пурха

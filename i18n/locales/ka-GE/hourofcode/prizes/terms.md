@@ -30,4 +30,12 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 <% end %>
 
+<% if @country == 'us' || @country == 'ca' %>
+
+## ვიდეოჩატი მოწვეულ სპიკერთან:
+
+პრიზი განკუთვნილია K-12 კლასებისთვის მხოლოდ აშშ-სა და კანადაში. Code.org აირჩევს გამარჯვებულ კლასებს, განსაზღვრავს ვიდეოჩატის დროს და ითანამშრომლებს შესაბამის მასწავლებელთან ტექტინიკური დეტალების მოსაგვარებლად. ამ პრიზის მისაღებად არ არის აუცილებელი მთელი სკოლის რეგისტრაცია. Both public and private schools are eligible to win.
+
+<% end %>
+
 <%= view :signup_button %>

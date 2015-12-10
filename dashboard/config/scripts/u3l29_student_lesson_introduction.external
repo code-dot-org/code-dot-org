@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 # Background
 
-We often can develop intuitions for patterns by performing real-life experiments at a small scale, but verifying our intuitions with larger experiments can prove prohibitively time-consuming, costly, or even dangerous. If we can develop a model or simulation of the phenomenon we wish to investigate we can confirm our hypotheses much more quickly without the risks or costs associated with a real-life experiment.
+We can often develop intuitions for patterns by performing real-life experiments at a small scale, but verifying our intuitions with larger experiments can prove prohibitively time-consuming, costly, or even dangerous. If we can develop a model or simulation of the phenomenon we wish to investigate, we can confirm our hypotheses much more quickly without the risks or costs associated with a real-life experiment.
 
 # Vocabulary
 

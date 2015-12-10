@@ -62,7 +62,7 @@ zh:
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
           Graph Paper Programming: 圖畫紙程式設計
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
+          "Real-life Algorithms: Paper Planes": '真實生活裡的演算法: 紙飛機'
           Getting Loopy: 愈來愈糟
           Relay programming: Relay programming
           Conditionals: 流程類別
@@ -82,7 +82,7 @@ zh:
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
           description_audience: 六歲以上 (閱讀要求)
-          description_short: Start with Course 2 for students who can read.
+          description_short: 與能夠閱讀的學生開始課程2
         course3:
           The Maze: 迷宮
           "Studio: Create a Story": '播放實驗室: 創造一個故事'
@@ -92,7 +92,7 @@ zh:
           Artist For Loops: 小畫家 For 迴圈
           Artist Nested Loops: Artist Nested Loops
           Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
+          Bee Nested Loops: 蜜蜂巢狀迴圈
           Bee Debuggin: Bee Debuggin
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
@@ -107,8 +107,8 @@ zh:
           Internet: 互聯網
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          Farmer - While Loops: '農夫 - While 迴圈　'
+          description: 課程3是為已經完成課程2的學生設計的。學生將深入前面介紹的程式設計主題到靈活的解法和更複雜的問題。這門課程結束時，學生將創建互動式故事和遊戲並可以與任何人分享。建議 4-5 年級。
           "Studio: Create a Game": '播放實驗室: 設計一個遊戲'
           Maze: 迷宮
           Artist: 畫家
@@ -146,7 +146,7 @@ zh:
           description_short: 和小畫家一起畫圖和設計!
         hourofcode:
           Maze: 迷宮
-          title: 一小時的程式設計課程
+          title: Classic Maze
           description: 嘗試計算機科學的基礎知識與憤怒的小鳥人物，植物大戰殭屍，和Scrat從冰河時代！
           description_short: 嘗試計算機科學的基礎知識與許多好玩的人物！
         frozen:
@@ -1348,6 +1348,10 @@ zh:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1473,9 +1477,9 @@ zh:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: 當個創世神的一個小時程式課程
-          description_short: 透過程式碼探索創世神的世界
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: Minecraft 程式碼時間
+          description_short: 從程式碼的角度探索 Minecraft 的世界
+          description: 請利用程式碼方塊帶領 Steve 或 Alex 在這個 Minecraft 世界當中遊歷一番
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

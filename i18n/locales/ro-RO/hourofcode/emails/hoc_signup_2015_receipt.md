@@ -10,35 +10,29 @@ de la: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x
 
 Faceti posibila pentru elevii din toata lumea participarea la o Ora de Programare in perioada 7-13 decembrie ce le poate schimba restul vietii.
 
-*Fiecare*organizator Hour of Code din toata lumea va primi un card cadou pentru Amazon, iTunes sau Windows Store ca un cadou de multumire.[Detalii](https://<%= hostname %>/premii).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
 #### Va vom tine la curent in legatura cu noile tutoriale si alte noutati. Ce puteti face acum?
 
+## 1. Find a local volunteer to help you with your event.
+
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+
 ## 1. Răspândește vestea
 
-Avem nevoie de ajutorul tau pentru a ajunge la 100.000 de organizatori din toata lumea. Spune-le prietenilor tai despre #HourOfCode. [Utilizeaza aceste resurse](https://<%= hostname %>/promote/resources) pentru a-ti promova evenimentul.
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-<% if international == 'true' %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. Solicită întregii şcoli sa ofere o Oră de Programare
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Trimite acest e-mail](https://<%= hostname %>/promote/resources#sample-emails)directorului scolii sau[imparte aceste materiale imprimate](https://<%= hostname %>/promote/resources). <% else %>
-
-## 2. Recruteaza-ti intreaga scoala pentru evenimentul Hour of Code cu scopul de a va califica in cursa pentru 10.000 de dolari
-
-[Trimite acest e-mail](https://<%= hostname %>/promote/resources#sample-emails)directorului scolii sau[imparte aceste materiale imprimate](https://<%= hostname %>/promote/resources). Planuieste pentru fiecare elev al scolii tale sa participe si puteti castiga echipamente tehnologice in valoare de 10.000 de dolari pentru scoala ta. [Completeaza acest formular pentru a te inscrie](https://<%= hostname %>/prizes/hardware-signup). <% end %>
-
-## 3. Solicită angajatorului tău să se implice
+## 3. Solicită angajatorului să se implice
 
 [Trimite acest e-mail](https://<%= hostname %>/promote/resources#sample-emails) manager-ului sau CEO-ului.
 
-## 4. Promoveaza Hour of Code în comunitatea ta
+## 5. Promote the Hour of Code in your community
 
 Recrutati un grup local sau chiar prietenii. [Trimiteti acest e-mail](https://<%= hostname %>/resources#sample-emails).
-
-## 5. Solicită unui oficial ales local sprijinul pentru organizarea Hour of Code
-
-[Trimiteti acest e-mail](https://<%= hostname %>/resources#politicians) primarului, consiliului local sau inspectorilor si invita-i sa va viziteze scoala.
 
 Va multumim deoarece conduceti aceasta miscare si daruiti fiecarui elev sansa sa invete competente fundamentale in tehnologia computerelor si programare.
 

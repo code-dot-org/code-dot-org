@@ -305,6 +305,6 @@
         desc: Lektion zu Conditionals und Piecewise
         video: alg_10_conditionals
       CollisionDetection:
-        title: Erkennen eines Zusammenstosses
+        title: Kollisionserkennung und der Satz des Pythagoras
         desc: Beschreibung der Lektion zur Erzeugung eines Zusammenstosses
         video: alg_16_biggame_collision_detection

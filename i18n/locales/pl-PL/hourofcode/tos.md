@@ -22,19 +22,19 @@ These Terms are subject to change. You are agreeing to be bound by such changes 
 
 Some Services may be subject to additional posted guidelines, rules or terms of service (“**Additional Terms**”) and your use of such Services will be conditioned on your agreement to the Additional Terms. If there is any conflict between these Terms and the Additional Terms, the Additional Terms will control for that Service, unless the Additional Terms expressly state that these Terms will control.
 
-### Children Under Age 13
+### Dzieci poniżej 13 roku życia
 
 Podejmujemy kroki w celu minimalizacji zbioru danych osobowych od użytkowników poniżej 13 roku życia, jak określa to [polityka prywatności](http://code.org/privacy). Jeżeli jesteś osobą poniżej 13 roku życia, zachęcamy do uzyskania zgody rodzica lub opiekuna prawnego przed utworzeniem konta na Code.org. Code.org allows certain representatives of school districts and schools, such as teachers, administrators, counselors, and other educators (a “**Educator**”) to connect with students through the Services in order to provide tutorial, educational and similar services. If you are an Educator, you may register accounts on the Services for one or more of your students.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Twoje konto
 
 If you create an account for Services, you are responsible for the security of your account and for keeping your own password safe. Jeżeli używasz konta, które zostało Ci przypisane przez nauczyciela, może on mieć do niego dostęp i je zablokować.
 
 Code.org może zezwolić, aby zarejestrować konto dla usług za pośrednictwem niektórych portali społecznościowych, jak Facebook Connect i Google ("**Usługi uwierzytelniające**"). By registering for the Services using an Authentication Service, you agree that Code.org may access your account information from the Authentication Service and you agree to any and all terms of use of the Authentication Service regarding your use of the Services via the Authentication Service. You are solely responsible for your interactions with the Authentication Service.
 
-### Privacy
+### Prywatność
 
 Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 

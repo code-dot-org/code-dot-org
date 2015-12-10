@@ -6,19 +6,18 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# How to teach one Hour of Code in After-school
+# How to teach one Hour of Code in after-school
 
-## 1) Sign up
+## 1) Tilmeld
 
-  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+  * Tilmeld dig som vært for en [Hour of Code](<%= resolve_url('/') %>) i <%= campaign_date('short') %>.
+  * Promovér din [Hour of Code](<%= resolve_url('/promote') %>) og opmunter andre til at blive værter.
 
 ## 2) Se denne øvelses video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) vælge en øvelse:
 
-Vi vil have en lang række [sjove, timelange vejledninger ](<%= resolve_url('https://code.org/learn') %>) liggende, for deltagere i alle aldre, lavet af forskellige samarbejdspartnere. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+Vi vil have en lang række [sjove, timelange vejledninger ](<%= resolve_url('https://code.org/learn') %>) liggende, for deltagere i alle aldre, lavet af forskellige samarbejdspartnere. *Nye øvelser til at sparke Hour of Code i gang kommer før <%= campaign_date('full') %>.* [Prøv nuværende øvelser.](<%= resolve_url("https://code.org/learn") %>)
 
 **Alle Hour of Code øvelser:**
 
@@ -38,9 +37,9 @@ Den bedste Hour of Code oplevelse får man, med computere der har adgang til int
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) Inspirér deltagere til at starte din Hour of Code
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan programmering påvirker alle dele af vores liv.
 
 **Vis en inspirerende video:**
 
@@ -53,17 +52,17 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
   * Forklare hvordan teknologi påvirker vores liv, med eksempler som både drenge og piger kan være interesseret i. (snak om apps og teknologi, der bruges til at redde liv, hjælpe folk, forbinde mennesker osv).
   * Fortæl om ting fra hverdagen, der indeholder programmer/kode.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Tips til, hvordan pigers interesse for programmering vækkes, kan findes [her](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Brug for mere vejledning?** Download denne [skabelon til lektionsplan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+**Vil du have flere undervisningsidéer?** Tjek [bedste øvelser](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra erfarne lærere ud.
 
-## 6) Code!
+## 6) Kod!
 
-**Direct participants to the activity**
+**Led deltagere til aktiviteten**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Skriv øvelseslinket på et whiteboard. Find linket listet på [information omkring din valgte øvelse](<%= resolve_url('https://code.org/learn') %>) under antallet af deltagere.
 
 **Hvis nogen løber ind i problemer, er det helt ok at svare:**
 
@@ -92,11 +91,12 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Fejr jeres succes
 
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [Udskriv beviser](<%= resolve_url('https://code.org/certificates') %>) til dine elever.
+  * [Udskriv "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
+  * Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 
 [col-33]
 
@@ -120,16 +120,19 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Flere Hour of Code materialer til undervisere:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Brug denne [skabelon](/files/AfterschoolEducatorLessonPlanOutline.docx) til at planlægge din Hour of Code.
+  * Tjek [tips og tricks](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra andre Hour of Code arrangører. 
+  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
+  * Besøg [Hour of Code forummet](http://forum.code.org/c/plc/hour-of-code) for at få rådgivning, indsigt og støtte fra andre arrangører. <% if @country == 'us' %>
+  * Tjek vores [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Hvad er næste skridt efter Hour of Code?
 
-Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave softwareapplikationer. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave dine egne programmer. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-<%= view :signup_button %>
+  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+

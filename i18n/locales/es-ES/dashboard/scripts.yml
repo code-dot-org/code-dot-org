@@ -146,7 +146,7 @@ es:
           description_short: ¡Dibuja imagenes estupendas y diseños con el Artista!
         hourofcode:
           Maze: Laberinto
-          title: Hora del código
+          title: Classic Maze
           description: ¡Prueba los fundamentos de la informática con los personajes de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!
           description_short: ¡Prueba los fundamentos de la informática con muchos personajes divertidos!
         frozen:
@@ -184,7 +184,7 @@ es:
           description_audience: Edades de 10 a 18 años
           Super Challenge - Variables: 'Super desafio - Variables'
           Super Challenge - For Loops: 'Super reto - para los bucles'
-          Super Challenge - Functions and Parameters: 'Super Challenge - funciones y parámetros'
+          Super Challenge - Functions and Parameters: 'Super reto - funciones y parámetros'
           Extreme Challenge - Comprehensive: 'Desafío extremo - integral'
         Course4pre:
           title: Prerequisito del Curso 4
@@ -1348,6 +1348,10 @@ es:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1474,8 +1478,8 @@ es:
           Craft: Craft
         mc:
           title: Hora de Código de Minecraft
-          description_short: Дослідимо світ Майнкрафту через код
-          description: Use blocos de código para levar Steve ou Alex para uma aventura através deste mundo de Minecraft
+          description_short: Explora el mundo de Minecraft a través del código
+          description: Usa bloques de código para acompañar a Steve o a Álex en una aventura por el mundo de Minecraft
           Hour of Code 2015: Hora del Código 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

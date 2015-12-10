@@ -78,8 +78,8 @@
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hej, jag är Paola! I dessa pussel är du en bonde som måste få sitt område
-          helt platt för att börja plantera grödor.
+        text: Hej, jag heter Paola! I dessa pussel är du en bonde som måste få din
+          åker helt platt för att börja plantera grödor.
       2:
         image: notes/stage9_2.jpg
         text: Du måste hjälpa henne ta bort alla smutshögar och fylla i alla hål.
@@ -424,27 +424,28 @@
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hej, är jag Paola! Datorer är riktigt bra på att upprepa åtgärder. Du
-          kan räkna till 10, 20 eller 100. Men en dator kan räkna till en miljard
-          eller en biljon. Den kommer inte bli uttråkad och det tar bara några sekunder.
-          Om det är att räkna, eller att rita, eller vad som helst--datorer kan upprepa
-          saker hundratals eller till och med miljarder gånger.
+        text: Hej, jag heter Paola! Datorer är riktigt bra på att göra samma sak om
+          och om igen. Du kan räkna till 10, 20 eller 100. Men en dator kan räkna
+          till en miljard eller en biljon. Den kommer inte bli uttråkad och det tar
+          bara några sekunder. Oavsett om det handlar om att räkna, att rita eller
+          vad som helst kan datorer upprepa saker hundratals eller till och med miljarder
+          gånger.
       2:
         image: notes/frozen2_2.jpg
-        text: I programmering kallar vi detta en loop. En loop eller slinga upprepar
+        text: Inom programmering kallar vi detta en loop. En loop eller slinga upprepar
           din kod om och om igen. För nästa pussel är ditt mål att hjälpa Anna skapa
-          en kvadrat med "Upprepa" blocket.
+          en kvadrat med blocket "Upprepa".
       3:
         image: notes/frozen2_3.jpg
-        text: Varje kodblock du sätter inne i "Upprepa" blocket kommer att upprepas
+        text: Varje kodblock du lägger inuti blocket "Upprepa" kommer att upprepas
           i sekvens, så många gånger du vill.
       4:
         image: notes/frozen2_4.jpg
-        text: Om du vill rita en kvadrat, kan du använda "gå framåt" och "Sväng höger"
-          blocket 4 gånger. Men det lättaste är att tala om för datorn att "gå framåt"
-          och "sväng höger med 90 grader" en gång, och sedan tala om att datorn ska  upprepa
-          detta par åtgärder 4 gånger. För att göra det, måste du sätta "gå framåt"
-          och "sväng höger" blocken inuti ett "Upprepa" block.
+        text: Om du vill rita en kvadrat kan du använda blocken "gå framåt" och "Sväng
+          höger" 4 gånger. Men det lättaste är att tala om för datorn att "gå framåt"
+          och "sväng höger med 90 grader" en gång, och sedan tala om att datorn ska
+          upprepa dessa åtgärder 4 gånger. För att göra det måste du lägga blocken
+          "gå framåt" och "sväng höger" inuti ett "Upprepa"-block.
       5:
         image: notes/frozen2_5.jpg
         text: Kom ihåg, att du kan ändra siffran i blocket "Upprepa" till en annan,
@@ -452,7 +453,7 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hej, är jag Chris Bosh. Jag är en basketspelare och jag kodat i college.
+        text: Hej, jag heter Chris Bosh. Jag är basketspelare och jag kodade på högskolan.
       2:
         image: notes/frozen3_2.jpg
         text: En av de viktigaste begreppen inom datavetenskap är att definiera nya
@@ -467,22 +468,22 @@
           ger det ett namn, kallas det en funktion.
       4:
         image: notes/frozen3_4.jpg
-        text: Hej, är jag Jess. När du programmerar med block använder du funktioner
+        text: Hej, jag heter Jess. När du programmerar med block använder du funktioner
           om där finns en samling åtgärder du vill använda flera gånger. Du har till
           exempel skrivit kod för att skapa en kvadrat.
       5:
         image: notes/frozen3_5.jpg
-        text: Du kan definiera detta som en funktion kallad "skapa en fyrkant."
+        text: 'Du kan definiera detta som en funktion kallad "skapa en kvadrat." '
       6:
         image: notes/frozen3_6.jpg
         text: Nu har du ett nytt block som du kan använda flera gånger för att skapa
-          flera fyrkanter.
+          flera kvadrater.
       7:
         image: notes/frozen3_7.jpg
         text: En hel del enkla former kan användas för att skapa mer komplexa mönster.
-          I nästa pussel är koden du skrev nyligen för att göra en cirkel tillgänglig
-          för dig som en ny funktion som kan göra cirklar i olika storlekar. Kan du
-          använda den för att låta Elsa skapa intrikata och vackra mönster i snön?
+          I nästa pussel är koden du nyss skrev för att skapa en cirkel tillgänglig
+          som en ny funktion som kan göra cirklar i olika storlekar. Kan du använda
+          den för att få Elsa att skapa avancerade och vackra mönster i snön?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
@@ -761,9 +762,9 @@
       3:
         image: notes/C1_maze_loops_3.png
         text: För att få fågeln till grisen i denna nivå... snarare än att dra tre
-          norr- block till arbetsytan, använder du "Upprepa" blocket. Dra "Upprepa"
-          blocket till arbetsytan och ange nummer 3. Sedan dra blocket "flytta norrut"
-          in i "Upprepa" blocket och tryck på "Kör" för att se om du fick det rätt.
+          norr- block till arbetsytan, använder du blocket "Upprepa". Dra blocket
+          "Upprepa" till arbetsytan och ange nummer 3. Sedan dra blocket "flytta norrut"
+          in i blocket "Upprepa" och tryck på "Kör" för att se om du fick det rätt.
           Grattis, du klarade det!
     C1_moveitmoveit_unplugged:
       1:
@@ -1294,20 +1295,20 @@
         image: notes/C2_zuck_repeat_loop_3.png
         text: I det här exemplet är ditt mål att flytta fågeln för att få grisen.  Vi
           ska nu kunna använda blocket "Upprepa" för att kunna göra detta mycket enkelt.
-          Du kan antingen göra detta genom att ge datorn ett "gå vidare" kommando
+          Du kan antingen göra detta genom att ge datorn ett "gå vidare"-kommando
           fem gånger för att fågeln ska gå ett steg i taget fram  till grisen.
       4:
         image: notes/C2_zuck_repeat_loop_4.png
         text: Eller så du kan bara tala om för datorn att "gå vidare" en gång och
           sedan tala om för den att "Upprepa" det 5 gånger och den kommer att göra
-          samma sak. Så du drar ditt "gå vidare" kommando för att göra detta och lägger
+          samma sak. Så du drar ditt "gå vidare"-kommando för att göra detta och lägger
           det inuti blocket "upprepa". Och du kan klicka på det och tala om hur många
           gånger du vill upprepa blocket för att tala om för det hur många steg du
           vill gå fram.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
-        text: En till sak är du kan sätta så många kommandon du vill ha inne i "Upprepa"
-          blocket. Så i det här exemplet säger du åt den att gå framåt och svänga
+        text: En till sak är du kan sätta så många kommandon du vill ha inne i blocket
+          "Upprepa". Så i det här exemplet säger du åt den att gå framåt och svänga
           vänster, som det att göra fem gånger. Bra jobbat och ha kul!
     C3_artist_functions:
       1:
@@ -2486,22 +2487,22 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: 'Hej, jag är Kathleen Kennedy och jag är producenten av Star Wars: The
+        text: 'Hej, jag heter Kathleen Kennedy och är producent för Star Wars: The
           Force Awakens. Idag kommer du att arbeta med en av våra stjärnor, BB-8.
-          BB-8 är en sfärisk droid. Allt han gör och varje rörelse som han gör styrs
-          av datorprogram. Datavetenskap påverkar alla branscher, från marknadsföring
-          till sjukvård till film. I själva verket har hundratals datatekniker arbetat
+          BB-8 är en sfärisk droid. Allt han gör och varje rörelse han gör styrs av
+          ett datorprogram. Datavetenskap påverkar alla branscher, från marknadsföring
+          till sjukvård till film. Faktum är att hundratals datatekniker har arbetat
           tillsammans för att göra en film som The Force Awakening.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hej jag är Rachel Rose, jag är en senior R&D ingenjör på ILM och jag
-          leder utvecklingsteamet för animationer ochkaraktäre. I The Force Awakens
-          är jag ansvarig för att hjälpa konstnärer utveckla riggar som är de delar
-          av karaktären som får den att röra sig och ge ett trovärdigt intryck av
-          att den kommer från en galax långt, långt borta.
+        text: Hej, jag är Rachel Rose. Jag är en senior R&D-ingenjör på ILM och jag
+          leder utvecklingsteamet för animationer och karaktäre. I The Force Awakens
+          är jag ansvarig för att hjälpa konstnärer att utveckla de de delar av karaktären
+          som får den att röra sig och ge ett trovärdigt intryck, som om den kommer
+          från en galax långt, långt borta.
       3:
         image: notes/starwars_intro_3.JPG
-        text: Under nästa timme kommer vi att bygga vårt eget Star Wars spel. Vi kommer
+        text: Under nästa timme kommer vi att bygga vårt eget Star Wars-spel. Vi kommer
           att lära dig de grundläggande begreppen i programmering. Vanligtvis är programmering
           bara text, men vi kommer att använda block här som vi kan dra och släppa
           för att skriva program. Under 'huven' skriver du fortfarande kod. När du
@@ -2509,7 +2510,7 @@
           de mest populära programmeringsspråken på webben.
       4:
         image: notes/starwars_intro_4.JPG
-        text: Till att börja med, kommer vi att arbeta med Rey för att programmera
+        text: Till att börja med kommer vi att arbeta med Rey för att programmera
           BB-8 att gå och samla in alla skrotdelar. Skärmen är uppdelad i tre delar.
           Till vänster är Star Wars spelyta, där koden körs. Under spelytan skrivs
           instruktionerna för varje nivå.
@@ -2523,66 +2524,66 @@
           bygga våra program.
       7:
         image: notes/starwars_intro_7.JPG
-        text: Om jag drar flyttaVänster(); blocket till vår arbetsyta och trycker
+        text: Om jag drar blocket flyttaVänster(); till vår arbetsyta och trycker
           på Kör, vad händer? BB-8 flyttar vänster ett steg på skärmen.
       8:
         image: notes/starwars_intro_8.JPG
-        text: Och vad händer om jag vill att BB-8 ska göra något efter flyttaVänster();
-          blocket? Jag kan lägga till ett annat block till vårt program. Jag kommer
-          att välja flyttaUpp(); blocket och jag ska dra det under mitt flyttaVänster();
-          block tills linjen visas. Sedan ska jag släppa det och de två blocken kommer
-          att knäppa ihop.
+        text: Och vad händer om jag vill att BB-8 ska göra något efter blocket flyttaVänster();?
+          Jag kan lägga till ett annat block till vårt program. Jag kommer att välja
+          blocket flyttaUpp(); och jag ska lägga det under flyttaVänster(); tills
+          linjen visas. Sedan ska jag släppa det och de två blocken kommer att kopplas
+          ihop.
       9:
         image: notes/starwars_intro_9.JPG
-        text: När jag trycker på kör igen, utför BB-8 de kommandon som är staplade
-          från toppen till botten på vår arbetsyta. Om du någonsin vill ta bort ett
-          block, ta bort det från stacken och dra tillbaka det in i verktygslådan.
+        text: När jag trycker på Kör igen utför BB-8 de kommandon som ligger staplade
+          i vår arbetsyta uppifrån och ned. Om du vill ta bort ett block, ta bort
+          det från arbetsytan och dra tillbaka det in i verktygslådan.
       10:
         image: notes/starwars_intro_10.JPG
-        text: Efter du har tryckt på Kör, kan du alltid trycka på Omstart-knappen
-          för att få BB-8 tillbaka till starten. Nu låt oss börja!
+        text: Efter du har tryckt på Kör kan du alltid trycka på knappen Omstart för
+          att få BB-8 tillbaka till starten. Låt oss få bollen i rullning nu!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
         text: Inuti blocken vi har använt finns JavaScript-kommandon. JavaScript är
           det populäraste programmeringsspråket för professionella utvecklare idag.
-          Block är ett bra sätt att börja lära sig koda. I själva verket börjar toppuniversitet
-          som Harvard och Berkeley undervisa detta sätt. Men när de väl lärt sig grunderna,
-          skriver ingenjörerna sin kod därför att det går fortare.
+          Block är ett bra sätt att börja lära sig koda. Faktum är att t.o.m. toppuniversitet
+          som Harvard och Berkeley använder denna metod i början av utbildningen.
+          Men när de väl lärt sig grunderna skriver ingenjörerna sin kod för hand
+          då det går fortare.
       2:
         image: notes/starwars_typing_2.JPG
         text: Vi kan skriva hundratals kommandon utan att vi måste hitta dem i verktygslådan
-          eller dra ut dem. Eftersom du håller på och lär dig kan skrivandet vara
-          långsammare till en början men vi vill att du ska göra ett försök.
+          eller dra ut dem. Eftersom du håller på och lär dig kan det gå långsammare
+          i början att skriva koden själv, men vi vill att du gör ett försök.
       3:
         image: notes/starwars_typing_3.JPG
         text: I det övre högra hörnet på din arbetsyta kan du klicka på knappen Visa
-          text på vilket pussel som helst för att byta från block till att skriva
-          kod som text.
+          text på valfritt pussel för att byta från block till att skriva kod som
+          text.
       4:
         image: notes/starwars_typing_4.JPG
         text: I nästa lektion startar vi dig i skrivarläge. Här kan du fortfarande
           dra block från verktygslådan eller skriva kommandonamnet. När du börjar
-          skriva, ser du namnen på möjliga kommandon visas under där du skriver. Istället
-          för att skriva hela kommandonamn, kan du välja ett av dessa. I mitt jobb
-          använder jag den här funktionen' Komplettera automatiskt' hela tiden när
-          jag skriver kod.
+          skriva, visas namnen på möjliga kommandon under textmarkören. Istället för
+          att skriva hela kommandonamn, kan du välja ett av dessa. I mitt jobb använder
+          jag funktionen 'Komplettera automatiskt' hela tiden när jag skriver kod.
       5:
         image: notes/starwars_typing_5.JPG
-        text: När du skriver kod, måste du vara mycket exakt. Du måste stava och Kapitalisera
-          kommandonamn exakt korrekt, inklusive parenteserna och semikolon. Även med
-          ett litet maskinskrivningsmisstag, kan BB-8 inte förstå koden och kommer
-          inte att kunna flytta.
+        text: När du skriver kod, måste du vara mycket exakt. Du måste använda små
+          och stora bokstäver rätt och stava kommandonamnen exakt korrekt, inklusive
+          parenteser och semikolon. Även ett litet misstag gör att BB-8 inte förstå
+          koden och kommer inte att kunna flytta på sig.
       6:
         image: notes/starwars_typing_6.JPG
-        text: När du gör ett fel på raden, belyser redaktör det åt dig så att du kan
-          prova att ändra din text för att fixa det.
+        text: När du gör ett fel på en rad markerar redigeraren det åt dig så att
+          du kan försöka att ändra texten för att fixa det.
       7:
         image: notes/starwars_typing_7.JPG
-        text: Om du fastnar, kan du alltid börja om med Omstartsknappen och du kan
+        text: Om du fastnar kan du alltid börja om med knappen Omstart och du kan
           växla tillbaka till blockläge när som helst genom att klicka i det övre
           högra hörnet. Ok, låt oss göra ett försök att skriva kod! Och om du gör
-          misstag, bli inte frustrerad. Det tar oss alla några försök innan det blir
+          misstag, bli inte frustrerad. Vi behöver alla några försök innan det blir
           rätt.
     starwars_events:
       1:
@@ -2590,18 +2591,18 @@
         text: Hej, mitt namn är Charita Carter och jag är en senior kreativ producent
           här på Walt Disney Imagineering. Jag är ansvarig för att leda grupper som
           faktiskt producerar de attraktioner som våra gäster får uppleva. Vi letar
-          alltid efter sätt att vi kan förbättra oss och skapa en bättre upplevelse
-          för våra gäster och teknik är kärnan i det.
+          alltid efter sätt för att förbättra oss och skapa en bättre upplevelse för
+          våra gäster, och teknik är kärnan i det.
       2:
         image: notes/starwars_events_2.JPG
-        text: Grattis, gjorde du det! Du har programmerat BB-8. Nu tror jag att är
+        text: Grattis, du gjorde det! Du har programmerat BB-8. Nu tror jag att är
           vi redo för något svårare. Låt oss göra det. Nu när du har lärt dig grunderna
-          i programmering, ska vi tillbaka i tiden att bygga ditt eget spel, med R2-D2
-          och C3PO.
+          i programmering ska vi tillbaka i tiden för att bygga ditt eget spel, med
+          R2-D2 och C3PO.
       3:
         image: notes/starwars_events_3.JPG
         text: 'För att göra ett spel måste vi lära oss om något som spelprogrammerare
-          använder varje dag: dte kallas händelser. Händelser säger till ditt program
+          använder varje dag: Det kallas händelser. Händelser säger till ditt program
           att lyssna eller vänta på att något händer och då utföra en åtgärd.'
       4:
         image: notes/starwars_events_4.JPG
@@ -2610,26 +2611,26 @@
       5:
         image: notes/starwars_events_5.JPG
         text: Här kommer vi att göra så att R2-D2 går uppåt för att leverera ett meddelande
-          till en rebel pilot och sedan går ned till den andra rebel pilot. Vi använder
-          händelser för att få honom att flytta när spelaren använder upp/ner piltangenterna
-          eller upp/ner knapparna.
+          till en rebelpilot och sedan går ned till den andra rebelpiloten. Vi använder
+          händelser för att få honom att flytta när spelaren använder piltangenterna
+          upp och ned eller knapparna upp och ner.
       6:
         image: notes/starwars_events_6.JPG
-        text: Vi använder närUpp() händelse blocket och fäster det under flyttaUpp()
-          blocket. När spelaren trycker på uppåt-piltangenten, körs koden som fästs
-          vid närUpp() blocket. Och vi ska göra samma sak för att få R2-D2 att flytta
+        text: Vi använder händelseblocket närUpp() och fäster blocket flyttaUpp()
+          till den. När spelaren trycker på piltangenten upp körs koden som fästs
+          vid blocket närUpp(). Och vi ska göra samma sak för att få R2-D2 att flytta
           nedåt.
       7:
         image: notes/starwars_events_7.JPG
         text: För att göra det ska vi använda ett kommando som kallas närUpp(). När
           du drar kommandot ur verktygslådan, ser du att det börjar och slutar med
           en lockig klammer istället för semikolon. Detta ger oss utrymme att sätta
-          andra kommandon i mitten. Varje kommando som vi placerar inuti dessa klamrar
-          kommer att köras när spelaren trycker på uppåt-pilen.
+          andra kommandon inuti den. Varje kommando som vi placerar inuti dessa klamrar
+          kommer att köras när spelaren trycker på piltangenten upp.
       8:
         image: notes/starwars_events_8.JPG
-        text: Vi vill att R2-D2 ska gå upp så låt oss sätta ett gåUpp(); block inuti
-          kommandot. Och vi ska göra samma sak fär att få R2-D2 att gå ner.
+        text: Vi vill att R2-D2 ska gå upp så låt oss lägga blocket gåUpp(); inuti
+          kommandot. Och vi ska göra samma sak för att få R2-D2 att gå ned.
       9:
         image: notes/starwars_events_9.JPG
         text: Istället för att skriva all kod för att styra vår droid i förväg, kan
@@ -2638,28 +2639,28 @@
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hej, jag heter Alice och jag leder projekt och ingenjörsteam här på
-          Code.org och jag arbetade på denna handledning du spelar igenom just nu.
+        text: Hej, jag heter Alice och jag leder projekt- och ingenjörsgrupper här
+          på Code.org. Jag har arbetat på denna genomgång du spelar igenom just nu.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: Du klarade just den sista nivån. Grattis! Du just lärt dig allt du behöver
-          veta för att göra ditt eget Star Wars-spel. Nu finns det inga fler instruktioner,
-          ingen pussel att lösa. Du kan göra egna spel och du väljer hur det fungerar.
-          En sak till, du har låst upp nya ljud och nya kommandon för att göra ännu
-          mer.
+        text: Du klarade just den sista nivån. Grattis! Du har har nu lärt dig allt
+          du behöver veta för att göra ditt eget Star Wars-spel. Nu finns det inga
+          fler instruktioner, inga pussel att lösa. Du kan göra egna spel och du väljer
+          hur de ska fungera. En sak till, du har låst upp nya ljud och nya kommandon
+          för att göra ännu mer.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[elever talar]Så vi gjorde ett spel som går ut på att du får poäng
-          för varje uppblåsbar gris du får. En stormtrooper dyker upp varje gång du
-          får en gris. Till slut är skärmen full med grisar och när du trycker på
-          10.000 grisar vinner du.'
+        text: '[elever berättar] Så vi gjorde ett spel som går ut på att du får poäng
+          för varje puffer-gris gris du fångar. Utmaningen är att en stormtrooper
+          dyker upp varje gång du fångat en gris. Hela skärmen är full med grisar
+          och när du fångat 10 000 grisar vinner du.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[elever talar] Vi gjorde ett spel där man inte kan förlora och allt
+        text: '[elever berättar] Vi gjorde ett spel där man inte kan förlora och allt
           man dödar ger poäng. I mitt program lät jag tangenterna byta plats så att
-          när man klickar upp går karaktären ner, och när man klickar höger går den
-          åt vänster, Det är verkligen svårt! Ibland får man bara en fördel sådär,
-          en inneboende fördel om du är en spelutvecklare. Fick jag det? Yay!'
+          när man klickar upp går den ned, och när man klickar höger går den åt vänster.
+          Det är verkligen svårt! Ibland får du en fördel, en orättvis sådan, om du
+          är en spelutvecklare. Fick jag det? Yay!'
       5:
         image: notes/starwars_congrats_5.JPG
         text: När du är klar med ditt spel, välj 'Dela' för att få en länk du kan
@@ -2668,26 +2669,26 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hej, jag är Kathleen Kennedy och jag är producenten av Star Wars: The
+        text: 'Hej, jag heter Kathleen Kennedy och är producent för Star Wars: The
           Force Awakens. Idag kommer du att arbeta med en av våra stjärnor, BB-8.
-          BB-8 är en sfärisk droid. Allt han gör och varje rörelse som han gör styrs
-          av datorprogram. Datavetenskap påverkar alla branscher, från marknadsföring
-          till sjukvård till film. I själva verket har hundratals datatekniker arbetat
-          tillsammans för att göra en film som The Force Awakens.'
+          BB-8 är en sfärisk droid. Allt han gör och varje rörelse han gör styrs av
+          ett datorprogram. Datavetenskap påverkar alla branscher, från marknadsföring
+          till sjukvård till film. Faktum är att hundratals datatekniker har arbetat
+          tillsammans för att göra en film som The Force Awakening.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hej jag är Rachel Rose, jag är en senior R&D ingenjör på ILM och jag
-          leder utvecklingsteamet för animationer och karaktärer. I The Force Awakens
-          är jag ansvarig för att hjälpa konstnärer utveckla riggar som är de delar
-          av karaktären som får den att röra sig och ge ett trovärdigt intryck av
-          att den kommer från en galax långt, långt borta.
+        text: Hej, jag heter Rachel Rose och är senior R&D-ingenjör på ILM. Jag leder
+          utvecklingsteamet för animationer och karaktärer. I The Force Awakens är
+          jag ansvarig för att hjälpa konstnärer att utveckla de delarna av karaktären
+          som behövs för att får den att röra sig och ge ett trovärdigt intryck, som
+          om den var från en galax långt, långt borta.
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: I nästa timme kommer vi att bygga vårt eget Star Wars spel som kommer
-          att lära dig de grundläggande begreppen i programmering. Vanligtvis är programmering
-          bara text men vi kommer att använda block här som vi kan dra och släppa
-          för att skriva program. Till att börja med kommer vi att arbeta med Rey
-          för att programmera BB-8 att samla in alla skrotdelar.
+        text: Kommande timme kommer vi att bygga vårt eget Star Wars-spel som kommer
+          att lära dig de grundläggande begreppen inom programmering. Vanligtvis är
+          programmering bara text, men vi kommer att använda block här som vi kan
+          dra och släppa för att skriva program. Till att börja med kommer vi att
+          arbeta med Rey för att programmera BB-8 att samla in alla skrotdelar.
       4:
         image: notes/starwars_blocks_intro_4.JPG
         text: Skärmen är uppdelad i tre delar. Till vänster är Star Wars spelyta där
@@ -2702,42 +2703,42 @@
           bygga våra program.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: Om jag drar flyttaVänster(); blocket till vår arbetsytan, vad händer?
-          BB-8 flyttar vänster en ruta på marken.
+        text: Om jag drar blocket flyttaVänster(); till vår arbetsytan, vad händer?
+          BB-8 flyttar vänster en ruta i rutnätet.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: Och vad händer om jag vill ha BB-8 att göra något efter flyttaVänster();
-          blocket? Jag kan lägga ett annat block till vårt program. Jag kommer att
-          välja flyttaUpp(); blocket och jag ska dra det under mitt flyttaVänster();
-          block tills ramen visas. Sedan ska jag släppa det och de två blocken kommer
-          att knäppa ihop. När jag trycker på kör igen, utför BB-8 de kommandon som
-          är staplade uppifrån och ned på vår arbetsyta.
+        text: Och vad händer om jag vill ha BB-8 att göra något efter blocket flyttaVänster();?
+          Jag kan lägga ett annat block till vårt program. Jag kommer att välja blocket
+          flyttaUpp(); och jag kommer dra den under blocket flyttaVänster(); tills
+          ramen visas. Sedan ska jag släppa det och de två blocken kommer att kopplas
+          ihop. När jag trycker på Kör igen, utför BB-8 de kommandon som är staplade
+          uppifrån och ned på vår arbetsyta.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: Om du någonsin vill ta bort ett block, bara dra bort den från stacken
-          och dra den tillbaka in i verktygslådan.
+        text: Om du någonsin vill ta bort ett block, dra bort den från stacken och
+          dra den tillbaka in i verktygslådan.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: Efter du har tryckt på Kör, kan du alltid trycka på Omstart-knappen
-          för att få BB-8 tillbaka till starten. Nu låt oss börja!
+        text: Efter du har tryckt på Kör kan du alltid trycka på knappen Omstart för
+          att få BB-8 tillbaka till starten. Låt oss få bollen i rullning nu!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
         text: Hej, mitt namn är Charita Carter och jag är en senior kreativ producent
           här på Walt Disney Imagineering. Jag är ansvarig för att leda grupper som
           faktiskt producerar de attraktioner som våra gäster får uppleva. Vi letar
-          alltid efter sätt att vi kan förbättra oss och skapa en bättre upplevelse
-          för våra gäster och teknik är kärnan i det.
+          alltid efter sätt för att förbättra oss och skapa en bättre upplevelse för
+          våra gäster, och teknik är kärnan i det.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Grattis, gjorde du det! Du har programmerat BB-8. Nu tror jag att är
+        text: Grattis, du gjorde det! Du har programmerat BB-8. Nu tror jag att är
           vi redo för något svårare. Låt oss göra det. Nu när du har lärt dig grunderna
-          i programmering, ska vi tillbaka i tiden att bygga ditt eget spel, med R2-D2
-          och C3PO.
+          i programmering ska vi tillbaka i tiden för att bygga ditt eget spel, med
+          R2-D2 och C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: 'För att göra ett spel måste vi lära oss om något som spelprogrammerare
-          använder varje dag: dte kallas händelser. Händelser säger till ditt program
+          använder varje dag: Det kallas händelser. Händelser säger till ditt program
           att lyssna eller vänta på att något händer och då utföra en åtgärd.'
       4:
         image: notes/starwars_blocks_events_4.JPG
@@ -2746,45 +2747,44 @@
       5:
         image: notes/starwars_blocks_events_5.JPG
         text: Här kommer vi att göra så att R2-D2 går uppåt för att leverera ett meddelande
-          till en rebel pilot och sedan går ned till den andra rebel pilot. Vi använder
-          händelser för att få honom att flytta när spelaren använder upp/ner piltangenterna
-          eller upp/ner knapparna.
+          till en rebelpilot och sedan går ned till den andra rebelpiloten. Vi använder
+          händelser för att få honom att flytta när spelaren använder piltangenterna
+          upp och ned eller knapparna upp och ner.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: Vi använder närUpp() händelse blocket och fäster det på flyttaUpp()
-          blocket. När spelaren trycker på uppåt piltangent, körs koden som finns
-          på närUpp() blocket. Och vi ska göra samma sak för att att få R2-D2 att
-          flytta nedåt. men istället för att skriva all kod för att styra vår droid
-          i förväg, kan vi låta R2-D2 reagera på knapptryck som flyttar honom runt
-          på skärmen.
+        text: Vi använder händelseblocket närUpp() och fäster det på blocket flyttaUpp().
+          När spelaren trycker på piltangenten upp, körs koden som finns under blocket
+          närUpp(). Och vi ska göra samma sak för att att få R2-D2 att flytta nedåt.
+          Men istället för att skriva all kod för att styra vår droid i förväg, kan
+          vi låta R2-D2 reagera på knapptryck som flyttar honom runt på skärmen.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Steg för steg, blir dina spel mer interaktiva.
+        text: Steg för steg blir dina spel mer interaktiva.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hej, jag heter Alice och jag leder projekt och ingenjörsteam här på
-          Code.org och jag arbetade på denna handledning du spelar igenom just nu.
+        text: Hej, jag heter Alice och jag leder projekt- och ingenjörsgrupper här
+          på Code.org. Jag har arbetat på denna genomgång du spelar igenom just nu.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: Du klarade just den sista nivån. Grattis! Du just lärt dig allt du behöver
-          veta för att göra ditt eget Star Wars-spel. Nu finns det inga fler instruktioner,
-          ingen pussel att lösa. Du kan göra egna spel och du väljer hur det fungerar.
-          En sak till, du har låst upp nya ljud och nya kommandon för att göra ännu
-          mer.
+        text: Du klarade just den sista nivån. Grattis! Du har har nu lärt dig allt
+          du behöver veta för att göra ditt eget Star Wars-spel. Nu finns det inga
+          fler instruktioner, inga pussel att lösa. Du kan göra egna spel och du väljer
+          hur de ska fungera. En sak till, du har låst upp nya ljud och nya kommandon
+          för att göra ännu mer.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[elever talar]Så vi gjorde ett spel som går ut på att du får poäng
-          för varje uppblåsbar gris du får. En stormtrooper dyker upp varje gång du
-          får en gris. Till slut är skärmen full med grisar och när du trycker på
-          10.000 grisar vinner du.'
+        text: '[elever berättar] Så vi gjorde ett spel som går ut på att du får poäng
+          för varje puffer-gris gris du fångar. Utmaningen är att en stormtrooper
+          dyker upp varje gång du fångat en gris. Hela skärmen är full med grisar
+          och när du fångat 10 000 grisar vinner du.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[elever talar] Vi gjorde ett spel där man inte kan förlora och allt
+        text: '[elever berättar] Vi gjorde ett spel där man inte kan förlora och allt
           man dödar ger poäng. I mitt program lät jag tangenterna byta plats så att
-          när man klickar upp går karaktären ner, och när man klickar höger går den
-          åt vänster, Det är verkligen svårt! Ibland får man bara en fördel sådär,
-          en inneboende fördel om du är en spelutvecklare. Fick jag det? Yay!'
+          när man klickar upp går den ned, och när man klickar höger går den åt vänster.
+          Det är verkligen svårt! Ibland får du en fördel, en orättvis sådan, om du
+          är en spelutvecklare. Fick jag det? Yay!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: När du är klar med ditt spel, välj 'Dela' för att få en länk du kan
@@ -2793,175 +2793,258 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: Mitt namn är Jens Bergensten men jag är mer känd som Jeb. Jag är den
-          ledande utvecklaren av Minecraft, här på Mojang i Stockholm. Jag tror jag
-          var elva eller kanske tolv och jag började programmera eftersom jag ville
-          göra spel. En av min fars vänner berättade för mig att för att göra spel,
-          måste du lära dig hur man programmerar. Det är hur jag kom igång. Jag gillar
-          att utforma och räkna ut arkitekturen av spel. Det är vad jag verkligen
-          tycker om Minecraft.
+        text: Jag heter Jens Bergensten, fast jag är mer känd som Jeb. Jag är huvudprogrammerare
+          för Minecraft, här på Mojang i Stockholm. Jag tror att jag var elva eller
+          tolv när jag började programmera för att jag ville göra spel. En av pappas
+          vänner sa att för att kunna göra spel måste man lära sig att programmera.
+          Det var så det började. Jag gillar att utforma och lista ut hur saker är
+          uppbyggda. Det är det jag gillar med Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Under nästa timme kommer du att lära dig grunderna i datavetenskap genomatt
-          programmera Alex eller Steve att flytta genom en simulerad bit av en Minecraft
-          värld.
+        text: Under den här timmen kommer du lära dig grunderna i datorvetenskap genom
+          att programmera Alex eller Steve att ta sig genom en simulerad del av en
+          Minecraft-värld.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditionell programmering är oftast i text men idag använder vi Blockly,
-          ett system som använder visuella block som du kan dra och släppa för att
-          skriva program. Under ytan skapar du Javascript-kod.
+        text: Traditionell programmering är vanligtvis text, men i dag kommer vi att
+          använda Blockly, ett system som använder block som du kan dra och släppa
+          för att skriva program. Under huven skapar du Javascript-kod.
       4:
         image: notes/mc_intro_4.JPG
-        text: De begrepp du kommer att lära är vad programmerare använder varje dag
-          och är grunden till datavetenskap. Här på Mojang använder vi dessa samma
-          begrepp för att få Minecraft att fungera.
+        text: Koncepten som du kommer lära dig är det datorprogrammerare använder
+          varje dag, och är grunden till datorvetenskap. Här på Mojang använder vi
+          samma koncept för att få Minecraft att fungera.
       5:
         image: notes/mc_intro_5.JPG
-        text: Innan du börjar, ska du välja din karaktär. Jag kommer att välja Alex.
-          Låt oss bygga koden för ett program som kommer att hjälpa henne att flytta
-          runt på skärmen.
+        text: Innan du börjar ska du välja karaktär. Jag tänker välja Alex. Nu bygger
+          vi kod till ett program som hjälper henne att röra sig på skärmen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Skärmen delas in i tre delar. Till vänster är Minecraft spelyta där
-          programmet körs. Instruktionerna för varje nivå skrivs nedanför.
+        text: Din skärm är delad i tre. Till vänster är spelutrymmet, där ditt program
+          kommer utföras. Instruktionerna för varje nivå står nedan.
       7:
         image: notes/mc_intro_7.JPG
-        text: Det mellersta området är verktygslådan och vart och ett av dessa block
-          är ett kommando som instruerar Alex att utföra något.
+        text: Mellanområdet är verktygslådan, och varje block är ett kommando som
+          styr Alex handlingar.
       8:
         image: notes/mc_intro_8.JPG
-        text: Det vita utrymmet till höger kallas arbetsytan och det är där vi ska
-          bygga våra program.
+        text: Det vita utrymmet till höger kallas arbetsytan, och det är här vi kommer
+          bygga vårt program.
       9:
         image: notes/mc_intro_9.JPG
-        text: Om vi drar gå framåt(); blocket till vår arbetsyta och sedan klickar
-          på kör, vad händer? Alex flyttar framåt ett steg.
+        text: Om vi drar blocket "gå framåt" till arbetsytan och klickar på Kör, vad
+          händer då? Alex går framåt en ruta.
       10:
         image: notes/mc_intro_10.JPG
-        text: Och om vi vill göra något när hon har flyttats framåt ett steg? Vi kan
-          lägga till ett annat block i vårt program. Jag kommer att välja sväng höger();
-          blocket och jag ska dra det under mitt gå framåt(); block tills denna orange
-          linje visas. Sedan ska jag släppa det och de två blocken kommer att knäppa
-          ihop. När vi trycker på kör igen, utför Alex de kommandon som är staplade
-          från toppen till botten på vår arbetsyta.
+        text: Och om vi vill göra något när hon har gått fram en ruta? Då kan vi lägga
+          till ett block till i programmet. Jag tänker välja blocket "sväng höger",
+          sedan drar jag det under mitt  "gå framåt"-block tills den här orange linjen
+          syns. Sedan släpper jag den, och de två blocken kommer slås ihop. När vi
+          trycker på Kör igen kommer Alex utföra de lagrade kommandona uppifrån och
+          ned på arbetsytan.
       11:
         image: notes/mc_intro_11.JPG
-        text: Om du någonsin vill ta bort ett block, dra den bara från stacken tillbaka
+        text: Och om du vill radera ett block behöver du bara dra det från högen tillbaka
           till verktygslådan.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'För att ångra dina ändringar och komma tillbaka till hur den nivån
-          startade, använd knappen ''börja om'' i det övre högra hörnet av arbetsytan.
-          En sak till: du ser den lilla triangeln på sväng-blocket? När du ser dessa
-          trianglar, betyder det att du kan välja ett annat alternativ. Låt oss börja
-          koda!'
+        text: 'För att ångra dina ändringar och återgå till hur nivån var från början
+          kan du använda Börja om-knappen i övre högra hörnet av arbetsytan. En sak
+          till: ser du den lilla triangeln på turblocken? När du ser de här trianglarna
+          betyder det att du kan välja ett annat alternativ. Nu börjar vi koda!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: Jag är Lydia Winters, Mojangs varumärkesdirektör och vi gjorde ett litet
-          spel som heter Minecraft.
+        text: Jag heter Lydia Winters, Mojangs Brand Director, och vi har gjort ett
+          litet spel som heter Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: Min favorit sak att göra i Minecraft är utforska. Jag älskar äventyr
-          i grottor och att se vad jag kan hitta. Som någon som inte är programmerare,
-          är jag verkligen glad över att få gå igenom Minecraft lektionen och faktiskt
-          lära mig en del kodning själv.
+        text: Det bästa jag vet i Minecraft är att utforska. Jag älskar att äventyra
+          i grottor och se vad jag kan hitta. Eftersom jag inte är programmerare är
+          det väldigt spännande att gå igenom Minecraft-lektionerna och lära mig koda
+          själv.
       3:
         image: notes/mc_repeat_3.JPG
-        text: Den sista nivån behöver massor av gå framåt(); block. Det skulle vara
-          lättare om vi bara kunde berätta för datorn att utföra gå framåt(); kommandot
-          fyra eller fem gånger. Lyckligtvis för oss är datorer riktigt bra på upprepa
-          kommandon med hjälp av upprepade loopar.
+        text: Förra nivån behövde massa "gå framåt"-block. Det skulle vara lättare
+          om vi bara kunde säga till datorn att utföra "gå framåt"-kommandot fyra
+          eller fem gånger. Lyckligtvis är datorer väldigt bra på att upprepa kommandon
+          med upprepningslooper.
       4:
         image: notes/mc_repeat_4.JPG
-        text: När man bygger Minecraft, använder vi upprepa -loopar' för att placera
-          allt inledande materialsom behövs för att skapa en ny värld. Det är tusentals
-          block. Vi använder också loopar på små sätt, till exempel att få Alexs fötter
-          röra sig fram och tillbaka när hon går. Upprepa- loopar är en kraftfull
+        text: När vi bygger Minecraft använder vi upprepningslooper för att placera
+          alla material för att skapa en ny värld. Det är flera tusentals block. Vi
+          brukar också använda looper på små sätt, till exempel för att få Alex fötter
+          att röra sig fram och tillbaka när hon går. Upprepningslooper är en kraftfull
           del av programmering.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Natten kommer så under de nästa nivåerna, ska vi bygga ett säkert hus.
-          Vi kommer att använda upprepa- blocket för att göra detta mycket enkelt.
+        text: Natten kommer, så i de följande nivåerna ska vi bygga ett hus för att
+          vara säkra. Vi kommer använda upprepningsblocket för att göra det här enkelt.
       6:
         image: notes/mc_repeat_6.JPG
-        text: För att bygga en mur av vårt hus, kan vi antingen säga till Alex att
-          'gå framåt'(); och placera plankor fyra gånger, eller vi kan säga till henne
-          att gå framåt(); och placera en planka, sedan ta det kommandot och använda
-          upprepablocket för att få henne att utföra åtgärden flera gånger. Nu ska
-          vi klicka på upprepa blocket och tala om för henne hur många gånger vi vill
-          att hon ska utföra den här åtgärden. Låt oss bygga vårt hus nu innan natten
-          faller på! Ha det så kul.
+        text: För att bygga en vägg till vårt hus kan vi antingen säga åt Alex att
+          gå framåt och placera plankor fyra gånger, eller så kan vi säga åt henne
+          att flytta fram och placera en planka, och sedan ta det här kommandot och
+          använda upprepningsblocket för att få henne att genomföra handlingen flera
+          gånger. Nu klickar vi på upprepningsblocket och säger till henne hur många
+          gånger vi vill att hon ska utföra handlingen. Nu bygger vi ett hus innan
+          natten kommer! Ha så kul!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Nu ska vi lära oss om uttalanden. Om-uttalanden är en grundläggande
-          del av att lära sig programmera. De hjälper en dator fatta beslut.
+        text: Nu ska vi lära oss om om-satser. Om-satser är en grundläggande del av
+          att lära sig programmera. De hjälper en dator att fatta beslut.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: Alla datorer använder om-uttalanden, inklusive min telefon. Till exempel
-          när jag låser upp min telefon kör den lite kod som sägeratt om jag anger
-          lösenordet korrekt ska den låsa upp. Annars visas ett felmeddelande.
+        text: Alla datorer använder om-satser, även min telefon. När jag till exempel
+          låser upp telefonen kör den kod som säger att om jag skriver in rätt lösenord
+          så ska telefonen låsas upp. Annars visar den ett felmeddelande.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: Du kan använda om-uttalanden i din kodför att göra så Steve och Alice
-          reagerar på vad de ser i världen. Till exempel om det finns en sten framför
-          dem, kan de svänga vänster. Eller svänga höger om de går in i ett träd.
+        text: Du kan använda om-satser i koden för att få Steve och Alice att reagera
+          på det de ser i världen. Om det till exempel finns en sten framför dem kan
+          de svänga åt vänster. Eller svänga höger om de går in i ett träd.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: I det här fallet vill vi inte att falla i lava. Det är lätt att planera
-          för lavan. Vi kan se det på skärmen. Men hur är det med lavan som vi inte
-          ser under stenen?
+        text: 'I det här fallet vill vi inte falla ned i lavan. Det är lätt att planera
+          för lavan. Vi kan se den på skärmen. Men hur blir det med lavan som vi inte
+          kan se under stenen? '
       5:
         image: notes/mc_if_statements_5.JPG
-        text: När vi har grävt upp stenen, måste vi kontrollera om det finns någon
-          lava på denna plats innan vi går vidare. Om det finns lava där, vill vi
-          placera en sten framför vår karaktär innan vi kan gå framåt. På så sätt
-          kan vi tryggt gå. Dags för mer gruvdrift! Och kom ihåg att använda om-uttalande
-          att för att inte gå fel.
+        text: När vi har brutit stenen måste vi kolla om det finns lava där innan
+          vi går framåt. Om det finns lava där så vill vi placera en sten framför
+          vår karaktär innan vi går framåt. På så sätt kan vi ta oss framåt säkert.
+          Dags för mer gruvbrytning! Och kom ihåg att använda om-satser för att hålla
+          dig säker.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Grattis! Du just lärt dig de grundläggande byggstenarna i datavetenskap.
+        text: Grattis! Du har lärt dig grunderna i datorvetenskap.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Nu kan du använda dessa block för att bygga din egen skapelse. Det finns
-          inga fler instruktioner och inga fler pussel att lösa. Du kan bygga vad
-          du vill. Du får välja.
+        text: Nu kan du använda de här blocken för att göra din egen skapelse. Det
+          finns inga fler instruktioner eller pussel att lösa. Du får bygga vad du
+          vill. Du väljer.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[studenter talar] Det handlar om att få det verkligt. Klippa av. Jag
-          gjorde ett L av facklor. Jag gjorde ett A av björkplankor. Det fungerade,
-          det fungerade. Vi byggde ett hus av ull!'
+        text: Nu blir det på riktigt. Klipp. Jag har gjort ett L av facklor. Och jag
+          har gjort ett A av björkplankor. Det gick, det gick! Vi byggde ett hus av
+          ull!
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: När du är klar med din skapelse, välj Dela att få en länk att dela med
-          dina vänner. Ha det så kul!
+        text: När du är färdig med din skapelse kan du välja Dela för att få en länk
+          att dela med dina vänner. Ha så kul!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Grattis! Du just lärt dig de grundläggande byggstenarna i datavetenskap.
+        text: Grattis! Du har lärt dig grunderna i datorvetenskap.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Nu kan du använda dessa block för att bygga din egen skapelse. Det finns
-          inga fler instruktioner och inga fler pussel att lösa. Du kan bygga vad
-          du vill. Du får välja.
+        text: Nu kan du använda de här blocken för att göra din egen skapelse. Det
+          finns inga fler instruktioner eller pussel att lösa. Du får bygga vad du
+          vill. Du väljer.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[studenter talar] Det handlar om att få det verkligt. Klippa av. Jag
-          gjorde ett L av facklor. Jag gjorde ett A av björkplankor. Det fungerade,
-          det fungerade. Vi byggde ett hus av ull!'
+        text: Nu blir det på riktigt. Klipp. Jag har gjort ett L av facklor. Och jag
+          har gjort ett A av björkplankor. Det gick, det gick! Vi byggde ett hus av
+          ull!
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Nu kan du bygga vad du vill. Ha det så kul!
+        text: Nu kan du bygga vad du vill. Ha så kul!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
+        text: Om du vill göra ditt eget spel, är det jättelätt. Allt du behöver kunna
+          är grunderna i programmering och du kan sedan börja spela ett spel som du
+          har skapat alldeles själv.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Har du ett favorit TV-spel? Vi kommer att ta ett steg mot att skapa
+          sådant spel i PlayLab. Bra spel har en historia och varje historia har skådespelare.
+          Skådespelare som gör saker som att tala, flytta och interagera med varandra.
+          De kanske även får poäng baserat på reglerna i spelet. I dag kommer vi att
+          lära oss hur man gör alla dessa saker steg för steg med roliga skådespelare
+          och sedan bygger vi ett spel från grunden som kan delas och spelas på en
+          telefon.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: I dag kommer vi att lära oss hur man gör alla dessa saker steg för steg
+          med roliga skådespelare och sedan bygga ett spel från grunden som kan delas
+          och spelas på en telefon.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Din skärm är indelad i tre delar. Till vänster är spelytan där programmet
+          körs. Instruktionerna för varje nivå skrivs nedan.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: Det mellersta området är verktygslådan och vart och ett av dessa block
+          är en bit kod.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Det vita utrymmet till höger kallas arbetsytan, och det är här vi kommer
+          bygga vårt program.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: För att komma igång måste du koppla ihop dina block med det orangea
+          "Vid start"-blocket. Du kan koppla ihop flera block genom att dra dem tills
+          du ser den gula linjen, och sedan kommer de att fästas ihop.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: I detta första pussel får vi skådespelarna att säga något genom att
+          länka "säga" blocket till "Vid start"-blocket och att skriva in ditt meddelande.
+          När du har dina block på plats, tryck knappen kör för att se vad du programmerat.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Kom igång och när du är färdig kommer du att kunna skapa ditt eget spel
+          med flera typer av spelare som kan interagera, få poäng, kasta saker och
+          få varandra att försvinna. Det är du som bestämmer!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Nu ska du få lära dig något som alla spelprogrammerare använder varje
+          dag. De kallas händelser. En händelse berättar för ditt program att lyssna
+          efter när något händer. När händelsen inträffar i spelet utför programmet
+          en instruktion.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Några exempel på händelser är att programmet väntar på ett musklick,
+          piltangent upp, piltangent ner eller ett tryck på skärmen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Här ska vi att göra så att skådespelaren säger något när spelaren klickar
+          på den. Vi kommer att använda "när klickad på"-blocket och bifoga blocket
+          "säg" till det. När spelaren klickar kommer att alla block som bifogats
+          detta block att utföras.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: Det finns också "Pil"-block. Om du länkar "Flytta"-block till dem kan
+          du flytta ditt skådespelare upp, ner, vänster och höger med piltangenterna.
+          Steg för steg blir ditt spel mer interaktivt.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Föreställ dig att du var tvungen att upprepa något om och om igen för
+          all framtid. Förhoppningsvis slipper du göra det eftersom datorer är riktigt
+          bra på att upprepa saker.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: Detta är ett "Upprepa för evigt"-block. Allt inuti detta block kommer
+          att hända för evigt i spelet. Om vi vill att en skådespelare gör något om
+          och om igen utan att spelaren att gör något så lägger vi dessa block inne
+          i ett "Upprepa för evigt"-block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: I nästa pussel är vårt mål att hjälpa skådespelaren gör ett jobb kontinuerligt.
+          När du lär dig hur upprepa-kommandon fungerar så kommer du att spara massor
+          av tid senare när du bygger ditt eget spel.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
         text: If you'd like to make your own game, it's really easy. All you need
           are just a few basics of programming and you can start playing a game that
           you created.
       2:
-        image: notes/gumball_intro_2.JPG
+        image: notes/iceage_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
           creating games just like that in PlayLab. Good games have a story and every
           story has actors. Actors that do things like speak, move and interact with
@@ -2969,72 +3052,72 @@
           we'll be learning how to do all these things one by one with fun actors
           and then build a game from scratch that can be shared and played on a phone.
       3:
-        image: notes/gumball_intro_3.JPG
+        image: notes/iceage_intro_3.JPG
         text: Today, we'll be learning how to do all these things one by one with
           fun actors and then build a game from scratch that can be shared and played
           on a phone.
       4:
-        image: notes/gumball_intro_4.JPG
+        image: notes/iceage_intro_4.JPG
         text: Your screen is split into three main parts. On the left is the gamespace
           where your program will run. The instructions for each level are written
           below.
       5:
-        image: notes/gumball_intro_5.JPG
+        image: notes/iceage_intro_5.JPG
         text: This middle area is the tool box and each of these blocks is a piece
           of code.
       6:
-        image: notes/gumball_intro_6.JPG
-        text: Det vita utrymmet till höger kallas arbetsytan och det är där vi ska
-          bygga våra program.
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
       7:
-        image: notes/gumball_intro_7.JPG
+        image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
           block. You can link multiple blocks together by dragging them out until
           you see the yellow line and then they'll snap together.
       8:
-        image: notes/gumball_intro_8.JPG
+        image: notes/iceage_intro_8.JPG
         text: In this first puzzle, we'll make the actors say something by linking
           the "say" block to the when run block and typing in your message. Once you
           have your blocks in place, hit the run button to see what you programmed.
       9:
-        image: notes/gumball_intro_9.JPG
+        image: notes/iceage_intro_9.JPG
         text: Get started and by the end you'll be able to create your own game with
           all kinds of players that can interact, score points, throw things, and
           vanish each other. It's all up to you!
-    gumball_events:
+    iceage_events:
       1:
-        image: notes/gumball_events_1.JPG
+        image: notes/iceage_events_1.JPG
         text: Now we're going to learn about something all game programmers use everyday.
           They're called events. An event tells your program to listen for when something
           happens and then when it does, the game performs an action.
       2:
-        image: notes/gumball_events_2.JPG
+        image: notes/iceage_events_2.JPG
         text: Some examples of events are listening for a mouse click or an up or
           down arrow key or even a tap on the screen.
       3:
-        image: notes/gumball_events_3.JPG
+        image: notes/iceage_events_3.JPG
         text: Here, we're going to make the actor say something when the player clicks
           on it. We will use the when clicked block and attach the "say" block to
           it. When the player clicks, all the blocks attached to this block will be
           performed.
       4:
-        image: notes/gumball_events_4.JPG
+        image: notes/iceage_events_4.JPG
         text: There are also when arrow blocks. If you link move blocks to those,
           you can start to move your actors up, down, left, right, with the arrow
           keys. Little by little your game is getting more interactive.
-    gumball_repeat:
+    iceage_repeat:
       1:
-        image: notes/gumball_repeat_1.JPG
+        image: notes/iceage_repeat_1.JPG
         text: Can you imagine if you had to repeat something forever and ever? Hopefully
           you never have to because computers are really good at repeating things.
       2:
-        image: notes/gumball_repeat_2.JPG
+        image: notes/iceage_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
           forever in the game. If we want an actor to do something repeatedly without
           the player having to do anything, we'll put those blocks inside the repeat
           forever block.
       3:
-        image: notes/gumball_repeat_3.JPG
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.

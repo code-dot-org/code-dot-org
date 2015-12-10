@@ -6,38 +6,10 @@
   "user_id": 155,
   "properties": {
     "skin": "applab",
-    "code_functions": {
-      "forLoop_i_0_4": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
-      "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "insertItem": null,
-      "appendItem": null,
-      "removeItem": null,
-      "listLength": null,
-      "randomNumber": null,
-      "console.log": null,
-      "declareAssign_x_array_1_4": {
-        "block": "var list = [1,2,3];"
-      }
-    },
     "edit_code": true,
     "embed": "false",
     "instructions": "Count the number of times 5 appears in an array. (Click to see full instructions)",
-    "markdown_instructions": "# Counting Occurances of a Value\r\n\r\nInstead of displaying a true/false value for *every* item in the list, let's compute one value and display it.  A common thing to want to do is **count** the number of times a value occurs.  We can do this with a very small change to the code we've already got. \r\n\r\n# Do This\r\n**Starter Code** is similar to past levels.  We've also created a variable called `fiveCount`.\r\n\r\n* ** Add an `if` statement** inside the `for` loop to **increment `fiveCount` if the value is equal to 5. **\r\n (Note: this will be exactly the same as the if statement you wrote in the previous level. Just giving you more practice).\r\n\r\n* **Run and re-run your code** to make sure that it's accurately counting the number of 5s in the array.  Since the array is getting a random set of values every time you run the program you might have to run it a bunch of times to thoroughly test it.  Make sure you get to run at least once when no 5s appear in the array.\r\n\r\n* Finally, if you'd like to, **change the first loop in the program to add 100 items to the array** instead of 10 -- your code should still work to count the number of 5s, no matter how big the original array is!",
+    "markdown_instructions": "# Counting Occurrences of a Value\r\n\r\nInstead of displaying a true/false value for *every* item in the list, let's compute one value and display it.  A common thing to want to do is **count** the number of times a value occurs.  We can do this with a very small change to the code we've already got. \r\n\r\n# Do This:\r\n**Starter Code** is similar to past levels.  We've also created a variable called `fiveCount`.\r\n\r\n* ** Add an `if` statement** inside the `for` loop to **increment `fiveCount` if the value is equal to 5. **\r\n (Note: this will be exactly the same as the `if` statement you wrote in the previous level. Just giving you more practice).\r\n\r\n* **Run and re-run your code** to make sure that it's accurately counting the number of 5's in the array. Since the array is getting a random set of values every time you run the program, you might have to run it a bunch of times to thoroughly test it. Make sure you get to run at least once when no 5's appear in the array.\r\n\r\n* Finally, if you'd like to, **change the first loop in the program to add 100 items to the array** instead of 10. Your code should still work to count the number of 5's, no matter how big the original array is!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -67,7 +39,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template"
+    "project_template_level_name": "U3 - Loops And Arrays - Linear Search Template",
+    "encrypted_examples": "3LS3ZydJckBaoso0vKYNNqiMoUI1NCR8klHs+xFrOgY8hkdslorthxOx6K6l\ni1GN\n"
   }
 }]]></config>
   <blocks/>

@@ -132,7 +132,7 @@
       submit: Muuda mu parool
   welcome_email:
     subject: Liitu minu klassiga (Code.org lehel)
-    body: Kliki lingile, et registreeruda arvutiõpetuse  kursustele Code.org-is (koos
+    body: Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos
       minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja
       õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid
       kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt
@@ -200,7 +200,7 @@
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Olete saanud auhinna! (Ainult USA õpilased)
-      not_earned_title: Lõpeta juhend, teeni auhindu (ainult  USA õpilastele)
+      not_earned_title: Lõpeta juhend, teeni auhindu (ainult USA õpilastele)
       not_earned: 'Õpi kõiki arvuti teaduse kontseptsioone, kogu kõik %{num_trophies}
         trofeed ja teeni reaalmaailma auhindu. Võite valida 10GB vaba ruumi Dropboxis,
         $10 Skype''i krediiti, ja tasuta mängude allalaadimise vahel. Märkus: pakkumine
@@ -223,7 +223,7 @@
           ainult Ameerika Ühendriikide erakoolides.
         bonus:
           not_earned_title: Sa saad teenida täiendavat $250 <a target="_blank" href="http://DonorsChoose.org">
-            DonorsChoose.org</a> krediiti (ainult Usa õpetajatele)
+            DonorsChoose.org</a> krediiti (ainult USA õpetajatele)
           earned: 7 või enam õpilast, kes kõik %{num_trophies} trofeed kogusid on
             tüdrukud. Olete võitnud boonusauhinna! (Ainult USA õpetajatele)
           not_earned: Kui vähemalt 7 sinu õpilastest, kes teenivad kõik %{num_trophies}
@@ -257,7 +257,7 @@
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
       label: Tere, %{username}
-      stats: Koodi stuudio
+      stats: Koodistuudio
       settings: Minu konto
       prizes: Auhinnad
       logout: Logi välja
@@ -276,8 +276,8 @@
       prize_us_only: (Ainult USA õpilased)
       prizes_link: rohkem infot
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Vastus
+    for_teachers_only: Ainult õpetajatele
     title:
       one: 'Sinu õpetaja:'
       other: 'Sinu õpetajad:'
@@ -308,10 +308,10 @@
       confirm_remove: Kas olete kindel et soovite selle õpilase eemaldada?
       help_reassign: Et oma klassi erinevateks osadeks jagada, valige õpilased keda
         tahate uude jaotisesse määrata.
-      help_register: Selle asemel, et iga õpilase infot eraldi importida, saate oma  klassi
-        kiirelt kokku panna, lastes neil registreeruda. Teie õpilased peavad valima
-        kasutajanimed ja paroolid aga nad ei pea andma oma e-maili aadressi. kui õpilane
-        oma parooli unustab saate selle ise lähtestada.
+      help_register: Selle asemel, et iga õpilase infot eraldi importida, saate oma
+        klassi kiirelt kokku panna, lastes neil registreeruda. Teie õpilased peavad
+        valima kasutajanimed ja paroolid, aga nad ei pea andma oma meiliaadressi.
+        Kui õpilane unustab oma parooli, saate selle ise lähtestada.
       register: Palun laske oma õpilastel ise registreeruda
       vist: Paluge õpilastel külastada
       section_code: 'ja sisestage nende jaotise kood:'
@@ -350,7 +350,7 @@
       section: Jaotis
       example: Näidislahendus
       example_with_number: Näidislahend %{solution_number}
-      submitted_on: Esitatud %{date}
+      submitted_on: 'Esitatud:'
       unsubmit: Võta vastus tagasi
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
@@ -440,15 +440,17 @@
       href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team">
       tervet meeskonda</a>, video tiimi, ja meie <a href="https://code.org/about/advisors">
       haridusnõustajaid</a> nende teenete eest Code Studio valmimisele.
-    help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid  luua
-      selle õppekeskkonna.
+    help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid
+      luua selle õppekeskkonna.
     help_from_html_old: Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st
       aitasid luua neid materjale.
-    art_from_html: Jääaeg (Ice Age)&#8482;&amp;&copy;%{current_year} 20th Century
-      Fox. Kõik õigused kaitstud.<br />Vihased Linnud (Angry Birds)&#8482;&amp;&copy;
-      2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Taimed
-      vs Koolnud (Plants vs. Zombies)&#8482;&amp;&copy;%{current_year} Electronic
-      Arts Inc. Kõik õigused kaitstud
+    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+      Kõik õigused on reserveeritud.<br />Frozen&#8482; &amp; &copy; %{current_year}
+      Disney. Kõik õigused on reserveeritud.<br />Jääaeg&#8482; &amp; &copy; %{current_year}
+      20th Century Fox. Kõik õigused on reserveeritud.<br />Angry Birds&#8482; &amp;
+      &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused on reserveeritud.<br
+      />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc.
+      Kõik õigused on reserveeritud
     art_from_html_old: Vihased Linnud (Angry Birds)&#8482;&amp;&copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Taimed vs Koolnud (Plants
       vs. Zombies)&#8482;&amp;&copy;%{current_year} Electronic Arts Inc. Kõik õigused
@@ -467,6 +469,9 @@
     privacy: Privaatsuspoliitika
     secure: Turvaline versioon
     report_abuse: Teata rikkumisest
+    built_on_code_studio: Code Studio abil loodud
+    make_my_own_app: Oma rakenduse loomine
+    how_it_works: Tööpõhimõtted
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid
@@ -508,7 +513,7 @@
   pdf_download: Lae alla PDF-fail
   download_coming_soon: Allalaaditav tegevus tuleb varsti.
   video_coming_soon: Video tuleb varsti!
-  not_started: The student has not attempted this level.
+  not_started: Õpilane pole seda taset veel proovinud.
   share_code:
     title: Klikka 'Run', et programm alustaks
     bounce_og_title: Tsekka mu Põrke mängu (Bounce Game)
@@ -562,7 +567,7 @@
         tegelased.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Uuri Minecrafti maailma koodi kaudu.
   gallery:
     students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
     students_made_these_with_code: Õpilased tegid need koodiga!

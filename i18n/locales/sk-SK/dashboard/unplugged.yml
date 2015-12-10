@@ -33,7 +33,7 @@ sk:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Podmienky
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -63,7 +63,7 @@ sk:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Zbaliť
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11

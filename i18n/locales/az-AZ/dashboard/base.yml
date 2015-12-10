@@ -405,6 +405,9 @@ az:
     privacy: Məxfilik siyasəti
     secure: Təhlükəsiz versiya
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -461,7 +464,7 @@ az:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Kod Saatı
+      title: Classic Maze
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
     flappy:
       title: Qanadlı Kod
@@ -609,7 +612,7 @@ az:
     really_delete: Delete?
     delete_yes: Bəli
     delete_no: Xeyr
-    saved: Saved
+    saved: Qalereyada yadda saxlandı!
     not_saved: Not saved
     cancel: İmtina et
     delete_confirm_title: Are you sure you want to delete this project?

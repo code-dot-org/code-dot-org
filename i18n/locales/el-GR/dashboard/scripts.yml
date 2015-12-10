@@ -146,7 +146,7 @@ el:
           description_short: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
         hourofcode:
           Maze: Λαβύρινθος
-          title: Η Ώρα του Κώδικα
+          title: Classic Maze
           description: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με χαρακτήρες από τα Angry Birds, τα Plants vs. Zombies και τον Scrat από την Εποχή των Παγετών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
         frozen:
@@ -325,7 +325,7 @@ el:
           title: Ταχεία εισαγωγή στο μάθημα Επιστήμης Υπολογιστών
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
           description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Αυτό το 20ωρο μάθημα καλύπτει τα βασικά των εννοιών της επιστήμης των υπολογιστών και του προγραμματισμού στα μαθήματα 2-4.
           Introduction to Computer Science: Εισαγωγή στην Επιστήμη των Υπολογιστών
           The Maze: Ο Λαβύρινθος
           Computational Thinking: Αλγοριθμική Σκέψη
@@ -367,21 +367,21 @@ el:
         flappy:
           title: Flappy κώδικα
           description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10 λεπτά!
           Flappy Code: Flappy κώδικα
         jigsaw:
           title: Παζλ
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Δοκιμάστε τον οδηγό παζλ
+          description_short: Δοκιμάστε τον οδηγό παζλ
           Jigsaw: Παζλ
         step:
           title: Βήμα
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Οδηγός με βήματα
+          description_short: Οδηγός με βήματα
           Step: Βήμα
         Hour of Code:
           title: Ώρα του Κώδικα 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
           Hour of Code 2013: Ώρα του Κώδικα 2013
         Code Studio Puzzle Challenge:
@@ -802,8 +802,8 @@ el:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -879,8 +879,8 @@ el:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Evaluation Blocks: Μπλοκ Αξιολόγησης
           Strings and Images: Strings και εικόνες
           Defining Variables: Ορίζοντας μεταβλητές
@@ -927,8 +927,8 @@ el:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -981,8 +981,8 @@ el:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1033,8 +1033,8 @@ el:
           Hour of Code 2015: Ώρα του Κώδικα 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1055,8 +1055,8 @@ el:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Wrap-Up: συνοψίζω
           Review StarLogo Nova: Review StarLogo Nova
@@ -1072,8 +1072,8 @@ el:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1092,8 +1092,8 @@ el:
         sciencePD2b-iZone:
           Welcome!: Καλώς ήρθατε!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1102,8 +1102,8 @@ el:
           Wrap-Up: συνοψίζω
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           0: |
             Unit 1, Days 1-2
@@ -1121,8 +1121,8 @@ el:
           Wrap-up: συνοψίζω
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           0: |
             Unit 1, Days 1-2
@@ -1348,6 +1348,10 @@ el:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1399,10 +1403,10 @@ el:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Play Lab Εποχής των Παγετώνων
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Εποχής των Παγετώνων!
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Εποχής των Παγετώνων!
+          Ice Age Play Lab: Play Lab Εποχής των Παγετώνων
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1453,17 +1457,17 @@ el:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Play Lab Τσιχλόμπαλα
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play Lab της Τσιχλόμπαλας!
+          Gumball Play Lab: Play Lab Τσιχλόμπαλα
         starwars:
-          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα'
+          title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           Hour of Code 2015: Ώρα του Κώδικα 2015
         starwarsblocks:
-          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα'
+          title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           Hour of Code 2015: Ώρα του Κώδικα 2015

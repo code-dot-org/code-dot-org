@@ -43,6 +43,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -51,7 +55,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
-## 1) Try the tutorials:
+## 1) Provoji tutorialet:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -62,28 +66,28 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planifikoni nevojat tuaja për hardware - kompjuterët janë opsionalë
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Provoni tutorialet në pajisjet ose kompjuterat e studentëve/nxënësve .** Sigurohuni që të funksionojnë siç duhet (me zë dhe video).
-  * **Shikoni faqen e përgëzimeve** për të parë atë që shikojnë dhe studentët kur përfundojnë. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Provoni tutorialet në pajisjet ose kompjuterat e studentëve.** Sigurohuni që të funksionojnë siç duhet (me zë dhe video).
+  * **Shikoni faqen e përgëzimeve** për të parë se çfarë studentët do të shikojnë kur të mbarojnë. 
+  * Në rast se tutoriali juaj funksionon më mirë me zë **Vini në dizpozicion kufje për klasën tuaj**, ose kërkoni nga studentët t'i kenë me vete kufjet e tyre.
 
-## 3) Plan ahead based on your technology available
+## 3) Planifikoni paraprakisht bazuar në teknologjinë tuaj në dispozicion
 
-  * **Nuk kemi pajisje te mjaftueshme?** Përdoreni [programim në dyshe](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Nuk kemi pajisje te mjaftueshme?** Përdoreni [programim në dyshe](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Kur pjesëmarrësit bashkepunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi.
   * **Keni lidhje të dobët të internetit?** Planifikoni t'i shfaqni videot para klasës, ashtu që të mos i shkarkojë secili student videot e veta ose provoni tutorialet e shkëputura/offline.
 
-## 4) Inspire students - show them a video
+## 4) Inspironi studentët - tregouani një video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Shfaqju studentëve një video inspiruese për të nisur Orën e Kodimit. Shembuj:
 
   * Video origjinale e lancimit të Code.org, ku paraqiten Bill Gates, Mark Zuckerberg, dhe ylli i NBA Chris Bosh (Ka versione [1 minutëshe](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutëshe](https://www.youtube.com/watch?v=nKIu9yen5nc), dhe [9 minutëshe](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Bëji studentët e tu të emocionuar - jepi nje hyrje të shkurtër**
 
 <% else %>
 

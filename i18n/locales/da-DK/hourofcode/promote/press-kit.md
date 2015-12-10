@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ## Hvordan kan du få medieopmærksomhed om dit Hour of Code arrangement
 
-*For al presse og medier henvendelse, kontakt <press@code.org>*
+*For al presse- og mediekontakt, benyt <press@code.org>*
 
 ### Vigtige Tips
 
@@ -47,7 +47,7 @@ Vi håber at det vil styrke interessen hos eleverne og at de vil fortsætte sene
 
 *Hvorfor er dette vigtigt?*
 
-I Kina tager alle elever programmering på high school. I USA underviser 90 procent af skolerne slet ikke i dette. Det er tid for os, at tage fat på det 21. århundrede. Vi ved, at uanset hvad vores elever gør når de vokser op, uanset om de får uddannelses inden for medicin, business, politik, eller kunst. Så må de vide hvordan man opbygger teknologi og it-programmer. Det vil give dem tillid og knowhow til at få succes.
+In China, every student takes computer science to graduate high school. I USA underviser 90 procent af skolerne slet ikke i dette. Det er tid for os, at tage fat på det 21. århundrede. Vi ved, at uanset hvad vores elever gør når de vokser op, uanset om de får uddannelses inden for medicin, business, politik, eller kunst. Så må de vide hvordan man opbygger teknologi og it-programmer. Det vil give dem tillid og knowhow til at få succes.
 
 **Flere detaljer og oplysninger du kan bruge i dit materialer**
 

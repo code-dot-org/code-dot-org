@@ -33,6 +33,7 @@ ____________________________________________________
 [example]
 
 ```
+// Basic numeric equality check.
 var x = 5;
 var y = 4;
 console.log(x == 5);
@@ -45,7 +46,10 @@ ____________________________________________________
 
 [example]
 
+**Example: 5 equals "5"?** Numeric string to number conversion is automatic in App Lab.
+
 ```
+// Numeric string to number conversion is automatic in App Lab.
 var x = 5;
 var y = "5";
 if(x == y)
@@ -63,8 +67,10 @@ else
 ____________________________________________________
 [example]
 
+**Example: 5 equals "five"?** Word string to number conversion is not automatic in App Lab.
 
 ```
+// Word string to number conversion is not automatic in App Lab.
 var x = 5;
 var y = "five";
 if(x == y)
@@ -103,7 +109,7 @@ ___ == ___
 [returns]
 
 ### Returns
-boolean true or false
+Boolean true or false
 
 [/returns]
 
@@ -112,6 +118,7 @@ boolean true or false
 ### Tips
 - = is the assignment operator. == is the boolean check for equivalency operator.
 - JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string "5").
+- Boolean operators include boolean operators < <= == > >= != && || !
 
 [/tips]
 

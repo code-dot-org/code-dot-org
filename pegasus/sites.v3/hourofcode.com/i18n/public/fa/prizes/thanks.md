@@ -6,13 +6,12 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
 Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
 
-## 1. گسترش واژه
+## 1.این مفهوم را گسترش دهید.
 
 درباره #HourOfCode به دوستان خود بگویید.
 
@@ -32,4 +31,3 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 [Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
-<%= view :signup_button %>
