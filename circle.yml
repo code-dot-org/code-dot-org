@@ -9,6 +9,7 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
+    - sudo apt-get install moreutils
     - bundle install
     - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
     - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
@@ -22,45 +23,34 @@ dependencies:
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
-    - bundle exec rake install
-    - bundle exec rake build
+    - bundle exec rake install | ts '[%Y-%m-%d %H:%M:%S]'
+    - bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]'
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
-database:
-    override:
-      - bundle exec rake db:create:
-          pwd:
-              dashboard
-      - bundle exec rake db:schema:load:
-          pwd:
-              dashboard
-      - bundle exec rake seed:all:
-          pwd:
-              dashboard
 test:
     override:
-#        - bundle exec rake test:
-#            pwd:
-#                pegasus
-#        - bundle exec rake test:
-#            pwd:
-#                shared
-#        - for i in 1 2; do grunt test && break; done:
-#            pwd:
-#                apps
-#        - bundle exec rake konacha:run:
-#            pwd:
-#                dashboard
-#        - ./test.sh:
-#            pwd:
-#                cookbooks
+        - bundle exec rake test:
+            pwd:
+                pegasus
+        - bundle exec rake test:
+            pwd:
+                shared
+        - for i in 1 2; do grunt test && break; done:
+            pwd:
+                apps
+        - bundle exec rake konacha:run:
+            pwd:
+                dashboard
+        - ./test.sh:
+            pwd:
+                cookbooks
         - ./bin/dashboard-server:
             background: true
         - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
             background: true
         - "until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 -f features/hourOfCodeFinish.feature":
+        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000":
             pwd:
                 dashboard/test/ui
 
