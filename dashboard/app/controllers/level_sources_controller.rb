@@ -25,7 +25,7 @@ class LevelSourcesController < ApplicationController
     else
       # sharing
       level_view_options hide_source: true
-      view_options(no_header: true, try_hoc_banner: true)
+      view_options no_header: true
       @is_legacy_share = true
     end
   end
