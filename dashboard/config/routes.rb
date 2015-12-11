@@ -32,6 +32,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/readonly_template', to: 'readonly_template#index'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -275,5 +276,6 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
+  get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/:action', controller: 'api'
 end

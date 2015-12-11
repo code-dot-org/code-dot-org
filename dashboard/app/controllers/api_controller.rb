@@ -65,8 +65,38 @@ class ApiController < ApplicationController
   end
 
   def user_progress
-    script = Script.get_from_cache(params[:script_name])
-    render json: summarize_user_progress(script)
+    if current_user
+      script = Script.get_from_cache(params[:script_name])
+      render json: summarize_user_progress(script)
+    else
+      render json: {}
+    end
+  end
+
+  def user_progress_for_stage
+    response = {}
+
+    if current_user
+      script = Script.get_from_cache(params[:script_name])
+      stage = script.stages[params[:stage_position].to_i - 1]
+      level = stage.script_levels[params[:level_position].to_i - 1].level
+
+      last_activity = current_user.last_attempt(level)
+      level_source = last_activity.try(:level_source).try(:data)
+
+      response[:progress] = current_user.user_progress_by_stage(stage)
+      if last_activity
+        response[:lastAttempt] = {
+          timestamp: last_activity.updated_at.to_datetime.to_milliseconds,
+          source: level_source
+        }
+
+      end
+      response[:disableSocialShare] = current_user.under_13?
+      response[:disablePostMilestone] =
+        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+    end
+    render json: response
   end
 
   def section_text_responses

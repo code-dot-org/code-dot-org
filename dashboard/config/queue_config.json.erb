@@ -6,8 +6,8 @@
       "handler_class": "AsyncProgressHandler",
       "queue_url": "<%= CDO.activity_queue_url %>",
       "num_processors": 1,
-      "num_workers_per_processor": 32,
-      "initial_max_rate": 3000,
+      "num_workers_per_processor": 10,
+      "initial_max_rate": 1000,
       "dcdo_max_rate_key": "activity_max_rate"
     }
   ]

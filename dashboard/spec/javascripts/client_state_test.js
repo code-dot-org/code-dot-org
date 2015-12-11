@@ -1,4 +1,4 @@
-/* global dashboard */
+/* global dashboard, assert */
 
 //= require client_state
 //= require jquery.cookie
@@ -241,5 +241,5 @@ describe("clientState#reset", function() {
     state.hasSeenVideo('someVideo').should.equal(false);
     state.levelProgress('sample', 1).should.equal(0);
     state.lines().should.equal(0);
-  })
+  });
 });

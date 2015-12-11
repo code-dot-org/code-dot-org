@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Premii - termeni și condiții
 
@@ -32,4 +31,11 @@ Pentru a clarifica, acest lucru nu este un concurs care implică noroc.
 
 <% end %>
 
-<%= view :signup_button %>
+<% if @country == 'us' || @country == 'ca' %>
+
+## Conferinta video cu un vorbitor invitat:
+
+Premiul se limitează la K-12 săli de clasă în SUA şi Canada numai. Code.org va selecta şcolile câştigătoare, oferind un slot de timp pentru conferinta online şi va lucra cu profesorul pentru a pune la punct detaliile legate de tehnologie. Întreaga şcoală nu trebuie să aplice pentru a se califica pentru acest premiu. Both public and private schools are eligible to win.
+
+<% end %>
+

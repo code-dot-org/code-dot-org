@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Prix - conditions générales
 
@@ -32,4 +31,11 @@ A des fins de clarification, prenez en note qu'il ne s'agit pas d'un jeu-concour
 
 <% end %>
 
-<%= view :signup_button %>
+<% if @country == 'us' || @country == 'ca' %>
+
+## Vidéoconférence avec un invité:
+
+L'attribution des prix s'avère limitée aux classes d'élémentaires et secondaires aux États-Unis et au Canada seulement. Code.org déterminera les classes gagnantes, établira une période pour la séance de clavardage et travaillera de concert avec l'enseignant afin de mettre en place les détails technologiques. Votre école, dans son ensemble, n'a pas besoin de postuler pour être admissible à ce prix. Both public and private schools are eligible to win.
+
+<% end %>
+

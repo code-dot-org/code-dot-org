@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to teach one Hour of Code in After-school
 
@@ -132,4 +131,3 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 La Hora del Código es sólo el primer paso en un viaje para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

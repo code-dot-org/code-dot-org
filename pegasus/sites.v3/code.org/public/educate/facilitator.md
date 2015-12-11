@@ -11,15 +11,9 @@ The ideal facilitator is an enthusiastic supporter of computer science education
 <br/>
 <br/>
 
-[<button>Apply now</button>](http://goo.gl/forms/Gi2DDy8aRw)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
 <br />
 <br />
-
-**Are you a district administrator or representative?**  
-[Apply](/educate/districts) for a district partnership to prepare a facilitator to deliver professional development to your district's teachers.
-
-[<button>District Partnership</button>](/educate/districts)
-
 
 ## What is Code.org's Facilitator Development Program?
 
@@ -74,9 +68,9 @@ At the time of application to the program, participants choose a curriculum focu
 
 All focus areas share a basic framework and approach, drawn from adult learning theory and best practices for facilitation, that ensures participants are well prepared to lead high-quality training. However, each focus area’s training curriculum is designed for the specific needs of the teachers and students impacted by the program, and for that reason has its own unique selection criteria, requirements, commitments and benefits. 
 
-Please carefully review [the criteria, requirements and commitments](google doc here) for the curriculum focus area of your choice. When you’re ready, click below to apply. 
+Please carefully review [the criteria, requirements and commitments](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing) for the curriculum focus area of your choice. When you’re ready, click below to apply. 
 
-[<button>Appy now</button>](http://goo.gl/forms/Gi2DDy8aRw)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1_SA7QWZYNHWdDeCWCV4nlj4artpG-Ck50UqMpQrQqqc/edit?usp=sharing)
 
-We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
+We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.** 
 

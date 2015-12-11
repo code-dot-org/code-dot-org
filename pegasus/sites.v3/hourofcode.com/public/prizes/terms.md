@@ -4,7 +4,6 @@ layout: wide
 nav: prizes_nav
 ---
 
-<%= view :signup_button %>
 
 # Prizes - terms and conditions
 
@@ -36,4 +35,3 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will sele
 
 <% end %>
 
-<%= view :signup_button %>

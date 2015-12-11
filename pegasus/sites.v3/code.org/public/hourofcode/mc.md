@@ -13,7 +13,7 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- Coming soon!
+- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
 
 ### Extension Activities:
 

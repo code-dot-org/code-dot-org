@@ -163,9 +163,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Give your UI elements descriptive and meaningful IDs. (Click to see full instructions)",
-    "markdown_instructions": "# Getting Started: Creating IDs\r\n\r\nTo get your application off the ground we've provided **the user interface elements that you will use in your application**. Unfortunately they all currently have **default IDs** which don't reflect how the elements will be used.\r\n\r\n# Do This\r\n\r\n* **Create a descriptive and meaningful ID** for each element in your app.",
+    "markdown_instructions": "# Getting Started: Creating IDs\r\n\r\nTo get your application off the ground we've provided **the user interface elements that you will use in your application**. Unfortunately they all currently have **default IDs** which don't reflect how the elements will be used.\r\n\r\n# Do This:\r\n\r\n* **Create a descriptive and meaningful ID** for each element in your app.",
     "slider_speed": "1",
-    "project_template_level_name": "U3 - Arrays - favThings template"
+    "project_template_level_name": "U3 - Arrays - favThings template",
+    "encrypted_examples": "RUfGS+Zr4moaaijF/9tOVweaP/J/EZUR/g5syplDr2Y3LqGQlhdpWyci0tAW\n4v0D\n"
   }
 }]]></config>
   <blocks/>

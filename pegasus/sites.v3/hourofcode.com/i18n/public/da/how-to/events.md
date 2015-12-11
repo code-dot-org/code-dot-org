@@ -6,22 +6,21 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Sådan organiserer du en Hour of Code
 
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Hold et Hour of Code-arrangement i Computer Science Education Week (<%= campaign_date('short') %>) for at fejre programmering og inspirere flere elever til at prøve det. Enhver kan hvor som helst organisere et Hour of Code-arrangement.
 
 ## 1) Forbered dit arrangement
 
   * Bestem sted, dato og tidspunkt
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+  * Send [et brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) for at invitere din lokale borgmester eller en indflydelsesrig forretningsmand til at komme og tale.
+  * Inviter medier/presse dvs. lokale nyhedsstationer, aviser, uddannelses-/it-bloggere. Se vores [pressekit](<%= resolve_url('/promote/press-kit') %>) for at få hjælp.
 
 ## 2) Under dit arrangement
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+  * Start dit arrangement med en af vores [inspirerende videoer](<%= resolve_url('/promote/resources#videos') %>).
+  * Giv en intro, hvor du giver et overblik over vigtigheden af programmering ved brug af disse [statistikker og intrografikker](<%= resolve_url('/promote/stats') %>).   
       
     
   * Andre event ideer: 
@@ -50,13 +49,12 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Kør et Show
 
-| Tidspunkt   | Hændelse                                                                                                                                                  |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                                |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>)           |
-| 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.                     |
-| 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever. |
-| 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                |
-| 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                            |
+| Tidspunkt   | Hændelse                                                                                                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 | Indled med en af vores [inspirerende videoer](<%= resolve_url('/promote/resources#videos') %>)                                                                                                |
+| 10:05-10:15 | Skolederen giver en intro, hvor han eller hun i overordnede træk fortæller om vigtigheden af programmering. Brug disse [statistikker og intrografikker](<%= resolve_url('/promote/stats') %>) |
+| 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.                                                       |
+| 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever.                                   |
+| 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                                                  |
+| 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                                                              |
 
-<%= view :signup_button %>

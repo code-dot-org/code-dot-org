@@ -30,7 +30,7 @@
     "disable_examples": "false",
     "player_start_direction": "0",
     "is_daytime": "false",
-    "ideal": "8",
+    "ideal": "7",
     "embed": "false",
     "free_play": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_what_is_iron\",\r\n  \"callout_text\": \"Mine this iron!\",\r\n  \"element_id\": \"#visualization\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 90\r\n    }\r\n   }\r\n  }\r\n }\r\n]",

@@ -163,9 +163,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Write code that allows a user to add their own favorite things to the list. (Click to see full instructions)",
-    "markdown_instructions": "# Adding New Items\r\n\r\nNow we want our user to be able to add items of their own to the list. As you might have guessed, this is as easy as inserting an item into our array at the current index.\r\n\r\n# Do This\r\n\r\n* **Add an event handler** to the \"Add\" button\r\n* **Write code** in your event handler that:\r\n\t* uses `getText` to access the user's new item\r\n    * uses`insertItem` to add that item to your array at the current index\r\n    * calls your update function to update the screen (the new item should be displayed)\r\n* Run your program to confirm that the user **can add items to the list** and that the output displayed is correct.",
+    "markdown_instructions": "# Adding New Items\r\n\r\nNow we want our user to be able to add items of their own to the list. As you might have guessed, this is as easy as inserting an item into our array at the current index.\r\n\r\n# Do This:\r\n\r\n* **Add an event handler** to the \"Add\" button.\r\n* **Write code** in your event handler that:\r\n\t* Uses `getText` to access the user's new item.\r\n    * Uses`insertItem` to add that item to your array at the current index.\r\n    * Calls your update function to update the screen (the new item should be displayed).\r\n* Run your program to confirm that the user **can add items to the list** and that the output displayed is correct.",
     "slider_speed": "1",
-    "project_template_level_name": "U3 - Arrays - favThings template"
+    "project_template_level_name": "U3 - Arrays - favThings template",
+    "encrypted_examples": "ZImGHD98p0bH5EXJExT9kyJXi4vh48ApVxmC3dG1NgJ5hETuPRfEtFOEPeFJ\n/3d/\n"
   }
 }]]></config>
   <blocks/>

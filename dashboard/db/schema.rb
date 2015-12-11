@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124014528) do
+ActiveRecord::Schema.define(version: 20151207223210) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -209,6 +209,7 @@ ActiveRecord::Schema.define(version: 20151124014528) do
     t.string   "app",         limit: 255, default: "turtle", null: false
   end
 
+  add_index "gallery_activities", ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
   add_index "gallery_activities", ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
   add_index "gallery_activities", ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
 

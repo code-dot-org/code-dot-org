@@ -413,3 +413,9 @@
   english: "Chinese (Traditional)"
   native: "繁體字"
   webfonts: false
+
+"zu": "zu-ZA"
+"zu-ZA":
+  english: "Zulu"
+  native: "isiZulu"
+  debug: true

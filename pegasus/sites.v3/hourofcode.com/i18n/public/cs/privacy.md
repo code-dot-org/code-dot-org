@@ -1,33 +1,33 @@
 ---
 
-title: Ochrana osobních údajů
+název: Ochrana osobních údajů
 
 ---
 
-### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
+### Závazným právním jazykem je angličtina a lze nalézt [zde](https://code.org/privacy). Dole je překlad.
 
 # Zásady ochrany osobních údajů
 
-Date of Last Revision: August 3, 2015
+Datum poslední revize: 3. srpna 2015
 
-## About Code.org
+## O Code.org
 
-Code.org® je nevýdělečná organizace, která se věnuje rozšiřování informatiky do škol. Jedním z cílů je rozšířit účast žen a znevýhodněných studentů.
+Code.org® je nevýdělečná organizace věnující se rozšiřování informatiky do škol. Jedním z cílů je rozšířit účast žen a znevýhodněných studentů.
 
 Prosím, přečtěte si tyto zásady (**ochrany soukromí**) pečlivě předtím, než přistoupíte k použití tohoto webu.
 
 ## Zásady ochrany osobních údajů na Code.org
 
-Our Privacy Notice is fueled by our commitment to the following Privacy Principles:
+Naše Ochrana osobních údajů je podpořena naším závazkem k následujícím Zásadám:
 
-  1. We’re deeply committed to creating a safe and secure learning environment for our students and teachers. We take the protection of this information seriously.
-  2. We do not require you to provide any Personal Information in order to try our tutorials, all of which are accessible without a user account. 
-  3. The only reason we collect any data from students or teachers is to better succeed at our mission of providing a great computer science education for every student who wants it. 
-  4. We do not sell your Personal Information or exploit it for financial gain; we do not sell ads. We are a charitable 501c3 nonprofit and our revenue comes from donations. We established ourselves as a nonprofit so our mission and your trust will not be in conflict with a for-profit motive.
-  5. Any student academic data provided by school district partners to 3rd party evaluators for the purpose of evaluating our courses in meeting our mission will be anonymous / de-identified (per standard industry practice). 
-  6. We strive to provide you with access to and control over the information you give us (as detailed below), and we take the protection of your information very seriously.
+  1. Jsme hluboce odhodlaní vytvořit bezpečné a zabezpečené, výukové prostředí pro naše studenty a učitele. Bereme vážně ochranu těchto informací.
+  2. Není nutné poskytovat žádné osobní údaje s cílem vyzkoušet naše kurzy, které jsou dostupné bez uživatelského účtu. 
+  3. Jediný důvod, proč shromažďujeme všechna data od studentů a učitelů, abychom uspěli lépe v našem poslání poskytovat skvělou výuku informatiky pro každého studenta, který má zájem. 
+  4. Nechceme prodávat vaše osobní informace nebo využít za účelem zisku; Nechceme prodávat reklamy. Jsme charitativní 501c 3 neziskové a naše příjmy pochází z darů. Založili Jsme se neziskově, takže naše poslání a vaši důvěru nebude v konfliktu se snahou vydělávat.
+  5. Jakékoliv studentské akademické údaje poskytované školními regionálními partnery třetím stranám za účelem vyhodnocení našich kurzů při sledování plnění našeho poslání bude anonymní / zpětně identifikovatelné (podle standardní průmyslové praxi). 
+  6. Snažíme se vám poskytnout přístup a kontrolu nad informacemi, které nám dáváte (jak je uvedeno níže) a bereme velmi vážně ochranu vašich informací.
 
-## Poznámky k ochraně soukromí
+## Poznámka k ochraně soukromí
 
 We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. As a not-for-profit, 501(c)(3) organization, we use the data we receive only insofar as it helps our mission of providing a great computer science education for every student who wants it. We established ourselves as a not-for-profit organization so that a for-profit motive will not interfere with our mission of providing a trusted educational resource.
 

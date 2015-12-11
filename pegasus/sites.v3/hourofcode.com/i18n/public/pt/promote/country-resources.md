@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -45,6 +44,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -53,7 +56,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Veja os tutoriais:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -64,28 +67,28 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planeje suas necessidades de hardware (computadores são opcionais)
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Para uma melhor experiência com a Hora do Código, o ideal são computadores conectados à internet. No entanto, não é necessário um computador por participante, e também é possível fazer a Hora do Código sem o uso de computadores.
 
   * **Teste os tutoriais nos computadores ou dispositivos dos alunos.** Verifique se eles funcionam da maneira adequada (com som e vídeo).
   * **Visualize a página de parabenização** para saber o que os alunos veem quando terminam. 
   * **Forneça fones de ouvido para o seu grupo** ou peça aos alunos que tragam seus próprios fones, se o tutorial escolhido funcionar melhor com som.
 
-## 3) Plan ahead based on your technology available
+## 3) Programe-se com antecedência com base na tecnologia disponível
 
   * **Não tem dispositivos suficientes?** Use [programação em duplas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quando os participantes trabalham em equipe, eles ajudam uns aos outros e dependem menos do professor.
   * **Tem baixa largura de banda?** Programe-se para mostrar os vídeos para a classe toda, assim os alunos não terão de fazer o download individualmente. Outra opção é trabalhar com os tutoriais offline.
 
-## 4) Inspire students - show them a video
+## 4) Inspire seus alunos - mostre um vídeo a eles
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Mostre aos alunos um vídeo inspirador para começar a Hora do Código. Exemplos:
 
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Estimule seus alunos - faça uma breve introdução**
 
 <% else %>
 
@@ -93,4 +96,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>

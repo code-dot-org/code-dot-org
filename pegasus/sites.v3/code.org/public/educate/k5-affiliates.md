@@ -7,9 +7,9 @@ nav: educate_nav
 Code.org is looking to partner with experienced computer science educators to deliver one-day, in-person workshops to local elementary school teachers to teach computer science in a format that's fun and accessible.
 
 The ideal CS Fundamentals Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus.  
-<br />
+<br /> 
 
-[<button>Apply now</button>](https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
 <br />
 <br />
 
@@ -36,7 +36,7 @@ For each workshop you host, CS Fundamentals Facilitators will receive a per-teac
 ## Are you interested? 
 Apply to become a CS Fundamentals Facilitator and host workshops for elementary teachers in your region. 
 
-[<button>Appy now</button>](https://docs.google.com/a/code.org/forms/d/1VURjBVOspP0H1ylwX1koYJ0YQdRxmp2JVWlWcslwosk/viewform)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/a/code.org/document/d/1Aylbn_ZNROiEUJzRVz8JsqEkEwDXElxMLrgw9fVm55U/pub)
 
 We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
 
