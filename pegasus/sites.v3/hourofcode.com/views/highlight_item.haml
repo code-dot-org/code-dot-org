@@ -1,0 +1,10 @@
+.highlight-item
+  %a.learnmore-link{href: "#{item[:url_s]}"}
+    .highlight-img{style: "background-image:url(#{item[:image_url_s]})"}
+    .highlight-caption
+      - if item[:short_heading_s]
+        %h4.caption-headline= item[:short_heading_s]
+      .highlight-description= item[:heading_s]
+      %br
+      - if item[:link_text_s]
+        .learn-button= item[:link_text_s]
