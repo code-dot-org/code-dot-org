@@ -57,7 +57,7 @@ max_age: 60
       -# Users who started at https://code.org/api/hour/begin/gumball?company=CN&lang=ar
       -# should see this block when they finish.
       %h2
-        أنهيت ساعة البرمجة !      
+        أنهيت ساعة البرمجة !
         %a{:href=>return_to_cn_path} العودة إلى كرتون نتورك
     -else
       %h2
@@ -86,7 +86,7 @@ max_age: 60
   = view :congrats_continue
 
 = view 'popup_window.js'
-%img{src: "https://code.org/api/hour/finish_#{params[:tutorial]}.png", alt: params[:tutorial], width: '1', height: '1'}
+%img{src: "https://code.org/api/hour/finish_#{params[:tutorial]}.png", alt: params[:tutorial], width: '1', height: '1', class: 'tracking-pixel'}
 :javascript
 
   var cookieValue;

@@ -102,6 +102,9 @@ strong em,
 em strong {
   font-family: $gotham-extra-bold-italics;
 }
+.tracking-pixel {
+  visibility: hidden;
+}
 
 a.video_link {
   /* IE9 CSS hack */
@@ -1230,10 +1233,10 @@ a.download-video {
     height: 20px;
     overflow: hidden;
     padding: 10px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
   .teacher-announce .announce-heading .heading-view-all {
-    float: right; 
+    float: right;
   }
   .teacher-announce .announce-content {
     background-color: #ebe8f1;
@@ -1243,7 +1246,7 @@ a.download-video {
     padding: 10px;
   }
   .teacher-announce .announce-content .content-img-container {
-    float: left; 
+    float: left;
   }
   .teacher-announce .announce-content .content-img {
     border-radius: 4px;
