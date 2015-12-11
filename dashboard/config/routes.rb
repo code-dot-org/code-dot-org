@@ -182,7 +182,6 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
   # one-off internal reports
-  get '/admin/temp/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
@@ -191,6 +190,7 @@ Dashboard::Application.routes.draw do
   get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/level_answers', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
