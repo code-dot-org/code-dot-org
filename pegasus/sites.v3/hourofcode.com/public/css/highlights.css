@@ -10,9 +10,12 @@
   position: relative;
 }
 
-.higlight-img {
+.highlight-img {
   border-radius: 5px;
-  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+  width: 260px;
+  height: 260px;
 }
 
 .highlight-caption {
@@ -27,6 +30,11 @@
   padding: 15px;
   height: 260px;
   display: none;
+}
+
+.learnmore-link {
+  color: white;
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .caption-headline {
