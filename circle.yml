@@ -28,6 +28,8 @@ dependencies:
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
+database:
+    override:
 test:
     override:
         - bundle exec rake test:
