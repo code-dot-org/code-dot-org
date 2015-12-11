@@ -1,3 +1,7 @@
+// TODO - brent - IIFE me
+
+// (brent) only used by dashboard/app/views/levels/_reference_area.html.haml
+// Probably a smarter way to do this
 var addClickTouchEvent = function(element, handler) {
   var wrapper = function(e) {
     handler(e);
@@ -19,6 +23,7 @@ var addClickTouchEvent = function(element, handler) {
  * @param {number} delay - How long to wait after the _last_ call before executing the callback
  * @returns {function}
  */
+// (brent) - used by header.js and dialog.js
 var debounce = function (callback, delay) {
   return (function () {
     // Scope the key to this particular call to debounce, but outside

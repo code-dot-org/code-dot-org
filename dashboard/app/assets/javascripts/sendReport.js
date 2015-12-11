@@ -1,5 +1,7 @@
 /* global dashboard, appOptions */
 
+// TODO - brent - IIFE me
+
 var lastAjaxRequest;
 var lastServerResponse = {};
 
