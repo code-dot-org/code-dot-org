@@ -103,9 +103,9 @@
     right: 0;
     overflow-y: hidden; }
   #netsim h1 {
-    font-family: "Gotham 5r", sans-serif; }
+    font-family: "Helvetica", sans-serif; }
   #netsim p, #netsim label {
-    font-family: "Gotham 4r", sans-serif; }
+    font-family: "Helvetica", sans-serif; }
   #netsim table {
     width: 100%; }
     #netsim table th, #netsim table td {
@@ -113,11 +113,11 @@
       border-collapse: collapse; }
     #netsim table th {
       border: solid #5b6770 1px;
-      font-family: "Gotham 4r", sans-serif;
+      font-family: "Helvetica", sans-serif;
       font-size: 10pt; }
     #netsim table td {
       border: solid #c6cacd 1px;
-      font-family: "Gotham 4r", sans-serif;
+      font-family: "Helvetica", sans-serif;
       -moz-user-select: text;
       -webkit-user-select: text;
       -ms-user-select: text;
@@ -150,7 +150,7 @@
     color: white;
     background-color: #ffa400;
     border-radius: 3px;
-    font-family: "Gotham 4r", sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-size: 8pt;
     line-height: 14pt;
     padding: 0 10px;
@@ -315,7 +315,7 @@
     #netsim div.netsim-panel h1 {
       margin: 0;
       padding: 0.3em;
-      font-family: "Gotham 4r", sans-serif;
+      font-family: "Helvetica", sans-serif;
       font-size: 110%;
       font-weight: bold;
       line-height: 110%;
@@ -534,7 +534,7 @@
       #netsim .netsim-tabs .ui-tabs-nav li {
         margin-right: 2px; }
         #netsim .netsim-tabs .ui-tabs-nav li a {
-          font-family: "Gotham 5r", sans-serif;
+          font-family: "Helvetica", sans-serif;
           font-size: 8pt;
           padding: 0 1em; }
     #netsim .netsim-tabs .ui-tabs-panel {
