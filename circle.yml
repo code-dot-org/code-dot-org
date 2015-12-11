@@ -23,8 +23,10 @@ dependencies:
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
+    # Run rake install, timestamping each output line
     - bundle exec rake install | ts '[%Y-%m-%d %H:%M:%S]'
-    - bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]'
+    # Try running rake build twice (in case of intermittent test failures within rake build)
+    - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
@@ -33,15 +35,13 @@ database:
       - 'echo "skipping"'
 test:
     override:
+        # (apps tests already ran during rake build, don't re-run)
         - bundle exec rake test:
             pwd:
                 pegasus
         - bundle exec rake test:
             pwd:
                 shared
-        - for i in 1 2; do grunt test && break; done:
-            pwd:
-                apps
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
@@ -53,7 +53,7 @@ test:
         - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
             background: true
         - "until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 10 --auto_retry --html":
+        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 5 --auto_retry --html":
             pwd:
                 dashboard/test/ui
 
