@@ -30,6 +30,7 @@ dependencies:
     - tar -xzf sc-latest-linux.tar.gz
 database:
     override:
+      - 'echo "skipping"'
 test:
     override:
         - bundle exec rake test:
