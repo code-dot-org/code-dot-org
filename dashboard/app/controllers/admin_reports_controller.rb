@@ -88,6 +88,46 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def level_answers
+    authorize! :read, :reports
+
+    @headers = ['Level ID', 'User Email', 'Data']
+    @responses = {}
+    @response_limit = 100
+    if params[:levels] || params[:mc_levels]
+      # Parse the parameters, namely the set of levels to grab answers for.
+      @mc_levels = params[:mc_levels] ? params[:mc_levels].split(',') : []
+      @levels = @mc_levels + (params[:levels] ? params[:levels].split(',') : [])
+
+      @levels.each do |level_id|
+        # Don't query for data if we've already retrieved it.
+        if @responses[level_id]
+          next
+        end
+
+        # Regardless of the level type, query the DB for level answers.
+        @responses[level_id] = LevelSource.
+          where(level_id: level_id).
+          joins(:activities).
+          joins("INNER JOIN users ON activities.user_id = users.id").
+          limit(@response_limit).
+          pluck(:level_id, :email, :data)
+
+        # If the level type is multiple choice, get the text answers and replace
+        # the numerical responses stored with the corresponding text.
+        if @mc_levels.include? level_id
+          level_properties = Level.where(id: level_id).pluck(:properties)
+          if level_properties.length > 0
+            level_answers = level_properties[0]["answers"]
+            @responses[level_id].each do |response|
+              response[2] = level_answers[response[2].to_i]["text"]
+            end
+          end
+        end
+      end
+    end
+  end
+
   def level_completions
     authorize! :read, :reports
     require 'date'
