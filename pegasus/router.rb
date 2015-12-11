@@ -406,13 +406,24 @@ class Documents < Sinatra::Base
       full_document
     end
 
+    def log_drupal_link(dir, uri)
+      if dir == 'drupal.code.org'
+        Honeybadger.notify(
+          error_class: "Link to v3.sites/drupal.code.org",
+          error_message: "#{uri} fell through to the base config directory"
+        )
+      end
+    end
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
-        return path if File.file?(path)
+        if File.file?(path)
+          log_drupal_link(dir, uri)
+          return path
+        end
       end
       nil
     end
@@ -421,7 +432,10 @@ class Documents < Sinatra::Base
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
-          return path if File.file?(path)
+          if File.file?(path)
+            log_drupal_link(dir, "#{uri}#{extname}")
+            return path
+          end
         end
       end
       nil
