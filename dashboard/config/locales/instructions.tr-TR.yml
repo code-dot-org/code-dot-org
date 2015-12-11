@@ -2115,7 +2115,17 @@
         \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
         all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: "Create an object with at\nleast
+        5 values including at least one string and one number. (Click to see\nfull
+        instructions) \n"
+      CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -3060,19 +3070,17 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Canavara çarpmak pek akıllıca bir davranış
-        değil. Canavarların yanından dikkatlice hareket ederek güvenli evine ulaş.
-      Overworld Chop Tree_instruction: Ahşap çok önemli bir kaynaktır. Pek çok şey
-        o kullanılarak yapılır. Ağaca doğru yürü ve onu kesmek için "bloğu yok et"
-        komutunu kullan.
-      Overworld Chop Trees_instruction: Güneş batmadan bir ev inşa etmeliyiz. Evler
-        için çok ahşap gerekir. 3 ağacı da kes.
-      Overworld Free Play 20x20_instruction: Tebrikler! Bütün bulmacaları çözdün.
-        Şimdi de öğrendiklerini kullanarak bloklar top, bina inşa et ve değişik bir
-        şeyler yarat.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
+      Overworld Avoid Monsters_instruction: Bir Creeper'a rastlamak hiç iyiye işaret
+        değildir. Creeper'ları dikkatlice geçin ve güvenli evinize ulaşın.
+      Overworld Chop Tree_instruction: Odun çok önemli bir kaynaktır. Birçok şey ondan
+        yapılır. Ağaca doğru yürüyün ve "bloğu yok et" komutunu kullanarak ağacı kesin.
+      Overworld Chop Trees_instruction: Güneş batmadan önce bir ev inşa etmemiz gerekiyor.
+        Evler için çok miktarda odun gerekir. 3 ağacın tümünü kesin.
+      Overworld Free Play 20x20_instruction: Tebrikler! Tüm bulmacalarımızı tamamladınız!
+        Şimdiye kadar öğrendiklerinizle maden çıkarın inşa edin ve benzersiz bir şey
+        oluşturun.
+      Overworld Free Play_instruction: Bu arazi oynamak için size verildi. Ne inşa
+        edeceğinizi seçmek size kalmış.
       Overworld House Frame - A_instruction: |
         Let's make our own house! This spot
         looks good. Build a frame on the dirt blocks.
@@ -3093,25 +3101,23 @@
         quite a lot here.
       Overworld House Frame Chosen_instruction: Evin geri kalan kısmını istediğin
         bir malzemeyi kullanarak inşa et. "Tekrarla" komutu çok işine yarayacak.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: Koyuna ulaşmak için ikinci bir “ilerle“
-        komutu ekle.
-      Overworld Place Wall_instruction: Her ev bir duvarla başlar. Evinin ilk kısmını
-        tekrar döngüsü içine "yerleştir" ve "ilerle" komutlarını koyarak tamamla.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: Süper! Pek çok kaynak topladın ve mütevazi
-        bir ev inşa ettin. Şimdi haritanın kenarından evinin kapısına ray döşe.
-      Overworld Shear Sheep_instruction: Koyun kırpma zamanı! "Kırp" komutunu kullanarak
-        her iki koyundan da yün topla.
+      Overworld House Frame_instruction: Hadi yeni evimizi yapalım! Burası iyi görünüyor.
+        Toprak bloklarının üzerine bir iskelet inşa edin.
+      Overworld Minecart Track_instruction: Bir sürü yer altı kaynağıyla yüzeye geri
+        döndünüz. Şimdi evinizin önündeki toprak patika boyunca bir yol yapacağız.
+        İlk iş patikayı temizlemek. Patikayı takip edin ve ağaçları temizleyin.
+      Overworld Move to Sheep_instruction: Koyunlara ulaşmak için ikinci bir "ileri
+        git" komutu ekleyin.
+      Overworld Place Wall_instruction: Her ev bir duvarla başlar. Tekrar döngüsünün
+        içinde "yerleştir" ve "ileri git" komutlarını kullanarak evinizin ilk parçasını
+        inşa edin.
+      Overworld Plant Crops_instruction: İleriyi planlamak iyidir. Suyun her iki tarafına
+        ekinlerinizi ekin, böylece daha sonra aç kalmazsınız.
+      Overworld Powered Minecart_instruction: Çok güzel! Bir sürü kaynak topladınız
+        ve mütevazı bir ev inşa ettiniz. Şimdi haritanın ucundan evinizin kapısına
+        kadar ray döşeyin.
+      Overworld Shear Sheep_instruction: Koyun kırkma zamanı! İki koyundan yün toplamak
+        için "kırk" komutunu kullanın.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3505,7 +3511,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3622,8 +3628,8 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3776,22 +3782,22 @@
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3800,7 +3806,7 @@
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3835,7 +3841,7 @@
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3987,8 +3993,9 @@
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
         a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
@@ -4783,8 +4790,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4855,6 +4862,61 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4890,21 +4952,21 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: Bu blokların bazılarının altında lav
-        gizli. İlerlemeden önce lavın üstünü örtmen gerekecek. "Eğer" komutu burada
-        çok işine yarayacak. Bu blokları toplamak için doğru yerde "ilerle" komutunu
-        kullan.
-      Underground If Statements_instruction: Şimdi işler biraz karmaşıklaşıyor. 3
-        tane kırmızı taş topla ama lavın içine düşme. Açığa çıkardığın lavların üstüne
-        "eğer" komutu kullanarak parke taşı yerleştir.
-      Underground Iron_instruction: Erimiş lavın içine yürümek iyi bir fikir değil.
-        Köprü oluşturmak için parke taşı döşe, sonrada en az iki demir blok topla.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7
-        redstone! Try using a repeat command inside a repeat command to walk in\na
-        square.\r\n"
-      Underground Mining Coal_instruction: En değerli doğal kaynakları yeraltında
-        bulacaksın, ama yer altı karanlık olabilir. En az 2 meşale yerleştir ve en
-        az 2 kömür topla.
+      Underground Avoiding Lava_instruction: Bu blokların bazılarının altında gizli
+        lav bulunur ve ileri gitmeden önce bunların üstünü örtmeniz gerekir. Burada
+        "eğer" komutu çok işimize yarayacak. Bu blokları çıkarmak için doğru yere
+        bir "ileri git" komutu ekleyin.
+      Underground If Statements_instruction: Şimdi işler biraz daha zorlaşıyor. 3
+        kızıltaş çıkarın ama lavın içine düşmeyin. Ortaya çıkardığınız lavların üstüne
+        kırıktaş yerleştirmek için bir "eğer" komutu kullanın.
+      Underground Iron_instruction: Erimiş lavın içine yürümek kötü bir fikir olabilir.
+        Bir köprü yapmak için kırıktaş yerleştirin ve ardından en az iki demir blok
+        çıkarın.
+      Underground Mine in a Circle_instruction: 5 elmas ve 7 kızıltaş bulun! Bir karenin
+        içinde yürümek için bir tekrar döngüsünün içinde bir tekrar komutu kullanmayı
+        deneyin.
+      Underground Mining Coal_instruction: En değerli kaynakları yer altında bulabilirsiniz
+        ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

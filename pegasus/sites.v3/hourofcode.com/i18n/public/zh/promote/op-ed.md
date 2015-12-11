@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### 下面是由電腦科學教育周支援的示例專欄，目標是它可以由國家、地方立法者、商界領袖等使用。
 
@@ -47,4 +46,3 @@ Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. 在整個 **[STATE]** 的學校，我們的學生將參加國家代碼小時、 解密電腦科學學科和希望吸引他們瞭解更多。 我會加入他們，和我邀請你也加入行列。 每個人都應該學會如何編寫代碼。 Visit https://hourofcode.com/<%= @country %> to learn more and get started. 和支援我們的努力，即是把電腦科學帶進在 **[STATE]** 的更多學校。.
 
-<%= view :signup_button %>

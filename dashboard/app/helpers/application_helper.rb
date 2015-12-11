@@ -127,7 +127,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO].include? app
+    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT].include? app
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
@@ -162,14 +162,10 @@ module ApplicationHelper
   end
 
   def script_certificate_image_url(user, script)
-    if script.hoc?
-      script_name = 'hoc'
-    elsif script.twenty_hour?
-      script_name = '20hours'
-    else
-      script_name = data_t_suffix('script.name', script.name, "title")
-    end
-    certificate_image_url(name: user.name, course: script_name)
+    certificate_image_url(
+        name: user.name,
+        course: script.name,
+        course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)

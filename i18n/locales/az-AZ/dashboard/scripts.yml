@@ -146,7 +146,7 @@ az:
           description_short: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           Maze: Labirint
-          title: Kod Saatı
+          title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə öyrənməyə cəhd edin!
         frozen:
@@ -1348,6 +1348,10 @@ az:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1473,9 +1477,9 @@ az:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: Maynkraft Kod Saatı
+          description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
+          description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

@@ -146,7 +146,7 @@ pl:
           description_short: Rysuj fajne obrazki i wzory z Artystą!
         hourofcode:
           Maze: Labirynt
-          title: Godzina kodowania (Hour of Code)
+          title: Classic Maze
           description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z epoki lodowcowej!
           description_short: Poznaj podstawy informatyki z wieloma zabawnymi postaciami!
         frozen:
@@ -1029,7 +1029,7 @@ pl:
           title: Godzina Kodowania 2015
           description_short: Posłuż się Play Lab, by utworzyć historyjkę lub grę.
           description: Posłuż się Play Lab, by utworzyć historyjkę lub grę.
-          Hour of Code: Godzina kodowania (Hour of Code)
+          Hour of Code: Godzina Kodowania
           Hour of Code 2015: Godzina Kodowania 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1348,6 +1348,10 @@ pl:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1474,8 +1478,8 @@ pl:
           Craft: Craft
         mc:
           title: Godzina Kodowania z Minecraft
-          description_short: Odkrywaj świat Minecraft poprzez kodowanie
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Poznaj świat Minecrafta poprzez programowanie
+          description: "Używaj bloków z kodem, aby zabrać Steve'a lub Alex na przygodę w tym świecie Minecraft"
           Hour of Code 2015: Godzina Kodowania 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

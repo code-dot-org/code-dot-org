@@ -36,7 +36,7 @@
   "reinfFeedbackMsg":"Lahko pritisnete gumb \"Poskusi znova\" in se vrnete nazaj k igranju svoje igre.",
   "scoreText":"Dosežek: {playerScore} (Uporabnikove točke)",
   "setBackground":"Izberi odzdadje",
-  "setBackgroundRandom":"Izberi nakljuno odzadje",
+  "setBackgroundRandom":"izberi naključno odzadje",
   "setBackgroundFlappy":"Izberi mestno(podnevi) odzadje",
   "setBackgroundNight":"Izberi mestno(nočno) odzadje",
   "setBackgroundSciFi":"Izberi znanstveno fantastično odzadje",

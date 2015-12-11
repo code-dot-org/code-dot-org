@@ -293,6 +293,11 @@ lv-LV:
   class_submission_level_vocational: Arods
   class_submission_languages_other: Cita valoda(s)
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -300,7 +305,7 @@ lv-LV:
   starwars_javascript_start_button: Izmēģini tūlīt
   starwars_blocks_title: Bloki
   starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
   starwars_blocks_start_button: Izmēģini tūlīt
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
@@ -309,9 +314,9 @@ lv-LV:
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Ages 6+
+  mc_gradelevel: Vecums no 4-104
   mc_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -556,6 +561,7 @@ lv-LV:
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Programmēšanas stunda ir klāt: no 8. līdz 14. decembrim!'
   code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   learn_more: Uzzini vairāk
@@ -583,17 +589,22 @@ lv-LV:
   carousel_heading_international: Pamācības tavā valodā
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
+  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Pamācības tiem, kas māca JavaScript
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes"
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
+  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Pamācības citās programēsanas valodās
+  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Izveido pats savas aplikācijas vai spēles
   carousel_heading_university: Universitāšu kursi tiešsaistē
   carousel_heading_webpages: Iemācies veidot mājas lapas
   carousel_heading_robots: Iemāčies programēt ar robotiem
   carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Teacher Led Lesson Plans
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: Ko mācīt Programmēšanas stundā
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
@@ -607,8 +618,8 @@ lv-LV:
   mobile_devices: Apmācības mobilajām ierīcēm
   frozen_name: Programmē ar Annu un Elzu
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Uzraksti savu pirmo programmu
-  codeintl_name: Uzraksti savu pirmo programmu
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ievads JavaScript
   khanes_name: Ievads JavaScript
@@ -644,10 +655,17 @@ lv-LV:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Akmens, Šķēres, Papīrīts
-  hourofcode_name: Vietturis uz jauno code.org/hoc
+  hourofcode_name: Classic Maze
   playlab_name: Spēles laboratorija
   infinity_name: Infinity Play Lab
   artist_name: Mākslinieks
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -687,10 +705,17 @@ lv-LV:
   projguts_gradelevel: Vecumā no 10-13
   hourofcode_gradelevel: Vecums no 4-104
   frozen_gradelevel: Vecumā no 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Vecums no 4-104
   playlab_gradelevel: Vecums no 4-104
   infinity_gradelevel: Vecums no 4-104
-  artist_gradelevel: Vecums no 4-104
+  artist_gradelevel: Vecumā no 8+
+  monstercoding_gradelevel: Vecumā 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Sākumskola
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   thinkersmithspanish_platformtext: Bezsaistē
@@ -732,6 +757,13 @@ lv-LV:
   frozen_platformtext: Moderni pārlūki + planšetdatori
   starwars_platformtext: Moderni pārlūki + planšetdatori
   playlab_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modernas pārlūkprogrammas
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modernas pārlūkprogrammas
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeorg_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem putniem!
   codeintl_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem putniem!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -775,6 +807,13 @@ lv-LV:
   playlab_shortdescription: Izveidot stāstu vai spēli ar Spēles laboratoriju!
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney Infinity characters.
   artist_shortdescription: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: 'Apgūsti datorzinību pamatus ar vizuālo "velc un nomet" programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu, Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.'
   codeintl_longdescription: 'Apgūsti datorzinību pamatus ar vizuālo "velc un nomet" programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu, Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.'
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -816,6 +855,13 @@ lv-LV:
   frozen_longdescription: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
   starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
   playlab_longdescription: Spēļu laboratorijā radi stāstu vai spēli. Liec dzīvniekiem, pirātiem, zombijiem, nindzjām un citiem tēliem kustēties, skanēt, krāt punktus un ķert ugunsbumbas!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Ievads Datorzinātnēs (8. klases pākāpē)
   khan_beyond_name: Mācies datorprogrammēšanu
   tynker_beyond_name: Mācies programmēt mājās
@@ -1004,11 +1050,11 @@ lv-LV:
   compatibility_https_header: Lūdzu iespējo HTTPS priekš Code.org.
   compatibility_https_message: "Lai uzlabotu drošību, mēs pāriesim uz HTTPS protokolu no %{https_date}. Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied šeit</a> un izlasi, kā iespējot HTTPS Code.org."
   compatibility_https_hide_this_warning: Nerādīt šo brīdinājumu
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: vicināt
   infinity_shortcode: inf
-  playlab_shortcode: spēlēt
+  playlab_shortcode: lab
   artist_shortcode: art

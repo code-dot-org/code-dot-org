@@ -146,7 +146,7 @@ pt-BR:
           description_short: Faça desenhos e figuras legais com o Artista!
         hourofcode:
           Maze: Labirinto
-          title: Hora do Código
+          title: Classic Maze
           description: Conheça os conceitos básicos da ciência da computação com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do Gelo!
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
         frozen:
@@ -1348,6 +1348,10 @@ pt-BR:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Armazenamento permanente de dados e conclusão do Clicker
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

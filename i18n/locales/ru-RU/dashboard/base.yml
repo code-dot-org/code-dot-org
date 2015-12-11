@@ -398,6 +398,9 @@ ru:
     privacy: Правила конфиденциальности
     secure: Защищенная версия
     report_abuse: Сообщить о нарушении
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -454,7 +457,7 @@ ru:
       unused: Неиспользованные уровни
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
     flappy:
       title: Порхающий код

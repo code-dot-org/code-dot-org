@@ -378,26 +378,24 @@ hr:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where he needs to go to fill in the grey lines.
+        text: Ovo su blokovi za crtanje. Upotrijebite one kojima ćete pomaknuti umjetnika tako da popuni sive crte.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Ovo su blokovi za skakanje. Kad ih koristite, umjetnik se pomiče, ali ne crta pa ih koristite za skok do sljedeće sive crte.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'Zar pčele nisu divne? U skupu problema koji slijede, vaš cilj je pomoći pčeli da dođe do cvijeta, uzme nektar i odleti do košnice kako bi napravila med. Morat ćete upotrijebiti blokove "uzmi nektar" i "napravi med" za ovu vježbu.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Svaki cvijet ima drugu brojčanu oznaku meda: 1, 2, 3 i više. Prema broju u kutu znamo koliko je nektara u crvenome cvijetu. Zato pokupite sav nektar prije nego krenete dalje. Također, svako saće može sadržavati određenu količinu meda: 1, 2, 3 i više. Napravite samo onoliko meda koliko saće može sadržavati.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: Ako uspijete skupiti sav nektar i napraviti sav med, možete krenuti na sljedeći nivo. U suprotnome, morate ponovo pokušati riješiti problem. Poigrajte se i provjerite kako je biti programer i zujati poput pčele.
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: Petlja je ponavljanje aktivnosti. Da biste provjerili košnicu, pogledate u okvir i vratite ga nazad te ponavljate radnju nekoliko puta. To je petlja, ponavljanje iste aktivnosti više puta.
       2:
         image: notes/C1_bee_loops_2.png
         text: |-
@@ -1673,4 +1671,57 @@ hr:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

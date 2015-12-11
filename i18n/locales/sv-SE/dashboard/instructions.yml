@@ -92,7 +92,7 @@ sv:
       2-3 Bee Conditionals 2_instruction: Hej, är jag ett bi! Hjälp mig samla alla nektar från blommor. Använd en loop.
       2-3 Bee Conditionals 3_instruction: Hjälp mig samla alla nektar från blommorna och göra honung. Använd en loop.
       2-3 Bee Conditionals 4_instruction: Hjälp mig samla alla nektar från blommorna och göra all honungen.
-      2-3 Bee Conditionals 5_instruction: 'Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om- blocket.'
+      2-3 Bee Conditionals 5_instruction: Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om-blocket.
       2-3 Bee Conditionals 6_instruction: 'Kolla denna blomma med ett "om"-block för att se om det finns någon nektar.'
       2-3 Bee Conditionals 7_instruction: Samla nektar från varje blomma om den har någon.
       2-3 Bee Conditionals 8_instruction: Det här fältet har röda och lila blommor. Röda blommor har ett känt antal nektar, men lila blommors antal nektar är okänt. Samla all nektar.
@@ -138,7 +138,7 @@ sv:
       2-3 Bee Loops 6_instruction: Använd en slinga att samla nektar från varje blomma och göra honung på varje honeycomb.
       2-3 Bee Loops 7_instruction: Sätta dessa block i en slinga för att samla nektar från varje blomma.
       2-3 Bee Loops 8_instruction: 'Dessa lila blommor har en okänd mängd nektar. Använd "medan nektar" slingan för att samla all nektar. Denna loop kommer att köra så länge villkoret är sant, i detta fall nektar > 0.'
-      2-3 Bee Loops 9_instruction: 'Medan- loppen kan utföra samma åtgärd som ett om-uttryck i en loop. Lägg till en medan- loop till denna kod för att utföra samma uppgift.'
+      2-3 Bee Loops 9_instruction: Medan-loppen kan utföra samma åtgärd som ett om-uttryck i en loop. Lägg till en medan-loop till denna kod för att utföra samma uppgift.
       2-3 Bee Loops Assessment 1_instruction: 'Bedömning - Använd en medan- loop för att samla all nektar från denna blomma.'
       2-3 Maze 1_instruction: 'Kan du hjälpa mig att fånga den stygga grisen? Stapla ett par "framåt" block tillsammans och tryck på "Kör". '
       2-3 Maze 10_instruction: Led mig till den gröna elakheten! (Se upp för TNT)
@@ -407,7 +407,7 @@ sv:
       Artist - Nested Loops Assessment 1_instruction: Använd en kapslad loop för att slutföra designen.
       Auto Open Function Editor_instruction: |-
         Du kan anropa funktioner från inuti andra funktioner! Med din "form" funktion som bas, skapa 3 hus former varav varje är 20 pixlar större än den förra. Den första ska vara 50 pixlar i längd. Att använda en 'räknare' loop kan vara till hjälp. 
-      Bee Recommended Blocks test_instruction: 'Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om- blocket.'
+      Bee Recommended Blocks test_instruction: Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om-blocket.
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1018,7 +1018,7 @@ sv:
       Course 4 Maze 1_instruction: Få arga fågeln till grisen!
       Course 4 Maze 2_instruction: Undvik TNT!
       Course 4 Maze 3_instruction: 'Programmera arga fågeln att gå till grisen. '
-      Course 4 Maze 4_instruction: 'Prova "Upprepa" blocket för att använda färre block när du löser detta pussel...'
+      Course 4 Maze 4_instruction: 'Prova blocket "Upprepa" för att använda färre block när du löser detta pussel...'
       Course 4 Maze 5_instruction: Kan du lösa pusslet med så få block som möjligt?
       Course 4 Maze 6_instruction: Kan du lösa pusslet med så få block som möjligt?
       Course 4 Play Lab For Loops 2_instruction: Låt oss denna gång försöka räkna udda nummer från 1 till 100.
@@ -1091,7 +1091,19 @@ sv:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1335,8 +1347,8 @@ sv:
       frozen cross rotate_instruction: Prova nu att upprepa det 10 gånger. Hur många grader behöver du svänga mellan varje linje?
       frozen cross_instruction: 'Linda en "Upprepa" block runt dessa kommandon för att skapa ett plustecken. Märkte du Elsa kan flytta framåt och bakåt?'
       frozen diamond mini snowflake_instruction: 'Visste du att varenda snöflinga har en helt unik form? Låt oss skapa en ny snöflinga genom att använda "Upprepa"-blocket och göra ett parallellogram 4 gånger, och svänga höger 90 grader mellan varje parallellogram.'
-      frozen diamond snowflake_instruction: Nu provar vi att skapa en ny snöflinga genom att använda upprepa blocket för att göra 10 parallellogram och svänga höger med 36 grader mellan varje.
-      frozen diamond_instruction: Använd en upprepning runt dessa block för att skapa ett parallellogram. Det är precis som en rektangel men har olika vinklar. Den här har 60 grader och 120 graders vinklar i stället för endast 90 graders vinklar.
+      frozen diamond snowflake_instruction: Nu provar vi att skapa en ny snöflinga genom att använda upprepa-blocket för att göra 10 parallellogram och svänga höger med 36 grader mellan varje.
+      frozen diamond_instruction: Använd en upprepning runt dessa block för att skapa ett parallellogram. Det är precis som en rektangel men har olika vinklar. Den här har vinklarna 60 grader och 120 graders istället för endast 90 graders vinkel.
       frozen freeplay_instruction: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
       frozen line_instruction: Hej! Jag är Elsa av Arendal. Hjälp mig göra en rak linje.
       frozen perpendicular_instruction: 'Nu ska vi se om vi kan göra två linjer i 90 graders vinkel mot varandra. Du kommer att behöva använda blocken "Sväng" och "Gå".'
@@ -1345,7 +1357,7 @@ sv:
       frozen snowflower_instruction: Enkla former kan kombineras och bli avancerade snömönster. Kan du gör ett mönster genom att upprepa 5 cirklar med storlek 5 och 5 cirklar med storlek 10?
       frozen square iterative_instruction: Vi verkar vara halvvägs med att göra en kvadrat. Låt oss sätta ihop 4 linjer så att det blir en kvadrat.
       frozen square loop 3x_instruction: Låt oss göra tre kvadrater, och svänga efter varje kvadrat. Se till att svänga 120 grader före varje ny kvadrat.
-      frozen square loop_instruction: 'Hej, heter jag Anna av Arendal! Låt oss göra en kvadrat med "Upprepa" blocket, som använder färre block. Hur många gånger (???) bör "Upprepa"-blocket upprepa blocken inom sig för att göra en kvadrat?'
+      frozen square loop_instruction: 'Hej, heter jag Anna av Arendal! Låt oss göra en kvadrat med blocket "Upprepa" för att använda färre block. Hur många gånger (???) bör "Upprepa"-blocket upprepa blocken inom sig för att göra en kvadrat?'
       frozen square snowflake_instruction: 'Kan du skapa en snöflinga med "Upprepa"-blocket för att göra en fyrkant 10 gånger, och "Vända"-blocket för att vända 36 grader mellan varje fyrkant?'
       Infinity_catch_instruction: 'Kan du göra så att Elsa ("spelkaraktär 2") kommer till Anna genom att använda piltangenterna?'
       Infinity_finale_instruction: Skapa vad du vill och dela det!
@@ -1739,24 +1751,24 @@ sv:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Det är inte bra att möta en Creeper. Gå försiktigt förbi Creppers och nå säkerheten i ditt hem.
-      Overworld Chop Tree_instruction: 'Trä är en mycket viktig resurs. Många saker är gjorda av det. Gå till trädet och Använd kommandot "förstöra block" för att hugga ner det.'
-      Overworld Chop Trees_instruction: Vi måste bygga ett hus innan solen går ner. Hus kräver mycket trä. Hugg ner alla 3 träd.
-      Overworld Free Play 20x20_instruction: Grattis! Du har slutfört alla våra pussel! Gräv, bygg och skapa något unikt med allt du lärt dig hittills.
-      Overworld Free Play_instruction: Detta landskap är ditt att leka med. Du väljer vad du ska bygga.
-      Overworld House Frame - A_instruction: Låt oss göra vårt eget hus! Denna plats ser bra ut. Bygg en ram på jordblocken.
-      Overworld House Frame - C_instruction: Låt oss göra vårt eget hus! Denna plats ser bra ut. Bygg en ram på jordblocken.
+      Overworld Avoid Monsters_instruction: Att springa på en smygare är en dålig idé. Gå försiktigt förbi smygarna och nå tryggheten i ditt hem.
+      Overworld Chop Tree_instruction: 'Trä är en viktig resurs. Mycket kan tillverkas av det. Gå till trädet och använd kommandot "förstör block" för att hugga ned det.'
+      Overworld Chop Trees_instruction: Vi måste bygga ett hus innan solen går ned. Hus kräver mycket träd. Hugg ned alla 3 träd.
+      Overworld Free Play 20x20_instruction: Grattis! Du har klarat alla pussel! Bryt, bygg och skapa något unikt med allt du har lärt dig hittills.
+      Overworld Free Play_instruction: Du får leka i det här landskapet. Du väljer vad du ska bygga.
+      Overworld House Frame - A_instruction: Vi bygger ett eget hus! Den här platsen ser bra ut. Bygg en ram på jordblocken.
+      Overworld House Frame - C_instruction: Vi bygger ett eget hus! Den här platsen ser bra ut. Bygg en ram på jordblocken.
       Overworld House Frame B_instruction: Ena väggen är klar, låt oss bygga resten av huset genom att följa din planritning! Du måste upprepa ganska mycket här.
       Overworld House Frame B2_instruction: Ena väggen är klar, låt oss bygga resten av huset genom att följa din planritning! Du måste upprepa ganska mycket här.
       Overworld House Frame C_instruction: Ena väggen är klar, låt oss bygga resten av huset genom att följa din planritning! Du måste upprepa ganska mycket här.
-      Overworld House Frame Chosen_instruction: 'Bygg resten av ditt hus med något material du vill ha. Kommandot "Upprepa" kommer bra till hands.'
-      Overworld House Frame_instruction: Låt oss göra vårt eget hus! Denna plats ser bra ut. Bygg en ram på jordblocken.
-      Overworld Minecart Track_instruction: Du är tillbaka på ytan med massor av resurserfrån underjorden med dig. Nu ska vi bygga ett spår på jordstigen från ditt hus. Det första steget är att rensa stigen. Följ stigen och hugg ner träden.
-      Overworld Move to Sheep_instruction: 'Lägg till ett andra "gå vidare" kommando för att nå fåren.'
-      Overworld Place Wall_instruction: 'Varje hus börjar med en vägg. Bygg den första delen av ditt hus genom att sätta "placera" och "gå vidare" kommandon inuti upprepa slingan.'
-      Overworld Plant Crops_instruction: Det är bra att planera i förväg. Plantera grödor på båda sidor av vattnet så att du inte blir hungrig senare.
-      Overworld Powered Minecart_instruction: Bra jobbat! Du har samlat massor av resurser och byggt ett anspråkslöst hem. Lägg nu en järnväg från kanten av kartan till dörren på ditt hus.
-      Overworld Shear Sheep_instruction: 'Dags att klippa fåren! Använd kommandot "klipp av" för att samla ull från båda fåren.'
+      Overworld House Frame Chosen_instruction: 'Bygg resten av ditt hus med valfritt material. Kommandot "Upprepa" kommer bra till hands.'
+      Overworld House Frame_instruction: Nu bygger vi vårt eget hus! Den här platsen ser bra ut. Bygg en grund på jordblocken.
+      Overworld Minecart Track_instruction: Du är tillbaka på ytan med många underjordsresurser. Nu ska vi bygga en räls på jordvägen från ditt hus. Första steget är att rensa vägen. Följ vägen och ta bort träden.
+      Overworld Move to Sheep_instruction: 'Lägg till ett till "gå framåt"-kommando för att komma till fåret.'
+      Overworld Place Wall_instruction: 'Varje hus börjar med en vägg. Bygg den första delen av ditt hus genom att lägga "placera"- och "gå framåt"-kommandona i upprepningsloopen.'
+      Overworld Plant Crops_instruction: Det är bra att planera framåt. Plantera grödor på båda sidor om vattnet så att du inte blir hungrig längre fram.
+      Overworld Powered Minecart_instruction: Bra jobbat! Du har samlat många resurser och byggt ett blygsamt hem. Nu kan du lägga räls från kartans kant till din ytterdörr.
+      Overworld Shear Sheep_instruction: 'Dags för fårklippning! Använd kommandot "klipp" för att samla ull från båda får.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -2085,7 +2097,7 @@ sv:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2202,8 +2214,8 @@ sv:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -2354,22 +2366,22 @@ sv:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -2378,7 +2390,7 @@ sv:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -2413,7 +2425,7 @@ sv:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -2565,8 +2577,9 @@ sv:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -3350,8 +3363,8 @@ sv:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -3421,6 +3434,64 @@ sv:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
@@ -3447,11 +3518,11 @@ sv:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: 'Lava finns gömt under några av dessa block, som måste du täcka innan vi går vidare. Ett "om" kommando kommer till hands här. Lägg till ett "gå vidare" kommando på den korrekta platsen för att gräva upp dessa block.'
-      Underground If Statements_instruction: 'Nu blir det knepigt. Gräv upp 3 redstone, men fall inte i lavan. Använd ett "Om" kommando för att placera kullersten över all lava du upptäcker.'
-      Underground Iron_instruction: Gå in i smält lava är en dålig idé. Placera kullerstenför att skapa en bro, sedan gräv upp minst två järnblock.
-      Underground Mine in a Circle_instruction: "Hitta ett sätt att få 5 diamanter och 7 rödsten! Prova att använda ett upprepa kommando inuti ett upprepakommando för att gå i en fyrkant. \r\n"
-      Underground Mining Coal_instruction: Du hittar de mest värdefulla resurserna under jord, men det kan bli mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
+      Underground Avoiding Lava_instruction: 'Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.'
+      Underground If Statements_instruction: 'Nu blir det svårare. Bryt 3 eldstenar utan att ramla ned i lavan. Använd ett "om"-kommando för att lägga kullersten över lava du hittar.'
+      Underground Iron_instruction: Det är ingen bra idé att gå in i lava. Placera kullersten för att skapa en bro och bryt minst två av järnblocken.
+      Underground Mine in a Circle_instruction: Hitta ett sätt att skaffa 5 diamanter och 7 eldstenar! Försök använda ett upprepningskommando i ett upprepningskommando för att gå i en fyrkant.
+      Underground Mining Coal_instruction: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
       Underground Test Level_instruction: Samla alla mineraler!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

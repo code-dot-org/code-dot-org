@@ -34,7 +34,7 @@ class VolunteerEngineerSubmission
   end
 
   def self.commitments()
-    @commitments ||= commitments_with_i18n_labels(
+    (@commitments ||= {})[I18n.locale] ||= commitments_with_i18n_labels(
       'uncertain',
       'now_and_then',
       'one_hr_per_week',
@@ -53,7 +53,7 @@ class VolunteerEngineerSubmission
   end
 
   def self.locations()
-    @locations ||= locations_with_i18n_labels(
+    (@locations ||= {})[I18n.locale] ||= locations_with_i18n_labels(
       'onsite',
       'remote',
       'curriculum',
@@ -69,7 +69,7 @@ class VolunteerEngineerSubmission
   end
 
   def self.experiences()
-    @experiences ||= experiences_with_i18n_labels(
+    (@experiences ||= {})[I18n.locale] ||= experiences_with_i18n_labels(
       'unspecified',
       'university_student_or_researcher',
       'software_professional',

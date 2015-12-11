@@ -198,7 +198,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundUnderwater":function(d){return "suv osti sahnasini joylashtirish"},
 "setBackgroundCave":function(d){return "g'or sahnasini joylashtirish"},
 "setBackgroundSanta":function(d){return "set scene Santa"},
-"setBackgroundTooltip":function(d){return "Sets the background image"},
+"setBackgroundTooltip":function(d){return "Orqa qismga rasm joylashtirish"},
 "setGapRandom":function(d){return "set a random gap"},
 "setGapVerySmall":function(d){return "set a very small gap"},
 "setGapSmall":function(d){return "set a small gap"},

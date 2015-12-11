@@ -44,4 +44,3 @@ Segðu vinum þínum frá **#HourOfCode**!
 
 [Sendu þennan tölvupóst](<%= resolve_url('/promote/resources#sample-emails') %>) til þingmanna, bæjarfulltrúa eða menntamálanefndar og bjóddu þeim að heimsækja skólann þinn á Klukkustund kóðunar. It can help build support for computer science in your area beyond one hour.
 
-<%= view :signup_button %>

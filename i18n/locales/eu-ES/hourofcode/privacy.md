@@ -4,19 +4,19 @@ title: Privacy Policy
 
 * * *
 
-### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
+### Testu juridiko loteslea ingelesez idatzita dago eta [hemen](https://code.org/privacy) daukazu eskuragarri. Beheko testua itzulpen bat da.
 
 # Privacy Policy
 
-Date of Last Revision: August 3, 2015
+Azken berrikuspenaren data: 2015eko abuztuaren 3an
 
-## About Code.org
+## Code.org webguneari buruz
 
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
 Please read this Privacy Policy (“**Privacy Notice**”) carefully before accessing or using the Website.
 
-## Code.org Privacy Principles
+## Code.org Webgunearen Pribatutasun Printzipioak
 
 Our Privacy Notice is fueled by our commitment to the following Privacy Principles:
 
@@ -53,14 +53,14 @@ The sections below describe the ways Code.org collects and uses the name, email 
 Student code creations (art, animations, apps) may be shared with friends or to a public gallery at the discretion of the student, along with the students’ display name.</br>  
 This data also helps Code.org improve the course effectiveness. For example, if a puzzle is too hard, Code.org may take action (like [providing better hints](http://code.org/hints)) to improve the learning process.</br> |
 | Login time, IP address, and other technical data                                                                                                                                                                                                | Mandatory (automatic)                                                                                                                          | This data helps Code.org troubleshoot any problems users experience. It also helps Code.org understand usage patterns, to guide the build out of servers to support all users, and to enable updating the site while minimizing service disruption. See section below on [“technical information”](#techinfo) for additional details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Email Address                                                                                                                                                                                                                                   | Optional if account created by teacher or parent</br>  
+| Helbide Elektronikoa                                                                                                                                                                                                                            | Optional if account created by teacher or parent</br>  
 Mandatory if student signs up directly</br>  
 Mandatory for teacher or parent accounts | To inform the student or parent or teacher when new course-work is available. The student’s email address is optional when a teacher or parent creates a student account. If a student creates an account directly, an email address is required, to enable Code.org to help the student User retrieve their forgotten password.</br>  
 If provided, the email can be used by the student as their Code.org login username and unique identity.</br>  
 If provided, the student email address is private and not shared with anyone (not even the teacher)</br>  
 Note: See section below for details on how we handle email addresses from children under 13.</br>                                                                                                                                                                                  |
 | Gender                                                                                                                                                                                                                                          | Optional                                                                                                                                       | This information is only used in aggregate, to measure the total % of students that are male or female, to track our progress towards reducing the gender gap in computer science.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Age (*Not* birthdate)                                                                                                                                                                                                                           | Mandatory                                                                                                                                      | To understand the developmental stage of students to offer an age-appropriate experience for each student. We use this field to ensure we don’t store email information for students with age < 13. We collect ages (eg 16), as opposed to birthdates (eg Feb 13, 1998)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Adina (*Ez* jaiotza-data)                                                                                                                                                                                                                       | Mandatory                                                                                                                                      | To understand the developmental stage of students to offer an age-appropriate experience for each student. We use this field to ensure we don’t store email information for students with age < 13. We collect ages (eg 16), as opposed to birthdates (eg Feb 13, 1998)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Any phone number                                                                                                                                                                                                                                | Optional                                                                                                                                       | Users aged 13 or older can choose to share their app, art, or other code creations to a phone. To do this, they are asked to provide a phone number (their own or someone else’s). Code.org uses a 3rd party service ([Twilio](https://www.twilio.com/)) to send a pre-written text message to this number. Code.org does not store any record of the number, however the phone number and message will be stored by Twilio and may also be stored by the phone service provider.                                                                                                                                                                                                                                                                                                                                                                    |
 | Custom photos, sounds, and/or videos                                                                                                                                                                                                            | Optional                                                                                                                                       | Users aged 13 or older can choose to upload custom photos, sounds, and videos to the Code Studio platform to use within applications that they create. These files are not used by Code.org for any purpose other than within the applications created by such users.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Messages sent within the “Internet Simulator”                                                                                                                                                                                                   | Optional                                                                                                                                       | The [“Internet Simulator”](/internetsimulator) is a tool developed by Code.org for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Contents of messages sent by students using the tool can be accessed by the recipient, and are not accessed or used by Code.org for any purpose other than in this educational tool.                                                                                                                                                                                                                                                                                                                                                                         |
@@ -146,11 +146,11 @@ In addition, Users may send messages to Code.org for customer support requests.
 
 Other than the above, the Website supports no other form of messaging among Users.
 
-## Information We Do NOT Collect
+## Biltzen EZ Dugun Informazioa
 
 Code.org does not directly collect or store payment instruments. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
 
-## Children Under the Age 13
+## 13 Urteetik Beherako Haurrak
 
 The Code Studio learning platform is designed to be used by Users of all ages, including children under the age of 13 with the involvement of their school, teacher, parent or legal guardian. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users.
 
@@ -236,7 +236,7 @@ Our Website is operated and managed on servers located within the United States.
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A note to California residents:
+### Kaliforniako biztanleentzako oharra:
 
 We do not disclose any personal information to third parties for marketing purposes. For additional information about our privacy practices, or to review and request to have deleted any personal information you have shared with us, please send a request to http://code.org/contact.
 
@@ -245,4 +245,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Please contact Code.org with any questions or comments about this Privacy Notice, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)
+[![irudia](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

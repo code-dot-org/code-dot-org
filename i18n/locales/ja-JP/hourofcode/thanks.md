@@ -22,20 +22,28 @@ Hour of Codeについて、ご友人の方に**#HourOfCode**のハッシュタ�
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Hour of Codeを主催するよう学校と交渉しましょう。
+## 2. Find a local volunteer to help you with your event.
 
-[こちらのメール](%= resolve_url('/promote/resources#sample-emails') %)を校長に送って、その学校でHour of Codeを行えるようにお願いしましょう。 <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. 会社の方々にも働きかける
+## 3. 学校全体でHour of Codeを開催できるように働きかける
 
-[こちらのメール](%= resolve_url('/promote/resources#sample-emails') %)を上司やCEOに送りましょう。
+[このメール](%= resolve_url('/promote/resources#sample-emails') %)を校長に送信して、あなたの学校の全てのクラスでHour of Codeのイベントを行うようにお願いしましょう。
 
-## 4. Hour of Codeを、あなたの周りのコミュニティで宣伝
+## 4. 働いている会社に働きかける
 
-[地域のグループ、例えばボーイスカウトやガールスカウトを勧誘](%= resolve_url('/promote/resources#sample-emails') %)しましょう。 新しいスキルを学ぶのは、必ずしも学校である必要はありません。 [こちらのポスターやバナー、ステッカーやビデオ](%= resolve_url('/promote/resources') %)もご利用ください。
+[このメール](%= resolve_url('/promote/resources#sample-emails') %)をあなたの上司やCEOに送信しましょう。
 
-## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
+## 5. Hour of Codeを、周囲のコミュニティで広める
 
-[こちらのメール](%= resolve_url('/promote/resources#sample-emails') %)を県知事や市長、国会議員や教育委員会に送りましょう。 この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
+[地元のグループを勧誘](%= resolve_url('/promote/resources#sample-emails') %)しましょう。例えば、ボーイスカウトや大学、教会などのグループです。 新しいスキルを学ぶのは、必ずしも学校である必要はありません。 [これらのポスターやバナー、ステッカーやビデオ](%= resolve_url('/promote/resources') %)をイベントで利用しましょう。
+
+## 6. 議員に働きかける
+
+[このメール](%= resolve_url('/promote/resources#sample-emails') %)を地元選出の議員や教育委員会に送信して、学校で行うHour of Codeのイベントを見学して頂けるようにお願いしましょう。 この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

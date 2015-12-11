@@ -8,7 +8,7 @@ title: Termini di Servizio
 
 # Termini di Servizio
 
-Last Revised: December 5, 2014
+Ultima revisione: 5 dicembre 2014
 
 Code.org è un'organizzazione no-profit 501(c)(3) ("Code.org"). La nostra missione è dare a ogni studente l'opportunità di imparare l'informatica. Come parte di questa missione, Code.org gestisce i siti web <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, altri siti Web, informazioni, testi, curriculum, video, grafica, foto, API, notifiche e-mail e altri materiali e prodotti correlati e servizi (i "**Servizi**"), tra cui la piattaforma di tutorial <http://studio.code.org> ("**Code Studio**").
 
@@ -22,13 +22,13 @@ Queste condizioni sono soggette a modifiche. Se si continuano a utilizzare i ser
 
 Alcuni Servizi potrebbero essere soggetti a linee guida, regole, o termini di servizio aggiuntivi (“**Termini Aggiuntivi**”), e nel caso il tuo utilizzo di questi Servizi sarà condizionato dall'accettazione di questi Termini Aggiuntivi. Se dovesse esserci un qualche conflitto tra questi Termini e i Termini Aggiuntivi, i Termini Aggiuntivi faranno fede per l'utilizzo di quel Servizio, a meno che i Termini Aggiuntivi non dichiarino espressamente che siano questi Termini a fare fede.
 
-### Children Under Age 13
+### Bambini di Età Inferiore ai 13 Anni
 
 Noi ci impegnamo nel ridurre al massimo la raccolta dei dati personali degli Utenti di età inferiore ai 13 anni, così come spiegato nella Code.org [privacy policy](http://code.org/privacy). Se hai meno di 13 anni ti chiediamo di chiedere l'approvazione dei tuoi genitori o dei tuoi tutori legali prima di creare un account su Code.org. Code.org permette ad alcuni responsabili dei distretti scolastici e delle scuole, ad esempio insegnanti, amministratori, counselors, e altri educatori (un “**Educatore**”), di entrare in contatti con gli studenti attraverso i Servizi, così da poter fornire servizi di tutoraggio, educativi, e simili. Se sei un Educatore, puoi registrare ai Servizi gli accounts di uno o più di uno dei tuoi studenti.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Il tuo Account
 
 Se registri un account per i Servizi, diventi responsabile della sicurezza del tuo account e della tua password. Se utilizzi un account che ti è stato dato da un Educatore, questi potrebbe essere capace di accedere al e di disabilitare il tuo account.
 
@@ -80,7 +80,7 @@ The [Code.org JSON API and database of schools](http://code.org/learn/find-schoo
 
 Any data provided by The Conference Board is provided “as is” with no warranty whatsoever, and is protected by United States and International Copyright laws. The data displayed are provided for informational purposes only and may only be accessed, reviewed, published, and/or used in accordance with, and the permission of, The Conference Board consistent with the Terms of Use displayed at [www.conference-board.org](http://www.conference-board.org). Such data may not be extracted for use in a database, used to create a derivative work, or otherwise misused by any means without express written permission from The Conference Board, except that you may make limited non-commercial use as consistent with Fair Use under Section 107 of the Copyright Act of 1976. The Conference Board® and The Conference Board Help Wanted OnLine® are registered trademarks of The Conference Board. The Conference Board reserves all rights in and to its trademarks. Further information regarding The Conference Board Help Wanted OnLine® can be found [here](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### Normativa sul copyright
 
 Code.org respects the intellectual property rights of others and expects users of the Services to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 

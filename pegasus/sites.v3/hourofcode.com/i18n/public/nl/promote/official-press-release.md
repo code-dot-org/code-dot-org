@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Voorbeeld perscommuniqué voor verkozenen
 
@@ -49,4 +48,3 @@ Voor meer informatie over [**EVENT/PROGRAM/ETC**], bezoek [**INSERT WEBSITE**]of
   
 
 
-<%= view :signup_button %>

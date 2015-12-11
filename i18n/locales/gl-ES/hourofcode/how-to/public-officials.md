@@ -30,9 +30,9 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
   &nbsp;
 </p>
 
-## Get every school participating, every student learning!
+## Fai que cada colexio participe, e que cada estudante aprenda!
 
-  1. **Recruit local schools and districts.** Use [this email](%= resolve_url('/promote/resources#sample-emails') %) or [this blurb](%= resolve_url('/promote/stats') %) as a starting point, and take a look at this [how-to](%= resolve_url('/how-to') %) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](%= resolve_url('/prizes') %) and in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Recruit local schools and districts.** Use [this email](%= resolve_url('/promote/resources#sample-emails') %) or [this blurb](%= resolve_url('/promote/stats') %) as a starting point, and take a look at this [how-to](%= resolve_url('/how-to') %) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](%= resolve_url('/prizes') %) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!
 
   2. **Host an Hour of Code event.** See our [event how-to guide](%= resolve_url('/how-to/event') %) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 

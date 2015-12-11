@@ -163,9 +163,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Use setText to display the first item in the array. (Click to see full instructions)",
-    "markdown_instructions": "# Displaying Information to the User\r\n\r\nBefore we make our application interactive we'll want to practice creating some simple user output. When the app starts up the first item in your list should be displayed. Let's write the code that will display this information to the screen. \r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/d93b2abfec64ce67e8ccfecee14bae3d-image-1447346228581.36.43 AM.png\" style=\"width: 250px; float:right\">\r\n\r\n* Using `setText` set the main text area to show your first favorite thing.\r\n* Using `setText` and `list.length` set the text indicating what item of the list the user is currently viewing.\r\n\t* **Hint:** since arrays are zero-indexed **you will have to add one to your index** to generate the correct value to display.\r\n* **Note:** neither of these outputs will be able to change yet. Don't worry, we'll be taking care of that in coming exercises!\r\n\r\n",
+    "markdown_instructions": "# Displaying Information to the User\r\n\r\nBefore we make our application interactive, we'll want to practice creating some simple user output. When the app starts up, the first item in your list should be displayed. Let's write the code that will display this information to the screen. \r\n\r\n# Do This:\r\n\r\n<img src=\"https://images.code.org/d93b2abfec64ce67e8ccfecee14bae3d-image-1447346228581.36.43 AM.png\" style=\"width: 250px; float:right\">\r\n\r\n* Using `setText` set the main text area to show your first favorite thing.\r\n* Using `setText` and `list.length` set the text indicating what item of the list the user is currently viewing.\r\n\t* **Hint:** since arrays are zero-indexed **you will have to add one to your index** to generate the correct value to display.\r\n* **Note:** neither of these outputs will be able to change yet. Don't worry, we'll be taking care of that in coming exercises!\r\n\r\n",
     "slider_speed": "1",
-    "project_template_level_name": "U3 - Arrays - favThings template"
+    "project_template_level_name": "U3 - Arrays - favThings template",
+    "encrypted_examples": "RASN+3eDvnFRALBLjIPUqWUAlL+kKcfWtSlyjn1n0M6QKPijrPyAbypGrdfy\n1aEy\n"
   }
 }]]></config>
   <blocks/>

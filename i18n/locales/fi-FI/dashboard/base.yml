@@ -412,6 +412,9 @@ fi:
     privacy: Yksityisyyskäytäntö
     secure: Turvallinen versio
     report_abuse: Ilmoita väärinkäytöksestä
+    built_on_code_studio: Rakennettu Koodistudiossa
+    make_my_own_app: Tee oma sovellukseni
+    how_it_works: Miten se toimii
   reference_area:
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet
@@ -468,7 +471,7 @@ fi:
       unused: Käyttämättömät tasot
   upsell:
     hoc:
-      title: Koodaustunti
+      title: Classic Maze
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code

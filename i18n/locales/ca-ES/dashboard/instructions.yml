@@ -222,12 +222,8 @@ ca:
       4-5 Artist 8_instruction: "La línia del mig d'un camp de futbol és perpendicular a les bandes. Aquest camp té un perímetre de 800 píxels i fa 200 píxels de llarg. Quant fa d'ample? Dibuixa les línies de les vores i del mig del camp."
       4-5 Artist 9_instruction: "Dibuixa l'altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg."
       4-5 Artist Assessment 1_instruction: 'Avaluació: Usa un bucle per dibuixar el triangle equilàter. Cada costat és de 300 píxels.'
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
+      4-5 Artist For Loops 1_instruction: "Posa els números de l'1 al 10 en els blocs d'amplada i executa el codi."
+      4-5 Artist For Loops 11_instruction: 'Completar el bloc "per a" perquè compti 0, 20, 40, 60, 80... 200.'
       4-5 Artist For Loops 12_instruction: |
         What happens if you reverse the "from"
         and "to" numbers? Complete the "for" block so that it counts 200, 180,
@@ -250,10 +246,8 @@ ca:
       4-5 Artist For Loops 4_instruction: |
         Complete the "for" block so that it
         counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+      4-5 Artist For Loops 6_instruction: |-
+        Dibuixa quadrats amb costats de 50, 60, 70, 80 i 90 píxels. Hauràs d'utilitzar la funció "dibuixa un quadrat" cinc vegades.
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -266,7 +260,7 @@ ca:
         These circles are size 5, 10, 15, 20,
         25, 30, and 35. Draw the circles using a "for" block.
       4-5 Artist Free Draw 1_instruction: Dibuix lliure! Dibuixa el que et digui la inspiració.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+      4-5 Artist Functions 1_instruction: Utilitza un bucle de repetició per dibuixar aquest triangle.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
@@ -321,10 +315,7 @@ ca:
         Use the draw a square and triangle functions
         along with other blocks to create a house by adding them to the 'draw a house"
         function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
+      4-5 Artist Functions 7_instruction: 'Utilitza la funció "dibuixa una casa" per dibuixar cases que facin 100 píxels per 50 píxels. Les dues cases estan separades per 50 píxels.'
       4-5 Artist Functions 8_instruction: |
         The "draw a flower" function has a parameter
         that allows you to set the stem height.  Set it to 200 and see what happens.
@@ -361,12 +352,8 @@ ca:
         nested that whole block of code into another loop, but you need to get the
         artist back in place to draw the next line. Which of these code blocks can
         you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
+      4-5 Artist Patterns 4_instruction: Aquest diamant té 50 píxel per costat i angles de 60 i 120 graus. Utilitza un bucle per dibuixar-lo.
+      4-5 Artist Patterns 5.5_instruction: Quantes vegades cal repetir aquest bloc per dibuixar la graella completa de diamants?
       4-5 Artist Patterns 5_instruction: |
         Let's repeat that to make a row of 6 diamonds.
         Notice that we changed our diamond code to repeat 3 times instead of 2 - why
@@ -379,9 +366,7 @@ ca:
         to make this more complex pattern. Notice how the diamonds overlap now, try
         changing the first "jump backwards" from 100 to 50 (half as far) - now how
         far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
+      4-5 Artist Patterns 8_instruction: Utilitza un bucle per dibuixar aquest hexàgon amb 40 píxel per costats i angles de 60 graus.
       4-5 Artist Patterns 9.5_instruction: |
         Let's loop this code to draw two rows
         of hexagons. Notice how our second row is shifted to the right.
@@ -434,10 +419,7 @@ ca:
         2, or 1 nectar. Here an if-else block is combined with another if-else block
         to create an if, else-if, else block. Complete the solution to collect the
         unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
+      4-5 Bee Conditionals 7_instruction: 'Recorda que les flors liles poden tenir 1, 2 o 3 nèctars. Completa la funció "comprovar la flor lila" i utilitzar-la per recollir tots els nèctar de les flors.'
       4-5 Bee Conditionals 8_instruction: |
         Write inside the function "check flower
         make honey". Your function should check if the purple flower has 3, 2, or
@@ -1812,7 +1794,19 @@ ca:
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing you can count multiple things\r\n\r\nFind out how many people like something\nother than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom this\r\n\r\nx% are dog lovers"
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: |
+        Create an object with at
+        least 5 values including at least one string and one number. (Click to see
+        full instructions) 
+      CSP U4 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -3102,7 +3096,7 @@ ca:
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indexes to change the values in
+        Use indices to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3219,8 +3213,8 @@ ca:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3371,22 +3365,22 @@ ca:
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
@@ -3395,7 +3389,7 @@ ca:
         loop and stop counting at once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3430,7 +3424,7 @@ ca:
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
         to 1. (Click to see full instructions)
@@ -3582,8 +3576,9 @@ ca:
         Run your simulation to get the full 10,000
         flips! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
       U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
         Update your while loop's condition so the
@@ -4367,8 +4362,8 @@ ca:
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events, and display event.key in the console.  Hit keys on the
-        keyboard to see what happens.  (Click to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4438,6 +4433,64 @@ ca:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the table name in create record
+        then check the Data Viewer to see the new table.
+      U4 - CreateRecord - 3_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add the provided javascript object as a
+        record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4L02 - Objects - createObject_instruction: |
+        Create an object with at least
+        5 values including at least one string and one number. (Click to see full
+        instructions) 
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+        
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

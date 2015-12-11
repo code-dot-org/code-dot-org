@@ -11,8 +11,8 @@ kk:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
-        Matching: Matching
+        Match the button combination to the dance moves.: Үйлестіру батырмасын би қимылдарымен салыстыру.
+        Matching: Сәйкестік
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
@@ -23,8 +23,8 @@ kk:
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
         <strong>Q</strong>: '<strong>Q</strong>'
-        Matching: Matching
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Matching: Сәйкестік
+        Use the key to match each code to its letter: Өз хатыңыздағы әр бір кодты сәйкестендіру үшін кілтті қолданыңыз.
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -32,8 +32,8 @@ kk:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
-        Matching: Matching
+        Match the grid to the program.: Бағдарлама торымен сәйкестендіру.
+        Matching: Сәйкестік
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
@@ -42,10 +42,10 @@ kk:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match: Maze Match
+        Drag the blocks to match.: Сәйкестендіру үшін блоктарды алып келіңіз.
+        Instructions: Нұсқаулар
+        Match the puzzles to the blocks: Блоктармен сәйкестендіру бас қатырғышы
+        Maze Match: Сәйкестендіру лабиринті
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -53,8 +53,8 @@ kk:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Match the grid to the program
-        Matching: Matching
+        Match the grid to the program: Бағдарлама торымен сәйкестендіру
+        Matching: Сәйкестік
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
@@ -64,8 +64,8 @@ kk:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Artist Loops Matching One
-        Match the loop to the shape: Match the loop to the shape
+        Artist Loops Matching One: бірге сәйкес орындаушыны байлау
+        Match the loop to the shape: Формасына сай байлау
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -75,8 +75,8 @@ kk:
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: Орындаушыны салыстыру
+        Match the shape with the blocks that complete it.: Форманы аяқтау үшін блоктармен салыстыру.
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -88,9 +88,9 @@ kk:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: Bounce Matching
-        Match the events with the actions: Match the events with the actions
-        Matching: Matching
+        Bounce Matching: Секіріс сәйкестігі
+        Match the events with the actions: Оқиғалардың іс-әрекеттерге сәйкестігі
+        Matching: Сәйкестік
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
@@ -98,9 +98,9 @@ kk:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Flappy Matching One
-        Match the events with the actions: Match the events with the actions
-        Matching: Matching
+        Flappy Matching One: Бірінші қанағат қағысы сәйкестігі
+        Match the events with the actions: Оқиғалардың іс-әрекеттерге сәйкестігі
+        Matching: Сәйкестік
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
@@ -108,19 +108,19 @@ kk:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match One: Maze Match One
+        Match the puzzles to the blocks: Блоктармен сәйкестендіру бас қатырғышы
+        Maze Match One: Бірінші лабиринтпен сәйкестік
       4-5 Algorithms Match 1:
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
-        Matching: Matching
+        <h4>Add Player 1 roll to total score</h4>: '<h4>1 ойыншының жалпы ұпйына күлше қосу</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Ойыншы күлшелерін кім жеңгендігін көру мақсатында салыстыру</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>1 ойыншы күлшесі ойыннан шығарылды</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>1 ойыншының күлше санын 0 теңестіру</h4>'
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Қадамдардың Dice Race ойынында шығуы қажет алгоритмдермен сәйкестігі.
+        Matching: Сәйкестік
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
@@ -131,7 +131,7 @@ kk:
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        Matching: Matching
+        Matching: Сәйкестік
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
@@ -142,8 +142,8 @@ kk:
         <h4>STACK</h4>: '<h4>STACK</h4>'
         <h4>STAMP</h4>: '<h4>STAMP</h4>'
         <h4>STAR</h4>: '<h4>STAR</h4>'
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
-        Matching: Matching
+        Match each program to the word it makes, using the provided group of skills.: Көрсетілген дағдылар тобын қолдана отырып сөздердің әр бір бағдарламамен сәйкестігін табу
+        Matching: Сәйкестік
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
@@ -152,10 +152,10 @@ kk:
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match: Maze Match
+        Drag the blocks to match.: Сәйкестендіру үшін блоктарды алып келіңіз.
+        Instructions: Нұсқаулар
+        Match the puzzles to the blocks: Блоктармен сәйкестендіру бас қатырғышы
+        Maze Match: Сәйкестендіру лабиринті
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -163,8 +163,8 @@ kk:
         <br/><br/>above: '<br/><br/>above'
         <br/><br/>below: '<br/><br/>below'
         <br/><br/>next to: '<br/><br/>next to'
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
-        Matching: Matching
+        Is the square next to, above, or below the ball?: Бұл шаршы шардың қасында ма, әлде жоғары не төмен орналасқан ба?
+        Matching: Сәйкестік
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -174,8 +174,8 @@ kk:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Match the shapes based on type.
-        Matching: Matching
+        Match the shapes based on type.: Типке тәуелді форманың сәйкестігі.
+        Matching: Сәйкестік
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -185,8 +185,8 @@ kk:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        Match the shapes based on type.: Match the shapes based on type.
-        Matching: Matching
+        Match the shapes based on type.: Типке тәуелді форманың сәйкестігі.
+        Matching: Сәйкестік
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
@@ -195,7 +195,7 @@ kk:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
         Match the code to the stairs it draws.: Match the code to the stairs it draws.
-        Matching: Matching
+        Matching: Сәйкестік
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
@@ -205,8 +205,8 @@ kk:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Match the blocks
-        Matching: Matching
+        Match the blocks: Блоктарды сәйкестендіру
+        Matching: Сәйкестік
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
@@ -215,8 +215,8 @@ kk:
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
-        Matching: Matching
+        Match the button combination to the dance moves.: Үйлестіру батырмасын би қимылдарымен салыстыру.
+        Matching: Сәйкестік
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
@@ -224,8 +224,8 @@ kk:
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
-        Match the blocks: Match the blocks
-        Matching: Matching
+        Match the blocks: Блоктарды сәйкестендіру
+        Matching: Сәйкестік
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -233,8 +233,8 @@ kk:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
-        Matching: Matching
+        Match the Map to the arrow that gets the Flurb to the treasure: Flurb-ті қазынаға алып келетін бағдарларды картамен сәйкестендіру
+        Matching: Сәйкестік
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -245,10 +245,10 @@ kk:
         /script_assets/k_1_images/move_blocks/ENE.png: /script_assets/k_1_images/move_blocks/ENE.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
-        Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
-        Match the puzzles and blocks: Match the puzzles and blocks
-        Matching: Matching
+        Drag the blocks to match.: Сәйкестендіру үшін блоктарды алып келіңіз.
+        Instructions: Нұсқаулар
+        Match the puzzles and blocks: Бас қатырғыштарды және блоктарды сәйкестендіру
+        Matching: Сәйкестік
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -256,8 +256,8 @@ kk:
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
-        Matching: Matching
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Flurb-ті гүлге алып баратын алгоримді картамен сәйкестендіру
+        Matching: Сәйкестік
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -269,11 +269,11 @@ kk:
         /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
         /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: Instructions
+        Instructions: Нұсқаулар
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: Matching
+        Matching: Сәйкестік
         Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
         Sydney: Sydney
         Van Minnen: Van Minnen
@@ -286,8 +286,8 @@ kk:
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
-        Multiple Choice: Multiple Choice
+        Choose an algorithm for the image provided.: Бұл бейне үшін алгоритмді таңдау
+        Multiple Choice: Көптік таңдау
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
@@ -297,177 +297,177 @@ kk:
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Көптік таңдау
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square'
-        Which image does <em>not</em> follow this algorithm?: 'Which image does <em>not</em> follow this algorithm?'
+        Which image does <em>not</em> follow this algorithm?: 'Бұл алгоритміді бейнелердің қайсысы <em>оқымайды</em>?'
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Multiple Choice: Multiple Choice
-        Which program makes this image?: Which program makes this image?
+        Multiple Choice: Көптік таңдау
+        Which program makes this image?: Бұл бейнені қай бағдарлама жасайды?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
-        Multiple Choice: Multiple Choice
+        According to the rules of the game, which set of cards is scored correctly?: Ойынның ережесіне сай, қай карталар жиыны дұрыс жинақталған?
+        Multiple Choice: Көптік таңдау
       2-3 Getting Loopy Multi 1:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
-        Multiple Choice: Multiple Choice
+        How would you simplify this sequence with loops?: Бұл қайталанатын тізбекті қалай жеңілдетуге болады?
+        Multiple Choice: Көптік таңдау
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Multiple Choice: Multiple Choice
-        Which program makes this image?: Which program makes this image?
+        Multiple Choice: Көптік таңдау
+        Which program makes this image?: Бұл бейнені қай бағдарлама жасайды?
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Maze Multiple Choice: Maze Multiple Choice
-        Which blocks work?: Which blocks work?
+        Maze Multiple Choice: Шатысқан көптік таңдау
+        Which blocks work?: Қандай блоктар жұмыс жасайды?
       2-3 Relay Programming Multi 1:
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
-        Multiple Choice: Multiple Choice
-        Which program does not create this image?: Which program does not create this image?
+        Multiple Choice: Көптік таңдау
+        Which program does not create this image?: Бұл бейнені қандай бағдарлама жасай алмайды?
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
-        Multiple Choice: Multiple Choice
-        Which image-program combo does not contain mistakes?: Which image-program combo does not contain mistakes?
+        Multiple Choice: Көптік таңдау
+        Which image-program combo does not contain mistakes?: Қандай бейне-бағдарлама комбинациясында қателік жоқ?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
-        Why won't this circle go all the way around?: "Why won't this circle go all the way around?"
+        Artist Debugging Multiple Choice One: Бірінші көптік таңдау күйін келтіуді орындаушы
+        Why won't this circle go all the way around?: Не себепті бұл дөңгелек айналадағы барлық жолды жүріп өтпейді?
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
-        Pick the correct blocks to draw this image using the given functions: Pick the correct blocks to draw this image using the given functions
+        Artist Functions Multiple Choice One: Бірінші көптік таңдау функцияларын орындаушы
+        Pick the correct blocks to draw this image using the given functions: Көрсетілген функцияларды қолдана отырып осы суртті жасауға қажетті дұрыс блоктарды таңдаңыз
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Artist Loops Multiple Choice: Көптік таңдау циклын орындаушы
+        Which shape is made by this loop?: Бұл циклда қандай формалар жасалынады?
       2-3 artist loops multi 2:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which shape is made by this program?: Which shape is made by this program?
+        Artist Loops Multiple Choice: Көптік таңдау циклын орындаушы
+        Which shape is made by this program?: Бұл бағдарламада қандай формалар жасалынады?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
-        Which comparison below is true?: Which comparison below is true?
+        Bee Conditionals Multiple Choice One: Бірінші көптік таңдаудың шартты Ара құрылымдары
+        Which comparison below is true?: Төмендегі салыстырулардың қайсысы дұрыс?
       2-3 bee conditionals multi 2:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
-        Choose the best blocks.: Choose the best blocks.
+        Bee Conditionals Multiple Choice Two: Екінші көптік таңдаудың шартты Ара құрылымдары
+        Choose the best blocks.: Ең жақсы блотарды таңдаңыз.
       2-3 bee conditionals multi 3:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
-        Choose the best blocks.: Choose the best blocks.
+        Bee Conditionals Multiple Choice Two: Екінші көптік таңдаудың шартты Ара құрылымдары
+        Choose the best blocks.: Ең жақсы блотарды таңдаңыз.
       2-3 bee loops multi 1:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
-        Which blocks collect all of the nectar?: Which blocks collect all of the nectar?
+        Bee Loops Multiple Choice One: Бірінші көптік таңдаудың Ара циклдары
+        Which blocks collect all of the nectar?: Қандай блоктар барлық нетарды жинақтайды?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Maze Multiple Choice One: Maze Multiple Choice One
-        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
+        Maze Multiple Choice One: Бірінші көптік таңдаудың лабиринті
+        Which set of blocks is the correct answer?: Қандай блоктар жинағы дұрыс жауап болып табылады?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
         Brushing your teeth: Brushing your teeth
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Көптік таңдау
         Shopping from a grocery list: Shopping from a grocery list
         Which one of these items is hardest to describe an algorithm for?: Which one of these items is hardest to describe an algorithm for?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Юджин _____ қала.
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        Multiple Choice: Multiple Choice
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        1: ': Мұнда үш сөйлем берілген. Төмендегі шаблондардың қайсысына барлық үш сөйлем шаблон сызбасына ұқсас сәйкестендіріледі?'
+        Multiple Choice: Көптік таңдау
+        Seattle _____ a _____ _____.: Сиэтл _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: '_____ бұл _____  _____.'
+        _____ is a _____ city.: '_____  _____ қала болып келеді.'
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
-        Multiple Choice: Multiple Choice
-        Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
+        Multiple Choice: Көптік таңдау
+        Which of these pictures best represents crowdsourcing?: Көрсетілген суреттердің қайсысы краудсорсингті жақсырақ береді?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
-        Multiple Choice: Multiple Choice
-        Washing your face: Washing your face
-        Which one of these activities would be best for practicing crowdsourcing?: Which one of these activities would be best for practicing crowdsourcing?
+        Brushing your hair: Шашыңызды жуу
+        Cleaning your room: Бөлмеңізді жинау
+        Eating your dessert: Өз десертіңізден дәм тату
+        Multiple Choice: Көптік таңдау
+        Washing your face: Бетіңізді жуу
+        Which one of these activities would be best for practicing crowdsourcing?: Краудсорсингті үйреніп жүргендер үшін көрсетілген қызметтердің қайсысы жақсырақ болады?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Multiple Choice
-        Which piece of information listed below is okay to share on the internet?: Which piece of information listed below is okay to share on the internet?
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: "Your parent's credit card number"
+        Multiple Choice: Көптік таңдау
+        Which piece of information listed below is okay to share on the internet?: Интернетте бөлісу үшін төмендегі тізімде ақпараттың қандай бөлігі көрсетілген?
+        Your address: Сіздің адресіңіз
+        Your birthday: Сіздің туылған күніңіз
+        Your favorite food: Сіздің сүйікті тағамыңыз
+        Your parent's credit card number: Ата-анаңыздың кредиттік карта номері
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: Multiple Choice
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When you try to log on to code.org, which IP address is the DNS most likely to take you to?
+        Multiple Choice: Көптік таңдау
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: 'Сіз code.org-қа кіруге талпынған кезде, сізге үшін қандай  IP адрессті DNS-ті қабылдаған дұрыс?'
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
-        Multiple Choice: Multiple Choice
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Егерде DNS сізге 100.42.50.110 ІР адресіндегі парақшаға сіз сайтта отырсыз деген хабарлама жіберсе?
+        Multiple Choice: Көптік таңдау
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -478,52 +478,52 @@ kk:
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
-        Multiple Choice: Multiple Choice
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        Multiple Choice: Көптік таңдау
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: 'Сіз хор деп анықтай алатын,айтылған сайын хор қайталай алатын бұл әннің ең үлкен  бөлшегі қандай?'
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Multiple Choice: Multiple Choice
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
+        Multiple Choice: Көптік таңдау
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Төмендегі бағдарламалардың қайсысы 1-бағдарламадағыдай тізбекті <em>орындай алмайд</em>?'
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        Which function creates a rectangle that can change its size?: Which function creates a rectangle that can change its size?
+        Artist Functions Multiple Choice: Көптік таңдау функцияларын орындаушы
+        Which function creates a rectangle that can change its size?: Қандай функция өлшемін өзгерте алатын тік төртбұрыш құра алады?
       4-5 artist loops multi 1:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which blocks will create the design?: Which blocks will create the design?
+        Artist Loops Multiple Choice: Көптік таңдау циклын орындаушы
+        Which blocks will create the design?: Қандай блоктар дизайнды құрады?
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Көптік таңдау функцияларын орындаушы
         "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
-        Artist Multiple Choice: Artist Multiple Choice
-        Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw a rectangle with a perimeter of 100?
+        Artist Multiple Choice: Көптік таңдау орындаушысы
+        Which blocks draw a rectangle with a perimeter of 100?: Қандай блоктар периметрі 100-ге тең болатын тік төртбұрыш салады?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
-        Artist Multiple Choice: Artist Multiple Choice
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Artist Multiple Choice: Көптік таңдау орындаушысы
+        Which drawing is symmetric?: Қандай сурет симетриялы?
       4-5 bee conditionals multi 1:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
@@ -531,9 +531,9 @@ kk:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
-        Choose the best blocks.: Choose the best blocks.
+        1: ': Лала гүлінде 3, 2 немесе 1 шырын болуы мүмкін, бірақ сен қанша екенін білмейсің. Лала гүлдегі барлық шырындарды жинап алу үшін қандай блоктарды тексерген дұрыс?'
+        Bee Conditionals Multiple Choice: Бірінші көптік таңдаудың шартты Ара құрылымдары
+        Choose the best blocks.: Ең жақсы блотарды таңдаңыз.
       4-5 bee debug multi 1:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
@@ -541,40 +541,40 @@ kk:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
-        Which version of the function will work?: Which version of the function will work?
+        Bee Debug Multiple Choice: Көптік таңдаудың Ара орындаушысы
+        Which version of the function will work?: Функцияның қай түрі жұмыс жасайды?
       4-5 bee loops multi 1:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
-        Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
+        Bee Loops Multiple Choice: Көптік таңдаудың ара циклдары
+        Which blocks will solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
       4-5 farmer loops multi 1:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
-        Famer Loops Multiple Choice: Famer Loops Multiple Choice
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Famer Loops Multiple Choice: Көптің таңдаудың Атақ циклы
+        Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
       4-5 maze conditionals multi 1:
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Maze Conditionals Multiple Choice: Көптік таңдаудың шатыстыру шартты құрылымдары
+        Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
       4-5 maze multi 1:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
-        Maze Multiple Choice: Maze Multiple Choice
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Maze Multiple Choice: Шатысқан көптік таңдау
+        Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: '3 - 7'
@@ -596,98 +596,98 @@ kk:
         /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
         /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
-        Multiple Choice: Multiple Choice
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Multiple Choice: Көптік таңдау
+        Which blocks solve this puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
       K-1 Artist 1 Multi 2:
         /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
         /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
         /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
         /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
-        Multiple Choice: Multiple Choice
-        Which blocks draw the square?: Which blocks draw the square?
+        Multiple Choice: Көптік таңдау
+        Which blocks draw the square?: Қандай блоктар шаршыны салады?
       K-1 Artist 2 Multi 1:
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
         /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png, 500
-        Multiple Choice: Multiple Choice
-        Which shape do these squares combine to make?: Which shape do these squares combine to make?
+        Multiple Choice: Көптік таңдау
+        Which shape do these squares combine to make?: Бұл шаршыны жасау үшін қандай фигураларды біріктіру қажет?
       K-1 Artist Loops Multi 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300
-        Multiple Choice: Multiple Choice
-        Which blocks create this picture?: Which blocks create this picture?
+        Multiple Choice: Көптік таңдау
+        Which blocks create this picture?: Бұл суретті қандай блоктар құрады?
       K-1 Bee 1 Multi 1:
         /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: How many nectars is this?
-        Multiple Choice: Multiple Choice
+        How many nectars is this?: Мұнда қанша шырын бар?
+        Multiple Choice: Көптік таңдау
       K-1 Bee 1 Multi 2:
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: How many nectars is this?
-        Multiple Choice: Multiple Choice
+        How many nectars is this?: Мұнда қанша шырын бар?
+        Multiple Choice: Көптік таңдау
       K-1 Digital Footprint Multi 1:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Multiple Choice: Multiple Choice
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
+        Multiple Choice: Көптік таңдау
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Қандай жануарда оны <strong>барынша қорғалмаған</strong> ететін сандық ізі бар?'
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
-        Multiple Choice: Multiple Choice
+        How would you simplify this sequence with loops?: Бұл қайталанатын тізбекті қалай жеңілдетуге болады?
+        Multiple Choice: Көптік таңдау
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
         /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Multiple Choice: Multiple Choice
-        Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to the treasure?
+        Multiple Choice: Көптік таңдау
+        Which arrow gets the Flurb to the treasure?: Flurb қазынаға дейін қандай бағдарларды қабылдайды?
       K-1 Keep it Private Multi 1:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
-        Multiple Choice: Multiple Choice
-        Which information should you <strong>not</strong> share online?: 'Which information should you <strong>not</strong> share online?'
+        Multiple Choice: Көптік таңдау
+        Which information should you <strong>not</strong> share online?: 'Қандай ақпарат онлайн түрде <strong>таратылмауы</strong> жажет?'
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
         /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
         /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
-        Multiple Choice: Multiple Choice
-        Which choice should be the final block?: Which choice should be the final block?
+        Multiple Choice: Көптік таңдау
+        Which choice should be the final block?: Қандай таңдау ақырғы блок болуы қажет?
       K-1 Maze Loops Multi 1:
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png, 300
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
-        Multiple Choice: Multiple Choice
-        Which repeat block is the same?: Which repeat block is the same?
+        Multiple Choice: Көптік таңдау
+        Which repeat block is the same?: Қандай қайталанатын блоктар бірдей?
       K-1 Maze Loops Multi 2:
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
-        Multiple Choice: Multiple Choice
-        Pick the correct repeat block.: Pick the correct repeat block.
+        Multiple Choice: Көптік таңдау
+        Pick the correct repeat block.: Дұрыс қайталанатын блокты таңдаңыз
       K-1 Maze Multiple Choice 2:
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -695,64 +695,64 @@ kk:
         /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
         Maze: Maze
-        Which answer solves this level?: Which answer solves this level?
+        Which answer solves this level?: Бұл деңгейдің шешімі қандай жауап болады?
       K-1 Move It Multi 1:
         /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
         /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
         /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
-        Multiple Choice: Multiple Choice
-        Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb to the flowers?
+        Multiple Choice: Көптік таңдау
+        Which algorithm gets the Flurb to the flowers?: Flurb гүл үшін қандай алгоитм қабылдайды?
       K-1 Plant a Seed Multi 1:
         /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
-        Multiple Choice: Multiple Choice
-        Which step should go at the beginning of this algorithm?: Which step should go at the beginning of this algorithm?
+        Multiple Choice: Көптік таңдау
+        Which step should go at the beginning of this algorithm?: Бұл алгортмнің басында қандай қадам болуы қажет?
       K-1 Plant a Seed Multi 2:
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
-        Multiple Choice: Multiple Choice
-        Which step should fill in the blank for this algorithm?: Which step should fill in the blank for this algorithm?
+        Multiple Choice: Көптік таңдау
+        Which step should fill in the blank for this algorithm?: Бұл алгортм үшін бланкті қандай қадам толтыруы қажет?
       K-1 Word Search Multi 1:
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
-        Multiple Choice: Multiple Choice
-        Which blocks spell "MOVE"?: 'Which blocks spell "MOVE"?'
+        Multiple Choice: Көптік таңдау
+        Which blocks spell "MOVE"?: 'Қандай блоктар "ҚИМЫЛ"-ды білдіреді?'
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
-        Multiple Choice: Multiple Choice
-        Which blocks spell "JUMP"?: 'Which blocks spell "JUMP"?'
+        Multiple Choice: Көптік таңдау
+        Which blocks spell "JUMP"?: 'Қандай блоктар "СЕКІРУ"-ді білдіреді?'
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
-        Multiple Choice: Multiple Choice
+        Multiple Choice: Көптік таңдау
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE
-        Which word is spelled?: Which word is spelled?
+        Which word is spelled?: Қандай сөз жазылған?
       K-1 multi 4:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
+        Driver and Helper: Жүргізуші және көмекші
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Бұл балалардың біреуі <b>жүргізуші</b>.  Ал екіншісі <b>көмекші</b>.'
+        Which boy is the <large>helper</large>?: 'Қай бала <large>көмекші</large>?'
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
+        Driver and Helper: Жүргізуші және көмекші
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Бұл балалардың біреуі <b>жүргізуші</b>.  Ал екіншісі <b>көмекші</b>.'
+        This time, which boy is the <large>driver</large>?: 'Бұл жолы балалардың қайсысы <large>жүргізуші</large>?'
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

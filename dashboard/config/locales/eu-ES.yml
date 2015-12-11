@@ -44,8 +44,8 @@
   less: GUTXIAGO
   beta: beta
   try_hoc: 'Probatu kode ordu bat. Klikatu hemen >> '
-  try_k8intro: Probatu gure Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
-  k8intro: Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
+  try_k8intro: Probatu gure 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
+  k8intro: 2. DBHko Informatikarako Sarrera kurtsoa (15-25 ordu)
   already_started: 'Jadanik hasia? Jarraitu hemen >> '
   demos: 'Kudeatzailea: erakustaldi guztiak'
   continue: Jarraitu
@@ -65,19 +65,19 @@
     windowslive: Microsoft kontua
     forgot_password: Pasahitza ahaztu duzu?
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
-    need_unlock: Ez dituzu lokatze argibideak jaso?
+    need_unlock: Ez dituzu liberatzeko argibideak jaso?
   signup_form:
     student_count: '%{count} ikasleek izena eman dute.'
-    teacher_count: '%{count} irakasleek izena eman dute.'
+    teacher_count: '%{count} irakaslek izena eman dute.'
     overview_student: Zure aurrerapena jarraitzeko ireki kontu bat. Zure email helbidea
       batez ere saioa hasteko eta pasahitza berreskuratzeko erabiliko dugu. Informazio
       gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun
       Araua</a>.
-    overview_teacher: Irakatsi itzazu informatika zure ikasgelan kontu bat irekita.
+    overview_teacher: Irakats ezazu informatika zure ikasgelan kontu bat irekita.
       <p/>Zure ikasleak gehitu eta beraien aurrerapena jarraitu ahal izango duzu.
-    no_signup_message: <a target="_blank" href="http://learn.code.org">en eszenatoki
-      eta puzleak bilatu ditzakezu</a>, baina izen eman beharko duzu zure aurrerapenak
-      gordetzeko.
+    no_signup_message: <a target="_blank" href="http://learn.code.org">en ikastaro
+      eta ariketa desberdinak egin ditzakezu</a>, baina izena eman beharko duzu zure
+      aurrerapenak gordetzeko.
     teacher_educator_guide: Ikusi hezitzailearen gida
     teacher_pitch: Irakasleen sarbidea Code.org-rako
     teacher_title: Irakasle bezala sartu
@@ -94,39 +94,39 @@
     teacher: Irakaslea al zara?
     valid_username: Erabilgarri!
     invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu
-    taken_username: Erabiltzailea hartuta dago
+    taken_username: Erabiltzailearen izen hori hartuta dago jada
     valid_password: Pasahitza zuzena!
     invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
     mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
     student_terms: Ados nago Code.org-k <a href='http://code.org/tos'> ezarrita dituen
-      zerbitzu baldintzekin</a>. 13 urte azpikoa banaiz, Code.org-k <br/> ematen dituen
+      zerbitzu baldintzekin</a>. 13 urte azpikoa banaiz, Code.org-k ematen dituen
       zerbitzuak erabiltzeko, gurasoen edota legezko tutorearen baimena dudala egiaztatzen
-      dut. 13 urte azpikoen e-mail helbideak ezin izango ditugu haiekin harremanetan
-      jartzeko.
+      dut. <br/>13 urte azpikoen e-mail helbideak ezin izango ditugu erabili haiekin
+      harremanetan jartzeko.
     teacher_terms: Ados nago eta onartzen ditut Code.org <a href='http://code.org/tos'>
       erabiltzeko baldintzak </a>.
     additional_information: Informazio gehiago behar dugu izen-ematearekin jarraitzeko.
   signin_form:
-    title: Kontua daukazu ? Hasi saioa
+    title: Kontua daukazu? Hasi saioa
     login: Emaila edo erabiltzailea
     password: Pasahitza
-    remember: Gogoratu nazazu
+    remember: Kontua daukazu? Hasi saioa
     submit: Hasi saioa
   signin:
-    try_heading: Saioa hasi gabe kodetu nahi duzu ?
-    try_hoc: Lehenengo probatu kode ordu bat
-    try_20hours: Konputagailu zientzietarako 20 orduko sarrera probatu
+    try_heading: Saioa hasi gabe kodetu nahi duzu?
+    try_hoc: Lehenik, probatu Kode Ordu bat
+    try_20hours: Probatu Informatikarako 20 orduko sarrera
   signinsection:
     welcome: Ongi etorri %{section_name}-ra
     name: Aukeratu zure izena
-    picture: Orain bilatu ezazu zure irudi sekretua
-    words: Orain sartu itzazu zure hitz sekretuak
+    picture: Orain bila ezazu zure irudi sekretua
+    words: Orain sar itzazu zure hitz sekretuak
     login: Hasi saioa
   password:
     reset_form:
       title: Pasahitza ahaztu duzu?
       email: Email helbidea
-      submit: Bidali iezazkidazue pasahitza berrezartzeko instrukzioak
+      submit: Bidal iezazkidazue pasahitza berrezartzeko argibideak
     change_form:
       title: Aldatu zure pasahitza
       new_password: Pasahitz berria
@@ -135,11 +135,11 @@
   welcome_email:
     subject: Nire klasean parte hartu (Code.org-n)
     body: |
-      Klikatu ezazu azpiko estekan Code.org-ko konputazio zientzietako tutorialetan izena emateko (ni zure "irakaslea" izanda):
+      Klikatu beheko estekan Code.org-ko informatikako tutorialetan izena emateko (ni zure "irakaslea" izanda):
 
       %{link}
 
-      Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez konputazio zientzien kontzeptu basikoak irakasten dituzte. Ikasi ezazu programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
+      Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
 
       %{name}
   follower:
@@ -147,15 +147,15 @@
     added_teacher: '%{name} zure irakasle moduan gehituta'
     registered: '%{section_name}-n izena eman duzu.'
     error:
-      signed_in: Mesedez itxi saioa jarraitu aurretik
+      signed_in: Mesedez, itxi saioa jarraitu aurretik
       username_not_found: '%{username} erabiltzaile izena ez da topatzen'
-      username_in_use: '%{username} erabiltzaile izena existitzen da, mesedez aukeratu
+      username_in_use: '%{username} erabiltzaile izena existitzen da; mesedez, aukeratu
         beste bat'
       no_teacher: Ezin izan da '%{teacher_email_or_code}'rekin izen emandako inor
-        aurkitu. Mesedez eska iezaiezu hemen izen ematea eta saiatu berriro gehitzen
-      section_not_found: Ez da aurkitu '%{section_code}' kodea duen sailik.
-      blank_code: Mesedez sar ezazu sailerako kode bat
-      cant_join_own_section: Barkatu baina ezin duzu parte hartu zuk sortutako sail
+        aurkitu. Mesedez, eska iezaiezu hemen izena emateko eta saiatu berriro gehitzen
+      section_not_found: Ez da aurkitu '%{section_code}' kodea duen atalik.
+      blank_code: Mesedez, sar ezazu atal kode bat
+      cant_join_own_section: Barkatu, baina ezin duzu parte hartu zuk sortutako atal
         batean.
     mail:
       invite_student:
@@ -166,20 +166,20 @@
         subject: 'Code.org abisua: %{teacher_name} dagoeneko ez da zure irakaslea.'
   reports:
     error:
-      access_denied: Ez daukazu pertsona honen estatistika ikusteko baimena
+      access_denied: Ez daukazu pertsona honen estatistikak ikusteko baimena
   redeem_prizes:
-    title: Jardute sariak:%{name}
+    title: 'Eskuratu sariak: %{name}'
     provider: 'Hornitzailea:'
     code: 'Kodea:'
-    redeem_header: 'Jardutea:'
+    redeem_header: 'Eskuratzeko:'
     donorschoose_register: Irakasle moduan DonorsChoose.org-en izena eman
     donorschoose_project: Proiektu bat bidali
     donorschoose_how_to: Zure kodea nola erabili
-    success: Zure saria ondo burutu da, ikusi kodea azpian.
-    error: Zure saria ez da ondo burutu, mesedez saiatu berriro.
-    error_us_only: Sariaren eskaintza EEBBetako erabiltzaileentzako da baliozkoa.
+    success: Zure saria ondo eskuratu da, ikusi kodea behean.
+    error: Zure saria ez da ondo eskuratu; mesedez, saiatu berriro.
+    error_us_only: Sariaren eskaintza AEBko erabiltzaileentzako soilik da baliozkoa.
     error_not_earned: Oraindik ez duzu sari hau irabazi.
-    error_already_redeemed: Zure saria dagoeneko burutu da.
+    error_already_redeemed: Zure saria dagoeneko eskuratu da.
     no_prizes_available: Sentitzen dugu, baina une honetan ez daukagu saririk eskuragarri.
     teacher_info_required: 'Irakasleen sariek eskolaren izen eta helbidea beharrezkoa
       dute:'
@@ -210,34 +210,34 @@
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Saria irabazi duzu! (AEBko ikasleak bakarrik)
       not_earned_title: Bukatu tutoriala, eskuratu saria (EEBBetako ikasleak soilik)
-      not_earned: 'Konputazio zientzetako kontzeptu guztiak ikasi. bildu  %{num_trophies}
-        garaikurrak, eta irabazi mundu errealeko sariak. Dohako 10GBetako Dropbox
-        espazioa, 10$ Skype kreditu, eta  dohako joku deskargen artean aukera dezakezu.
-        OHARRA: eskaintza EEBBetako ikasleentzako soilik eta izakinak bukatu bitartean.'
+      not_earned: 'Ikasi Informatikaren kontzeptu guztiak. bildu %{num_trophies} garaikurrak,
+        eta irabazi mundu errealeko sariak. Dohako 10GBetako Dropbox espazioa, 10$
+        Skype kreditu, eta dohako joko deskargen artean aukera dezakezu. OHARRA: eskaintza
+        AEBko ikasleentzako soilik eta izakinak bukatu bitartean.'
       teacher:
-        earned: 15 edo gehiago dira %{num_trophies} garaikur guztiak batu dituztenak.
-          Irakasle-sari bat irabazi duzu! (AEBko irakasleak bakarrik)
+        earned: 15 ikasle edo gehiago dira %{num_trophies} garaikur guztiak bildu
+          dituztenak. Irakasle-sari bat irabazi duzu! (AEBko irakasleak bakarrik)
         not_earned_title: Irakatsi ikastaro hau eta irabazi 1.000$ <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a>ko kreditutan (AEBko
           irakasleak bakarrik)
-        not_earned: Lehen aldiko konputagailu-irakasleak saritzeko, 1.000$ irabaz
-          dezakezu <a href="http://DonorsChoose.org">DonorsChoose.org</a>ko kreditutan
-          ikastalde bat K-8 sarrera-ikastaroa gidatzeagatik. Kalifikatzeko, gutxienez
-          15 ikasleko talde bat arrakastaz eraman behar duzu K-8 sarrera-ikastaro
-          oso batean zehar,  15 ikaslek (edo gehiago) tutorial guztiak bukatuta eta  %{num_trophies}
+        not_earned: Lehen aldiko Informatika irakasleak saritzeko, 1.000$ irabaz dezakezu
+          <a href="http://DonorsChoose.org">DonorsChoose.org</a>eko kreditutan ikastalde
+          bat DBH2ko sarrera-ikastaroa gidatzeagatik. Kalifikatzeko, gutxienez 15
+          ikasleko talde bat arrakastaz eraman behar duzu DBH2ko sarrera-ikastaro
+          osoan zehar, 15 ikaslek (edo gehiago) tutorial guztiak bukatuta eta %{num_trophies}
           garaikur guztiak lortuta. Garaikur guztiak lortzen dituztenen artean 7 neska
-          badaude, zure saria 1.000$-koa da  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          kreditutan. Bestela 750$koa da zure saria <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ko
+          badaude, zure saria 1.000$-ekoa da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          kreditutan. Bestela, 750$ekoa da zure saria <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ko
           kreditutan. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          kredituak bakarrik erabil ditzakete AEBko irakasleek.
+          kredituak AEBko eskola publikoetako irakasleek bakarrik erabil ditzakete.
         bonus:
           not_earned_title: Oraindik irabaz dezakezu 250$ gehiago <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEB-ko
             irakasleak bakarrik)
-          earned: ' %{num_trophies} garaikur guztiak lortu dituztenen artean 7 neska
-            daude. Bonus-sariure bat irabazi duzu! (EABko irakasleek bakarrik)'
+          earned: '%{num_trophies} garaikur guztiak lortu dituztenen artean gutxienez
+            7 neska daude. Bonus-sari bat irabazi duzu! (AEBko irakasleek bakarrik)'
           not_earned: '%{num_trophies} garaikur guztiak lortzen dituzten zure ikasleen
-            artean gutxienez 7 neska badaude, zure saria 250$-koa da <a target="_blank"
+            artean gutxienez 7 neska badaude, zure saria 250$ gehiago da <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEBko
             eskola publikoko irakasleeentzat bakarrik).'
   crud:
@@ -300,7 +300,7 @@
       show_past: 'Ikaslearen iraganeko (%{bullet_html}) jarduera erakutsi:'
       levels_key: Mailetako gakoa
       perfect: Osatuta, perfektoa
-      completed: Osatuta, baina block gehiegi erabilita
+      completed: Osatuta, baina bloke gehiegi erabilita
       tried: Saiatuta, baina ez osatuta
       not_tried: Oraindik saiatu gabe
       activity: Ikaslearen azken %{hours} %{plural}-etako jarduera erakusten du
@@ -315,8 +315,8 @@
       add: Ikasleak gehitu
       remove: ikaslea ezabatu
       confirm_remove: Ziur zaude ikasle hau ezabatu nahi duzula?
-      help_reassign: Zure ikasgela hainbat sekziotan banatzeko, ikasleak aukeratu
-        sekzio berri batean gehitzeko.
+      help_reassign: Zure ikasgela hainbat ataletan banatzeko, aukeratu ikasleak atal
+        berri batean gehitzeko.
       help_register: Zuk ikasleak banan-banan gehitzen denbora asko pasa ordez, zure
         ikasgela sortu dezakezu beraiei izena emateko eskatuz. Zure ikasleek beren
         erabiltzailea eta pasahitza aukeratu beharko dute, baina EZ dute beraien posta
@@ -351,7 +351,7 @@
     cant_remove_teacher_no_email: '%{teacher_name} ezin da ezabatu zure irakasle gisa,
       zuk ez duzulako email helbiderik erregistratu'
     student_teacher_disassociated: '%{teacher_name} %{student_name}-(r)en irakasle
-      gisa ezabatu da'
+      gisa ezabatua izan da'
     panel:
       answer_viewer: Erantzun Ikusgailua
       student: Ikaslea
@@ -387,7 +387,7 @@
     lines_of_code: '%{lines_count} KODE LERRO IKASLEEK IDATZITA'
     lines_of_code_linebreak: '%{lines_count} KODE LERRO<br/> %{students_count} MILIOI
       IKASLEK IDATZITA'
-    all_courses: 1, 2 eta 3 Kurtsoen laburpena
+    all_courses: 1., 2. eta 3. Kurtsoen laburpena
     lesson_plans: Ikasketa plana
     signin_message: Jadanik erregistratuta? %{link}
     student_reg_link: Ikaslearen izen ematea
@@ -397,47 +397,47 @@
     teacher_dashboard: Ikusi aurrerapen panela
     teacher_student_count_one: Ikasle %{count} duzu.
     teacher_student_count: '%{count} ikasle dituzu.'
-    teacher_averages: Batezbestez, zure ikasleek "kontzeptuen menperatze" %{trophy_max}
-      trofeotatik %{trophy_average} irabazi dituzte.
-    teacher_print_certificates: Ikastaro hau bukatu duten ikasleen ziurtagiriak inprimatu
-    teacher_read_blog: Berriak eta gure materialaren eguneraketak irakurri Hezitzaileen
+    teacher_averages: Batezbeste, zure ikasleek "kontzeptuen menperatze" %{trophy_max}
+      garaikurretatik %{trophy_average} irabazi dituzte.
+    teacher_print_certificates: Inprimatu ikastaro hau bukatu duten ikasleen ziurtagiriak
+    teacher_read_blog: Irakurri berriak eta gure materialaren eguneraketak Hezitzaileen
       Blogean
     classroom: Zure ikasgela
     student_progress: Zure ikaskuntza aurrerapena
-    student_stats: '"Kontzeptuen menperatze" %{trophy_max} trofeotatik %{trophy_count}
+    student_stats: '"Kontzeptuen menperatze" %{trophy_max} garaikurretatik %{trophy_count}
       irabazi dituzu.'
     student_left_off: 'Non utzi zenuen:'
     student_finished: Code.org tutorial guztiak amaitu dituzu. Aukeratu beste ikasgela
       bat %{online_link} edo %{local_school_link}.
     local_school: bertako eskola
     online: online
-    see_details: Ikusi zehaztasunak
+    see_details: Ikusi xehetasunak
     view_course: Ikusi ikastaroa
     prize_info: 'Parte hartzeagatik sariak (soilik Estatu Batuetako eskola publikoetako
       irakasleak): 1000$ arteko ikasgelarako ordainsariak.'
     tryfirst: 'Edo lehenenik probatu, eta ondoren izena eman dezakezu:'
     trynow: Saiatu orain
-    add_hint_help: Mesedez lagun gaitzazu iradokizun erabilgarriak gehitzen Code.org
+    add_hint_help: Mesedez, lagun gaitzazu iradokizun erabilgarriak gehitzen Code.org
       tutorialetan
     20hour_overview: 20 orduko ikastaro honek informatikaren eta programazioaren oinarrizko
-      kontzeptuak aurkezten ditu. Ikastaroa 5-14 urteko ikasleentzat prestatuta dago,
-      baina edozein adinetan ikasteko dibertigarria da.
+      kontzeptuak aurkezten ditu. Ikastaroa DBH2ko ikasleentzat prestatuta dago, baina
+      edozein adinetan ikasteko dibertigarria da.
     test_videos_help: Probatu gure bideo irakurgailu berria zure eskolan
-    try_beta_courses: Berria! K-5 ikasleentzako beta ikastaroak proba itzazu
+    try_beta_courses: Berria! proba itzazu LH5 ikasleentzako beta ikastaroak
     use_as_teacher: Erabili gune hau irakasle gisa
-    heading_hoc2014: <h2>Kodearen Ordua</h2><h1>Adin guztientzat</h1>
-    heading_elementary: <h2>20 ikastaro ordu</h2><h1>informatikaren oinarriei buruz
-      (adin guztiak)</h1>
+    heading_hoc2014: <h2>Kode Ordua</h2><h1>Adin guztietarako</h1>
+    heading_elementary: <h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei
+      buruz (adin guztiak)</h1>
     heading_apps: <h2>Dibertsioa</h2><h1>Guztiontzat</h1>
     heading_legacy: <h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>
     your_gallery: Galeria
     no_primary_course: Probatu Code Studioko ikastaro bat
-    choose_next_course: Probatu Code Studioko ikastaro bat azpikoetako bat aukeratuta
+    choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
   share:
     title: Ezagutu Code Studio
-    description: Edonork ikasi dezake informatika. Jokoak, aplikazioak eta artea sortu
-      kodearen bidez.
+    description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu
+      programazioaren bidez.
   gender:
     male: Gizona
     female: Emakumea
@@ -448,22 +448,26 @@
   footer:
     thank_you: Eskerrak eman gure <a href="https://code.org/about/donors">emaileei</a>,
       <a href="https://code.org/about/partners">kideei</a>, gure <a href="https://code.org/about/team">talde
-      zabalari</a>, gure video zerrendari, eta gure <a href="https://code.org/about/advisors">hezkuntza
-      aholkulariei</a> Code Studio sortzen emandako babesarekin.
-    help_from_html: Bereziki eskertu nahi ditugu Google, Microsoft, Facebook, eta
-      Twitter-eko ingeniariak, eta material hauek sortzen lagundu duten guztiak.
+      zabalari</a>, gure bideo zerrendari, eta gure <a href="https://code.org/about/advisors">hezkuntza
+      aholkulariei</a> Code Studio sortzen emandako babesagatik.
+    help_from_html: Bereziki eskertu nahi diegu Google, Microsoft, Facebook, eta Twitter-eko
+      ingeniariei, eta material hauek sortzen lagundu duten guztiei.
     help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material
       hau sortzen lagundu dute.
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Eskubide
-      guztiak babestuak.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Eskubide guztiak babestuak.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak babestuak
+    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Eskubide
+      guztiak babestuak.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney
+      and Lucasfilm. Eskubide guztiak babestuak.<br />Frozen&#8482; &amp; &copy; %{current_year}
+      Disney. Eskubide guztiak babestuak.<br />Ice Age&#8482; &amp; &copy; %{current_year}
+      20th Century Fox. Eskubide guztiak babestuak.<br />Angry Birds&#8482; &amp;
+      &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak babestuak.<br
+      />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc.
+      Eskubide guztiak babestuak
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Eskubide guztiak babestuak.<br />Plants vs. Zombies&#8482;
       &amp; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak babestuak
     powered_by_aws: Amazon Web Servicesek sostengatua
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODEren logoa eta
-      Code&reg-en ordua Code.org-ren marka bereziak dira.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode
+      Ordua&reg; Code.org-ren marka bereziak dira.'
     copyright: Egile-eskubideak
     more: Gehiago
     feedback: Bidali iruzkina
@@ -475,6 +479,9 @@
     privacy: Pribatutasun politika
     secure: Bertsio segurua
     report_abuse: Erabilera okerra jakinarazi
+    built_on_code_studio: Code Studio-n oinarrituta
+    make_my_own_app: Nere app-a egin
+    how_it_works: Funtzionamendua
   reference_area:
     title: Laguntzarik behar?
     subtitle: Ikusi bideo eta aholku hauek
@@ -494,7 +501,7 @@
       message: Code.org-ek web teknologia berriak erabiltzen ditu. Honek webgunea
         azkarrago erabiltzea ahalbidetzen du. Zure nabigatzaileak ez ditu beharrezko
         ezaugarri guztiak onartzen, eta ondorioz, webgunearen atal hau erabiltzean
-        arazoak nabari ditzakezu. Mesedez lagundu gaitzazu <a href='%{report_issue_url}'>
+        arazoak nabari ditzakezu. Mesedez, lagundu gaitzazu <a href='%{report_issue_url}'>
         topatutako arazoen berri emanez</a>. <a href='%{supported_browsers_url}'>Zure
         nabigatzailea bertsio bateragarri batera ere eguneratu dezakezu</a>.
       hide_this_warning: Ezkutatu ohar hau
@@ -628,12 +635,12 @@
   dialog:
     ok: Ongi
     startover_title: Ziur al zaude berriro hasi nahi duzula?
-    startover_body: Honek puzlea hasierako egoeran berrezarriko du eta gehitu edo
-      aldatu dituzun datu guztiak berrasieratu ditu.
+    startover_body: Honek ariketa hasierako egoeran berrezarriko du eta gehitu edo
+      aldatu dituzun datu guztiak berrasieratuko ditu.
     startover_ok: Hasi Berriro
     startover_cancel: Ezeztatu
   time:
-    hour: Ordu 1
+    hour: Ordu bat
     day: eguna
     week: astea
   data:
@@ -642,8 +649,8 @@
         20-hour:
           title: Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
           description: 20 orduko ikastaro honek informatikaren eta programazioaren
-            oinarrizko kontzeptuak aurkezten ditu. Ikastaroa 5-14 urteko ikasleentzat
-            prestatuta dago, baina edozein adinetan ikasteko dibertigarria da.
+            oinarrizko kontzeptuak aurkezten ditu. Ikastaroa DBH2ko ikasleentzat prestatuta
+            dago, baina edozein adinetan ikasteko dibertigarria da.
         Hour of Code:
           title: Kodearen ordua 2013
           description: ''
@@ -673,13 +680,13 @@
     age: Zure adina
     header: Kontuaren Informazioa Eguneratu
     message: Gure zerbitzua eguneratzen ari gara pribatasun babes handiagoa eskaintzeko.
-      Horretarako, erabiltzaileek adina sar dezaten behar dugu..<br/>Betiko legez,
+      Horretarako, erabiltzaileek adina sar dezaten behar dugu.<br/>Betiko legez,
       code.org-ek ez die sekula informazio hori bitartekoei alokatuko, ez salduko
       eta ez konpartituko.
     sign_out: Zure adina eman nahi ez baduzu <a href="%{url}">deskonektatu</a> zaitezke.
   zendesk_too_young_message: Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen
     lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu
-    dezakezu konektatu gabe edo zure guraso zeinirakasleari esan gurekin harremanetan
+    dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan
     jartzeko.
   progress:
     not_started: hasi gabe
@@ -710,9 +717,9 @@
     name: Izena
     updated: Eguneratua
     project_type: Proiektu mota
-    help_text: Egin klik behean <strong>Egin app bat</strong> edo <strong>Irudikatu</strong>-n
-      Artista edo Jokoen Laborategiko proiektu berri bat egiteko! <br/>Zure proiektuetara
-      itzuli ahal izango zara edozein unetan.
+    help_text: Egin klik behean <strong>Egin app bat</strong> edo <strong>Marraztu
+      zerbait</strong>-en, Artista edo Jolas Laborategiko proiektu berri bat egiteko!<br/>Zure
+      proiektuetara itzuli ahal izango zara edozein unetan.
     need_help: Hasteko laguntzarik behar?
     really_delete: Ezabatu?
     delete_yes: Bai
@@ -731,29 +738,29 @@
     abuse:
       tos: Proiektu honek Code.org-en <a href='http://code.org/tos'>Zerbitzuaren Baldintzak</a>
         hautsi ditu eta ezin da konpartitu.
-      contact_us: Hau errorea dela badirudizu, mesedez <a href='https://code.org/contact'>harremanetan
-        jarri.</a>
+      contact_us: Hau errorea dela uste baduzu, mesedez <a href='https://code.org/contact'>jarri
+        harremanetan gurekin.</a>
       go_to_code_studio: Joan Code Sudio-ra
       report_abuse_form:
         intro: Code Studio-z egindako app-ak erabiliz, eduki iraingarriak, mehatxuak,
           cyberbulling-a, jazarpenak edo zure jabegoko edukiaren copyrighta hausten
-          duen instantziarik aurkitu baduzu, mesedez bete beheko fitxa. Zure txostena
-          oso serio hartuko dugu, ikertu eta beharrezko neurriak hartuko ditugu.
+          duen zerbait aurkitu baduzu, mesedez bete beheko fitxa. Zure txostena oso
+          serio hartuko dugu, ikertu eta beharrezko neurriak hartuko ditugu.
         validation:
           email: Mesedez, sartu email helbide bat
           age: Mesedez, zehaztu adina
           abuse_type: Mesedez, adierazi nola hausten dituen eduki honek Zerbitzuaren
             Baldintzak
-          abuse_detail: Mesedez, zehaztu erdiesten ari zaren edukia
-        abusive_url: Erdiesten ari den edukiaren URLa
+          abuse_detail: Mesedez, zehaztu salatzen ari zaren edukia
+        abusive_url: Salatzen ari den edukiaren URLa
         abuse_type:
-          question: Nola hausten ditu eduki onek %{link_start}Zerbitzuaren Baldintzak%{link_end}?
+          question: Nola hausten ditu eduki honek %{link_start}Zerbitzuaren Baldintzak%{link_end}?
           harassment: Mehatxuak, cyberbulling-a, jazarpena
           offensive: Eduki iraingarria
           infringement: Copyright-a urratu
           other: Beste bat
-        detail: Mesedez, erdiesten ari zaren edukiaren inguruko ahalik eta xehetasun
-          gehiago eman.
+        detail: Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun
+          gehien eman.
         acknowledge: Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end}
           eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan
           erabiliko dela onartzen duzu

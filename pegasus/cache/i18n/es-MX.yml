@@ -318,6 +318,11 @@
   class_submission_languages_other: Otros idiomas
   inspirational_videos_more: Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     videos inspiradores</a> de modelos y celebridades
+  playlab_choose_theme: Escoge el tema para tu laboratorio de juego
+  playlab_classic_title: Clásico
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: La Era de Hielo - Próximamente
+  playlab_iceage_title_live: La Era de Hielo
   starwars_subtitle: Construyendo una Galaxia con Código
   starwars_javascript_title: Javascript
   starwars_javascript_description: Usa los bloques y JavaScript.
@@ -336,7 +341,7 @@
     aventura a través del mundo de Minecraft.
   mc_shortdescription: Utiliza bloques de código para llevar a Esteban o Ale en una
     aventura a través del mundo de Minecraft.
-  mc_gradelevel: Edades 6+
+  mc_gradelevel: Edad 4-104
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
   mc_specs: Navegadores modernos y tabletas | Edades 6+
   minecraft_subtitle: Minecraft de la Hora del Código
@@ -345,14 +350,14 @@
   volunteer_engineer_submission_subtitle_generic: 100.000 docentes van a realizar
     una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y
     necesitan tu ayuda!
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros quieren
-    a voluntarios apasionados por la enseñanza de ciencias de la computación para
-    ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios
-    se han inscripto. Únete a ellos.'
-  volunteer_engineer_submission_intro_background: La Hora del Código es un movimiento
-    mundial para introducir a la Informática a decenas de millones de estudiantes
-    en más de 180 países. Por favor únete a esta iniciativa durante la Semana de Educación
-    en Ciencias de la Computación, del 7 al 13 de Diciembre.
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros requieren
+    voluntarios apasionados por educacion computacional para aydar con su Hora de
+    Codigo este diciembre.<br>%{num_volunteers} voluntarios se han inscrito. Unete
+    a ellos.'
+  volunteer_engineer_submission_intro_background: La Hora de Codigo es un movimiento
+    global para intentar una hora introduccion a la ciencia computacional alcanzando
+    diez millone sde estudiantes en mas de 180 paises. Porfavor unete a esta iniciativa
+    durante la semana d educacion de ciencias de la computacion, del 7 al 13 de diciembre.
   volunteer_engineer_submission_intro_recruit: 'Estos maestros le encantaría tener
     a alguien <span style="font-family: ''Gotham 7r'', sans-serif;"> apasionado por
     la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula,
@@ -364,9 +369,10 @@
   volunteer_engineer_submission_intro_signup: Por favor introduzca la siguiente información
     si usted es un estudiante de informática o profesional del software. Los campos
     marcados con un <span class="form-required-field">*</span> son obligatorios.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: ¿No está buscando ser voluntario? <a
+    href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de
+    Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}">
+    mapa de voluntariado</a>.
   volunteer_engineer_submission_header_shared: Información compartida con docentes
     en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
@@ -695,6 +701,8 @@
     &mdash; cada organizador que participe recibirá una tarjeta de regalo de Amazon.com
     o de Microsoft Windows Store como agradecimiento. Únete a aulas en todo el mundo
     del 7 al 13 de Diciembre.
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -708,16 +716,16 @@
   learn_educator_resources_button: Recursos del educador
   learn_are_you_educator: ¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">como
     a enseñar una Hora del Código</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_find_volunteer: <a href="https://code.org/voluntario/local">Encuentra un voluntario
+    local</a> para ayudar durante tu Hora de Código
+  learn_teacher_led_lesson_plans: Inspirado por <a href="https://code.org/teacher-led">
+    profesor guia planes de lección de la hora de Código</a>
+  learn_how_to_hoc: Siga <a href="https://hourofcode.com/how-to"> nuestra guía de
+    cómo</a> para la enseñanza de una Hora de Código
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Más información</a> sobre
     los premios para educadores.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspirar a los estudiantes mostrándoles <a href="https://code.org/educate/inspire">
+    estos videos</a>
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en
     beta
@@ -730,11 +738,15 @@
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_javascript: Tutoriales que enseñan JavaScript
+  carousel_heading_beyond_javascript: Tutoriales para aprender JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática
     sin conexión
   carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas
+  carousel_heading_beyond_devices: Tutoriales en aplicaciones para teléfonos y tabletas
   carousel_heading_languages: Tutoriales en otros lenguajes de programación
+  carousel_heading_beyond_languages: Tutoriales en otros lenguajes de programación
   carousel_heading_apps_games: Crea tus propias aplicaciones o juegos
   carousel_heading_university: Cursos de universidades en línea
   carousel_heading_webpages: Aprende a hacer páginas web
@@ -742,6 +754,10 @@
   carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Notas del educador
   teach_led_lesson_plans: Profesor Llevó a Cabro Lecciones de la Hora del Código
+  learn_footer_all_tutorials: Vea la <a href="https://code.org/educate/allhourofcode">lista
+    detallada de los tutoriales de la Hora de Código</a>. Para ver nuestros criterios
+    y los lineamientos de envío para nuevos tutoriales de la hora de código, <a href="https://hourofcode.com/tutorial-guidelines">de
+    clic aquí</a>
   how_to_teach_hoc: Cómo enseñar  una "Hora de código"
   more_resources_educators: Más recursos para profesores y educadores
   beyond_submission: ¿Desea entregar un tutorial despues de una hora? Ver los criterios
@@ -788,7 +804,7 @@
   robomindnl_name: Programá tu robot virtual
   flappy_name: Crea un juego Flappy
   bitsbox_name: Bitsbox - crea un juego
-  makeschool_name: ¡Crea un juego para iPhone en tu navegador!
+  makeschool_name: ¡Desarrolla un juego para iPhone en tu navegador!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor en la Hora del Código
   blockly_name: '"Blockly" es el nombre de la marca para el lenguaje arrastra+ubica.
@@ -800,6 +816,13 @@
   playlab_name: Laboratorio de Juegos
   infinity_name: Laboratorio de Juego Infinity
   artist_name: Artista
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Profesor Llevó a Cabro Lecciones de la Hora del Código
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
@@ -842,7 +865,14 @@
   starwars_gradelevel: Edades 6+
   playlab_gradelevel: Edad 4-104
   infinity_gradelevel: Edad 4-104
-  artist_gradelevel: Edad 4-104
+  artist_gradelevel: Edad 8+
+  monstercoding_gradelevel: Edad 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Escuela primaria
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
   thinkersmithspanish_platformtext: Desconectado
@@ -886,6 +916,13 @@
   frozen_platformtext: Navegadores modernos y tabletas
   starwars_platformtext: Navegadores modernos y tabletas
   playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Navegadores modernos
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Navegadores modernos
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeorg_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   codeintl_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -927,8 +964,8 @@
   flappy_shortdescription: Haz tu propio juego - Flappy Bird, Tiburón o Submarino
   bitsbox_shortdescription: Programa una serie de aplicaciones para jugar y compartir,
     con JavaScript real.
-  makeschool_shortdescription: ¡Crea un juego para iPhone! ¡Aprende escribiendo código
-    que le enseña a tu monstruo nuevos movimientos!
+  makeschool_shortdescription: ¡Crea un juego para iPhone! ¡Aprende a escribir código
+    para enseñarle a tu monstruo nuevos movimientos!
   touchdevelop_shortdescription: 'Resuelve problemas, crea juegos y aprende a programar,
     todo desde tu teléfono. '
   appinventor_shortdescription: ¡Crea tu propia aplicación! (sólo para Android)
@@ -948,6 +985,19 @@
   infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia
     o juego protagonizados por personajes de Disney Infinity.
   artist_shortdescription: ¡Dibuja imagenes estupendas y diseños con el Artista!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,
@@ -1063,10 +1113,10 @@
     que niños muy jóvenes programen en JavaScript real, y cuanto más avancen más lejos
     llegarán.
   makeschool_longdescription: ¡Aprende a programar haciendo un juego para iPhone usando
-    un lenguaje de programación totalmente nuevo y apto para principiantes llamado
-    Swift! Crea un juego de acción inspirado en Pok&eacute;mon y escribe código para
-    enseñarle a tu monstruo nuevos movimientos ¡Aprenderás cómo utilizar variables,
-    métodos y objetos para ayudar a tu monstruo a ganar!
+    un lenguaje de programación totalmente nuevo y para principiantes llamado Swift!
+    Crea un juego de acción inspirado en Pok&eacute;mon y escribe código para enseñar
+    a tu monstruo a moverse. ¡Aprenderás cómo utilizar variables, métodos y objetos
+    para ayudar a tu monstruo ganar!
   touchdevelop_longdescription: 'El editor táctil te guiará a crear arte de pixeles,
     resolver el problema del oso, o hacer tu propio juego de un pájaro saltarín. '
   appinventor_longdescription: Videotutoriales rápidos y entretenidos te guían para
@@ -1099,6 +1149,37 @@
   playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de
     juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se
     muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras
   tynker_beyond_name: Aprende programación de computadoras en casa
@@ -1112,7 +1193,7 @@
   groklearning_beyond_name: Aprenda el lenguaje de programación Python
   hacketyhack_beyond_name: Aprenda el lenguaje de programación Ruby
   robomind_beyond_name: Programá tu robot virtual
-  makeschool_beyond_name: ¡Crea un juego para iPhone en tu navegador!
+  makeschool_beyond_name: ¡Desarrolla un juego para iPhone en tu navegador!
   appinventor_beyond_name: AppInventor en la Hora del Código
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Aprende a programar con Karel, el perro
@@ -1313,11 +1394,11 @@
     controlando su propio robot virtual. El curso online es completamente autocontenido
     con presentaciones cortas, videos, cuestionarios y consejos que ayudan a completar
     los ejercicios de programación. '
-  makeschool_beyond_longdescription: ¿Ya sabes algo de ObjectiveC? ¡Aprende a hacer
+  makeschool_beyond_longdescription: ¿Ya sabés algo de ObjectiveC? ¡Aprende a hacer
     un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar,
     testear y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook
-    para que tus amigos puedan probarlo. No se necesita experiencia previa en desarrollo
-    para iPhone, pero debes entender sobre variables, métodos y objetos.
+    para que todos puedan jugarlo. No se necesita experiencia previa en desarrollo
+    para iPhone, pero debés entender que son variables, métodos y objetos.
   appinventor_beyond_longdescription: Videotutoriales rápidos y entretenidos te guían
     para construir tres aplicaciones sencillas para tu teléfono o tableta Android.
     Tanto para principiantes como para expertos esta hora del código te va a preparar

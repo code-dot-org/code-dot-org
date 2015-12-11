@@ -146,7 +146,7 @@ cs:
           description_short: Bakresli v pohodě obrázky a vzory s umělcem!
         hourofcode:
           Maze: Bludiště
-          title: Hodina kódu
+          title: Classic Maze
           description: Zkuste se základy informatiky s postavičkami z Angy Birds, Plants vs. Zombies a Scrat z doby ledové!
           description_short: Zkuste základy informatiky s mnoha zábavnými postavami!
         frozen:
@@ -1348,6 +1348,10 @@ cs:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1459,13 +1463,13 @@ cs:
           Gumball Play Lab: Žvýkačka Play Lab
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
-          description_short: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
-          description: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           Hour of Code 2015: Hodina kódu 2013
         starwarsblocks:
           title: 'Hvězdné války: Budování galaxie s kódem'
-          description_short: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
-          description: Nauč se programovat droidy a vytvořit si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
           Hour of Code 2015: Hodina kódu 2013
         minecraft:
           title: Minecraft

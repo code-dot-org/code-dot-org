@@ -4,10 +4,11 @@ class SmsController < ApplicationController
   # put your own credentials here
   ACCOUNT_SID = CDO.twilio_sid
   AUTH_TOKEN = CDO.twilio_auth
-  SMS_FROM = CDO.twilio_phone
+  MESSAGING_SERVICE = CDO.twilio_messaging_service
+
+  protect_from_forgery except: [:send_to_phone] # the page that posts here is cached
 
   # set up a client to talk to the Twilio REST API
-
   def send_to_phone
     if params[:level_source] && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms(level_source_url(level_source), params[:phone])
@@ -25,9 +26,9 @@ class SmsController < ApplicationController
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
     @client.messages.create(
-      :from => SMS_FROM,
+      :messaging_service_sid => MESSAGING_SERVICE,
       :to => phone,
-      :body => "Check this out on Code Studio: #{link}. (reply STOP to stop receiving this)"
+      :body => "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
     )
     render status: :ok, nothing: true
   end

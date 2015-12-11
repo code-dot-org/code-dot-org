@@ -403,6 +403,9 @@ sr:
     privacy: Политика приватности
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Требаш помоћ?
     subtitle: Погледај ове снимке и савете
@@ -459,7 +462,7 @@ sr:
       unused: Неупотребљени Нивои
   upsell:
     hoc:
-      title: Час кода
+      title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -607,7 +610,7 @@ sr:
     really_delete: Желите ли да избришете?
     delete_yes: Да
     delete_no: не
-    saved: Saved
+    saved: Сачувано у галерији!
     not_saved: Not saved
     cancel: Откажи
     delete_confirm_title: Are you sure you want to delete this project?

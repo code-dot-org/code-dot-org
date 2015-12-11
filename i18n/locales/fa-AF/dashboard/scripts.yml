@@ -146,7 +146,7 @@ fa-AF:
           description_short: با نقاش چند عکس و طرح باحال بکش!
         hourofcode:
           Maze: هزارتو
-          title: ساعتی با کد
+          title: Classic Maze
           description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
         frozen:
@@ -1348,6 +1348,10 @@ fa-AF:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

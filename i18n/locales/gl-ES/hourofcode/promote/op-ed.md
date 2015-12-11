@@ -6,43 +6,43 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### A continuación atópase un exemplo dun artículo de opinión dando o seu apio á Semana da Educación en Informática e os seus obxectivos, que poden ser usados por lexisladores locais, líderes empreariais, etc.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Vai a [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) para atopar información específica sobre informática.
 
-**Title: Computing…Where the Jobs Are**
+**Título: Informática... Onde están os postos de traballo**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**Por [NAME] e [CONDIERA A COAUTORÍA CON UN EDUCADOR, SUPERVISOR OU LÍDER EMPRESARIAL]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Os ordenadores están por tódalas partes. Están nos nosos petos. Están nas nosas paredes. Están nos nosos coches. Son pezas fundamentais da nosa infraestructura abarcando dende as redes eléctricas a ata ós semáforos, pasando polo funcionamento interno dos nosos mercados financieiros. E todos estes ordenadores teñen unha cousa en común. Dependen do software para dicirlles que facer.
 
-But who exactly is going to write this software?
+Pero, quen vai escribir este código exactamente?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Tendo en conta o rápido que o noso mundo está a ser transformado pola tecnoloxía, calquera pensaría que o número de estudantes de informática en educación básica estivese hoxe nas cotas máis altas da historia. Nembargantes, estaríamos equivocados. De feito, a día de hoxe menos estudantes optan pola informática que hai unha década, e ainda menos os colexios que a ensinan.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+Nunha época onde a demanda por programadores cualificados é a máis alta da historia, estánse a formar menos expertos en informática. Incluso nesta época de alto desemprego, miles de postos de traballo, moitos deles aquí mesmo en **[INSERTAR NOME DE ESTADO/CIDADE]**, quedan sen cubrir pola falta de xente coas habilidades necesarias.
 
-Why is this? And how can we address it?
+Por que pasa isto? E, como podemos facer para resolverlo?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+O problema empeza nos colexios tanto de primaria coma de secundaria. Nove de cada dez dos nosos colexios non ofrecen clases de informática. No **[DISTRITO ESCOLAR]**, o ano pasado, soamente **<[NUMBER]** estudantes realizaron o exame de nivel universitario de Colocación Avanzada (AP) en Informática, exactamente o **[%]** de tódolos estudantes que realizaron un AP no noso estado. Simplemente, non estamos a facer o suficiente para preparar ou animar ós nosos estudantes para que sigan estas carreiras tan importantes coma ben pagadas.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+A meirande parte das innovacións informáticas inventáronse neste pais, nembargantes, estamos a piques de perder esta posición de liderazgo se non facemos algo.
 
-We need to make some changes.
+Temos que facer algúns cambios.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[OPCIONAR PARA OS ESTADOS ONDE ESTO SE APLICA]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Un cambio positivo sería permitir o uso de cursos rigurosos de informática para completar os requisitos dalgunha asignatura de matemáticas ou ciencias para a graduación da ensinanza secundaria. En **[INSERTAR ESTADO]**, unha das opcións ofertadas son cursos de informática. Tendo en conta as esixencias académicas, os estudantes non se poden permitir coller cursos optativos de informática. E logrando este cambio teríase un grande impacto. Nos estados onde os cursos de informática contan como requisitos para a graduación, las clases contan con máis do cincuenta por cento máis de participación por parte das minorías que en estados onde a informática é optativa.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+Tamén deberíamos traballar cos estuantes a idades tempranas para despertar neles o interés pola informática e a programación. Os nosos nenos no deberían simplemente saber como usar as aplicacións e video xogos - deberían saber como crealos. Os nenos poden aprender os fundamentos da programación xa no segundo curso.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Necesitamos reclutar máis profesores de informática e promover o seu desenrolo profesional dentro do seu propio campo. A día de hoxe hai moitos recursos en línea que poden axudar ós mestres a ter acceso e manterse ó día das novas tecnoloxías para os seus estudantes.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+De acordo coa oficina de estadísticas laborales, no ano 2020, haberá 9,2 millos de postos de traballo nos campos STEM. A metade deses postos de traballo - 4,6 millóns - serán en computación ou tecnoloxías da información. E a informática considérase, cada vez máis, un coñecemento fundamental para o século 21. Quen ocupará estes postos de traballo se os nosos fillos non teñen a oportunidade de adquiriren as habilidades que precisan?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Esta semana, <%= campaign_date('full') %>, e a Semana da Educación en Informática. En colexios por todo **[STATE]**, os nosos estudantes tomarán parte a nivel nacional na Hora do Código, desmitificando a asignatura de informática e con algo de sorte, despertando o seu gusto por continuar e aprender máis. Eu unireime a eles, e invítovos a que fagades o mesmo. Todos deberíamos aprender a programar. Visita https://hourofcode.com/<%= @country %> para saber máis e empezar. E apoia os nosos esforzos de traer a informática a máis colexios de **[STATE]**.
 
 <%= view :signup_button %>

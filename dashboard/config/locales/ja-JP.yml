@@ -427,6 +427,9 @@
     privacy: プライバシー ポリシー
     secure: 保護されたバージョン
     report_abuse: 不正を報告
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
@@ -504,12 +507,12 @@
     frozen:
       title: アナと雪の女王
     starwars:
-      title: Star Wars
+      title: スター・ウォーズ
     infinity:
       title: インフィニティ プレイ ラボ
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
-      title: Minecraft
+      title: マインクラフト
       body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: これらの作品は、生徒たちがコードを使って描きました！

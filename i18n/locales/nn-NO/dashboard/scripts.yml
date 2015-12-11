@@ -23,8 +23,8 @@ nn:
           "Maze 2: Loops": 'Labyrint 2: Sløyfer'
           "Bee 2: Loops": 'Staving 2: Sløyfer'
           Multi & Match: 'Multi & Kamp'
-          K-1 Flappy: Barnehage og 1. klasse Flappy
-          Flappy non blockly: Flappy utan blockly
+          K-1 Flappy: Barnehage og 1. klasse Flakse
+          Flappy non blockly: Flakse utan blockly
           title: Kurs 1
           Artist 2: Kunstnar 2
           Happy Maps: Glade Kart
@@ -53,7 +53,7 @@ nn:
           "Studio: Create a Story": 'Spel-lab: Lag ei historie'
           Artist Loops: Kunstnar Løkker
           Bee Conditionals: Bier Vilkår
-          Flappy: Flappy
+          Flappy: Flakse
           title: Kurs 2
           Bee Loops: Bier Løkker
           Artist Functions: Kunstnar Funksjonar
@@ -146,7 +146,7 @@ nn:
           description_short: Teikn stilige bilde og design med Kunstnaren!
         hourofcode:
           Maze: Labyrint
-          title: Kodetimen
+          title: Classic Maze
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds, planter mot zombiar og Scrat frå Istid!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
         frozen:
@@ -366,8 +366,8 @@ nn:
           Eval: Eval
         flappy:
           title: Flakse-kode
-          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen i Flaksekode!
-          description_short: Lag ditt eige Flappy-spel på mindre enn ti minutt!
+          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa i Flaksekode!
+          description_short: Lag ditt eige Flakse-spel på mindre enn ti minutt!
           Flappy Code: Flakse-kode
         jigsaw:
           title: Puslespill
@@ -904,7 +904,7 @@ nn:
           Bee: Bier
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
+          Flappy: Flakse
           Bounce: Sprett
           Multi: Multi
           Match: Kamp
@@ -1348,6 +1348,10 @@ nn:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

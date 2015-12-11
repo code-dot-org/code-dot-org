@@ -164,7 +164,7 @@
           description_short: Disegna fantastiche immagini e decorazioni con l'artista!
         hourofcode:
           Maze: 'Labirinto: Sequenze e Cicli'
-          title: L'Ora del Codice
+          title: Labirinto Classico
           description: Impara i concetti base dell'informatica con i personaggi di
             Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi
@@ -1523,6 +1523,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1580,12 +1584,12 @@
             Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
             finché ci sono!
         iceage:
-          title: Laboratorio Gioco Età del ghiaccio
+          title: Laboratorio con L'Era Glaciale
           description_short: Crea una storia oppure fai un gioco con il Laboratorio
-            Gioco Età del ghiaccio!
-          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco
-            Età del ghiaccio!
-          Ice Age Play Lab: Laboratorio Gioco Età del ghiaccio
+            con L'Era Glaciale!
+          description: Crea una storia oppure fai un gioco con il Laboratorio con
+            L'Era Glaciale!
+          Ice Age Play Lab: Laboratorio con L'Era Glaciale
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1640,33 +1644,33 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratorio Gioco Gumball
+          title: Laboratorio con Gumball
           description_short: Crea una storia oppure fai un gioco con il Laboratorio
-            Gioco Gumball!
-          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco
+            con Gumball!
+          description: Crea una storia oppure fai un gioco con il Laboratorio con
             Gumball!
-          Gumball Play Lab: Laboratorio Gioco Gumball
+          Gumball Play Lab: Laboratorio con Gumball
         starwars:
-          title: 'Star Wars: Costruisci una galassia con il codice'
+          title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description_short: Impara a programmare i droidi e crea la tua versione
-            di Star Wars ... in una galassia lontana lontana...
-          description: Impara a programmare i droidi e crea la tua versione di Star
-            Wars ... in una galassia lontana lontana...
+            di Guerre Stellari, in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Guerre
+            Stellari, in una galassia lontana lontana...
           Hour of Code 2015: L'Ora del Codice 2015
         starwarsblocks:
-          title: 'Star Wars: Costruisci una galassia con il codice'
+          title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description_short: Impara a programmare i droidi e crea la tua versione
-            di Star Wars ... in una galassia lontana lontana...
-          description: Impara a programmare i droidi e crea la tua versione di Star
-            Wars ... in una galassia lontana lontana...
+            di Guerre Stellari, in una galassia lontana lontana...
+          description: Impara a programmare i droidi e crea la tua versione di Guerre
+            Stellari, in una galassia lontana lontana...
           Hour of Code 2015: L'Ora del Codice 2015
         minecraft:
           title: Minecraft
-          description_short: Use code to survive in a Minecraft world!
-          description: Use code to survive in a Minecraft world!
+          description_short: Usa il codice per sopravvivere nel mondo di Minecraft!
+          description: Usa il codice per sopravvivere nel mondo di Minecraft!
           Craft: Craft
         mc:
-          title: Minecraft L'Ora del Codice
+          title: L'Ora del Codice con Minecraft
           description_short: Esplora il mondo di Minecraft attraverso il codice
           description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
             con Steve o Alex

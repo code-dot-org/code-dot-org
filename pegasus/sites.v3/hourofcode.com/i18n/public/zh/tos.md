@@ -10,11 +10,11 @@
 
 Last Revised: December 5, 2014
 
-Code.org 是一個 501(c)(3) 非營利組織("Code.org")。 我們的使命就是要給每個學生有機會學習電腦科學。 作為這一使命的一部分，Code.org 經營網站位於 [HTTP://code.org](http://code.org)、 [HTTP://csedweek.org](http://csedweek.org)、 [HTTP://computinginthecore.org](http://computinginthecore.org)、 [HTTP://hourofcode.com](http://hourofcode.com)、 其他網站、 資訊、 文本、 課程、 視頻、 圖形、 照片、 Api、 電子郵件通訊、其他材料及相關的產品和服務 ("**服務**")，包括教程平臺上 [HTTP://studio.code.org](http://studio.code.org) ("**代碼工作室**")。
+Code.org 是一個 501(c)(3) 非營利組織("Code.org")。 我們的使命就是要給每個學生有機會學習資訊科學。 作為這一使命的一部分，Code.org 經營了以下數個網站： [HTTP://code.org](http://code.org)、 [HTTP://csedweek.org](http://csedweek.org)、 [HTTP://computinginthecore.org](http://computinginthecore.org)、 [HTTP://hourofcode.com](http://hourofcode.com)，還有其他網站、 資訊、 文字、 課程、 影片、 圖片、 照片、 API、 電子郵件通知、其他素材及相關的產品和服務 ("**服務**")，包括教學平台 [HTTP://studio.code.org](http://studio.code.org) ("**Code Studio**")。
 
-請在訪問或使用服務之前，仔細閱讀這些服務條款（"**條款**"）。 訪問或使用服務的任何部分，或點擊"我同意"或"註冊"按鈕，可表示你意味著您同意受這些條款而無需修改。
+請在使用這些服務之前，仔細閱讀這些服務條款（"**條款**"）。 訪問或使用服務的任何部分，或點擊"我同意"或"註冊"按鈕，可表示你意味著您同意受這些條款而無需修改。
 
-這些條款是在你和 Code.org 之間，關於您使用服務的法律合同。 只有當你能與Code.org簽有約束力的合同，並且沒有接收根據美國或其他適用的司法管轄區的法律禁止接受服務的人，您就可以使用本服務。 如果您接受這些條款並在服務公司代表、 組織、 政府或其他法律實體使用，您表示並保證您有權這樣做。 您可以使用服務只有遵守這些條款和所有適用的當地、 國家、 國家和國際法律、 規則和條例。
+這些條款是在您和 Code.org 之間，關於您使用服務的法律合同。 只有當你能與Code.org簽有約束力的合同，並且沒有接收根據美國或其他適用的司法管轄區的法律禁止接受服務的人，您就可以使用本服務。 如果您接受這些條款並在服務公司代表、 組織、 政府或其他法律實體使用，您表示並保證您有權這樣做。 您可以使用服務只有遵守這些條款和所有適用的當地、 國家、 國家和國際法律、 規則和條例。
 
 這些條款如有任何更改。表示您同意受此類更改，如果您繼續使用到服務後這些條件的變化，所以請檢查定期更改這些條款。
 
@@ -22,25 +22,25 @@ Code.org 是一個 501(c)(3) 非營利組織("Code.org")。 我們的使命就�
 
 某些服務可能會受到額外發佈的指南、 規則或服務 ("**附加條款**") 的條款及條件您使用這種服務將是您附加的條款的協定。 如果這些條款之間有任何衝突和附加條款，附加條款將控制為該服務，除非附加條款明確指出，這些條款將控制。
 
-### Children Under Age 13
+### 13 歲以下兒童
 
 我們採取措施來減少 Code.org [隱私權原則](http://code.org/privacy) 所述的 13 歲來自使用者的個人資料的集合。 如果你是年齡在 13 歲以下，我們鼓勵您獲得父母或法律監護人的批准才可在 Code.org 上創建一個帳戶。 Code.org 允許某些代表的學區和學校，例如教師、 管理員、 輔導員和其他教育工作者 ("**教育家**") 連接與學生通過服務提供教程，教育和類似的服務。 如果你是一位教育家，您可以註冊帳戶對一個或多個您的學生服務。
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### 您的帳戶
 
 如果您為服務創建一個帳戶，你有責任為您的帳戶安全並保持自己的密碼安全。 如果您使用的帳戶分配給你的一位教育家，你教育家可能能夠訪問和禁用您的帳戶。
 
 Code.org 可能允許您通過某些協力廠商的社交網路服務，如 Facebook 和谷歌 ("**身份驗證服務**") 的服務註冊一個帳戶。 註冊使用身份驗證服務的服務，即表示您同意 Code.org 可能會訪問您的帳戶資訊從身份驗證服務和您同意使用身份驗證服務的任何和所有條款關於您使用服務通過身份驗證服務。 你是獨自負責您與身份驗證服務的交互。
 
-### Privacy
+### 隱私權
 
 您的隱私對我們至關重要。 Code.org 的 [私隱政策](http://code.org/privacy) 解釋了我們如何對待您的個人資料，並納入這些條款通過引用。 請閱讀隱私政策仔細為有關 Code.org 的收集、 使用和披露您的個人資訊資料。
 
 如果你是一個學生使用的帳戶由教育家為你註冊，或否則連接到一個教育工作者，你同意 Code.org 可能披露您的資訊與您的帳戶相關聯的教育工作者。 如果你是一名教育工作者，您同意不共用您收到來自 Code.org 與任何非授權代理商的教室、 學校區或其它你所代表的教育機構的學生資訊。
 
-### User Generated Content - Management; License Grant; Representations and Warranties
+### 使用者生成的內容的管理; 許可證的授予; 陳述和保證
 
 Code.org 可能現在或將來允許您和其他使用者發送到服務的電腦代碼 (包括原始程式碼和結果代碼)、 資訊、 文本、 圖形、 筆記、 問題、 評論、 評級、 評論、 圖像和視頻或其他通信 (統稱"**使用者內容**")。 你明白，不論發表了此類使用者內容，Code.org 並不保證任何提交任何保密。
 
@@ -54,17 +54,17 @@ By submitting or distributing User Content through the Services or directly to C
 
 此外，提交或發佈使用者內容通過服務，您在此授予對每個使用者的服務非獨家許可，訪問和使用您的使用者內容。
 
-### User Content Representations and Warranties
+### 使用者內容的陳述和保證
 
 你是全權負責使用者內容您發佈到服務和張貼或發佈他們的後果。 通過上傳、 提交、 創建，或發佈您的使用者內容或通過服務，您代表，並保證: (1) 你的創造者和擁有者的您的使用者內容，你有權使用或有必要的許可證、 權利、 份同意書和許可權發佈使用者內容您提交;(2) 您的使用者內容不會也不會: (a) 侵犯，違反、 或挪用任何協力廠商權利，包括任何版權、 商標、 專利、 營業秘密、 道德權利、 隱私權利、 權利的宣傳，或任何其他智慧財產權或專有權利或 (b) 誹謗，詆毀、 誹謗，或侵犯隱私、 宣傳或其他智慧財產權的任何其他人; 權利(3) 您的使用者內容不包含任何病毒、 廣告軟體、 間諜軟體、 蠕蟲或其他惡意程式碼。
 
-### Restrictions on Content and Use of the Services
+### 對內容和使用的服務的限制
 
 我們在任何時候都有權 (但不是會有義務) 刪除或拒絕分發任何使用者內容的網站上，暫停或終止使用者，沒有給你的責任。 我們也有權訪問、 讀取、 保留，和透露任何資訊，因為我們有理由相信是必要的 (i) 滿足任何適用的法律，法規，法律程式或政府要求，(ii) 強制執行的條款，包括調查可能違反本協定，(iii) 檢測、 防止，或以其他方式解決欺詐、 安全或技術問題，(iv) 回應使用者支援請求，或 (v) 保護的權利財產或 Code.org、 其使用者及公眾的安全。
 
 你不可能做的以下任何訪問或使用服務時: (i) 訪問、 篡改，或使用非公共領域的服務，Code.org 的電腦系統或技術的運載系統的 Code.org 的供應商;(ii) 探針、 掃描或測試漏洞的任何系統或網路或違反或規避任何安全或身份驗證的措施;(iii) 訪問或搜索或嘗試訪問或搜索的服務通過的任何方式 (自動或其它) 比其他目前可用，出版和也提供了 Code.org (只有根據這些條款及條件)，除非你有獲得特別允許，做到與 Code.org 的單獨協定的介面 (注: 爬行服務是允許的如果做的 robots.txt 檔規定然而，明文禁止刮 Code.org 事先未經服務);(iv) 任何 TCP/IP 資料包報頭或其任何部分的標頭資訊中的任何電子郵件或張貼，或以任何方式使用服務發送偽造塗改、 欺騙性或虛假源標識資訊;(v) 干擾或破壞，(或嘗試這樣做)，或訪問的任何使用者、 主機或網路，包括但不限於，欺負或騷擾、 發送病毒、 超載、 水浸、 發送垃圾郵件、 郵件炸彈的服務，或通過編寫腳本以這種方式創建內容干擾或在服務上創建不必要的負擔。
 
-### Your License to Use Code.org Videos, Tutorials, Data, and APIs
+### 您對使用 Code.org 視頻、 教程、 資料和 Api 的許可證
 
 Code.org 的 [視頻庫，](http://youtube.com/user/CodeOrg) 可能會重新分配自由表達的條件 (1) 視頻被重新分發 AS-IS，(使用嵌入式視頻播放機提供，或如果提供下載連結) 與歸屬於 Code.org (2) 錄影不納入任何混搭，(3) 視頻用於電腦科學教育目的，和 (4) 使用的視頻並不構成協力廠商品牌背書提供服務或產品和 (5) 如果訪問類似重新分配內容或服務是免費。
 
@@ -80,11 +80,11 @@ Code.org 的 [視頻庫，](http://youtube.com/user/CodeOrg) 可能會重新分�
 
 會議局提供的任何資料都提供"按原樣"，沒有保修，並受美國和國際版權法。 顯示的資料提供僅用於提供資訊和可能只被訪問、 審查、 出版，或用於符合和會議委員會符合使用條件顯示在 [www.conference-board.org](http://www.conference-board.org) 的許可。 除了，你可以作為符合公平使用有限的非商業用途第 1976 年版權法第 107 條，不可能用於在資料庫中，用於創建衍生作品，或以任何方式未經明確的書面許可，從會議委員會，否則濫用提取這些資料。 世界大企業聯合會 ® 和會議委員會想要線上說明 ® 是會議委員會的註冊的商標。 世界大企業聯合會保留所有的權利和對其商標。 關於會議委員會想要線上說明 ® 資訊可以進一步發現 [在這裡](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### 版權政策
 
 Code.org 尊重他人的智慧財產權，並期望使用者要做同樣的服務。 我們會回應涉嫌侵犯著作權注意遵守適用的法律和適當地提供給我們。 If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 
-### Digital Millennium Copyright Act
+### 數位千年版權法案
 
 It is Code.org’s policy to respond to notices of alleged copyright infringement that comply with the Digital Millennium Copyright Act.
 
@@ -138,7 +138,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE CODE.ORG ENTITIES SHALL N
 
 SOME STATES OR OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
 
-### General Terms
+### 一般條款
 
 #### A. Waiver and Severability
 

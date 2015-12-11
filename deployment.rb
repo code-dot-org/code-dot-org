@@ -165,6 +165,10 @@ class CDOImpl < OpenStruct
     canonical_hostname('code.org')
   end
 
+  def hourofcode_hostname
+    canonical_hostname('hourofcode.com')
+  end
+
   def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
     if rack_env?(:development) && !CDO.https_development

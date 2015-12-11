@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -25,7 +24,7 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 <% elsif @country == 'ca' %>
 
-## Videos <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
+## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
@@ -45,6 +44,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -60,7 +63,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 **All Hour of Code tutorials:**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+  * Son titoriais guiados, o que permite ós estudantes traballaren ó seu propio ritmo e segundo as súas habilidades
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
@@ -68,14 +71,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Proba os tutoriais nos ordenadores os dispositivos dos estudantes.** Asegúrate de que funcionan correctamente (con son e vídeo).
+  * ** Previsualiza a páxina de parabéns** para ver o que os estudantes verán cando rematen. 
+  * **Proporcione auriculares á súa clase**, ou pídalle ós estudantes que traian os seus, se o tutorial que escolleu funciona mellor con son.
 
 ## 3) Plan ahead based on your technology available
 
-  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * **Non hai dispositivos abondo** Use[programación por parellas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cando os participantes se emparellan, axúdanse entre si e dependen menos do mestre.
+  * **Ten pouco ancho de banda?** Mostre os vídeos co proxector da clase, para evitar que cada estudante teña que descargar o vídeo. Ou probe con titoriais sen conexión ou fora de liña.
 
 ## 4) Inspire students - show them a video
 
@@ -89,8 +92,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% else %>
 
-# Additional resources coming soon!
+# Proximamente, recursos adicionais!
 
 <% end %>
 
-<%= view :signup_button %>

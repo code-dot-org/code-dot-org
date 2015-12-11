@@ -1,5 +1,5 @@
 de-DE:
-  hour_of_code: Programmierstunde
+  hour_of_code: Stunde der Code
   hello: Hallo Welt
   select_language: Bitte wähle deine Sprache
   en: Informatik
@@ -141,7 +141,7 @@ de-DE:
   studiobar_flappy_body: Erstelle und teile dein eigenes Flappy-Spiel
   studiobar_teacher_title: Für Lehrer gemacht
   studiobar_teacher_body: Code-Studio in deinem Unterricht einführen
-  studiobar_frozen_title: Programmierstunde
+  studiobar_frozen_title: Stunde der Code
   studiobar_frozen_body: Erstelle ein Wintermärchen mit Anna und Elsa
   studiobar_donate_title: Spenden
   studiobar_donate_body: Ein Kind lernt, für jeden Euro den du spendest
@@ -214,7 +214,7 @@ de-DE:
   homepage_banner_text_link: Erfahre mehr
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Erfahre mehr
-  homepage_slot_text_title_hoc: Programmierstunde
+  homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: 'Probiere "The Hour of Code" aus'
   homepage_slot_text_link_host: Organisiere eine Hour of Code
@@ -277,6 +277,11 @@ de-DE:
   class_submission_level_vocational: Berufliche
   class_submission_languages_other: Andere Sprache(n)
   inspirational_videos_more: 'Weitere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirierende Videos</a>, sortiert nach Rollen und Berühmtheiten'
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Erbaue ein Galaxie mit Code
   starwars_javascript_title: JavaScript
   starwars_javascript_description: 'Verwende Drag & Drop Blöcke und Javascript.'
@@ -284,8 +289,8 @@ de-DE:
   starwars_javascript_start_button: Probiere es jetzt aus
   starwars_blocks_title: Bausteine
   starwars_blocks_description: 'Verwende Drag & Drop Blöcke.'
-  starwars_blocks_specs: Viele Sprachen (in Kürze) | Moderne Browser, Smartphones, Tablets | Alter 6-10
-  starwars_blocks_start_button: Probiere es jetzt aus
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_start_button: Erfahre mehr
   starwars_watch_videos: Bevor du loslegst, sieh dir eines dieser inspirierende Videos an
   starwars_speak_languages: Du sprichst eine andere Sprache?
   starwars_help_translate: Hilf mit, bei der Übersetzung
@@ -295,7 +300,7 @@ de-DE:
   mc_shortdescription: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken.
   mc_gradelevel: Ab 6 Jahren
   mc_platformtext: Moderne Browser, Smartphones, Tablets
-  mc_specs: Viele Sprachen (in Kürze) | Moderne Browser und Tablets | Alter 6 +
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspiriere Schüler und unterstütze Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer führen dieses Jahr eine Hour of Code mit ihren Klassen durch, 7. bis 13. Dezember 2015. Sie brauchen deine Hilfe! '
@@ -304,7 +309,7 @@ de-DE:
   volunteer_engineer_submission_intro_recruit: |-
     Diese Lehrer würden gerne jemanden haben der <span style="font-family: 'Gotham 7r', sans-serif;">begeistert von der Lehre Informatik ist</span> und so im Klassenzimmer aushelfen kann. Oder jemand der Schüler <span style="font-family: 'Gotham 7r', sans-serif;">inspirieren</span> kann, indem er über die Möglichkeiten der Informatik redet (auch via Videochat möglich). Wenn du nicht beabsichtigst zu helfen, <a href="%{url}">lerne mehr</a> darüber dein eigenes Hore of Code Ereignis zu planen.
   volunteer_engineer_submission_intro_signup: 'Bitte gib die folgenden Information ein, falls du ein Informatikstudent oder professioneller Entwickler bist. Felder mit <span class="form-required-field">*</span> sind pflicht.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Du suchst keine Freiwilligen? <a href="%{learn_more}">Lerne mehr</a> darüber, wie Du Dein eigenes "Hour of Code"-Event organisierst und Freiwillige in Deiner Nähe auf der <a href="%{volunteer_local}">Freiwilligenkarte</a> findest.'
   volunteer_engineer_submission_header_shared: Mit Lehrern geteilte Informationen auf der Unterstützerkarte
   volunteer_engineer_submission_field_name: Name
   volunteer_engineer_submission_field_name_placeholder: Vollständiger Name
@@ -517,14 +522,14 @@ de-DE:
   dashboard_progress_completed_too_many_blocks: abgeschlossen, zu viele Blöcke
   dashboard_progress_completed_perfect: Abgeschlossen, perfekt
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
-  dashboard_stage: Teil
+  dashboard_stage: Bühne
   dashboard_puzzle: Aufgabe
   dashboard_question: Frage
   dashboard_response: Antwort
   stats_hoc_2013_heading: 'Fantastische Ergebnisse der Hour of Code aus dem Vorjahr. Allein in einer Woche:'
   stats_hoc_2013_image_alt: Ergebnisse der Hour of Code 2013
   dashboard_teacher: Lehrer
-  dashboard_student: Schüler
+  dashboard_student: Student
   dashboard_sections_email_question: Haben alle Schüler eine gültige E-Mail Adresse?
   dashboard_sections_account_creation_question: Wer richtet die Zugänge für die Schüler ein?
   dashboard_sections_password_question: Welche Passwörter verwenden die Schüler?
@@ -540,6 +545,7 @@ de-DE:
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
   dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten Galaxie zu erstellen und zu teilen.'
+  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr
@@ -551,11 +557,11 @@ de-DE:
   learn_educator_resources_description: Erfahre wie du eine Hour of Code lehrst
   learn_educator_resources_button: Lehrmaterial
   learn_are_you_educator: 'Sind Sie ein Lehrer ? Lernen Sie <a href="http://hourofcode.com/resources/how-to"> wie man Hour of Code</a> lehrt.'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Finde Freiwillige</a>, diie Dir während Deines Hour of Code helfen.'
+  learn_teacher_led_lesson_plans: 'Lass Dich von <a href="https://code.org/teacher-led">Lehrer-geführten Hour-of-Code-Unterrichtskonzepten</a> inspirieren!'
+  learn_how_to_hoc: 'Sieh Dir <a href="https://hourofcode.com/how-to">unsere HOWTO-Anleitung</a> für den Unterricht einer Hour of Code an!'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Erfahre mehr</a> über die Preise für jeden Tutor.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Inspiriere Studenten, indem Du ihnen <a href="https://code.org/educate/inspire">diese Videos</a> zeigst.'
   hoc2014_try_new_tutorials: Probiere unsere neuen Anleitung für die Hour of Code aus
   hoc2014_try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
   hoc2014_try_scrat: Angry Birds, PvZ und Scrat
@@ -567,10 +573,14 @@ de-DE:
   carousel_heading_international: Anleitungen in deiner Sprache
   carousel_heading_domestic: Anleitungen auf englisch
   carousel_heading_beginners: Anleitungen für Anfänger
+  carousel_heading_beyond_beginners: Anleitungen für Anfänger
   carousel_heading_javascript: Anleitungen für JavaScript
+  carousel_heading_beyond_javascript: Anleitungen für JavaScript
   carousel_heading_unplugged: 'Kein Computer oder Internet? Probiere "Offline"-Informatik aus'
   carousel_heading_devices: Einführungen für Telefon und Tablet
+  carousel_heading_beyond_devices: Einführungen für Telefon und Tablet
   carousel_heading_languages: Einführungen in anderen Sprachen
+  carousel_heading_beyond_languages: Einführungen in anderen Sprachen
   carousel_heading_apps_games: Erstelle deine eigenen Anwendungen oder Spiele
   carousel_heading_university: Universitätskurse online
   carousel_heading_webpages: Lerne, Webseiten zu erstellen
@@ -578,6 +588,7 @@ de-DE:
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
   educator_notes: Notizen für Tutoren
   teach_led_lesson_plans: Hour of Code Lehranleitungen
+  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
   how_to_teach_hoc: 'Anleitung zum Unterrichten einer "Hour of Code"'
   more_resources_educators: Weitere Quellen für Lehrer und Tutoren
   beyond_submission: Du willst eine weiterführende Anleitung für Beyond an Hour einreichen? Schau dir die Kriterien und das Vorlageformular an.
@@ -591,8 +602,8 @@ de-DE:
   mobile_devices: Anleitungen für mobile Geräte
   frozen_name: Programmiere mit Anna und Elsa
   starwars_name: 'Star Wars: Erbaue eine Galaxie mithilfe von Code'
-  codeorg_name: Schreibe dein erstes Computerprogramm
-  codeintl_name: Schreibe dein erstes Computerprogramm
+  codeorg_name: Classic Maze
+  codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Eine Einführung in JavaScript
   khanes_name: Eine Einführung in JavaScript
@@ -621,17 +632,24 @@ de-DE:
   robomindnl_name: Programmiere einen virtuellen Roboter
   flappy_name: Erstelle ein Flappy-Spiel
   bitsbox_name: 'Bitsbox - baue ein Spiel'
-  makeschool_name: Erstelle ein iPhone Spiel in deinem Browser!
+  makeschool_name: Bau ein iPhone-Spiel in deinem Browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  hourofcode_name: Platzhalter für neue code.org/hoc
+  hourofcode_name: Classic Maze
   playlab_name: Play Lab
   infinity_name: Infinity Spiele Lab
   artist_name: Künstler
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Hour of Code Lehranleitungen
   codeorg_gradelevel: Im Alter von 4-104
   codeintl_gradelevel: Im Alter von 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -675,6 +693,13 @@ de-DE:
   playlab_gradelevel: Im Alter von 4-104
   infinity_gradelevel: Im Alter von 4-104
   artist_gradelevel: Im Alter von 4-104
+  monstercoding_gradelevel: Alter 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Grundschule
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
   thinkersmithspanish_platformtext: Offline
@@ -716,6 +741,13 @@ de-DE:
   frozen_platformtext: Moderne Browser und Tablets
   starwars_platformtext: Moderne Browser und Tablets
   playlab_platformtext: Moderne Browser, Smartphones, Tablets
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Moderne Web-Browser
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Moderne Web-Browser
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Moderne Browser, Smartphones, Tablets
   codeorg_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   codeintl_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -745,8 +777,8 @@ de-DE:
   tynkerapp_shortdescription: 'Lerne programmieren durch das Lösen von spaßigen Programmierungs-Rätseln. '
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: 'Entwickle dein eigenes Spiel - Flappy Bird, Shark oder Submarine'
-  bitsbox_shortdescription: Programmiere eine Serie von Apps zum spielen und teilen, indem du richtiges JavaScript benutzt.
-  makeschool_shortdescription: Entwickele ein iPhone-Spiel. Lerne in dem du Code erschaffst um deinen Monstern neue Bewegungen beizubringen!
+  bitsbox_shortdescription: Programmiere eine Serie von Apps zum Spielen und Teilen, indem du richtiges JavaScript benutzt.
+  makeschool_shortdescription: Entwickele ein iPad-Spiel. Lerne dies durch die Programmierung von Bewegungen Deines Monsters!
   touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene App! (nur Android)
   blockly_shortdescription: Lade eine ZIP-Datei herunter, um ohne Internet-Verbindung lernen zu können
@@ -759,6 +791,13 @@ de-DE:
   playlab_shortdescription: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
   infinity_shortdescription: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Charakteren zu erstellen.
   artist_shortdescription: Zeichne coole Bilder und Designs mit dem Künstler!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: |
     Lerne die Grundlagen des Programmierens ganz einfach durch "Drag & Drop". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.
     Lerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar.
@@ -804,6 +843,13 @@ de-DE:
   frozen_longdescription: 'Wir wollen mit unseren Programmen gemeinsam mit Anna und Elsa den Zauber und die Schönheit des Eises erkunden. Beim Eislaufen wirst Du Schneeflocken und Muster erschaffen - ein Winter- Wunderland, das du mit deinen Freunden teilen kannst!'
   starwars_longdescription: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
   playlab_longdescription: Erfinde eine Geschichte oder ein Spiel mit dem Spielelabor! Erstelle Tiere, Piraten, Zombies, Ninjas und viele andere Charakter. Erstelle Sounds, erziele Punkte und werfe sogar Feuerbälle!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
+  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
+  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
+  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Einführung in Informatik und Programmieren für Kinder zwischen 5 und 14 Jahre
   khan_beyond_name: Lerne Computer-Programmierung und Programmiersprachen
   tynker_beyond_name: Lerne Computer-Programmierung ganz einfach von zuhause
@@ -965,7 +1011,7 @@ de-DE:
   groklearning_beyond_longdescription: Ein Einführungskurs, in die Programmiersprache Python für Menschen mit keinerlei Programmiererfahrung. Unsere einzigartige Mischung aus einleitende Inhalte und Herausforderungen bringt Sie einem gründlichem Verständnis der Python und Programmierung selbst entgegen. Wir haben diese Inhalte für Schüler unterschiedlichen Alters ausgelegt, aus den verschiedensten Hintergründen und wir sind sicher, dass es Ihnen auch passen wird.
   hacketyhack_beyond_longdescription: 'Hackety Hack lernen Sie die absoluten Grundlagen der Programmierung von Grund auf. Keine Vorkenntnisse in der Programmierung ist erforderlich! Mit Hackety Hack lernen Sie die Programmiersprache Ruby. Ruby wird für alle Arten von Programmen, einschließlich desktop-Anwendungen und Websites verwendet. [Hinweis: Desktopinstallation erforderlich]'
   robomind_beyond_longdescription: 'Schüler lernen die Grundlagen der Programmierung durch die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der Programmierung Übungen helfen. '
-  makeschool_beyond_longdescription: 'Kennst du dich ein bisschen mit "ObjectiveC" aus? Wenn ja, kannst du bei uns lernen, ein iPhone-Spiel in einer Stunde zu entwickeln. Wir führen dich durch den Ablauf der Entwicklung, der Tests und dem Probespielen, ganz einfach im Browser. Anschließend kannst du das Spiel mit deinen Freunden auf Facebook teilen! Du brauchst keine iPhone-Programmierkenntnisse, solltest aber wissen, was Variablen, Methoden und Objekte sind.'
+  makeschool_beyond_longdescription: 'Kennst Du Dich schon ein bisschen mit der Programmiersprache "Objective C" aus? Wenn ja, kannst Du es bei uns lernen, ein iPhone Spiel in einer Stunde zu entwickeln. Wir führen Dich durch den Ablauf der Entwicklung, des Tests und Spiels, ganz einfach im Internet-Browser. Anschliessend kannst Du das Spiel mit Deinen Freunden auf Facebook teilen. Du brauchst keine iPhone Programmierkenntnisse, solltest aber wissen, was Variable, Methoden und Objekte sind.'
   appinventor_beyond_longdescription: Unterhaltsame und schnelle Video-Anleitungen führen dich durch die Entwicklung von drei einfachen Apps für dein Android-Handy oder Tablet. Ob Anfänger oder Experte, diese Hour of Code bereitet dich darauf vor deine eigenen Anwendungen zu erstellen. Stelle dir vor deine eigenen Apps mit deinen Freunden teilen zu können! Diese Kurse eignen sich für Einzelpersonen, aber auch für Lehrer mit ihren Klassen.
   touchdevelop_beyond_longdescription: TouchDevelop ermöglicht die Erstellung von Apps auf iPad, iPhone, Android, PC, Mac, Windows Phone. Mit unserem Touch-freundlich-Editor macht coding-Spaß, auch auf Ihrem Handy oder Tablet!
   codehs_beyond_longdescription: 'Lernen Sie die Grundlagen der Programmierung mit Karel dem Hund, ein Spaß, zugänglich und visuelle Einführung in die Kodierung, wo wie Befehle an einen Computer geben, es ist wie einm Hund Befehle zu erteile. Dieses Tutorial ist toll, wenn von einem Lehrer geführt, aber auch unabhängig voneinander. [Anmerkung: Bezahlung ist notwending]'
@@ -992,11 +1038,11 @@ de-DE:
   compatibility_https_header: Bitte schalte HTTPS für Code.org ein.
   compatibility_https_message: "Um die Sicherheit zu erhöhen, wechseln wir am %{https_date} auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'> Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert."
   compatibility_https_hide_this_warning: Diese Warnung ausblenden
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: flattern
   infinity_shortcode: inf
-  playlab_shortcode: spielen
+  playlab_shortcode: lab
   artist_shortcode: art

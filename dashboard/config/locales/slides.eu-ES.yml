@@ -177,7 +177,7 @@
           ez bagenu?
       3:
         image: notes/hoc3_3.jpg
-        text: '"errepikatu harik eta" bloke baten barruan "Mugitu aurrera" bloke bat
+        text: '"errepikatu harik eta" bloke baten barruan "mugitu aurrera" bloke bat
           sartzen badugu, txoria aurrera mugituko da txerriarenganaino iritsi ARTE
           (edo horma baten kontra jo arte).'
       4:
@@ -420,9 +420,9 @@
       8:
         image: notes/frozen1_8.jpg
         text: Hemen "Aurrera mugitu" blokean "100 pixel aurrera mugitu" esaten du.
-          "Exekutatu" klikatzen duzunean zer gertatzen da? Elsa pantailan mugitzen
-          da, 100 pixel hain zuzen ere! Pixelak, oinarrian, zure pantailako karratu
-          txiki-txikiak dira.
+          "Hasi" klikatzen duzunean zer gertatzen da? Elsa pantailan mugitzen da,
+          100 pixel hain zuzen ere! Pixelak, oinarrian, zure pantailako karratu txiki-txikiak
+          dira.
       9:
         image: notes/frozen1_9.jpg
         text: Puzle honetan dugun beste blokeak "biratu 90 gradu eskubira" dio, eta
@@ -756,9 +756,9 @@
           ariketan eta pentsatu nora joan behar duen.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: Blokeak erraminta-lekutik lan-lekura arrastatu itzazu. Ziurtatu zaitez
-          "Exekutatzen ari den bitartean" blokearen azpian dagoela eta soluzioa duzula
-          pentsatzen duzunean, "Exekutatu" klikatu eta ikus ezazu txoria kabira joaten.
+        text: Arrastatu blokeak tresna-kutxatik lan-eremura. Ziurtatu "Abiaraztean"
+          blokearen azpian dagoela eta soluzioa duzula pentsatzen duzunean, egin klik
+          "Hasi" botoian eta ikusi txoria habira joaten.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
@@ -775,9 +775,9 @@
       3:
         image: notes/C1_maze_loops_3.png
         text: Txoria txerrira eramateko maila honetan... hiru ipar bloke eraman ordez
-          langunera, "errepika" blokea erabiliko duzu. Eraman "errepika" blokea langunera
-          eta sartu 3 zenbakia. Ondoren, eraman "mugitu iparrera" blokea eta sakatu
-          "Exekutatu" zuzen egin ote duzun ikusteko. Zorionak, lortu duzu!
+          lan-eremura, "errepikatu" blokea erabiliko duzu. Eraman "errepikatu" blokea
+          lan-eremura eta sartu 3 zenbakia. Ondoren, eraman "mugitu iparrera" blokea
+          eta sakatu "Hasi" zuzen egin ote duzun ikusteko. Zorionak, lortu duzu!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
@@ -2154,13 +2154,13 @@
           sakatzea gertaerak dira.
       2:
         image: notes/infinity_playlab_events_2.png
-        text: Hemen Baymax gora mugitu araziko dugu Hiro ikuitzeko, eta behera, Rapunzel
-          ikuitzeko jokalariak gora/behera gezidun teklak edo gora/behera botoiak
-          erabiltzen dituenean. "Gora geziarekin" blokea erabiliko dugu eta "mugitu
-          aktorea gora" blokea lotu, jokalariak gora gezia sakatzen duenean "gora
-          geziarekin" blokeari lotuta dagoen guztia exekuta dadin. Gauza bera egingo
-          dugu Baymax behera mugitzeko. Urratsez urrats zure jokoa gero eta elkarreragileago
-          bihurtzen ari da.
+        text: Hemen Baymax gora mugitu araziko dugu Hiro ukitzeko, eta behera, Rapunzel
+          ukitzeko jokalariak gora/behera gezidun teklak edo gora/behera botoiak erabiltzen
+          dituenean. "Gora geziarekin" blokea erabiliko dugu eta "mugitu aktorea gora"
+          blokea lotu, jokalariak gora gezia sakatzen duenean "gora geziarekin" blokeari
+          lotuta dagoen guztia exekuta dadin. Gauza bera egingo dugu Baymax behera
+          mugitzeko. Urratsez urrats zure jokoa gero eta elkarreragileago bihurtzen
+          ari da.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
@@ -2203,12 +2203,13 @@
           eta hemen sortuko dugu gure programa.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: Hasteko, zure blokeak "abiaraztean" bloke laranjari lotu beharko dizkiozu.
-          Bloke mordoa lotu ditzakezu ertz horia ikusten duzun artearrastatuz eta,
-          ondoren, klaska egingo dute elkarrekin. Lehenengo puzlean Hiro 1 aktorea
+        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjari lotu beharko
+          dizkiozu. Bloke mordoa lotu ditzakezu ertz horia ikusten duzun artearrastatuz
+          eta, ondoren, klaska egingo dute elkarrekin. Lehenengo puzlean Hiro 1 aktorea
           da, eta Baymax, 2 aktorea. Hiro mugitu beharko duzu Baymax-ena joateko "eskuinera
-          mugitu" blokea arrastatuz eta "abiaraztean" blokearekin lotzeko. Zure blokeak
-          leku egokian daudenean, sakatu "Hasi" botoia ikusteko zer programatu duzun.
+          mugitu" blokea arrastatuz eta "martxan dagoenean" blokearekin lotzeko. Zure
+          blokeak leku egokian daudenean, sakatu "Hasi" botoia ikusteko zer programatu
+          duzun.
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Goazen hastera eta amaitzerako elkarreragin, puntuak zenbatu, microbotak,
@@ -2288,7 +2289,7 @@
           programatzea ez dela arte onaren oso desberdina.
       3:
         image: notes/unplug1_3.png
-        text: Programazioaren oinarriak ikasi nituenean, orma zuria ate mordoa bihurtu
+        text: Programazioaren oinarriak ikasi nituenean, horma zuria ate mordoa bihurtu
           zen eta ate horiek irekitzean, noski, beste ate mordoaren ataria aurkituko
           duzu. Programatzea dibertigarria eta erraza da. Zure buruak nahi duen guztia
           egin dezakezu. Amaieran ate nahikoak ireki eta argia ikusiko duzu. Niretzat,
@@ -2628,7 +2629,7 @@
       4:
         image: notes/starwars_events_4.JPG
         text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
-          edo pantaila ikuitzeko zain egotea.
+          edo pantaila ukitzeko zain egotea.
       5:
         image: notes/starwars_events_5.JPG
         text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
@@ -2675,7 +2676,7 @@
         text: '[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
           Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
           bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
-          beteta daukazu eta 10,000 ikuitu behar dituzu irabazteko.'
+          beteta daukazu eta 10,000 ukitu behar dituzu irabazteko.'
       4:
         image: notes/starwars_congrats_4.JPG
         text: '[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
@@ -2766,7 +2767,7 @@
       4:
         image: notes/starwars_blocks_events_4.JPG
         text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
-          edo pantaila ikuitzeko zain egotea.
+          edo pantaila ukitzeko zain egotea.
       5:
         image: notes/starwars_blocks_events_5.JPG
         text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
@@ -2801,7 +2802,7 @@
         text: '[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
           Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
           bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
-          beteta daukazu eta 10,000 ikuitu behar dituzu irabazteko.'
+          beteta daukazu eta 10,000 ukitu behar dituzu irabazteko.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
         text: '[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
@@ -2908,12 +2909,12 @@
           erabiliz.
       6:
         image: notes/mc_repeat_6.JPG
-        text: Gure etxearen orma eraikitzeko Alex-i mugituAurrera(); egiteko eta ohola
-          jartzeko lau aldiz estea daukagu, edo esan mugituAurrera(); egiteko eta
-          ohol bat jartzeko eta, ondoren, erabili errepikatu blokea ekintza hori hainbat
-          aldiz egikaritzeko. Errepikatu blokean egingo dugu klik eta esan zenbat
-          aldiz nahi dugun ekintza hori exekutatzea. Eraiki dezagun gure etxea gaua
-          egin aurretik! Ongi pasa.
+        text: Gure etxearen horma eraikitzeko Alex-i mugituAurrera(); egiteko eta
+          ohola jartzeko lau aldiz estea daukagu, edo esan mugituAurrera(); egiteko
+          eta ohol bat jartzeko eta, ondoren, erabili errepikatu blokea ekintza hori
+          hainbat aldiz egikaritzeko. Errepikatu blokean egingo dugu klik eta esan
+          zenbat aldiz nahi dugun ekintza hori exekutatzea. Eraiki dezagun gure etxea
+          gaua egin aurretik! Ongi pasa.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
@@ -2982,11 +2983,97 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
+        text: Oso erraza da zure joko garatzea. Programazioko oinarri batzuk jakinda,
+          segituan has zaitezke jolasean zeuk sortutako jokoan.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Bideo-joko faboritorik ba al daukazu? Pausu bat emango dugu PlayLab-ekin
+          jokoak sortu ahal izateko. Joko onek istorio bat izan ohi dute eta istorio
+          guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien artean
+          elkar eragiten dute. Agian puntuan batu ere egingo dituzte jokoaren arauen
+          arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola
+          egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen
+          eta telefonoak jolasteko balioko duen joko bat eraikiko dugu.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
+          ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta
+          telefonoak jolasteko balioko duen joko bat eraikiko dugu.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Zure pantaila hiru zati nagusitan banatuta dago. Ezkerrean programa
+          nola exekutatzen den ikusi ahal izango duzu. Maila bakoitzean egin beharrekoa
+          azpialdean azaltzen zaizu.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: Erdiko eremua tresna kutxa da non blokeetako bakoitza kode zati bat
+          den.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjarekin lotu beharko
+          dituzu. Hainbat bloke lotu ditzakezu elkarrekin hauek arrastatuz inguruko
+          marra horia agertu arte. Orduan elkar lotu egingo dira.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: Lehen puzzle honetan, aktoreek zerbait esatea lortuko dugu "esan" blokea
+          "martxan dagoenean" blokearekin lotzen eta zure mezua bertan idazten. Zure
+          blokeak behar den lekuan dituzunean hasi botoian sakatu programatu duzuna
+          ikusteko.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Has zaitez eta bukaerarako zure joko propioa sortzeko kapaz izango zara,
+          elkar eragin dezaketen mota guztietako jokalariekin, puntuekin, gauzak jaurtikiz,
+          eta elkar desagerraraziz. Dena zure esku dago!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Orain, joko programatzaileek egunero erabiltzen duten zerbait ikasiko
+          dugu. Gertaerak deritze. Gertaera batek zure programari esaten dio zerbait
+          gertatzearen zain adi egoteko, eta zerbait hori gertatzen denean jokoak
+          ekintza bat gauzatuko du.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Gertaera adibide batzuk dira saguaren klik bat edo gora eta beherako
+          gezi tekla bat edo baita ere pantaila ukitzea.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Hemen jokalariak aktorearen gainean klik egiten duenean honek zerbait
+          esatea lortuko dugu. "Klik egiterakoan" blokea erabiliko dugu eta horri
+          lotuko diogu "esan" blokea. Jokalariak klik egiterakoan, bloke horretara
+          lotutako bloke guztiak burutuko dira.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: Badira ere "gezia sakatzean" blokeak. Mugimendu blokeak lotzen badizkiozu
+          bloke horiei, zure aktoreak gora, behera, eskuin eta ezker mugitzen has
+          zaitezke geziekin. Pixkanaka zure jokoa elkarreragileago bihurtzen ari da.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Imajina dezakezu zerbait behin eta berriz betirako errepikatzen egon
+          beharko bazenu? Zorionez ez duzu horrelakorik inoiz egin beharko konputagailuak
+          oso onak baitira gauzak errepikatzen.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: Hau da betirako errepikatu blokea. Edozer gauza bloke honen barruan
+          betirako errepikatuko da jokoan. Aktore batek gauzaren bat errepikatzen
+          ibiltzea nahi badugu jokalariaren parte hartzerik gabe, bloke horiek betirako
+          errepikatu blokearen barruan jarriko ditugu.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
+          lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
+          emango dizu gero zure joko propioa egiten ari zarenean.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
         text: If you'd like to make your own game, it's really easy. All you need
           are just a few basics of programming and you can start playing a game that
           you created.
       2:
-        image: notes/gumball_intro_2.JPG
+        image: notes/iceage_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
           creating games just like that in PlayLab. Good games have a story and every
           story has actors. Actors that do things like speak, move and interact with
@@ -2994,71 +3081,72 @@
           we'll be learning how to do all these things one by one with fun actors
           and then build a game from scratch that can be shared and played on a phone.
       3:
-        image: notes/gumball_intro_3.JPG
+        image: notes/iceage_intro_3.JPG
         text: Today, we'll be learning how to do all these things one by one with
           fun actors and then build a game from scratch that can be shared and played
           on a phone.
       4:
-        image: notes/gumball_intro_4.JPG
+        image: notes/iceage_intro_4.JPG
         text: Your screen is split into three main parts. On the left is the gamespace
           where your program will run. The instructions for each level are written
           below.
       5:
-        image: notes/gumball_intro_5.JPG
+        image: notes/iceage_intro_5.JPG
         text: This middle area is the tool box and each of these blocks is a piece
           of code.
       6:
-        image: notes/gumball_intro_6.JPG
-        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
       7:
-        image: notes/gumball_intro_7.JPG
+        image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
           block. You can link multiple blocks together by dragging them out until
           you see the yellow line and then they'll snap together.
       8:
-        image: notes/gumball_intro_8.JPG
+        image: notes/iceage_intro_8.JPG
         text: In this first puzzle, we'll make the actors say something by linking
           the "say" block to the when run block and typing in your message. Once you
           have your blocks in place, hit the run button to see what you programmed.
       9:
-        image: notes/gumball_intro_9.JPG
+        image: notes/iceage_intro_9.JPG
         text: Get started and by the end you'll be able to create your own game with
           all kinds of players that can interact, score points, throw things, and
           vanish each other. It's all up to you!
-    gumball_events:
+    iceage_events:
       1:
-        image: notes/gumball_events_1.JPG
+        image: notes/iceage_events_1.JPG
         text: Now we're going to learn about something all game programmers use everyday.
           They're called events. An event tells your program to listen for when something
           happens and then when it does, the game performs an action.
       2:
-        image: notes/gumball_events_2.JPG
+        image: notes/iceage_events_2.JPG
         text: Some examples of events are listening for a mouse click or an up or
           down arrow key or even a tap on the screen.
       3:
-        image: notes/gumball_events_3.JPG
+        image: notes/iceage_events_3.JPG
         text: Here, we're going to make the actor say something when the player clicks
           on it. We will use the when clicked block and attach the "say" block to
           it. When the player clicks, all the blocks attached to this block will be
           performed.
       4:
-        image: notes/gumball_events_4.JPG
+        image: notes/iceage_events_4.JPG
         text: There are also when arrow blocks. If you link move blocks to those,
           you can start to move your actors up, down, left, right, with the arrow
           keys. Little by little your game is getting more interactive.
-    gumball_repeat:
+    iceage_repeat:
       1:
-        image: notes/gumball_repeat_1.JPG
+        image: notes/iceage_repeat_1.JPG
         text: Can you imagine if you had to repeat something forever and ever? Hopefully
           you never have to because computers are really good at repeating things.
       2:
-        image: notes/gumball_repeat_2.JPG
+        image: notes/iceage_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
           forever in the game. If we want an actor to do something repeatedly without
           the player having to do anything, we'll put those blocks inside the repeat
           forever block.
       3:
-        image: notes/gumball_repeat_3.JPG
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.

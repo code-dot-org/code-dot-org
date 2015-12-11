@@ -517,70 +517,69 @@ sq:
         text: E pëlqejë kompjuterin e nënës time sepse mund të përdorë internetin. Interneti është diqka si lagjia juaj. Mund të vizitoni vende të bukura, mund të flisni me familjen dhe shokët dhe të mësoni plot gjëra të reja.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: Dje, unë vizitova nje kopsht zoologjik afër shtëpisë time. Unë pash një zebër. E fotografova dhe i ndryshova ngjyrat e vijave të saj, pastaj i shtova një kapelë dhe e shtova një koleksionin tim të kafshëve. E përkryer! Më vonë, shkova në një vend shumë shumë larg. Vizitova Kenian. Është një vend në Afrikë. Shume zebra jetojnë atje.
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+          Nganjëherë në internet unë flas me njerëzit qe njoh, si gjyshja ime që jeton në tjetër shtet. Tung gjyshe! Ajo ështe duke më pregaditur kekë dhe do të m'i dërgojë për ditëlindje. "Yummy, do të doja që interneti të ketë shijues!" Unë mund të flas me njerëz të ndryshëm në internet, si kusheriri im por unë vetëm flas me njerëzit që njoh.
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: "Cfarë më pëlqen më së shumti në internet është sepse luaj lojra. Pikë! Unë gjithashtu pëlqej të vizatojë dhe krijojë gjëra të reja dhe t'i ndajë me shokët e mi. Bukur! Nganjëherë unë vizitojë faqe të internetit ku mund të mësojë gjëra të reja por une gjithëmonë ndalem në faqe të internetit që janë atje pikërisht për mua. Wow, dinozaurë!"
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: "Interneti është një super vend i mirë. Por sikur kur kalon një rrugë në lagjen tënde, ju gjithashtu duhet të keni kujdes kur paraqiteni online. Këtu janë tre rregulla për t'u mbajtur në mend. Rregulli numër 1: Gjithmonë pyet prindërit tuaj së pari. Rregulli numër 2: Fol vetëm me njerëzit që njeh. Rregulli numër 3: Ndalo te vendet që janë për ty."
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: "Wow, ajo ishte e bukur! Koha e darkës. Unë po c'kyqem tani. Nuk mund të pres të kyqem përsëri të shoh cfarë do të vizitojë në vazhdim."
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: Sot ne do të mësojmë për programimin në dyshe. Në programimin në dyshe ju punoni si një ekip. Pse duhet dy njerëz të përdorin një kompjuter? Sepse dy koka janë më mirë se një. Në programimin dyshe ju dhe partneri juaj do të uleni bashkë në një kompjuter dhe ju bashkë do të punoni në projektin e njejtë.
       2:
         image: notes/C1_pair_programming_2.png
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: Në programimin dyshe, një person është vozitësi dhe tjetri person udhëzuesi, sikur kur vozitë një veturë. Vozitësi ulet te kompjuteri dhe është ai që përdor tastaturën apo miun apo ekranin me prekje dhe duke kontrulluan aksionet kryesore të kompjuterit. Tjetri person është udhëzuesi. Udhëzuesi ndihmon vozitësin duke iu përgjigjur pyetjeve të shoferit dhe duke i gjetur problemet e mundshme apo gabimet.
       3:
         image: notes/C1_pair_programming_3.png
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: "Komunikimi është qelsi për një programim në dyshe të suksesshëm. S'ka ofendime, bëhu i respektueshem, mos u bëj një udhëzues boss, sepse askush nuk dëshiron një pasagjer të pakëndshëm. Ju dhe partneri juaj duhet gjithmonë të flisni. Shoferi mund të shpjegojë cfarë ajo apo ai janë duke bëre. Dhe udhëzuesi mund të ndihmojë duke sygjeruar qfarë të bëjë në vazhdim."
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team.
+        text: Udhëzuesi duhet të mendojë për fotografinë e madhe dhe shoferi fokusohet në detaje. Të dy rolet janë të rëndësishëm, Programimi në dyshe ka të bëjë me punën së bashku si një ekip.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: Ky mësim thirret mbjellja e një fare dhe do të na ndihmojë të kuptojmë algoritmet. Algoritmet janë instruksione specifike që shpjegojnë urdhërin në cfarë të bëjmë diqka. Madje cdo ditë gjërat si ngernia e mëngjesit apo larja e dhëmbëve janë algoritme që kërkojnë hapa të vegjël për të kryer një punë.
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: Kompjuterët mund të jenë shumë të menqur por ata mund të kuptojnë vetëm nëse ju tregon taman cfarë dëshiron hap pas hapi. Gjëja më e mirë rreth algoritmeve është se nëse përcjell udhëzimet në rregull, ju mund të bëni diqka që nuk e keni ditur si të bëni që moti. Është sikur të përcjellësh një recept.
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: Sot ne do të mbjellim farat tona duke përdorur një algoritm. Krijo algoritmin tuaj duke prerë fotografinë. Zgjedh fotografitë që tregojnë hapat në mbjelljen e një fare dhe aranzho këto fotografi në mënyrë korrekte.
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: Tani është koha që të shihni nëse algoritmi juaj funksionon. Ndiq hapat në algoritëm me kujdes. A janë në mënyrë korrekte? A keni qenë të suksesshëm në mbjelljen e një fare duke ndjekur algoritmin? Është sikur programimi me fotografi!
       5:
         image: notes/C1_planting_seed_5.png
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: Kur ne duam të bëjmë qokollatë, jane shumë hapa të mëdhenjë drejt atij procesi dhe secili prej këtyre hapave të medhenjë ka një set hapash të vegjël dhe ka receptë të ndryshëm apo algoritme duke u varur në atë se si duam që qokollata të shijojë. Secili hap është i rëndësishëm, edhe të vegjlit, kështu që pa një hap, të tjerët nuk mund të kompletohen. Krijimi i algoritmeve që të tjerët mund të kuptojnë është me të vërtetë i rëndësishëm. Kjo ndodhë për shkak që secili hap duhet të shkruhet poshtë kështu që nuk ka lidhje kush e bën atë, rezultati është i njejtë.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell.
+        text: "Koha për t'u bërë kreativ dhe për të përdorur aftësitë e kodimit për të treguar një histori. Historia juaj do të ketë aktorë dhe ju do të jeni në gjendje për t'i bërë këta aktorë të flasin me njëri tjetrin. Fillo të mendosh se qfarë lloj historie dëshiron të tregosh."
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: |-
-          The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The "when run" block starts everything. The "move" block will move your character and the "say" block will make your character say whatever you type.
+        text: "Macja gjithmonë ka qenë e frikësuar nga qeni dhe cka nëse macja kupton se qeni dëshiron të jetë i mirë? Blloku 'fillo' fillon gjithcka. Blloku 'lëviz' do të lëvizë personazhin tuaj dhe blloku 'fol' do të bëjë karakterin tuaj të flas cka do që ju shtypni."
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: 'This is the "when actors collide" block which you can link up to the other blocks.'
+        text: "Ky është blloku 'kur aktorët përplasen' të cilin mund ta bashkosh me blloqet e tjera."
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: 'I was making the dog come over and say "Hi" but then the cat got scared so it ran away. "Ahh" If there was more time, it would have been a happy ending. The end!'
+        text: "Isha duke e bërë qenin të vij dhe thotë 'Tung' por pastaj macja u frikësua dhe iku larg. 'Ahh' nëse do të kishte më shumë kohë, do të ishte një fund i lumtur. Fundi!"
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words.
+        text: Ky është niveli i drejtshkrimit bletë. Përdor pjesët e enigmës për të levizur bletën. Kur ajo levizë, ajo do të grumbullojë shkronjat të shqiptojë fjalët.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: Shiko nëse mundesh të shqiptosh fjalën që të kanë dhënë në kutinë poshtë fazës. Por keni kujdes! Duke lëvizur në drejtimin e gabuar do të shtojë shkronjë që nuk dëshironi.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
@@ -590,170 +589,167 @@ sq:
         text: "Për shembull, nëse do të doja të urojë të gjithë në Facebook një ditëlindje të lumtur duke u dërguar atyre një email, do të më merrte kohë më shumë së një shekull për të shkruar të gjithë kto emaile. Por me pak linja kodimi, mund të kem një sistem që u dërgon emaile të gjithve për t'i uruar ditëndje të lumtur."
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: Në këtë shembull, qëllimi juaj do të jetë të levizësh zogun për të marrë derrin. Tani, ne do të jemi të gatshëm për të përdorur bllokun përsëritës siq duhet për të qenë të gatshëm për ta bërë këtë shumë lehtë. Ju mund ta bëni këtë duke i dhëne kompjuterit një komandë të hecë përpara disa herë për të avansuar zogun një hap secilën herë për të shkuar te derri apo ju mund ti thoni kompjuterit të levizë njëherë përpara dhe pastaj ti thoni ta përsërisë atë disa herë dhe ai do ta bëjë të njejtën gjë.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: 'In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward.'
+        text: "Në mënyrë që ta bëni këtë, ju tërhiqni komandën tuaj për të levizur përpara dhe pastaj e futni atë brenda bllokut përsëritës, Dhe ju mund të klikoni në të dhe t'i tregoni se sa herë ju të përsëritni bllokun për t'i treguar atij sa hapa ju dëshironi që të marrë përpara."
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: Një gjë më shumë është se ju mund të vendosni aq shumë komanda sa dëshironi brenda bllokut përsëritës. Kështu në ketë shembull, ju jeni duke i thënë të lëvizë përpara dhe të kthehet në të majtë, të cilën do ta bëjë disa herë, Kënaqu!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: Ju nuk do të mund as të kualifikoheni për garën nëse nuk keni njerëz që janë të aftë në shkenca kompjuterike sepse kaq shumë të dhëna që makinat grumbullojnë dhe nevoja për të pasur njerëz që mund të shkruajnë programe për të gjetur si të vazhdojmë të gjejmë si të ndërtojmë performancën.
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Në këto enigma, ju do të jeni një artist që përdorë një laps për të vizatuar forma të ndryshme. Kudo që artisti juaj shkon, do të vizatoje një vizë pas jush.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Për të lëvizur rreth kanavacës, ju do të përdorni bllokun lëviz përpara. Këtu blloku lëviz përpara thotë lëviz përpara me 100 pikselë. Kur ne shtypim lësho, cfarë ndodhë? Artisti lëviz përpara në shumë të caktuar dhe ajo shumë është 100 pikselë. Pikselët janë katrorë shumë të vegjël në ekranin e kompjuterit tuaj.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Blloku tjeter që ne kemi në këtë enigmë thotë kthehu djathtas në 90 shkallë. Dhe kur ne tërheqim atë e bën artistin tonë të kthejë një shumë të caktuar. Kështu që ju mund të luani përreth me aq shumë sa ju dëshironi që artisti të kthejë. Kjo është një 90 shkallë kthesë.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Dhe kjo është një 120 shkallë kthesë. Dhe kujto, ti mund të ndryshosh këto vlera duke klikuar në shigjetën afër numrave për pikselë dhe shkallë. Shijo vizatimin me artistin tuaj!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: Ky është një bllok i kushtëzuar. Thotë NËSE ka një nektar apo mjaltë që është më pak, e barabartë apo më e madhe se një numër, PASTAJ bëj diqka.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Kjo është ndihmuese kur ne nuk dijmë sa shumë nektar apo mjaltë të marrim, siq e shohim këtu me këtë shenjë pyetse.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: Në këtë shembull, ne do të themi se NËSE lulja vjollcë ka nektar me të madh se 0, merr nektar. Ajo do të i tregojë bletës tonë të mbaj nektarin aq gjatë sa është atje. Ta-dah!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!
+        text: "Ky është mësimi binar bylyzyk. Ne do të kodojmë inicialet tona ne një bylyzyk që mund ta veshim dhe të i'a tregojmë shokëve tanë!"
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites.
+        text: Binari është një rrugë e prezantimit të informacionit duke perdorur vetëm dy opsione. Nganjëherë njerëzit mendojnë për këtë vetëm si një 1s dhe 0s. Por ju mund te prezantoni binarin me kombinime të on dhe off, lart dhe poshtë, brenda dhe jashtë apo qfarëdo grup i të kundërtave.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
+        text: Tung, unë jam Orion dhe unë programojë robotë këtu në Play-im. Gjithë kompjuterët dhe trurët e robotit në nivelin e tyre fundamental janë porta elektronike të vogla. Kur posta është e hapur, elektriciteti mund të rrjedhë dhe kur është e mbyllur, elektriciteti nuk mundet.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: Një shembull i binarëve në robot janë sytë e robotit. Sytë e robotit janë LED dhe këto janë dritat që janë on apo off. Është një sistem binarë, një apo tjetri. Ne mund të përdorim dritat për të prezantuar numrat binarë. Nëse ne kemi një set robotësh, ne mund të themi se roboti i parë është vendi i parë dhe roboti i dytë është vendi i dytë, roboti i tretë është në vendin e katërt dhe kështu. Kjo është si ju prezantoni një numër binar. Robotët do ta bëjnë këtë me sytë e tyre binarë dhe të llogarisin për ju.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear.
+        text: Ky mësim thirret kushtëzimet me karta. Cdo ditë ju merrni vendime të bazuara në cfarë ju shihni dhe ndëgjoni.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: "Unë dëshirojë të shkojë te parku por së pari unë duhet të vendos nëse duhet të marrë nje umbrellë apo jo. Kështu që shikojë jashtë dritares. Nëse është vranët, do ta marrë umbrellën time. Nëse jo, do t'i marrë syzet e diellit. Mendojë më mirë të marrë umbrellën. Cfarë unë shoh dhe ndëgjojë determinon cfarë marrë për te parku."
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: |-
-          Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
+        text: 'Kushtëzimet janë të përdorshme në lojra gjithashtu. Sot ne do të praktikojmë përdorjen e kushtëzimeve me një lojë me karta. Në këtë lojë, karta që unë vizatojë determinon cfarë shokët e mi do të bëjnë. Nëse unë vizatoj një shtatë, cdokush duartroket. Përndryshe, cdokush thotë "awww". Le ta provojmë! "Awww" "gëzuar"'
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: Vë bast që ju mund të bëni në lojra që janë edhe më argëtuese me kushtëzime. Provoje! Kushtëzimet janë cfarë i bëjnë kompjuterët të duken të menqur. Një program kompjuteri që përfshin kushtëzimet mund të reagojë të përdoruesi dhe ndryshojë kursin e tij të veprimit.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: Mendo për lojën tënde të preferuar. A fitoni më shumë pikë për disa veprime sesa ju bëni për të tjera? Kjo ndodhë sepse kompjuteri është duke përdorur kushtëzimet. Është mënyra që një kompjuter merr një vendim. Cka rreth, nëse ju goditni targetin, ju fitoni dhjetë pikë. Përndryshe, ju humbni tre. Kur ju dini si kushtëzimet punojnë, ju mund të krijoni të gjitha llojet e lojrave emocionuese.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Këtu ne kemi disa blloqe në hapsirën tonë të punës. Por diqka ka gabim.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: Le ta rregullojmë ketë kod duke zvogëluar shpejtësinë dhe duke e shikuar atë si shkon përmes secilit bllok hap pas hapi.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Oh, ka një problem! Mustaqet e maces janë 75 pikselë të gjata, jo 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Keni ndegjuar ndonjëherë për rregullimin e një programi? Kjo është mënyra si ju kuptoni cfarë nuk punon. Kur ju rregulloni një kod, ju identifikoni dhe fshini gabimet.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: Këtu ne tashmë kemi disa blloqe në hapsirën tonë të punës. Ne do të përdorim butonin e hapit për të ecur përmes blloqeve, hap pas hapi, për të parë nëse kjo është zgjidhja e duhur dhe ku kemi nevojë ta rregullojmë.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: Duket sikur ka një problem! Ne kemi nevojë për një bllok më shumë ec përpara. Butoni i hapit na ndihmon neve të rregullojmë problemin tonë duke identifikuar ku gabimi është kështu qe ne mund ta riparojmë atë.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Në kokën tuaj mbani kapelën dhe mendja juaj do të ju tregojë juve kur jeni në dhe të mendoni për kopshtin zoologjik, dhe të tundi kokën tung për ty dhe ty! Përdor kokën tuaj kur ju jeni online për të ruajtur cfarë është e juaja brenda kokës suaj dhe të dini si të jeni i sigurtë, si ti jepni jetës tuaj pak hapësirë private! Nga koka juaj poshtë këpucëve tua, pauzo, mendo për këtë. Nga këmbët të hunda juaj, pauzo dhe mendo online!
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Përdor zemrën tënde të rritesh dhe të rritesh, dhe ti japësh vetës një shkelqim të shëndetshëm, dhe të bërë një të dashur, t'i thuash dikujt se do të jesh i imi! Përdor zemrën tuaj kur jeni online, ndjej cfarë është e duhur dhe gjithmonë e këndshme, dhe trego për shokët tuaj respekt, të jesh i drejtë dhe i mirë në internet. Nga koka juaj te këpucët, pauzo, mendo për të. Nga këmbët te hunda juaj, pauzo dhe mendo online!"
       3:
         image: notes/C2_digital_footprint_3.png
-        text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "Përdor krahët tuaj për të përqafuar kafshën tuaj shtëpiake, të mbash rrobat tuaja nga lagështia, dhe për të veshur mëngët tuaja të preferuara dhe të ju ndihmojë të flutorosh dhe të ju bëj të besosh. Përdor krahët tuaja kur ju jeni online, për të marrë pushim dhe për të balancuar kohën dhe të lësh teknologjinë anash dhe t'i gjesh vets një lis për t'u ngjitur. Nga koka juaj te këpucët, pauzo, mendo për të. Nga këmbët tuaja te hunda juaj, pauzo dhe mendo online!"
       4:
         image: notes/C2_digital_footprint_4.png
-        text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Përdor barkun tënd për të vendosur ushqimin, dhe të ndëgjosh ulërimin e tij, për të bërë një bark të bie, dhe të ndjesh gazin në pop sode. Përdor barkun kur je online, të shikosh për shenja të caktuara, dhe të lejosh atë të tregojë rrugën dhe të tregojë kur nuk është në rregull. Nga koka juaj te këpucët tuaja, pauzo, mendo për atë. Nga këmbët tuaja te hunda, pauzo dhe mendo online!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
+        text: Kështu që mendo me kokën tënde, dhe ndjeje me zemrën tënde, balanco krahët tu, ndëgjo te barku yt, online. Përdor këmbët për të drejtuar dhe goditur, dhe për të kërcyer në një shkop pogo, dhe të vallëzosh rreth bllokut, dhe të kaloni së bashku në qorapet tua me aromë. Përdor këmbët tuaja kur jeni online për të qendruar që të kalojnë vijën, dhe kujto të qëndrosh gjatë, ji i mirë te krijesat e mëdha dhe të vogla.
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!
+        text: Nga koka juaj te këpucët, pauzo, mendo për të. Nga këmbët te hunda juaj, pauzo dhe mendo online! Kështu që mendo me kokën tënde, dhe ndjej me zemrën tënde, bëj balancin me krahët tu, ndëgjo në barkun tënd, qëndro ngritur me këmbët tua. Nga koka juaj te këpucët tua, pauzo, mendo për të. Nga këmbët tua te hunda juaj, pauzo, mendo online!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?
+        text: Cdoherë që ju jeni online, ju lërni një gjurmë që mund të kërkohet, kopjohet, shpërndahet, transmetohet dhe është e përhershme. Cfarë lloj të gjurmëve digjitale po leni? Cfarë lloj të gjurmëve digjitale dëshironi të leni?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: 'Ky mësim thirret "Programimi i letër grafiqeve" dhe ka të bëjë me algoritme. Sot ne do të mësojmë si të shkruajm programe që i tregojnë njëri tjetrit si të rikrijojnë imazhe të thjeshta bardhë edhe zi, duke përdorur vetëm shigjeta të tërhequra me dorë.'
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: Një algoritëm është një listë e instruksioneve për të kompletuar një detyrë. Ne do të njekim këtë kuti të instruksioneve për të bërë tasin. Algoritmet janë me të vërtetë ndihmuese kur ju keni nevojë për dikë të kuptojë si të bëjmë dicka.
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: Nëse ju jeni duke shkruaj një algoritëm për një kompjuter, ju duhet ta ndani atë në hapa të vegjël. Kështu që përfundoje këtë rresht dhe shko te tjetri, pastaj te tjetri, dhe do ta përfundosh.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
+        text: Unë përdor algoritmet në punën time. Nëse unë shkruaj të gjitha hapat unë mund të rikrijojë të njejtën pjesë përsëri, apo unë mund të mësojë dikë ta bëjë këtë. Vendos xhamin në tharrës, bashkëshkrij ato së bashku, ndjek të gjitha instruksionet për të bërë tasin. Algoritmet ju japin juve një hartë të rrugës për të përfunduar dicka.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started.
+        text: Këtu ne do të përdorin bllokun përsëritës të na ndihmojë neve të ruajmë hapat kur jemi duke programuar artistin. Ne tashmë kemi disa blloqe jashtë fazës tonë por ata janë atje vetëm sa të fillojmë ne.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square.
+        text: "Për t'i përsëritur këto blloqe katër herë për të vizatuar të gjithë katrorin, ne tërheqim jashtë bllokun përsëritës dhe vendosim blloqet ec përpara dhe kthehu djathtas brenda bllokut përsëritës. Kur shtypim lësho, artisti do të përsëris këta hapa katër herë për të kompletuar katrorin."
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: "A loop is a repetition of activity. Going into a hive to inspect, I look at a frame, and then I put it back. I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: Një unazë përsëritëse është një përsëritje e aktivitetit. Duke shkuar brenda një zgjua për të inspektuar, unë shikojë në një kornizë, dhe pastaj e vendos atë prapa. Unë përsëris të njejtin aktivitet disa herë. Është duke u përsëritur përreth, duke e bërë aktivitetin e njejtë disa herë.
       2:
         image: notes/C2_bee_loops_2.png
-        text: "This is the repeat block. Whatever you put inside the repeat block will repeat those actions the number of times that you tell it to. For example, in this level, rather than drag out move forward and get nectar three times, we're going to just drag them out once each and repeat the action three times. That made it easy!"
+        text: "Ky është blloku përsëritës. Ckado që ju vendosni brenda bllokut përsëritës do të përsërisë këto veprime numrin që ju i thoni t'a bëjë. Për shembull, në këtë nivel, më mirë sesa të terheqim jashtë ec përpara dhe të marrim nektarin tre herë, ne do të tërheqim atë njëherë dhe të përsërisim veprimin tre herë. Ajo e bëri atë më të lehtë!"
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: Zakonisht programimi është i gjithi në tekst por ne do të përdorim Bllokuesin i cili përdorë blloqe vizuele që ju tërhiqni dhe lëshoni për të shkruar programe. Poshtë mbulesës ju ende jeni duke krijuar kodim. Për të filluar, ne do të ndërtojmë kodim për një program që do të ndihmojë këtë Angry Bird të lëvizë përmes një labirinti për të mbrrirë te derrat e egër që vodhi vezët e tij.
       2:
         image: notes/C2_maze_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Bllokuesi është i ndarë në tre pjesë kryesore. Në të majtë është labirinti i zogut, ku programi juaj fillon. Intruksionet për cdo nivel janë të shkruara poshtë labirintit. Kjo zonë e mesme është kuti e veglave dhe secili bllok është një komandë që zogu mund ta kuptojë. Hapësira e bardhë në të djathtë thirret hapësirë e punës dhe kjo është ku ne do të ndërtojmë programin tonë.
       3:
         image: notes/C2_maze_intro_3.png
-        text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: 'Nëse unë tërheq bllokun lëvizës në hapsirën tonë të punës dhe shtyp "lësho" cfarë ndodhë? Zogu lëvizë përpara një kuti në rrjet. Dhe cka nëse unë dua që zogu të bëjë dicka pasi që e lëvizë përpara një kuti? Unë mund të shtojë një tjetër bllok në programin tonë.'
       4:
         image: notes/C2_maze_intro_4.png
-        text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "Run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+        text: 'Unë do të zgjedhë bllokun "kthehu djathtas" dhe do ta tërheqë atë poshtë bllokut tim lëvizës deri sa shigjeta e verdhë të paraqitet. Pastaj do ta lëshojë dhe dy blloqet do të kapen së bashku. Kur unë shtyp "lësho" përsëri, zogu do të performojë komandat që janë grumbulluar nga lart poshtë në hapsirën tonë të punës.'
       5:
         image: notes/C2_maze_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: "Nëse ju dëshironi të fshini ndonjë bllok, vetëm largoje atë nga grumbulli dhe tërhiqe te shporta. Pasi që ju shtypni lësho, ju mund gjithmonë të shtypi butonin rivendos për të kthyer zogun mbrapa nga fillimi. Tash lë t'i marrim këta derra!"
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms.
+        text: Ky mësim thirret Algormitni në jetën e vërtetë. Algoritmet shpjegojnë gjërat që njerëzit bëjnë cdo ditë. Recepte të kekeve dhe drejtimet për të ndërtuar një fole janë algoritme cdo ditore.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: "Sot ne do të bëjmë, krijojmë dhe testojmë një algoritëm për një aeroplan letre. Por në fillim, ne duhet ta ndajmë këtë projekt të madh në hapa të vogël të lehtë për t'i ndjekur. Për të bërë një aeroplan letre. ne duhet të vendosim cfarë hapa të marrim dhe në mënyrë që t'i marrim ata."
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: Ju do të krijoni argoritmin tuaj fillimisht duke prerë në pjesë pikturen. Në vazhdim, ju do të zgjidhni 6 forografi që tregojnë hapat të nevojshëm për të bërë një aeroplan letre dhe për të aranzhuar në mënyrën e duhur. Pasi që keni bërë gjithcka në rregull, ju do të tregtoni algoritmet me një tjetër ekipë studenti për të provuar nëse algoritmi punon. Një algoritëm i mirë dizajnuar është shumë i rëndësishëm për të bërë aeroplanin më të mirë prej letre.
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
+        text: Kur ne bëjmë qokolatë, janë disa hapa të mëdhenjë në atë proces. Dhe secili nga këta hapa të mëdhenjë ka setin e vet me hapa të vegjël. Dhe ka recepte të ndryshme, apo algoritme, duke u bazuar në atë se si duam që qokolata të shijojë. Cdo hap është i rëndësishëm, edhe të vegjlit. Kështu që pa një hap, të tjerë nuk mund të kompletohen. Krijimi i algoritmeve që të tjerët mund të kuptojnë është me të vërtetë i rëndësishëm. Kjo është për shkak që cdo hap duhet të shkruhet, kështu që nuk ka lidhje kush e bën atë, rezultati është i njejtë.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -764,215 +760,214 @@ sq:
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: Sot ne do të transmetojmë programimin. E gjitha është rreth programimit në presion dhe rregullimi i gabimeve që ndonjëherë ndodhin kur ju punoni shumë shpejt apo në ekipe. Ne do të përdorim letër grafik programimin për të stimuluar kodimin, dhe përdorimin i garave transmetuese për stimulimin duke pasur një afat.
       2:
         image: notes/C2_relay_programming_2.png
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: Në transmetimin e programimit, ekipet do të garojnë për të përfunduar nje program grafiku letre. Ju duhet të kontrolloni punën e kolegut tuaj, ta rregulloni, fiksoni nëse ka ndonjë gabim, shtoje shigjetën tuaj dhe lësho dhe etiketo kolegun tuaj.
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it.
+        text: Programerët përdorin shumë rregullimin për të gjetur dhe fiksuar problemet në algoritmet e tyre apo kodim. Ka shumë rrugë për të rregulluar problemet. Një nga më të lehtat është për të lëvizur hap pas hapi derisa ju gjeni dicka që shkon gabim, pastaj fiksoje atë.
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: Këtu, unë jam duke provuar për të bërë një salto me duar prapa, por vazhdoj të bie. Unë ec përmes secilës pjesë, hap pas hapi, dhe kuptojë ku kanë qenë gabimet e mia. Trajneri im më tregoi mua që unë nuk isha duke i vënë duart në kokë në rregull. Kështu që unë provova një tjeter salto me duar prap në kokë me pozicionin tim të ri të duarve, dhe ja dola! Unë isha shumë krenar që e rregullova salton time me duar prapa. Ne e gjetëm! Rregullimi është gjetja dhe fiksimi i problemeve. Mirë, punë e mirë!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: "One thing that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots of times in a row. But a computer can do the same thing millions or even billions of times, and not get bored and be able to carry that out really well."
+        text: Një gjë që kompjuterën janë vërtetë të mirë është përsëritja e komandave. Si një person, ju do të mërziteni nëse do të duhej të bënit të njejtën gjë shumë herë në një rresht. Por një kompjuter mund të bëje gjënë e njejtë milion apo bilion herë, dhe nuk mërzitet dhe është në gjetje ta bëjë shumë mirë.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: "So for example if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than a century to actually write out all of those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday. So that's what loops are, and why they're valuable, and something that computers can do very well."
+        text: "Kështu që për shembull nëse dëshiron t'i urosh secilit në Facebook një urim ditëlindjeje duke dërguar një email, do të marrë më shumë kohë se një shekull për t'i shkruat të gjithë këto emaile për secilin. Por me pak linja kodimi, unë mund të kem një sistem për të dërguar një email të secili në Facebook duke i uruar një ditëlindje të gëzuar. Kjo është cfarë përsëritjet janë, dhe pse janë të vlefshme, dhe diqka që kompjuterët mund ta bëjnë shumë mirë."
       3:
         image: notes/C2_zuck_repeat_loop_3.png
-        text: |-
-          In this example your goal is going to be to move the bird to get the pig.  Now we're gonna be able to use the "repeat" block in order to be able to do this very easily. You can either do this by giving the computer a "move forward" command five times in order to advance the bird one step each time to the pig.
+        text: 'Në këtë shembull qëllimi juaj do të jetë për të lëvizur zogun për të marrë derrin. Tani ne do të jemi të gatshëm të përdorim bllokun "përsëritës" në mënyrë që të jemi të gatshëm ta bëjmë këtë shumë lehtë. Ju mund ta bëni këtë duke i dhënë kompjuterit komanden "ec përpara" pesë herë në mënyrë që të avancosh zogun një hap përpara për te derri.'
       4:
         image: notes/C2_zuck_repeat_loop_4.png
-        text: 'Or you can just tell the computer to "move forward" once, and then tell it to "repeat" that 5 times, and it will do the same thing. So in order to do this you drag your "move forward" command, and then you put it inside the "repeat" block.And you can click on it and tell it how many times you want to repeat the block to tell it how many steps you want it to take forward.'
+        text: |-
+          Apo ju mund ti thoni një kompjuteri të "ec përpara" njëherë, dhe pastaj t'i thoni ta "përsëris" atë 5 herë, dhe do ta bëjë gjënë e njejtë. Kështu që në mënyrë për ta bërë këtë tërhiq komandën tuaj "lëviz përpaa" dhe pastaj vendose brenda bllokut "përsërit". Dhe ju mund të klikoni në të dhe t'i tregoni së herë ju dëshironi të përsërisni bllokun për t'i treguar së shumë hapa dëshironi që të marrë përpara.
       5:
         image: notes/C2_zuck_repeat_loop_5.png
-        text: |-
-          Now one more thing is you can put as many commands as you want inside the "repeat" block. So in this example you're telling it to move forward and turn left, which it will do five times. All right good job and have fun!
+        text: 'Tani një gjë më shumë është që ju mund të vendosni aq shumë komanda sa ju dëshironi brenda bllokut "përsërit". Kështu që në këtë shembull ju do ti tregoni ta lëvizë përpara dhe të kthehet majtas, që do tav bëjë pesë herë. Gjithcka në rregull punë e mirë dhe kënaqu!'
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+        text: Një nga gjërat më të mëdha në programimin kompjuterik është që nëse njëherë ju mësoni një kompjuter si ta bëjë një veprim, ju mund të thërrisni atë funksion përsëri. Ju i jepni një emër dhe pastaj ju e thërrisni atë. Kjo është sikur zgjerimi i një gjuhe.
       2:
         image: notes/C3_artist_functions_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square, so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code. It will get done for us. We've added that concept to our programming language."
+        text: "Në programin që ne ndërtojmë, ne kemi mësuar si të vizatojmë një katror duke lëvizur dhe duke kthyer katër herë. Ne mund të marrin atë funksion dhe t'i japim një emër, vizatoj një katror, kështu që në qdo kohë që duam ta bëjmë atë, ne thjeshtë themi vizato një katror dhe do të kthehet dhe ta bëjë atë funksion, atë kod. Do të kryejë për ne. Ne e kemi shtuar atë koncept në gjuhën tonë programuese."
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: Ju nuk do të mund as të kualifikoheni për garën nëse nuk keni njerëz që janë të aftë në shkenca kompjuterike sepse kaq shumë të dhëna që makinat grumbullojnë dhe nevoja për të pasur njerëz që mund të shkruajnë programe për të gjetur si të vazhdojmë të gjejmë si të ndërtojmë performancën.
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Në këto enigma, ju do të jeni një artist që përdorë një laps për të vizatuar forma të ndryshme. Kudo që artisti juaj shkon, do të vizatoje një vizë pas jush.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Për të lëvizur rreth kanavacës, ju do të përdorni bllokun lëviz përpara. Këtu blloku lëviz përpara thotë lëviz përpara me 100 pikselë. Kur ne shtypim lësho, cfarë ndodhë? Artisti lëviz përpara në shumë të caktuar dhe ajo shumë është 100 pikselë. Pikselët janë katrorë shumë të vegjël në ekranin e kompjuterit tuaj.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Blloku tjeter që ne kemi në këtë enigmë thotë kthehu djathtas në 90 shkallë. Dhe kur ne tërheqim atë e bën artistin tonë të kthejë një shumë të caktuar. Kështu që ju mund të luani përreth me aq shumë sa ju dëshironi që artisti të kthejë. Kjo është një 90 shkallë kthesë.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Dhe kjo është një 120 shkallë kthesë. Dhe kujto, ti mund të ndryshosh këto vlera duke klikuar në shigjetën afër numrave për pikselë dhe shkallë. Shijo vizatimin me artistin tuaj!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: "When you put a loop inside of another loop, we call that a nested loop. For example, here we're given the code already to draw one triangle with sides of length 100 pixels using the repeat times block set to three, once for each side of a triangle."
+        text: Kur ju vendosni një përsëritës brenda një tjetër përsëritësi, ne thërrasim një unazë përsëritëse të mbivendosur. Për shembull, këtu ne kemi dhënë kodin tashmë për të vizatuar një trekëndësh me anë të gjatësisë 100 pikselë duke përdorur herët përsëritëse të setit me blloqe në tre, një për secilën anë të trekëndëshit.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+        text: Por ne duam të vizatojmë gjashtë trekëndësha. Në mënyrë që ta bëjmë këtë, ne do të marrim këtë unazë përsëritëse dhe ta vendosim atë brenda një blloku tjetër përsëritës. Shumë bukur!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: Ky është një bllok i kushtëzuar. Thotë NËSE ka një nektar apo mjaltë që është më pak, e barabartë apo më e madhe se një numër, PASTAJ bëj diqka.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Kjo është ndihmuese kur ne nuk dijmë sa shumë nektar apo mjaltë të marrim, siq e shohim këtu me këtë shenjë pyetse.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: Në këtë shembull, ne do të themi se NËSE lulja vjollcë ka nektar me të madh se 0, merr nektar. Ajo do të i tregojë bletës tonë të mbaj nektarin aq gjatë sa është atje. Ta-dah!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Keni ndegjuar ndonjëherë për rregullimin e një programi? Kjo është mënyra si ju kuptoni cfarë nuk punon. Kur ju rregulloni një kod, ju identifikoni dhe fshini gabimet.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: Këtu ne tashmë kemi disa blloqe në hapsirën tonë të punës. Ne do të përdorim butonin e hapit për të ecur përmes blloqeve, hap pas hapi, për të parë nëse kjo është zgjidhja e duhur dhe ku kemi nevojë ta rregullojmë.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
+        text: Duket sikur ka një problem! Ne kemi nevojë për një bllok më shumë ec përpara. Butoni i hapit na ndihmon neve të rregullojmë problemin tonë duke identifikuar ku gabimi është kështu qe ne mund ta riparojmë atë.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define new commands, how to add your own words to a computer language. Most computer languages have only about one hundred words or commands. The art and magic is in defining your own new words out of these building blocks.
+        text: Një nga konceptet më të rëndësishme në shkenca kompjuterike është si të definosh komanda të reja, si të shtosh fjalët tua në një gjuhë kompjuterike. Shumica e gjuhëve kompjuterike ka vetëm rreth 100 fjalë apo komanda. Arti dhe magjia është në definimin e fjalëve tua të reja jashtë këtyrë blloqeve ndërtuese.
       2:
         image: notes/C3_bee_functions_2.png
-        text: "We do this all the time in sports. For example, in basketball, you start by learning how to dribble, how to do a lay-up, how to rebound. Once you've learned these really basic moves, you learn new moves and put together these building blocks, like a pick and roll or give and go. You can then go from there to do more complex plays. Once you learn that play and give it a name, everybody on the team knows how to do it."
+        text: "Ne e bëjmë këtë gjithë kohën në sporte. Për shembull, në basketbollm ju filloni duke mësuar si të dribloni, si të hedhni lart, si të tërhiqeni. Njëherë që ju mësoni këto lëvizje bazike, ju mësoni lëvizje të reja dhe t'i vendosni së bashku këto blloqe ndërtuese, si një zgjedh dhe rrotullo apo jep dhe shko. Ju mund pastaj të shkoni nga aty për të bërë më shumë lojra komplekse. Njëherë që mësoni atë lojë dhe i jepni një emër, secili në ekipë do të dijë ta bëjë atë."
       3:
         image: notes/C3_bee_functions_3.png
-        text: "Similarly once you've taught a computer how to do an action once using these sequences of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function. Now we're going to use functions to help the bee."
+        text: "Njejtë njëherë pasi që keni mësuar një kompjuter si të bëjë një veprim njëherë duke përdorur këto sekuenca të komandave, ju mund të krijoni emrin tuaj për atë veprim kështu që është e lehtë për ta përsëritur më vonë. Kur ju definoni komandën tuaj dhe i jepni një emër, ajo thirret një funksion. Tani ne do të përdorim funksionet t'i ndihmojmë bletës."
       4:
         image: notes/C3_bee_functions_4.png
-        text: "In this example, our function is called get 2 nectar, this green block right here. We know what get 2 nectar does by looking at this grey box which is the function definition. If we look inside there, the get 2 nectar is going to get nectar and then get nectar again. Always look at what's inside the grey box so that you know what these green function blocks can do."
+        text: Në këtë shembull, funksioni jonë thirret 2 nektar, ky bllok i gjelbër këtu. Ne e dijmë cfarë marrja e 2 nektarëve bën dukë shikuar në këtë kuti gri e cila është definicioni i funksionit. Nëse ne shikojmë brenda, marrja e dy nektareve do të marrë nektarin dhe pastaj të marrë nektarin përsëri. Gjithmonë shiko cfarë ka brenda kutisë gri kështu që ju dini cfarë këto funksione të blloqeve të gjelbërta mund të bëjnë.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: "Now we're going to use nested loops with the bee. We're given some starter code which tells the bee to move forward and get nectar three times and then turn right. Let's take that whole piece of code and nest it inside another repeat block and set to repeat three times. Done!"
+        text: Tani ne do të përdorim unazat përsëritëse të mbivendosuar me bletën. Ne kemi disa kode startuese që tregojnë bletë të ecë përpara dhe merr nektarin tre herë dhe pastaj të kthehet djathtas. Le të marrim të gjithë pjesën e kodit dhe mbivendosim atë brenda bllokut përsëritës dhe vendosim në përsëritje tre herë. U krye!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: "You're going to be creating your very own bounce game that you'll be able to share with your friends! How cool!"
+        text: Ju do të krijoni lojën tuaj të kërcimit që do të jeni në gjendje ta shpërndani me shokët tuaj! Shume bukur!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow keys on our keyboard.
+        text: Për të filluar, ne duket të lidhim kontrollet e vozitjes në qelsat e shigjetës në tastierën tonë.
       3:
         image: notes/C3_bounce_3.png
-        text: "We can do this by linking the when left arrow block to the move left block and the when right arrow block to the move right block. Give it a go and you'll be programming your own bounce game in no time!"
+        text: Ne mund të bëjmë këtë duke lidhur bllokun e shigjetës së majtë te blloku i majtë dhe bllokun e shigjetës së djathtë te blloku i djathtë. Jepi një shtysë dhe ju do të jeni duke programuar lojën tuaj të kërcimit në jo kohë!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: "This lesson is computational thinking. Sometimes learning a new game can be tough, right? At first it might seem really confusing and sometimes, there's no one there to teach you the rules, so you have to figure it out on your own."
+        text: Ky mësim është të mendiarit kompjuterik. Nganjëherë të mësuarit e një loje të re mund të jetë e ashpër, apo jo? Në fillim mund të duket me të vërtetë konfuze dhe nganjëherë, nuk është askush për të ju mësuar rregullat, kështu që ju duhet të zbuloni tuajat.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
+        text: Lajmi i mirë është që ju mund të bëni më mirë dukë gjetur gjërat vetë kur ju dini disa trika. Këto trika janë mënyra unike për të shikuar dhe zgjidhjen e problemeve. Në këtë mësim, ju do të mësoni katër trike dhe praktikoni ato me shokët për të zbuluar rregullat për një lojë.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+        text: Kur ju e ndani një problem të madh në pjesë të vogla, ju jeni duke përdorur trurin tuaj për të zbërthyer problemin e madh. Si të zbërthejmë problemin e madh ne disa probleme të vogla, ne mund të shkojmë në trikun tonë të rradhes, i cili thirret përshatatja e modeleve.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+        text: Kjo është kur ne shikojmë për ngjasime në mes të gjërave. Njëherë që gjej gjërat që janë të njejta, unë mund të zbulojë gjërat që janë të ndryshme. Kur une fshij këto ndryshime, ajo thirret abstragim.
       5:
         image: notes/C3_computational_thinking_5.png
-        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+        text: Pasi që kam zbuluar hapat në zgjidhjen e një problemi, unë mund të vendos këta hapa në nje mënyrë specifike që thirret një algoritëm kështu që cdokush mund të përdor drejtimet e mia për të zgjidhur atë problem. Ne do të përdorim këta katër hapa për të zbuluar si të luajmë një lojë pa rregulla. Në fund të lojës, ju do të jeni në gjendje të luani dicka që duket kështu!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: "This lesson is called crowdsourcing. In this lesson we'll use a deck of cards to learn about how much easier some things can be to do in groups instead of trying to do them all alone. So grab some friends and make something awesome. Crowdsourcing is getting help from a large group of people to finish something faster."
+        text: Ky mësim thirret bing. Në këtë mësim ju do të përdorni një pako kartash për të mësuar sa lehtë disa gjëra mund të jenë për të bërë në grupe në vend të provojnë të bëjnë gjithqka të vetëm. Kështu që merr disa shoke dhe krijo diqka të bukur. Bingu është marrja e ndihmës nga një grup të madh të njerëzve për të përfunduar diqka më shpejtë.
       2:
         image: notes/C3_crowdsourcing_2.png
         text: In computer science, we use crowdsourcing all the time. Thousands of amateurs and professionals link their computers together to search through billions and billions of pieces of information. Looking for things like the next Marsenne prime number, or even possible alien communications.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: "When you see a movie, each second of the movie is 24 individual pictures, we call those frames. So every one of those pictures needs to be created and rendered and put all together. My team and I, we're all software developers. We all work together to create a piece of software that actually creates an image, creates the final image that you see on screen. That's a tool that artists and other developers can use as part of their teamwork and their process to be able to create the images that they want on screen."
+        text: "Kur ju shikoni një film, secili sekond i filmit është 24 fotografi individuale, ne i thërrasim këto korniza. Kështu që secili nga këto fotografi ka nevojë për t'u krijuar dhe për t'i vendosur të gjitha bashkë. Ekipi im dhe unë, ne të gjithë jemi zhvillues të softuerit. Ne të gjithë punojmë për të krijuar një pjesë softueri që aktualisht krijon një imazh, krijon imazhin final që ju shikoni në ekran. Është një mjet që artistët dhe zhvilluesit mund ta përdorin si një pjesë të punës ekipore të tyre dhe procesit të tyre për të qenë të gatshëm për të krijuar imazhet që ata duan në ekran."
       4:
         image: notes/C3_crowdsourcing_4.png
         text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
+        text: Ky mësim thirret garë me zare. Gati cdokush pëlqen të luaj lojra kompjuterike. A keni menduar ndonjëherë rreth asaj si programuesit e kompjuterin kthejnë hapat të një loje në një program? Hapi i parë në krijimi e lojrave kompjuterike dhe në zgjidhen e cfarë do problemi kërkon të menduarit dhe planifikimin.
       2:
         image: notes/C3_dice_race_2.png
-        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+        text: Hapi i të menduarit në zgjidhjen e problemit prodhon një algoritëm, cili është një plan hap pas hapi në zgjidhjen e problemit apo në përfundimin e detyrave. Në këtë mësim, ju do të krijoni një algoritëm për nje garë loje me zare. Pastaj ju do të pyesni shokët tuaj ta provojnë planin tuaj për të parë nëse ata mund të ndjekin hapat për të luajtur lojën. Pasi që programeri është i sigurtë që hapat janë korrekt, është koha për të përkthyer algoritmin në një program me një gjuhë që kompjuteri mund të kuptojë.
       3:
         image: notes/C3_dice_race_3.png
-        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+        text: "Gati se gjithcka që ne bëjmë cdo ditë kërkon një algoritëm, një listë të hapave që ju mund të ndiqni për të përfunduar një detyrë. Mendo për t'u bërë gati për shkollë apo për të planifrikuar një ditë knaqësie me shokët tuaj apo fiksimin e një pjese. Për të përfunduar një nga këto detyra, ju duhet të ndani atë në hapa të vegjël dhe nganjëherë hapat duhet të jenë në një mënyrë specifike."
       4:
         image: notes/C3_dice_race_4.png
-        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+        text: Mendo për të bërë një sanduiq. Nuk ka rëndësi cilin përbërës ju nxirrni nga bufeja së pari. Por ju nuk mund të shperndani gjalpin e kikirikut para se të hapni qypin. Kompjuterët kanë nevojë për algoritme dhe programe për të u treguar atyre si të bëjmë edhe gjërat me të thjeshta që ne mund të bëjmë pa menduar për të.
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
+        text: Një algoritëm është të menduarit pas asaj se qfarë duhet të ndodhë përderisa programi është instruksionet aktuale të dhëna te kompjuteri për ta bërë të ndodhë. Një algoritëm duhet të përkthehet në një program para se kompjuteri ta lëshojë atë. Ndarja e një detyre në algoritëm është nganjëherë e rëndë. Por sikur cdo aftësi e re, bëhet me e lehtë me praktikim.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: "While loops are pretty similar to what you do in everyday life. Imagine you are washing your car, you'll keep scrubbing until it's clean. While it's not clean, continue to scrub. You're evaluating these things all the time."
+        text: Përderisa përsëritjet janë shumë të ngjashme me atë se cfarë bëni cdo dite në jetë. Imagjino që ju jeni duke e larë veturën tuaj, ju do të vazhdoni ta pastroni përderisa është e pastër. Përderisa nuk është e pastër, vazhdo ta pastrosh. Ju jeni duke vlerësuar këto gjëra gjatë gjithë kohës.
       2:
         image: notes/C3_farmer_while_2.png
-        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+        text: Ne kemi një pamje të re për të ndihmuar fermerin tuaj. Thirret një përderisa-bllok. Është shumë e thjeshtë aktualisht. Përderisa një fjali në maje është e vërtetë, bëj diqka. Për shembull, përderisa ka një grumbull leviz një. Shko përpara dhe jeni një provë me fermerin tuaj.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: "Ky mësim është dekorim diellsjellës funksional. Ju do të jeni duke krijuar këto dekorime duke përdorur funksionet. Janë disa hapa në krijimin e një nga këto diellsjellës dekorime. Disa nga hapat ju duhet t'i përsërisni shumë herë."
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+        text: Hapi i parë në thjeshtësimin e procesit për krijimin e një diellsjellës dekorimit është të zbulojmë cka ne duhet të përsërisim përseri dhe përsëri. Ne mund të grupojmë këta hapa në cfarë ne thërrasim një funksion.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: Por ka më shumë në krijimin e një diellsjellës dekorimi të bukur sesë përcjellja e hapave preciz. Nganjëherë ne duam të jemi kreativ dhe ndryshojmë ngjyren e rruzava që ne jemi duke përdorur. Ne mund të bëjmë cdo diellsjellës dekorim unik nëse ne përdorim rruza me ngjyra të ndryshme.
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: "Dekorimi juaj diellsjellës do të jetë unik i juaji kur ju mësoni të mendoni për rruza si variabla e cila është një fjalë që do të thotë 'placeholder' per informacionin që mund të ndryshojë. Kënaqu duke krijuaj dekorime diellsjellës të bukur duke përdorur funksionet dhe variablat!"
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly.
+        text: Ky mësim është rreth internetit. Interneti është një vend shumë i ngarkuar dhe i ngjashëm me këtë rrugë të ngarkuar. Mesazhet si veturat janë duke ikur shpejtë për të mbërrirë në destinacionet e tyre. Mesazhet lëvizin nëpërmes internetit shumë shpejt.
       2:
         image: notes/C3_internet_2.png
-        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+        text: Duke kuptuar si interneti punon do të ju ndihmojë të kuptoni cfarë po ndodhë kur ju përdorni internetin. Ju do të mësoni si mesazhet shkojnë nga kompjuteri juaj në një faqe të internetit të preferuar apo nga një shok në inbox të emailit. Sikur që është lehtë të drejtosh në rrugët e ngarkuara kur ju dini rrugët dhe mund të lexoni shenjat, udhëtimi në internet nuk është aq i komplikuar kur ju dini cfarë ndodhë pas skenës.
       3:
         image: notes/C3_internet_3.png
-        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+        text: Dergimi i mesazheve në internet është pak sikur dërgimi i mesazheve në email por me disa ndryshime. Uhë jam këtu në Google.com IP adresa për këtë faqe të internetit është ky numër. Ju mund të mendoni për një IP adresë si adresë kthyese në email. Le të imagjinojmë që unë dua të dërgojë një mesazh në postë te dikush në zyre. A po shikoni URL dhe IP adresën në atë derë? Unë e kam shkruar këtë mesazh dhe shtypur dërgo.
       4:
         image: notes/C3_internet_4.png
-        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+        text: "Sikur shërbimi i postës, gjëja e parë që ndodhë është që interneti e ndan mesazhin në pjesë të vogla kështu që mund të dërgohet më lehtë. Këto pjesë të vogla thirren pako. Secila pako e mesazheve është e dërguar në destinacionin njëherë. Këto paketa janë të vendosura së bashku në mënyrën e duhur kështu që pranuesi mund të lexojë mesazhin në mënyrë korrekte. Sigurisht, ka shumë gjëra për të mësuar se si interneti punon por ky është një fillim i bukur. Ju jeni në rrugën tuaj për t'u bërë një përdorues interneti i menqur! Ji i sigurtë të iu tregosh familjes dhe shokëve tuaj cfarë keni mësuar!"
       5:
         image: notes/C3_internet_5.png
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: Emri im është Armanda Camp dhe unë jam një inxhinier softueri në Google. Unë punojë në një ekip që punon në serverin backend që ruan profile dhe kontakte. Në punën time, ne mendojmë shumë se si kontaktet mund të dërgohen në paisje tjera, sikur në telefon. Shumë njerëz kanë shumë kontakte, ju mund të keni thënë, 1000 kontakte dhe ne nuk duam të dërgojmë të gjithë këto kontakte njëherë në telefonin tuaj sepse është mesazh shumë i madh. Njejtë sikur interneti e ndan një mesazh të madh në pako, ne përdorim një koncept që thirret ndarje ku ne mund të dërgojmë vetëm 100 kontakte në një kohë dhe lejojmë telefonin tuaj të pergjigjet duke kërkuar për 100 të rradhës.
       6:
         image: notes/C3_internet_6.png
-        text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
+        text: Gjëja më emocionuese për softuerin është fakti që mund të ketë ndikim në të gjithë botën. Unë në fillim mësova të programoj kur unë isha gati nëntëmbëdhjetë. Unë mendojë që isha gati student i vitit të dytë apo i ri në kolegj. Programi i parë që unë kujtoj dukë shkruar është diqka që konvertoi Celsius në Fahrenheit. Pëlqej programimin për shkak që unë pëlqej të ndihmojë njerëzit. Unë mund të shkruaj programe në Google që ndihmon njerëzit rreth gjithë botës dhe kjo është emocionuese.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+        text: Njerëzit marrin vendime cdo ditë. Për shembull, para se të dilni jashtë, ju keni një nëse deklarim që thotë nëse është duke rënë shi, unë duhet të marrë xhaketën time. Kompjuterët janë të mrekullueshëm kur ju vendosni këto lloje të deklaratave që mund seriozisht të ekzekutojnë këto gjëra në një shpejtësi të pabesueshme. Një program kompjuteri është me të vërtetë pak matematikë dhe disa nëse deklarata ku vendimi merret.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: "The if block helps the zombie make a decision. It checks something. For example, let's use the block that says if there's a path to the left, and put a turn left command inside it. We're telling the zombie to check its surroundings, see if there's a path on the left and if so, make that turn."
+        text: Blloku nëse ndihmon mumjet të marrin një vendim. Ajo kontrollon gjithcka. Për shembull, le të përdorim bllokun që thotë nëse ka një rrugë në të majtë, dhe jepi një komandë kthehu majtas brenda saj. Ne jemi duke ju treguar mumjeve të kontrollojnë rrethinat e saj, shikojnë nëse ka një rrugë majtas dhe nëse po, bëje atë kthesë.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: "Then we use the move forward block inside this repeat to get it to keep moving forward as long as it just wants to go straight. Then when there's a turn, the if block will tell it to make that turn to the left. You can see that if we do that, if we take the turn to the left and otherwise moving forward, we'll achieve our goal."
+        text: Pastaj ne përdorim bllokun ec përpara brenda kësaj përsëritje për të mbajtur atë duke lëvizur përpara aq gjatë sa dëshiron të shkojë drejtë. Pastaj kur ka një kthesë, blloku nëse do të ju tregojë të bëni atë kthesë në të majtë. Ju mund të shihni nëse ne e bëjmë atë, nëse ne marrim kthesën në të majtë dhe përndryshe duke lëvizur përpara, ne do të arrijmë qëllimin tonë.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: "It's an example of using an if statement which is really a fundamental concept in computer programming. One of the first things I learned was how to write a program that played tic-tac-toe. I had if statements to say, ok, if the other person is about to win, go ahead and block that spot. Have fun learning how to use if statements, it's a key concept."
+        text: Është një shembull të përdorimit nëse deklarimit i cili është më të vërtetë koncept fundamental në programimin kompjuterik. Një nga gjërat e para që kam mësuar ishtë si të shkruaj një program që ka luajtur lojën tic-tac toe. Unë kisha nëse deklaratën për të thënë, ok, nëse tjetri person do të fitojë, ec përpara dhe bllokoje atë vend. Kënaqu duke mësuar si të perdorësh nëse deklaratat, është një koncept kyq.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block.
+        text: Në këtë shembull, qëllimi juaj është ti dërgosh mumjet te luledielli. Ne mund të kishim përdorur pesë blloqe ec përpara apo ne mund të i kishin thënë kompjuterit të lëviz përpara dhe përsëris pesë herë duke përdorur bllokun përsëritës.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower.
+        text: Kjo kursen kohë dhe e bënë atë më të lehtë. Për të përdorur këtë, vetëm vendos bllokun ec përpara brenda bllokut përsëritës. Shtyp lësho dhe mumjet do të lëvizin përpara pesë herë për te luledielli.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -983,27 +978,27 @@ sq:
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program. The written notes and words tell the singer exactly what to do. Some parts of music are used over and over again.
+        text: Ky është mësimi i shkruarjes së këngës. Muzika është sikur një program kompjuteri. Shenimet e shkruara dhe fjalët tregojnë këngëtarit saktësisht cfarë të bëjë. Disa pjesë të muzikës janë të përdorura përseri dhe përsëri.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program that are used over and over again are called functions. When you read song lyrics and it says the word chorus, do you sing the word chorus? No, you look at the top of the page to see what words make up the chorus.
+        text: Ne e thërrasim këtë kor. Në një program kompjuterik, pjesët e programit që janë të përdorura shumë herë thirren funksione. Kur ju lexoni tekstin e këngëve dhe thotë fjalën kor, a e këndoni fjalën kor? Jo, ju shikoni në krye të faqes për të parë cfarë fjalë duhen për korin.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"
+        text: Në këtë mësim, ju do të mësoni një këngë të vogël pa kuptim që thirret lepuri i vogël foo foo. Kënga ka një kor që ju do të këndoni shumë herë përsëri dhe përsëri. Një funksion është një pjesë e kodimit qe ju mund ta thërrisni dhe përdorni shumë herë. Ajo e bën programimin më të lehtë dhe më eficient kështu që ju nuk duhet të shkuani hapat të funksionit tuaj shumë herë. Ju mund ta shkruani atë vetëm njëherë!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: "This is the conditional block. It says if you're at the flower or the honeycomb, then do something. This is useful when we don't know how much honey or nectar to get as we see here with this question mark."
+        text: Ky është blloku kushtëzues. Ajo thotë nëse jeni në lule apo në huall, pastaj bëj diqka. Kjo është e përdorshme kur ne nuk dijmë sa shumë mjaltë apo nektar të marrim siq e shohim këtë me këtë shenjë pyetse.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: "In this example, we're going to say, if it's a flower, get all the nectar and then use another one to say, if it's a honeycomb, make honey. Ta-dah!"
+        text: Në këtë shembull, ne do të themi, nëse është një lule, merr gjithë nektarin dhe pastaj përdore një tjetër për të thënë, nëse është një huall, bëj mjaltë. Ta-dah!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: "We have a new block that's called the if/else block. It's a conditional statement just like the if block you've used in the puzzles before. But now there's a new part at the bottom that says else. The if/else block lets the bee make a decision between two sets of actions. If the bee is at a flower, the bee will do the set of actions you put in the first part where it says do. If the bee is not at a flower, the bee will do the set of actions you put in the slot where it says else."
+        text: Ne kemi blloqe të reja që thirren blloku nëse/tjetër. Është një deklaratë kushtëzuese sikur blloku nëse që keni përdorur në enigma më parë. Por tani ka një pjesë tjetër në mes që thotë tjetër. Blloku nëse/tjetër lejon bletën të marrë një vendim në mes dy seteve të veprimeve. Nëse bleta është në një lule, bleta do të bëjë setin e veprimeve që ju vendosni në pjesën e parë ku ajo thotë bëje. Nëse bleta nuk është në një lule, bleta do të bëjë setin e veprimeve që ju vendosni në vrimë ku ajo thotë tjetër.
       2:
         image: notes/C4_conditionals_2.png
-        text: "If statements are how computers are able to make decisions. Humans set up conditions for the computer that say if the computer is presented with a certain situation do this. Else, which just means otherwise, do that. The top of our if/else block says if at flower. But the top of our block could say other things, like if nectar equals 2 or if there's a path ahead, our block will behave in the same way. That if the statement at the top is true it will do the first set of actions. But if the statement at the top is false, it will do the second set of actions."
+        text: Nëse deklarimet janë si kompjuterët janë të gatshëm të marrin vendime. Njerëzit vendosin kushtezimet për kompjuterin që thotë nëse kompjuteri është i prezantuar me një situatë të caktuar bëjë këtë. Tjetër, e cila do të thotë përndryshe, bëjë këtë. Maja e bllokut tonë nëse/tjetër thotë nëse në një lule. Por maja e bllokut tonë do të thotë gjëra tjera, sikur nëse nektari bën 2 apo nëse ka një rrugë përpara, blloku jonë do të sillet në të njejtën mënyrë. Ai nëse deklarim në maje është i vërtëte do të bëjë setin e parë të veprimeve. Por nëse deklarimi në maje është fals, do të bëjë setin e dytë të veprimeve.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
@@ -1050,7 +1045,7 @@ sq:
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+        text: Një nga gjërat më të mëdha në programimin kompjuterik është që nëse njëherë ju mësoni një kompjuter si ta bëjë një veprim, ju mund të thërrisni atë funksion përsëri. Ju i jepni një emër dhe pastaj ju e thërrisni atë. Kjo është sikur zgjerimi i një gjuhe.
       2:
         image: notes/C4_function_edit_2.png
         text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code and it will get done for us. We've added that concept to our programming language."
@@ -1073,10 +1068,10 @@ sq:
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: Zakonisht programimi është i gjithi në tekst por ne do të përdorim Bllokuesin i cili përdorë blloqe vizuele që ju tërhiqni dhe lëshoni për të shkruar programe. Poshtë mbulesës ju ende jeni duke krijuar kodim. Për të filluar, ne do të ndërtojmë kodim për një program që do të ndihmojë këtë Angry Bird të lëvizë përmes një labirinti për të mbrrirë te derrat e egër që vodhi vezët e tij.
       2:
         image: notes/C4_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Bllokuesi është i ndarë në tre pjesë kryesore. Në të majtë është labirinti i zogut, ku programi juaj fillon. Intruksionet për cdo nivel janë të shkruara poshtë labirintit. Kjo zonë e mesme është kuti e veglave dhe secili bllok është një komandë që zogu mund ta kuptojë. Hapësira e bardhë në të djathtë thirret hapësirë e punës dhe kjo është ku ne do të ndërtojmë programin tonë.
       3:
         image: notes/C4_intro_3.png
         text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
@@ -1086,7 +1081,7 @@ sq:
           I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
       5:
         image: notes/C4_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: "Nëse ju dëshironi të fshini ndonjë bllok, vetëm largoje atë nga grumbulli dhe tërhiqe te shporta. Pasi që ju shtypni lësho, ju mund gjithmonë të shtypi butonin rivendos për të kthyer zogun mbrapa nga fillimi. Tash lë t'i marrim këta derra!"
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
@@ -1660,4 +1655,57 @@ sq:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

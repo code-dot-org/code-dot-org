@@ -37,7 +37,8 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
+            # Allow the company cookie to be read and set to track company users for tutorials.
+            cookies: whitelisted_cookies + ['company']
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
@@ -76,6 +77,9 @@ class HttpCache
               /
               /learn*
               /congrats
+              /mc
+              /starwars
+              /playlab
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,
@@ -94,15 +98,18 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          # Turn off cookie stripping for the starwars script until we fix the bug where users are
-          # logged out after visiting this level. This must be re-enable before HOC 2015 to get
-          # the benefits of the CDN.
-          #
-          # {
-          # path: "/s/starwars/stage/1/puzzle/*",
-          # headers: LANGUAGE_HEADER,
-          # cookies: LANGUAGE_COOKIES
-          # },
+          {
+            path: %w{
+               /s/starwars/stage/1/puzzle/*
+               /s/starwarsblocks/stage/1/puzzle/*
+               /s/mc/stage/1/puzzle/*
+               /s/frozen/stage/1/puzzle/*
+               /s/gumball/stage/1/puzzle/*
+               /hoc/*
+            },
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES
+          },
           {
             path: '/api/*',
             headers: LANGUAGE_HEADER,

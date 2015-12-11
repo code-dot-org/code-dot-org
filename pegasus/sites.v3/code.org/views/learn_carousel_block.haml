@@ -1,15 +1,19 @@
 - short_code = I18n.t(:"#{id}_shortcode")
 - short_url = "https://hourofcode.com/#{short_code}"
-- show_sw_blocks = id == "starwars" && request.locale != "en-US"
-- if show_sw_blocks
-  - launch_code = "starwarsblocks"
+- if id == "starwars"
+  - if request.locale != "en-US"
+    - launch_path = "/api/hour/begin/starwarsblocks"
+  - else
+    - launch_path = "/starwars"
+- elsif id == "gumball" || id == "iceage" || id == "playlab"
+  - launch_path = "/playlab"
 - else
-  - launch_code = id
+  - launch_path = "/api/hour/begin/#{id}"
 
 .container-fluid
   .row-fluid
     .courseblock-tall{id: "miniblock-#{id}"}
-      %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
+      %a{href: launch_path, target: "_blank"}
         .imgspan
           %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
         .clear
@@ -28,7 +32,7 @@
           %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;", target: "_blank"}
             = short_url
         %div{id: "gobutton-#{id}", style: "position: relative;"}
-          %a{href: "/api/hour/begin/#{launch_code}", target: "_blank"}
+          %a{href: launch_path, target: "_blank"}
             %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)
 
 :javascript

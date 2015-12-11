@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Cómo organizar un evento de la Hora de Código
 
 Organizar el evento "Hora de Código" durante la Semana de la Educación de Ciencias de la Computación (<%= campaign_date('short') %>) para celebrar las ciencias de la computación e inspirar que más estudiantes lo intenten. Cualquiera, en cualquier lugar puede organizar un evento "Hora de Código".
 
@@ -14,12 +14,12 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 
   * Determina un lugar, fecha y hora
   * Envía [una carta](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) invitando al alcalde, diputado, presidente autonómico o empresario influyente para que de una charla.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+  * Invita a los medios/prensa p.e. la radio o televisión local/periódico o blogs de educación. Ver nuestro [equipo de prensa](%= resuelve_url('/promueve/equipo de prensa') %) para obtener ayuda.
 
 ## 2) Durante tu evento
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+  * Comienza tu evento con uno de nuestros [vídeos motivadores](%= resuelve_url('/promueve/recursos#videos') %).
+  * De una introducción resumiendo la importancia de las ciencias de la computación, puedes usar estas [estadísticas e infografías](%= acordar_url('/promueve/stadisticas') %).   
       
     
   * Otras ideas de evento: 
@@ -48,13 +48,8 @@ Organizar el evento "Hora de Código" durante la Semana de la Educación de Cien
 
 ## Programa del evento
 
-| Hora             | Acción                                                                                                                                                                                 |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                                                             |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %)                                        |
-| 10:15 - 10:30 am | Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.                              |
-| 10:30 - 10:40 am | Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes. |
-| 10:40 - 11:00 am | Los estudiantes hacen una demostración de una actividad sin conexión y como las ciencias de la computación pueden enseñarse sin usar ordenadores.                                      |
-| 11:00 - 11:05 am | El profesor que organizó el evento para toda la escuela dará la charla de cierre.                                                                                                      |
+Empeze con uno de nuestros </td> </tr> 
+
+</tbody> </table> 
 
 <%= view :signup_button %>

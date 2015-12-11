@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 # Background
 
-Processing arrays of information is a much more interesting and powerful when we can visualize the results. In this lesson you will be developing a drawing app which takes advantage of a new user interface element called the canvas. By capturing user interactions with this element your app will not only let the user draw on the canvas, but will stored every mark they place on the screen. Using array processing it is possible to remix these drawings in a number of interesting and visually pleasing ways.
+Processing arrays of information is much more interesting and powerful when we can visualize the results. In this lesson, you will be developing a drawing app which takes advantage of a new user interface element called the canvas. By capturing user interactions with this element, your app will not only let the user draw on the canvas, but it will store every mark they place on the screen. Using array processing, it is possible to remix these drawings in a number of interesting and visually-pleasing ways.
 
 # Vocabulary
 
@@ -15,9 +15,9 @@ Processing arrays of information is a much more interesting and powerful when we
 
 # Lesson
 
-* Introduction to the canvas
-* Create a drawing app with the canvas
-* Store information about the drawing in an array
+* Introduction to the canvas.
+* Create a drawing app with the canvas.
+* Store information about the drawing in an array.
 * Process stored information to redraw an image with a variety of visual effects.
 
   

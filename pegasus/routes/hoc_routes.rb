@@ -24,9 +24,17 @@ get '/api/hour/begin/:code' do |code|
   pass unless tutorial = DB[:tutorials].where(code: code).first
 
   # set company to nil if not a valid company
-  company = request.GET['company']
-  unless company.nil?
+  company = request.GET['company'] || request.cookies['company']
+  # Pass through the company param to the congrats page only if an entry exists in the forms,
+  # or for the special case of cartoon network, where we need the company to add a customized link.
+  unless company.nil? || company == CARTOON_NETWORK
     company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
+  end
+
+  # The lang parameter is used only by the cartoon network integration.
+  lang = request.GET['lang']
+  if company == CARTOON_NETWORK && (lang == 'ar' || lang == 'en')
+    response.set_cookie('language_', {value: lang, domain: ".code.org", path: '/', expires: Time.now + (365*24*3600)})
   end
 
   launch_tutorial(tutorial, company: company)
@@ -51,7 +59,7 @@ get '/api/hour/certificate/:filename' do |filename|
   width = width.to_i
   width = 0 unless(width > 0 && width < 1754)
 
-  image = create_course_certificate_image(row[:name].to_s.strip, 'hoc')
+  image = create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
   image.resize_to_fit!(width) unless width == 0
   image.format = extname[1..-1]
 
@@ -70,7 +78,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'])
+  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
   image.format = format
 
   content_type format.to_sym

@@ -6,14 +6,14 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# آور-آف-کوڈ کا انعقاد کیسے کریں
 
 Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Prepare for your event
 
   * Determine a venue, date and time
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * بھیجیں [ایک خط](%= resolve_url('/promote/resources#sample-emails') %) اپنے مقامی میئر، کانگریس مین، گورنر، یا مؤثر بزنس پرسن کو شرکت کے لیے مدعو کریں کہ خطاب کرے۔
   * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
 
 ## 2) During your event
@@ -32,7 +32,7 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 ## 3) Share how it went
 
   * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * ہیش-ٹیگ استعمال کریں تاکہ ** #آور-آف-کوڈ# **
 
 ## Example Event Plan
 

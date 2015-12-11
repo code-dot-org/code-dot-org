@@ -410,6 +410,9 @@ sv:
     privacy: Sekretesspolicy
     secure: Skyddad version
     report_abuse: Rapportera missbruk
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Behöver du hjälp?
     subtitle: Se dessa filmer och tips
@@ -466,7 +469,7 @@ sv:
       unused: Oanvända nivåer
   upsell:
     hoc:
-      title: Timmen med Kod
+      title: Classic Maze
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
       title: Flappy kod
@@ -501,8 +504,8 @@ sv:
     caption_by_name_age: 'av %{name}, ålder %{age}'
     caption_time_ago: '%{time_ago} tid sedan'
     header: Galleri
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Spel-labb
+    header_artist: Konstnären
   landing:
     prerelease: "Denna kurs är i <span class='betatext'> beta</span>.  Detta innebär att det inte är den slutliga versionen av kursen, och är föremål för översyn allt eftersom feedback tas emot och förbättringar görs."
     prerelease_hoc2014: "Den här övningen är en <span class='betatext'>betaversion</span>.  Den revideras allteftersom synpunkter kommer in och förbättringar görs."
@@ -569,7 +572,7 @@ sv:
           title: Pussel
           description: ""
         step:
-          title: steg
+          title: Steg
           description: ""
         sample_level_builder:
           title: Exempel nivå-byggare

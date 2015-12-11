@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 
@@ -265,4 +264,3 @@ Si haz creado una tutoría orientada a estudiantes con visión deteriorada, nos 
 
 [**Volver al principio**](#top)
 
-<%= view :signup_button %>

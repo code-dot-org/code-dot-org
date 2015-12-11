@@ -176,23 +176,23 @@ Vi udlejer eller sælger ikke personlige oplysninger, vi indsamler fra brugere, 
 
 Navnlig, deler vi ikke nogen personlige oplysninger med vores donorer eller sponsorer (bortset fra de "offentlige rapporteringer" af anonyme rapporter som beskrevet nedenfor).
 
-### We may share student achievement data with your school or school district
+### Vi kan dele elevers resultat-data med din skole eller skoledistrikt
 
 Hvis din brug af webstedet Code.org er inden for rammerne af et partnerskab med din skole eller skoledistrikt, kan vi give skole eller skoledistrikt lov til at få adgang til de samme elevers statusrapport, som i forvejen deles med din lærer(e).
 
-### We may share teacher contact information with training facilitators
+### Vi kan dele lærer kontaktoplysninger med uddannelsesfacilitatorer
 
 En del af vores pædagogiske program, er at tilbyde faglige udviklingsworkshops for at forberede lærere på, at undervise på IT kurser. Hvis du er en lærer, der deltager i en af disse workshops, vil dit navn og kontaktoplysninger blive delt med facilitatoren der står for workshoppen.
 
-### We may share data with social networks at your request
+### Vi kan dele data med sociale netværk på din anmodning
 
 Nogle af vores brugere vælger at dele deres kode-kreationer med sociale netværk. Denne funktionalitet er helt valgfri. Når vi sender indhold til sociale netværk, har du fuld kontrol over det indhold der deles, og der deles aldrig noget automatisk på dine vegne. Dette indhold omfatter typisk kun koden (app eller animation eller spil eller andet), du skrev, sendt sammen med eventuelle andre bemærkninger du kan vælge at tilføje.
 
-### We may share limited information when you contact us for support
+### Vi deler muligvis begrænsede oplysninger, når du kontakter os for support
 
 Når du kontakter os med en anmodning om support, kan du angive personlige oplysninger, der deles med Code.org supporter for at behandle din anmodning. Code.org supportere er enten medarbejdere eller uafhængige entreprenører af Code.org, og vil altid have underskrevet en kontrakt, der pålægger dem at beskytte og ikke videregive fortrolige oplysninger, herunder personlige oplysninger fra brugere, og at kun bruge denne information i forbindelse med løsningen af dit problem med produktet.
 
-### When you are chosen to be profiled on our site
+### Når du er valgt til at blive profileret på vores site
 
 Code.org vælger Ugens elev og Månedens lærer hver måned, sammen med præmier. Disse udvalgte elever og lærere og udtalelser er altid udgivet med tilladelse af deltagende elever eller underviser og, hvis det er relevant, deres forældre eller værge eller lærer, og kan omfatte personlige oplysninger som navn, billede og foto eller video af den person, der er profileret.
 
@@ -200,35 +200,35 @@ Code.org vælger Ugens elev og Månedens lærer hver måned, sammen med præmier
 
 Vi kan offentliggøre anonymiserede oplysninger om elevernes resultater på vores tutorials og hjemmesider, men vi vil aldrig offentligt udlevere dine personlige oplysninger i disse rapporter. Data om elevernes resultater vil forblive anonyme, men samlede og anonymiserede data fra store datasæt kan trækkes ud på demografiske kriterier som alder, generelle placering, køn, Etnicitet og socioøkonomisk status.
 
-### We may share anonymous or aggregate data to improve our services and learn more about our Users
+### Vi kan dele anonyme eller aggregerede data for at forbedre vores tjenester og få flere oplysninger om vores brugere
 
 I visse tilfælde kan Code.org arbejde med tredjeparter (f.eks. universiteter) for at forbedre vores tjenester eller ydelser. Vi kan videregive automatisk indsamlet og andre ikke-personlige oplysninger til autoriserede partnere for, at gennemføre studier af online uddannelse eller hjælpe med at forstå brug, visning og demografiske mønstre for visse programmer, indhold, tjenester, kampagner og/eller funktionalitet på hjemmesiden.
 
-### We will share data when required by law
+### Vi vil dele data, når dette er lovpligtigt
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. I nogle tilfælde kan vi gøre sådanne oplysninger tilgængelige uden først at give besked til brugerne.
 
-### We may share data when necessary or appropriate to protect Code.org or others
+### Vi kan dele data når det er nødvendigt eller hensigtsmæssigt at beskytte Code.org eller andre
 
 Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
-### We may share data in the context of a change of business, including a merger or acquisition
+### Vi kan dele data i forbindelse med en firma mæssig ændring - herunder en fusion eller virksomhedsovertagelse
 
 I tilfælde af, at Code.org bliver opkøbt, sammenlagt eller fusioneret med en anden enhed, kan vi overføre de personlige oplysninger, vi har indsamlet fra brugerne som en del af sådanne fusionen, erhvervelse, salg eller anden ændring af kontrol. Vores løfte til dig er, at personlige oplysninger vi måtte have indsamlet fra brugerne ville være sikret under det samme niveau af sikkerhed og privatliv som ydes af denne fortrolighedserklæring.
 
 ## Our Approach to Data Security
 
-### Website security is important to you, and to us
+### Website sikkerhed er vigtigt for dig og os
 
 For at beskytte dit privatliv og sikkerhed, tage vi rimelige forholdsregler for at bekræfte din identitet før ydelse du konto adgang eller foretage rettelser til dine personlige oplysninger. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Hvis du ønsker en SSL-krypteret forbindelse på eller for at kryptere data, som du indtaster mens du bruger hjemmesiden, og bruger HTTPS-protokollen ved at besøge https://code.org/.
 
-### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
+### Vi forsøger at sikre, at vores hjemmeside og de oplysninger, der sendes til os er sikre, men ingen sikkerhedsforanstaltninger er perfekt
 
 Code.org bruger visse fysiske-, ledelses- og tekniske sikkerhedsforanstaltninger beregnet til at bevare integriteten og sikkerheden af dine personlige oplysninger og andre oplysninger, vi opretholde i forbindelse med hjemmesiden. Vi kan ikke, men sikre eller garanterer sikkerheden for en eller alle af de personlige oplysninger og andre oplysninger, du sender Code.org, og du gør det på egen risiko. Når vi modtager din transmission af oplysninger, gør Code.org kommercielt rimelig indsats for at sikre sikkerheden i vores systemer. Bemærk dog, at dette ikke er en garanti for at sådanne personlige oplysninger ikke kan åbnes, videregives, ændres, eller ødelagt af brud på nogen af vores fysiske, teknisk eller ledelsesmæssig sikkerhedsforanstaltninger.
 
 Hvis vi opdager at en data sikkerhedshændelse, der bringer dig eller du synes at kompromittere din personlige oplysninger, vil vi forsøge at meddele dig elektronisk, således at du kan træffe nødvendige beskyttende foranstaltninger.
 
-### International visitors
+### Internationale besøgende
 
 Vores hjemmeside drives og administreres på servere placeret i USA. Hvis du vælger at bruge vores hjemmeside fra den Europæiske Union eller andre regioner i verden med love for dataindsamling og anvendelse, der adskiller sig fra amerikansk ret, så anerkender og accepterer du at du overflytter dine personlige oplysninger uden for disse regioner til USA, og at ved at give dine personlige oplysninger på hjemmesiden, du samtykke til at overføre.
 

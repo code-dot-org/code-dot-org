@@ -47,7 +47,7 @@ Vi håper det vil vekkje interesse hos elevane som motiverer dei til vidare lær
 
 *Kvifor er dette viktig?*
 
-I Kina te alle elevar datavitskap som fag før dei går ut av videregåande skule. 90 prosent av skulene i USA underviser det ikkje ein gong. No er det på tide å nå att det 21. hundreåret. Vi veit at uansett kva elevane vel å gjere når dei voks opp, om dei satsar på medisin, næringliv, politikk eller kunst, det å vite korleis teknologi blir laga vil gi dei sjølvtillit og kunnskap til å lykkast.
+In China, every student takes computer science to graduate high school. 90 prosent av skulene i USA underviser det ikkje ein gong. No er det på tide å nå att det 21. hundreåret. Vi veit at uansett kva elevane vel å gjere når dei voks opp, om dei satsar på medisin, næringliv, politikk eller kunst, det å vite korleis teknologi blir laga vil gi dei sjølvtillit og kunnskap til å lykkast.
 
 **Fleire detaljar og eit sitat du kan bruke i materiellet**
 

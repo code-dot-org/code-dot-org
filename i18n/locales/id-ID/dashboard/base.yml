@@ -2,7 +2,7 @@ id:
   errors:
     messages:
       not_saved: 'Mohon Perbaiki kesalahan berikut:'
-      too_young: Konten berikut ini terbatas untuk usia tertentu dan tidak diperuntukkan bagi anak kecil
+      too_young: Konten berikut ini memiliki batasan usia dan tidak diperuntukkan bagi pelajar dibawah umur
   activerecord:
     errors:
       messages:
@@ -53,8 +53,8 @@ id:
   auth:
     sign_in_with: 'Masuk pakai akun %{provider}'
     signed_in: Masuk!
-    signed_out: 'Anda telah keluar dari <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Anda menggunakan %{provider} untuk masuk. <a href="%{url}">Klik disini</a> untuk keluar dari %{provider}.'
+    signed_out: 'Anda telah sign out dari <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Anda menggunakan %{provider} untuk sign in. <a href="%{url}">Klik disini</a> untuk sign out dari %{provider}.'
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum bergabung?
     google_oauth2: Akun Google
@@ -65,10 +65,10 @@ id:
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
-    student_count: '%{count} Pelajar sudah terdaftar.'
-    teacher_count: '%{count} Guru sudah terdaftar.'
-    overview_student: 'Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password. Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a> kami.'
-    overview_teacher: 'Ajarkan ilmu kompter pada kelas anda dengan mendaftar untuk akun.<p/> Anda akan dapat menambahkan pelajar anda dan mendata kemajuan mereka.'
+    student_count: '%{count} Pelajar telah mendaftar.'
+    teacher_count: '%{count} Pengajar telah mendaftar.'
+    overview_student: 'Buatlah akun untuk melacak kemajuan kamu. Email kamu akan dipakai terutama untuk log in dan pemulihan password. Untuk informasi lebih lanjut, lihat <a href="http://code.org/privacy">kebijakan privasi</a>.'
+    overview_teacher: 'Ajari teman-teman sekelas kamu pengetahuan komputer dengan cara membuat akun di website ini.<p/>Kamu dapat menambahkan teman-teman kamu sebagai murid dan kamu juga dapat melacak kemajuan mereka.'
     no_signup_message: 'Anda dapat <a target="_blank" href="http://learn.code.org"> mencoba berbagai tahap dan berbagai teka-teki</a>, tetapi Anda akan perlu untuk masuk supaya kemajuan belajar Anda dapat dicatat.'
     teacher_educator_guide: Lihat panduan guru
     teacher_pitch: Guru daftar untuk Code.org
@@ -81,7 +81,7 @@ id:
     gender: Jenis kelamin (opsional)
     birthday: Tanggal ulang tahun (opsional)
     age: Umur
-    user_type: Apakah anda palajar atau guru?
+    user_type: Anda Pelajar atau Pengajar?
     submit: Daftar
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
@@ -90,8 +90,8 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    student_terms: "Saya setuju untuk terikat oleh <a href='http://code.org/tos'> persyaratan layanan</a> Code.org . Jika saya di bawah usia 13 tahun, saya mengkonfirmasi dengan mengirimkan formulir ini bahwa saya telah diizinkan legal orang tua atau wali saya untuk menggunakan layanan Code.org. <br/>Untuk pengguna di bawah 13, alamat email tidak disimpan dalam bentuk yang memungkinkan kami untuk menghubungi mereka."
-    teacher_terms: "Saya setuju untuk terikat dengan Code.org <a href='http://code.org/tos'>persyaratan layanan</a>."
+    student_terms: "Saya setuju terhadap<a href='http://code.org/tos'>Syarat Layanan</a>dari Code.org. Jika umur Saya dibawah 13 tahun, Saya mengkonfirmasi dengan cara mengisi form ini bahwa Saya telah diizinkan oleh orang tua atau pengasuh Saya untuk menggunakan layanan dari Code.org. <br/>Untuk pengguna dengan umur dibawah 13 tahun, alamat email tidak dimasukkan ke dalam form yang memungkinkan kita untuk menghubungi mereka."
+    teacher_terms: "Saya setuju dengan <a href='http://code.org/tos'>Syarat Layanan</a>Code.org."
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan pendaftaran anda
   signin_form:
     title: Punya akun? Masuk disini
@@ -107,7 +107,7 @@ id:
     welcome: 'Selamat Datang di %{section_name}'
     name: Pilih nama anda
     picture: Sekarang temukan gambar rahasia anda
-    words: Sekarang masukkan kata sandi anda
+    words: Sekarang masukkan kata-kata rahasia anda anda
     login: Masuk
   password:
     reset_form:
@@ -224,7 +224,7 @@ id:
         calculate: Calculate Something
         applab: Buat App
     user:
-      classroom: Beranda Guru
+      classroom: Beranda guru
       district_dashboard: Wilayah Dashboard
       label: 'Halo %{username}'
       stats: Kemajuan saya
@@ -246,8 +246,8 @@ id:
       prize_us_only: (Hanya untuk siswa dari Amerika Serikat)
       prizes_link: Info lebih lanjut
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Jawaban
+    for_teachers_only: Hanya untuk pengajar
     title:
       one: 'Guru anda:'
       other: 'Guru Anda:'
@@ -386,13 +386,13 @@ id:
     student: siswa
     teacher: Pelajar
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Kami berterima kasih kepada para <a href="https://code.org/about/donors">donatur</a>, <a href="https://code.org/about/partners">rekanan</a>,<a href="https://code.org/about/team">pihak-pihak yang terlibat</a>,pemeran dalam video, dan para<a href="https://code.org/about/advisors">penasehat pendidikan</a>atas dukungan mereka dalam pembuatan Code Studio.'
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Para insinyur dari Google, Microsoft, Facebook, dan Twitter turut membantu dalam pembuatan materi-materi ini.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Hak Cipta Dilindungi.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Hak Cipta Dilindungi.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Angry Birds&#8482;&amp;&copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta dilindungi undang-undang<br />Plants vs. Zombies &#8482;&amp;&copy;%{current_year} Electronic Arts Inc. Hak Cipta dilindungi undang'
     powered_by_aws: Didukung oleh Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: Hak cipta
     more: Lebih
     feedback: Berikan pendapat
@@ -404,6 +404,9 @@ id:
     privacy: Kebijakan privasi
     secure: Versi yang aman
     report_abuse: Laporkan penyalahgunaan
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
@@ -435,7 +438,7 @@ id:
   pdf_download: Unduh PDF
   download_coming_soon: Aktivitas yang dapat diunduh segera hadir.
   video_coming_soon: Video Segera Hadir!
-  not_started: The student has not attempted this level.
+  not_started: Pelajar tidak diusahakan level ini.
   share_code:
     title: "klik 'Jalankan' untuk melihat program saya berjalan"
     bounce_og_title: Check out permainan Bouncing ku
@@ -460,7 +463,7 @@ id:
       unused: Tingkat yang tidak terpakai
   upsell:
     hoc:
-      title: Jam kode
+      title: Classic Maze
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
     flappy:
       title: Flappy Code
@@ -478,13 +481,13 @@ id:
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Perang Bintang
     infinity:
       title: Play Lab tak tebatas
       body: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Jelajahi dunia Minecraft melalui kode.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -618,22 +621,22 @@ id:
     click_to_remix: "Klik 'Remix' untuk mematikan putaran versi Anda sendiri!"
     edit_project: Sunting Proyek
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      tos: "Proyek ini telah dilaporkan atas pelanggaran<a href='http://code.org/tos'> Syarat Layanan</a> Code.org dan tidak dapat dibagikan kepada orang lain."
+      contact_us: "Jika kamu yakin ini adalah sebuah kesalahan, mohon <a href='https://code.org/contact'> hubungi kami.</a>"
       go_to_code_studio: Pergi ke Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Jika kamu menghadapi isi konten yang menyerang, berisi ancaman, cyber bully, pelecehan, atau praktek pelanggaran terhadap konten yang kamu miliki ketika menggunakan pembuat aplikasi di Code Studio, mohon lengkapi saja form di bawah ini. Kami akan menanggapi dengan serius laporan kamu, menginvestigasinya, dan akan mengambil tindakan yang tepat.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Mohon isikan alamat email
+          age: Beritahu usia anda
+          abuse_type: Mohon berikan jawaban bagaimana konten ini melanggar syarat layanan
+          abuse_detail: Mohon berikan rincian mengenai konten yang anda laporkan
+        abusive_url: URL konten sudah dilaporkan
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Bagaimana bisa konten ini melanggar tautan%{link_start} Syarat Layanan %{link_end}?'
+          harassment: Ancaman, cyber bully, pelecehan
+          offensive: Konten yang menyerang
+          infringement: Pelanggaran hak cipta
           other: Lain
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Harap memberikan sedetail mungkin mengenai konten yang Anda laporkan.
+        acknowledge: 'Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani sesuai dengan syarat %{link_start_privacy} kebijakan privasi%{link_end}dan%{link_start_tos}Syarat Layanantautan%{link_end}'

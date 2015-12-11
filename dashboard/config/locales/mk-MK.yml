@@ -472,6 +472,9 @@
     privacy: Privacy Policy
     secure: Secure Version
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -712,7 +715,7 @@
     really_delete: Delete?
     delete_yes: 'Yes'
     delete_no: 'No'
-    saved: Saved
+    saved: Зачувано во галерија!
     not_saved: Not saved
     cancel: Откажи
     delete_confirm_title: Are you sure you want to delete this project?

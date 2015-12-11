@@ -183,7 +183,9 @@
 
   prizes_header: "Prizes for every educator"
   prizes_10k: "One public school in every US state (and Washington D.C.) will win $10,000 worth of technology"
+  prizes_10k_past: "One public school in every US state (and Washington D.C.) won $10,000 worth of technology"
   prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last."
+  prizes_more: "More exciting prizes"
 
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
@@ -257,7 +259,7 @@
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "For example, Lincoln High School"
-  signup_event_location_placeholder: "Postal code and country OR full address.\r\n(We’ll use this to place a pin on our map)"
+  signup_event_location_placeholder: "Postal code and country OR full address."
   signup_special_event_details_placeholder: 'Describe what makes this a special event'
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
 
@@ -281,9 +283,9 @@
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
 
-  meta_tag_og_title: 'The Hour of Code is coming'
+  meta_tag_og_title: 'The Hour of Code is here'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
-  meta_tag_twitter_title: 'The Hour of Code is coming'
+  meta_tag_twitter_title: 'The Hour of Code is here'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
@@ -326,7 +328,7 @@
   hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
   hoc_faq_devices_q: "What devices should I use for my students?"
-  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: 'Do I need computers for every participant?'
   hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
   hoc_faq_international_q: "I am in <country>. How do I participate internationally?"
@@ -352,7 +354,9 @@
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
-  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
+  hoc_faq_posters_q: "Where are my posters?"
+  hoc_faq_posters_a: "We are so sorry to share that we ran out of posters to send everyone who requested them. We've more than tripled signups from last year which means we grossly underestimated how many posters to print for organizers. We are working to find a solution to distribute more. You can always print posters yourself on our <a href='/promote/resources'>resources page</a>."
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."

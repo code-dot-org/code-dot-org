@@ -105,6 +105,8 @@
         StudioEC: Ігрова студія
         Applab: App Lab
         NetSim: Інтернет симулятор
+        Custom: Художник
+        CustomStudio: Ігрова студія
     trophy:
       name:
         Bronze: Бронза
@@ -529,61 +531,80 @@
           до Прибульця та попередь усіх про вторгнення
         studio_playlab_10: Створи власну гру. Коли завершиш, натисни кнопку Готово,
           щоб поділитись грою з друзями.
-        studio_iceage_1: Менні хоче сказати "привіт" - допоможеш йому?
-        studio_iceage_2: Дієго (персонаж 1) та Бабуня (персонаж 2) хочуть сказати
-          "привіт" одне одному. Можеш їм допомогти, використавши блок "говорити" двічі?
-        studio_iceage_3: Можеш допомогти Скрету дістатись до прапора?
-        studio_iceage_4: Можеш допомогти Скрету (персонаж 1) дістатись до Бабуні (персонаж
-          2) і заграти звук, коли він до неї потрапить?
-        studio_iceage_5: Можеш допомогти Сіду сказати "вітання", коли його клацнули?
-          Не забудь клацнути, після того як запустиш програму
-        studio_iceage_6: Можеш допомогти Дієго рухатись, використовуючи стрілки вгору/вниз/вправо/вліво,
-          щоб дістатись до всіх прапорів?
-        studio_iceage_7: Блок "повторювати завжди" дозволяє виконувати код безперервно.
-          Можеш прикріпити блоки так, щоб Сід постійно рухався вліво та вправо?
-        studio_iceage_8: Можеш додати блок, щоб отримати бал і ще один блок, щоб грати
-          звук, коли Сід натрапляє на Менні, а тоді переміщувати його стрілками, поки
-          не отримаєш бал?
-        studio_iceage_9: Встанови тло для цього льодовикового періоду та допоможи
-          Сіду дістатись до Бабуні швидше, змінивши швидкість. Тоді переміщуй його
-          стрілками, щоб дістатись до Сіда і сповістити інших.
-        studio_iceage_10: Створи власну гру. Коли завершиш, натисни кнопку Готово,
-          щоб поділитись грою з друзями.
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_hello1: Сід хоче зібрати всіх для нової пригоди. Можеш допомогти
+          йому сказати "привіт", перетягуючи блок "говорити" на робочу область, та
+          надрукувавши всередині "привіт"?
+        studio_iceage_hello2: Сід (персонаж 1) знайшов Манні (персонаж 2) і хоче запросити
+          його до пригоди. Допоможи їм привітатись, двічі використавши блок "персонаж
+          говорить".
+        studio_iceage_move_to_flag: Скрет шукає свій жолудь! Допоможи йому пройти
+          останні 200 пікселів, використовуючи блок "рухатись".
+        studio_iceage_move_to_actor: Дієго (персонаж 1) шукає Манні (персонаж 2).
+          Допоможи Дієго пройти 200 пікселів вниз до Манні, використовуючи блок "перемістити
+          персонажа". Далі додай блок до події "коли персонаж торкається", щоб програти
+          звук, коли вони зустрінуться.
+        studio_iceage_repeat: Блок "повторювати завжди" дозволяє виконувати код постійно.
+          Можеш прикріпити блоки так, щоб допомогти Гренні розім'ятись, постійно рухаючись
+          вліво та вправо?
+        studio_iceage_click_hello: Можеш допомогти Сіду зробити останнє оголошення
+          для друзів після клацання? Не забудь клацнути по ньому після того, як натиснеш
+          Запустити.
+        studio_iceage_move_events: Скрет все ще шукає жолуді! Допоможи йому рухатись
+          навколо, прикріпивши блок "рухатись" до кожної з подій та змінюючи напрямок,
+          який має працювати із кожною стрілкою. Коли готово, клацай Запустити і спробуй
+          зібрати усі жолуді.
+        studio_iceage_sound_and_points: Ми підготували більшість коду, який допомагає
+          Гренні рухатись вліво та вправо, так само як і код, який переміщує по екрану
+          Сіда. Можеш завершити цей код і додати блоки до події "коли персонаж торкається",
+          щоб коли Гренні та Сід зіткнуться, і програвався звук, і додавався бал?
+          Натисни "Запустити", щоб пограти в гру.
+        studio_iceage_warn_ice_age: Всім потрібно рухатися швидше, бо наступає Льодовиковий
+          період! Змінюй тло на "айсберги" і встанови швидкість Сіда у високу, а тоді
+          тисни Запустити і переміщуй його до Дієго, щоб попередити.
+        studio_iceage_throw_hearts: Сід хоче повідомити своїй бабусі Гренні, що він
+          її дуже любить. Скористайся командою "актор кидає", щоб Сід (персонаж 1)
+          кинув сердечка для Гренні (персонаж 2)! Налаштуй настрій Гренні у щасливий,
+          коли у неї влучить сердечко.
+        studio_iceage_free_play: Час створити власну гру чи історію! Коли завершиш,
+          клацай Готово, щоб друзі змогли спробувати твою гру на своїх телефонах,
+          планшетах та комп'ютерах!
+        studio_gumball_hello1: Анаїт хоче з кимось подружитись. Можеш допомогти їй
+          сказати "привіт", перетягуючи блок "говорити" у робочу область і друкуючи
+          слово "привіт" вспередині?
+        studio_gumball_hello2: Дарвін (персонаж 1) та його брат Гамбол (персонаж 2)
+          прямують до школи. Допоможи їм привітатись один з одним, двічі використавши
+          блоки "персонаж говорить".
+        studio_gumball_move_to_flag: Банановий Джо ось-ось виграє у перегонах! Допоможи
+          йому пройти останні 200 пікселів, використавши блок "рухатись".
+        studio_gumball_move_to_actor: Гамбол (персонаж 1) та Дарвін (персонаж 2) запізнюються
+          на перегони! Допоможи Гамболу пройти останні 200 пікселів донизу до Дарвіна,
+          використавши блок "перемістити персонажа". Далі підключи блок до події "коли
+          персонаж торкається", щоб програти звук, коли вони знайдуть один одного.
+        studio_gumball_repeat: Блок "повторювати завжди" дозволяє виконувати код безперервно.
+          Можеш прикріпити до нього блоки, щоб допомогти Гамболу розігрітись для перегонів,
+          постійно рухаючись вліво та вправо?
+        studio_gumball_click_hello: Можеш допомогти Антону оголосити початок перегонів,
+          промовляючи "На старт, увага, руш!"? Не забудь клацнути Антона після запуску,
+          щоб перевірити програму!
+        studio_gumball_move_events: Дарвін бере участь у змаганнях зі збору прапорців!
+          Допоможи йому пробігти дистанцію, прикріпивши блок "рухатись" до кожної
+          з подій. Коли готово, клацни "Запустити" і спробуй зібрати усі прапорці.
+        studio_gumball_sound_and_points: Ми підготували більшість коду, який допомагає
+          Антону (персонаж 2) рухатись вліво та вправо, так само як і код, який переміщує  по
+          екрану Бананового Джо (персонаж 1). Можеш завершити цей код і додати блоки
+          до події "коли персонаж торкається", щоб коли Антон і Банановий Джо зіткнуться,
+          і програвався звук, і додавався бал? Натисни "Запустити", щоб пограти в
+          гру.
+        studio_gumball_warn_food_fight: Дарвін щойно втік з битви за їжу! Зміни тло
+          на "символи" і налаштуй швидкість Дарвіна на високу, а тоді натисни Запустити
+          і перемісти його до Пенні, щоб попередити її.
+        studio_gumball_join_food_fight: Приєднуйся до битви за їжу! Використовуй команду
+          "персонаж кидає об'єк праворуч", щоб Банановий Джо (персонаж 1) кидав їжу
+          в Антона (персонаж 2)! Встанови настрій Антона у сердитий, коли у нього
+          влучають.
+        studio_gumball_free_play: Створюй власну гру чи історію. Коли завершиш, клацай
+          Готово, щоб твою гру могли спробувати на своїх телефонах, планшетах чи комп'ютерах
+          твої друзі!
         studio_full_sandbox: Створи власну гру. Коли завершиш, натисни кнопку Готово,
           щоб поділитись грою з друзями.
         studio_k1_1: Можеш запрограмувати собаку, щоб він сказав "Привіт, світе"?
@@ -726,6 +747,9 @@
         infinity_playlab_intro: Ігрова лабораторія - Вступ
         infinity_playlab_events: Ігрова лабораторія - Події
         infinity_playlab_repeat_forever: Ігрова лабораторія - Повторювати завжди
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -779,9 +803,12 @@
         mc_if_statements: Майнкрафт - команди умови
         mc_congrats_share: Майнкрафт - вітання
         mc_congrats_no_share: Майнкрафт - вітання
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        gumball_intro: Година коду Гамбола - Вступ
+        gumball_events: Година коду Гамбола - Події
+        gumball_repeat: Година коду Гамбола - Команди повторення
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

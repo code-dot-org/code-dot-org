@@ -404,6 +404,9 @@ km:
     privacy: Privacy Policy
     secure: កំណែ​សុវត្ថិភាព
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: ត្រូវការ​ជំនួយ?
     subtitle: មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ
@@ -460,7 +463,7 @@ km:
       unused: កម្រិត​ដែល​មិន​បាន​ប្រើ
   upsell:
     hoc:
-      title: ពេលវេលា​នៃ​កូដ
+      title: Classic Maze
       body: សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។
     flappy:
       title: Flappy កូដ
@@ -608,7 +611,7 @@ km:
     really_delete: Delete?
     delete_yes: យល់ព្រម
     delete_no: ទេ
-    saved: Saved
+    saved: បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!
     not_saved: Not saved
     cancel: បោះបង់
     delete_confirm_title: Are you sure you want to delete this project?

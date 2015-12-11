@@ -396,6 +396,9 @@ en:
     privacy: crwdns3901:0crwdne3901:0
     secure: crwdns5339:0crwdne5339:0
     report_abuse: crwdns49669:0crwdne49669:0
+    built_on_code_studio: crwdns55144:0crwdne55144:0
+    make_my_own_app: crwdns55145:0crwdne55145:0
+    how_it_works: crwdns55146:0crwdne55146:0
   reference_area:
     title: crwdns2625:0crwdne2625:0
     subtitle: crwdns3090:0crwdne3090:0
@@ -452,7 +455,7 @@ en:
       unused: crwdns4647:0crwdne4647:0
   upsell:
     hoc:
-      title: crwdns9011:0crwdne9011:0
+      title: crwdns55279:0crwdne55279:0
       body: crwdns4901:0crwdne4901:0
     flappy:
       title: crwdns4902:0crwdne4902:0

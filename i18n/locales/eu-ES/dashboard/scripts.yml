@@ -146,7 +146,7 @@ eu:
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
         hourofcode:
           Maze: Labirintoa
-          title: Kode ordua
+          title: Classic Maze
           description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
         frozen:
@@ -1350,6 +1350,10 @@ eu:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

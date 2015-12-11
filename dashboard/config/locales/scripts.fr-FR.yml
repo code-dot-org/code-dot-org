@@ -24,7 +24,7 @@
           'Bee 2: Loops': 'Abeille 2: boucles'
           Multi & Match: Multi & Match
           K-1 Flappy: Flappy niveau maternelle et CP
-          Flappy non blockly: Flappy sans block
+          Flappy non blockly: Flappy sans blockly
           title: Cours 1
           Artist 2: L'Artiste 2
           Happy Maps: Cartes joyeuses
@@ -57,7 +57,7 @@
           Artist Debugging: L'Artiste et le débogage
           Bounce: Rebond
           'Studio: Create a Story': 'Labo: Créer une histoire'
-          Artist Loops: L'Artiste et boucles
+          Artist Loops: L'Artiste et les boucles
           Bee Conditionals: Abeilles et instructions conditionnelles
           Flappy: Flappy
           title: Cours 2
@@ -1510,6 +1510,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1650,9 +1654,9 @@
           Craft: Craft
         mc:
           title: Une Heure de Code Minecraft
-          description_short: Explore un monde Minecraft avec du code
-          description: Utilise des blocs de code pour emmener Steve ou Alex dans une
-            aventure dans le monde de Minecraft
+          description_short: Explorez un monde Minecraft tout en code
+          description: Utilisez des blocs de code pour vivre une aventure avec Steve
+            ou Alex dans ce monde Minecraft
           Hour of Code 2015: Heure de Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

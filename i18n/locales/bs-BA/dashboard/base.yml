@@ -400,6 +400,9 @@ bs:
     privacy: Pravila Privatnosti
     secure: Sigurna Verzija
     report_abuse: Prijava zloupotrebe
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Trebaš li pomoć?
     subtitle: Pogledaj ove videozapise i savjete
@@ -456,7 +459,7 @@ bs:
       unused: Neiskorišteni nivoi
   upsell:
     hoc:
-      title: Sat Kodiranja
+      title: Classic Maze
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd

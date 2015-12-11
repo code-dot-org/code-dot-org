@@ -11,7 +11,7 @@ eu:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Bat egin botoi konbinaketak dantza mugimenduekin.
+        Match the button combination to the dance moves.: Goiko parekatzeak kontuan hartuz, arrastatu dantza mugimenduen sekuentzia bakoitza dagokion ikur konbinaketaren ondoan jartzeko.
         Matching: Parekatuz
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -24,7 +24,7 @@ eu:
         <strong>P</strong>: '<strong>P</strong>'
         <strong>Q</strong>: '<strong>Q</strong>'
         Matching: Parekatuz
-        Use the key to match each code to its letter: Erabili tekla kode bakoitza bere letrarekin elkartzeko
+        Use the key to match each code to its letter: Kodeen eta letren arteko goiko parekatzeak kontuan hartuz, mugitu beheko kode bakoitza dagokion letraren ondoan kokatzeko
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -32,7 +32,7 @@ eu:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Lauki sarea programarekin elkartu.
+        Match the grid to the program.: Mugitu programa grafiko bakoitza dagokion irudiaren parean jartzeko.
         Matching: Parekatuz
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -44,7 +44,7 @@ eu:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Arrastatu blokeak bat egiteko.
         Instructions: Argibideak
-        Match the puzzles to the blocks: Bat egin puzleak blokeekin
+        Match the puzzles to the blocks: Arrastatu blokeen sekuentzia bakoitza dagokion labirintoaren ondoan jartzeko
         Maze Match: Labirinto jokoa
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -53,7 +53,7 @@ eu:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Bar egin lauki sarea programarekin
+        Match the grid to the program: Mugitu programa grafiko bakoitza dagokion irudiaren parean jartzeko
         Matching: Parekatuz
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -108,7 +108,7 @@ eu:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Bat egin puzleak blokeekin
+        Match the puzzles to the blocks: Arrastatu blokeen sekuentzia bakoitza dagokion labirintoaren ondoan jartzeko
         Maze Match One: Labirituaren Lehenengo Partida
       4-5 Algorithms Match 1:
         <h4>1)</h4>: '<h4>1)</h4>'
@@ -154,7 +154,7 @@ eu:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Arrastatu blokeak bat egiteko.
         Instructions: Argibideak
-        Match the puzzles to the blocks: Bat egin puzleak blokeekin
+        Match the puzzles to the blocks: Arrastatu blokeen sekuentzia bakoitza dagokion labirintoaren ondoan jartzeko
         Maze Match: Labirinto jokoa
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
@@ -215,7 +215,7 @@ eu:
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Bat egin botoi konbinaketak dantza mugimenduekin.
+        Match the button combination to the dance moves.: Goiko parekatzeak kontuan hartuz, arrastatu dantza mugimenduen sekuentzia bakoitza dagokion ikur konbinaketaren ondoan jartzeko.
         Matching: Parekatuz
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -448,7 +448,7 @@ eu:
         Eating your dessert: Zure postrea janez
         Multiple Choice: Aukera anitza
         Washing your face: Aurpegia garbituz
-        Which one of these activities would be best for practicing crowdsourcing?: Partehartzailea den ekoizpena aurrera eramateko, zein ekintza litzateke onena hauen artean?
+        Which one of these activities would be best for practicing crowdsourcing?: Talde-lana saiatzeko zein ekintza litzateke onena hauen artean?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Aukera anitza
         Which piece of information listed below is okay to share on the internet?: Hemen agertzen den zerrendan agertzen den edukia kontuan hartuz, zein argitara liteke interneten?
@@ -463,7 +463,7 @@ eu:
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: Aukera anitzak
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Code.org gunean sartzean zein IP helbide esleituko lizule DNSak ziurrenik?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Code.org gunean sartzean zein IP helbide esleituko lizuke DNSak ziurrenik?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: DNSak 100.42.50.110 IP helbidedun orrira bidali bazaitu, zein web orritan zaude?

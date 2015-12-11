@@ -153,7 +153,7 @@
   studiobar_flappy_body: 製作和分享你自己的Flappy遊戲
   studiobar_teacher_title: 為導師們製造
   studiobar_teacher_body: 在您的課室裡介紹編程工作室
-  studiobar_frozen_title: 一小時的程式設計課程
+  studiobar_frozen_title: 一小時的程式課程
   studiobar_frozen_body: 與安娜和埃爾莎創建一個冬季仙境
   studiobar_donate_title: 捐贈
   studiobar_donate_body: 一個孩子學習為你捐的每一分錢
@@ -204,7 +204,7 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: 瞭解更多資訊
-  homepage_slot_text_title_hoc: 一小時的程式設計課程
+  homepage_slot_text_title_hoc: 一小時的程式課程
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
   homepage_slot_text_link_host: 舉辦「一小時程式學習」活動。
@@ -268,6 +268,11 @@
   class_submission_languages_other: 其他語言
   inspirational_videos_more: 更多名人的 <a href="HTTPs://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     激勵影片</a>
+  playlab_choose_theme: Choose your Play Lab theme
+  playlab_classic_title: Classic
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: 用程式建立一個銀河系
   starwars_javascript_title: Javascript
   starwars_javascript_description: 使用拖拉區塊及JavaScript.
@@ -280,14 +285,14 @@
   starwars_watch_videos: 在開始始，先看一些激發靈感的影片
   starwars_speak_languages: 使用另一種語言?
   starwars_help_translate: 協助我們翻譯
-  starwars_platform_text: 瀏覽器, 智慧手機, 平板
-  mc_name: 當個創世神的一個小時程式課程
+  starwars_platform_text: 當代的瀏覽器、 智慧型手機、 平板電腦
+  mc_name: Minecraft 程式碼時間
   mc_longdescription: 使用程式模塊幫助 Steve 或 Alex 闖過創世神的各種冒險
   mc_shortdescription: 使用程式模塊幫助 Steve 或 Alex 闖過創世神的各種冒險
   mc_gradelevel: 年齡6歲以上
-  mc_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  mc_platformtext: 瀏覽器, 智慧手機, 平板
   mc_specs: 多國語言(即將上線) |瀏覽器和平板 |年齡6歲以上
-  minecraft_subtitle: 當個創世神的一個小時程式課程
+  minecraft_subtitle: Minecraft 程式碼時間
   volunteer_engineer_submission_title: 激勵學生和志工參與一個小時的程式課程
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour
     of Code，他們需要你的幫忙! '
@@ -295,13 +300,9 @@
     志工 註冊 加入他們'
   volunteer_engineer_submission_intro_background: Hour of Code是在教電腦科學的全球性的運動，在超過180個以上的國家有好幾千萬個學生響應。請在12/7-12/13的電腦科學教學週
     (CSEdWeek) 一起參與。
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+  volunteer_engineer_submission_intro_recruit: '這些老師非常想要一些<span style="font-family:
+    ''Gotham 7r'', sans-serif;">熱衷於電腦科學教育</span>且能夠在教室裡幫忙，或藉由談論電腦科學的可能性有多大(不一定要面對面，或許也能透過拍攝影片)
+    來幫助學生<span style="font-family: ''Gotham 7r'', sans-serif;">激發</span>出靈感的人。'
   volunteer_engineer_submission_intro_signup: '如果你是在學習電腦科學的學生或是軟體的專業人士，請輸入下列資訊。此為必填:
     <span class="form-required-field">*</span>'
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
@@ -312,7 +313,7 @@
   volunteer_engineer_submission_field_name_placeholder: 全名
   volunteer_engineer_submission_field_company: 公司(或大學)
   volunteer_engineer_submission_field_company_placeholder: 公司(或大學)
-  volunteer_engineer_submission_field_experience_level: Experience level
+  volunteer_engineer_submission_field_experience_level: 經驗等級
   volunteer_engineer_submission_field_location: 位置
   volunteer_engineer_submission_field_location_desc: 我們不會洩漏您的確切地址，只是用來標記在地圖上。
   volunteer_engineer_submission_field_location_placeholder: 郵遞區號，城市和州/國家，或街道住址
@@ -325,26 +326,17 @@
   volunteer_engineer_submission_field_facebook: Facebook的個人資料
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: 描述
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: 描述你的電腦科學體驗且為何你想參加一名志願者成為當地的教師
+  volunteer_engineer_submission_field_description_placeholder: 描述你的經驗和 (或) 參與。如果你會說英語以外的語言，一定要將其包括在這裡。
+  volunteer_engineer_submission_header_private: 讓資訊保持隱密不外洩
   volunteer_engineer_submission_field_email: 電子郵件地址
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: 您的電子郵件不會外洩，但我們會向您發送來自教師的請求
   volunteer_engineer_submission_field_email_placeholder: 電子郵件地址
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_final_paragraph: 你會被標示在地圖上，讓當地的老師能在Hour of Code或其他機關需要志工時聯繫你。你的電子郵件和確切地址我們絕對不會外洩，但其他資訊(包括你的大略位置)會公布給當地的老師。
+  volunteer_engineer_submission_checkbox_contact: 我同意老師可以在需要志工時聯繫我(註:您的電子郵件不會被洩漏)
   volunteer_engineer_submission_submit: 送出
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: 感謝您參與Hour of Code的志工群。為Hour of Code做好準備或是招募其他志工，<a
+    href="%{url}">請點我</a>
   volunteer_engineer_submission_commitment_uncertain: 不確定
   volunteer_engineer_submission_commitment_one_hr_per_week: 每星期１小時
   volunteer_engineer_submission_commitment_three_hrs_per_week: 每星期３小時
@@ -358,7 +350,7 @@
   volunteer_engineer_submission_location_flexibility_remote: 遠端教師或學生
   volunteer_engineer_submission_location_flexibility_curriculum: 願意為開源計劃或開源項目作出貢獻
   volunteer_engineer_submission_experience_unspecified: 未指定
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: 沒有工程師的科技公司
   volunteer_engineer_submission_experience_university_student_or_researcher: 正在修讀學位或研究生
   volunteer_engineer_submission_experience_software_professional: 軟件專家
   volunteer_engineer_submission_distance_8: 5 英里
@@ -370,10 +362,8 @@
   volunteer_engineer_submission_num_volunteers_25: 25 個志工
   volunteer_engineer_submission_num_volunteers_50: 50 位志工
   volunteer_engineer_submission_type_task_onsite: 我希望你參觀我的教室並提供科技協助和鼓勵
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_type_task_remote: 我希望能利用Skype，請你跟我的學生說說話、激發靈感
+  volunteer_engineer_submission_type_task_mentor: 我在尋找一個能夠幫助我準備程式語言教學的老師
   petition_age: 年齡
   dashboard_landing_title: 教師主頁
   dashboard_landing_welcome: 歡迎來到改良過的新版教師主控台
@@ -419,7 +409,7 @@
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: 為期一年的高中課程
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -427,7 +417,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: 在科學中的電腦科學
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -435,7 +425,7 @@
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp: 電腦科學原則
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: 載入中...
@@ -581,9 +571,11 @@
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
   dashboard_announce_hoc: <b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
-  learn_more: 瞭解更多資訊
+  learn_more: 快來試試
   learn_sign_up_description: 在 CS 教育週期間報名參加一小時的程式碼課程
   learn_sign_up_button: 註冊帳號
   learn_videos_watch: Watch this inspirational video with your classroom
@@ -606,16 +598,20 @@
   hoc2014_try_scrat: 憤怒的小鳥，PvZ 和Scrat
   hoc2014_try_frozen: 來自冰雪奇緣的藝術家安娜及愛紗。
   carousel_heading_codeorg: 由 Code.org 所提供的教學課程
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: 教程由 Code.org 提供
   carousel_heading_3rd_party: 由 協力廠商 所提供的教學課程
   carousel_heading_third_party: 由 協力廠商 所提供的教學課程
   carousel_heading_international: 使用你語言的教程
   carousel_heading_domestic: 可用的在英語教程
   carousel_heading_beginners: 適合初學者的教程
+  carousel_heading_beyond_beginners: 適合初學者的教程
   carousel_heading_javascript: 教 JAVAscript 的自學教案
+  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 沒有設備或網際網路嗎？試試 '不插電'的電腦科學
   carousel_heading_devices: 手機和平板電腦的自學APPs
+  carousel_heading_beyond_devices: 手機和平板電腦的自學APPs
   carousel_heading_languages: 其他程式設計語言的自學教案
+  carousel_heading_beyond_languages: 其他程式設計語言的自學教案
   carousel_heading_apps_games: 建立自己的應用程式或遊戲
   carousel_heading_university: 線上大學課程
   carousel_heading_webpages: 學習製作網頁
@@ -623,6 +619,10 @@
   carousel_heading_ide: 教師們的熱門平臺
   educator_notes: 教育者注意事項
   teach_led_lesson_plans: 一小時程式碼的教學計畫
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: 如何教an Hour of Code (一個小時的代碼)
   more_resources_educators: 給教師和教育工作者的更多資源
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -675,10 +675,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭，布
-  hourofcode_name: 新的 code.org/hoc 的預留位置
+  hourofcode_name: 編寫您的第一個電腦程式
   playlab_name: 播放實驗室
   infinity_name: Infinity Play Lab
   artist_name: 畫家
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: 一小時程式碼的教學計畫
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲
   thinkersmithspanish_gradelevel: Por todos
@@ -722,8 +729,15 @@
   playlab_gradelevel: 適合年齡自 4 至104歲
   infinity_gradelevel: 適合年齡自 4 至104歲
   artist_gradelevel: 適合年齡自 4 至104歲
-  codeorg_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
-  codeintl_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  monstercoding_gradelevel: 適合年齡自 5至13歲
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: 小學
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
+  codeorg_platformtext: 瀏覽器, 智慧手機, 平板
+  codeintl_platformtext: 瀏覽器, 智慧手機, 平板
   thinkersmithspanish_platformtext: 不插電的
   khan_platformtext: 當代 Web 瀏覽器
   khanes_platformtext: 當代 Web 瀏覽器
@@ -735,7 +749,7 @@
   scratch_platformtext: 僅桌面 web 瀏覽器 (而不是平板電腦)
   lightbot_platformtext: 所有瀏覽器和 iOS、 Android系統或遊戲器
   thinkersmith_platformtext: 不插電的
-  condcards_platformtext: 非不插電
+  condcards_platformtext: 不插電的
   lightbotintl_platformtext: iOS，Android系統 （或 web 瀏覽器）
   codehs_platformtext: 現代的瀏覽器。(後續課程需要 $$)
   codecademy_platformtext: 當代 web 瀏覽器。iOS，Android Apps。
@@ -750,7 +764,7 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad，安卓平板電腦
   robomindnl_platformtext: 當代 web 瀏覽器，行動網路
-  flappy_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  flappy_platformtext: 瀏覽器, 智慧手機, 平板
   bitsbox_platformtext: 當代 Web 瀏覽器
   makeschool_platformtext: 當代 Web 瀏覽器
   touchdevelop_platformtext: 當代的瀏覽器、 智慧型手機、 所有設備
@@ -759,10 +773,17 @@
   thinkersmith2_platformtext: 不插電的
   kodableunplugged_platformtext: 不插電的
   projguts_platformtext: 不插電的
-  hourofcode_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  hourofcode_platformtext: 瀏覽器, 智慧手機, 平板
   frozen_platformtext: 當代瀏覽器 + 平板電腦
   starwars_platformtext: 當代瀏覽器 + 平板電腦
-  playlab_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  playlab_platformtext: 瀏覽器, 智慧手機, 平板
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: 當代 Web 瀏覽器
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: 當代 Web 瀏覽器
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: 瀏覽器, 智慧手機, 平板
   codeorg_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   codeintl_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -793,7 +814,7 @@
   robomindnl_shortdescription: 為虛擬機器器人編寫程式碼
   flappy_shortdescription: 用Flappy鳥、鯊魚或潛艇設計出自己的遊戲
   bitsbox_shortdescription: 編寫一系列的Apps代碼來播放和共用，使用真正的 JavaScript 。
-  makeschool_shortdescription: 設計一個 iPhone 遊戲 ！學習使用程式碼來教你的怪物移動 ！
+  makeschool_shortdescription: 設計一個 iPhone 遊戲 ！學習用程式碼來教你的怪物移動 ！
   touchdevelop_shortdescription: 解謎，建立遊戲，和學習程式碼都在您的手機上完成。
   appinventor_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   blockly_shortdescription: 下載 ZIP 檔，以瞭解離線
@@ -807,6 +828,19 @@
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
   artist_shortdescription: 和小畫家一起畫圖和設計!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
   codeintl_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
@@ -851,10 +885,8 @@
   flappy_longdescription: 使用拖放式的程式語言設計你自己Flappy鳥遊戲，並可自訂它不同的外觀 （Flappy鯊魚、Flappy聖誕老人、或任何角色）。只要按一下，就可將遊戲加到您的手機中。
   bitsbox_longdescription: 自訂您自己的虛擬平板電腦，然後編寫一系列的Apps來使用及分享。讓非常小的孩子透過簡單體驗來使用真正 JAVAscript
     ，成為可能的事，您會達到比您想到還遠。
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  makeschool_longdescription: 使用這個全新的、容易上手的，名為Swift的程式語言建立一個iPhone遊戲以學習程式設計!建立一個神奇&eacute;寶貝啟發的動作遊戲和編寫程式碼來教你的怪物移動。您將學習如何使用變數、
+    方法和物件，來協助你的怪物獲勝 ！
   touchdevelop_longdescription: 觸控式螢幕友好編輯器將引導您創造像素藝術、 解決熊謎題，或者建立你自己的跳躍鳥遊戲。
   appinventor_longdescription: 娛樂、 簡短的影片教案引導您在您的 Android 手機或平板電腦上完成建立三個簡單的APPs程式。它設計給新手和專家，此Hour
     of Code活動讓你開始建構自己的Apps，在你瞭解它之前。想像一下與朋友分享您自己創造的應用程式 ！這些活動適合個人自學和教師帶領的班級課程。
@@ -869,6 +901,37 @@
     and make a winter wonderland that you can then share with your friends!
   starwars_longdescription: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
   playlab_longdescription: 創建一個故事或讓與發揮實驗室的遊戲!使動物，海盜，僵屍，忍者，和更多的角色移動，發出的聲音，得分，和甚至投擲火球!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: 介紹電腦科學 (學齡前到8 年級）
   khan_beyond_name: 學習電腦程式設計
   tynker_beyond_name: 在家學習程式設計
@@ -993,7 +1056,7 @@
   groklearning_beyond_shortdescription: 基本的 python 程式設計簡介
   hacketyhack_beyond_shortdescription: 從基礎學習Ruby
   robomind_beyond_shortdescription: 為虛擬機器器人編寫程式碼
-  makeschool_beyond_shortdescription: 學習在一小時內做一個 iPhone 遊戲
+  makeschool_beyond_shortdescription: 學會在一小時內做一個 iPhone 遊戲
   appinventor_beyond_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   touchdevelop_beyond_shortdescription: 直接在您的手機、 平板電腦或筆記型電腦上的編寫App程式碼
   codehs_beyond_shortdescription: 使用一個有趣的視覺環境來學習 JavaScript 程式設計
@@ -1041,11 +1104,8 @@
     對駭客，您將學習 Ruby 程式設計語言。Ruby 用於所有種類的程式，包括桌面應用程式和網站。[注意： 桌面安裝所需]
   robomind_beyond_longdescription: '學生透過控制他們自己的虛擬機器器人學習程式設計的基礎知識。線上課程完整包含了簡短的簡報、 影片、
     測驗與自動指導/提示來協助程式設計練習。 '
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
+  makeschool_beyond_longdescription: 知道一些 ObjectiveC 嗎？學會讓 iPhone 遊戲一小時的時間 ！我們將引導您完成整個過程，以編寫代碼、
+    測試和完全在瀏覽器中玩你的遊戲，然後分享它在 facebook 上的朋友嘗試 ！沒有事先的 iPhone 開發經驗是必需的。您必須瞭解變數、 方法和物件是什麼。
   appinventor_beyond_longdescription: 娛樂、 簡短的影片教案引導您在您的 Android 手機或平板電腦上完成建立三個簡單的APPs程式。它設計給新手和專家，此Hour
     of Code活動讓你開始建構自己的Apps，在你瞭解它之前。想像一下與朋友分享您自己創造的應用程式 ！這些活動適合個人自學和教師帶領的班級課程。
   touchdevelop_beyond_longdescription: TouchDevelop 允許您創建應用程式，ipad、 iPhone、 Android、

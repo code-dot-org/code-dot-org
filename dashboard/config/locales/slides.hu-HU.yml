@@ -2657,37 +2657,36 @@
           hogy még több dolgot tudj csinálni.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot,
+          ha elkapsz egy Malacot. Viszont az a csavar, hogy valahányszor elkapsz egy
+          Malacot, megjelenik egy Rohamosztagos. Az egész képernyő tele van Malacokkal,
+          és ha 10 000-et elkapsz, akkor nyersz.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz,
+          és minden, amit megölsz, pontot ér. Én a programomhoz megfordítottam a nyilak
+          irányát, így ha a föl nyilat megnyomod, a szereplő lefelé megy, és ha a
+          jobb gombot megnyomod, balra megy. Elég nehéz! Néha előnyhöz jutsz, igazságtalan
+          előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével
+          meg tudd mutatni a barátaidnak. Jó szórakozást!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: Szia, Kathleen Kennedy vagyok, a Star Wars Ébredő erő producere. Ma
+          egy filmcsillagunkkal fogsz dolgozni, BB-8-tel, aki egy szférikus droid.
+          Mindent, amit csinál, és minden mozgását számítógépes szoftver irányítja.
+          A számítógép-tudomány minden iparágban jelen van a marketingtől az egészségügyön
+          át a filmig. Valójában informatikai mérnökök százai dolgoznak együtt az
+          olyan filmeken, mint az Ébredő erő.
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Szia, Rachel Rose vagyok, vezető kutatásfejlesztő mérnök az ILM-nél
+          és én vezetem az animációs és karakterfejlesztő csapatot. Az erő ébredésében
+          én segítek a művészeknek kidolgozni a mozgó ruhákat. Ezek a karakterek szerves
+          részét képezik, és valósághűvé teszik őket a messzi-messzi galaxisban.
       3:
         image: notes/starwars_blocks_intro_3.JPG
         text: A következő egy órában a saját Star Wars játékunkat fogjuk elkészíteni.
@@ -2720,8 +2719,7 @@
           teljesíteni fog föntről lefelé haladó sorrendben.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
       10:
         image: notes/starwars_blocks_intro_10.JPG
         text: Ha törölni szeretnél egy blokkot, csak vonszold vissza az eszköztárba.
@@ -2757,14 +2755,15 @@
           gombokat használja.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: A "ha van felfelé nyíl" esemény blokkot fogjuk használni, és hozzácsatoljuk
+          a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a "ha
+          van felfelé nyíl"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk
+          csinálni, hogy R2-D2 lefelé mozogjon. Így ahelyett, hogy a kóddal előre
+          meghatároznánk a droid mozgását, R2-D2 a gombok nyomására fog reagálni és
+          így fog mozogni a képernyőn.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Lépésről lépésre egyre interaktívabb lesz a játék.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -2779,21 +2778,21 @@
           hogy még több dolgot tudj csinálni.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot,
+          ha elkapsz egy Malacot. Viszont az a csavar, hogy valahányszor elkapsz egy
+          Malacot, megjelenik egy Rohamosztagos. Az egész képernyő tele van Malacokkal,
+          és ha 10 000-et elkapsz, akkor nyersz.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz,
+          és minden, amit megölsz, pontot ér. Én a programomhoz megfordítottam a nyilak
+          irányát, így ha a föl nyilat megnyomod, a szereplő lefelé megy, és ha a
+          jobb gombot megnyomod, balra megy. Elég nehéz! Néha előnyhöz jutsz, igazságtalan
+          előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével
+          meg tudd mutatni a barátaidnak. Jó szórakozást!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -2882,7 +2881,7 @@
           ciklusok hatásos részei a programozásnak.
       5:
         image: notes/mc_repeat_5.JPG
-        text: A következő szinteken beköszönt az eset, így egy házat kell építenünk,
+        text: A következő szinteken beköszönt az est, így egy házat kell építenünk,
           hogy biztonságban legyünk. Az ismételd blokkot fogjuk használni, így ez
           nagyon könnyű lesz.
       6:
@@ -3034,6 +3033,90 @@
           forever block.
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.

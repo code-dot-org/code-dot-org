@@ -105,6 +105,8 @@ kk:
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Internet Simulator
+        Custom: Artist
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: Bronze
@@ -123,23 +125,22 @@ kk:
         parameters: Functions with parameters
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get angry!
-        maze_2_5: "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: 'Help me banish this bad piggy using the fewest number of blocks. Try using more than one "repeat times" block.'
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-        maze_2_9: 'Ok, try the new "repeat until" block - it will repeat until I reach the annoying pig.'
-        maze_2_10: 'Ok, one last time for practice - can you solve this one using only 4 blocks?'
-        maze_2_11: 'Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?'
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only 5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.'
-        maze_2_14: 'Ok, this is just like the last puzzle, but you need to remember how you used the "if" block and the "repeat" block together.'
-        maze_2_15: 'Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.'
+        maze_2_2: 'Маған мына тентек қорсылдақты ұстауға көмектесесің бе? Бірнеше «Алға» блоктарын қойып, «Орындау» батырмасын бас. '
+        maze_2_1: Мына қорсылдақ мазамды алды! Тезірек жетуіме көмектесші!
+        maze_2_2_5: Жолымды белгілеп ал да, мына ақымақ қорсылдаққа мені жеткіз. Жарылғыш заттан аулақ жүр, өйтпесе қауырсындарым шашылады!
+        maze_2_3: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
+        maze_2_4: Тыныш. Маған зиянды қорсылдақты табуға көмектес. Әйтпесе, мені ашуландырасың!
+        maze_2_5: Тек екі блокты пайдаланып, ақылсызға жетуге болады. Шешуін таба аласың ба?
+        maze_2_6: Үш ақ блокты қолданып, көк құбыжыққа жеткізгейсің.
+        maze_2_7: Маған мүмкіндігіңше аз блоктарды пайдаланып, зиянды торайдан құтылуға көмектес. «Қайталау» блогын бір реттен артық пайдалан.
+        maze_2_8: Сұр блоктарды алып тастау мүмкін емес. «Қайталау» блогын пайдалану арқылы есепті шеш. 3 рет «қайталау» сұр блогының ішіне «алға», тағы да «алға», және «бұрылу» блоктарын орналастырып көр.
+        maze_2_9: 'Енді жаңа “... дейін қайталау” блогын қолдан - ол сен көрсеткен әрекеттерді, мен торайға жеткенге дейін қайталайды.'
+        maze_2_10: 'Ал енді соңғы талпыныс - тек қана 4 блокты қолданып, шеше аласың ба?'
+        maze_2_11: 'Құрметті бағдарламашы! Мен зомбимін. Өте ашпын. Маған күнбағысқа дейін жету керек. Тек 5  блокты қолданып мені оған жеткізе аласың ба?'
+        maze_2_12: Жарайды, қазір ұқсас сұрақ, бірақ кішкене басқашалау. Сен тек 5 блокты пайдаланып жасай аласың ба?
+        maze_2_13: 'Жаңа «егер» блогыпен таныс бол. Оны қолданып, қашан бұрылатындығымды шеш. Анықтама: саған тағы да бір блок қажет, бірақ оны қайда қоятындығын ұғынып ал. Келесі жолы өзің жасайтындай бол.'
+        maze_2_14: Жақсы, бұл өткен сұраққа ұқсайды, бірақ сен «қайталау» және «егер» блоктарын қалай қолданғаныңды еске түсіруің керек.
+        maze_2_15: 'Маған күнбағыс керек! "Егер" блогын алып, мүмкіндігінше аз блокты қолдан.'
         maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
         maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
         maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
@@ -328,20 +329,22 @@ kk:
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_iceage_1: 'Manny wants to say "hello" - can you help him?'
-        studio_iceage_2: 'Diego (actor 1) and Granny (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and play a sound when he gets there?
-        studio_iceage_5: 'Can you help Sid say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
-        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
-        studio_iceage_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the the "actor say" block twice.'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
         studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball get 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
         studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
         studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
@@ -477,6 +480,9 @@ kk:
         infinity_playlab_intro: 'Play Lab - Introduction'
         infinity_playlab_events: 'Play Lab - Events'
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -530,6 +536,9 @@ kk:
         gumball_intro: 'Gumball Hour of Code - Introduction'
         gumball_events: 'Gumball Hour of Code - Events'
         gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

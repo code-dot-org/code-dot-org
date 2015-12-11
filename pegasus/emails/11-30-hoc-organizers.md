@@ -4,52 +4,61 @@ subject: Your Hour of Code next week
 ---
 
 
-## Minecraft joins the Hour of Code!
+#### Next week, students at 155,000 events around the world will learn their first Hour of Code, jumping into a field that can change the rest of their lives!
 
-[![image](https://code.org/images/mc/fit-500/mc_social.jpg)](https://code.org/mc)
+*Here’s what you should know to make your Hour of Code a success:*
 
-Since the very beginning, probably the #1 Hour of Code request we’ve heard is a tutorial featuring “Minecraft,” a game very special to girls and boys alike. We heard you! Today, we present [Minecraft Hour of Code](https://code.org/mc), in partnership with Microsoft and Mojang AB for the Hour of Code coming in just three weeks.
+### 1) Print certificates for your students 
+You can print Hour of Code certificates in bulk at [code.org/certificates](https://code.org/certificates). Students will also see a certificate when they complete an Hour of Code tutorial, but some students won’t make it to the very end in an hour — and that’s okay. 
 
-The tutorial introduces learners to basic coding and guides them to mine, build, and explore in a 2-D “Minecraft” world.
+[![image](https://code.org/images/fit-250/email/certificate.jpg)](https://code.org/certificates/)
 
-### Try an early preview of [Minecraft Hour of Code](https://code.org/mc)
-
-<% if international == 'true' %>
-The tutorial will be translated into 30+ languages in the next few weeks (if you can help translate, visit [https://code.org/translate](https://code.org/translate)).
-<% end %>
-
-<% if organizer == 'true' %>
-### You are leading one of the 99,000(!) Hour of Code events worldwide registered to participate during Dec. 7-13. What should you do now?
-
-1) Check out [more tutorial options](https://code.org/learn) for every age and device. Or, [browse fantastic teacher-led lesson plans](https://code.org/teacher-led) for creative Hour of Code classroom activities.
-
-2) Join upcoming info sessions to ask questions and learn everything you need to know to prep for your Hour of Code.
-
-- [Wednesday, Nov. 18 at 5pm PST](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845): An Educator's Guide to the Hour of Code
-- [Wednesday, Dec. 2 at 5pm PST](http://www.eventbrite.com/e/sneak-peek-2015-hour-of-code-tutorials-tickets-17987437911): Ask final questions, with Code.org founder Hadi Partovi
-
-<% else %>
-### Anybody can participate. No experience needed, no computers either.
-You can check out [more tutorial options](https://code.org/learn) for all ages and [browse fantastic teacher-led lesson plans](https://code.org/teacher-led) for creative Hour of Code classroom activities. Then, join the worldwide celebration. There are 99,000(!) Hour of Code events worldwide registered to participate during Dec. 7-13.
-
-[**Sign up to join**](https://hourofcode.com/)
-<% end %> 
 
 <% if international == 'false' %>
-### You can win an inspiring live video chat for your students 
-We just announced an awesome roster of Hour of Code ambassadors who will live chat with classrooms to their first Hour of Code, including Instagram founder Kevin Systrom, BuzzFeed publisher Dao Nguyen and singer/songwriter Aloe Blacc. We’ll contact lucky winners soon, so [make sure your class is signed up](https://hourofcode.com/). 
 
+### 2) See even more new tutorial options
+There are 50 Hour of Code tutorials available for every age and every device. In case you missed it, there’s now a tablet-friendly, blocked-based version of [Star Wars: Building a Galaxy with Code](https://code.org/starwars) for younger beginners. 
+<% else %>
+### 2) Learn an Hour of Code in 44 languages
+Hour of Code tutorials are available in 44 languages. If you want to help translate new tutorials into more languages, visit [code.org/translate](https://code.org/translate). In case you missed it, there’s now a tablet-friendly, blocked-based version of [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars) for younger beginners. For schools with limited Internet access, look out for tutorials that can be done offline available later this week.
 <% end %>
 
-Together, we have a special opportunity to empower students to impact the world by creating technology of their own. Try [Minecraft Hour of Code](https://code.org/mc) now, share the world you build, and tell us what you think. 
+### 3) Use friendly urls
+When you’re ready to start your Hour of Code, you can write an easy, “friendly url” on the board. [Each tutorial](https://code.org/learn) has a short link. Instruct students to type it into their browsers to get started. 
 
+[![image](https://code.org/images/email/fit-400/friendly-url.png)](https://code.org/learn/)
 
-Hadi Partovi, <br/>
-Founder, Code.org
+<% if international == 'false' %>
+### 4) Watch inspiring video chats – celebrate computer science all week
+Throughout next week, role models who’ve made Instagram, BuzzFeed, and top-charting music hits will chat with classrooms about changing the world with code. [Tune into the live chats with students](https://hourofcode.com/prizes#video-chats), or watch the video archives. 
+
+### 5) Find a technical volunteer to help your class
+9,087 technical volunteers have signed up to help, and most of them haven’t heard from you yet. There’s still time to find a volunteer near you using our volunteer map and invite one to join your Hour of Code. [Find volunteers](https://code.org/volunteer/local).
+<% end %>
+
+<% if international == 'false' %>
+### 6) Join me on Wednesday for a live Q&A session - tomorrow
+I’ll be online to answer your Hour of Code questions via video conference tomorrow at 5pm PST. You can tune in live or catch the video recording later.
+
+[Join here](https://plus.google.com/events/c7s7qpt4ronikmfvm1393iigk40), Wednesday, Dec. 2, 5pm PST<br/>
+(Or watch our [previous info session](https://youtu.be/EJeMeSW2-Mw))
+<% else %>
+### 4) Join me for a live Q&A session - tomorrow
+I’ll be online to answer your Hour of Code questions via video conference tomorrow at 5pm PST. You can tune in live or catch the video recording later.
+
+[Join here](https://plus.google.com/events/c7s7qpt4ronikmfvm1393iigk40), Wednesday, Dec. 2, 5pm PST<br/>
+(Or watch our [previous info session](https://youtu.be/EJeMeSW2-Mw))
+<% end %>
+Thank you so much for your support,
+
+Hadi Partovi,
+<br/>Founder, Code.org
 
 <hr>
-<p><small>You’re receiving this email because you signed up to host an Hour of Code on <a href="https://hourofcode.com/">hourofcode.com</a>. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
-<small><strong>Don't like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
+<p><small> **Note:** Code.org has performed no references nor background checks on these potential volunteers and neither recommends nor certifies any volunteer. It is entirely your responsibility to thoroughly check references or perform any background checks required by your school or district. Code.org provides no warranty, guarantees of suitability, or information other than the ability to contact these potential volunteers, and all liability in any use of volunteers rests only with you. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on this potential volunteer.</small> 
+</small></p>
+<p><small>You’re receiving this email because you created an account on <a href="https://code.org/">Code.org</a> or signed our petition. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
+<small><strong>Don't want these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
 <p><small>Stay in touch with us. Follow Code.org on
 <a href="https://www.facebook.com/Code.org">Facebook</a>, <a href="https://twitter.com/codeorg">Twitter</a>, <a href="https://instagram.com/codeorg">Instagram</a>.
 </small></p>

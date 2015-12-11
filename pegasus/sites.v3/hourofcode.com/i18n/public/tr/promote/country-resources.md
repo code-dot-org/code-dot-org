@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -45,15 +44,19 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
 
-## Use this handout to recruit corporations
+## Bu broşürü şirketleri de çağırmak için kullanabilirsiniz
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Bu öğreticileri deneyin:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -64,7 +67,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Donanım gereksinimlerinizi kendiniz planlayın - bilgisayar kullanımı isteğe bağlı
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -72,12 +75,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Tebrikler sayfasını görüntüleyin**, böylece öğrenciler bitirdiklerinde onların göreceği sayfayı görüntüleyeceksiniz. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Plan ahead based on your technology available
+## 3) Elinizdeki mevcut teknoloji ile planınızı önceden yapın
 
   * **Yeterince aygıtınız yok mu?** [Takım olarak programlatmayı](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) deneyin. When participants partner up, they help each other and rely less on the teacher.
   * **Bant genişliğiniz düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen öğreticileri deneyin.
 
-## 4) Inspire students - show them a video
+## 4) Öğrencilerinize ilham verin - onlara bir video izletin
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -85,7 +88,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Öğrencilerinizi heyecanlandırın - küçük bir başlangıç yapın**
 
 <% else %>
 
@@ -93,4 +96,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>

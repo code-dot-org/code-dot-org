@@ -105,6 +105,8 @@
         StudioEC: Театрална лаборатория
         Applab: Лаборатория за приложения
         NetSim: Интернет симулатор
+        Custom: Художник
+        CustomStudio: Театрална лаборатория
     trophy:
       name:
         Bronze: Бронз
@@ -549,64 +551,82 @@
           скорост. След това го преместeте  със стрелките, за да предупреди останалите
         studio_playlab_10: Създайте своя собствена игра. Когато сте готови, щракнете
           върху Финал, за да споделите с приятелите си играта за телефон.
-        studio_iceage_1: Мани иска да каже "Здравей" - може ли да му помогнете?
-        studio_iceage_2: Диего (актьор 1) и Грани (актьор 2) биха искали да си кажат
-          "здрасти" един на друг. Можете ли да им помогнете като поставите 2 блока
-          за диалог?
-        studio_iceage_3: Може да ви помогнете на Scrat да вземе знамето?
-        studio_iceage_4: Може ли да помогнете на Scrat (актьор 1) да стигне до Грани
-          (актьор 2) и да се чуе звук, когато той го направи?
-        studio_iceage_5: Може ли да помогнете на Сид да каже "Поздравления", когато
-          бъде щракнато върху му? Не забравяйте да щракнете върху него, след като
-          натиснете Старт
-        studio_iceage_6: Може ли да помогнете на Диего да се движи чрез клавишите
-          със стрелки и да стигне до всички знамена?
-        studio_iceage_7: Блокът "повторение завинаги" ви позволява да стартирате даден
-          код непрекъснато. Можете ли да прикачите блокове към него, за да помогнете
-          на Сид да се движи надясно и наляво?
-        studio_iceage_8: Може ли да добавите блок за добавяне на една точка и блок
-          за звук, когато Сид връхлита върху Мани, а след това го преместете със стрелките
-          докато спечелите точки?
-        studio_iceage_9: Задайте фона за тази Ледена епоха и помогнете на Сид да стигне
-          до Грани по-бързо чрез промяна на неговата скорост. След това го преместете
-          със стрелките, за да предупреди всички останали.
-        studio_iceage_10: Създайте своя собствена игра. Когато сте готови, щракнете
-          върху Финал, за да споделите с приятелите си играта за телефон.
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_hello1: Сид иска да събере желаещи за ново приключение. Помогнете
+          му да каже "Здравей" като плъзнете "казва" блока в работната област и напишете
+          думата "Здравей" вътре.
+        studio_iceage_hello2: Сид (актьор 1) намери Мани (актьор 2) и иска да го покани
+          в приключението.  Помогнете им да се поздравяват помежду си с помощта на
+          два блока за диалог.
+        studio_iceage_move_to_flag: Scrat търси своя жълъд!  Помогнете му да измине
+          последните 200 пиксела като използвате  блок за движение.
+        studio_iceage_move_to_actor: Диего (актьор 1) търси Мани (актьор 2). Помогнете
+          на Диего да измине 200 пиксела надолу към Мани, използвайки блок за движение.
+          Свържете след това блок за звук към "когато актьор докосва" събитието, за
+          да се чуе звук когато те се намерят един друг.
+        studio_iceage_repeat: '"Повтаря завинаги" блока ви позволява да стартирате
+          код непрекъснато. Ще прикачите ли блокове, за да помогнете на Грани да се
+          раздвижи чрез многократно преместване наляво и надясно?'
+        studio_iceage_click_hello: Можете ли да помогнете на Сид да направи покана
+          за приятелите си, когато кликнете върху него? Не забравяйте да кликнете
+          върху него, след като натиснете Старт.
+        studio_iceage_move_events: Scrat все още се търси жълъди! Помогнете му да
+          бяга наоколо чрез поставяне на "блок за движение за всяко от събитията?
+          Променете посоката, за да работи със стрелките от компютъра. Когато сте
+          готови, щракнете върху Старт и се опитайте да съберете всички жълъди.
+        studio_iceage_sound_and_points: Ние сме дали по-голямата част от кода, която
+          помага на Грани да се движи наляво и надясно, както и кода, с който Сид
+          се движи на екрана. Можете ли да довършите кода като добавите блокове към
+          "когато актьор докосва" събитието, за да се чува звуков сигнал и да се дава
+          точка, когато Сид и Грани се сблъскат? Натиснете Старт, за да играете играта.
+        studio_iceage_warn_ice_age: Всички трябва да се движат по-бързо защото идва
+          Ледената епоха! Променете фона на "айсберги" и задайте бърза скорост на
+          Сид. След това натиснете бутона Старт и го преместете до Diego, за да го
+          предупреди.
+        studio_iceage_throw_hearts: Сид иска да каже на Грани, че я обича. Използвайте
+          командата "актьор хвърля", за да може Сид (актьор 1) да хвърли сърца на
+          Грани (актьор 2)! Задайте на Грани щастливо настроение, когато тя получи
+          сърцата.
+        studio_iceage_free_play: Време е да създадете своя собствена игра или история!
+          Когато сте готови, щракнете върху Готово, за да споделите с приятели, за
+          да опитат играта на техните телефони, таблети или компютри!
+        studio_gumball_hello1: Анаис иска да си намери нови приятели. Можете ли да
+          ѝ помогнете да каже "Здравей"? Плъзнете блок за думи в работната област
+          и напишете думата "Здравей" вътре.
+        studio_gumball_hello2: Дарвин (актьор 1) и неговия брат Гъмбол (актьор 2)
+          отиват на училище.  Помогни им да се поздравяват взаимно с помощта на два
+          блока за текст.
+        studio_gumball_move_to_flag: Банана Джо е на път да спечели състезанието!  Помогнете
+          му да измине последните 200 пиксела с използване на блок за движение.
+        studio_gumball_move_to_actor: Гъмбол (актьор 1) и Дарвин (актьор 2) са закъснели
+          за състезанието! Помогнете на Гъмбол да извърви 200 пиксела до Дарвин. Използвайте
+          "премести актьор" блок.  После свържете блок за звук със събитието "когато
+          актьор докосва". Когато се намерят ще прозвучи звук.
+        studio_gumball_repeat: Блокът "повтаряй завинаги" позволява да се стартира
+          код непрекъснато.  Може ли да прикачите блокове към него, за да помогнете
+          на Гъмбол да се движи много пъти наляво и надясно по време на състезанието?
+        studio_gumball_click_hello: 'Може ли да помогнете на Антон да обяви началото
+          на състезанието с думите: "Приготви се, готови, старт!"? За да тествате
+          програмата, не забравяйте да щракнете върху Антон, след като сте натиснали
+          на Старт!'
+        studio_gumball_move_events: Дарвин е на състезание по събиране на флагове!
+          Помогнете му да тича чрез поставяне на блок за "преместване" на всеки от
+          събития. Когато сте готови, щракнете върху Старт и се опитайте да събере
+          всички флагове.
+        studio_gumball_sound_and_points: Ние сме дали по-голямата част от кода, която
+          помага на Антон (актьор 2) да се движи наляво и надясно, както и кода, с
+          който Банана Джо (актьор 1) се движи на екрана.  Можете ли да довършите
+          кода като добавите блокове към "когато актьор докосва" събитието, така че
+          да се чува звуков сигнал и да се дава точка, когато Банана Джо и Антон се
+          сблъскат?  Натиснете Старт, за да играете играта.
+        studio_gumball_warn_food_fight: Дарвин е избягал от боя с храна! Променете
+          фона на "цели" и задайте на Дарвин бърза скорост. След това, натиснете бутона
+          Старт и го преместете към Пени, за да я предупреди.
+        studio_gumball_join_food_fight: Присъединете се към боя с храна! Използвайте
+          командата "актьор хвърля ", за да може банана Джо (актьор 1) да хвърли храна
+          по Антон (актьор 2)! Задайте на Антон ядосано настроение при успешен удар.
+        studio_gumball_free_play: Създайте своя собствена игра или история. Когато
+          сте готови, щракнете върху Готово, за да споделите с приятели, за да опитат
+          играта на техните телефони, таблети или компютри!
         studio_full_sandbox: Създайте своя собствена игра. Когато сте готови, щракнете
           върху Финал, за да споделите с приятелите си играта за телефон.
         studio_k1_1: Можете ли да накарате това куче да казва "Здравей, свят"?
@@ -745,6 +765,9 @@
         infinity_playlab_intro: Игрална лаборатория - Въведение
         infinity_playlab_events: Игрална лаборатория - Събития
         infinity_playlab_repeat_forever: Игрална Лаборатория - повторение завинаги
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -800,9 +823,12 @@
         mc_if_statements: Minecraft - "ако" отчети
         mc_congrats_share: Minecraft - Поздравления
         mc_congrats_no_share: Minecraft - Поздравления
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        gumball_intro: Гъмбол Hour of Code - Въведение
+        gumball_events: Гъмбол Hour of Code - Събития
+        gumball_repeat: Гъмбол Hour of Code - повторение на отчети
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

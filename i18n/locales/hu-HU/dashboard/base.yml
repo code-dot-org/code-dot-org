@@ -399,6 +399,9 @@ hu:
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
@@ -455,7 +458,7 @@ hu:
       unused: Nem használt szintek
   upsell:
     hoc:
-      title: A kódolás órája
+      title: Classic Maze
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód

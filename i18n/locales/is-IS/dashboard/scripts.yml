@@ -146,7 +146,7 @@ is:
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
         hourofcode:
           Maze: Völundarhús
-          title: Klukkustund kóðunar
+          title: Classic Maze
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum fígúrum!
         frozen:
@@ -1348,6 +1348,10 @@ is:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

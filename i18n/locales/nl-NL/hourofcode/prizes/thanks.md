@@ -6,28 +6,28 @@ title: <%= hoc_s(:title_prizes_thanks) %> layout: wide nav: prizes_nav
 
 <%= view :signup_button %>
 
-# Thanks for signing up for a chance to win the $10,000 Hardware Prize
+# Bedankt voor het aanmelden, u maakt nu kans om de prijs van $10.000 aan Hardware te winnen
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
+Uw hele school maakt nu kans om laptops (of apparatuur ter waarde van $10.000) te winnen. Wij zullen uw aanmelding nakijken en de winnaars aankondiging in december.
 
-## 1. Zegt het voort
+## 1. Spreid het woord
 
-Vertel je vrienden over het Uur Code, #HourOfCode.
+Vertel je vrienden over het CodeUur, #HourOfCode.
 
-## 2. Vraag je hele school een Uur Code aan te bieden
+## 2. Vraag je hele school om een Uur Code aan te bieden
 
-[Send this email](%= resolve_url('/promote/resources#email') %) to your principal.
+[Stuur deze e-mail](%= resolve_url('/promote/resources#email') %) door naar de directeur.
 
 ## 3. Vraag je werkgever betrokken te raken
 
-[Send this email](%= resolve_url('/promote/resources#email') %) to your manager, or the CEO.
+[Stuur deze e-mail](%= resolve_url('/promote/resources#email') %) naar uw directeur of de CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promoot the CodeUur in uw gemeenschap
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](%= resolve_url('/promote/resources#email') %).
+Werven een lokale groep — jongen/meisje scouts club, kerk, Universiteit, veteranen groep of vakbond. Of host een CodeUur "block party" in uw buurt. [Stuur deze e-mail](%= resolve_url('/promote/resources#email') %).
 
-## Vraag een politicus het Uur Code te ondersteunen
+## Vraag een politicus het CodeUur te ondersteunen
 
-[Send this email](%= resolve_url('/promote/resources#politicians') %) to your mayor, city council, or school board and invite them to visit your school.
+[Stuur deze e-mail](%= resolve_url('/promote/resources#politicians') %) door naar uw burgemeester, gemeenteraad of schoolbestuur en nodig hen uit voor een bezoek aan uw school.
 
 <%= view :signup_button %>

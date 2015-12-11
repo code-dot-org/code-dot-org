@@ -463,6 +463,9 @@
     privacy: Privātuma politika
     secure: Droša versija
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Vajadzīga palīdzība?
     subtitle: Skatīt šos video un padomus
@@ -702,7 +705,7 @@
     really_delete: Izdzēst?
     delete_yes: Jā
     delete_no: Nē
-    saved: Saved
+    saved: Saglabāts galerijā!
     not_saved: Not saved
     cancel: Atcelt
     delete_confirm_title: Are you sure you want to delete this project?

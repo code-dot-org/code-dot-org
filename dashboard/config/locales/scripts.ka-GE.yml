@@ -67,12 +67,12 @@
           Bee Debugging: ფუტკრის ბაგების გამოსწორება
           Bee Functions: ფუტკრის ფუნქციები
           Maze Loops: ლაბირინთის ციკლები
-          Graph Paper Programming: გრაფიკული პროგრამირება
+          Graph Paper Programming: გრაფიკული პროგრამირება ქაღალდზე
           'Real-life Algorithms: Paper Planes': 'ცხოვრებისეული ალგორითმები: ქაღალდის
             თვითმფრინავები'
           Getting Loopy: ჩაციკლვა
           Relay programming: პროგრამირება ცვლაში
-          Conditionals: პირობები
+          Conditionals: პირობითი ბრძანებები
           Binary Bracelets: ორობითი სამაჯურები
           The Big Event: დიდი მოვლენა
           Your Digital Footprint: თქვენი ციფრული ნაკვალევი
@@ -212,11 +212,11 @@
           Maze and Bee: ლაბირინთი და ფუტკარი
           Artist Binary: 'მხატვარი: ორობითი'
           description_audience: 'ასაკი: 10-18'
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          Super Challenge - Variables: სუპერ-დავალება - ცვლადები
+          Super Challenge - For Loops: სუპერ-დავალება - For ციკლები
+          Super Challenge - Functions and Parameters: სუპერ-დავალება - ფუნქციები და
+            პარამეტრები
+          Extreme Challenge - Comprehensive: განსაკუთრებული დავალება - ამომწურავი
         Course4pre:
           title: კურსი 4-ის პრერეკვიზიტი
           description_short: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ
@@ -278,7 +278,7 @@
           'Play Lab: Boolean (Big Game)': The Big Game - Booleans
           'Unplugged: Conditionals and Piecewise Functions': 'გაკვეთილი კომპიუტერის
             გარეშე: პირობითი ბრძანებები და ნაწილობითი ფუნქციები'
-          'Eval: Conditionals': პირობები
+          'Eval: Conditionals': პირობითი ბრძანებები
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Pythagorean Theorem'
           'Play Lab: Collision Detection (Big Game)': The Big Game - Collision Detection
@@ -376,19 +376,19 @@
           Introduction to Computer Science: ინფორმატიკის შესავალი
           The Maze: ლაბირინთი
           Computational Thinking: გამოთვლითი აზროვნება
-          Graph Paper Programming: გრაფიკული პროგრამირება
+          Graph Paper Programming: გრაფიკული პროგრამირება ქაღალდზე
           The Artist: მხატვარი
           Algorithms: ალგორითმები
           The Artist 2: მხატვარი 2
           Functions: ფუნქციები
           The Farmer: ფერმერი
-          Conditionals: პირობები
+          Conditionals: პირობითი ბრძანებები
           The Artist 3: მხატვარი 3
           Song Writing: სიმღერის დაწერა
           The Farmer 2: ფერმერი 2
           Abstraction: აბსტრაქცია
           The Artist 4: მხატვარი 4
-          Relay Programming: პროგრამირება ცვლაში
+          Relay Programming: ესტაფეტური პროგრამირება
           The Farmer 3: ფერმერი 3
           The Internet: ინტერნეტი
           The Artist 5: მხატვარი 5
@@ -1307,7 +1307,7 @@
           Move it, Move it: ვისწავლოთ გადაადგილება
           'Real-life Algorithms: Plant a Seed': 'ცხოვრებისეული ალგორითმები: დათესე
             მცენარე'
-          Graph Paper Programming: გრაფიკული პროგრამირება
+          Graph Paper Programming: გრაფიკული პროგრამირება ქაღალდზე
           Building a Foundation: ფუნდამენტის აშენება
           Getting Loopy: ჩაციკლვა
           The Big Event: დიდი მოვლენა
@@ -1512,6 +1512,10 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1566,10 +1570,12 @@
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: გამყინვარების პერიოდი - თამაშების ლაბორატორია
+          description_short: შექმენით ისტორია ან თამაში გამყინვარების პერიოდის თამაშების
+            ლაბორატორიაში!
+          description: შექმენით ისტორია ან თამაში გამყინვარების პერიოდის თამაშების
+            ლაბორატორიაში!
+          Ice Age Play Lab: გამყინვარების პერიოდი - თამაშების ლაბორატორია
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1624,10 +1630,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumball - თამაშების ლაბორატორია
+          description_short: შექმენით ისტორია ან თამაში Gumball თამაშების ლაბორატორიაში!
+          description: შექმენით ისტორია ან თამაში Gumball თამაშების ლაბორატორიაში!
+          Gumball Play Lab: Gumball - თამაშების ლაბორატორია
         starwars:
           title: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით'
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი

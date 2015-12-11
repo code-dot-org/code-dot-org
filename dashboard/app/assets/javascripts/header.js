@@ -29,9 +29,9 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
-  progressData = progressData || {levels: {}};
+  progressData = progressData || {};
 
-  var clientLevelProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
+  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 
   $('.header_text').first().text(stageData.title);
   if (stageData.finishLink) {
@@ -52,8 +52,16 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
   var progressContainer = $('.progress_container');
+  var serverProgress = progressData.levels || {};
   stageData.levels.forEach(function(level, index, levels) {
-    var status = mergedActivityCssClass((progressData.levels[level.id] || {}).result, clientLevelProgress[level.id]);
+    var status;
+    if (dashboard.clientState.queryParams('user_id')) {
+      // Show server progress only (the student's progress)
+      status = activityCssClass((serverProgress[level.id] || {}).result);
+    } else {
+      // Merge server progress with local progress
+      status = mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+    }
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
     if (userId) {
@@ -62,7 +70,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     if (sectionId) {
       href += '&section_id=' + sectionId;
     }
-    var link = $('<a>').attr('href', href).addClass('level_link').addClass(status).text(level.title);
+    var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link').addClass(status).text(level.title);
 
     if (level.kind == 'unplugged') {
       link.addClass('unplugged_level');
@@ -73,6 +81,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     }
     progressContainer.append(div).append('\n');
   });
+
   $('.level_free_play').qtip({
     content: {
       attr: 'title'
@@ -441,15 +450,7 @@ function activityCssClass(result) {
  * @return {string} The result css class.
  */
 function mergedActivityCssClass(a, b) {
-  a = a || 0;
-  b = b || 0;
-  if (a === 0) {
-    return activityCssClass(b);
-  }
-  if (b === 0) {
-    return activityCssClass(a);
-  }
-  return activityCssClass(Math.max(a, b));
+  return activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
 }
 
 function populateProgress(scriptName) {
@@ -468,6 +469,9 @@ function populateProgress(scriptName) {
 
         // Clear the existing class and replace
         $('#level-' + levelId).attr('class', 'level_link ' + status);
+
+        // Write down new progress in sessionStorage
+        dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
       }
     });
   });

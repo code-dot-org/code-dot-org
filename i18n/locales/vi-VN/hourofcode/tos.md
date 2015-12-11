@@ -22,25 +22,25 @@ Các điều khoản có thể thay đổi. Bạn đồng ý bị ràng buộc b
 
 Một số dịch vụ có thể tùy thuộc vào hướng dẫn bổ sung, quy tắc hoặc điều khoản đã đăng của dịch vụ ("Điều khoản bổ sung") và việc sử dụng dịch vụ như vậy của bạn sẽ là điều kiện thỏa thuận với các điều khoản bổ sung. Nếu có bất kỳ xung đột giữa các điều khoản và các điều khoản bổ sung, các điều khoản bổ sung sẽ kiểm soát dịch vụ đó, trừ khi các điều khoản bổ sung khẳng định rõ ràng rằng các điều khoản này sẽ kiểm soát.
 
-### Children Under Age 13
+### Trẻ em dưới 13 tuổi
 
 Chúng tôi từng bước hạn chế thu thập dữ liệu cá nhân từ người dùng dưới tuổi 13 như diễn tả trong Code.org [chính sách bảo mật](http://code.org/privacy). Nếu bạn dưới 13 tuổi, chúng tôi khuyến khích bạn nên có được sự chấp thuận của cha mẹ hoặc người giám hộ hợp pháp trước khi tạo một tài khoản trên Code.org. Code.org cho phép kết nối với học sinh thông qua đại diện của trường học, chẳng hạn như giáo viên, ban giám hiệu, cố vấn, và các nhà sư phạm (một "**giáo dục**") để cung cấp các hướng dẫn, giáo dục và các dịch vụ tương tự. Nếu bạn là một nhà giáo dục, bạn có thể đăng ký tài khoản trên các dịch vụ cho một hoặc nhiều học sinh của bạn.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Your Account
+### Tài khoản của bạn
 
 Nếu bạn tạo một tài khoản để sử dụng dịch vụ, bạn có trách nhiệm giữ tài khoản và mật khẩu riêng của bạn an toàn. Nếu bạn đang sử dụng tài khoản được đăng kí bởi nhà giáo dục, nhà giáo dục của bạn có thể truy cập và vô hiệu hóa tài khoản của bạn.
 
 Code.org có thể cho phép bạn đăng ký một tài khoản để sử dụng dịch vụ thông qua một mạng xã hội nhất định, chẳng hạn như kết nối Facebook và Google ("**Dịch vụ xác thực**"). Đăng ký sử dụng dịch vụ bằng cách sử dụng một tài khoản xác thực, bạn đồng ý rằng Code.org có thể truy cập thông tin tài khoản xác thực của bạn và đồng ý với bất kỳ và tất cả các điều khoản sử dụng của tài khoản xác thực liên quan đến sử dụng dịch vụ thông qua tài khoản xác thực. Bạn chỉ có trách nhiệm cho sự tác động của bạn với tài khoản xác thực.
 
-### Privacy
+### Bảo mật
 
 Vấn đề bảo mật của bạn là rất quan trọng đối với chúng tôi. [Privacy Policy](http://code.org/privacy) (chính sách bảo mật của Code.org) sẽ trình bày cách chúng tôi sử dụng thông tin cá nhân của bạn kết hợp với các điều khoản xem xét. Vui lòng xem kỹ Chính sách bảo mật của Code.org để biết thông tin liên quan đến sự thu thập, sử dụng và tiết lộ thông tin của bạn.
 
 Nếu bạn là một học viên đang sử dụng một tài khoản được đăng kí bởi một giáo viên hay kết nối với một giáo viên nào đó, bạn phải đồng ý rằng Code.org có thể tiết lộ thông tin của bạn với vị giáo viên liên kết với tài khoản của bạn. Nếu bạn là một giáo viên, bạn đồng ý rằng không chia sẻ thông tin của học viên mình từ Code.org với bất kì ai khác ngoại trừ lớp học, khu học chánh, hoặc cơ sở giáo dục mà bạn đại diện.
 
-### User Generated Content - Management; License Grant; Representations and Warranties
+### Thỏa thuận- Quản lý người dùng phát sinh; Giấy phép; Đại diện và Bảo đảm
 
 Hiện tại hoặc trong tương lai Code.org thể cho phép bạn và người dùng khác gửi mã máy tính (bao gồm mã nguồn và đối tượng), thông tin, văn bản, đồ họa, ghi chú, câu hỏi, ý kiến, xếp hạng, đánh giá, hình ảnh và video hoặc các thông tin khác (gọi chung là, "**thỏa thuận người dùng**") cho các dịch vụ. Bạn hiểu rằng cho dù có hay không những Thỏa thuận người dùng được công bố, Code.org cũng không đảm bảo bất kỳ bảo mật đối với bất kỳ đệ trình nào.
 
@@ -54,17 +54,17 @@ By submitting or distributing User Content through the Services or directly to C
 
 Ngoài ra, bằng cách gửi hoặc phân phối Thỏa thuận Người dùng thông qua các dịch vụ, bạn đồng ý cấp cho từng người sử dụng của Dịch vụ giấy phép không độc quyền để truy cập và sử dụng Thỏa thuận người dùng của bạn.
 
-### User Content Representations and Warranties
+### Sự miêu tả và đảm bảo cho nội dung người dùng
 
 Bạn đang chịu trách nhiệm về nội dung người sử dụng mà bạn đăng lên các dịch vụ và những hậu quả của sự đăng tải hoặc phát tán chúng. Việc tải lên, gửi, tạo ra, hoặc công khai nội dung người dùng của bạn đến hoặc qua dịch vụ bạn đại diện phải đảm bảo đảm rằng: (1) bạn là tác giả và chủ sở hữu của nội dung người dùng đó và rằng bạn có quyền sử dụng hoặc có các giấy phép cần thiết, quyền, sự đồng ý, và quyền để công khai nội dung người dùng bạn gửi; (2) nội dung người dùng của bạn không và sẽ không: (a) vi phạm, xâm phạm, hoặc chiếm đoạt các quyền của bên thứ ba, bao gồm bất kỳ bản quyền, thương hiệu, bằng sáng chế, bí mật kinh doanh, đạo đức, quyền công khai, hoặc bất kỳ tài sản trí tuệ (b) vu khống, phỉ báng hoặc xâm hại quyền riêng tư, công khai hoặc các quyền sở hữu khác của bất kỳ người nào; (3) nội dung người dùng của bạn không chứa bất kỳ vi rút, phần mềm quảng cáo, phần mềm gián điệp, hoặc mã độc hại khác.
 
-### Restrictions on Content and Use of the Services
+### Hạn chế về nội dung và sử dụng các dịch vụ
 
 Chúng tôi bảo lưu quyền (nhưng sẽ không có nghĩa vụ) loại bỏ hoặc từ chối để tiết lộ bất kỳ nội dung người dùng trên các trang web và đình chỉ hoặc chấm dứt người dùng, mà không thuộc trách nhiệm của bạn. Chúng tôi cũng bảo lưu quyền truy cập, đọc, duy trì, và tiết lộ bất kỳ thông tin cần thiết phải (i) đáp ứng các điều luật, quy định, quá trình hợp pháp hoặc yêu cầu chính phủ, (ii) thực thi các điều khoản này, bao gồm các sự điều tra khả năng vi phạm, (iii) phát hiện, ngăn chặn, hoặc mặt khác sự gian lận địa chỉ, bảo mật hoặc các vấn đề kỹ thuật, (iv) đáp ứng với yêu cầu hỗ trợ người dùng, hoặc (v) bảo vệ quyền , tài sản hoặc sự an toàn của Code.org, người dùng và sự công khai.
 
 Bạn có thể không làm bất kỳ những điều sau đây trong khi truy cập hoặc sử dụng các dịch vụ: (i) truy cập, giả mạo, hoặc sử dụng các khu vực không công khai của các dịch vụ, Hệ thống máy tính của Code.org, hoặc các hệ thống phân phối kỹ thuật của nhà cung cấp cho Code.org; (ii) thăm dò, quét, hoặc kiểm tra các lỗ hổng của bất kỳ hệ thống, mạng hoặc vi phạm, phá vỡ bất kỳ biện pháp an ninh hoặc các biện pháp xác thực; (iii) truy cập, tìm hoặc cố truy cập, tìm kiếm các dịch vụ bằng mọi phương tiện (tự động hoặc bằng cách khác) khác thông qua giao diện được công bố, có sẵn hiện nay được cung cấp bởi Code.org (và chỉ theo những điều khoản và điều kiện), trừ khi bạn đã được đặc biệt cho phép làm như vậy trong một thỏa thuận riêng biệt với Code.org (lưu ý: thu thập các dịch vụ được cho phép nếu được thực hiện phù hợp với các quy định của các tập tin robots.txt Tuy nhiên, sự loại bỏ các dịch vụ mà không có sự đồng ý trước của Code.org rõ ràng bị cấm); (iv) giả mạo bất kỳ tiêu đề gói TCP/IP hoặc bất kỳ phần nào của các thông tin tiêu đề ở bất kỳ email hoặc bài đăng, hoặc bất kỳ cách sử dụng các dịch vụ gửi thay đổi, lừa đảo hoặc làm giả các thông tin xác định nguồn; hoặc (v) can thiệp, phá hoại, (hoặc cố gắng để làm như vậy), truy cập của bất kỳ người sử dụng, máy chủ hoặc mạng, bao gồm, không giới hạn, đe doạ hoặc quấy rối, gửi một vi-rút, làm quá tải, gửi thư rác, bom thư các dịch vụ, hoặc bằng kịch bản tạo ra nội dung như một cách để can thiệp vào hoặc tạo ra một sự quá tải lên các dịch vụ.
 
-### Your License to Use Code.org Videos, Tutorials, Data, and APIs
+### Giấy phép của bạn để sử dụng các băng hình trong code.org, các hướng dẫn, dữ liệu và API.
 
 Code.org [Thư viện video ](http://youtube.com/user/CodeOrg) có thể được phân phối lại tự do dựa vào các điều kiện (1) các video được phân phối lại AS-IS, (bằng cách sử dụng trình phát video nhúng cung cấp hoặc tải về liên kết nếu cung cấp) với việc ghi nhận của Code.org (2) các video không được tích hợp vào bất kỳ mash-up, (3) các video được sử dụng cho mục đích giáo dục khoa học máy tính, và (4) việc sử dụng video không cấu thành một sự chứng thực của một thương hiệu bên thứ 3 , dịch vụ hoặc sản phẩm và (5) nếu truy cập vào nội dung phân phối lại hoặc dịch vụ thì được miễn phí.
 
@@ -80,17 +80,17 @@ Khác so với các video độc quyền và tác phẩm nghệ thuật được
 
 Bất kỳ dữ liệu nào được cung cấp bởi Ban Hội nghị được cung cấp "như là" không có bảo hành nào, và được bảo vệ bởi luật bản quyền quốc tế và Hoa Kỳ. Dữ liệu hiển thị được cung cấp cho mục đích thông tin và có thể chỉ được truy cập, được nhận xét, xuất bản, và/hoặc được sử dụng trong phù hợp với, và sự cho phép của, The Ban Hội nghị phù hợp với các điều khoản sử dụng được trưng bày tại [www.conference-board.org](http://www.conference-board.org). Dữ liệu như vậy có thể không được tách ra để sử dụng trong cơ sở dữ liệu, được sử dụng để tạo ra một tác phẩm phái sinh, hoặc nếu không lạm dụng bởi bất kỳ phương tiện nào mà không cho phép rõ ràng văn từ Ban Hội nghị, ngoại trừ rằng bạn có thể hạn chế sử dụng phi thương mại như là phù hợp với hội chợ sử dụng theo mục 107 của luật bản quyền năm 1976. The Conference Board ® và The Conference Board Help Wanted OnLine ® là đăng ký thương hiệu của The Conference Board. The Conference Board bảo lưu tất cả các quyền trong và để thương hiệu của nó. Thêm thông tin về The Conference Board Help Wanted OnLine® có thể được tìm thấy [ở đây](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### Chính sách Bản quyền
 
 Code.org tôn trọng quyền sở hữu trí tuệ của người khác và hy vọng người sử dụng của các dịch vụ cũng làm vậy. Chúng tôi sẽ trả lời thông báo về vi phạm bản quyền bị cáo buộc tuân theo pháp luật hiện hành và chính xác được cung cấp cho chúng tôi. Nếu bạn tin rằng công việc của bạn đã bị sao chép một cách vi phạm bản quyền, xin vui lòng cung cấp cho chúng tôi với các thông tin sau: (i) một chữ ký vật lý hoặc điện tử của người sở hữu bản quyền hoặc một người được ủy quyền hành động thay cho họ; (ii) xác định các tác phẩm đã đăng ký quyền tác giả tuyên bố đã bị xâm phạm; (iii) xác định các tài liệu tuyên bố bị xâm phạm hoặc là chủ đề của vi phạm hoạt động và nó bị gỡ bỏ hoặc truy cập vào đó là để được vô hiệu hóa, và thông tin hợp lý đủ để cho phép chúng tôi để xác định vị trí các vật liệu; (iv) thông tin liên lạc của bạn bao gồm địa chỉ, số điện thoại và địa chỉ email; (v) một tuyên bố của bạn rằng bạn có một tin rằng sử dụng tài liệu theo cách bị khiếu nại không được uỷ quyền của chủ sở hữu quyền tác giả, đại diện của, hoặc pháp luật; và (vi) một tuyên bố rằng các thông tin trong thông báo là chính xác, và, theo hình phạt phạt khai man, bạn được ủy quyền hành động thay mặt cho chủ sở hữu quyền tác giả.
 
-### Digital Millennium Copyright Act
+### Đạo luật bản quyền kỹ thuật số thiên niên kỷ
 
 Nó là chính sách Code.org để đáp ứng các thông báo về vi phạm bản quyền bị cáo buộc tuân theo đạo luật bản quyền kỹ thuật số thiên niên kỷ.
 
 Chúng tôi có quyền loại bỏ nội dung bị cáo buộc là vi phạm mà không cần thông báo trước, theo ý kiến của chúng tôi, và không có trách nhiệm với bạn. Trong trường hợp thích hợp, Code.org cũng sẽ chấm dứt tài khoản của người dùng nếu người dùng được xác định là người tái vi phạm. Để báo cáo một sự vi phạm bản quyền, xin vui lòng liên hệ với chúng tôi. Chúng tôi đại lý bản quyền cho các thông báo về khiếu nại về vi phạm bản quyền có thể được đạt đến bởi gửi e-mail trực tiếp đến các đại lý bản quyền tại copyright@code.org.
 
-### Code.org Intellectual Property Rights, and Your License to Use the Services
+### Quyền sở hữu trí tuệ của code.org, và giấy phép sử dụng các dịch vụ
 
 Tất cả quyền lợi, tiêu đề và mối quan tâm đến các dịch vụ (bao gồm cả nội dung được cung cấp bởi người sử dụng) sẽ vẫn thuộc quyền sở hữu riêng của Code.org. Các dịch vụ được bảo vệ bởi bản quyền, thương hiệu, bao bì thương mại, bằng sáng chế và các bộ luật khác của Hoa Kỳ. Nội dung, thông tin, dữ liệu, thiết kế, mã hóa, và tài liệu liên kết với các dịch vụ ("**Nội dung**") được bảo vệ bởi quyền sở hữu trí tuệ và các bộ luật khác. Bạn phải tuân thủ tất cả các bộ luật, bản quyền, nhãn hiệu hoặc các thông báo pháp lý hoặc các giới hạn. Không có bất kỳ điều khoản nào cho phép bạn sử dụng tên Code.org hoặc tên bất kỳ các thương hiệu của Code.org, cũng như các biểu trưng, tên miền, hay các nhãn hiệu đặc biệt khác. Bất kỳ thông tin phản hồi, ý kiến, hay các đề nghị bạn có thể cung cấp liên quan đến Code.org, hoặc các dịch vụ là hoàn toàn tự nguyện và chúng tôi sẽ được tự do sử dụng các ý kiến phản hồi cũng như các đề xuất chúng tôi thấy hợp lý mà không phải có bất kỳ nghĩa vụ nào đối với bạn.
 
@@ -102,15 +102,15 @@ The CODE ® là một nhãn hiệu đăng ký có bản quyền của Code.org. 
 
 Code.org không đảm bảo rằng các dịch vụ không mắc lỗi,không nhiễm virus hoặc các thành phần gây hại khác, hay lỗi phần mềm sẽ được sửa chữa. Chúng tôi không đảm bảo rằng thông tin có sẵn trên hệ thống sẽ được cung cấp chính xác, kịp thời hay đáng tin cậy. Chúng tôi có thể thực hiện bất cứ thay đổi nào về tính năng, chức năng cũng như nội dung của các dịch vụ. Chúng tôi có quyền chỉnh sửa hoặc xóa bất kỳ nội dung, thông có sẵn như là một phần của dịch vụ.
 
-### Code.org Store and Support Forums
+### Cửa hàng code.org và diễn đàn hỗ trợ
 
 Cửa hàng Code.org và diễn đàn hỗ trợ được điều hành bởi bên thứ ba. Xin vui lòng đọc các điều khoản dành cho người sử dụng và chính sách bảo mật cho các trang web trước khi đặt mua một khoản mục từ cửa hàng Code.org hoặc trước khi đưa ra một câu hỏi hay câu trả lời lên diễn đàn hỗ trợ. Bằng cách truy cập Code.org và diễn đàn hỗ trợ, bạn phải chấp nhận bị ràng buộc bởi người sử dụng tương ứng và chính sách riêng tư của bên thứ ba.
 
-### Volunteer mentors
+### Những cố vấn tình nguyện
 
 Code.org khuyến khích những kĩ sư phần mềm làm tình nguyện viên với vai trò là cố vấn cho giáo viên trong việc giảng dạy môn khoa học máy tính. Code.org cung cấp thông tin về những tình nguyện viên tiềm năng này mà không cần giấy phép, tài liệu tham khảo, hoặc kiểm tra nền tảng. Nếu bạn là một nhà giáo dục yêu cầu sự trợ giúp của một tình nguyện viên thông qua cơ sở dữ liệu của Code.org, bạn phải hoàn toàn chịu toàn bộ trách nhiệm trong việc kiểm tra những tài liệu tham khảo hoặc thực hiện những bài kiểm tra nền tảng cần thiết. Code.org cung cấp không bảo đảm hoặc những thông tin hơn là khả năng liên lạc với những tình nguyện viên tiềm năng, và tất cả những trách nhiệm pháp lí hợp tác với tình nguyện viên thuộc về bạn. Code.org không bảo đảm tính chính xác hoặc tính đầy đủ của bất kì thông tin nào được cung cấp bởi những tình nguyện viên và chúng tôi cũng không áp dụng hay chứng nhận, hay chịu trách nhiệm cho tính chính xác hay độ tin cậy của bất kì ý kiến, lời khuyên, hoặc tuyên bố nào được đưa ra bởi bất kì bên nào hơn là Code.org. Code.org sẽ không chịu trách nhiệm cho bất kì mất mát hay thiệt hại nào gây ra bởi bất kì người nào dựa trên những thông tin hoặc những nội dung khác được đăng trên dịch vụ hoặc chuyển giao bởi những người khác.
 
-### Pledges, Donations and Payments
+### Cam kết, đóng góp và thanh toán
 
 A. Cam kết và đóng góp. Nếu bạn thực hiện một cam kết hoặc lập quỹ tài trợ trên trang web này, bạn phải chấp nhận thanh toán cho mọi cam kết và các khoản đóng góp được chỉ định.
 
@@ -118,7 +118,7 @@ B. Phương thức thanh toán. Bạn có nhiệm vụ thanh toán các cam kế
 
 C. Ủy quyền thẻ tín dụng. Nếu bạn sử dụng một thẻ tín dụng để trả tiền cho bất kỳ cam kết hoặc các đóng góp liên quan đến các trang web, bạn sẽ được yêu cầu cung cấp cho Code.org số thẻ tín dụng từ công ty phát hành thẻ mà chúng tôi chấp nhận. Code.org có thể tìm kiếm các ủy quyền trước của các tài khoản thẻ tín dụng của bạn để xác minh thẻ tín dụng là hợp lệ và/hoặc có kinh phí cần thiết hoặc tín dụng có sẵn để trang trải các cam kết hoặc các đóng góp của bạn. Các ủy quyền trước sẽ làm giảm số dư có sẵn của bạn bởi số lượng ủy quyền cho đến khi nó được phát hành hoặc tương ứng với khoản phí thực. Xin vui lòng liên hệ với công ty phát hành thẻ tín dụng nếu bạn có thêm câu hỏi liên quan đến số tiền ủy quyền sẽ được gỡ bỏ từ cam kết của bạn.
 
-### Disclaimers and Limitations of Liability
+### Từ chối và Giới hạn trách nhiệm pháp lý
 
 Xin vui lòng đọc phần này một cách cẩn thận vì nó giới hạn trách nhiệm pháp lý của Code.org và cha mẹ, công ty con, chi nhánh, công ty liên quan, cán bộ, giám đốc, nhân viên, đại lý, đại diện, đối tác, và cấp giấy phép (gọi chung là, các "Code.org thực thể"). Mỗi phần trong số các phần phụ dưới đây chỉ áp dụng đến mức tối đa cho phép theo luật áp dụng. Một số điều luật không cho phép tuyên bố từ chối bảo đảm ngụ ý hoặc giới hạn trách nhiệm trong hợp đồng, và kết quả là các nội dung của phần này có thể không áp dụng cho bạn. Không có gì trong phần này được thiết kế để hạn chế bất kỳ quyền nào bạn có thể có, mà không có giới hạn hợp pháp.
 
@@ -138,7 +138,7 @@ Giới hạn hợp pháp tối đa của luật pháp hiện hành, các thực 
 
 Một số tiểu bang hoặc các quốc gia không cho phép loại bỏ những bảo đảm mập mờ, vì thế những loại trừ trên có thể không áp dụng với bạn.
 
-### General Terms
+### Những điều khoản chung.
 
 #### A. Sự từ bỏ và tính hiệu lực
 
