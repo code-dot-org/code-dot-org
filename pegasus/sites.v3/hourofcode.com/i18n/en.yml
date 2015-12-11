@@ -183,7 +183,9 @@
 
   prizes_header: "Prizes for every educator"
   prizes_10k: "One public school in every US state (and Washington D.C.) will win $10,000 worth of technology"
+  prizes_10k_past: "One public school in every US state (and Washington D.C.) won $10,000 worth of technology"
   prizes_gift_cards: "<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift! While supplies last."
+  prizes_more: "More exciting prizes"
 
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
