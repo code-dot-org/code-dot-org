@@ -27,8 +27,6 @@
   .clear
 
   - if current_user
-    #hoc_announcement{style: "margin-top: 10px;"}
-      = render template: 'api/hoc_announcement'
     #user_hero
       = render template: 'api/user_hero'
     - if Gatekeeper.allows('logged_in_studio_homepage', default: true)
