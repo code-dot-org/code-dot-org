@@ -180,17 +180,13 @@ social:
       %img{src: "/images/stats-info3.jpg", style: "width: 100%;"}
         %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
 
-  %a#hocsignupform{name: 'signup'}
-  #join
-    %h1=hoc_s(:front_join_us_button)
-    %div
-      .row
-        .col-md-6
-          =view :signup_form
-        .col-md-1
-        .col-md-5
-          =view :join_us_description
-          =view :prizes_announce
+  %div
+    .row
+      .col-md-6
+        =view :prizes_announce
+      .col-md-1
+      .col-md-5
+        =view :join_us_description
 
   -# FAQ
 
