@@ -1,4 +1,4 @@
-/* globals debounce */
+/* globals dashboard  */
 
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
@@ -85,7 +85,7 @@ function Dialog(options) {
     var scrollableElement = this.div.find(options.autoResizeScrollableElement);
     scrollableElement.css('overflow-y', 'auto');
 
-    resizeCallback = debounce(function () {
+    resizeCallback = dashboard.utils.debounce(function () {
       if (!this.isVisible) {
         return;
       }

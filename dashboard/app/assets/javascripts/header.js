@@ -1,6 +1,6 @@
 //= require client_state
 
-/* globals dashboard, trackEvent, Dialog, React, appOptions, debounce */
+/* globals dashboard, trackEvent, Dialog, React, appOptions */
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -129,7 +129,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   });
   $('.header_popup_close').click(hideHeaderPopup);
 
-  $(window).resize(debounce(function () {
+  $(window).resize(dashboard.utils.debounce(function () {
     if (isHeaderPopupVisible) {
       sizeHeaderPopupToViewport();
     }
