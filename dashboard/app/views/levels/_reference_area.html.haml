@@ -11,7 +11,7 @@
   %div{style: 'clear: both;'}
 :javascript
   $('.video_link').each(function() {
-    addClickTouchEvent($(this), $.proxy(function() {
+    dashboard.utils.addClickTouchEvent($(this), $.proxy(function() {
       showVideoDialog({
         src: $(this).attr('data-src'),
         name: $(this).attr('data-name'),
