@@ -1,0 +1,13 @@
+{
+  "browser": true,
+  "curly": true,
+  "esnext": true,
+  "globals": {
+    "$": true,
+    "jQuery": true
+  },
+  "mocha": true,
+  "node": true,
+  "undef": true
+}
+
