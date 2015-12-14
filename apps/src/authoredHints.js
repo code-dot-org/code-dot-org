@@ -153,11 +153,13 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
  */
 AuthoredHints.prototype.updateLightbulbDisplay_ = function () {
   var hintCount = this.getUnseenHints().length; 
+  // If there are more than nine hints, simply display "9+"
+  var hintText = (hintCount > 9) ? "9+" : hintCount;
   if (hintCount === 0) {
     this.lightbulb.innerHTML = lightbulbDimSVG;
   } else {
     this.lightbulb.innerHTML = lightbulbSVG;
-    this.lightbulb.querySelector('#hintCount').textContent = hintCount;
+    this.lightbulb.querySelector('#hintCount').textContent = hintText;
   }
 };
 
