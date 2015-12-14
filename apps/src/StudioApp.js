@@ -57,11 +57,6 @@ var StudioApp = function () {
   this.BASE_URL = undefined;
 
   /**
-  * If truthy, a version number to be appended to asset urls.
-  */
-  this.CACHE_BUST = undefined;
-
-  /**
   * The current locale code.
   */
   this.LOCALE = ENGLISH_LOCALE;
@@ -214,7 +209,6 @@ StudioApp.singleton = new StudioApp();
  */
 StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
-  this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
