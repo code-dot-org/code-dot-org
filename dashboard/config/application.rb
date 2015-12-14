@@ -79,12 +79,6 @@ module Dashboard
 
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
-    # Hack for cache busting.
-    # Extracts version number from package.json of Blockly apps.
-    # See also Blockly#cache_bust.
-    cache_bust_path = Rails.root.join('.cache_bust')
-    ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
-
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('./public/shared/js')
     config.assets.paths << Rails.root.join('../shared/css')
