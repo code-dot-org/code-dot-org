@@ -293,6 +293,16 @@ namespace :install do
     end
   end
 
+  task :code_studio do
+    if local_environment?
+      Dir.chdir(code_studio_dir) do
+        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('built') : 'code-studio-package'
+        RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
+      end
+      install_npm
+    end
+  end
+
   task :dashboard do
     if local_environment?
       Dir.chdir(dashboard_dir) do
@@ -317,6 +327,7 @@ namespace :install do
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
+  tasks << :code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
