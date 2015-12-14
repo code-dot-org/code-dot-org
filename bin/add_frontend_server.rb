@@ -79,7 +79,7 @@ def aws_instance_type(environment)
   when 'production'
     'c3.8xlarge'
   else
-    raise "Unknown environment #{environment}"
+    raise "Unknown environment #{environment} - currently adhoc and production are supported"
   end
 end
 
