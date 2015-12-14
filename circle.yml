@@ -32,10 +32,15 @@ dependencies:
     - tar -xzf sc-latest-linux.tar.gz
 database:
     override:
-      - 'echo "skipping"'
+      - 'echo "skipping Circle CI database defaults, already set up."'
 test:
     override:
         # (apps tests already ran during rake build, don't re-run)
+
+        # temporarily set hoc flags to green, as is currently required for dev enlistments
+        - ./set_hoc_flags.rb green:
+            pwd:
+                bin/dynamic_config
         - bundle exec rake test:
             pwd:
                 pegasus
