@@ -10,6 +10,8 @@ if (!window.dashboard) {
   window.dashboard = {};
 }
 
+// TODO - IFFE
+
 /**
  * @param stageData{{
  *   script_id: number,
@@ -242,10 +244,12 @@ function shareProject() {
 
     var dialog = new Dialog({body: body});
 
-    $("#sharing-phone").click(function (event) {
+    $('a.popup-window').click(window.dashboard.popupWindow);
+
+    $('#sharing-phone').click(function (event) {
       event.preventDefault();
     });
-    $("#phone-submit").click(function (event) {
+    $('#phone-submit').click(function (event) {
       event.preventDefault();
     });
 
