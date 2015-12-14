@@ -27,9 +27,13 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
+dashboard.buildHeader = function (stageData, progressData, currentLevelId, scriptName) {
   stageData = stageData || {};
   progressData = progressData || {};
+
+  var params = dashboard.clientState.queryParams(),
+    userId = params.userId,
+    sectionId = params.sectionId;
 
   var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
 

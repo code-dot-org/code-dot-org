@@ -67,5 +67,5 @@
 
   :javascript
     //<![CDATA[
-    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, #{@user.try(:id) || 'null'}, #{@section.try(:id) || 'null'}, "#{script.name}")
+    dashboard.buildHeader(#{script_level.stage.summarize.to_json}, #{user_progress}, #{script_level.level_id}, "#{script.name}")
     //]]>
