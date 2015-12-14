@@ -10,16 +10,26 @@ pwd  = File.dirname(File.expand_path(__FILE__))
 log_dir = Pathname.new(File.join(pwd, '../../log/')).cleanpath
 config_dir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
 
-if ARGV.size < 1 || ARGV.size > 2
-  puts "Usage: #{$0} start|stop|restart|reload|status [CONFIG_FILE_PATH]"
-  exit
-end
+command = nil
+config_file = "#{config_dir}/queue_config.json.erb"
 
-command = ARGV.shift
-if ARGV.size > 0
-  config_file = ARGV.shift
-else
-  config_file = "#{config_dir}/queue_config.json.erb"
+OptionParser.new do |opts|
+  opts.on('-r', '--run COMMAND', 'The command to run - either start, stop, restart, reload, status') do |run_command|
+    command = run_command
+  end
+
+  opts.on('-c', '--config CONFIG', 'Path to the config file to use') do |config|
+    config_file = Pathname.new(config).cleanpath
+  end
+
+  opts.on('-h', '--help', 'Print this usage') do
+    puts opts
+    exit
+  end
+end.parse!
+
+if command.nil? || %w('start', 'stop', 'restart', 'reload', 'status').include?(command)
+  raise OptionParser::MissingArgument 'Need a command to run - start, stop, restart, reload, status'
 end
 
 argv = [command, '--', config_file]
