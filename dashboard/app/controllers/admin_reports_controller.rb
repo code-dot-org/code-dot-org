@@ -130,9 +130,9 @@ class AdminReportsController < ApplicationController
     end
   end
 
-private
+  private
   def level_answers_csv
-    csv = CSV.generate do
+    csv_string = CSV.generate do |csv|
       csv << @headers
       @responses.each do |level_id, level_responses|
         level_responses.each do |response|
