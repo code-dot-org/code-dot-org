@@ -6,10 +6,9 @@
         =I18n.t(:dashboard_announce_view_all)
         >>
   %div.announce-content
-    %div.content-img-container
-      %img.content-img{:src=>"/shared/images/courses/fit-x108/logo_tall_playlab.jpg"}
+    %a{:href=>"http://teacherblog.code.org/"}
+      %div.content-img-container
+        %img.content-img{:src=>"/images/fit-300/st-matthews.jpg"}
     %div.content-text
-      =I18n.t(:dashboard_announce_playlab)
-  %div.announce-learn-more
-    %a{:href=>"/learn"}
-      %button!= I18n.t(:learn_more)
+      %b December 11, 2015 - 
+      Thank you for participating in the Hour of Code campaign. With over 198,000 events registered, we've almost tripled participation since last year. It's because of educators like you that millions of students around the world are learning an introduction to computer science. Share your classroom experience with #HourOfCode

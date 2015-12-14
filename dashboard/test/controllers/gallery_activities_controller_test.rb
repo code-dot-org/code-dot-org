@@ -188,6 +188,17 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "cannot create gallery activity with no user" do
+    another_user = create(:user)
+    activity = create :activity, user: another_user
+
+    assert_no_difference('GalleryActivity.count') do
+      post :create, gallery_activity: { activity_id: activity.id }, format: :json
+    end
+
+    assert_response 401
+  end
+
 
   test "cannot create gallery activity with no activity id" do
     sign_in create(:user)
