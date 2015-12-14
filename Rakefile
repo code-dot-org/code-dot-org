@@ -24,8 +24,8 @@ namespace :lint do
     Dir.chdir(shared_js_dir) do
       RakeUtils.system 'npm run lint'
     end
-    Dir.chdir(code_studio_js_dir) do
-      RakeUtils.system 'npm run lint -s'
+    Dir.chdir(code_studio_dir) do
+      RakeUtils.system 'npm run lint:js -s'
     end
   end
 
@@ -103,6 +103,16 @@ namespace :build do
 
       HipChat.log 'Building <b>shared js</b>...'
       RakeUtils.system 'npm run gulp'
+    end
+  end
+
+  task :code_studio do
+    Dir.chdir(code_studio_dir) do
+      HipChat.log 'Installing <b>code-studio</b> dependencies...'
+      RakeUtils.npm_install
+
+      HipChat.log 'Building <b>code-studio</b>...'
+      RakeUtils.system 'npm run build'
     end
   end
 
@@ -195,6 +205,7 @@ namespace :build do
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus

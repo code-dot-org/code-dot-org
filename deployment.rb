@@ -325,6 +325,6 @@ def shared_js_dir(*dirs)
   deploy_dir('shared/js', *dirs)
 end
 
-def code_studio_js_dir(*dirs)
-  deploy_dir('code-studio/src/js', *dirs)
+def code_studio_dir(*dirs)
+  deploy_dir('code-studio')
 end
