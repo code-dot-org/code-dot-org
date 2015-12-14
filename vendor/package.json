@@ -1,0 +1,7 @@
+{
+  "name": "@cdo/vendor",
+  "version": "0.0.1",
+  "description": "Location of common vendor assets for Code.org projects.",
+  "author": "Code.org",
+  "license": "Apache-2.0"
+}
