@@ -37,7 +37,8 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
+            # Allow the company cookie to be read and set to track company users for tutorials.
+            cookies: whitelisted_cookies + ['company']
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {

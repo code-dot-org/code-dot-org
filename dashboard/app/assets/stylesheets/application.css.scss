@@ -172,6 +172,17 @@ img.video_thumbnail {
 .header-wrapper {
   padding-top: 15px;
   min-height: 70px;
+
+  #progresswarning {
+    position: absolute;
+    font-size: 10px;
+    top: -1px;
+    left: 97px;
+
+    .learnmore {
+      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    }
+  }
 }
 
 .header {
@@ -242,6 +253,9 @@ html, body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  .legacy-share-view & {
+    position: relative;
+  }
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
@@ -1208,6 +1222,54 @@ a.download-video {
     font-size: 18px;
   }
 
+  .teacher-announce {
+    position: relative;
+    font-size: 14px;
+  }
+  .teacher-announce .announce-heading {
+    background-color: #7665a0;
+    border-radius: 4px;
+    color: #fff;
+    height: 20px;
+    overflow: hidden;
+    padding: 10px;
+    text-transform: uppercase; 
+  }
+  .teacher-announce .announce-heading .heading-view-all {
+    float: right; 
+  }
+  .teacher-announce .announce-content {
+    background-color: #ebe8f1;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .teacher-announce .announce-content .content-img-container {
+    float: left; 
+  }
+  .teacher-announce .announce-content .content-img {
+    border-radius: 4px;
+    height: 108px;
+  }
+  .teacher-announce .announce-content .content-text {
+    color: #4d575f;
+    float: left;
+    max-height: 90px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 18px;
+    width: 610px;
+  }
+  .teacher-announce .announce-content .content-text b {
+    font-family: 'Gotham 5r', sans-serif;
+  }
+  .teacher-announce .announce-learn-more {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+  }
+
   .gallery {
     margin: 0 auto;
     overflow: hidden;
@@ -2109,5 +2171,23 @@ $width: 400px;
   }
   #visualizationEditorHeader.responsive {
     margin-left: $width;
+  }
+}
+
+div#tryHoc {
+  font-size: 20px;
+  padding: 10px 15px;
+  text-align: right;
+  margin:0;
+  right: 0;
+  a {
+    color: #999;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  img#hocLogo {
+    width:40px;
   }
 }

@@ -12,6 +12,7 @@
 #
 # Indexes
 #
+#  index_gallery_activities_on_activity_id              (activity_id)
 #  index_gallery_activities_on_app_and_autosaved        (app,autosaved)
 #  index_gallery_activities_on_user_id_and_activity_id  (user_id,activity_id) UNIQUE
 #

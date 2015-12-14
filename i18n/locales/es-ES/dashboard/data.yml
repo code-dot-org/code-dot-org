@@ -436,7 +436,7 @@ es:
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
-        C4_loops_zombie: Iteraciones
+        C4_loops_zombie: Bucles
         C4_bee_conditional: Condiciones de la Abeja
         C4_variables_artist: 'Variables - Artista'
         C4_variables_playlab: 'Variables - Laboratorio de juego'
@@ -472,7 +472,7 @@ es:
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
-        csp_applab_loops: Iteraciones
+        csp_applab_loops: Bucles
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Un poco más de píxeles
         csp_pixelation_color_1: 'Reproductor Color pixelación - parte 1'

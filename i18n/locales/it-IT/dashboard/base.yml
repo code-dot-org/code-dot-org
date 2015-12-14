@@ -444,7 +444,7 @@ it:
   pdf_download: Scarica il PDF
   download_coming_soon: La descrizione di questa attività è in corso di preparazione.
   video_coming_soon: Il video è in corso di preparazione!
-  not_started: Lo studente non ha provato questo livello.
+  not_started: Lo studente non ha provato questo esercizio.
   share_code:
     title: 'Clicca su "Esegui" per vedere il mio programma in azione'
     bounce_og_title: Prova la mia versione del Ping-Pong
@@ -464,12 +464,12 @@ it:
     back: Ritorna agli script
     success: Hai modificato correttamente i blocchi.
     level:
-      create: Crea un nuovo livello
+      create: Crea un nuovo esercizio
       current: Livelli correnti
       unused: LIvelli non usati
   upsell:
     hoc:
-      title: Classic Maze
+      title: Labirinto Classico
       body: "Impara i concetti base dell'informatica. Milioni di persone l'hanno già fatto."
     flappy:
       title: Flappy
@@ -576,7 +576,7 @@ it:
           title: Passo
           description: ""
         sample_level_builder:
-          title: Costruttore di un livello di prova
+          title: Costruttore di un esercizio
           description: ""
   age_interstitial:
     age: La tua età
@@ -589,7 +589,7 @@ it:
     in_progress: in corso
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
-    furthest_level_attempted: livello più avanzato che è stato provato
+    furthest_level_attempted: esercizio più avanzato che è stato provato
     assessment: verifica
   studio:
     courses_working_on: Corsi su cui stai lavorando
