@@ -290,7 +290,7 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.level.scriptLevelId);
+  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
   if (config.authoredHintViewRequestsUrl) {
     this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
   }
@@ -877,7 +877,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
-  var scrollableSelector;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -888,7 +887,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
-    scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
@@ -903,6 +901,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
+    hintReviewTitle: msg.hintReviewTitle(),
     authoredHints: this.authoredHintsController_.getSeenHints(),
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
@@ -952,8 +951,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
-    scrollContent: !!renderedMarkdown,
-    scrollableSelector: scrollableSelector,
+    scrollContent: true,
+    scrollableSelector: ".instructions-container",
     header: headerElement
   });
 
