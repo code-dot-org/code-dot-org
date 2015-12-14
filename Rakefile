@@ -24,6 +24,9 @@ namespace :lint do
     Dir.chdir(shared_js_dir) do
       RakeUtils.system 'npm run lint'
     end
+    Dir.chdir(code_studio_js_dir) do
+      RakeUtils.system 'npm run lint -s'
+    end
   end
 
   task all: [:ruby, :haml, :javascript]

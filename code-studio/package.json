@@ -1,0 +1,35 @@
+{
+  "name": "@cdo/code-studio",
+  "version": "0.0.1",
+  "description": "Pipeline for static assets used by our Code Studio rails app (i.e. dashboard)",
+  "author": "Code.org",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=0.10.25 <0.13",
+    "npm": "^2.9.1"
+  },
+  "scripts": {
+    "build:blockly_editor": "browserify --debug src/js/blockly_editor.js -o built/blockly_editor.js -t [ babelify --presets [es2015] ]",
+    "prebuild": "npm run clean && mkdir built",
+    "build": "npm run build:blockly_editor",
+    "clean": "rm -rf built",
+    "env": "env",
+    "lint": "npm run lint:js -s",
+    "lint:js": "jshint src/js/*.js",
+    "start": "echo \"Unimplemented.\"",
+    "stop": "echo \"Unimplemented.\"",
+    "test": "test",
+    "pretest": "echo \"Unimplemented, but could lint here.\""
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "jshint": "^2.8.0"
+  },
+  "dependencies": {
+    "@cdo/vendor": "file:../vendor",
+    "codemirror": "5.5",
+    "marked": "0.3.2"
+  }
+}
