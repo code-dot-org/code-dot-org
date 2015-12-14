@@ -78,6 +78,7 @@ def aws_instance_type(environment)
     'c3.xlarge'  # Default to a somewhat smaller instance type for adhco
   when 'production'
     'c3.8xlarge'
+  else
     raise "Unknown environment #{environment} - currently adhoc and production are supported"
   end
 end
