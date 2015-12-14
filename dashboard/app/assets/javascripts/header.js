@@ -56,7 +56,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, scrip
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
   }
 
-  renderStageProgress(stageData, progressData, clientProgress, currentLevelId, userId, sectionId);
+  renderStageProgress(stageData, progressData, clientProgress, currentLevelId);
 
   $('.level_free_play').qtip({
     content: {
@@ -461,7 +461,7 @@ function populateProgress(scriptName) {
   }
 }
 
-function renderStageProgress(stageData, progressData, clientProgress, currentLevelId, userId, sectionId) {
+function renderStageProgress(stageData, progressData, clientProgress, currentLevelId) {
   var progressContainer = $('.progress_container');
   var serverProgress = progressData.levels || {};
   stageData.levels.forEach(function(level, index, levels) {
@@ -474,13 +474,7 @@ function renderStageProgress(stageData, progressData, clientProgress, currentLev
       status = mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
     }
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
-    var href = level.url;
-    if (userId) {
-      href += '?user_id=' + userId;
-    }
-    if (sectionId) {
-      href += '&section_id=' + sectionId;
-    }
+    var href = level.url + location.search;
     var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link').addClass(status).text(level.title);
 
     if (level.kind == 'unplugged') {
