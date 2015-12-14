@@ -16,19 +16,11 @@
 <% if (locals.aniGifURL) { -%>
   <img class="aniGif example-image" src='<%= locals.aniGifURL %>'/>
 <% } -%>
-
 <% if (locals.authoredHints && locals.authoredHints.length) { -%>
-<h4 class="hint">
-  <details>
-    <summary role="button" aria-expanded="true"><b>Hints</b></summary>
+  <div class="authored-hints">
+    <h1><%= locals.hintReviewTitle %></h1>
     <% for (var i = 0; i < locals.authoredHints.length; i++) { %>
-      <h5 class="hintInner">
-        <details>
-          <summary role="button" aria-expanded="false"><b>Hint #<%- i %></b></summary>
-          <%- locals.authoredHints[i].content %>
-        </details>
-      </h5>
+      <div><%- locals.authoredHints[i].content %></div>
     <% } %>
-  </details>
-</h4>
+  </div>
 <% } %>
