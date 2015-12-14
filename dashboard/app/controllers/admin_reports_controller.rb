@@ -96,8 +96,7 @@ class AdminReportsController < ApplicationController
     @response_limit = 100
     if params[:levels] || params[:mc_levels]
       # Parse the parameters, namely the set of levels to grab answers for.
-      @mc_levels = params[:mc_levels] ? params[:mc_levels].split(',') : []
-      @levels = @mc_levels + (params[:levels] ? params[:levels].split(',') : [])
+      @levels = params[:levels] ? params[:levels].split(',') : []
 
       @levels.each do |level_id|
         # Don't query for data if we've already retrieved it.
@@ -113,16 +112,31 @@ class AdminReportsController < ApplicationController
           limit(@response_limit).
           pluck(:level_id, :email, :data)
 
-        # If the level type is multiple choice, get the text answers and replace
-        # the numerical responses stored with the corresponding text.
-        if @mc_levels.include? level_id
-          level_properties = Level.where(id: level_id).pluck(:properties)
-          if level_properties.length > 0
-            level_answers = level_properties[0]["answers"]
-            @responses[level_id].each do |response|
-              response[2] = level_answers[response[2].to_i]["text"]
-            end
+        # Determine whether the level is a multi question, replacing the
+        # numerical answer with its corresponding text if so.
+        level_info = Level.where(id: level_id).pluck(:type, :properties).first
+        if level_info && level_info[0] == 'Multi' && level_info[1].length > 0
+          level_answers = level_info[1]["answers"]
+          @responses[level_id].each do |response|
+            response[2] = level_answers[response[2].to_i]["text"]
           end
+        end
+      end
+    end
+
+    respond_to do |format|
+      format.html
+      format.csv { render :csv => level_answers_csv }
+    end
+  end
+
+private
+  def level_answers_csv
+    csv = CSV.generate
+      csv << @headers
+      @responses.each do |level_id, level_responses|
+        level_responses.each do |response|
+          csv << response
         end
       end
     end
