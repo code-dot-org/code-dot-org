@@ -63,7 +63,7 @@ exports.promptNum = function (text) {
  */
 exports.dropletGlobalConfigBlocks = [
   {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
-  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value', docFunc: 'randomNumber_min_max' },
+  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
   {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
   {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
 ];
@@ -108,7 +108,8 @@ standardConfig.blocks = [
   {func: 'notOperator', block: '!__', category: 'Math' },
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
-  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math'},
+  // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
+  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math', docFunc: 'randomNumber'},
   {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
