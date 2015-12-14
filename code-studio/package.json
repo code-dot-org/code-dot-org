@@ -9,8 +9,8 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "build:blockly_editor": "browserify --debug src/js/blockly_editor.js -o built/blockly_editor.js -t [ babelify --presets [es2015] ]",
-    "prebuild": "npm run clean && mkdir built",
+    "build:blockly_editor": "browserify --debug src/js/blockly_editor.js -o built/js/blockly_editor.js -t [ babelify --presets [es2015] ]",
+    "prebuild": "mkdir -p built/js",
     "build": "npm run build:blockly_editor",
     "clean": "rm -rf built",
     "env": "env",
