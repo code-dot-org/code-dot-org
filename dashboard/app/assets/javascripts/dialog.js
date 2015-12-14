@@ -1,5 +1,7 @@
 /* globals dashboard  */
 
+// TODO - IFFE
+
 /**
  * Adjust the maximum size of the popup's inner scroll area so that the whole popup
  * will fit within the browser viewport.
