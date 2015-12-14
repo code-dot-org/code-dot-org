@@ -13,20 +13,24 @@ config_dir = Pathname.new(File.join(pwd, '../../config/')).cleanpath
 command = nil
 config_file = "#{config_dir}/queue_config.json.erb"
 
-OptionParser.new do |opts|
-  opts.on('-r', '--run COMMAND', 'The command to run - either start, stop, restart, reload, status') do |run_command|
-    command = run_command
-  end
+if (ARGV.size == 1)
+  command  = ARGV.shift
+else
+  OptionParser.new do |opts|
+    opts.on('-r', '--run COMMAND', 'The command to run - either start, stop, restart, reload, status') do |run_command|
+      command = run_command
+    end
 
-  opts.on('-c', '--config CONFIG', 'Path to the config file to use') do |config|
-    config_file = Pathname.new(config).cleanpath
-  end
+    opts.on('-c', '--config CONFIG', 'Path to the config file to use') do |config|
+      config_file = Pathname.new(config).cleanpath
+    end
 
-  opts.on('-h', '--help', 'Print this usage') do
-    puts opts
-    exit
-  end
-end.parse!
+    opts.on('-h', '--help', 'Print this usage') do
+      puts opts
+      exit
+    end
+  end.parse!
+end
 
 if command.nil? || %w('start', 'stop', 'restart', 'reload', 'status').include?(command)
   raise OptionParser::MissingArgument 'Need a command to run - start, stop, restart, reload, status'
