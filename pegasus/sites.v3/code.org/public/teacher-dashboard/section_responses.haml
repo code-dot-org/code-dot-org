@@ -11,7 +11,7 @@ content-type: text/ng-template
 
 %div{'ng-show' => 'responsesLoaded'}
   View text responses in:
-  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeScript(course_id)'}
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeCourse(course_id)'}
 
 %br/
 
