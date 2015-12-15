@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Trebaš dodati 20 Miš Droida. Upotrijebi \"dodaj Miš Droida\" komandu unutar \"kada je Miš Droid uzet\" događaj da bi se dodala dva ili više Miš Droida svaki put kada se uzme jedan."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Čestitamo, dodao/la si kod koji pravi Miš Droide. Možeš ići na slijedeći zadatak ili pokušati ponovo da uzmeš 20 Miš Droida. Pokušaj si olakšati dodavanjem više njih! (Pritisni i drži tipke na tvojoj tastaturi (ili ekranu) za brže kretanje.)"},
 "failedChangeSettingTimeout":function(d){return "Uzmi tri Pobunjenička Pilota za nastavak."},
-"failedChangeSettingSettings":function(d){return "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu."}};

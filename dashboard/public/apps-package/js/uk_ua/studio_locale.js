@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Потрібно зібрати 20 Дроїдів-Мишей. Використай команду \"додати Дроїда-Мишу\" всередині події \"коли торкнулись Дроїда-Миші\", щоб з'являлося два чи більше дроїдів, коли торкаєшся одного із них."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Вітання, додано код створення Дроїдів-Мишей. Можна перейти до наступного рівня, коли збереш 20 Дроїдів-Мишей. Спробуй полегшити задачу, додаючи їх більшу кількість! (Натискай та утримуй клавіші на клавіатурі чи екрані, щоб рухатися швидше.)"},
 "failedChangeSettingTimeout":function(d){return "Дістанься до трьох Пілотів повстанців, щоб рухатися далі."},
-"failedChangeSettingSettings":function(d){return "Створи власну гру. Щоб пройти цей рівень потрібно змінити дроїда та задати його швидкість."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Створи власну гру. Щоб пройти цей рівень потрібно змінити дроїда та задати його швидкість."}};

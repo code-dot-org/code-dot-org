@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "უნდა დაიჭიროთ 20 თაგვი დროიდი. გამოიყენეთ ბრძანება \"თაგვი დროიდის დამატება\" მოვლენაში \"თაგვი დროიდის დაჭერისას\" და დაამატეთ ორი ან მეტი თაგვი ყოველი ერთის დაჭერისას."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "გილოცავთ, თქვენ დაამათეთ კოდი და დააგროვეთ რამდენიმე თაგვი დროიდი. შეგიძლიათ ახალ თავსატეხზე გადასვლა ან თავიდან ცდა და 20 თაგვი დროიდის დაგროვება. გაიმარტივეთ საქმე - დაამატეთ ერთ ჯერზე მეტი! (გინდათ უფრო სწრაფად იმოძრავოთ? დააჭირეთ ღილაკებს და არ აუშვათ.)"},
 "failedChangeSettingTimeout":function(d){return "გასაგრძელებლად დაიჭირეთ სამი მეამბოხე პილოტი."},
-"failedChangeSettingSettings":function(d){return "მოარგეთ თამაში თქვენს საჭიროებებს. ამ თავსატეხის დასასრულებლად უნდა შეცვალოთ თქვენი დროიდი და განსაზღვროთ მისი სიჩქარე."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "მოარგეთ თამაში თქვენს საჭიროებებს. ამ თავსატეხის დასასრულებლად უნდა შეცვალოთ თქვენი დროიდი და განსაზღვროთ მისი სიჩქარე."}};

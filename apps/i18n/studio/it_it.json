@@ -764,14 +764,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Devi raggiungere 20 Droidi-Topo. Usa il blocco \"aggiungi un Droide-Topo\" all'interno dell'evento \"quando raggiungi un Droide-Topo\" per aggiungere due o più Droidi-Topo ogni volta che ne raggiungi uno.",
   "failedMultiplyCharactersTimeoutGotSome": "Complimenti, hai aggiunto il codice per far apparire i Droidi-Topo. Puoi passare al prossimo esercizio o provare di nuovo a prendere 20 Droidi-Topo. Più Droidi-Topo aggiungi e più sarà facile superare il livello! (Tieni premuti i tasti freccia della tastiera (o dello schermo) per muoverti più velocemente.)",
   "failedChangeSettingTimeout": "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello.",
-  "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità.",
-  "whenSpriteCollidedWithAnyItem": "touches any character",
-  "whenSpriteCollidedWithObstacle": "touches obstacle",
-  "whenSpriteCollidedWithStormtrooper": "touches Stormtrooper",
-  "whenSpriteCollidedWithRebelPilot": "touches Rebel Pilot",
-  "whenSpriteCollidedWithPufferPig": "touches Puffer Pig",
-  "whenSpriteCollidedWithMynock": "touches Mynock",
-  "whenSpriteCollidedWithMouseDroid": "touches Mouse Droid",
-  "whenSpriteCollidedWithTauntaun": "touches Tauntaun",
-  "whenSpriteCollidedWithProbot": "touches Probot"
+  "failedChangeSettingSettings": "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."
 }

@@ -764,14 +764,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Для прохождения этого уровня тебе необходимо собрать 20 робо-мышей. Используй команду \"Добавить робо-мышь\" внутри блока \"Когда получишь Робо-мышь\", чтобы добавить двух и более робо-мышей каждый раз, когда дроид подбирает одну из них.",
   "failedMultiplyCharactersTimeoutGotSome": "Поздравляем, ты создал программу по клонированию робо-мышей. Можешь смело переходить к следующему уровню или попробуй еще раз собрать 20 робо-мышей. Но только в этот раз сделай игру проще и добавь еще больше робо-мышей! (Нажми и удерживай клавиши на клавиатуре (или экране) чтобы двигаться быстрее)",
   "failedChangeSettingTimeout": "Подбери три Пилота Повстанцев для продолжения.",
-  "failedChangeSettingSettings": "Сделай собственную игру. Для того чтобы пройти этот уровень тебе нужно изменить внешность своего дроида и установить ему скорость передвижения.",
-  "whenSpriteCollidedWithAnyItem": "touches any character",
-  "whenSpriteCollidedWithObstacle": "touches obstacle",
-  "whenSpriteCollidedWithStormtrooper": "touches Stormtrooper",
-  "whenSpriteCollidedWithRebelPilot": "touches Rebel Pilot",
-  "whenSpriteCollidedWithPufferPig": "touches Puffer Pig",
-  "whenSpriteCollidedWithMynock": "touches Mynock",
-  "whenSpriteCollidedWithMouseDroid": "touches Mouse Droid",
-  "whenSpriteCollidedWithTauntaun": "touches Tauntaun",
-  "whenSpriteCollidedWithProbot": "touches Probot"
+  "failedChangeSettingSettings": "Сделай собственную игру. Для того чтобы пройти этот уровень тебе нужно изменить внешность своего дроида и установить ему скорость передвижения."
 }

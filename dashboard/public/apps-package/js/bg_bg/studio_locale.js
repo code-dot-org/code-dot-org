@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Трябват още 20 мишки дроиди. Използвайте командата \"добави мишка дроид\" и я вмъкнете в Събитието \"когато взема мишка дроид\", за да добавите две или повече мишки дроиди всеки път, когато хванете една от тях."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Поздравления, добавихте код, за да направите мишка дроид. Можете да отидете на следващия пъзел или да се върнете на този и да заловите още 20 мишки дроиди. Направете го лесно като поставите още от тях. (Натиснете и задръжте стрелките на вашата клавиатура или екран, за да се движите по-бързо.)"},
 "failedChangeSettingTimeout":function(d){return "Стигни до трима Бунтовник пилоти, за да продължиш."},
-"failedChangeSettingSettings":function(d){return "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."}};

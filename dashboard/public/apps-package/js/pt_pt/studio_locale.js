@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Precisas apanhar 20 Mouse Droids. Usa o comando \"add a Mouse Droid\" dentro do evento \"when get Mouse Droid\" para adicionares dois ou mais Mouse Droids de cada vez que apanhas um."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Parabéns, adicionaste código para fazer Mouse Droids. Podes continuar para o próximo puzzle ou tentar novamente obter 20 Mouse Droids. Tenta torná-lo mais fácil adicionando mais deles! (Pressiona e segura as teclas do teu teclado (ou ecrã) para te moveres mais rápido.)"},
 "failedChangeSettingTimeout":function(d){return "Consegue três Pilotos Rebeldes para seguires em frente."},
-"failedChangeSettingSettings":function(d){return "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade."}};
