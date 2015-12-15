@@ -96,8 +96,14 @@ When /^I submit$/ do
 end
 
 When /^I rotate to landscape$/ do
-  if ENV['BS_AUTOMATE_OS'] == 'android'
+  if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
+  end
+end
+
+When /^I rotate to portrait$/ do
+  if ENV['BS_ROTATABLE'] == "true"
+    @browser.rotate(:portrait)
   end
 end
 
@@ -140,14 +146,26 @@ When /^I press the last button with text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
-  menu_selector = 'div#page-small-footer a.more-link'
-  menu_item_selector = "div#page-small-footer a:contains(#{menuItemText})"
+When /^I (?:open|close) the small footer menu$/ do
+  menu_selector = 'div.small-footer-base a.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible
     And I click selector "#{menu_selector}"
-    And I wait until element "#{menu_item_selector}" is visible
+  }
+end
+
+When /^I press menu item "([^"]*)"$/ do |menuItemText|
+  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+  steps %{
+    Then I open the small footer menu
+    And I press menu item "#{menuItemText}"
   }
 end
 
@@ -609,6 +627,10 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+When /^I press enter key$/ do
+  @browser.action.send_keys(:return).perform
 end
 
 When /^I disable onBeforeUnload$/ do

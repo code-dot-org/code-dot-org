@@ -17,7 +17,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false",
+    "impressive": "true",
     "embed": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -31,7 +31,8 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "ideal": "61",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Course_4_SCV_6\",\r\n  \"callout_text\": \"This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!\",\r\n  \"element_id\": \"#colorMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Course_4_SCV_6\",\r\n  \"callout_text\": \"This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!\",\r\n  \"element_id\": \"#colorMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>

@@ -16,13 +16,9 @@ class FollowersControllerTest < ActionController::TestCase
 
     # student without section or teacher
     @student = create(:user)
-
-    sign_in @laurel
   end
 
-  test "student_user_new" do
-    sign_out @laurel
-
+  test "student_user_new when not signed in" do
     get :student_user_new, section_code: @chris_section.code
 
     assert_response :success
@@ -93,11 +89,31 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal "Sorry, you can't join your own section.", flash[:alert]
   end
 
+  test "student_register as teacher" do
+    sign_out @laurel
+
+    student_params = {email: 'teacher@school.edu',
+                      name: "A name",
+                      password: "apassword",
+                      gender: 'F',
+                      age: '13'}
+
+    assert_creates(User, Follower) do
+      post :student_register, section_code: @chris_section.code, user: student_params
+    end
+
+    assert_redirected_to '/'
+
+    assert_equal 'A name', assigns(:user).name
+    assert_equal 'F', assigns(:user).gender
+    assert_equal Date.today - 13.years, assigns(:user).birthday
+    assert_equal nil, assigns(:user).provider
+    assert_equal User::TYPE_STUDENT, assigns(:user).user_type
+  end
+
 
   test "student_register with age and email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      sign_out @laurel
-
       student_params = {email: 'student1@school.edu',
                         name: "A name",
                         password: "apassword",
@@ -120,8 +136,6 @@ class FollowersControllerTest < ActionController::TestCase
 
   test "student_register with age and hashed email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      sign_out @laurel
-
       student_params = {hashed_email: Digest::MD5.hexdigest('studentx@school.edu'),
                         name: "A name",
                         password: "apassword",
@@ -161,6 +175,32 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal "#{@laurel.name} added as your teacher", flash[:notice]
   end
 
+  test "create when already followed by a teacher switches sections" do
+    sign_in @laurel_student_1.student_user
+
+    assert_does_not_create(Follower) do
+      post :create, section_code: @laurel_section_2.code, redirect: '/'
+    end
+
+    assert_redirected_to '/'
+    assert_equal "#{@laurel.name} added as your teacher", flash[:notice]
+
+    assert_equal [@laurel_student_2.student_user], @laurel_section_1.reload.students # removed from old section
+    assert_equal [@laurel_student_1.student_user], @laurel_section_2.reload.students # added to new section
+  end
+
+  test "create does not allow joining your own section" do
+    sign_in @chris
+
+    assert_does_not_create(Follower) do
+      post :create, section_code: @chris_section.code, redirect: '/'
+    end
+
+    assert_redirected_to '/'
+    assert_equal "Sorry, you can't join your own section.", flash[:alert]
+  end
+
+
   test "create with invalid section code gives error message" do
     sign_in @student
 
@@ -183,13 +223,23 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal "Please enter a section code", flash[:alert]
   end
 
+  test "remove has nice error when student does not actually have teacher" do
+    sign_in @laurel
+
+    assert_no_difference('Follower.count') do
+      post :remove, teacher_user_id: @chris.id
+    end
+    assert_redirected_to '/'
+    assert_equal "The teacher could not be found.", flash[:alert]
+  end
+
   test "student can remove teacher" do
     follower = @laurel_student_1
 
     sign_in follower.student_user
 
     assert_difference('Follower.count', -1) do
-      post :remove, student_user_id: follower.student_user.id, teacher_user_id: follower.user_id
+      post :remove, teacher_user_id: follower.user_id
     end
 
     assert !Follower.exists?(follower.id)
@@ -202,34 +252,10 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in follower.student_user
 
     assert_difference('Follower.count', -1) do
-      post :remove, student_user_id: follower.student_user.id, teacher_user_id: follower.user_id
+      post :remove, teacher_user_id: follower.user_id
     end
 
     assert !Follower.exists?(follower.id)
-  end
-
-  test "teacher can remove student" do
-    follower = @laurel_student_1
-
-    sign_in follower.user
-
-    assert_difference('Follower.count', -1) do
-      post :remove, student_user_id: follower.student_user_id, teacher_user_id: follower.user_id
-    end
-
-    assert !Follower.exists?(follower.id)
-  end
-
-  test "student cannot remove other student" do
-    follower = @laurel_student_1
-
-    sign_in @student
-
-    assert_no_difference('Follower.count') do
-      post :remove, student_user_id: follower.student_user_id, teacher_user_id: follower.user_id
-    end
-    assert_response :forbidden
-    assert follower.reload # not deleted
   end
 
   test "student_user_new when signed in in section with script" do
@@ -246,8 +272,6 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test "student_register in section with script" do
-    sign_out @laurel
-
     student_params = {email: 'student1@school.edu',
                       name: "A name",
                       password: "apassword",

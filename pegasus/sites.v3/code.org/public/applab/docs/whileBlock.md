@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## whileBlock
+## While block
 
 [/name]
 
@@ -19,12 +19,13 @@ Category: Control
 
 [short_description]
 
-Creates a loop consisting of a conditional expression and a block of statements executed for each iteration of the loop.
-The loop continues to execute as long as the condition evaluates to true.
+Executes a block of statements while the specified condition is true.
 
 [/short_description]
 
-**Note**: Ensure the while loop condition eventually evaluates to false to prevent an infinite loop.
+Apps sometimes need to repeatedly execute some code while something is true. The while loop uses a boolean condition to repeatedly run a block of code. It will check the expression, and if it is true it runs the block of code contained within the curly braces. This process of checking the condition and running the block of code is repeated as long as the boolean condition remains true. Once the boolean expression becomes false it will stop.
+
+A *while* block requires you to define an expression that evaluates to true or false. Just as in arithmetic there are some operators you can use to write expressions that evaluate to a number, programming languages also have a comparison operators (< <= == > >= !=) and boolean operators (&& || !) that let you write expressions that evaluate to true or false.
 
 [/description]
 
@@ -33,47 +34,32 @@ ____________________________________________________
 
 [example]
 
-The following block of code declares an Array named `randoms`. The while loop executes 10 times.
-Each iteration of the loop computes a random number and appends the value to the Array.
-After the loop terminates, the contents of the Array is printed to the console.
-
-
 ```
-var randoms = [];
-while (randoms.length < 10) {
-    var num = randomNumber(0, 100);
-    randoms.push(num);
+// Keep rolling a die while you do not roll a 6. (event-controlled loop)
+var die=randomNumber(1,6);
+while (die !=6) {
+  write(die);
+  die=randomNumber(1,6);
 }
-
-console.log(randoms);
+write(die);
 ```
 
 [/example]
 ____________________________________________________
 
-[example]
-The following block of code is similar to the previous example.
-Instead of creating an empty Array, however, it pre-allocates an Array of length 10.
-The variable `index` is used to maintain the current position in the Array to populate next.
-The while loop iterates through each index of the Array and sets the value at that index
-to a random number between 0 and 100.
-After the loop terminates, the numbers are printed to the console.
 
+[example]
 
 ```
-var numbers = new Array(10);
-var index = 0;
-while (index < numbers.length) {
-    var value = randomNumber(0, 100); // compute a random number between 0 and 100
-    numbers[index] = value; // store the random number in the Array at the jth index
-    index += 1; // increment the index by 1
+// Roll a die 5 times. (counter-controlled loop)
+var count=1;
+while (count<=5) {
+  write(randomNumber(1,6));
+  count=count+1;
 }
-
-console.log(numbers); // print the Array of numbers to the console.
 ```
 
 [/example]
-
 ____________________________________________________
 
 [syntax]
@@ -87,6 +73,32 @@ while (condition) {
 ```
 
 [/syntax]
+
+[parameters]
+
+### Parameters
+
+| Name  | Type | Required? | Description |
+|-----------------|------|-----------|-------------|
+| condition | boolean expression | Yes | An expression that evaluates to true or false. Comparison operators include < <= == > >= !=. Boolean operators include && || ! |
+| statement | App Lab statement(s) | Yes | Any valid App Lab statements. |
+
+[/parameters]
+
+[returns]
+
+### Returns
+No return value.
+
+[/returns]
+
+[tips]
+
+### Tips
+- Unlike an event handler, an while statement does not constantly monitor your program checking the condition to see if it's true or false. A while statement is an instruction just like any other that gets executed line by line in order from top to bottom.
+- Ensure the while loop condition eventually evaluates to false to prevent an infinite loop.
+
+[/tips]
 
 [bug]
 
