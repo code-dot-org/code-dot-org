@@ -6,6 +6,7 @@ title: CS in Science
 Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards. Download a [brief](science/files/Code.org_MS_Science_Program_two_pager.pdf) or [full](science/files/Code.org_MS_Science_Program_four_pager.pdf) description.
 
 
+<a name="videos"></a>
 ## Videos
 
 <%= partial('video_grid', :videos => [
