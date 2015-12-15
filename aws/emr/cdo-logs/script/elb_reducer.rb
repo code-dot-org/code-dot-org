@@ -13,10 +13,9 @@ ARGF.each do |line|
     post_count += value.to_i
   else
     other_count += value.to_i
-  end 
+  end
 end
 
 puts "GET" + "\t" + get_count.to_s
 puts "POST" + "\t" + post_count.to_s
 puts "OTHER" + "\t" + other_count.to_s
-

@@ -3,8 +3,9 @@ ARGF.each do |line|
   # key/value.
   if line.include? "GET"
     puts "GET" + "\t" + "1"
-  end
-  if line.include? "POST" 
+  elsif line.include? "POST" 
     puts "POST" + "\t" + "1"
+  else
+    puts "OTHER" + "\t" + "1"
   end
 end
