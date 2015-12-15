@@ -462,9 +462,14 @@ function populateProgress(scriptName) {
 }
 
 function renderStageProgress(stageData, progressData, clientProgress, currentLevelId) {
-  var progressContainer = $('.progress_container');
   var serverProgress = progressData.levels || {};
-  stageData.levels.forEach(function(level, index, levels) {
+  var currentLevelIndex = null;
+
+  var combinedProgress = stageData.levels.map(function(level, index) {
+    if (level.id === currentLevelId) {
+      currentLevelIndex = index;
+    }
+
     var status;
     if (dashboard.clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
@@ -473,17 +478,19 @@ function renderStageProgress(stageData, progressData, clientProgress, currentLev
       // Merge server progress with local progress
       status = mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
     }
-    var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url + location.search;
-    var link = $('<a>').attr('id', 'header-level-' + level.id).attr('href', href).addClass('level_link').addClass(status).text(level.title);
 
-    if (level.kind == 'unplugged') {
-      link.addClass('unplugged_level');
-    }
-    var div = $('<div>').addClass(level.id === currentLevelId ? 'puzzle_outer_current' : defaultClass).append(link);
-    if (index === levels.length - 1) {
-      div.addClass('last');
-    }
-    progressContainer.append(div).append('\n');
+    return {
+      title: level.title,
+      status: status,
+      kind: level.kind,
+      link: href,
+      id: level.id
+    };
   });
+
+  $('.progress_container').replaceWith(React.renderToStaticMarkup(React.createElement(dashboard.StageProgress, {
+    levels: combinedProgress,
+    currentLevelIndex: currentLevelIndex
+  })));
 }
