@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # Updates a contact's email address in forms so it will be reflected in solr and in future bulk emails
-# The change will be reflected in solr when the index-users-in-solr cron job runs (every minute)
+# The change will be reflected in solr when the process-forms cron job runs (every minute)
 #
 # Usage: update-contact-email old_email new_email
 
