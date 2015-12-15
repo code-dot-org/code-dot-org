@@ -250,7 +250,7 @@ social:
                 </div>
                 <div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://thetrends.ro/" target="_blank"><img style="max-width: 100%" src="/images/trends1tif.png"></a>
+                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://thetrends.ro/" target="_blank"><img style="max-width: 100%" src="/images/trends.jpg”></a>
                     </div>
                 </div>
                 <div class="col-sm-3 col span_3">
