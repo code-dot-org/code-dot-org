@@ -999,6 +999,11 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U4 - Read Record - Local vs Remote Data External:
+        Local vs. Remote Data: Local vs. Remote Data
+      U4 - Unique Ids Explanation:
+        Records Have Unique IDs: Records Have Unique IDs
+        title: title
       U4 Inspirational Data Video: {}
       U4L01 Student Lesson Introduction:
         description here: description here
@@ -3313,7 +3318,7 @@ en:
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
         Another name for the purpose of a function.: Another name for the purpose of a function.
         'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
-        para-meter -- a measure of the distance between a function\’s conception and implementation.: para-meter -- a measure of the distance between a function\’s conception and implementation.
+        'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
       U3L06-API-multichoice:
         Abstract Parameter Interface: Abstract Parameter Interface
         Abstract Programming Inheritance: Abstract Programming Inheritance
@@ -3342,7 +3347,7 @@ en:
         Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
         Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
         Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
-        Select the two true statements about functions with parameters: Select the two true statements about functions with parameters
+        'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
         Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
       U3L08 Assessment3:
         'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
@@ -3382,7 +3387,7 @@ en:
         The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
         The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
         Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.: Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.
-        What happens when two buttons are given the same ID?: What happens when two buttons are given the same ID?
+        'What happens when two buttons are given the same ID? Choose two of the following:': 'What happens when two buttons are given the same ID? Choose two of the following:'
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Buttons and Event Handlers
         Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
@@ -3392,8 +3397,6 @@ en:
         Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
       U3L14 - MC variable reassignment:
         Code does not execute due to error: Code does not execute due to error
-        Variable Check In: Variable Check In
-        'What will be displayed in the console? ': 'What will be displayed in the console? '
         a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
         a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
         a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
@@ -4670,7 +4673,7 @@ en:
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L03 Free Response Wrap Up:
-        'Reflection: Why functions?': 'Reflection: Why functions?'
+        'Reflection: Why Functions?': 'Reflection: Why Functions?'
       U3L04 Assessment1:
         'Free Response: Top-Down Design': 'Free Response: Top-Down Design'
       U3L04 Free Response Getting Started:
@@ -4735,7 +4738,7 @@ en:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
       U3L15 spot the difference variable debugging:
-        'Free response: Spot and fix the bug': 'Free response: Spot and fix the bug'
+        'Free response: Spot and Fix the Bug': 'Free response: Spot and Fix the Bug'
       U3L16 Assessment Free Response:
         'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
       U3L16 Free Response Getting Started:

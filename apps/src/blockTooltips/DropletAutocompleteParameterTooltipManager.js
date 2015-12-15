@@ -257,6 +257,10 @@ DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor,
   if (this.overrideCompleter) {
     var allCompleters = editor.completers;
     editor.completers = [ this.overrideCompleter ];
+
+    // Ensure that autoInsert is off so we don't insert immediately when there is only one option:
+    editor.completer.autoInsert = false;
+
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions.call(this, editor, callback);
     editor.completers = allCompleters;
   } else {
