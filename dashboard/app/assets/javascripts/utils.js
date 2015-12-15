@@ -1,5 +1,3 @@
-// TODO - brent - IIFE me
-
 window.dashboard = window.dashboard || {};
 
 window.dashboard.utils = (function () {
