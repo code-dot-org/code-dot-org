@@ -243,7 +243,7 @@ a.header_status_bar:hover {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 165px;
+$footer_height: 110px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -368,17 +368,6 @@ $small-footer-standard-width: 400px;
     padding-top: 3px;
     white-space: nowrap;
   }
-}
-
-#copyright-flyout {
-  display: none; /* Invisible until summoned. */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 625px;
-  max-width: 50%;
-  min-width: 300px;
-  padding: 1em;
 }
 
 #more-menu {
