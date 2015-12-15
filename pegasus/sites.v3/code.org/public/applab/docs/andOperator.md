@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Math
@@ -20,9 +19,11 @@ Category: Math
 
 [short_description]
 
-A logical operator typically used with Boolean expressions. Returns true when both expressions are true and false otherwise.
+Returns true when both expressions are true and false otherwise.
 
 [/short_description]
+
+A logical operator typically used with Boolean expressions. 
 
 [/description]
 

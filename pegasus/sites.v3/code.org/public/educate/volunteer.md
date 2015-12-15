@@ -29,7 +29,7 @@ I’m a [X]th grade student at [SCHOOL NAME] and I’d like to volunteer to brin
 
 Code.org offers a free, K-8 Intro to Computer Science course that I want to teach. It’s a mix of self-guided, online tutorials (featuring Angry Birds, Plants vs. Zombies and Mark Zuckerberg) and group activities. It’s a lot of fun and teaches the foundations of computer science -- like logic, problem solving and creativity. 
 
-I think it’s important for every student today to learn how technology works. I’m excited to volunteer and give give [SCHOOL NAME] students a chance to learn what 90% of schools don’t teach.  
+I think it’s important for every student today to learn how technology works. I’m excited to volunteer and give give [SCHOOL NAME] students a chance to learn what most schools don’t teach.  
 
 Can we schedule a time to talk more about this opportunity? 
 
