@@ -6,11 +6,10 @@
  * Dynamic header generation and event bindings for header actions.
  */
 
-if (!window.dashboard) {
-  window.dashboard = {};
-}
+window.dashboard = window.dashboard || {};
 
-// TODO - IFFE
+// Namespace for manipulating the header DOM.
+dashboard.header = {};
 
 /**
  * @param stageData{{
@@ -29,7 +28,7 @@ if (!window.dashboard) {
  *   }>
  * }}
  */
-dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
+dashboard.header.build = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
   stageData = stageData || {};
   progressData = progressData || {};
 
@@ -59,10 +58,10 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     var status;
     if (dashboard.clientState.queryParams('user_id')) {
       // Show server progress only (the student's progress)
-      status = activityCssClass((serverProgress[level.id] || {}).result);
+      status = dashboard.progress.activityCssClass((serverProgress[level.id] || {}).result);
     } else {
       // Merge server progress with local progress
-      status = mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+      status = dashboard.progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
     }
     var defaultClass = level.kind == 'assessment' ? 'puzzle_outer_assessment' : 'puzzle_outer_level';
     var href = level.url;
@@ -292,9 +291,6 @@ function remixProject() {
   }
 }
 
-// Namespace for manipulating the header DOM.
-dashboard.header = {};
-
 // Minimal project header for viewing channel shares and legacy /c/ share pages.
 dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
@@ -426,65 +422,3 @@ dashboard.header.updateTimestamp = function () {
     $('.project_updated_at').text("Not saved"); // TODO i18n
   }
 };
-
-/**
- * See ApplicationHelper#activity_css_class.
- * @param result
- * @return {string}
- */
-function activityCssClass(result) {
-  if (!result) {
-    return 'not_tried';
-  }
-  if (result >= 1000) {
-    return 'submitted';
-  }
-  if (result >= 30) {
-    return 'perfect';
-  }
-  if (result >= 20) {
-    return 'passed';
-  }
-  return 'attempted';
-}
-
-/**
- * Returns the "best" of the two results, as defined in apps/src/constants.js.
- * Note that there are negative results that count as an attempt, so we can't
- * just take the maximum.
- * @param {Number} a
- * @param {Number} b
- * @return {string} The result css class.
- */
-function mergedActivityCssClass(a, b) {
-  return activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
-}
-
-function populateProgress(scriptName) {
-  // Render the progress the client knows about (from sessionStorage)
-  var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
-  Object.keys(clientProgress).forEach(function (levelId) {
-    $('#level-' + levelId).addClass(activityCssClass(clientProgress[levelId]));
-  });
-
-  $.ajax('/api/user_progress/' + scriptName).done(function (data) {
-    // Merge progress from server (loaded via AJAX)
-    var serverProgress = (data || {}).levels || {};
-    Object.keys(serverProgress).forEach(function (levelId) {
-      if (serverProgress[levelId].result !== clientProgress[levelId]) {
-        var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
-
-        // Clear the existing class and replace
-        $('#level-' + levelId).attr('class', 'level_link ' + status);
-
-        // Write down new progress in sessionStorage
-        dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
-      }
-    });
-  });
-
-  // Highlight the current level
-  if (window.appOptions && appOptions.serverLevelId) {
-    $('#level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
-  }
-}
