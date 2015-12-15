@@ -1374,19 +1374,15 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
 
-    if (level.projectileCollisions) {
-      handleActorCollisionsWithCollidableList(i,
-                                              iXCenter,
-                                              iYCenter,
-                                              Studio.projectiles);
-    }
-    if (level.itemCollisions || level.removeItemsWhenActorCollides) {
-      handleActorCollisionsWithCollidableList(i,
-                                              iXCenter,
-                                              iYCenter,
-                                              Studio.items,
-                                              level.removeItemsWhenActorCollides);
-    }
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.items,
+                                            level.removeItemsWhenActorCollides);
 
     handleEdgeCollisions(
         sprite,
@@ -1717,6 +1713,18 @@ Studio.initSprites = function () {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
+
+    if (level.projectileCollisions) {
+      blocks.enableProjectileCollisions(Blockly);
+    }
+
+    if (level.edgeCollisions) {
+      blocks.enableEdgeCollisions(Blockly);
+    }
+
+    if (level.allowSpritesOutsidePlayspace) {
+      blocks.enableSpritesOutsidePlayspace(Blockly);
+    }
   }
 };
 
@@ -2580,11 +2588,7 @@ var registerHandlersWithMultipleSpriteParams =
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'any_item');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
-    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
-      blockParam2, 'wall');
   }
 };
 
@@ -2820,7 +2824,7 @@ Studio.execute = function() {
 
   var handlers = [];
   if (studioApp.isUsingBlockly()) {
-    if (Studio.checkForBlocklyPreExecutionFailure() || level.edit_blocks) {
+    if (Studio.checkForBlocklyPreExecutionFailure()) {
       return Studio.onPuzzleComplete();
     }
 
@@ -3192,12 +3196,7 @@ Studio.drawTimeoutRect = function() {
       background.setAttribute('height', height);
       background.setAttribute('x', 0);
       background.setAttribute('y', Studio.MAZE_HEIGHT - height);
-      var color = level.showTimeoutRect;
-      if (color === true) {
-        // If this was enabled as a boolean, use white 50% alpha as a default:
-        color = 'rgba(255, 255, 255, 0.5)';
-      }
-      background.setAttribute('fill', color);
+      background.setAttribute('fill', level.showTimeoutRect);
       group.appendChild(background);
       svg.appendChild(group);
     }
@@ -3341,7 +3340,7 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var backgroundLayer = document.getElementById('backgroundLayer');
+  var spriteLayer = document.getElementById('backgroundLayer');
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -3361,7 +3360,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        Studio.drawWallTile(backgroundLayer, wallVal, row, col);
+        Studio.drawWallTile(spriteLayer, wallVal, row, col);
       }
     }
   }
@@ -3542,22 +3541,14 @@ Studio.displayVictoryText = function() {
   if (dom.isMobile() || dom.isWindowsTouch()) {
     var resetTextA = document.getElementById('resetTextA');
     var resetTextB = document.getElementById('resetTextB');
+    resetTextB.textContent = studioMsg.tapToReset();
     resetTextA.setAttribute('visibility', 'hidden');
+    resetTextB.setAttribute('visibility', 'visible');
     $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
-    if (level.tapSvgToRunAndReset) {
-      resetTextB.textContent = studioMsg.tapToReset();
-      resetTextB.setAttribute('visibility', 'visible');
-    } else {
-      resetTextB.setAttribute('visibility', 'hidden');
-    }
   } else {
     var resetText = document.getElementById('resetText');
-    if (level.tapSvgToRunAndReset) {
-      resetText.textContent = studioMsg.tapOrClickToReset();
-      resetText.setAttribute('visibility', 'visible');
-    } else {
-      resetText.setAttribute('visibility', 'hidden');
-    }
+    resetText.textContent = studioMsg.tapOrClickToReset();
+    resetText.setAttribute('visibility', 'visible');
   }
 };
 
@@ -3716,7 +3707,7 @@ Studio.displayFloatingScore = function(changeValue) {
     return;
   }
 
-  var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
+  var sprite = Studio.sprite[0];
   var floatingScore = document.getElementById('floatingScore');
   floatingScore.textContent = changeValue > 0 ? ("+" + changeValue) : changeValue;
   floatingScore.setAttribute('x', sprite.x + sprite.width/2);
@@ -4052,10 +4043,7 @@ Studio.playSound = function (opts) {
  * @returns {Object} options object that can be passed to item constructor.
  */
 Studio.getItemOptionsForItemClass = function (itemClass) {
-  var classProperties = {};
-  if (skin.specialItemProperties) {
-    classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
-  }
+  var classProperties = utils.valueOr(skin.specialItemProperties[itemClass], {});
   return {
     className: itemClass,
     image: skin[itemClass],
@@ -4103,10 +4091,10 @@ Studio.addItem = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  // Create stationary, grid-aligned items when level.itemGridAlignedMovement,
+  // Create stationary, grid-aligned items when level.gridAlignedMovement,
   // otherwise, create randomly placed items travelling in a random direction.
-  // Assumes that the protagonist sprite is in use, and avoids placing the item
-  // too close to that sprite.
+  // Assumes that sprite[0] is in use, and avoids placing the item too close
+  // to that sprite.
 
   var generateRandomItemPosition = function () {
     // TODO (cpirich): check for edge collisions? (currently avoided by placing
@@ -4142,13 +4130,11 @@ Studio.addItem = function (opts) {
     // TODO (cpirich): just move within the map looking for open spaces instead
     // of randomly retrying random numbers
 
-    var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
-
     var numTries = 0;
     var minDistanceFromSprite = 100;
     while (Studio.willCollidableTouchWall(item, item.x, item.y) ||
-           Studio.getDistance(sprite.x + sprite.width/2,
-                              sprite.y + sprite.height/2,
+           Studio.getDistance(Studio.sprite[0].x + Studio.sprite[0].width/2,
+                              Studio.sprite[0].y + Studio.sprite[0].height/2,
                               item.x, item.y) < minDistanceFromSprite) {
       var newPos = generateRandomItemPosition();
       item.x = newPos.x;
@@ -4352,7 +4338,7 @@ Studio.setDroidSpeed = function (opts) {
   }
 
   opts.value = speedNumericVal;
-  opts.spriteIndex = Studio.protagonistSpriteIndex || 0;
+  opts.spriteIndex = Studio.protaganistSpriteIndex || 0;
   Studio.setSpriteSpeed(opts);
 };
 
@@ -5704,21 +5690,9 @@ var checkFinished = function () {
       Studio.testResults = TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
       Studio.progressConditionTestResult = true;
     }
-    var progressMessageKey = progressConditionResult.messageKey;
+    var progressMessage = progressConditionResult.message;
     if (studioApp.isUsingBlockly()) {
-      progressMessageKey = progressConditionResult.blocklyMessageKey || progressMessageKey;
-    }
-    var progressMessage;
-    if (studioMsg[progressMessageKey]) {
-      // If messageKey/blocklyMessageKey is present, invoke its function from the
-      // studioMsg object. This allows level builders to use pre-defined localized strings,
-      // but those strings cannot contain substitutable parameters.
-      progressMessage = studioMsg[progressMessageKey]();
-    } else {
-      progressMessage = progressConditionResult.message;
-      if (studioApp.isUsingBlockly()) {
-        progressMessage = progressConditionResult.blocklyMessage || progressMessage;
-      }
+      progressMessage = progressConditionResult.blocklyMessage || progressMessage;
     }
     Studio.message = utils.valueOr(progressMessage, null);
     Studio.pauseInterpreter = utils.valueOr(progressConditionResult.pauseInterpreter, false);

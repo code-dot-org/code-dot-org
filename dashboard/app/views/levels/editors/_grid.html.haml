@@ -10,7 +10,6 @@
     .end { background-color: lime !important }
     .obstacle { background-color: gold !important }
     .dirt { background-color: #d1d567 !important }
-    .item { background-color: cadetblue !important }
     tr {
       height: 40px;
     }
@@ -32,87 +31,49 @@
       background-size: 1100px 100%;
       text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
     }
-    td.item {
-      background-image: url('/blockly/media/skins/studio/blue_fireball.png');
-      background-size: 400px 100%;
-    }
     .htInvalid { background-color: orangered !important}
     .htNumeric { text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF }
   #mazeTable
-  %p
   .label
     WHAT THE NUMBERS MEAN:
-    %br
-    %span.maze MAZE:
-    %ul.maze(style="list-style-type:none;margin:0;")
+    %ul(style="list-style-type:none;margin:0;")
       %li.border 0 = border/wall
       %li.path 1 = path
       %li.start 2 = start
       %li.end 3 = end (for Maze levels only)
       %li.obstacle 4 = obstacle
-    %span.karel FARMER:
-    %ul.karel(style="list-style-type:none;margin:0;")
+    FARMER:
+    %ul(style="list-style-type:none;margin:0;")
       %li.dirt -x hole
       %li.dirt +x pile
       %li.dirt -x &lt;= -11 = hole of unknown size
-    %span.karel BEE:
-    %ul.karel(style="list-style-type:none;margin:0;")
+    BEE:
+    %ul(style="list-style-type:none;margin:0;")
       %li.dirt +x = nectar. +99 = unlimited
       %li.dirt -x = honey. -99 = unlimited
-    %span.playlab PLAYLAB (values can be added together):
-    %ul.playlab(style="list-style-type:none;margin:0;")
-      %li.border 0 = empty
+    PLAYLAB:
+    %ul(style="list-style-type:none;margin:0;")
+      %li.start 16 = character
       %li.path 1 = waypoint flag
-      %li.obstacle 4 = random obstacle/wall
-      %li.start 16 = sprite/actor (top left)
-      %li.item 32 = character/item (class 0)
-      %li.item 64 = character/item (class 1)
-      %li.item 128 = character/item (class 2)
-      %li.item 256 = character/item (class 3)
-      %li.item 512 = character/item (class 4)
-      %li.item 1024 = character/item (class 5)
-      %li.item 2048 = character/item (class 6)
-      %li.item 4096 = character/item (class 7)
 :javascript
   var data = eval(#{@level.maze_data.try(:to_json)})
   function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
     var dataValues = ['border','path','start','end','obstacle'];
-    var validMazeNumeric = parseInt(value) < 5 && parseInt(value) >= 0;
-    var isStudio = $('#level_type').val() === 'Studio';
     if(value[0] == '+' || value[0] == '-') {
-      Handsontable.renderers.TextRenderer.apply(this, arguments);
-      td.className += ' dirt';
-      // index into the dirt png spritesheet
-      var dirtValue = parseInt(value);
-      var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
-      $(td).css('background-position',(-dirtIndex * 50));
+        Handsontable.renderers.TextRenderer.apply(this, arguments);
+        td.className += ' dirt';
+        // index into the dirt png spritesheet
+        var dirtValue = parseInt(value);
+        var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
+        $(td).css('background-position',(-dirtIndex * 50));
     }
-    else if (validMazeNumeric || isStudio) {
-      Handsontable.renderers.NumericRenderer.apply(this, arguments);
-    }
-    if (validMazeNumeric) {
-      td.className += ' ' + dataValues[parseInt(value)];
-    } else if (isStudio) {
-      if (parseInt(value) & 16) {
+    else if (parseInt(value) < 5 && parseInt(value) >= 0) {
+        Handsontable.renderers.NumericRenderer.apply(this, arguments);
+        td.className += ' ' + dataValues[parseInt(value)];
+    } else if (parseInt(value) === 16) {
+        Handsontable.renderers.NumericRenderer.apply(this, arguments);
         td.className += ' start';
-      } else if (parseInt(value) & (32 | 64 | 128 | 256 | 512 | 1024 | 2048 | 4096)) {
-        td.className += ' item';
-      }
     }
-  }
-  $('.maze').hide();
-  $('.karel').hide();
-  $('.playlab').hide();
-  switch ($('#level_type').val()) {
-    case 'Karel':
-      $('.karel').show();
-      // fall through
-    case 'Maze':
-      $('.maze').show();
-      break;
-    case 'Studio':
-      $('.playlab').show();
-      break;
   }
   $("#mazeTable").handsontable({
     data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
