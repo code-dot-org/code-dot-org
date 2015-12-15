@@ -461,26 +461,16 @@ fi:
       4-5 Maze 12_instruction: Ok, tämä on hiukan erilainen. Voitko tehdä sen käyttämällä vain kuutta lohkoa?
       4-5 Maze 13_instruction: Hoida minut tuon possun luo!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
+      4-5 Maze 2 (copy 1)_instruction: Saa zombi auringonkukan luokse, mutta vältä ahmijaa!
+      4-5 Maze 2_instruction: Saa zombie auringonkukan luo, mutta vältä ahmijaa!
       4-5 Maze 3 (copy 1)_instruction: Täytyy.. päästä... auringonkukalle.
       4-5 Maze 3_instruction: Täytyy.. päästä... auringonkukalle.
-      4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      4-5 Maze 4 (copy 1)_instruction: 'Kokeile "toista" lohkoa käyttääksesi vähemmän lohkoja...'
+      4-5 Maze 4_instruction: 'Kokeile "toista" lohkoa käyttääksesi vähemmän lohkoja...'
+      4-5 Maze 5 (copy 1)_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
+      4-5 Maze 5_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
+      4-5 Maze 6 (copy 1)_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
+      4-5 Maze 6_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
       4-5 Maze 7_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 8_instruction: |
         Use the "repeat" block to get the zombie to the
@@ -1603,12 +1593,8 @@ fi:
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
-      Course 4 Maze 5_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: |
-        Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
+      Course 4 Maze 6_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen määrän lohkoja?
       Course 4 Play Lab For Loops 2_instruction: |
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -4441,10 +4427,7 @@ fi:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-        
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

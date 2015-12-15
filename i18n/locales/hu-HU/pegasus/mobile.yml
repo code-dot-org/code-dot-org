@@ -294,7 +294,7 @@ hu-HU:
   starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: 'Több nyelv | Modern böngészők, okostelefonok, táblagépek | Korosztál: 6-10 évesek'
   starwars_blocks_start_button: Próbálja ki most
   starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
   starwars_speak_languages: Beszél egy másik nyelven is?
@@ -305,7 +305,7 @@ hu-HU:
   mc_shortdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
   mc_gradelevel: 4-től 104 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Kódolás Órája
   volunteer_engineer_submission_title: Ösztönözz tanulókat és önkénteseket a Kódolás Órájára.
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '

@@ -497,8 +497,8 @@ kk:
     caption_by_name_age: '%{name}, жасы %{age}'
     caption_time_ago: '%{time_ago} бұрын'
     header: Галерея
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Stories and games
+    header_artist: Code art
   landing:
     prerelease: "Бұл курс <span class='betatext'>бета нұсқада</span>. Бұл деген курстың әлі толық жасалып бітпегенін көрсетеді және кері байланыс кезінде өзгертулер еңгізіледі."
     prerelease_hoc2014: "Бұл сабақ <span class='betatext'>бета нұсқада</span>. Бұл сабаққа кері байланыс кезінде өзгертулер еңгізіледі.."

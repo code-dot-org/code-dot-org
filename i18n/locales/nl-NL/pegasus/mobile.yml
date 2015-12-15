@@ -289,7 +289,7 @@ nl-NL:
   starwars_javascript_start_button: Probeer nu
   starwars_blocks_title: Blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Probeer nu
   starwars_watch_videos: "Bekijk voor je begint deze inspiratie-video's"
   starwars_speak_languages: Spreek je een andere taal?
@@ -300,7 +300,7 @@ nl-NL:
   mc_shortdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Uur Code
   volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger voor het Uur Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit jaar een Uur Code in hun klaslokaal, 7-13 dec 2015. Ze willen jouw hulp! '
@@ -605,8 +605,8 @@ nl-NL:
   mobile_devices: Handleidingen voor mobiele apparaten
   frozen_name: Code met Anna en Elsa
   starwars_name: 'Star Wars: Bouw een Heelal met Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassiek doolhof
+  codeintl_name: Klassiek doolhof
   thinkersmithspanish_name: Mijn Robotvriend
   khan_name: Een inleiding in JavaScript
   khanes_name: Een inleiding in JavaScript
@@ -642,7 +642,7 @@ nl-NL:
   thinkersmith2_name: Binaire kerstballen
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Blad, Steen, Schaar
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassiek doolhof
   playlab_name: Speel Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstenaar

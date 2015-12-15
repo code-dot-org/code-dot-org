@@ -264,7 +264,7 @@ zh-CN:
   starwars_javascript_start_button: 现在就试试
   starwars_blocks_title: 模块
   starwars_blocks_description: 使用拖放块。
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: 现在就试试
   starwars_watch_videos: 在开始之前，看一段鼓舞人心的视频
   starwars_speak_languages: 另一种语言?
@@ -275,7 +275,7 @@ zh-CN:
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: 6岁以上
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: 我的世界 编程一小时
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -577,8 +577,8 @@ zh-CN:
   mobile_devices: 用于移动设备的教程
   frozen_name: Code with Anna and Elsa
   starwars_name: '星球大战: 用代码构建一个星系'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: 经典迷宫
+  codeintl_name: 经典迷宫
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 简介
   khanes_name: JavaScript 简介
@@ -614,7 +614,7 @@ zh-CN:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 石头、剪子、布
-  hourofcode_name: Classic Maze
+  hourofcode_name: 经典迷宫
   playlab_name: 游戏实验室
   infinity_name: 无限发挥游戏实验室
   artist_name: 艺术家

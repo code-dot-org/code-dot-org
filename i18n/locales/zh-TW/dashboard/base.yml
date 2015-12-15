@@ -166,7 +166,7 @@ zh:
     error_already_redeemed: 您獲得的獎項已經兌現。
     no_prizes_available: 很抱歉，目前我們無法提供獎品。
     teacher_info_required: '教師的獎勵需要學校名稱跟地址:'
-    teacher_email_required: 老師獎需要一個已確認電子郵件地址：
+    teacher_email_required: 老師的獎項需要一個已確認電子郵件地址：
     confirm:
       title: 請確認
       "no": 否
@@ -190,7 +190,7 @@ zh:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 你贏得了獎品！（僅適用於美國學生）
-      not_earned_title: 完成本教程，賺取報酬 (僅適用于美國學生)
+      not_earned_title: 完成此課程，並領取獎賞 (僅適用美國學生)
       not_earned: '學習所有的電腦科學概念，並收集完所有 %{num_trophies}個獎盃，就能獲得真實世界的獎品。您可以選擇 10 GB 的 Dropbox 空間，10美元的Skype儲值或是免費遊戲下載。注意：獎項僅適用於美國學生，並僅有在獎品供應持續的情況下適用。'
       teacher:
         earned: '15 個以上的學生已經收集完所有 %{num_trophies} 個獎盃。您贏得了教師獎章！(僅限美國教師)'

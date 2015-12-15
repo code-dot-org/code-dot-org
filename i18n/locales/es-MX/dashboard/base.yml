@@ -1,7 +1,7 @@
 es-MX:
   errors:
     messages:
-      not_saved: 'Por favor corrije los siguientes errores:'
+      not_saved: 'Por favor corrige los siguientes errores:'
       too_young: Este contenido tiene restricciones de edad y no esta disponible para alumnos jóvenes
   activerecord:
     errors:
@@ -404,7 +404,7 @@ es-MX:
     secure: Versión Segura
     report_abuse: Reportar uso indebido
     built_on_code_studio: Construye en Code Studio
-    make_my_own_app: Haz tu propia aplicación
+    make_my_own_app: Hacer mi propia app
     how_it_works: Como funciona
   reference_area:
     title: ¿Necesitas ayuda?
@@ -462,7 +462,7 @@ es-MX:
       unused: Niveles no utilizados
   upsell:
     hoc:
-      title: Classic Maze
+      title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones lo han intentado.
     flappy:
       title: Código Flappy

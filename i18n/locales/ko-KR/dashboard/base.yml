@@ -403,7 +403,7 @@ ko:
     privacy: 개인정보보호 정책
     secure: 보안 버전
     report_abuse: 악용 사례 신고
-    built_on_code_studio: 코드 스튜디오 기반
+    built_on_code_studio: 코드 스튜디오 내장
     make_my_own_app: 나만의 앱 만들기
     how_it_works: 작동하는 방법
   reference_area:
@@ -462,7 +462,7 @@ ko:
       unused: 비사용 레벨
   upsell:
     hoc:
-      title: Classic Maze
+      title: 고전 미로게임
       body: 컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다.
     flappy:
       title: 플래피 코드

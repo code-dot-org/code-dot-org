@@ -126,7 +126,7 @@ nn:
           "Bee: Functions2": 'Bier: Funksjonar2'
           "Bee: Conditionals2": 'Bier: Vilkår2'
           "Maze: Conditionals2": 'Labyrint: Vilkår2'
-          "Artist: Nested Loops2": 'Kunstnar: Løkker inni løkker2'
+          "Artist: Nested Loops2": 'Kunstnar: Løkker inni løkker 2'
           "Farmer: While Loops2": 'Bonde: Medan-løkker2'
           "Bee: Nested Loops2": 'Bier: Løkker inni løkker2'
           "Bee: Debugging2": 'Bier: Feilsøking2'
@@ -146,7 +146,7 @@ nn:
           description_short: Teikn stilige bilde og design med Kunstnaren!
         hourofcode:
           Maze: Labyrint
-          title: Classic Maze
+          title: Klassisk labyrint
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds, planter mot zombiar og Scrat frå Istid!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
         frozen:
@@ -672,7 +672,7 @@ nn:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: Mendan-løkker
+          While Loops: Medan-løkker
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1437,7 +1437,7 @@ nn:
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: Mendan-løkker
+          While Loops: Medan-løkker
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events

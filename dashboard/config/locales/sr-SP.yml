@@ -42,7 +42,7 @@
   of: од
   more: ВИШЕ
   less: МАЊЕ
-  beta: beta
+  beta: пробна верзија
   try_hoc: 'Испробајте Hour of Code.Кликните овде >> '
   try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
   k8intro: К-8 курс Увод у рачунарство (15-25 часова)
@@ -67,8 +67,8 @@
     need_confirmation: Нисте примили инструкције за потврду?
     need_unlock: Нисте примили инструкције за откључавање?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} ученика се већ пријавило.'
+    teacher_count: '%{count} наставника се већ пријавило.'
     overview_student: Sign up for an account to track your progress. Your email is
       primarily used to allow you to log in and for password recovery. For more information,
       see our <a href="http://code.org/privacy">Privacy Policy</a>.

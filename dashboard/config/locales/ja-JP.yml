@@ -563,7 +563,7 @@
     ok: OK
     startover_title: 本当に最初からやり直してもよいですか？
     startover_body: パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。
-    startover_ok: 最初からやり直す
+    startover_ok: 最初（さいしょ）からやり直（なお）す。
     startover_cancel: キャンセル
   time:
     hour: 1 時間

@@ -290,7 +290,7 @@ sv-SE:
   starwars_javascript_start_button: Prova nu
   starwars_blocks_title: bitar
   starwars_blocks_description: Använd dra-och-släpp block.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Prova nu
   starwars_watch_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   starwars_speak_languages: Tala ett annat språk?
@@ -301,7 +301,7 @@ sv-SE:
   mc_shortdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
   mc_gradelevel: Ålder 6+
   mc_platformtext: Moderna webbläsare, smartphones, surfplattor
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspirera elever och frivilliga för Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 lärare kommer att vara värdar för Hour of Code i sina klassrum detta år,7-13 dec, 2015. De vill ha din hjälp! '

@@ -311,11 +311,11 @@
   class_submission_languages_other: Inne języki
   inspirational_videos_more: Więcej <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspirujących filmów </a> z udziałem osobistości i gwiazd
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_choose_theme: Wybierz motyw Labolatorium
+  playlab_classic_title: Klasyczny
+  playlab_gumball_title: Gambol
+  playlab_iceage_title: Epoka lodowcowa - już wkrótce
+  playlab_iceage_title_live: Epoka lodowcowa
   starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
   starwars_javascript_title: Javascript
   starwars_javascript_description: Użyj bloków do przeciągania i upuszczania oraz
@@ -325,8 +325,8 @@
   starwars_javascript_start_button: Spróbuj teraz
   starwars_blocks_title: Bloki
   starwars_blocks_description: Użyj bloków do przeciągania i upuszczania.
-  starwars_blocks_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki, smartfony,
-    tablety | W wieku 6-10
+  starwars_blocks_specs: Wiele języków | Nowoczesne przeglądarki, smartfony, tablety
+    | W wieku 6-10
   starwars_blocks_start_button: Spróbuj teraz
   starwars_watch_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów
   starwars_speak_languages: Czy mówisz w innym języku?
@@ -339,8 +339,7 @@
     gry Minecraft.
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
-  mc_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki i tablety | Wiek
-    6 +
+  mc_specs: Wiele języków | Nowoczesne przeglądarki i tablety | Wiek 6 +
   minecraft_subtitle: Godzina Kodowania z Minecraft
   volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy dla Godziny
     Kodowania.
@@ -696,8 +695,10 @@
     wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę
     lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami
     w Twojej okolicy.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>4 grudnia 2015 r.</b> - Godzina Kody jest tutaj!
+    Spróbuj 50 tutoriali dla każdego wieku i każdego urządzenia. Nowe w tym tygodniu:
+    Zaprogramuj własne opowiadania i gry w nowej grzę Labolatorium, Epoka lodowcowa
+    i Gumball.'
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -738,7 +739,7 @@
   carousel_heading_beginners: Samouczki partnerów dla uczniów z K-8
   carousel_heading_beyond_beginners: Samouczki dla początkujących
   carousel_heading_javascript: Samouczki partnerów do nauki JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Samouczki uczące Kodu JavaScript
   carousel_heading_unplugged: Nie masz komputera lub dostępu do Internet? Poznaj informatykę
     "unplugged", czyli informatykę bez komputera
   carousel_heading_devices: Aplikacje z samouczkami partnerów dla telefonów komórkowych
@@ -754,10 +755,10 @@
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
   teach_led_lesson_plans: Plany lekcji do poprowadzenia Godziny Kodowania przez nauczyciela
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: Zobacz <a href="https://code.org/educate/allhourofcode">
+    pełną listę samouczki Godzina programowania</a>. Aby zobaczyć nasze kryteria i
+    wytyczne składane na tutoriali Godzina programowania, <a href="https://hourofcode.com/tutorial-guidelines">
+    kliknij tutaj.</a>
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania?
@@ -774,8 +775,8 @@
   mobile_devices: Samouczki partnerów dla urządzeń mobilnych
   frozen_name: Koduj z Anną i Elsą
   starwars_name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu'
-  codeorg_name: Napisz swój pierwszy program komputerowy
-  codeintl_name: Napisz swój pierwszy program komputerowy
+  codeorg_name: Klasyczny labirynt
+  codeintl_name: Klasyczny labirynt
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Wprowadzenie do JavaScript
   khanes_name: Wprowadzenie do JavaScript
@@ -811,16 +812,16 @@
   thinkersmith2_name: Binarne Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
-  hourofcode_name: Napisz swój pierwszy program komputerowy
+  hourofcode_name: Klasyczny labirynt
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artysta
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Tajemnicza wyspa Zadanie Kodowania
+  allcancode_name: Biegnij Marco!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minut kodowania
   teacherled_name: Plany lekcji do poprowadzenia Godziny Kodowania przez nauczyciela
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
@@ -866,12 +867,12 @@
   infinity_gradelevel: W wieku 4-104
   artist_gradelevel: W wieku 4-104
   monstercoding_gradelevel: W wieku 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Wiek 5-10
+  csfirst_gradelevel: Wiek 9-14
   boxisland_gradelevel: Podstawowa
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Wiek 12-14
+  texasinstruments_gradelevel: Wiek 13-16
+  teacherled_gradelevel: W wieku 5+
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
@@ -914,12 +915,12 @@
   frozen_platformtext: Nowoczesne przeglądarki + tablety
   starwars_platformtext: Nowoczesne przeglądarki + tablety
   playlab_platformtext: Nowoczesne przeglądarki, smartfony, tablety
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Nowoczesne przeglądarki, iOS, Android
+  allcancode_platformtext: Nowoczesne przeglądarki, iOS
   csfirst_platformtext: Nowoczesne przeglądarki sieci
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Nowoczesne przeglądarki sieci
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: Kalkulatory TI
   teacherled_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeorg_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
     i Angry Birds!

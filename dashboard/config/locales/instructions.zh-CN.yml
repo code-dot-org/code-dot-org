@@ -33,89 +33,42 @@
       2-3 Artist Debugging 6_instruction: 好像我坐的椅子少了一条腿，你能帮忙补上吗？
       2-3 Artist Debugging 7_instruction: 好像这个C画反了，你能把它改过来吗？
       2-3 Artist Debugging 8_instruction: 我的风车还没完成呢。我要重复多少次才能完成它呢？
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
+      2-3 Artist Debugging 9_instruction: '茎的代码不正确。提示: 角度应该是60度。'
+      2-3 Artist Debugging Assessment 1_instruction: 这个形状太小了，你能把它变大一点吗？提示：每条边都应该是75像素。
+      2-3 Artist Free Play_instruction: 自己玩吧！想画什么就画什么。
       2-3 Artist Functions 1_instruction: 你好。我的僵尸艺术家。我爱画画 ！请帮我画副方形眼镜。 提示： 眼镜之间的桥梁比正方形边长短25
         像素。
       2-3 Artist Functions 10_instruction: 这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。使用它们来绘制一个机器的内部结构！
       2-3 Artist Functions 11.5_instruction: 这里同样是"画一个六边形"的功能。如果在循环中每次只转 60 度会发生什么呢？
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
+      2-3 Artist Functions 11_instruction: 我们将“画一个正方形”的函数改成了“画一个六边形”，但它实际上还是只能画正方形！你能把“画一个六边形”的函数改成能画边长50像素的六边形，然后用它画一个六边形吗？
+      2-3 Artist Functions 12_instruction: '函数对于多次画一个复杂的事物非常有帮助。你能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）  '
+      2-3 Artist Functions 13_instruction: 我们提供了4个函数。你可以随意把它们放在一个或者多个循环中来画图，然后分享给你的朋友们。点击“运行”来看示例。
+      2-3 Artist Functions 2_instruction: 函数能让你定义新的模块。我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。你能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。
+      2-3 Artist Functions 3_instruction: 将画一个正方形的函数改为画115像素边长的正方形，从而能够画出一个更大的眼镜。正方形的间隔为45个像素。
+      2-3 Artist Functions 4_instruction: 用重复模块来画这三个正方形。
+      2-3 Artist Functions 7_instruction: '用“画一个房子"的函数来画两个参数不同的房子。（提示: 第一个房子是100像素的）。'
+      2-3 Artist Functions 9_instruction: 这里有个雪花函数。试试用它创造出冬季的景色！这是一个自由关卡，不需要解决问题。随便玩吧！
+      2-3 Artist Loops 1_instruction: 你能做出一个边长100像素的六边形吗？记住，这代表每次只能转60度。
+      2-3 Artist Loops 10_instruction: 如果让最后一步提早一半，将会发生什么？
+      2-3 Artist Loops 11_instruction: 现在，让我们用另一个循环把整个作品都包围起来！ 别忘了在外层循环的最后增加一个角度。
       2-3 Artist Loops 2_instruction: |
         Now use a repeat block to make the cell a
         shell.
       2-3 Artist Loops 4_instruction: 如果我们用循环来一次次重复这个形状的话，会发生什么呢？
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
+      2-3 Artist Loops 5_instruction: 现在，让我们对这个循环做个小小的改动，然后看看图象有什么不同。
+      2-3 Artist Loops 6_instruction: 在循环里再添加一个移动和另一个转弯，然后看看你的设计有什么变化。
+      2-3 Artist Loops 7_instruction: 我们可以用循环来制作所有的多边形。你能在六边形里面创建一个平行四边形吗？
       2-3 Artist Loops 8_instruction: 将两个元素放到一个循环里。
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
+      2-3 Artist Loops 9_instruction: "我们要循环同样的元素了，但是现在我们需要给它们之间加一些距离。\r用和以前一样的代码，但是在外面的循环结束时往前走一步。"
       2-3 Artist Loops New 1_instruction: 让我们来画一个机器人的头！你可以创建一个100像素边的正方形。
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
+      2-3 Artist Loops New 10_instruction: 现在，让我们把这一堆V连在一起，在一个循环里画出它们。
       2-3 Artist Loops New 11_instruction: |
         This time let's draw it 24 times. Add
         a left turn of 30 degrees to this code and put it all in a repeat block.
       2-3 Artist Loops New 12_instruction: |
         Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
+      2-3 Artist Loops New 13_instruction: 现在，在一个循环中画三次菱形。
+      2-3 Artist Loops New 14_instruction: 现在让我们来画10个菱形，但是每个之间要旋转90度。
       2-3 Artist Loops New 15_instruction: 绘制一些有趣的东西。
       2-3 Artist Loops New 2_instruction: 这里有一些你用来绘制该正方形的代码。如果您使用重复块来运行这段代码 4 次，会发生什么？
       2-3 Artist Loops New 9_instruction: |
@@ -3235,11 +3188,7 @@
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: 函数能让你定义新的模块。我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。你能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"

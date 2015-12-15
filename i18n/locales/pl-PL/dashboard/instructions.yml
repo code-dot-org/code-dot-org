@@ -864,7 +864,7 @@ pl:
       Course 4 Artist Functions 1_instruction: Czy potrafisz za pomocą pętli narysować kwadrat, który ma bok o długości 100 pikseli?
       Course 4 Artist Functions 10_instruction: Który blok musisz dodać, aby otrzymać trójkąt leżący na kwadracie?
       Course 4 Artist Functions 11_instruction: 'Sprawdź ten kod, który rysuje kostkę (sześcian) - czy potrafisz zamienić go na funkcję o nazwie "narysuj sześcian" (draw a cube)'
-      Course 4 Artist Functions 12.1_instruction: 'Stwórzmy funkcję o nazwie "narysuj ośmiokąt 20", która rysuje ośmiokąt o długości każdego boku równej 20 pikseli.'
+      Course 4 Artist Functions 12.1_instruction: 'Stwórzmy funkcję o nazwie "draw an octagon 20" (rysuj ośmiokąt 20), która rysuje ośmiokąt z bokami o długości 20 pikseli.'
       Course 4 Artist Functions 12_instruction: Powtórz w pętli funkcję rysującą kwadrat, by narysować rząd kwadratów
       Course 4 Artist Functions 13.1_instruction: "Teraz stwórzmy funkcję o nazwie \"skocz do prawego górnego rogu\", która przeniesie artystę do prawego górwnego rogu ośmiokątu, który właśnie narwysowałeś, żebyśmy mogli zakończyć wzór.\r\n\r\nWskazówka: Aby dostać się do prawego górnego roku, możesz spróbować przeskakiwać we wzorze, który tworzy tylko 3/8 ośmiokąta."
       Course 4 Artist Functions 13_instruction: 'Sprawdź, mamy nową funkcję "draw a line of squares" (narysuj rząd kwadratów). Przyjrzyj się, jak ta funkcja została utworzona. Kliknij "Uruchom", gdy jesteś gotowy na następną łamigłówkę.'
@@ -921,9 +921,9 @@ pl:
       Course 4 Artist Vars 5_instruction: 'Użyj zmiennej "sides" (boki), by kontrolować liczbę przebiegów pętli.'
       Course 4 Artist Vars 6_instruction: "Tutaj jest kod, który może posłużyć do narysowania dowolnego regularnego wielokąta. Pojawiła się nowa zmienna o nazwie \"sides\" (boki), która ma wartość 4. Czy potrafisz użyć tej zmiennej \"sides\" (wraz z blokiem matematycznym), aby zapewnić, że jest wykonywany odpowiedni skręt bez względu na liczbę boków w wielokącie?\r\n\r\nKliknij tutaj, aby wrócić na podpowiedź!"
       Course 4 Artist Vars 7_instruction: "Skorzystaj z tego, czego dowiedziałeś się w poprzedniej łamigłówce, aby utworzyć ten sześciokąt używając zmiennej \"sides\" (boki).\r\n\r\nZorientuj się, jak mógłbyś zmienić jedną wartość, by narysować trójkąt, kwadrat, pięciokąt lub ośmiokąt."
-      Course 4 Artist Vars 8_instruction: 'Czas na zabawę: Poeksperymentuj z liczbę boków tego kształtu. Czy potrafisz zmienić algorytm tak, aby całkowity rozmiar kształtu pozostał taki sam niezależnie od liczby boków? Wskazówka: Możesz użyć bloków matematycznych (360 dzielone przez "sides") w dwóch miejscach.'
+      Course 4 Artist Vars 8_instruction: 'Czas na zabawę: Poeksperymentuj z liczbę boków tego kształtu. Czy potrafisz zmienić algorytm tak, aby całkowity rozmiar kształtu pozostał taki sam niezależnie od liczby boków? Wskazówka: Jeśli podzielisz początkową długość przez liczbę boków, to długość każdego boku zmniejszy się, gdy liczba boków zwiększy się.'
       Course 4 Artist Vars 9_instruction: 'Zmodyfikuj ten algorytm, by rysując trójkąt używał zmiennej "sides" (boki) zamiast ustalonej liczby. Zastąp liczbę 3 zmienną "sides" i użyj bloku "przypisz sides wartość".'
-      Course 4 Bee 1_instruction: 'Pszczółka nie może stwierdzić, czy to jest kwiat, czy plaster miodu. Najpierw, użyj bloku "jeśli", by sprawdź, czy to jest kwiat czy plaster miodu. Następnie, zbierz nektar, jeśli jest to kwiat. '
+      Course 4 Bee 1_instruction: 'Pszczółka nie może stwierdzić, czy to jest kwiat, czy plaster miodu. Najpierw użyj bloku "jeśli", by sprawdź, czy to jest kwiat, a następnie, zbierz nektar, jeśli jest to kwiat. '
       Course 4 Bee 2_instruction: 'Użyj bloku "jeśli-w przeciwnym razie", aby sprawdź każdy obiekt, czy jest to kwiat czy plaster miodu. Jeśli jest to kwiat, to zbierz nektar, a w przeciwnym razie zrób miód!'
       Course 4 Bee 3_instruction: 'Nieznany obiekt jest kwiatem lub plastrem miodu. Tym razem użyj bloku "jeśli-w przeciwnym razie", by zebrać nektar, jeśli jest to kwiat, w przeciwnym razie zrób miód (gdyż jest to plaster miodu).'
       Course 4 Bee 4_instruction: 'Ten fioletowy kwiat może mieć 3, 2 lub 1 nektaru. Tutaj, blok "jeśli-w przeciwnym razie" jest połączony z innym blokiem "jeśli-w przeciwnym razie", by utworzyć instrukcję "jeśli-w przeciwnym razie/jeśli-w przeciwnym razie". Ukończ rozwiązanie, by zebrać nieznaną ilość nektaru.'
@@ -950,16 +950,16 @@ pl:
       Course 4 Bee Params 4 (copy 1)_instruction: Spróbuj używając swojej nowej funkcji zebrać wszystkie kwiaty. Pamiętaj, 0 = w lewo i 1 = w prawo.
       Course 4 Bee Params 4 - Two WhenRun_instruction: 'Używając swojej nowej funkcji spróbuj zebrać z wszystkich kwiatów. Pamiętaj, aby użyć zmiennych "left" (w lewo) i "right" (w prawo).'
       Course 4 Bee Params 4 backup_instruction: 'Byłoby miło, gdybyśmy mogli zebrać cały nektar za pomocą jednej funkcja. Spróbuj dodać nowy parametr do swojej funkcji o nazwie "nectars" (nektary), aby kontrolować ilości nektaru do zebrania. Prawdopodobnie będziesz chciał również zmienić nazwę funkcji!'
-      Course 4 Bee Params 4_instruction: 'Spróbuj używając swojej nowej funkcji, zebrać wszystkie kwiaty. Pamiętaj, aby użyć zmiennych "left" (w lewo) i "right" (w prawo).'
+      Course 4 Bee Params 4_instruction: 'Spróbuj używając swojej nowej funkcji zebrać nektar z wszystkich kwiatów. Pamiętaj, aby użyć zmiennych "left" (w lewo) i "right" (w prawo).'
       Course 4 Bee Params 5_instruction: 'Zacznijmy od szkicu - czy potrafisz utworzyć nową funkcję o nazwie "zbierz 5 nektarów" z parametrem "kierunek"?'
       Course 4 Bee Params 6 (copy 1)_instruction: Spróbuj stosując swoją nową funkcję zebrać cały ten nektar.
       Course 4 Bee Params 6_instruction: 'Byłoby miło, gdybyśmy mogli zebrać cały nektar za pomocą jednej funkcja. Spróbuj dodać nowy parametr do swojej funkcji o nazwie "nectar units" (ilość nektarów), aby kontrolować ilości nektaru do zebrania. Prawdopodobnie będziesz chciał również zmienić nazwę funkcji!'
       Course 4 Bee Params 7 (copy 1)_instruction: Spróbuj stosując swoją nową funkcję zebrać cały ten nektar.
       Course 4 Bee Params 7_instruction: Spróbuj użyć swojej nowej funkcji, aby zebrać cały ten nektar.
-      Course 4 Bee Params 8 Clone 2_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
-      Course 4 Bee Params 8 clone 3_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
-      Course 4 Bee Params 8 Clone_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
-      Course 4 Bee Params 8 new_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
+      Course 4 Bee Params 8 Clone 2_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
+      Course 4 Bee Params 8 clone 3_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
+      Course 4 Bee Params 8 Clone_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
+      Course 4 Bee Params 8 new_instruction: Ah, teraz musimy sobie jeszcze poradzić z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić miód.
       Course 4 Bee Params 8_instruction: 'Wyzwanie: Teraz pojawił się miód! Zmodyfikuj swoją funkcję, by uwzględniała liczbę jednostek nektaru i liczbę jednostek miodu. Jak wykorzystasz te liczby, by decydować, co należy zrobić?'
       Course 4 Bee Params Ex_instruction: Spróbuj użyć swojej nowej funkcji, aby zebrać cały ten nektar.
       Course 4 Binary 1_instruction: Oto funkcja, która dla binarnego łańcucha złożonego z jedynek i zer, kieruje rolnikiem, aby skręcał z lewa na prawo, z góry do dołu, skręcał na kwadratach, gdzie liczba ma wartość zero. Uruchom ten kod, aby zobaczyć, jak rolnicy używają binarnych łańcuchów do tworzenia rysunku.
@@ -1048,19 +1048,19 @@ pl:
       Course 4 SCFL 1a_instruction: Czy pomożesz Skratowi dostać się do jego szyszki używając jak najmniejszej ilości klocków?
       Course 4 SCFL 1b_instruction: Czy pomożesz Skratowi dostać się do jego szyszki używając jak najmniejszej ilości klocków?
       Course 4 SCFL 2_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
-      Course 4 SCFL 3_instruction: Spróbuj odtworzyć ten rysunek.
-      Course 4 SCFL 4_instruction: Spróbuj odtworzyć ten rysunek.
-      Course 4 SCFL 5_instruction: Spróbuj odtworzyć ten rysunek.
-      Course 4 SCFL 6_instruction: Czy potrafisz wykombinować, jak odtworzyć ten rysunek używając pojedynczej pętli?
-      Course 4 SCFL 7_instruction: Artysta chce łapać fale! Czy możesz dowiedzieć się, jak odtworzyć ten rysunek?
-      Course 4 SCFP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli. Możesz użyć liczb dodatnich i ujemnych.
+      Course 4 SCFL 3_instruction: Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFL 4_instruction: Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFL 5_instruction: Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFL 6_instruction: Czy wiesz, jak odtworzyć ten rysunek używając pojedynczej pętli?
+      Course 4 SCFL 7_instruction: Artysta chce łapać fale! Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując liczby dodatnie i ujemne).
       Course 4 SCV 1_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
       Course 4 SCV 2_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
       Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary to make this game work the way it's been explained.  How will you\nget Dog to move in all directions using the arrow keys?  How will you add\npoints when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand Penguin touch?"
       Course 4 SCV 4_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 5_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 6_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
-      Course 4 SCVP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli. Możesz użyć liczb dodatnich i ujemnych.
+      Course 4 SCVP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując liczby dodatnie i ujemne).
       Course 4 Variables Assessment_instruction: Czy mógłbyś utworzyć ten obraz używając zmiennej dla boków? Każda linia powinna mieć długość 50 pikseli.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
@@ -3474,10 +3474,7 @@ pl:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-        
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

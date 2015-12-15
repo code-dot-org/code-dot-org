@@ -437,7 +437,7 @@ pl:
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Cześć! Nazywam się Miral Kotb i jestem twórcą Illuminate. W mojej pracy jest coś, czego możemy użyć zarówno w tańcu jak i w programowaniu lightsuits. Są to pętle! Pętla to wielokrotne powtórzenie tej samej akcji.
       2:
         image: notes/C1_getting_loopy_2.png
         text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
@@ -1679,7 +1679,7 @@ pl:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. '
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

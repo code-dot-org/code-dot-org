@@ -812,7 +812,7 @@ bg:
         text: Когато поставите цикъл в друг цикъл, ние наричаме това вложен цикъл. За пример, тук ние сме дали кода на вече изготвения триъгълник със страни, дълги 100 пиксела, като използвате блок за повторение и го настроите на 3, по веднъж за всяка страна на триъгълника.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+        text: Но ние искаме да начертаем шест триъгълника. За да направим това, трябва да вземем този цикъл и да го поставим в друг. Много готино!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
@@ -1670,7 +1670,7 @@ bg:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Бялото пространство вдясно, се нарича работно пространство и това е мястото, където ние ще изградим нашата програма.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

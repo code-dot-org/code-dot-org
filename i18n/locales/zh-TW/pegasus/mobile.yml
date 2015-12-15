@@ -5,21 +5,21 @@ zh-TW:
   en: 資訊科學
   computer_science_edweek: 電腦科學教育周
   csedweek_dates: 2014 年 12 月 8-14 日
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">編程一小時</a> 即將到來。招喚教師以及志願者們<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策劃您的編程一小時</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是電腦科學的導師嗎？請查閱其它CWSdWeek的資源</a>'
-  n_have_learned_an_hoc: '<h1>即刻試下</h1><h2>一小時編程</h2><h3>#人已嘗試</h3>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">一小時的程式設計課程</a>活動即將開始。所有的教師以及活動組織者們，請<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">開始計畫您的活動吧！</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
+  n_have_learned_an_hoc: '<h1>立刻嘗試</h1><h2>一小時的程式設計活動</h2><h3>目前已有 # 人玩過</h3>'
   anybody_can_learn: 任何人都可以學習。
-  learn_now: 現在就開始進行學習課程
-  petition_message: 每個在學校的學生都應該有機會去學習電腦科學
-  petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
-  petition_sign_message_support: '如果你支持我們，請在這裡簽名。加入 # 已簽名的。'
-  petition_join_others: 參與其他活動
+  learn_now: 現在就開始學習
+  petition_message: 每個在學校的學生都應該有機會去學習資訊科學
+  petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
+  petition_sign_message_support: '如果您支持我們的理想，請在此簽署您的名字。目前已有 # 人簽署。'
+  petition_join_others: '目前已有 # 人簽署。'
   name: 你的名字
   email: 電子郵件
   zipcode: 郵遞區號或國家
   submit: 送出
-  twentyhours_heading: 試試看我們的電腦科學課程簡介
-  twentyhours_text: 完成您的第一個小時的編程了嗎？在此後續課程可以瞭解更多核心電腦科學和程式設計的概念。
+  twentyhours_heading: 試試看我們的資訊科學課程簡介
+  twentyhours_text: 完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。
   hoc2014_heading: '加入 <a href="HTTP://hourofcode.com"> 編程一小時</a> <br/>，2014 年 12 月 8日至14 日 <br/>'
   hoc2014_students: 學生
   hoc2014_try: 試一試
@@ -264,7 +264,7 @@ zh-TW:
   starwars_javascript_start_button: 快來試試
   starwars_blocks_title: 程式積木
   starwars_blocks_description: 使用拖拉區塊
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: 許多語言 |現代的瀏覽器、 智慧手機、 平板電腦 |年齡在 6-10
   starwars_blocks_start_button: 快來試試
   starwars_watch_videos: 在開始始，先看一些激發靈感的影片
   starwars_speak_languages: 使用另一種語言?
@@ -275,7 +275,7 @@ zh-TW:
   mc_shortdescription: 使用程式模塊幫助 Steve 或 Alex 闖過創世神的各種冒險
   mc_gradelevel: 年齡6歲以上
   mc_platformtext: 瀏覽器, 智慧手機, 平板
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft 程式碼時間
   volunteer_engineer_submission_title: 激勵學生和志工參與一個小時的程式課程
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour of Code，他們需要你的幫忙! '

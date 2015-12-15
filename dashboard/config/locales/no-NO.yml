@@ -538,7 +538,7 @@
       unused: Ubrukte nivåer
   upsell:
     hoc:
-      title: Hour of Code (kodetimen)
+      title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
         alt prøvd.
     flappy:

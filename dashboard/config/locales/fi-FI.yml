@@ -530,7 +530,7 @@
       unused: Käyttämättömät tasot
   upsell:
     hoc:
-      title: Koodaustunti
+      title: Klassinen sokkelo
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code

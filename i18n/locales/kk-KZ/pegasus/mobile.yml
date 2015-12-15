@@ -267,7 +267,7 @@ kk-KZ:
   starwars_javascript_start_button: Қазір қолданып көріңіз
   starwars_blocks_title: Блоктар
   starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Қазір қолданып көріңіз
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Басқа тілде сөйлейсіз бе?
@@ -278,7 +278,7 @@ kk-KZ:
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Жас аралығы 4-14
   mc_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Кодтау Сағаты
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -474,7 +474,7 @@ kk-KZ:
   dashboard_curriculum: Оқу бағдарламасы
   dashboard_curriculum_overview: Мектепке дейінгі және бастауыш мектеп оқушылары үшін бағдарламаны шолу
   dashboard_overview: Қысқаша шолу
-  dashboard_sequence: Sequence
+  dashboard_sequence: Жүйелілік
   dashboard_framework: Құрылым
   dashboard_standards: Стандарттар
   dashboard_implementation_guide: Іске асыру туралы нұсқаулық
@@ -667,7 +667,7 @@ kk-KZ:
   projguts_gradelevel: Жас аралығы 10-13
   hourofcode_gradelevel: Жас аралығы 4-14
   frozen_gradelevel: Жасы 8 +
-  starwars_gradelevel: Жас аралық 6+
+  starwars_gradelevel: Жас аралық 6-106
   playlab_gradelevel: Жас аралығы 4-14
   infinity_gradelevel: Жас аралығы 4-14
   artist_gradelevel: Жасы 8 +

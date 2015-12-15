@@ -496,9 +496,9 @@
     privacy: Politique de confidentialité
     secure: Version sécurisée
     report_abuse: Signaler un abus
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Construit avec Code Studio
+    make_my_own_app: Construire ma propre application
+    how_it_works: Comment ça marche
   reference_area:
     title: Besoin d'aide ?
     subtitle: Voir ces vidéos et conseils
@@ -565,7 +565,7 @@
       unused: Niveaux Inutilisés
   upsell:
     hoc:
-      title: Heure de Code
+      title: Labyrinthe classique
       body: Lancez-vous dans la découverte des bases de l'informatique. Des millions
         de personnes ont tenté l'aventure.
     flappy:
@@ -640,9 +640,9 @@
     correct_body: C'est la bonne réponse.
   contract_match:
     wrong_title: Réponse incorrecte
-    badname: Votre contrat a le mauvais nom.
-    badname_case: Les noms de fonctions sont sensibles à la casse.  Essaie de changer
-      le nom de ton contrat.
+    badname: Votre contrat a un nom incorrect.
+    badname_case: Les noms de fonctions sont sensibles à la casse. Essayez de modifier
+      le nom de votre contrat.
     badrange: Votre contrat a la mauvaise plage.
     baddomainsize: Votre contrat n'a pas le bon nombre d'éléments dans son domaine.
     baddomainname: Un ou plusieurs éléments de ton domaine ont le mauvais nom.

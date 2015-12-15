@@ -286,7 +286,7 @@ tr-TR:
   starwars_javascript_start_button: Şimdi dene
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Sürükle-bırak blokları kullan.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar, tabletler | 6-10 yaş
   starwars_blocks_start_button: Şimdi dene
   starwars_watch_videos: Başlamadan önce bu ilham verici videolardan birini izle
   starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
@@ -297,7 +297,7 @@ tr-TR:
   mc_shortdescription: "Steve veya Alex'i Minecraft dünyasında bir maceraya almak için kod blokları kullan."
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş
   minecraft_subtitle: Minecraft Kod Saati
   volunteer_engineer_submission_title: Hour of Code etkinliği için gönüllü ol ve öğrencilere ilham kaynağı ol.
   volunteer_engineer_submission_subtitle_generic: "Bu sene 7-13 Aralık'ta 100,000 öğretmen sınıflarında `Hour of Code` etkinliğini gerçekleştirecek. Unutmayın yardımınıza ihtiyaçları var! "
@@ -324,11 +324,11 @@ tr-TR:
   volunteer_engineer_submission_field_facebook: Facebook profili
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/sizin_adiniz
   volunteer_engineer_submission_field_description: Tanım
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: Bilgisayar bilgisi deneyiminizi ve yerel öğretmen olarak bize nasıl katkı sağlayabileceğinizi anlatınız.
+  volunteer_engineer_submission_field_description_placeholder: "Deneyim ve/veya katılım açıklaması. İngilizce'den başka dil biliyorsanız, buraya eklediğinizden emin olun."
+  volunteer_engineer_submission_header_private: Bilgiler gizli tutulur ve asla paylaşılmaz
   volunteer_engineer_submission_field_email: E-posta adresi
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: E-posta adresiniz asla paylaşılmaz, ancak öğretmenlerden size istekler göndereceğiz.
   volunteer_engineer_submission_field_email_placeholder: E-posta adresi
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
@@ -601,8 +601,8 @@ tr-TR:
   mobile_devices: Mobil cihazlar için eğitimler
   frozen_name: Anna ve Elsa ile kodlama yap
   starwars_name: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klasik Labirent
+  codeintl_name: Klasik Labirent
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: "JavaScript'e giriş"
   khanes_name: "JavaScript'e giriş"
@@ -638,16 +638,16 @@ tr-TR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Taş,Kağıt, Makas
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
   artist_name: Aktör
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: Kutu Adası
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 Dakika Kod
   teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
@@ -743,9 +743,9 @@ tr-TR:
   monstercoding_platformtext: Modern web browsers, iOS, Android
   allcancode_platformtext: Modern web browsers, iOS
   csfirst_platformtext: Modern Web tarayıcıları
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: Android, IOS
   codesters_platformtext: Modern Web tarayıcıları
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI hesap makineleri
   teacherled_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeorg_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   codeintl_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
@@ -777,7 +777,7 @@ tr-TR:
   robomindnl_shortdescription: Sanal robotumuz için kod yazın
   flappy_shortdescription: 'Kendi oyununuzu yapın - Flappy Bird, Shark veya Denizaltı'
   bitsbox_shortdescription: Gerek JavaScript kullanaraki oynanacak ve paylaşılacak oyunlar için bir dizi kodlama yap.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
+  makeschool_shortdescription: Bir iPhone oyunu yap! Kod yazarak Canavarınıza yeni hareketler öğretin!
   touchdevelop_shortdescription: 'Telefonunuz üzerinden yapbozlar çözün, oyunlar yaratın ve kodlama öğrenin. '
   appinventor_shortdescription: Kendi uygulamanızı yapın! (Sadece android)
   blockly_shortdescription: Çevrimdışı öğrenmek için ZIP dosyasını indirin
@@ -791,7 +791,7 @@ tr-TR:
   infinity_shortdescription: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
   artist_shortdescription: Sanatçı ile harika resimler ve tasarımlar yap!
   monsterocding_shortdescription: A colorful self-guided programming adventure for children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
+  allcancode_shortdescription: Marco, görsel programlama dilini öğrenmek için sürükleyici bir oyun.
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
   boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
   codesters_shortdescription: Create your own games, animations, and artwork using Python.

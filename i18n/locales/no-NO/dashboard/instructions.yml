@@ -308,13 +308,13 @@
       4-5 Bee Debugging Assessment 1_instruction: 'Lekse: Fiks koden.'
       4-5 Bee Nested Loops 1_instruction: Bruk en løkke til å samle inn all nektaren.
       4-5 Bee Nested Loops 2_instruction: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
-      4-5 Bee Nested Loops 3_instruction: Put koden som er lagt til i en nestet løkke til å samle inn alt nektaren.
+      4-5 Bee Nested Loops 3_instruction: Putt koden som er lagt til i en løkke i løkke til å samle inn alt nektaren.
       4-5 Bee Nested Loops 4_instruction: Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.
-      4-5 Bee Nested Loops 5_instruction: Samle inn all nektaren ved å bruke en nestet løkke.
+      4-5 Bee Nested Loops 5_instruction: Samle inn all nektaren ved å bruke en løkke i løkke.
       4-5 Bee Nested Loops 6_instruction: Samle all nektaren.
-      4-5 Bee Nested Loops 7_instruction: Putt denne løkken inni en annen løkke for å opprette en nestet løkke til å samle inn all nektaren fra blomstene.
+      4-5 Bee Nested Loops 7_instruction: Putt denne løkken inni en annen løkke for å opprette en løkke i løkke til å samle inn all nektaren fra blomstene.
       4-5 Bee Nested Loops 8_instruction: 'Samle all nektaren fra disse blomstene ved å bruke løkke i en annen mens-løkke. Erstatt den indre repeter antall-blokka med en mens-løkke. '
-      4-5 Bee Nested Loops 9_instruction: Samle inn all nektaren fra disse blomstene ved å bruke en nøstet mens-løkke ini en gjenta blokk.
+      4-5 Bee Nested Loops 9_instruction: 'Samle inn all nektaren fra disse blomstene ved å bruke en løkke i løkke ved å legge "så lenge"-brikken i en "gjenta"-brikke.'
       4-5 Bee Nested Loops Assessment 1_instruction: 'Lekse - Samle inn all nektaren og lag all honningen ved bruk av løkker.'
       4-5 Bee Nested Loops Rows_instruction: Samle nektar fra radene med blomster! Bruk løkke i løkke.
       4-5 Maze 1 (copy 1)_instruction: Kjære person. Meg zombie. Må... komme... til solsikke.
@@ -351,16 +351,16 @@
       4-5 Maze Conditionals Assessment 1_instruction: 'Bruk en "gjenta til"- og en "hvis eller"-blokk for å få meg til solsikken med så få blokker som mulig.'
       4-5 Nested Loops 1_instruction: 'Fullfør koden for å tegne disse triangelen. Den første er gjort ferdig for deg. Tips: 3 triangler rotert til sammen 360 grader.'
       4-5 Nested Loops 10_instruction: Tegn den siste raden med stjerner på flagget ved å kjøre en løkke over de gitte blokkene. Stjernene er 50 piksler fra hverandre, men husk at stjernene er 30 piksler i bredde.
-      4-5 Nested Loops 11_instruction: Klarer du å tegne de 10 firkantene på fortauet ved å bruke en nestet løkke? Hver firkant er 30 piksler.
-      4-5 Nested Loops 12_instruction: 'Får du til å tegne disse  36 trianglene ved hjelp av en nestet løkke?'
-      4-5 Nested Loops 2_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en nestet løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
-      4-5 Nested Loops 3_instruction: "Tegn en sol ved å nøste koden fra utgangspunktet inni en annen løkke.  Dette kalles en nestet løkke.\r\n"
+      4-5 Nested Loops 11_instruction: Klarer du å tegne de 10 firkantene på fortauet ved å bruke en løkke i løkke? Hver firkant er 30 piksler.
+      4-5 Nested Loops 12_instruction: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
+      4-5 Nested Loops 2_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en løkke i løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
+      4-5 Nested Loops 3_instruction: "Tegn en sol ved å legge koden fra utgangspunktet inni en annen løkke. Dette kalles en løkke i løkke.\r\n"
       4-5 Nested Loops 5_instruction: Bruk koden som er lagt inn som utgangspunkt og repeter den for å lage en vindmølle.
       4-5 Nested Loops 6_instruction: Får til til å tegne en sekskant ved å repetere triangelkoden?
       4-5 Nested Loops 7_instruction: 'Repeter designet 10 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 10?)'
       4-5 Nested Loops 8_instruction: 'Repeter designet 6 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)'
       4-5 Nested Loops 9_instruction: Tegn tennene i munnen til alligatoren!
-      4-5 Nested Loops Assessment 1_instruction: Bruk en nøstet løkke for å fullføre designet.
+      4-5 Nested Loops Assessment 1_instruction: Bruk en løkke i løkke for å fullføre designet.
       4-5 While Loops 1_instruction: 'Flytt meg til hullet og bruk en "fylle"-blokk til å fylle det med to spader med jord.'
       4-5 While Loops 2_instruction: 'Flytt meg til jordhaugen og bruk "Fjern 1" blokken til å fjern den på fem spadetak.'
       4-5 While Loops 3_instruction: 'Flytt meg til jordhaugen og fjern alt sammen. Etterpå flytter du meg til hullet og fyller det helt opp. Tips: bruk så få blokker som mulig.'
@@ -413,7 +413,7 @@
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      Artist - Nested Loops Assessment 1_instruction: Bruk en nøstet løkke for å fullføre designet.
+      Artist - Nested Loops Assessment 1_instruction: Bruk en løkke i løkke for å fullføre designet.
       Auto Open Function Editor_instruction: 'Du kan kalle på funksjoner fra innsiden av andre funksjoner! Bruk "figur"-funksjonen som grunnlag, opprett 3 hus-figurer som hver er 20 piksler større enn den forrige. Den første starter på 50 piksler i lengde. Å bruke en teller-løkke kan være nyttig. '
       Bee Recommended Blocks test_instruction: 'Lilla blomster har enten 1 eller 0 nektar, men du vet ikke hvilken! Pass på at du ikke prøver å samle inn nektar fra blomster som ikke har nektar. Sjekk om nektar er lik 1 ved å bruke en "hvis"-blokk.'
       Big Game Animation 1 (copy 1)_instruction: |
@@ -3473,10 +3473,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-        
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

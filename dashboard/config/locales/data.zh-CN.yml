@@ -317,16 +317,13 @@
         studio_playlab_8: 当独角兽跑近巫师时，添加一个模块来得分和一个模块播放声音，然后你能用箭头移动它们直到得分吗？
         studio_playlab_9: 为这次外星人入侵事件设置背景画面，并通过加快空间机器人的速度来使到达外星人。通过方向键来移动太空机器人，并警告其它人。
         studio_playlab_10: 创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。
-        studio_iceage_hello1: 喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“语言”模块拖放到工作区，然后在里面输入"你好"。
+        studio_iceage_hello1: 喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“说”模块拖放到工作区，然后在里面输入"你好"。
         studio_iceage_hello2: 喜得(角色1) 发现了曼尼(角色2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"演员 说"块两次。
         studio_iceage_move_to_flag: 斯奎特正在找他的橡子！使用"移动"模块帮他移动到最后200像素位置。
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
+        studio_iceage_move_to_actor: |
+          迪亚哥 (演员 1) 正寻找曼尼 (演员 2)。请帮助迪亚哥使用"移动演员"块 ，向曼尼移动200 个像素。
+          接着，在"当演员触及"事件块的下面，拼接”播放声音"块，以便当他们发现对方的时候，播放声音。
+        studio_iceage_repeat: '"永远重复"块可以连续不停地运行代码。你可以拼上这个块，帮助格瑞尼重复地左右移动来锻炼吗?'
         studio_iceage_click_hello: Can you help Sid do a final call for friends when
           clicked? Don’t forget to click on him after you hit Run.
         studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
@@ -345,9 +342,7 @@
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
           with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_free_play: 是时候创建你自己的游戏或故事啦！当你完成后时，单击“完成”来让你的朋友在他们的手机、 平板电脑或电脑试试你的游戏吧！
         studio_gumball_hello1: Anais wants to make some new friends. Can you help
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
@@ -429,7 +424,7 @@
         Unplug6: 条件语句
         Unplug7: 写歌
         Unplug8: 抽象化
-        Unplug9: Relay programming
+        Unplug9: 编程接力
         Unplug10: 互联网
         Unplug11: 总结
         C1_happy_maps_unplugged: 快乐地图
@@ -453,14 +448,14 @@
         C2_artist_intro: 艺术家简介
         C2_zuck_repeat_loop: 迷宫循环
         C2_artist_loops: 艺术家循环
-        C2_artist_debugging: Artist Debugging
+        C2_artist_debugging: 艺术家： 调试
         C2_bee_loops: 蜜蜂循环
         C2_bee_debugging: 蜜蜂调试
-        C2_bee_conditionals: Bee Conditionals
+        C2_bee_conditionals: 蜜蜂：条件
         C2_playlab_createstory: '游戏实验室: 创建一个故事'
         C2_graph_paper: 方格纸编程
         C2_conditionals_with_cards: 条件语句
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: 二进制的手镯
         C2_relay_programming: 编程接力
         C2_paper_airplanes: 纸飞机
         C2_digital_footprint: 你的数字足迹
@@ -469,8 +464,8 @@
         C3_artist_intro: 艺术家简介
         C3_artist_functions: 艺术家函数
         C3_bee_functions: 蜜蜂函数
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_bee_conditionals: 蜜蜂：条件
+        C3_maze_conditionals: 迷宫：条件
         C3_artist_nested_loops: 循环嵌套
         C3_farmer_while: 当循环
         C3_bee_nested_loops: 循环嵌套
@@ -481,11 +476,11 @@
         C3_dice_race: 骰子比赛
         C3_internet: 互联网
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: 函数化的吊饰
         C3_songwriting_with_parameters: 通过输入参数来作曲。
         C4_intro: 介绍
         C4_loops_zombie: 循环
-        C4_bee_conditional: Bee Conditionals
+        C4_bee_conditional: 蜜蜂：条件
         C4_variables_artist: 变量 —— 艺术家
         C4_variables_playlab: 变量 — — 游戏实验室
         C4_for_loops: For 循环

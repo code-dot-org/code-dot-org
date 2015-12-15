@@ -2577,20 +2577,20 @@
           ezt az automatikus-kiegészítés funkciót.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Amikor a kódot gépeled, akkor a számítógép elvárja, hogy nagyon precíz
+          legyél. Pontosan kell gépelned az utasításneveket, figyelve a kis és nagybetűkre,
+          a zárójelekre és a pontosvesszőkre. A legkisebb gépelési hiba is azt jelentheti,
+          hogy BB-8 nem tudja megérteni a kódot és nem fog tudni mozogni.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Amikor egy sorban hibázol, akkor a szerkesztő kiemeli azt, így meg tudod
+          próbálni kijavítani a szöveget.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Ha elakadsz, akkor az újrakezdés gomb megnyomásával bármikor elkezdheted
+          az elejéről a feladatot, de visszaválthatsz blokk módba is a jobb felső
+          sarokba kattintva. Akkor próbáljuk meg a gépelést! Ne keseredj el, ha hibázol.
+          Mindenki próbálkozik egy darabig, mire összejön.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -2629,11 +2629,11 @@
           csinálni, hogy R2-D2 lefelé mozogjon.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Ehhez a "ha van felfelé nyíl" whenUp() parancsot fogjuk használni. Amikor
+          a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy
+          kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé
+          teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit
+          ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat.
       8:
         image: notes/starwars_events_8.JPG
         text: Azt akarjuk, hogy R2-D2 felfelé menjen, így tegyünk be egy menj fel
@@ -3066,8 +3066,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

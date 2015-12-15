@@ -1381,8 +1381,9 @@
       Course 4 Artist Functions 11_instruction: Sprawdź ten kod, który rysuje kostkę
         (sześcian) - czy potrafisz zamienić go na funkcję o nazwie "narysuj sześcian"
         (draw a cube)
-      Course 4 Artist Functions 12.1_instruction: Stwórzmy funkcję o nazwie "narysuj
-        ośmiokąt 20", która rysuje ośmiokąt o długości każdego boku równej 20 pikseli.
+      Course 4 Artist Functions 12.1_instruction: Stwórzmy funkcję o nazwie "draw
+        an octagon 20" (rysuj ośmiokąt 20), która rysuje ośmiokąt z bokami o długości
+        20 pikseli.
       Course 4 Artist Functions 12_instruction: Powtórz w pętli funkcję rysującą kwadrat,
         by narysować rząd kwadratów
       Course 4 Artist Functions 13.1_instruction: "Teraz stwórzmy funkcję o nazwie
@@ -1545,14 +1546,15 @@
         trójkąt, kwadrat, pięciokąt lub ośmiokąt."
       Course 4 Artist Vars 8_instruction: 'Czas na zabawę: Poeksperymentuj z liczbę
         boków tego kształtu. Czy potrafisz zmienić algorytm tak, aby całkowity rozmiar
-        kształtu pozostał taki sam niezależnie od liczby boków? Wskazówka: Możesz
-        użyć bloków matematycznych (360 dzielone przez "sides") w dwóch miejscach.'
+        kształtu pozostał taki sam niezależnie od liczby boków? Wskazówka: Jeśli podzielisz
+        początkową długość przez liczbę boków, to długość każdego boku zmniejszy się,
+        gdy liczba boków zwiększy się.'
       Course 4 Artist Vars 9_instruction: Zmodyfikuj ten algorytm, by rysując trójkąt
         używał zmiennej "sides" (boki) zamiast ustalonej liczby. Zastąp liczbę 3 zmienną
         "sides" i użyj bloku "przypisz sides wartość".
       Course 4 Bee 1_instruction: 'Pszczółka nie może stwierdzić, czy to jest kwiat,
-        czy plaster miodu. Najpierw, użyj bloku "jeśli", by sprawdź, czy to jest kwiat
-        czy plaster miodu. Następnie, zbierz nektar, jeśli jest to kwiat. '
+        czy plaster miodu. Najpierw użyj bloku "jeśli", by sprawdź, czy to jest kwiat,
+        a następnie, zbierz nektar, jeśli jest to kwiat. '
       Course 4 Bee 2_instruction: Użyj bloku "jeśli-w przeciwnym razie", aby sprawdź
         każdy obiekt, czy jest to kwiat czy plaster miodu. Jeśli jest to kwiat, to
         zbierz nektar, a w przeciwnym razie zrób miód!
@@ -1630,9 +1632,9 @@
         cały nektar za pomocą jednej funkcja. Spróbuj dodać nowy parametr do swojej
         funkcji o nazwie "nectars" (nektary), aby kontrolować ilości nektaru do zebrania.
         Prawdopodobnie będziesz chciał również zmienić nazwę funkcji!
-      Course 4 Bee Params 4_instruction: Spróbuj używając swojej nowej funkcji, zebrać
-        wszystkie kwiaty. Pamiętaj, aby użyć zmiennych "left" (w lewo) i "right" (w
-        prawo).
+      Course 4 Bee Params 4_instruction: Spróbuj używając swojej nowej funkcji zebrać
+        nektar z wszystkich kwiatów. Pamiętaj, aby użyć zmiennych "left" (w lewo)
+        i "right" (w prawo).
       Course 4 Bee Params 5_instruction: Zacznijmy od szkicu - czy potrafisz utworzyć
         nową funkcję o nazwie "zbierz 5 nektarów" z parametrem "kierunek"?
       Course 4 Bee Params 6 (copy 1)_instruction: Spróbuj stosując swoją nową funkcję
@@ -1646,17 +1648,17 @@
       Course 4 Bee Params 7_instruction: Spróbuj użyć swojej nowej funkcji, aby zebrać
         cały ten nektar.
       Course 4 Bee Params 8 Clone 2_instruction: Ah, teraz musimy sobie jeszcze poradzić
-        z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo
-        zrobić miód.
+        z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić
+        miód.
       Course 4 Bee Params 8 clone 3_instruction: Ah, teraz musimy sobie jeszcze poradzić
-        z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo
-        zrobić miód.
+        z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić
+        miód.
       Course 4 Bee Params 8 Clone_instruction: Ah, teraz musimy sobie jeszcze poradzić
-        z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo
-        zrobić miód.
+        z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić
+        miód.
       Course 4 Bee Params 8 new_instruction: Ah, teraz musimy sobie jeszcze poradzić
-        z miodem! Jak mogłbyś zmienić swoją funkcję, żeby albo zebrać nektar albo
-        zrobić miód.
+        z miodem! Jak zmienisz swoją funkcję, żeby albo zebrać nektar albo zrobić
+        miód.
       Course 4 Bee Params 8_instruction: 'Wyzwanie: Teraz pojawił się miód! Zmodyfikuj
         swoją funkcję, by uwzględniała liczbę jednostek nektaru i liczbę jednostek
         miodu. Jak wykorzystasz te liczby, by decydować, co należy zrobić?'
@@ -1883,16 +1885,16 @@
         używając jak najmniejszej ilości klocków?
       Course 4 SCFL 2_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
-      Course 4 SCFL 3_instruction: Spróbuj odtworzyć ten rysunek.
-      Course 4 SCFL 4_instruction: Spróbuj odtworzyć ten rysunek.
-      Course 4 SCFL 5_instruction: Spróbuj odtworzyć ten rysunek.
-      Course 4 SCFL 6_instruction: Czy potrafisz wykombinować, jak odtworzyć ten rysunek
-        używając pojedynczej pętli?
-      Course 4 SCFL 7_instruction: Artysta chce łapać fale! Czy możesz dowiedzieć
-        się, jak odtworzyć ten rysunek?
+      Course 4 SCFL 3_instruction: Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFL 4_instruction: Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFL 5_instruction: Czy wiesz, jak odtworzyć ten rysunek?
+      Course 4 SCFL 6_instruction: Czy wiesz, jak odtworzyć ten rysunek używając pojedynczej
+        pętli?
+      Course 4 SCFL 7_instruction: Artysta chce łapać fale! Czy wiesz, jak odtworzyć
+        ten rysunek?
       Course 4 SCFP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście
-        skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli. Możesz
-        użyć liczb dodatnich i ujemnych.
+        skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując
+        liczby dodatnie i ujemne).
       Course 4 SCV 1_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
       Course 4 SCV 2_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
       Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
@@ -1908,8 +1910,8 @@
         liczby bloków.
       Course 4 SCV 6_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
       Course 4 SCVP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście
-        skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli. Możesz
-        użyć liczb dodatnich i ujemnych.
+        skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując
+        liczby dodatnie i ujemne).
       Course 4 Variables Assessment_instruction: Czy mógłbyś utworzyć ten obraz używając
         zmiennej dla boków? Każda linia powinna mieć długość 50 pikseli.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey

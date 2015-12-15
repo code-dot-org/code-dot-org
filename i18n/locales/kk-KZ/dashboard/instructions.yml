@@ -408,7 +408,7 @@ kk:
       2-3 Maze 1_instruction: |
         Can you help me to catch the naughty pig? Stack a
         couple of "move forward" blocks together and press "Run". 
-      2-3 Maze 10_instruction: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
+      2-3 Maze 10_instruction: Мені жасыл зұлымға баста! (Жарылғыш затты абайлаңыз)
       2-3 Maze 11_instruction: |
         Get me to the flower I'm hungry! How many times
         do you have to repeat a block?
@@ -441,14 +441,14 @@ kk:
       2-3 Maze 3_instruction: |
         Trace the path and lead me to the silly pig. Avoid
         TNT or feathers will fly!
-      2-3 Maze 4_instruction: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
-      2-3 Maze 5_instruction: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
+      2-3 Maze 4_instruction: Мені жасыл зұлымға баста! (Жарылғыш затты абайлаңыз)
+      2-3 Maze 5_instruction: Мені жасыл зұлымға баста! (Жарылғыш затты абайлаңыз)
       2-3 Maze 6_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
-      2-3 Maze 7_instruction: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
+      2-3 Maze 7_instruction: Мені жасыл зұлымға баста! (Жарылғыш затты абайлаңыз)
       2-3 Maze 8_instruction: Get me to the pig!
-      2-3 Maze 9_instruction: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
+      2-3 Maze 9_instruction: Мені жасыл зұлымға баста! (Жарылғыш затты абайлаңыз)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
       2-3 Maze Loops 18_instruction: Get me to the sunflower!
@@ -478,7 +478,7 @@ kk:
       2-3 Maze sq2_instruction: |
         Trace the path and lead me to the silly pig.  Avoid
         the TNT or the feathers will fly!
-      2-3 Maze sq3_instruction: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
+      2-3 Maze sq3_instruction: Мені жасыл зұлымға баста! (Жарылғыш затты абайлаңыз)
       2-3 Maze sq4_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
@@ -4919,10 +4919,7 @@ kk:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-        
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |
