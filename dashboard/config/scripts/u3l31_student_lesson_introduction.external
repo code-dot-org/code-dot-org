@@ -11,13 +11,13 @@ When designing programs, you will often discover new pieces of functionality you
 
 # Vocabulary
 
-* **Key event:** an event triggered by pressing or releasing a key on the keyboard
+* **Key event:** an event triggered by pressing or releasing a key on the keyboard.
 
 # Lesson
 
-* Introduction to key events
-* Improve the "My Favorite Things" app to store and display images
-* Refactor code in order to incorporate new functionality
+* Introduction to key events.
+* Improve the "My Favorite Things" app to store and display images.
+* Refactor code in order to incorporate new functionality.
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
