@@ -33,7 +33,7 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**December 5th Location**
+**February 6th Location**
 
 
 [North Point High School
@@ -52,6 +52,10 @@ Green journal
 Snacks
 <br/>
 Water
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+
+More info coming soon!
 
 [**Back to the top**](#top)
 
@@ -76,11 +80,7 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
-
-
 Milestone Complete!
-
-
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
@@ -96,7 +96,7 @@ Semester 2: Monday, April 25, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**November 10th Location**
+**April 25th Location**
 
 [Davis Middle School<br/> 
 Room M106<br/>
@@ -167,56 +167,7 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
 
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Thursday, November 12, 2015 <br/>
-11:00am - 3:00pm
-
-
-**Location**
-
-[Charles County Public Schools Central Office<br/>
-Staff Development Room<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>](https://www.google.com/maps/place/Charles+County+Public+Schools/@38.5490763,-76.9494484,17z/data=!4m7!1m4!3m3!1s0x89b709a6d3ee22c3:0xefd796aeca6573d2!2s5980+Radio+Station+Rd,+La+Plata,+MD+20646!3b1!3m1!1s0x0000000000000000:0x1f85716d87e60113)
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Thursday, November 12, 2015 <br/>
-8:00am - 10:00am
-
-**Location**
-
-Charles County Public Schools Central Office<br/>
-Staff Development Room<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.
