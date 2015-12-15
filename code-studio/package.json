@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "browserify --debug src/js/blockly_editor.js -o built/js/blockly_editor.js -t [ babelify --presets [es2015] ]",
-    "build:min": "browserify src/js/blockly_editor.js -t [ babelify --presets [es2015] ] | uglifyjs -o built/js/blockly_editor.min.js",
+    "build:min": "browserify src/js/blockly_editor.js -t [ babelify --presets [es2015] ] | uglifyjs -o built/js/blockly_editor.js",
     "prebuild": "mkdir -p built/js",
     "prebuild:min": "mkdir -p built/js",
     "clean": "rm -rf built",
@@ -19,8 +19,7 @@
     "lint:js": "jshint src/js/*.js",
     "start": "echo \"Unimplemented.\"",
     "stop": "echo \"Unimplemented.\"",
-    "test": "test",
-    "pretest": "echo \"Unimplemented, but could lint here.\""
+    "test": "test"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
