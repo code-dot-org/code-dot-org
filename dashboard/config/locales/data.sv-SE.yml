@@ -753,6 +753,9 @@
         infinity_playlab_intro: Play Lab - introduktion
         infinity_playlab_events: Play Lab - Händelser
         infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -806,6 +809,9 @@
         gumball_intro: Gumball En timme av kod - introduktion
         gumball_events: Gumball En timme av kod - händelser
         gumball_repeat: Gumball En timme av kod - Upprepa-satser
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket

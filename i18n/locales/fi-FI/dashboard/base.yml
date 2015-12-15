@@ -471,7 +471,7 @@ fi:
       unused: Käyttämättömät tasot
   upsell:
     hoc:
-      title: Koodaustunti
+      title: Classic Maze
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code

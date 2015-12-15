@@ -147,6 +147,7 @@ window.dashboard.dialog = (function () {
       app: appOptions.dialog.app,
       level: appOptions.dialog.level,
       result: result,
+      pass: result,
       testResult: result ? 100 : 0,
       onComplete: function () {
         var willRedirect = !!lastServerResponse.nextRedirect;

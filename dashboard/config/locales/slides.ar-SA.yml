@@ -551,8 +551,8 @@
           for when something happens. When that thing happens, it performs an action.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: بعض الأمثلة من الأحداث الاستماع لنقر الفأرة أو مفتاح السهم، أو النقر
+          على الشاشة.
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a
@@ -2605,37 +2605,34 @@
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: مرحبا، أنا شريتا كارتر. أنا مختصّة في الإنتاج الإبداعي في والت ديزني.
+          أنا مسؤولة على قيادة الفرق المنتجة للألعاب التي سيجرّبها ضيوفنا. نحن نبحث
+          دائما عن طرق تمكننا من تحسين التجارب و التكنولوجيا في قلب ذلك.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: تهانينا، لقد استطعت فعل ذلك! لقد برمجت ب ب 8. والآن أعتقد أننا مستعدون
+          لشيء أكثر صعوبة. دعونا ننطلق. والآن بعد أن كنت قد تعلمت أساسيات البرمجة،
+          سنعود في الوقت المناسب لبناء لعبتنا، بطولة ر2 د 2 و س3 بو.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'لصنع لعبة، نحن بحاجة إلى معرفة شيء يستخدمه المبرمجون كل يوم: يسمى الأحداث.
+          الأحداث تطلب من برنامجك الإستماع أو الانتظار حتى يحدث شيء ما وثم عندما يحدث
+          ذلك، فإنهم ينفذون التّعليمات.'
       4:
         image: notes/starwars_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button
           or a tap on the screen.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: هنا سنجعل ر2-د2 يتحرّك للأعلى ليسلّم رسالة إلى الطيّارين المتمردين وثم
+          يتحرّك للأسفل لبقيّة الطيّارين المتمردين. سنستخدم الأحداث لإجباره على التحرك.
+          عندما يستخدم اللاعب مفاتيح الأسهم أعلى/أسفل ، أوالأزرار الأعلى/أسفل.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: سنستخدم المقطع الحدث "عند نقر السّهم أعلى" وسنرفق المقطع "إذهب إلى الأعلى".
+          عندما يقوم اللاعب بالضغط على مفتاح السهم العلوي، يتم تشغيل التعليمات البرمجية
+          المرفقة إلى المقطع "عند نقر السّهم أعلى". وسوف نفعل نفس الشيء لجعل ر2-د2
+          يتحرك للأسفل.
       7:
         image: notes/starwars_events_7.JPG
         text: To do this, we'll use a command called whenUp(). When you drag the command
@@ -2649,39 +2646,36 @@
           And we'll do the same thing to make R2-D2 go down.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: الآن بدلاً من كتابة كافة التعليمات البرمجية للتحكم مسبقا بالروبوت، يمكننا
+          أن ندع ر2 - د 2 يتفاعل مع أحداث الضغط على الزر الذي ينقله حول الشاشة. في
+          كل خطوة، لعبتك تصبح أكثر تفاعلية.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: مرحبا، اسمي أليس و أقود فرق البرمجة و الهندسة في موقع Code.org وعملت
+          في هذا البرنامج التعليمي الذي كنت تلعب به الآن.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: لقد استطعت إنجاز ذلك للمستوى الأخير. تهانينا! تعلمت كل ما تحتاج إلى
+          معرفته لإنشاء لعبتك الخاصة من حرب النجوم. ليس هناك الآن المزيد من التعليمات،
+          و لا الألغاز لحلها. يمكنك إنشاء لعبتك الخاصة، ويمكنك اختيار كيف تعمل. آخرا،
+          لقد تحصّلت على أصوات وأوامر جديدة للقيام بالمزيد من الأشياء.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[الطلاب يتحدثون] هكذا أنجزنا لعبة حيث يمكنك الحصول على نقاط عند الإمساك
+          بالخنازير. في كل مرة تحصل على خنزير يظهر جندي العاصفة. حاليّا الشاشة بأكملها
+          مليئة بالخنازير وعند لمس 10,000 منها، يمكنك الفوز.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[الطلاب يتحدثون] صنعنا لعبة لا تخسر فيها أبدا وكل شيء تقتله تمنحك النقاط.
+          في برنامجي، عكس المفاتيح حيث أنه كلما قمت بالنقر فوق المفتاح العلوي لاعبك
+          ينزل، وعندما تذهب إلى اليمين، يذهب اللاعب إلى اليسار. هذا صعب حقاً! في بعض
+          الأحيان يمكنك فقط الحصول على ميزة، ميزة غير عادلة إذا كنت مطور اللعبة. تحصل
+          عليه؟ ياي!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: عند الانتهاء من صناعة اللعبة الخاصة بك، اختر "شارك" للحصول على رابط
+          يمكنك مشاركته مع الأصدقاء أو اللعب بلعبتك على الهاتف الخاص بك. استمتع!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2736,32 +2730,28 @@
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: مرحبا، أنا شريتا كارتر. أنا مختصّة في الإنتاج الإبداعي في والت ديزني.
+          أنا مسؤولة على قيادة الفرق المنتجة للألعاب التي سيجرّبها ضيوفنا. نحن نبحث
+          دائما عن طرق تمكننا من تحسين التجارب و التكنولوجيا في قلب ذلك.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: تهانينا، لقد استطعت فعل ذلك! لقد برمجت ب ب 8. والآن أعتقد أننا مستعدون
+          لشيء أكثر صعوبة. دعونا ننطلق. والآن بعد أن كنت قد تعلمت أساسيات البرمجة،
+          سنعود في الوقت المناسب لبناء لعبتنا، بطولة ر2 د 2 و س3 بو.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'لصنع لعبة، نحن بحاجة إلى معرفة شيء يستخدمه المبرمجون كل يوم: يسمى الأحداث.
+          الأحداث تطلب من برنامجك الإستماع أو الانتظار حتى يحدث شيء ما وثم عندما يحدث
+          ذلك، فإنهم ينفذون التّعليمات.'
       4:
         image: notes/starwars_blocks_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button
           or a tap on the screen.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: هنا سنجعل ر2-د2 يتحرّك للأعلى ليسلّم رسالة إلى الطيّارين المتمردين وثم
+          يتحرّك للأسفل لبقيّة الطيّارين المتمردين. سنستخدم الأحداث لإجباره على التحرك.
+          عندما يستخدم اللاعب مفاتيح الأسهم أعلى/أسفل ، أوالأزرار الأعلى/أسفل.
       6:
         image: notes/starwars_blocks_events_6.JPG
         text: We use the whenUp() event block and attach the goUp() block to it. When
@@ -2775,33 +2765,30 @@
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
+        text: مرحبا، اسمي أليس و أقود فرق البرمجة و الهندسة في موقع Code.org وعملت
+          في هذا البرنامج التعليمي الذي كنت تلعب به الآن.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
+        text: لقد استطعت إنجاز ذلك للمستوى الأخير. تهانينا! تعلمت كل ما تحتاج إلى
+          معرفته لإنشاء لعبتك الخاصة من حرب النجوم. ليس هناك الآن المزيد من التعليمات،
+          و لا الألغاز لحلها. يمكنك إنشاء لعبتك الخاصة، ويمكنك اختيار كيف تعمل. آخرا،
+          لقد تحصّلت على أصوات وأوامر جديدة للقيام بالمزيد من الأشياء.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+        text: '[الطلاب يتحدثون] هكذا أنجزنا لعبة حيث يمكنك الحصول على نقاط عند الإمساك
+          بالخنازير. في كل مرة تحصل على خنزير يظهر جندي العاصفة. حاليّا الشاشة بأكملها
+          مليئة بالخنازير وعند لمس 10,000 منها، يمكنك الفوز.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+        text: '[الطلاب يتحدثون] صنعنا لعبة لا تخسر فيها أبدا وكل شيء تقتله تمنحك النقاط.
+          في برنامجي، عكس المفاتيح حيث أنه كلما قمت بالنقر فوق المفتاح العلوي لاعبك
+          ينزل، وعندما تذهب إلى اليمين، يذهب اللاعب إلى اليسار. هذا صعب حقاً! في بعض
+          الأحيان يمكنك فقط الحصول على ميزة، ميزة غير عادلة إذا كنت مطور اللعبة. تحصل
+          عليه؟ ياي!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+        text: عند الانتهاء من صناعة اللعبة الخاصة بك، اختر "شارك" للحصول على رابط
+          يمكنك مشاركته مع الأصدقاء أو اللعب بلعبتك على الهاتف الخاص بك. استمتع!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -2959,81 +2946,158 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: إذا كنت ترغب في إنجاز اللعبة الخاصة بك، فهذا فغلا سهل. كل ما تحتاجه
-          هو بضع أساسيات البرمجة ويمكن بدء تشغيل لعبة التي قمت بإنشائها.
+        text: إذا كنت ترغب بإنشاء اللعبة الخاصة بك، فإن ذلك سهل جدا. كل ما تحتاجه
+          هو القليل من أساسيات البرمجة ويمكنك البدء بلعب اللعبة الذي قمت بإنشائها.
       2:
         image: notes/gumball_intro_2.JPG
-        text: هل لديك لعبة فيديو مفضلة؟ سنخطو خطوة واحدة نحو خلق ألعاب فقط مثل التي
-          في مختبر اللّعب. الألعاب الجيدة لها قصة وكل قصة ممثلون. الممثلون يقومون
-          بأشياء مثل الكلام، التحرك و التفاعل مع بعضهم البعض. ربما حتى تسجيل نقاط
-          استناداً إلى قواعد اللعبة. اليوم، سنتعلم كيفية القيام بكل هذه الأشياء واحداً
-          تلو الآخر مع ممثلين ممتعين ومن ثم سننجز لعبة من نقطة الصفر التي يمكن مشاركتها
-          ولعبها على الهاتف.
+        text: هل لديك لعبة فيديو مفضلة؟ نحن في طريقنا إلى إنشاء لعبة مشابهة لتلك المفضلة
+          لديك من خلال PlayLab. الألعاب الجيدة تروي قصص ولكل قصة شخصياتها. تقوم هذه
+          الشخصيات بأفعال كالكلام، أيضاً التحرك والتفاعل مع شخصيات أخرى. كم يمكن أن
+          تجمع النقاط إعتماداً على قواعد اللعب. اليوم، سنتعلم كيفية تنفيذ هذه الأشياء
+          الممتعة مع الشخصيات و ثم نبني اللعبة من الصفر التي يمكن أن نشاركها ونلعبها
+          من الهاتف.
       3:
         image: notes/gumball_intro_3.JPG
-        text: اليوم، سنتعلم كيفية القيام بكل هذه الأشياء واحداً تلو الآخر مع ممثلين
-          ممتعين ومن ثم سننجز لعبة من نقطة الصفر التي يمكن مشاركتها ولعبها على الهاتف.
+        text: اليوم، سنتعلم كيفية تنفيذ هذه الأشياء الممتعة مع الشخصيات و ثم نبني
+          اللعبة من الصفر التي يمكن أن نشاركها ونلعبها من الهاتف.
       4:
         image: notes/gumball_intro_4.JPG
-        text: تنقسم الشاشة إلى 3 أجزاء أساسيين. يوجد على اليمين فضاء اللّعب، أين سيشتغل
-          البرنامج. التعليمات لكل مستوى مكتوبة أسفله.
+        text: الشاشة مقسمة إلى ثلاثة أجزاء رئيسية. على اليسار هو مساحة اللعبة حيث
+          سيتم تشغيل البرنامج. التعليمات لكل مستوى مذكورة في الأسفل.
       5:
         image: notes/gumball_intro_5.JPG
-        text: المنطقة الوسطى هي صندوق الأدوات وكل واحدة من هذه المقاطع هي من التعليمات
-          البرمجية.
+        text: هذه المنطقة الوسطى هي صندوق الأدوات وكل واحد من هذه القطع هو أمر من
+          التعليمات البرمجية.
       6:
         image: notes/gumball_intro_6.JPG
-        text: والمنطقة البيضاء الموجودة على اليمين تعرف باسم مساحة العمل، وهي المكان
-          المخصص لإنشاء البرنامج الخاص بنا.
+        text: ويطلق على المساحة البيضاء على اليمين مساحة العمل وهذا هو المكان الذي
+          سوف نبني فيه برنامجنا.
       7:
         image: notes/gumball_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: لتبدأ، ستحتاج إلى ربط القطع الخاصة بك إلى البرتقالي وهو أمرعند الركض.
+          يمكنك ربط أوامر متعددة معا عن طريق سحبهم حتى ترى الخط الأصفر ثم سيلتصقون
+          معا.
       8:
         image: notes/gumball_intro_8.JPG
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
+        text: في هذا اللغز الأول، سنجعل الشخصيات تقول شيء وذلك من خلال ربط أمر القول
+          بأمر الركض عندما يكتب اللاعب القول. عند الانتهاء من وضع الأوامر إضغط زر
+          التشغيل لترى نتيجة ما قمت ببرمجته.
       9:
         image: notes/gumball_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: قم بالبدء وعندما تصل إلى النهاية ستصبح قادراً على إنشاء كل أنواع الشخصيات
+          اللتي يمكن أن تتفاعل، تسجل النقاط، وترمي الأشياء، وتخفي بعضها البعض. لكم
+          حرية الاختيار!
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: نحن الآن في طريقنا لمعرفة شيء يستخدمه مبرمجي الألعاب يوميا. يطلق عليه
+          مسمى الأحداث. الحدث يخبر البرنامج للاستماع عندما يقوم المستخدم بشيء ثم تقوم
+          اللعبة بتنفيذ هذا العمل.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: أحد الأمثلة على الأحداث هي الاستماع إلى نقرة الماوس أو ضغط مفتاح السهم
+          الأعلى أو الأسفل أو حتى النقرعلى الشاشة.
       3:
         image: notes/gumball_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: هنا،سوف نجعل الشخصية تقول شيئا عندما ينقراللاعب عليها. سوف نستخدم أمر
+          الحظرعند النقر عليها ونربط به محتوى الكلام. عندما ينقر اللاعب، جميع محتوى
+          الكلام المربوط سوف يظهر.
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: يوجد أيضا أوامرالأسهم. إذا قمت بربط أمر التحرك بذلك، يمكنك البدء في
+          نقل الشخصية الخاصة بك إلى أعلى أو أسفل و يسارأو يمين، باستخدام مفاتيح الأسهم.
+          شيئا فشيئا تصبح اللعبة أكثر تفاعلا و تقارب أن تكتمل.
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: "هل لك أن تتخيل لو اردت تكريرأحد الأوامر مرةً بعد مرة و للأبد؟ \nنأمل
+          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة.\n"
       2:
         image: notes/gumball_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: يسمى هذا بأمرالتكرار للأبد. وأي شيء يربط به يتكرر باستمرار في اللعبة.
+          إذا كنا نريد أحد الشخصيات بالقيام بحركة ما مرارا وتكرارا دون أن يفعل اللاعب
+          أي شيء، سوف نربط أمر تلك الحركة بأمر التكرار إلى الأبد.
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: في هذا اللغز القادم، هدفنا هو مساعدة الشخصية بالقيام بحركة مستمرة. عندما
+          تتعلم كيفية القيام بأوامر التكرار سيوفر لك ذلك طن من الوقت عند بناء اللعبة
+          خاصتك.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: إذا كنت ترغب بإنشاء اللعبة الخاصة بك، فإن ذلك سهل جدا. كل ما تحتاجه
+          هو القليل من أساسيات البرمجة ويمكنك البدء بلعب اللعبة الذي قمت بإنشائها.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: هل لديك لعبة فيديو مفضلة؟ نحن في طريقنا إلى إنشاء لعبة مشابهة لتلك المفضلة
+          لديك من خلال PlayLab. الألعاب الجيدة تروي قصص ولكل قصة شخصياتها. تقوم هذه
+          الشخصيات بأفعال كالكلام، أيضاً التحرك والتفاعل مع شخصيات أخرى. كم يمكن أن
+          تجمع النقاط إعتماداً على قواعد اللعب. اليوم، سنتعلم كيفية تنفيذ هذه الأشياء
+          الممتعة مع الشخصيات و ثم نبني اللعبة من الصفر التي يمكن أن نشاركها ونلعبها
+          من الهاتف.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: اليوم، سنتعلم كيفية تنفيذ هذه الأشياء الممتعة مع الشخصيات و ثم نبني
+          اللعبة من الصفر التي يمكن أن نشاركها ونلعبها من الهاتف.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: الشاشة مقسمة إلى ثلاثة أجزاء رئيسية. على اليسار هو مساحة اللعبة حيث
+          سيتم تشغيل البرنامج. التعليمات لكل مستوى مذكورة في الأسفل.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: هذه المنطقة الوسطى هي صندوق الأدوات وكل واحد من هذه القطع هو أمر من
+          التعليمات البرمجية.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: والمنطقة البيضاء الموجودة على اليمين تعرف باسم مساحة العمل، وهي المكان
+          المخصص لإنشاء البرنامج الخاص بنا.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: لتبدأ، ستحتاج إلى ربط القطع الخاصة بك إلى البرتقالي وهو أمرعند الركض.
+          يمكنك ربط أوامر متعددة معا عن طريق سحبهم حتى ترى الخط الأصفر ثم سيلتصقون
+          معا.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: في هذا اللغز الأول، سنجعل الشخصيات تقول شيء وذلك من خلال ربط أمر القول
+          بأمر الركض عندما يكتب اللاعب القول. عند الانتهاء من وضع الأوامر إضغط زر
+          التشغيل لترى نتيجة ما قمت ببرمجته.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: قم بالبدء وعندما تصل إلى النهاية ستصبح قادراً على إنشاء كل أنواع الشخصيات
+          اللتي يمكن أن تتفاعل، تسجل النقاط، وترمي الأشياء، وتخفي بعضها البعض. لكم
+          حرية الاختيار!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: نحن الآن في طريقنا لمعرفة شيء يستخدمه مبرمجي الألعاب يوميا. يطلق عليه
+          مسمى الأحداث. الحدث يخبر البرنامج للاستماع عندما يقوم المستخدم بشيء ثم تقوم
+          اللعبة بتنفيذ هذا العمل.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: أحد الأمثلة على الأحداث هي الاستماع إلى نقرة الماوس أو ضغط مفتاح السهم
+          الأعلى أو الأسفل أو حتى النقرعلى الشاشة.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: هنا،سوف نجعل الشخصية تقول شيئا عندما ينقراللاعب عليها. سوف نستخدم أمر
+          الحظرعند النقر عليها ونربط به محتوى الكلام. عندما ينقر اللاعب، جميع محتوى
+          الكلام المربوط سوف يظهر.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: يوجد أيضا أوامرالأسهم. إذا قمت بربط أمر التحرك بذلك، يمكنك البدء في
+          نقل الشخصية الخاصة بك إلى أعلى أو أسفل و يسارأو يمين، باستخدام مفاتيح الأسهم.
+          شيئا فشيئا تصبح اللعبة أكثر تفاعلا و تقارب أن تكتمل.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: "هل لك أن تتخيل لو اردت تكريرأحد الأوامر مرةً بعد مرة و للأبد؟ \nنأمل
+          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة.\n"
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: يسمى هذا بأمرالتكرار للأبد. وأي شيء يربط به يتكرر باستمرار في اللعبة.
+          إذا كنا نريد أحد الشخصيات بالقيام بحركة ما مرارا وتكرارا دون أن يفعل اللاعب
+          أي شيء، سوف نربط أمر تلك الحركة بأمر التكرار إلى الأبد.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: في هذا اللغز القادم، هدفنا هو مساعدة الشخصية بالقيام بحركة مستمرة. عندما
+          تتعلم كيفية القيام بأوامر التكرار سيوفر لك ذلك طن من الوقت عند بناء اللعبة
+          خاصتك.

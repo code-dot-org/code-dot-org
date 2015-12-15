@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Sådan organiserer du en Hour of Code
 
@@ -59,4 +58,3 @@ Hold et Hour of Code-arrangement i Computer Science Education Week (<%= campaign
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                                                  |
 | 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                                                              |
 
-<%= view :signup_button %>

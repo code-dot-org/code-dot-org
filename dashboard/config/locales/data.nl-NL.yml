@@ -757,6 +757,9 @@
         infinity_playlab_intro: Play Lab - Inleiding
         infinity_playlab_events: Play Lab - Gebeurtenissen
         infinity_playlab_repeat_forever: Play Lab - Oneindig Herhalen
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -810,6 +813,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

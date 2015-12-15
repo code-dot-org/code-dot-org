@@ -500,9 +500,8 @@
           الأسهم للحصول على الكائن الفضائي وتنبيه الجميع
         studio_playlab_10: قم بانشاء اللعبة الخاصة بك. عند الانتهاء من ذلك، انقر فوق
           "إنهاء" للسماح لأصدقاءك بتجربة اللعبة الخاصة بك على هواتفهم.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
+        studio_iceage_hello1: سيد يريد جمع الجميع لمغامرة جديدة.هل يمكنك مساعدته ليقول
+          "مرحبا" بسحب كتلة 'يقول' إلى منطقة العمل وكتابة كلمة "hello" داخلها ؟
         studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
           him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
@@ -706,6 +705,9 @@
         infinity_playlab_intro: مختبر اللعب - المقدمة
         infinity_playlab_events: مختبر اللعب - الأحداث
         infinity_playlab_repeat_forever: مختبر الألعاب - تكرار إلى الأبد
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -759,6 +761,9 @@
         gumball_intro: ساعة البرمجة غامبول - مقدّمة
         gumball_events: ساعة البرمجة غامبول - الأحداث
         gumball_repeat: ساعة البرمجة غامبول - تركيب التكرار
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

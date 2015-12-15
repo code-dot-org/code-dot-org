@@ -462,7 +462,7 @@ sr:
       unused: Неупотребљени Нивои
   upsell:
     hoc:
-      title: Час кода
+      title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code

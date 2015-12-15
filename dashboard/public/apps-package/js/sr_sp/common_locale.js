@@ -319,7 +319,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "examplesFailedOnClose":function(d){return "Један или више ваших примера се не поклапају са вашом дефиницијом. Проверите своје примере пре затварања"},
 "extraTopBlocks":function(d){return "Имате неповезане блокове."},
 "extraTopBlocksWhenRun":function(d){return "Имате неповезане блокове. Да ли мислите да их повежете у блок \"покретања\"?"},
-"finalStage":function(d){return "Честитамо! Завршили сте последњу етапу."},
+"finalStage":function(d){return "Честитамо! Завршили сте последнју етапу."},
 "finalStageTrophies":function(d){return "Честитамо! Завршио-ла си последњи ниво и освојио-ла  "+common_locale.p(d,"numTrophies",0,"sr",{"one":"трофеј","other":common_locale.n(d,"numTrophies")+" трофеја"})+"."},
 "finish":function(d){return "Заврши"},
 "generatedCodeInfo":function(d){return "Чак и најбољи универзитети уче блок-базирано кодирање (нпр. "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"). Али блокови су постављени тако да их можете видети у JavaScript, светском најкоришћенијем програмском језику:"},

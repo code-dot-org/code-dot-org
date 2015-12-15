@@ -462,7 +462,7 @@ sl:
       unused: Neuporabljene stopnje
   upsell:
     hoc:
-      title: Ura kode
+      title: Classic Maze
       body: Preizkusite se v osnovah računalništva. Milijonom je že uspelo.
     flappy:
       title: Program za Plahutača (Flappyja)

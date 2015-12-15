@@ -132,4 +132,3 @@ Você pode entrar em contato comigo [pelo telefone (número do telefone) ou pelo
 
 Atenciosamente, [NOME], [CARGO]
 
-<%= view :signup_button %>

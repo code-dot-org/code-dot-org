@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # سیمپل پریس ریلیز برائے الیکٹڈ آفیشیلز
 
@@ -47,4 +46,3 @@ nav: promote_nav
   
 
 
-<%= view :signup_button %>

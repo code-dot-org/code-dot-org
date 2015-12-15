@@ -540,14 +540,14 @@
           всех о вторжении
         studio_playlab_10: Создайте свою собственную игру. Когда закончите, нажмите
           кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
+        studio_iceage_hello1: Сид хочет собрать всех для нового приключения. Не поможешь
+          ему сказать "hello"? Для этого перетащи блок "Высказывания" в рабочую область
+          и напечатай внутри блока "hello" .
+        studio_iceage_hello2: Сид (персонаж 1) нашел Мэнни (персонаж 2) и хочет пригласить
+          его принять участие в приключении. Помоги им поприветствовать друг друга,  дважды
+          использовав блок "Высказывания персонажа".
+        studio_iceage_move_to_flag: Скрат ищет свой желудь. Помоги ему пройти последние
+          200 пикселей, использую для этого блок "Переместить".
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
@@ -752,6 +752,9 @@
         infinity_playlab_intro: Лаборатория игр - введение
         infinity_playlab_events: Лаборатория игр - события
         infinity_playlab_repeat_forever: Лаборатория игр - повторять бесконечно
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -809,6 +812,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

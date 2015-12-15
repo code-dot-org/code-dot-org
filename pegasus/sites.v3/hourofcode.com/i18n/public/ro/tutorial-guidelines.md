@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Recomandări si explicații pentru Hour of Code și Saptamana Educatiei in Tehnologia computer-ului si programare
 
@@ -266,4 +265,3 @@ Dacă creaţi un tutorial care este proiectat pentru vision-impaired, ne-ar plă
 
 [**La începutul paginii**](#top)
 
-<%= view :signup_button %>

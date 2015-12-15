@@ -1649,3 +1649,54 @@ es:
       3:
         image: notes/gumball_repeat_3.JPG
         text: En el sigueinte rompecabezas, nuestro objetivo es ayudar al actor a que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Si deseas hacer su propio juego, es muy fácil. Todo lo que necesita son unos pocos conceptos básicos de programación y puede empezar a jugar un juego que tu creaste.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: ¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación de juegos sólo asi en el LabDeJuego. Buenos juegos tienen una historia y cada historia tiene actores. Actores que hacen cosas como hablar, mover e interactúar con los demás. Tal vez incluso marcan puntos basado en las reglas del juego. Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos actores y luego construiremos un juego desde cero que puede compartir y reproducir en un teléfono.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos actores y luego construiremos un juego desde cero que puede ser compartido y reproducir en un teléfono.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: La pantalla se divide en tres partes principales. A la izquierda es el espacio de juego donde se ejecutará el programa. Las instrucciones para cada nivel están escritas abajo.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: En el área de en medio es de la caja de herramientas y cada uno de estos bloques es un pedazo de código.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: El espacio blanco de la derecha se llama zona de trabajo y es donde crearemos nuestro programa.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: 'Para empezar, necesitarás unir tus bloques al bloque naranja llamado "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.'
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: 'En este primer rompecabezas, haremos que los actores digan algo poniendo el bloque de "decir" para cuando se ejecute el bloque y escribiendo tu mensaje. Una vez que tus bloques esten en lugar, da clic en el botón de ejecutar para ver lo que programaste.'
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Comienza y al final podrás crear tu propio juego con todo tipo de jugadores que puedan interactuar, tener puntos, tirar cosas y desaparece unos a otros. Todo depende de ti!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Ahora aprenderemos algo que todos los programadores de juego usan cada día. Son llamados eventos. Un evento le indica a tu programa escuchar para cuando algo sucede y entonces cuando lo hace, el juego realiza una acción.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Algunos ejemplos de eventos estan escuchando por un clic del ratón o un teclado de la flecha de arriba o abajo en la pantalla.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: 'Aquí, vamos a hacer al actor decir algo cuando el jugador haga clic en él. Usaremos el cuando haga clic en el bloque y agregar el bloque de "decir" a éste. Cuando el jugador haga clic en todos los bloques agregados, a este bloque se realizarán.'
+      4:
+        image: notes/iceage_events_4.JPG
+        text: También hay cuando bloques de flecha. Si tu enlace mueve bloques a esos, puedes comenzar a mover tus actores para arriba, abajo, izquierda, derecha, con las teclas de flecha. Poco a poco, tu juego es cada vez más interactivo.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: ¿Te imaginas si tuvieras que repetir algo por siempre y para siempre? Esperemos que nunca tengas orque los equipos son realmente buenos en repetir cosas.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: Este es el bloque de repetición por siempre. Cualquier cosa dentro de este bloque pasara por siempre en el juego. Si queremos que un actor haga algo repetidamente sin el jugador haga nada, pondremos eso bloques dentro del bloque de repetición por siempre.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: En el sigueinte rompecabezas, nuestro objetivo es ayudar al actor a que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.

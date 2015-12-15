@@ -466,7 +466,7 @@ fr:
       unused: Niveaux Inutilisés
   upsell:
     hoc:
-      title: Heure de Code
+      title: Classic Maze
       body: "Lancez-vous dans la découverte des bases de l'informatique. Des millions de personnes ont tenté l'aventure."
     flappy:
       title: "Flappy l'oiseau"

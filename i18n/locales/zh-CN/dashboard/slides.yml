@@ -6,10 +6,10 @@ zh:
         text: 欢迎来到你第一个《编程一小时》课程！让我们立刻开始吧。
       2:
         image: notes/hoc1_2.jpg
-        text: 我们将使用布洛克里，一个可视化编程语言。你只需要拖放块来进行编程。
+        text: 我们将使用模块化的，一个可视化编程语言。你只需要拖放块来进行编程。
       3:
         image: notes/hoc1_3.jpg
-        text: '大多数代码都是通过打字输入的，但布洛克里是可视的。每个块对应于一行"真正的"代码。'
+        text: '大多数代码都是通过打字输入的，但模块化的是可视的。每个块对应于一行"真正的"代码。'
       4:
         image: notes/hoc1_4.jpg
         text: 你将会学习计算机科学的基础概念。这些概念广泛的应用于各个领域，从应用程序到控制火星车。
@@ -71,34 +71,34 @@ zh:
         text: 每一个小土堆和坑洞的大小都不相同，所以你必须告诉农夫要使用几铲来完成工作。
     flappy_intro:
       1:
-        image: 标记/ flappy01.jpg
+        image: notes/flappy01.jpg
         text: 你好，我是凯蒂 ！计算机科学最令人兴奋的事情之一就是计算机程序可以与人互动。
       2:
-        image: 标记/ flappy02.jpg
+        image: notes/flappy02.jpg
         text: 当有人在电脑或手机上点击或打字时，都会触发一个『事件』，由一些代码来决定当『事件』发生时要做什么。
       3:
-        image: 标记/ flappy03.jpg
+        image: notes/flappy03.jpg
         text: '例如，您可能有一个《事件处理程序》，说："当鼠标单击时播放声音" '
       4:
-        image: 标记/ flappy04.jpg
+        image: notes/flappy04.jpg
         text: 你听说过游戏 FlappyBird 吗? 通过使用事件处理程序，我们要学习编程让 FlappyBird 变成我们自己的版本 ！
       5:
-        image: 标记/ flappy05.jpg
+        image: notes/flappy05.jpg
         text: 你拖放的模块代表了对计算机的命令。实际上，每个模块是真正的代码来表达的。
       6:
-        image: 标记/ flappy06.jpg
+        image: notes/flappy06.jpg
         text: '如果你看看工作区中，有一些为您填写的绿色块-这些都是"事件处理程序"'
       7:
-        image: 标记/ flappy07.jpg
+        image: notes/flappy07.jpg
         text: '如果要让鸟在您单击鼠标时飞行，你可以通过将"飞行"块附加到适当的事件处理程序中，现在在你的游戏只要你点击鼠标，鸟就会飞起来。'
       8:
-        image: 标记/ flappy08.jpg
+        image: notes/flappy08.jpg
         text: 在这项活动的每个拼图中，我们会介绍新类型的事件，在工作区中，它们是绿色模块。您可以决定添加适当的模块来响应这些事件。
       9:
-        image: 标记/ flappy09.jpg
+        image: notes/flappy09.jpg
         text: '当你看到一个像这样的下拉箭头时，这意味着您可以更改的设置 - 比如当flappy掉到地上时播放其中的某个声音。'
       10:
-        image: 标记/ flappy10.jpg
+        image: notes/flappy10.jpg
         text: 在最后的谜题，你可以创建自己的游戏，并将它分享给你的朋友。玩得愉快！
     loop_times:
       1:
@@ -274,7 +274,7 @@ zh:
         text: 当你滑冰的时候你将会制造出雪花和不同的同案并且让寒冷的冬天变成童话世界，然后再将你的佳作分享给你的朋友们来欣赏。
       3:
         image: notes/frozen1_3.jpg
-        text: 接下来的一个小时，你将会学习编程的基础知识。传统的编程通常是使用文本，但我们将使用积木模块来编程，你可以拖放可视化的积木块来编写的程序。连大学生都是用这样的方式学习编程的基础知识。而实际上，你仍然是在创造程序代码。
+        text: 接下来的一个小时，你将会学习编程的基础知识。传统的编程通常是使用文本，但我们将使用模块化来编程，你可以拖放可视化的积木块来编写的程序。连大学生都是用这样的方式学习编程的基础知识。而实际上，你仍然是在创造程序代码。
       4:
         image: notes/frozen1_4.jpg
         text: 程序是一组指令，它会告诉计算机需要什么。让我们生成一段代码或者程序，帮助艾莎画出一条简单的线条。以后我们将使用这些技能去创建更多复杂的图案。
@@ -1531,7 +1531,7 @@ zh:
         text: 在随后一小时里，你要通过对艾莉克斯或史蒂夫编程，使其在一个 我的世界 的世界中移动，来学习计算机科学的基础知识。
       3:
         image: notes/mc_intro_3.JPG
-        text: 传统编程通常是文本形式的，不过今天我们要使用 Blokly：这个系统可以使用方块拖放来编写程序。在方块下面，你创建的就是 JavaScript 代码。
+        text: 传统编程通常是文本形式的，不过今天我们要使用模块化：这个系统可以使用方块拖放来编写程序。在方块下面，你创建的就是 JavaScript 代码。
       4:
         image: notes/mc_intro_4.JPG
         text: 你要学习的理念就是计算机程序员每天用到的东西，也是计算机科学的基础。在 Mojang，我们也用相同的理念完成 我的世界 的工作。
@@ -1672,4 +1672,57 @@ zh:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

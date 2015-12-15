@@ -469,7 +469,7 @@ ca:
       unused: Nivells sense utilitzats
   upsell:
     hoc:
-      title: Hora del codi
+      title: Classic Maze
       body: Provea els conceptes bàsics de la Informàtica. Milions li han donat una oportunitat.
     flappy:
       title: Codi Flappy

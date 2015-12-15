@@ -469,7 +469,7 @@ sv:
       unused: Oanvända nivåer
   upsell:
     hoc:
-      title: Timmen med Kod
+      title: Classic Maze
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
       title: Flappy kod

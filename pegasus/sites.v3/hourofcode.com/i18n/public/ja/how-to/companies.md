@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Hour of Codeを企業で開催する方法
 
@@ -129,4 +128,3 @@ nav: how_to_nav
 
 Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 より深く学びたい生徒には、[こちら](<%= resolve_url('https://code.org/learn/beyond') %>)を紹介しましょう。.
 
-<%= view :signup_button %>

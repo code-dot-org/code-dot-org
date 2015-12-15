@@ -1967,10 +1967,10 @@ ro:
       Overworld House Frame Chosen_instruction: 'Construieste restul casei din orice material doresti. Comanda "Repeta" iti va fi de ajutor.'
       Overworld House Frame_instruction: Sa ne construim propria casa! Acest loc arata bine. Construieste un cadru pe blocurile de pamant.
       Overworld Minecart Track_instruction: Esti din nou la suprafata cu o multime de resurse subterane. Acum, vom construi un drum de-a lungul traseului cu mizerie de la casa ta. Primul pas este sa cureti tot de pe traseu. Urmareste traseul si taie copacii.
-      Overworld Move to Sheep_instruction: 'Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oi.'
+      Overworld Move to Sheep_instruction: 'Adauga din nou instructiunea "Mergi inainte" pentru a ajunge la oaie.'
       Overworld Place Wall_instruction: 'Fiecare casa incepe cu un perete. Construieste prima parte a casei asezand comenzile "Loc" si "Mergi inainte" in interiorul buclei "Repeta".'
       Overworld Plant Crops_instruction: Este bine sa planifici dinainte. Planteaza culturi pe ambele parti ale apei astfel incat mai tarziu sa nu-ti fie foame.
-      Overworld Powered Minecart_instruction: Buna treaba! Ai adunat resurse suficiente pentru a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii pana la usa casei tale.
+      Overworld Powered Minecart_instruction: Buna treaba! Ai adunat suficiente resurse pentru a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii pana la usa casei tale.
       Overworld Shear Sheep_instruction: 'E vremea sa tunzi oile! Foloseste comanda "Tunde" pentru a aduna lana de la oi.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
@@ -2419,8 +2419,8 @@ ro:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3654,14 +3654,37 @@ ro:
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -3671,8 +3694,8 @@ ro:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
@@ -3700,7 +3723,7 @@ ro:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: 'Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "mergi inainte" in locul corect pentru a acoperi aceste blocuri.'
+      Underground Avoiding Lava_instruction: 'Sub aceste blocuri se gaseste lava, pe care trebuie sa o acoperi inainte sa mergi inainte. O comanda "Daca" ar fi de ajutor aici. Adauga o comanda "Mergi inainte" in locul corect pentru a acoperi aceste blocuri.'
       Underground If Statements_instruction: 'Acum lucrurile devin mai dificile. Aduna 3 pietre rosii, dar fara sa cazi in lava. Foloseste o comanda "daca" pentru a acoperi lava cu piatra.'
       Underground Iron_instruction: A merge in lava topita este o idee rea. Plaseaza placi de gresie pentru a crea un pod, apoi aduna cel putin 2 dintre blocurile de fier.
       Underground Mine in a Circle_instruction: "Gaseste un mod sa aduni 5 diamante si 7 pietre rosii! Incearca sa folosesti o comanda \"repeta\" in interiorul altei comenzi \"repeta\" pentru a intra in patrat.\r\n"

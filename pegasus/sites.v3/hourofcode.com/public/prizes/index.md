@@ -4,7 +4,6 @@ layout: wide
 nav: prizes_nav
 ---
 
-<%= view :signup_button %>
 
 # 2015 Hour of Code prizes
 
@@ -142,4 +141,3 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will sele
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
 <% end %>
-<%= view :signup_button %>

@@ -310,18 +310,17 @@ et:
         studio_playlab_8: Kas oskad lisada ühe ploki nii, et kui ükssarvik põrkab võluriga kokku, siis sa saad punkti, ja teise ploki nii, et kõlaks heli, ja kas oskad neid punkti saamiseks nooleklahvide abil liigutada?
         studio_playlab_9: Määra selle tulnukate sissetungi jaoks sobiv taust ja muuda kosmoseroboti kiirust, et ta jõuaks kiiremini tulnukani. Siis liiguta teda nooleklahvide abil, et ta jõuaks tulnukani ja saaks teisi hoiatada.
         studio_playlab_10: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja lase sõpradel telefonis lugu proovida.
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Sid tahab kõiki uue seikluse jaoks kokku koguda. Aita tal öelda "tere", selleks lohista plokk "ütle" tööruumi ja kirjuta sellesse sõna "tere".'
+        studio_iceage_hello2: Sid (tegelaskuju 1) leidis Manny (tegelaskuju 2) ja soovib teda seiklema kutsuda. Aita neil teineteist tervitada ja kasuta selleks kaks korda plokki „tegelaskuju ütleb“.
+        studio_iceage_move_to_flag: Scrat otsib oma tammetõru. Aita tal liikuda edasi viimased 200 pikslit ja kasuta selleks plokki „liiguta“.
+        studio_iceage_move_to_actor: Diego (tegelaskuju 1) otsib Mannyt (tegelaskuju 2). Aita Diegol liikuda 200 pikslit allapoole Manny juurde ja kasuta selleks plokki „liiguta tegelaskuju“. Seejärel ühenda plokk sündmusega „kui tegelane puudutab“, et esitada heli, kui nad teineteist leiavad.
+        studio_iceage_repeat: 'Ploki "korda igavesti" abil saad koodi pidevalt käitada. Kas oskad kinnitada plokid nii, et vanaema liiguks harjutuste tegemiseks korduvalt vasakule ja paremale?'
+        studio_iceage_click_hello: Kas saad aidata Sidil viimast korda oma sõpru kutsuda ploki „kui tegelaskuju puudutatakse“ abil? Ära unusta Sidi klõpsata pärast nupu Käivita vajutamist.
+        studio_iceage_move_events: Scrat otsib ikka veel tammetõrusid! Aita tal ringi lipata. Selleks kinnita iga sündmuse külge plokk „liigu“ ja muuda suunda iga nooleklahviga töötamiseks. Kui see on valmis, klõpsa nuppu Käivita ja proovi kokku koguda kõik tammetõrud.
+        studio_iceage_sound_and_points: 'Siin on suurem osa koodist, mis aitab vanaemal liikuda vasakule ja paremale ning samuti kood, mis paneb Sidi ekraanil liikuma. Kas oskad koodi lõpuni koostada ja lisada plokke sündmusele "kui tegelane puudutab", et siis, kui Sid ja vanaema kokku põrkavad, kostab heli ja saad punkti? Mängimiseks vajuta nuppu "Käivita".'
+        studio_iceage_warn_ice_age: Kõik peavad kiiremini liikuma, sest jääaeg on tulemas! Muuda taust jäämägedeks ja sea Sidi liikumiskiirus kiireks ning seejärel vajuta nuppu Käivita ning liiguta ta Diego juurde, et teda hoiatada.
+        studio_iceage_throw_hearts: Sid tahab oma vanaemale öelda, et ta armastab teda. Selleks, et Sid (tegelaskuju 1) saaks vanaemale (tegelaskuju 2) südameid visata, kasuta käsku „tegelaskuju viskab“ . Sea vanaema rõõmsasse meeleollu, kui ta südamega pihta saab.
+        studio_iceage_free_play: 'On aeg luua oma mäng või lugu. Kui oled valmis, vajuta nuppu "Valmis" ja lase sõpradel telefonis, tahvelarvutis või arvutis lugu proovida.'
         studio_gumball_hello1: 'Anais otsib uusi sõpru. Aita tal öelda "tere", selleks lohista plokk "ütle" tööruumi ja kirjuta sellesse sõna "tere".'
         studio_gumball_hello2: 'Darwin (tegelane 1) ja tema vend Gumball (tegelane 2) on teel kooli. Aita neil üksteist tervitada, kasutades kaks korda plokki "tegelaskuju ütleb".'
         studio_gumball_move_to_flag: 'Banana Joe võidab kohe spordipäeva võidujooksu! Aita tal läbida viimased 200 pikslit, kasutades plokki "liiguta".'
@@ -461,6 +460,9 @@ et:
         infinity_playlab_intro: 'Play Lab - Sissejuhatus'
         infinity_playlab_events: 'Play Lab - Üritused'
         infinity_playlab_repeat_forever: Play Lab – korda Igavesti
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -514,6 +516,9 @@ et:
         gumball_intro: 'Gumballi KoodiTund - Sissejuhatus'
         gumball_events: 'Gumballi KoodiTund - Sündmused'
         gumball_repeat: 'Gumballi KoodiTund - "Korda" laused'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

@@ -404,9 +404,9 @@ ar:
     privacy: سياسة الخصوصية
     secure: نسخة آمنة
     report_abuse: الابلاغ عن سوء استخدام
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: 'بني في "Code Studio"'
+    make_my_own_app: بناء التطبيق الخاص بي
+    how_it_works: كيفية العمل
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
@@ -463,7 +463,7 @@ ar:
       unused: المستويات غير المستخدمة
   upsell:
     hoc:
-      title: ساعة من البرمجة
+      title: Classic Maze
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
     flappy:
       title: رمز لعبة flappy

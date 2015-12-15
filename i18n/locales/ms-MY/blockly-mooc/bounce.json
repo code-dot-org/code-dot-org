@@ -85,7 +85,7 @@
   "setPaddleSpeedRandom":"Tetapkan kelajuan pedal rawak",
   "setPaddleSpeedVerySlow":"menetapkan kelajuan kayuhan yang perlahan",
   "setPaddleSpeedSlow":"menetapkan kelajuan perlahan",
-  "setPaddleSpeedNormal":"set normal paddle speed",
+  "setPaddleSpeedNormal":"tetapkan kelajuan dayung yang normal",
   "setPaddleSpeedFast":"set fast paddle speed",
   "setPaddleSpeedVeryFast":"set very fast paddle speed",
   "setPaddleSpeedTooltip":"Sets the speed of the paddle",

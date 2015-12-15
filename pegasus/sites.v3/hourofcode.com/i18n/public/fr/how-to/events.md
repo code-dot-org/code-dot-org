@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Comment organiser un évènement Une Heure de Code ?
 
@@ -59,4 +58,3 @@ Organisez un évènement Une Heure de Code au cours de la semaine de l'éducatio
 | 10:40-11:00 | Les étudiants font une démonstration d'activités hors connexion et montrer comment l'informatique peut être enseigné sans utiliser d'ordinateur.                   |
 | 11:00-11:05 | Les enseignants qui ont contribué à organiser l'évènement dans toute l'école donnent une allocution de clôture.                                                    |
 
-<%= view :signup_button %>

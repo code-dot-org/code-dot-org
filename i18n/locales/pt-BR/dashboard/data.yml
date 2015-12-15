@@ -463,6 +463,9 @@ pt-BR:
         infinity_playlab_intro: 'Laboratório - Introdução'
         infinity_playlab_events: 'Laboratório - Eventos'
         infinity_playlab_repeat_forever: 'Laboratório - Repetir infinitamente'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -516,6 +519,9 @@ pt-BR:
         gumball_intro: 'Hora do Código com Gumball - Introdução'
         gumball_events: 'Hora do Código com Gumball - Eventos'
         gumball_repeat: 'Hora do Código com Gumball - Instruções de repetição'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'

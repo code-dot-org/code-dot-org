@@ -1501,13 +1501,20 @@ cs:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: Jmenuji se Jens Bergensten, známý též jako Jeb. Pracuji jako hlavní vývojář na Minecraftu, zde v Mojangu ve Stockholmu. Myslím, že mi bylo jedenáct, možná dvanáct, kdy jsem začal s programováním. Chtěl jsem dělat hry. Jeden z přátel mého otce mi řekl, že pro hry se musím naučit programovat. A tak jsem se začal učit. Mám rád návrh a promýšlení architektura hry. To je to, co se mi opravdu líbí na Minecraftu.
+        text: |
+          Jmenuji se Jens Bergensten, ale jsem znám jako Jeb. Jsem vedoucí vývojář Minecraftu zde v mojang.com. Myslím, že mi bylo 11 nebo 12, když jsem programovat, protože jsem chtěl dělat hry. Jeden z přátel táty mi pověděl, že abych dělal hry, potřebuji se naučit, jak se programuje. Takže jsem se do toho dal. Rád navrhuji a zjišťuji architekturu věcí. Tohle je to, co
+          mám skutečně rád na Minecraftu.
       2:
         image: notes/mc_intro_2.JPG
-        text: Během následující hodiny se naučíš základy informatiky programováním Alexy nebo Steva, abys ses tak posunul do simulovaného kousku světa Minecraftu.
+        text: |
+          Během následující hodiny se naučíš základy informatiky programováním pohybů Alex nebo Steva v simulovaném kousku světa
+          Minecraftu.
       3:
         image: notes/mc_intro_3.JPG
-        text: Tradiční programování je obvykle v textu, dnes však budeme používat blokově systém používající vizuální bloky. Ty můžeš přetahovat a pouštět k psaní programů. Pod kapotou tak se vytváří Javascript kód.
+        text: |
+          Tradiční programování je běžně text, ale dnes použijeme Blockly: 
+          využívání bloků, které přetahujete k psaní programů. Na pozadí tvoříte
+          JavaScript kód.
       4:
         image: notes/mc_intro_4.JPG
         text: Pojmy, které se naučíš, počítačoví programátoři používají denně a jsou základem informatiky. Tady v Mojangu používáme tyto stejné koncepty, aby Minecraft pracoval.
@@ -1525,10 +1532,10 @@ cs:
         text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme stavět náš program.
       9:
         image: notes/mc_intro_9.JPG
-        text: Když přetáhneme blok moveForward(); do našeho pracovního prostoru a klepneme na tlačítko run. Co se stane? Alexa se pohybuje vpřed o jedno pole na mřížce.
+        text: 'Když přetáhneme blok "posunout vpřed" do našeho pracovního prostoru a klepneme na tlačítko Spustit. Co se stane? Alex se pohybuje vpřed o jedno pole na mřížce.'
       10:
         image: notes/mc_intro_10.JPG
-        text: A co, když chceme udělat něco poté, co se přesune dopředu o jedno pole? Můžeme přidat další blok do našeho programu. Vyberu si blok turnRight(); a přetáhnu jej pod moveForward(); blok, dokud se neobjeví tato oranžová čára. Pak to tam upustím a dva bloky se přichytí dohromady. Když stiskneme znova run, Alexa bude provádět příkazy v našem pracovním prostoru od shora dolů.
+        text: 'A co, když chceme udělat něco poté, co se přesune dopředu o jedno pole? Můžeme přidat další blok do našeho programu. Vyberu si blok "otočit vpravo" a přetáhnu jej pod "posunout vpřed", dokud se neobjeví tato oranžová čára. Potom ho pustím a dva bloky se přichytí dohromady. Když stiskneme znova Spustit, Alex bude provádět příkazy v našem pracovním prostoru odshora dolů.'
       11:
         image: notes/mc_intro_11.JPG
         text: Když chceš někdy odstranit blok, stačí jej přetáhnout ze zásobníku zpět do panelu nástrojů.
@@ -1544,7 +1551,7 @@ cs:
         text: Mojí oblíbenou věcí, co dělám v Minecraftu, je zkoumání. Mám ráda dobrodružství v jeskyních a vidět, co mohu najít. Jako někdo, kdo není programátor, jsem opravdu nadšená, projít lekci Minecraftu a skutečně se sama naučit kódování.
       3:
         image: notes/mc_repeat_3.JPG
-        text: Pro poslední úroveň je zapotřebí spousty moveForward(); bloků. Bylo by snazší, kdyby jsme mohli jen povědět počítači, aby provedl povel moveForward(); čtyřikrát nebo pětkrát. Naštěstí pro nás, počítače jsou opravdu dobří v opakovacích příkazech s cykly opakování.
+        text: 'Pro poslední úroveň je zapotřebí spousty bloků "posunout vpřed". Bylo by snazší, kdyby jsme mohli jen povědět počítači, aby provedl povel "posunout vpřed" čtyřikrát nebo pětkrát. Naštěstí pro nás, počítače jsou opravdu dobré v opakovaných příkazech díky s cyklům.'
       4:
         image: notes/mc_repeat_4.JPG
         text: Při vytváření Minecraftu požíváme k opakování cykly, aby umístili počáteční materiály k vytvoření nového světa. Jsou to tisíce a tisíce bloků. Používáme též cyklů i v malém např. aby Alexovy nohy se pohybovaly sem a tam při chůzi. Opakování pomocí cyklů je silná součást programování.
@@ -1553,7 +1560,7 @@ cs:
         text: Noc se blíží, takže v příštích několika úrovních, budeme stavět dům, abychom bydleli v bezpečí. Budeme používat k tomu velmi snadno bloku opakování.
       6:
         image: notes/mc_repeat_6.JPG
-        text: K vybudování zdi našeho domu, můžeme buď povědět Alexe moveForward(); a umístí prkna čtyřikrát nebo jí povíme moveForward(); a umísti jedno prkno, pak tento povel a použij blok opakování, aby to provedla tuto akci vícekrát. Teď klepneme na bloku opakování a povíme jí kolikrát chceme, aby se tato akci provedla. Pojďme stavět náš dům než nastane noc! Pobav se.
+        text: 'K vybudování zdi našeho domu, můžeme buď povědět Alex "posun vpřed" a umísti prkna čtyřikrát nebo jí povíme "posun vpřed" a umísti jedno prkno, pak tento povel a použij blok opakování, aby to provedla tuto akci vícekrát. Teď klepneme na bloku opakování a povíme jí kolikrát chceme, aby se tato akci provedla. Pojďme stavět náš dům než nastane noc! Bav se!'
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
@@ -1647,3 +1654,56 @@ cs:
       3:
         image: notes/gumball_repeat_3.JPG
         text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě. Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš vlastní hru.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

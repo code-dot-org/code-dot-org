@@ -313,18 +313,17 @@ eu:
         studio_playlab_8: Gehi dezakezu bloke bat puntu bat lortzeko eta bloke bat soinu bat erreproduzitzeko adarbakarra aztiarenganaino iristean? Programa martxan dagoenean, mugitu adarbakarra geziekin puntu bat lortu arte
         studio_playlab_9: Ezarri atzealdea estralurtarren inbasio honetarako eta lagundu espazioko robotari estralurtarrengana azkarrago iristen haren abiadura aldatuz. Mugiarazi gezien bidez beste guztiei abisatzeko
         studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the `say` block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego get 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: 'Everyone needs to move faster because an ice age is coming! Change the background to "icebergs" and set Sid’s speed to fast, then press Run and move him to Diego to warn him.'
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Sid-ek guztiak bildu nahi ditu abentura berri batean. Lagundu diezaiokezu "kaixo" esaten, `esan` blokea lan-ermeuan arrastatu eta barruan "kaixo" idatziz?'
+        studio_iceage_hello2: 'Sid-ek (1 aktoreak) Manny (2 aktorea) topatu du eta abenturara gonbidatu nahi du. Lagundu iezaiezu elkarri agurtzen "aktoreak dio" blokea birritan erabiliz.'
+        studio_iceage_move_to_flag: 'Scrat bere ezkurraren bila dabil! Lagundu iezaziozu azken 200 pixeletan aurrera egiten "mugitu" blokea erabiliz.'
+        studio_iceage_move_to_actor: 'Diego (1 aktorea) Manny-ren (2 aktorearen) bilda dabil. Lagundu iezaiozu Diegori 200 pixel behera egiten Manny-rengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ikutzen duenean" blokearekin elkar aurkitzen dutenean soinu bat jotzeko.'
+        studio_iceage_repeat: '"errepikatu betirako" blokearen bidez zure kodea modu jarraituan exekutatzen da. Elkartu al ditzakezu blokeak Granny-k ariketa fisikoa egin dezan ezkerrera eta eskuinera etengabe mugituz?'
+        studio_iceage_click_hello: 'Lagundu al diezaiokezu Sid-i lagunei azkeneko deia egiteko klik egiterakoan? Ez ahaztu klik egin behar duzula "Hasi" sakatu ondoren.'
+        studio_iceage_move_events: 'Scrat oraindik ezkurren bila dabil! Lagundu iezaiozu noraezean ibiltzen "mugitu" blokea gertaera bakoitzari lotuz eta norabide aldaketa eraginez gezidun tekla bakoitza sakatzerakoan, Amaitzen duzunean, sakatu "Hasi" eta saiatu ezkur guztiak biltzen.'
+        studio_iceage_sound_and_points: 'Granny ezker eta eskuinera mugitzeko, eta Sid pantailan zehar mugitzeko behar den kode gehiena eman dizugu. Amaitu dezakezu kodea eta "aktoreak ikutzen duenean" gertaerari blokeak gehitu, Sid-ek eta Granny-k tupust egiten dutenean hots bat egin eta puntu bat eskuratzeko? Sakatu Hasi jokatzeko.'
+        studio_iceage_warn_ice_age: 'Guztiak mugitu behar dira azkar izotz aldia datorrelako! Jarri "izozmendiak" atzealdea eta ezarri "Sid"-en abiadura azkarra, ondoren sakatu Hasi eta mugitu Diegorengana jakinaren gainean jartzeko.'
+        studio_iceage_throw_hearts: 'Sid-ek bere amona Granny-ri maite duela jakinarazi nahi dio. Erabili "aktoreak bota" komandoa Sid-ek (1 aktoreak) Granny-ri (2 aktoreari) bihotzak botatzeko! Ezarri Granny-ren aldartea onera bihotzekin talka egiten duenean.'
+        studio_iceage_free_play: 'Zure joko edo historioa sortzeko garaia! Amaitu duzunean, sakatu "Amaitu" zure lagunei beraien telefono, tableta edo konputagailuetan zure jokoa probatzeko aukera emateko!'
         studio_gumball_hello1: 'Anaisek lagun berriak egin nahi ditu. Lagundu diezaiokezu "kaixo" esaten "esan" blokea arrastatuz lan eremura eta horren barruan "kaixo" idazten?'
         studio_gumball_hello2: 'Darwin (1. aktorea) eta haren neba Gumball (2. aktorea) eskolarako bidean doaz. Lagun iezaiezu elkarri agurtzen "aktoreak esan" blokea bi aldiz erabiliz.'
         studio_gumball_move_to_flag: 'Banana Joe txango eguneko lasterketa irabazteko zorian dago. Lagun iezaiozu azken 200 pixelak ibiltzen "mugitu" blokea erabiliz.'
@@ -464,6 +463,9 @@ eu:
         infinity_playlab_intro: 'Jolas Laborategia - Sarrera'
         infinity_playlab_events: 'Jolas Laborategia - Gertaerak'
         infinity_playlab_repeat_forever: 'Jolas Laborategia - "Errepikatu Betirako"'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -517,6 +519,9 @@ eu:
         gumball_intro: 'Gumballen Kode Ordua - Sarrera'
         gumball_events: 'Gumballen Kode Ordua - Gertaerak'
         gumball_repeat: 'Gumballen Kode Ordua - "errepikatu" aginduak'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'Arrastatu "mugitu" blokea eta lotu beste blokearen azpian'

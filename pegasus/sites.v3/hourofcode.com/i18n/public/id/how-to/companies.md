@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -135,4 +134,3 @@ Mulai Hour of Code Anda dengan menginspirasi siswa dan diskusikan bagaimana ilmu
 
 The Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut tentang bagaimana teknologi bekerja dan bagaimana untuk membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini, [dorongpara peserta untuk belajar online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

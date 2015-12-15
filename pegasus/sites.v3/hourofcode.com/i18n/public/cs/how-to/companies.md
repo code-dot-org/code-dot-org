@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Jak přivést Hodinu kódu do vaší společnosti
 
@@ -135,4 +134,3 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 Hodina kódu je jen prvním krokem k poznání, jak fungují technologie a jak vytvářet software. K pokračování na této cestě [povzbuďte vaše děti, aby se učily online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

@@ -528,8 +528,8 @@
       4-5 Artist Patterns Free Play_instruction: თავისუფალი თამაში - სცადეთ თქვენ
         თვითონ შექმნა ნიმუში!
       4-5 Bee Conditionals - FC Test_instruction: ფუტკარს ახლა მხოლოდ ნექტარი სურს.
-        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმე ყოველი ღრუბელი, ყვავილს ხომ
-        არ მალავს. თუ მალავს, მაშინ შეგიძლია ნექტარის შეგროვება.
+        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ
+        არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -541,9 +541,9 @@
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: ფუტკარს ახლა მხოლოდ ნექტარი უნდა. დაიმახსოვრეთ,
-        ყველა ობიექტი ყვავილი არაა, ამიტომ შეამოწმეთ, რომ ნექტარის აღება მხოლოდ ყვავილთან
-        სცადოთ.
+      4-5 Bee Conditionals 2_instruction: ფუტკარს ახლა მხოლოდ ნექტარი სურს. ყველა
+        ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს.
+        თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       4-5 Bee Conditionals 3_instruction: ახლა ფუტკარს მხოლოდ თაფლის გაკეთება სურს.
         შეამოწმეთ, რომ მხოლოდ ფიჭასთან გააკეთოს თაფლი.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
@@ -1261,9 +1261,8 @@
       Course 4 Artist Binary 7_instruction: დაასრულეთ ეს ნახატი.
       Course 4 Artist Binary Free Play 2_instruction: 'თავისუფალი თამაში: ეს ცარიელი
         ტილო მთლიანად თქვენს განკარგულებაშია. დახატეთ, რაც კი მოგესურვებათ!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
-        to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
-        to get creative with the bits?"
+      Course 4 Artist Binary Free Play 2a_instruction: "აი, ტილო უფრო მაღალი გარჩევადობით
+        - 16X16 პიქსელი. \r\n\r\nხედავთ, რა ხდება, როცა ბიტებს შემოქმედებას ვუმატებთ?"
       Course 4 Artist Binary Free Play 2b_instruction: მინიშნებების სანახავად დააჭირეთ
         აქ.
       Course 4 Artist Binary Free Play_instruction: 'თავისუფალი თამაში: დახატეთ რაც
@@ -2726,9 +2725,8 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
+      Overworld Avoid Monsters_instruction: ქვეწარმავალთან შეჯახება ცუდი იდეაა. ჩუმად
+        უნდა შეიპაროთ თქვენს სახლში.
       Overworld Chop Tree_instruction: ხე ძალიან მნიშვნელოვანი რესურსია. ბევრი რამ
         შედგება მისგან. მიდით ხესთან და გამოიყენეთ "ბლოკის განადგურების" ბრძანება
         მის მოსაჭრელად.
@@ -2952,8 +2950,8 @@
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: ფუტკარს ახლა მხოლოდ ნექტარი სურს.
-        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმე ყოველი ღრუბელი, ყვავილს ხომ
-        არ მალავს. თუ მალავს, მაშინ შეგიძლია ნექტარის შეგროვება.
+        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ
+        არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       Ryan Test Locked Blocks_instruction: ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ
         ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
@@ -3264,8 +3262,8 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -4513,13 +4511,36 @@
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
@@ -4528,8 +4549,8 @@
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis

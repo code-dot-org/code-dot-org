@@ -146,7 +146,7 @@ hr:
           description_short: Nacrtaj cool slike i uzorke pomoću Umjetnika!
         hourofcode:
           Maze: Labirint
-          title: Hour of Code
+          title: Classic Maze
           description: Isprobaj osnove informatike s likovima kao što su Angry Birds, Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
           description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
         frozen:
@@ -183,9 +183,9 @@ hr:
           Artist Binary: Umjetnik binarno
           description_audience: Dob 10+ (nakon Tečaja 3)
           Super Challenge - Variables: 'Super izazov - Varijable'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - For Loops: 'Super izazov - For petlja'
+          Super Challenge - Functions and Parameters: 'Super izazov - funkcije i parametri'
+          Extreme Challenge - Comprehensive: 'Ekstremni izazov - sveobuhvatno'
         Course4pre:
           title: Preduvjeti za Tečaj 4
           description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve 2 i 3.
@@ -337,7 +337,7 @@ hr:
           The Farmer: Farmer
           Conditionals: Uvjeti
           The Artist 3: Umjetnik 3
-          Song Writing: Skladanje pjesmi
+          Song Writing: Skladanje pjesama
           The Farmer 2: Farmer 2
           Abstraction: Apstrakcija
           The Artist 4: Umjetnik 4
@@ -1404,8 +1404,8 @@ hr:
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
           title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Izradi priču ili načini igru s Ice Age Play Lab!
+          description: Izradi priču ili načini igru s Ice Age Play Lab!
           Ice Age Play Lab: Ice Age Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1458,8 +1458,8 @@ hr:
           Challenge Overview: Challenge Overview
         gumball:
           title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Izradi priču ili načini igru s Gumball Play Lab!
+          description: Izradi priču ili načini igru s Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
@@ -1478,8 +1478,8 @@ hr:
           Craft: Craft
         mc:
           title: Minecraft Sat Kodiranja
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Istraži Minecraft svijet pomoću koda
+          description: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu kroz ovaj svijet Minecrafta
           Hour of Code 2015: Sat kodiranja 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'

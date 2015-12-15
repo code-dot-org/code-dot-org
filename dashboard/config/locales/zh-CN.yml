@@ -399,7 +399,11 @@
       教育顾问</a>在创建代码工作室中给予的支持。
     help_from_html: 特别感谢来自谷歌、 微软、 Facebook 和 Twitter 的工程师帮助创建了本教程。
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
-    art_from_html: 愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。
+    art_from_html: 我的世界 &#8482; &amp; &copy; %{current_year} 微软版权所有。<br />星球大战 &#8482;
+      &amp; &copy; %{current_year} 迪斯尼和卢卡斯影业版权所有。<br /> 冰雪奇缘 &#8482; &amp; &copy;
+      %{current_year} 迪斯尼版权所有。<br /> 冰河世纪 &#8482; &amp; &copy; %{current_year} 20世纪福克斯版权所有。<br
+      />愤怒的小鸟 &#8482; &amp; &copy; 2009年-%{current_year} Rovio 娱乐有限公司版权所有。 <br />植物与僵尸&#8482;
+      &amp; &copy; %{current_year} 电子艺术公司保留所有的权利。
     art_from_html_old: 愤怒的小鸟&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment
       Ltd. 版权所有。<br /> 植物大战僵尸&#8482; &amp; &copy; %{current_year} Electronic Arts
       Inc. 版权所有

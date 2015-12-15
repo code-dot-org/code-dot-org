@@ -768,6 +768,9 @@
         infinity_playlab_intro: Phòng trò chơi - Giới thiệu
         infinity_playlab_events: Sự kiện Phòng Trò Chơi
         infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -821,6 +824,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

@@ -531,42 +531,43 @@
           до Прибульця та попередь усіх про вторгнення
         studio_playlab_10: Створи власну гру. Коли завершиш, натисни кнопку Готово,
           щоб поділитись грою з друзями.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_hello1: Сід хоче зібрати всіх для нової пригоди. Можеш допомогти
+          йому сказати "привіт", перетягуючи блок "говорити" на робочу область, та
+          надрукувавши всередині "привіт"?
+        studio_iceage_hello2: Сід (персонаж 1) знайшов Манні (персонаж 2) і хоче запросити
+          його до пригоди. Допоможи їм привітатись, двічі використавши блок "персонаж
+          говорить".
+        studio_iceage_move_to_flag: Скрет шукає свій жолудь! Допоможи йому пройти
+          останні 200 пікселів, використовуючи блок "рухатись".
+        studio_iceage_move_to_actor: Дієго (персонаж 1) шукає Манні (персонаж 2).
+          Допоможи Дієго пройти 200 пікселів вниз до Манні, використовуючи блок "перемістити
+          персонажа". Далі додай блок до події "коли персонаж торкається", щоб програти
+          звук, коли вони зустрінуться.
+        studio_iceage_repeat: Блок "повторювати завжди" дозволяє виконувати код постійно.
+          Можеш прикріпити блоки так, щоб допомогти Гренні розім'ятись, постійно рухаючись
+          вліво та вправо?
+        studio_iceage_click_hello: Можеш допомогти Сіду зробити останнє оголошення
+          для друзів після клацання? Не забудь клацнути по ньому після того, як натиснеш
+          Запустити.
+        studio_iceage_move_events: Скрет все ще шукає жолуді! Допоможи йому рухатись
+          навколо, прикріпивши блок "рухатись" до кожної з подій та змінюючи напрямок,
+          який має працювати із кожною стрілкою. Коли готово, клацай Запустити і спробуй
+          зібрати усі жолуді.
+        studio_iceage_sound_and_points: Ми підготували більшість коду, який допомагає
+          Гренні рухатись вліво та вправо, так само як і код, який переміщує по екрану
+          Сіда. Можеш завершити цей код і додати блоки до події "коли персонаж торкається",
+          щоб коли Гренні та Сід зіткнуться, і програвався звук, і додавався бал?
+          Натисни "Запустити", щоб пограти в гру.
+        studio_iceage_warn_ice_age: Всім потрібно рухатися швидше, бо наступає Льодовиковий
+          період! Змінюй тло на "айсберги" і встанови швидкість Сіда у високу, а тоді
+          тисни Запустити і переміщуй його до Дієго, щоб попередити.
+        studio_iceage_throw_hearts: Сід хоче повідомити своїй бабусі Гренні, що він
+          її дуже любить. Скористайся командою "актор кидає", щоб Сід (персонаж 1)
+          кинув сердечка для Гренні (персонаж 2)! Налаштуй настрій Гренні у щасливий,
+          коли у неї влучить сердечко.
+        studio_iceage_free_play: Час створити власну гру чи історію! Коли завершиш,
+          клацай Готово, щоб друзі змогли спробувати твою гру на своїх телефонах,
+          планшетах та комп'ютерах!
         studio_gumball_hello1: Анаїт хоче з кимось подружитись. Можеш допомогти їй
           сказати "привіт", перетягуючи блок "говорити" у робочу область і друкуючи
           слово "привіт" вспередині?
@@ -746,6 +747,9 @@
         infinity_playlab_intro: Ігрова лабораторія - Вступ
         infinity_playlab_events: Ігрова лабораторія - Події
         infinity_playlab_repeat_forever: Ігрова лабораторія - Повторювати завжди
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -802,6 +806,9 @@
         gumball_intro: Година коду Гамбола - Вступ
         gumball_events: Година коду Гамбола - Події
         gumball_repeat: Година коду Гамбола - Команди повторення
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

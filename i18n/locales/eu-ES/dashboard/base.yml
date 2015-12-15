@@ -403,9 +403,9 @@ eu:
     privacy: Pribatutasun politika
     secure: Bertsio segurua
     report_abuse: Erabilera okerra jakinarazi
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Code Studio-n oinarrituta
+    make_my_own_app: Nere app-a egin
+    how_it_works: Funtzionamendua
   reference_area:
     title: Laguntzarik behar?
     subtitle: Ikusi bideo eta aholku hauek
@@ -462,7 +462,7 @@ eu:
       unused: Erabili gabeko mailak
   upsell:
     hoc:
-      title: Kode ordua
+      title: Classic Maze
       body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
     flappy:
       title: Flappy Code

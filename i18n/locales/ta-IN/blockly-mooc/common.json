@@ -165,7 +165,7 @@
   "extraTopBlocks":"You have unattached blocks.",
   "extraTopBlocksWhenRun":"You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "finalStage":"வாழ்த்துக்கள்! நீங்கள் இறுதிக் கட்டத்தை நிறைவு செய்துள்ளீர்கள்.",
-  "finalStageTrophies":"Congratulations! You have completed the final stage and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
+  "finalStageTrophies":"Congratulations! You have completed the final puzzle and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish":"Finish",
   "generatedCodeInfo":"Even top universities teach block-based coding (e.g., {berkeleyLink}, {harvardLink}). But under the hood, the blocks you have assembled can also be shown in JavaScript, the world's most widely used coding language:",
   "hashError":"மன்னிக்கவும், '%1' எந்த சேமிக்கப்பட்ட நிரலுடனும் பொருந்தவில்லை.",

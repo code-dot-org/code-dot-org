@@ -44,4 +44,3 @@ Beritahukan teman mengenai **#HourOfCode**!
 
 [Kirim email ini](<%= resolve_url('/promote/resources#sample-emails') %>) ke perwakilan setempat, dewan kota, atau dewan sekolah dan mengundang mereka untuk mengunjungi sekolah Anda untuk Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
 
-<%= view :signup_button %>

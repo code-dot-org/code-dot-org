@@ -395,7 +395,7 @@ it:
         text: Adesso impari un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge una azione.
       2:
         image: notes/playlab_events_2.png
-        text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo sullo schermo."
+        text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo."
       3:
         image: notes/playlab_events_3.png
         text: |-
@@ -1260,17 +1260,17 @@ it:
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Una variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un algoritmo, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere algoritmi intelligenti che si comportano in maniera differente a seconda del valore memorizzato nella variabile.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: "Now you're going to try playlab where you are given different games and you can change the values of variables like speed, height, score, in order to change the game. You won't have to change the algorithm of the game to change how it plays, just the variable."
+        text: "Stai per provare il Laboratorio in cui ti verranno proposti diversi giochi in cui potrai cambiare i valori di alcune variabili come la velocità, l'altezza o il punteggio, in modo tale da personalizzare il gioco proposto. Non dovrai modificare l'algoritmo del gioco per cambiarne il comportamento, dovrai concentrarti solo sulle variabili. "
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in many different ways. One way that you can use a variable is to store page numbers of a book. A user can increase and decrease the size of the font on a page. Based on the font size, the number of pages in the book can change. We can adjust it by storing the number of pages in the variable.
+        text: "Nel mio lavoro per Kindle e sull'X-ray per i libri, noi usiamo le variabili in molti modi. Uno dei modi in cui si può usare una variabile è per memorizzare il numero di pagine di un libro. Un utente può aumentare o diminuire la grandezza dei caratteri di una pagina. A seconda della grandezza del carattere, il numero di pagine di un libro può cambiare. Possiamo risolvere il problema memorizzando il numero di pagine in una variabile."
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: "Adesso imparerai un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge un'azione. Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo sullo schermo."
+        text: "Adesso imparerai un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge un'azione. Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo."
       2:
         image: notes/infinity_playlab_events_2.png
         text: |-
@@ -1616,123 +1616,132 @@ it:
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: 'Mi chiamo Jens Bergensten, ma sono conosciuto come Jeb. Sono lo sviluppatore capo di Minecraft qui in Mojang a Stoccolma. Ho iniziato a programmare quando avevo circa 11 o 12 anni perché volevo creare videogiochi. Un amico di mio padre mi disse che per creare giochi bisogna prima imparare a programmare. È così che ho cominciato. Mi piace progettare e comprendere la struttura delle cose. È questo che più amo di Minecraft. '
+        text: "Il mio nome è Jens Bergensten, ma tutti mi chiamano Jeb. Sono il capo sviluppatore di Minecraft, qui alla Mojang di Stoccolma. Penso di aver avuto undici anni, o forse dodici, quando ho cominciato a programmare, perché volevo creare dei giochi. Uno degli amici di mio padre mi aveva detto che, per creare dei giochi, dovevo imparare a programmare. Ecco come ho iniziato. Mi piace immaginare e progettare l'architettura dei giochi. Questo è ciò che mi piace veramente di Minecraft."
       2:
         image: notes/mc_intro_2.JPG
-        text: "Nella prossima ora imparerete le basi della programmazione facendo muovere Alex o Steve all'interno di un mondo simulato di Minecraft."
+        text: "Nella prossima ora, imparerai i concetti base dell'informatica dando istruzioni a Steve o Alex in modo da farli muovere nel mondo virtuale di Minecraft."
       3:
         image: notes/mc_intro_3.JPG
-        text: In genere la programmazione avviene tramite testo, ma oggi useremo il blockly, un sistema che permette di scrivere programmi afferrando e trascinando blocchi. In realtà, state scrivendo codice JavaScript.
+        text: 'I programmi tradizionali sono di solito del testo detto "codice". Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono uniti per scrivere programmi. Anche se usi i blocchi, in realtà stai scrivendo del codice JavaScript.'
       4:
         image: notes/mc_intro_4.JPG
-        text: "I concetti che imparerete vengono usati ogni giorno dai programmatori e sono i fondamenti dell'informatica. Qui in Mojang usiamo questi stessi concetti per far funzionare Minecraft."
+        text: |-
+          I concetti che stai per apprendere ("commands"=istruzioni, "repeat blocks"=blocchi di ripetizione, "if statements"=istruzioni 'se') sono usati ogni giorno dai programmatori di computer e sono le basi dell'informatica. Qui a Mojang, utilizziamo questi stessi concetti per realizzare Minecraft.
       5:
         image: notes/mc_intro_5.JPG
-        text: Prima di iniziare dobbiamo scegliere un personaggio. Io userò Alex. Scriviamo insieme il codice per un programma che le permetta di muoversi per lo schermo.
+        text: Prima di iniziare, devi scegliere il tuo personaggio. Io scelgo Alex. Realizziamo del codice per un programma che la fa muovere sullo schermo.
       6:
         image: notes/mc_intro_6.JPG
-        text: Il vostro schermo è ora diviso in tre parti. Sulla sinistra si trova la schermata di Minecraft, in cui girerà il vostro programma. Sotto ci sono le istruzioni per ogni livello.
+        text: |-
+          Il tuo schermo è suddiviso in tre parti principali. Sulla sinistra si trova l'area di gioco ("play space") di Minecraft, dove viene eseguito il programma. Le spiegazioni di ogni esercizio ("instructions") sono scritte sotto quest'area.
       7:
         image: notes/mc_intro_7.JPG
-        text: "Nell'area centrale si trovano i blocchi che verranno usati come comandi per Alex."
+        text: |-
+          Questa zona centrale è la cassetta degli attrezzi ("tool box"). Ognuno di questi blocchi è un'istruzione che dirige le azioni di Alex.
       8:
         image: notes/mc_intro_8.JPG
-        text: "L'area sulla destra si chiama spazio di lavoro ed è dove creeremo il nostro programma."
+        text: 'Lo spazio bianco sulla destra è la tua area di lavoro ("workspace") ed è il posto in cui costruisci il tuo programma.'
       9:
         image: notes/mc_intro_9.JPG
-        text: 'Se spostiamo il blocco "muovi avanti" nello spazio di lavoro e clicchiamo Run, che succede? Alex si muove di un passo sulla griglia.'
+        text: |-
+          Se sposti il blocco "moveForward" (vai avanti) nell'area di lavoro come illustrato e premi il pulsante "Esegui", cosa succede? Alex si sposta di una casella avanti sulla griglia.
       10:
         image: notes/mc_intro_10.JPG
         text: |-
-          E se volessimo farle compiere un'altra azione dopo essersi mossa? Possiamo aggiungere un altro blocco al programma. Prendo il blocco "gira a destra" e lo posiziono sotto il blocco "muovi avanti" finché non appare questa linea arancione. Quindi lo lascio e i due blocchi si uniranno. Se premiamo ancora Run, Alex eseguirà tutti i comandi dall'alto in basso sullo spazio di lavoro.
+          E cosa puoi fare se vuoi che Alex faccia qualcosa dopo essere avanzata di una casella? Puoi aggiungere un altro blocco al programma. Scegli il blocco "turnRight" (gira a destra) e spostalo sotto il blocco "moveForward" che hai aggiunto prima. Non appena appare una linea gialla sul contorno puoi rilasciarlo e i due blocchi si agganceranno. Se premi nuovamente "Esegui", Alex esegue le istruzioni associate ai blocchi presenti nell'area di lavoro, procedendo dall'alto verso il basso.
       11:
         image: notes/mc_intro_11.JPG
-        text: Se volete rimuovere un blocco, è sufficiente trascinarlo indietro.
+        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro e rimetterlo nella cassetta degli attrezzi.
       12:
         image: notes/mc_intro_12.JPG
-        text: "Per annullare le azioni e ricominciare dal principio, usate il pulsante Start Over in alto a destra dello spazio di lavoro. Un'altra cosa: vedete il piccolo triangolo sui blocchi di movimento? Se è visualizzato, significa che è possibile scegliere diverse opzioni. Ora iniziamo a programmare!"
+        text: |-
+          Per annullare le modifiche e tornare nella situazione iniziale, usa il pulsante "Ripristina" che trovi sull'angolo in alto a destra della tua area di lavoro. Un'ultima cosa: hai notato il triangolino con la punta verso il basso nei blocchi "gira a ...."? Ogni volta che vedi questi triangolini, significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia a programmare!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: Sono Lydia Winters, direttore del marchio di Mojang, dove abbiamo creato un giochino chiamato Minecraft.
+        text: 'Sono Lydia Winters, sono "brand director" alla Mojang, che ha realizzato questo gioco chiamato Minecraft.'
       2:
         image: notes/mc_repeat_2.JPG
-        text: "Quello che più mi piace di Minecraft è l'esplorazione. Adoro entrare nelle caverne e vedere cosa riesco a trovare. Da profana della programmazione, non vedo l'ora di imparare a creare qualcosa di mio con Minecraft."
+        text: "La cosa che preferisco fare in Minecraft è esplorare. Amo avventurarmi nelle grotte e vedere cosa riesco a trovare. Come chiunque altro che non sia un programmatore, sono davvero entusiasta di seguire queste lezioni con Minecraft e d'imparare anch'io un po' di codice."
       3:
         image: notes/mc_repeat_3.JPG
         text: |-
-          Per l'ultimo livello ci sono voluti moltissimi blocchi "muovi avanti". Sarebbe stato più semplice dire al computer di eseguire questo comando quattro o cinque volte. Fortunatamente, i computer sanno ripetere i comandi con i loop.
+          L'ultimo esercizio ha richiesto un bel po' di blocchi "vai avanti" (move forward). Sarebbe stato più semplice se avessimo potuto dire al computer di eseguire quattro o cinque volte l'istruzione "vai avanti". Fortunatamente, i computer sono davvero bravi a ripetere le istruzioni usando il blocco "ripeti ... volte" (repeat ... times).
       4:
         image: notes/mc_repeat_4.JPG
-        text: Nel programmare Minecraft, abbiamo usato i loop per posizionare tutti i materiali iniziali e creare un nuovo mondo. Migliaia e migliaia di blocchi. Usiamo i loop anche per operazioni minori, come far muovere i piedi di Alex avanti e indietro mentre cammina. I loop sono uno strumento molto potente.
+        text: 'Durante la creazione di Minecraft, usiamo i blocchi di ripetizione (detti anche "cicli") per posizionare tutti i materiali necessari a creare un nuovo mondo. Sono migliaia e migliaia di blocchi. Usiamo i cicli anche in altri modi, ad esempio per far muovere i piedi di Alex avanti e indietro mentre cammina. I cicli giocano un ruolo importantissimo nella programmazione.'
       5:
         image: notes/mc_repeat_5.JPG
-        text: Sta calando la notte, quindi nei prossimi livelli costruiremo una casa per stare al sicuro. Useremo i loop per crearla molto facilmente.
+        text: 'Sta per scendere la notte e quindi, nei prossimi due livelli, devi costruire una casa per stare al sicuro. Useremo il blocco "ripeti ... volte" per farlo in maniera molto semplice.'
       6:
         image: notes/mc_repeat_6.JPG
-        text: Per costruire un muro, possiamo dire ad Alex di spostarsi avanti e posizionare le assi quattro volte, oppure di muoversi e posizionare una sola asse, quindi usare il loop per farle compiere questa azione più volte. Ora clicchiamo sul blocco per dirle quante volte dovrà eseguire questa azione. Costruiamo la nostra casa prima che cali la notte! Buon divertimento.
+        text: |-
+          Per costruire un muro della tua casa, puoi dire ad Alex di andare avanti e mettere le assi di legno per quattro volte di fila, oppure puoi dirle di andare avanti e mettere le assi di legno una sola volta, poi spostare queste due istruzioni all'interno di un blocco "ripeti ... volte" per farle eseguire queste azioni più volte. Poi inserisci nel blocco "ripeti ... volte" il numero di volte che vuoi che ripeta queste azioni. Ed ora costruisci la tua casa prima che scenda la notte! E buon divertimento.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Ora impareremo le dichiarazioni if. Si tratta di un elemento chiave della programmazione, che aiuta i computer a prendere decisioni.
+        text: 'Stai per imparare le istruzioni "se" (if). Le istruzioni "se" sono una parte fondamentale della programmazione. Danno al computer la possibilità di prendere delle decisioni.'
       2:
         image: notes/mc_if_statements_2.JPG
-        text: Tutti i computer le usano, anche il mio cellulare. Quando sblocco il telefono, si attiva un codice che determina se la password è corretta, quindi sblocca il telefono. Altrimenti viene mostrato un messaggio di errore.
+        text: 'Tutti i computer usano le istruzioni "se", compreso il mio telefono. Per esempio, quando sblocco il mio telefono, lui esegue del codice che dice che se inserisco la password correttamente, allora il telefono si deve sbloccare. Altrimenti, deve mostrare un messaggio di errore.'
       3:
         image: notes/mc_if_statements_3.JPG
-        text: "Potete usare le dichiarazioni if per far reagire Steve e Alex a quello che vedono all'interno del mondo. Per esempio, se c'è una roccia di fronte a loro, possono girare a sinistra. Oppure a destra se incontrano un albero."
+        text: |-
+          Nel tuo codice puoi usare le istruzioni "se" per far agire Steve e Alex in base a ciò che vedono nel mondo. Per esempio, se di fronte a loro c'è una roccia, possono girare a sinistra. Oppure possono girare a destra se si imbattono in un albero.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In questo caso, non vogliamo cadere nella lava. È facile evitare la lava, possiamo vederla sullo schermo. Ma come facciamo per quella che si trova sotto la pietra?
+        text: In questo caso, non vuoi che cadano nella lava. È facile evitare la lava quando la vedi sullo schermo. Ma cosa puoi fare se la lava è nascosta sotto la roccia?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "Dopo aver scavato la pietra, dobbiamo controllare che non ci sia lava prima di proseguire. Se c'è, dobbiamo posizionare della pietra di fronte al nostro personaggio per poterci muovere. In questo modo possiamo avanzare in tutta sicurezza. È tempo di scavare! Ricordate di usare le dichiarazioni if per evitare rischi inutili."
+        text: |-
+          Dopo che hai scavato la roccia, devi controllare se c'è della lava prima di poter andare avanti. Se c'è della lava, devi mettere una lastra di pietra prima di proseguire. In questo modo puoi avanzare tranquillamente. È il momento di scavare altra roccia! E ricordati di usare l'istruzione "se" per fare attenzione a dove metti i piedi.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulazioni! Avete appena imparato i fondamentali della programmazione.
+        text: "Complimenti! Hai appena imparato i concetti di base dell'informatica."
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Ora potete usare questi blocchi per le vostre creazioni. Non ci sono ulteriori istruzioni o puzzle da risolvere. Potrete creare tutto quello che volete. A voi la scelta.
+        text: Ora puoi usare questi blocchi per creare qualcosa di tuo. Non ci sono più indicazioni o esercizi da risolvere. Puoi costruire qualunque cosa tu voglia. A te la scelta.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[studenti] Sta diventando reale. Tosa. Ho fatto una L con le torce. Ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa con la lana!'
+        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa di lana!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: Quando avete finito di creare, cliccate Share per ottenere un link da condividere con gli amici. Buon divertimento!
+        text: 'Quando hai finito di creare la tua versione del gioco, clicca su "Condividi" (Share) per ottenere un link da condividere con i tuoi amici o per giocare sul tuo telefono con la tua versione del gioco. Buon divertimento!'
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulazioni! Avete appena imparato i fondamentali della programmazione.
+        text: "Complimenti! Hai appena imparato i concetti di base dell'informatica."
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Ora potete usare questi blocchi per le vostre creazioni. Non ci sono ulteriori istruzioni o puzzle da risolvere. Potrete creare tutto quello che volete. A voi la scelta.
+        text: Ora puoi usare questi blocchi per creare qualcosa di tuo. Non ci sono più indicazioni o esercizi da risolvere. Puoi costruire qualunque cosa tu voglia. A te la scelta.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[studenti] Sta diventando reale. Tosa. Ho fatto una L con le torce. Ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa con la lana!'
+        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona. Abbiamo costruito una casa di lana!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Ora potete creare tutto quello che volete. Buon divertimento!
+        text: Ora puoi costruire qualunque cosa tu voglia. Buon divertimento!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: Se vuoi creare un gioco per conto tuo, puoi farlo! Tutto ciò che ti serve sono alcuni concetti fondamentali di programmazione e potrai iniziare a giocare ad un gioco fatto da te.
       2:
         image: notes/gumball_intro_2.JPG
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: "Hai un videogioco preferito? Beh, stiamo per fare il primo passo verso la creazione di un gioco proprio come hai fatto nel Laboratorio. I buoni giochi hanno una storia e ogni storia ha dei personaggi. I personaggi fanno delle cose, come parlare, spostarsi e interagire l'un l'altro. Potrebbero anche guadagnare dei punti in base alle regole del gioco. Oggi impareremo come fare tutte queste cose, una alla volta, con dei personaggi divertenti. Costruirai un gioco a partire da zero e poi potrai condividerlo con i tuoi amici e giocarci sul tuo telefono."
       3:
         image: notes/gumball_intro_3.JPG
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Oggi impareremo come fare tutte queste cose, una alla volta, con dei personaggi divertenti. Costruirai un gioco a partire da zero e poi potrai condividerlo con i tuoi amici e giocarci sul tuo telefono.
       4:
         image: notes/gumball_intro_4.JPG
         text: |-
           Lo schermo è diviso in tre parti principali. Sulla sinistra c'è l' "area di gioco", dove viene eseguito il programma. Le spiegazioni per ciascun esercizio sono scritte sotto quest'area.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: |-
+          La zona centrale è la "cassetta degli attrezzi": ognuno di questi blocchi corrisponde ad un'istruzione.
       6:
         image: notes/gumball_intro_6.JPG
-        text: "L'area sulla destra si chiama spazio di lavoro ed è dove creeremo il nostro programma."
+        text: 'Lo spazio bianco sulla destra è la tua area di lavoro ("workspace") ed è il posto in cui costruisci il tuo programma.'
       7:
         image: notes/gumball_intro_7.JPG
         text: |-
@@ -1740,7 +1749,7 @@ it:
       8:
         image: notes/gumball_intro_8.JPG
         text: |-
-          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+          In questo primo esercizio, faremo dire qualcosa ai personaggi attaccando il blocco "pronuncia" al blocco 'quando si clicca su "Esegui" ' e scrivendo qualcosa al suo interno. Una volta che i blocchi sono stati posizionati, clicca il pulsante "Esegui" per vedere quello che hai programmato.
       9:
         image: notes/gumball_intro_9.JPG
         text: "Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco con tanti tipi di giocatori che possono interagire, guadagnare punti, lanciare oggetti o perfino farsi scomparire l'un l'altro. Dipende tutto da te!"
@@ -1750,14 +1759,15 @@ it:
         text: Adesso imparerai un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge una azione.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo."
       3:
         image: notes/gumball_events_3.JPG
         text: |-
-          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+          In questo esercizio, faremo dire qualcosa al personaggio quando il giocatore clicca su di lui. Usa il blocco "quando si clicca sul personaggio" ('when actor clicked') attaccandoci sotto un blocco "pronuncia" ('say'). Quando il giocatore clicca sul personaggio, tutto ciò che è attaccato al blocco "quando si clicca sul personaggio" viene eseguito.
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+        text: |-
+          Ci sono anche i blocchi  "quando si preme la freccia ..." ('when ... arrow'). Se gli colleghi i blocchi "sposta il personaggio ..." ('move ...'), puoi iniziare a muovere gli attori in su, in giù, a sinistra o a destra. Passo dopo passo, il tuo  gioco diventa sempre più interattivo.
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
@@ -1768,4 +1778,62 @@ it:
           Questo è il blocco "ripeti per sempre". Qualsiasi istruzione all'interno di questo blocco verrà ripetuta in continuazione durante il gioco. Se vogliamo che un personaggio faccia qualcosa in continuazione, senza che il giocatore faccia nulla, metteremo i relativi blocchi all'interno del blocco "ripeti per sempre".
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In questo esercizio, il nostro obiettivo è di aiutare il personaggio a fare un lavoro in continuazione. Imparare come funzionano i comandi di ripetizione ti farà risparmiare un sacco di tempo più tardi quando costruirai il tuo gioco.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Se vuoi creare un gioco per conto tuo, puoi farlo! Tutto ciò che ti serve sono alcuni concetti fondamentali di programmazione e potrai iniziare a giocare ad un gioco fatto da te.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Hai un videogioco preferito? Beh, stiamo per fare il primo passo verso la creazione di un gioco proprio come hai fatto nel Laboratorio. I buoni giochi hanno una storia e ogni storia ha dei personaggi. I personaggi fanno delle cose, come parlare, spostarsi e interagire l'un l'altro. Potrebbero anche guadagnare dei punti in base alle regole del gioco. Oggi impareremo come fare tutte queste cose, una alla volta, con dei personaggi divertenti. Costruirai un gioco a partire da zero e poi potrai condividerlo con i tuoi amici e giocarci sul tuo telefono."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Oggi impareremo come fare tutte queste cose, una alla volta, con dei personaggi divertenti. Costruirai un gioco a partire da zero e poi potrai condividerlo con i tuoi amici e giocarci sul tuo telefono.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: |-
+          Lo schermo è diviso in tre parti principali. Sulla sinistra c'è l' "area di gioco", dove viene eseguito il programma. Le spiegazioni per ciascun esercizio sono scritte sotto quest'area.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: |-
+          La zona centrale è la "cassetta degli attrezzi": ognuno di questi blocchi corrisponde ad un'istruzione.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: 'Lo spazio bianco sulla destra è la tua area di lavoro ("workspace") ed è il posto in cui costruisci il tuo programma.'
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: |-
+          Per cominciare, è necessario collegare i blocchi al blocco arancione 'quando si clicca su "Esegui" '. È possibile collegare più blocchi insieme trascinandoli fino a che non vedrai formarsi la linea gialla di contorno e non si attaccheranno tra loro.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In questo primo esercizio, faremo dire qualcosa ai personaggi attaccando il blocco "pronuncia" al blocco 'quando si clicca su "Esegui" ' e scrivendo qualcosa al suo interno. Una volta che i blocchi sono stati posizionati, clicca il pulsante "Esegui" per vedere quello che hai programmato.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco con tanti tipi di giocatori che possono interagire, guadagnare punti, lanciare oggetti o perfino farsi scomparire l'un l'altro. Dipende tutto da te!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Adesso imparerai un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge una azione.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo."
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          In questo esercizio, faremo dire qualcosa al personaggio quando il giocatore clicca su di lui. Usa il blocco "quando si clicca sul personaggio" ('when actor clicked') attaccandoci sotto un blocco "pronuncia" ('say'). Quando il giocatore clicca sul personaggio, tutto ciò che è attaccato al blocco "quando si clicca sul personaggio" viene eseguito.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: |-
+          Ci sono anche i blocchi  "quando si preme la freccia ..." ('when ... arrow'). Se gli colleghi i blocchi "sposta il personaggio ..." ('move ...'), puoi iniziare a muovere gli attori in su, in giù, a sinistra o a destra. Passo dopo passo, il tuo  gioco diventa sempre più interattivo.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Puoi immaginare di dover ripetere qualcosa per sempre? Fortunatamente non dovrai mai farlo visto che i computer sono veramente bravi nel ripetere le cose.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: |-
+          Questo è il blocco "ripeti per sempre". Qualsiasi istruzione all'interno di questo blocco verrà ripetuta in continuazione durante il gioco. Se vogliamo che un personaggio faccia qualcosa in continuazione, senza che il giocatore faccia nulla, metteremo i relativi blocchi all'interno del blocco "ripeti per sempre".
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In questo esercizio, il nostro obiettivo è di aiutare il personaggio a fare un lavoro in continuazione. Imparare come funzionano i comandi di ripetizione ti farà risparmiare un sacco di tempo più tardi quando costruirai il tuo gioco.

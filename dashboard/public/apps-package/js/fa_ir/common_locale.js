@@ -319,7 +319,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "examplesFailedOnClose":function(d){return "یک یا بیشتر از مثال های شما با تعریف شما همخوانی ندارند. مثال هایتان را قبل از بستن چک کنید"},
 "extraTopBlocks":function(d){return "شما بلوک های جدا از هم داری."},
 "extraTopBlocksWhenRun":function(d){return "بلوک های جدا از هم داری. آیا می خواهی که این ها را به بلوک \"when run\" وصل کنی؟"},
-"finalStage":function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید."},
+"finalStage":function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."},
 "finalStageTrophies":function(d){return "آفرین! شما مرحله‌ی نهایی را به پایان رساندید و برنده‌ی "+common_locale.p(d,"numTrophies",0,"fa",{"one":"یک جایزه","other":common_locale.n(d,"numTrophies")+" جایزه"})+" شدید."},
 "finish":function(d){return "تمام کن"},
 "generatedCodeInfo":function(d){return "دانشگاههای برتر نیز کدنویسی بر اساس بلوک ها را آموزش می دهند (مثل "+common_locale.v(d,"berkeleyLink")+" و "+common_locale.v(d,"harvardLink")+"). اما در پشت پرده، بلوک هایی که شما سر هم کرده اید را می توان به زبان جاوا اسکریپت نشان داد، که پر استفاده ترین زبان کدنویسی در دنیاست:"},

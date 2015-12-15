@@ -26,7 +26,7 @@
   "honeyTooltip":"Produce miele dal nettare",
   "honeycombFullError":"Il favo non ha più spazio per altro miele.",
   "ifCode":"se",
-  "ifInRepeatError":"Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se non ci riesci, prova di nuovo il livello precedente per vedere come funzionava.",
+  "ifInRepeatError":"Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se non ci riesci, prova di nuovo l'esercizio precedente per vedere come funzionava.",
   "ifPathAhead":"se c'è strada in avanti",
   "ifTooltip":"Se c'è strada nella direzione specificata, allora esegue alcune azioni.",
   "ifelseTooltip":"Se c'è strada nella direzione specificata, allora esegue il primo blocco di azioni. Altrimenti, esegue il secondo.",

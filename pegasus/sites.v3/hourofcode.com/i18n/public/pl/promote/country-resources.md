@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Pokaż uczniom inspiracyjny filmik żeby wystartować Godzinę Kodowania. Przyk�
 
 <% end %>
 
-<%= view :signup_button %>

@@ -320,7 +320,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "extraTopBlocks":function(d){return "你有一些流浪在外的區塊。"},
 "extraTopBlocksWhenRun":function(d){return "你有一些在外面流浪的區塊喔。你是不是要讓它們回到「當按下執行時」的積木身邊？"},
 "finalStage":function(d){return "恭喜你 ！你已完成最後關卡的挑戰。"},
-"finalStageTrophies":function(d){return "恭喜! 你已完成最後關卡並且贏得了 "+common_locale.p(d,"numTrophies",0,"zh",{"one":"1 個獎盃","other":common_locale.n(d,"numTrophies")+" 個獎盃"})+"。"},
+"finalStageTrophies":function(d){return "恭喜! 你已完成最後關卡並且贏得 "+common_locale.p(d,"numTrophies",0,"zh",{"one":"一個獎盃","other":common_locale.n(d,"numTrophies")+" 獎盃"})+"."},
 "finish":function(d){return "完成 "},
 "generatedCodeInfo":function(d){return "就連頂尖大學也使用程式積木來進行程式教學（例如： "+common_locale.v(d,"berkeleyLink")+", "+common_locale.v(d,"harvardLink")+"）。但是藏在底下的是，你所組裝的每個程式積木都可以用 JavaScript 語法（世界上使用最廣的程式語言之一）來表示："},
 "hashError":function(d){return "對不起，'%1' 無法對應任何已儲存的程式。"},

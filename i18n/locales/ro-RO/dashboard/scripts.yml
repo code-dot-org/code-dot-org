@@ -148,7 +148,7 @@ ro:
           description_short: Desenează poze şi proiecte mişto cu Artistul!
         hourofcode:
           Maze: Labirint
-          title: Oră de Programare
+          title: Classic Maze
           description: Încercaţi bazele informaticii cu personaje din Angry Birds, Plants vs Zombies şi Scrat din Ice Age!
           description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
         frozen:
@@ -1033,7 +1033,7 @@ ro:
           title: Ora de cod 2015
           description_short: Utilizează Laboratorul de joacă pentru a crea o poveste sau un joc.
           description: Utilizează Laboratorul de joacă pentru a crea o poveste sau un joc.
-          Hour of Code: Oră de Programare
+          Hour of Code: Ora de Programare
           Hour of Code 2015: Ora de cod 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1481,7 +1481,7 @@ ro:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Ora de Cod Minecraft
+          title: Ora de Programare Minecraft
           description_short: Explorează o lume Minecraft programând
           description: Folosim blocuri de instructiuni pentru a-l lua pe Steve sau Alex într-o aventură prin aceasta lume Minecraft
           Hour of Code 2015: Ora de cod 2015

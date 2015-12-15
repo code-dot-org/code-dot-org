@@ -69,29 +69,29 @@ hi:
     teacher_count: '%{count} शिक्षकों जिनहोने पहले ही साइन अप किया हैं'
     overview_student: 'अपनी प्रगति को मापने के लिए एक खाते के लिए साइन अप करें. आपका ईमेल मुख्य रूप से आप में और पासवर्ड वसूली के लिए लॉग इन करने की अनुमति देने के लिए प्रयोग किया जाता है. अधिक जानकारी के लिए, देखिए हमारी <a href="http://code.org/privacy">गोपनीयता नीति</a>.'
     overview_teacher: 'एक खाते के लिए साइन अप करने से अपनी कक्षा में कंप्यूटर विज्ञान पढाईए ।<p/> आप अपने छात्रों को जोड़ने और उनकी प्रगति को मापने में सक्षम हो सकते हैं ।'
-    no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
-    teacher_educator_guide: See educator guide
-    teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
-    school_name: School Name (optional)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    no_signup_message: 'आप <a target="_blank" href="http://learn.code.org">विभिन्न चरणों और पहेली ब्राउज़ कर सकते हैं</a>, लेकिन अगर आप अपनी प्रगति बचाना चाहते हो, तो साइन अप करने की आवश्यकता होगी ।'
+    teacher_educator_guide: शिक्षक मार्गदर्शिका देखें
+    teacher_pitch: कोड.ऑर्ग साइन अप शिक्षक के लिए
+    teacher_title: शिक्षक के लिए साइन अप
+    student_pitch: कोड.ऑर्ग साइन अप छात्र के लिए
+    student_title: छात्र के लिए साइन अप
+    school_name: स्कूल का नाम (यदि आप चाहते हैं)
+    school_address: स्कूल का पता (यदि आप चाहते हैं)
+    address_placeholder: पता, शहर, राज्य, पिन
+    gender: लिंग (यदि आप चाहते हैं)
+    birthday: जन्मदिन (यदि आप चाहते हैं)
     age: आयु
-    user_type: Are you a student or teacher?
+    user_type: आप एक छात्र या शिक्षक हैं?
     submit: Sign up
-    teacher: Are you a teacher?
-    valid_username: Available!
-    invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
-    valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
-    mismatch_password: The two passwords you entered do not match
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
+    teacher: क्या आप एक शिक्षक हैं?
+    valid_username: उपलब्ध!
+    invalid_username: प्रयोक्ता नाम कम से कम पाँच अक्षरों का होना चाहिए
+    taken_username: ये प्रयोक्ता का नाम पहले से लिया है
+    valid_password: वैध पासवर्ड!
+    invalid_password: पासवर्ड कम से कम ६ अंकों का होना चाहिए
+    mismatch_password: आपके द्वारा दर्ज दो पासवर्ड एक समान नहीं हैं
+    student_terms: "मैं कोड.ऑर्ग से बंधे होने के लिए सहमत हूँ<a href='http://code.org/tos'>terms of service</a>। अगर मैं १३ वर्ष से कम उम्र का हूँ, तो इस फार्म के जमा करने से इस बात की पुष्टि है कि कोड.ऑर्ग कि सेवाएं उपयोग करने के लिए मेरे माता-पिता या कानूनी अभिभावक की अनुमति है ।<br/>१३ के तहत उपयोगकर्ताओं के लिए, ईमेल पतों को एक रूप में संग्रहीत नहीं कर सकते कि हमें उनसे संपर्क करने की अनुमति देता है ।"
+    teacher_terms: "मैं कोड.ऑर्ग कि<a href='http://code.org/tos'>सेवा की शर्तें</a> से बंधे होने के लिए सहमत हूँ"
     additional_information: We need some additional information to continue signing you up.
   signin_form:
     title: Have an account already? Sign in
@@ -463,7 +463,7 @@ hi:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code

@@ -200,10 +200,10 @@ he:
       not_earned: 'למד את כל המושגים של מדעי המחשב, אסוף את כל ה%{num_trophies} גביעים, וזכה בפרסים אמיתיים. אתה יכול לבחור בין 10GB של מקום בדרופבוקס חינם, $10 בקרדיטים של Skype, והורדות של משחקים בחינם. הערה: הצעה זו תקפה רק לתושבי ארה"ב, ורק כל עוד נשאר במלאי.'
       teacher:
         earned: '15 או יותר תלמידים אספו % {num_trophies} גביעים, שהם כל הגביעים. זכית בפרס המורה! (מורים בארה"ב בלבד)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+        not_earned_title: 'למד את הכיתה, והרווח עד 1,000 דולר בקרדיטים <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (מורים בארה״ב בלבד)'
         not_earned: 'רק למורים בבי"ס ציבוריים בארה"ב: כדי לתגמל מורים המלמדים בפעם הראשונה מדעי-המחשב, את/ה יכול/ה להרוויח עד $1000 ב<a href="http://DonorsChoose.org"> קרדיטים על הנחיית כיתה בכל קורס המבוא (K-8). כדי להיות רשאיים לקבל את הפרס, עליכם להנחות בהצלחה כיתה של לפחות 15 תלמידים בכל קורס המבוא, שכל 15 התלמידים גומרים את שיעורי ההדרכה, ומקבלים את כל ה%{num_trophies} גביעים. אם יותר מ7 מהתלמידים המקבלים את כל הגביעים הם בנות, הפרס שלך הוא $1000 ב<a target="_blank" href="http://DonorsChoose.org"> קרדיטים. אחרת, הפרס שלך הוא $750 ב<a target="_blank" href="http://DonorsChoose.org"> קרדיטים.  בקרדיטים של <a target="_blank" href="http://DonorsChoose.org"> רק מורים בבי"ס ציבוריים בארה"ב יכולים להשתמש.'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: 'אתה עדיין יכול להרוויח 250 דולר נוספים בקרדיטים <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (מורים בארה״ב בלבד)'
           earned: '7 או יותר מהתלמידים שקיבלו את כל ה%{num_trophies} גביעים הם בנות. קיבלת פרס בונוס! (רק למורים מארה"ב.)'
           not_earned: 'אם לפחות 7 מהתלמידים שלך שקיבלו את כל ה%{num_trophies} גביעים הם בנות, הפרס שלך הוא $250 בונוס ב<a target="_blank" href="http://DonorsChoose.org"> קרדיטים. רק מורים בבי"ס ציבוריים בארה"ב יכולים להשתמש בקרדיטים של <a target="_blank" href="http://DonorsChoose.org">.'
   crud:
@@ -325,14 +325,14 @@ he:
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_wrong_email: (כתובת דוא״ל שגויה?)
     email_resend_confirm: 'שלח מחדש הוראות אישור דוא"ל'
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים שלך)
     delete: מחק את החשבון שלך
-    delete_text: Clicking the button below will delete your account.
+    delete_text: לחיצה על הכפתור למטה תמחק את החשבון שלך.
     delete_text_teacher_note: 'שים לב: מחיקת החשבון שלך לא תגרום למחיקת חשבונות התלמידים שלך.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete_confirm: האם אתה בטוח שברצונך למחוק את החשבון שלך?
   user_level:
     completed: הושלם
     tried: נוסה
@@ -413,7 +413,7 @@ he:
     report_abuse: Report Abuse
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
-    how_it_works: How it works
+    how_it_works: איך זה עובד
   reference_area:
     title: צריך עזרה?
     subtitle: לראות את קטעי וידאו ורמזים
@@ -470,7 +470,7 @@ he:
       unused: שלבים שלא נוצלו
   upsell:
     hoc:
-      title: שעה של קוד
+      title: Classic Maze
       body: נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.
     flappy:
       title: קוד מתנופף

@@ -126,6 +126,8 @@ Craft.init = function (config) {
     config.level.customSlowMotion = 0.1;
   }
 
+  config.level.disableFinalStageMessage = true;
+
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function() {
     return document.documentMode;
@@ -285,6 +287,12 @@ Craft.init = function (config) {
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
       }
+
+      if (studioApp.hideSource) {
+        // Set visualizationColumn width in share mode so it can be centered
+        var visualizationColumn = document.getElementById('visualizationColumn');
+        visualizationColumn.style.width = this.nativeVizWidth + 'px';
+      }
     },
     twitter: {
       text: "Share on Twitter",
@@ -353,10 +361,12 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-steve')[0], function () {
     selectedPlayer = CHARACTER_STEVE;
+    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-alex')[0], function () {
     selectedPlayer = CHARACTER_ALEX;
+    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   popupDialog.show();
@@ -384,14 +394,17 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-a')[0], function () {
     selectedHouse = "houseA";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-b')[0], function () {
     selectedHouse = "houseB";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-c')[0], function () {
     selectedHouse = "houseC";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
 

@@ -462,7 +462,7 @@ ko:
       unused: 비사용 레벨
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: 컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다.
     flappy:
       title: 플래피 코드

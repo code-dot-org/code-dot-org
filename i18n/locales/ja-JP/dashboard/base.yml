@@ -464,7 +464,7 @@ ja:
       unused: 未使用のレベル
   upsell:
     hoc:
-      title: Hour of Code（Codeを学ぶ時間）
+      title: Classic Maze
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
     flappy:
       title: Flappy Code

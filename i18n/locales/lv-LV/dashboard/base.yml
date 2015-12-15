@@ -462,7 +462,7 @@ lv:
       unused: Neizmantotie līmeņi
   upsell:
     hoc:
-      title: Programmēšanas stunda
+      title: Classic Maze
       body: Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši.
     flappy:
       title: Flappy kods

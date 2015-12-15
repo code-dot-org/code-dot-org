@@ -403,9 +403,9 @@ is:
     privacy: Persónuvernd
     secure: Örugg útgáfa
     report_abuse: Tilkynna misnotkun
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Byggt á Kóðastúdíóinu
+    make_my_own_app: Búa til mitt eigið app
+    how_it_works: Hvernig það virkar
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
@@ -462,7 +462,7 @@ is:
       unused: Ónotaðir áfangar
   upsell:
     hoc:
-      title: Klukkustund kóðunar
+      title: Classic Maze
       body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
     flappy:
       title: Flappy kóði

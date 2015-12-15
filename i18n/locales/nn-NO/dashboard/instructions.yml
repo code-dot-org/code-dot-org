@@ -220,18 +220,18 @@ nn:
       4-5 Artist Functions 1_instruction: Bruk ein gjenta-løkke til å teikne denne trekanten.
       4-5 Artist Functions 10a_instruction: 'Sett denne koden inn i "teikn eit snøfnugg" funksjonen og erstatt 50 med parameteren "storleik". Funksjonen er allereie kalla på for å opprette snæfnugg på 100 pikslar.'
       4-5 Artist Functions 10b_instruction: 'Bruk "teikn eit snøfnugg" funksjonen for å opprette snøfnugg av ulik storleik. Hint: lengda på det første snøflaket er 25 og kvart snøfnugg er dobbelt så stort som det førre.'
-      4-5 Artist Functions 11_instruction: '"tegn en sekskant"-funksjonen bruker "tegn en trekant"-funksjonen. Gjør ferdig sekskant-funksjonen. (Hint: En sekskant har 6 sider, hvor hver er 100 piksler lang)'
-      4-5 Artist Functions 12_instruction: "Fullfør 'tegn bølger'-funksjonen. Hver bølge består av en Øvre bølge og en Nedre bølge. Hint: Tegn 5 blå bølger."
-      4-5 Artist Functions 13 Free play_instruction: Her er noen funksjoner til å tegne planeter, stjerner, raketter og roboter. Bruk dem på hvilken måte du vil til å lage bilder du kan dele med vennene dine.
-      4-5 Artist Functions 14 Free play_instruction: "Her har vi gitt deg flere funksjoner. Bruk dem på hvilken måte du vil inni en eller flere løkker for å lage bilder som du kan dele med vennene dine. Klikk 'Kjør' for å se et eksempel."
-      4-5 Artist Functions 15 Assessment_instruction: 'Lekse: Bruk "tegn en firkant"-funksjonen til å opprette firkantene. Firkantene er 50, 100 og 150 piksler.'
-      4-5 Artist Functions 2a_instruction: 'Putt disse blokkene inn i en ny funksjon kalt "tegn en liten trekant" og kall på den.'
-      4-5 Artist Functions 2b_instruction: 'Opprett en funksjon kalt "tegn en liten trekant" ved å bruke de gitte blokkene.'
-      4-5 Artist Functions 3_instruction: 'Opprett funksjonene "tegn en medium trekant" og "tegn en stor trekant". "Tegn en liten trekant"-funksjonen er opprettet for deg. Trekantene har sider med lengdene 50 (liten), 100 (medium) og 150 (stor). '
-      4-5 Artist Functions 4_instruction: 'Эта новая функция "нарисовать треугольник" содержит параметр и может выполнять действия предыдущих трех функций. Нарисуйте такие же треугольники с помощью новой функции.'
-      4-5 Artist Functions 5_instruction: 'Kan du endre "tegn en trekant"-funksjonen til å en "tegn et kvadrat"-funksjon for å endre tegningen?'
-      4-5 Artist Functions 6_instruction: 'Bruk "tegn et kvadrat" og "tegn en trekant"-funksjonene til å tegne et hus. (Hint: Kvadratets sider er 200 piksler)'
-      4-5 Artist Functions 6b_instruction: 'Bruk funksjonene tegn et kvadrat og trekant sammen med andre blokker for å lage et hus ved å legge dem til i "tegn et hus"-funksjonen og kalle den.'
+      4-5 Artist Functions 11_instruction: '"Teikn sekskant" funksjonen brukar "teikn ein trekant" funksjonen. Gjer ferdig sekskant funksjonen. (Hint: Ein sekskant har 6 sider, der kvar er 100 pikslar lang)'
+      4-5 Artist Functions 12_instruction: 'Fullfør "teikn bølger" funksjonen. Kvar bølge består av ei Øvre bølge og ei Nedre bølge. Hint: Teikn 5 blå bølger.'
+      4-5 Artist Functions 13 Free play_instruction: Her er nokre funksjonar til å teikne planetar, stjerner, rakettar og robotar. Bruk dei slik du sjølv ønskjer til å lage bilete du kan dele med vennene dine.
+      4-5 Artist Functions 14 Free play_instruction: 'Her har vi gitt deg fleire funksjonar. Bruk dem slik du sjølv vil inni ei eller fleire løkker for å lage bilete som du kan dele med vennene dine. Klikk "Køyr" for å sjå eit døme.'
+      4-5 Artist Functions 15 Assessment_instruction: 'Oppgåve: Bruk "teikn eit kvadrat" funksjonen til å opprette kvadrata. Kvadrata er 50, 100 og 150 pikslar.'
+      4-5 Artist Functions 2a_instruction: 'Sett desse blokkane inn i ein ny funksjon kalla "teikn ein liten trekant" og kall på den.'
+      4-5 Artist Functions 2b_instruction: 'Opprett ein funksjon kalla "teikn ein liten trekant" ved å bruke dei gitte blokkane.'
+      4-5 Artist Functions 3_instruction: 'Opprett funksjonane "teikn ein medium trekant" og "teikn ein stor trekant". "Teikn ein liten trekant" er oppretta for deg. Trekantane har sider med lengdene 50 (liten), 100 (medium) og 150 (stor). '
+      4-5 Artist Functions 4_instruction: 'Denne nye "teikn ein trekant" funksjonen har ein parameter og kan gjere det same arbeidet som alle dei tre funksjonane vi laga tidlegare. Teikn dei same trekantane ved å bruke den nye funksjonen.'
+      4-5 Artist Functions 5_instruction: 'Kan du endre "teikn ein trekant" funksjonen til ein "teikn eit kvadrat" funksjon for å endre teikninga?'
+      4-5 Artist Functions 6_instruction: 'Bruk "teikn eit kvadrat" og "teikn ein trekant" funksjonane til å teikne eit hus. (Hint: Kvadratet sine sider er 200 pikslar)'
+      4-5 Artist Functions 6b_instruction: 'Bruk funksjonane som teiknar eit kvardrat og ein trekant saman med andre blokkar for å lage eit hus ved å legge dei til i "teikn eit hus" funksjonen og kalle den.'
       4-5 Artist Functions 7_instruction: 'Bruk "tegn et hus"-funksjonen til å tegne hus som er 100 piksler og 50 piksler. De to husene skal være separert med 50 piksler.'
       4-5 Artist Functions 8_instruction: 'Funksjonen "tegn en blomst" har et parameter som tillater deg å sette stilkens høyde. Sett den til 200 og se hva som skjer.'
       4-5 Artist Functions 9_instruction: Tegn disse 3 blomstene. Høyden på den første er 100 og den neste blomsten er alltid 50 piksler mer enn høyden på den forrige. Blomstene er også 100 piksler unna hverandre.
@@ -1016,7 +1016,7 @@ nn:
       Course 4 Play Lab Vars 3_instruction: 'Her er et nytt type spill! Bruk venstre- og høyre-pilene til å bevege deg og opp-pila til å hoppe. Se om du kan samle alle flaggene.'
       Course 4 Play Lab Vars 4_instruction: 'Nå bruker vi en variabel kalt "høyde" for å kontrollere hvor høyt hunden kan hoppe. Oppdater "høyde"-variabelen slik at hunden kan hoppe høyt nok til å nå alle flaggene.'
       Course 4 Play Lab Vars 5_instruction: 'La oss bygge et spill! Først trenger vi en poengsum. Bruk "sett poeng til"-blokk for å sette scoren til 10. '
-      Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Kult, nå har vi vår score-variabel, men hvordan skal vi ha nytte av den? Hva med å legge til score-variabelen hver gang du treffer fienden med en ildkule? Bruk "når skuespiller 2 berører noe"-hendelsen til å utløse en oppdatering av poengsummen din når dine ildkuler treffer katten. Du kan øke score ved å sette score = score + 1. Øk din score til 10 (ett poeng om gangen!) for å bestå brettet.'
+      Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Kult, nå har vi vår score-variabel, men hvordan skal vi ha nytte av den? Hva med å legge til score-variabelen hver gang du treffer fienden med en ildkule? Bruk "når figur 2 berører noe"-hendelsen til å utløse en oppdatering av poengsummen din når dine ildkuler treffer katten. Du kan øke score ved å sette score = score + 1. Øk din score til 10 (ett poeng om gangen!) for å bestå brettet.'
       Course 4 Play Lab Vars 6_instruction: "Bruk høyre piltast til å skyte hjerter.\r\n\r\nI vårt spill, hvordan skal vi score poeng? Legg til 1 til din \"poeng\"-variabel hver gang Hund treffer Katt med et hjerte. Bruk \"når figur 2 berører noe\"-hendelsen til å utølse en oppdatering av poeng-scoren din. Du kan øke variabelen ved å sette \"poeng = poeng + 1\". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gangen!) for å bestå nivå."
       Course 4 Play Lab Vars 7_instruction: Flott! La oss gjøre spillet litt vanskeligere å spille. Hver gang Hund (figur 1) blir truffet av gule hjerter fra Katt (spiller 2) skal du miste ett poeng. Start med 10 poeng slik at det ikke er for vanskelig. For å fullføre nivået må poeng-scoren falle fra 10 til 0.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'En siste ting til dette spillet - la oss gjøre så spilleren kan vinne (eller tape). Bruk en for alltid-løkke for å sjekke verdien av poeng - hvis poeng er større enn 20 skal fienden forsvinne. Hvis poeng er mindre enn 0 skal spilleren forsvinne. Trykk "Fullfør" når spillet fungerer sånn som du vil det skal gjøre.'
@@ -1337,12 +1337,12 @@ nn:
       frozen square snowflake_instruction: 'Får du til å lage et snøfnugg ved å bruke "repeter"-blokken til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert kvadrat?'
       Infinity_catch_instruction: 'Kan du få Elsa ("skuespiller 2") til å ta igjen med Anna ved å bruke piltastene?'
       Infinity_finale_instruction: Lag det du har lyst til og del det med andre!
-      Infinity_move_collide_instruction: 'Hiro er "skuespiller 1". Flytt han direkte til Baymax og spill en lyd når de berører hverandre.'
-      Infinity_move_directions_instruction: 'Baymax er "skuespiller 2". Bruk flytt-blokker for å styre Baymax med pilene. Få han til å berøre de to andre figurene.'
-      Infinity_move_right_instruction: 'Hiro er "skuespiller 1". Bruk "Flytt"-blokken til å flytte Hiro mot høyre for å berøre Baymax.'
+      Infinity_move_collide_instruction: 'Hiro er "figur 1". Flytt han direkte til Baymax og spill en lyd når de berører hverandre.'
+      Infinity_move_directions_instruction: 'Baymax er "figur 2". Bruk flytt-blokker for å styre Baymax med pilene. Få han til å berøre de to andre figurene.'
+      Infinity_move_right_instruction: 'Hiro er "figur 1". Bruk "Flytt"-blokken til å flytte Hiro mot høyre for å berøre Baymax.'
       Infinity_repeat_instruction: 'Bruk "Gjenta alltid"-blokken til å få Anna til å bevege seg opp og ned 400 pixler.'
       Infinity_say_instruction: 'Få Anna til å si "Hei der." ved å bruke Si-brikken.'
-      Infinity_shoot_instruction: 'Baymax er "skuespiller 2". Få Baymax til å skyte en rakett mot Hiro.'
+      Infinity_shoot_instruction: 'Baymax er "figur 2". Få Baymax til å skyte en rakett mot Hiro.'
       Infinity_shoot_directions_instruction: 'Hiro er "skuespiller 3". Få Hiro til å kaste et prosjektil mot hver av de fire andre figurene. Vent et sekund mellom hvert kast.'
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Berør enda flere snøfnugg!
@@ -2192,8 +2192,8 @@ nn:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -3427,14 +3427,37 @@ nn:
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -3444,8 +3467,8 @@ nn:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "

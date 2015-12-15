@@ -5,6 +5,7 @@ module ViewOptionsHelper
     no_footer
     small_footer
     share_footer
+    try_hoc_banner
     has_i18n
     no_padding
     white_background
@@ -18,6 +19,7 @@ module ViewOptionsHelper
     puzzle_ratings_url
     server_level_id
     game_display_name
+    script_name
     stage_position
     level_position
     public_caching

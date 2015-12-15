@@ -43,7 +43,7 @@
   more: MAI MULT
   less: MAI PUŢIN
   beta: beta
-  try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
+  try_hoc: 'Încearcă Ora de Programare, faceți clic aici >> '
   try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
   already_started: Ai început deja? Rezumă aici >>
@@ -263,7 +263,7 @@
     access_denied: Nu ai acces la această %{model}.
   nav:
     header:
-      finished_hoc: Am terminat Ora mea de Cod
+      finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
         playlab: Creează o aplicație

@@ -146,7 +146,7 @@ fi:
           description_short: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
         hourofcode:
           Maze: Sokkelo
-          title: Koodaustunti
+          title: Classic Maze
           description: Kokeile tietojenkäsittelytieteen perusteita peleistä tuttujen hahmojen kanssa. Mukana mm. Angry Birds, Plants vs. Zombies sekä Scrat elokuvasta Ice Age!
           description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen hahmojen seurassa!
         frozen:

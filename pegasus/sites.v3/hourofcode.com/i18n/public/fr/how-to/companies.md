@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -135,4 +134,3 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant les participants et e
 
 Une Heure de Code n'est qu'une première étape pour apprendre comment fonctionne la technologie et comment créer des applications logicielles. Pour poursuivre ce voyage, [Encouragez les élèves à apprendre en ligne](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

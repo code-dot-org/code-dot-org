@@ -5,7 +5,6 @@ shtrirje: e gjerë
 
 ---
 
-<%= view :signup_button %>
 
 # Udhëzime tutoriali për Orën e Kodimit dhe Javës së Arsimimit në Shkencat Kompjuterike
 
@@ -266,4 +265,3 @@ Nëse keni krijuar një tutorial që është projektuar për vizionin-e dobët, 
 
 [**Përsëri në krye**](#top)
 
-<%= view :signup_button %>

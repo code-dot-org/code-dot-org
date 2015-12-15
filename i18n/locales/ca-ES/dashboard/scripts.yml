@@ -146,7 +146,7 @@ ca:
           description_short: "Dibuixar imatges estupendes i dissenys amb l'artista!"
         hourofcode:
           Maze: Laberint
-          title: Hora del codi
+          title: Classic Maze
           description: "Prova els bàsics de la informàtica amb els personatges d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!"
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
         frozen:
@@ -1477,7 +1477,7 @@ ca:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Hora del Codi de Minecraft
           description_short: Explora el món de Minecraft a través del codi
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hora del codi 2015

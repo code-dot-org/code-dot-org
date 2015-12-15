@@ -441,7 +441,7 @@ nn:
   share_code:
     title: 'Klikk "Kjør" for å sjå programmet mitt i aksjon'
     bounce_og_title: Sjekk ut sprette-spelet mitt
-    flappy_og_title: Sjekk ut Flappy-spelet mitt
+    flappy_og_title: Sjekk ut Flakse-spelet mitt
     studio_og_title: "Sjekk ut Play Lab App'en min"
     check_out_what_i_made: Sjekk ut det eg har laga
     og_description: Eg skreiv koden sjølv med Code.org
@@ -462,7 +462,7 @@ nn:
       unused: Ubrukte nivå
   upsell:
     hoc:
-      title: Kodetimen
+      title: Classic Maze
       body: Prøv grunnleggjande informatikk. Millionar andre har prøvd.
     flappy:
       title: Flakse-kode

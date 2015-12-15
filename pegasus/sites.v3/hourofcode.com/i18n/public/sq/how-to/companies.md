@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Si ta sjellësh Orën e Kodimit në kompaninë tuaj
 
@@ -135,4 +134,3 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
 
 Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim, [inkurajo pjesëmarrësit tuaj të mësojnë online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

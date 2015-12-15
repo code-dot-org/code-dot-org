@@ -191,7 +191,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Lahko pritisnete gumb \"Poskusi znova\" in se vrnete nazaj k igranju svoje igre."},
 "scoreText":function(d){return "Dosežek: "+flappy_locale.v(d,"playerScore")+" (Uporabnikove točke)"},
 "setBackground":function(d){return "Izberi odzdadje"},
-"setBackgroundRandom":function(d){return "Izberi nakljuno odzadje"},
+"setBackgroundRandom":function(d){return "izberi naključno odzadje"},
 "setBackgroundFlappy":function(d){return "Izberi mestno(podnevi) odzadje"},
 "setBackgroundNight":function(d){return "Izberi mestno(nočno) odzadje"},
 "setBackgroundSciFi":function(d){return "Izberi znanstveno fantastično odzadje"},

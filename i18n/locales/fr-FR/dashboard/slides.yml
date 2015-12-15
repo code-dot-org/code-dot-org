@@ -1174,11 +1174,11 @@ fr:
         text: "Si je veux dessiner un rectangle de 50 pixels de haut et qui soit deux fois plus large que haut, comment devrais-je programmer l'ordinateur pour qu'il le fasse ? Et bien je pourrais dire au dessinateur de monter de 50 pixels, de tourner à droite, d'aller à 100 pixels et de refaire ça dans l'autre sens mais là, c'est moi qui calcule pour l'ordinateur."
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
+        text: "Multiplier cinquante par deux de tête n'est peut-être pas si compliqué, mais les ordinateurs sont vraiment bons pour les maths, alors nous devons leur laisser les calculs autant que possible. Si j'avais juste utilisé une variable appelée hauteur à la place, alors j'aurais pu facilement changer la hauteur pour cinquante, et ensuite changer mon algorithme pour qu'il dise à l'artiste de monter de la hauteur, de tourner à droite, et ensuite d'avancer de hauteur fois 2, ce qui nous donne un rectangle deux fois plus large que haut."
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: "This lesson is called Tangram Algorithms. A tangram is a puzzle with seven pieces that can be put together to make other shapes. You'll be using an algorithm to explain to your partner how to put the puzzle together."
+        text: "Cette leçon s'appelle Algorithmes Tangram. Un Tangram est un puzzle de sept pièces qui peuvent être assemblées pour créer d'autres formes. Tu va devoir utiliser un algorithme pour expliquer à ton partenaire comment assembler le puzzle."
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: "Un algorithme est juste une liste d'étape que tu peux exécuter pour terminer une tâche. Nous les utilisons tous les jours, par exemple en faisant une liste de course ou une recette de cuisine. Si ton algorithme est trop simple, il peut y avoir plusieurs interprétations et celui qui va l’exécuter peut ne pas obtenir exactement le résultat que tu attendais. Si tu veux être sûr que tout le monde obtiennent exactement la même chose, alors ton algorithme doit être très détaillé et précis."
@@ -1709,16 +1709,17 @@ fr:
         text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: "Ton écran se divise en trois parties. A la gauche, se trouve l'espace de jeu où le programme va s'exécuter. Les instructions pour chaque niveau sont écrites en dessous."
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Cette zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code.
       6:
         image: notes/gumball_intro_6.JPG
         text: "L'espace blanc à droite est appelé espace de travail : c'est là que nous allons créer notre programme."
       7:
         image: notes/gumball_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: |-
+          Pour commencer, tu devras relier tes blocs au bloc "lors du lancement". Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu voies la ligne jaune, et il s'emboiteront alors ensemble.
       8:
         image: notes/gumball_intro_8.JPG
         text: |-
@@ -1750,3 +1751,56 @@ fr:
       3:
         image: notes/gumball_repeat_3.JPG
         text: "Dans ce puzzle, notre objectif est d'aider l'élément à faire un travail en continu. Apprendre à utiliser la commande 'répéter' te permettras de gagner énormément de temps plus tard quand tu construiras ton propre jeu."
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

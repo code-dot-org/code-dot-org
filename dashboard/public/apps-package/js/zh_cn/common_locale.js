@@ -156,7 +156,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).common_locale = {
 "and":function(d){return "和"},
 "backToPreviousLevel":function(d){return "回到前一关"},
-"blocklyMessage":function(d){return "布洛克里"},
+"blocklyMessage":function(d){return "模块化"},
 "blocks":function(d){return "模块"},
 "booleanFalse":function(d){return "错"},
 "booleanTrue":function(d){return "真"},

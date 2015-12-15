@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Sådan indfører du Hour of Code i hele dit lokalområde.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Forbind lokalt.** Besøg [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) for at lære mere om programmøruddannelser. Tilmeld dig der og du får opdateringer fra Code.org på deres lokale og statslige indsats.
 
-<%= view :signup_button %>

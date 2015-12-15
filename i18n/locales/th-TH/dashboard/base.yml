@@ -463,7 +463,7 @@ th:
       unused: Unused Levels
   upsell:
     hoc:
-      title: ช่วงเวลาของ Code
+      title: Classic Maze
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code

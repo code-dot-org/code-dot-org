@@ -405,9 +405,9 @@ tr:
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm
     report_abuse: Hata Rapor Et
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Kod Stüdyosunda Yapıldı
+    make_my_own_app: Kendi programımı yap
+    how_it_works: Nasıl çalışır
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
@@ -464,7 +464,7 @@ tr:
       unused: Kullanılmamış Seviyeler
   upsell:
     hoc:
-      title: Saat Kodu
+      title: Classic Maze
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
     flappy:
       title: Flappy Kod
@@ -626,22 +626,22 @@ tr:
     click_to_remix: "Kendi sürümünüzü yaratmak için 'Remix'e basın!"
     edit_project: Projeyi Düzenle
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      tos: "Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a> ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz."
       contact_us: "Eğer bir hata olduğunu düşünüyorsanız, lütfen <a href='https://code.org/contact'>bizimle iletişime geçin.</a>"
       go_to_code_studio: "Kod Stüdyosu'na git"
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Rahatsız edici, tehdit, sanal kabadayılık, taciz yada telif hakkı ihlali içeren bir içerikle karşılaşırsanız lütfen aşağıdaki formu doldurun. Raporunuzu çok ciddiye alacağız ve dikkatlice inceleyip gereken eylemi yerine getireceğiz.
         validation:
           email: Lütfen E-posta adresinizi belirtiniz
           age: Lütfen yaşınızı belirtiniz
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
+          abuse_type: Lütfen bu içeriğin Hizmet Şartlarını nasıl ihlal ettiğini açıklayın
+          abuse_detail: Bildirmekte olduğunuz içeriği açıklayın
         abusive_url: "Raporlamış olduğunuz içeriğin URL'si"
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          question: 'Bu içerik %{link_start}Hizmet Şartlarını%{link_end} nasıl ihlal ediyor?'
           harassment: Tehditler, klavye delikanlılığı, zorbalık
           offensive: Rahatsız edici içerik
           infringement: Telif Hakkı İhlali
           other: Diğer
-        detail: Please provide as much detail as possible regarding the content you are reporting.
+        detail: Bildirmekte olduğunuz içerik ile ilgili mümkün olduğunca fazla ayrıntı veriniz.
         acknowledge: 'Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end} ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz'

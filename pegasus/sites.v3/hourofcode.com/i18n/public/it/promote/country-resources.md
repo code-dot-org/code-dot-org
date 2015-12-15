@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Mostra agli studenti un video motivante per iniziare l'Ora del Codice. Alcuni es
 
 <% end %>
 
-<%= view :signup_button %>

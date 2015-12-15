@@ -396,9 +396,9 @@ et:
     privacy: Privaatsuspoliitika
     secure: Turvaline versioon
     report_abuse: Teata rikkumisest
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Code Studio abil loodud
+    make_my_own_app: Oma rakenduse loomine
+    how_it_works: Tööpõhimõtted
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid
@@ -455,7 +455,7 @@ et:
       unused: Kasutamata tasemed
   upsell:
     hoc:
-      title: KoodiTund
+      title: Classic Maze
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
     flappy:
       title: Flappy kood

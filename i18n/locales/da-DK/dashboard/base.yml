@@ -462,7 +462,7 @@ da:
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: Hour of Code
+      title: Classic Maze
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
     flappy:
       title: Flappy kode

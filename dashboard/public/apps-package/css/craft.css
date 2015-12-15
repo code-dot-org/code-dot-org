@@ -324,6 +324,8 @@ html[dir='rtl'] #codeWorkspace {
     left: 350px; }
   html[dir='rtl'] #codeWorkspace {
     right: 350px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 350px;
     line-height: 350px; }
@@ -351,6 +353,8 @@ html[dir='rtl'] #codeWorkspace {
     left: 300px; }
   html[dir='rtl'] #codeWorkspace {
     right: 300px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 300px;
     line-height: 300px; }
@@ -378,6 +382,8 @@ html[dir='rtl'] #codeWorkspace {
     left: 250px; }
   html[dir='rtl'] #codeWorkspace {
     right: 250px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 250px;
     line-height: 250px; }
@@ -405,6 +411,8 @@ html[dir='rtl'] #codeWorkspace {
     left: 200px; }
   html[dir='rtl'] #codeWorkspace {
     right: 200px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 200px;
     line-height: 200px; }
@@ -1220,6 +1228,19 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 .legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
   display: none; }
 
+.legacy-share-view #visualizationColumn {
+  margin: 0 auto;
+  padding: 20px 0; }
+
+.legacy-share-view .small-footer-base {
+  width: auto;
+  left: 0;
+  right: 0; }
+
+.legacy-share-view #more-menu, .legacy-share-view #copyright-flyout {
+  left: auto;
+  right: 0; }
+
 body {
   background-color: #646464; }
 
@@ -1249,10 +1270,10 @@ body {
 #bubble {
   background-color: transparent !important; }
 
-.small-footer-base {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #4E4E4E;
   color: #969292; }
-  .small-footer-base a:hover {
+  .small-footer-base a:hover, #copyright-flyout a:hover, #more-menu a:hover {
     color: white; }
 
 #codeApp {
@@ -1375,6 +1396,8 @@ a.video_link {
     left: 181.970649895px; }
   html[dir='rtl'] #codeWorkspace {
     right: 181.970649895px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 181.970649895px;
     line-height: 200px; }
@@ -1399,6 +1422,8 @@ a.video_link {
     left: 252.029350105px; }
   html[dir='rtl'] #codeWorkspace {
     right: 252.029350105px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 252.029350105px;
     line-height: 277px; }
@@ -1423,6 +1448,8 @@ a.video_link {
     left: 343.014675052px; }
   html[dir='rtl'] #codeWorkspace {
     right: 343.014675052px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 343.014675052px;
     line-height: 377px; }
@@ -1447,6 +1474,8 @@ a.video_link {
     left: 409.433962264px; }
   html[dir='rtl'] #codeWorkspace {
     right: 409.433962264px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 409.433962264px;
     line-height: 450px; }
@@ -1471,6 +1500,8 @@ a.video_link {
     left: 468.57442348px; }
   html[dir='rtl'] #codeWorkspace {
     right: 468.57442348px; }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px; }
   div#visualizationResizeBar {
     left: 468.57442348px;
     line-height: 515px; }
@@ -1886,7 +1917,7 @@ a.video_link {
     .dash_modal button.mc-share-button:active, .minecraft button.mc-share-button:active {
       outline: none;
       border-style: solid !important;
-      border-width: 5px 4px 3px 3px !important;
+      border-width: 5px 5px 3px 3px !important;
       image-rendering: optimizeSpeed;
       /* Legal fallback */
       image-rendering: -moz-crisp-edges;
@@ -1903,10 +1934,10 @@ a.video_link {
       /* CSS4 Proposed  */
       -ms-interpolation-mode: nearest-neighbor;
       /* IE8+           */
-      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 fill stretch !important; }
     .dash_modal button.mc-share-button > div, .minecraft button.mc-share-button > div {
       margin: 0; }
   .dash_modal button#runButton, .minecraft button#runButton {
@@ -1946,7 +1977,7 @@ a.video_link {
     .dash_modal button#runButton:active, .minecraft button#runButton:active {
       outline: none;
       border-style: solid !important;
-      border-width: 5px 4px 3px 3px !important;
+      border-width: 5px 5px 3px 3px !important;
       image-rendering: optimizeSpeed;
       /* Legal fallback */
       image-rendering: -moz-crisp-edges;
@@ -1963,10 +1994,10 @@ a.video_link {
       /* CSS4 Proposed  */
       -ms-interpolation-mode: nearest-neighbor;
       /* IE8+           */
-      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important; }
+      -moz-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -webkit-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      -o-border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+      border-image: url("/blockly/media/craft/Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 fill stretch !important; }
     .dash_modal button#runButton > div, .minecraft button#runButton > div {
       margin-top: 4px;
       margin-left: 2px;
@@ -2145,6 +2176,11 @@ a.video_link {
     html[dir=rtl] .dash_modal #show-code, html[dir=rtl] .dash_modal #feedbackButtons, html[dir=rtl] .dash_modal #puzzleRatingButtons, html[dir=rtl] .dash_modal #sharing {
       margin-right: -100px;
       margin-left: 0; }
+  @media screen and (max-height: 630px) {
+    .dash_modal .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px; } }
   .dash_modal #sharing {
     color: #e7e8ea; }
     .dash_modal #sharing button {

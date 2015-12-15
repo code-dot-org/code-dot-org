@@ -11,7 +11,7 @@
     font-weight:bold">Planlegg din kodetime</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser</a>'
-  n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>"
+  n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>
   anybody_can_learn: Hvem som helst kan lære.
   learn_now: Lær nå
   petition_message: Alle skoleelever burde ha muligheten til å lære koding
@@ -35,7 +35,7 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støtt det &#x25BE;
   hoc2014_whatishoc: Hva er kodetimen?
-  csedweek_map_header: "# CSEdWeek / Kodetimen-arrangementer verden rundt"
+  csedweek_map_header: '# CSEdWeek / Kodetimen-arrangementer verden rundt'
   csedweek_map_signup: Registrer ditt arrangement
   csedweek_map_search_placeholder: Søk etter Kodetimen-arrangementer
   csedweek_map_search_search: Søk
@@ -64,7 +64,7 @@
     hvis-så-setninger og grunnleggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynner
-  n_participants: "# deltakere"
+  n_participants: '# deltakere'
   go: Gå
   thank_you_: Takk!
   congratulations: Gratulerer!
@@ -113,7 +113,7 @@
   beyond_an_hour: Etter Kodetimen
   get_started: Start
   i_agree: Jeg samtykker
-  participant_select: "- Velg -"
+  participant_select: '- Velg -'
   participant_student: elev
   participant_parent: Forelder
   participant_educator: Lærer
@@ -134,7 +134,7 @@
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubber
-  hoc_is_here: "#Kodetimen er her - sjekk den ut! @kidsakoder"
+  hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   twitter_teach_cs: Hvorfor tilbyr ikke flere skoler undervisning i informatikk? Vi
     kan fikse dette. http://youtu.be/nKIu9yen5nc. Les mer på http://code.org/.
@@ -146,10 +146,10 @@
   help_recruit_coders: Hjelp oss med å finne flere kodere til laget ditt!
   help_recruit: Hjelp oss med å rekruttere flere kodere!
   lines_of_code: OVER <b># KODELINJER</b> skrevet HITTIL.
-  lines_of_code_alt: "<b>#</b> KODELINJER SKREVET AV ELEVER"
+  lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: "%{elevs}, elever har gjort kodentimen og skrevet %{lines} kodelinjer."
+  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
@@ -183,8 +183,8 @@
     Barack Obama'
   homepage_hero_text_sheryl: '"Våre barn - inkludert våre jenter - trenger å lære
     informatikk." Sheryl, COO i Facebook'
-  homepage_hero_text_satya: "«Informatikk kan åpne for de beste mulighetene i verden.»
-    Satya, CEO i Microsoft"
+  homepage_hero_text_satya: «Informatikk kan åpne for de beste mulighetene i verden.»
+    Satya, CEO i Microsoft
   homepage_hero_text_bosh: '"Hvis du kan programmere, kan du velge og vrake retningen
     til ditt eget liv." Chris Bosh'
   homepage_hero_text_student1: |
@@ -211,8 +211,8 @@
     innovasjon - \nalt som er viktig i enhver karriere.\"\nFloresa, lærer\n"
   homepage_hero_text_teacher2: "\"Dette programmet har fått 100 % av elevene \nengasjert,
     involvert og delaktige.\"\nAdam, lærer\n"
-  homepage_hero_text_stat_loc: "#loc linjer med kode skrevet av elever"
-  homepage_hero_text_stat_students: "#elev_count elevkontoer på koden Studio"
+  homepage_hero_text_stat_loc: '#loc linjer med kode skrevet av elever'
+  homepage_hero_text_stat_students: '#elev_count elevkontoer på koden Studio'
   homepage_hero_text_stat_served: 'Time kode: #served servert'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
@@ -222,7 +222,7 @@
   homepage_slot_text_shop: Butikk
   homepage_slot_text_flappy: Flappy kode
   homepage_action_text_hoc: En time med programmering for alle elever.
-  homepage_action_text_num_served: "# servert"
+  homepage_action_text_num_served: '# servert'
   homepage_action_text_join_us: Bli med oss
   homepage_action_text_sign_up: Meld deg på
   homepage_action_text_try_it: Prøv
@@ -246,7 +246,7 @@
   homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
   homepage_slot_text_link_hoc: Prøv Kodetimen
   homepage_slot_text_link_host: Bli vertskap for Kodetimen
-  homepage_slot_text_link_hocserved: "# servert"
+  homepage_slot_text_link_hocserved: '# servert'
   homepage_solot_text_link_volunteer: Meld deg som frivillig til Kodetimen
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Utforsk alle våre opplæringsprogrammer
@@ -341,9 +341,9 @@
     elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærere skal holde en Kodetime
     i sitt klasserom i år, 7.-13. desember. De ønsker din hjelp! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lærere trenger
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere trenger
     frivillige som er lidenskapelig opptatt av informatikk til å hjelpe til med Kodetimen
-    i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med."
+    i desember. <br>%{num_volunteers} frivillige har meldt seg. Bli med.'
   volunteer_engineer_submission_intro_background: Kodetimen er en global bevegelse
     for å gi en times introduksjon til informatikk og programmering, som når ut til
     titalls millioner elever i 180+ land. Bli gjerne med under Computer Science Education
@@ -464,7 +464,7 @@
   dashboard_landing_available_title: Tilgjengelige kurs
   dashboard_landing_available_courses: Disse kursene er for tiden tilgjengelig for
     deg og dine elever.
-  dashboard_landing_more_tutorials: "Ønsker du å se flere opplæringsprogrammer?"
+  dashboard_landing_more_tutorials: Ønsker du å se flere opplæringsprogrammer?
   dashboard_landing_more_tutorials_desc: Det finnes flere opplæringsprogrammer <a
     href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter,
     lage nettsider, lage din egen applikasjon eller utforske andre språk som C++,
@@ -488,7 +488,7 @@
     programmering i midtskolematematikk og -vitenskap - som et verktøy for å lære
     matemtikk- og vitenskapskonsepter. For å melde deg på de profesjonelle utviklingsverkstedene,
     søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
-  dashboard_high_courses: "Årslange høyskolekurs"
+  dashboard_high_courses: Årslange høyskolekurs
   dashboard_high_courses_desc: Høyskoleprogrammet vårt hjelper skoledistrikter med
     å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte
     i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene,
@@ -536,7 +536,7 @@
   dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
   dashboard_navigation_view_stats: Se statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
-  dashboard_navigation_student: 'Student: %{elev_name}'
+  dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: Ny seksjon
   dashboard_sections_jumbotron_instruction: Lag nye seksjoner og legg til elever.
     Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore
@@ -575,8 +575,8 @@
   dashboard_students_female: Kvinne
   dashboard_students_secret: Hemmelig
   dashboard_students_password: passord
-  dashboard_students_username: 'Brukernavn: %{elev_username}'
-  dashboard_students_email: 'Epost: %{elev_email}'
+  dashboard_students_username: 'Brukernavn: %{student_username}'
+  dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivåer
   dashboard_students_total_lines: Linjer med kode
   dashboard_students_show_secret: Vis hemmelig
@@ -667,10 +667,12 @@
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjøringer
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_hoc: "<b>9 November 2015</b> - en ny time av koden tutorial er
+  dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er
     her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede
     nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele
-    dine egne spill i en galakse langt, langt borte."
+    dine egne spill i en galakse langt, langt borte.'
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: Kodetimen er her - 8. til 14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
   learn_more: Lær mer
@@ -703,16 +705,16 @@
   carousel_heading_3rd_party: Guider laget av andre
   carousel_heading_third_party: Guider laget av andre
   carousel_heading_international: Gjennomganger på norsk
-  carousel_heading_domestic: "Øvinger tilgjengelig på engelsk"
-  carousel_heading_beginners: "Øvinger for nybegynnere"
-  carousel_heading_beyond_beginners: "Øvinger for nybegynnere"
-  carousel_heading_javascript: "Øvinger som underviser JavaScript"
+  carousel_heading_domestic: Øvinger tilgjengelig på engelsk
+  carousel_heading_beginners: Øvinger for nybegynnere
+  carousel_heading_beyond_beginners: Øvinger for nybegynnere
+  carousel_heading_javascript: Øvinger som underviser JavaScript
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Ingen enhet eller Internett? Prøv 'frakoblet' koding
-  carousel_heading_devices: "Øvings-apper for telefoner og nettbrett"
-  carousel_heading_beyond_devices: "Øvings-apper for telefoner og nettbrett"
-  carousel_heading_languages: "Øvinger i andre programmeringsspråk"
-  carousel_heading_beyond_languages: "Øvinger i andre programmeringsspråk"
+  carousel_heading_devices: Øvings-apper for telefoner og nettbrett
+  carousel_heading_beyond_devices: Øvings-apper for telefoner og nettbrett
+  carousel_heading_languages: Øvinger i andre programmeringsspråk
+  carousel_heading_beyond_languages: Øvinger i andre programmeringsspråk
   carousel_heading_apps_games: Lag dine egne apper eller spill
   carousel_heading_university: Universitetskurs på nett
   carousel_heading_webpages: Lær hvordan å lage nettsider
@@ -726,18 +728,18 @@
     here.</a>
   how_to_teach_hoc: Hvordan lære bort en Kodetime
   more_resources_educators: Flere lærerressurser
-  beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
-    innlevering skjemaet."
+  beyond_submission: Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
+    innlevering skjemaet.
   participants: deltakere
   teachers_notes: Lærernotater
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
   previous: Forrige
   next: Neste
-  older_systems: "Øvinger som fungerer på eldre systemer"
+  older_systems: Øvinger som fungerer på eldre systemer
   older_systems_subheading: Disse burde fungere i eldre nettlesere. For å få tilgang
     til alle øvinger, oppgrader til en <a href="http://browsehappy.com/" target="_blank">moderne
     nettleser.</a>
-  mobile_devices: "Øvinger for mobile enheter"
+  mobile_devices: Øvinger for mobile enheter
   frozen_name: Kode med Anna og Elsa
   starwars_name: 'Star Wars: Skap en galakse med kode'
   codeorg_name: Skriv ditt første dataprogram
@@ -760,7 +762,7 @@
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Bygg eit spel med JavaScript
-  processing_name: "Å teikne med kode"
+  processing_name: Å teikne med kode
   robomind_name: Programmer ein virtuell robot
   groklearning_name: Chatterbot-doktotren Eliza
   quorum_name: Tilgjengelig koding (med skjemleserstøtte)
@@ -781,6 +783,13 @@
   playlab_name: Spill-lab
   infinity_name: Infinity Spill-Lab
   artist_name: Kunstner
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Planlegging av Kodetimen
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -824,6 +833,13 @@
   playlab_gradelevel: Alder 4-104
   infinity_gradelevel: Alder 4-104
   artist_gradelevel: Alder 4-104
+  monstercoding_gradelevel: Alderen 5 til 13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Grunnskole
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeintl_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   thinkersmithspanish_platformtext: Frakobla
@@ -865,6 +881,13 @@
   frozen_platformtext: Moderne nettlesere + nettbrett
   starwars_platformtext: Moderne nettlesere + nettbrett
   playlab_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Moderne nettlesere
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Moderne nettlesere
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   codeintl_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -921,6 +944,19 @@
   infinity_shortdescription: Bruk Spill-lab for å lage en historie eller spill med
     Disney Infinity figurer.
   artist_shortdescription: Tegn kule bilder og tegninger med Kunstneren!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
     Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
     Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
@@ -970,12 +1006,12 @@
     grunnleggende programmering, for de på 4 år og oppover, på iOS eller Android (eller
     nettleser). Lær hvordan du sorterer kommandoer, identifiserer mønstre, bruker
     prosedyrer og løkker!
-  codehs_longdescription: "Å gi kommandoer til en datamaskin, som er hva programmering
+  codehs_longdescription: Å gi kommandoer til en datamaskin, som er hva programmering
     handler om, er akkurat som å gi kommandoer til en hund. Lær å kode med hunden
     Karel&mdash; en morsom, tilgjengelig og visuell introduksjon til programmering
     som lærer elevene grunnleggende begreper som kommandoer og funksjoner på nybegynnernivå.
     Opplæringen er rettet mot elever men lærere kan registrere seg for tilgang til
-    lærerverktøy og spore elevenes mestring!"
+    lærerverktøy og spore elevenes mestring!
   codecademy_longdescription: Codecademy er en interaktiv, elevfokusert introduksjon
     til grunnleggende CS gjennom JavaScript som brukes av millioner av elever over
     hele verden. Vi har utarbeidet en problemfri Kodetime-opplevelse med tilhørende
@@ -1061,6 +1097,37 @@
   playlab_longdescription: Lag en historie eller lag et spill med "Spill-Lab"! Få
     dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage
     lyder, få poeng, og til og med kaste flammekuler!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Introduksjon til koding (1.-8. trinn)
   khan_beyond_name: Lær koding
   tynker_beyond_name: Lær koding hjemme
@@ -1394,70 +1461,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
-  codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
-  monstercoding_gradelevel: Ages 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: Elementary
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
-  csfirst_platformtext: Modern web browsers
-  boxisland_platformtext: Android, iOS
-  codesters_platformtext: Modern web browsers
-  texasinstruments_platformtext: TI Calculators
-  teacherled_platformtext: Modern browsers, smartphones, tablets
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.

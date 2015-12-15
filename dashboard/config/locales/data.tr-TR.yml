@@ -527,9 +527,9 @@
           ok tuşlarıyla kontrol ederek bota ulaş ve diğer herkesi uyar
         studio_playlab_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
+        studio_iceage_hello1: Sid herkesi yeni bir macera için toplamak istiyor. Sid'in
+          herkese merhaba diyebilmesi için çalışma alanına 'söyle' bloğunu sürükleyip;
+          bloğun içine de "merhaba" yazarmısın?
         studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
           him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
@@ -745,6 +745,9 @@
         infinity_playlab_intro: Oyun Laboratuvarı - Giriş
         infinity_playlab_events: Oyun Laboratuvarı - Olaylar
         infinity_playlab_repeat_forever: Oyun Laboratuvarı - Sonsuz Döngü
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -801,6 +804,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

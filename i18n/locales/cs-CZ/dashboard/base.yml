@@ -464,7 +464,7 @@ cs:
       unused: Nepoužívané úrovně
   upsell:
     hoc:
-      title: Hodina kódu
+      title: Classic Maze
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
     flappy:
       title: Tenký kód

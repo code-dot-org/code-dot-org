@@ -2895,65 +2895,25 @@ lt:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
-      Overworld Move to Sheep_instruction: |
-        Add a second “move forward” command to
-        reach the sheep.
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
+      Overworld Avoid Monsters_instruction: "Atsitrenkti į Creeper'į - bloga idėja. Atsargiai judėk tarp Crepper'ių ir saugiai pasiek namus."
+      Overworld Chop Tree_instruction: 'Mediena - labai svarbus išteklius, iš jos pagaminta labai daug daiktų. Eik iki medžio ir naudok "sunaikinti bloką" komandą tam, kad jį nukirstum.'
+      Overworld Chop Trees_instruction: 'Mums reikia pastatyti namą prieš nusileidžiant saulei. Namui reikia labai daug medienos - nukirsk visus 3 medžius.'
+      Overworld Free Play 20x20_instruction: Sveikinu! Tu išsprendei visus galvosūkius! Dabar gali kasti, statyti ir kurti ką nors ypatingo, panaudodamas viską, ką išmokai.
+      Overworld Free Play_instruction: 'Šis kraštovaizdis - tavo žaidimų aikštelė. Pasirink, ką statysi.'
+      Overworld House Frame - A_instruction: Pastatykime savo namą! Ši vieta atrodo tinkama. Pastatyk rėmus iš purvo blokų.
+      Overworld House Frame - C_instruction: Pastatykime savo namą! Ši vieta atrodo tinkama. Pastatyk rėmus iš purvo blokų.
+      Overworld House Frame B_instruction: Viena siena jau baigta, pastatykime likusią namo dalį pagal tavo grindų planą. Reikės kartoti tuos pačius veiksmus keletą kartų.
+      Overworld House Frame B2_instruction: Viena siena jau baigta, pastatykime likusią namo dalį pagal tavo grindų planą. Reikės kartoti tuos pačius veiksmus keletą kartų.
+      Overworld House Frame C_instruction: Viena siena jau baigta, pastatykime likusią namo dalį pagal tavo grindų planą. Reikės kartoti tuos pačius veiksmus keletą kartų.
+      Overworld House Frame Chosen_instruction: 'Pastatyk likusią namo dalį iš kokios tik nori medžiagos. Tau pravers "kartok" komanda.'
+      Overworld House Frame_instruction: Pastatykime savo namą! Ši vieta atrodo tinkama. Pastatyk rėmus iš purvo blokų.
+      Overworld Minecart Track_instruction: 'Sugrįžai į paviršių, kuris turi labai daug išteklių po žeme. Dabar pastatysime taką išilgai purvo kelio prie tavo namų. Pirmiausia reikia jį išvalyti - eik keliu ir išvalyk medžius.'
+      Overworld Move to Sheep_instruction: 'Pridėk antrą "ženk į priekį" komandą, kad pasiektum avį.'
+      Overworld Place Wall_instruction: 'Kiekvieno namo statyba prasideda nuo sienos. Pastatyk pirmąją savo namo dalį naudodamas "ženk į priekį" ir "padėti" komandas į "kartok" blokelio vidų.'
+      Overworld Plant Crops_instruction: Yra svarbu planuoti į priekį. Pasodink pasėlius iš abiejų vandens telkinio pusių, kad nereikėtų būti alkanam.
       Overworld Powered Minecart_instruction: |
         Puikiai padirbėta! Tu surinkai daugybe
-        resursų ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki
+        išteklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki
         savo namo durų.
       Overworld Shear Sheep_instruction: |
         Avių kirpimo metas! Naudokis "kirpti" komanda,
@@ -3443,8 +3403,8 @@ lt:
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use `offsetX` and `offsetY` with
-        small random value added. (Click to see full instructions)
+        image using a dot whose x and y locations use offsetX and offsetY with small
+        random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
         your array, redrawing the dots as they originally appeared. (Click to see
@@ -4678,14 +4638,37 @@ lt:
       U4 - CreateRecord - 5_instruction: |
         Add the provided javascript object as a
         record to a table. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Update your code to add properties
+        to your object one at a time using dot notation. (Click to see full instructions)
       U4 - Objects - createObject_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -4695,8 +4678,8 @@ lt:
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
       U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 5
-        values including at least one string and one number. (Click to see full instructions)
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
         
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
@@ -4724,23 +4707,15 @@ lt:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
-      Underground If Statements_instruction: |
-        Now things are getting tricky. Mine
-        3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
-        over any lava you uncover.
-      Underground Iron_instruction: |
-        Walking into molten lava is a bad idea. Place
-        cobblestone to create a bridge, then mine at least two of the iron blocks.
-      Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
+      Underground Avoiding Lava_instruction: 'Po kai kuriais blokais slepiasi lava. Tau reikės ją uždengti prieš einant toliau. Tau pravers "jei" komanda. Pridėk "ženk į priekį" komandą teisingoje vietoje, kad galėtum sunaikinti šiuos blokus.'
+      Underground If Statements_instruction: 'Darosi sudėtinga. Sunaikink 3 raudonus akmenis, tačiau neįkrisk į lavą. Naudok "jei" komandą, kad padengtum grindiniu lavą, kurią atrasi.'
+      Underground Iron_instruction: 'Vaikščioti per lavą - bloga idėja. Padėk grindinį, kad sukurtum tiltelį, tada sunaikink bent 2 geležies blokus.'
+      Underground Mine in a Circle_instruction: |
+        Rask būdą gauti 5 deimantus ir 7 raudonus akmenis! 
+        Pabandyk naudoti "kartok" komandą "kartok" komandos viduje, kad vaikščiotum kvadratu.
+        
+        
+      Underground Mining Coal_instruction: Vertingiausius išteklius rasi po žeme, bet gali sutemti. Padėk bent 2 deglus ir iškask bent 2 anglis.
       Underground Test Level_instruction: Surink visus mineralus!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

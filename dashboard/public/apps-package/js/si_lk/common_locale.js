@@ -176,7 +176,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "codeTooltip":function(d){return "ජනිත වූ JavaScript කේතය බලන්න."},
 "completedWithoutRecommendedBlock":function(d){return "ඔබ ප්‍රෙහෙලිකාව "+common_locale.v(d,"puzzleNumber")+" සම්පූර්ණ කලා.... සුභ පැතුම්! (නමුත් ප්‍රභල කේතයක් සඳහා වෙනත් බ්ලොක් එකක් භාවිතා කරන්න පුලුවන්)"},
 "continue":function(d){return "ඉදිරියට යන්න"},
-"copy":function(d){return "Copy"},
+"copy":function(d){return "පිටපත් කරන්න"},
 "defaultTwitterText":function(d){return "Check out what I made"},
 "designMode":function(d){return "නිරමාණය"},
 "dialogCancel":function(d){return "අවලංගු කරන්න"},
