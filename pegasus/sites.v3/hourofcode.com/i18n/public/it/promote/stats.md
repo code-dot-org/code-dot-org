@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Statistiche Utili
 
@@ -20,4 +19,3 @@ I computer sono ovunque, ma rispetto a 10 anni fa le scuole che insegnano inform
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

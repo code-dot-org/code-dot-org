@@ -12,6 +12,13 @@
 - show_bug_links = (script_level && script.show_report_bug_link?) || (level && level.try(:is_project_level))
 
 .header-wrapper.hide_on_mobile{class: ('feedback-bug-links' if show_bug_links)}
+  - if script_level && script
+    #progresswarning{style: "display: none"}
+      %a{href: "http://teacherblog.code.org/", target: "_blank"}
+        Due to very high traffic, your progress may not be saved.
+        %span.learnmore
+          Learn more
+
   - if show_bug_links
     - report_url = script_level ? script_level.report_bug_url(request) : level.report_bug_url(request)
     #betainfo
@@ -34,10 +41,6 @@
               - else
                 = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
-              -# Very temporary beta notice
-              - if @script && (@script.name == "starwars" || @script.name == "starwarsblocks" || @script.name == "mc")
-                .beta-notice
-                  = t('beta')
           .header_middle
             - if script_level
               = render partial: 'shared/header_progress'

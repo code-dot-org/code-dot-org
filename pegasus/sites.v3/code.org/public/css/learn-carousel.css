@@ -44,9 +44,15 @@
 #quicklinks {
   float: left;
   display: inline-block;
-  width: 190px;
+  width: 200px;
+}
+
+#quicklinks a {
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 200px;
 }
 
 .multi-item-carousel .carousel-control.left,
@@ -111,6 +117,10 @@
   #quicklinks {
     width: 175px;
   }
+
+  #quicklinks a {
+    width: 175px;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 769px) {
@@ -155,6 +165,10 @@
   #quicklinks {
     width: 190px;
   }
+
+  #quicklinks a {
+    width: 190px;
+  }
 }
 
 @media (min-width: 770px) and (max-width: 989px) {
@@ -172,6 +186,10 @@
   }
 
   #quicklinks {
+    width: 185px;
+  }
+
+  #quicklinks a {
     width: 185px;
   }
 

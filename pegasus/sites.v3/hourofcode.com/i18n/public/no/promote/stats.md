@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Presentasjon og nyttig statistikk
 
@@ -20,4 +19,3 @@ Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

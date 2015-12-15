@@ -28,7 +28,7 @@ social:
     %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
   %h1.starwars-heading= I18n.t(:starwars_subtitle)
 
-  .col-25.starwars-tutorial{style: "right: 20px;"}
+  .col-25.starwars-tutorial.starwars-js-tutorial
     %div.tutorial-box
       %h2.sw-h2= I18n.t(:starwars_javascript_title)
       %div.sw-tutorial-info
@@ -37,7 +37,7 @@ social:
       %a{:href => '/api/hour/begin/starwars', :target=>'_self'}
         %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
 
-  .col-25.starwars-tutorial{style: "right: 270px;"}
+  .col-25.starwars-tutorial.starwars-blocks-tutorial
     %div.tutorial-box
       %h2.sw-h2= I18n.t(:starwars_blocks_title)
       %div.sw-tutorial-info

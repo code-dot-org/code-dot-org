@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Jak přilákat média na Vaší Hodinu kódu
 
@@ -62,4 +61,3 @@ Code.org je 501c3 veřejná nezisková společnost účelová na expanzi účast
   
 Najděte více zdrojů a vzorových emailů [zde](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

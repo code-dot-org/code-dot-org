@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 <% end %>
 
-<%= view :signup_button %>

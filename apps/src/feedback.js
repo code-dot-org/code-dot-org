@@ -1,4 +1,4 @@
-/* global trackEvent */
+/* global trackEvent, appOptions */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -80,7 +80,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   var hadShareFailure = (options.response && options.response.share_failure);
-  var showingSharing = options.showingSharing && !hadShareFailure;
+  // options.response.level_source is the url that we are sharing; can't
+  // share without it
+  var canShare = options.response && options.response.level_source;
+  var showingSharing = options.showingSharing && !hadShareFailure && canShare;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -565,8 +568,15 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
-          message = finalLevel ? msg.finalStage(msgParams) : '';
-          message = message + ' ' + options.appStrings.reinfFeedbackMsg;
+          var reinfFeedbackMsg = (options.appStrings &&
+              options.appStrings.reinfFeedbackMsg) || '';
+
+          if (options.level.disableFinalStageMessage) {
+            message = reinfFeedbackMsg;
+          } else {
+            message = finalLevel ? (msg.finalStage(msgParams) + ' ') : '';
+            message = message + reinfFeedbackMsg;
+          }
         } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
@@ -615,13 +625,8 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
  *
  */
 FeedbackUtils.prototype.createSharingDiv = function(options) {
-  if (!options.response || !options.response.level_source) {
-    // don't even try if our caller didn't give us something that can be shared
-    // options.response.level_source is the url that we are sharing
-    return null;
-  }
-
-  if (this.studioApp_.disableSocialShare) {
+  // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
+  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;

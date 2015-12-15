@@ -95,7 +95,7 @@ body {
   background-color: transparent !important;
 }
 
-.small-footer-base {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: $footer-background;
   color: $footer-text–and-arrow;
   & a:hover {
@@ -579,6 +579,7 @@ $height-to-width: 434 / 477;
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
   @include pixelated();
+
   -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
   -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
   -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Up_Slice.png") 3 3 5 5 stretch !important;
@@ -591,12 +592,12 @@ $height-to-width: 434 / 477;
   &:active {
     outline:none;
     border-style: solid !important;
-    border-width: 5px 4px 3px 3px !important;
+    border-width: 5px 5px 3px 3px !important;
     @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 4 3 3 fill stretch !important;
+    -moz-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/Run_Button_Down_Slice.png") 5 5 3 3 fill stretch !important;
   }
 }
 
@@ -764,8 +765,12 @@ $height-to-width: 434 / 477;
     }
   }
 
-  .modal-content {
-    //margin-left: 110px; // TODO(bjordan): needed?
+  @media screen and (max-height: 630px) {
+    .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px;
+    }
   }
 
   #sharing {
@@ -902,7 +907,8 @@ $height-to-width: 434 / 477;
   transform: translateX($translateX) translateY($translateY) rotate($degrees);
 }
 
-// Rotate and tweak positioning of tip asset to line up at different orientations
+// Rotate and tweak positioning of tip asset to line up at different
+// orientations.
 
 .qtip-pos-lc .qtip-tip {
   @include translate-x-y-rotate(2px, 0, -90deg);

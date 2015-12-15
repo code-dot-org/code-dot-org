@@ -20,7 +20,7 @@ action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,code.org,show,al
 action_num_served,action,homepage_action_text_num_served,num_served,,,,,,code.org,show,all
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,show,all
 action_starwars_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,nah,all
-action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,nah,all
+action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,show,all
 action_codevideo,action,homepage_action_text_codevideo,video,2DxWIxec6yo,,,,,code.org,nah,all
 action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,,,,,csedweek.org,show,all
 action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,all
@@ -31,7 +31,7 @@ banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http:
 banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,/privacy,,,,,code.org,nah,en
 banner_hoc,banner,homepage_banner_text_prizes,homepage_banner_link_prizes,https://hourofcode.com,,,,,code.org,nah,all
 block_hoc_frozen,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_hoc.jpg,code.org,nah,en
-block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
+block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
 block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
 block_advocates,block,homepage_slot_text_title_advocates,homepage_slot_text_blurb_advocates,"185, 191, 21","209, 213, 103",/promote,,/shared/images/courses/logo_tall_map.jpg,code.org,show,en

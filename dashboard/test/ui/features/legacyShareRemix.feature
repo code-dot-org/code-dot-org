@@ -14,7 +14,7 @@ Feature: Legacy Share Remix
     And I wait to see ".congrats"
     And I navigate to the share URL
     And I select the "How it works" small footer item
-    And I wait until element ".project_remix" is visible
+    And I wait to see ".project_remix"
     And I press the first ".project_remix" element
     And I wait for 10 seconds
     And check that the URL contains "/projects/artist/"

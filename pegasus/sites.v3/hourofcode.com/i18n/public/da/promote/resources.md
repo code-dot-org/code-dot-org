@@ -132,4 +132,3 @@ Venligst kontakt mig på [telefon nummer eller E-mail adresse]. Jeg ser frem til
 
 Med venlig hilsen, [navn], [Titel]
 
-<%= view :signup_button %>

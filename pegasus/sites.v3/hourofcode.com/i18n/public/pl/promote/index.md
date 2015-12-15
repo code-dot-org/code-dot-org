@@ -44,4 +44,3 @@ Tell your friends about the **#HourOfCode**!
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Może to pomóc w tworzeniu informatyki w twoim obszarze ponad jedną godzinę.
 
-<%= view :signup_button %>

@@ -58,7 +58,6 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
       locale: studioApp.LOCALE,
       localeDirection: studioApp.localeDirection(),
       baseUrl: studioApp.BASE_URL,
-      cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: this.xml

@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Grazas por rexistarse para ter unha oportunidade de gañar o premio de $10.000 en Hardware
 
@@ -32,4 +31,3 @@ Recluta un grupo local - nenos e nenas de distintas asociacións, igrexa, univer
 
 [Envía este correo electrónico](<%= resolve_url('/promote/resources#politicians') %>) ó seu alcalde, ó Concello ou xunta escolar, e invíteos a visitar a súa escola.
 
-<%= view :signup_button %>
