@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{ 'Apply to be a Participant'=>current_url+'-application',  'About the Curriuclum'=>current_url+'#curriculum', 'About the Professional Learning Program'=>current_url+'#about', 'How does it work?'=> current_url+ '#components', 'What are the commitments?'=> current_url+'#commitments', 'Who can participate?'=> current_url+'#participate', 'Where is it offered?'=>current_url+'#locations'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

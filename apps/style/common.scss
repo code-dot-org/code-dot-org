@@ -441,6 +441,9 @@ html[dir='rtl'] #codeWorkspace {
   html[dir='rtl'] #codeWorkspace {
     right: $width;
   }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px;
+  }
   div#visualizationResizeBar {
     left: $width;
     line-height: $height;
@@ -1183,8 +1186,8 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
   .generatedCode {
     font-size: 14px;
-    overflow: auto;
-    max-height: 150px;
+    overflow: scroll;
+    max-height: 400px;
   }
 }
 
@@ -1523,5 +1526,20 @@ $see-examples-thick-underline-color: $yellow;
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
   }
-}
 
+  #visualizationColumn {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .small-footer-base {
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #more-menu, #copyright-flyout {
+    left: auto;
+    right: 0;
+  }
+}

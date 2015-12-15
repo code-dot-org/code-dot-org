@@ -97,23 +97,7 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">12</title>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE">30</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">30</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
+        <block type="pick_one"/>
       </xml>
     </required_blocks>
     <solution_blocks>

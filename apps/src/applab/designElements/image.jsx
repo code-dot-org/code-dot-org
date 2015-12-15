@@ -123,13 +123,14 @@ module.exports = {
     var element = document.createElement('img');
     element.style.height = '100px';
     element.style.width = '100px';
-    element.setAttribute('src', '/blockly/media/1x1.gif');
-    element.setAttribute('data-canonical-image-url', '');
+    element.setAttribute('src', '');
 
     return element;
   },
   onDeserialize: function (element, updateProperty) {
-    var url = element.getAttribute('data-canonical-image-url') || '';
-    updateProperty(element, 'picture', url);
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      updateProperty(element, 'picture', url);
+    }
   }
 };

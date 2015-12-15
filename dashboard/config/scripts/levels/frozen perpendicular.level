@@ -24,7 +24,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the “Turn” block as well as the “Move” block.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the “Turn” block as well as the “Move” block.\r\n\r\n<h5>**Help me with angles**</h5>\r\n![](https://images.code.org/083d4888f1fe97a7e8645924bf01a336-image-1442593512858.png)",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

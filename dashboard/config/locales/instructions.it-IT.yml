@@ -1470,8 +1470,8 @@
         Usiamo di nuovo il blocco con la variabile COUNTER per disegnare questa immagine. '
       Course 4 Artist For Loops 6_instruction: Spazio Libero! Prova ad usare un ciclo
         FOR per disegnare un modello di forma crescente a piacere.
-      Course 4 Artist For Loops 6a_instruction: Fare tre piccole modifiche al codice
-        dell'ultimo livello per arrivare a questo!
+      Course 4 Artist For Loops 6a_instruction: Fai tre piccole modifiche al codice
+        dell'ultimo esercizio per arrivare a questo!
       Course 4 Artist For Loops 7_instruction: Cosa succede se rimouvi il blocco RIPETI
         3 da questo algoritmo, mantenendo i blocchi MUOVI e RUOTA nel ciclo RIPETI?
         In questo triangolo a spirale ogni lato è 20 pixels più lungo del precedente.
@@ -1858,7 +1858,7 @@
         Solo la sfida!'
       Course 4 EC 2c_instruction: '* * Sfida estrema: * * Nessuna regola. Nessun indizo.
         Solo la sfida!'
-      Course 4 EC 3_instruction: 'Utilizza quello che hai imparato nel livello precedente
+      Course 4 EC 3_instruction: 'Usa quello che hai imparato nell''esercizio precedente
         per disegnare un''immagine come questa. NB: Il codice diventa più semplice
         se si incorporano i parametri. '
       Course 4 EC 3a_instruction: Sfida estrema. Nessuna regola. Nessun indizio. Solo
@@ -1882,10 +1882,10 @@
         che consente al tuo personaggio principale di saltare di 100 pixel. Utilizza
         questa nuova funzione per raccogliere tutte le bandiere.
       Course 4 Play Lab Params 10_instruction: "Abbiamo aggiunto un'ultima funzione
-        che puoi usare. \r\n\r\nProgramma il tuo gioco in modo tale da chiamare la
-        funzione \"sali di un livello\" se la variabile \"punti del giocatore\"diventa
-        maggiore di 10 (>10). \r\n\r \nLancia il gioco e supera il livello 4 per passare
-        al prossimo esercizio. "
+        che puoi usare. <br>\nProgramma il tuo gioco in modo tale da chiamare la funzione
+        \"sali di un livello\" se la variabile \"punti del giocatore\"diventa maggiore
+        di 10 (>10).<br>\nLancia il gioco e supera il livello 4 per passare al prossimo
+        esercizio. \n"
       Course 4 Play Lab Params 2_instruction: "Ora le bandiere sono troppo in alto
         per poterle raggiungere con la nostra funzione \"salta\"! Prova ad usare le
         frecce \"su\" e \"giù\" per poter avere salti di diverse altezze.  \r\n\r
@@ -1906,23 +1906,22 @@
         ciascuno di loro. Ricorda che i personaggi corrispondono ai numeri 1, 2 e
         3.
       Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+        Aggiungi un altro parametro chiamato "speed" (velocità)
+        alla funzione "patrol". Provate a utilizzare il blocco "set speed" (imposta velocità) con il nuovo parametro "speed" per aiutare il pinguiono a predenre entrambe le bandiere prima che gli altri ne prendano una.
       Course 4 Play Lab Params 7_instruction: "Osserva il codice che ti è stato dato
         per vedere se riesci a capire cosa fa ogni blocco. \r\n\r\nQuando hai finito,
         utilizza i tasti freccia per far muovere il cane e raccogliere tutte le bandiere."
       Course 4 Play Lab Params 8_instruction: Utilizza un blocco "quando il personaggio
         ... tocca ..." per spostare il cane in alto a sinistra SOLO se il cane tocca
         uno qualsiasi degli altri personaggi.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Ecco il nostro gioco in uno stadio
+        ancora più iniziale ma con la maggior parte del codice nascosta. Esiste una
+        nuova funzione  «score_points ». \r\n \r\nModifica la funzione in modo che
+        il parametro \"points\" sia aggiunto alla variabile  \"player_score\". \r\n\r\nLa
+        variable \"player_score\" dovrà essre incrementata ogniqualvolta il che il
+        cane tocca il gatto e diminuita ogni volta che il gatto tocca il cane. \r\n\r\nNota.
+        Una volta concluso premi  \"Esegui \" per giocare.  Una volta che il cane
+        ha raggiunto i 6 punti , si passa al  puzzle sseguente. "
       Course 4 Play Lab Vars 1_instruction: Non devi scrivere alcun codice. Devi solo
         premere "Esegui" per giocare! In questo gioco, sei il cane che sta cercando
         di raccogliere più bandiere del gatto. Utilizza la freccia verso il basso
@@ -1947,18 +1946,15 @@
         palla di fuoco ? Usate l'evento «quando l'attore 2 tocca qualsiasi cosa »
         per aggiornare la variabile quando la palla di fuoco colpisce il gatto. Potete
         incrementare il punteggio impostando score = score + 1. Fate in modo che il
-        vostro punteggio arrivi a 10, incrementandolo di 1 alla volta, per passare
-        il livello.
-      Course 4 Play Lab Vars 6_instruction: "Utilizza la freccia destra per lanciare
-        cuori. \r \n\r\nNel nostro gioco, come dovremmo assegnare i punti? Aggiungi\n1
-        alla variabile \"punti\" ogni volta che il cane colpisce il gatto con un cuore.
-        Usa la variabile \"quando il personaggio 2 tocca una cosa qualunque\" per
-        attivare un aggiornamento del tuo punteggio. Puoi incrementare la tua variabile
-        impostando \"punti = punti +1\". Fai salire il tuo punteggio fino a 10 (un
-        punto alla volta!) per superare il livello."
+        vostro punteggio arrivi a 10, incrementandolo di 1 alla volta, per risolvere
+        l'esercizio.
+      Course 4 Play Lab Vars 6_instruction: |
+        Utilizza la freccia destra per lanciare cuori.<br>
+        Nel nostro gioco, come dovremmo assegnare i punti? Aggiungi
+        1 alla variabile "punti" ogni volta che il cane colpisce il gatto con un cuore. Usa la variabile "quando il personaggio 2 tocca una cosa qualunque" per attivare un aggiornamento del tuo punteggio. Puoi incrementare la tua variabile impostando "punti = punti +1". Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per superare il livello.
       Course 4 Play Lab Vars 7_instruction: |
         Bello, ma ora facciamo in modo che questo gioco non sia troppo facile.
-        Ogni volta che il cane (personaggio 1) viene colpito da un cuore giallo lanciato dal gatto (personaggio 2), dovresti perdere un punto. Inizia con 10 punti così non è troppo difficile. Lascia che il tuo punteggio scenda da 10 fino a 0 per superare il livello.
+        Ogni volta che il cane (personaggio 1) viene colpito da un cuore giallo lanciato dal gatto (personaggio 2), dovresti perdere un punto. Inizia con 10 punti così non è troppo difficile. Lascia che il tuo punteggio scenda da 10 fino a 0 per risolvere l'esercizio.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: Bene. Un'ultima cosa per questo
         gioco. Predisponiamolo in modo che il giocatore possa vincere (o perdere).
         Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio.
@@ -2043,12 +2039,12 @@
         con il minor numero possibile di blocchi?
       Course 4 SCF 1b_instruction: Può capire come raccogliere tutto questo nettare
         con il minor numero possibile di blocchi?
-      Course 4 SCF 2_instruction: 'Utilizza quello che hai imparato nel livello precedente
+      Course 4 SCF 2_instruction: 'Usa quello che hai imparato nell''esercizio precedente
         per disegnare un''immagine come questa. NB: Il codice diventa più semplice
         se si incorporano i parametri. '
       Course 4 SCF 3 Fail 1_instruction: Puoi capire come...
       Course 4 SCF 3 Fail 2_instruction: Puoi capire come...
-      Course 4 SCF 3_instruction: 'Utilizza quello che hai imparato nel livello precedente
+      Course 4 SCF 3_instruction: 'Usa quello che hai imparato nell''esercizio precedente
         per disegnare un''immagine come questa. NB: Il codice diventa più semplice
         se si incorporano i parametri. '
       Course 4 SCFL 1_instruction: Risolvi il puzzle con il minor numero di blocchi

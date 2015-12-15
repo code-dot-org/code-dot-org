@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var student1 = {};\r\nstudent1.name = \"Maya\";\r\nstudent1.grade = 11;\r\nstudent1.inClass = true;\r\n\r\nvar student2 = {};\r\nstudent2.name = \"Favian\";\r\nstudent2.grade = 10;\r\nstudent2.inClass = true;\r\n\r\nvar student3 = {};\r\nstudent3.name = \"Max\";\r\nstudent3.grade = 9;\r\nstudent3.inClass = true;\r\n\r\nvar student4 = {};\r\nstudent4.name = \"Nell\";\r\nstudent4.grade = 10;\r\nstudent4.inClass = false;\r\n\r\nvar student5 = {};\r\n//create a student object for yourself",
+    "start_blocks": "var student1 = {};\r\nstudent1.name = \"Maya\";\r\nstudent1.grade = 11;\r\nstudent1.onTimeToClass = true;\r\n\r\nvar student2 = {};\r\nstudent2.name = \"Favian\";\r\nstudent2.grade = 10;\r\nstudent2.onTimeToClass = true;\r\n\r\nvar student3 = {};\r\nstudent3.name = \"Max\";\r\nstudent3.grade = 9;\r\nstudent3.onTimeToClass = true;\r\n\r\nvar student4 = {};\r\nstudent4.name = \"Nell\";\r\nstudent4.grade = 10;\r\nstudent4.onTimeToClass = false;\r\n\r\nvar student5 = {};\r\n//create a student object for yourself",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -44,7 +44,10 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

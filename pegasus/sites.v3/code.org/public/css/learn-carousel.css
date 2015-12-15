@@ -44,7 +44,7 @@
 #quicklinks {
   float: left;
   display: inline-block;
-  width: 190px;
+  width: 200px;
 }
 
 #quicklinks a {
@@ -52,7 +52,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 190px;
+  width: 200px;
 }
 
 .multi-item-carousel .carousel-control.left,

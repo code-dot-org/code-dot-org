@@ -158,19 +158,19 @@ it-IT:
   homepage_hero_text_susan: |
     &ldquo;Se si può cambiare la tecnologia,
     si può cambiare il mondo.&rdquo;
-    Susan, CEO di YouTube
+    Susan, Amministratore Delegato di YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Non giocare soltanto con il tuo telefono,
+    &ldquo;Col tuo telefono non giocarci soltanto,
     programmalo.&rdquo;
-    Presidente Barack Obama
+    Il Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;I nostri bambini &mdash; comprese le nostre bambine &mdash;
+    &ldquo;I nostri figli &mdash; tra cui le nostre ragazze &mdash;
     devono avere l'opportunità di imparare informatica.&rdquo;
-    Sheryl, COO di Facebook
+    Sheryl, Direttore Operativo di Facebook
   homepage_hero_text_satya: |
     &ldquo;L'informatica può creare 
     le migliori opportunità del mondo.&rdquo;
-    Satya, CEO di Microsoft
+    Satya, Amministratore Delegato di Microsoft
   homepage_hero_text_bosh: |
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
@@ -243,7 +243,7 @@ it-IT:
   homepage_slot_text_link_fullcurriculum: Guarda il nostro curriculum completo
   homepage_slot_text_link_pd: Professional Development
   homepage_slot_text_title_advocates: Sostenitori
-  homepage_slot_text_blurb_advocates: "Appoggia le diversità nell'informatica"
+  homepage_slot_text_blurb_advocates: "Appoggia la diffusione della diversità nell'informatica"
   homepage_slot_text_link_stats: Guarda le statistiche
   homepage_slot_text_link_buy: Fatti coinvolgere
   homepage_slot_text_link_donate: Fai una donazione
@@ -289,11 +289,11 @@ it-IT:
   class_submission_level_vocational: Formazione professionale
   class_submission_languages_other: Altre lingue
   inspirational_videos_more: 'Altri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video stimolanti</a> fatti da celebrità e modelli di riferimento'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Scegli il tema del tuo Laboratorio
+  playlab_classic_title: Classico
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: "L'Era Glaciale - È in arrivo"
+  playlab_iceage_title_live: "L'Era Glaciale"
   starwars_subtitle: Costruisci una galassia con il codice
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
@@ -301,7 +301,7 @@ it-IT:
   starwars_javascript_start_button: Prova adesso
   starwars_blocks_title: Blocchi
   starwars_blocks_description: Usa la programmazione a blocchi.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Molte lingue | Browser, smartphone e tablet moderni | Da 6 anni in su
   starwars_blocks_start_button: Prova adesso
   starwars_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
   starwars_speak_languages: "Parli un'altra lingua?"
@@ -312,7 +312,7 @@ it-IT:
   mc_shortdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex.
   mc_gradelevel: Da 4 a 104 anni
   mc_platformtext: Browser moderni, smartphone, Tablet
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Molte lingue | Browser e tablet moderni | Da 6 anni in su
   minecraft_subtitle: "L'Ora del Codice con Minecraft"
   volunteer_engineer_submission_title: "Invita studenti e volontari a partecipare all'ora del codice."
   volunteer_engineer_submission_subtitle_generic: "100.000 insegnanti ospiteranno un'Ora di Codice nelle loro classi quest'anno: 7-13 Dicembre 2015. Hanno bisogno del tuo aiuto! "
@@ -321,7 +321,8 @@ it-IT:
   volunteer_engineer_submission_intro_recruit: |-
     Questi insegnanti cercano <span style="font-family: 'Gotham 7r', sans-serif;"> appassionati di formazione informatica</span> che possano aiutare in classe, o qualcuno che possa <span style="font-family: 'Gotham 7r', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità dell'informatica (che potrebbe essere fatto con una chat video). Se non siete in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento dell'Ora del Codice.
   volunteer_engineer_submission_intro_signup: 'Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class="form-required-field">*</span> sono obbligatori.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: |-
+    Non vuoi offrirti volontario? <a href="%{learn_more}">Scopri di più</a> riguardo organizzare il tuo evento dell' Ora del Codice e trova un volontario locale sulla nostra <a href="%{volunteer_local}">Mappa Volontari</a>.
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
   volunteer_engineer_submission_field_name_placeholder: Cognome e nome
@@ -538,7 +539,7 @@ it-IT:
   dashboard_progress_not_completed: non completato
   dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
   dashboard_progress_completed_perfect: completato in modo perfetto
-  dashboard_progress_furthest_level_attempted: livello più avanzato che è stato provato
+  dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato provato
   dashboard_stage: Lezione
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
@@ -563,7 +564,7 @@ it-IT:
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
   dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando! Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_playlab: "<b>4 Dicembre, 2015</b> - L'Ora del Codice è qua! Prova uno dei 50 corsi per tutte le età e tutti i dispositivi. Novità della settimana: programma le tue storie e i tuoi giochi con i nuovi corsi del Laboratorio: L'Era Glaciale e Gumball."
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
   learn_more: Ulteriori informazioni
@@ -576,11 +577,14 @@ it-IT:
   learn_educator_resources_button: Risorse per gli insegnanti
   learn_are_you_educator: |-
     Sei un insegnante? Impara <a href="http://hourofcode.com/resources/how-to"> con insegnare un'Ora del Codice</a>
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_find_volunteer: |-
+    <a href="https://code.org/volunteer/local">Trova un volontario locale</a> che aiuti durante l'Ora del Codice
+  learn_teacher_led_lesson_plans: |-
+    Ispirati<a href="https://code.org/teacher-led">a piani di lezioni per l'Ora del Codice guidate da professori</a>
+  learn_how_to_hoc: |-
+    Segui <a href="https://hourofcode.com/how-to">la nostra guida </a> su come insegnare l'Ora del Codice
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Scopri</a> i premi per gli organizzatori.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: 'Ispira student mostrandogli <a href="https://code.org/educate/inspire">questi video</a>'
   hoc2014_try_new_tutorials: "Prova i nuovi corsi dell'Ora del Codice"
   hoc2014_try_new_tutorial: "Prova il nuovo corso dell'Ora del Codice in versione provvisoria"
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
@@ -592,14 +596,14 @@ it-IT:
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Corsi disponibili in Inglese
   carousel_heading_beginners: Corsi per principianti
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: Tutorial per principianti
   carousel_heading_javascript: Lezioni che insegnano il linguaggio Javascript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutorial che insegnano JavaScript
   carousel_heading_unplugged: "Non hai Internet o dispositivi informatici? Prova l'informatica con mezzi tradizionali!"
   carousel_heading_devices: App per imparare su smartphone e tablet
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Applicazioni tutorial per smartphone e tablet
   carousel_heading_languages: Corsi per imparare altri linguaggi di programmazione
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Tutorial in altre lingue di programmazione
   carousel_heading_apps_games: Costruisci la tua app o il tuo gioco
   carousel_heading_university: Corsi universitari online
   carousel_heading_webpages: Impara a costruire pagine web
@@ -608,7 +612,8 @@ it-IT:
   educator_notes: Note per gli insegnanti
   teach_led_lesson_plans: |-
     Piani di attività "Gestite dagli Insegnanti" per l'Ora del Codice
-  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
+  learn_footer_all_tutorials: |-
+    Guarda <a href="https://code.org/educate/allhourofcode">la lista comprensiva dei tutorial per l'Ora del Codice</a>. Per vedere I criteri e linee guida di sottomissione per l'Ora del Codice, <a href="https://hourofcode.com/tutorial-guidelines">clicca qui.</a>
   how_to_teach_hoc: Come insegnare un ora di codice
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   beyond_submission: |-
@@ -623,8 +628,8 @@ it-IT:
   mobile_devices: Corsi per dispositivi mobili
   frozen_name: Programma con Anna ed Elsa
   starwars_name: 'Guerre Stellari: Costruisci una galassia con il codice'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Labirinto Classico
+  codeintl_name: Labirinto Classico
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: "Un'introduzione a JavaScript"
   khanes_name: "Un'introduzione a JavaScript"
@@ -660,16 +665,16 @@ it-IT:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sasso, Carta, Forbici
-  hourofcode_name: Classic Maze
+  hourofcode_name: Labirinto Classico
   playlab_name: Laboratorio
   infinity_name: Disney Infinity
   artist_name: 'Artista: Sequenze e Cicli'
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: "Missione del Coding dell' Isola Misteriosa"
+  allcancode_name: Corri Marco!
+  csfirst_name: Prima il CS
+  boxisland_name: Isola scatola
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minuti di Coding
   teacherled_name: |-
     Piani di attività "Gestite dagli Insegnanti" per l'Ora del Codice
   codeorg_gradelevel: Da 4 a 104 anni
@@ -716,12 +721,12 @@ it-IT:
   infinity_gradelevel: Da 4 a 104 anni
   artist_gradelevel: Da 8 anni in su
   monstercoding_gradelevel: Da 5 a 13 anni
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Anni 5-10
+  csfirst_gradelevel: Anni 9-14
   boxisland_gradelevel: Scuola elementare
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Anni 12-14
+  texasinstruments_gradelevel: Anni 13-16
+  teacherled_gradelevel: Anni 5+
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet
   thinkersmithspanish_platformtext: Tradizionale
@@ -763,12 +768,12 @@ it-IT:
   frozen_platformtext: 'Browser moderni  + tablet'
   starwars_platformtext: 'Browser moderni  + tablet'
   playlab_platformtext: Browser moderni, smartphone, Tablet
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Browser moderni, iOS e Android
+  allcancode_platformtext: Browser moderni e iOS
   csfirst_platformtext: Browser Web moderni
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: Android e iOS
   codesters_platformtext: Browser Web moderni
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: Calcolatori TI
   teacherled_platformtext: Browser moderni, smartphone, Tablet
   codeorg_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!

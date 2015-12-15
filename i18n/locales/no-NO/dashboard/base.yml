@@ -145,7 +145,7 @@
       invite_student:
         subject: 'Bli med i en av klassene til %{teacher_name} på Code.org!'
       student_disassociated:
-        subject: 'Melding fra Code.org: %{elev_name} er ikke lenger tilknyttet som din elev.'
+        subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som din elev.'
       teacher_disassociated:
         subject: 'Melding fra Code.org: %{teacher_name} er ikke lenger tilknyttet som læreren din.'
   reports:
@@ -301,9 +301,9 @@
     rollup: Fremdriftsoversikt
     activity: Nylig klasseaktivitet
     user_not_found: Læreren eller eleven ble ikke funnet
-    cant_remove_student_no_email: '%{elev_name} kan ikke fjernes som din elev fordi %{elev_name} ikke har registrert en e-postadresse'
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din elev fordi %{student_name} ikke har registrert en e-postadresse'
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer fordi du ikke har registrert en e-postadresse'
-    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{elev_name}'
+    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
     panel:
       answer_viewer: Visning av svaret
       student: elev

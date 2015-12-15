@@ -146,7 +146,7 @@ it:
           description_short: "Disegna fantastiche immagini e decorazioni con l'artista!"
         hourofcode:
           Maze: 'Labirinto: Sequenze e Cicli'
-          title: Classic Maze
+          title: Labirinto Classico
           description: "Impara i concetti base dell'informatica con i personaggi di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!"
           description_short: "Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!"
         frozen:
@@ -1405,10 +1405,10 @@ it:
           Halloween 2015: Halloween 2015
           description: "Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!"
         iceage:
-          title: Laboratorio Gioco Età del ghiaccio
-          description_short: Crea una storia oppure fai un gioco con il Laboratorio Gioco Età del ghiaccio!
-          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco Età del ghiaccio!
-          Ice Age Play Lab: Laboratorio Gioco Età del ghiaccio
+          title: "Laboratorio con L'Era Glaciale"
+          description_short: "Crea una storia oppure fai un gioco con il Laboratorio con L'Era Glaciale!"
+          description: "Crea una storia oppure fai un gioco con il Laboratorio con L'Era Glaciale!"
+          Ice Age Play Lab: "Laboratorio con L'Era Glaciale"
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1459,10 +1459,10 @@ it:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratorio di Gumball
-          description_short: Crea una storia oppure fai un gioco con il Laboratorio di Gumball!
-          description: Crea una storia oppure fai un gioco con il Laboratorio di Gumball!
-          Gumball Play Lab: Laboratorio di Gumball
+          title: Laboratorio con Gumball
+          description_short: Crea una storia oppure fai un gioco con il Laboratorio con Gumball!
+          description: Crea una storia oppure fai un gioco con il Laboratorio con Gumball!
+          Gumball Play Lab: Laboratorio con Gumball
         starwars:
           title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description_short: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
