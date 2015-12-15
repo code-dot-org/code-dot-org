@@ -1,11 +1,14 @@
+# functionality for student users (teachers do this via the
+# teacher-dashboard in pegasus and the api) to manipulate Followers,
+# which means joining and leaving Sections (see Follower and Section
+# models).
+
 class FollowersController < ApplicationController
-  before_filter :authenticate_user!, except: [:student_user_new, :student_register, :index, :manage, :sections]
-  before_filter :load_section, only: [:create, :student_user_new, :student_register]
+  before_filter :authenticate_user!, except: [:student_user_new, :student_register]
+  before_action :load_section, only: [:create, :student_user_new, :student_register]
 
   # join a section as a logged in student
   def create
-    load_section
-
     @section.add_student(current_user)
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
@@ -31,26 +34,22 @@ class FollowersController < ApplicationController
   # GET /join/XXXXXX
   # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
-    load_section
-
     # make sure section_code is in the path (rather than just query string)
     if request.path != student_user_new_path(section_code: params[:section_code])
       redirect_to student_user_new_path(section_code: params[:section_code])
-    elsif current_user && @section
+    elsif current_user
       @section.add_student(current_user)
 
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
     else
       @user = User.new
-      # render student_user_new
+      # if there is no logged in user, render the default student_user_new view which includes the sign up form
     end
   end
 
   # POST /join/XXXXXX
   # join a section as a new student
   def student_register
-    load_section
-
     user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
 
     student_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
@@ -74,7 +73,7 @@ class FollowersController < ApplicationController
       end
     end
 
-    render "student_user_new", formats: [:html]
+    render 'student_user_new', formats: [:html]
   end
 
   private
@@ -89,13 +88,15 @@ class FollowersController < ApplicationController
       return
     end
 
-    unless @section = Section.find_by_code(params[:section_code])
+    @section = Section.find_by_code(params[:section_code])
+    unless @section
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end
 
     if current_user && current_user == @section.user
-      redirect_to redirect_url, alert: I18n.t('follower.error.cant_join_own_section') and return
+      redirect_to redirect_url, alert: I18n.t('follower.error.cant_join_own_section')
+      return
     end
   end
 end
