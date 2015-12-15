@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Use the wrap function to prevent currentIndex from leaving the bounds of your array. (Click to see full instructions)"
   }
 }]]></config>
