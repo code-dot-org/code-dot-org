@@ -23,6 +23,7 @@ var plainTwitterOptions = {
   hashtag: 'HourOfCode'
 };
 
+
 function loadGumball(skin, assetUrl) {
   skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'dots';
@@ -132,14 +133,12 @@ function loadGumball(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: skin.walkValues[i],
-        emotionCycles: 0,
         extraEmotions: 3
       },
-      timePerFrame: 100
+      animationSpeed: 3
     };
   });
 
@@ -314,14 +313,12 @@ function loadIceAge(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 12,
-        emotionCycles: 0,
         extraEmotions: 3
       },
-      timePerFrame: 100
+      animationSpeed: 3
     };
   });
 
@@ -450,12 +447,11 @@ function loadInfinity(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 12
       },
-      timePerFrame: 100
+      animationSpeed: 3
     };
   });
 
@@ -806,12 +802,11 @@ function loadHoc2015(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: name == 'r2-d2' ? 14 : 16,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: name == 'r2-d2' ? 14 : 8
       },
-      timePerFrame: 100
+      animationSpeed: 3
     };
   });
 
@@ -1267,12 +1262,11 @@ function loadHoc2015x(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 21,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 19
       },
-      timePerFrame: 100
+      animationSpeed: 3
     };
   });
   skin['bb-8'].movementAudio = [
@@ -1444,11 +1438,12 @@ function loadStudio(skin, assetUrl) {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
-        animation: 1,
+        normal: 2,
+        holdIdleFrame0Count: 8,
         turns: 7,
         emotions: 3
-      }
+      },
+      animationSpeed: 6
     };
   });
 

@@ -3030,7 +3030,10 @@ function spriteFrameNumber (index, opts) {
   var frameNum = 0;
 
   var currentTime = new Date();
-  var elapsed = currentTime - Studio.startTime;
+  // adjust animTick to convert overall tick frequency to animation frequency
+  // and skew each sprite slightly so each animates at a slightly different time
+  var animTick = Math.floor(
+    (Studio.tickCount + index * (sprite.animationSpeed + 1)) / sprite.animationSpeed);
 
   if (opts && opts.walkDirection) {
     var direction = constants.frameDirTableWalking[sprite.displayDir];
@@ -3042,40 +3045,37 @@ function spriteFrameNumber (index, opts) {
     }
     return direction;
   }
-  else if (opts && opts.walkFrame && sprite.timePerFrame) {
-    return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
+  else if (opts && opts.walkFrame && sprite.frameCounts.walk) {
+    return animTick % sprite.frameCounts.walk;
   }
 
   if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
-    // turn frames start after normal and animation frames
-    return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
-      constants.frameDirTable[sprite.displayDir];
+    // turn frames start after normal frames, skip 1 since frameDirTable assumes
+    // the south-facing image is omitted, but the spritesheet includes it when turns == 8
+    return sprite.frameCounts.normal + 1 + constants.frameDirTable[sprite.displayDir];
   }
   if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
-    // turn frames start after normal and animation frames
-    return sprite.frameCounts.normal + sprite.frameCounts.animation +
-      constants.frameDirTable[sprite.displayDir];
-  }
-  if (sprite.frameCounts.animation === 1 && Studio.tickCount) {
-    // we only support two-frame animation for base playlab, the 2nd frame is
-    // only up for 1/8th of the time (since it is a blink of the eyes)
-    if (1 === Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
-        ANIM_AFTER_NUM_NORMAL_FRAMES) {
-      // animation frame is the first frame after all the normal frames
-      frameNum = sprite.frameCounts.normal;
-    }
+    // turn frames start after normal frames
+    return sprite.frameCounts.normal + constants.frameDirTable[sprite.displayDir];
   }
 
-  if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
-    // Use elapsed time instead of tickCount
-    frameNum = Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
+  if (sprite.frameCounts.holdIdleFrame0Count) {
+    // Insert extra "held" frames at the end of the animation:
+    frameNum = animTick %
+                (sprite.frameCounts.normal + sprite.frameCounts.holdIdleFrame0Count);
+    if (frameNum >= sprite.frameCounts.normal) {
+      // When the frameNumber is out of range due to the extra "held" frames,
+      // display frame 0:
+      frameNum = 0;
+    }
+  } else {
+    frameNum = animTick % sprite.frameCounts.normal;
   }
 
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
     sprite.frameCounts.emotions > 0) {
-    // emotion frames precede normal, animation, turn frames
-    frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
-      sprite.frameCounts.turns + (sprite.emotion - 1);
+    // emotion frames precede normal, turn frames
+    frameNum = sprite.frameCounts.normal + sprite.frameCounts.turns + (sprite.emotion - 1);
   }
 
   return frameNum;
@@ -3083,8 +3083,7 @@ function spriteFrameNumber (index, opts) {
 
 function spriteTotalFrames (index) {
   var sprite = Studio.sprite[index];
-  return sprite.frameCounts.normal + sprite.frameCounts.animation +
-    sprite.frameCounts.turns + sprite.frameCounts.emotions;
+  return sprite.frameCounts.normal + sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
 
 /* Return the frame count for items or projectiles
@@ -4635,7 +4634,7 @@ Studio.setSprite = function (opts) {
   }
 
   sprite.frameCounts = skinSprite.frameCounts;
-  sprite.timePerFrame = skinSprite.timePerFrame;
+  sprite.animationSpeed = skinSprite.animationSpeed || 1;
   // Reset height and width:
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
