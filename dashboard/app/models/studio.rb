@@ -22,7 +22,6 @@
 
 class Studio < Grid
   serialized_attrs %w(
-    avatar_list
     first_sprite_index
     protaganist_sprite_index
     success_condition
@@ -44,34 +43,16 @@ class Studio < Grid
     code_functions
     sort_draw_order
     wall_map_collisions
-    wall_map
     block_moving_into_walls
     grid_aligned_movement
     item_grid_aligned_movement
-    item_collisions
     remove_items_when_actor_collides
-    slow_execution_factor
+    slow_js_execution_factor
     marker_height
     marker_width
     delay_completion
     floating_score
     goal_override
-    auto_arrow_steer
-    tap_svg_to_run_and_reset
-    msg_string_overrides
-    music
-    play_start_sound
-    show_timeout_rect
-    progress_conditions
-    markdown_instructions_with_classic_margins
-    instructions2
-    disable_printing
-    app_strings_functions
-    goal_override
-    default_emotion
-    ticks_before_face_south
-    grid_aligned_extra_pause_steps
-    param_restrictions
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -80,41 +61,9 @@ class Studio < Grid
     level
   end
 
-  # Attributes that are stored as JSON strings but should be passed through to the app as
-  # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
-  # returns camelCase properties because of where it's used in the pipeline.
-  def self.json_object_attrs
-    %w(
-      progress_conditions
-    ).map{ |x| x.camelize(:lower) }
-  end
-
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio', 'infinity', 'hoc2015', 'hoc2015x', 'gumball', 'iceage']
-  end
-
-  def self.default_progress_conditions
-    <<-JS.strip_heredoc.chomp
-        [
-          // { "required": { "collectedSpecificItemsAtOrAbove": { "className": "mynock", "count": 8 } },
-          //   "result": { "success": true, "messageKey": "successCharacter1" } },
-          // { "required": {"timedOut": true, "collectedSpecificItemsAtOrAbove": { "className": "mynock", "count": 5 } },
-          //   "result": { "success": false, "canPass": true, "messageKey": "failedChainCharactersTimeoutGotSome" } },
-          // { "required": {
-          //     "collectedSpecificItemsAtOrAbove": { "className": "tauntaun", "count": 4 },
-          //     "createdSpecificItemsBelow": { "className": "mynock", "count": 5 }
-          //   },
-          //   "result": { "success": false, "messageKey": "failedChainCharactersTimeout" } },
-          // { "required": { "timedOut": true },
-          //   "result": { "success": false, "messageKey": "failedChainCharactersTimeout" } }
-          //
-          // All possible conditions:
-          // timedOut, collectedItemsAtOrAbove/collectedItemsBelow, collectedSpecificItemsAtOrAbove/collectedSpecificItemsBelow
-          // createdSpecificItemsAtOrAbove/createdSpecificItemsBelow, gotAllItems, touchedHazardsAtOrAbove
-          // currentPointsAtOrAbove/currentPointsBelow, allGoalsVisited, setMap, setSprite, setDroidSpeed, throwProjectile, setEmotion
-        ]
-    JS
+    ['studio', 'infinity', 'hoc2015']
   end
 
   def self.default_success_condition
@@ -127,142 +76,6 @@ class Studio < Grid
           // return Studio.tickCount > 50;
         }
     JS
-  end
-
-  def self.wall_map_options
-    [
-      ['Use custom map (default)', 'default'],
-      ['Blank', 'blank'],
-      ['Blobs (hoc2015 only)', 'blobs'],
-      ['Horizontal (hoc2015 only)', 'horizontal'],
-      ['Grid (hoc2015 only)', 'grid'],
-      ['Circle (hoc2015 only)', 'circle']
-    ]
-  end
-
-  AvatarItem = Struct.new(:name, :value)
-  def self.avatar_list_options
-    [
-      AvatarItem.new('dog (studio only)', 'dog'),
-      AvatarItem.new('cat (studio only)', 'cat'),
-      AvatarItem.new('penguin (studio only)', 'penguin'),
-      AvatarItem.new('dinosaur (studio only)', 'dinosaur'),
-      AvatarItem.new('octopus (studio only)', 'octopus'),
-      AvatarItem.new('witch (studio only)', 'witch'),
-      AvatarItem.new('bat (studio only)', 'bat'),
-      AvatarItem.new('bird (studio only)', 'bird'),
-      AvatarItem.new('dragon (studio only)', 'dragon'),
-      AvatarItem.new('squirrel (studio only)', 'squirrel'),
-      AvatarItem.new('wizard (studio only)', 'wizard'),
-      AvatarItem.new('alien (studio only)', 'alien'),
-      AvatarItem.new('ghost (studio only)', 'ghost'),
-      AvatarItem.new('monster (studio only)', 'monster'),
-      AvatarItem.new('robot (studio only)', 'robot'),
-      AvatarItem.new('unicorn (studio only)', 'unicorn'),
-      AvatarItem.new('zombie (studio only)', 'zombie'),
-      AvatarItem.new('knight (studio only)', 'knight'),
-      AvatarItem.new('ninja (studio only)', 'ninja'),
-      AvatarItem.new('pirate (studio only)', 'pirate'),
-      AvatarItem.new('caveboy (studio only)', 'caveboy'),
-      AvatarItem.new('cavegirl (studio only)', 'cavegirl'),
-      AvatarItem.new('princess (studio only)', 'princess'),
-      AvatarItem.new('spacebot (studio only)', 'spacebot'),
-      AvatarItem.new('soccergirl (studio only)', 'soccergirl'),
-      AvatarItem.new('soccerboy (studio only)', 'soccerboy'),
-      AvatarItem.new('tennisgirl (studio only)', 'tennisgirl'),
-      AvatarItem.new('tennisboy (studio only)', 'tennisboy'),
-      AvatarItem.new('anais (gumball only)', 'anais'),
-      AvatarItem.new('anton (gumball only)', 'anton'),
-      AvatarItem.new('bananajoe (gumball only)', 'bananajoe'),
-      AvatarItem.new('darwin (gumball only)', 'darwin'),
-      AvatarItem.new('gumball (gumball only)', 'gumball'),
-      AvatarItem.new('nicole (gumball only)', 'nicole'),
-      AvatarItem.new('penny (gumball only)', 'penny'),
-      AvatarItem.new('richard (gumball only)', 'richard'),
-      AvatarItem.new('manny (iceage only)', 'manny'),
-      AvatarItem.new('sid (iceage only)', 'sid'),
-      AvatarItem.new('scrat (iceage only)', 'scrat'),
-      AvatarItem.new('diego (iceage only)', 'diego'),
-      AvatarItem.new('granny (iceage only)', 'granny'),
-      AvatarItem.new('anna (infinity only)', 'anna'),
-      AvatarItem.new('elsa (infinity only)', 'elsa'),
-      AvatarItem.new('hiro (infinity only)', 'hiro'),
-      AvatarItem.new('baymax (infinity only)', 'baymax'),
-      AvatarItem.new('rapunzel (infinity only)', 'rapunzel'),
-      AvatarItem.new('r2-d2 (hoc2015 only)', 'r2-d2'),
-      AvatarItem.new('c-3po (hoc2015 only)', 'c-3po'),
-      AvatarItem.new('bb-8 (hoc2015x only)', 'bb-8'),
-    ]
-  end
-
-  def self.background_options
-    [
-      ['Hardcourt (studio only)', 'hardcourt'],
-      ['Black (studio only)', 'black'],
-      ['Cave (studio only)', 'cave'],
-      ['Night (studio only)', 'night'],
-      ['Cloudy (studio only)', 'cloudy'],
-      ['Underwater (studio only)', 'underwater'],
-      ['City (studio only)', 'city'],
-      ['Desert (studio only)', 'desert'],
-      ['Rainbow (studio only)', 'rainbow'],
-      ['Soccer (studio only)', 'soccer'],
-      ['Tennis (studio only)', 'tennis'],
-      ['Winter (studio only)', 'winter'],
-      ['Grid (studio only)', 'grid'],
-      ['Space (studio, gumball only)', 'space'],
-      ['Characters (gumball only)', 'characters'],
-      ['Checkers (gumball only)', 'checkers'],
-      ['Clouds (gumball only)', 'clouds'],
-      ['Cornered (gumball only)', 'cornered'],
-      ['Dots (gumball only)', 'dots'],
-      ['Graffiti (gumball only)', 'graffiti'],
-      ['Squares (gumball only)', 'squares'],
-      ['Stripes (gumball only)', 'stripes'],
-      ['Wood (gumball only)', 'wood'],
-      ['Icy 1 (iceage only)', 'icy1'],
-      ['Icy 2 (iceage only)', 'icy2'],
-      ['Icy 3 (iceage only)', 'icy3'],
-      ['Icy 4 (iceage only)', 'icy4'],
-      ['Icy 5 (iceage only)', 'icy5'],
-      ['Ground (iceage only)', 'ground'],
-      ['Main (hoc2015x only)', 'main'],
-      ['Hoth (hoc2015 only)', 'hoth'],
-      ['Endor (hoc2015 only)', 'endor'],
-      ['Starship (hoc2015 only)', 'starship'],
-      ['Circle (hoc2015 only)', 'circle'],
-      ['Leafy (infinity only)', 'leafy'],
-      ['Grassy (infinity only)', 'grassy'],
-      ['Flower (infinity only)', 'flower'],
-      ['Tile (infinity only)', 'tile'],
-      ['Icy (infinity only)', 'icy']
-    ]
-  end
-
-  MusicTrack = Struct.new(:name, :value)
-  def self.music_options
-    [
-      MusicTrack.new('Song1 (hoc2015, hoc2015x only)', 'song1'),
-      MusicTrack.new('Song2 (hoc2015, hoc2015x only)', 'song2'),
-      MusicTrack.new('Song3 (hoc2015, hoc2015x only)', 'song3'),
-      MusicTrack.new('Song4 (hoc2015, hoc2015x only)', 'song4'),
-      MusicTrack.new('Song5 (hoc2015, hoc2015x only)', 'song5'),
-      MusicTrack.new('Song6 (hoc2015, hoc2015x only)', 'song6'),
-      MusicTrack.new('Song7 (hoc2015, hoc2015x only)', 'song7'),
-      MusicTrack.new('Song8 (hoc2015, hoc2015x only)', 'song8'),
-      MusicTrack.new('Song9 (hoc2015, hoc2015x only)', 'song9'),
-      MusicTrack.new('Song10 (hoc2015, hoc2015x only)', 'song10'),
-      MusicTrack.new('Song11 (hoc2015, hoc2015x only)', 'song11'),
-      MusicTrack.new('Song12 (hoc2015, hoc2015x only)', 'song12'),
-      MusicTrack.new('Song13 (hoc2015, hoc2015x only)', 'song13'),
-      MusicTrack.new('Song14 (hoc2015, hoc2015x only)', 'song14'),
-      MusicTrack.new('Song15 (hoc2015, hoc2015x only)', 'song15'),
-    ]
-  end
-
-  def assign_defaults_before_editing
-    self.play_start_sound = true if self.play_start_sound.nil?
-    super
   end
 
   def self.default_failure_condition
@@ -279,18 +92,8 @@ class Studio < Grid
 </category>
 <category name="Events">
   <block type="studio_whenArrow" />
-  <block type="studio_whenUp" />
-  <block type="studio_whenDown" />
-  <block type="studio_whenLeft" />
-  <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
-  <block type="studio_whenTouchCharacter" />
-  <block type="studio_whenTouchObstacle" />
-  <block type="studio_whenTouchGoal" />
-  <block type="studio_whenGetCharacter" />
-  <block type="studio_whenGetAllCharacters" />
-  <block type="studio_whenGetAllCharacterClass" />
 </category>
 <category name="Actions">
   <block type="studio_setSprite" />
@@ -367,8 +170,6 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_addPoints" />
-  <block type="studio_removePoints" />
   <block type="studio_saySprite">
     <title name="TEXT">type here</title>
   </block>
@@ -422,7 +223,6 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_setDroidSpeed" />
   <block type="studio_setSpriteEmotion" />
   <block type="studio_setSpriteEmotionParams">
     <value name="SPRITE">
@@ -431,9 +231,8 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_showCoordinates" />
-  <block type="studio_setMap" />
   <block type="studio_setSpriteSize" />
+  <block type="studio_showCoordinates" />
   <block type="studio_setSpriteSizeParams">
     <value name="SPRITE">
       <block type="math_number">
@@ -454,7 +253,6 @@ class Studio < Grid
       </block>
     </value>
   </block>
-  <block type="studio_endGame" />
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
