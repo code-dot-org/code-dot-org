@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Χρειάζεται να πάρεις 20 Ανδροειδή Ποντίκια. Χρησιμοποίησε την εντολή \"βάλε ένα Ανδροειδές Ποντίκι\" μέσα στο γεγονός \"όταν πάρεις Ανδροειδές Ποντίκι\" για να προσθέσεις δύο ή περισσότερα Ανδροειδή Ποντίκια κάθε φορά που παίρνεις ένα."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Συγχαρητήρια, έβαλες κώδικα για να κάνεις Ανδροειδή Ποντίκια. Μπορείς να πας στο επόμενο παζλ ή να δοκιμάσεις να πάρεις 20 Ανδροειδή Ποντίκια. Δοκίμασε να το κάνεις πιο εύκολο βάζοντας περισσότερα από αυτά (Πάτησε και κράτα πατημένα τα πλήκτρα στο πληκτρολόγιό σου (ή την οθόνη σου) για να κινηθείς ταχύτερα.)"},
 "failedChangeSettingTimeout":function(d){return "Πάρε τρεις Αντάρτες Πιλότους για να προχωρήσεις."},
-"failedChangeSettingSettings":function(d){return "Κάνε το δικό σου παιχνίδι. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του."}};
+"failedChangeSettingSettings":function(d){return "Κάνε το δικό σου παιχνίδι. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

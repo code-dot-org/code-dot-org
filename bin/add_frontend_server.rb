@@ -297,8 +297,10 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
                      "/tmp/knife_config#{file_suffix}")
 
   configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
-  configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
-  configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
+  OUTPUT_MUTEX.synchronize {
+    configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
+    configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
+  }
 
   File.open('/tmp/new_knife_config.json', 'w') do |f|
     f.write(JSON.dump(configuration_json))

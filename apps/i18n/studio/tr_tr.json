@@ -764,5 +764,14 @@
   "failedMultiplyCharactersTimeoutBlockly": "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one.",
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
-  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım."
+  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım.",
+  "whenSpriteCollidedWithAnyItem": "touches any character",
+  "whenSpriteCollidedWithObstacle": "touches obstacle",
+  "whenSpriteCollidedWithStormtrooper": "touches Stormtrooper",
+  "whenSpriteCollidedWithRebelPilot": "touches Rebel Pilot",
+  "whenSpriteCollidedWithPufferPig": "touches Puffer Pig",
+  "whenSpriteCollidedWithMynock": "touches Mynock",
+  "whenSpriteCollidedWithMouseDroid": "touches Mouse Droid",
+  "whenSpriteCollidedWithTauntaun": "touches Tauntaun",
+  "whenSpriteCollidedWithProbot": "touches Probot"
 }

@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Musisz złapać 20 Myszodroidów. Użyj polecenia \"dodaj Myszodroida\" wewnątrz zdarzenia \"gdy złapie Myszodroida\", by dodać dwa lub więcej Myszodroidy za każdym razem, gdy złapiesz jednego."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulacje, dodałeś kod, by utworzyć Myszodroidów. Możesz przejść do następnej łamigłówki lub ponownie zdobyć 20 Myszodroidów. Ułatwisz to sobie dodając ich więcej! (Naciskaj i przytrzymuj klawisze ze strzałkami na klawiaturze (lub na ekranie), by poruszać się szybciej.)"},
 "failedChangeSettingTimeout":function(d){return "Zdobądź trzech Pilotów Rebeliantów, aby kontynuować."},
-"failedChangeSettingSettings":function(d){return "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."}};
+"failedChangeSettingSettings":function(d){return "Stwórz własną grę. Aby przejść ten poziom, musisz zmienić swojego droida i ustawić jego prędkość."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

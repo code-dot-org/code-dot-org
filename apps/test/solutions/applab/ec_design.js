@@ -583,7 +583,7 @@ module.exports = {
     },
 
     {
-      description: "images have correct urls",
+      description: "remixed images have correct urls",
       editCode: true,
       xml: '',
       levelHtml: '' +
@@ -592,39 +592,16 @@ module.exports = {
             '<img src="/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/red.Png" id="image1" data-canonical-image-url="red.Png" style="height: 105px; width: 100px; position: absolute; left: 10px; top: 10px; margin: 0px;" />' +
             '<button id="button1" data-canonical-image-url="yellow.png" style="padding: 0px; margin: 0px; height: 120px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 130px; ' +
                 'background-image: url(http://localhost.studio.code.org:3000/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/yellow.png); background-color: rgb(26, 188, 156); background-size: 120px 120px;">Button</button>' +
-            '<img src="" id="image2" style="height: 100px; width: 100px; position: absolute; left: 20px; top: 20px; margin: 0px;" />' +
-            '<img src="/blockly/media/1x1.gif" id="image3" data-canonical-image-url="" style="height: 100px; width: 100px; position: absolute; left: 30px; top: 155px; margin: 0px;" />' +
-      '</div>' +
+          '</div>' +
         '</div>',
       runBeforeClick: function (assert) {
-        // a remixed image with previous channel id in its src.
         var redImage = '/v3/assets/applab-channel-id/red.Png';
         assert.equal($('#design_image1').attr('src'), redImage, 'after init, design mode img src prefixed with new channel id');
         assert.equal($('#image1').attr('src'), redImage, 'after init, code mode img src prefixed with new channel id');
 
-        // a remixed button with a previous channel id in its background image url.
         var yellowImageRegex = new RegExp("^url\\(http://localhost:[0-9]+/v3/assets/applab-channel-id/yellow\\.png\\)$");
         assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')), 'after init, design mode button image prefixed with new channel id');
         assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')), 'after init, code mode button image prefixed with new channel id');
-
-        // a legacy image element whose image url was never set.
-        assert.equal($('#design_image2').attr('src'), '/blockly/media/1x1.gif', 'after init, in design mode, empty image has placeholder image src');
-        assert.equal($('#design_image2').attr('data-canonical-image-url'), '', 'after init, in design mode, empty image has empty canonical image url');
-        assert.equal($('#image2').attr('src'), '/blockly/media/1x1.gif', 'after init, in code mode, empty image has placeholder image src');
-
-        // a legacy image element whose image url was set to ''.
-        assert.equal($('#design_image3').attr('src'), '/blockly/media/1x1.gif', 'after init, in design mode, erased image has placeholder image src');
-        assert.equal($('#design_image3').attr('data-canonical-image-url'), '', 'after init, in design mode, erased image has empty canonical image url');
-        assert.equal($('#image3').attr('src'), '/blockly/media/1x1.gif', 'after init, in code mode, erased image has placeholder image src');
-        var images = $('#designModeViz').find('img');
-        assert.equal(images.length, 3, "there are three images in design mode");
-
-        // a new image element.
-        testUtils.dragToVisualization('IMAGE', 100, 100);
-        assert.equal($('#design_image4').attr('src'), '/blockly/media/1x1.gif', 'in design mode, new image has placeholder image src');
-        assert.equal($('#design_image4').attr('data-canonical-image-url'), '', 'in design mode, new image has empty canonical image url');
-        images = $('#designModeViz').find('img');
-        assert.equal(images.length, 4, "there are four images in design mode");
 
         testUtils.runOnAppTick(Applab, 1, function () {
           assert.equal($('#design_image1').attr('src'), redImage, 'after run, design mode img src prefixed with new channel id');
@@ -632,11 +609,6 @@ module.exports = {
 
           assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')), 'after run, design mode button image prefixed with new channel id');
           assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')), 'after run, code mode button image prefixed with new channel id');
-
-          assert.equal($('#image2').attr('src'), '/blockly/media/1x1.gif', 'after run, empty image has placeholder image src');
-          assert.equal($('#image3').attr('src'), '/blockly/media/1x1.gif', 'after run, erased image has placeholder image src');
-          assert.equal($('#image4').attr('src'), '/blockly/media/1x1.gif', 'arter run, new image has placeholder image src');
-
 
           Applab.onPuzzleComplete();
         });

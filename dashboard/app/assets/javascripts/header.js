@@ -303,8 +303,11 @@ dashboard.header.showMinimalProjectHeader = function () {
   $('.project_remix').click(remixProject);
 };
 
-// Project header for levels backed by a channel, with "Share" and "Remix".
-dashboard.header.showProjectLevelHeader = function () {
+// Project header with "Share" and "Remix".
+dashboard.header.showShareRemixHeader = function () {
+  if ($('.project_info .project_share').length !== 0) {
+    return;
+  }
   $('.project_info')
       .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));

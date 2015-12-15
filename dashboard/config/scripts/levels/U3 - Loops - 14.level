@@ -51,9 +51,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Defensive Loop Conditions\r\n\r\nTake a look at the starting code. Instead of counting by threes we had decided to count by 4's. \r\n\r\nOnly thing is this will run us into a problem. Can you see why?\r\n\r\nWe wanted to stop counting at 30, but when you count by 4 you will actually never hit 30. It would go... 24, 28, 32, 36...  What we really want to do is stop when the number is **greater than 30**. This is an important defensive programming strategy. Make the condition catch more cases than you think you need so that if for some reason something does not go exactly as you planned it will hit the stop condition and not go infinitely.\r\n\r\n\r\n# Do This:\r\n\r\n* **Change the loop condition** to prevent the infinite loop and stop counting once the count is past 30.",
+    "markdown_instructions": "# Defensive Loop Conditions\r\n\r\nTake a look at the starting code. Instead of counting by 3's we had decided to count by 4's. \r\n\r\nBut this will run us into a problem. Can you see why?\r\n\r\nWe wanted to stop counting at 30, but when you count by 4 you will actually never hit 30. It would go... 24, 28, 32, 36...  What we really want to do is stop when the number is **greater than 30**. This is an important defensive programming strategy. Make the condition catch more cases than you think you need so that if for some reason something does not go exactly as you planned it will hit the stop condition and not go infinitely.\r\n\r\n\r\n# Do This:\r\n\r\n* **Change the loop condition** to prevent the infinite loop and stop counting once the count is past 30.",
     "start_blocks": "var count = 0;\r\nwhile (count != 30) { \r\n  count = count + 4;\r\n  console.log(count); \r\n}",
-    "instructions": "Change the loop condition to prevent the infinite loop and stop counting at once the count is past 30. (Click to see full instructions)",
+    "instructions": "Change the loop condition to prevent the infinite loop and stop counting once the count is past 30. (Click to see full instructions)",
     "encrypted_examples": "Y5fAVKNsTSSG6kZ7+x6gSIdrEDFMn/ZOb9+yrcRCG9TwWVbqa/9Vn6mafBrH\nq9bZ\n"
   }
 }]]></config>

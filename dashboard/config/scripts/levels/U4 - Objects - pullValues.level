@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Pulling Values\r\n\r\n# Do This",
+    "markdown_instructions": "# Getting Data From the User\r\n\r\nThe `addContactsScreen` is where the user can input information about a new contact. We'll treat building its functionality as a three step process. The first step is to make sure you can access the values in each input by displaying them in the console.\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* In Design Mode **go look at the IDs already given to the 4 text inputs**.\r\n* Add a \"click\" event handler to the \"Add Contact\" button\r\n* Write code within your event handler that **displays the contents of all 4 text inputs using `console.log`**. This will let you know that you are properly accessing each value.\r\n\r\n<img src=\"https://images.code.org/1bf71fcf3d2f5978618536527acad710-image-1449528040863.39.22 PM.png\" style=\"float:left; width:200px\">\r\n\r\n<img src=\"https://images.code.org/e8f6c1838f2d5c596b2dce275ee1becc-image-1449528044430.39.35 PM.png\" style=\"float:left; width:150px\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -160,7 +160,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
@@ -169,7 +169,8 @@
     "debugger_disabled": "false",
     "encrypted_examples": [
 
-    ]
+    ],
+    "instructions": "Create an event handler for the \"Add Contact\" button that displays the contents of the 4 text input fields in the console. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

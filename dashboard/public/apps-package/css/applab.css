@@ -87,19 +87,19 @@
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
   #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern .textArea, #designModeViz.appModern button, #designModeViz.appModern select, #designModeViz.appModern input, #designModeViz.appModern .textArea, .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent .textArea {
     outline: 0; }
-  #divApplab.appModern img[data-canonical-image-url=''], #designModeViz.appModern img[data-canonical-image-url=''], .draggingParent img[data-canonical-image-url=''] {
+  #divApplab.appModern img[src=''], #designModeViz.appModern img[src=''], .draggingParent img[src=''] {
     display: none; }
   #divApplab.appModern .screen, #designModeViz.appModern .screen, .draggingParent .screen {
     outline: 0; }
 
-#designModeViz.appModern img[data-canonical-image-url=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[data-canonical-image-url=''], .draggingParent canvas, .draggingParent .chart {
+#designModeViz.appModern img[src=''], #designModeViz.appModern canvas, #designModeViz.appModern .chart, .draggingParent img[src=''], .draggingParent canvas, .draggingParent .chart {
   border: 5px solid #fff;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
 
-#designModeViz.appModern img[data-canonical-image-url=''], .draggingParent img[data-canonical-image-url=''] {
+#designModeViz.appModern img[src=''], .draggingParent img[src=''] {
   display: block;
   background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
 

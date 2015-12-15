@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du mußt 20 Maus-Droiden fangen. Benutze den Befehl \"Füge hinzu Maus-Droid\" im \"Wenn Maus-Droid erreicht\" Ereignis, um zwei oder mehr Maus-Droiden erscheinen zu lassen, immer wenn Du einen erreichst."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Glückwunsch, Du hast programmiert, Maus-Droiden zu erschaffen. Du kannst zum nächsten Level gehen oder nochmal versuchen, 20 Stück von ihnen zu fangen. Es wird leichter, wenn Du mehr von ihnen auf einmal hinzufügst. Halte die Pfeiltasten gedrückt, um Dich schneller zu bewegen."},
 "failedChangeSettingTimeout":function(d){return "Hol' Dir drei Rebellen-Piloten, um weiter zu kommen."},
-"failedChangeSettingSettings":function(d){return "Jetzt kannst Du das Spiel selbst gestalten. Um dieses Level zu schaffen, mußt Du das Aussehen und die Geschwindigkeit des Droiden einstellen."}};
+"failedChangeSettingSettings":function(d){return "Jetzt kannst Du das Spiel selbst gestalten. Um dieses Level zu schaffen, mußt Du das Aussehen und die Geschwindigkeit des Droiden einstellen."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

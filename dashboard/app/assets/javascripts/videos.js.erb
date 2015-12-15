@@ -1,4 +1,4 @@
-//= require ../../../../shared/js/url_test/url_test.js
+//= require url_test/url_test.js
 
 function createVideoWithFallback(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
@@ -120,7 +120,7 @@ function showVideoDialog(options, forceShowVideo) {
     active: (lastTab !== null) ? lastTab : 0  // Set starting tab.
   });
 
-  var download = $('<a/>').append($('<img src="<%= asset_path 'download_button.png' %>"/>'))
+  var download = $('<a/>').append($('<img src="/shared/images/download_button.png"/>'))
       .addClass('download-video')
       .attr('href', options.download);
   var nav = $div.find('.ui-tabs-nav');

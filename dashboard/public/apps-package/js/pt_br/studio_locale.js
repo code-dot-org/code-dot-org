@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Você precisa pegar 20 Mouse Droids. Use o comando \"adicione um Mouse Droid\" dentro do evento \"quando pegar Mouse Droid\" para adicionar dois ou mais Mouse Droids sempre que você pegar um."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Parabéns, você adicionou código para criar Mouse Droids. Você pode ir para o próximo desafio ou tentar pegar 20 Mouse Droids novamente. Tente facilitar, adicionando mais deles! (Pressione e segure as teclas do seu teclado - ou tela - para se mover mais rápido)."},
 "failedChangeSettingTimeout":function(d){return "Pegue três Pilotos Rebeldes para seguir em frente."},
-"failedChangeSettingSettings":function(d){return "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."}};
+"failedChangeSettingSettings":function(d){return "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

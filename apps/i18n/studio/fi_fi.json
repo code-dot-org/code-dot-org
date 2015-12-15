@@ -764,5 +764,14 @@
   "failedMultiplyCharactersTimeoutBlockly": "Tarvitset 20 hiiridroidia. Käytä komentoa \"Lisää Hiiridroidi\" tapahtuman \"Kerättäessä Hiiridroidi\" sisällä ja lisää sen avulla vähintään kaksi uutta hiiridroidia aina kun keräät niistä yhden.",
   "failedMultiplyCharactersTimeoutGotSome": "Onnittelut, lisäsit koodia luodaksesi hiiridroideja. Voit siirtyä seuraavaan tehtävään tai kokeilla uudelleen saada 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)",
   "failedChangeSettingTimeout": "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin.",
-  "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."
+  "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta.",
+  "whenSpriteCollidedWithAnyItem": "touches any character",
+  "whenSpriteCollidedWithObstacle": "touches obstacle",
+  "whenSpriteCollidedWithStormtrooper": "touches Stormtrooper",
+  "whenSpriteCollidedWithRebelPilot": "touches Rebel Pilot",
+  "whenSpriteCollidedWithPufferPig": "touches Puffer Pig",
+  "whenSpriteCollidedWithMynock": "touches Mynock",
+  "whenSpriteCollidedWithMouseDroid": "touches Mouse Droid",
+  "whenSpriteCollidedWithTauntaun": "touches Tauntaun",
+  "whenSpriteCollidedWithProbot": "touches Probot"
 }

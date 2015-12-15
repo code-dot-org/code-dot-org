@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Для прохождения этого уровня тебе необходимо собрать 20 робо-мышей. Используй команду \"Добавить робо-мышь\" внутри блока \"Когда получишь Робо-мышь\", чтобы добавить двух и более робо-мышей каждый раз, когда дроид подбирает одну из них."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Поздравляем, ты создал программу по клонированию робо-мышей. Можешь смело переходить к следующему уровню или попробуй еще раз собрать 20 робо-мышей. Но только в этот раз сделай игру проще и добавь еще больше робо-мышей! (Нажми и удерживай клавиши на клавиатуре (или экране) чтобы двигаться быстрее)"},
 "failedChangeSettingTimeout":function(d){return "Подбери три Пилота Повстанцев для продолжения."},
-"failedChangeSettingSettings":function(d){return "Сделай собственную игру. Для того чтобы пройти этот уровень тебе нужно изменить внешность своего дроида и установить ему скорость передвижения."}};
+"failedChangeSettingSettings":function(d){return "Сделай собственную игру. Для того чтобы пройти этот уровень тебе нужно изменить внешность своего дроида и установить ему скорость передвижения."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

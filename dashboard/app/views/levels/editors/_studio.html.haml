@@ -3,8 +3,8 @@
   %p Integer representing which sprite to use for the first character. Default is 0.
   = f.number_field :first_sprite_index
 .field
-  = f.label :protaganist_sprite_index, 'Protaganist sprite index'
-  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. If no value is set, all sprites can collect flags.
+  = f.label :protaganist_sprite_index, 'Protagonist sprite index'
+  %p Integer of the protagonist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. If no value is set, all sprites can collect flags.
   = f.number_field :protaganist_sprite_index
 .field
   = f.label :timeout_failure_tick, 'Timeout failure tick'
@@ -27,6 +27,10 @@
   %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
   = f.text_area :failure_condition, rows: 4
 .field
+  = f.label :progress_conditions, 'Progress conditions'
+  %p Optional JSON array of conditions evaluated in order, until one of them is entirely satisfied, and then the result is acted upon.
+  = f.text_area :progress_conditions, rows: 8
+.field
   = f.label :soft_buttons, 'Controls buttons'
   %p
     Select
@@ -36,17 +40,116 @@
     (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
 .field
+  = f.label :background, 'Starting background'
+  = f.select :background, options_for_select(@level.class.background_options, @level.background), {include_blank: true}
+.field
   = f.label :edge_collisions, 'Edge collisions'
   = boolean_check_box f, :edge_collisions
 .field
   = f.label :projectile_collisions, 'Projectile collisions'
   = boolean_check_box f, :projectile_collisions
 .field
+  = f.label :item_collisions, 'Item collisions'
+  = boolean_check_box f, :item_collisions
+.field
   = f.label :allow_sprites_outside_playspace, 'Allow sprites outside playspace'
   = boolean_check_box f, :allow_sprites_outside_playspace
 .field
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
+.field
+  = f.label :wall_map_collisions, 'Enable obstacles and obstacle collisions'
+  %p Required for levels with the setMap block.
+  = boolean_check_box f, :wall_map_collisions
+.field
+  = f.label :block_moving_into_walls, 'Prevent actors from moving into obstacles'
+  = boolean_check_box f, :block_moving_into_walls
+.field
+  = f.label :wall_map, 'Start with pre-built obstacle map'
+  %p Used to tell playlab we want to start with one of the pre-built obstacle maps (skin dependent).
+  = f.select :wall_map, options_for_select(@level.class.wall_map_options, @level.wall_map), {include_blank: true}
+.field
+  = f.label :sort_draw_order, 'Sort the draw order of sprites, items, and tiles so top to bottom is back to front'
+  = boolean_check_box f, :sort_draw_order
+.field
+  = f.label :remove_items_when_actor_collides, 'Remove items when sprite collides'
+  %p Required for levels that use the whenGet/whenGetAll events.
+  = boolean_check_box f, :remove_items_when_actor_collides
+.field
+  = f.label :item_grid_aligned_movement, 'Item grid-aligned movement'
+  %p Restrict items to stay on grid alignment. Strongly recommended for levels with item movement activity (roam/flee/chase).
+  = boolean_check_box f, :item_grid_aligned_movement
+.field
+  = f.label :auto_arrow_steer, 'Automatically move protagonist sprite in response to arrow keys'
+  = boolean_check_box f, :auto_arrow_steer
+.field
+  = f.label :floating_score, 'Display a floating score change message above the protagonist sprite'
+  = boolean_check_box f, :floating_score
+.field
+  = f.label :grid_aligned_movement, 'Sprite grid-aligned movement'
+  %p Each simple move command moves 50 pixels. Forces sprites to 50x50 size. Recommended for maze-like levels.
+  = boolean_check_box f, :grid_aligned_movement
+.field
+  = f.label :slow_execution_factor, 'Slow execution factor'
+  %p Integer value to slow down execution between commands. Default (normal speed) is 1. Recommended for use with sprite grid-aligned movement to show continous smooth movement between grid positions.
+  = f.number_field :slow_execution_factor
+.field
+  = f.label :play_start_sound, 'Play start sound when Run is pressed'
+  = boolean_check_box f, :play_start_sound
+.field
+  = f.label :tap_svg_to_run_and_reset, 'Tap play space to run and reset after game ends'
+  %p Automatically run and reset the game when tapping. Show tap/click prompts over play space. Recommended for use with the endGame block.
+  = boolean_check_box f, :tap_svg_to_run_and_reset
+.field
+  = f.label :show_timeout_rect, 'Show timeout rect'
+  %p Show an animated timeout warning bar at the bottom of the play space when the level is about to time out.
+  = boolean_check_box f, :show_timeout_rect
+.field
+  = f.label :music, 'Play music before running (skin dependent)'
+  %p Play a random track from the set selected below when the instructions popup appears.
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.collection_select :music, @level.class.music_options, :value, :name, {selected: @level.music}, {multiple: true, :size => @level.class.music_options.length, :style => "width:300px;"}
+.field
+  = f.label :avatar_list
+  %p Re-order or reduce available actor images (skin dependent)
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.collection_select :avatar_list, @level.class.avatar_list_options, :value, :name, {selected: @level.avatar_list}, {multiple: true, :size => 15, :style => "width:300px;"}
+.field
+  = f.label :delay_completion, 'Delay completion'
+  %p Number of milliseconds to delay puzzle completion after it would normally be finished (due to progress conditions, goals, success/failure condition, or timeout).
+  = f.number_field :delay_completion
+
+
+-#    Fields to be added:
+-#
+-#    marker_height
+-#    marker_width
+-#    goal_override
+-#    msg_string_overrides
+-#    markdown_instructions_with_classic_margins
+-#    instructions2
+-#    disable_printing
+-#    app_strings_functions
+-#    goal_override
+-#    default_emotion
+-#    ticks_before_face_south
+-#    grid_aligned_extra_pause_steps
+-#    param_restrictions
+
+
+:javascript
+  $('.select_all').click(make_selection_handler(true));
+  $('.select_none').click(make_selection_handler(false));
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {
@@ -56,6 +159,11 @@
   });
   CodeMirror.fromTextArea($('#level_failure_condition').get(0), {
     mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });
+  CodeMirror.fromTextArea($('#level_progress_conditions').get(0), {
+    mode: 'application/json',
     viewportMargin: Infinity,
     matchBrackets: true
   });

@@ -23,7 +23,7 @@ Tests whether two values are equal.
 
 [/short_description]
 
-Your apps will sometimes need to check if the values in their code are equivalent or not, and then possibly perform some specific action using an *if* or *if-else* block. *==* returns true if the value on the left-hand side of the opertor is equal to the value on the right-hand side of the operator.
+Your apps will sometimes need to check if the values in their code are equivalent or not, and then possibly perform some specific action using an *if* or *if-else* block. *==* returns true if the value on the left-hand side of the operator is equal to the value on the right-hand side of the operator.
 
 [/description]
 
@@ -37,6 +37,22 @@ ____________________________________________________
 var x = 5;
 var y = 4;
 console.log(x == 5);
+console.log(x == y);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: "Alan Turing" equals "ALAN TURING"?** Basic string equality check. Case matters for string comparison.
+
+```
+// Basic string equality check. Case matters for string comparison.
+var x = "Alan Turing";
+var y = "ALAN TURING";
+console.log(x == "Alan Turing");
 console.log(x == y);
 ```
 
@@ -118,7 +134,7 @@ Boolean true or false
 ### Tips
 - = is the assignment operator. == is the boolean check for equivalency operator.
 - JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string "5").
-- Boolean operators include boolean operators < <= == > >= != && || !
+- Comparison operators include < <= == > >= !=
 
 [/tips]
 

@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "你需要抓到 20 滚轮机器人。当每次你抓到一个时，在”当抓到滚轮机器人时“事件里面使用\"添加一个滚轮机器人\"命令添加两个或更多的滚轮机器人。"},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "恭喜，您添加了制造抓到机器人的代码。你可以去下做一道题或再次尝试获得 20个 抓到机器人。通过添加更多来使其更容易!（按住键盘 (或屏幕) 的键不放移动得更快。）"},
 "failedChangeSettingTimeout":function(d){return "获得三名反叛飞行员来进入下一关。"},
-"failedChangeSettingSettings":function(d){return "制作你自己的游戏，要通过这一关，您需要更改您的机器人并设置它的速度。"}};
+"failedChangeSettingSettings":function(d){return "制作你自己的游戏，要通过这一关，您需要更改您的机器人并设置它的速度。"},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

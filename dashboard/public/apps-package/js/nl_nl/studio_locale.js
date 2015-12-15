@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Je hebt 20 Mouse Droids nodig. Gebruik de 'voeg een Mouse Droid toe' in de 'als je een Mouse Droid krijgt' gebeurtenis om twee of meer Mouse Droids toe te voegen als je er een te pakken krijgt."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gefeliciteerd, je hebt een code toegevoegd om Mouse Droids te maken. Je kan naar de volgende puzzel gaan of opnieuw proberen 20 ervan te krijgen. Probeer het makkelijk te maken door meer ervan toe te voegen! (Hou de pijltoetsen op je toetsenbord (of scherm) om sneller te bewegen.)"},
 "failedChangeSettingTimeout":function(d){return "Pak drie Rebel Pilots om verder te gaan."},
-"failedChangeSettingSettings":function(d){return "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen."}};
+"failedChangeSettingSettings":function(d){return "Maak nu je eigen spel. Om deze puzzel te doorlopen, moet je jouw droid veranderen en de snelheid zelf bepalen."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
