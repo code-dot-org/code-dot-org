@@ -54,7 +54,7 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**December 5th Location**
+**February 20th Location**
 
 [Rainier Tower<br/>
 30th Floor Conference Room<br/>

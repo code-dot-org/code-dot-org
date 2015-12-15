@@ -1,12 +1,11 @@
 name 'U3L25 Free Response 3'
-title 'String and Substring: Assessment 4'
-
-markdown <<MARKDOWN
-What is the output of this code segment?
-
-	var phrase = "I am so";
-	var emotion = "excited";
-	var sentence = phrase + " " + emotion.toUpperCase() + "!";
-	console.log(sentence);
-<br/>
-MARKDOWN
+encrypted '/t6zfqGpak8GbEWK0wTweg4uWplPcYG3ltqoBkpzjZ8iWpe47I2p1L5mFpVo
+GgIjuNpQ3ICIl8pWJRUndEGq8osOa9l8FfNrULTe5oJVNwFp+J7oOBhZwYSU
+WYzQTCvKgSOYFNzLXntCwZlllaJTa5MuD/X/WD9g0VjdL4Im1DoZDxJV50G6
+frxXrpEtkN3HHb78PJconmj0KVEvjIocK+vasUA1R9Ia1+6YcdPB95rtIgfs
+nYLEkjl88laFBoSMNvOUdBoiwsZ2WNhsJDlINezay3RZRls0UPAAcS0h9uNa
+4eT8zA9S/QSNIxKsZxKRKY7tCUjGfJi5b00aJQ+5XouSriTojCQH3jZZht2W
+ezySvwtt+LR4VVlFB1akbM0zZeZxgEspy2Zqnf0yrxBbTf5RSMZCvySwK5kF
+NkW+t5Jum0el6hPrEw61zL1fCVSvHTXU85qbdSAhtjZ00Si4+UbdHFFvBk6i
+JGQouA9cYp96LU1aty4qplrmHeJAn0o+DNIYVDisrCPeH76Z0UqYIQ==
+'

@@ -9,12 +9,12 @@ wrong 'Line 5'
 markdown <<MARKDOWN
 This question uses a robot in a grid of squares. The robot is represented as a triangle, which is initially facing toward the right side of the grid. The robot is moved according to the following instructions.
 
-| Instruction | Explanation |
+| Instruction       | Explanation |
 |--------------------|--------|
-|<pre>Move Forward</pre> | The robot moves one square forward in the direction it is facing |
-|<pre>Rotate right</pre> | The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn). |
-|<pre>Rotate left</pre> | The robot rotates in place 90 degrees counter-clockwise (i.e., makes an in-place left turn). |
-|<pre>REPEAT n TIMES </pre> | The block of instructions contained between the braces {} is repeated n times. |
+|<pre><nobr>Move Forward</nobr></pre> | The robot moves one square forward in the direction it is facing |
+|<pre><nobr>Rotate right</nobr></pre> | The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn). |
+|<pre><nobr>Rotate left</nobr></pre> | The robot rotates in place 90 degrees counter-clockwise (i.e., makes an in-place left turn). |
+|<pre><nobr>REPEAT n TIMES</nobr> </pre> | The block of instructions contained between the braces {} is repeated n times. |
 
 </br>
 Consider the following incorrect program, which is intended to move the robot around the perimeter of the grid below, as indicated by the arrows.

@@ -6,14 +6,14 @@ title: How to help
 
 
 ## Host an Hour of Code - at work, in your community, or local school
-Millions of people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Join the worldwide movement during Dec. 7-13, 2015. 
+Millions of people of all ages have learned an [Hour of Code](http://code.org/learn), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
-[<button>Join us</button>](https://hourofcode.com)
+[<button>Start today</button>](https://code.org/learn)
 
 ## Software engineers &mdash; volunteer at a local Hour of Code 
-If you're a software professional or a computer science student, we'll help match you with a nearby classroom learning an Hour of Code during Dec. 7-13. Assist students on intro tutorials, share your story, and inspire new coders to keep going.
+If you're a software professional or a computer science student, we'll help match you with a nearby classroom learning an Hour of Code. Assist students on intro tutorials, share your story, and inspire new coders to keep going.
 
-[<button>Volunteer</button>](/volunteer/engineer)
+[<button>Volunteer</button>](/volunteer)
 
 ## Make a generous donation
 We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.

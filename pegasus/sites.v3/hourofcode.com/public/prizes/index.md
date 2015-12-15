@@ -12,7 +12,7 @@ nav: prizes_nav
 
 # Prizes for every organizer
 
-Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank-you gift!
+Every educator who hosted an Hour of Code for students received 10 GB of Dropbox space as a thank-you gift!
 
 <% else %>
 
@@ -39,7 +39,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <% if @country == 'us' %>
 
-## 51 schools will win a class-set of laptops (or $10,000 for other technology)
+## 51 schools won a class-set of laptops (or $10,000 for other technology)
 
 Sign up for this prize is now closed. Check back to see this year's winners.
 
@@ -57,9 +57,9 @@ Sign up for this prize is now closed. Check back to see this year's winners.
 
 
 <a id="video-chats"></a>
-## 30 classrooms will win a video chat with a guest speaker
+## 30 classrooms won a video chat with a guest speaker
 
-Lucky classrooms will have the opportunity to talk with guest speakers who will share how computer science has impacted their lives and careers. 
+Lucky classrooms had the opportunity to talk with guest speakers who shared how computer science has impacted their lives and careers. 
 
 <%= view :video_chat_speakers %>
 
@@ -110,40 +110,13 @@ Organizatorii evenimentelor Hour of Code în România vor beneficia de un prem
 Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is limited to US residents only.
 
 ## Is there a deadline to sign up to receive the all organizer thank-you gift?
-You must sign up **before** December 4 in order to be eligible to receive the all organizer thank-you gift. 
+Organizers who signed up **before** December 11 are eligible to receive the all organizer thank-you gift. 
 
 ## When will I receive my thank-you gift?
 We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
 
 ## Can I redeem all of the thank-you gift options? 
 No. Thank-you gifts are limited to one per organizer while supplies last. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
-
-<% if @country == 'us' %>
-
-## Does your whole school have to enter to win the $10,000 in hardware?
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form. Sign up for this prize is now closed. Check back to see this year's winners.
-
-## Who is eligible to win the $10,000 in hardware?
-
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.Sign up for this prize is now closed. Check back to see this year's winners.
-
-## Why is the $10,000 hardware prize only available to public schools?
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
-
-## When is the deadline to apply for the hardware prize?
-November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
-
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
-Yes, in the Hardware Application form include the dates that your whole school is participating.
-
-<% end %>
-
-<% if @country == 'us' || @country == 'ca' %>
-
-## Video chat with a guest speaker:
-Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
-
-<% end %>
 
 ## I’m outside the United States. Can I qualify for prizes?
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
