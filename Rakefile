@@ -335,6 +335,33 @@ namespace :install do
 end
 task :install => ['install:all']
 
+# Commands to update built static asset packages
+namespace :update_package do
+
+  task :code_studio do
+    if RakeUtils.git_staged_changes?
+      puts 'You have changes staged for commit; please unstage all changes before running an `update_package` command.'
+    else
+      # Lint, Clean, Build, Test
+      Dir.chdir(code_studio_dir) do
+        RakeUtils.system "npm run lint && npm run clean && npm run build:min"
+      end
+
+      # Remove old built package
+      package_dir = dashboard_dir('public', 'code-studio-package')
+      RakeUtils.system "rm -rf #{package_dir}"
+
+      # Copy in new built package
+      RakeUtils.system "cp -r #{code_studio_dir('built')} #{package_dir}"
+
+      # Commit directory
+      RakeUtils.git_add '-A', package_dir
+      RakeUtils.system 'git commit --no-verify -m "Updated code-studio-package."'
+    end
+  end
+
+end
+
 task :default do
   puts 'List of valid commands:'
   system 'rake -P'
