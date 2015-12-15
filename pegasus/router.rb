@@ -406,11 +406,13 @@ class Documents < Sinatra::Base
       full_document
     end
 
-    def log_drupal_link(dir, uri)
+    def log_drupal_link(dir, uri, path)
       if dir == 'drupal.code.org'
         Honeybadger.notify(
           error_class: "Link to v3.sites/drupal.code.org",
-          error_message: "#{uri} fell through to the base config directory"
+          error_message: "#{uri} fell through to the base config directory",
+          environment_name: "drupal_#{rack_env}",
+          context: {path: path}
         )
       end
     end
@@ -421,7 +423,7 @@ class Documents < Sinatra::Base
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
         if File.file?(path)
-          log_drupal_link(dir, uri)
+          log_drupal_link(dir, uri, path)
           return path
         end
       end
@@ -433,7 +435,7 @@ class Documents < Sinatra::Base
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
           if File.file?(path)
-            log_drupal_link(dir, "#{uri}#{extname}")
+            log_drupal_link(dir, "#{uri}#{extname}", path)
             return path
           end
         end
