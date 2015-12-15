@@ -227,6 +227,7 @@ class Blockly < Level
       %w(map initialDirt finalDirt goal softButtons inputOutputTable).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
+          concat(Studio.json_object_attrs).
           each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end

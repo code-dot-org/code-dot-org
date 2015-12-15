@@ -46,5 +46,8 @@
         </block>
       </xml>
     </required_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
   </blocks>
 </Karel>

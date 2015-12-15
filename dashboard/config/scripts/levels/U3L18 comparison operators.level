@@ -55,7 +55,8 @@
     "debugger_disabled": "true",
     "instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
-    "encrypted_examples": "pqj+VPYSeuu0JZlMHl+4DGGQOS6t4gFPkyAkhs41lXNCW/mjNmfgpDqHAq7X\nLhWe\n"
+    "encrypted_examples": "pqj+VPYSeuu0JZlMHl+4DGGQOS6t4gFPkyAkhs41lXNCW/mjNmfgpDqHAq7X\nLhWe\n",
+    "video_key": "csp_applab_conditionals_1"
   }
 }]]></config>
   <blocks/>
