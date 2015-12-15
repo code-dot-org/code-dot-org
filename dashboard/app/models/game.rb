@@ -127,7 +127,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB
+    app == NETSIM || app == APPLAB || name == "TextCompression"
   end
 
   # True if the app takes responsibility for showing footer info
