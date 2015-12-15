@@ -764,14 +764,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "20 Mouse Droid behar dituzu. Erabili \"gehitu Mouse Droid bat\" komandoa \"Mouse Droid lortzean\" gertaeraren barnean bi Mouse Droid edo gehiago gehitzeko bat lortzen duzun bakoitzean.",
   "failedMultiplyCharactersTimeoutGotSome": "Zorionak, Mouse Droid-ak gehitzeko kodea gehitu duzu. Hurrengo ariketarekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (Mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)",
   "failedChangeSettingTimeout": "Lortu hiru Rebel Pilot aurrera jarraitzeko.",
-  "failedChangeSettingSettings": "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri.",
-  "whenSpriteCollidedWithAnyItem": "touches any character",
-  "whenSpriteCollidedWithObstacle": "touches obstacle",
-  "whenSpriteCollidedWithStormtrooper": "touches Stormtrooper",
-  "whenSpriteCollidedWithRebelPilot": "touches Rebel Pilot",
-  "whenSpriteCollidedWithPufferPig": "touches Puffer Pig",
-  "whenSpriteCollidedWithMynock": "touches Mynock",
-  "whenSpriteCollidedWithMouseDroid": "touches Mouse Droid",
-  "whenSpriteCollidedWithTauntaun": "touches Tauntaun",
-  "whenSpriteCollidedWithProbot": "touches Probot"
+  "failedChangeSettingSettings": "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."
 }

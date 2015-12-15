@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Trebuie sa prinzi 20 de Mouse Droids. Foloseste comanda \"adauga Mouse Droid\" inauntrul evenimentului \"cand prind Mouse Droid\" pentru a adauga doi sau mai multi roboti Mouse de fiecare data cand prinzi unul."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Felicitari, ai adaugat codul pentru a crea mai multi roboti Mouse. Poti merge catre urmatorul puzzle sau sa incerci din nou sa prinzi cei 20 de roboti. Incearca sa iti usurezi munca adaugand mai multi! (tine apasate sagetile tasataturii sau ecranului pentru a merge mai repede"},
 "failedChangeSettingTimeout":function(d){return "Obtine 3 Rebel Pilots pentru a trece mai departe."},
-"failedChangeSettingSettings":function(d){return "Fa-ti propriul joc. Pentru a trece de acest puzzle, trebuie sa iti schimbi robotul si sa ii setezi viteza."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Fa-ti propriul joc. Pentru a trece de acest puzzle, trebuie sa iti schimbi robotul si sa ii setezi viteza."}};

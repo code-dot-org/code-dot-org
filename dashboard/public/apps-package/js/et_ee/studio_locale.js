@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Sul on vaja saada 20 hiirt. Kasuta sündmuses „kui saab hiire“ käsku „lisa hiir“, et lisada mõne hiire kättesaamisel kaks või rohkem hiirt juurde."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Tubli töö! Lisasid hiirte loomiseks koodi. Võid liikuda järgmise mõistatuse juurde või proovida uuesti saada 20 hiirt. Et asi oleks lihtsam, lisa neid juurde! (Kiiremaks liikumiseks vajuta pikalt klaviatuuril (või ekraanil) olevaid klahve.)"},
 "failedChangeSettingTimeout":function(d){return "Edasiliikumiseks hangi kolm pilooti."},
-"failedChangeSettingSettings":function(d){return "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse."}};

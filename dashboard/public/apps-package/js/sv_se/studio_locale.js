@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Du behöver fånga 20 mus-droider. Använd kommandot \"Lägg till en mus-droid\" inuti händelsen \"när få mus-droid\" för att lägga till två eller flera mus-droider varje gång du fångat en."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Grattis, du har lagt till kod för att skapa mus-droider. Du kan gå till nästa pussel eller försöka igen för att fånga 20 mus-droider. Försök att göra det lättare genom att lägga till fler av dem! (Tryck och håll ner tangenterna på tangentbordet (eller skärmen) för att gå snabbare.)"},
 "failedChangeSettingTimeout":function(d){return "Få tre rebellpiloter att flytta på sig."},
-"failedChangeSettingSettings":function(d){return "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet."}};

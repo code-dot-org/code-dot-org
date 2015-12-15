@@ -919,13 +919,4 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "20 Mouse Droid behar dituzu. Erabili \"gehitu Mouse Droid bat\" komandoa \"Mouse Droid lortzean\" gertaeraren barnean bi Mouse Droid edo gehiago gehitzeko bat lortzen duzun bakoitzean."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Zorionak, Mouse Droid-ak gehitzeko kodea gehitu duzu. Hurrengo ariketarekin jarrai dezakezu edo berriro saiatu 20 Mouse Droid lortzeko. Errazagoa da gehiago gehitzen badituzu! (Mantendu sakatuta gezidun teklak zure teklatuan (edo pantailan) arinago mugitzeko.)"},
 "failedChangeSettingTimeout":function(d){return "Lortu hiru Rebel Pilot aurrera jarraitzeko."},
-"failedChangeSettingSettings":function(d){return "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."},
-"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
-"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
-"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
-"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
-"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
-"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
-"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
-"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
-"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
+"failedChangeSettingSettings":function(d){return "Egin ezazu nahi duzun jokoa. Ariketa hau gainditzeko, zure robota aldatu behar duzu eta bere abiadura ezarri."}};
