@@ -73,6 +73,9 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
+      <xml/>
+    </required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
@@ -87,7 +90,7 @@
           <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="draw_turn_by_constant">

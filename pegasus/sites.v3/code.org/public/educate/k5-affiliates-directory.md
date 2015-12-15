@@ -260,6 +260,15 @@ gargiulo@pd.code.org
 
 [/col-33]
 
+[col-33]
+
+### Sandy Feder
+Fair Oaks, CA
+
+feder@pd.code.org
+
+[/col-33]
+
 <p style="clear:both">&nbsp;</p>
 
 ### **Central California**

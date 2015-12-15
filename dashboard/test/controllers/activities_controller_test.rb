@@ -207,6 +207,27 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
+  test "logged in milestone with panda does not crash" do
+    # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
+
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    assert_creates(Activity, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, LevelSource) do
+        assert_difference('@user.reload.total_lines', 20) do # update total lines
+          post :milestone, @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+        end
+      end
+    end
+
+    assert_response :success
+    assert_equal_expected_keys build_expected_response, JSON.parse(@response.body)
+  end
+
   # Expect the controller to invoke "milestone_logger.info()" with a
   # string that matches given regular expression.
   def expect_controller_logs_milestone_regexp(regexp)
@@ -955,12 +976,27 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    Gatekeeper.set('sharingEnabled', where: {script_name: @script.name}, value: false)
+    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
 
-    response = post :milestone, @milestone_params
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
 
     assert_nil response['share_failure']
     assert_nil response['level_source']
+  end
+
+  test 'sharing when gatekeeper has disabled sharing for some other script still works' do
+    Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
+
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
+
+    assert_nil response['share_failure']
+    assert response['level_source'].match(/^http:\/\/test.host\/c\//)
   end
 
   test 'milestone changes to next stage in default script' do

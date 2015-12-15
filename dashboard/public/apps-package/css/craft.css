@@ -1228,6 +1228,19 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 .legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
   display: none; }
 
+.legacy-share-view #visualizationColumn {
+  margin: 0 auto;
+  padding: 20px 0; }
+
+.legacy-share-view .small-footer-base {
+  width: auto;
+  left: 0;
+  right: 0; }
+
+.legacy-share-view #more-menu, .legacy-share-view #copyright-flyout {
+  left: auto;
+  right: 0; }
+
 body {
   background-color: #646464; }
 
@@ -2163,6 +2176,11 @@ a.video_link {
     html[dir=rtl] .dash_modal #show-code, html[dir=rtl] .dash_modal #feedbackButtons, html[dir=rtl] .dash_modal #puzzleRatingButtons, html[dir=rtl] .dash_modal #sharing {
       margin-right: -100px;
       margin-left: 0; }
+  @media screen and (max-height: 630px) {
+    .dash_modal .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px; } }
   .dash_modal #sharing {
     color: #e7e8ea; }
     .dash_modal #sharing button {

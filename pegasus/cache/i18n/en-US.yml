@@ -281,7 +281,7 @@
   inspirational_videos_more: "More <a href=\"https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP\">inspirational videos</a> by role models and celebrities"
   playlab_choose_theme: "Choose your Play Lab theme"
   playlab_classic_title: "Classic"
-  playlab_gumball_title: "Gumball"
+  playlab_gumball_title: "The Amazing World of Gumball"
   playlab_iceage_title: "Ice Age - Coming soon"
   playlab_iceage_title_live: "Ice Age"
   starwars_subtitle: "Building a Galaxy With Code"
@@ -842,7 +842,7 @@
   playlab_longdescription: "Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!"
   monstercoding_longdescription: "The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions."
   allcancode_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
-  csfirst_longdescription: "Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!"
+  csfirst_longdescription: "Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!"
   boxisland_longdescription: "Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used in class as a way to spark students'' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  '
