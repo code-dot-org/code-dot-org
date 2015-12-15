@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## Inequality operator: x != y
+## Equality operator
 
 [/name]
-
 
 [category]
 
@@ -20,11 +19,11 @@ Category: Math
 
 [short_description]
 
-Tests whether two values are not equal
+Tests whether two values are not equal.
 
 [/short_description]
 
-Returns true if the value on the left-hand side of the expression does not equal the value on the right-hand side of the expression.  Note that JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string "5").
+Your apps will sometimes need to check if the values in their code are not equivalent, and then possibly perform some specific action using an *if* or *if-else* block. *==* returns true if the value on the left-hand side of the operator is not equal to the value on the right-hand side of the operator.
 
 [/description]
 
@@ -33,18 +32,12 @@ ____________________________________________________
 
 [example]
 
-
 ```
+// Basic numeric inequality check.
 var x = 5;
-if(x != 7)
-{
-  console.log("not equivalent")
-}
-else
-{
-  console.log("equivalent")
-}
-
+var y = 4;
+console.log(x != 5);
+console.log(x != y);
 ```
 
 [/example]
@@ -53,38 +46,35 @@ ____________________________________________________
 
 [example]
 
+**Example: "Alan Turing" inequals "ALAN TURING"?** Basic string inequality check. Case matters for string comparison.
 
 ```
-var x = 5;
-var trueOrFalse = (x!=7)
-console.log("Expression was " + trueOrFalse)
-if(trueOrFalse)
-{
-  console.log("not equivalent")
-}
-else
-{
-  console.log("equivalent")
-}
-
+// Basic string inequality check. Case matters for string comparison.
+var x = "Alan Turing";
+var y = "ALAN TURING";
+console.log(x != "Alan Turing");
+console.log(x != y);
 ```
 
 [/example]
 
 ____________________________________________________
+
 [example]
 
+**Example: 5 equals "5"?** Numeric string to number conversion is automatic in App Lab.
 
 ```
+// Numeric string to number conversion is automatic in App Lab.
 var x = 5;
-var y = 7;
+var y = "5";
 if(x != y)
 {
-  console.log("not equivalent")
+  console.log("equivalent")
 }
 else
 {
-  console.log("equivalent")
+  console.log("not equivalent")
 }
 ```
 
@@ -93,22 +83,23 @@ else
 ____________________________________________________
 [example]
 
+**Example: 5 equals "five"?** Word string to number conversion is not automatic in App Lab.
 
 ```
+// Word string to number conversion is not automatic in App Lab.
 var x = 5;
-var y = "7";
+var y = "five";
 if(x != y)
 {
-  console.log("not equivalent")
+  console.log("equivalent")
 }
 else
 {
-  console.log("equivalent")
+  console.log("not equivalent")
 }
 ```
 
 [/example]
-
 ____________________________________________________
 
 [syntax]
@@ -116,7 +107,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-x == y
+___ != ___
 ```
 
 [/syntax]
@@ -127,23 +118,22 @@ x == y
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| x | any | Yes | The first value to use for comparison.  |
-| y | any | Yes | The second value to use for comparison.  |
+| ___ | any | Yes | The operands can be a number/string/boolean, or a variable containing a number/string/boolean, or the number/string/boolean returned by a function, or the number/string/boolean result of the evaluation of an expression. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-True or false.
+Boolean true or false
 
 [/returns]
 
 [tips]
 
 ### Tips
-- In general, it is easier to think about equivalence testing than not equivalent testing.  Some programmers therefore prefer to avoid negative logic  and structure around equivalence tests and then use the else clause of the if statement to handle when the values aren't equivalent.
-
+- JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string "5").
+- Comparison operators include < <= == > >= !=
 
 [/tips]
 

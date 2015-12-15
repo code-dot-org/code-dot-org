@@ -15,6 +15,20 @@ social:
 
 # Noutăți
 
+## <b>Președintele României, domnul Klaus Iohannis, susține campania Hour of Code 2015, cel mai mare eveniment de educaţie din lume.</b>
+În acest sens, Președintele Klaus Iohannis a participat vineri, 4 decembrie a.c., la Palatul Cotroceni, alături de un grup de 23 de copii, cu vârste cuprinse între 5 și 14 ani, la o oră de programare.
+
+Prin organizarea acestui eveniment și susținerea campaniei Hour of Code 2015, Președintele României dorește să readucă în atenția opiniei publice importanța competenţelor digitale şi a investiției în dezvoltarea abilităţilor de programare ale copiilor, dar şi ale adulţilor, în procesul de învăţare pe tot parcursul vieţii.
+
+Tutorialele urmate de copiii prezenţi astăzi, la Palatul Cotroceni, sunt disponibile pe site-ul oficial: ro.code.org. Acestea demonstrează că programarea reprezintă o îmbinare între logică şi matematică, între muncă şi perseverenţă, fiind accesibilă chiar şi la vârste mici. Performanţa României în domeniul IT a dovedit fără echivoc nevoia de a stimula talentul nativ în acest domeniu în ţara noastră.
+
+Hour of Code România este un eveniment organizat de Asociația ADFABER, care, în 2014, a reușit să implice peste 400.000 de români în activități de programare.
+
+<b>Video Hour of Code la Cotroceni</b>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JldNuPL7K2A" frameborder="0" allowfullscreen></iframe>
+
+
 ## Smiley invata sa programeze alaturi de tinerii romani, pe 7 decembrie, ziua de start Hour of Code Romania
 
 <b>Smiley alaturi de echipa HaHaHa Production sustine editia 2015 a celui mai mare eveniment de educatie din istorie, al carui mesaj este ca oricine, indiferent de varsta sau specializare, poate invata programare.</b>
