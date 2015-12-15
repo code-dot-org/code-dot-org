@@ -241,7 +241,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocks.hideDiv();
+        feedbackBlocks.hide();
       }
 
       // If the user requests the hint...
@@ -257,7 +257,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
         // Restore feedback blocks, if present.
         if (feedbackBlocks && feedbackBlocks.div) {
-          feedbackBlocks.revealDiv();
+          feedbackBlocks.show();
         }
 
         // Report hint request to server.
@@ -330,7 +330,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   });
 
   if (feedbackBlocks && feedbackBlocks.div) {
-    feedbackBlocks.show();
+    feedbackBlocks.render();
   }
 };
 

@@ -53,47 +53,64 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
   this.div = document.createElement('div');
-  this.div.setAttribute('id', 'feedbackBlocksContainer');
+  this.div.setAttribute('id', 'feedbackBlocks');
+
+  // Will be set by this.render()
+  this.blockSpaceEditor = undefined;
 };
 
 module.exports = FeedbackBlocks;
 
-FeedbackBlocks.prototype.show = function () {
+FeedbackBlocks.prototype.render = function () {
+  // Only render if this.div exists in the DOM
+  var div = document.getElementById("feedbackBlocks");
+  if (div !== this.div) {
+    return;
+  }
+
+  // This is sort of a nasty hack. Throughout the blockly code,
+  // constructors look at Blockly.readOnly to determine if they're
+  // supposed to be readonly. Because we want this BlockSpace to be
+  // readonly regardless of the global setting, we temporarily override
+  // the value while we build what we want, then restore it at the end.
+  // Similarly for languageTree, which is supposed to define the toolbox
   var readOnly = Blockly.readOnly;
   var languageTree = Blockly.languageTree;
 
   Blockly.readOnly = true;
   Blockly.languageTree = false;
 
-  var blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
+  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
     var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
     if (!metrics) {
       return null;
     }
+    // Expand the view so we don't see scrollbars
+    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
     return metrics;
   }, function (xyRatio) {
     Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
   }, true);
 
-
-  var blockspace = blockSpaceEditor.blockSpace;
-  var wrappedxml = "<xml>" + this.xml + "</xml>";
-  var actualxml = parseXmlElement(wrappedxml);
-  Blockly.Xml.domToBlockSpace(blockspace, actualxml);
+  var blockSpace = this.blockSpaceEditor.blockSpace;
+  var parsedXml = parseXmlElement(this.xml);
+  Blockly.Xml.domToBlockSpace(blockSpace, parsedXml);
 
   Blockly.readOnly = readOnly;
   Blockly.languageTree = languageTree;
 };
 
-FeedbackBlocks.prototype.hideDiv = function() {
-  this.div.className += " hiddenIframe";
+FeedbackBlocks.prototype.show = function () {
+  this.div.style.visibility = '';
+  this.div.style.height = '';
+  if (this.blockSpaceEditor) {
+    this.blockSpaceEditor.svgResize();
+  }
 };
 
-FeedbackBlocks.prototype.revealDiv = function() {
-  // this regex should simply match the first FULL WORD instance of
-  // "hiddenIframe"; meaning it will ignore instances of, for example,
-  // "hiddenIframeSomethingElse"
-  this.div.className = this.div.className.replace(/\bhiddenIframe\b/,'');
+FeedbackBlocks.prototype.hide = function() {
+  this.div.style.visibility = 'hidden';
+  this.div.style.height = '0px';
 };
 
 /**
@@ -102,7 +119,7 @@ FeedbackBlocks.prototype.revealDiv = function() {
  * @return {string} The generated string of XML.
  */
 FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
-  var blockXMLStrings = [];
+  var blockXMLStrings = ['<xml>'];
   var blockX = 10;  // Prevent left output plugs from being cut off.
   var blockY = 0;
   var blockXPadding = 200;
@@ -144,5 +161,6 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
       blockX += blockXPadding;
     }
   }
+  blockXMLStrings.push('</xml>');
   return blockXMLStrings.join('');
 };
