@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "birds",
-    "instructions": "This is a test!\r\nMove one way, then another to get me to the pig",
+    "instructions": "Let's see what you've learned!\r\nMove one way, then another to get me to the pig.",
     "step_mode": "0",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -38,11 +38,11 @@
         <block type="maze_moveWest"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveEast"/>
         <block type="maze_moveSouth"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>
