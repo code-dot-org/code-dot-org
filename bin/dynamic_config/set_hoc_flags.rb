@@ -35,24 +35,24 @@ EOF
   case mode
     when 'red'
       Gatekeeper.set('postMilestone', value: false)
-      Gatekeeper.set('hoc_activity_writes_disabled', value: true)
       Gatekeeper.set('async_activity_writes', value: true)
       Gatekeeper.set('tracking_pixel_enabled', value: false)
       Gatekeeper.set('puzzle_rating', value: false)
+      DCDO.set('hoc_activity_sample_weight', 0)  # Don't write to hoc_activity.
       DCDO.set('activity_max_rate', 100)
     when 'yellow'
       Gatekeeper.set('postMilestone', value: true)
-      Gatekeeper.set('hoc_activity_writes_disabled', value: true)
       Gatekeeper.set('tracking_pixel_enabled', value: false)
       Gatekeeper.set('async_activity_writes', value: true)
       Gatekeeper.set('puzzle_rating', value: false)
+      DCDO.set('hoc_activity_sample_weight', 10)  # Sample 1/10 of sessions in hoc_activity.
       DCDO.set('activity_max_rate', 3000)  # Max async op rate per queue processor.
     when 'green'
       Gatekeeper.set('postMilestone', value: true)
-      Gatekeeper.set('hoc_activity_writes_disabled', value: false)
       Gatekeeper.set('async_activity_writes', value: false)
       Gatekeeper.set('tracking_pixel_enabled', value: true)
       Gatekeeper.set('puzzle_rating', value: true)
+      DCDO.set('hoc_activity_sample_weight', 1)  # Include all sessions in hoc_activity.
       DCDO.set('activity_max_rate', 0)  # No limit.
     else
       raise "Unexpected mode #{mode}"

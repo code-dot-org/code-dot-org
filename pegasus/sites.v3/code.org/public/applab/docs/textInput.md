@@ -23,7 +23,7 @@ Creates a text input box on the screen displaying the *text* provided and refere
 
 [/short_description]
 
-Your apps will sometimes need to collect text input from the user. You can code an event handler that is triggered by various events in the textInput box.
+Your apps will sometimes need to collect text input from the user. You can code an event handler that is triggered by various events in the textInput box. Use [getText()](/applab/docs/getText) to get the text currently in the textInput box.
 
 [/description]
 

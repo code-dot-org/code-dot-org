@@ -10,7 +10,6 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
-- [I'm attending Counselor-Administrator PD](#counselor-admin)
 
 
 <a id="csp"></a>
@@ -54,7 +53,16 @@ Breakfast and lunch will be served.
 [23 E Illinois St<br/>
 Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
 
-Please enter through After-Words bookstore found on E Illinois St. 
+Please enter through After-Words bookstore found on E Illinois St. Transportation recommendations: 
+<br/>
+
+1. If you want to take public transportation the venue is 1 block away from the Grand Avenue Red Line Stop.
+
+
+2. Parking Recommendations.  
+Use SpotHero.com to reserve a parking space in a nearby surface lot or garage at a low rate.  You should be able to find something around $18 for the day.  The closest spot hero lot is across the street from the office at 430 N Rush St.  There are cheaper places to park that are a bit further away.
+
+Street/meter Parking is generally available on Wabash right in front of the office, but you'll need to use the City of Chicago Parking app to park for longer than two hours.  It's also a $4/hr zone.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -77,7 +85,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+More details coming soon!
 
 
 [**Back to the top**](#top)
@@ -144,7 +152,40 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
+
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.))
+
+**Save the Dates**
+
+Monday, August 1st - Wednesday, August 3rd
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -277,40 +318,7 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
 
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Monday, October 20, 2015 <br/>
-11:00am - 3:00pm
-
-**Location**
-
-23 E Illinois St<br/>
-Chicago, IL 60611
-
-### Administrators##
-
-**Save the date**
-
-Monday, October 20, 2015 <br/>
-8:00am - 10:45am
-
-**Location**
-
-23 E Illinois St<br/>
-Chicago, IL 60611
-
-
-[**Back to the top**](#top)
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

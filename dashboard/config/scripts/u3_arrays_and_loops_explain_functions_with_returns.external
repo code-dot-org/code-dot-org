@@ -37,13 +37,13 @@ It is possible to make your program return at any point using the `return` comma
 
 ![](https://images.code.org/632c3875d47bb6fd54130b9874c44552-image-1447778563981.gif)
 
-Most of the time we want every line of our functions to run, and so we wouldn't write functions with commands after a return statement. If we had ever used `return`, it would have been as the last line in our functions, and since reaching the closing curly brace will automatically do the same thing as a `return` command, there's been no reason to use it at all.
+Most of the time we want every line of our functions to run, and so we wouldn't write functions with commands after a `return` statement. If we had ever used `return`, it would have been as the last line in our functions, and since reaching the closing curly brace will automatically do the same thing as a `return` command, there's been no reason to use it at all.
 
 
 
 # Returning Values
 
-There is one critical difference between reaching the last line of your function and using `return`. When you use `return` you are also able to **specify a single value** that will be "returned" to whatever code called the function in the first place. The effect is that the function acts like any expression that evaluates to a single value. You can think of it as the though the value simply replaces the function where it was called in the code.
+There is one critical difference between reaching the last line of your function and using `return`. When you use `return` you are also able to **specify a single value** that will be "returned" to whatever code called the function in the first place. The effect is that the function acts like any expression that evaluates to a single value. You can think of it as though the value simply replaces the function where it was called in the code.
 
 When your function is done executing it will be replaced by whatever value you return, just like `randomNumber` is replaced by a randomly generated number and `getText` is replaced by the text of one of your UI elements. This is how your functions can generate output that other parts of your program can use.
 
@@ -51,7 +51,7 @@ When your function is done executing it will be replaced by whatever value you r
 
 Notice that we need to place our new function inside of a `console.log` statement in order to display the value it returned. Without this statement, the value would be calculated, but it would not be used anywhere in your program. This is no different than if you were to call `randomNumber` and not use the value generated. It is up to you, the programmer, to decide how this returned value will be used in the rest of your program.
 
-You will typically write a function that returns a value when you have **a calculation that you perform many times in your code** (for example, finding the minimum value in an array). Your function would use parameters to provide inputs, would calculate a result, and would return that result as output. To help you get started writing your own functions that return value, here are some simple guidelines to follow.
+You will typically write a function that returns a value when you have **a calculation that you perform many times in your code** (for example, finding the minimum value in an array). Your function would use parameters to provide inputs, would calculate a result, and would return that result as output. To help you get started writing your own functions that return values, here are some simple guidelines to follow.
 
 **Guidelines for Writing Functions with Return Values**
 

@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Switching Screens\r\n\r\n# Do This",
+    "markdown_instructions": "# Switching Screens\r\n\r\nYour Contacts App now lets you view and scroll through your contacts, but you can't add any new ones. A second screen in your app called `addContactsScreen` was included as part of the starter code you were provided, as are some UI elements. You will be writing the code that pulls values from the text inputs provided here in order to add contacts to your app. The first step will be allowing the user to switch between these screens.\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided here.\r\n\r\n* In Design Mode **give meaningful IDs** to the \"Add Contact\" and \"Go Back\" buttons that can be found on each screen.\r\n* Use these IDs **to attach event handlers to each button that switch the current screen**, as shown below.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -160,7 +160,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
@@ -169,7 +169,8 @@
     "debugger_disabled": "false",
     "encrypted_examples": [
 
-    ]
+    ],
+    "instructions": "Attach event handlers to the \"Add Contact\" and \"Go Back\" buttons that allow the user to switch screens. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
