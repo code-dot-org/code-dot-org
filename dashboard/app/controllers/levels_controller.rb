@@ -35,8 +35,6 @@ class LevelsController < ApplicationController
     if @level.is_a? Grid
       @level.maze_data = @level.class.unparse_maze(@level.properties)
     end
-
-    @level.assign_defaults_before_editing
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
@@ -111,7 +109,6 @@ class LevelsController < ApplicationController
       params[:level][:timeout_after_when_run] = true
       params[:level][:success_condition] = Studio.default_success_condition
       params[:level][:failure_condition] = Studio.default_failure_condition
-      params[:level][:progress_conditions] = Studio.default_progress_conditions
     end
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params.merge!(user: current_user)
@@ -235,15 +232,11 @@ class LevelsController < ApplicationController
       {poems: []},
       {concept_ids: []},
       {soft_buttons: []},
-      {music: []},
-      {avatar_list: []},
       {examples: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
-    params[:level][:music].delete_if(&:empty?) if params[:level][:music].is_a? Array
-    params[:level][:avatar_list].delete_if(&:empty?) if params[:level][:avatar_list].is_a? Array
     permitted_params.concat(Level.serialized_properties.values.flatten)
     params[:level].permit(permitted_params)
   end
