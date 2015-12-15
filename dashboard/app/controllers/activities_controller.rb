@@ -20,17 +20,19 @@ class ActivitiesController < ApplicationController
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = ('true' == params[:result])
+    script_name = ''
+
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = @script_level.level
+      script_name = @script_level.script.name
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?
       @level = Level.find(params[:level_id].to_i)
     end
 
-    @sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: params[:scriptName]}, default: true)
-
-    if params[:program] && @sharing_allowed
+    sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
+    if params[:program] && sharing_allowed
       begin
         share_failure = find_share_failure(params[:program])
       rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error

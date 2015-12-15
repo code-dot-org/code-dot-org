@@ -546,13 +546,23 @@ exports.removeItem = function (blockId, array, index) {
                            'index': index });
 };
 
+exports.drawChart = function (chartId, chartType, chartData, options, callback) {
+  return Applab.executeCmd(null,
+                          'drawChart',
+                          {'chartId': chartId,
+                           'chartType': chartType,
+                           'chartData': chartData,
+                           'options': options,
+                           'callback': callback });
+};
+
 exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
   return Applab.executeCmd(null,
                           'drawChartFromRecords',
                           {'chartId': chartId,
-                            'chartType': chartType,
-                            'tableName': tableName,
-                            'columns': columns,
-                            'options': options,
-                            'callback': callback });
+                           'chartType': chartType,
+                           'tableName': tableName,
+                           'columns': columns,
+                           'options': options,
+                           'callback': callback });
 };

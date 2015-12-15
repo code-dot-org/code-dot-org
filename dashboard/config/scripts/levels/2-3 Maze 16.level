@@ -50,11 +50,24 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
         <block type="maze_moveForward"/>
+      </xml>
+    </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>

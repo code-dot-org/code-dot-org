@@ -29,13 +29,13 @@ Here's a [sample letter](https://code.org/promote/letter) you can send. Your loc
 <% end %>
 
 <% if ['educator'].include? role_s %>
-## 3) [Host an Hour of Code](https://hourofcode.com) and win prizes for your school
+## 3) [Host an Hour of Code](https://hourofcode.com) any time throughout the year.
 
-Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. [Sign up your school](https://hourofcode.com).
+Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics.
 <% else %>
 ## 3) [Host an Hour of Code](https://hourofcode.com) — at work, in your community, or local school
 
-Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. [Get involved](https://hourofcode.com) or [try it yourself](https://code.org/learn). If you're technical, [volunteer to help a teacher in your community](https://code.org/volunteer).
+Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. Or [try it yourself](https://code.org/learn).
 <% end %>
 
 ## 4) Support our work

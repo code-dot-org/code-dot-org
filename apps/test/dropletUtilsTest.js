@@ -352,6 +352,11 @@ describe('generateDropletModeOptions', function () {
           "color": "#D3E965",
           "title": "getUserId"
         },
+        "drawChart": {
+          "color": "#D3E965",
+          "dropdown": {},
+          "title": "drawChart"
+        },
         "drawChartFromRecords": {
           "color": "#D3E965",
           "dropdown": {},
