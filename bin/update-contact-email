@@ -30,7 +30,7 @@ def update_email(old_email, new_email)
   PEGASUS_DB.transaction do
     forms.each do |form|
       new_data = update_form_data(form[:data], new_email)
-      PEGASUS_DB[:forms].where(id: form[:id]).update(email: new_email, data: new_data)
+      PEGASUS_DB[:forms].where(id: form[:id]).update(email: new_email, data: new_data, indexed_at: nil)
     end
   end
 
