@@ -46,5 +46,12 @@
     <required_blocks>
       <xml/>
     </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Maze>
