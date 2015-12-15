@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "instructions": "Get three nectars and then make two honey",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
     "start_direction": "2",
@@ -28,7 +28,11 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>
@@ -42,13 +46,13 @@
         <block type="maze_honey"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveWest"/>
         <block type="maze_moveSouth"/>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Karel>

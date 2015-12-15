@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,3,0,0,0,0,0,0],[0,1,1,4,0,0,0,0],[0,4,1,2,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "This is a test!\r\nDebug this level by rearranging and adding blocks to get me to the pig",
+    "instructions": "This is a test!\r\nDebug this level by rearranging and changing blocks to get me to the pig",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -24,6 +24,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>
@@ -57,11 +59,11 @@
         <block type="maze_moveWest"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveWest"/>
         <block type="maze_moveNorth"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>

@@ -39,11 +39,11 @@
         <block type="maze_moveWest"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveWest"/>
         <block type="maze_moveSouth"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>
