@@ -148,7 +148,7 @@ Item.prototype.update = function () {
       return;
     }
 
-    var sprite = Studio.sprite[0];
+    var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
 
     var spriteX = sprite.x + sprite.width/2;
     var spriteY = sprite.y + sprite.height/2;

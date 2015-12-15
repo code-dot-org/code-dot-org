@@ -1161,6 +1161,16 @@ function loadHoc2015(skin, assetUrl) {
     [msg.itemTauntaun(), '"tauntaun"'],
     [msg.itemProbot(), '"probot"'],
     [msg.itemRandom(), RANDOM_VALUE]];
+
+  skin.whenItemCollidedChoices = [
+    [msg.whenSpriteCollidedWithStormtrooper(), 'stormtrooper'],
+    [msg.whenSpriteCollidedWithRebelPilot(), 'rebelpilot'],
+    [msg.whenSpriteCollidedWithPufferPig(), 'pufferpig'],
+    [msg.whenSpriteCollidedWithMynock(), 'mynock'],
+    [msg.whenSpriteCollidedWithMouseDroid(), 'mousedroid'],
+    [msg.whenSpriteCollidedWithTauntaun(), 'tauntaun'],
+    [msg.whenSpriteCollidedWithProbot(), 'probot']];
+
 }
 
 function loadHoc2015x(skin, assetUrl) {
