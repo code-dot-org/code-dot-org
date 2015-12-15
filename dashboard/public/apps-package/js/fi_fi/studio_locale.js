@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Tarvitset 20 hiiridroidia. Käytä komentoa \"Lisää Hiiridroidi\" tapahtuman \"Kerättäessä Hiiridroidi\" sisällä ja lisää sen avulla vähintään kaksi uutta hiiridroidia aina kun keräät niistä yhden."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Onnittelut, lisäsit koodia luodaksesi hiiridroideja. Voit siirtyä seuraavaan tehtävään tai kokeilla uudelleen saada 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)"},
 "failedChangeSettingTimeout":function(d){return "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin."},
-"failedChangeSettingSettings":function(d){return "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."}};
+"failedChangeSettingSettings":function(d){return "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

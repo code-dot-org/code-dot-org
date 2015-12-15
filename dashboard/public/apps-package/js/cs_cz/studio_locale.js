@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Potřebuješ dostat 20 Mouse Droidů. Použij povel \"add Mouse Droid\" uvnitř události \"when get Mouse Droid\" k přidání pokaždéd vou nebo více Mouse Droidů, když dostaneš jednoho."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Blahopřejeme, přidal jsi kód, abys vytvořil Mouse Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Mouse Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)"},
 "failedChangeSettingTimeout":function(d){return "Dostaň tři Rebel Piloty k posunu dál."},
-"failedChangeSettingSettings":function(d){return "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."}};
+"failedChangeSettingSettings":function(d){return "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

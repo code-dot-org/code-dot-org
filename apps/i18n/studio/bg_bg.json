@@ -764,5 +764,14 @@
   "failedMultiplyCharactersTimeoutBlockly": "Трябват още 20 мишки дроиди. Използвайте командата \"добави мишка дроид\" и я вмъкнете в Събитието \"когато взема мишка дроид\", за да добавите две или повече мишки дроиди всеки път, когато хванете една от тях.",
   "failedMultiplyCharactersTimeoutGotSome": "Поздравления, добавихте код, за да направите мишка дроид. Можете да отидете на следващия пъзел или да се върнете на този и да заловите още 20 мишки дроиди. Направете го лесно като поставите още от тях. (Натиснете и задръжте стрелките на вашата клавиатура или екран, за да се движите по-бързо.)",
   "failedChangeSettingTimeout": "Стигни до трима Бунтовник пилоти, за да продължиш.",
-  "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му."
+  "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му.",
+  "whenSpriteCollidedWithAnyItem": "touches any character",
+  "whenSpriteCollidedWithObstacle": "touches obstacle",
+  "whenSpriteCollidedWithStormtrooper": "touches Stormtrooper",
+  "whenSpriteCollidedWithRebelPilot": "touches Rebel Pilot",
+  "whenSpriteCollidedWithPufferPig": "touches Puffer Pig",
+  "whenSpriteCollidedWithMynock": "touches Mynock",
+  "whenSpriteCollidedWithMouseDroid": "touches Mouse Droid",
+  "whenSpriteCollidedWithTauntaun": "touches Tauntaun",
+  "whenSpriteCollidedWithProbot": "touches Probot"
 }

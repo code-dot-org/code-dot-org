@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "20 Egér Droidot kell szerezned. Használd az \"adj hozzá egy Egér Droid\" utasítást a \"ha elkapja az egér droidot\" eseményen belül, hogy még egy vagy két Egér Droidot hozzáadj akkor, amikor elkapsz egyet."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Gratulálok, készítettél kódot Egér Droidok készítésére. Mehetsz a következő feladványra, vagy megpróbálhatsz ismét 20 Egér Droidot elkapni. Próbáld egyszerűbbé tenni több hozzáadásával! (Tartsd lenyomva a nyilakat a billentyűzeten vagy képernyőn a gyorsabb mozgáshoz)"},
 "failedChangeSettingTimeout":function(d){return "Három Lázadót kell elkapnod a továbbjutáshoz."},
-"failedChangeSettingSettings":function(d){return "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét."}};
+"failedChangeSettingSettings":function(d){return "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

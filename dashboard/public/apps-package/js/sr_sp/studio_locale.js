@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "You need to get 20 Mouse Droids. Use the \"add a Mouse Droid\" command inside the \"when get Mouse Droid\" event to add two or more Mouse Droids every time you get one."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)"},
 "failedChangeSettingTimeout":function(d){return "Get three Rebel Pilots to move on."},
-"failedChangeSettingSettings":function(d){return "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."}};
+"failedChangeSettingSettings":function(d){return "Make the game your own. To pass this puzzle, you need to change your droid and set its speed."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

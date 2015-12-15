@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Tú necesitas obtener 20 Droides Ratón. Usa el comando \"agregar un Droide Ratón\" dentro del evento \"cuando obtienes Droide Ratón\" para agregar dos o más Droides Ratón cada vez que obtienes uno."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Felicitaciones, has agregado código para hacer Droides Ratón. Puedes ir al siguiente rompecabezas o intentar otra vez conseguir 20 Ratónes Droide. Trata de hacerlo más fácil agregando más de ellos! (Presione y sostenga las teclas de tu teclado (o pantalla) para moverse más rápido.)"},
 "failedChangeSettingTimeout":function(d){return "Obten tres pilotos rebeldes para seguir adelante."},
-"failedChangeSettingSettings":function(d){return "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."}};
+"failedChangeSettingSettings":function(d){return "Crea tu propio juego. Para pasar este rompecabezas, necesitas cambiar tu droide y establecer su velocidad."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};

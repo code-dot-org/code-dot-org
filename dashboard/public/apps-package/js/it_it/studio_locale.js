@@ -919,4 +919,13 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "failedMultiplyCharactersTimeoutBlockly":function(d){return "Devi raggiungere 20 Droidi-Topo. Usa il blocco \"aggiungi un Droide-Topo\" all'interno dell'evento \"quando raggiungi un Droide-Topo\" per aggiungere due o più Droidi-Topo ogni volta che ne raggiungi uno."},
 "failedMultiplyCharactersTimeoutGotSome":function(d){return "Complimenti, hai aggiunto il codice per far apparire i Droidi-Topo. Puoi passare al prossimo esercizio o provare di nuovo a prendere 20 Droidi-Topo. Più Droidi-Topo aggiungi e più sarà facile superare il livello! (Tieni premuti i tasti freccia della tastiera (o dello schermo) per muoverti più velocemente.)"},
 "failedChangeSettingTimeout":function(d){return "Raggiungi tre piloti dell'Alleanza Ribelle per superare il livello."},
-"failedChangeSettingSettings":function(d){return "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."}};
+"failedChangeSettingSettings":function(d){return "Costruisci la tua versione del gioco. Per superare il livello, devi cambiare il tuo droide e impostarne la velocità."},
+"whenSpriteCollidedWithAnyItem":function(d){return "touches any character"},
+"whenSpriteCollidedWithObstacle":function(d){return "touches obstacle"},
+"whenSpriteCollidedWithStormtrooper":function(d){return "touches Stormtrooper"},
+"whenSpriteCollidedWithRebelPilot":function(d){return "touches Rebel Pilot"},
+"whenSpriteCollidedWithPufferPig":function(d){return "touches Puffer Pig"},
+"whenSpriteCollidedWithMynock":function(d){return "touches Mynock"},
+"whenSpriteCollidedWithMouseDroid":function(d){return "touches Mouse Droid"},
+"whenSpriteCollidedWithTauntaun":function(d){return "touches Tauntaun"},
+"whenSpriteCollidedWithProbot":function(d){return "touches Probot"}};
