@@ -1,7 +1,6 @@
 {
   "browser": true,
   "curly": true,
-  "esnext": true,
   "globals": {
     "$": true,
     "jQuery": true
