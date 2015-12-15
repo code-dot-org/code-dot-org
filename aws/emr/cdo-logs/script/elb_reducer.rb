@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 get_count = 0
 post_count = 0
 other_count = 0
