@@ -67,6 +67,14 @@ var ChartEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
+  getDrawChartCode: function() {
+    var id = elementUtils.getId(this.props.element);
+    var code =
+      'drawChart("' + id + '", "bar", ' +
+      '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]);\n';
+    return code;
+  },
+
   getDrawChartFromRecordsCode: function() {
     var id = elementUtils.getId(this.props.element);
     var code =
@@ -75,12 +83,19 @@ var ChartEvents = React.createClass({
     return code;
   },
 
+  insertDrawChart: function() {
+    this.props.onInsertEvent(this.getDrawChartCode());
+  },
+
   insertDrawChartFromRecords: function() {
     this.props.onInsertEvent(this.getDrawChartFromRecordsCode());
   },
 
   render: function () {
     var element = this.props.element;
+    var drawChartName = 'drawChart';
+    var drawChartDesc =
+        "Draws the chart using data you provide.";
     var drawChartFromRecordsName = 'drawChartFromRecords';
     var drawChartFromRecordsDesc =
         "Draws the chart using App Lab's table data storage.";
@@ -93,6 +108,10 @@ var ChartEvents = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
+        <EventRow
+          name={drawChartName}
+          desc={drawChartDesc}
+          handleInsert={this.insertDrawChart}/>
         <EventRow
           name={drawChartFromRecordsName}
           desc={drawChartFromRecordsDesc}
