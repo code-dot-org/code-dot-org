@@ -44,6 +44,6 @@ class Follower < ActiveRecord::Base
 
   after_create :assign_script
   def assign_script
-    student_user.assign_script(section.script) if section.try(:script)
+    student_user.assign_script(section.script) if section.script
   end
 end
