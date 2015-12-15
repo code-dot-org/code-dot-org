@@ -44,11 +44,12 @@ This workshop will be in Montgomery County, Maryland.
 Breakfast and lunch will be served.
 
 
-**December 5th Location**
+**February 27th Location**
 
-[I/O Spaces<br/>
-8120 Fenton St, Ste 202<br/>
-Silver Spring, MD  20910](https://www.google.com/maps/place/I%2FO+Spaces/@38.9913503,-77.0257067,17z/data=!4m2!3m1!1s0x0:0xfc5f74bf8966ff84)
+[General Assembly <br/>
+Level 3 Concourse Room<br/>
+10 E 21st St<br/>
+New York, NY 10010](https://www.google.com/maps/place/General+Assembly+New+York/@40.739884,-73.990081,15z/data=!4m2!3m1!1s0x0:0x3884039b8867e84b)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -94,7 +95,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 14th Location**
+**February 6th Location**
 
 [Microsoft<br/>
 Music Box 5411<br/>
@@ -173,44 +174,6 @@ Water
 [**Back to the top**](#top)
 
 
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Administrators
-
-**Save the date**
-
-Thursday, November 5th, 2015  <br/>
-8:00am - 10:00am
-
-**Location**
-
-[Yotel <br/>
-Studio - Fourth Floor<br/>
-570 10th Ave<br/>
-New York, NY 10036<br/>](https://www.google.com/maps/place/YOTEL+New+York/@40.7591199,-73.9956249,15z/data=!4m2!3m1!1s0x0:0x9aaeb9042dabf0a)
-
-
-### Counselors
-
-**Save the date**
-
-Thursday, November 5th, 2015 <br/>
-11:00am - 3:00pm
-
-**Location**
-
-[Yotel <br/>
-Studio - Fourth Floor<br/>
-570 10th Ave<br/>
-New York, NY 10036<br/>](https://www.google.com/maps/place/YOTEL+New+York/@40.7591199,-73.9956249,15z/data=!4m2!3m1!1s0x0:0x9aaeb9042dabf0a)
-
-[**Back to the top**](#top)
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.
