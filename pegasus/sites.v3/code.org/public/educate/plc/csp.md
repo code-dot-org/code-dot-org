@@ -43,7 +43,7 @@ The program has two components:
 In-Person Summit: (June-August)
 
   - 5 days (30 hours) in person. Choose from three dates:
-	  - June 20-25 in Atlanta, GA
+	  - June 20-24 in Atlanta, GA
 	  - July 18-22 in Salt Lake City, UT
 	  - August 8-12 in Chicago, IL
 

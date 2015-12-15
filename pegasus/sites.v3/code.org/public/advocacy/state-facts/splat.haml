@@ -221,7 +221,7 @@ theme: pdf
   %div
     %p
       %h2 What can your state do to improve computer science education?
-      Here are 8 key policies that help to provide all students with access to computer science. Read more about these 8 policy ideas at
+      States and local school districts need to adopt a broad policy framework to provide all students with access to computer science. The following eight recommendations are a menu of best practices that states can choose from to support and expand computer science. Not all states will be in a position to adopt all of the policies, and no state has accomplished all 8 yet. Read more about these 8 policy ideas at
       = succeed "." do
         %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf
     %div.policies
@@ -229,106 +229,152 @@ theme: pdf
       %div.policy-item
         - if state_info[:cs_standards_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             has established rigorous K-12 computer science standards.
-        - else
+        - elsif state_info[:cs_standards_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
             have rigorous computer science standards. Computer science has often been confused with broader technology education in schools. States should adopt discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
+        - elsif state_info[:cs_standards_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_1_t]
 
       %div.policy-item
         - if state_info[:pd_funding_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             has allocated funding for rigorous computer science professional development and course support.
-        - else
+        - elsif state_info[:pd_funding_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
             provide funding for rigorous computer science professional development and course support. States should provide professional development resources by creating matching fund opportunities to bring computer science to school districts.
+        - elsif state_info[:pd_funding_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_2_t]
 
       %div.policy-item
         - if state_info[:cs_teacher_cert_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             has clear certification pathways for computer science teachers.
-        - else
+        - elsif state_info[:cs_teacher_cert_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
             have clear certification pathways for computer science teachers. The expansion of K-12 computer science education is hampered by the lack of qualified computer science teachers. We can grow their ranks by creating clear, navigable, and rewarding professional paths for computer science teachers.
+        - elsif state_info[:cs_teacher_cert_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_3_t]
 
       %div.policy-item
         - if state_info[:pre_service_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             has established incentives at institutions of higher education to offer computer science to pre-service teachers.
-        - else
+        - elsif state_info[:pre_service_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b currently has no
             incentives for institutions of higher education to offer computer science to pre-service teachers. The computer science teacher shortage can be addressed by exposing more pre-service teachers to computer science during their required coursework or by creating specific pathways for computer science teachers.
+        - elsif state_info[:pre_service_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_4_t]
 
       %div.policy-item
         - if state_info[:state_position_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             has dedicated computer science positions in state and local education authorities.
-        - else
+        - elsif state_info[:state_position_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have dedicated computer science positions in state and local education authorities. Creating a statewide computer science leadership position within the state education authority will oversee state-level implementation of computer science education  initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
+            have dedicated computer science positions in state and local education authorities. Creating a statewide computer science leadership position within the state education authority can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
+        - elsif state_info[:state_position_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_5_t]
 
       %div.policy-item
         - if state_info[:require_hs_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             requires that all secondary schools offer computer science.
-        - else
+        - elsif state_info[:require_hs_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
             require that all secondary schools offer computer science. States should adopt policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
+        - elsif state_info[:require_hs_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_6_t]
 
       %div.policy-item
         - if state_info[:cs_counts_t] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            allows computer science to count for a core mathematics or science graduation requirement.
-        - else
+            allows computer science to count for a core graduation requirement. Find out how 
+            = state_info[:state_name_s]
+            allows computer science to count towards graduation at
+            = succeed "." do
+              %a{href: "http://bit.ly/1Is6YXS"} http://bit.ly/1Is6YXS
+        - elsif state_info[:cs_counts_t] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count for a core mathematics or science graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities.
+            allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation from underrepresented minorities. Find out how other states allow computer science to count towards graduation at
+            = succeed "." do
+              %a{href: "http://bit.ly/1Is6YXS"} http://bit.ly/1Is6YXS
+        - elsif state_info[:cs_counts_t] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_7_t]
 
       .policy-item
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
-            %i.fa.fa-check
+            %i.fa.fa-check-square-o
             = state_info[:state_name_s]
             allows computer science to count as a mathematics or science admission requirement at institutions of higher education.
-        - else
+        - elsif state_info[:higher_ed_entrance_s] == 'No'
           %div
-            %i.fa.fa-times
+            %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
             allow computer science to count as a mathematics or science admission requirement at institutions of higher education.  Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
+        - elsif state_info[:higher_ed_entrance_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            = state_info[:policy_8_t]
 
   %div
     %h3 Follow us!
