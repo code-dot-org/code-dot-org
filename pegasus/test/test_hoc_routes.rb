@@ -105,6 +105,33 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
+    it 'starts and ends given tutorial, tracking company and tutorial' do
+      DB.transaction(rollback: :always) do
+        with_test_company 'testcompany'
+
+        before_start_row = get_session_hoc_activity_entry
+        assert_nil before_start_row
+
+        @mock_session.cookie_jar['company'] = 'testcompany'
+
+        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+
+        after_start_row = get_session_hoc_activity_entry
+        assert_equal 'testcompany', after_start_row[:company]
+        assert_equal 'mc', after_start_row[:tutorial]
+        assert after_start_row[:started_at]
+
+        assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
+        assert_includes @pegasus.last_request.url, "&s=#{CGI::escape(Base64.urlsafe_encode64('mc'))}"
+        assert_includes @pegasus.last_request.url, '&co=testcompany'
+
+        after_end_row = get_session_hoc_activity_entry
+        assert_equal 'testcompany', after_end_row[:company]
+        assert_equal 'mc', after_end_row[:tutorial]
+        assert after_end_row[:finished_at]
+      end
+    end
+
     it 'starts and ends given tutorial, tracking company and tutorial, with hoc_activity_sample_weight 100' do
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 100)  # Sample 1/100 of the sessions.
@@ -181,11 +208,23 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
-    it 'always records hoc_activity for cartoon network' do
+    it 'always records hoc_activity for cartoon network in arabic' do
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_proportion', 0)  # Pretend we're otherwise not sampling at all.
         Kernel.stubs(:rand).returns(0.9)
         assert_redirects_from_to '/api/hour/begin/gumball?company=CN&lang=ar', '/s/gumball/reset'
+        row = get_session_hoc_activity_entry
+        refute_nil row
+        assert_equal row[:company], CARTOON_NETWORK
+        assert_in_delta 1.0, get_sampling_weight(row)
+      end
+    end
+
+    it 'always records hoc_activity for cartoon network in english' do
+      DB.transaction(rollback: :always) do
+        DCDO.set('hoc_activity_sample_proportion', 0)  # Pretend we're otherwise not sampling at all.
+        Kernel.stubs(:rand).returns(0.9)
+        assert_redirects_from_to '/api/hour/begin/gumball?company=CN&lang=en', '/s/gumball/reset'
         row = get_session_hoc_activity_entry
         refute_nil row
         assert_equal row[:company], CARTOON_NETWORK

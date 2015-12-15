@@ -37,7 +37,7 @@ Quarter 4: Saturday, March 5, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 21st Location**
+**Location**
 
 [Gonzaga University<br/>
 PACCAR 107<br/>

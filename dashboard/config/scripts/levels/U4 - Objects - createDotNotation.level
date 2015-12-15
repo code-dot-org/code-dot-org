@@ -136,8 +136,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Update your code to add properties to your object one at a time using dot notation. (Click to see full instructions)",
-    "markdown_instructions": "# Creating Objects with Dot Notation\r\n\r\nIn the last exercise we created an object by adding every property in a single command. If you didn't notice **this style of creating objects requires a lot of syntax!** Additionally, for larger objects this can get very difficult to read. **A clearer way to create objects is to create an empty object and then individually add each property using dot notation**.\r\n\r\n![](https://images.code.org/1f7e0d6b6696d4c6a4b1bfe8b4b5b8a5-image-1449085564719.45.40 PM.png)\r\n\r\nThis pattern works because **setting the value of a new property will automatically add it to the object**. This will typically be our preferred way of creating and referencing objects. Notice that **property names are not placed in quotes when using dot notation**.\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates several student objects using the pattern shown above. The last student object is currently empty.\r\n\r\n* Use the pattern shown above to **complete the final student object for yourself**\r\n* Make sure your object **has the same property names as the other 4**.\r\n* Run the program to **display the contents of your objects**. Confirm the values you expected appear there.\r\n\r\n![](https://images.code.org/a7ceb3d7458850e0bd83f17408c33b58-image-1449091210306.19.55 PM.png)",
+    "instructions": "Create a student Object yourself. Add properties to your object one at a time using dot notation. (Click to see full instructions)",
+    "markdown_instructions": "# Creating Objects with Dot Notation\r\n\r\nWe've used dot notation to reference values in an object, but **you can also use dot notation to set the values in an object**. The example below shows how you might use this ability to build an object.\r\n\r\n![](https://images.code.org/1f7e0d6b6696d4c6a4b1bfe8b4b5b8a5-image-1449085564719.45.40 PM.png)\r\n\r\nThis pattern works because **setting the value of a new property will automatically add it to the object**. This will typically be our preferred way of creating and referencing objects. \r\n\r\n<details>\r\n<summary>**Alternate Method of Creating Objects**</summary>\r\nYou can create an object in a single line using the syntax below. **For large objects this method can quickly become difficult to read and write**. It will not be used in examples but you can use it if you wish.\r\n<ul>\r\n<li>Curly braces are placed around the contents of an object `{}`</li>\r\n<li>Properties of the object are given a name and a value which are separated by a colon `:`</li>\r\n<li>Properties are separated from one another by commas `,`</li>\r\n<li>Property names should be strings but do not need to be placed in double quotes. If they are not strings they will be coerced to strings, possibly creating unpredictable behavior.</li>\r\n<li> **Example:** `var user = {userName:\"Ada\", password:\"csIsAwesome\", yearBorn:1815};`</li>\r\n</ul>\r\n</details>\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates several student objects using the pattern shown above. The last student object is currently empty.\r\n\r\n* Use the pattern shown above to **complete the final student object for yourself**\r\n* Make sure your object **has the same property names as the other 4**.\r\n* Run the program to **display the contents of your objects**. Confirm the values you expected appear there.\r\n\r\n![](https://images.code.org/304a8cb6ef242292f4e818d40a257dc6-image-1449516213225.23.07 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,7 +167,10 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

@@ -5,7 +5,7 @@
 # configure the read pool
 
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
-reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
+reader = URI.parse(CDO.dashboard_reporting_db_reader) if CDO.dashboard_reporting_db_reader
 %>
 
 mysql_defaults: &mysql_defaults

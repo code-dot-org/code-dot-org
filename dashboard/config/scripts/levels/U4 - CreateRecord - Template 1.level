@@ -18,7 +18,8 @@
           "object",
           "callback"
         ]
-      }
+      },
+      "console.log": null
     },
     "edit_code": true,
     "embed": "false",
