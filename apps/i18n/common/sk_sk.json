@@ -243,5 +243,9 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: "
+  "workspaceHeaderShort": "Pracovná plocha: ",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }
