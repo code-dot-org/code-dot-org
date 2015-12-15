@@ -1,4 +1,5 @@
 var constants = require('./constants');
+var parseXmlElement = require('./xml').parseElement;
 
 var TestResults = constants.TestResults;
 
@@ -51,60 +52,37 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
 
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
-  this.iframeOptions = {
-    app: options.app,
-    options: {
-      readonly: true,
-      locale: studioApp.LOCALE,
-      localeDirection: studioApp.localeDirection(),
-      baseUrl: studioApp.BASE_URL,
-      skinId: options.skin,
-      level: options.level,
-      blocks: this.xml
-    }
-  };
-
   this.div = document.createElement('div');
   this.div.setAttribute('id', 'feedbackBlocksContainer');
-
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-
-  this.div.appendChild(this.iframe);
 };
 
 module.exports = FeedbackBlocks;
 
-/**
- * Generate a url (with params) for the iFrame that's going to hold the
- * blocks.
- * TODO(elijah) replace this whole thing with an implementation that
- * doesn't require an iframe, since we can now have multiple blocklys on
- * the same page
- */
-FeedbackBlocks.prototype.readonlyTemplateUrl_ = function () {
-  var params = {
-    app: this.iframeOptions.app,
-    js_locale: this.iframeOptions.options.locale,
-    locale_dir: this.iframeOptions.options.localeDirection
-  };
+FeedbackBlocks.prototype.show = function () {
+  var readOnly = Blockly.readOnly;
+  var languageTree = Blockly.languageTree;
 
-  // Simple polyfill for $.params
-  var paramString = Object.keys(params).map(function (key) {
-    return key + "=" + encodeURIComponent(params[key]);
-  }).join("&");
+  Blockly.readOnly = true;
+  Blockly.languageTree = false;
 
-  return "/readonly_template?" + paramString;
-};
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
+    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if (!metrics) {
+      return null;
+    }
+    return metrics;
+  }, function (xyRatio) {
+    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+  }, true);
 
-FeedbackBlocks.prototype.show = function() {
-  var iframeOptions = this.iframeOptions;
-  var iframe = this.iframe;
-  iframe.setAttribute('src', this.readonlyTemplateUrl_());
-  iframe.onload = function () {
-    this[iframeOptions.app + "Main"](iframeOptions.options);
-  }.bind(iframe.contentWindow);
+
+  var blockspace = blockSpaceEditor.blockSpace;
+  var wrappedxml = "<xml>" + this.xml + "</xml>";
+  var actualxml = parseXmlElement(wrappedxml);
+  Blockly.Xml.domToBlockSpace(blockspace, actualxml);
+
+  Blockly.readOnly = readOnly;
+  Blockly.languageTree = languageTree;
 };
 
 FeedbackBlocks.prototype.hideDiv = function() {
