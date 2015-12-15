@@ -9,8 +9,8 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "build": "browserify --debug src/js/blockly_editor.js -o built/js/blockly_editor.js -t [ babelify --presets [es2015] ]",
-    "build:min": "browserify src/js/blockly_editor.js -t [ babelify --presets [es2015] ] | uglifyjs -o built/js/blockly_editor.js",
+    "build": "browserify --debug src/js/blockly_editor.js -o built/js/blockly_editor.js",
+    "build:min": "browserify src/js/blockly_editor.js | uglifyjs -o built/js/blockly_editor.js",
     "prebuild": "mkdir -p built/js",
     "prebuild:min": "mkdir -p built/js",
     "clean": "rm -rf built",
@@ -22,8 +22,6 @@
     "test": "test"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.3.13",
-    "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "jshint": "^2.8.0",
     "uglify-js": "^2.6.1"

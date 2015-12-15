@@ -1,13 +1,13 @@
-import CodeMirror from "codemirror";
-import "codemirror/mode/markdown/markdown";
-import "codemirror/addon/edit/closetag";
-import "codemirror/addon/edit/matchtags";
-import "codemirror/addon/edit/matchbrackets";
-import "codemirror/addon/fold/xml-fold";
-import "codemirror/mode/xml/xml";
-import "codemirror/mode/javascript/javascript";
-import "@cdo/vendor/js/codemirror.inline-attach";
-import "marked";
+var CodeMirror = require('codemirror');
+require("codemirror/mode/markdown/markdown");
+require("codemirror/addon/edit/closetag");
+require("codemirror/addon/edit/matchtags");
+require("codemirror/addon/edit/matchbrackets");
+require("codemirror/addon/fold/xml-fold");
+require("codemirror/mode/xml/xml");
+require("codemirror/mode/javascript/javascript");
+require("@cdo/vendor/js/codemirror.inline-attach");
+require("marked");
 
 /* global inlineAttach */
 
