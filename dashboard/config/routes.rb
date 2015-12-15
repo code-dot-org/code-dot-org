@@ -32,8 +32,6 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/readonly_template', to: 'readonly_template#index'
-
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
 
