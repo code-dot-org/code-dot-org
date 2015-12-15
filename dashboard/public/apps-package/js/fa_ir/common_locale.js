@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویدیو را ببینید"},
 "when":function(d){return "وقتی"},
 "whenRun":function(d){return "زمان اجرا"},
-"workspaceHeaderShort":function(d){return "محیط کار: "}};
+"workspaceHeaderShort":function(d){return "محیط کار: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};

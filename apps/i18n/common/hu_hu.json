@@ -243,5 +243,9 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: "
+  "workspaceHeaderShort": "Munkaterület: ",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }

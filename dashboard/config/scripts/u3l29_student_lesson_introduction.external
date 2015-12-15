@@ -18,7 +18,7 @@ We can often develop intuitions for patterns by performing real-life experiments
 
 * Calculate statistics from a coin flipping experiment.
 * Create a simulation to repeat this experiment for much larger inputs.
-* Create an update hypotheses based on the results of simulations.
+* Create updated hypotheses based on the results of simulations.
 
 # Resources
 * Activity Guide: <a href="https://docs.google.com/document/d/1xLzpruWj1foU23cVDGAcq7WoH_QCvAbSGpT-QT5tp0s/edit?usp=sharing" target="_blank">

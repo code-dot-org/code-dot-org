@@ -243,5 +243,9 @@
   "watchVideo": "ये वीडियो देखें",
   "when": "कब",
   "whenRun": "जब चलाएँ",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }

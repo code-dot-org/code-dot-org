@@ -9,7 +9,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
-- [I'm attending Administrator or Counselor PD](#counselor-admin)
+
 
 
 <a id="ecs"></a>
@@ -70,9 +70,40 @@ Snacks
 Water
 
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.))
+
+**Save the Dates**
+
+Monday, June 13th - Wednesday, June 15th
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -94,7 +125,7 @@ Milestone Complete!
 
 #### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
@@ -109,7 +140,7 @@ Semester 2: Saturday, January 23, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**September 12th Location**
+**Location**
 
 [Columbus State Community College<br/>
 Conference Center<br/>
@@ -148,7 +179,7 @@ Milestone Complete!
 
 #### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
@@ -179,62 +210,6 @@ Laptop and Charger
 <br/>
 Curriculum guide
 <br/>
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
-
-
-
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Tuesday, November 10, 2015 <br/>
-11:00am - 3:00pm
-
-**Location**
-
-[Microsoft Corporation<br/> 
-Scarlet Room<br/>
-8800 Lyra Drive, Suite 400<br/>
-Columbus, OH 43240](https://www.google.com/maps/place/Microsoft+Corporation/@40.1445251,-82.9729873,15z/data=!4m2!3m1!1s0x0:0x4d85ce7a6fec2b0e?sa=X&ved=0CGoQ_BIwC2oVChMIjfKP8JqYyQIVRimICh2FvwBf)
-
-Free parking is available in three lots surrounding the building.
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Tuesday, November 10, 2015 <br/>
-8:00am - 10:00am
-
-**Location**
-
-[Microsoft Corporation<br/> 
-Scarlet Room<br/>
-8800 Lyra Drive, Suite 400<br/>
-Columbus, OH 43240](https://www.google.com/maps/place/Microsoft+Corporation/@40.1445251,-82.9729873,15z/data=!4m2!3m1!1s0x0:0x4d85ce7a6fec2b0e?sa=X&ved=0CGoQ_BIwC2oVChMIjfKP8JqYyQIVRimICh2FvwBf)
-
-Free parking is available in three lots surrounding the building.
-
-**What to bring**
-
 Snacks
 <br/>
 Water

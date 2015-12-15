@@ -243,5 +243,9 @@
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når den køyrer",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }
