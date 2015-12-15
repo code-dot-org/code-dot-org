@@ -2028,8 +2028,10 @@ Studio.getMovementSoundFileNames = function (fromSkin) {
 };
 
 var preloadImage = function(url) {
-  var img = new Image();
-  img.src = url;
+  if (url) {
+    var img = new Image();
+    img.src = url;
+  }
 };
 
 var preloadBackgroundImages = function() {
@@ -2051,6 +2053,7 @@ var preloadProjectileAndItemImages = function() {
 var preloadActorImages = function() {
   for (var i = 0; i < skin.avatarList.length; i++) {
     preloadImage(skin[skin.avatarList[i]].sprite);
+    preloadImage(skin[skin.avatarList[i]].walk);
   }
 };
 
@@ -3010,75 +3013,101 @@ Studio.onPuzzleComplete = function() {
   }
 };
 
-
-var ANIM_RATE = 6;
-var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
-var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // Number of extra ticks between the last time the sprite moved and when we
 // reset them to face south.
 var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
-
 /**
- * Given direction/emotion/tickCount, calculate which frame number we should
- * display for sprite.
- * @param {boolean} opts.walkDirection - Return walking direction (0-7)
- * @param {boolean} opts.walkFrame - Return walking animation frame
+ * Given direction/emotion/tickCount, calculate which frame numbers we should
+ * display for an image asset.
+ *
+ * @param {boolean} opts.legacySpriteSheet - using legacy horizontal sheet
+ * @param {number}  opts.spriteIndex - determine state for this spriteIndex
+ * @param {boolean} opts.isWalking - pass walking state
  */
-function spriteFrameNumber (index, opts) {
-  var sprite = Studio.sprite[index];
-  var frameNum = 0;
+function imageAssetFrameNumbers (opts) {
+  var sprite = Studio.sprite[opts.spriteIndex];
+  var frameNums = {
+    x: 0,
+    y: 0
+  };
 
-  var currentTime = new Date();
   // adjust animTick to convert overall tick frequency to animation frequency
   // and skew each sprite slightly so each animates at a slightly different time
   var animTick = Math.floor(
-    (Studio.tickCount + index * (sprite.animationSpeed + 1)) / sprite.animationSpeed);
+    (Studio.tickCount + opts.spriteIndex * (sprite.animationSpeed + 1)) /
+     sprite.animationSpeed);
 
-  if (opts && opts.walkDirection) {
-    var direction = constants.frameDirTableWalking[sprite.displayDir];
+  var frameTable = sprite.frameCounts.counterclockwise ?
+      constants.frameDirTableWalkingWithIdleCounterclockwise :
+      constants.frameDirTableWalkingWithIdleClockwise;
+  frameNums.x = frameTable[sprite.displayDir];
 
-    // If there are extra emotions sprites, and the actor is facing forward,
-    // use the emotion sprites (last columns of the walking sprite sheet).
-    if (direction === 0 && sprite.frameCounts.extraEmotions > 0 && sprite.emotion !== 0) {
-      return sprite.frameCounts.turns + sprite.emotion - 1;
+  // If there are idleEmotions or walkingEmotions in the spritesheet, and the
+  // actor is facing forward, use those frames (last columns of the spritesheet).
+  if (frameNums.x === 0 && sprite.emotion !== Emotions.NORMAL) {
+    if (opts.isWalking && sprite.frameCounts.walkingEmotions > 0) {
+      frameNums.x = sprite.frameCounts.turns + !!sprite.frameCounts.idleColumn +
+                    (sprite.frameCounts.idleEmotions || 0) + (sprite.emotion - 1);
+    } else if (sprite.frameCounts.idleEmotions > 0) {
+      frameNums.x = sprite.frameCounts.turns + !!sprite.frameCounts.idleColumn +
+                    (sprite.emotion - 1);
     }
-    return direction;
   }
-  else if (opts && opts.walkFrame && sprite.frameCounts.walk) {
-    return animTick % sprite.frameCounts.walk;
-  }
-
-  if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
-    // turn frames start after normal frames, skip 1 since frameDirTable assumes
-    // the south-facing image is omitted, but the spritesheet includes it when turns == 8
-    return sprite.frameCounts.normal + 1 + constants.frameDirTable[sprite.displayDir];
-  }
-  if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
-    // turn frames start after normal frames
-    return sprite.frameCounts.normal + constants.frameDirTable[sprite.displayDir];
+  if (sprite.frameCounts.walk && !opts.legacySpriteSheet) {
+    frameNums.y = animTick % sprite.frameCounts.walk;
   }
 
-  if (sprite.frameCounts.holdIdleFrame0Count) {
-    // Insert extra "held" frames at the end of the animation:
-    frameNum = animTick %
-                (sprite.frameCounts.normal + sprite.frameCounts.holdIdleFrame0Count);
-    if (frameNum >= sprite.frameCounts.normal) {
-      // When the frameNumber is out of range due to the extra "held" frames,
-      // display frame 0:
-      frameNum = 0;
+  if (opts.legacySpriteSheet &&
+      sprite.emotion !== Emotions.NORMAL &&
+      sprite.frameCounts.extraEmotions > 0) {
+    // Legacy spritesheet (shift to a lower row for extraEmotions)
+    frameNums.y = sprite.emotion;
+  }
+
+  if (sprite.frameCounts.normal && opts.legacySpriteSheet) {
+    // Legacy spritesheet (shift frame number up by count of "normal" idle frames)
+    frameNums.x += sprite.frameCounts.normal;
+  }
+  if (sprite.frameCounts.turns == 7 && opts.legacySpriteSheet) {
+    // Legacy spritesheet (shift frame number down by 1, since we expected 8 turn frames)
+    frameNums.x -= 1;
+  }
+
+  if (sprite.displayDir === Direction.SOUTH && !opts.isWalking) {
+    var idleCount = sprite.frameCounts.idleColumn ?
+        sprite.frameCounts.walk : (sprite.frameCounts.normal || 0);
+
+    var idleFrame;
+
+    if (sprite.frameCounts.holdIdleFrame0Count) {
+      // Insert extra "held" frames at the end of the animation:
+      idleFrame = animTick % (idleCount + sprite.frameCounts.holdIdleFrame0Count);
+      if (idleFrame >= idleCount) {
+        // When the frameNumber is out of range due to the extra "held" frames,
+        // display frame 0:
+        idleFrame = 0;
+      }
+    } else {
+      idleFrame = animTick % idleCount;
     }
-  } else {
-    frameNum = animTick % sprite.frameCounts.normal;
+
+    if (sprite.frameCounts.idleColumn) {
+      frameNums.y = idleFrame;
+    } else {
+      frameNums.x = idleFrame;
+    }
+
+    if (opts.legacySpriteSheet &&
+        frameNums.x === 0 &&
+        sprite.emotion !== Emotions.NORMAL &&
+        sprite.frameCounts.emotions > 0) {
+      // Legacy spritesheet (idle emotion frames are the rightmost frames)
+      frameNums.x = sprite.frameCounts.normal + sprite.frameCounts.turns + (sprite.emotion - 1);
+    }
   }
 
-  if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
-    sprite.frameCounts.emotions > 0) {
-    // emotion frames precede normal, turn frames
-    frameNum = sprite.frameCounts.normal + sprite.frameCounts.turns + (sprite.emotion - 1);
-  }
-
-  return frameNum;
+  return frameNums;
 }
 
 function spriteTotalFrames (index) {
@@ -3391,7 +3420,7 @@ Studio.displaySprite = function(i, isWalking) {
   var spriteWalkIcon = document.getElementById('spriteWalk' + i);
 
   var spriteIcon, spriteClipRect, unusedSpriteClipRect;
-  var xOffset, yOffset;
+  var frameNumbers, xOffset, yOffset;
 
   if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
 
@@ -3408,26 +3437,36 @@ Studio.displaySprite = function(i, isWalking) {
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
 
-    xOffset = sprite.drawWidth * spriteFrameNumber(i, {walkDirection: true});
-    yOffset = sprite.drawHeight * spriteFrameNumber(i, {walkFrame: true});
+    frameNumbers = imageAssetFrameNumbers({ spriteIndex: i, isWalking: isWalking });
+    xOffset = sprite.drawWidth * frameNumbers.x;
+    yOffset = sprite.drawHeight * frameNumbers.y;
 
     spriteIcon = spriteWalkIcon;
     spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
-    unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
+    if (skin[sprite.value].sprite) {
+      unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
+    }
+  } else if (skin[sprite.value] && !skin[sprite.value].sprite && skin[sprite.value].walk) {
+    // We only have a "walking" spritesheet, so use it all the time
+
+    // Show walk sprite, and hide regular sprite.
+    spriteRegularIcon.setAttribute('visibility', 'hidden');
+    spriteWalkIcon.setAttribute('visibility', 'visible');
+
+    frameNumbers = imageAssetFrameNumbers({ spriteIndex: i, isWalking: isWalking });
+    xOffset = sprite.drawWidth * frameNumbers.x;
+    yOffset = sprite.drawHeight * frameNumbers.y;
+
+    spriteIcon = spriteWalkIcon;
+    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
   } else {
     // Show regular sprite, and hide walk sprite.
     spriteRegularIcon.setAttribute('visibility', 'visible');
     spriteWalkIcon.setAttribute('visibility', 'hidden');
 
-    xOffset = sprite.drawWidth * spriteFrameNumber(i);
-
-    // For new versions of sprites (iceage/gumball), there are additional rows of
-    // idle animations for each emotion.
-    if (sprite.frameCounts.extraEmotions > 0) {
-      yOffset = sprite.drawHeight * sprite.emotion;
-    } else {
-      yOffset = 0;
-    }
+    frameNumbers = imageAssetFrameNumbers({ spriteIndex: i, legacySpriteSheet: true });
+    xOffset = sprite.drawWidth * frameNumbers.x;
+    yOffset = sprite.drawHeight * frameNumbers.y;
 
     spriteIcon = spriteRegularIcon;
     spriteClipRect = document.getElementById('spriteClipRect' + i);
@@ -3486,11 +3525,13 @@ Studio.displaySprite = function(i, isWalking) {
   spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
   spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
 
-  // Update the other clip rect too, so that calculations involving
-  // inter-frame differences (just above, to calculate sprite.dir)
-  // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-  unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
+  if (unusedSpriteClipRect) {
+    // Update the other clip rect too, so that calculations involving
+    // inter-frame differences (just above, to calculate sprite.dir)
+    // are correct when we transition between spritesheets.
+    unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
+    unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
+  }
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -4599,8 +4640,11 @@ Studio.setSprite = function (opts) {
     spriteValue = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
   }
 
+  var skinSprite = skin[spriteValue];
+
   var spriteIcon = document.getElementById('sprite' + spriteIndex);
-  if (!spriteIcon) {
+  var spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
+  if (!spriteIcon && !spriteWalk) {
     return;
     // TODO (cpirich): We should probably throw here, but since our JS tutorials
     // don't allow the student to set the spriteIndex, we will fail silently
@@ -4609,27 +4653,22 @@ Studio.setSprite = function (opts) {
     // throw new RangeError("Incorrect parameter: " + spriteIndex);
   }
 
-  var skinSprite = skin[spriteValue];
   if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
-  spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  if (skinSprite.sprite) {
+    spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+  }
   sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
 
   // If this skin has walking spritesheet, then load that too.
-  var spriteWalk = null;
-  if (spriteValue !== undefined && skinSprite.walk) {
-    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
-    if (!spriteWalk) {
-      return;
-    }
-
-    // Hide the walking sprite at this stage.
+  if (spriteValue !== undefined && skinSprite.walk && skinSprite.walk) {
+    // If we have two spritesheets, hide the walking sprite at this stage.
     spriteWalk.setAttribute('visibility', 'hidden');
   }
 
@@ -4654,16 +4693,18 @@ Studio.setSprite = function (opts) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
   }
 
-  var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
-  spriteClipRect.setAttribute('width', sprite.drawWidth);
-  spriteClipRect.setAttribute('height', sprite.drawHeight);
+  if (spriteIcon && skinSprite.sprite) {
+    var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
+    spriteClipRect.setAttribute('width', sprite.drawWidth);
+    spriteClipRect.setAttribute('height', sprite.drawHeight);
 
-  spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
-  spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
-  spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
+    spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
+    spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
+    var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
+    spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
+  }
 
-  if (spriteWalk) {
+  if (spriteWalk && skinSprite.walk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
     var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
     spriteWalkClipRect.setAttribute('width', sprite.drawWidth);
@@ -4671,7 +4712,12 @@ Studio.setSprite = function (opts) {
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
 
-    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
+    var extraWidth = (sprite.frameCounts.walkingEmotions || 0) * sprite.drawWidth;
+    if (!skinSprite.sprite) {
+      // If we have only one spritesheet, this one is wider to store idle animations
+      // in an additional column
+      extraWidth += sprite.drawWidth;
+    }
     spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }

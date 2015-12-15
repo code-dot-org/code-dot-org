@@ -23,7 +23,6 @@ var plainTwitterOptions = {
   hashtag: 'HourOfCode'
 };
 
-
 function loadGumball(skin, assetUrl) {
   skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'dots';
@@ -136,7 +135,8 @@ function loadGumball(skin, assetUrl) {
         turns: 8,
         emotions: 0,
         walk: skin.walkValues[i],
-        extraEmotions: 3
+        extraEmotions: 3,
+        walkingEmotions: 3
       },
       animationSpeed: 3
     };
@@ -316,7 +316,8 @@ function loadIceAge(skin, assetUrl) {
         turns: 8,
         emotions: 0,
         walk: 12,
-        extraEmotions: 3
+        extraEmotions: 3,
+        walkingEmotions: 3
       },
       animationSpeed: 3
     };
