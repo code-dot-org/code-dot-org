@@ -23,9 +23,9 @@
     #gmap.full-width
 #belowmaplegend.legend
   .legend-title= hoc_s(:map_legend_title)
-  .color.turquoise
+  .color.brown
   %div= hoc_s(:map_legend_hoc_events)
-  .color.orange
+  .color.teal
   %div= hoc_s(:map_legend_cs_tech_jam)
 
 :javascript
@@ -68,12 +68,12 @@
       styles: [{
         where: "review CONTAINS 'approved'",
         markerOptions: {
-          iconName: "orange_stars"
+          iconName: "ltblu_stars"
         }
       }, {
         where: "review DOES NOT CONTAIN 'approved'",
         markerOptions: {
-          iconName: "measle_turquoise"
+          iconName: "measle_brown"
         }
       }],
     });
