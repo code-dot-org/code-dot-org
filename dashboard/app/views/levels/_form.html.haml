@@ -11,8 +11,6 @@
     = render partial: 'levels/editors/all', locals: {f: f}
     = render partial: 'levels/editors/md_instructions', locals: {f: f} unless @level.is_a? DSLDefined
 
-    = render partial: 'levels/editors/authored_hints', locals: {f: f} unless @level.is_a? DSLDefined
-
     = render partial: 'levels/editors/blockly', locals: {f: f} if @level.is_a? Blockly
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
