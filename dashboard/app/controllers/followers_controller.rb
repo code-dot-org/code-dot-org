@@ -1,49 +1,24 @@
+# functionality for student users (teachers do this via the
+# teacher-dashboard in pegasus and the api) to manipulate Followers,
+# which means joining and leaving Sections (see Follower and Section
+# models).
+
 class FollowersController < ApplicationController
-  before_filter :authenticate_user!, except: [:student_user_new, :student_register, :index, :manage, :sections]
-
-  # old teacher dashboard -- redirect to new teacher dashboard
-  def index
-    redirect_to teacher_dashboard_url
-  end
-
-  def manage
-    redirect_to teacher_dashboard_url
-  end
-
-  def sections
-    redirect_to teacher_dashboard_url
-  end
+  before_filter :authenticate_user!, except: [:student_user_new, :student_register]
+  before_action :load_section, only: [:create, :student_user_new, :student_register]
 
   # join a section as a logged in student
   def create
-    redirect_url = params[:redirect] || root_path
+    @section.add_student(current_user)
 
-    if params[:section_code].blank?
-      redirect_to redirect_url, alert: I18n.t('follower.error.blank_code')
-      return
-    end
-
-    unless @section = Section.find_by_code(params[:section_code])
-      redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
-      return
-    end
-
-    teacher = @section.user
-
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      @follower = Follower.where(user: teacher, student_user: current_user, section: @section).first_or_create!
-    end
-    current_user.assign_script(@section.script) if @section.script
-
-    redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: teacher.name)
+    redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
   end
 
   # remove a section/teacher as a logged in student
   def remove
-    @user = User.find(params[:student_user_id])
     @teacher = User.find(params[:teacher_user_id])
 
-    f = Follower.where(user_id: @teacher.id, student_user_id: @user.id).first
+    f = Follower.where(user_id: @teacher.id, student_user_id: current_user.id).first
 
     unless f.present?
       redirect_to root_path, alert: t('teacher.user_not_found')
@@ -52,43 +27,29 @@ class FollowersController < ApplicationController
 
     authorize! :destroy, f
     f.delete
-    FollowerMailer.student_disassociated_notify_teacher(@teacher, @user).deliver_now if @teacher.email.present?
-    redirect_to root_path, notice: t('teacher.student_teacher_disassociated', teacher_name: @teacher.name, student_name: @user.name)
+    FollowerMailer.student_disassociated_notify_teacher(@teacher, current_user).deliver_now if @teacher.email.present?
+    redirect_to root_path, notice: t('teacher.student_teacher_disassociated', teacher_name: @teacher.name, student_name: current_user.name)
   end
 
   # GET /join/XXXXXX
-  # join a section as a new student
+  # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
-    @section = Section.find_by_code(params[:section_code])
-
     # make sure section_code is in the path (rather than just query string)
     if request.path != student_user_new_path(section_code: params[:section_code])
       redirect_to student_user_new_path(section_code: params[:section_code])
-    elsif current_user && @section
-      if current_user == @section.user
-        redirect_to root_path, alert: I18n.t('follower.error.cant_join_own_section') and return
-      end
+    elsif current_user
+      @section.add_student(current_user)
 
-      follower_same_user_teacher = current_user.followeds.where(:user_id => @section.user_id).first
-      if follower_same_user_teacher.present?
-        follower_same_user_teacher.update_attributes!(:section_id => @section.id)
-      else
-        Follower.create!(user_id: @section.user_id, student_user: current_user, section: @section)
-      end
-
-      current_user.assign_script(@section.script) if @section.script
-
-      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name) and return
+      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+    else
+      @user = User.new
+      # if there is no logged in user, render the default student_user_new view which includes the sign up form
     end
-
-    @user = User.new
   end
 
   # POST /join/XXXXXX
   # join a section as a new student
   def student_register
-    @section = Section.find_by_code(params[:section_code])
-
     user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
 
     student_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
@@ -104,8 +65,7 @@ class FollowersController < ApplicationController
       @user.user_type = user_type == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save
-          Follower.create!(user_id: @section.user_id, student_user: @user, section: @section)
-          @user.assign_script(@section.script) if @section.script
+          @section.add_student(@user)
           sign_in(:user, @user)
           redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
           return
@@ -113,6 +73,30 @@ class FollowersController < ApplicationController
       end
     end
 
-    render "student_user_new", formats: [:html]
+    render 'student_user_new', formats: [:html]
+  end
+
+  private
+
+  def redirect_url
+    params[:redirect] || root_path
+  end
+
+  def load_section
+    if params[:section_code].blank?
+      redirect_to redirect_url, alert: I18n.t('follower.error.blank_code')
+      return
+    end
+
+    @section = Section.find_by_code(params[:section_code])
+    unless @section
+      redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
+      return
+    end
+
+    if current_user && current_user == @section.user
+      redirect_to redirect_url, alert: I18n.t('follower.error.cant_join_own_section')
+      return
+    end
   end
 end

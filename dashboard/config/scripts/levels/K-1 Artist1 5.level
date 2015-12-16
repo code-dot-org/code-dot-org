@@ -16,7 +16,22 @@
     "free_play": "false",
     "ideal": "3",
     "slider_speed": "0.2",
-    "disable_param_editing": "true"
+    "disable_param_editing": "true",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -28,12 +43,12 @@
         <block type="simple_move_left"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="simple_move_up"/>
         <block type="simple_move_up"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
