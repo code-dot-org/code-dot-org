@@ -703,6 +703,9 @@ class UserTest < ActiveSupport::TestCase
       section = create :section, script: Script.find_by_name('course1')
       create :follower, student_user: student, section: section, created_at: assigned_date
 
+      # pretend we created this script before we had the callback to create user_scripts
+      UserScript.last.destroy
+
       assert_creates(UserScript) do
         student.backfill_user_scripts
       end

@@ -10,7 +10,7 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
-- [I'm attending Counselor-Administrator PD](#counselor-admin)
+
 
 <a id="csp"></a>
 ## Computer Science Principles
@@ -33,18 +33,17 @@ Quarter 4: Saturday, March 5, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 21st Location**
+**January 30th Location**
 
-[Google<br/>
-340 Main St.<br/>
-Los Angeles, CA 90291](https://www.google.com/maps/place/Google+Venice,+340+Main+St,+Venice,+CA+90291/@33.9958697,-118.4788045,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2bacf16b3cbf5:0x31fc6f8820c621e)
+[9 Dots<br/>
+931 N Highland Avenue<br/>
+Los Angeles, CA, 90038<br/>](https://www.google.com/maps/place/9+Dots/@34.0880332,-118.3389293,15z/data=!4m2!3m1!1s0x0:0x2efadb41115b9452?sa=X&ved=0CHAQ_BIwCmoVChMImdnXi9WYyQIVUKOICh2aQglh)
 
-The parking garage is located underground.  Please pull under the binoculars in front of the building on Main Street (yes we are the "binocular building"), push the button on the keypad to the left in front of the gate, and let Reception/Security know you are here to meet with Jen Barth for Code.org event.  They will buzz you in.
+(323) 524-8328 <br/>
 
-Drive to the valet on level B (located 2nd floor down) and they will guide you to open parking spots in the structure or valet your car for you.  Take the elevator to the first floor and check-in with reception.  Jen Barth from Google will greet you there.  
+Free parking lot available in the back of the building surrounded by a wooden fence. The parking entrance is in the alleyway between Highland Ave and Citrus Ave. See parking map here: [https://code.org/images/9-dots-parking-map.png](/images/9-dots-parking-map.png)
 
-Please feel free to call Jen's cell if you have any trouble getting here. 646-489-7459.
-
+If the lot is full, there is plenty of street parking around the block. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -54,6 +53,11 @@ Green journal <br/>
 Snacks
 <br/>
 Water
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
+
+More Details Coming Soon!
+
 
 [**Back to the top**](#top)
 
@@ -91,12 +95,9 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**December 12th Location**
+**February 20th Location**
 
-[Alliance College-Ready Public Schools<br/>
-Columbia Ave. Building<br/>
-515 Columbia Ave<br/>
-Los Angeles, CA 90017](https://www.google.com/maps/place/515+Columbia+Ave,+Los+Angeles,+CA+90017/@34.0568357,-118.2683455,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c7a5dc0c6221:0xcce25074a5f9e728)
+TBD
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -111,7 +112,37 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
-More info coming soon!
+The fourth phase of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. The fourth phase addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.
+
+**Save the Dates**
+
+Monday, June 20th - Wednesday, June 22nd
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger
+
+<br />
 
 [**Back to the top**](#top)
 
@@ -218,29 +249,6 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-<b><i>Counselors and Administrators will attend the same workshop</i></b><br/><br/>
-**Save the date**
-
-Tuesday, October 20, 2015 <br/>
-8:30am - 10:30am
-
-**Location**
-
-[Los Angeles Unified School District<br/>
-Room 202 - 2nd floor <br/>
-333 So. Beaudry Avenue<br/>
-Los Angeles 90017<br/>](https://www.google.com/maps/place/Los+Angeles+Unified+School+District/@34.0562743,-118.257519,15z/data=!4m2!3m1!1s0x0:0x46dbbd0a986126b8)
-
-
-[**Back to the top**](#top)
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

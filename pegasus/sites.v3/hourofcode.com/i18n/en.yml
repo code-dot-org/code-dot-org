@@ -272,6 +272,7 @@
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
+  map_title: "Hour of Code map"
   map_header: '# Hour of Code events around the world'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
