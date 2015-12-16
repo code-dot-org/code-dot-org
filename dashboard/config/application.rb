@@ -91,7 +91,6 @@ module Dashboard
       angularProjects.js
       shared.js
       shared.min.js
-      editor/blockly_editor.css
       editor/embedded_markdown_editor.js
       levels/*
       jquery.handsontable.full.css
