@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,3,1,1,1,4,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the pig! Use the repeat loop.",
+    "instructions": "Get me to the pig! Be sure to use `repeat` loops.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -25,7 +25,9 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Get me to the pig!  \r\nBe sure to use `repeat` loops.",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
