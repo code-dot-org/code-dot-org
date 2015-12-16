@@ -1189,7 +1189,6 @@ function onReportComplete(response) {
   runButton.disabled = false;
   appState.response = response;
   appState.waitingForReport = false;
-  studioApp.onReportComplete(response);
   displayFeedback();
 }
 
