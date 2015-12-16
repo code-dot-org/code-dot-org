@@ -1311,6 +1311,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.markdownMode
  * @param {boolean} options.scrollContent
  * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
@@ -1328,6 +1329,11 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
   } else {
     options.contentDiv.className += ' no-modal-icon';
   }
+
+  if (options.markdownMode) {
+    modalBody.className += ' markdown';
+  }
+
   options.contentDiv.className += ' modal-content';
   modalBody.appendChild(options.contentDiv);
 
