@@ -6,7 +6,7 @@ require("codemirror/addon/edit/matchbrackets");
 require("codemirror/addon/fold/xml-fold");
 require("codemirror/mode/xml/xml");
 require("codemirror/mode/javascript/javascript");
-require("@cdo/vendor/js/codemirror.inline-attach");
+require("vendor/js/codemirror.inline-attach");
 require("marked");
 
 /* global inlineAttach */
