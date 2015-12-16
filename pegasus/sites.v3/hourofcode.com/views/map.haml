@@ -21,7 +21,7 @@
 .row
   .col-sm-12
     #gmap.full-width
-#belowmaplegend.legend{style: "display: none;"}
+#belowmaplegend.legend
   .legend-title= hoc_s(:map_legend_title)
   .color.turquoise
   %div= hoc_s(:map_legend_hoc_events)
@@ -84,7 +84,7 @@
     legend.index = 1;
     $("#belowmaplegend div").clone().appendTo(legend);
 
-    //gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 
