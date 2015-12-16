@@ -243,5 +243,6 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: "
+  "workspaceHeaderShort": "Espacio de trabajo: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
 }
