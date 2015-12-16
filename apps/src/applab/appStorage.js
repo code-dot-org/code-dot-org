@@ -157,13 +157,14 @@ var handleReadRecords = function(searchParams, onSuccess, onError) {
  * Updates a record in a table, accessible to all users.
  * @param {string} tableName The name of the table to update.
  * @param {string} record.id The id of the row to update.
- * @param {Object} record Object containing other properites to update
+ * @param {Object} record Object containing other properties to update
  *     on the record.
- * @param {function()} onSuccess Function to call on success.
+ * @param {function(Object, boolean)} onComplete Function to call on success,
+ *     or if the record id is not found.
  * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
+ *     in case of other types of failures.
  */
-AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
+AppStorage.updateRecord = function(tableName, record, onComplete, onError) {
   if (!tableName) {
     onError('error updating record: missing required parameter "tableName"');
     return;
@@ -174,7 +175,7 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onSuccess, onError);
+  req.onreadystatechange = handleUpdateRecord.bind(req, tableName, record, onComplete, onError);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId;
   req.open('POST', url, true);
@@ -182,20 +183,20 @@ AppStorage.updateRecord = function(tableName, record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
+var handleUpdateRecord = function(tableName, record, onComplete, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
-    onSuccess(null, false);
+    onComplete(null, false);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess(record, true);
+  onComplete(record, true);
 };
 
 /**
@@ -203,11 +204,12 @@ var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
  * @param {string} tableName The name of the table to delete from.
  * @param {string} record.id The id of the record to delete.
  * @param {Object} record Object whose other properties are ignored.
- * @param {function()} onSuccess Function to call on success.
+ * @param {function(boolean)} onComplete Function to call on success, or if the
+ *     record id is not found.
  * @param {function(string)} onError Function to call with an error message
- *    in case of failure.
+ *     in case of other types of failures.
  */
-AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
+AppStorage.deleteRecord = function(tableName, record, onComplete, onError) {
   if (!tableName) {
     onError('error deleting record: missing required parameter "tableName"');
     return;
@@ -218,7 +220,7 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onSuccess, onError);
+  req.onreadystatechange = handleDeleteRecord.bind(req, tableName, record, onComplete, onError);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' +
       tableName + '/' + recordId + '/delete';
   req.open('POST', url, true);
@@ -226,20 +228,20 @@ AppStorage.deleteRecord = function(tableName, record, onSuccess, onError) {
   req.send(JSON.stringify(record));
 };
 
-var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
+var handleDeleteRecord = function(tableName, record, onComplete, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
   }
   if (this.status === 404) {
-    onSuccess(false);
+    onComplete(false);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
     onError('error deleting record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess(true);
+  onComplete(true);
 };
 
 /**
