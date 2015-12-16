@@ -56,9 +56,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_blocks": "var song = {};\r\nsong.title = \"Single Ladies\";\r\nsong.seconds = 199;\r\ncreateRecord(\"mySongs\", song, function(record){\r\n  console.log(record);\r\n});",
-    "encrypted_examples": [
-
-    ],
     "data_tables": "{\r\n\r\n\t\"mySongs\": [\r\n        {\r\n          \"title\": \"Thriller\",\r\n          \"seconds\": 358,\r\n          \"id\": 1\r\n        },\r\n        {\r\n          \"title\": \"Wonderwall\",\r\n          \"seconds\": 280,\r\n          \"id\": 2\r\n        },\r\n        {\r\n          \"title\": \"I Will Survive\",\r\n          \"seconds\": 180,\r\n          \"id\": 3\r\n        }\r\n\t]\r\n}"
   }
 }]]></config>

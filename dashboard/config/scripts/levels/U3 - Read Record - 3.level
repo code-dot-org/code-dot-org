@@ -54,10 +54,7 @@
     "data_tables": "{\r\n\"myMovies\" :[\r\n  {\r\n    \"name\": \"Top Gun\",\r\n    \"year\": 1986\r\n  },\r\n  {\r\n  \"name\": \"Breakfast at Tiffany's\",\r\n    \"year\": 1961\r\n  },\r\n  {\r\n   \"name\": \"The Goonies\",\r\n    \"year\": 1985\r\n  }\r\n  {\r\n    \"name\": \"Say Anything\",\r\n    \"year\": 1989\r\n  }\r\n  {\r\n    \"name\": \"Fight Club\",\r\n    \"year\": 1999\r\n  }\r\n  {\r\n    \"name\": \"The Dark Knight\",\r\n    \"year\": 2008\r\n  }\r\n   {\r\n    \"name\": \"WALL-E\",\r\n    \"year\": 2008\r\n  }\r\n]\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "readRecords(\"myTable\", {}, function(records){\r\n  console.log(records);\r\n});",
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "readRecords(\"myTable\", {}, function(records){\r\n  console.log(records);\r\n});"
   }
 }]]></config>
   <blocks/>

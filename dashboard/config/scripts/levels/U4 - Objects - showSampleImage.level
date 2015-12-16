@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Attach an event handler to the image URL text input so that the user can confirm their image will work as expected. (Click to see full instructions)"
   }
 }]]></config>
