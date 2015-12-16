@@ -83,8 +83,8 @@ ARGF.each do |line|
 
   tutorials.each do |t|
     if (line.include? "begin" + "\/" + t) ||
-        (line.include? "begin" + "_" + t)
-        (line.include? "443" + "\/" + t)
+      (line.include? "begin" + "_" + t)
+      (line.include? "443" + "\/" + t)
       # Emit the date and the tutorial as the key and the count one as the
       # value.
       puts date + " " + t + "\t" + "1"
