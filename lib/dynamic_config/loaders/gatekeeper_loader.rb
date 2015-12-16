@@ -3,8 +3,7 @@
 #
 # <feature name>:
 # # Comment describing what the rule intends
-# - rule:
-#    where: (optional)
+#  - where: (optional)
 #      user_id: 2
 #      script_id: 2
 #    value: <boolean>
@@ -14,11 +13,9 @@
 #
 # milestone:
     # Turn off for all users
-#   - rule:
-#     value: false
+#   - value: false
     # Turn on for script 38
-#   - rule:
-#     where:
+#   - where:
 #       script_id: 38
 #     value: true
 #
@@ -31,7 +28,6 @@ module GatekeeperLoader
   # @param feature [String] name of the feature
   # @param rule [Hash]
   def self.validate_rule(feature, rule)
-    raise ArgumentError, "In #{feature}, rule description is required." unless rule.key? 'rule'
     raise ArgumentError, "In #{feature}, value is required" unless rule.key? 'value'
     raise ArgumentError, "In #{feature}, value must be a boolean" unless rule['value'] == !!rule['value']
 

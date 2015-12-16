@@ -1,12 +1,9 @@
 milestone:
-  - rule: Turn off for all users
-    value: false
-  - rule: Turn on for Trevor
-    where:
+  - value: false
+  - where:
       script_id: 38
     value: true
 
 feature2:
-  - rule: Turn on for all users
-    value: true
+  - value: true
 
