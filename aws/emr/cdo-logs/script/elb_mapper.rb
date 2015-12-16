@@ -76,6 +76,8 @@ tutorials = [
     "disney_static_starwarsblocks"
   ]
 
+LONG_VALUE_SUM = "LongValueSum:"
+
 ARGF.each do |line|
   # The line starts with a timestamp of the form YYYY-MM-DDTHH:MM:SS.XXXXXXZ,
   # from which we extract only the date for aggregation.
@@ -85,9 +87,10 @@ ARGF.each do |line|
     if (line.include? "begin" + "\/" + t) ||
       (line.include? "begin" + "_" + t)
       (line.include? "443" + "\/" + t)
-      # Emit the date and the tutorial as the key and the count one as the
-      # value.
-      puts date + " " + t + "\t" + "1"
+      # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
+      # aggregate. Using the date and tutorial as the key gives breakdowns by
+      # day and tutorial.
+      puts LONG_VALUE_SUM + date + " " + t + "\t" + "1"
       break
     end
   end
