@@ -39,10 +39,7 @@
     "markdown_instructions": "We can import data\r\n\r\nGiven a csv file, have students import it and then go look at in the data viewer",
     "code_functions": {
       "console.log": null
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   }
 }]]></config>
   <blocks/>
