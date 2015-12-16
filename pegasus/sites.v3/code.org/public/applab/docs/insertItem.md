@@ -23,7 +23,7 @@ Inserts the item into the array at the specified index position.
 
 [/short_description]
 
-In real life you sometimes need add items at various positions in a list, and make the list larger. *insertItem(list, index, item)* makes the "list" one larger and inserts the "item" at the specified *index* position (moving other items to the right). The index must be a valid index position in the list or you may get unexpected results.
+In real life you sometimes need to add items at various positions in a list, and make the list larger. *insertItem(list, index, item)* makes the "list" one larger and inserts the "item" at the specified *index* position (moving other items to the right). The index must be a valid index position in the list or you may get unexpected results.
 
 [/description]
 
@@ -97,7 +97,7 @@ No return value.
 [tips]
 
 ### Tips
-- List(array) manipulation functions include: [appendItem(list, item)](/applab/docs/appendItem), [insertItem(list, index, item)](/applab/docs/insertItem) and [removeItem(list, index)](/applab/docs/removeItem)
+- List(array) manipulation functions include: [appendItem(list, item)](/applab/docs/appendItem), [insertItem(list, index, item)](/applab/docs/insertItem) and [removeItem(list, index)](/applab/docs/removeItem).
 - Multiple calls to *insertItem()* can be slow because to expand the list, Javascript needs to create a new list one item larger and then copy all the items over before instering the new item at the end. If possible it is better to create the list intially large enough for all the possible items and *list[index]* to add new items at specific positions.
 
 [/tips]
