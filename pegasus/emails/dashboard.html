@@ -5,8 +5,8 @@ if defined? from && from != nil
   formatted_from = "Code.org <#{from}>"
 end
 %>
-from: <%= formatted_from.dump %>
-subject: <%= subject.dump %>
+from: <%= formatted_from.inspect %>
+subject: <%= subject.inspect %>
 ---
 <%= body %>
 
