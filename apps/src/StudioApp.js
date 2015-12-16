@@ -31,6 +31,7 @@ var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
+var AuthoredHints = require('./authoredHints');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -50,6 +51,7 @@ var MAX_PHONE_WIDTH = 500;
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
+  this.authoredHintsController_ = new AuthoredHints(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
@@ -282,6 +284,11 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
+  if (config.authoredHintViewRequestsUrl) {
+    this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
+  }
+
   if (config.puzzleRatingsUrl) {
     puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
@@ -406,8 +413,10 @@ StudioApp.prototype.init = function(config) {
       promptIcon.src = this.smallIcon;
       $('#prompt-icon-cell').show();
     }
+
     var bubble = document.getElementById('bubble');
-    bubble.addEventListener('click', function () {
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
       this.showInstructions_(config.level, false);
     }.bind(this));
   }
@@ -855,10 +864,13 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
+StudioApp.prototype.onReportComplete = function (response) {
+  this.authoredHintsController_.finishHints(response);
+};
+
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
-  var scrollableSelector;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -869,7 +881,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
-    scrollableSelector = '.instructions-markdown';
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
@@ -884,6 +895,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
+    hintReviewTitle: msg.hintReviewTitle(),
+    authoredHints: this.authoredHintsController_.getSeenHints(),
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
@@ -932,8 +945,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
-    scrollContent: !!renderedMarkdown,
-    scrollableSelector: scrollableSelector,
+    scrollContent: true,
+    scrollableSelector: ".instructions-container",
     header: headerElement
   });
 
@@ -1286,11 +1299,15 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 */
 StudioApp.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = options;
-  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - this.initTime);
-  report.attempt = this.attempts;
-  report.lines = this.feedback_.getNumBlocksUsed();
+  var report = $.extend({}, options, {
+    pass: this.feedback_.canContinueToNextLevel(options.testResult),
+    time: ((new Date().getTime()) - this.initTime),
+    attempt: this.attempts,
+    lines: this.feedback_.getNumBlocksUsed(),
+  });
+
+  this.lastTestResult = options.testResult;
+
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
