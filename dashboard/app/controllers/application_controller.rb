@@ -197,8 +197,6 @@ class ApplicationController < ActionController::Base
     # Set up the background design
     response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE
 
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 

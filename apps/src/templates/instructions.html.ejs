@@ -1,28 +1,16 @@
-<div class="instructions-container">
-  <% if (!locals.renderedMarkdown) { /** if md, rendered in header instead */ -%>
-    <p class='dialog-title'><%= locals.puzzleTitle %></p>
+<% if (!locals.renderedMarkdown) { /** if md, rendered in header instead */ -%>
+  <p class='dialog-title'><%= locals.puzzleTitle %></p>
+<% } -%>
+<% if (locals.renderedMarkdown) { -%>
+  <div class='instructions-markdown<% if (locals.markdownClassicMargins) { -%> classic-margins<% } -%>'><%- locals.renderedMarkdown %></div>
+<% } else { -%>
+  <% if (locals.instructions) { -%>
+    <p><%- locals.instructions %></p>
   <% } -%>
-  <% if (locals.renderedMarkdown) { -%>
-    <div class='instructions-markdown<% if (locals.markdownClassicMargins) { -%> classic-margins<% } -%>'>
-      <%- locals.renderedMarkdown %>
-    </div>
-  <% } else { -%>
-    <% if (locals.instructions) { -%>
-      <p><%- locals.instructions %></p>
-    <% } -%>
-    <% if (locals.instructions2) { -%>
-      <p class="instructions2"><%- locals.instructions2 %></p>
-    <% } -%>
+  <% if (locals.instructions2) { -%>
+    <p class="instructions2"><%- locals.instructions2 %></p>
   <% } -%>
-  <% if (locals.aniGifURL) { -%>
-    <img class="aniGif example-image" src='<%= locals.aniGifURL %>'/>
-  <% } -%>
-  <% if (locals.authoredHints && locals.authoredHints.length) { -%>
-    <div class="authored-hints">
-      <h1><%= locals.hintReviewTitle %></h1>
-      <% for (var i = 0; i < locals.authoredHints.length; i++) { %>
-        <div><%- locals.authoredHints[i].content %></div>
-      <% } %>
-    </div>
-  <% } %>
-</div>
+<% } -%>
+<% if (locals.aniGifURL) { -%>
+  <img class="aniGif example-image" src='<%= locals.aniGifURL %>'/>
+<% } -%>
