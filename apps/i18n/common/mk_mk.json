@@ -243,5 +243,9 @@
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: "
+  "workspaceHeaderShort": "Работна површина: ",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }

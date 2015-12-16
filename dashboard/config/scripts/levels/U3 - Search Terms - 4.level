@@ -56,10 +56,7 @@
     "submittable": "false",
     "data_tables": "\"myCities\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\"\r\n    \"population\": 9,000,000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\"\r\n    \"population\": 4,000,000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\"\r\n    \"population\": 3,000,000\r\n  }\r\n  {\r\n     \"name\": \"Houston\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n  {\r\n     \"name\": \"Philadelphia\",\r\n    \"state\": \"Pennsylvania\"\r\n    \"population\": 2,000,000\r\n  }\r\n    {\r\n     \"name\": \"Phoenix\",\r\n    \"state\": \"Arizona\"\r\n    \"population\": 2,000,000\r\n  }\r\n    {\r\n     \"name\": \"San Antonio\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n   {\r\n     \"name\": \"San Diego\",\r\n    \"state\": \"California\"\r\n    \"population\": 2,000,000\r\n  }\r\n    {\r\n     \"name\": \"Dallas\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n  {\r\n     \"name\": \"San Jose\",\r\n    \"state\": \"California\"\r\n    \"population\": 1,000,000\r\n  }\r\n \r\n],\r\n\"myMovies\" :[\r\n  {\r\n    \"name\": \"Top Gun\",\r\n    \"year\": 1986\r\n  },\r\n  {\r\n  \"name\": \"Breakfast at Tiffany's\",\r\n    \"year\": 1961\r\n  },\r\n  {\r\n   \"name\": \"The Goonies\",\r\n    \"year\": 1985\r\n  }\r\n  {\r\n    \"name\": \"Say Anything\",\r\n    \"year\": 1989\r\n  }\r\n  {\r\n    \"name\": \"Fight Club\",\r\n    \"year\": 1999\r\n  }\r\n  {\r\n    \"name\": \"The Dark Knight\",\r\n    \"year\": 2008\r\n  }\r\n   {\r\n    \"name\": \"WALL-E\",\r\n    \"year\": 2008\r\n  }\r\n]\r\n\"mySongs\" :[\r\n  {\r\n    \"title\": \"Thriller\",\r\n    \"seconds\": 358,\r\n    \"artist\": \"Michael Jackson\"\r\n  },\r\n  {\r\n    \"title\": \"Wonderwall\",\r\n    \"seconds\": 280,\r\n    \"artist\": \"Oasis\"\r\n  },\r\n  {\r\n    \"title\": \"I Will Survive\",\r\n    \"seconds\": 180,\r\n    \"artist\": \"Gloria Gaynor\"\r\n  }\r\n   {\r\n    \"title\": \"Single Ladies\",\r\n    \"seconds\": 199,\r\n  \t\"artist\": \"Beyonce\"\r\n  }\r\n]",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

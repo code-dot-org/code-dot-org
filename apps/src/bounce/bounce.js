@@ -1046,6 +1046,7 @@ var displayFeedback = function() {
 Bounce.onReportComplete = function(response) {
   Bounce.response = response;
   Bounce.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 };
 

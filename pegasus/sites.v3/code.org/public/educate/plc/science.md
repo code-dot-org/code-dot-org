@@ -14,24 +14,45 @@ CS in Science is based on a crosswalk identifying areas of overlap between the N
 <br/>
 Through a rigorous yet introductory professional development this program introduces computer science concepts into science classrooms within the context of modeling and simulation. 
 
-To learn more about the curriclum, [click here!](/curriculum/science). 
+[<button>Learn more</button>](https://code.org/curriculum/science#videos)
 
 ## <a name="about"></a>About the Professional Learning Program
  
  
 #### <a name="components"></a>How does it work?
-***Insert corresponding section from the PD overview doc for the program***
+The Code.org CS in Science program is built with professional development (PD) and curriculum that flow together seamlessly, representing one cohesive set of resources that empowers teachers to deliver the course with confidence. 
+<br/>
+<br/>
+Since the PD program lives both in-person and online, participants are supported throughout their first year of teaching CS in Science with PD that is “job-embedded”. Many of the supports, including videos, curriculum, and a crosswalk of CSTA and NGSS standards, are available at the [CS in Science](code.org/curriculum/mss) homepage (code.org/curriculum/mss).
 
 
-[<button>Sound interesting? Apply Now!</button>](/educate/plc/csp/application)
+[<button>Apply now</button>](/educate/plc/csp/application)
 
 ### <a name="commitments"></a>What are the program commitments?
 
-***insert the commitments from the program pd overview doc***
+- **Phase 1: Online Introduction**
+<br/>
+	- 2 hours online, self-paced
+<br/>
+- **Phase 2: Summer Blended Study**
+<br/>
+	- 3 days (21 hours) in person
+<br/>
+	- 8 hours online, self-paced
+<br/>
+- **Phase 3: Blended Academic Year Development**
+<br/>
+	- 2 days (14 hours) in person
+<br/>
+	- 10 hours online, self-paced
 
 ### <a name="participate"></a>Who can Participate?
 
-**overview of requirements for teachers to be accepted to the program**
+Any middle school science teacher who teaches Life, Physical, Earth Science and who's district is partnered with Code.org.
+<br/>
+<br/>
+[Click here](https://code.org/educate/partner-districts) to see if your district is partnered with us. 
+
 
 
 ### <a name="locations"></a>Where is the program offered?
@@ -45,4 +66,4 @@ We're so excited that you're interested in applying for our Professional Learnin
 
 **Is your location on the map?** Join the other teachers in your district on the journey to teach CS Principles! 
 <br>
-[<button>Apply Now!</button>](/educate/plc/csp/application)
+[<button>Apply now</button>](/educate/plc/csp/application)

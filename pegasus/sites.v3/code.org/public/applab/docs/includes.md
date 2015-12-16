@@ -97,7 +97,7 @@ ____________________________________________________
 [returns]
 
 ### Returns
-true or false
+Boolean true or false
 
 [/returns]
 

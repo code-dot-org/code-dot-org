@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Add values to the three contact objects provided in the starter code. (Click to see full instructions)"
   }
 }]]></config>

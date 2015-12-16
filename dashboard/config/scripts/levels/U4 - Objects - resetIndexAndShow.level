@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Add code to your event handler fro the \"Add Contact\" button so that when a new contact is added the inputs are cleared, the screen is switched, and the correct contact is shown. (Click to see full instructions)"
   }
 }]]></config>
