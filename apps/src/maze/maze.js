@@ -960,7 +960,6 @@ var displayFeedback = function() {
 Maze.onReportComplete = function(response) {
   Maze.response = response;
   Maze.waitingForReport = false;
-  studioApp.onReportComplete(response);
   displayFeedback();
 };
 

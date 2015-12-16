@@ -1290,7 +1290,6 @@ Artist.prototype.onReportComplete = function(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
 };
 
