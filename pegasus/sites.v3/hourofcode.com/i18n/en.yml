@@ -285,9 +285,9 @@
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
 
-  meta_tag_og_title: 'The Hour of Code is here'
+  meta_tag_og_title: 'Every child deserves opportunity'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
-  meta_tag_twitter_title: 'The Hour of Code is here'
+  meta_tag_twitter_title: 'Every child deserves opportunity'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
