@@ -4640,8 +4640,6 @@ Studio.setSprite = function (opts) {
     spriteValue = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
   }
 
-  var skinSprite = skin[spriteValue];
-
   var spriteIcon = document.getElementById('sprite' + spriteIndex);
   var spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
   if (!spriteIcon && !spriteWalk) {
@@ -4653,21 +4651,21 @@ Studio.setSprite = function (opts) {
     // throw new RangeError("Incorrect parameter: " + spriteIndex);
   }
 
+  var skinSprite = skin[spriteValue];
   if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
-  if (skinSprite.sprite) {
-    spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
-  }
+  spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+
   sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
 
   // If this skin has walking spritesheet, then load that too.
-  if (spriteValue !== undefined && skinSprite.walk && skinSprite.walk) {
+  if (spriteValue !== undefined && skinSprite.walk && skinSprite.sprite) {
     // If we have two spritesheets, hide the walking sprite at this stage.
     spriteWalk.setAttribute('visibility', 'hidden');
   }
