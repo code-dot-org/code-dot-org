@@ -43,7 +43,7 @@ if (hoursWorked > 40) {
   write("You worked " + (hoursWorked-40) + " hours overtime.");
 }
 else {
-  write("You didnot work any overtime.");
+  write("You did not work any overtime.");
 }  
 ```
 
@@ -69,6 +69,31 @@ console.log(num + " is " + evenOrOdd + ".");
 ```
 
 [/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Letter Grade** Prompt the user for an exam score and assign a letter grade.
+
+```
+// Prompt the user for an exam score and assign a letter grade.
+var examGrade = promptNum("Enter an exam score from 0 to 100:");
+if (examGrade>=90) {
+  write("Grade = A");
+} else if (examGrade>=80) {
+  write("Grade = B");  
+} else if (examGrade>=70) {
+  write("Grade = C");  
+} else if (examGrade>=60) {
+  write("Grade = D");  
+} else {
+  write("Grade = F");  
+}
+```
+
+[/example]
+
 ____________________________________________________
 
 [syntax]

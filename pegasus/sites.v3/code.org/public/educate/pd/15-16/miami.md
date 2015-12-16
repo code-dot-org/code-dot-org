@@ -8,6 +8,7 @@ nav: pd2_nav
 
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor/Administrator PD](#counselor-admin)
 
 <a id="ecs"></a>
 
@@ -114,6 +115,42 @@ Snacks
 Water
 
 [**Back to the top**](#top)
+<a id="counsleor-admin"></a>
+
+## Counselors and Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
+
+####Administrators
+
+**Save the date**
+
+Thursday, January 28th, 2015<br/> 
+Time TBD<br/>
+
+**Location**
+
+[Venture Hive<br/>
+1010 NE 2nd Ave<br/>
+Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
+
+Free parking is available in front of the building.
+
+####Counselors
+
+**Save the date**
+
+Wednesday, January 27th, 2015<br/> 
+Time TBD
+
+**Location**
+
+[Venture Hive<br/>
+1010 NE 2nd Ave<br/>
+Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
+
+Free parking is available in front of the building.
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

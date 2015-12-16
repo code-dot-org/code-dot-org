@@ -35,9 +35,11 @@ We are interested in seeing what's happening in computer science education inter
 
 ## Outside resources
 
-- Landscape of K-12 Computer Science Education in the U.S., a Gallup [report](http://csedu.gallup.com/home.aspx) commissioned by Google
+- [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education"
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools
 - [Arkansas has seen a major boost in CS enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). This spring, Arkansas passed a law requiring (and funding) every high school to teach CS. Months later, Arkansas has seen a 260% increase in total CS enrollment, a 300% increase among females, and a 600% increase among African American females. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
+- [Twice as many Americans](http://changetheequation.org/blog/hidden-half) use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are [women](http://changetheequation.org/blog/grid-uncounted-women-computing). 
+- [Summary](http://changetheequation.org/blog/talent-hidden-plain-sight-addressing-gaps-computer-science) of untapped minority talent in computing
 
 
 ## Master slide deck 
