@@ -29,7 +29,6 @@
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
-    "@cdo/vendor": "file:../vendor",
     "codemirror": "5.5",
     "marked": "0.3.2"
   }
