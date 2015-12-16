@@ -45,10 +45,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "project_template_level_name": "U4 - Exploring Data Tools - Template",
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "U4 - Exploring Data Tools - Template"
   }
 }]]></config>
   <blocks/>
