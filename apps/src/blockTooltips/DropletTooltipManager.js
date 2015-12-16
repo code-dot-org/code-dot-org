@@ -40,14 +40,7 @@ function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocomplet
    * Map of block types to tooltip objects
    * @type {Object.<String, DropletFunctionTooltip>}
    */
-  this.blockTypeToTooltip_ = {};
-
-  /**
-   * Maps func from one block type to another, such that we use the target for
-   * documentation instead of the source
-   * @type {Object.<String, String>}
-   */
-  this.docFuncMapping_ = {};
+  this.blockTypeToTooltip = {};
 
   /**
    * @type {DropletBlockTooltipManager}
@@ -100,20 +93,14 @@ DropletTooltipManager.prototype.registerBlocks = function () {
         // autocompletePaletteApisOnly mode enabled and block is not in palette:
         return;
       }
-      if (dropletBlockDefinition.docFunc) {
-        // If a docFunc was specified, update our mapping 
-        this.docFuncMapping_[dropletBlockDefinition.func] = dropletBlockDefinition.docFunc;
-      } else {
-        this.blockTypeToTooltip_[dropletBlockDefinition.func] =
-          new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
-      }
+      this.blockTypeToTooltip[dropletBlockDefinition.func] =
+        new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
     },
     this);
 };
 
 DropletTooltipManager.prototype.hasDocFor = function (functionName) {
-  var docFuncName = this.docFuncMapping_[functionName] || functionName;
-  return this.blockTypeToTooltip_.hasOwnProperty(docFuncName);
+  return this.blockTypeToTooltip.hasOwnProperty(functionName);
 };
 
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
@@ -137,12 +124,11 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
  * @returns {DropletFunctionTooltip}
  */
 DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
-  if (!this.hasDocFor(functionName)) {
+  if (!this.blockTypeToTooltip.hasOwnProperty(functionName)) {
     throw "Function name " + functionName + " not registered in documentation manager.";
   }
 
-  var docFuncName = this.docFuncMapping_[functionName] || functionName;
-  return this.blockTypeToTooltip_[docFuncName];
+  return this.blockTypeToTooltip[functionName];
 };
 
 /**
