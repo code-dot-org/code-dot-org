@@ -45,6 +45,7 @@ def load_configuration()
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_shared_js'             => [:development, :adhoc, :staging].include?(rack_env),
+    'build_code_studio'           => [:development, :adhoc, :staging].include?(rack_env),
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',

@@ -327,7 +327,7 @@ namespace :install do
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
-  tasks << :code_studio
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
