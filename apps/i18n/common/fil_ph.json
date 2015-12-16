@@ -243,9 +243,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Workspace: "
 }
