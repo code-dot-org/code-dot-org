@@ -398,5 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Katso video"},
 "when":function(d){return "kun"},
 "whenRun":function(d){return "suoritettaessa"},
-"workspaceHeaderShort":function(d){return "Työtila: "},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"workspaceHeaderShort":function(d){return "Työtila: "}};

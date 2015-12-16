@@ -243,6 +243,5 @@
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Vinnusvæði: "
 }

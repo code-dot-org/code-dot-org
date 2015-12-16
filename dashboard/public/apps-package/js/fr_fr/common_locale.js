@@ -398,5 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Voir la vidéo"},
 "when":function(d){return "quand"},
 "whenRun":function(d){return "quand l'exécution commence"},
-"workspaceHeaderShort":function(d){return "Espace de travail :"},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"workspaceHeaderShort":function(d){return "Espace de travail :"}};

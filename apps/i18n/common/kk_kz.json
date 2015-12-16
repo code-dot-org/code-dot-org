@@ -243,6 +243,5 @@
   "watchVideo": "Бейнематериалды көру",
   "when": "кезде",
   "whenRun": "қосу кезінде",
-  "workspaceHeaderShort": "Жұмыс аумағы: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Жұмыс аумағы: "
 }

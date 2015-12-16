@@ -243,6 +243,5 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "কর্মপরিসর:"
 }

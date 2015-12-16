@@ -243,6 +243,5 @@
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Работна површина: "
 }

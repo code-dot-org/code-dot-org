@@ -243,6 +243,5 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Werkplaats: "
 }
