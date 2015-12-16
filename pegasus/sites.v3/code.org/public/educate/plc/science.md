@@ -56,14 +56,12 @@ Any middle school science teacher who teaches Life, Physical, Earth Science and 
 
 
 ### <a name="locations"></a>Where is the program offered?
+We're so excited that you're interested in applying for our Professional Learning Program! [Check out the list of partner districts](https://docs.google.com/spreadsheets/d/1BDzs4k6nbZ87KdRZE62gqO_VpBC1yRSRbolWejGtDnU/edit#gid=0) to see if the program is available in your region.
+<br><br> 
 
-#### Professional Learning Locations
-We're so excited that you're interested in applying for our Professional Learning Program! Check out th emap below to see the lcoations where the program is offered. 
-
-***insert map of partner district locations*** 
-
-**Don't see your region on the map?** Encourage your administrators [to apply to be a partner district!](https://code.org/educate/districts)
-
-**Is your location on the map?** Join the other teachers in your district on the journey to teach CS Principles! 
+**Don't see your region on the list?** Encourage your administrators [to apply to be a partner district!](https://code.org/educate/districts)
+<br><br>
+**Is your location on the list?** Join the other teachers in your district on the journey to teach CS in Science! 
+<br><br>
 <br>
 [<button>Apply now</button>](/educate/plc/csp/application)

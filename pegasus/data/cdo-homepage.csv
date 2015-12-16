@@ -1,31 +1,29 @@
 id_s!,type_s,text1_s,param1_s,param2_s,param3_s,param4_s,watermark_s,image_t,site_s,active_s,language_supported_s
-hero_starwars,widehero,,15% 50%,celeba,bottom,,,/images/homepage/starwars.jpg,both,show,all
-hero_minecraft,widehero,,15% 50%,celeba,bottom,,,/images/homepage/minecraft.jpg,both,show,all
-hero_stat_loc,widehero,homepage_hero_text_stat_loc,50% 40%,stat,bottom,,,/images/homepage/girl2.jpg,both,nah,all
-hero_stat_students,widehero,homepage_hero_text_stat_students,50% 30%,stat,bottom,,,/images/homepage/girl6.jpg,both,nah,all
-hero_stat_served,widehero,homepage_hero_text_stat_served,50% 35%,stat,top,,,/images/homepage/girl9.jpg,both,nah,all
-hero_malala,widehero,homepage_hero_text_malala,50% 30%,celeb,bottom,,,/images/homepage/malala.jpg,both,nah,all
-hero_susan,widehero,homepage_hero_text_susan,52% 6%,celeb,top,,,/images/homepage/susan.jpg,both,nah,all
-hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,bottom,,,/images/homepage/satya.jpg,both,nah,all
-hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeba,bottom,,,/images/homepage/sheryl.jpg,both,nah,all
-hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeba,bottom,,,/images/homepage/fistbump.jpg,both,nah,all
-hero_student_girl,widehero,homepage_hero_text_student1,50% 30%,student,bottom,,,/images/homepage/girl.jpg,both,nah,all
-hero_student_boyblue,widehero,homepage_hero_text_student2,55% 7%,student,top,,,/images/homepage/boy5.jpg,both,nah,all
-hero_student_boybosh,widehero,homepage_hero_text_bosh,62% 33%,celeb,bottom,,,/images/homepage/boy7.jpg,both,nah,all
-hero_student_girlsmile,widehero,homepage_hero_text_student4,41% 20%,student,bottom,,,/images/homepage/kids4.jpg,both,nah,all
-hero_student_boycomputer,widehero,homepage_hero_text_student5,45% 31%,student,top,,,/images/homepage/boy3.jpg,both,nah,all
-hero_teacher_girl,widehero,homepage_hero_text_teacher1,24% 11%,teacher,bottom,,,/images/homepage/girl10.jpg,both,nah,all
-hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,teacher,bottom,,,/images/homepage/kids10.jpg,both,nah,all
+hero_starwars,widehero,,15% 50%,celeba,bottom,,,/images/homepage/starwars.jpg,both,nah,all
+hero_minecraft,widehero,,15% 50%,celeba,bottom,,,/images/homepage/minecraft.jpg,both,nah,all
+hero_stat_loc,widehero,homepage_hero_text_stat_loc,50% 40%,stat,bottom,,,/images/homepage/girl2.jpg,both,show,all
+hero_stat_students,widehero,homepage_hero_text_stat_students,50% 30%,stat,bottom,,,/images/homepage/girl6.jpg,both,show,all
+hero_stat_served,widehero,homepage_hero_text_stat_served,50% 35%,stat,top,,,/images/homepage/girl9.jpg,both,show,all
+hero_malala,widehero,homepage_hero_text_malala,50% 30%,celeb,bottom,,,/images/homepage/malala.jpg,both,show,all
+hero_susan,widehero,homepage_hero_text_susan,52% 6%,celeb,top,,,/images/homepage/susan.jpg,both,show,all
+hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,bottom,,,/images/homepage/satya.jpg,both,show,all
+hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeba,bottom,,,/images/homepage/sheryl.jpg,both,show,all
+hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeba,bottom,,,/images/homepage/fistbump.jpg,both,show,all
+hero_student_girl,widehero,homepage_hero_text_student1,50% 30%,student,bottom,,,/images/homepage/girl.jpg,both,show,all
+hero_student_boyblue,widehero,homepage_hero_text_student2,55% 7%,student,top,,,/images/homepage/boy5.jpg,both,show,all
+hero_student_boybosh,widehero,homepage_hero_text_bosh,62% 33%,celeb,bottom,,,/images/homepage/boy7.jpg,both,show,all
+hero_student_girlsmile,widehero,homepage_hero_text_student4,41% 20%,student,bottom,,,/images/homepage/kids4.jpg,both,show,all
+hero_student_boycomputer,widehero,homepage_hero_text_student5,45% 31%,student,top,,,/images/homepage/boy3.jpg,both,show,all
+hero_teacher_girl,widehero,homepage_hero_text_teacher1,24% 11%,teacher,bottom,,,/images/homepage/girl10.jpg,both,show,all
+hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,teacher,bottom,,,/images/homepage/kids10.jpg,both,show,all
 action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,code.org,show,all
 action_num_served,action,homepage_action_text_num_served,num_served,,,,,,code.org,show,all
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,show,all
-action_starwars_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,nah,all
 action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,show,all
-action_codevideo,action,homepage_action_text_codevideo,video,2DxWIxec6yo,,,,,code.org,nah,all
 action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,,,,,csedweek.org,show,all
 action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,all
 action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,code.org,show,all
-action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,all
+action_learn,action,homepage_action_text_learn,learn,/learn,,,,,both,show,all
 action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,show,all
 banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/,,,,,code.org,nah,all
 banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,/privacy,,,,,code.org,nah,en
@@ -36,8 +34,8 @@ block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
 block_advocates,block,homepage_slot_text_title_advocates,homepage_slot_text_blurb_advocates,"185, 191, 21","209, 213, 103",/promote,,/shared/images/courses/logo_tall_map.jpg,code.org,show,en
 blocklink_hoc,blocklink,block_hoc,homepage_slot_text_link_hoc,/learn,,,,,code.org,show,en
-blocklink_host,blocklink,block_hoc,homepage_slot_text_link_host,https://hourofcode.com,,,,,code.org,show,en
-blocklink_hocserved,blocklink,block_hoc,homepage_solot_text_link_volunteer,/volunteer/engineer,,,,,code.org,show,en
+blocklink_host,blocklink,block_hoc,homepage_slot_text_link_host,https://hourofcode.com/how-to,,,,,code.org,show,en
+blocklink_hocserved,blocklink,block_hoc,homepage_slot_text_link_hocserved,/leaderboards,,,,,code.org,show,en
 blocklink_codestudio,blocklink,block_students,homepage_slot_text_link_codestudio,http://studio.code.org/,,,,,code.org,show,en
 blocklink_local,blocklink,block_students,homepage_slot_text_link_local,/learn/local,,,,,code.org,show,en
 blocklink_othercourses,blocklink,block_students,homepage_slot_text_link_othercourses,/learn/beyond,,,,,code.org,show,en
