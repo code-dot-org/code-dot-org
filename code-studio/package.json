@@ -15,6 +15,8 @@
     "prebuild:min": "mkdir -p built/js",
     "clean": "rm -rf built",
     "env": "env",
+    "preinstall": "rm -f node_modules/vendor",
+    "postinstall": "ln -s ../vendor node_modules/vendor",
     "lint": "npm run lint:js -s",
     "lint:js": "jshint src/js/*.js",
     "start": "echo \"Unimplemented.\"",
