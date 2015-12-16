@@ -85,7 +85,7 @@ ARGF.each do |line|
 
   tutorials.each do |t|
     if (line.include? "begin" + "\/" + t) ||
-      (line.include? "begin" + "_" + t)
+      (line.include? "begin" + "_" + t) ||
       (line.include? "443" + "\/" + t)
       # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
       # aggregate. Using the date and tutorial as the key gives breakdowns by
