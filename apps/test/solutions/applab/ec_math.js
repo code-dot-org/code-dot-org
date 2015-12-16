@@ -169,8 +169,11 @@ module.exports = {
         assert.equal($(".tooltipster-content").text(), '', 'No tooltip to start');
         testUtils.typeAceText('Math.min(');
 
-        assert.equal(/Math.min\(\)/.test($(".tooltipster-content").text()),
-          true, 'get tooltip');
+        assert.equal(/Math.min\(n1, n2, ..., nX\)/.test($(".tooltipster-content").text()),
+          true, 'tooltip has full signature');
+
+        assert.equal(/See examples/.test($(".tooltipster-content").text()),
+          true, 'tooltip has examples link');
 
         // clear contents before run
         testUtils.setAceText('');
