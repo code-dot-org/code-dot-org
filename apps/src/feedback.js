@@ -80,7 +80,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   var hadShareFailure = (options.response && options.response.share_failure);
-  var showingSharing = options.showingSharing && !hadShareFailure;
+  // options.response.level_source is the url that we are sharing; can't
+  // share without it
+  var canShare = options.response && options.response.level_source;
+  var showingSharing = options.showingSharing && !hadShareFailure && canShare;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -622,12 +625,6 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
  *
  */
 FeedbackUtils.prototype.createSharingDiv = function(options) {
-  if (!options.response || !options.response.level_source) {
-    // don't even try if our caller didn't give us something that can be shared
-    // options.response.level_source is the url that we are sharing
-    return null;
-  }
-
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
   if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
@@ -676,6 +673,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
+
+  // Note: We have a dependency on dashboard here. This dependency has always
+  // been here (we used to mysteriously just always bubble clicks on body to
+  // a.popup-window if it existed), but it is now more explicit
+  if (window.dashboard && window.dashboard.popupWindow) {
+    $(sharingDiv).find('a.popup-window').click(window.dashboard.popupWindow);
+  }
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {

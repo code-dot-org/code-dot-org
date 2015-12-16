@@ -607,7 +607,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
       $scope.responses.$promise.then(function(){
         $scope.responsesLoaded = true;
-        scope.findStages();
+        $scope.findStages();
       });
     };
 

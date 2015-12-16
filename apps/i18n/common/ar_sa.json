@@ -131,7 +131,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "OR boolean operator",
-  "dropletBlock_randomNumber_min_max_description": "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range",
+  "dropletBlock_randomNumber_min_max_description": "Returns a random number in the closed range from min to max.",
   "dropletBlock_randomNumber_param0": "اقل رقم",
   "dropletBlock_randomNumber_param0_description": "اقل رقم تم ارجاعه",
   "dropletBlock_randomNumber_param1": "أكبر رقم",
@@ -243,5 +243,6 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
 }

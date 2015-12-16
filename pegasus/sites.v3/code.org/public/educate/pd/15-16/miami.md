@@ -95,7 +95,13 @@ Breakfast and lunch will be served.
 
 **January 30th Location**
 
-TBD
+[3280 South Miami Ave<br/>
+Miami Fl, 33129 ](https://www.google.com/maps/place/3280+S+Miami+Ave,+Miami,+FL+33129/@25.7475713,-80.2142076,17z/data=!3m1!4b1!4m2!3m1!1s0x88d9b65d35bae2af:0x557bf56002bafcf7)
+
+In the Teen Tech Center and the Executive Conference Room
+
+Across the street from Vizcaya. Parking is free and we will have signage indicating were to go in the building.
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

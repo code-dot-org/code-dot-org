@@ -58,7 +58,8 @@
     "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nwrite(\"Day is: \"+day);\r\n//write your code here\r\n",
     "slider_speed": "1.0",
     "encrypted_examples": "uqk/TLr6g7Obx3LElZLpi2JKCGdBXE75n0cZA67X8zZ3ikQ2IGyCL2vWTLgd\nt+Tm\n",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "video_key": "csp_applab_conditionals_3"
   }
 }]]></config>
   <blocks/>

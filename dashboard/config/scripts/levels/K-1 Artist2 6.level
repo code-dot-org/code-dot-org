@@ -28,7 +28,10 @@
     "definition_collapse": "false",
     "permitted_errors": "0",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -40,9 +43,14 @@
         <block type="simple_move_left"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="simple_move_right"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_left"/>
+        <block type="simple_move_up"/>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

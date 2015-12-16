@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "NOT boolean operator"},
 "dropletBlock_orOperator_description":function(d){return "Returns true when either expression is true and false otherwise"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "OR boolean operator"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "мин"},
 "dropletBlock_randomNumber_param0_description":function(d){return "Минимум санды қайтарады"},
 "dropletBlock_randomNumber_param1":function(d){return "макс"},
@@ -398,4 +398,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Бейнематериалды көру"},
 "when":function(d){return "кезде"},
 "whenRun":function(d){return "қосу кезінде"},
-"workspaceHeaderShort":function(d){return "Жұмыс аумағы: "}};
+"workspaceHeaderShort":function(d){return "Жұмыс аумағы: "},
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
