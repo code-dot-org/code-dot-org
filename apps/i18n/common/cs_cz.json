@@ -243,6 +243,5 @@
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Pracovní prostor: "
 }

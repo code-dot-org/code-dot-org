@@ -243,6 +243,5 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Arbetsyta: "
 }

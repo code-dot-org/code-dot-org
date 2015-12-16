@@ -398,5 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ดูวีดีโอ"},
 "when":function(d){return "เมื่อ"},
 "whenRun":function(d){return "เมื่อเรียกให้ทำงาน"},
-"workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "}};

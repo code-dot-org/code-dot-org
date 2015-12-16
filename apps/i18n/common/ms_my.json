@@ -243,6 +243,5 @@
   "watchVideo": "Tonton Video",
   "when": "apabila",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Workspace: "
 }

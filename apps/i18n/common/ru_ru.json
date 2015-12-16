@@ -243,6 +243,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

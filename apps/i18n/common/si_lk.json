@@ -243,6 +243,5 @@
   "watchVideo": "වීඩියෝව නරඹන්න",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "වැඩ අවකාශය: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "වැඩ අවකාශය: "
 }

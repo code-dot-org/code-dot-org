@@ -398,5 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Посмотреть видео"},
 "when":function(d){return "когда"},
 "whenRun":function(d){return "При запуске"},
-"workspaceHeaderShort":function(d){return "Место сбора блоков: "},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"workspaceHeaderShort":function(d){return "Место сбора блоков: "}};

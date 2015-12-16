@@ -398,5 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Бейнематериалды көру"},
 "when":function(d){return "кезде"},
 "whenRun":function(d){return "қосу кезінде"},
-"workspaceHeaderShort":function(d){return "Жұмыс аумағы: "},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"workspaceHeaderShort":function(d){return "Жұмыс аумағы: "}};

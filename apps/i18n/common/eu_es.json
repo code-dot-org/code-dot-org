@@ -243,6 +243,5 @@
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Lan eremua: "
 }

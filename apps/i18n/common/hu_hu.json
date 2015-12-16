@@ -243,6 +243,5 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Munkaterület: "
 }

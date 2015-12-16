@@ -243,6 +243,5 @@
   "watchVideo": "Xem Video",
   "when": "Khi nào",
   "whenRun": "Khi chạy",
-  "workspaceHeaderShort": "Không gian làm việc:",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "workspaceHeaderShort": "Không gian làm việc:"
 }
