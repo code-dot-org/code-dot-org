@@ -9,9 +9,9 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,-3,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Use loops to get the nectar, make honey, and to move!",
+    "instructions": "Use `repeat` loops to get the nectar, make honey, and to move!",
     "start_direction": "3",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "true",
     "nectar_goal": "3",
     "honey_goal": "3",
@@ -27,7 +27,13 @@
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
-    "definition_collapse": "false"
+    "definition_collapse": "false",
+    "markdown_instructions": "Use `repeat` loops to get the nectar, make honey, and to move!",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>
@@ -46,12 +52,19 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <recommended_blocks>
+      <xml>
         <block type="maze_moveWest"/>
         <block type="maze_nectar"/>
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
         <block type="maze_honey"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Karel>
