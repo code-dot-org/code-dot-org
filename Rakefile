@@ -344,7 +344,7 @@ namespace :update_package do
     else
       # Lint, Clean, Build, Test
       Dir.chdir(code_studio_dir) do
-        RakeUtils.system "npm run lint && npm run clean && npm run build:min"
+        RakeUtils.system "npm run lint && npm run clean && npm run build"
       end
 
       # Remove old built package
