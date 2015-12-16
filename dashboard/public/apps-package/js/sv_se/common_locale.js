@@ -398,8 +398,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Titta på videon"},
 "when":function(d){return "när"},
 "whenRun":function(d){return "vid start"},
-"workspaceHeaderShort":function(d){return "Arbetsyta: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Arbetsyta: "}};
