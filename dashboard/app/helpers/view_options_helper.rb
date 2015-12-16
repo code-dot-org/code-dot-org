@@ -17,7 +17,6 @@ module ViewOptionsHelper
     is_channel_backed
     post_milestone
     puzzle_ratings_url
-    authored_hint_view_requests_url
     server_level_id
     game_display_name
     script_name

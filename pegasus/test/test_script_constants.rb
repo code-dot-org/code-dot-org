@@ -30,6 +30,10 @@ class ScriptConstantsTest < Minitest::Test
     assert ScriptConstants.hoc?(ScriptConstants::STARWARS_NAME)
     assert ScriptConstants.hoc?(ScriptConstants::STARWARS_BLOCKS_NAME)
     assert ScriptConstants.hoc?(ScriptConstants::MINECRAFT_NAME)
+    assert ScriptConstants.hoc?(ScriptConstants::INFINITY_NAME)
+    assert ScriptConstants.hoc?(ScriptConstants::ARTIST_NAME)
+    assert ScriptConstants.hoc?(ScriptConstants::GUMBALL_NAME)
+    assert ScriptConstants.hoc?(ScriptConstants::ICEAGE_NAME)
     assert !ScriptConstants.hoc?(ScriptConstants::COURSE4_NAME)
   end
 end

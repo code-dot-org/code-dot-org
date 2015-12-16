@@ -13,15 +13,17 @@ The ideal Professional Learning Partner is a regional education unit, non-profit
 
 
 ## What does a Code.org Professional Learning Partner do?
-If accepted into the Code.org CSP Educator Development program, you will:
+If accepted into the Code.org Professional Learning Partner program, you will:
 
 - Join a nationwide community of educators working to change the face of CS education 
-- Participate in in-person and online professional development
-- Plan and deliver the CSP curriculum to your students, and reflect on your experiences 
+- Plan and host in in-person Computer Science professional development with the help of approved facilitators
+- Build a local community of Computer Science educators to share best practices, questions, thoughts, ideas and inspiration.
  
  
 ## Where does Code.org need partners?
-Each pin on the map below indicates a city where Code.org is looking for a Professional Learning Partner.
+Each pin on the map below is a city where Code.org is looking for a Professional Learning Partner. Click on a pin for more information on the population served in the region.
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=zfFUcsP6-miE.kWGjiXEmiyok" width="640" height="480"></iframe>
 
 
 [<button>Apply now</button>](/educate/plc/professional-learning-partner-application)
@@ -30,7 +32,7 @@ Each pin on the map below indicates a city where Code.org is looking for a Profe
 
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼-time commitment at first, but will grow with time)
 - Attend our Facilitation Summit, May 20-22, 2016 in TBD
-- Attend the same 5-day Summer Teacher Experience as teachers from your state
+- Attend the same 5-day Summer Professional Learning Experience as teachers from your state
 	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, IN, MD, NC, OH, TX)
 	- July 18-22 in Salt Lake City, UT - states attending (WA, CA, ID, AZ, NV, UT)
 	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY)

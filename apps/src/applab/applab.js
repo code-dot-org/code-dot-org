@@ -1333,7 +1333,6 @@ Applab.onSubmitComplete = function(response) {
 Applab.onReportComplete = function(response) {
   Applab.response = response;
   Applab.waitingForReport = false;
-  studioApp.onReportComplete(response);
   displayFeedback();
 };
 

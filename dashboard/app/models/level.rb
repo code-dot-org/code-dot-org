@@ -47,7 +47,6 @@ class Level < ActiveRecord::Base
     callout_json
     instructions
     markdown_instructions
-    authored_hints
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

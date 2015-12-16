@@ -1,8 +1,6 @@
 - content_for(:head) do
   = stylesheet_link_tag 'editor/blockly_editor', media: 'all'
-  = stylesheet_link_tag 'editor/json_editor', media: 'all'
   = javascript_include_tag 'editor/blockly_editor'
-  = javascript_include_tag 'editor/json_editor'
 
 .field
   = f.label 'concepts'
@@ -14,6 +12,25 @@
     (shift-click or cmd-click to select multiple).
   = f.collection_select :concept_ids, Concept.cached, :id, :name, { :selected => @level.concept_ids }, { :multiple => true, :name => 'level[concept_ids][]', :size => Concept.cached.length }
 
+:javascript
+  function make_selection_handler(flag) {
+    return function (e) {
+      e.preventDefault();
+      $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
+    }
+  }
+  $('.select_all').click(make_selection_handler(true));
+  $('.select_none').click(make_selection_handler(false));
+
+:css
+  textarea {
+    width: 100%
+  }
+
+  button {
+    font-size: 100%;
+  }
+
 .field
   = f.label :video_key, 'Level Video'
   %p Ask an engineer to add new videos to the videos.csv and data.en.yml files.
@@ -22,128 +39,187 @@
 
 - video_infos = {}
 - Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
+:javascript
+  $(document).ready(function() {
+    var videoInfos = #{video_infos.to_json};
 
-#callout_editor.field
-  .json_editor
-    .json_template
-      .callout_space
-        %label Callout
-        %table
-          %tr
-            %td.required Element ID
-            %td.required Localization Key
-            %td.required Callout text
-          %tr
-            %td
-              %input.element_id{type: 'text', placeholder: '#runButton'}
-            %td
-              %input.localization_key{type: 'text', placeholder: 'level_name_callout1'}
-            %td{colspan: 4}
-              %input.callout_text{type: 'text', placeholder: 'Text of callout', style: 'width: 100%'}
-          %tr
-            %td Qtip on callout
-            %td Qtip points to Element
-            %td Show when
-            %td X distance
-            %td Y distance
-            %td Classes
-          %tr
-            %td
-              %select.my
-                %option{value: 'top left'} Top left
-                %option{value: 'top center'} Top center
-                %option{value: 'top right'} Top right
-                %option{value: 'right top'} Right top
-                %option{value: 'right center'} Right center
-                %option{value: 'right bottom'} Right bottom
-                %option{value: 'bottom right'} Bottom right
-                %option{value: 'bottom center'} Bottom center
-                %option{value: 'bottom left'} Bottom left
-                %option{value: 'left bottom'} Left bottom
-                %option{value: 'left center'} Left center
-                %option{value: 'left top'} Left top
-            %td
-              %select.at
-                %option{value: 'top left'} Top left
-                %option{value: 'top center'} Top center
-                %option{value: 'top right'} Top right
-                %option{value: 'right top'} Right top
-                %option{value: 'right center'} Right center
-                %option{value: 'right bottom'} Right bottom
-                %option{value: 'bottom right'} Bottom right
-                %option{value: 'bottom center'} Bottom center
-                %option{value: 'bottom left'} Bottom left
-                %option{value: 'left bottom'} Left bottom
-                %option{value: 'left center'} Left center
-                %option{value: 'left top'} Left top
-            %td
-              %input.on{type: 'text', placeholder: 'function_editor_opened'}
-            %td
-              %input.x{type: 'number', style: 'width: 80px;'}
-            %td
-              %input.y{type: 'number', style: 'width: 80px;'}
-            %td
-              %input.classes{type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
-        %button.remove_callout{type: 'button'}
-          %i.icon-trash
-        %hr
-    #all_callouts_editor
-    %button#add_callout{type: 'button'} Add a callout
+    function updateVideoPreview() {
+      var selectionValue = $('.video-dropdown')[0].value;
+      if (selectionValue) {
+        var videoInfo = videoInfos[selectionValue];
+        $('.video-preview').html(createVideoWithFallback(null, videoInfo, 400, 400));
+        $('.video-preview').show();
+      } else {
+        $('.video-preview').hide();
+      }
+    }
+    $('.video-dropdown').change(updateVideoPreview);
+    updateVideoPreview();
+  });
 
-  .field
-    = f.label :callout_json
-    %div{style: '-webkit-user-select: text'}
-    = f.text_area :callout_json, rows: 4
+:css
+  .required:after {
+    content: ' *';
+    color: #ff0000;
+  }
+.field.callouteditor
+  #callout_template{style: 'display: none;'}
+    .callout_space
+      %label Callout
+      %table
+        %tr
+          %td.required Element ID
+          %td.required Localization Key
+          %td.required Callout text
+        %tr
+          %td
+            %input.element_id{type: 'text', placeholder: '#runButton'}
+          %td
+            %input.localization_key{type: 'text', placeholder: 'level_name_callout1'}
+          %td{colspan: 4}
+            %input.callout_text{type: 'text', placeholder: 'Text of callout', style: 'width: 100%'}
+        %tr
+          %td Qtip on callout
+          %td Qtip points to Element
+          %td Show when
+          %td X distance
+          %td Y distance
+          %td Classes
+        %tr
+          %td
+            %select.my
+              %option{value: 'top left'} Top left
+              %option{value: 'top center'} Top center
+              %option{value: 'top right'} Top right
+              %option{value: 'right top'} Right top
+              %option{value: 'right center'} Right center
+              %option{value: 'right bottom'} Right bottom
+              %option{value: 'bottom right'} Bottom right
+              %option{value: 'bottom center'} Bottom center
+              %option{value: 'bottom left'} Bottom left
+              %option{value: 'left bottom'} Left bottom
+              %option{value: 'left center'} Left center
+              %option{value: 'left top'} Left top
+          %td
+            %select.at
+              %option{value: 'top left'} Top left
+              %option{value: 'top center'} Top center
+              %option{value: 'top right'} Top right
+              %option{value: 'right top'} Right top
+              %option{value: 'right center'} Right center
+              %option{value: 'right bottom'} Right bottom
+              %option{value: 'bottom right'} Bottom right
+              %option{value: 'bottom center'} Bottom center
+              %option{value: 'bottom left'} Bottom left
+              %option{value: 'left bottom'} Left bottom
+              %option{value: 'left center'} Left center
+              %option{value: 'left top'} Left top
+          %td
+            %input.on{type: 'text', placeholder: 'function_editor_opened'}
+          %td
+            %input.x{type: 'number', style: 'width: 80px;'}
+          %td
+            %input.y{type: 'number', style: 'width: 80px;'}
+          %td
+            %input.classes{type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
+      %button.remove_callout{type: 'button'} Remove callout
+      %hr
+  #all_callouts_editor
+  %button#add_callout{type: 'button'} Add a callout
+.field
+  = f.label :callout_json
+  %div{style: '-webkit-user-select: text'}
+  = f.text_area :callout_json, rows: 4
+:javascript
+  // <![CDATA[
+    var callout_editor = CodeMirror.fromTextArea($('#level_callout_json').get(0), {
+      mode: 'javascript',
+      viewportMargin: Infinity,
+      matchBrackets: true
+    });
 
-- content_for :body_scripts do
-  :javascript
-    $(document).ready(function() {
-      jsonEditor("#callout_editor", {
-        json_textarea: '#level_callout_json',
-        add_button: '#add_callout',
-        remove_button: ".remove_callout",
-        value_space: ".callout_space",
-        template: ".json_template",
-        form_container: "#all_callouts_editor",
-        wrapper: ".json_editor",
-        model: {
-          localization_key: "",
-          callout_text: "",
-          element_id: "",
-          on: "",
-          qtip_config: {
-            style: {classes: ""},
-            position: {
-              my: "",
-              at: "",
-              adjust: {x: 0, y: 0}
-            }
-          }
+    var calloutJSON = callout_editor.getValue();
+    var calloutModel = {
+      localization_key: "",
+      callout_text: "",
+      element_id: "",
+      on: "",
+      qtip_config: {
+        style: {classes: ""},
+        position: {
+          my: "",
+          at: "",
+          adjust: {x: 0, y: 0}
+        }
+      }
+    };
+
+    // Create callout spaces for each callout in the original JSON
+    if (calloutJSON.length > 0) {
+      var callouts_to_update = JSON.parse(callout_editor.getValue());
+      $.each(callouts_to_update, function (index, callout) {
+        updateTemplate(callout, $createNewCalloutSpace());
+      });
+    }
+
+    /**
+     * For each key in the given model, set the <input> with a matching class name to the key's value.
+     * @param {model} The model to use when updating the DOM.
+     * @param {$template} The jQuery element to search for <input> elements.
+     */
+    function updateTemplate(model, $template) {
+      $.each(model, function (key, value) {
+        if (value && typeof value === 'object') {
+          updateTemplate(value, $template);
+        } else {
+          $template.find('.' + key).val(model[key]);
         }
       });
+    }
 
-      function make_selection_handler(flag) {
-        return function (e) {
-          e.preventDefault();
-          $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
-        }
-      }
-
-      $('.select_all').click(make_selection_handler(true));
-      $('.select_none').click(make_selection_handler(false));
-
-      var videoInfos = #{video_infos.to_json};
-
-      function updateVideoPreview() {
-        var selectionValue = $('.video-dropdown')[0].value;
-        if (selectionValue) {
-          var videoInfo = videoInfos[selectionValue];
-          $('.video-preview').html(createVideoWithFallback(null, videoInfo, 400, 400));
-          $('.video-preview').show();
+    /**
+     * For each key in the given model, set the key's value to the value of the <input> with a matching class name.
+     * @param {model} The model to update from the DOM.
+     * @param {$template} The jQuery element to search for <input> elements.
+     */
+    function updateModel(model, $template) {
+      $.each(model, function (key, value) {
+        if (typeof value === 'object') {
+          updateModel(value, $template);
         } else {
-          $('.video-preview').hide();
+          var value = $template.find('.' + key).val();
+          model[key] = typeof model[key] === 'number' ? +value : value;
         }
-      }
-      $('.video-dropdown').change(updateVideoPreview);
-      updateVideoPreview();
+      });
+    }
+
+    function updateCalloutJSON() {
+      var updated_callouts = [];
+      $('#all_callouts_editor .callout_space').each(function () {
+        var model = $.extend(true, {}, calloutModel);
+        updateModel(model, $(this));
+        updated_callouts.push(model);
+      });
+      callout_editor.setValue(JSON.stringify(updated_callouts, null, ' '));
+    }
+
+    function $createNewCalloutSpace() {
+      var $newCallout = $("#callout_template").children(":first").clone();
+      $("#all_callouts_editor").append($newCallout);
+      return $newCallout;
+    }
+
+    $(document).on("click", "#add_callout", function () {
+      $createNewCalloutSpace();
+      updateCalloutJSON();
     });
+
+    $(document).on("click", ".remove_callout", function () {
+      $(this).closest(".callout_space").remove();
+      updateCalloutJSON();
+    });
+
+    $(".callouteditor").on("input", function () {
+      updateCalloutJSON();
+    });
+  // ]]>

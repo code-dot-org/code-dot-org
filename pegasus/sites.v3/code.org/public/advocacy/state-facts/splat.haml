@@ -357,13 +357,16 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             = state_info[:policy_7_t]
+            Find out how other states allow computer science to count towards graduation at
+            = succeed "." do
+              %a{href: "http://bit.ly/1Is6YXS"} http://bit.ly/1Is6YXS
 
       .policy-item
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            allows computer science to count as a mathematics or science admission requirement at institutions of higher education.
+            allows computer science to count as a core admission requirement at institutions of higher education.
         - elsif state_info[:higher_ed_entrance_s] == 'No'
           %div
             %i.fa.fa-square-o

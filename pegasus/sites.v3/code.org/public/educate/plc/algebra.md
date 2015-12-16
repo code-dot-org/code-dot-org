@@ -25,14 +25,14 @@ At the end of the course, students will have written programs to build composite
 ## <a name="about"></a>About the Professional Learning Program
  
  
-#### <a name="components"></a>How does it work?
+### <a name="components"></a>How does it work?
 
 The Code.org CS in Algebra professional development program is designed to help teachers identify the intersection between Computer Science and Algebra in a way that supports student learning of Algebraic functions, with a focus on providing space for teachers to become comfortable with the curricular materials (lesson plans and computer-based tools) and associated teaching strategies.
 
 
-[<button>Apply now</button>](/educate/plc/algebra/application)
+[<button>Apply now</button>](/educate/plc/algebra-application)
 
-### <a name="commitments"></a>What are the program commitments?
+## <a name="commitments"></a>What are the program commitments?
 
 - **Phase 1: Online Introduction**
 <br/>
@@ -51,21 +51,19 @@ The Code.org CS in Algebra professional development program is designed to help 
 	- 10 hours online, self-paced
 
 
-### <a name="participate"></a>Who can Participate?
+## <a name="participate"></a>Who can Participate?
  
 Any middle school algebra teacher who's district is partnered with Code.org.
-<br/>
-<br/>
-[Click here](https://code.org/educate/partner-districts) to see if your district is partnered with us.
+<br/><br/>
 
-### <a name="locations"></a>Where is the program offered?
+## <a name="locations"></a>Where is the program offered?
 
-#### Professional Learning Locations
-We're so excited that you're interested in applying for our Professional Learning Program! 
+### Professional Learning Locations
+We're so excited that you're interested in applying for our Professional Learning Program! [Check out the list of partner districts](https://docs.google.com/spreadsheets/d/1BDzs4k6nbZ87KdRZE62gqO_VpBC1yRSRbolWejGtDnU/edit#gid=0) to see if the program is available in your region.
+<br><br> 
 
-
-**Don't see your region on the map?** Encourage your administrators [to apply to be a partner district!](https://code.org/educate/districts)
-
-**Is your location on the map?** Join the other teachers in your district on the journey to teach CS Principles! 
-<br>
-[<button>Apply now</button>](/educate/plc/algebra/application)
+**Don't see your region on the list?** Encourage your administrators [to apply to be a partner district!](https://code.org/educate/districts)
+<br><br>
+**Is your location on the list?** Join the other teachers in your district on the journey to teach CS in Algebra! 
+<br><br>
+[<button>Apply now</button>](/educate/plc/algebra-application)
