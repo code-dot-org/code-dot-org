@@ -188,15 +188,14 @@ var handleUpdateRecord = function(tableName, record, onSuccess, onError) {
     return;
   }
   if (this.status === 404) {
-    onError('error updating record: could not find record id ' + record.id +
-            ' in table ' + tableName);
+    onSuccess(null, false);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
     onError('error updating record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess(record);
+  onSuccess(record, true);
 };
 
 /**
@@ -233,15 +232,14 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
     return;
   }
   if (this.status === 404) {
-    onError('error deleting record: could not find record id ' + record.id +
-        ' in table ' + tableName);
+    onSuccess(false);
     return;
   }
   if (this.status < 200 || this.status >= 300) {
     onError('error deleting record: unexpected http status ' + this.status);
     return;
   }
-  onSuccess();
+  onSuccess(true);
 };
 
 /**
