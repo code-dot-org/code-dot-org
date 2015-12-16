@@ -1,6 +1,5 @@
 //= require url_test/url_test.js
 
-// TODO - iffy. be aware of potential conflicts with josh's erb work
 (function() {
 
   window.createVideoWithFallback = function(parentElement, options, width, height) {
@@ -224,7 +223,7 @@
     });
   }
 
-  widnow.onYouTubeBlocked = function(callback) {
+  window.onYouTubeBlocked = function(callback) {
     testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
   }
 

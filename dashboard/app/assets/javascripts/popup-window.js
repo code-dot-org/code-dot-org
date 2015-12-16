@@ -19,7 +19,8 @@ window.dashboard.popupWindow = (function () {
       'copyhistory=no, width=' + width + ', height=' + height + ', top=' + top +
       ', left=' + left);
     if (!share) {
-      // If window.open fails, just return such that
+      // If window.open fails for some reason, just return such that we still
+      // open the url in a new tab
       return true;
     }
     if (window.focus) {
