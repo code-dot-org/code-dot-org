@@ -9,15 +9,30 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-10,0,0,0],[0,0,0,0,-10,0,0,0],[0,0,0,0,10,0,0,0],[0,0,0,0,10,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Use loops to get the nectar, honey, and to move!",
+    "instructions": "Get all of the nectar and make all of the honey.",
     "start_direction": "2",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "true",
     "nectar_goal": "20",
     "honey_goal": "20",
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "false",
-    "ideal": "13"
+    "ideal": "13",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>
@@ -34,9 +49,12 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-</xml>
-    </required_blocks>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>
