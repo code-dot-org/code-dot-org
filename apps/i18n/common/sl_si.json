@@ -243,5 +243,9 @@
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: "
+  "workspaceHeaderShort": "Delovni prostor: ",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }

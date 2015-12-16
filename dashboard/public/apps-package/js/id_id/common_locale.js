@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Tonton Videonya"},
 "when":function(d){return "ketika"},
 "whenRun":function(d){return "ketika dijalankan"},
-"workspaceHeaderShort":function(d){return "Area kerja: "}};
+"workspaceHeaderShort":function(d){return "Area kerja: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};
