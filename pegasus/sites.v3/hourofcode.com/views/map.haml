@@ -18,9 +18,7 @@
     %a{href: resolve_url("/events/all")}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
 
-.row
-  .col-sm-12
-    #gmap.full-width
+#gmap.full-width
 #belowmaplegend.legend
   .legend-title= hoc_s(:map_legend_title)
   .color.brown
