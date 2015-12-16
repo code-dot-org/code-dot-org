@@ -296,7 +296,7 @@ namespace :install do
   task :code_studio do
     if local_environment?
       Dir.chdir(code_studio_dir) do
-        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('built') : 'code-studio-package'
+        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
         RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
       end
       install_npm
@@ -352,7 +352,7 @@ namespace :update_package do
       RakeUtils.system "rm -rf #{package_dir}"
 
       # Copy in new built package
-      RakeUtils.system "cp -r #{code_studio_dir('built')} #{package_dir}"
+      RakeUtils.system "cp -r #{code_studio_dir('build')} #{package_dir}"
 
       # Commit directory
       RakeUtils.git_add '-A', package_dir
