@@ -243,5 +243,6 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: "
+  "workspaceHeaderShort": "Работна област: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
 }

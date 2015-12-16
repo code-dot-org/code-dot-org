@@ -398,4 +398,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Гледайте видеото"},
 "when":function(d){return "когато"},
 "whenRun":function(d){return "при стартиране"},
-"workspaceHeaderShort":function(d){return "Работна област: "}};
+"workspaceHeaderShort":function(d){return "Работна област: "},
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};

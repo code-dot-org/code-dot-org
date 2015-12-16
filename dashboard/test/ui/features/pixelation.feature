@@ -52,4 +52,3 @@ Feature: Pixelation levels
     And I press keys "110011001100110011111111" for element "#pixel_data"
     And I save pixelation data and reload
     Then pixelation data has text "04 04 18 FF0000 00AAAA 999999 CCCCFF"
-

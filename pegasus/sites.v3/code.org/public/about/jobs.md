@@ -9,15 +9,13 @@ nav: about_nav
 
 - **Curriculum**
  	- [CS Curriculum Writer](#curric)
-- **Product**
+- **Engineering**
 	- [Engineering Manager / Chief Architect](#eng)
+	- [Software Engineer](#engineer)
 - **Operations & Professional Development**
 	- [Operations Program Coordinator](#ops)
 	- [VP of Professional Learning & Community](#vp)
 
-**No current positions, but always accepting great resumes:**
-
-- [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
 
@@ -84,6 +82,28 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+
+**Skills and Qualifications:**
+
+- A Bachelor's degree or greater in Computer Science
+- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
+- Experience with startup culture preferred 
+- Expertise/Experience in some of these technologies preferred
+	- Rails
+	- Ruby
+	- JavaScript
+	- Sinatra
+	- SQL/Databases/Mysql
+	- React
+	- Testing: Ruby, Selenium
+	- Angular
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="ops" href="#ops">Operations Program Coordinator (Seattle, WA)</a>
 
@@ -153,20 +173,6 @@ Additional desired strengths include:
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
-
-**Skills and Qualifications:**
-
-- A Bachelor's degree or greater in Computer Science
-- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
-- Deep expertise in either JavaScript or Ruby preferred 
-- Experience with startup culture preferred 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>
