@@ -834,29 +834,6 @@ input[type="radio"] {
   padding-right: 10px;
   padding-bottom: 10px;
   height: auto;
-
-  /* authored hints */
-  &.authored_hints {
-    width: 80px;
-
-    #prompt-icon {
-      padding-top: 20px;
-    }
-
-    #lightbulb {
-      position: absolute;
-      left: 40px;
-
-      #hintCount {
-        font-weight: bold;
-        font-size: 400px;
-        fill: white;
-        stroke: black;
-        stroke-width: 30px;
-        font-family: Verdana, Geneva, sans-serif;
-      }
-    }
-  }
 }
 
 #prompt-cell {
