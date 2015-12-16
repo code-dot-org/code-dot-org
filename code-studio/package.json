@@ -9,14 +9,13 @@
     "npm": "^2.9.1"
   },
   "scripts": {
+    "postinstall": "linklocal",
     "build": "browserify --debug src/js/blockly_editor.js -o build/js/blockly_editor.js",
     "build:min": "browserify src/js/blockly_editor.js | uglifyjs -o build/js/blockly_editor.min.js",
     "prebuild": "mkdir -p build/js",
     "prebuild:min": "mkdir -p build/js",
     "clean": "rm -rf build",
     "env": "env",
-    "preinstall": "rm -f node_modules/vendor",
-    "postinstall": "ln -s ../vendor node_modules/vendor",
     "lint": "npm run lint:js -s",
     "lint:js": "jshint src/js/*.js",
     "start": "echo \"Unimplemented.\"",
@@ -29,7 +28,9 @@
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
+    "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
+    "linklocal": "^2.5.2",
     "marked": "0.3.2"
   }
 }
