@@ -100,4 +100,4 @@
       $('.scrollable-wrapper').css('max-height', newHeight);
     }
     $(document).ready(resizeScrollable);
-    $(window).resize(debounce(resizeScrollable, 250));
+    $(window).resize(dashboard.utils.debounce(resizeScrollable, 250));
