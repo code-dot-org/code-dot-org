@@ -9,40 +9,55 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
+    - sudo apt-get install moreutils
     - bundle install
-    - rake install:pegasus
-    - "printf \"assets_s3_directory: assets_circle/$RANDOM\nsources_s3_directory: sources_circle/$RANDOM\n\" > locals.yml"
-    - npm install:
-        pwd:
-            apps
-    - bash build_with_core.sh:
-        pwd:
-            apps
-    - bundle exec rake assets:precompile:
-        pwd:
-            dashboard
+    - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
+    - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
+    - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
+    - 'echo "saucelabs_username: $SAUCE_USERNAME" >> locals.yml'
+    - 'echo "saucelabs_authkey: $SAUCE_ACCESS_KEY" >> locals.yml'
+    - 'echo "use_my_apps: true" >> locals.yml'
+    - 'echo "use_my_shared_js: true" >> locals.yml'
+    - 'echo "build_blockly_core: true" >> locals.yml'
+    - 'echo "build_apps: true" >> locals.yml'
+    - 'echo "build_shared_js: true" >> locals.yml'
+    - 'echo "build_dashboard: true" >> locals.yml'
+    - 'echo "build_pegasus: true" >> locals.yml'
+    # Run rake install, timestamping each output line
+    - bundle exec rake install | ts '[%Y-%m-%d %H:%M:%S]'
+    # Try running rake build twice (in case of intermittent test failures within rake build)
+    - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done
+  post:
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
 database:
     override:
-      - bundle exec rake db:create:
-          pwd:
-              dashboard
-      - bundle exec rake db:schema:load:
-          pwd:
-              dashboard
+      - 'echo "skipping Circle CI database defaults, already set up."'
 test:
     override:
+        # (apps tests already ran during rake build, don't re-run)
+
+        # temporarily set hoc flags to green, as is currently required for dev enlistments
+        - ./set_hoc_flags.rb green:
+            pwd:
+                bin/dynamic_config
         - bundle exec rake test:
             pwd:
                 pegasus
         - bundle exec rake test:
             pwd:
                 shared
-        - for i in 1 2; do grunt test && break; done:
-            pwd:
-                apps
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
         - ./test.sh:
             pwd:
                 cookbooks
+        - ./bin/dashboard-server:
+            background: true
+        - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
+            background: true
+        - "until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
+        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 6 --auto_retry --html":
+            pwd:
+                dashboard/test/ui
