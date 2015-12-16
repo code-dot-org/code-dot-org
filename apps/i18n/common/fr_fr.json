@@ -131,7 +131,7 @@
   "dropletBlock_notOperator_signatureOverride": "Opérateur booléen NON",
   "dropletBlock_orOperator_description": "Renvoie vrai lorsque chacune des expressions est vraie et faux sinon",
   "dropletBlock_orOperator_signatureOverride": "Opérateur booléen OU",
-  "dropletBlock_randomNumber_min_max_description": "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range",
+  "dropletBlock_randomNumber_min_max_description": "Returns a random number in the closed range from min to max.",
   "dropletBlock_randomNumber_param0": "min",
   "dropletBlock_randomNumber_param0_description": "Le nombre minimal renvoyé",
   "dropletBlock_randomNumber_param1": "max",
@@ -244,8 +244,5 @@
   "when": "quand",
   "whenRun": "quand l'exécution commence",
   "workspaceHeaderShort": "Espace de travail :",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
 }

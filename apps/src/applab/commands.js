@@ -1100,21 +1100,11 @@ applabCommands.setPosition = function (opts) {
     el.style.position = 'absolute';
     el.style.left = opts.left + 'px';
     el.style.top = opts.top + 'px';
-    var setWidthHeight = false;
-    // don't set width/height if
-    // (1) both parameters are undefined AND
-    // (2) width/height already specified OR IMG element with width/height attributes
-    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
-        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-        setWidthHeight = true;
-      }
-    } else {
-      setWidthHeight = true;
-    }
-    if (setWidthHeight) {
-      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
+    // if we have a width and/or height given, validate args and setSize
+    if (opts.width !== undefined || opts.height !== undefined) {
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number', OPTIONAL);
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number', OPTIONAL);
       setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;

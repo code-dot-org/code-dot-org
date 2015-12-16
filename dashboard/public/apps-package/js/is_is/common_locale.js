@@ -399,7 +399,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
 "workspaceHeaderShort":function(d){return "Vinnusvæði: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};

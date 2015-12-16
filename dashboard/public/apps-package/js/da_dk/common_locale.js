@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "OG boolesk operator"},
 "dropletBlock_orOperator_description":function(d){return "Returnerer sand, når begge udtryk er sande, og ellers falsk"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "ELLER boolesk operator"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
 "dropletBlock_randomNumber_param0_description":function(d){return "Det mindste tal returneret"},
 "dropletBlock_randomNumber_param1":function(d){return "max"},
@@ -399,7 +399,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "når"},
 "whenRun":function(d){return "når programmet kører"},
 "workspaceHeaderShort":function(d){return "Arbejdsområde: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
