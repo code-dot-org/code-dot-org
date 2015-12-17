@@ -9,11 +9,14 @@
 /crontab
 /dashboard/public/blockly
 /dashboard/public/shared
+/dashboard/public/code-studio
 /.dropbox.cache
 /build-started
 /locals.yml
 /rebuild
 /rebuild-apps
+/rebuild-shared
+/rebuild-code-studio
 /i18n/code.org/crowdin.yaml
 /i18n/hourofcode.com/crowdin.yaml
 /i18n/curriculum/crowdin.yaml
