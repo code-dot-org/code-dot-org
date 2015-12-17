@@ -29,6 +29,13 @@ var applabCommands = module.exports;
 var toBeCached = {};
 
 /**
+ * {Object} map from element id to the last mousemove event which occurred on
+ * that element. This is used to simulate movementX and movementY for browsers
+ * which do not support it natively.
+ */
+var lastMouseMoveEventMap = {};
+
+/**
  * @param value
  * @returns {boolean} true if value is a string, number, boolean, undefined or null.
  *     returns false for other values, including instances of Number or String.
@@ -1175,6 +1182,13 @@ applabCommands.getYPosition = function (opts) {
   return 0;
 };
 
+applabCommands.clearLastMouseMoveEvent = function(e) {
+  var elementId = e.currentTarget && e.currentTarget.id;
+  if (elementId && (typeof lastMouseMoveEventMap[elementId] !== 'undefined')) {
+    delete lastMouseMoveEventMap[elementId];
+  }
+};
+
 applabCommands.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
     var div = document.getElementById('divApplab');
@@ -1191,7 +1205,7 @@ applabCommands.onEventFired = function (opts, e) {
     var applabEvent = {};
     // Pass these properties through to applabEvent:
     ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'keyLocation', 'location', 'metaKey', 'offsetX',
       'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
       function (prop) {
         if (typeof e[prop] !== 'undefined') {
@@ -1212,6 +1226,27 @@ applabCommands.onEventFired = function (opts, e) {
           applabEvent[prop] = (e[prop] - yOffset) / yScale;
         }
       });
+    // Set movementX and movementY, computing it from clientX and clientY if necessary.
+    // The element must have an element id for this to work.
+    if (typeof e.movementX !== 'undefined' && typeof e.movementY !== 'undefined') {
+      // The browser supports movementX and movementY natively.
+      applabEvent.movementX = e.movementX;
+      applabEvent.movementY = e.movementY;
+    } else if (e.type == 'mousemove') {
+      var currentTargetId = e.currentTarget.id;
+      var lastEvent = lastMouseMoveEventMap[currentTargetId];
+      if (currentTargetId && lastEvent) {
+        // Compute movementX and movementY from clientX and clientY.
+        applabEvent.movementX = e.clientX - lastEvent.clientX;
+        applabEvent.movementY = e.clientY - lastEvent.clientY;
+      } else {
+        // There has been no mousemove event on this element since the most recent
+        // mouseout event, or this element does not have an element id.
+        applabEvent.movementX = 0;
+        applabEvent.movementY = 0;
+      }
+      lastMouseMoveEventMap[currentTargetId] = e;
+    }
     // Replace DOM elements with IDs and then add them to applabEvent:
     ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
       'toElement'].forEach(
@@ -1308,7 +1343,6 @@ applabCommands.onEvent = function (opts) {
       case 'click':
       case 'change':
       case 'keyup':
-      case 'mousemove':
       case 'dblclick':
       case 'mousedown':
       case 'mouseup':
@@ -1323,6 +1357,16 @@ applabCommands.onEvent = function (opts) {
         domElement.addEventListener(
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
+        break;
+      case 'mousemove':
+        domElement.addEventListener(
+          opts.eventName,
+          applabCommands.onEventFired.bind(this, opts));
+        // Additional handler needed to ensure correct calculation of
+        // movementX and movementY.
+        domElement.addEventListener(
+          'mouseout',
+          applabCommands.clearLastMouseMoveEvent.bind(this));
         break;
       default:
         return false;

@@ -125,6 +125,59 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+
+    {
+      description: 'receives movementX and movementY in mousemove events',
+      editCode: true,
+      xml:
+        'createCanvas("canvas1", 320, 450);' +
+        'textLabel("movementX", "");' +
+        'textLabel("movementY", "");' +
+        'onEvent("canvas1", "mousemove", function(event) {' +
+        '  console.log("movementX: " + event.movementX + " movementY: " + event.movementY)' +
+        '});',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        // provide time for image to load
+        testUtils.runOnAppTick(Applab, 10, function () {
+          var point1 = {x: 1, y: 1};
+          var point2 = {x: 100, y: 200};
+          var point3 = {x: 110, y: 220};
+          var point4 = {x: 111, y: 222};
+          var move1 = testUtils.createMouseEvent('mousemove', point1.x, point1.y);
+          var mouseout = testUtils.createMouseEvent('mouseout', point1.x, point1.y);
+          var move2 = testUtils.createMouseEvent('mousemove', point2.x, point2.y);
+          var move3 = testUtils.createMouseEvent('mousemove', point3.x, point3.y);
+          var move4 = testUtils.createMouseEvent('mousemove', point4.x, point4.y);
+
+          var expectedOutput = '';
+          // The first mousemove event does not have movementX/Y since there is no previous event.
+          $('#canvas1')[0].dispatchEvent(move1);
+          expectedOutput += 'movementX: 0 movementY: 0';
+
+          // The second mousemove event does not have movementX/Y due to the mouseout event.
+          $('#canvas1')[0].dispatchEvent(mouseout);
+          $('#canvas1')[0].dispatchEvent(move2);
+          expectedOutput += '\nmovementX: 0 movementY: 0';
+
+          // The subsequent mousemove events have movementX/Y due to the previous mousemove event.
+          $('#canvas1')[0].dispatchEvent(move3);
+          expectedOutput += '\nmovementX: 10 movementY: 20';
+
+          $('#canvas1')[0].dispatchEvent(move4);
+          expectedOutput += '\nmovementX: 1 movementY: 2';
+
+          var debugOutput = document.getElementById('debug-output');
+          assert.equal(debugOutput.textContent, expectedOutput);
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
   ]
 };
