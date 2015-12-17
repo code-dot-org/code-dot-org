@@ -185,7 +185,7 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function (e) {
   var clickIsOnTarget = e.target && e.target === this.target_;
 
   // Clicking on the flyout background clears the global selection
-  if (Blockly.selected && !Blockly.readOnly && clickIsOnTarget) {
+  if (Blockly.selected && !this.blockSpace_.getReadOnly() && clickIsOnTarget) {
     Blockly.selected.unselect();
   }
 
@@ -194,7 +194,7 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function (e) {
 
   // On left-click on scrollable area, begin scroll-drag
   // In readonly mode, we scroll-drag when clicking through a block, too.
-  var shouldDrag = clickIsOnTarget || blockNonInteractive || Blockly.readOnly;
+  var shouldDrag = clickIsOnTarget || blockNonInteractive || this.blockSpace_.getReadOnly();
   var isLeftClick = !Blockly.isRightButton(e);
 
   if (this.blockSpace_.scrollbarPair && isLeftClick && shouldDrag) {
