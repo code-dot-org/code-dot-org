@@ -81,7 +81,6 @@ module Dashboard
 
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('./public/shared/js')
-    config.assets.paths << Rails.root.join('./public/code-studio')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
@@ -92,6 +91,7 @@ module Dashboard
       shared.js
       shared.min.js
       editor/blockly_editor.css
+      editor/blockly_editor.js
       editor/embedded_markdown_editor.js
       levels/*
       jquery.handsontable.full.css
