@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = '/educate/plc/csp'
-    -{'Apply to be a Participant'=>'csp-application',  'About the Curriculum'=>current_url+'#curriculum', 'About the Professional Learning Program'=>current_url+'#about', 'How does it work?'=> current_url+ '#components', 'What are the commitments?'=> current_url+'#commitments', 'Who can participate?'=> current_url+'#participate', 'Where is it offered?'=>current_url+'#locations'}.each_pair do |label,url|
+    -{'PLC Home'=>'/educate/plc', 'Apply to the Program'=>'csp-application',  'About the Curriculum'=>current_url+'#curriculum', 'About the Professional Learning Program'=>current_url+'#about', 'How does it work?'=> current_url+ '#components', 'What are the commitments?'=> current_url+'#commitments', 'Who can participate?'=> current_url+'#participate', 'Where is it offered?'=>current_url+'#locations'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else
