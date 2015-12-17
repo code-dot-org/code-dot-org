@@ -887,11 +887,13 @@ function sortDrawOrder() {
   // Add sprites, both walking and non-walking.
   for (i = 0; i < Studio.sprite.length; i++) {
     var sprite = {};
+    // TODO: sort Sprite legacy element
     sprite.element = document.getElementById('sprite' + i);
     sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
     sprite = {};
+    // TODO: sort Sprite element
     sprite.element = document.getElementById('spriteWalk' + i);
     sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
     itemsArray.push(sprite);
@@ -3035,6 +3037,10 @@ function imageAssetFrameNumbers (opts) {
   var frameTable = sprite.frameCounts.counterclockwise ?
       constants.frameDirTableWalkingWithIdleCounterclockwise :
       constants.frameDirTableWalkingWithIdleClockwise;
+  if (sprite.frameCounts.normal) {
+    // Has a legacy sprite for "idle" animation, use the old clockwise table:
+    frameTable = constants.frameDirTableWalking;
+  }
   frameNums.x = frameTable[sprite.displayDir];
 
   // If there are idleEmotions or walkingEmotions in the spritesheet, and the
@@ -4709,6 +4715,11 @@ Studio.setSprite = function (opts) {
     spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
     var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
     spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
+
+    // NEW
+    // TODO: use ImageAsset or similar
+    sprite.setLegacyImage(skinSprite.sprite, sprite.frameCounts);
+
   }
 
   if (spriteWalk && skinSprite.walk) {
@@ -4722,7 +4733,6 @@ Studio.setSprite = function (opts) {
     // NEW
     // TODO: use ImageAsset or similar
     sprite.setImage(skinSprite.walk, 8);
-    sprite.createElement(document.getElementById('spriteLayer'));
 
     var extraWidth = (sprite.frameCounts.walkingEmotions || 0) * sprite.drawWidth;
     if (!skinSprite.sprite) {
@@ -4733,6 +4743,8 @@ Studio.setSprite = function (opts) {
     spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
     spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
+
+  sprite.createElement(document.getElementById('spriteLayer'));
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
   // First, stop any movement audio for the current character.

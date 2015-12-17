@@ -201,7 +201,7 @@ Projectile.prototype.display = function () {
       },
       Studio.tickCount);
 
-  if (this.spriteSheet_.framesPerAnimation > 1) {
+  if (this.spriteSheet_.defaultFramesPerAnimation > 1) {
     this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
