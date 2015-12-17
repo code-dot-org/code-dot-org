@@ -289,62 +289,9 @@
     remove: (öğretmeni kaldır)
     confirm:
       remove: Bu öğretmeni kaldırmak istediğinizden emin misiniz?
-    tools: Öğretmen Araçları
-    followers:
-      section: 'Bölüm:'
-      stages: 'Görüntülenecek kademe(ler):'
-      show_past: 'Geçmiş öğrenci aktivitelerini göster (%{bullet_html}):'
-      levels_key: Düzey anahtarı
-      perfect: Tamamlandı, mükemmel
-      completed: Tamamlandı, fakat çok fazla blok kullanıldı
-      tried: Denendi ama tamamlanmadı
-      not_tried: Daha denenmedi
-      activity: Son %{hours} %{plural} içerisindeki öğrenci aktivitesini gösterir
-      no_section: Atanan bölüm yok
-      trophies: kupalar
     students:
-      name: İsim
-      username: kullanıcı adı
-      password: şifre
-      manage: Öğrencileri yönet
       dashboard: Öğretmen Panosuna Git
-      add: Öğrenciler Ekle
-      remove: öğrenciyi sil
-      confirm_remove: Bu öğrenciyi çıkarmak istediğinden emin misin?
-      help_reassign: Sınıfınızı birden çok bölüme ayırmak istiyorsan, yeni bölüme
-        atayacağın öğrencileri seç.
-      help_register: Öğrenci verilerini tek tek içe aktararak fazladan zaman kaybetmek
-        yerine, hızlıca sınıfını giriş yapmaya çağırarak ayarlayabilirsin. Öğrencilerin
-        kullanıcı adı ve parola seçmelidir, fakat e-posta adresi girmeleri gerekmez.
-        Eğer bir öğrenci parolasını unutursa, onlar için sıfırlayabilirsin.
-      register: Öğrencilerinize kaydolmalarını söyleyin
-      vist: Öğrencilerinize ziyaret etmelerini söyleyin
-      section_code: 've onların bölge-kodunu girin:'
-      first_please: İlk olarak, lütfen %{add_section}
-      for: İçin
-      enter: 'girin:'
-    sections:
-      add: Bölüm ekle
-      manage: Bölümleri yönetmek
-      section: Bölüm
-      students: Öğrenciler
-      section_code: Bölge Kodu
-      add_section_code: Öğrencilerin Bölge-Kodunu Girin
-      secret: Gizlilik türü
-      grade: Sınıf
-      course: Kurs
-      rename: yeniden adlandır
-      edit: düzenle
-      delete: sil
-      confirm_delete: Bu bölümü silmek istediğinden emin misin?
-      email: Eposta içinde gönder
-    rollup: İlerleme Kontrol Paneli
-    activity: Son sınıf etkinlikleri
     user_not_found: Öğrenci ve öğretmen bulunamadı
-    cant_remove_student_no_email: Öğrenciniz olan %{student_name} çıkarılamaz çünkü
-      %{student_name} için kayıtlı bir e-posta adresi yok
-    cant_remove_teacher_no_email: Öğretmeniniz olan %{teacher_name} çıkarılamaz çünkü
-      kayıtlı bir e-posta adresiniz yok
     student_teacher_disassociated: '% {teacher_name},  % {student_name} ''in öğretmeni
       olmaktan kaldırıldı'
     panel:
@@ -432,6 +379,7 @@
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
       ve sanat yarat.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Erkek
     female: Kadın
@@ -471,6 +419,7 @@
     built_on_code_studio: Kod Stüdyosunda Yapıldı
     make_my_own_app: Kendi programımı yap
     how_it_works: Nasıl çalışır
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
@@ -538,7 +487,7 @@
       unused: Kullanılmamış Seviyeler
   upsell:
     hoc:
-      title: Saat Kodu
+      title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
     flappy:
       title: Flappy Kod

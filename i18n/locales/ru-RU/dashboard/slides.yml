@@ -33,7 +33,7 @@ ru:
         text: 'Каждый блок - это одна инструкция. Если вы перенесёте блок «двигаться вперед» в рабочую область и нажмете кнопку «Запустить программу», птица продвинется в лабиринте на одну клетку  вперед.'
       11:
         image: notes/hoc1_11.jpg
-        text: Чтобы совершить несколько действий, можно перетащить больше блоков в рабочую область и соединить их. Птица будет выполнять команды, начиная с самой верхней.
+        text: Чтобы совершить несколько действий, можно перетащить много блоков в рабочую область и соединить их. Птица будет выполнять команды, начиная с самой верхней.
       12:
         image: notes/hoc1_12.jpg
         text: Если вы запустили программу, а затем хотите что-то исправить и снова ее запустить, нажмите кнопку «Сброс».
@@ -414,141 +414,140 @@ ru:
         text: В этом уроке вами будут управлять бумажным пультом дистанционного управления. Прям как видео-игра наяву.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: Событие — это действие, которое вызывает результат. Это как когда вы нажмете на кнопку мыши и загружается веб-страницу. Это событие. Когда вы касаетесь экрана на полосу для прокрутки, это также событие . События являются отличным способом позволить пользователям обращаться на прямую к вашей программе всякий раз, когда они нуждаются.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: 'Все мы реагируем на некоторые вещи. Когда мы голодны - мы идем к холодильнику. Когда мы слышим, что пришел почтальон - мы идем проверять почтовый ящик. Это абсолютно такие же события, как нажатие кнопки или перемещение джойстика. Это то, что заставляет нас что-то делать.'
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: В видео-играх есть событие под названием «Обновление», и оно происходит 30 или 60 раз в секунду. Для разработчиков видеоигр это почти важнее как событие, нежели чем кнопки или джойстик.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: |-
-          The main event we're watching for is that "Update" tick happening. And then we check the joystick in the tick. So we say, "Oh, has somebody pushed the button this frame? Yes or no?" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything.
+        text: 'Главное событие, которое мы ожидаем, это выполнение "Обновления". В момент этого события мы проверяем джойстик. Другими словами - "Хмм, нажал ли кто-то кнопку в этот момент? Да или нет?" Без событий игрок не мог бы двигаться, прыгать и контролировать, что происходит. Видеоигра потеряла бы способность взаимодействовать с игроком.'
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: 'Когда ты строишь песчаные замки, ты должен понимать, что неудача - это тоже часть процесса. Но если ты упорный, то это занятие будет становиться для тебя все более и более увлекательным, а ты постепенно будете делать все более и более сложные вещи. Упорство - это часть игры.'
       2:
         image: notes/C1_building_foundation_2.jpg
         text: Этот урок называется закладывание основ. В этом уроке мы будем работать над задачей, которая должна быть очень трудным. Вы должны будете придумать, как сделать постройку высотой не меньше одной из этих чашек; достаточно крепкую, чтобы выдержать вес книги.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: Иногда бывает, что что-то не работает. Иногда бывает, что ты фрустрирован, и хочешь все бросить. В жизни может быть много подобных моментов, но если мы будем продолжать пытаться сделать что-то снова и снова, то мы обязательно это сделаем.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: 'Упорство - это продолжать делать, когда тебе уже хочется всё бросить. Если ты хочешь создать что то новое и особенное, то на пути к этому будет много неудачных попыток.'
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
+        text: Путь к упорству лежит через извлечение уроков из твоих неудач, вместо того, чтобы все бросить, потому что ты фрустрирован. Фрустрация, по большому счету, означает, что что-то прекрасное ждет тебя совсем недалеко. Не бросай всё, пока ты не добрался до своей цели!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Привет, меня зовут Мирал Котб, и я создатель Iluminate. В моей работе мы используем кое-что как в разработке танцев, так и в разработке лайтсьютов. И это циклы! Циклы повторяют действие снова и снова.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: Когда ты повторяешь что-то много раз, например, как мои движения для того, чтобы хулахуп продолжал крутиться, ты выполняешь цикл этого действия. Это цикл. И это цикл.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: 'Сегодня мы собираемся устроить танцевальную вечеринку. Мы будем использовать циклы в новом танце - Итерации. Мы изучим циклы, используя танец. Ты выучишь пару простых движений, и будешь повторять их снова и снова для того, чтобы станцевать танец.'
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: Вот шаги, которые вам нужно выучить. Хлопайте в ладоши. Положите руки за голову. Положите руки на вашу талию. Поднимите левую руку вверх. Поднимите правую руку вверх. Довольно просто, правда? Вы обнаружите, что вы можете сократить описание, разместив несколько танцевальных шагов в циклах.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: Мы на самом деле используем циклы в нашем танце. На танцорах закреплены компьютеры, находящиеся в одной сети. Я мог бы зажигать подсветку на костюмах танцоров снова и снова. В цикле у меня должна быть итерация, где я описываю, что хотел бы зажигать подсветку костюмов танцоров снова и снова, увеличивая скорость с каждой итерацией. И все это создается с помощью циклов. Циклы очень важны в компьютерной науке, потому что они делают нашу работу более быстрой и легкой.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "This lesson is called Happy Maps. Today we're gonna help our furry little friend Flurb get to her fruit."
+        text: 'Этот урок называется "Веселые карты". Сегодня мы собираемся помочь нашему пушистому маленькому другу Flurb добраться до фруктов.'
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: Помоги Флурб найти путь до фрукта. Для этого тебе нужно понять в каком направлении должна идти Флурб и направлять её с помощью стрелок. В каком направлении должна двигаться Флурб для того, чтобы добраться до яблока? Направьте её вверх.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Для того, чтобы переместить это туда, ты очерчиваешь путь, по которому нужно двигаться.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: Создайте свой алгоритм путем склеивания стрелок рядом с картой, которую вы пытаетесь решить. Второй алгоритм такой же, но в направлении вниз.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: Это как программирование с бумагой. И вот оно!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: Отладка это поиск и устранение проблем. Существует множество способов отладки. Один из простейших способов заключается в пошаговом продвижении до тех пор, пока ты не найдешь что-то, что идет не так. Здесь я пытаюсь выполнить кувырок назад на бревне, но я постоянно падаю.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: Я прошел через каждую составляющую и понял, в чем была моя ошибка. Я неправильно ставил руки на бревно. Итак, я попробовал еще раз сделать обратный кувырок на бревне с правильным положением рук и у меня получилось. Я был действительно доволен тем, что я отладил обратный кувырок.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: Для того, чтобы изучить отладку, мы начнем с набора блоков, присутствующих на этапе. Ты заметишь, что эти блоки не приведут тебя к цели. Мы должны отладить решение и исправить его. Что пошло не так? Ты заметишь, что нужен еще один блок для того, чтобы продолжать продвигаться на запад.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: 'Давайте исправим это путем добавления еще одного блока западного блока и нажмем "Бег" для того, чтобы посмотреть, правильно ли мы это поняли. Да! Вы его получили!'
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: В этой головоломке вам нужно помочь птице добраться до хрюшки. Посмотрите на головоломку и поймите, по какой траектории она должна двигаться.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: Вам нужно перетащить блоки над из панели элементов в рабочую область. Убедитесь, что они находятся под блоком «при запуске» и когда вы будете уверены, что у вас есть правильное решение, то нажмите кнопку «Запуск» и наблюдайте за перемещением птицы к хрюшке.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Одна из вещей, в которых компьютеры действительно хороши, это повторение команд. Как человеку, тебе становится действительно скучно делать одни и те же вещи много раз подряд. Но компьютер может выполнять одно и то же миллионы или даже миллиарды раз подряд и не только не скучать, но и прекрасно себя чувствовать.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Например, если бы я хотел поздравить всех с днем рождения на Фейсбук, это могло бы потребовать более века для написания и отправки всех этих электронных писем. Но с помощью всего нескольких строк кода я могу получить систему, которая отправит всем электронные письма с поздравлениями.
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: |
+          Для того, чтобы провести птицу к хрюшке на этом уровне... вместо того, чтобы перетаскивать три блока "Север" на рабочую область, используй блок "Повторение". Перетащи блок "Повторение" на рабочую область и введи цифру 3. После этого перетащи блок "Переместиться на Север" внутрь блока "Повторение" и нажми "Запуск" для того, чтобы понять, правильно ли ты всё сделал. Поздравляем, у тебя это получилось!
+          
+          
+          Получить птица Свиньи в этом уровне..., а не Перетащите три Севера блоков на рабочую область, будет использовать блок «повторить». Перетащите «повторить» блок на рабочую область и введите число 3. Затем перетащите блок «двигаться на север» в блоке «повторить» и нажмите «Запустить», чтобы увидеть, если вы получили это право. Поздравляем вы получили это!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: Этот урок называется двигай это, двигай это. Вместе мы собираемся написать программу, чтобы переместить наших друзей со стартового компаса на лицо смайлика.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: Но смайлик перевернут лицом вниз и только один человек знает, как туда добраться. Давайте начнем писать эту программу.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: 'Программа - это алгоритм, закодированный во что-то, что может быть запущено машиной. Многие из нас думают о программе как о чем-то, что мы пишем для компьютера. Программы и правда хороши для этого, но они также полезны в других местах. Вы можете написать свою собственную игру или даже запрограммировать робота, чтобы он делал что-либо для вас.'
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Мое имя Иеремия. Привет! Мне семь лет. Я люблю играть на компьютере своей мамы, но я всегда сперва спрашиваю разрешения. "Мам, можно мне поиграть на компьютере? Конечно, милая!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 'Я люблю компьютер своей мамы, потому что я могу выходить в Интернет. Интернет - это что-то вроде твоего района. Ты можешь посещать классные места, ты можешь общаться со своей семьей и друзьями и ты можешь узнать много нового.'
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: Вчера я была в зоопарке, который рядом с моим домом. Я видела детеныша зебры. Я сфотографировала ее и поменяла цвета ее полосок, затем добавила шляпу и добавила это в свою коллекцию забавных животных. Невероятно! Потом я поехала далеко-далеко. Я побывала в Кении. Это страна в Африке. Там живут много зебр.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: 'Иногда в Интернете я разговариваю с людьми, которых знаю, как моя бабушка, которая живет в другой области. Привет, бабуля! Она печет печенье, которое отправляет мне на день рождения. "Вкуснятина, вот бы Интернет передавал запах!" Я могу разговаривать с разными людьми в Интернете, например, с двоюродным братом, но я разговариваю только с людьми, которых знаю.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: 'Что я люблю делать в Интернет, так это играть в забавные игры. Выиграл! Также мне нравиться рисовать и создавать новые вещи и делиться ими со своими друзьями. Круто! Иногда я захожу на сайты, на которых узнаю что-то новое, но я всегда "застреваю" на сайтах, которые мне интересны. Ух ты, динозавры!'
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'Интернет супер весёлое место. Но когда вы становитесь он-лайн, вы должны быть так же осторожны как при переходе улицы в своём районе. Запомните три правила. Правило номер 1: сначала спросите ваших родителей. Правило номер 2: разговаривайте только с людьми, которых вы знаете. Правило номер 3: придерживайтесь мест, которые вам подходят.'
       7:
         image: notes/C1_going_places_safely_7.png
         text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: Сегодня мы собираемся учиться парному программированию. В парном программировании вы работает как команда. Почему двум людям следует пользоваться одним компьютером? Потому что две головы лучше, чем одна. В парном программировании вы и ваш партнёр садитесь вместе за один компьютер и вы вдвоём работаете над одним проектом.
       2:
         image: notes/C1_pair_programming_2.png
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: 'В парном программировании один человек водитель, а другой - штурман, как при вождении автомобиля. Водитель сидит за компьютером и с помощью клавиатуры и мышки или сенсорного экрана управляет основными действиями компьютера. Другой человек штурман. Штурман помогает водителю отвечать на его вопросы и указывает возможные проблемы или ошибки.'
       3:
         image: notes/C1_pair_programming_3.png
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: Общение это ключ к успеху в парном программировании. Без оскорблений, будьте вежливыми, не будьте высокомерным штурманом, потому что никому не нравятся надоедливые пассажиры. Вам и вашему партнёру следует всегда общаться. Водитель может объяснить, что она или он делают. А штурман может предложить помощь, что делать дальше.
       4:
         image: notes/C1_pair_programming_4.png
         text: The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team.
@@ -592,10 +591,10 @@ ru:
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: Одна из вещей, в которых компьютеры действительно хороши, это повторение команд. Как человеку, тебе становится действительно скучно делать одни и те же вещи много раз подряд. Но компьютер может выполнять одно и то же миллионы или даже миллиарды раз подряд и не только не скучать, но и прекрасно себя чувствовать.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Например, если бы я хотел поздравить всех с днем рождения на Фейсбук, это могло бы потребовать более века для написания и отправки всех этих электронных писем. Но с помощью всего нескольких строк кода я могу получить систему, которая отправит всем электронные письма с поздравлениями.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
@@ -670,14 +669,14 @@ ru:
         text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Ой, у нас проблема! Длина усов кошки 75 пикселей, а не 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Вы когда-нибудь слышали об отладке программы? Это способ, с помощью которого ты выясняешь, что не работает. Когда ты отлаживаешь свой код, ты определяешь и устраняешь ошибки.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: 'У нас есть несколько блоков в рабочем пространстве. Мы будем использовать кнопку "Шаг" для прохода через блоки, шаг за шагом, чтобы увидеть, является ли это решение правильным и где нам может потребоваться его исправить.'
       3:
         image: notes/C2_bee_debugging_3.png
         text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
@@ -690,7 +689,7 @@ ru:
         text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
       3:
         image: notes/C2_digital_footprint_3.png
-        text: "Use your arms to hug your pet, to keep your clothes from getting wet, and to wear your favorite sleeves and to help you fly and make believe. Use your arms when you're online, to take break and balance time and leave your tech behind and to find yourself a tree to climb. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Используйте свои руки, чтобы обнимать своего питомца, чтобы защитить свою одежду от промокания и чтобы носить свои любимые рукава и для того, чтобы летать и заставить тебя поверить. Используйте свои руки, когда вы онлайн, чтобы сделать перерыв и сохранить баланс времени и оставить свою технику позади и найти дерево, чтобы на него вскарабкаться. От макушки до кончиков пальцев, сделайте паузу, подумайте об этом. От ваших ног до кончика носа, сделайте паузу и думайте в режиме онлайн!
       4:
         image: notes/C2_digital_footprint_4.png
         text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
@@ -714,24 +713,24 @@ ru:
         text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: Если вы пишете алгоритм для компьютера, вам необходимо разбить его на маленькие шаги. Сначала закончите этот ряд и переходите к следующему, а затем к следующему за ним и дело будет сделано.
       4:
         image: notes/C2_graph_paper_4.png
         text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started.
+        text: Здесь мы будем использовать блок повтора, это поможет нам сохранить шаги во время программирования нашего художника. У нас уже есть несколько блоков на сцене, но они там простодля того, чтобы было с чего начать.
       2:
         image: notes/C2_artist_loops_2.png
-        text: To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square.
+        text: 'Чтобы зациклить эти блоки четыре раза для того, чтобы нарисовать целый квадрат, мы просто перетащим блок "повторить" и поместим блоки "двигаться вперед" и "повернуть направо" внутри блока "повторить". Когда мы нажмем "запуск", художник будет повторять эти шаги четыре раза, чтобы закончить квадрат.'
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: "A loop is a repetition of activity. Going into a hive to inspect, I look at a frame, and then I put it back. I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: 'Цикл - это повторение действия. Заходя в улей на проверку, я смотрю на рамку и затем возвращаю ее на место. Я повторяю одно и то же действие несколько раз. Процесс зацикливается, повторяя одно и то же действие несколько раз.'
       2:
         image: notes/C2_bee_loops_2.png
-        text: "This is the repeat block. Whatever you put inside the repeat block will repeat those actions the number of times that you tell it to. For example, in this level, rather than drag out move forward and get nectar three times, we're going to just drag them out once each and repeat the action three times. That made it easy!"
+        text: 'Это блок "повторить". Что бы вы не поместили внутрь блока "повторить", оно будет повторяться количество раз, которое вы ему сообщите. Например, на этом уровне, вместо того, чтобы перетаскивать блоки "двигаться вперед" и "собирать нектар" три раза, мы собираемся просто перетащить их один раз каждый и повторить действие три раза. Это намного проще!'
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -843,10 +842,10 @@ ru:
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Вы когда-нибудь слышали об отладке программы? Это способ, с помощью которого ты выясняешь, что не работает. Когда ты отлаживаешь свой код, ты определяешь и устраняешь ошибки.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
+        text: 'У нас есть несколько блоков в рабочем пространстве. Мы будем использовать кнопку "Шаг" для прохода через блоки, шаг за шагом, чтобы увидеть, является ли это решение правильным и где нам может потребоваться его исправить.'
       3:
         image: notes/C3_debugging_bee_3.png
         text: "Looks like there's our problem! We need one more move forward block. The step button helps us debug our problem by identifying where the error is so we can fix it."
@@ -1386,25 +1385,25 @@ ru:
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        text: 'Внутри блоков мы использовали JavaScript. Это самый популярный язык для профессиональных разработчиков сегодня. Блоки - это лучший способ начать изучать программирование. Ведущие университеты, такие как Гарвард и Беркли начинают обучение таким же способом. Но как только вы изучили основы, инженеры пишут код печатая текст, что позволяет им программировать быстрее.'
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Мы можем печатать тысячи команд без поиска их в панели инструментов или необходимости переносить их оттуда. Когда вы учитесь печатать, сначала это может быть медленно, но всё равно попробуйте.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: 'В верхнем правом углу рабочей области любой головоломки вы можете нажать кнопку "показать текст", чтобы переключиться от блоков к тексту кода.'
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: В следующем уроке мы начнем печатать. Здесь вы можете перетаскивать блоки из панели инструментов или вы можете вводить имя команды. При вводе, вы увидите имена возможных команд внизу где вы печатаете. Вместо того, чтобы вводить всю команду полностью, вы можете выбрать одну из них, чтобы двигаться быстрее. В моей работе, я использую эту функцию автозаполнения всё время при написании кода.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Когда вы печатаете код, вы должны быть очень точными. Вам нужно написать имя команды правильно, использовать правильные заглавные и строчные буквы, а также скобки и точки с запятой. Даже при небольшой опечатке, ВВ-8 не сможет понять код и не сможет двигаться.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Если вы сделаете ошибку, текстовый редактор подчеркнёт эту строку, чтобы вы могли её исправить.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: 'Если вы застряли, нажмите начать сначала и переключитесь назад к блокам, нажав кнопку в правом верхнем углу. Давайте попробуем напечатать! Если сделаете ошибки - не расстраивайтесь. Каждый ученик должен сделать несколько попыток, прежде чем получится правильно.'
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -1426,10 +1425,10 @@ ru:
         text: 'Мы возьмем блок события "когда вверх" и прикрепим к нему блок движения вверх. Когда игрок нажмет кнопку вверх - выполнится код, прикрепленный к этому блоку. Так же мы заставим R2-D2 двигаться вниз.'
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: Чтобы сделать это, мы используем команду когдаВверх(). Когда вы перенесёте команду из панели инструментов, вы увидите, что она начинается и заканчивается фигурной скобкой вместо точки с запятой. Это даёт вам место, чтобы разместить ваши команды посередине. Каждая команда внутри этих скобок будет выполнена когда игрок нажмёт кнопку со стрелкой вверх.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Мы хотим, чтобы R2-D2 пошёл наверх, поэтому добавьте блок идтиВверх() внутрь команды. Сделайте то же самое, чтобы R2-D2 пошёл вниз.
       9:
         image: notes/starwars_events_9.JPG
         text: А теперь вместо того, чтобы писать весь код управления дроидом заранее, можно позволить R2-D2 реагировать на нажатие кнопок для движения по экрану. Шаг за шагом игра становится все более интерактивной.
@@ -1498,10 +1497,10 @@ ru:
         text: 'Мы же заставим R2-D2 двигаться вверх, чтобы доставить сообщение Пилоту повстанцев, а потом - двигаться вниз к другому пилоту. Мы используем события, чтобы он двигался. Игрок использует клавиши вверх/вниз или кнопки вверх/вниз.'
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Мы используем блок событий когдаВверх() и прикрепим к нему блок идтиВверх(). Когда игрок нажмёт на кнопку вверх, выполнится код прикреплённый к блоку когдаВверх(). И мы сделаем то же самое, чтобы R2-D2 двигался вниз. Теперь, вместо того, чтобы писать заранее весь код для управления дроидом, R2-D2 будет реагировать на события при нажатии кнопок, которые двигают его по экрану.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Шаг за шагом, ваша игра становится более интерактивной.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -1687,7 +1686,7 @@ ru:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Белое поле справа – это рабочее пространство, в котором мы пишем программу. '
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

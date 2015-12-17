@@ -250,57 +250,10 @@ bs:
     remove: (ukloni učitelja)
     confirm:
       remove: Jesi li siguran/na da želiš ukloniti ovog učitelja?
-    tools: Alati za učitelja
-    followers:
-      section: 'Odjeljenje:'
-      stages: 'Faze za prikaz:'
-      show_past: 'Pokaži dosadašnje aktivnosti učenika (%{bullet_html}):'
-      levels_key: Ključ nivoa
-      perfect: Završeno, savršeno
-      completed: Završeno, ali uz upotrebu previše blokova
-      tried: Pokušano, ali nezavršeno
-      not_tried: Još nije pokušano
-      activity: 'Označava učeničke aktivnosti u zadnjih %{hours} %{plural}'
-      no_section: Nema dodijeljenog odjeljenja
-      trophies: Trofeji
     students:
-      name: Ime
-      username: Korisničko ime
-      password: Šifra
-      manage: Upravljanje učenicima
       dashboard: Idi na upravljačku ploču učitelja
-      add: Dodavanje učenika
-      remove: ukloni učenika
-      confirm_remove: Jesi li sigurnan/na da želiš ukloniti ovog učenika?
-      help_reassign: Da biste podijelili razred u više odjeljenja, odaberite učenike za dodjelu u novo odjeljenje.
-      help_register: Umjesto da potrošite puno vremena pojedinačno uvozeći podatke o učenicima, možete brzo napraviti svoj razred tako da ih zamolite da se sami prijave. Vaši učenici će trebati odabrati korisnička imena i lozinke, ali od njih NEĆE biti zatraženo da daju adresu e-pošte. Ako učenik zaboravi svoju lozinku, bit ćete u mogućnosti da je resetirate.
-      register: Zamolite učenike da se sami registriraju
-      vist: Zamolite učenike da posjete
-      section_code: 'i unesite svoju šifru za odjeljenje:'
-      first_please: 'Molimo, prvo %{add_section}'
-      for: Za
-      enter: 'unesi:'
-    sections:
-      add: Dodaj odjeljenje
-      manage: Upravljaj odjeljenjima
-      section: Odjeljenje
-      students: Učenici
-      section_code: Šifra odjeljenja
-      add_section_code: Dodaj učeničke šifre odjeljenja
-      secret: Tajni način
-      grade: Razred
-      course: Kurs
-      rename: preimenuj
-      edit: uredi
-      delete: izbriši
-      confirm_delete: Jeste li sigurni da želite izbrisati ovo odjeljenje?
-      email: Pošalji u e-pošti
-    rollup: Upravljačka ploča napretka
-    activity: Nedavna aktivnost razreda
-    user_not_found: Učitelj ili učenik nije pronađen
-    cant_remove_student_no_email: '%{student_name} se ne može ukloniti kao vaš učenik jer %{student_name} nema registrovanu e-mail adresu'
-    cant_remove_teacher_no_email: '%{teacher_name} ne može biti uklonjen kao vaš učitelj jer niste registrirali e-mail adresu'
-    student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Preglednik Odgovora
       student: Učenik
@@ -374,6 +327,7 @@ bs:
   share:
     title: Naučite o Code Studiu
     description: Svako može naučiti računarske znanosti, te pisati kod za igre, aplikacije i umjetnost.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Muško
     female: Žensko
@@ -385,8 +339,8 @@ bs:
     thank_you: 'Zahvaljujemo našim <a href="https://code.org/about/donors"> donatorima</a>, <a href="https://code.org/about/partners"> partnerima</a>, našem <a href="https://code.org/about/team"> timu</a> i našim <a href="https://code.org/about/advisors"> obrazovnim savjetnicima</a> na njihovoj podršci u stvaranju Code Studia.'
     help_from_html: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli napraviti ovaj tutorijal.
     help_from_html_old: Inženjeri iz Google-a, Microsoft-a, Facebook-a i Twitter-a su pomogli napraviti ove materijale za učenje.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Sva prava pridržana.'
-    art_from_html_old: 'Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc. (sva prava pridržana)'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Potpomognuto sa Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour of Code&reg; su zaštitni znaci tvrtke Code.org.'
     copyright: Autorska prava
@@ -403,6 +357,7 @@ bs:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Trebaš li pomoć?
     subtitle: Pogledaj ove videozapise i savjete

@@ -27,7 +27,7 @@
   "honeycombFullError": "මෙම මීවදයෙ මී පැනි එකතු කරන්න තව ඉඩ නැත.",
   "ifCode": "if",
   "ifInRepeatError": "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked.",
-  "ifPathAhead": "if path ahead",
+  "ifPathAhead": "පාරක් තිබෙයි නම්",
   "ifTooltip": "If there is a path in the specified direction, then do some actions.",
   "ifelseTooltip": "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
   "ifFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do some actions.",

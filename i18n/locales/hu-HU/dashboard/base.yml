@@ -249,57 +249,10 @@ hu:
     remove: (tanár eltávolítása)
     confirm:
       remove: Biztosan el szeretné bocsátani ezt a tanárt?
-    tools: Tanári eszközök
-    followers:
-      section: 'Szakasz:'
-      stages: 'Elérhető szintek:'
-      show_past: 'Mutasd meg a diákok tevékenységét (%{bullet_html}):'
-      levels_key: Szint kódja
-      perfect: Tökéletesen megcsináltad
-      completed: Sikeresen megcsináltad de túl sok blokkot használtál
-      tried: Megpróbáltad, de nem sikerült
-      not_tried: Még nem próbáltam
-      activity: 'Diákok tevékenységét jelzi az utóbbi %{hours}%{plural} órában'
-      no_section: Nincs feladott szakasz
-      trophies: trófeák
     students:
-      name: Név
-      username: felhasználónév
-      password: jelszó
-      manage: Diákok kezelése
       dashboard: Vissza a Tanári Nyitólapra
-      add: Diákok hozzáadása
-      remove: diák eltávolítása
-      confirm_remove: Biztos el akarod távolítani ezt a diákot?
-      help_reassign: Ahhoz, hogy az osztályodat több részre oszd, válassz ki néhány diákot, és adj fel nekik egy új szakaszt.
-      help_register: Ahelyett, hogy neked kéne sok időt töltened azzal, hogy egyesével hozzáadd a diákjaidat a csoportodhoz, megkérheted őket, hogy regisztráljanak az osztályodba. A diákjaidnak meg kell adniuk egy felhasználó nevet és jelszót, de nekik NEM kell e-mail címet megadniuk. ha egy diák elfelejti a jelszavát, te újat tudsz neki adni.
-      register: Kérd meg a diákjaidat, hogy regisztrálják magukat
-      vist: Kérd meg a diákjaidat, hogy látogassák meg
-      section_code: 'és írják be ezt a kódot:'
-      first_please: 'Először is kérjük, %{add_section}'
-      for: nak
-      enter: 'írd be:'
-    sections:
-      add: Adj hozzá egy szakaszt
-      manage: Vezetési szakasz
-      section: Szakasz
-      students: Diákok
-      section_code: Szakasz kódja
-      add_section_code: Adj a listához diákokat a kódjukkal
-      secret: Titkos
-      grade: Évfolyam
-      course: Tanfolyam
-      rename: átnevezés
-      edit: szerkeszt
-      delete: törlés
-      confirm_delete: Biztos vagy benne, hogy törölni szeretnéd ezt a szakaszt?
-      email: Küldj e-mailt
-    rollup: Nyomonkövetési felület
-    activity: Legutóbbi osztálytermi aktivitás
-    user_not_found: A tanár vagy a diák nem található
-    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert %{student_name} nem regisztrált e-mail címet'
-    cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál e-mail címet'
-    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára a rendszerben'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Válasz megtekintő
       student: Diák
@@ -373,6 +326,7 @@ hu:
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat, alkalmazásokat vagy alkoss a kódolás segítségével!
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Férfi
     female: Nő
@@ -384,8 +338,8 @@ hu:
     thank_you: 'A Kód Stúdió létrehozásában segítettek minket támogatóink: <a href="https://code.org/about/donors">, partnereink: </a>, <a href="https://code.org/about/partners">tágabb csapatunk tagjai:</a>, our <a href="https://code.org/about/team">videó stábunk tagjai: </a>, és oktatási tanácsadóink: <a href="https://code.org/about/advisors">education advisors</a>, akiknek köszönetet mondunk a támogatásért.'
     help_from_html: A Google, a Microsoft, a Facebook és a Twitter mérnökei segítettek létrehozni ezt a gyakorlatot.
     help_from_html_old: A Google, Microsoft, Facebook, és a Twitter mérnökei segítettek létrehozni ezeket a tartalmakat.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Minden jog fenntartva.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Az Amazon Web Services működteti
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az Hour of Code&reg; a Code.org védjegyei.'
     copyright: Szerzői jog
@@ -399,9 +353,10 @@ hu:
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Készült a Code Studio seggítségével
+    make_my_own_app: Készítsd el saját alkalmazásod
+    how_it_works: Hogyan működik
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
@@ -458,7 +413,7 @@ hu:
       unused: Nem használt szintek
   upsell:
     hoc:
-      title: Classic Maze
+      title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód

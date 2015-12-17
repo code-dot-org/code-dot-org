@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Välkommen till din första Hour of Code! Vi kastar oss direkt in i ditt
-          första smakprov på programmering.
+        text: Välkommen till din första Kodtimme! Vi kastar oss direkt in i ditt första
+          smakprov på programmering.
       2:
         image: notes/hoc1_2.jpg
         text: Vi kommer använda Blocky, ett visuellt programmeringsspråk där du drar
@@ -372,20 +372,20 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hej, är mitt namn Lyndsey. Jag designar, programmerar och skriver min
-          egen appar. Låt oss använda kod för att följa med Anna och Elsa när de utforskar
-          magin och skönheten med is.
+        text: Hej, är mitt namn Lyndsey. Jag är modell, skådespelare och skriver mina
+          egna appar. Låt oss använda kod för att följa med Anna och Elsa när de utforskar
+          isens magi och skönhet.
       2:
         image: notes/frozen1_2.jpg
-        text: Du kommer att skapa snöflingor och mönster när du åker skridskor och
-          gör ett vinterlandskap som du sedan kan dela med dina vänner.
+        text: Du kommer att skapa snöflingor och mönster medan du åker skridskor och
+          skapa ett vinterlandskap som du sedan kan dela med dina vänner.
       3:
         image: notes/frozen1_3.jpg
-        text: Under nästa timme kommer du att lära sig grunderna i hur man kodar.
-          Traditionell programmering är oftast i text, men vi kommer att använda Blockly,
-          som använder block som du kan dra och släppa för att skriva program. Detta
-          är även hur universitets studenter lära sig grunderna. Under blocken skapas
-          fortfarande kod.
+        text: Under nästa timme kommer du att lära dig grunderna i hur man kodar.
+          Traditionell programmering är oftast textbaserad, men vi kommer att använda
+          Blockly, som använder block som du kan dra och släppa för att skriva program.
+          Det är så till och med universitetsstudenter lär sig grunderna. Under ytan
+          skapar du fortfarande kod.
       4:
         image: notes/frozen1_4.jpg
         text: Ett program är en uppsättning instruktioner som talar om för en dator
@@ -721,10 +721,10 @@
           faller av hela tiden.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: Jag gick igenom varje del steg och insåg var mitt misstag var. Jag satte
-          inte mina händer korrekt på balken. Så jag provade en bakåt volt på balken
-          med min nya handposition och jag klarade den. Jag var verkligen glad att
-          jag felsökte min bakåtvolt.
+        text: Jag gick igenom varje del steg för steg och förstod var jag gjorde ett
+          misstag. Jag satte inte mina händer korrekt på balken. Så jag provade ytterligare
+          en bakåt-handvolt på balken med min nya handposition och jag klarade den.
+          Jag var verkligen glad att jag felsökte min bakåt-handvolt.
       3:
         image: notes/C1_maze_debugging_3.png
         text: För att läsa oss om felsökning börjar vi med en uppsättning block på
@@ -1270,12 +1270,13 @@
           sedan fixa det.
       4:
         image: notes/C2_relay_programming_4.png
-        text: Här, jag försöker göra en bakåtvolt, men jag bara faller av. Jag går
-          igenom varje del, steg för steg, och inser var mitt misstag är. Min tränare
-          visade mig att jag inte satte mina händer på balken korrekt. Så jag försökte
-          en annan bakåtvolt på balken med min nya hand sättning, och jag klarade
-          det! Jag var verkligen glad att jag felsökte min bakåtvolt. Vi kom på det!
-          Felsökning är att hitta och åtgärda problem. Nice, bra jobb!
+        text: Här försöker jag göra en bakåt-handvolt, men faller bara av. Jag går
+          igenom varje del, steg för steg, och förstår vad mitt misstag var. Min tränare
+          visade mig att jag inte satte mina händer på balken korrekt. Så jag gjorde
+          ytterligare försök till en bakåt-handvolt på balken med min nya handisättning,
+          och jag klarade det! Jag var verkligen glad att jag felsökte min bakåt-handvolt.
+          Vi kom på det! Felsökning är att hitta och åtgärda problem. Härligt, bra
+          jobbat!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
@@ -3040,84 +3041,86 @@
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Om du vill göra ditt eget spel, är det jättelätt. Allt du behöver kunna
+          är grunderna i programmering och du kan sedan börja spela ett spel som du
+          har skapat alldeles själv.
       2:
         image: notes/iceage_intro_2.JPG
-        text: Do you have a favorite video game? We're going to take one step toward
-          creating games just like that in PlayLab. Good games have a story and every
-          story has actors. Actors that do things like speak, move and interact with
-          each other. Maybe even score points based on the rules of the game. Today,
-          we'll be learning how to do all these things one by one with fun actors
-          and then build a game from scratch that can be shared and played on a phone.
+        text: Har du ett favorit TV-spel? Vi kommer att ta ett steg mot att skapa
+          sådant spel i PlayLab. Bra spel har en historia och varje historia har skådespelare.
+          Skådespelare som gör saker som att tala, flytta och interagera med varandra.
+          De kanske även får poäng baserat på reglerna i spelet. I dag kommer vi att
+          lära oss hur man gör alla dessa saker steg för steg med roliga skådespelare
+          och sedan bygger vi ett spel från grunden som kan delas och spelas på en
+          telefon.
       3:
         image: notes/iceage_intro_3.JPG
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
+        text: I dag kommer vi att lära oss hur man gör alla dessa saker steg för steg
+          med roliga skådespelare och sedan bygga ett spel från grunden som kan delas
+          och spelas på en telefon.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Din skärm är indelad i tre delar. Till vänster är spelytan där programmet
+          körs. Instruktionerna för varje nivå skrivs nedan.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Det mellersta området är verktygslådan och vart och ett av dessa block
+          är en bit kod.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det vita utrymmet till höger kallas arbetsytan, och det är här vi kommer
+          bygga vårt program.
       7:
         image: notes/iceage_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: För att komma igång måste du koppla ihop dina block med det orangea
+          "Vid start"-blocket. Du kan koppla ihop flera block genom att dra dem tills
+          du ser den gula linjen, och sedan kommer de att fästas ihop.
       8:
         image: notes/iceage_intro_8.JPG
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
+        text: I detta första pussel får vi skådespelarna att säga något genom att
+          länka "säga" blocket till "Vid start"-blocket och att skriva in ditt meddelande.
+          När du har dina block på plats, tryck knappen kör för att se vad du programmerat.
       9:
         image: notes/iceage_intro_9.JPG
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
+        text: Kom igång och när du är färdig kommer du att kunna skapa ditt eget spel
+          med flera typer av spelare som kan interagera, få poäng, kasta saker och
+          få varandra att försvinna. Det är du som bestämmer!
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
+        text: Nu ska du få lära dig något som alla spelprogrammerare använder varje
+          dag. De kallas händelser. En händelse berättar för ditt program att lyssna
+          efter när något händer. När händelsen inträffar i spelet utför programmet
+          en instruktion.
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
+        text: Några exempel på händelser är att programmet väntar på ett musklick,
+          piltangent upp, piltangent ner eller ett tryck på skärmen.
       3:
         image: notes/iceage_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: Här ska vi att göra så att skådespelaren säger något när spelaren klickar
+          på den. Vi kommer att använda "när klickad på"-blocket och bifoga blocket
+          "säg" till det. När spelaren klickar kommer att alla block som bifogats
+          detta block att utföras.
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: Det finns också "Pil"-block. Om du länkar "Flytta"-block till dem kan
+          du flytta ditt skådespelare upp, ner, vänster och höger med piltangenterna.
+          Steg för steg blir ditt spel mer interaktivt.
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: Föreställ dig att du var tvungen att upprepa något om och om igen för
+          all framtid. Förhoppningsvis slipper du göra det eftersom datorer är riktigt
+          bra på att upprepa saker.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: Detta är ett "Upprepa för evigt"-block. Allt inuti detta block kommer
+          att hända för evigt i spelet. Om vi vill att en skådespelare gör något om
+          och om igen utan att spelaren att gör något så lägger vi dessa block inne
+          i ett "Upprepa för evigt"-block.
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: I nästa pussel är vårt mål att hjälpa skådespelaren gör ett jobb kontinuerligt.
+          När du lär dig hur upprepa-kommandon fungerar så kommer du att spara massor
+          av tid senare när du bygger ditt eget spel.

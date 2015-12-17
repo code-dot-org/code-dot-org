@@ -161,8 +161,8 @@
       invite_student:
         subject: Bli med i en av klassene til %{teacher_name} på Code.org!
       student_disassociated:
-        subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som
-          din elev.'
+        subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet
+          som din elev.'
       teacher_disassociated:
         subject: 'Melding fra Code.org: %{teacher_name} er ikke lenger tilknyttet
           som læreren din.'
@@ -293,62 +293,9 @@
     remove: (Fjern lærer)
     confirm:
       remove: Er du sikker på at du vil fjerne denne læreren?
-    tools: Lærerverktøy
-    followers:
-      section: 'Seksjon:'
-      stages: 'Nivå(er) å vise:'
-      show_past: 'Vis elev aktivitet (%{bullet_html}) i siste:'
-      levels_key: Nivåer nøkkel
-      perfect: Perfekt fulført
-      completed: Fulført, men du brukte for mange blokker
-      tried: Prøvde, men fulførte ikke
-      not_tried: Ikke forsøkt ennå
-      activity: Viser elevens aktivitet i de siste %{hours} %{plural}
-      no_section: Ingen tilordnet seksjon
-      trophies: pokaler
     students:
-      name: Navn
-      username: brukernavn
-      password: passord
-      manage: Administrer elever
       dashboard: Gå til lærer-oversikten
-      add: Legg til elever
-      remove: fjerne elev
-      confirm_remove: Er du sikker på at du vil fjerne denne eleven?
-      help_reassign: For å del klassen inn i flere deler. Velg elever skal tilordnes
-        en ny del.
-      help_register: I steden for å bruke mye tid på å legge til individuell informasjon
-        om eleven, kan du be klassen din registrere seg selv. Elevene dine vil trenge
-        brukernavn og passord, men de trenger ikke å oppgi email adressen sin. Viss
-        en elev glemmer passordet sitt, har du muligheten til å resette det for dem.
-      register: Be elevene registrere seg selv
-      vist: La elevene besøke
-      section_code: 'og angi deres delkode:'
-      first_please: Først kan du %{add_section}
-      for: For
-      enter: 'Angi:'
-    sections:
-      add: Legge til inndeling
-      manage: Administrere deler
-      section: Seksjon
-      students: Elever
-      section_code: Delkode
-      add_section_code: Legg til elevenes delen-kode
-      secret: Hemmelig type
-      grade: Karakter
-      course: Kurs
-      rename: gi nytt navn
-      edit: rediger
-      delete: Slett
-      confirm_delete: Er du sikker på at du vil slette denne seksjonen?
-      email: Sende e-post
-    rollup: Fremdriftsoversikt
-    activity: Nylig klasseaktivitet
     user_not_found: Læreren eller eleven ble ikke funnet
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din elev fordi
-      %{student_name} ikke har registrert en e-postadresse'
-    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer
-      fordi du ikke har registrert en e-postadresse'
     student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
     panel:
       answer_viewer: Visning av svaret
@@ -433,6 +380,7 @@
     title: Lære i Code Studio
     description: Alle kan lære programmering. Lag egne spill, programmer og tegninger
       ved å kode.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mann
     female: Kvinne
@@ -472,6 +420,7 @@
     built_on_code_studio: Bygget i Code Studio
     make_my_own_app: Lag min egen app
     how_it_works: Slik virker det
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Se disse videoene og tipsene
@@ -538,7 +487,7 @@
       unused: Ubrukte nivåer
   upsell:
     hoc:
-      title: Hour of Code (kodetimen)
+      title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
         alt prøvd.
     flappy:

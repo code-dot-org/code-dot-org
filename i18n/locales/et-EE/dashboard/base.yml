@@ -246,57 +246,10 @@ et:
     remove: (eemalda õpetaja)
     confirm:
       remove: Oled kindel, et tahad seda õpetajat eemaldada?
-    tools: Õpetaja töövahendid
-    followers:
-      section: 'Jaotis:'
-      stages: 'Etappide kuvamine:'
-      show_past: 'Kuva õpilase aktiivsus (%{bullet_html}):'
-      levels_key: Tasemete võti
-      perfect: Tehtud, suurepärane
-      completed: Tehtud, kuid liiga paljude plokkidega
-      tried: Proovitud, aga ei lõpetanud
-      not_tried: Pole veel proovinud
-      activity: 'Näitab õpilase aktiivsust viimasel %{hours}%{plural}'
-      no_section: Pole määratud sektsiooni
-      trophies: Trofeed
     students:
-      name: Nimi
-      username: Kasutajanimi
-      password: Salasõna
-      manage: Halda õpilasi
       dashboard: Mine õpetaja menüüsse
-      add: Lisa õpilasi
-      remove: eemalda õpilane
-      confirm_remove: Kas olete kindel et soovite selle õpilase eemaldada?
-      help_reassign: Et oma klassi erinevateks osadeks jagada, valige õpilased keda tahate uude jaotisesse määrata.
-      help_register: Selle asemel, et iga õpilase infot eraldi importida, saate oma klassi kiirelt kokku panna, lastes neil registreeruda. Teie õpilased peavad valima kasutajanimed ja paroolid, aga nad ei pea andma oma meiliaadressi. Kui õpilane unustab oma parooli, saate selle ise lähtestada.
-      register: Palun laske oma õpilastel ise registreeruda
-      vist: Paluge õpilastel külastada
-      section_code: 'ja sisestage nende jaotise kood:'
-      first_please: 'Esiteks, palun %{add_section}'
-      for: Jaoks
-      enter: 'Sisestage:'
-    sections:
-      add: Jaotise lisamine
-      manage: Halda jaotisi
-      section: Jaotis
-      students: Õpilased
-      section_code: Jaotise kood
-      add_section_code: Lisa õpilaste jagu-kood
-      secret: Salajane tüüp
-      grade: Klass
-      course: Kursus
-      rename: nimeta ümber
-      edit: muuda
-      delete: kustuta
-      confirm_delete: Oled kindel, et soovid selle sektsiooni kustutada?
-      email: Saada meiliga
-    rollup: Edusammude ülevaade
-    activity: Hiljutine klassi tegevus
-    user_not_found: Õpetajat või õpilast ei leitud
-    cant_remove_student_no_email: '%{student_name} ei saa eemaldada teie õpilasena, sest %{student_name} ei ole registreeritud e-posti aadressi'
-    cant_remove_teacher_no_email: '%{teacher_name} ei saa eemaldada oma õpetajat, kuna sul pole registreeritud e posti aadress'
-    student_teacher_disassociated: '%{teacher_name} on eemaldatud %{student_name} õpetajana'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Vastuse Vaataja
       student: Õpilane
@@ -370,6 +323,7 @@ et:
   share:
     title: Õpi Code stuudios
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mees
     female: Naine
@@ -381,8 +335,8 @@ et:
     thank_you: 'Me täname oma <a href="https://code.org/about/donors"> sponsoreid </a>,<a href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team"> tervet meeskonda</a>, video tiimi, ja meie <a href="https://code.org/about/advisors"> haridusnõustajaid</a> nende teenete eest Code Studio valmimisele.'
     help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid luua selle õppekeskkonna.
     help_from_html_old: "Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st aitasid luua neid materjale."
-    art_from_html: 'Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Kõik õigused on reserveeritud.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Kõik õigused on reserveeritud.<br />Jääaeg&#8482; &amp; &copy; %{current_year} 20th Century Fox. Kõik õigused on reserveeritud.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused on reserveeritud.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Kõik õigused on reserveeritud'
-    art_from_html_old: 'Vihased Linnud (Angry Birds)&#8482;&amp;&copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Taimed vs Koolnud (Plants vs. Zombies)&#8482;&amp;&copy;%{current_year} Electronic Arts Inc. Kõik õigused kaitstud'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Amazoni poolt toetatud
     trademark: '&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg; on Code.org kaubamärgid.'
     copyright: Autoriõigus
@@ -399,6 +353,7 @@ et:
     built_on_code_studio: Code Studio abil loodud
     make_my_own_app: Oma rakenduse loomine
     how_it_works: Tööpõhimõtted
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid
@@ -455,7 +410,7 @@ et:
       unused: Kasutamata tasemed
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
     flappy:
       title: Flappy kood

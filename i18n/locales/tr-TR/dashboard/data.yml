@@ -517,11 +517,11 @@ tr:
         mc_congrats_share: 'Minecraft - Tebrikler'
         mc_congrats_no_share: 'Minecraft - Tebrikler'
         gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        gumball_events: 'Gumball Kodlama Saati - Olaylar'
+        gumball_repeat: 'Gumball Kodlama Saati - Tekrarlayan İfadeler'
+        iceage_intro: 'Buz Devri Kodlama Saati - Giriş'
+        iceage_events: 'Buz Devri Kodlama Saati - Olaylar'
+        iceage_repeat: 'Buz Devri Kodlama Saati - Tekrarlayan İfadeler'
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

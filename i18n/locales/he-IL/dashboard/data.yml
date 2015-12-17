@@ -102,11 +102,11 @@ he:
         Webapp: מעבדת היישומים
         ArtistEC: האמן
         TextMatch: התאמת טקסט
-        StudioEC: Play Lab
+        StudioEC: מעבדת משחקים
         Applab: מעבדת היישומים
         NetSim: מדמה אינטרנט
         Custom: אמן
-        CustomStudio: Play Lab
+        CustomStudio: מעבדת משחקים
     trophy:
       name:
         Bronze: ארד
@@ -263,17 +263,17 @@ he:
         flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
         jigsaw_1: לחץ על הבלוק
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_2: גרור את הבלוק אל המטרה
+        jigsaw_3: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_4: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_5: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_6: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_7: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_8: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_9: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_10: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_11: ארגן את הבלוקים כדי ליצור תמונה
+        jigsaw_12: ארגן את הבלוקים כדי ליצור תמונה
         jigsaw_13: פתור את החידה!
         mazestep_1: תיאור צעדי ההליכה במבוך כאן
         mazestep_2: תיאור צעדי ההליכה במבוך כאן
@@ -392,7 +392,7 @@ he:
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_bee_level_intro: 'שלב הדבורה - מבוא'
         C1_artist_intro: מבוא לאמן
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
@@ -436,7 +436,7 @@ he:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: מבוא
         C4_loops_zombie: לולאות
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
@@ -513,11 +513,11 @@ he:
         starwars_blocks_intro: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד - מבוא'
         starwars_blocks_events: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד - אירועים'
         starwars_blocks_congrats: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד - מזל טוב'
-        mc_intro: 'Minecraft - מבוא'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'מיינקראפט - מבוא'
+        mc_repeat: 'מיינקראפט - לולאות'
+        mc_if_statements: 'מיינקראפט - אירועי אם ואז'
+        mc_congrats_share: 'מיינקראפט - סיום'
+        mc_congrats_no_share: 'מיינקראפט - סיום'
         gumball_intro: 'Gumball Hour of Code - Introduction'
         gumball_events: 'Gumball Hour of Code - Events'
         gumball_repeat: 'Gumball Hour of Code - Repeat statements'

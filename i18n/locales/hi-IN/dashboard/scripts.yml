@@ -357,9 +357,9 @@ hi:
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Events
-          description: Events
-          description_short: Events
+          title: घटनाएँ
+          description: घटनाएँ
+          description_short: घटनाएँ
           Bounce: Bounce
           Studio: Studio
           Calc: Calc
@@ -1352,6 +1352,21 @@ hi:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1462,12 +1477,12 @@ hi:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015

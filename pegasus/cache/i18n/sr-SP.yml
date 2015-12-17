@@ -28,6 +28,9 @@
   twentyhours_heading: Пробајте наш курс Увод у Компјутерску науку
   twentyhours_text: Завршили сте свој први Сат програмирања?Научите више основа компјутерске
     науке и концепта програмирања у овом курсу који следи.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Придружите се<a href="http://hourofcode.com">Сату програмирања
     </a><br/>8.-14 .децембар,2014<br/>
   hoc2014_students: Students
@@ -42,7 +45,7 @@
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Тражи
   csedweek_map_search_reset: Почни поново
-  csedweek_map_legend_title: Legend
+  csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Региструј се
@@ -328,22 +331,23 @@
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Izgradi Galaksiju sa Code
+  starwars_subtitle: Изгради Галаксију Са Кодом
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Користи повуци-испусти блокове и JavaScript.
+  starwars_javascript_specs: Samo na engleskom | Moderni pretraživači | Uzrasta 11
+    +
   starwars_javascript_start_button: Испробај сада
   starwars_blocks_title: блокови
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Искористи повуци-спусти блокове.
+  starwars_blocks_specs: Више језика | Савремени прегледачи, паметни телефони, таблети
+    | Узраст 6-10
   starwars_blocks_start_button: Испробај сада
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Пре него што почнеш, погледај један од ових инспиративних
+    видео снимака
+  starwars_speak_languages: Govoriš li neki drugi jezik?
+  starwars_help_translate: Pomozi nam da prevedemo
   starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Minecraft sat programiranja
+  mc_name: Мајнкрафт час програмирања
   mc_longdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
     кроз овај Мајнкрафт свет.
   mc_shortdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
@@ -351,7 +355,7 @@
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft sat programiranja
+  minecraft_subtitle: Мајнкрафт час програмирања
   volunteer_engineer_submission_title: Volunteer for the Hour of Code
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
@@ -375,6 +379,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and find a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Име
@@ -679,7 +684,13 @@
   dashboard_faq: Често постављана питања
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announce_view_all: Prikaži sve
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Сазнајте више
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -755,7 +766,7 @@
     веб читач.</a>
   mobile_devices: Туторијали за мобилне уређаје
   frozen_name: Програмирај са Аном и Елзом
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
+  starwars_name: 'Ratovi Zvezda: Izgradi Galaksije sa Kôdom'
   codeorg_name: Напиши свој први компјутерски програм
   codeintl_name: Напиши свој први компјутерски програм
   thinkersmithspanish_name: Mis Amigos Roboticos

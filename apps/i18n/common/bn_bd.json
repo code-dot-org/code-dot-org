@@ -172,7 +172,11 @@
   "help": "সাহায্য",
   "hideToolbox": "(লুকান)",
   "hintHeader": "এখানে একটি ইঙ্গিত:",
+  "hintPrompt": "Need help?",
   "hintRequest": "ইঙ্গিত দেখুন",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "সংকেত:",
   "ignore": "উপেক্ষা করুন",
   "infinity": "অসীম",
@@ -243,9 +247,5 @@
   "watchVideo": "ভিডিও দেখুন",
   "when": "যখন",
   "whenRun": "চালানোর সময়",
-  "workspaceHeaderShort": "কর্মপরিসর:",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "কর্মপরিসর:"
 }

@@ -172,7 +172,11 @@
   "help": "Ayuda",
   "hideToolbox": "(Ocultar)",
   "hintHeader": "Aquí hay un consejo:",
+  "hintPrompt": "¿Necesitas ayuda?",
   "hintRequest": "Ver pista",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Sugerencia:",
   "ignore": "Ignorar",
   "infinity": "Infinito",
@@ -243,9 +247,5 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Espacio de trabajo: "
 }

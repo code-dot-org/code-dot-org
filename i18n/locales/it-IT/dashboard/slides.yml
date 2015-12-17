@@ -740,7 +740,7 @@ it:
         text: Usa la tua pancia per il mangiare e per ascoltare il suo brontolare, per dare una panciata e per sentire il gas nella bevanda gassata. Usa la tua pancia quando sei connesso, per riconoscere un segnale espresso e per farti guidare bene e dirti quando non conviene. Dalla testa fino ai tuoi piedi, fermati, riflettici adesso. Dai tuoi piedi fino al naso, fermati e pensa connesso!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
+        text: Quindi, pensa con la tua testa e senti con il tuo cuore, stai in equilibrio con le braccia e ascolta la tua pancia, online. Usa le tue gambe per correre e calciar, per saltare e rimbalzare sui trampoli con molla e per ballare intorno al blocco e per saltare lungo coi tuoi calzini maleodoranti. Usa le tue gambe quando sei online, per alzarti davanti ai bulli che attraversano la linea e ricordati di puntare in alto, sii gentile con creature grandi e piccole.
       6:
         image: notes/C2_digital_footprint_6.png
         text: From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!
@@ -1246,7 +1246,7 @@ it:
         text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+        text: "In qualsiasi momento avete bisogno di memorizzare una informazione per un successivo utilizzo, usate una variabile. Supponiamo che abbiamo bisogno di contare il numero di volte che l'utente ha twittato. Ogni volta che l'utente invia un Tweet, aggiungeremo uno a quel numero e ogni volta che l'utente elimina un tweet lo toglieremo. Ogni volta che abbiamo bisogno di sapere quante volte che l'utente ha twittato ci basterà guardare le variabile."
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png

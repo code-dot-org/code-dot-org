@@ -29,6 +29,9 @@
   twentyhours_heading: Hãy thử xem bản giới thiệu của khóa học khoa học máy tính
   twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các
     khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng
     8 đến 14 tháng 12, 2014 <br/>
   hoc2014_students: học viên
@@ -85,8 +88,8 @@
   congratulations_on_completing_course: Xin chúc mừng đã hoàn thành %{course} khóa
     học
   congrats_next_tutorials_title: Thực hiện các hướng dẫn tiếp theo
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_desc: Hảy thữ những bài hướng dẫn ngắn hơn (dài khoảng 1
+    tiếng), hoặc là thử <a href="%{current_path}/next"> đối tác hướng dẫn</a>.
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
   enter_valid_age: Vui lòng chọn tuổi hợp lệ
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
@@ -228,15 +231,15 @@
   homepage_slot_text_course4: Khóa học 4
   homepage_slot_text_shop: Mua sắm
   homepage_slot_text_flappy: Lập trình Flappy
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Một Giờ Mã Lập Trình dành cho tất cả học sinh.
   homepage_action_text_num_served: phục vụ
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Hãy tham gia với chúng tôi
   homepage_action_text_sign_up: Đăng ký
   homepage_action_text_try_it: Hãy thử nó
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Cần tình nguyện viên kỹ thuật
   homepage_action_text_codevideo: Xem video
   homepage_action_text_teachervideo: Xem video
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Truyền cảm hứng cho một cô gái
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
@@ -320,9 +323,9 @@
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  playlab_iceage_title: Kỉ băng hà -sắp ra mắt
+  playlab_iceage_title_live: Kỉ băng hà
+  starwars_subtitle: Xây dựng vũ trụ bằng mã lập trình
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
@@ -369,14 +372,15 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and find a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Tên
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_name_placeholder: Họ tên đầy đủ
+  volunteer_engineer_submission_field_company: Công ty (hoặc Đại Học)
+  volunteer_engineer_submission_field_company_placeholder: Công ty (hoặc Đại Học)
+  volunteer_engineer_submission_field_experience_level: Kinh nghiệm
+  volunteer_engineer_submission_field_location: Địa điểm
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -681,6 +685,12 @@
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Tìm hiểu thêm
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -696,9 +706,9 @@
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+  learn_educator_resources_button: Tài nguyên giáo dục
+  learn_are_you_educator: Bạn có phải giáo viên? Xem <a href="http://hourofcode.com/resources/how-to">cách
+    dạy Hour of code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
@@ -714,20 +724,20 @@
     tôi
   hoc2014_try_scrat: Angry Birds, PvZ, và Scrat
   hoc2014_try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg: Hướng dẫn bởi Code.org
+  carousel_heading_codeorg_any_device: Hướng dẫn bởi Code.org ( cho tất cả thiết bị)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Các hướng dẫn bằng ngôn ngữ của bạn
   carousel_heading_domestic: Hướng dẫn có sẵn bằng tiếng Anh
   carousel_heading_beginners: Hướng dẫn cho người mới bắt đầu
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: Hướng dẫn cho người mới bắt đầu
   carousel_heading_javascript: Hướng dẫn dạy JavaScript
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Không có thiết bị hoặc internet? Thử rút khỏi khoa học
     máy tính
   carousel_heading_devices: Hướng dẫn viết ứng dụng cho điện thoại và máy tính bảng
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Hướng dẫn cho điện thoại hoặc máy tính bảng
   carousel_heading_languages: Các hướng dẫn trong các ngôn ngữ lập trình khác
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Làm ứng dụng hoặc trò chơi của riêng bạn
@@ -757,8 +767,8 @@
   mobile_devices: Hướng dẫn cho thiết bị di động
   frozen_name: Mã hóa cùng  Anna và Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Viết chương trình máy tính đầu tiên của bạn
-  codeintl_name: Viết chương trình máy tính đầu tiên của bạn
+  codeorg_name: Mê cung cổ điển
+  codeintl_name: Mê cung cổ điển
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Giới thiệu chung về JavaScript
   khanes_name: Giới thiệu chung về JavaScript
@@ -794,7 +804,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Viết chương trình máy tính đầu tiên của bạn
+  hourofcode_name: Mê cung cổ điển
   playlab_name: Phòng trò chơi
   infinity_name: Phòng thí nghiệm Vui Chơi Bất Tận
   artist_name: Nghệ sĩ
@@ -903,15 +913,15 @@
   codesters_platformtext: Modern web browsers
   texasinstruments_platformtext: TI Calculators
   teacherled_platformtext: Modern browsers, smartphones, tablets
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeorg_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
+  codeintl_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  khanpt_shortdescription: Learn to draw in JavaScript
-  khanhe_shortdescription: Learn to draw in JavaScript
-  khanfr_shortdescription: Learn to draw in JavaScript
-  khanpl_shortdescription: Learn to draw in JavaScript
+  khan_shortdescription: Học cách vẽ trên JavaScript
+  khanes_shortdescription: Học cách vẽ trên JavaScript
+  khanpt_shortdescription: Học cách vẽ trên JavaScript
+  khanhe_shortdescription: Học cách vẽ trên JavaScript
+  khanfr_shortdescription: Học cách vẽ trên JavaScript
+  khanpl_shortdescription: Học cách vẽ trên JavaScript
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own
     mobile games.
   scratch_shortdescription: Create interactive games, stories, and animations.
@@ -952,7 +962,7 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
@@ -1256,8 +1266,9 @@
   processing_beyond_platformtext: Modern web browsers
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
+  codeorg_beyond_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry
+    Birds!
+  khan_beyond_shortdescription: Học cách vẽ trên JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create interactive games, stories, and animations.

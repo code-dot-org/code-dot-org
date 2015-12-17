@@ -120,9 +120,7 @@
         <h4>Compare player scores to see who wins</h4>: <h4>比較所有玩家的得分，來看看誰贏了</h4>
         <h4>Player 1 rolls die</h4>: <h4>玩家 1 角色死亡</h4>
         <h4>Set Player 1 score to 0</h4>: <h4>設定玩家 1 的分數為 0</h4>
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
-          the steps in the Dice Race game to the order that they should appear in
-          the algorithm.
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 請把這些選項依正確的順序列出。
         Matching: 配對
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
@@ -151,8 +149,7 @@
         <h4>STACK</h4>: <h4>STACK</h4>
         <h4>STAMP</h4>: <h4>STAMP</h4>
         <h4>STAR</h4>: <h4>STAR</h4>
-        Match each program to the word it makes, using the provided group of skills.: Match
-          each program to the word it makes, using the provided group of skills.
+        Match each program to the word it makes, using the provided group of skills.: 請依提示和選項組合成正確的單字。
         Matching: 配對
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
@@ -331,8 +328,7 @@
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: 根據左方規則，哪一套卡牌是正確的？
         Multiple Choice: 多選
       2-3 Getting Loopy Multi 1:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
@@ -458,15 +454,15 @@
         Shopping from a grocery list: 從購物清單購物
         Which one of these items is hardest to describe an algorithm for?: 這些物品之中哪一個是最難來描述演算法的
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene 是一座_____的城市。
         0: '? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
         1: ': Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
         Multiple Choice: 多選
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        Seattle _____ a _____ _____.: 西雅圖 _____ 一座_____ _____。
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 西雅圖是一個大型城市。
+          <br/>尤金是一個中等城市。<br/> 曉嵐是一個小型城市。
         _____ is _____ a _____.: _____ 是 _____ 一 _____。
         _____ is a _____ city.: _____ 是一座 _____ 的城市。
       4-5 Crowdsourcing Multi 1:
@@ -586,9 +582,7 @@
         0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?'
-        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?'
+        1: 一朵紫色的花可能會有 3，2 或 1 的花蜜，但你不知道有多少。請正確檢查和收集所有的紫色花蜜?
         Bee Conditionals Multiple Choice: 蜜蜂條件 多項選擇
         Choose the best blocks.: 選取最佳方塊。
       4-5 bee debug multi 1:
@@ -697,7 +691,7 @@
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: 這是多少朵花?
         Multiple Choice: 多選
       K-1 Bee 1 Multi 2:
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
@@ -705,7 +699,7 @@
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: 這是多少朵花?
         Multiple Choice: 多選
       K-1 Digital Footprint Multi 1:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
@@ -713,9 +707,8 @@
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: 多選
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 哪一位動物留下了
+          <strong>最不安全</strong> 的資料?
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png

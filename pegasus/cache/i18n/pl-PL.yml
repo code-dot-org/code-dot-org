@@ -29,6 +29,9 @@
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -311,11 +314,11 @@
   class_submission_languages_other: Inne języki
   inspirational_videos_more: Więcej <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspirujących filmów </a> z udziałem osobistości i gwiazd
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Wybierz własny motyw Play Lab
+  playlab_classic_title: Klasyczny
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: Epoka lodowcowa - już wkrótce
+  playlab_iceage_title_live: Epoka lodowcowa
   starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
   starwars_javascript_title: Javascript
   starwars_javascript_description: Użyj bloków do przeciągania i upuszczania oraz
@@ -325,8 +328,8 @@
   starwars_javascript_start_button: Spróbuj teraz
   starwars_blocks_title: Bloki
   starwars_blocks_description: Użyj bloków do przeciągania i upuszczania.
-  starwars_blocks_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki, smartfony,
-    tablety | W wieku 6-10
+  starwars_blocks_specs: Wiele języków | Nowoczesne przeglądarki, smartfony, tablety
+    | W wieku 6-106
   starwars_blocks_start_button: Spróbuj teraz
   starwars_watch_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów
   starwars_speak_languages: Czy mówisz w innym języku?
@@ -339,8 +342,7 @@
     gry Minecraft.
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
-  mc_specs: Wiele języków (już wkrótce) | Nowoczesne przeglądarki i tablety | Wiek
-    6 +
+  mc_specs: Wiele języków | Nowoczesne przeglądarki i tablety | W wieku 6 - 106
   minecraft_subtitle: Godzina Kodowania z Minecraft
   volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy dla Godziny
     Kodowania.
@@ -367,6 +369,7 @@
   volunteer_engineer_submission_intro_links: Nie chcesz być wolontariuszem? <a href="%{learn_more}">
     Dowiedz się więcej</a> o organizacji swojej własnej Godziny Kodowania i jak znaleźć
     wolontariusza w okolicy na naszej <a href="%{volunteer_local}"> mapie wolontariuszy</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
     na mapie wolontariuszy
   volunteer_engineer_submission_field_name: Nazwa
@@ -691,13 +694,20 @@
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Ucz się więcej
   dashboard_announce_hoc: <b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata
     edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000
     wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę
     lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami
     w Twojej okolicy.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>4 grudnia 2015 r.</b> - Godzina Kodowania jest tutaj!
+    Wypróbuj 50 samouczków dla każdego wieku i każdego urządzenia. Nowości w tym tygodniu:
+    Zaprogramuj własną historyjkę i grę w nowej Play Labs, Ice Age i Gumball.'
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
@@ -738,26 +748,26 @@
   carousel_heading_beginners: Samouczki partnerów dla uczniów z K-8
   carousel_heading_beyond_beginners: Samouczki dla początkujących
   carousel_heading_javascript: Samouczki partnerów do nauki JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Samouczki uczące JavaScript
   carousel_heading_unplugged: Nie masz komputera lub dostępu do Internet? Poznaj informatykę
     "unplugged", czyli informatykę bez komputera
   carousel_heading_devices: Aplikacje z samouczkami partnerów dla telefonów komórkowych
     i tabletów
-  carousel_heading_beyond_devices: Aplikacje z poradnikami dla telefonów komórkowych
+  carousel_heading_beyond_devices: Aplikacje z samouczkami dla telefonów komórkowych
     i tabletów
   carousel_heading_languages: Samouczki partnerów dla innych języków programowania
-  carousel_heading_beyond_languages: Poradniki dla innych języków programowania
+  carousel_heading_beyond_languages: Samouczki dla innych języków programowania
   carousel_heading_apps_games: Utwórz własną aplikację lub grę
   carousel_heading_university: Uniwersyteckie kursy online
   carousel_heading_webpages: Naucz się tworzyć strony internetowe
   carousel_heading_robots: Naucz się programować roboty
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
-  teach_led_lesson_plans: Plany lekcji do poprowadzenia Godziny Kodowania przez nauczyciela
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  teach_led_lesson_plans: Plany lekcji do poprowadzenia przez nauczyciela
+  learn_footer_all_tutorials: Zobacz <a href="https://code.org/educate/allhourofcode">
+    pełną listę samouczków Godziny Kodowania</a>. Aby zobaczyć nasze kryteria i wytyczne
+    dotyczące zgłoszeń samouczków dla Godziny Kodowania, <a href="https://hourofcode.com/tutorial-guidelines">
+    kliknij tutaj.</a>
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania?
@@ -774,8 +784,8 @@
   mobile_devices: Samouczki partnerów dla urządzeń mobilnych
   frozen_name: Koduj z Anną i Elsą
   starwars_name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu'
-  codeorg_name: Napisz swój pierwszy program komputerowy
-  codeintl_name: Napisz swój pierwszy program komputerowy
+  codeorg_name: Klasyczny labirynt
+  codeintl_name: Klasyczny labirynt
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Wprowadzenie do JavaScript
   khanes_name: Wprowadzenie do JavaScript
@@ -811,17 +821,17 @@
   thinkersmith2_name: Binarne Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
-  hourofcode_name: Napisz swój pierwszy program komputerowy
+  hourofcode_name: Klasyczny labirynt
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artysta
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: Tajemnicza wyspa Zadanie Kodowania
+  allcancode_name: Biegnij Marco!
+  csfirst_name: Najpierw informatyka
+  boxisland_name: Kartonowa Wyspa (Box Island)
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Plany lekcji do poprowadzenia Godziny Kodowania przez nauczyciela
+  texasinstruments_name: 10 minut kodowania
+  teacherled_name: Plany lekcji do poprowadzenia przez nauczyciela
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -850,7 +860,7 @@
   kodable_gradelevel: Podstawowa
   tynkerapp_gradelevel: W wieku 5-13
   robomindnl_gradelevel: W wieku 8-13
-  flappy_gradelevel: W wieku 4-104
+  flappy_gradelevel: W wieku 6-106
   bitsbox_gradelevel: Podstawowa
   makeschool_gradelevel: Szkoła ponadgimnazjalna
   touchdevelop_gradelevel: Szkoła ponadgimnazjalna
@@ -860,18 +870,18 @@
   kodableunplugged_gradelevel: W wieku 8-13
   projguts_gradelevel: W wieku 10-13
   hourofcode_gradelevel: W wieku 4-104
-  frozen_gradelevel: W wieku 8+
+  frozen_gradelevel: W wieku 8-108
   starwars_gradelevel: Wiek 6 +
-  playlab_gradelevel: W wieku 4-104
+  playlab_gradelevel: W wieku 6-14
   infinity_gradelevel: W wieku 4-104
   artist_gradelevel: W wieku 4-104
   monstercoding_gradelevel: W wieku 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: W wieku 5-10
+  csfirst_gradelevel: W wieku 9-14
   boxisland_gradelevel: Podstawowa
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: W wieku 12-14
+  texasinstruments_gradelevel: W wieku 13-16
+  teacherled_gradelevel: W wieku 5+
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
@@ -914,12 +924,12 @@
   frozen_platformtext: Nowoczesne przeglądarki + tablety
   starwars_platformtext: Nowoczesne przeglądarki + tablety
   playlab_platformtext: Nowoczesne przeglądarki, smartfony, tablety
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Nowoczesne przeglądarki, iOS, Android
+  allcancode_platformtext: Nowoczesne przeglądarki, iOS
   csfirst_platformtext: Nowoczesne przeglądarki sieci
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Nowoczesne przeglądarki sieci
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: Kalkulatory TI
   teacherled_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeorg_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
     i Angry Birds!
@@ -988,19 +998,20 @@
   infinity_shortdescription: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
     z Disney Infinity w rolach głównych.
   artist_shortdescription: Rysuj fajne obrazki i wzory z Artystą!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
+  monsterocding_shortdescription: Kolorowa przygoda dla samodzielnego programowania
+    przez dzieci.
+  allcancode_shortdescription: Wciągająca gra do kierowania Marco, wykorzystująca
+    wizualny język programowania.
+  csfirst_shortdescription: Animuj historię o dwóch postaciach na oceanie. Zastosuj
+    swój własny styl!
+  boxisland_shortdescription: Weź udział w wycieczce kodowania na Kartonowej Wyspie
+    (Box Island) z dzielnym Hiro.
+  codesters_shortdescription: Twórz własne gry, animacje i grafiki używając języka
     Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  texasinstruments_shortdescription: Poznaj podstawy kodowania posługując się kalkulatorem
+    TI-84 &#8482; Plus.
+  teacherled_shortdescription: Poczuj się zainspirowany do zaprojektowania własnego
+    wydarzenia w ramach Godziny Kodowania z pomocą tych planów lekcji.
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies
@@ -1164,9 +1175,9 @@
   csfirst_longdescription: Create a story about two characters at sea. Animate the
     water, and customize the scenery to add your own flare. Use code to tell the story
     you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
+  boxisland_longdescription: Wybierz się na wycieczkę po Kartonowej Wyspie (Box island)
+    oraz pomóż Hiro zebrać wszystkie zegary porozrzucane na pustkowiu! W tym samouczku
+    poznasz podstawy algorytmów, sekwencje, pętle i warunki!
   codesters_longdescription: 'Create your own games, animations, and artwork using
     Python.  Once you’re done, share them with friends! Program in Python, a real
     programming language used every day at companies - our drag and drop toolkit makes
@@ -1177,11 +1188,11 @@
     they carry in their backpacks everyday.  Learn the basics of coding using the
     TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
     needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  teacherled_longdescription: Dziesiątki tysięcy nauczycieli skorzystało z Godziny
+    Kodowania, wiele klas jest przygotowanych na bardziej kreatywne, nie takie same
+    dla wszystkich działania, które uczą podstaw informatyki. Aby zainspirować nauczycieli,
+    zebraliśmy i opracowaliśmy dla nauczycieli godzinne lekcje i plany aktywności
+    z różnych dziedzin przeznaczone dla weteranów Godziny Kodowania.
   codeorg_beyond_name: Wprowadzenie do informatyki (dla klas K-8)
   khan_beyond_name: Naucz się programować komputer
   tynker_beyond_name: Ucz się programowania w domu

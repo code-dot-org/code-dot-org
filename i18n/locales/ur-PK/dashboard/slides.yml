@@ -282,74 +282,72 @@ ur:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: ہائے، میرا نام لینڈسے ہے۔ میں ماڈل، ایکٹ کرنے کے ساتھ اپنی اپپس خود لکھتی ہوں۔ آئیں اینا اور ایلسا کو جوائن کرنے کے لیے کوڈ کو استعمال کریں اورسیکھیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز کری-ایٹ کریں گے اور ونٹر ونڈرلینڈ بھی جو بعد میں آپ اپنے دوستوں کے ساتھ شیئر بھی کرسکیں گے!
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: اگلے آوور میں، آپ ہاؤ ٹو کوڈ کی بیسکس سیکھنے جا رہے ہیں۔ ٹریڈیشنل پروگرامنگ عام طور پر ٹیکسٹ میں ہوتی ہے، لیکن ہم بلاکلی استعمال کریں گے، جس میں ویژول بلاکس استعمال میں آتے ہیں جن کو آپ پروگرامز رائٹ کرنے کے لیے ڈریگ اور ڈراپ کرسکتے ہیں۔ اس طرح سے یونیورسٹی لیول کے اسٹوڈنٹ بھی بیسکس سیکھ سکتے ہیں۔ اور کسی حد تک، آپ بہرحال کوڈ کری-ایٹ کر رہے ہیں۔
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: ایک پروگرام جو دراصل انسٹرکشنز کا ایک سیٹ ہوتا ہے جو کہ کمپیوٹر کو بتاتا ہے کہ کیا کرنا ہے۔ آئیں ایک کوڈ تیار کرتے ہیں، یا ایک پروگرام، جس میں ایلسا کی مدد سے ایک سمپل لائن کری-ایٹ کرنا ہے۔ ہم اسے بعد میں استعمال کریں گے تاکہ اس سے مزید کامپلیکس پیٹرنز بنا سکیں۔
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: آپ کی اسکرین تین بڑے حصوں میں اسپلٹ ہوئی ہے۔ لیفٹ پر، آئس سرفیس ہے جہاں آپ اپنا پروگرام رَن کریں گے۔ ہر لیول کی مخصوص انسٹرکشن، سرفیس کے بالکل نیچے لکھی ہوئی موجود ہیں۔
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: یہ مڈل ایریا دراصل ٹول باکس ہے، اور ان میں سے ہر ایک بلاکس ایک منفرد ایکشن کا حامل ہے جو کہ ایلسا اور ایننا انجام دے سکتی ہیں۔
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'رائٹ سائڈ پر وائٹ سپیس کو ورک اسپیس کہتے ہیں، اور یہ وہ جگہ ہے جہاں ہم اپنا پروگرام تیار کریں گے۔ آئس سرفیس میں موو کرنے کے لیے، آپ "موو فارورڈ" بلاک کو استعمال کریں گے۔'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'یہاں، یہ "موو فارورڈ" بلاک کہتا ہے، "موو فارورڈ بائے 100 پکسلز"۔ جب ہم "رَن" پریس کریں گے، تو کیا ہوگا؟ تو اسکرین پر ایلسا ایک مخصوص حد آگے بڑھتی ہے، اصل میں صرف 100 پکسلز! بنیادی طور پر پکسل دراصل آپ کی کمپیوٹر اسکرین کے بہت چھوٹے اسکوائرز ہوتے ہیں۔'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'اس پزل میں ہمارے پاس جو بلاک ہیں یہ بتا رہے ہیں کہ "ٹرن رائٹ بائی 90 ڈگریز"۔ اور جب ہم اس "ٹرن رائٹ" کو استعمال کرتے ہیں تو یہ ایلسا کو ایک سرٹین اماؤنٹ (متعین قدر) پر ٹرن کر دیتے ہیں۔ اب آپ جس طرح اور جہاں تک چاہیں ایلسا کو ٹرن کرسکتے ہیں۔ یہ اینگل ایلسا کے پاتھ سے آگے تک میژرڈ (ناپ) سکتا ہے۔ لہذا، یہ ایک 90 ڈگری ٹرن ہے۔ اور یہ ایک 120 ڈگری ٹرن ہے۔'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: یاد رکھیں، آپ پکسلز کے نمبرز اور ڈگریز کو، ایروز کے ساتھ ان پر کلکنگ کرتے ہوئے تبدیل کرسکتے ہیں۔
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: ہائے، میں پاؤلا ہوں! دہرانے کے عمل میں کمپیوٹر بہت کارآمد ہوتے ہیں۔ آپ 10، 20، یا 100 تک گنتی کرسکتے ہیں۔ لیکن کمپیوٹر ایک بلیئن یا ایک ٹریلئن تک بھی گنتی کرسکتا ہے۔ وہ یہ کرتے ہوئے بیزار نہیں ہوتا اور اسے اس کام میں صرف چند سیکنڈز لگیں گے۔ چاہے یہ کاؤنٹنگ کرنا ہو، یا ڈرائنگ، یا کچھ بھی – کمپیوٹر ایسے کاموں کو سینکڑوں بلکہ یہاں تک کہ بلیئن مرتبہ بھی دہرا سکتا ہے۔
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'پروگرامنگ کی زبان میں، ہم اسے ایک لوپ کہتے ہیں۔ ایک لوپ دراصل بار بار دہرانے کے عمل کا کوڈ ہوتا ہے۔ اگلے پزل کے لیے، آپ کا گول یہ ہے کہ اینا کی مدد سے ایک اسکوائر کے ساتھ "ریپیٹ" بلاک کری-ایٹ کرنا ہے۔'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: 'آپ کوڈ کا کوئی بھی بلاک جو آپ "رپیٹ" بلاک کے اندر رکھیں گے وہ اتنی ہی مرتبہ ترتیب کے مطابق رپیٹ ہوگا جتنی بار آپ چاہیں گے۔'
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'ایک اسکوائر ڈرا کرنے کے لیے، آپ "موو فاروڈ" اور "ٹرن رائٹ" بلاک 4 مرتبہ استعمال کر سکتے ہیں۔ لیکن اس سے آسان طریقہ یہ ہوگا کہ آپ کمپیوٹر کو بتائیں کہ وہ ایک بار "موو فارورڈ" اور "ٹرن رائٹ بائی 90 ڈگریز" کرے، اور پھر اس سے کہیں کہ وہ 4 مرتبہ تک اس کام کو دہرائے۔ اس کو یہ کہنے کے لیے، آپ کو "موو فارورڈ" اور "ٹرن رائٹ" بلاک کو "رپیٹ" بلاک کے اندر لگانا ہوگا۔'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'یا رکھیں، آپ کسی بھی عمل کو دہرانے کے لیے "رپیٹ" بلاک میں دہرانے کی تعداد تبدیل کرسکتے ہیں، اور یہ وہی کچھ اتنی بار دہرائے گا جتنی بار بلاک کے اندر دہرانے کا نمبر دیا ہوگا۔'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: ہائے، میں کرس بُش ہوں۔ میں ایک پروفیشنل باسکٹ بال پلیئر ہوں، اور میں نے کالج میں کوڈ کیا ہے۔
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: کمپیوٹر سائنس کے سب سے اہم ترین کونسیپٹس میں ایک تصور یہ ہے کہ نئے کمانڈز کیسے ڈیفائن (وضع) کئے جائیں۔ زیادہ تر کمپیوٹر لینگویجز میں تقریباً محض 100 الفاظ یا کمانڈز ہوتے ہیں۔ اور واقعتاً، اصل فن اور جادو ان ہی بلڈنگ بلاکس کو خود آپ کے اپنے وضع کئے ہوئے نئے الفاظ میں ڈھال دینا ہے۔
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: ایک بار آپ کمپیوٹر کے بارے میں یہ جان جاتے ہیں کہ ایکشن کے لیے کمانڈز کو کیسے سیکوئنس میں استعمال کیا جاتا ہے، تو پھر آپ اسے بعد میں دہرانا بہت ہی آسان ہوتا ہے۔ جب آپ اپنے کمانڈز خود ڈیزائن کر لیتے ہیں اور اسے نام دیتے ہیں، تو اس عمل کو ایک فنکشن کہتے ہیں۔
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: ہائے، میں جیمز ہوں۔ جب بلاکس سے پروگرامنگ کرنا ہو تو، آپ ایسے فنکشن استعمال کریں گے، اگر اس میں آپ ایک سیٹ آف ایکشنز بار بار اور کئی مرتبہ استعمال کرنا چاہیں۔ مثال کے طور پر ایک اسکوائر کری-ایٹ کرنے کے لیے آپنے کوڈ لکھا۔
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'آپ اس کو "کری-ایٹ آ اسکوائر" کے نام سے ایک فنکشن کے طور ڈیفائن کرسکتے ہیں۔ '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: اب آپ کے پاس نیا بلاک ہے جو کہ آپ ملٹیپل مرتبہ ملٹیپل اسکوائرز بنانے کے لیے استعمال کرسکتے ہیں۔
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: بہت سے سمپل شیپس بے شمار کامپلیکس پیٹرن تیار کرنے میں استمعال کئے جاسکتے ہیں۔ اگلے پزل میں، کچھ دیر پہلے آپ نے جو کوڈ سرکل بنانے کے لیے لکھا، وہ بطور ایک نیو فنکشن آپ کے پاس موجود ہے جو کہ مختلف سائزوں کے مختلف سرکلز بنا سکتا ہے۔ کیا آپ اس کو استعمال کرتے ہوئے، سنو میں پیچیدہ اور خوبصورت پیٹرینز بنانے کے لیے، ایلسا کی مدد کرسکتے ہیں؟
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
@@ -1375,7 +1373,7 @@ ur:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1431,7 +1429,7 @@ ur:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1506,7 +1504,7 @@ ur:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."

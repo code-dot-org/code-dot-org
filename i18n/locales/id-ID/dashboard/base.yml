@@ -254,57 +254,10 @@ id:
     remove: (hapus guru)
     confirm:
       remove: Apakah anda yakin ingin menghapus guru ini?
-    tools: Peralatan Guru
-    followers:
-      section: Sesi
-      stages: Tahapan Kerja untuk ditampilkan
-      show_past: 'Tunjukkan aktivitas siswa (%{bullet_html}) masa lalu:'
-      levels_key: Kunci Tingkatan
-      perfect: Komplet, sempurna
-      completed: Komplet, tapi terlalu banyak blok
-      tried: Mencoba tapi belum selesai
-      not_tried: Belum mencoba
-      activity: 'Menunjukkan kegiatan siswa yang terakhir %{hours} %{plural}'
-      no_section: Tidak ada sesi yang dipilih
-      trophies: Piala
     students:
-      name: Nama
-      username: nama pengguna
-      password: kata sandi
-      manage: Mengelola siswa
       dashboard: Pergi ke Dashboard Guru
-      add: Cantumkan nama siswa
-      remove: Hapus siswa
-      confirm_remove: Anda yakin akan menghapus siswa ini ?
-      help_reassign: untuk membagi kelas kamu dalam beberapa sesi, pilih siswa untuk menentukan sesi baru
-      help_register: Untuk membuat anda menghabiskan waktu secara individual dalam mengimpor data siswa, anda dapat menyusun kelas secara cepat dengan memerintah mereka untuk mendaftar. Siswa anda akan perlu untuk memilih nama pengguna dan kata sandi, tapi mereka tidak dapat diminta untuk menyiapkan alamat email. Jika seorang siswa lupa kata sandinya, Anda akan dapat meresetkan untuk mereka.
-      register: Perintah siswa anda untuk mendaftarkan diri mereka
-      vist: Perintahkan siswa anda untuk mengunjungi
-      section_code: 'dan masukkan kode sesi mereka:'
-      first_please: 'Pertama, masukkan %{add_section}'
-      for: untuk
-      enter: 'masuk:'
-    sections:
-      add: Tambahkan Sesi
-      manage: Kelola bagian
-      section: Sesi
-      students: Siswa
-      section_code: Kode Sesi
-      add_section_code: Tambahkan Kode Sesi Siswa
-      secret: Tulisan rahasia
-      grade: Kelas
-      course: Kursus
-      rename: ubah nama
-      edit: edit
-      delete: hapus
-      confirm_delete: Anda yakin untuk menghapus sesi ini ?
-      email: Kirimkan lewat email
-    rollup: 'Dashboard Kemajuan '
-    activity: Aktivitas kelas
-    user_not_found: Guru atau murid tidak dapat ditemukan
-    cant_remove_student_no_email: '% {student_name} tidak dapat dihapus sebagai siswa Anda karena %{student_name} belum mendaftar e-mail'
-    cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dihapus sebagai guru Anda karena Anda belum mendaftarkan e-mail'
-    student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Menjawab Pembaca
       student: siswa
@@ -378,6 +331,7 @@ id:
   share:
     title: Belajar di Code Studio
     description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi dan seni dengan kode.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Laki-laki
     female: Wanita
@@ -389,8 +343,8 @@ id:
     thank_you: 'Kami berterima kasih kepada para <a href="https://code.org/about/donors">donatur</a>, <a href="https://code.org/about/partners">rekanan</a>,<a href="https://code.org/about/team">pihak-pihak yang terlibat</a>,pemeran dalam video, dan para<a href="https://code.org/about/advisors">penasehat pendidikan</a>atas dukungan mereka dalam pembuatan Code Studio.'
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
     help_from_html_old: Para insinyur dari Google, Microsoft, Facebook, dan Twitter turut membantu dalam pembuatan materi-materi ini.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Hak Cipta Dilindungi.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Hak Cipta Dilindungi.'
-    art_from_html_old: 'Angry Birds&#8482;&amp;&copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta dilindungi undang-undang<br />Plants vs. Zombies &#8482;&amp;&copy;%{current_year} Electronic Arts Inc. Hak Cipta dilindungi undang'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Didukung oleh Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: Hak cipta
@@ -407,6 +361,7 @@ id:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
@@ -533,9 +488,9 @@ id:
     open_response_body: Terima kasih atas responmu!
   dialog:
     ok: Oke!
-    startover_title: Apakah Anda yakin Anda ingin memulai dari awal?
+    startover_title: Kamu yakin ingin memulainya dari awal?
     startover_body: Ini akan mengembalikan puzzle ke kondisi awal dan membatalkan penambahan atau perubahan data.
-    startover_ok: Memulai kembali
+    startover_ok: Mulai kembali
     startover_cancel: Batal
   time:
     hour: 1 jam

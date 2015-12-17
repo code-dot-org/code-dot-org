@@ -301,63 +301,9 @@
     remove: (neħħi l-għalliem)
     confirm:
       remove: Żgur tixtieq tneħħi dan l-għalliem?
-    tools: Għodod tal-Għalliem
-    followers:
-      section: 'Taqsima:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Komplut, perfett
-      completed: Lest, iżda bl-użu ta' wisq blokok
-      tried: Ippruvajt, iżda mhux lest
-      not_tried: Għadni ma' ppruvajtx
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: L-ebda taqsima assenjata
-      trophies: Trofej
     students:
-      name: Name
-      username: Isem l-utent
-      password: Password
-      manage: Iġġestixxi l-istudenti
       dashboard: Żur il-Pannell tal-Kontroll tal-Għalliem
-      add: Żid l-istudenti
-      remove: neħħi l-istudent
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Itlob l-istudenti tiegħek iżuru
-      section_code: 'u jdaħħlu l-kodiċi tat-taqsima tagħhom:'
-      first_please: First, please %{add_section}
-      for: Għall-
-      enter: 'daħħal:'
-    sections:
-      add: Żid Sezzjoni
-      manage: Immaniġġja sezzjonijiet
-      section: It-Taqsima
-      students: Studenti
-      section_code: Kodici tas-Sezzjoni
-      add_section_code: Żid kodiċi tat-Taqsima tal-istudenti
-      secret: Tip ta' Sigriet
-      grade: Grad
-      course: Kors
-      rename: Ibdel l-isem
-      edit: editja
-      delete: ħassar
-      confirm_delete: Żgur tixtieq tħassar din is-Sezzjoni?
-      email: Ibgħat bil-posta elettronika
-    rollup: Progress Dashboard
-    activity: L-attività riċenti tal-klassi
     user_not_found: L-għalliem jew student ma nstabx
-    cant_remove_student_no_email: '%{student_name} ma jistax jitneħħa bħala student
-      tiegħek għax %{student_name} ma irregistrax l-indirizz elettroniku tieghu'
-    cant_remove_teacher_no_email: '%{teacher_name} ma jistax jitneħħa bħala għalliem
-      tiegħek għax inti ma rreġistrajtx indirizz elettroniku'
     student_teacher_disassociated: '%{teacher_name} tneħħa bħala għalliem ta'' %{student_name}'
     panel:
       answer_viewer: Werrej tar-risposta
@@ -448,6 +394,7 @@
     title: Tgħallem fil-Code Studio
     description: Kulħadd jistgħa jitgħallem ix-xjenza tal-kompjuter. Ghamel logħob,
       apps u arti b ' kodiċi.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Maskili
     female: Femminili
@@ -488,6 +435,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Teħtieġ l-għajnuna?
     subtitle: Ara dawn il-vidjos u suġġerimenti

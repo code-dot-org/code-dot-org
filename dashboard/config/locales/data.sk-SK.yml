@@ -125,37 +125,35 @@
         parameters: Funkcie s parametrami
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
-          forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the
-          feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
-          angry!
-        maze_2_5: There's a way I can get to the silly pig using only 2 blocks. Can
-          you figure it out?
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: Help me banish this bad piggy using the fewest number of blocks.
-          Try using more than one "repeat times" block.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
-        maze_2_9: Ok, try the new "repeat until" block - it will repeat until I reach
-          the annoying pig.
-        maze_2_10: Ok, one last time for practice - can you solve this one using only
-          4 blocks?
-        maze_2_11: Dear person.  Me zombie. Me hungry. Must... get... to sunflower...
-          Can you get me there with only 5 blocks?
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only
-          5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you
-          only need one more block, but learn how we set it up so you can do it on
-          your own next time.'
-        maze_2_14: Ok, this is just like the last puzzle, but you need to remember
-          how you used the "if" block and the "repeat" block together.
-        maze_2_15: Me want sunflower! Use an "if" block to get me there with the fewest
-          number of blocks.
+        maze_2_2: 'Pomôžete mi chytiť neposlušné prasa? Dajte dohromady niekoľko blokov
+          "posunúť vpred" a stlačte "Spustiť", aby som sa tam dostal. '
+        maze_2_1: To prasa mi pije krv. Pomôž mi ho nájsť!
+        maze_2_2_5: Nájdi cestu a veď ma k tomu hlúpemu prasaťu. Vyhni se TNT, lebo
+          bude lietať perie!
+        maze_2_3: Naviguj ma k zelenému zlu! (Pozor na TNT)
+        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
+        maze_2_5: K zelenému prasiatku sa možno dostať použitím len 2 blokov. Prídeš
+          na to?
+        maze_2_6: Dostaň ma k zelenému votrelcovi použitím troch blokov.
+        maze_2_7: Pomôž sa mi zbaviť toho zlého prasiatka pomocou čo najmenšieho počtu
+          blokov. Skus použiť viac ako jeden blok "opakovať n-krát".
+        maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj",
+          ktorý sa zopakuje 3 krát. Vlož do neho 3 bloky: posunúť vpred, posunúť vpred
+          a otoč a nastav blok "opakuj", aby to zopakoval trikrát.'
+        maze_2_9: V poriadku, skús nový "opakuj dovtedy" blok - bude akciu opakovať
+          až kým neprídem k tomu otravnému prasaťu.
+        maze_2_10: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
+        maze_2_11: Drahá osoba. Ja zombie. Ja hladný. Musieť... dostať... k slnečnica...
+          Dostaneš ma tam pomocou 5 blokov?
+        maze_2_12: Ok, toto je podobné, ale mierne rozdielne. Spravíš to použitím
+          len 5 blokov?
+        maze_2_13: 'Použi nový "pokiaľ!" blok aby si mňa nechal rozhodnúť kedy sa
+          otočiť. Tip: potrebuješ už len jeden blok, ale nauč sa ako sme ho nastavili
+          aby si to zvládol nabudúce sám.'
+        maze_2_14: V poriadku, toto je naozaj posledná hádanka, ale musíš si zapamätať
+          ako si použil bloky "pokiaľ" a "opakovať" spolu.
+        maze_2_15: Chcem slnečnicu! Použi blok "pokiaľ" aby som sa tam dostal čo s
+          najmenším počtom použitých blokov.
         maze_2_16: Ok, let's do that again for practice - this isn't very different,
           but watch out for the chompers!
         maze_2_17: The "If-else" blocks checks a condition, and then does one thing
@@ -164,8 +162,8 @@
           on your first try?
         maze_2_19: Can you add just 3 blocks to help me solve a more complex maze?
           If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
+        turtle_1_1: Ahoj, som umelec. Možeš napísať kód aby som nakreslil skoro čokoľvek.
+          Použi pár blokov aby som nakreslil nad šedé čiary v obrázku.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "set color" block.'
         turtle_1_3: Urobte štvorec s použitím iba 3 častí.
@@ -211,9 +209,8 @@
           obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
         turtle_4_10: Here's the solution to the previous puzzle. How many times should
           you repeat to complete the drawing?
-        turtle_4_11: Try changing the numbers in the "turn" and "repeat" blocks to
-          make different patterns. Or, experiment changing the rest of the code to
-          draw anything you want.
+        turtle_4_11: Skús zmeniť čísla v "otoč" a "zopakuj" blokoch aby si spravil
+          iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.
         maze_karel_1_1: Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na
           mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu
           hliny a použite blok "odstrániť" na jeho odstránenie.

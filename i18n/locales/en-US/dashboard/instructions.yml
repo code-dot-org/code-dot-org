@@ -1092,6 +1092,7 @@ en:
       Play Lab Rocket 5_instruction: crwdns35190:0crwdne35190:0
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
       Ryan - 4-5 Bee Conditionals 2_instruction: crwdns50295:0crwdne50295:0
+      Ryan - Bee Conditionals_instruction: crwdns55791:0crwdne55791:0
       Ryan Test Locked Blocks_instruction: crwdns50669:0crwdne50669:0
       Ryan's clone of C4S15P10_instruction: crwdns49720:0crwdne49720:0
       Sam the Butterfly 1 (copy 1)_instruction: crwdns34665:0crwdne34665:0
@@ -1279,6 +1280,16 @@ en:
       U3 - Movie Bot - toLowerCase_instruction: crwdns51153:0crwdne51153:0
       U3 - Movie Bot - When Multiple If Statements_instruction: crwdns51154:0crwdne51154:0
       U3 - Practice Create Performance Task_instruction: crwdns54685:0crwdne54685:0
+      U3 - Read Record - 1.2_instruction: crwdns55792:0crwdne55792:0
+      U3 - Read Record - 1.5_instruction: crwdns55793:0crwdne55793:0
+      U3 - Read Record - 1.6_instruction: crwdns55794:0crwdne55794:0
+      U3 - Read Record - 1_instruction: crwdns55795:0crwdne55795:0
+      U3 - Read Record - 2_instruction: crwdns55796:0crwdne55796:0
+      U3 - Read Record - 3_instruction: crwdns55797:0crwdne55797:0
+      U3 - Read Record - 4.1_instruction: crwdns55798:0crwdne55798:0
+      U3 - Read Record - 4_instruction: crwdns55799:0crwdne55799:0
+      U3 - Read Record - 5 and half_instruction: crwdns55800:0crwdne55800:0
+      U3 - Read Record - 5_instruction: crwdns55801:0crwdne55801:0
       U3 - Return Values - constrainTurtle_instruction: crwdns54686:0crwdne54686:0
       U3 - Return Values - debuggingConstrain_instruction: crwdns54687:0crwdne54687:0
       U3 - Return Values - debuggingMaxVal_instruction: crwdns54688:0crwdne54688:0
@@ -1290,6 +1301,12 @@ en:
       U3 - Return Values - useMinVal_instruction: crwdns54694:0crwdne54694:0
       U3 - Return Values - wrapTurtle_instruction: crwdns54695:0crwdne54695:0
       U3 - Return Values - writeMaxVal_instruction: crwdns54696:0crwdne54696:0
+      U3 - Search Terms - 1_instruction: crwdns55802:0crwdne55802:0
+      U3 - Search Terms - 2_instruction: crwdns55803:0crwdne55803:0
+      U3 - Search Terms - 3_instruction: crwdns55804:0crwdne55804:0
+      U3 - Search Terms - 4_instruction: crwdns55805:0crwdne55805:0
+      U3 - Search Terms - 5_instruction: crwdns55806:0crwdne55806:0
+      U3 - Search Terms - 6_instruction: crwdns55807:0crwdne55807:0
       U3 - Simulation - 1_instruction: crwdns51155:0crwdne51155:0
       U3 - Simulation - 2.1_instruction: crwdns51156:0crwdne51156:0
       U3 - Simulation - 2.5_instruction: crwdns51157:0crwdne51157:0
@@ -1540,20 +1557,62 @@ en:
       U3L27 Chatbot Final_instruction: crwdns43514:0crwdne43514:0
       U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
+      U4 - add createRecord to contacts App_instruction: crwdns55808:0crwdne55808:0
+      U4 - Add Row By Hand_instruction: crwdns55809:0crwdne55809:0
+      U4 - Charts - drawChartsFromRecords 1_instruction: crwdns55810:0crwdne55810:0
+      U4 - Charts - Import Data 1_instruction: crwdns55811:0crwdne55811:0
+      U4 - Charts - Remixing Apps with Data_instruction: crwdns55812:0crwdne55812:0
       U4 - CreateRecord - 1_instruction: crwdns55162:0crwdne55162:0
+      U4 - CreateRecord - 2.5_instruction: crwdns55813:0crwdne55813:0
       U4 - CreateRecord - 2_instruction: crwdns55163:0crwdne55163:0
       U4 - CreateRecord - 3_instruction: crwdns55164:0crwdne55164:0
       U4 - CreateRecord - 4_instruction: crwdns55165:0crwdne55165:0
       U4 - CreateRecord - 5_instruction: crwdns55166:0crwdne55166:0
+      U4 - debug column names are case sensitive_instruction: crwdns55814:0crwdne55814:0
+      U4 - deleteRecords 0_instruction: crwdns55815:0crwdne55815:0
+      U4 - deleteRecords 1_instruction: crwdns55816:0crwdne55816:0
+      U4 - deleteRecords 2 delete object_instruction: crwdns55817:0crwdne55817:0
+      U4 - deleteRecords 2_instruction: crwdns55818:0crwdne55818:0
+      U4 - Edit Data Table by Hand_instruction: crwdns55819:0crwdne55819:0
+      U4 - Exploring Data Tools - Template_instruction: crwdns55820:0crwdne55820:0
+      U4 - fix contacts by hand in data table_instruction: crwdns55821:0crwdne55821:0
+      U4 - last stage test adding contcts_instruction: crwdns55822:0crwdne55822:0
+      U4 - Objects - accessingPropertiesInArray_instruction: crwdns55823:0crwdne55823:0
       U4 - Objects - arraysOfObjects_instruction: crwdns55194:0crwdne55194:0
+      U4 - Objects - createContactObject_instruction: crwdns55824:0crwdne55824:0
+      U4 - Objects - createContactsData_instruction: crwdns55825:0crwdne55825:0
       U4 - Objects - createDotNotation_instruction: crwdns55195:0crwdne55195:0
       U4 - Objects - createObject_instruction: crwdns55167:0crwdne55167:0
       U4 - Objects - dotNotation_instruction: crwdns55196:0crwdne55196:0
+      U4 - Objects - eventHandlersToSwitchScreen_instruction: crwdns55826:0crwdne55826:0
       U4 - Objects - eventParameter_instruction: crwdns55168:0crwdne55168:0
+      U4 - Objects - exemplarContactsApp_instruction: crwdns55827:0crwdne55827:0
       U4 - Objects - loopingArray_instruction: crwdns55197:0crwdne55197:0
       U4 - Objects - loopingArray2_instruction: crwdns55198:0crwdne55198:0
       U4 - Objects - loopingCompoundConditions_instruction: crwdns55199:0crwdne55199:0
       U4 - Objects - loopingConditions_instruction: crwdns55200:0crwdne55200:0
+      U4 - Objects - pullValues_instruction: crwdns55828:0crwdne55828:0
+      U4 - Objects - readStarterCode_instruction: crwdns55829:0crwdne55829:0
+      U4 - Objects - resetIndexAndShow_instruction: crwdns55830:0crwdne55830:0
+      U4 - Objects - showContact1_instruction: crwdns55831:0crwdne55831:0
+      U4 - Objects - showContact2_instruction: crwdns55832:0crwdne55832:0
+      U4 - Objects - showContact3_instruction: crwdns55833:0crwdne55833:0
+      U4 - Objects - showSampleImage_instruction: crwdns55834:0crwdne55834:0
+      U4 - Objects - writeWrap_instruction: crwdns55835:0crwdne55835:0
+      U4 - Read Record - 1.2_instruction: crwdns55836:0crwdne55836:0
+      U4 - Read Record - 1.3_instruction: crwdns55837:0crwdne55837:0
+      U4 - Read Record - 1_instruction: crwdns55838:0crwdne55838:0
+      U4 - Read Record - 2_instruction: crwdns55839:0crwdne55839:0
+      U4 - Read Record - 3_instruction: crwdns55840:0crwdne55840:0
+      U4 - Read Record - 4.1_instruction: crwdns55841:0crwdne55841:0
+      U4 - Read Record - 4_instruction: crwdns55842:0crwdne55842:0
+      U4 - Read Record - 5_instruction: crwdns55843:0crwdne55843:0
+      U4 - Read Record - part 1 - template_instruction: crwdns55844:0crwdne55844:0
+      U4 - ReadRecords - Contacts App 1_instruction: crwdns55845:0crwdne55845:0
+      U4 - ReadRecords - Contacts App 2_instruction: crwdns55846:0crwdne55846:0
+      U4 - ReadRecords - Contacts App 3_instruction: crwdns55847:0crwdne55847:0
+      U4 - ReadRecords - Contacts App 4_instruction: crwdns55848:0crwdne55848:0
+      U4 - ReadRecords - Contacts App 5 make delete work_instruction: crwdns55849:0crwdne55849:0
       U4L02 - Objects - createObject_instruction: crwdns55169:0crwdne55169:0
       U4L02 - Objects - eventParameter_instruction: crwdns55170:0crwdne55170:0
       U4L02 - Objects - Template1_instruction: crwdns55171:0crwdne55171:0

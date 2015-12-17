@@ -253,57 +253,10 @@ es:
     remove: (eliminar profesor)
     confirm:
       remove: ¿Estás seguro que quieres eliminar este profesor?
-    tools: Herramientas del maestro/a
-    followers:
-      section: 'Sección:'
-      stages: 'Etapa(s) para mostrar:'
-      show_past: 'Mostrar la actividad (%{bullet_html}) previa del alumno:'
-      levels_key: Clave de los niveles
-      perfect: Terminado, perfecto
-      completed: Terminado, pero utilizando demasiados bloques
-      tried: Intentado, pero no terminado
-      not_tried: Aún no intentado
-      activity: 'Muestra la actividad del alumno en las últimas %{hours} %{plural}'
-      no_section: Ninguna sección asignada
-      trophies: trofeos
     students:
-      name: Nombre
-      username: nombre de usuario
-      password: contraseña
-      manage: Administrar los alumnos
       dashboard: Ir a el panel del maestro
-      add: Añadir alumnos/as
-      remove: eliminar alumno
-      confirm_remove: ¿Está seguro de que desea eliminar a este alumno?
-      help_reassign: Para dividir la clase en multiples secciones, seleccione algunos alumnos para asignarlos a una nueva sección.
-      help_register: En lugar de hacerle perder el tiempo importando datos de alumnos de forma individual, puede configurar su clase rápidamente pidiéndoles que se registren. Sus alumnos necesitarán elegir nombres de usuario y claves, pero NO estarán obligados a proporcionar una dirección de correo. Si un alumno olvida su clave, usted podrá restablecerla.
-      register: Pide a tus estudiantes que se registren ellos mismos
-      vist: Pide a tus estudiantes que visiten
-      section_code: 'e introduzca su código de sección:'
-      first_please: 'Primero, por favor, %{add_section}'
-      for: Para
-      enter: 'introduzca:'
-    sections:
-      add: Agregar sección
-      manage: Administrar secciones
-      section: Sección
-      students: Alumnos
-      section_code: Código de sección
-      add_section_code: Añade los códigos de sección de los alumnos
-      secret: Tipo secreto
-      grade: Calificación
-      course: Curso
-      rename: renombrar
-      edit: Editar
-      delete: Borrar
-      confirm_delete: ¿Estás seguro de que quieres borrar esta sección?
-      email: Manda un correo electrónico
-    rollup: Panel de progreso
-    activity: Actividad reciente de la clase
-    user_not_found: El profesor o el estudiante no se encontró
-    cant_remove_student_no_email: '%{student_name} no puede eliminarse como su estudiante porque % {student_name} no ha registrado una dirección de correo electrónico'
-    cant_remove_teacher_no_email: '%{teacher_name} no puede eliminarse como tu maestro, porque no has registrado una dirección de correo electrónico'
-    student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor de %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Ver respuesta
       student: estudiante
@@ -377,6 +330,7 @@ es:
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones y arte con código.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Varón
     female: Mujer
@@ -388,8 +342,8 @@ es:
     thank_you: 'Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>, <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores académicos</a> por su apoyo a la creación de Code Studio.'
     help_from_html: En especial queremos reconocer el trabajo de los Ingenieros de Google, Microsoft, Facebook y Twitter que han ayudado a crear estos materiales educativos.
     help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este material.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Todos los Derechos Reservados.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los Derechos Reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos los Derechos Reservados'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE y el de Hora de Código &reg; son marcas registradas de Code.org.'
     copyright: Derechos de autor
@@ -406,6 +360,7 @@ es:
     built_on_code_studio: Construye en Code Studio
     make_my_own_app: Haz tu propia aplicación
     how_it_works: Como funciona
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: ¿Necesitas ayuda?
     subtitle: Ver estos videos y sugerencias
@@ -462,7 +417,7 @@ es:
       unused: Niveles no utilizados
   upsell:
     hoc:
-      title: Classic Maze
+      title: Laberinto clásico
       body: Prueba los fundamentos de la ciencia de la computación. Millones lo han intentado.
     flappy:
       title: Código Flappy

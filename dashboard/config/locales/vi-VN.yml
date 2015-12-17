@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
-      too_young: Nội dung này có giới hạn độ tuổi và không có sẵn cho học sinh nhỏ
-        tuổi
+      too_young: Nội dung này không dành cho học sinh nhỏ tuổi
   activerecord:
     errors:
       messages:
@@ -23,7 +22,7 @@
         error:
           future: không thể trong tương lai
   hello: Xin chào thế giới
-  welcome_back: Chào mừng bạn trở lại, %{name}
+  welcome_back: Chào mừng trở lại, %{name}
   submit: Chấp nhận
   add_teacher_form:
     code:
@@ -31,7 +30,7 @@
       placeholder: Phần mã (ABCDEF)
     submit: Thêm giáo viên
   add_hint_form:
-    placeholder: Hãy nhập gợi ý của bạn ở đây
+    placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
     submit: Thêm gợi ý
   appname: Code.org
   stage: giai đoạn
@@ -40,11 +39,11 @@
   trophies: những danh hiệu
   courses: Các khóa học
   of: của
-  more: Nhiều hơn
-  less: Ít hơn
-  beta: Phiên bản beta
-  try_hoc: 'Thử Hour of Code, bấm vào đây >> '
-  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 hours)
+  more: NHIỀU HƠN
+  less: ÍT HƠN
+  beta: phiên bản thử nghiệm
+  try_hoc: 'Tham gia thử cuộc thi Hour of Code, bấm vào đây >> '
+  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 giờ)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
   already_started: 'Đã bắt đầu rồi à? Tiếp tục ở đây >> '
   demos: 'Admin: Tất cả các bản demo'
@@ -302,64 +301,9 @@
     remove: (thay đổi giáo viên)
     confirm:
       remove: Bạn có chắc bạn muốn loại bỏ giáo viên này không?
-    tools: Công cụ dành cho giáo viên
-    followers:
-      section: 'Mục:'
-      stages: '(Các) Quá trình để hiển thị:'
-      show_past: 'Hiển thị hoạt động của sinh viên (%{bullet_html}) trong quá khứ:'
-      levels_key: Cấp độ khóa
-      perfect: Hoàn thành, hoàn hảo
-      completed: Hoàn thành, nhưng bằng cách sử dụng quá nhiều khối
-      tried: Đã cố gắng, nhưng chưa hoàn thành
-      not_tried: Chưa thử
-      activity: Cho thấy hoạt động của sinh viên trong %{plural} %{hours} cuối
-      no_section: Không có phần được chỉ định
-      trophies: những danh hiệu
     students:
-      name: Tên
-      username: tài khoản
-      password: mật khẩu
-      manage: Quản lý học sinh
       dashboard: Đi đến bảng điều khiển của giáo viên
-      add: Thêm học sinh
-      remove: loại bỏ sinh viên
-      confirm_remove: Bạn có chắc muốn loại bỏ sinh viên/học sinh này?
-      help_reassign: Để chia lớp của bạn thành nhiều nhóm, lựa chọn các học viên để
-        phân công thành nhóm mới.
-      help_register: Thay vì dành nhiều thời gian cá nhân của bạn vào việc nhập dữ
-        liệu của sinh viên/học sinh, bạn có thể thiết lập lớp học của bạn một cách
-        nhanh chóng bằng cách yêu cầu sinh viên/học sinh của bạn đăng ký. Các sinh
-        viên/học sinh cần chọn tên và mật khẩu, nhưng họ KHÔNG CẦN phải cung cấp địa
-        chỉ email. Nếu sinh viên/học sinh của bạn quên mật khẩu của họ, bạn có thể
-        tạo lại mật khẩu cho sinh viên/học sinh đó.
-      register: Yêu cầu học sinh của bạn tự đăng ký
-      vist: Yêu cầu sinh viên/học sinh của bạn truy cập vào
-      section_code: 'và nhập mã lớp học của họ:'
-      first_please: Trước tiên, xin vui lòng %{add_section}
-      for: Đối với
-      enter: 'nhập:'
-    sections:
-      add: Thêm phần
-      manage: Quản lý các học phần
-      section: Học phần
-      students: học viên
-      section_code: Mã của học phần
-      add_section_code: Thêm học viên Vào Học Phần
-      secret: Loại bí mật
-      grade: Điểm số
-      course: Khóa học
-      rename: đổi tên
-      edit: chỉnh sửa
-      delete: xóa
-      confirm_delete: Bạn có chắc bạn muốn xóa phần này không?
-      email: Gửi trong email
-    rollup: Bảng tiến trình
-    activity: Hoạt động gần đây của lớp
     user_not_found: Không thể tìm thấy giáo viên hoặc sinh viên này
-    cant_remove_student_no_email: '%{student_name} không thể được gỡ bỏ khỏi danh
-      sách sinh viên của bạn vì %{student_name} chưa đăng ký với một địa chỉ email'
-    cant_remove_teacher_no_email: '%{teacher_name} không thể được gỡ bỏ khỏi danh
-      sách giáo viên của bạn vì bạn chưa đăng ký địa chỉ email'
     student_teacher_disassociated: '%{teacher_name} đã được thay thế như là môt giáo
       viên cho %{student_name}'
     panel:
@@ -371,7 +315,7 @@
       example: Ví dụ
       example_with_number: Ví dụ giải pháp %{solution_number}
       submitted_on: 'Gửi lên ngày:'
-      unsubmit: Unsubmit
+      unsubmit: Ngưng gửi
   user:
     email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
@@ -450,6 +394,7 @@
     title: Học về Xưởng Code
     description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ
       thuật với mã lệnh.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Nam
     female: Nữ
@@ -490,6 +435,7 @@
     built_on_code_studio: Được xây dựng trên Code Studio
     make_my_own_app: Tạo ứng dụng của tôi
     how_it_works: Nó hoạt động như thế nào
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý
@@ -560,7 +506,7 @@
       unused: Không sử dụng cấp độ
   upsell:
     hoc:
-      title: Giờ của mã
+      title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
         các khóa này.
     flappy:
@@ -584,7 +530,7 @@
     frozen:
       title: Bộ phim Frozen
     starwars:
-      title: Star Wars
+      title: Cuộc Chiến Giữa Các Vì Sao
     infinity:
       title: Phòng thí nghiệm Vui Chơi Bất Tận
       body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với
