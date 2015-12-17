@@ -205,8 +205,8 @@ Blockly.BlockSpace.prototype.scrollbarPair = null;
 /**
  * @returns {boolean}
  */
-Blockly.BlockSpace.prototype.getReadOnly = function() {
-  return (Blockly.readOnly || this.blockSpaceEditor.getReadOnly());
+Blockly.BlockSpace.prototype.isReadOnly = function() {
+  return (Blockly.readOnly || this.blockSpaceEditor.isReadOnly());
 };
 
 /**
@@ -313,7 +313,7 @@ Blockly.BlockSpace.prototype.dispose = function() {
  * Add a trashcan.
  */
 Blockly.BlockSpace.prototype.addTrashcan = function() {
-  if (Blockly.hasTrashcan && !this.getReadOnly()) {
+  if (Blockly.hasTrashcan && !this.isReadOnly()) {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
     this.svgBlockCanvas_.appendChild(svgTrashcan);

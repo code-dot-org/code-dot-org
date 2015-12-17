@@ -242,7 +242,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // it here so that blocks can be dragged over the top of it.  The HTML div
   // appears over the blocks, meaning that blocks dragged to it would appear
   // underneath it, if it had a background color, which wouldn't look as good.
-  if (!this.hideTrashRect_ && !this.getReadOnly() && Blockly.hasCategories) {
+  if (!this.hideTrashRect_ && !this.isReadOnly() && Blockly.hasCategories) {
     this.svgBackground_ = Blockly.createSvgElement('rect',
       {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
       this.svg_);
@@ -250,7 +250,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
   svg.appendChild(this.blockSpace.createDom());
 
-  if (!this.getReadOnly()) {
+  if (!this.isReadOnly()) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
@@ -704,7 +704,7 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
  * @private
  */
 Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
-  if (this.getReadOnly()) {
+  if (this.isReadOnly()) {
     return;
   }
   var options = [];
@@ -909,7 +909,7 @@ Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
 /**
  * @returns {boolean}
  */
-Blockly.BlockSpaceEditor.prototype.getReadOnly = function() {
+Blockly.BlockSpaceEditor.prototype.isReadOnly = function() {
   return (Blockly.readOnly || this.readOnly_);
 };
 
