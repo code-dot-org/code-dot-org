@@ -240,48 +240,49 @@ social:
                         <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.upir.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/upir.png"></a>
                     </div>
                 </div>
-            </div>
-            <h1 class="text-align-center">Parteneri Media</h1>
-            <div class="row">
-                <div class="col-sm-3 col span_3">
+            </div><h1 class="text-align-center">Parteneri Media</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://digi24.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/D24.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://digi24.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/D24.jpg"></a>
                     </div>
-                </div>
-                <div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://thetrends.ro/" target="_blank"><img style="max-width: 100%" src="/images/trends.jpg”></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://thetrends.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/trends.jpg"></a>
                     </div>
-                </div>
-                <div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.agora.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_AGORA-511x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.agora.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/logo_AGORA-511x160.png"></a>
                     </div>
-                </div>
-                <div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/FIA_negru-382x160.jpg"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/FIA_negru-382x160.jpg"></a>
                     </div>
-                </div>
-            </div>
-            <h1 class="text-align-center">PR</h1>
-            <div class="row">
-                <div class="col-sm-3 col span_3">
+                  </div></div><h1 class="text-align-center">PR</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.mslgroup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Screen-Shot-2014-12-17-at-22.29.54-290x160.png"></a>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.mslgroup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/FIA_negru-382x160.jpg"></a>
                     </div>
-                </div>
-                <div class="col-sm-3 col span_3">
+                  </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <img style="max-width: 100%" src="">
+                      <img style="max-width: 100%" src="">
                     </div>
-                </div>
-            </div>
-        </div>
-        <!--/row-->
-    </div>
-    <!--/container-->
+                  </div></div>
+
+
+
+			
+
+
+
+
+		</div><!--/row-->
+
+
+
+	</div><!--/container-->
+
+
+
 </div>
+
 ---
 
 ## Parteneri Globali

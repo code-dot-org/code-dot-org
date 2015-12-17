@@ -31,8 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "fast_get_nectar_animation": "false",
-    "maze_data": null
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>

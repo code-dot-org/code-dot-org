@@ -226,7 +226,7 @@ assessment 'U3L25 Free Response 3'
 
 
 # 17
-stage 'Introduction to Digital Assistant Project'
+stage 'Introduction to Digital Assistants'
 level 'U3L23 Student Lesson Introduction'
 assessment 'U3L23 Free Response Getting Started'
 level 'U3 Digital Assistant Target'
@@ -424,6 +424,7 @@ level 'U3L34 Student Lesson Introduction'
 level 'U3 - Practice Create Performance Task'
 
 ##TURDS DO NOT USE##
+stage 'Introduction to Digital Assistant Project'
 stage 'Creating Procedures - Part 1'
 stage 'Creating Procedures - Part 2'
 stage 'Layers of Abstraction and Programming Efficiency'
