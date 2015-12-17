@@ -29,23 +29,21 @@ var Sprite = function (options) {
   this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
-  this.displayDir = Direction.SOUTH;
+  this.displayDir = Direction.NONE;
   this.startFadeTime = null;
   this.fadeTime = constants.DEFAULT_ACTOR_FADE_TIME;
 
-  /** @private {StudioAnimation} */
-  if (this.image) {
-    this.animation_ = new StudioAnimation($.extend({}, options, {
-      spriteSheet: new StudioSpriteSheet(options),
-      animationFrameDuration: this.getAnimationFrameDuration()
-    }));
-  }
+  this.image = null;
+  this.legacyImage = null;
 };
 Sprite.inherits(Collidable);
 module.exports = Sprite;
 
+/**
+ * Sets (or modifies) the image - we will generate a StudioSpriteSheet and
+ * StudioAnimation in response..
+ */
 Sprite.prototype.setImage = function (image, totalAnimations) {
-
   if (image !== this.image) {
     this.image = image;
     this.totalAnimations = totalAnimations;
@@ -72,12 +70,60 @@ Sprite.prototype.setImage = function (image, totalAnimations) {
       animationFrameDuration: this.getAnimationFrameDuration()
     }));
   }
+};
 
+Sprite.prototype.setLegacyImage = function (image, frameCounts) {
+  if (image !== this.legacyImage) {
+    this.legacyImage = image;
+
+    var options = {
+      renderScale: this.renderScale,
+      opacity: this.opacity,
+      loop: this.loop,
+      animationFrameDuration: this.animationFrameDuration,
+      width: this.width,
+      height: this.height,
+      imageAsset: {
+        spriteSheet: this.legacyImage,
+        animations: {
+          normal: {
+            count: 1,
+            frames: frameCounts.normal
+          },
+          turns: {
+            count: 1,
+            frames: frameCounts.turns
+          },
+          emotions: {
+            count: 1,
+            frames: frameCounts.emotions
+          }
+        },
+      },
+      horizontalAnimation: true,
+      animationsInOneStrip: true
+    };
+
+    if (this.legacyAnimation_) {
+      this.legacyAnimation_.removeElement();
+    }
+
+    /** @private {StudioAnimation} */
+    this.legacyAnimation_ = new StudioAnimation($.extend({}, options, {
+      spriteSheet: new StudioSpriteSheet(options),
+      animationFrameDuration: this.getAnimationFrameDuration()
+    }));
+  }
 };
 
 /** @returns {SVGImageElement} */
 Sprite.prototype.getElement = function () {
   return this.animation_.getElement();
+};
+
+/** @returns {SVGImageElement} */
+Sprite.prototype.getLegacyElement = function () {
+  return this.legacyAnimation_.getElement();
 };
 
 /**
@@ -104,7 +150,12 @@ Sprite.prototype.getDirectionFrame = function() {
  * Create an image element with a clip path
  */
 Sprite.prototype.createElement = function (parentElement) {
-  this.animation_.createElement(parentElement);
+  if (this.animation_) {
+    this.animation_.createElement(parentElement);
+  }
+  if (this.legacyAnimation_) {
+    this.legacyAnimation_.createElement(parentElement);
+  }
 };
 
 /**
@@ -128,7 +179,12 @@ Sprite.prototype.beginRemoveElement = function () {
  * Remove our element/clipPath/animator
  */
 Sprite.prototype.removeElement = function() {
-  this.animation_.removeElement();
+  if (this.animation_) {
+    this.animation_.removeElement();
+  }
+  if (this.legacyAnimation_) {
+    this.legacyAnimation_.removeElement();
+  }
 };
 
 /**
@@ -169,12 +225,25 @@ Sprite.prototype.display = function () {
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
-    this.animation_.setOpacity(opacity);
+    // this.animation_.setOpacity(opacity);
+    this.setOpacity(opacity);
   }
 
   var animationIndex = this.getDirectionFrame();
-  if (animationIndex >= this.totalAnimations) {
-    this.animation_.hide();
+  if ((animationIndex >= this.totalAnimations) || (!this.animation_)) {
+    // Legacy render path:
+    if (this.animation_) {
+      this.animation_.hide();
+    }
+    if (this.legacyAnimation_) {
+      this.legacyAnimation_.setCurrentAnimation('normal', 0);
+      this.legacyAnimation_.redrawCenteredAt({
+            x: this.x + this.renderOffset.x,
+            y: this.y + this.renderOffset.y
+          },
+          Studio.tickCount);
+      this.legacyAnimation_.show();
+    }
   } else {
     this.animation_.setCurrentAnimation('direction', animationIndex);
     this.animation_.redrawCenteredAt({
@@ -183,6 +252,9 @@ Sprite.prototype.display = function () {
         },
         Studio.tickCount);
     this.animation_.show();
+    if (this.legacyAnimation_) {
+      this.legacyAnimation_.hide();
+    }
   }
 };
 
@@ -207,7 +279,13 @@ Sprite.prototype.moveToNextPosition = function () {
  */
 Sprite.prototype.setSpeed = function (speed) {
   this.speed = speed;
-  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+  if (this.animation_) {
+    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+  }
+  if (this.legacyAnimation_) {
+    this.legacyAnimation_.setAnimationFrameDuration(
+        this.getAnimationFrameDuration());
+  }
 };
 
 /**
@@ -216,7 +294,12 @@ Sprite.prototype.setSpeed = function (speed) {
  */
 Sprite.prototype.setOpacity = function (newOpacity) {
 
-  // TODO: this.animation_.setOpacity(newOpacity);
+  if (this.animation_) {
+    this.animation_.setOpacity(newOpacity);
+  }
+  if (this.legacyAnimation_) {
+    this.legacyAnimation_.setOpacity(newOpacity);
+  }
 
   var spriteIndex = Studio.sprite.indexOf(this);
   if (spriteIndex < 0) {

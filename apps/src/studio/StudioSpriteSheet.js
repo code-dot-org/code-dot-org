@@ -41,10 +41,14 @@ var StudioSpriteSheet = module.exports = function (options) {
   var imageAsset = options.imageAsset || {
     spriteSheet: options.image,
     animations: {
-      direction: 8,
-      idle: 1
+      direction: {
+        count: 8
+      },
+      idle: {
+        count: 1
+      }
     },
-    animationFrames: 1
+    defaultFramesPerAnimation: 1
   };
 
   /** @type {string} spritesheet asset path */
@@ -56,17 +60,33 @@ var StudioSpriteSheet = module.exports = function (options) {
   /** @type {number} */
   this.frameHeight = utils.valueOr(options.height, 50); // TODO: Magic Number
 
+  /** @type {number} frames per animation / height in frames of sprite sheet */
+  this.defaultFramesPerAnimation = utils.valueOr(options.frames,
+      imageAsset.defaultFramesPerAnimation);
+
+  /** @type {boolean} Whether animations are stacked in one long strip 
+   * (this mode requires that imageAsset.animations be supplied)
+   */
+  this.animationsInOneStrip = utils.valueOr(options.animationsInOneStrip, false);
+
   /** @type {number} animations in sheet / width in frames of sprite sheet */
   this.animationOffsets = {};
+  this.animationFrameCounts = {};
+  var totalFrames = 0;
   var totalAnimations = 0;
   for (var name in imageAsset.animations) {
-    this.animationOffsets[name] = totalAnimations;
-    totalAnimations += imageAsset.animations[name];
+    this.animationOffsets[name] = this.animationsInOneStrip ?
+        totalFrames : totalAnimations;
+    totalAnimations += imageAsset.animations[name].count;
+    this.animationFrameCounts[name] = imageAsset.animations[name].frames;
+    var framesPerThisAnimationType = utils.valueOr(
+        imageAsset.animations[name].frames,
+        this.defaultFramesPerAnimation);
+    totalFrames += framesPerThisAnimationType * imageAsset.animations[name].count;
   }
   this.totalAnimations = utils.valueOr(options.totalAnimations, totalAnimations);
-
-  /** @type {number} frames per animation / height in frames of sprite sheet */
-  this.framesPerAnimation = utils.valueOr(options.frames, imageAsset.animationFrames);
+  this.totalFrames = totalFrames ||
+      (this.totalAnimations * this.defaultFramesPerAnimation);
 
   /** @type {boolean} Whether animation frames run in rows, not columns */
   this.horizontalAnimation = utils.valueOr(options.horizontalAnimation, false);
@@ -74,14 +94,30 @@ var StudioSpriteSheet = module.exports = function (options) {
 
 /** @return {number} original height of the whole sprite sheet. */
 StudioSpriteSheet.prototype.assetWidth = function () {
+  if (this.animationsInOneStrip) {
     return this.frameWidth * (this.horizontalAnimation ?
-            this.framesPerAnimation : this.totalAnimations);
+            this.totalFrames : 1);
+  } else {
+    return this.frameWidth * (this.horizontalAnimation ?
+            this.defaultFramesPerAnimation : this.totalAnimations);
+  }
 };
 
 /** @return {number} original width of the whole sprite sheet. */
 StudioSpriteSheet.prototype.assetHeight = function () {
-  return this.frameHeight * (this.horizontalAnimation ?
-          this.totalAnimations : this.framesPerAnimation);
+  if (this.animationsInOneStrip) {
+    return this.frameHeight * (this.horizontalAnimation ?
+            1 : this.totalFrames);
+  } else {
+    return this.frameHeight * (this.horizontalAnimation ?
+            this.totalAnimations : this.defaultFramesPerAnimation);
+  }
+};
+
+/** @return {number} number of animation frames for a given type. */
+StudioSpriteSheet.prototype.getAnimationFrameCount = function (animationType) {
+  return utils.valueOr(this.animationFrameCounts[animationType],
+      this.defaultFramesPerAnimation);
 };
 
 /**
@@ -95,12 +131,20 @@ StudioSpriteSheet.prototype.assetHeight = function () {
  */
 StudioSpriteSheet.prototype.getFrame = function (animationType,
     animationIndex, frameIndex) {
-
-  if (animationType) {
-    animationIndex += this.animationOffsets[animationType];
+  var x, y;
+  if (this.animationsInOneStrip) {
+    var absoluteFrameIndex = this.animationOffsets[animationType] +
+        this.animationFrameCounts[animationType] * animationIndex;
+    absoluteFrameIndex += frameIndex;
+    x = this.frameWidth * (this.horizontalAnimation ? absoluteFrameIndex : 0);
+    y = this.frameHeight * (this.horizontalAnimation ? 0 : absoluteFrameIndex);
+  } else {
+    if (animationType) {
+      animationIndex += this.animationOffsets[animationType];
+    }
+    x = this.frameWidth * (this.horizontalAnimation ? frameIndex : animationIndex);
+    y = this.frameHeight * (this.horizontalAnimation ? animationIndex : frameIndex);
   }
-  var x = this.frameWidth * (this.horizontalAnimation ? frameIndex : animationIndex);
-  var y = this.frameHeight * (this.horizontalAnimation ? animationIndex : frameIndex);
   return {
     x: x,
     y: y,

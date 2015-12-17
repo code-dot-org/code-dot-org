@@ -155,10 +155,13 @@ StudioAnimation.prototype.removeElement = function() {
  */
 StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
   var currentFrame = Math.floor(tickCount / this.animationFrameDuration_);
+  var framesInThisAnimation =
+      this.spriteSheet_.getAnimationFrameCount(this.currentAnimationType_);
+  // TODO: add time skew per-sprite
   if (this.loop_) {
-    currentFrame = currentFrame % this.spriteSheet_.framesPerAnimation;
+    currentFrame = currentFrame % framesInThisAnimation;
   } else {
-    currentFrame = Math.min(currentFrame, this.spriteSheet_.framesPerAnimation - 1);
+    currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
   }
 
   var frame = this.spriteSheet_.getFrame(this.currentAnimationType_,
