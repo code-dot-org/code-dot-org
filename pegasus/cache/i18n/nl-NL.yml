@@ -335,8 +335,8 @@
   starwars_javascript_start_button: Probeer nu
   starwars_blocks_title: Blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
-  starwars_blocks_specs: Veel talen | Moderne browsers, smartphones, tablets | Leeftijd
-    6-10jr
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Probeer nu
   starwars_watch_videos: Bekijk voor je begint deze inspiratie-video's
   starwars_speak_languages: Spreek je een andere taal?
@@ -349,7 +349,7 @@
     door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
-  mc_specs: Veel talen | Moderne browsers en tablets | Leeftijd 6+jr
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Uur Code
   volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger
     voor het Uur Code.
@@ -373,7 +373,7 @@
     een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
     zijn verplicht.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Informatie gedeeld met docenten op
     de vrijwilligerskaart
@@ -1508,3 +1508,13 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

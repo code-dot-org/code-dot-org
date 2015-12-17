@@ -327,8 +327,8 @@
   starwars_javascript_start_button: Опитайте сега
   starwars_blocks_title: Блокове
   starwars_blocks_description: Използвайте drag-drop блокове.
-  starwars_blocks_specs: На повече езици (Очаквайте скоро) | Съвременни браузъри,
-    смартфони, таблетки | Възраст 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Опитайте сега
   starwars_watch_videos: Преди да започнете, гледайте едно от тези вдъхновяващи видеа
   starwars_speak_languages: Говорите друг език?
@@ -341,8 +341,7 @@
     приключението чрез този Minecraft свят.
   mc_gradelevel: Възраст 6 +
   mc_platformtext: Съвременни браузъри, смартфони, таблети
-  mc_specs: На повече езици (Очаквайте скоро) | Съвременни браузъри и таблети | Възраст
-    6 +
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Вдъхнови ученици и доброволци за Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100 000 учители ще бъдат домакини
@@ -1493,3 +1492,13 @@
   infinity_shortcode: inf
   playlab_shortcode: играй
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

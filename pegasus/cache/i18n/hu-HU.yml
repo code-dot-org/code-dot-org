@@ -328,8 +328,8 @@
   starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
-  starwars_blocks_specs: 'Több nyelven is (hamarosan) | Modern böngészők, okostelefonok,
-    tabletek | Korosztály: 6-10'
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Próbálja ki most
   starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
   starwars_speak_languages: Beszél egy másik nyelven is?
@@ -342,8 +342,7 @@
     a Minecraft világában.
   mc_gradelevel: 4-től 104 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
-  mc_specs: 'Több nyelven is (hamarosan) | Modern böngészők és tabletek | Korosztály:
-    6 +'
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Kódolás Órája
   volunteer_engineer_submission_title: Ösztönözz tanulókat és önkénteseket a Kódolás
     Órájára.
@@ -362,13 +361,12 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: Az információ meg lett osztva az önkéntes
     tanárok térképén
@@ -1511,3 +1509,13 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
