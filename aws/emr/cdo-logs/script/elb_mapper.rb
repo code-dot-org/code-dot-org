@@ -84,14 +84,17 @@ ARGF.each do |line|
   date = line[0..9]
 
   tutorials.each do |t|
-    if (line.include? "begin" + "\/" + t) ||
-      (line.include? "begin" + "_" + t) ||
-      (line.include? "443" + "\/" + t)
-      # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
-      # aggregate. Using the date and tutorial as the key gives breakdowns by
-      # day and tutorial.
-      puts LONG_VALUE_SUM + date + " " + t + "\t" + "1"
-      break
+    if line.include? t
+      # The GET request is surrounded by double quotes, so we exploit this as a
+      # delimiter.
+      get_request = /GET [^"]*/.match(line).to_s
+      if get_request != ""
+        # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
+        # aggregate. Using the date and GET request as the key gives breakdowns by
+        # day and GET request.
+        puts LONG_VALUE_SUM + date + " " + get_request + "\t" + "1"
+        break
+      end
     end
   end
 end
