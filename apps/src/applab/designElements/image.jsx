@@ -130,6 +130,11 @@ module.exports = {
   },
   onDeserialize: function (element, updateProperty) {
     var url = element.getAttribute('data-canonical-image-url') || '';
-    updateProperty(element, 'picture', url);
+    if (url) {
+      updateProperty(element, 'picture', url);
+    } else {
+      element.setAttribute('src', '/blockly/media/1x1.gif');
+      element.setAttribute('data-canonical-image-url', '');
+    }
   }
 };
