@@ -140,7 +140,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
   CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-    RakeUtils.rakefile '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/code-studio-package')
     RakeUtils.system 'cp', '-R', code_studio_dir('build'), dashboard_dir('public/code-studio-package')
   end
