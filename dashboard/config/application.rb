@@ -93,6 +93,7 @@ module Dashboard
       editor/blockly_editor.css
       editor/blockly_editor.js
       editor/embedded_markdown_editor.js
+      editor/json_editor.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js
