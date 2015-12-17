@@ -24,9 +24,6 @@ namespace :lint do
     Dir.chdir(shared_js_dir) do
       RakeUtils.system 'npm run lint'
     end
-    Dir.chdir(code_studio_dir) do
-      RakeUtils.system 'npm run lint:js -s'
-    end
   end
 
   task all: [:ruby, :haml, :javascript]
@@ -103,16 +100,6 @@ namespace :build do
 
       HipChat.log 'Building <b>shared js</b>...'
       RakeUtils.system 'npm run gulp'
-    end
-  end
-
-  task :code_studio do
-    Dir.chdir(code_studio_dir) do
-      HipChat.log 'Installing <b>code-studio</b> dependencies...'
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run build'
     end
   end
 
@@ -205,7 +192,6 @@ namespace :build do
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
-  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
@@ -293,16 +279,6 @@ namespace :install do
     end
   end
 
-  task :code_studio do
-    if local_environment?
-      Dir.chdir(code_studio_dir) do
-        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
-        RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
-      end
-      install_npm
-    end
-  end
-
   task :dashboard do
     if local_environment?
       Dir.chdir(dashboard_dir) do
@@ -327,40 +303,12 @@ namespace :install do
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
-  tasks << :code_studio if CDO.build_code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 
 end
 task :install => ['install:all']
-
-# Commands to update built static asset packages
-namespace :update_package do
-
-  task :code_studio do
-    if RakeUtils.git_staged_changes?
-      puts 'You have changes staged for commit; please unstage all changes before running an `update_package` command.'
-    else
-      # Lint, Clean, Build, Test
-      Dir.chdir(code_studio_dir) do
-        RakeUtils.system "npm run lint && npm run clean && npm run build"
-      end
-
-      # Remove old built package
-      package_dir = dashboard_dir('public', 'code-studio-package')
-      RakeUtils.system "rm -rf #{package_dir}"
-
-      # Copy in new built package
-      RakeUtils.system "cp -r #{code_studio_dir('build')} #{package_dir}"
-
-      # Commit directory
-      RakeUtils.git_add '-A', package_dir
-      RakeUtils.system 'git commit --no-verify -m "Updated code-studio-package."'
-    end
-  end
-
-end
 
 task :default do
   puts 'List of valid commands:'
