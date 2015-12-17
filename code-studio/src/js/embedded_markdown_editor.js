@@ -1,4 +1,6 @@
-/* global codeMirror, marked, dashboard */
+/* global codeMirror */
+
+var marked = require("marked");
 
 window.dashboard = window.dashboard || {};
 
