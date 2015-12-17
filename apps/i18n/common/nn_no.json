@@ -244,5 +244,8 @@
   "when": "når",
   "whenRun": "når den køyrer",
   "workspaceHeaderShort": "Arbeidsområde: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }

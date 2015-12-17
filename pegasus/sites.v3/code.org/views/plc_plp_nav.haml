@@ -1,0 +1,10 @@
+#about_nav
+  %span.about_list
+    -current_url = '/educate/plc/plp'
+    -{'Apply to be a Participant'=>'plp-application',  'Where we need partners'=> current_url+'#partners', 'What are the commitments?'=>current_url+'#commitments'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr
+

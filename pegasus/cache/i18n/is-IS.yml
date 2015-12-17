@@ -330,8 +330,8 @@
   starwars_javascript_start_button: Prófaðu núna
   starwars_blocks_title: Kubbar
   starwars_blocks_description: Nota færanlega kubba.
-  starwars_blocks_specs: Mörg tungumál (á næstunni) | Nýlegir vafrar, snjallsímar,
-    spjaldtölvur | Aldur 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Prófaðu núna
   starwars_watch_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en þú byrjar
   starwars_speak_languages: Talarðu annað tungumál?
@@ -344,7 +344,7 @@
     um þennan Minecraft heim.
   mc_gradelevel: Aldur 6+
   mc_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
-  mc_specs: Mörg tungumál (á næstunni) | Nýlegir vafrar og spjaldtölvur | Aldur 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
   volunteer_engineer_submission_title: Vertu nemendum hvatning og hjálpaðu til við
     Klukkustund kóðunar.
@@ -1487,3 +1487,13 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

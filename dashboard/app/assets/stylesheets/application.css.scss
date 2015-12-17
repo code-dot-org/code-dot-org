@@ -470,6 +470,12 @@ $default-modal-width: 640px;
     right: 0;
     margin: 0 auto;
   }
+
+  .markdown {
+    .modal-image {
+      margin-top: -100px;
+    }
+  }
 }
 
 .auto-resize-scrollable {
@@ -485,9 +491,6 @@ $default-modal-width: 640px;
     margin-bottom: 25px;
 
     z-index: 1050;
-  }
-  .modal-image {
-    margin-top: -100px;
   }
 }
 

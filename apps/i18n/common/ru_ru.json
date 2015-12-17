@@ -244,5 +244,8 @@
   "when": "когда",
   "whenRun": "При запуске",
   "workspaceHeaderShort": "Место сбора блоков: ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max."
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }

@@ -399,4 +399,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "Ne zaman"},
 "whenRun":function(d){return "Çalıştığı zaman"},
 "workspaceHeaderShort":function(d){return "Çalışma alanı: "},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};

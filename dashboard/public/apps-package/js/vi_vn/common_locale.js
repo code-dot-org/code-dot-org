@@ -399,4 +399,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "Khi nào"},
 "whenRun":function(d){return "Khi chạy"},
 "workspaceHeaderShort":function(d){return "Không gian làm việc:"},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."}};
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};
