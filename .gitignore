@@ -9,6 +9,7 @@
 /crontab
 /dashboard/public/blockly
 /dashboard/public/shared
+/dashboard/public/code-studio
 /.dropbox.cache
 /build-started
 /locals.yml
