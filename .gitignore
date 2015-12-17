@@ -26,6 +26,8 @@
 /globals.yml
 /aws/.shared-built
 /aws/.shared-commit-built
+/aws/.code-studio-built
+/aws/.code-studio-commit-built
 /shared/js/node_modules/
 /apps/build
 /apps/node_modules/
