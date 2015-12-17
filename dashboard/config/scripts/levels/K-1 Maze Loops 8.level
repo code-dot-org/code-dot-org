@@ -26,7 +26,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "markdown_instructions": "Use `repeat` loops to get me to the pig."
   }
 }]]></config>
