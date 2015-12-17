@@ -1,7 +1,0 @@
-{
-  "name": "@cdo/code-studio-vendor",
-  "version": "0.0.1",
-  "description": "Code Studio vendor package, used to reference vendor files from our own source",
-  "private": true
-}
-
