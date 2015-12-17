@@ -88,7 +88,10 @@ ARGF.each do |line|
       # The GET request is surrounded by double quotes, so we exploit this as a
       # delimiter.
       get_request = /GET [^"]*/.match(line).to_s
-      if get_request != "" && (t != "hourofcode" || !/certificate64/.match(line))
+      # Since the certificate pages have a custom hash, we do not track them.
+      # Also, to avoid counting random URLs, we restrict by length.
+      if get_request != "" && !(/certificate64/.match(line)) &&
+        get_request.length < 75
         # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
         # aggregate. Using the date and GET request as the key gives breakdowns by
         # day and GET request.
