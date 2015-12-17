@@ -52,6 +52,13 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/sha
   group node[:current_user]
 end
 
+link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/code-studio" do
+  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashbaord/public/code-studio-package"
+  action :create
+  user node[:current_user]
+  group node[:current_user]
+end
+
 execute "bundle-install-dashboard" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
