@@ -41,10 +41,7 @@
       "readRecords": null,
       "console.log": null
     },
-    "instructions": "Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mydata” table. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mydata” table. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
