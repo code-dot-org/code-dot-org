@@ -280,7 +280,8 @@
   starwars_javascript_start_button: 快來試試
   starwars_blocks_title: 程式積木
   starwars_blocks_description: 使用拖拉區塊
-  starwars_blocks_specs: 多國語言(增加中) | 瀏覽器, 智慧手機, 平板 |年齡6-10歲
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: 快來試試
   starwars_watch_videos: 在開始始，先看一些激發靈感的影片
   starwars_speak_languages: 使用另一種語言?
@@ -291,7 +292,7 @@
   mc_shortdescription: 使用程式模塊幫助 Steve 或 Alex 闖過創世神的各種冒險
   mc_gradelevel: 年齡6歲以上
   mc_platformtext: 瀏覽器, 智慧手機, 平板
-  mc_specs: 多國語言(即將上線) |瀏覽器和平板 |年齡6歲以上
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft 程式碼時間
   volunteer_engineer_submission_title: 激勵學生和志工參與一個小時的程式課程
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour
@@ -306,7 +307,7 @@
   volunteer_engineer_submission_intro_signup: '如果你是在學習電腦科學的學生或是軟體的專業人士，請輸入下列資訊。此為必填:
     <span class="form-required-field">*</span>'
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_header_shared: 在志工地圖上與老師共用的資訊
   volunteer_engineer_submission_field_name: 你的名字
@@ -1162,3 +1163,13 @@
   infinity_shortcode: inf
   playlab_shortcode: 玩
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
