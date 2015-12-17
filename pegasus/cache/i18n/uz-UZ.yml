@@ -340,8 +340,8 @@
   starwars_javascript_start_button: Hoziroq sinang
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Ko‘chuvchi bloklardan foydalaning.
-  starwars_blocks_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brazerlar, smartfonlar,
-    planshetlar | Yosh: 6-10'
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Hoziroq sinang
   starwars_watch_videos: Boshlashdan avval ilhomlantiruvchi videolardan birortasini
     ko‘ring
@@ -355,7 +355,7 @@
     bloklaridan foydalaning.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: 'Ko‘p tillar (tez orada) | Zamonaviy brauzerlar | Yosh: 6+'
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Maynkraft Dasturlash soati
   volunteer_engineer_submission_title: O‘quvchi va ko‘ngillilarni Dasturlash soatiga
     jalb qiling.
@@ -381,7 +381,7 @@
     bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. <span class="form-required-field">*</span>
     belgili sohalarni to‘ldirish majburiy.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Ko‘ngillilar xaritasida o‘qituvchilar
@@ -1489,3 +1489,13 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

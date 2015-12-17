@@ -341,14 +341,15 @@
     kroz Minecraft svijet.
   mc_gradelevel: Dob 4-104
   mc_platformtext: Savremeni browser-i, mobiteli, tableti
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Sata Kodiranja Minecraft-a
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
+    of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 nastavnika će ugostiti
     Sat Kodiranja u njihovoj učionici ove godine, Dec 7-13, 2015. Oni žele tvoju pomoć! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
+    volunteers passionate about computer science education to help with their Hour
+    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: Sat Kodiranja je globalni pokret
     da bi se isprobao jedan sat uvoda u računarstvo i koji doseže desetke miliona
     učenika u 180+ zemalja. Zovemo vas da se priključite tokom Edukacijske Sedmice
@@ -358,13 +359,12 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Molimo da unesete slijedeću informaciju
     ako ste student računarstva ili softverski poznavalac. Polja zabilježena sa <span
     class="form-required-field">*</span>su obavezna.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informacija podijeljena sa nastavnicima
@@ -1481,3 +1481,13 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
