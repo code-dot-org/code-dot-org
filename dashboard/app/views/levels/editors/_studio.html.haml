@@ -47,3 +47,15 @@
 .field
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
+
+:javascript
+  CodeMirror.fromTextArea($('#level_success_condition').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });
+  CodeMirror.fromTextArea($('#level_failure_condition').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });
