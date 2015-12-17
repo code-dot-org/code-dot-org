@@ -1,4 +1,4 @@
-def claim_prize_code(type, email, params={})
+def claim_prize_code(type, email, purpose, params={})
   ip_address = params[:ip_address] || request.ip || '127.0.0.1'
 
   type = type.downcase
@@ -7,6 +7,7 @@ def claim_prize_code(type, email, params={})
   begin
     rows_updated = DB[:hoc_survey_prizes].where(claimant: nil, type: type).limit(1).update(
       claimant: email,
+      purpose: purpose,
       claimed_at: DateTime.now,
       claimed_ip: ip_address,
     )
@@ -17,5 +18,7 @@ def claim_prize_code(type, email, params={})
     raise
   end
 
-  DB[:hoc_survey_prizes].where(claimant: email).first[:value]
+  prize = DB[:hoc_survey_prizes].where(claimant: email, type: type).get(:value)
+  return 'None' unless prize
+  prize
 end
