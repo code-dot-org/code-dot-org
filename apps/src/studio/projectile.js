@@ -155,6 +155,38 @@ Projectile.prototype.removeElement = function () {
 };
 
 /**
+ * Flip the direction of the projectile
+ */
+Projectile.prototype.bounce = function () {
+  switch (this.dir) {
+    case Direction.NORTH:
+      this.dir = Direction.SOUTH;
+      break;
+    case Direction.WEST:
+      this.dir = Direction.EAST;
+      break;
+    case Direction.SOUTH:
+      this.dir = Direction.NORTH;
+      break;
+    case Direction.EAST:
+      this.dir = Direction.WEST;
+      break;
+    case Direction.NORTHEAST:
+      this.dir = Direction.SOUTHWEST;
+      break;
+    case Direction.SOUTHEAST:
+      this.dir = Direction.NORTHWEST;
+      break;
+    case Direction.SOUTHWEST:
+      this.dir = Direction.NORTHEAST;
+      break;
+    case Direction.NORTHWEST:
+      this.dir = Direction.SOUTHEAST;
+      break;
+  }
+};
+
+/**
  * Display our projectile at it's current location, rotating as necessary
  */
 Projectile.prototype.display = function () {

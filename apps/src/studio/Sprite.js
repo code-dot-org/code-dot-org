@@ -51,7 +51,6 @@ Sprite.prototype.getElement = function () {
  * Returns the frame of the spritesheet for the current walking direction.
  */
 Sprite.prototype.getDirectionFrame = function() {
-
   // Every other frame, if we aren't yet rendering in the correct direction,
   // assign a new displayDir from state table; only one turn at a time.
 
@@ -119,7 +118,6 @@ Sprite.prototype.isFading = function() {
   return !!this.startFadeTime;
 };
 
-
 /**
  * Returns true if the item has finished fading away.  The caller will usually
  * then call removeElement to destroy this item's assets.
@@ -175,10 +173,24 @@ Sprite.prototype.setSpeed = function (speed) {
 };
 
 /**
- * Change visible opacity of this item.
+ * Change visible opacity of this collidable sprite.
  * @param {number} newOpacity (between 0 and 1)
- * @override
  */
 Sprite.prototype.setOpacity = function (newOpacity) {
-  this.animation_.setOpacity(newOpacity);
+
+  // TODO: this.animation_.setOpacity(newOpacity);
+
+  var spriteIndex = Studio.sprite.indexOf(this);
+  if (spriteIndex < 0) {
+    return;
+  }
+
+  var spriteRegularIcon = document.getElementById('sprite' + spriteIndex);
+  var spriteWalkIcon = document.getElementById('spriteWalk' + spriteIndex);
+  if (spriteRegularIcon) {
+    spriteRegularIcon.setAttribute('opacity', newOpacity);
+  }
+  if (spriteWalkIcon) {
+    spriteWalkIcon.setAttribute('opacity', newOpacity);
+  }
 };
