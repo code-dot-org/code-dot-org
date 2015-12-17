@@ -4,7 +4,6 @@ layout: wide
 nav: prizes_nav
 ---
 
-
 # 2015 Hour of Code prizes
 
 <% if @country == 'la' %>
@@ -17,15 +16,9 @@ Every educator who hosted an Hour of Code for students received 10 GB of Dropbox
 
 ## Prizes for EVERY organizer
 
-**Every** educator who hosted an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!*
+**Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes, Windows Store or 10GB of Dropbox space** as a thank-you gift!*
 
-<img style="float:left;" src="/images/fit-130/amazon_giftcards.png"/>
-
-<img style="float:left;" src="/images/fit-130/apple_giftcards.png"/>
-
-<img styel="float:left;" src="/images/fit-130/microsoft_giftcards.png"/>
-
-<p style="clear:both">&nbsp;</p>
+<%= view :prizes_giftcards %>
 
 *While supplies last
 

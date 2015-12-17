@@ -166,10 +166,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "markdown_instructions": "# Create a Delete Button\r\n\r\nNow that you can add new contacts to your app, you might want to add functionality to remove them. Let's **create a new button the user can click to delete the current contact**.\r\n\r\n# Do This\r\n**NOTE:** Your code and database for the Contacts App is provided\r\n\r\n * In Design Mode **shrink the \"Add Contact\" button** on the \"showContactsScreen\"\r\n \r\n * **Add a new button for delete** in the space you created.\r\n \r\n * Set the style of the button, change its text, and give it a descriptive ID.\r\n\r\n![](https://images.code.org/e390ba49c28b447279bc20dd2b7eef91-image-1449865822878.14.31 PM.png)",
-    "instructions": "Create a \"Delete\" button. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Create a \"Delete\" button. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

@@ -14,6 +14,7 @@
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
   front_volunteers: 'Technical volunteers wanted'
+  front_start_learning: 'Start learning'
 
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
@@ -272,6 +273,7 @@
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
+  map_title: "Hour of Code map"
   map_header: '# Hour of Code events around the world'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
@@ -283,9 +285,9 @@
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
 
-  meta_tag_og_title: 'The Hour of Code is here'
+  meta_tag_og_title: 'Every child deserves opportunity'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
-  meta_tag_twitter_title: 'The Hour of Code is here'
+  meta_tag_twitter_title: 'Every child deserves opportunity'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"

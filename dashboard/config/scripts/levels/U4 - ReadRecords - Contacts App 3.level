@@ -166,10 +166,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "markdown_instructions": "# Updating Your Contacts: Adding a Contact\r\n\r\nWhen you add a new contact to your app it currently gets added to your database by calling `createRecord`. Once this happens **your local copy is no longer up to date**. \r\n\r\nWe can address this by calling `refreshLocalData()` any time we add anything to the database.  For example, any time we `createRecord` we can refresh the local data as soon as we know the new record was successfully added to the database (i.e. when the callback function is triggered).\r\n\r\n# Do This\r\n\r\n**NOTE:** Your code and database for the Contacts App is provided\r\n\r\n * Your app currently **adds a new contact to the database** when you click the \"Create Contact\" button.\r\n \r\n * **Add a call to `refreshLocalData()` inside the callback function of `createRecord`**\r\n \r\n * <details><summary><strong>What your code should look like</strong></summary>![](https://images.code.org/233f231adbdc1729e9c639003d8275d8-image-1449953768940.55.57 PM.png)</details>\r\n* Run the program and **confirm when you add a contact to your database you can also see it in your app**",
-    "instructions": "Add a call to \"refreshLocalData\" to the callback function of the createRecord you use to add a new contact to your database. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Add a call to \"refreshLocalData\" to the callback function of the createRecord you use to add a new contact to your database. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

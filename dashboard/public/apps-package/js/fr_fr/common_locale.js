@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "Opérateur booléen NON"},
 "dropletBlock_orOperator_description":function(d){return "Renvoie vrai lorsque chacune des expressions est vraie et faux sinon"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "Opérateur booléen OU"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
 "dropletBlock_randomNumber_param0_description":function(d){return "Le nombre minimal renvoyé"},
 "dropletBlock_randomNumber_param1":function(d){return "max"},

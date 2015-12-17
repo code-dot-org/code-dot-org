@@ -7,12 +7,27 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,4,0,0,0,0],[0,0,1,1,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,1,1,4],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the pig! Use the repeat loop.",
+    "instructions": "Get me to the pig! The `repeat` loop will make this easier.",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
-    "ideal": "4"
+    "ideal": "4",
+    "markdown_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier.",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -27,11 +42,11 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveEast"/>
         <block type="maze_moveSouth"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>
