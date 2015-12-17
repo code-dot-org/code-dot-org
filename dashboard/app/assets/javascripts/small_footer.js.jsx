@@ -218,7 +218,7 @@ window.dashboard.footer = (function () {
             <li key={index} style={styles.listItem}>
             <a href={item.link}
                 ref={item.copyright ? "menuCopyright" : undefined}
-                target={item.newWindow ? "_blank" : undefined}
+                target={undefined}
                 onClick={item.copyright ? this.clickMenuCopyright : undefined}>
               {item.text}
             </a>
