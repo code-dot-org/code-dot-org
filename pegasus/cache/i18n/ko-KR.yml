@@ -297,7 +297,8 @@
   starwars_javascript_start_button: 지금 해보기
   starwars_blocks_title: 블럭
   starwars_blocks_description: 끌어서 놓기 블록들을 이용하세요.
-  starwars_blocks_specs: 여러 가지 언어 (지원 예정) | 최신 브라우저, 스마트폰, 태블릿 | 6-10 세
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: 지금 해보기
   starwars_watch_videos: 시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요.
   starwars_speak_languages: 다른 언어를 할 줄 아나요?
@@ -308,7 +309,7 @@
   mc_shortdescription: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
   mc_gradelevel: 6세 이상
   mc_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
-  mc_specs: 여러 가지 언어 (지원 예정) | 최신 브라우저, 태블릿 | 6세 이상
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: 마인크래프트 Hour of Code
   volunteer_engineer_submission_title: 학생들에게 꿈과 희망을 주고, Hour of Code 에 자원봉사해 주세요.
   volunteer_engineer_submission_subtitle_generic: '올 해 12월7일-13일까지 100,000 명의 선생님들이
@@ -1277,3 +1278,13 @@
   infinity_shortcode: inf
   playlab_shortcode: 실행
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
