@@ -13,7 +13,6 @@ var _ = utils.getLodash();
  * @property {Object.<number, funciton>} dropdown
  * @property {bool} dontMarshal
  * @property {bool} noAutocomplete
- * @property {string} docFunc Use the provided func as the key for our documentation.
  */
 
 /**
@@ -72,11 +71,11 @@ exports.dropletGlobalConfigBlocks = [
  * @type {DropletBlock[]}
  */
 exports.dropletBuiltinConfigBlocks = [
-  {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound' },
-  {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs' },
-  {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax' },
-  {func: 'Math.min', category: 'Math', type: 'value', docFunc: 'mathMin' },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
+  {func: 'Math.round', category: 'Math', type: 'value' },
+  {func: 'Math.abs', category: 'Math', type: 'value' },
+  {func: 'Math.max', category: 'Math', type: 'value' },
+  {func: 'Math.min', category: 'Math', type: 'value' },
+  {func: 'Math.random', category: 'Math', type: 'value' }
 ];
 
 /**
@@ -108,8 +107,7 @@ standardConfig.blocks = [
   {func: 'notOperator', block: '!__', category: 'Math' },
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
-  // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
-  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math', docFunc: 'randomNumber'},
+  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math' },
   {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },

@@ -329,8 +329,8 @@
   starwars_javascript_start_button: Δοκιμάστε τώρα
   starwars_blocks_title: μπλοκ
   starwars_blocks_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε».
-  starwars_blocks_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης,
-    έξυπνα τηλέφωνα, tablet | Ηλικίες 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Δοκιμάστε τώρα
   starwars_watch_videos: Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης
   starwars_speak_languages: Μιλάτε άλλη γλώσσα;
@@ -343,8 +343,7 @@
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_gradelevel: Ηλικίες 6+
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
-  mc_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης και tablets
-    | Ηλικιών 6 +
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
   volunteer_engineer_submission_title: Εμπνεύστε μαθητές και προσφέρετε εθελοντική
     εργασία για την Ώρα του Κώδικα.
@@ -1591,3 +1590,13 @@
   infinity_shortcode: inf
   playlab_shortcode: παίξε
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

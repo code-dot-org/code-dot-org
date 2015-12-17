@@ -1,5 +1,6 @@
 ---
 title: CS in Algebra Educator Application
+nav: plc_nav_algebra
 ---
 
 # Computer Science in Algebra Application  
