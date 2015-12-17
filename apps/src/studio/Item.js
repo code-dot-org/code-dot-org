@@ -36,6 +36,7 @@ var Item = function (options) {
   this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
+  this.normalSpeed = options.normalSpeed || constants.DEFAULT_ITEM_SPEED;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
@@ -329,7 +330,7 @@ Item.prototype.getAnimationFrameDuration = function () {
     return constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
   } else {
     return constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION *
-        constants.DEFAULT_ITEM_SPEED / this.speed;
+        this.normalSpeed / this.speed;
   }
 };
 
