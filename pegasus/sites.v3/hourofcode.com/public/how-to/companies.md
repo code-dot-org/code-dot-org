@@ -6,6 +6,9 @@ nav: how_to_nav
 
 
 # How to bring the Hour of Code to your company
+
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
 ## Inspire students and volunteer for the Hour of Code
 **Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.** 
 

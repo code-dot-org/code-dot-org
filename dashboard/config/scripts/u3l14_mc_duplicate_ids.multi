@@ -1,5 +1,5 @@
 name 'U3L14 - MC Duplicate Ids'
-title 'Buttons and IDs'
+title 'Choose Two: Buttons and IDs'
 type 'multi2'
 description ''
 question 'What happens when two buttons are given the same ID? Choose two of the following:'
