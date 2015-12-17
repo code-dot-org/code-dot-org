@@ -3291,17 +3291,23 @@ en:
         Why Programming? Question 2: Why Programming? Question 2
       U3L03 - multiselect - properties of functions:
         Choose Two - True statements about functions: Choose Two - True statements about functions
+        'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
         Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
         Functions in programming are named groupings of programming instructions.: Functions in programming are named groupings of programming instructions.
+        Functions in programming are named groupings of programming instructions.<br>: Functions in programming are named groupings of programming instructions.<br>
         Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
+        Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
         Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
+        Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
         Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
+        Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
       U3L03 Assessment:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Multiple Choice - False statements about functions: Multiple Choice - False statements about functions
+        'Multiple Choice: False Statements about Functions': 'Multiple Choice: False Statements about Functions'
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
@@ -3378,11 +3384,13 @@ en:
         Error messages help programmers identify problems in their code.: Error messages help programmers identify problems in their code.
         It is common for programs to contain errors the first time they are written.: It is common for programs to contain errors the first time they are written.
         Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
+        'Multiple Choice: Debugging and Error Messages': 'Multiple Choice: Debugging and Error Messages'
         Not all errors in a program will generate an error message.: Not all errors in a program will generate an error message.
         Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
         Buttons and IDs: Buttons and IDs
+        'Choose Two: Buttons and IDs': 'Choose Two: Buttons and IDs'
         JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.: JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.
         The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
         The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
@@ -3391,6 +3399,7 @@ en:
       U3L14 - MC order of button and onEvent:
         Buttons and Event Handlers: Buttons and Event Handlers
         Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
+        'Multiple Choice: Buttons and Event Handlers': 'Multiple Choice: Buttons and Event Handlers'
         No, JavaScript is flexible; the button and its event handler can appear in any order in the code.: No, JavaScript is flexible; the button and its event handler can appear in any order in the code.
         Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
         Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
@@ -4734,6 +4743,7 @@ en:
         Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
       U3L13 Free Response Reflection:
         Event-Driven Programming Wrap-Up: Event-Driven Programming Wrap-Up
+        'Free Response: Event-Driven Programming Wrap-Up': 'Free Response: Event-Driven Programming Wrap-Up'
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
@@ -4777,6 +4787,7 @@ en:
       U3L23 Free Response Getting Started:
         'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
       U3L23 Free Response Wrap Up:
+        'Free Response: Natural Language Processing': 'Free Response: Natural Language Processing'
         Natural Language Processing: Natural Language Processing
       U3L23 Free Response Wrap Up 2:
         Natural Language Processing: Natural Language Processing
@@ -4789,6 +4800,7 @@ en:
       U3L25 Free Response 2:
         'String and Substring: Assessment 2': 'String and Substring: Assessment 2'
       U3L25 Free Response 3:
+        'Free Response: String and Substring': 'Free Response: String and Substring'
         'String and Substring: Assessment 4': 'String and Substring: Assessment 4'
       U3L25 Free Response Getting Started:
         'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
