@@ -77,7 +77,7 @@ Blockly.Bubble = function(blockSpace, content, shape,
   this.renderArrow_();
   this.rendered_ = true;
 
-  if (!blockSpace.getReadOnly()) {
+  if (!blockSpace.isReadOnly()) {
     Blockly.bindEvent_(this.bubbleBack_, 'mousedown', this,
                        this.bubbleMouseDown_);
     if (this.resizeGroup_) {
