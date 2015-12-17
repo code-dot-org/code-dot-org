@@ -27,7 +27,7 @@ module Cdo
     VARNISH_URL = "#{LOCALHOST}:#{VARNISH_PORT}"
     CLOUDFRONT_URL = "https://#{$environment}-studio.code.org"
     USER = Etc.getlogin
-    HOME = Etc.getpwnam(user).dir
+    HOME = Etc.getpwnam(USER).dir
 
     def self.setup
       puts 'setup'
