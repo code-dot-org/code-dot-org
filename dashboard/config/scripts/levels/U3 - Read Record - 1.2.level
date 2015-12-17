@@ -54,10 +54,7 @@
     "data_tables": "\"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\"\r\n    \"population\": 9,000,000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\"\r\n    \"population\": 4,000,000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\"\r\n    \"population\": 3,000,000\r\n  }\r\n  {\r\n     \"name\": \"Houston\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n]",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "slider_speed": "1",
-    "encrypted_examples": [
-
-    ]
+    "slider_speed": "1"
   }
 }]]></config>
   <blocks/>

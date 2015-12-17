@@ -13,7 +13,7 @@
 
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
   - if form.secret
-    %h1 Update your information
+    %h1= I18n.t(:volunteer_engineer_submission_update_information)
 
   %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
@@ -108,7 +108,7 @@
     %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
-  %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', 'https://hourofcode.com')
+  %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
 
 :javascript
   $(document).ready(function() {

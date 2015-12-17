@@ -23,7 +23,7 @@ Tests whether two values are equal.
 
 [/short_description]
 
-Your apps will sometimes need to check if the values in their code are equivalent or not, and then possibly perform some specific action using an *if* or *if-else* block. *==* returns true if the value on the left-hand side of the operator is equal to the value on the right-hand side of the operator.
+Your apps will sometimes need to check if the values in their code are equivalent or not, and then possibly perform some specific action using an *if*, *if-else*, or *while* block. *==* returns true if the value on the left-hand side of the operator is equal to the value on the right-hand side of the operator.
 
 [/description]
 

@@ -3,7 +3,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-## Unit 2 Challenge Preview > What is a challenge?
+## Unit 2 Challenge > What is a challenge?
 
 Watch this brief video from Code.org ECS Program Manager, Dani McAvoy, to learn about challenges.
 

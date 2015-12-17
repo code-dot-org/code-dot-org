@@ -393,21 +393,21 @@ exports.readRecords = function (table, searchParams, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.updateRecord = function (table, record, onSuccess, onError) {
+exports.updateRecord = function (table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'updateRecord',
                           {'table': table,
                            'record': record,
-                           'onSuccess': onSuccess,
+                           'onComplete': onComplete,
                            'onError': onError});
 };
 
-exports.deleteRecord = function (table, record, onSuccess, onError) {
+exports.deleteRecord = function (table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'deleteRecord',
                           {'table': table,
                            'record': record,
-                           'onSuccess': onSuccess,
+                           'onComplete': onComplete,
                            'onError': onError});
 };
 
