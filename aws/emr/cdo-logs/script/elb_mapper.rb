@@ -88,7 +88,7 @@ ARGF.each do |line|
       # The GET request is surrounded by double quotes, so we exploit this as a
       # delimiter.
       get_request = /GET [^"]*/.match(line).to_s
-      if get_request != ""
+      if get_request != "" && (t != "hourofcode" || !/certificate64/.match(line))
         # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
         # aggregate. Using the date and GET request as the key gives breakdowns by
         # day and GET request.
