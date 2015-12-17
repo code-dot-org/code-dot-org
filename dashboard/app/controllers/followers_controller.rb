@@ -34,16 +34,14 @@ class FollowersController < ApplicationController
   # GET /join/XXXXXX
   # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
-    # make sure section_code is in the path (rather than just query string)
-    if request.path != student_user_new_path(section_code: params[:section_code])
-      redirect_to student_user_new_path(section_code: params[:section_code])
-    elsif current_user
+    if current_user && @section
       @section.add_student(current_user)
 
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
     else
       @user = User.new
-      # if there is no logged in user, render the default student_user_new view which includes the sign up form
+      # if there is no logged in user or no section, render the default student_user_new view which
+      # includes the section code form or sign up form
     end
   end
 
@@ -84,7 +82,10 @@ class FollowersController < ApplicationController
 
   def load_section
     if params[:section_code].blank?
-      redirect_to redirect_url, alert: I18n.t('follower.error.blank_code')
+      if request.path != student_user_new_path(section_code: params[:section_code])
+        # if user submitted the section form without a code /join
+        redirect_to student_user_new_path(section_code: params[:section_code])
+      end
       return
     end
 

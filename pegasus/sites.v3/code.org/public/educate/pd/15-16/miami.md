@@ -134,7 +134,7 @@ Time TBD<br/>
 1010 NE 2nd Ave<br/>
 Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
 
-Free parking is available in front of the building.
+This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
 
 ####Counselors
 
@@ -149,7 +149,7 @@ Time TBD
 1010 NE 2nd Ave<br/>
 Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
 
-Free parking is available in front of the building.
+This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
 
 
 ----------

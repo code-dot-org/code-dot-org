@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "უყურეთ ვიდეოს"},
 "when":function(d){return "როდის"},
 "whenRun":function(d){return "გაშვებისას"},
-"workspaceHeaderShort":function(d){return "სამუშაო სივრცე: "}};
+"workspaceHeaderShort":function(d){return "სამუშაო სივრცე: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};
