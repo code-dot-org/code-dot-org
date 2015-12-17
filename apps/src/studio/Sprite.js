@@ -34,13 +34,46 @@ var Sprite = function (options) {
   this.fadeTime = constants.DEFAULT_ACTOR_FADE_TIME;
 
   /** @private {StudioAnimation} */
-  this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: new StudioSpriteSheet(options),
-    animationFrameDuration: this.getAnimationFrameDuration()
-  }));
+  if (this.image) {
+    this.animation_ = new StudioAnimation($.extend({}, options, {
+      spriteSheet: new StudioSpriteSheet(options),
+      animationFrameDuration: this.getAnimationFrameDuration()
+    }));
+  }
 };
 Sprite.inherits(Collidable);
 module.exports = Sprite;
+
+Sprite.prototype.setImage = function (image, totalAnimations) {
+
+  if (image !== this.image) {
+    this.image = image;
+    this.totalAnimations = totalAnimations;
+
+    var options = {
+      renderScale: this.renderScale,
+      opacity: this.opacity,
+      loop: this.loop,
+      animationFrameDuration: this.animationFrameDuration,
+      image: this.image,
+      width: this.width,
+      height: this.height,
+      frames: this.frameCounts ? this.frameCounts.walk : this.frames,
+      totalAnimations: totalAnimations
+    };
+
+    if (this.animation_) {
+      this.animation_.removeElement();
+    }
+
+    /** @private {StudioAnimation} */
+    this.animation_ = new StudioAnimation($.extend({}, options, {
+      spriteSheet: new StudioSpriteSheet(options),
+      animationFrameDuration: this.getAnimationFrameDuration()
+    }));
+  }
+
+};
 
 /** @returns {SVGImageElement} */
 Sprite.prototype.getElement = function () {
@@ -73,7 +106,6 @@ Sprite.prototype.getDirectionFrame = function() {
 Sprite.prototype.createElement = function (parentElement) {
   this.animation_.createElement(parentElement);
 };
-
 
 /**
  * This function should be called every frame, and moves the sprite around.
@@ -140,12 +172,18 @@ Sprite.prototype.display = function () {
     this.animation_.setOpacity(opacity);
   }
 
-  this.animation_.setCurrentAnimation('direction', this.getDirectionFrame());
-  this.animation_.redrawCenteredAt({
-        x: this.x + this.renderOffset.x,
-        y: this.y + this.renderOffset.y
-      },
-      Studio.tickCount);
+  var animationIndex = this.getDirectionFrame();
+  if (animationIndex >= this.totalAnimations) {
+    this.animation_.hide();
+  } else {
+    this.animation_.setCurrentAnimation('direction', animationIndex);
+    this.animation_.redrawCenteredAt({
+          x: this.x + this.renderOffset.x,
+          y: this.y + this.renderOffset.y
+        },
+        Studio.tickCount);
+    this.animation_.show();
+  }
 };
 
 Sprite.prototype.getNextPosition = function () {

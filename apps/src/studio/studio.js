@@ -849,11 +849,11 @@ function performItemOrProjectileMoves (list) {
 }
 
 /**
- * Triggers display update on a list of Projectiles or Items - for updating
- * position and/or animation frames.
- * @param {Item[]|Projectile[]} list
+ * Triggers display update on a list of Sprites, Projectiles, or Items - for
+ * updating position and/or animation frames.
+ * @param {Collidable[]} list
  */
-function displayItemsOrProjectiles (list) {
+function displayCollidables (list) {
   for (var i = list.length - 1; i >= 0; i--) {
     list[i].display();
   }
@@ -1067,7 +1067,7 @@ Studio.onTick = function() {
     // After 5 ticks of no movement, turn sprite forward.
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
-      Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.sprite[i].dir = Direction.NONE;
       Studio.movementAudioOff();
       isWalking = false;
     }
@@ -1101,8 +1101,9 @@ Studio.onTick = function() {
     performItemOrProjectileMoves(Studio.projectiles);
     performItemOrProjectileMoves(Studio.items);
   }
-  displayItemsOrProjectiles(Studio.projectiles);
-  displayItemsOrProjectiles(Studio.items);
+  displayCollidables(Studio.sprite);
+  displayCollidables(Studio.projectiles);
+  displayCollidables(Studio.items);
 
   Studio.updateFloatingScore();
 
@@ -2243,11 +2244,15 @@ Studio.reset = function(first) {
 
   // Move sprites into position.
   for (i = 0; i < Studio.spriteCount; i++) {
+    if (Studio.sprite[i]) {
+      Studio.sprite[i].removeElement();
+    }
     Studio.sprite[i] = new Sprite({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
       displayX: Studio.spriteStart_[i].x,
       displayY: Studio.spriteStart_[i].y,
+      loop: true,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
@@ -3063,7 +3068,8 @@ function imageAssetFrameNumbers (opts) {
     frameNums.x -= 1;
   }
 
-  if (sprite.displayDir === Direction.SOUTH && !opts.isWalking) {
+  if ((sprite.displayDir === Direction.SOUTH || sprite.displayDir === Direction.NONE) &&
+      !opts.isWalking) {
     var idleCount = sprite.frameCounts.idleColumn ?
         sprite.frameCounts.walk : (sprite.frameCounts.normal || 0);
 
@@ -3477,11 +3483,11 @@ Studio.displaySprite = function(i, isWalking) {
     var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
 
     var dirPrev = sprite.dir;
-    if (dirPrev === Direction.NONE) {
+    /* if (dirPrev === Direction.NONE) {
       // direction not yet set, start at SOUTH (forward facing)
       sprite.dir = Direction.SOUTH;
     }
-    else if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
+    else */ if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
       sprite.dir = Direction.NONE;
       if (sprite.x < xCoordPrev) {
         sprite.dir |= Direction.WEST;
@@ -3513,6 +3519,9 @@ Studio.displaySprite = function(i, isWalking) {
 
   spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
   spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
+
+  // NEW: (may be redundant once we're running)
+  sprite.display();
 
   if (unusedSpriteClipRect) {
     // Update the other clip rect too, so that calculations involving
@@ -4709,6 +4718,11 @@ Studio.setSprite = function (opts) {
     spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
+
+    // NEW
+    // TODO: use ImageAsset or similar
+    sprite.setImage(skinSprite.walk, 8);
+    sprite.createElement(document.getElementById('spriteLayer'));
 
     var extraWidth = (sprite.frameCounts.walkingEmotions || 0) * sprite.drawWidth;
     if (!skinSprite.sprite) {

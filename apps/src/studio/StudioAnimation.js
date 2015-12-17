@@ -88,6 +88,24 @@ StudioAnimation.prototype.getElement = function () {
  * Create an image element with a clip path
  */
 StudioAnimation.prototype.createElement = function (parentElement) {
+  if (this.element_ && this.clipPath_) {
+
+    // Update the clip rect
+    var clipRect = this.clipPath_.childNodes[0];
+    clipRect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
+    clipRect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
+
+    // Update the image and asset rect
+    this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+       this.spriteSheet_.assetPath);
+    this.element_.setAttribute('height',
+        this.spriteSheet_.assetHeight() * this.renderScale_);
+    this.element_.setAttribute('width',
+        this.spriteSheet_.assetWidth() * this.renderScale_);
+
+    return;
+  }
+
   var nextId = (uniqueId++);
 
   // create our clipping path/rect
@@ -194,9 +212,23 @@ StudioAnimation.prototype.setAnimationFrameDuration = function (ticksPerFrame) {
 };
 
 /**
- * Change visible opacity of this animation..
+ * Change visible opacity of this animation.
  * @param {number} newOpacity (between 0 and 1)
  */
 StudioAnimation.prototype.setOpacity = function (newOpacity) {
   this.opacity_ = newOpacity;
+};
+
+/**
+ * Make this animation hidden.
+ */
+StudioAnimation.prototype.hide = function () {
+  this.element_.setAttribute('visibility', 'hidden');
+};
+
+/**
+ * Make this animation visible.
+ */
+StudioAnimation.prototype.show = function () {
+  this.element_.setAttribute('visibility', 'visible');
 };
