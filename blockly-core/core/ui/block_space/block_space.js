@@ -313,7 +313,7 @@ Blockly.BlockSpace.prototype.dispose = function() {
  * Add a trashcan.
  */
 Blockly.BlockSpace.prototype.addTrashcan = function() {
-  if (Blockly.hasTrashcan && !this.getReadOnly) {
+  if (Blockly.hasTrashcan && !this.getReadOnly()) {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
     this.svgBlockCanvas_.appendChild(svgTrashcan);
