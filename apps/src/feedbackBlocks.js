@@ -78,7 +78,7 @@ FeedbackBlocks.prototype.render = function () {
   var languageTree = Blockly.languageTree;
 
   Blockly.readOnly = true;
-  Blockly.languageTree = false;
+  Blockly.languageTree = null;
 
   this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
     var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
