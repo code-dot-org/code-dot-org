@@ -102,7 +102,7 @@ var Projectile = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
-  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
+  this.speed = options.speed || constants.DEFAULT_PROJECTILE_SPEED;
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
@@ -120,7 +120,8 @@ var Projectile = function (options) {
 
   /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: this.spriteSheet_
+    spriteSheet: this.spriteSheet_,
+    animationFrameDuration: this.getAnimationFrameDuration()
   }));
 };
 Projectile.inherits(Collidable);
@@ -139,10 +140,11 @@ Projectile.prototype.createElement = function (parentElement) {
 };
 
 /**
- * Stop our animations
+ * Retrieve animation speed (frames per tick)
  */
-Projectile.prototype.stopAnimations = function() {
-  this.animation_.stopAnimator();
+Projectile.prototype.getAnimationFrameDuration = function () {
+  return constants.DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION *
+      constants.DEFAULT_PROJECTILE_SPEED / this.speed;
 };
 
 /**
@@ -162,9 +164,10 @@ Projectile.prototype.display = function () {
   };
 
   this.animation_.redrawCenteredAt({
-    x: this.x,
-    y: this.y
-  });
+        x: this.x,
+        y: this.y
+      },
+      Studio.tickCount);
 
   if (this.spriteSheet_.framesPerAnimation > 1) {
     this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +

@@ -2069,15 +2069,6 @@ function resetItemOrProjectileList (list) {
 }
 
 /**
- * Freeze a list of Items or Projectiles by telling them to stop animating.
- */
-function freezeItemOrProjectileList (list) {
-  for (var i = 0; i < list.length; i++) {
-    list[i].stopAnimations();
-  }
-}
-
-/**
  * Clear the event handlers and stop the onTick timer.
  */
 Studio.clearEventHandlersKillTickLoop = function() {
@@ -2103,9 +2094,6 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Freeze the projectiles and items (stop the animation timers)
-  freezeItemOrProjectileList(Studio.projectiles);
-  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -3035,8 +3023,8 @@ function imageAssetFrameNumbers (opts) {
   // adjust animTick to convert overall tick frequency to animation frequency
   // and skew each sprite slightly so each animates at a slightly different time
   var animTick = Math.floor(
-    (Studio.tickCount + opts.spriteIndex * (sprite.animationSpeed + 1)) /
-     sprite.animationSpeed);
+    (Studio.tickCount + opts.spriteIndex * (sprite.animationFrameDuration + 1)) /
+     sprite.animationFrameDuration);
 
   var frameTable = sprite.frameCounts.counterclockwise ?
       constants.frameDirTableWalkingWithIdleCounterclockwise :
@@ -4257,11 +4245,21 @@ Studio.setItemSpeed = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
+  // convert speed string parameter to appropriate numerical speed for this class:
+  var newSpeed = utils.valueOr(skin.specialItemProperties[itemClass].speed,
+      constants.DEFAULT_ITEM_SPEED);
+
+  if (opts.speed.toLowerCase() === 'fast') {
+    newSpeed = Math.floor(newSpeed * 2);
+  } else if (opts.speed.toLowerCase() === 'slow') {
+    newSpeed = Math.floor(newSpeed / 2);
+  }
+
   // retain this speed value for items of this class created in the future:
-  Studio.itemSpeed[itemClass] = opts.speed;
+  Studio.itemSpeed[itemClass] = newSpeed;
   Studio.items.forEach(function (item) {
     if (item.className === itemClass) {
-      item.speed = opts.speed;
+      item.setSpeed(newSpeed);
     }
   });
 };
@@ -4671,7 +4669,7 @@ Studio.setSprite = function (opts) {
   }
 
   sprite.frameCounts = skinSprite.frameCounts;
-  sprite.animationSpeed = skinSprite.animationSpeed || 1;
+  sprite.animationFrameDuration = skinSprite.animationFrameDuration || 1;
   // Reset height and width:
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
