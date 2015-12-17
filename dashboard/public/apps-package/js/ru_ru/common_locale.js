@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Посмотреть видео"},
 "when":function(d){return "когда"},
 "whenRun":function(d){return "При запуске"},
-"workspaceHeaderShort":function(d){return "Место сбора блоков: "}};
+"workspaceHeaderShort":function(d){return "Место сбора блоков: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};
