@@ -27,6 +27,9 @@
   twentyhours_heading: Isprobajte naš Uvod u Tečaj informatike
   twentyhours_text: Završio si svoj prvi Sat Kodiranja? Nauči više o Informatici i
     konceptima programiranja u narednom tečaju.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com">Satu Kodiranja</a><br/>8.
     - 14. prosinca 2014.<br/>
   hoc2014_students: Učenici
@@ -318,15 +321,15 @@
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  starwars_subtitle: Izgradnja galaksije pomoću koda
   starwars_javascript_title: Javascript
   starwars_javascript_description: Koristi povuci-ispusti blokove i JavaScript.
-  starwars_javascript_specs: Samo Engleski jezik | Suvremeni preglednici | Dob 11+
+  starwars_javascript_specs: Samo engleski jezik | Suvremeni preglednici | Dob 11+
   starwars_javascript_start_button: Probaj sad
   starwars_blocks_title: Blokovi
   starwars_blocks_description: Koristi povuci-ispusti blokove.
-  starwars_blocks_specs: Više jezika (uskoro) | Suvremeni preglednici, pametni telefoni,
-    tableti | Dob 6-10
+  starwars_blocks_specs: Mnogi jezici | Moderni preglednici, pametni telefoni, tableti
+    | Dob 6-106
   starwars_blocks_start_button: Probaj sad
   starwars_watch_videos: Prije nego što počneš, pogledaj jedan od ovih inspirativnih
     videa
@@ -366,6 +369,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and find a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Ime
@@ -674,6 +678,12 @@
   dashboard_faq_k5: K-5 Često postavljana pitanja
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Doznaj više
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -749,8 +759,8 @@
   mobile_devices: Tutorijali za mobilne uređaje
   frozen_name: Kodiraj s Annom i Elsom
   starwars_name: 'Ratovi Zvijezda: Stvaranje galaksije uz pomoć koda'
-  codeorg_name: Napravi svoj prvi računalni program
-  codeintl_name: Napravi svoj prvi računalni program
+  codeorg_name: Klasični labirint
+  codeintl_name: Klasični labirint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Uvod u JavaScript
   khanes_name: Uvod u JavaScript
@@ -786,7 +796,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamen, škare, papir
-  hourofcode_name: Prostor za novi code.org/hoc
+  hourofcode_name: Klasični labirint
   playlab_name: Laboratorij igara
   infinity_name: Infinity Laboratorij igara
   artist_name: Umjetnik
@@ -946,8 +956,8 @@
   hourofcode_shortdescription: Nauči programirati s Markom Zuckerbergom i Angry Birds!
   frozen_shortdescription: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi
     dok istražuju čaroliju i ljepotu leda.
-  starwars_shortdescription: Nauči programirati droide, te kreiraj svoju Zvjezdani
-    ratovi igricu u dalekoj, dalekoj galaksiji.
+  starwars_shortdescription: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
+    ratovi u galaksiji daleko, daleko odavde.
   playlab_shortdescription: Napravi priču ili igru pomoću Laboratorija igara!
   infinity_shortdescription: Koristi Laboratorij igara da napraviš priču ili igru
     s likovima iz Disney Infinity.
@@ -1102,8 +1112,8 @@
   frozen_longdescription: Iskoristimo programiranje da bi se pridružili Anni i Elsi
     dok istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš pahuljice i druge
     uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti sa svojim prijateljima!
-  starwars_longdescription: Nauči programirati droide, te kreiraj svoju Zvjezdani
-    ratovi igricu u dalekoj, dalekoj galaksiji.
+  starwars_longdescription: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
+    ratovi u galaksiji daleko, daleko odavde.
   playlab_longdescription: Napravi priču ili igru pomoću Laboratorija igara! Napravi
     da se životinje, gusari, zombiji, ninje i mnogi drugi likovi miču, prave zvukove,
     skupljaju bodove, pa čak i da bacaju vatrene kugle!

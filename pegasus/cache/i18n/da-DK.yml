@@ -26,6 +26,9 @@
   twentyhours_heading: Prøv vores intro til programmeringskursus
   twentyhours_text: Færdig med din første Hour of Code? Lær flere centrale datalogi-
     og programmeringbegreber i dette opfølgende kursus.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Vær med i <a href="http://hourofcode.com">Hour of Code</a> <br/>8.
     - 14. December 2014 <br/>
   hoc2014_students: Elever
@@ -226,7 +229,7 @@
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Butik
   homepage_slot_text_flappy: Flappy kode
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: An Hour of Code er programmering for alle elever.
   homepage_action_text_num_served: '# har prøvet'
   homepage_action_text_join_us: Slut dig til os
   homepage_action_text_sign_up: Tilmeld
@@ -238,9 +241,10 @@
   homepage_action_text_learn: Begynd at lære
   homepage_action_text_signpetition: Skriv under
   homepage_signpetition_dropdown: Jeg er enig &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: Afgiv et løfte om mangfoldighed
+  homepage_banner_text_prizes: 'The Hour Of Code kommer igen, nemlig d. 7.-13. december
+    2015. '
+  homepage_banner_link_prizes: 'Deltag i den største læringsbegivenhed i historien. '
   homepage_banner_text_main: Code.org og College Board har dannet en alliance, for
     at øge mangfoldigheden i computerundervisning.
   homepage_banner_text_link: Lær mere
@@ -252,7 +256,7 @@
   homepage_slot_text_link_hoc: Prøv Hour of Code
   homepage_slot_text_link_host: Hold selv en Hour of Code
   homepage_slot_text_link_hocserved: '# har prøvet'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Meld dig som frivillig til Hour Of Code
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
   homepage_slot_text_link_codestudio: Prøv Code Studio
@@ -310,13 +314,12 @@
   class_submission_level_college: Gymnasium
   class_submission_level_vocational: Faglig
   class_submission_languages_other: Andre sprog
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  inspirational_videos_more: Flere inspirationsvideoer af rollemodeller og berømtheder
+  playlab_choose_theme: Vælg dit Spil Lab tema
+  playlab_classic_title: Klassisk
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: Istid - kommer snart
+  playlab_iceage_title_live: Is-tid
   starwars_subtitle: Byg en galakse med kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Brug træk-slip blokke og JavaScript.
@@ -324,8 +327,8 @@
   starwars_javascript_start_button: Prøv nu
   starwars_blocks_title: Blokke
   starwars_blocks_description: Brug træk-slip blokke.
-  starwars_blocks_specs: Mange sprog (kommer snart) | Moderne browsere, smartphones,
-    tablets | Fra 6-10 år
+  starwars_blocks_specs: Mange sprog | Moderne browsere, smartphones, tablets | Alderstrin
+    6-10
   starwars_blocks_start_button: Lær mere
   starwars_watch_videos: Før du går i gang, kan du se en af vores inspirationsvideoer
   starwars_speak_languages: Taler du et andet sprog?
@@ -338,74 +341,79 @@
     i denne Minecraft-verden.
   mc_gradelevel: Alder 6+
   mc_platformtext: Moderne browsere, smartphones, tabletter
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Mange sprog | Moderne browsere og tablets | Alder 6+
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
-  volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_title: Inspirer studerende og frivillge til Hour Of
+    Code.
+  volunteer_engineer_submission_subtitle_generic: '100.000 lærere vil være værter
+    i Hour Of Code i deres klasseværelser i år d. 7.-13. december 2015. De vil gerne
+    bede om din hjælp! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere vil gerne
+    have frivillige, som er dedikerede i deres interesse for uddannelse i tekniske
+    videnskaber, til at hjælpe med Hour of Code her i december. <br>%{num_volunteers}
+    frivillige har meldt sig. Slut dig til dem.'
+  volunteer_engineer_submission_intro_background: Kodetimen er en global bevægelse
+    vil give en times Introduktion til programmering, nå millioner af studerende i
+    180 + lande. Blive involveret i programmeringsuddannelse uge, December 7-13.
+  volunteer_engineer_submission_intro_recruit: 'Disse lærere ville elske at have nogen
+    der er <span style="font-family: ''Gotham 7r'', sans-serif;"> lidenskabelig omkring
+    computer uddannelse</span> der kan hjælpe i klasseværelset, eller for nogen, der
+    kan <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirere</span> deres
+    elever ved at tale om mulighederne med computer (som kunne ske gennem en video
+    chat).'
+  volunteer_engineer_submission_intro_signup: Angiv følgende oplysninger, hvis du
+    er en computer studerende eller software professionel. Felter markeret med en
+    <span class="form-required-field"> *</span> er påkrævet.
+  volunteer_engineer_submission_intro_links: Ønsker du ikke at være frivillig? <a
+    href="%{learn_more}"> Lær mere</a> om at organisere din egen kodetime begivenhed
+    og finde en lokal frivillig på vores <a href="%{volunteer_local}"> frivillige
+    kort</a>.
+  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_header_shared: Oplysninger, der deles med lærere på
+    kort over frivillige
   volunteer_engineer_submission_field_name: Navn
   volunteer_engineer_submission_field_name_placeholder: Fulde navn
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_company: Virksomhed (eller Universitet)
+  volunteer_engineer_submission_field_company_placeholder: Virksomhed (eller Universitet)
   volunteer_engineer_submission_field_experience_level: Erfaringsniveau
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_location: Placering
+  volunteer_engineer_submission_field_location_desc: Din placering vil blive brugt
+    til at give lærerne mulighed for at søge efter nærliggende frivillige og vil blive
+    vist som en knappenål på kortet. Hvis du bekymrer dig om beskyttelse af personlige
+    oplysninger, skal du bruge dit arbejde/skole adresse eller kun din by.
+  volunteer_engineer_submission_field_location_placeholder: Postnummer, by og stat/land
+    eller gadeadresse
+  volunteer_engineer_submission_field_location_flexibility: Jeg kan hjælpe under kodetimen
+    med... (Vælg alle relevante)
+  volunteer_engineer_submission_checkbox_after_hoc: Jeg er interesseret i frivilligt
+    arbejde efter kodetimen
+  volunteer_engineer_submission_field_time_commitment: Tidsengagement efter kodetimen
+  volunteer_engineer_submission_field_linkedin: LinkedIn profil
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/dit_navn
+  volunteer_engineer_submission_field_facebook: Facebook profil
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/dit_navn
   volunteer_engineer_submission_field_description: Beskrivelse
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: Beskrive din computer erfaring
+    og hvordan du kan deltage som frivillige for lokale lærere.
+  volunteer_engineer_submission_field_description_placeholder: Beskrivelse af erfaring
+    og/eller deltagelse. Hvis du taler andre sprog end dansk, skal du medtage det
+    her.
+  volunteer_engineer_submission_header_private: Oplysninger der er private og ikke
+    deles
   volunteer_engineer_submission_field_email: Email adresse
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: Din e-mail adresse vil aldrig blive
+    delt, men vi sender dig anmodninger fra lærere.
   volunteer_engineer_submission_field_email_placeholder: Email adresse
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_final_paragraph: Du vil være på et kort så lokale
+    lærere kan kontakte dig for kodetimer eller andet frivillige opgaver. Din e-mail
+    og nøjagtige adresse vil aldrig blive delt af os. Men andre oplysninger (herunder
+    omtrentlige placering) vil være offentligt tilgængelig til lokale lærere.
+  volunteer_engineer_submission_checkbox_contact: 'Jeg er enig i, at lærere må kontakte
+    mig med opgaver (Note: din e-mail adresse vil ikke blive delt)'
   volunteer_engineer_submission_submit: Indsend
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Tak for dit frivilligt arbejde for kodetimen.
+    For at blive klar til kodetimen og rekruttere andre frivillige, <a href="%{url}">
+    Læs mere her.</a>
   volunteer_engineer_submission_commitment_uncertain: Usikker
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 time om ugen
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timer om ugen
@@ -413,7 +421,7 @@
   volunteer_engineer_submission_commitment_now_and_then: Ny og næ
   volunteer_engineer_submission_commitment_annually: 2-3 gange om året
   volunteer_engineer_submission_commitment_monthly: Et par timer om måneden
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_weekly: Et par timer om ugen
   volunteer_engineer_submission_commitment_more: Mere
   volunteer_engineer_submission_location_flexibility_onsite: På skolen
   volunteer_engineer_submission_location_flexibility_remote: Mentor på distance (lærere
@@ -425,20 +433,20 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Nuværende
     universitetsstuderende (eller forsker)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_distance_8: 8 km
+  volunteer_engineer_submission_distance_16: 16 km
+  volunteer_engineer_submission_distance_24: 24 km
+  volunteer_engineer_submission_distance_32: 32 km
+  volunteer_engineer_submission_num_volunteers_5: 5 frivillige
+  volunteer_engineer_submission_num_volunteers_10: 10 frivillige
+  volunteer_engineer_submission_num_volunteers_25: 25 frivillige
+  volunteer_engineer_submission_num_volunteers_50: 50 frivillige
+  volunteer_engineer_submission_type_task_onsite: Jeg vil gerne have besøg til teknisk
+    hjælp og inspiration
+  volunteer_engineer_submission_type_task_remote: Jeg ønsker du at Skyper til min
+    klasse for at give inspiration til børnene
+  volunteer_engineer_submission_type_task_mentor: Jeg leder efter en mentor til at
+    lære mig kodning med mine elever
   petition_age: Alder
   dashboard_landing_title: Lærerens startside
   dashboard_landing_welcome: Velkommen til den nye og forbedrede startside for undervisere.
@@ -463,11 +471,11 @@
   dashboard_landing_progress_title: Vigtigste klasse fremskridt
   dashboard_landing_progress_biggest: Fremskridt for dit største hold.
   dashboard_landing_view_progress: Se fremskridt for %{biggest_section}
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Udskrivning
   dashboard_landing_available_title: Tilgængelige kurser
   dashboard_landing_available_courses: Her er kurserne som lige nu er tilgængelige
     for dig og dine elever.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials: Vil du se flere tutorials?
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
@@ -670,6 +678,12 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: Vis alle
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Lær mere
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -744,8 +758,8 @@
   mobile_devices: Vejledninger til mobile enheder
   frozen_name: Kod med Anna og Elsa
   starwars_name: 'Star Wars: Byg en Galakse med Code'
-  codeorg_name: Skriv dit første computerprogram
-  codeintl_name: Skriv dit første computerprogram
+  codeorg_name: Klassisk labyrint
+  codeintl_name: Klassisk labyrint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduktion til JavaScript
   khanes_name: En introduktion til JavaScript
@@ -781,7 +795,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sten, saks, papir
-  hourofcode_name: Skriv dit første computerprogram
+  hourofcode_name: Klassisk labyrint
   playlab_name: Spille Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstner
