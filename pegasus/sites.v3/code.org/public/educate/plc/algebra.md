@@ -21,7 +21,7 @@ We believe that Code.org CS in Algebra breaths new life and exitement into tradi
 <br/>
 At the end of the course, students will have written programs to build composite images, animations, and a complete video game of their own design, all of which can be shared to demonstrate mastery of programming and algebra
 
-[<button>Learn more</button>](https://code.org/curriculum/algebra#start)
+[<button>Learn more</button>](/curriculum/algebra#start)
 
 ## <a name="about"></a>About the Professional Learning Program
  
@@ -61,7 +61,7 @@ Any middle school algebra teacher who's district is partnered with Code.org.
 We're so excited that you're interested in applying for our Professional Learning Program! [Check out the list of partner districts](https://docs.google.com/spreadsheets/d/1BDzs4k6nbZ87KdRZE62gqO_VpBC1yRSRbolWejGtDnU/edit#gid=0) to see if the program is available in your region.
 <br><br> 
 
-**Don't see your region on the list?** Encourage your administrators [to apply to be a partner district!](https://code.org/educate/districts)
+**Don't see your region on the list?** Encourage your administrators [to apply to be a partner district!](/educate/districts)
 <br>
 **Is your location on the list?** Join the other teachers in your district on the journey to teach CS in Algebra! 
 <br><br>
