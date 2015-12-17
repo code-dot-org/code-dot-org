@@ -19,6 +19,7 @@ var blocks = require('./blocks');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
+var Sprite = require('./Sprite');
 var Projectile = require('./projectile');
 var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
@@ -1514,7 +1515,7 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
 /**
  * Test to see if an actor sprite will be beyond its given playspace boundaries
  * if it is moved to a given X/Y position.
- * @param {Collidable} sprite
+ * @param {Sprite} sprite
  * @param {number} xPos
  * @param {number} yPos
  */
@@ -2242,7 +2243,7 @@ Studio.reset = function(first) {
 
   // Move sprites into position.
   for (i = 0; i < Studio.spriteCount; i++) {
-    Studio.sprite[i] = new Collidable({
+    Studio.sprite[i] = new Sprite({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
       displayX: Studio.spriteStart_[i].x,
