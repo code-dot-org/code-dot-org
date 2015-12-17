@@ -4081,6 +4081,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     height: classProperties.height,
     dir: Direction.NONE,
     speed: Studio.itemSpeed[itemClass],
+    normalSpeed: classProperties.speed,
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
