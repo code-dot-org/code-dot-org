@@ -315,8 +315,8 @@
   starwars_javascript_start_button: Proovi nüüd
   starwars_blocks_title: Plokid
   starwars_blocks_description: Kasuta "sikuta ja lase lahti" plokke.
-  starwars_blocks_specs: Palju keeli (tulekul) | Tänapäevased brauserid, nutitelefonid,
-    tahvelarvutid | Vanusele 6–10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Proovi nüüd
   starwars_watch_videos: Enne alustamist vaata ühte nendest inspireerivatest videotest.
   starwars_speak_languages: Kas räägid mõnda muud keelt?
@@ -329,8 +329,7 @@
     Minecrafti maailmas.
   mc_gradelevel: Vanusele 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
-  mc_specs: Palju keeli (tulekul) | Tänapäevased brauserid ja tahvelarvutid | Vanusele
-    6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecrafti KoodiTund
   volunteer_engineer_submission_title: Inspireeri õpilasi ja ole KoodiTunni vabatahtlik
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015.
@@ -1447,3 +1446,13 @@
   infinity_shortcode: inf
   playlab_shortcode: mängi
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
