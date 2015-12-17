@@ -373,7 +373,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, CODE_STUDIO_COMMIT_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
