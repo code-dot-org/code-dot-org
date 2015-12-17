@@ -13,6 +13,7 @@ require 'minitest/mock'
 require 'json'
 require 'securerandom'
 require 'uri/common'
+require 'etc'
 
 puts "Cloudfront: #{$cloudfront}"
 # Setup the mock-server and ngrok
@@ -25,10 +26,12 @@ module Cdo
     LOCALHOST = 'localhost'
     VARNISH_URL = "#{LOCALHOST}:#{VARNISH_PORT}"
     CLOUDFRONT_URL = "https://#{$environment}-studio.code.org"
+    USER = Etc.getlogin
+    HOME = Etc.getpwnam(user).dir
 
     def self.setup
       puts 'setup'
-      $ngrok_pid = $cloudfront && spawn('/usr/local/ngrok/ngrok start cdo --config=/home/kitchen/.ngrok2/ngrok.yml --log=stdout')
+      $ngrok_pid = $cloudfront && spawn("/usr/local/ngrok/ngrok start cdo --config=#{HOME}/.ngrok2/ngrok.yml --log=stdout")
       $pid = spawn('cd ~; java -jar mock.jar --verbose')
       # Don't start tests until wiremock is live.
       mock_started = false
@@ -55,12 +58,10 @@ module Cdo
     module Helpers
       # Returns the number of times the specified URL missed all proxy caches and was served by the mock server.
       def count_origin_requests(url)
-        request = <<JSON
-{
-  "method": "GET",
-  "url": "#{url}"
-}
-JSON
+        request = {
+          method: 'GET',
+          url: url
+        }.to_json
         JSON.parse(`curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/requests/count -d '#{request}'`)['count']
       end
 
