@@ -237,7 +237,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#video').replaceWith(playerCode);
 
   videojs.options.flash.swf = "<%= asset_path("video-js.swf") %>";
-  videojs.options.techOrder = ["html5", "flash"];
+  videojs.options.techOrder = ["flash", "html5"];
 
   var videoPlayer = videojs(fallbackPlayerID, {}, function() {
     var $fallbackPlayer = $('#' + fallbackPlayerID);
