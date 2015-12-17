@@ -93,6 +93,8 @@ module Dashboard
       shared.min.js
       editor/blockly_editor.css
       editor/embedded_markdown_editor.js
+      editor/json_editor.css
+      editor/json_editor.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js
