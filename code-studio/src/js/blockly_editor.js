@@ -7,7 +7,7 @@ require("codemirror/addon/fold/xml-fold");
 require("codemirror/mode/xml/xml");
 require("codemirror/mode/javascript/javascript");
 require("@cdo/code-studio-vendor/js/codemirror.inline-attach");
-require("marked");
+var marked = require("marked");
 
 /* global inlineAttach */
 
@@ -47,8 +47,9 @@ function codeMirror(name, mode, callback, attachments) {
   return editor;
 }
 // Export to window
-window.CodeMirror = CodeMirror; // Necessary until json_editor is removed from dashboard
+window.CodeMirror = CodeMirror; // Necessary until json_editor is moved.
 window.codeMirror = codeMirror;
+window.marked = marked; // Necessary until embedded_markdown_editor is moved.
 
 // On page load, specifically for the editor page.
 $(function () {
