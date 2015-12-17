@@ -38,7 +38,7 @@ goog.require('goog.style');
  * blockspace for something like the function editor, we don't want to create
  * an additional one, relying on the main blockspace editor's one instead.
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect) {
+Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect, opt_readOnly) {
   if (opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics;
   }
@@ -47,6 +47,9 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
   }
   if (opt_hideTrashRect) {
     this.hideTrashRect_ = opt_hideTrashRect;
+  }
+  if (opt_readOnly) {
+    this.readOnly_ = opt_readOnly;
   }
   /**
    * @type {Blockly.BlockSpace}
@@ -239,7 +242,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // it here so that blocks can be dragged over the top of it.  The HTML div
   // appears over the blocks, meaning that blocks dragged to it would appear
   // underneath it, if it had a background color, which wouldn't look as good.
-  if (!this.hideTrashRect_ && !Blockly.readOnly && Blockly.hasCategories) {
+  if (!this.hideTrashRect_ && !this.getReadOnly() && Blockly.hasCategories) {
     this.svgBackground_ = Blockly.createSvgElement('rect',
       {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
       this.svg_);
@@ -247,7 +250,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
   svg.appendChild(this.blockSpace.createDom());
 
-  if (!Blockly.readOnly) {
+  if (!this.getReadOnly()) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
@@ -701,7 +704,7 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
  * @private
  */
 Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
-  if (Blockly.readOnly) {
+  if (this.getReadOnly()) {
     return;
   }
   var options = [];
@@ -901,6 +904,13 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
   return Blockly.bindEvent_(this.blockSpace.getCanvas(),
     'blocklyBlockSpaceChange', this, func);
+};
+
+/**
+ * @returns {boolean}
+ */
+Blockly.BlockSpaceEditor.prototype.getReadOnly = function() {
+  return (Blockly.readOnly || this.readOnly_);
 };
 
 /**
