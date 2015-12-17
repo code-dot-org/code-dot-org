@@ -10,6 +10,7 @@ var msg = require('./locale');
 var commonMsg = require('../locale');
 var constants = require('./constants');
 var studioApp = require('../StudioApp').singleton;
+var ImageAsset = require('./ImageAsset');
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -138,7 +139,12 @@ function loadGumball(skin, assetUrl) {
         extraEmotions: 3,
         walkingEmotions: 3
       },
-      animationSpeed: 3
+      animations: {
+        turns: 8,
+        walkingEmotions: 3,
+      },
+      animationFrames: skin.walkValues[i],
+      animationFrameDuration: 3
     };
   });
 
@@ -319,7 +325,12 @@ function loadIceAge(skin, assetUrl) {
         extraEmotions: 3,
         walkingEmotions: 3
       },
-      animationSpeed: 3
+      animations: {
+        turns: 8,
+        walkingEmotions: 3,
+      },
+      animationFrames: 12,
+      animationFrameDuration: 3
     };
   });
 
@@ -452,7 +463,11 @@ function loadInfinity(skin, assetUrl) {
         emotions: 0,
         walk: 12
       },
-      animationSpeed: 3
+      animations: {
+        turns: 8
+      },
+      animationFrames: 12,
+      animationFrameDuration: 3
     };
   });
 
@@ -807,7 +822,11 @@ function loadHoc2015(skin, assetUrl) {
         emotions: 0,
         walk: name == 'r2-d2' ? 14 : 8
       },
-      animationSpeed: 3
+      animations: {
+        turns: 8
+      },
+      animationFrames: name == 'r2-d2' ? 14 : 8,
+      animationFrameDuration: 3
     };
   });
 
@@ -1267,7 +1286,11 @@ function loadHoc2015x(skin, assetUrl) {
         emotions: 0,
         walk: 19
       },
-      animationSpeed: 3
+      animations: {
+        turns: 8
+      },
+      animationFrames: 19,
+      animationFrameDuration: 3
     };
   });
   skin['bb-8'].movementAudio = [
@@ -1444,7 +1467,7 @@ function loadStudio(skin, assetUrl) {
         turns: 7,
         emotions: 3
       },
-      animationSpeed: 6
+      animationFrameDuration: 6
     };
   });
 

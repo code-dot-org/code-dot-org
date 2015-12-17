@@ -118,10 +118,6 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-Collidable.prototype.setActivity = function(type) {
-  this.activity = type;
-};
-
 /**
  * Assumes x/y are center coords (true for projectiles and items)
  * outOfBounds() returns true if the object is entirely "off screen"

@@ -15,7 +15,6 @@
 
 var utils = require('../utils');
 var SVG_NS = require('../constants').SVG_NS;
-var constants = require('./constants');
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -31,8 +30,8 @@ var uniqueId = 0;
  *        wrapped in necessary metadata.
  * @param {number} [options.renderScale] - Default 1.
  * @param {number} [options.opacity] - Opacity on a 0-1 scale.  Default 1.
- * @param {number} [options.animationRate] - How fast the animation should be
- *        played, in frames per second.  Default 20.
+ * @param {number} [options.animationFrameDuration] - How fast the animation
+ *        should be played, in 30 fps ticks per frame.  Default 1 (30 fps).
  * @param {boolean} [options.loop] - Whether the animation should loop
  *        automatically.  Default false.
  */
@@ -47,13 +46,18 @@ var StudioAnimation = module.exports = function (options) {
   this.opacity_ = utils.valueOr(options.opacity, 1);
 
   /**
-   * Which animation (which column in the sprite sheet) is currently playing.
+   * Which animation type (a group of columns in the sprite sheet) is currently
+   * playing.
    * @private {number}
    */
-  this.currentAnimation_ = 0;
+  this.currentAnimationType_ = 0;
 
-  /** @private {number} index of current frame in the current animation. */
-  this.currentFrame_ = 0;
+  /**
+   * Which animation (which column in the sprite sheet for a given type) is
+   * currently playing.
+   * @private {number}
+   */
+  this.currentAnimationIndex_ = 0;
 
   /** @private {boolean} whether the animation should loop automatically. */
   this.loop_ = utils.valueOr(options.loop, false);
@@ -64,10 +68,8 @@ var StudioAnimation = module.exports = function (options) {
   /** @private {SVGElement} */
   this.clipPath_ = null;
 
-  // Setting the animation rate here initializes the setInterval that keeps
-  // the current frame changing at the framerate.
-  this.setAnimationRate(utils.valueOr(options.animationRate,
-      constants.DEFAULT_ANIMATION_RATE));
+  /** @private {number} frame duration of current animation (1/30 sec ticks). */
+  this.animationFrameDuration_ = options.animationFrameDuration || 1;
 };
 
 /**
@@ -128,24 +130,23 @@ StudioAnimation.prototype.removeElement = function() {
     this.clipPath_ = null;
   }
 
-  this.stopAnimator();
-};
-
-/**
- * Stop the animator (used when we freeze in onPuzzleComplete)
- */
-StudioAnimation.prototype.stopAnimator = function() {
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-    this.animator_ = null;
-  }
 };
 
 /**
  * Display the current frame at the given location
  */
-StudioAnimation.prototype.redrawCenteredAt = function (center) {
-  var frame = this.spriteSheet_.getFrame(this.currentAnimation_, this.currentFrame_);
+StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
+  var currentFrame = Math.floor(tickCount / this.animationFrameDuration_);
+  if (this.loop_) {
+    currentFrame = currentFrame % this.spriteSheet_.framesPerAnimation;
+  } else {
+    currentFrame = Math.min(currentFrame, this.spriteSheet_.framesPerAnimation - 1);
+  }
+
+  var frame = this.spriteSheet_.getFrame(this.currentAnimationType_,
+      this.currentAnimationIndex_,
+      currentFrame);
+
   var scale = this.renderScale_;
 
   // Preserved behavior: When scaling a sprite up, we actually scale around the
@@ -176,26 +177,20 @@ StudioAnimation.prototype.redrawCenteredAt = function (center) {
  * Sets which animation to play out of the sprite sheet.
  * Animations are indexed by their position in the sprite sheet, where each
  * animation is its own column and animation zero is the far-left column.
+ * @param {!string} animationType
  * @param {!number} animationIndex
  */
-StudioAnimation.prototype.setCurrentAnimation = function (animationIndex) {
-  this.currentAnimation_ = animationIndex;
+StudioAnimation.prototype.setCurrentAnimation = function (animationType, animationIndex) {
+  this.currentAnimationType_ = animationType;
+  this.currentAnimationIndex_ = animationIndex;
 };
 
 /**
- * Set the animation rate for this item's sprite.
- * @param {number} framesPerSecond
+ * Set the animation speed for this item's sprite.
+ * @param {number} ticksPerFrame
  */
-StudioAnimation.prototype.setAnimationRate = function (framesPerSecond) {
-  if (this.animator_) {
-    window.clearInterval(this.animator_);
-  }
-  this.animator_ = window.setInterval(function () {
-    if (this.loop_ || this.currentFrame_ + 1 < this.spriteSheet_.framesPerAnimation) {
-      this.currentFrame_ = (this.currentFrame_ + 1) %
-          this.spriteSheet_.framesPerAnimation;
-    }
-  }.bind(this), Math.round(1000 / framesPerSecond));
+StudioAnimation.prototype.setAnimationFrameDuration = function (ticksPerFrame) {
+  this.animationFrameDuration_ = ticksPerFrame;
 };
 
 /**

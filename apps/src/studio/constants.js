@@ -282,7 +282,12 @@ exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
 exports.DEFAULT_SPRITE_SPEED = exports.SpriteSpeed.NORMAL;
 exports.DEFAULT_SPRITE_SIZE = 1;
 
+exports.DEFAULT_PROJECTILE_SPEED = exports.SpriteSpeed.SLOW;
+exports.DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION = 1.5;
+
 exports.DEFAULT_ITEM_SPEED = exports.SpriteSpeed.SLOW;
+exports.DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
+
 
 /**
  * The types of squares in the maze, which is represented

@@ -191,21 +191,21 @@ exports.setToStop = function(className) {
 exports.moveFast = function(className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
-    'speed': constants.SpriteSpeed.FAST
+    'speed': 'fast'
   });
 };
 
 exports.moveNormal = function(className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
-    'speed': constants.SpriteSpeed.SLOW
+    'speed': 'normal'
   });
 };
 
 exports.moveSlow = function(className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     'className': className,
-    'speed': constants.SpriteSpeed.VERY_SLOW
+    'speed': 'slow'
   });
 };
 

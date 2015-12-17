@@ -28,8 +28,6 @@ var Item = function (options) {
   }
   Studio.trackedBehavior.createdItems[this.className]++;
 
-  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
-
   /**
    * Rendering offset for item animation vs display position - applied as
    * late as possible.
@@ -44,7 +42,8 @@ var Item = function (options) {
 
   /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: new StudioSpriteSheet(options)
+    spriteSheet: new StudioSpriteSheet(options),
+    animationFrameDuration: this.getAnimationFrameDuration()
   }));
 };
 Item.inherits(Collidable);
@@ -112,6 +111,14 @@ Item.prototype.update = function () {
   // update logic (facing the actor is handled every frame in display())
   if (this.activity === 'watchActor') {
     return;
+  } else if (this.activity === 'none') {
+    this.dir = Direction.NONE;
+    // Update this because animation speed may change as we alter direction:
+    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+
+    this.destGridX = undefined;
+    this.destGridY = undefined;
+    return;
   }
 
   if (this.destGridX !== undefined) {
@@ -140,13 +147,6 @@ Item.prototype.update = function () {
   // Or have we already reached our prior destination location in grid coords?
   // If not, determine it.
   if (this.destGridX === undefined || reachedDestinationGridPosition) {
-
-    if (this.activity === 'none') {
-      this.dir = Direction.NONE;
-      this.destGridX = undefined;
-      this.destGridY = undefined;
-      return;
-    }
 
     var sprite = Studio.sprite[0];
 
@@ -262,6 +262,9 @@ Item.prototype.update = function () {
       this.dir = Direction.NONE;
     }
   }
+
+  // Update this because animation speed may change as we alter direction:
+  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
 };
 
 /**
@@ -293,6 +296,10 @@ Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
   }
 };
 
+Item.prototype.setActivity = function(type) {
+  this.activity = type;
+};
+
 /**
  * Begin a fade out.
  */
@@ -315,10 +322,15 @@ Item.prototype.removeElement = function() {
 };
 
 /**
- * Stop our animations
+ * Retrieve animation frame duration (frames per tick)
  */
-Item.prototype.stopAnimations = function() {
-  this.animation_.stopAnimator();
+Item.prototype.getAnimationFrameDuration = function () {
+  if (this.dir === Direction.NONE) {
+    return constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
+  } else {
+    return constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION *
+        constants.DEFAULT_ITEM_SPEED / this.speed;
+  }
 };
 
 /**
@@ -356,11 +368,12 @@ Item.prototype.display = function () {
     this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
-  this.animation_.setCurrentAnimation(this.getDirectionFrame());
+  this.animation_.setCurrentAnimation('direction', this.getDirectionFrame());
   this.animation_.redrawCenteredAt({
-    x: this.x + this.renderOffset.x,
-    y: this.y + this.renderOffset.y
-  });
+        x: this.x + this.renderOffset.x,
+        y: this.y + this.renderOffset.y
+      },
+      Studio.tickCount);
 };
 
 Item.prototype.getNextPosition = function () {
@@ -381,6 +394,15 @@ Item.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Sets the speed and changes the animation frame duration to match.
+ * @param {number} speed Number of pixels to move per tick
+ */
+Item.prototype.setSpeed = function (speed) {
+  this.speed = speed;
+  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
 };
 
 /**
