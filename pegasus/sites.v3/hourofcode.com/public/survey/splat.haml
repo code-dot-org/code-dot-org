@@ -40,7 +40,7 @@ rightbar: blank
       %select#event-country.form-control{name: "event_country_s", type: "select", required: true}
         %option{value: country, selected: true}= country
         - DB[:geography_countries].all().map{|i| i[:name_s]}.sort.each do |country|
-          %option{value: country}= country unless country == 'United States'
+          %option{value: country}= country
         %option{value: "Other"} Other
 
   .form-group
