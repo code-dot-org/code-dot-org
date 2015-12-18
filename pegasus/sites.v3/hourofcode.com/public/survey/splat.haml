@@ -6,11 +6,18 @@ rightbar: blank
 
 -code = File.basename(request.path_info)
 
+:ruby
+  email = Poste.decrypt(code) rescue nil
+  signup = DB[:forms].where(kind: 'HocSignup2015', email: email).first
+  not_found! unless signup
+  processed_data = JSON.load signup[:processed_data]
+  country = processed_data['location_country_s']
+
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
-%script{type: "text/javascript", src: "/js/hoc-survey-2014.js"}
+%script{type: "text/javascript", src: "/js/hoc-survey-2015.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 /[if lt IE 9]
@@ -31,19 +38,18 @@ rightbar: blank
     %span.form-required-field *
     %div
       %select#event-country.form-control{name: "event_country_s", type: "select", required: true}
-        %option{value: nil, selected: true}
-        %option{value: "United States"} United States
-        -DB[:geography_countries].all().map{|i| i[:name_s]}.sort.each do |country|
-          %option{value: country}= country unless country == 'United States'
+        %option{value: country, selected: true}= country
+        - DB[:geography_countries].all().map{|i| i[:name_s]}.sort.each do |country|
+          %option{value: country}= country
         %option{value: "Other"} Other
 
   .form-group
-    %label.control-label{for: "teacher-description"} Which best describes you?
+    %label.control-label{for: "experience-rating"} Overall, how would you rate your Hour of Code experience?
     %span.form-required-field *
     %div
-      %select#teacher-description.form-control{name: "teacher_description_s", type: "select", required: true}
+      %select#experience-rating.form-control{name: "experience_rating_s", type: "select", required: true}
         %option{value: nil, selected: true}
-        -HocSurvey2014.teacher_descriptions.each  do |label|
+        -HocSurvey2015.experience_ratings.each  do |label|
           %option{value: label}= label
 
   .form-group
@@ -52,17 +58,69 @@ rightbar: blank
     %div
       %select#event-location-type.form-control{name: "event_location_type_s", type: "select", required: true}
         %option{value: nil, selected: true}
-        -HocSurvey2014.event_location_types.each  do |label|
+        - HocSurvey2015.event_location_types.each  do |label|
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "students-number-total"} For how many students did you organize the Hour of Code?
+    %label.control-label{for: "school-teach-cs"} Does your school already teach/offer a Computer Science class that includes programming or coding?
+    %span.form-required-field *
+    %div
+    .radio-row
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "school-teach-cs-yes", name: "school_teach_cs_s", required: true, value: "Yes"} Yes
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "school-teach-cs-no", name: "school_teach_cs_s", required: true, value: "No"} No
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "school-teach-cs-na", name: "school_teach_cs_s", required: true, value: "I don’t know / Not applicable"} I don’t know / Not applicable
+
+  .form-group
+    %label.control-label{for: "cs-interest"} How has your experience with the Hour of Code affected your interest in teaching computer science?
+    %span.form-required-field *
+    %div
+    .radio-row
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "cs-interest-more", name: "cs_interest_s", required: true, value: "More interested"} More interested
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "cs-interest-nochange", name: "cs_interest_s", required: true, value: "No change"} No change
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "cs-interest-less", name: "cs_interest_s", required: true, value: "Less interested"} Less interested
+
+  .form-group
+    %label.control-label{for: "cs-beyond-hoc"} If given the opportunity, would you continue teaching coding or computer science beyond just one hour?
+    %span.form-required-field *
+    %div
+      %select#cs-beyond-hoc.form-control{name: "cs_beyond_hoc_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        - HocSurvey2015.beyond_hoc_answers.each  do |label|
+          %option{value: label}= label
+
+  .form-group
+    %label.control-label{for: "age-range"} What age range were the students that participated in your Hour of Code? Check all that apply.
+    %span.form-required-field *
+    %div
+      %select#age-range.form-control{name: "age_range_ss[]", type: "select", multiple: true, required: true}
+        %option{value: nil, selected: true}
+        - HocSurvey2015.age_ranges.each  do |label|
+          %option{value: label}= label
+
+  .form-group
+    %label.control-label{for: "longer_than_hour"} Did any of your students do coding for longer than one hour?
+    %span.form-required-field *
+    %div
+    .radio-row
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "longer_than_hour-yes", name: "longer_than_hour_s", required: true, value: "Yes"} Yes
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "longer_than_hour-no", name: "longer_than_hour_s", required: true, value: "No"} No
+
+  .form-group
+    %label.control-label{for: "students-number-total"} In total, how many students participated in your Hour of Code? Enter a whole number.
     %span.form-required-field *
     %div
       %input#students-number-total.form-control{name: "students_number_total_s", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-number-girls"} How many of the students were girls (approximately)?
+    %label.control-label{for: "students-number-girls"} In total, how many of the students who participated in your Hour of Code were girls? Enter a whole number.
     %span.form-required-field *
     %div
       %input#students-number-girls.form-control{name: "students_number_girls_s", placeholder: "", type: "text", required: true}/
@@ -70,76 +128,20 @@ rightbar: blank
   .form-group
     #students-number-ethnicity-wrapper{style: "display: none;"}
       %label.control-label{for: "students-number-ethnicity"}
-        In total, how many of the students were Hispanic, African American, or Native American (approximately)?
+        In total, how many of the students who participated were from historically underrepresented ethnicities in computer science:
+        African American, Hispanic/Latino/Latina, Pacific Islander, or Native American/Alaskan Native? Enter a whole number.
         %span.form-required-field *
       %div
         %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_s", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply)
+    %label.control-label{for: "volunteer-participation"} Did a volunteer participate in the Hour of Code?
     %span.form-required-field *
     %div
-      %select#students-grade-levels.form-control{name: "students_grade_levels_ss[]", type: "select", multiple: true, required: true}
+      %select#volunteer-participation.form-control{name: "volunteer_participation_s", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
-        -HocSurvey2014.students_grade_levels.each  do |label|
+        - HocSurvey2015.volunteer_participation_values.each  do |label|
           %option{value: label}= label
-
-  .form-group
-    %label.control-label{for: "event-tutorials"} Which tutorial did you use? (Choose all that apply)
-    %span.form-required-field *
-    %div
-      %select#event-tutorials.form-control{name: "event_tutorials_ss[]", type: "select", multiple: true, required: true}
-        %option{value: nil, selected: true}
-        -HocSurvey2014.event_tutorials.each  do |label|
-          %option{value: label}= label
-
-  .form-group
-    %label.control-label{for: "event-technology"} What level of technology did you have?
-    %span.form-required-field *
-    %div
-      %select#event-technology.form-control{name: "event_technology_s", type: "select"}
-        %option{value: nil, selected: true}
-        -HocSurvey2014.event_technologies.each  do |label|
-          %option{value: label}= label
-
-  .form-group
-    %label.control-label{for: "event-experience"} Overall, how would you rate your Hour of Code experience?
-    %span.form-required-field *
-    %div
-      %select#event-experience.form-control{name: "event_experience_s", type: "select", required: true}
-        %option{value: nil, selected: true}
-        -HocSurvey2014.event_experiences.each  do |label|
-          %option{value: label}= label
-
-  .form-group
-    %label.control-label{for: "hoc-event-improvement"} How do you think we could improve the Hour of Code? (optional)
-    %div
-      %textarea#hoc-event-improvement.form-control{name: "event_improvement_s", placeholder: "", style: "height: 8em;"}
-
-  .form-group
-    %label.control-label{for: "event-annual"} Do you think the Hour of Code should be an annual event?
-    %span.form-required-field *
-    .radio-row
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "event-annual-yes", name: "event_annual_s", required: true, value: "Yes"} Yes
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "event-annual-no", name: "event_annual_s", required: true, value: "No"} No
-
-  .form-group
-    %label.control-label{for: "teacher-plan-teach-cs"} Do you plan to teach a longer computer science or coding course in your classroom? (optional)
-    .radio-row
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "teacher-plan-teach-cs-yes", name: "teacher_plan_teach_cs_s", required: true, value: "Yes"} Yes
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "teacher-plan-teach-cs-no", name: "teacher_plan_teach_cs_s", required: true, value: "No"} No
-
-  .form-group
-    %label.control-label{for: "teacher-first-year"} Will this be your first year teaching computer science? (optional)
-    .radio-row
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "teacher-first-year-yes", name: "teacher_first_year_s", required: true, value: "Yes"} Yes
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "teacher-first-year-no", name: "teacher_first_year_s", required: true, value: "No"} No
 
   .form-group
     %label.control-label{for: "teacher-how-heard"} How did you hear about the Hour of Code? (Choose all that apply)
@@ -147,31 +149,30 @@ rightbar: blank
     %div
       %select#teacher-how-heard.form-control{name: "teacher_how_heard_ss[]", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
-        -HocSurvey2014.teacher_how_heards.each do |label|
+        -HocSurvey2015.teacher_how_heards.each do |label|
           %option{value: label}= label
 
     %div#teacher-how-heard-other-wrapper{style: 'display: none;'}
-      %label.control-label{for: "teacher-how-heard-other"}<
+      %label.control-label{for: "teacher-how-heard-other"}
         %em{style: 'font-weight: normal;'} Other method
       %div
         %input#tacher-how-heard-other.form-control{name: "teacher_how_heard_other_s", placeholder: "", type: "text"}/
 
   .form-group
-    #teacher-district-wrapper{style: "display: none;"}
-      %label.control-label{for: "teacher-district"} What school district do you teach in? (optional)
-      %div
-        %input#teacher-district.form-control{name: "teacher_district_s", placeholder: "", type: "text"}/
+    %label.control-label{for: "hoc-centerpiece"}
+      Should we keep the Hour of Code as the centerpiece activity of Computer Science Education Week,
+      and keep “Hour of Code” as the unifying brand for all the other activities that educators organize throughout the week?
+    %span.form-required-field *
+    %div
+      %select#hoc-centerpiece.form-control{name: "hoc_centerpiece_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        - HocSurvey2015.hoc_centerpiece_values.each  do |label|
+          %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "prize-choice"} What prize would you like to receive?
-    %span.form-required-field *
-    .radio-row
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "prize-choice-dropbox", name: "prize_choice_s", value: "Dropbox"} 10 GB of Dropbox space
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "prize-choice-skype", name: "prize_choice_s", value: "Skype"} $10 of Skype credit
-      %label{class: "radio-inline"}
-        %input{type: "radio", id: "prize-choice-none", name: "prize_choice_s", value: "None"} No prize
+    %label.control-label{for: "event-improvement"} How do you think we could improve the Hour of Code? (optional, limit 250 words)
+    %div
+      %textarea#event-improvement.form-control{name: "event_improvement_s", placeholder: "", style: "height: 8em;"}
 
   %input{name:'code_s', type:'hidden', value:code}
 
@@ -180,4 +181,4 @@ rightbar: blank
 
 #thanks{:style=>"display: none;"}
   :markdown
-    Thank you for completing the survey. If you selected a prize, you receive an email with information about how to claim it.
+    Thank you for completing the survey. If you selected a prize, you will receive an email with information about how to claim it.
