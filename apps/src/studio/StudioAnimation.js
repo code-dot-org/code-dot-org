@@ -53,6 +53,12 @@ var StudioAnimation = module.exports = function (options) {
   this.currentAnimationType_ = 0;
 
   /**
+   * An object of special animations.
+   * @private {object}
+   */
+  this.specialAnimations_ = {};
+
+  /**
    * Which animation (which column in the sprite sheet for a given type) is
    * currently playing.
    * @private {number}
@@ -150,6 +156,28 @@ StudioAnimation.prototype.removeElement = function() {
 
 };
 
+/** @returns {number} the count of frames for the current animation */
+StudioAnimation.prototype.getAnimationFrameCount = function () {
+  var specialFrames = this.specialAnimations_[this.currentAnimationType_];
+  if (specialFrames) {
+    return specialFrames[this.currentAnimationIndex_].length;
+  } else {
+    return this.spriteSheet_.getAnimationFrameCount(this.currentAnimationType_);
+  }
+};
+
+/** @returns {object} the frame rectangle from the sprite sheet for a frame */
+StudioAnimation.prototype.getFrame = function (frameIndex) {
+  var specialFrames = this.specialAnimations_[this.currentAnimationType_];
+  if (specialFrames) {
+    return specialFrames[this.currentAnimationIndex_][frameIndex];
+  } else {
+    return this.spriteSheet_.getFrame(this.currentAnimationType_,
+        this.currentAnimationIndex_,
+        frameIndex);
+  }
+};
+
 /**
  * Display the current frame at the given location
  */
@@ -163,8 +191,7 @@ StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
   }
 
   var currentFrame = Math.floor(animTick / this.animationFrameDuration_);
-  var framesInThisAnimation =
-      this.spriteSheet_.getAnimationFrameCount(this.currentAnimationType_);
+  var framesInThisAnimation = this.getAnimationFrameCount();
 
   if (this.loop_) {
     currentFrame = currentFrame % framesInThisAnimation;
@@ -172,9 +199,7 @@ StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
     currentFrame = Math.min(currentFrame, framesInThisAnimation - 1);
   }
 
-  var frame = this.spriteSheet_.getFrame(this.currentAnimationType_,
-      this.currentAnimationIndex_,
-      currentFrame);
+  var frame = this.getFrame(currentFrame);
 
   var scale = this.renderScale_;
 
@@ -212,6 +237,31 @@ StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
 StudioAnimation.prototype.setCurrentAnimation = function (animationType, animationIndex) {
   this.currentAnimationType_ = animationType;
   this.currentAnimationIndex_ = animationIndex;
+};
+
+/**
+ * Creates a new special animation types based on specific frames to play from
+ * the sprite sheet.
+ * @param {!string} type - the name of the new animation type
+ * @param {!number} index - the index of the new animation
+ * @param {!array} animationList - an array with frame information
+ * @param {string} [animationList[].type] - animation type for a specific frame.
+ * @param {number} [animationList[].index] - animation index for a specific frame.
+ * @param {number} [animationList[].frame] - animation frame for a specific frame.
+ */
+StudioAnimation.prototype.createSpecialAnimation =
+    function (type, index, animationList) {
+  if (!this.specialAnimations_[type]) {
+    this.specialAnimations_[type] = [];
+  }
+  var frames = [];
+  for (var i = 0; i < animationList.length; i++) {
+    frames.push(
+        this.spriteSheet_.getFrame(animationList[i].type,
+            animationList[i].index,
+            animationList[i].frame));
+  }
+  this.specialAnimations_[type][index] = frames;
 };
 
 /**

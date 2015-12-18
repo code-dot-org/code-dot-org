@@ -33,6 +33,11 @@ var Sprite = function (options) {
 
   this.image = null;
   this.legacyImage = null;
+
+  this.animation_ = null;
+  this.legacyAnimation_ = null;
+
+  this.useLegacyIdleEmotionAnimations = false;
 };
 Sprite.inherits(Collidable);
 module.exports = Sprite;
@@ -93,7 +98,7 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
             count: 1,
             frames: frameCounts.turns
           },
-          emotions: {
+          emotionframe: {
             count: frameCounts.emotions,
             frames: 1
           }
@@ -113,6 +118,49 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
       spriteSheet: new StudioSpriteSheet(options),
       animationFrameDuration: this.getAnimationFrameDuration()
     }));
+
+    var i, animationList;
+    if (frameCounts.holdIdleFrame0Count) {
+      // Create a new special animation also called "normal", which will
+      // override the built-in "normal" from the spritesheet:
+      animationList = [];
+      for (i = 0; i < frameCounts.holdIdleFrame0Count; i++) {
+        animationList.push({
+          type: 'normal',
+          index: 0,
+          frame: 0
+        });
+      }
+      for (i = 1; i < frameCounts.normal; i++) {
+        animationList.push({
+          type: 'normal',
+          index: 0,
+          frame: i
+        });
+      }
+      this.legacyAnimation_.createSpecialAnimation('normal', 0, animationList);
+    }
+
+    for (i = 0; i < frameCounts.emotions; i++) {
+      // Create special animations for each emotion
+      animationList = [];
+      for (var j = 0; j < frameCounts.holdIdleFrame0Count; j++) {
+        animationList.push({
+          type: 'emotionframe',
+          index: i,
+          frame: 0
+        });
+      }
+      for (var k = 1; k < frameCounts.normal; k++) {
+        animationList.push({
+          type: 'normal',
+          index: 0,
+          frame: k
+        });
+      }
+      this.legacyAnimation_.createSpecialAnimation('idleEmotion', i, animationList);
+      this.useLegacyIdleEmotionAnimations = true;
+    }
   }
 };
 
@@ -244,9 +292,10 @@ Sprite.prototype.display = function () {
   var standingStill = this.displayDir === Direction.NONE;
   var southFacing = standingStill || this.displayDir === Direction.SOUTH;
 
-  if (southFacing && this.emotion !== Emotions.NORMAL) {
+  if (southFacing && this.emotion !== Emotions.NORMAL &&
+      this.useLegacyIdleEmotionAnimations) {
     // TODO: Support legacy emotion animation and new emotion animations:
-    animationType = 'emotions';
+    animationType = 'idleEmotion';
     animationIndex = this.emotion - 1;
     useLegacyAnimation = true;
   } else if (!this.animation_) {
