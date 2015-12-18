@@ -2,10 +2,20 @@
  * @file Main entry point for scripts used only in levelbuilder when editing
  *       DSL-defined levels.
  */
+/* global $ */
 'use strict';
-var _ = require('lodash');
+var initializeEmbeddedMarkdownEditor = require('./initializeEmbeddedMarkdownEditor');
 
-window.levelbuilder = window.levelbuilder || {};
-_.extend(window.levelbuilder, {
-  initializeEmbeddedMarkdownEditor: require('./initializeEmbeddedMarkdownEditor')
+// Initialize markdown editors on page load
+$(function () {
+  initializeEmbeddedMarkdownEditor(
+    $('#level_dsl_text'),
+    'markdown_textarea',
+    $('#markdown-preview'),
+    'markdown');
+  initializeEmbeddedMarkdownEditor(
+    $('#level_dsl_text'),
+    'teacher_markdown_textarea',
+    $('#teacher-markdown-preview'),
+    'teacher_markdown');
 });
