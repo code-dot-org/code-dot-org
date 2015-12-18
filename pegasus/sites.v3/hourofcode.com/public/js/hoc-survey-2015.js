@@ -5,6 +5,30 @@ $(document).ready(function() {
     plugins: ['fast_click']
   });
 
+  // Only allow whole integers
+  $('#students-number-total').keypress(function(event) {
+    return /\d/.test(String.fromCharCode(event.keyCode));
+  }).triggerHandler('keypress');
+  $('#students-number-total').change(function() {
+    $(this).val($(this).val().match(/\d+/));
+  }).triggerHandler('change');
+
+  // Only allow whole integers
+  $('#students-number-girls').keypress(function(event) {
+    return /\d/.test(String.fromCharCode(event.keyCode));
+  }).triggerHandler('keypress');
+  $('#students-number-girls').change(function() {
+    $(this).val($(this).val().match(/\d+/));
+  }).triggerHandler('change');
+
+  // Only allow whole integers
+  $('#students-number-ethnicity').keypress(function(event) {
+    return /\d/.test(String.fromCharCode(event.keyCode));
+  }).triggerHandler('keypress');
+  $('#students-number-ethnicity').change(function() {
+    $(this).val($(this).val().match(/\d+/));
+  }).triggerHandler('change');
+
   $('#event-country').change(function() {
     if ($(this).val() == 'United States') {
       $('#students-number-ethnicity-wrapper').show();
@@ -23,15 +47,15 @@ $(document).ready(function() {
     }
   }).triggerHandler('change');
 
-  $('#event-country, #event-location-type').change(function() {
-    if ($('#event-country').val() == 'United States' && $('#event-location-type' == 'Public school')) {
-      $('#teacher-district-wrapper').show();
-    } else {
-      $('#teacher-district').val('');
-      $('#teacher-district-wrapper').hide();
-    }
+  // Limit to 250 words
+  $('#event-improvement').keyup(function() {
+    var newVal = $(this).val().match(/^(?:\s*\S*){0,250}/);
+    $(this).val(newVal);
+  }).triggerHandler('keyup');
+  $('#event-improvement').change(function() {
+    var newVal = $(this).val().match(/^(?:\s*\S*){0,250}/);
+    $(this).val(newVal);
   }).triggerHandler('change');
-
 
   $( "#hoc-survey-form" ).submit(function( event ) {
     surveyFormSubmit();
@@ -40,19 +64,18 @@ $(document).ready(function() {
 
 function surveyFormComplete(data)
 {
-  $('#hoc-survey-form').hide();
-  $('#thanks').show();
+  window.location.href = window.location.href.replace("/survey/","/survey/prize/");
 }
 
 function surveyFormError(data)
 {
   $('.has-error').removeClass('has-error');
 
-  errors = Object.keys(data.responseJSON);
-  errors_count = errors.length;
+  var errors = Object.keys(data.responseJSON);
+  var errors_count = errors.length;
 
-  for (i = 0; i < errors_count; ++i) {
-    error_id = '#' + errors[i].replace(/_/g, '-');
+  for (var i = 0; i < errors_count; ++i) {
+    var error_id = '#' + errors[i].replace(/_/g, '-');
     error_id = error_id.replace(/-[sbi]s?$/, '');
     $(error_id).parents('.form-group').addClass('has-error');
   }
@@ -70,7 +93,7 @@ function surveyFormSubmit()
   $("#signup_submit").attr('disabled','disabled');
 
   $.ajax({
-    url: "/forms/HocSurvey2014",
+    url: "/forms/HocSurvey2015",
     type: "post",
     dataType: "json",
     data: $("#hoc-survey-form").serialize()

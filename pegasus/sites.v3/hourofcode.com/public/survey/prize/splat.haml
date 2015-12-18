@@ -1,0 +1,89 @@
+---
+title: Hour of Code Organizer Survey - Claim Prize
+nav: blank
+rightbar: blank
+---
+
+-code = File.basename(request.path_info)
+
+:ruby
+  email = Poste.decrypt(code) rescue nil
+  completed_survey = DB[:forms].where(kind: 'HocSurvey2015', email: email).first
+  redirect "/survey/#{code}" unless completed_survey
+
+  data = JSON.parse completed_survey[:data]
+  country = data['event_country_s']
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/hoc-survey-prize-2015.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+%h1 Hour of Code Organizer Survey - Claim Prize
+
+%form{:id=>"hoc-survey-form", role: "form", onsubmit: "event.preventDefault();"}
+  %p
+    Please select a thank-you gift from one of the available options.
+    Supplies are limited so not all prize options may be available at this time.
+    Your gift code will be emailed to you. Make sure to check your spam in case it ends up there.
+
+  %p
+    %strong Note:
+    If you choose Dropbox and have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a
+    *different* account or choose a different thank-you gift if available.
+
+  #error-message
+
+  .form-group
+    %label.control-label{for: "prize-choice"} What prize would you like to receive?
+    %span.form-required-field *
+    .radio-row
+      - case country
+        - when 'United States'
+          = view :survey_prize_choice, value: 'Apple.US'
+          = view :survey_prize_choice, value: 'Amazon.US'
+          = view :survey_prize_choice, value: 'Microsoft.US'
+        - when 'Canada'
+          = view :survey_prize_choice, value: 'Apple.Canada'
+          = view :survey_prize_choice, value: 'Amazon.Canada'
+        - when 'Italy'
+          = view :survey_prize_choice, value: 'Apple.Italy'
+          = view :survey_prize_choice, value: 'Amazon.Italy'
+        - when 'United Kingdom'
+          = view :survey_prize_choice, value: 'Apple.UK'
+          = view :survey_prize_choice, value: 'Amazon.UK'
+        - when 'India'
+          = view :survey_prize_choice, value: 'Apple.India'
+          = view :survey_prize_choice, value: 'Amazon.India'
+        - when 'Spain'
+          = view :survey_prize_choice, value: 'Apple.Spain'
+          = view :survey_prize_choice, value: 'Amazon.Spain'
+        - when 'Turkey'
+          = view :survey_prize_choice, value: 'Apple.Turkey'
+        - when 'Australia'
+          = view :survey_prize_choice, value: 'Apple.Australia'
+        - when 'Mexico'
+          = view :survey_prize_choice, value: 'Apple.Mexico'
+        - when 'Indonesia'
+          = view :survey_prize_choice, value: 'Apple.Indonesia'
+        - when 'Germany'
+          = view :survey_prize_choice, value: 'Amazon.Germany'
+        - when 'China'
+          = view :survey_prize_choice, value: 'Amazon.China'
+        - when 'Japan'
+          = view :survey_prize_choice, value: 'Amazon.Japan'
+        - when 'France'
+          = view :survey_prize_choice, value: 'Amazon.France'
+      = view :survey_prize_choice, value: 'dropbox'
+      = view :survey_prize_choice, value: 'None'
+
+  %input{name:'code_s', type:'hidden', value:code}
+
+  .form-group.submit-btn
+    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+
+#thanks{:style=>"display: none;"}
+  :markdown
+    Thank you for completing the survey. If you selected a prize, you receive an email with information about how to claim it.

@@ -3,10 +3,6 @@ require_relative '../../pegasus/helpers/prize_helpers'
 require 'securerandom'
 require 'ostruct'
 
-def request
-  @request ||= OpenStruct.new ip: '127.0.0.1'
-end
-
 class HocSurveyPrizeTest < SequelTestCase
 
   TYPE1 = 'apple'
