@@ -16,10 +16,6 @@ class HocSurveyPrize2015
   end
 
   def self.receipt(data)
-
-    puts "Generating receipt!"
-    puts "data: #{data.inspect}"
-
     suffix = data['prize_choice_s'].partition('.').first.downcase
     suffix = 'msft' if suffix == 'microsoft'
     "12-18-hoc-organizer-survey-#{suffix}"
