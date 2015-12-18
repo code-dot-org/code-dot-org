@@ -37,6 +37,11 @@ goog.require('goog.style');
  * drags a block towards the toolbox to delete it.  However, when creating a
  * blockspace for something like the function editor, we don't want to create
  * an additional one, relying on the main blockspace editor's one instead.
+ * @param {boolean} opt_readOnly whether or not to initialize this
+ * workspace in readOnly mode. All Blockly elements that are (or can be)
+ * aware of this BlockSpaceEditor will consider Blockly to be in
+ * readOnly mode if this BlockSpaceEditor.readOnly OR Blockly.readOnly
+ * are true
  */
 Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect, opt_readOnly) {
   if (opt_getMetrics) {
@@ -48,9 +53,8 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
   if (opt_hideTrashRect) {
     this.hideTrashRect_ = opt_hideTrashRect;
   }
-  if (opt_readOnly) {
-    this.readOnly_ = opt_readOnly;
-  }
+
+  this.readOnly_ = !!opt_readOnly;
   /**
    * @type {Blockly.BlockSpace}
    */
