@@ -8,13 +8,16 @@ UNIQUE CODE GOES HERE
  
 **To redeem:**
 
-1.   Go to :
-2.   Enter code.
-3.   Start shopping at Amazon.com
+1.  Log into your [Amazon account](http://amazon.com).
+2.  Click 'Apply a Gift Card to Your Account'.
+3.  Enter your claim code and click 'Apply to Your Account'. 
+3.  Start shopping at Amazon.com
 
-**For help:**
+**Note:** You can also enter your claim code during checkout. You won't be able to redeem your gift card using the Amazon.com 1-Click service unless you redeem the gift card funds to Your Account first.
 
-**Note:**
+**For help** [go here](https://www.amazon.com/gp/help/customer/display.html).
+
+**Note:** This is a promotional gift card. [See card terms and agreement](https://www.amazon.com/gp/help/customer/display.html?nodeId=3122091&app-nav-type=modal/ref=gcui_d_e_tc_o_d_b_x).
 
 <br/>
 <hr/>
