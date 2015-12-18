@@ -135,7 +135,8 @@ module.exports = {
         'textLabel("movementX", "");' +
         'textLabel("movementY", "");' +
         'onEvent("canvas1", "mousemove", function(event) {' +
-        '  console.log("movementX: " + event.movementX + " movementY: " + event.movementY)' +
+        '  setText("movementX", event.movementX);\n' +
+        '  setText("movementY", event.movementY);\n' +
         '});',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
@@ -154,25 +155,32 @@ module.exports = {
           var expectedOutput = '';
           // The first mousemove event does not have movementX/Y since there is no previous event.
           $('#canvas1')[0].dispatchEvent(move1);
-          expectedOutput += 'movementX: 0 movementY: 0';
+          assert.equal($('#movementX')[0].textContent, '0');
+          assert.equal($('#movementY')[0].textContent, '0');
 
           // The second mousemove event does not have movementX/Y due to the mouseout event.
           $('#canvas1')[0].dispatchEvent(mouseout);
           $('#canvas1')[0].dispatchEvent(move2);
-          expectedOutput += '\nmovementX: 0 movementY: 0';
+          assert.equal($('#movementX')[0].textContent, '0');
+          assert.equal($('#movementY')[0].textContent, '0');
 
           // The subsequent mousemove events have movementX/Y due to the previous mousemove event.
           $('#canvas1')[0].dispatchEvent(move3);
-          expectedOutput += '\nmovementX: 10 movementY: 20';
+          assert.equal($('#movementX')[0].textContent, '10');
+          assert.equal($('#movementY')[0].textContent, '20');
 
           $('#canvas1')[0].dispatchEvent(move4);
-          expectedOutput += '\nmovementX: 1 movementY: 2';
-
-          var debugOutput = document.getElementById('debug-output');
-          assert.equal(debugOutput.textContent, expectedOutput);
+          assert.equal($('#movementX')[0].textContent, '1');
+          assert.equal($('#movementY')[0].textContent, '2');
 
           Applab.onPuzzleComplete();
         });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
       },
       expected: {
         result: true,
