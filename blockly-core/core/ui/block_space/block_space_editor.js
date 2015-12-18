@@ -268,10 +268,12 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
    * When disabled, we wont allow you to drag blocks into blockSpace
    */
   this.setEnableToolbox = function (enabled) {
-    if (this.flyout_) {
-      this.flyout_.setEnabled(enabled);
-    } else if (this.toolbox) {
-      this.toolbox.enabled = enabled;
+    if (!this.isReadOnly()) {
+      if (this.flyout_) {
+        this.flyout_.setEnabled(enabled);
+      } else if (this.toolbox) {
+        this.toolbox.enabled = enabled;
+      }
     }
   };
 
@@ -471,7 +473,7 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
     Blockly.documentEventsBound_ = true;
   }
 
-  if (Blockly.languageTree) {
+  if (Blockly.languageTree && !this.isReadOnly()) {
     if (Blockly.hasCategories) {
       this.toolbox.init(this.blockSpace, this);
     } else {
