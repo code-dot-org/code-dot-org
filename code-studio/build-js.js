@@ -3,6 +3,7 @@
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
+var _ = require('lodash');
 var child_process = require('child_process');
 var program = require('commander');
 var path = require('path');
@@ -34,33 +35,26 @@ function main() {
       .option('--min', 'Build minified output', false)
       .parse(process.argv);
 
+  // Run build
   var buildCommands = [
-    addNpmBinToPath(),
     ensureDirectoryExists(BUILD_PATH),
     browserifyCommand(program.min)
   ].join(" && \\\n");
-
-  // Run build.
   console.log(buildCommands);
+
   try {
     // For documentation on synchronous execution of shell commands from node scripts, see:
     // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-    var result = child_process.execSync(buildCommands);
-    // TODO - use env argument instead of setting PATH as a step, if possible.
+    var result = child_process.execSync(buildCommands, {
+      env: _.extend({}, process.env, {
+        PATH: './node_modules/.bin:' + process.env.PATH
+      }),
+      stdio: 'inherit'
+    });
     console.log("code-studio built\n");
   } catch (e) {
     process.exit(e.status);
   }
-}
-
-/**
- * Generate command to:
- * Pull node_modules/.bin into the environment PATH so that we can
- * use npm-included executables without prefixing a complete path.
- * @returns {string}
- */
-function addNpmBinToPath() {
-  return 'PATH=`npm bin`:$PATH';
 }
 
 /**
