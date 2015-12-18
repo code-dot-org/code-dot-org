@@ -1,5 +1,9 @@
+def request_ip
+  defined? request ? request.ip : nil
+end
+
 def claim_prize_code(type, email, purpose, params={})
-  ip_address = params[:ip_address] || request.ip || '127.0.0.1'
+  ip_address = params[:ip_address] || request_ip || '127.0.0.1'
 
   type = type.downcase
   return 'None' if type == 'none'
@@ -21,4 +25,8 @@ def claim_prize_code(type, email, purpose, params={})
   prize = DB[:hoc_survey_prizes].where(claimant: email, type: type).get(:value)
   return 'None' unless prize
   prize
+end
+
+def prize_available?(type)
+  !DB[:hoc_survey_prizes].where(claimant: nil, type: type).empty?
 end
