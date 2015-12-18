@@ -201,3 +201,14 @@ Scenario Outline: Simple page view without instructions dialog
 Examples:
   | url                                                               | test_name                 |
   | http://learn.code.org/projects/applab/new                         | new applab project        |
+
+Scenario Outline: Simple page view
+  When I open my eyes to test "<test_name>"
+  And I am on "<url>"
+  And I close my eyes
+Examples:
+  | url                           | test_name                    |
+  | http://hourofcode.com/us      | hourofcode.com us            |
+  | http://hourofcode.com/br      | hourofcode.com br            |
+  | http://code.org/              | code.org homepage            |
+  | http://studio.code.org/       | logged out studio homepage   |
