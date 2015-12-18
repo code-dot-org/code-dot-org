@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'simple-spreadsheet'
 
 CODES_ROOT = 'Codes'
 
 APPLE_DIR = 'Apple'
+# country => filename
 APPLE_CODES = {
   'Australia' => 'AUS_Q1_16_Promo_PINS_Batch_20_10AUD_250cards_120115073758299.lst',
   'Canada' => 'Canada_Q1_16_Promo_PINS_Batch_20_10CAD_750cards_12011507480051.lst',
@@ -18,10 +20,24 @@ APPLE_CODES = {
   'US' => 'US_Q1_16_Promo_PINS_Batch_20_10USD_16250cards_120215091859908.lst'
 }
 
-AMAZON_DIR = 'Amazon'
-AMAZON_CODES = {}
+AMAZON_FILE = 'Amazon/Gift Card Codes - Code.org.xlsx'
+# sheet name => import details
+# Some sheets have a column with the codes,
+# while others have multiple values together in a single column separated by semicolons and need to be further parsed
+#   i.e. France is in the format "--row-num--;--code--;EUR 10"
+AMAZON_CODES = {
+  'Amazon Gift Card Codes US' => {country: 'US', col: 2},
+  'Amazon Gift Card Codes China' => {country: 'China', col: 2},
+  'Amazon Gift Card Codes France' => {country: 'France', col: 1, delimeter: ';', item: 1},
+  'Amazon UK Gift Card Codes' => {country: 'UK', col: 2},
+  'Amazon Gift Card Codes Canada' => {country: 'Canada', col: 2},
+  'Amazon Gift Card Codes Italy' => {country: 'Italy', col: 1, delimeter: ';', item: 1},
+  'Amazon Gift Card Codes Spain' => {country: 'Spain', col: 1, delimeter: ';', item: 1},
+  'JP Gift Card Codes' => {country: 'Japan', col: 2}
+}
 
 MS_DIR = 'Msft'
+# country => filename
 MS_CODES = {
   'US' => 'msft_us_only.csv'
 }
@@ -47,16 +63,23 @@ def import_apple_codes
 end
 
 def import_amazon_codes
-  AMAZON_CODES.each do |country, file_name|
-    file_path = File.join(CODES_ROOT, AMAZON_DIR, file_name)
-    type = "Amazon.#{country}"
-    puts "Importing #{type} from #{file_path}"
+  file_path = File.join(CODES_ROOT, AMAZON_FILE)
+  spreadsheet = SimpleSpreadsheet::Workbook.read(file_path)
+  spreadsheet.sheets.each do |sheet|
+    import_info = AMAZON_CODES[sheet]
+    raise "Unrecognized sheet name: #{sheet}" unless import_info
+    type = "Amazon.#{import_info[:country]}"
+    puts "Importing #{type}"
     count = 0
-    File.open(file_path).each_line do |line|
-      code = line.strip
-      next unless code
-      import_code type, code
-      count+= 1
+    spreadsheet.selected_sheet = sheet
+    # Skip first (header) row
+    2.upto(spreadsheet.last_row) do |row|
+      data = spreadsheet.cell(row,import_info[:col])
+      if import_info[:delimeter]
+        data = data.split(import_info[:delimeter])[import_info[:item]]
+      end
+      import_code type, data
+      count += 1
     end
     puts "  Imported #{count} codes."
   end
