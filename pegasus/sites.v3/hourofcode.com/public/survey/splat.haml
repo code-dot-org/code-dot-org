@@ -43,7 +43,7 @@ rightbar: blank
           %option{value: country}= country unless country == 'United States'
         %option{value: "Other"} Other
 
-  .form-roup
+  .form-group
     %label.control-label{for: "experience-rating"} Overall, how would you rate your Hour of Code experience?
     %span.form-required-field *
     %div
@@ -149,7 +149,7 @@ rightbar: blank
     %div
       %select#teacher-how-heard.form-control{name: "teacher_how_heard_ss[]", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
-        -HocSurvey2014.teacher_how_heards.each do |label|
+        -HocSurvey2015.teacher_how_heards.each do |label|
           %option{value: label}= label
 
     %div#teacher-how-heard-other-wrapper{style: 'display: none;'}
@@ -179,9 +179,6 @@ rightbar: blank
   .form-group.submit-btn
     %button#btn-submit.btn.btn-default{type: "submit"} Submit
 
-#prizeChoice{:style=>"display: none;"}
-
-
 #thanks{:style=>"display: none;"}
   :markdown
-    Thank you for completing the survey. If you selected a prize, you receive an email with information about how to claim it.
+    Thank you for completing the survey. If you selected a prize, you will receive an email with information about how to claim it.
