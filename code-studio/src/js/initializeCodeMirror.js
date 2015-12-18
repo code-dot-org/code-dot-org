@@ -1,3 +1,8 @@
+/**
+ * @file Function that initializes a CodeMirror editor in place of a textarea.
+ */
+/* global inlineAttach */
+'use strict';
 var CodeMirror = require('codemirror');
 require("codemirror/mode/markdown/markdown");
 require("codemirror/addon/edit/closetag");
@@ -7,11 +12,17 @@ require("codemirror/addon/fold/xml-fold");
 require("codemirror/mode/xml/xml");
 require("codemirror/mode/javascript/javascript");
 require("@cdo/code-studio-vendor/js/codemirror.inline-attach");
-require("marked");
 
-/* global inlineAttach */
-
-function codeMirror(name, mode, callback, attachments) {
+/**
+ * initializeCodeMirror replaces a textarea on the page with a full-featured
+ * CodeMirror editor.
+ * @param {!string} name (partial) name of the textarea to replace.
+ * @param {!string} mode - editor syntax mode
+ * @param {function} [callback] - onChange callback for editor
+ * @param {booblen} [attachments] - whether to enable attachment uploading in
+ *        this editor.
+ */
+module.exports = function (name, mode, callback, attachments) {
   // Code mirror parses html using xml mode
   var htmlMode = false;
   if (mode === 'html') {
@@ -45,28 +56,4 @@ function codeMirror(name, mode, callback, attachments) {
     });
   }
   return editor;
-}
-// Export to window
-window.CodeMirror = CodeMirror; // Necessary until json_editor is removed from dashboard
-window.codeMirror = codeMirror;
-
-// On page load, specifically for the editor page.
-$(function () {
-  var jQuerySuccessConditionBox = $('#level_success_condition');
-  if (jQuerySuccessConditionBox.length) {
-    CodeMirror.fromTextArea(jQuerySuccessConditionBox.get(0), {
-      mode: 'javascript',
-      viewportMargin: Infinity,
-      matchBrackets: true
-    });
-  }
-
-  var jQueryFailureConditionBox = $('#level_failure_condition');
-  if (jQueryFailureConditionBox.length) {
-    CodeMirror.fromTextArea(jQueryFailureConditionBox.get(0), {
-      mode: 'javascript',
-      viewportMargin: Infinity,
-      matchBrackets: true
-    });
-  }
-});
+};
