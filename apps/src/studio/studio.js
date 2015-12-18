@@ -871,67 +871,87 @@ function sortDrawOrder() {
 
   var spriteLayer = document.getElementById('spriteLayer');
 
-  var itemsArray = [];
+  var drawArray = [];
+  var drawItem;
 
   // Add items.
   for (var i = 0; i < Studio.items.length; i++) {
-    var item = {};
-    item.element = Studio.items[i].getElement();
-    item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
-    itemsArray.push(item);
+    drawItem = {
+      element: Studio.items[i].getElement(),
+      y: Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y
+    };
+    drawArray.push(drawItem);
 
     Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
-    Studio.drawDebugRect("itemBottom", Studio.items[i].x, item.y, 4, 4);
+    Studio.drawDebugRect("itemBottom", Studio.items[i].x, drawItem.y, 4, 4);
   }
 
   // Add sprites, both walking and non-walking.
   for (i = 0; i < Studio.sprite.length; i++) {
-    var sprite = {};
-    // TODO: sort Sprite legacy element
-    sprite.element = document.getElementById('sprite' + i);
-    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
-    itemsArray.push(sprite);
+    var sprite = Studio.sprite[i];
+    var y = sprite.displayY + sprite.height;
 
-    sprite = {};
-    // TODO: sort Sprite element
-    sprite.element = document.getElementById('spriteWalk' + i);
-    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
-    itemsArray.push(sprite);
+    drawArray.push({
+      element: document.getElementById('sprite' + i),
+      y: y
+    });
+
+    drawItem = {
+      element: sprite.getElement(),
+      y: y
+    };
+    if (drawItem.element) {
+      drawArray.push(drawItem);
+    }
+
+    drawArray.push({
+      element: document.getElementById('spriteWalk' + i),
+      y: y
+    });
+
+    drawItem = {
+      element: sprite.getLegacyElement(),
+      y: y
+    };
+    if (drawItem.element) {
+      drawArray.push(drawItem);
+    }
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
   }
 
   // Add wall tiles.
   for (i = 0; i < Studio.tiles.length; i++) {
-    var tile = {};
-    tile.element = document.getElementById('tile_' + i);
-    tile.y = Studio.tiles[i].bottomY;
-    itemsArray.push(tile);
+    drawArray.push({
+      element: document.getElementById('tile_' + i),
+      y: Studio.tiles[i].bottomY
+    });
   }
 
   // Add goals.
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
-    var goal = {};
-    goal.element = document.getElementById('spriteFinish' + i);
     var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
-    goal.y = Studio.spriteGoals_[i].y + goalHeight;
-    itemsArray.push(goal);
+
+    drawArray.push({
+      element: document.getElementById('spriteFinish' + i),
+      y: Studio.spriteGoals_[i].y + goalHeight
+    });
   }
 
   // Now sort everything by y.
-  itemsArray = _.sortBy(itemsArray, 'y');
+  drawArray = _.sortBy(drawArray, 'y');
 
   // Carefully place the elements back in the DOM starting at the end of the
   // spriteLayer and, one by one, insert them before the previous one
   // (this prevents flashing in Safari vs. an in-order appendChild() loop)
   var prevNode;
-  for (i = itemsArray.length - 1; i >= 0; i--) {
+  for (i = drawArray.length - 1; i >= 0; i--) {
     if (prevNode) {
-      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+      spriteLayer.insertBefore(drawArray[i].element, prevNode);
     } else {
-      spriteLayer.appendChild(itemsArray[i].element);
+      spriteLayer.appendChild(drawArray[i].element);
     }
-    prevNode = itemsArray[i].element;
+    prevNode = drawArray[i].element;
   }
 }
 
@@ -3065,13 +3085,14 @@ function imageAssetFrameNumbers (opts) {
     frameNums.y = sprite.emotion;
   }
 
-  if (sprite.frameCounts.normal && opts.legacySpriteSheet) {
+  if (frameNums.x !== 0 && sprite.frameCounts.normal && opts.legacySpriteSheet) {
     // Legacy spritesheet (shift frame number up by count of "normal" idle frames)
     frameNums.x += sprite.frameCounts.normal;
-  }
-  if (sprite.frameCounts.turns == 7 && opts.legacySpriteSheet) {
-    // Legacy spritesheet (shift frame number down by 1, since we expected 8 turn frames)
-    frameNums.x -= 1;
+
+    if (sprite.frameCounts.turns == 7) {
+      // Legacy spritesheet (shift frame number down by 1, since we expected 8 turn frames)
+      frameNums.x -= 1;
+    }
   }
 
   if ((sprite.displayDir === Direction.SOUTH || sprite.displayDir === Direction.NONE) &&
@@ -3493,8 +3514,9 @@ Studio.displaySprite = function(i, isWalking) {
       // direction not yet set, start at SOUTH (forward facing)
       sprite.dir = Direction.SOUTH;
     }
-    else */ if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
-      sprite.dir = Direction.NONE;
+    else */
+    sprite.dir = Direction.NONE;
+    if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
       if (sprite.x < xCoordPrev) {
         sprite.dir |= Direction.WEST;
       } else if (sprite.x > xCoordPrev) {
@@ -4687,17 +4709,20 @@ Studio.setSprite = function (opts) {
 
   sprite.frameCounts = skinSprite.frameCounts;
   sprite.animationFrameDuration = skinSprite.animationFrameDuration || 1;
+  sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
   // Reset height and width:
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
-    sprite.size = 1; //sprite.width / skin.spriteWidth;
+    sprite.size = sprite.width / skin.spriteWidth;
 
-    sprite.drawHeight = sprite.size * skin.spriteHeight;
-    sprite.drawWidth = sprite.size * skin.spriteWidth;
+    sprite.drawHeight = sprite.drawScale * sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.drawScale * sprite.size * skin.spriteWidth;
   } else {
-    sprite.drawHeight = sprite.height = sprite.size * skin.spriteHeight;
-    sprite.drawWidth = sprite.width = sprite.size * skin.spriteWidth;
+    sprite.drawHeight = sprite.height =
+        sprite.drawScale * sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.width =
+        sprite.drawScale * sprite.size * skin.spriteWidth;
   }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;

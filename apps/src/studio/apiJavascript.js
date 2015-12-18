@@ -51,14 +51,12 @@ exports.setDroidSpeed = function (value) {
   });
 };
 
-/*
 exports.setSpriteSize = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpriteSize', {
     'spriteIndex': spriteIndex,
     'value': value
   });
 };
-*/
 
 exports.setSpritePosition = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpritePosition', {

@@ -1286,6 +1286,7 @@ function loadHoc2015x(skin, assetUrl) {
         emotions: 0,
         walk: 19
       },
+      drawScale: 2,
       animations: {
         turns: 8
       },
