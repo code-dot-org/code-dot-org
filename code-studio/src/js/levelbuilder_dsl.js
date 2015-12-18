@@ -7,5 +7,5 @@ var _ = require('lodash');
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
-  initializeEmbeddedMarkdownEditor: require('./embedded_markdown_editor')
+  initializeEmbeddedMarkdownEditor: require('./initializeEmbeddedMarkdownEditor')
 });
