@@ -106,11 +106,11 @@ StudioAnimation.prototype.createElement = function (parentElement) {
     return;
   }
 
-  var nextId = (uniqueId++);
+  this.animId = (uniqueId++);
 
   // create our clipping path/rect
   this.clipPath_ = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'studioanimation_clippath_' + nextId;
+  var clipId = 'studioanimation_clippath_' + this.animId;
   this.clipPath_.setAttribute('id', clipId);
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
@@ -118,7 +118,7 @@ StudioAnimation.prototype.createElement = function (parentElement) {
   this.clipPath_.appendChild(rect);
   parentElement.appendChild(this.clipPath_);
 
-  var itemId = 'studioanimation_' + nextId;
+  var itemId = 'studioanimation_' + this.animId;
   this.element_ = document.createElementNS(SVG_NS, 'image');
   this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
      this.spriteSheet_.assetPath);
@@ -154,10 +154,18 @@ StudioAnimation.prototype.removeElement = function() {
  * Display the current frame at the given location
  */
 StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
-  var currentFrame = Math.floor(tickCount / this.animationFrameDuration_);
+  var animTick = tickCount;
+
+  // Each animation will start at a different frame when this is enabled:
+  if (this.skewAnimations) {
+    // NOTE: not intended to be used with non-looping animations
+    animTick = tickCount + this.animId * (this.animationFrameDuration_ + 1);
+  }
+
+  var currentFrame = Math.floor(animTick / this.animationFrameDuration_);
   var framesInThisAnimation =
       this.spriteSheet_.getAnimationFrameCount(this.currentAnimationType_);
-  // TODO: add time skew per-sprite
+
   if (this.loop_) {
     currentFrame = currentFrame % framesInThisAnimation;
   } else {

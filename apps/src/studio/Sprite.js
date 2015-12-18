@@ -3,6 +3,7 @@ var constants = require('./constants');
 var studioMsg = require('./locale');
 var spriteActions = require('./spriteActions');
 var Direction = constants.Direction;
+var Emotions = constants.Emotions;
 var NextTurn = constants.NextTurn;
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -17,9 +18,6 @@ var StudioSpriteSheet = require('./StudioSpriteSheet');
 var Sprite = function (options) {
   // call collidable constructor
   Collidable.apply(this, arguments);
-
-  this.height = options.height || 50;
-  this.width = options.width || 50;
 
   /**
    * Rendering offset for item animation vs display position - applied as
@@ -54,10 +52,11 @@ Sprite.prototype.setImage = function (image, totalAnimations) {
       loop: this.loop,
       animationFrameDuration: this.animationFrameDuration,
       image: this.image,
-      width: this.width,
-      height: this.height,
+      width: this.drawWidth,
+      height: this.drawHeight,
       frames: this.frameCounts ? this.frameCounts.walk : this.frames,
-      totalAnimations: totalAnimations
+      totalAnimations: totalAnimations,
+      skewAnimations: true
     };
 
     if (this.animation_) {
@@ -81,8 +80,8 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
       opacity: this.opacity,
       loop: this.loop,
       animationFrameDuration: this.animationFrameDuration,
-      width: this.width,
-      height: this.height,
+      width: this.drawWidth,
+      height: this.drawHeight,
       imageAsset: {
         spriteSheet: this.legacyImage,
         animations: {
@@ -95,13 +94,14 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
             frames: frameCounts.turns
           },
           emotions: {
-            count: 1,
-            frames: frameCounts.emotions
+            count: frameCounts.emotions,
+            frames: 1
           }
         },
       },
       horizontalAnimation: true,
-      animationsInOneStrip: true
+      animationsInOneStrip: true,
+      skewAnimations: true
     };
 
     if (this.legacyAnimation_) {
@@ -133,11 +133,14 @@ Sprite.prototype.getDirectionFrame = function() {
   // Every other frame, if we aren't yet rendering in the correct direction,
   // assign a new displayDir from state table; only one turn at a time.
 
+  // temporarily disabled as it is redundant
+  /*
   if (this.dir !== this.displayDir && this.displayDir !== undefined) {
     if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
       this.displayDir = NextTurn[this.displayDir][this.dir];
     }
   }
+  */
 
   var frameDirTable = this.spritesCounterclockwise ?
     constants.frameDirTableWalkingWithIdleCounterclockwise :
@@ -152,9 +155,15 @@ Sprite.prototype.getDirectionFrame = function() {
 Sprite.prototype.createElement = function (parentElement) {
   if (this.animation_) {
     this.animation_.createElement(parentElement);
+    if (!this.visible) {
+      this.animation_.hide();
+    }
   }
   if (this.legacyAnimation_) {
     this.legacyAnimation_.createElement(parentElement);
+    if (!this.visible) {
+      this.legacyAnimation_.hide();
+    }
   }
 };
 
@@ -229,29 +238,51 @@ Sprite.prototype.display = function () {
     this.setOpacity(opacity);
   }
 
+  var useLegacyAnimation = false;
+  var animationType;
   var animationIndex = this.getDirectionFrame();
-  if ((animationIndex >= this.totalAnimations) || (!this.animation_)) {
+  var standingStill = this.displayDir === Direction.NONE;
+  var southFacing = standingStill || this.displayDir === Direction.SOUTH;
+
+  if (southFacing && this.emotion !== Emotions.NORMAL) {
+    // TODO: Support legacy emotion animation and new emotion animations:
+    animationType = 'emotions';
+    animationIndex = this.emotion - 1;
+    useLegacyAnimation = true;
+  } else if (!this.animation_) {
+    animationType = southFacing ? 'normal' : 'turns';
+    animationIndex = 0;
+    useLegacyAnimation = true;
+  } else {
+    animationType = standingStill ? 'idle' : 'direction';
+  }
+
+  if (useLegacyAnimation) {
     // Legacy render path:
     if (this.animation_) {
       this.animation_.hide();
     }
     if (this.legacyAnimation_) {
-      this.legacyAnimation_.setCurrentAnimation('normal', 0);
+      this.legacyAnimation_.setCurrentAnimation(animationType, animationIndex);
       this.legacyAnimation_.redrawCenteredAt({
-            x: this.x + this.renderOffset.x,
-            y: this.y + this.renderOffset.y
+            x: this.displayX + this.renderOffset.x,
+            y: this.displayY + this.renderOffset.y
           },
           Studio.tickCount);
-      this.legacyAnimation_.show();
+      if (this.visible) {
+        this.legacyAnimation_.show();
+      }
     }
   } else {
-    this.animation_.setCurrentAnimation('direction', animationIndex);
+    this.animation_.setCurrentAnimation(animationType, animationIndex);
     this.animation_.redrawCenteredAt({
-          x: this.x + this.renderOffset.x,
-          y: this.y + this.renderOffset.y
+          x: this.displayX + this.renderOffset.x,
+          y: this.displayY + this.renderOffset.y
         },
         Studio.tickCount);
-    this.animation_.show();
+    if (this.visible) {
+      this.animation_.show();
+    }
     if (this.legacyAnimation_) {
       this.legacyAnimation_.hide();
     }
