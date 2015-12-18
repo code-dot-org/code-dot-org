@@ -4,8 +4,6 @@ class HocSurvey2015
     result = {}
 
     result[:email_s] = Poste.decrypt(data[:code_s])
-    puts result[:email_s]
-
     result[:event_country_s] = required stripped data[:event_country_s]
     result[:experience_rating_s] = required stripped data[:experience_rating_s]
     result[:event_location_type_s] = required stripped data[:event_location_type_s]

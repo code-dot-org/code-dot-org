@@ -17,6 +17,7 @@ class HocSurveyPrize2015
 
   def self.receipt(data)
     suffix = data['prize_choice_s'].partition('.').first.downcase
+    return if suffix == 'none' # no receipt email for none
     suffix = 'msft' if suffix == 'microsoft'
     "12-18-hoc-organizer-survey-#{suffix}"
   end
