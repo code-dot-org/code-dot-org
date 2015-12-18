@@ -86,7 +86,6 @@ class HocSurvey2015
     [
       'Yes, someone visited my classroom in person',
       'Yes, someone did a video conference with my classroom',
-      'Yes, I found a volunteer without using your volunteer map',
       'No, I tried contacting a volunteer but I never heard back',
       'No, I didn’t know how to contact a volunteer'
     ]
