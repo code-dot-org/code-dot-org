@@ -9,8 +9,6 @@ _.extend(window.levelbuilder, {
   initializeCodeMirror: require('./initializeCodeMirror')
 });
 
-// TODO: Remove when global `codeMirror` is no longer required.
-window.codeMirror = window.levelbuilder.initializeCodeMirror;
 // TODO: Remove when global `CodeMirror` is no longer required.
 window.CodeMirror = require('codemirror');
 // TODO: Remove when global `marked` is no longer required.
