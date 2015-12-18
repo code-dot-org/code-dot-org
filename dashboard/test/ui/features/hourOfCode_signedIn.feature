@@ -61,16 +61,22 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
 
 Scenario: Async progress write followed by a stale read
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
-  And element ".header_middle a.level_link:first" does not have class "perfect"
-  Then mark the current level as completed on the client
-  And I reload the page
   And I wait to see ".header_middle"
-  And I wait for 2 seconds
-  And element ".header_middle a.level_link:last" has class "perfect"
-  Then I am on "http://studio.code.org/s/hourofcode"
-  And I wait to see ".user-stats-block"
-  And I wait for 2 seconds
-  And element ".user-stats-block .games:first a.level_link:last" has class "perfect"
+  And element ".header_middle a.level_link:last" does not have class "perfect"
+  Then mark the current level as completed on the client
+  And validate progress for level is "perfect"
+
+Scenario: Progress on the server that is not on the client
+  Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And I wait to see ".header_middle"
+  And element ".header_middle a.level_link:last" has class "not_tried"
+  And I close the dialog
+  And I wait until element "#runButton" is visible
+  And I press "runButton"
+  And I wait to see ".modal"
+  Then I am on "http://studio.code.org/hoc/reset"
+  Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And validate progress for level is "attempted"
 
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video

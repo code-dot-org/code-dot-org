@@ -271,6 +271,19 @@ Then /^mark the current level as completed on the client/ do
   @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
 end
 
+Then /^validate progress for level is "([^"]*)"/ do |test_result|
+  steps %{
+    And I reload the page
+    And I wait to see ".header_middle"
+    And I wait for 10 seconds
+    And element ".header_middle a.level_link:last" has class "#{test_result}"
+    Then I am on "http://studio.code.org/s/hourofcode"
+    And I wait to see ".user-stats-block"
+    And I wait for 10 seconds
+    And element ".user-stats-block .games:first a.level_link:last" has class "#{test_result}"
+  }
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
