@@ -1182,12 +1182,12 @@ applabCommands.getYPosition = function (opts) {
   return 0;
 };
 
-applabCommands.clearLastMouseMoveEvent = function(e) {
+function clearLastMouseMoveEvent(e) {
   var elementId = e.currentTarget && e.currentTarget.id;
   if (elementId && (typeof lastMouseMoveEventMap[elementId] !== 'undefined')) {
     delete lastMouseMoveEventMap[elementId];
   }
-};
+}
 
 applabCommands.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
@@ -1232,8 +1232,8 @@ applabCommands.onEventFired = function (opts, e) {
       // The browser supports movementX and movementY natively.
       applabEvent.movementX = e.movementX;
       applabEvent.movementY = e.movementY;
-    } else if (e.type == 'mousemove') {
-      var currentTargetId = e.currentTarget.id;
+    } else if (e.type === 'mousemove') {
+      var currentTargetId = e.currentTarget && e.currentTarget.id;
       var lastEvent = lastMouseMoveEventMap[currentTargetId];
       if (currentTargetId && lastEvent) {
         // Compute movementX and movementY from clientX and clientY.
@@ -1245,7 +1245,9 @@ applabCommands.onEventFired = function (opts, e) {
         applabEvent.movementX = 0;
         applabEvent.movementY = 0;
       }
-      lastMouseMoveEventMap[currentTargetId] = e;
+      if (currentTargetId) {
+        lastMouseMoveEventMap[currentTargetId] = e;
+      }
     }
     // Replace DOM elements with IDs and then add them to applabEvent:
     ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
@@ -1366,7 +1368,7 @@ applabCommands.onEvent = function (opts) {
         // movementX and movementY.
         domElement.addEventListener(
           'mouseout',
-          applabCommands.clearLastMouseMoveEvent.bind(this));
+          clearLastMouseMoveEvent);
         break;
       default:
         return false;
