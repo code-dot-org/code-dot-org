@@ -1,6 +1,8 @@
-require File.expand_path('../../../../config/environment.rb', __FILE__)
+def require_rails_env
+  require File.expand_path('../../../../config/environment.rb', __FILE__)
+end
 
-DEFAULT_WAIT_TIMEOUT = 2.minutes
+DEFAULT_WAIT_TIMEOUT = 2 * 60
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
@@ -12,7 +14,7 @@ def replace_hostname(url)
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
   # Convert http to https
-  url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
+  url = url.gsub(/^http:\/\//,'https://') unless url.start_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
   url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
@@ -466,6 +468,8 @@ And(/^I set the language cookie$/) do
 end
 
 def encrypted_cookie(user)
+  require_rails_env
+
   key_generator = ActiveSupport::KeyGenerator.new(CDO.dashboard_secret_key_base, iterations: 1000)
 
   encryptor = ActiveSupport::MessageEncryptor.new(
@@ -513,6 +517,8 @@ Given(/^I am a (student|teacher)$/) do |user_type|
 end
 
 And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
+  require_rails_env
+
   @users ||= {}
   @users[name] = User.find_or_create_by!(email: "user#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
     user.name = name
