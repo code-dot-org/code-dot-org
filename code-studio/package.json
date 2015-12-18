@@ -20,9 +20,9 @@
     "prebuild-css": "mkdir -p build/css",
     "build-css:min": "node-sass --output-style compressed --include-path node_modules src/css/blockly_editor.css.scss build/css/blockly_editor.min.css",
     "prebuild-css:min": "mkdir -p build/css",
-    "build-js": "browserify --debug src/js/*.js -p [ factor-bundle -o '> build/js/`basename $FILE`' ] -o build/js/code-studio-common.js",
+    "build-js": "browserify --debug src/js/levelbuilder*.js -p [ factor-bundle -o '> build/js/`basename $FILE`' ] -o build/js/code-studio-common.js",
     "prebuild-js": "mkdir -p build/js",
-    "build-js:min": "browserify src/js/*.js -p [ factor-bundle -o 'uglifyjs > build/js/`basename $FILE .js`.min.js' ] | uglifyjs -o build/js/code-studio-common.min.js",
+    "build-js:min": "browserify src/js/levelbuilder*.js -p [ factor-bundle -o 'uglifyjs > build/js/`basename $FILE .js`.min.js' ] | uglifyjs -o build/js/code-studio-common.min.js",
     "prebuild-js:min": "mkdir -p build/js",
     "start": "echo \"Unimplemented.\"",
     "stop": "echo \"Unimplemented.\"",
@@ -40,6 +40,7 @@
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
     "linklocal": "^2.5.2",
+    "lodash": "^3.10.1",
     "marked": "0.3.2"
   }
 }
