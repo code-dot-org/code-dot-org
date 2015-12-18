@@ -97,6 +97,6 @@ def import_ms_codes
   end
 end
 
-# import_apple_codes
+import_apple_codes
 import_amazon_codes
-# import_ms_codes
+import_ms_codes
