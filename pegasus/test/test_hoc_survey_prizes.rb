@@ -53,14 +53,17 @@ class HocSurveyPrizeTest < SequelTestCase
   end
 
   def test_new_event
-    generate_codes TYPE1 => 3
+    generate_codes TYPE1 => 4
 
     claim1 = claim_prize_code TYPE1, USER1, PURPOSE1
     claim2 = claim_prize_code TYPE1, USER1, PURPOSE2
     claim3 = claim_prize_code TYPE1, USER2, PURPOSE1
+    claim4 = claim_prize_code TYPE1, USER1, PURPOSE2 # should return claim2 again
     assert_equal expected(TYPE1,0), claim1
     assert_equal expected(TYPE1,1), claim2
     assert_equal expected(TYPE1,2), claim3
+    assert_equal claim2, claim4
+
   end
 
   private
