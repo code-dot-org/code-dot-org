@@ -5,7 +5,7 @@ subject: "Your thank-you gift"
 <% survey_url = "http://hourofcode.com/survey/#{Poste.encrypt(recipient.email)}" %>
 
 <% if no_posters == 'true' %>  
-First and foremost, an apology: We are very sorry you didn't receive the Hour of Code posters you requested for your school. We received 4X the expected demand and should have limited the requests. Again, we are very sorry for our mistake.  
+One thing I'm disappointed to write about is that we grossly under-planned for this year's demand for posters. Really, everything about this year's Hour of Code was more than double our expectations, and as a nonprofit with a limited budget we didn't print nearly enough Hour of Code posters for everybody who asked for them. I want to apologize sincerely because your classroom didn't receive a set. Sorry! :-(  
 <% end %>
 
 Thank you for hosting an Hour of Code! We promised a thank-you gift for organizers (**supplies limited**). First, we need 10-minutes of your time to help inform future Hour of Code campaigns. No matter how you did the Hour of Code, we want to know how it went and count your participation. 
@@ -20,7 +20,7 @@ Because of your passion, we are changing the face of computer science. Millions 
 
 <% if domestic %>  
 **Beyond one hour**  
-We offer high-quality, zero-cost, 1-day workshops to prepare elementary educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in grades K-5. [Find a workshop near you](http://code.org/k5).  
+We offer high-quality, zero-cost, 1-day workshops to prepare elementary educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in grades K-5. [Find a workshop near you](http://code.org/professional-development-workshops).  
 <% end %>
 
 Thank you for all your support,
