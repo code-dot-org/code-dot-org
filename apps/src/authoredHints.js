@@ -183,6 +183,9 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
           }.bind(this),
           showHint: function () {
             api.set('content.text', hint.content);
+            $(api.elements.content).find('img').on('load', function (e) {
+              api.reposition(e);
+            });
             this.recordUserViewedHint_(hint);
           }.bind(this),
         });
