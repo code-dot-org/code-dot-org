@@ -364,23 +364,27 @@ Sprite.prototype.display = function () {
     if (this.legacyAnimation_) {
       this.legacyAnimation_.setCurrentAnimation(animationType, animationIndex);
       this.legacyAnimation_.redrawCenteredAt({
-            x: this.displayX + this.renderOffset.x,
-            y: this.displayY + this.renderOffset.y
+            x: this.displayX + (this.drawWidth / 2) + this.renderOffset.x,
+            y: this.displayY + (this.drawHeight / 2) + this.renderOffset.y
           },
           Studio.tickCount);
       if (this.visible) {
         this.legacyAnimation_.show();
+      } else {
+        this.legacyAnimation_.hide();
       }
     }
   } else {
     this.animation_.setCurrentAnimation(animationType, animationIndex);
     this.animation_.redrawCenteredAt({
-          x: this.displayX + this.renderOffset.x,
-          y: this.displayY + this.renderOffset.y
+          x: this.displayX + (this.drawWidth / 2) + this.renderOffset.x,
+          y: this.displayY + (this.drawHeight / 2) + this.renderOffset.y
         },
         Studio.tickCount);
     if (this.visible) {
       this.animation_.show();
+    } else {
+      this.animation_.hide();
     }
     if (this.legacyAnimation_) {
       this.legacyAnimation_.hide();
