@@ -12,13 +12,11 @@ level 'PD check your progress'
 level 'ECSPD Unit 2 Outline'
 level 'ECSPD P3 Plan'
 
-
 stage 'Intro to Unit 2'
 level 'ECSPD Unit2 Connections'
 level 'ECSPD Unit 2 Lesson Overview'
 
 stage 'Teaching Strategies'
-
 level 'Forum-ECSPD-Unit 2-Teaching Practice'
 level 'ECSPD Unit 2 Growth'
 level 'ECSPD Phase 3 - Unit 2 - Teaching Practice'
@@ -28,36 +26,19 @@ level 'ECSPD Real Life Problem Solving'
 level 'ECSPD Find Learning Strategy'
 level 'ECSPD strategies'
 
-stage 'Day 1-2 Solving Community Problems with Data'
+stage 'Lesson Overviews'
 level 'ECSPD U2 D 1-2'
-
-stage 'Day 3 Intro To Problem Solving: Candy Bar Activity'
 level 'ECSPD U2 D 3'
-
-stage 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
 level 'ECSPD U2 D 4-6'
-
-
-stage 'Day 7-9 Problem Solving: Cornrow Curves'
 level 'ECSPD U2 D 7-9 Intro'
-
-stage 'Day 10-12 Binary Number Systems'
 level 'ECSPD U2 D 10-12 Intro'
 level 'ECSPD Binary Odometer'
 level 'ECSPD Why Binary - The Internet Video'
-
-stage 'Day 13-14 Linear and Binary Search: Tower Building Activity'
 level 'ECSPD U2 D 13-14 Intro'
 level 'ECSPD Linear vs Binary Search Video'
-
-stage 'Day 15-16 Sorting Algorithms'
 level 'ECSPD U2 D 15-16 Intro'
 level 'ECSPD U2L1516 Sorting Video'
-
-stage 'Day 17 Minimal Spanning Trees: Muddy City'
 level 'ECSPD U2 D 17 Intro'
-
-stage 'Day 18-21 Final Project'
 level 'ECSPD U2 D 18-21 Intro'
 
 stage 'Unit 2 Challenge'
@@ -69,7 +50,15 @@ level 'ECSPD Pick Challenge'
 level 'ECSU2 Challenge Submission'
 
 stage 'Close & Next Steps'
-level 'ECSPD Start Challenge'
 level 'ECSPD Challenge Reflection'
 level 'ECSPD 1 page template'
 
+stage 'Day 1-2 Solving Community Problems with Data'
+stage 'Day 3 Intro To Problem Solving: Candy Bar Activity'
+stage 'Day 4-6 Strategies in Problem Solving: Handshake Activity'
+stage 'Day 7-9 Problem Solving: Cornrow Curves'
+stage 'Day 10-12 Binary Number Systems'
+stage 'Day 13-14 Linear and Binary Search: Tower Building Activity'
+stage 'Day 15-16 Sorting Algorithms'
+stage 'Day 17 Minimal Spanning Trees: Muddy City'
+stage 'Day 18-21 Final Project'

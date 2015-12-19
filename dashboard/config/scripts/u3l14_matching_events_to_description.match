@@ -11,7 +11,7 @@ question 'Triggers when the mouse button is pressed'
 answer 'mousedown'
 
 markdown <<MARKDOWN
-# Mouse Events
+## Matching: Mouse Events
 
 Match the mouse events you just used with their descriptions. Feel free to go back if you need to check on some.
 MARKDOWN

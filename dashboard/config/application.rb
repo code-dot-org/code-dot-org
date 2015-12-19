@@ -91,6 +91,8 @@ module Dashboard
       angularProjects.js
       shared.js
       shared.min.js
+      editor/json_editor.css
+      editor/json_editor.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js

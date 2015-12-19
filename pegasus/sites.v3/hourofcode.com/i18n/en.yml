@@ -359,8 +359,8 @@
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_posters_q: "Where are my posters?"
   hoc_faq_posters_a: "We are so sorry to share that we ran out of posters to send everyone who requested them. We've more than tripled signups from last year which means we grossly underestimated how many posters to print for organizers. We are working to find a solution to distribute more. You can always print posters yourself on our <a href='/promote/resources'>resources page</a>."
-  hoc_faq_logo_q: "Are there limitations of how I use the Hour of Code logo or name?"
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits. Please see <a href='http://support.code.org/hc/en-us/articles/215831637'><these guidelines for usage></a>."
+  hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
