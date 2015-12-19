@@ -4,7 +4,7 @@ subject: "Your iTunes store gift"
 ---
 Thank you for participating in the Hour of Code. Here is your $10.00 iTunes gift code.
  
-UNIQUE CODE GOES HERE
+`<%= prize_code_s %>`
  
 To redeem:  
 
