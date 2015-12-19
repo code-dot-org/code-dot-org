@@ -46,21 +46,32 @@ module.exports = Sprite;
  * Sets (or modifies) the image - we will generate a StudioSpriteSheet and
  * StudioAnimation in response..
  */
-Sprite.prototype.setImage = function (image, totalAnimations) {
+Sprite.prototype.setImage = function (image, frameCounts) {
   if (image !== this.image) {
     this.image = image;
-    this.totalAnimations = totalAnimations;
 
     var options = {
       renderScale: this.renderScale,
       opacity: this.opacity,
       loop: this.loop,
       animationFrameDuration: this.animationFrameDuration,
-      image: this.image,
       width: this.drawWidth,
       height: this.drawHeight,
-      frames: this.frameCounts ? this.frameCounts.walk : this.frames,
-      totalAnimations: totalAnimations,
+      imageAsset: {
+        spriteSheet: this.image,
+        animations: {
+          'direction': {
+            count: frameCounts.turns || 0
+          },
+          'idle': {
+            count: (frameCounts.idleNormal || 0) + (frameCounts.idleEmotions || 0)
+          },
+          'walkingEmotions': {
+            count: frameCounts.walkingEmotions || 0
+          }
+        },
+        defaultFramesPerAnimation: frameCounts.walk
+      },
       skewAnimations: true
     };
 
@@ -80,6 +91,9 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
   if (image !== this.legacyImage) {
     this.legacyImage = image;
 
+    var rowCount = 1 + utils.valueOr(frameCounts.extraEmotions, 0);
+    var frameCount = frameCounts.normal + frameCounts.turns + frameCounts.emotions;
+
     var options = {
       renderScale: this.renderScale,
       opacity: this.opacity,
@@ -90,22 +104,14 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
       imageAsset: {
         spriteSheet: this.legacyImage,
         animations: {
-          normal: {
-            count: 1,
-            frames: frameCounts.normal
-          },
-          turns: {
-            count: 1,
-            frames: frameCounts.turns
-          },
-          emotionframe: {
-            count: frameCounts.emotions,
-            frames: 1
+          legacyEmotionRow: {
+            count: rowCount,
+            frames: frameCount
           }
         },
+        defaultFramesPerAnimation: frameCount
       },
       horizontalAnimation: true,
-      animationsInOneStrip: true,
       skewAnimations: true
     };
 
@@ -119,47 +125,77 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
       animationFrameDuration: this.getAnimationFrameDuration()
     }));
 
+    var turnCount = utils.valueOr(frameCounts.turns, 0);
+    var frame0Count = utils.valueOr(frameCounts.holdIdleFrame0Count, 1);
     var i, animationList;
-    if (frameCounts.holdIdleFrame0Count) {
-      // Create a new special animation also called "normal", which will
-      // override the built-in "normal" from the spritesheet:
+
+    for (var row = 0; row < rowCount; row++) {
+      // Create a new special animation called "idle":
       animationList = [];
-      for (i = 0; i < frameCounts.holdIdleFrame0Count; i++) {
+
+      for (i = 0; i < frame0Count; i++) {
         animationList.push({
-          type: 'normal',
-          index: 0,
+          type: 'legacyEmotionRow',
+          index: row,
           frame: 0
         });
       }
       for (i = 1; i < frameCounts.normal; i++) {
         animationList.push({
-          type: 'normal',
-          index: 0,
+          type: 'legacyEmotionRow',
+          index: row,
           frame: i
         });
       }
-      this.legacyAnimation_.createSpecialAnimation('normal', 0, animationList);
+      this.legacyAnimation_.createSpecialAnimation('idle', row, animationList);
+
+      // Create single-frame 'direction' animations from each 'turn' frame:
+      if (turnCount >= 7) {
+        var turnIndex = 0;
+        var frameIndex = 0;
+        if (turnCount === 7) {
+          // If turnCount is only 7, create the first animation from 'normal'
+          // frame 0.
+          this.legacyAnimation_.createSpecialAnimation('direction',
+              turnIndex,
+              [ { type: 'legacyEmotionRow', index: row, frame: 0 } ]);
+          turnIndex++;
+        }
+        for (;turnIndex < 8; turnIndex++, frameIndex++) {
+          this.legacyAnimation_.createSpecialAnimation('direction',
+              turnIndex,
+              [ { type: 'legacyEmotionRow',
+                  index: row,
+                  frame: this.frameCounts.normal + frameIndex
+              } ]);
+        }
+      }
     }
 
-    for (i = 0; i < frameCounts.emotions; i++) {
-      // Create special animations for each emotion
-      animationList = [];
-      for (var j = 0; j < frameCounts.holdIdleFrame0Count; j++) {
-        animationList.push({
-          type: 'emotionframe',
-          index: i,
-          frame: 0
-        });
+    if (rowCount === 1) {
+      // If no extra emotions were supplied as complete rows, we can create
+      // special idle animations for each emotion from single emotion frames:
+
+      for (i = 0; i < frameCounts.emotions; i++) {
+      // Create a new special animation called "idle" with emotion as index:
+        animationList = [];
+        for (var j = 0; j < frame0Count; j++) {
+          animationList.push({
+            type: 'legacyEmotionRow',
+            index: 0,
+            frame: frameCounts.normal + frameCounts.turns + i
+          });
+        }
+        for (var k = 1; k < frameCounts.normal; k++) {
+          animationList.push({
+            type: 'legacyEmotionRow',
+            index: 0,
+            frame: k
+          });
+        }
+        this.legacyAnimation_.createSpecialAnimation('idle', i + 1, animationList);
+        this.useLegacyIdleEmotionAnimations = true;
       }
-      for (var k = 1; k < frameCounts.normal; k++) {
-        animationList.push({
-          type: 'normal',
-          index: 0,
-          frame: k
-        });
-      }
-      this.legacyAnimation_.createSpecialAnimation('idleEmotion', i, animationList);
-      this.useLegacyIdleEmotionAnimations = true;
     }
   }
 };
@@ -288,22 +324,36 @@ Sprite.prototype.display = function () {
 
   var useLegacyAnimation = false;
   var animationType;
-  var animationIndex = this.getDirectionFrame();
+  var animationIndex;
   var standingStill = this.displayDir === Direction.NONE;
-  var southFacing = standingStill || this.displayDir === Direction.SOUTH;
+  var facingSouthWithEmotion =
+      this.displayDir === Direction.SOUTH && this.emotion !== Emotions.NORMAL;
 
-  if (southFacing && this.emotion !== Emotions.NORMAL &&
-      this.useLegacyIdleEmotionAnimations) {
-    // TODO: Support legacy emotion animation and new emotion animations:
-    animationType = 'idleEmotion';
+  if (standingStill || (!this.animation_ && facingSouthWithEmotion)) {
+    // Show idle animation while standing still
+    // if we only have a legacy animation, also show while moving south
+    animationIndex = this.emotion;
+    animationType = 'idle';
+
+    if (standingStill && this.frameCounts.normal) {
+      // If we see legacy normal frames (which are "idle" animations), use them:
+      useLegacyAnimation = true;
+    } else if (this.animation_ && !this.frameCounts.idleNormal) {
+      // If we are playing an "idle" animation from the primary spritesheet and
+      // there were no "normal" idle animations in the sheet, index based on
+      // (emotion - 1) instead of (emotion)
+      animationIndex -= 1;
+    }
+  } else if (facingSouthWithEmotion &&
+      this.animation_ && this.animation_.hasType('walkingEmotions')) {
     animationIndex = this.emotion - 1;
-    useLegacyAnimation = true;
-  } else if (!this.animation_) {
-    animationType = southFacing ? 'normal' : 'turns';
-    animationIndex = 0;
-    useLegacyAnimation = true;
+    animationType = 'walkingEmotions';
   } else {
-    animationType = standingStill ? 'idle' : 'direction';
+    animationIndex = this.getDirectionFrame();
+    animationType = 'direction';
+  }
+  if (!this.animation_) {
+    useLegacyAnimation = true;
   }
 
   if (useLegacyAnimation) {

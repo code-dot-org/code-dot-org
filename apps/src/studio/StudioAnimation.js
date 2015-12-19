@@ -156,6 +156,12 @@ StudioAnimation.prototype.removeElement = function() {
 
 };
 
+/** @returns {boolean} whether the type of animation has been created */
+StudioAnimation.prototype.hasType = function (type) {
+  return !!this.specialAnimations_[type] ||
+      !!this.spriteSheet_.animationFrameCounts[type];
+};
+
 /** @returns {number} the count of frames for the current animation */
 StudioAnimation.prototype.getAnimationFrameCount = function () {
   var specialFrames = this.specialAnimations_[this.currentAnimationType_];
