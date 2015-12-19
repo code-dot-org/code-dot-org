@@ -78,10 +78,10 @@ var StudioSpriteSheet = module.exports = function (options) {
     this.animationOffsets[name] = this.animationsInOneStrip ?
         totalFrames : totalAnimations;
     totalAnimations += imageAsset.animations[name].count;
-    this.animationFrameCounts[name] = imageAsset.animations[name].frames;
     var framesPerThisAnimationType = utils.valueOr(
         imageAsset.animations[name].frames,
         this.defaultFramesPerAnimation);
+    this.animationFrameCounts[name] = framesPerThisAnimationType;
     totalFrames += framesPerThisAnimationType * imageAsset.animations[name].count;
   }
   this.totalAnimations = utils.valueOr(options.totalAnimations, totalAnimations);
