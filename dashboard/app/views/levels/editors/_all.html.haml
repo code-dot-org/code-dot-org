@@ -3,7 +3,6 @@
   = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
   = javascript_include_tag 'js/code-studio-common'
   = javascript_include_tag 'js/levelbuilder'
-  = javascript_include_tag 'editor/json_editor'
   = javascript_include_tag 'jquery.handsontable.full'
 
 .field
@@ -100,7 +99,7 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function() {
-      jsonEditor("#callout_editor", {
+      levelbuilder.jsonEditor("#callout_editor", {
         json_textarea: '#level_callout_json',
         add_button: '#add_callout',
         remove_button: ".remove_callout",
