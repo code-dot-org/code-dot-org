@@ -28,8 +28,8 @@
       .span8.signupblock
         = form_for(@user, url: { action: :student_register }) do |f|
 
+          = hidden_field_tag :section_code, params[:section_code]
           = f.hidden_field :user_type, value: user_type
-          = f.hidden_field :section_code, value: params[:section_code]
           = f.hidden_field :locale, value: locale
           = f.hidden_field :hashed_email
 
