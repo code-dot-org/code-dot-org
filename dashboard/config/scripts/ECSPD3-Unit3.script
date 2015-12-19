@@ -17,7 +17,6 @@ level 'ECSPD Unit3 Connections'
 level 'ECSPD Unit 3 Lesson Overview'
 
 stage 'Teaching Strategies'
-level 'ECSPD Teaching Strategies Intro'
 level 'Forum-ECSPD-Unit 3-Teaching Practice'
 level 'ECSPD Unit 3 Expertise'
 level 'ECSPD Phase 3 - Unit 3 - Teaching Practice'
@@ -25,11 +24,7 @@ level 'ECSPD jsfiddle'
 level 'ECSPD Unit 3 Strategy Review'
 level 'ECSPD strategies'
 
-stage 'Unit 3 Challenge Preview'
-level 'ECSPD Unit 2 Challenge Preview'
-level 'ECSPD U3 Challenges'
-level 'ECSPD Unit 3 Stage4Review'
-level 'ECSPD Unit 2 Break'
+
 
 stage 'Unit 3 Day-by-Day'
 level 'ECSPD Unit 3 Stage 6 Overview'
@@ -46,12 +41,14 @@ level 'ECSPD U3 D 20-21 Intro'
 level 'ECSPD U3 D 22-25 Intro'
 
 stage 'Unit 3 Challenge'
-level 'ECSPD Unit 3 Pick2'
+level 'ECSPD U3 Challenges'
 level 'ECSPD U3 Challenge Decision'
 level 'ECSPD unit 3 Pick Challenge'
 level 'ECSU3 Challenge Submission'
 
 stage 'Close & Next Steps'
-level 'ECSPD Start Challenge'
 level 'ECSPD Challenge Reflection'
 level 'Unit 3 Survey 2'
+
+
+stage 'Unit 3 Challenge Preview'
