@@ -36,8 +36,8 @@ var ImageAsset = function (options) {
 
   /*
    * frameCounts object: contains counts for each type:
-   *  walk, idleEmotions, walkingEmotions: (applies to spriteSheet)
-   *  idleColumn (boolean), counterClockwise (boolean): (applies to spriteSheet)
+   *  walk, idleNormal, idleEmotions, walkingEmotions: (applies to spriteSheet)
+   *  counterClockwise (boolean): (applies to spriteSheet)
    *  turns: (applies to spriteSheet && legacySpriteSheet)
    *  normal, emotions, extraEmotions: (applies to legacySpriteSheet)
    */

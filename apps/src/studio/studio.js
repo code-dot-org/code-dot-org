@@ -3067,10 +3067,10 @@ function imageAssetFrameNumbers (opts) {
   // actor is facing forward, use those frames (last columns of the spritesheet).
   if (frameNums.x === 0 && sprite.emotion !== Emotions.NORMAL) {
     if (opts.isWalking && sprite.frameCounts.walkingEmotions > 0) {
-      frameNums.x = sprite.frameCounts.turns + !!sprite.frameCounts.idleColumn +
+      frameNums.x = sprite.frameCounts.turns + (sprite.frameCounts.idleNormal || 0) +
                     (sprite.frameCounts.idleEmotions || 0) + (sprite.emotion - 1);
     } else if (sprite.frameCounts.idleEmotions > 0) {
-      frameNums.x = sprite.frameCounts.turns + !!sprite.frameCounts.idleColumn +
+      frameNums.x = sprite.frameCounts.turns + (sprite.frameCounts.idleNormal || 0) +
                     (sprite.emotion - 1);
     }
   }
@@ -3097,7 +3097,7 @@ function imageAssetFrameNumbers (opts) {
 
   if ((sprite.displayDir === Direction.SOUTH || sprite.displayDir === Direction.NONE) &&
       !opts.isWalking) {
-    var idleCount = sprite.frameCounts.idleColumn ?
+    var idleCount = sprite.frameCounts.idleNormal ?
         sprite.frameCounts.walk : (sprite.frameCounts.normal || 0);
 
     var idleFrame;
@@ -3114,7 +3114,7 @@ function imageAssetFrameNumbers (opts) {
       idleFrame = animTick % idleCount;
     }
 
-    if (sprite.frameCounts.idleColumn) {
+    if (sprite.frameCounts.idleNormal) {
       frameNums.y = idleFrame;
     } else {
       frameNums.x = idleFrame;
@@ -4757,7 +4757,7 @@ Studio.setSprite = function (opts) {
 
     // NEW
     // TODO: use ImageAsset or similar
-    sprite.setImage(skinSprite.walk, 8);
+    sprite.setImage(skinSprite.walk, sprite.frameCounts);
 
     var extraWidth = (sprite.frameCounts.walkingEmotions || 0) * sprite.drawWidth;
     if (!skinSprite.sprite) {
