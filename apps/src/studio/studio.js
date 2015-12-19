@@ -2264,6 +2264,14 @@ Studio.reset = function(first) {
     Studio.JSInterpreter = null;
   }
 
+  var renderOffset = {
+    x: 0,
+    y: 0
+  };
+  if (level.gridAlignedMovement) {
+    renderOffset.x = skin.gridSpriteRenderOffsetX || 0;
+    renderOffset.y = skin.gridSpriteRenderOffsetY || 0;
+  }
   // Move sprites into position.
   for (i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i]) {
@@ -2280,6 +2288,7 @@ Studio.reset = function(first) {
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
       emotion: level.defaultEmotion || Emotions.NORMAL,
+      renderOffset: renderOffset,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
