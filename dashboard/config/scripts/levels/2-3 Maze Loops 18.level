@@ -48,11 +48,6 @@
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
-          <statement name="DO">
-            <block type="controls_repeat">
-              <title name="TIMES">???</title>
-            </block>
-          </statement>
         </block>
       </xml>
     </required_blocks>
@@ -60,14 +55,9 @@
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="maze_moveForward"/>
-          </statement>
-          <next>
-            <block type="maze_turn">
-              <title name="DIR">turnRight</title>
-            </block>
-          </next>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
         </block>
       </xml>
     </recommended_blocks>
