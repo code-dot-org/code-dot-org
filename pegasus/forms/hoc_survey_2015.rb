@@ -12,11 +12,11 @@ class HocSurvey2015
     result[:cs_beyond_hoc_s] = required stripped data[:cs_beyond_hoc_s]
     result[:age_range_ss] = required stripped data[:age_range_ss]
     result[:longer_than_hour_s] = required stripped data[:longer_than_hour_s]
-    result[:students_number_total_s] = required stripped data[:students_number_total_s]
-    result[:students_number_girls_s] = required stripped data[:students_number_girls_s]
+    result[:students_number_total_s] = required integer data[:students_number_total_s]
+    result[:students_number_girls_s] = required integer data[:students_number_girls_s]
 
     if result[:event_country_s].class != FieldError && result[:event_country_s] == 'United States'
-      result[:students_number_ethnicity_s] = required stripped data[:students_number_ethnicity_s]
+      result[:students_number_ethnicity_s] = required integer data[:students_number_ethnicity_s]
     end
 
     result[:volunteer_participation_s] = required stripped data[:volunteer_participation_s]
