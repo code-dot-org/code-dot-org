@@ -5,30 +5,6 @@ $(document).ready(function() {
     plugins: ['fast_click']
   });
 
-  // Only allow whole integers
-  $('#students-number-total').keypress(function(event) {
-    return /\d/.test(String.fromCharCode(event.keyCode));
-  }).triggerHandler('keypress');
-  $('#students-number-total').change(function() {
-    $(this).val($(this).val().match(/\d+/));
-  }).triggerHandler('change');
-
-  // Only allow whole integers
-  $('#students-number-girls').keypress(function(event) {
-    return /\d/.test(String.fromCharCode(event.keyCode));
-  }).triggerHandler('keypress');
-  $('#students-number-girls').change(function() {
-    $(this).val($(this).val().match(/\d+/));
-  }).triggerHandler('change');
-
-  // Only allow whole integers
-  $('#students-number-ethnicity').keypress(function(event) {
-    return /\d/.test(String.fromCharCode(event.keyCode));
-  }).triggerHandler('keypress');
-  $('#students-number-ethnicity').change(function() {
-    $(this).val($(this).val().match(/\d+/));
-  }).triggerHandler('change');
-
   $('#event-country').change(function() {
     if ($(this).val() == 'United States') {
       $('#students-number-ethnicity-wrapper').show();
