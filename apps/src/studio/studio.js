@@ -1479,7 +1479,7 @@ function updateItems () {
 
     item.update();
 
-    if (item.hasCompletedFade && item.hasCompletedFade()) {
+    if (item.hasCompletedFade()) {
       item.removeElement();
       Studio.items.splice(i, 1);
     }
@@ -4350,7 +4350,10 @@ Studio.vanishActor = function (opts) {
   explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
   explosion.setAttribute('width', numFrames * frameWidth);
 
-  if (!skin.fadeExplosion) {
+  if (skin.fadeExplosion) {
+    Studio.sprite[opts.spriteIndex].startFade(
+        skin.explosionFrames * skin.timePerExplosionFrame);
+  } else {
     Studio.setSprite({
       spriteIndex: opts.spriteIndex,
       value: 'hidden'
@@ -4373,13 +4376,15 @@ Studio.vanishActor = function (opts) {
   });
   Studio.perExecutionTimeouts.push(setTimeout(function () {
     explosion.setAttribute('visibility', 'hidden');
-    if (skin.fadeAnimation) {
+    if (skin.fadeExplosion) {
       // hide the sprite
       Studio.setSprite({
         spriteIndex: opts.spriteIndex,
         value: 'hidden'
       });
       sprite.removeAttribute('opacity');
+      // TODO (cpirich): switch to this method only
+      Studio.sprite[opts.spriteIndex].setOpacity(1);
     }
   }, skin.timePerExplosionFrame * (numFrames + 1)));
 

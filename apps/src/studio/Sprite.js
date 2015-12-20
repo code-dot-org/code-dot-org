@@ -29,7 +29,7 @@ var Sprite = function (options) {
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
   this.displayDir = Direction.NONE;
   this.startFadeTime = null;
-  this.fadeTime = constants.DEFAULT_ACTOR_FADE_TIME;
+  this.fadeTime = 0;
 
   this.image = null;
   this.legacyImage = null;
@@ -217,6 +217,8 @@ Sprite.prototype.getDirectionFrame = function() {
   // Every other frame, if we aren't yet rendering in the correct direction,
   // assign a new displayDir from state table; only one turn at a time.
 
+  // TODO (cpirich): re-enable this or place in display or update
+
   // temporarily disabled as it is redundant
   /*
   if (this.dir !== this.displayDir && this.displayDir !== undefined) {
@@ -254,6 +256,9 @@ Sprite.prototype.createElement = function (parentElement) {
 /**
  * This function should be called every frame, and moves the sprite around.
  */
+
+// TODO (cpirich): ensure that update is called for Sprite object
+
 Sprite.prototype.update = function () {
 
   // Draw the sprite's current location.
@@ -263,9 +268,11 @@ Sprite.prototype.update = function () {
 
 /**
  * Begin a fade out.
+ * @param {!number} fadeTime - the duration of the fade (in milliseconds)
  */
-Sprite.prototype.beginRemoveElement = function () {
+Sprite.prototype.startFade = function (fadeTime) {
   this.startFadeTime = new Date().getTime();
+  this.fadeTime = utils.valueOr(fadeTime, constants.DEFAULT_ACTOR_FADE_TIME);
 };
 
 /**
@@ -318,8 +325,12 @@ Sprite.prototype.display = function () {
   if (this.startFadeTime) {
     opacity = 1 - (currentTime - this.startFadeTime) / this.fadeTime;
     opacity = Math.max(opacity, 0);
-    // this.animation_.setOpacity(opacity);
     this.setOpacity(opacity);
+    if (this.hasCompletedFade()) {
+      // NOTE: we don't automatically change the state to hidden or set visible
+      // to false here.
+      this.startFadeTime = null;
+    }
   }
 
   var useLegacyAnimation = false;
@@ -434,6 +445,8 @@ Sprite.prototype.setOpacity = function (newOpacity) {
   if (this.legacyAnimation_) {
     this.legacyAnimation_.setOpacity(newOpacity);
   }
+
+  // TODO (cpririch): Remove this and rely on animation rendering only
 
   var spriteIndex = Studio.sprite.indexOf(this);
   if (spriteIndex < 0) {
