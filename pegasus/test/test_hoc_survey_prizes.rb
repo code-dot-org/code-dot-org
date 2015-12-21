@@ -1,7 +1,6 @@
 require_relative 'sequel_test_case'
 require_relative '../../pegasus/helpers/prize_helpers'
 require 'securerandom'
-require 'ostruct'
 
 class HocSurveyPrizeTest < SequelTestCase
 
@@ -26,10 +25,10 @@ class HocSurveyPrizeTest < SequelTestCase
   def test_out_of_codes
     generate_codes TYPE1 => 1
 
-    ex = assert_raises StandardError do
+    ex = assert_raises AbortFormError do
       claim_prize_code TYPE2, USER1, PURPOSE1
     end
-    assert ex.message.include? "Out of '#{TYPE2}' codes."
+    assert_equal "Out of '#{TYPE2}' codes.", ex.message
   end
 
   def test_reclaim_old
