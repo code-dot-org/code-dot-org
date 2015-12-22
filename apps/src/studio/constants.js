@@ -367,6 +367,10 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+exports.IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
+
 /** @type {number} animation rate in frames per second. */
 exports.DEFAULT_ANIMATION_RATE = 20;
 

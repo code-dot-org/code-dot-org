@@ -188,7 +188,8 @@ function loadLevel() {
   Studio.slowExecutionFactor = level.slowExecutionFactor || 1;
   Studio.gridAlignedExtraPauseSteps = level.gridAlignedExtraPauseSteps || 0;
   Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
-                                  utils.valueOr(level.ticksBeforeFaceSouth, IDLE_TICKS_BEFORE_FACE_SOUTH);
+      utils.valueOr(level.ticksBeforeFaceSouth,
+          constants.IDLE_TICKS_BEFORE_FACE_SOUTH);
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -1050,32 +1051,15 @@ Studio.onTick = function() {
       performQueuedMoves(i);
     }
 
-    var isWalking = true;
-
     // After 5 ticks of no movement, turn sprite forward.
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.NONE;
       Studio.movementAudioOff();
-      isWalking = false;
-    }
-
-    // Also if the character has never moved, they are also not walking.
-    // Separate to the above case because we don't want to force them to
-    // face south in this case.  They are still allowed to face a different
-    // direction even if they've never walked.
-    if (Studio.sprite[i].lastMove === Infinity) {
-      isWalking = false;
     }
 
     // Display sprite:
-    Studio.displaySprite(i, isWalking);
-
-    // Animate goals
-    Studio.animateGoals();
-
-    // Animate clouds
-    Studio.animateClouds();
+    Studio.displaySprite(i);
 
     var sprite = Studio.sprite[i];
     if (sprite.hasActions()) {
@@ -1084,6 +1068,12 @@ Studio.onTick = function() {
 
     Studio.drawDebugRect("spriteCenter", Studio.sprite[i].x, Studio.sprite[i].y, 5, 5);
   }
+
+  // Animate goals
+  Studio.animateGoals();
+
+  // Animate clouds
+  Studio.animateClouds();
 
   if (!animationOnlyFrame) {
     performItemOrProjectileMoves(Studio.projectiles);
@@ -3004,114 +2994,6 @@ Studio.onPuzzleComplete = function() {
   }
 };
 
-// Number of extra ticks between the last time the sprite moved and when we
-// reset them to face south.
-var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
-
-/**
- * Given direction/emotion/tickCount, calculate which frame numbers we should
- * display for an image asset.
- *
- * @param {boolean} opts.legacySpriteSheet - using legacy horizontal sheet
- * @param {number}  opts.spriteIndex - determine state for this spriteIndex
- * @param {boolean} opts.isWalking - pass walking state
- */
-function imageAssetFrameNumbers (opts) {
-  var sprite = Studio.sprite[opts.spriteIndex];
-  var frameNums = {
-    x: 0,
-    y: 0
-  };
-
-  // adjust animTick to convert overall tick frequency to animation frequency
-  // and skew each sprite slightly so each animates at a slightly different time
-  var animTick = Math.floor(
-    (Studio.tickCount + opts.spriteIndex * (sprite.animationFrameDuration + 1)) /
-     sprite.animationFrameDuration);
-
-  var frameTable = sprite.frameCounts.counterclockwise ?
-      constants.frameDirTableWalkingWithIdleCounterclockwise :
-      constants.frameDirTableWalkingWithIdleClockwise;
-  if (sprite.frameCounts.normal) {
-    // Has a legacy sprite for "idle" animation, use the old clockwise table:
-    frameTable = constants.frameDirTableWalking;
-  }
-  frameNums.x = frameTable[sprite.displayDir];
-
-  // If there are idleEmotions or walkingEmotions in the spritesheet, and the
-  // actor is facing forward, use those frames (last columns of the spritesheet).
-  if (frameNums.x === 0 && sprite.emotion !== Emotions.NORMAL) {
-    if (opts.isWalking && sprite.frameCounts.walkingEmotions > 0) {
-      frameNums.x = sprite.frameCounts.turns + (sprite.frameCounts.idleNormal || 0) +
-                    (sprite.frameCounts.idleEmotions || 0) + (sprite.emotion - 1);
-    } else if (sprite.frameCounts.idleEmotions > 0) {
-      frameNums.x = sprite.frameCounts.turns + (sprite.frameCounts.idleNormal || 0) +
-                    (sprite.emotion - 1);
-    }
-  }
-  if (sprite.frameCounts.walk && !opts.legacySpriteSheet) {
-    frameNums.y = animTick % sprite.frameCounts.walk;
-  }
-
-  if (opts.legacySpriteSheet &&
-      sprite.emotion !== Emotions.NORMAL &&
-      sprite.frameCounts.extraEmotions > 0) {
-    // Legacy spritesheet (shift to a lower row for extraEmotions)
-    frameNums.y = sprite.emotion;
-  }
-
-  if (frameNums.x !== 0 && sprite.frameCounts.normal && opts.legacySpriteSheet) {
-    // Legacy spritesheet (shift frame number up by count of "normal" idle frames)
-    frameNums.x += sprite.frameCounts.normal;
-
-    if (sprite.frameCounts.turns == 7) {
-      // Legacy spritesheet (shift frame number down by 1, since we expected 8 turn frames)
-      frameNums.x -= 1;
-    }
-  }
-
-  if ((sprite.displayDir === Direction.SOUTH || sprite.displayDir === Direction.NONE) &&
-      !opts.isWalking) {
-    var idleCount = sprite.frameCounts.idleNormal ?
-        sprite.frameCounts.walk : (sprite.frameCounts.normal || 0);
-
-    var idleFrame;
-
-    if (sprite.frameCounts.holdIdleFrame0Count) {
-      // Insert extra "held" frames at the end of the animation:
-      idleFrame = animTick % (idleCount + sprite.frameCounts.holdIdleFrame0Count);
-      if (idleFrame >= idleCount) {
-        // When the frameNumber is out of range due to the extra "held" frames,
-        // display frame 0:
-        idleFrame = 0;
-      }
-    } else {
-      idleFrame = animTick % idleCount;
-    }
-
-    if (sprite.frameCounts.idleNormal) {
-      frameNums.y = idleFrame;
-    } else {
-      frameNums.x = idleFrame;
-    }
-
-    if (opts.legacySpriteSheet &&
-        frameNums.x === 0 &&
-        sprite.emotion !== Emotions.NORMAL &&
-        sprite.frameCounts.emotions > 0) {
-      // Legacy spritesheet (idle emotion frames are the rightmost frames)
-      frameNums.x = sprite.frameCounts.normal + sprite.frameCounts.turns + (sprite.emotion - 1);
-    }
-  }
-
-  return frameNums;
-}
-
-function spriteTotalFrames (index) {
-  var sprite = Studio.sprite[index];
-  return sprite.frameCounts.normal + sprite.frameCounts.turns + sprite.frameCounts.emotions;
-}
-
 /* Return the frame count for items or projectiles
 */
 function getFrameCount (className, exceptionList, defaultCount) {
@@ -3405,7 +3287,7 @@ var updateSpeechBubblePath = function (element) {
                                               onRight));
 };
 
-Studio.displaySprite = function(i, isWalking) {
+Studio.displaySprite = function (i) {
   var sprite = Studio.sprite[i];
 
   // avoid lots of unnecessary changes to hidden sprites
