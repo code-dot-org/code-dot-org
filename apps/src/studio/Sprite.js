@@ -38,6 +38,8 @@ var Sprite = function (options) {
   this.legacyAnimation_ = null;
 
   this.useLegacyIdleEmotionAnimations = false;
+
+  this.lastDrawPosition = { x: 0, y: 0 };
 };
 Sprite.inherits(Collidable);
 module.exports = Sprite;
@@ -202,12 +204,12 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
 
 /** @returns {SVGImageElement} */
 Sprite.prototype.getElement = function () {
-  return this.animation_.getElement();
+  return this.animation_ ? this.animation_.getElement() : null;
 };
 
 /** @returns {SVGImageElement} */
 Sprite.prototype.getLegacyElement = function () {
-  return this.legacyAnimation_.getElement();
+  return this.legacyAnimation_ ? this.legacyAnimation_.getElement() : null;
 };
 
 /**
@@ -367,6 +369,8 @@ Sprite.prototype.display = function () {
     useLegacyAnimation = true;
   }
 
+  var drawPosition = this.getCurrentDrawPosition();
+
   if (useLegacyAnimation) {
     // Legacy render path:
     if (this.animation_) {
@@ -374,11 +378,7 @@ Sprite.prototype.display = function () {
     }
     if (this.legacyAnimation_) {
       this.legacyAnimation_.setCurrentAnimation(animationType, animationIndex);
-      this.legacyAnimation_.redrawCenteredAt({
-            x: this.displayX + (this.drawWidth / 2) + this.renderOffset.x,
-            y: this.displayY + (this.drawHeight / 2) + this.renderOffset.y
-          },
-          Studio.tickCount);
+      this.legacyAnimation_.redrawCenteredAt(drawPosition, Studio.tickCount);
       if (this.visible) {
         this.legacyAnimation_.show();
       } else {
@@ -387,11 +387,7 @@ Sprite.prototype.display = function () {
     }
   } else {
     this.animation_.setCurrentAnimation(animationType, animationIndex);
-    this.animation_.redrawCenteredAt({
-          x: this.displayX + (this.drawWidth / 2) + this.renderOffset.x,
-          y: this.displayY + (this.drawHeight / 2) + this.renderOffset.y
-        },
-        Studio.tickCount);
+    this.animation_.redrawCenteredAt(drawPosition, Studio.tickCount);
     if (this.visible) {
       this.animation_.show();
     } else {
@@ -401,6 +397,8 @@ Sprite.prototype.display = function () {
       this.legacyAnimation_.hide();
     }
   }
+
+  this.lastDrawPosition = drawPosition;
 };
 
 Sprite.prototype.getNextPosition = function () {
@@ -416,6 +414,14 @@ Sprite.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/** @returns {object} the center x, y coordinates for the next draw */
+Sprite.prototype.getCurrentDrawPosition = function () {
+  return {
+    x: this.displayX + (this.drawWidth / 2) + this.renderOffset.x,
+    y: this.displayY + (this.drawHeight / 2) + this.renderOffset.y
+  };
 };
 
 /**
@@ -444,21 +450,5 @@ Sprite.prototype.setOpacity = function (newOpacity) {
   }
   if (this.legacyAnimation_) {
     this.legacyAnimation_.setOpacity(newOpacity);
-  }
-
-  // TODO (cpririch): Remove this and rely on animation rendering only
-
-  var spriteIndex = Studio.sprite.indexOf(this);
-  if (spriteIndex < 0) {
-    return;
-  }
-
-  var spriteRegularIcon = document.getElementById('sprite' + spriteIndex);
-  var spriteWalkIcon = document.getElementById('spriteWalk' + spriteIndex);
-  if (spriteRegularIcon) {
-    spriteRegularIcon.setAttribute('opacity', newOpacity);
-  }
-  if (spriteWalkIcon) {
-    spriteWalkIcon.setAttribute('opacity', newOpacity);
   }
 };
