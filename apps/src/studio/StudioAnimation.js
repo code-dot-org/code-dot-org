@@ -68,6 +68,9 @@ var StudioAnimation = module.exports = function (options) {
   /** @private {boolean} whether the animation should loop automatically. */
   this.loop_ = utils.valueOr(options.loop, false);
 
+  /** @private {boolean} whether each animation should be uniquely skewed */
+  this.skewAnimations_ = utils.valueOr(options.skewAnimations, false);
+
   /** @private {SVGImageElement} */
   this.element_ = null;
 
@@ -191,7 +194,7 @@ StudioAnimation.prototype.redrawCenteredAt = function (center, tickCount) {
   var animTick = tickCount;
 
   // Each animation will start at a different frame when this is enabled:
-  if (this.skewAnimations) {
+  if (this.skewAnimations_) {
     // NOTE: not intended to be used with non-looping animations
     animTick = tickCount + this.animId * (this.animationFrameDuration_ + 1);
   }
