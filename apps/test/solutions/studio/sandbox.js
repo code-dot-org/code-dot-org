@@ -420,7 +420,7 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         assert(Studio.sprite[0].visible === false, "Actor 1 starts out hidden");
-        var visibility = document.getElementById('sprite0').getAttribute('visibility');
+        var visibility = Studio.sprite[0].getLegacyElement().getAttribute('visibility');
         assert(visibility === 'hidden', 'Actor 1 html element is not visible');
         testUtils.runOnStudioTick(50, function () {
           assert(Studio.sprite[0].x === 250, "Actor 1 finished moving");
@@ -786,7 +786,7 @@ module.exports = {
         ) + '</xml>',
       runBeforeClick: function (assert) {
         testUtils.runOnStudioTick (5, function () {
-          var sprite = document.getElementById('sprite0');
+          var sprite = Studio.sprite[0].getLegacyElement();
           var vis = sprite.getAttribute('visibility');
           assert(sprite.getAttribute('visibility') === 'visible', 'vis: ' + vis);
           assert(sprite.getAttribute('xlink:href') !== undefined);
