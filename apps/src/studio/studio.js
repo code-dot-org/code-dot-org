@@ -308,38 +308,6 @@ var drawMap = function () {
 
   if (Studio.spriteStart_) {
     for (i = 0; i < Studio.spriteCount; i++) {
-      // Sprite clipPath element
-      // (not setting x, y, height, or width until displaySprite)
-      var spriteClip = document.createElementNS(SVG_NS, 'clipPath');
-      spriteClip.setAttribute('id', 'spriteClipPath' + i);
-      var spriteClipRect = document.createElementNS(SVG_NS, 'rect');
-      spriteClipRect.setAttribute('id', 'spriteClipRect' + i);
-      spriteClip.appendChild(spriteClipRect);
-      spriteLayer.appendChild(spriteClip);
-
-      // Add sprite (not setting href, height, or width until displaySprite).
-      var spriteIcon = document.createElementNS(SVG_NS, 'image');
-      spriteIcon.setAttribute('id', 'sprite' + i);
-      spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
-      spriteLayer.appendChild(spriteIcon);
-
-      // Add support for walking spritesheet.
-      var spriteWalkIcon = document.createElementNS(SVG_NS, 'image');
-      spriteWalkIcon.setAttribute('id', 'spriteWalk' + i);
-      spriteWalkIcon.setAttribute('clip-path', 'url(#spriteWalkClipPath' + i + ')');
-      spriteLayer.appendChild(spriteWalkIcon);
-
-      var spriteWalkClip = document.createElementNS(SVG_NS, 'clipPath');
-      spriteWalkClip.setAttribute('id', 'spriteWalkClipPath' + i);
-      var spriteWalkClipRect = document.createElementNS(SVG_NS, 'rect');
-      spriteWalkClipRect.setAttribute('id', 'spriteWalkClipRect' + i);
-      spriteWalkClip.appendChild(spriteWalkClipRect);
-      spriteLayer.appendChild(spriteWalkClip);
-
-      dom.addMouseDownTouchEvent(spriteIcon,
-        delegate(this, Studio.onSpriteClicked, i));
-    }
-    for (i = 0; i < Studio.spriteCount; i++) {
       var spriteSpeechBubble = document.createElementNS(SVG_NS, 'g');
       spriteSpeechBubble.setAttribute('id', 'speechBubble' + i);
       spriteSpeechBubble.setAttribute('visibility', 'hidden');
@@ -860,8 +828,8 @@ function displayCollidables (list) {
 }
 
 /**
- * Sort the draw order of sprites, items, and tiles so that items higher on
- * the screen are drawn before the ones in front, for a simple form of
+ * Sort the draw order of sprites, explosions, items, and tiles so that items
+ * higher on the screen are drawn before the ones in front, for a simple form of
  * z-sorting.
  */
 function sortDrawOrder() {
@@ -886,15 +854,18 @@ function sortDrawOrder() {
     Studio.drawDebugRect("itemBottom", Studio.items[i].x, drawItem.y, 4, 4);
   }
 
-  // Add sprites, both walking and non-walking.
+  // Add sprite elements (both legacy and normal) and explosions.
   for (i = 0; i < Studio.sprite.length; i++) {
     var sprite = Studio.sprite[i];
     var y = sprite.displayY + sprite.height;
 
-    drawArray.push({
-      element: document.getElementById('sprite' + i),
+    drawItem = {
+      element: document.getElementById('explosion' + i),
       y: y
-    });
+    };
+    if (drawItem.element) {
+      drawArray.push(drawItem);
+    }
 
     drawItem = {
       element: sprite.getElement(),
@@ -903,11 +874,6 @@ function sortDrawOrder() {
     if (drawItem.element) {
       drawArray.push(drawItem);
     }
-
-    drawArray.push({
-      element: document.getElementById('spriteWalk' + i),
-      y: y
-    });
 
     drawItem = {
       element: sprite.getLegacyElement(),
@@ -3447,63 +3413,6 @@ Studio.displaySprite = function(i, isWalking) {
     return;
   }
 
-  var spriteRegularIcon = document.getElementById('sprite' + i);
-  var spriteWalkIcon = document.getElementById('spriteWalk' + i);
-
-  var spriteIcon, spriteClipRect, unusedSpriteClipRect;
-  var frameNumbers, xOffset, yOffset;
-
-  if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
-
-    // One exception: don't show the walk sprite if we're already playing an explosion animation for
-    // that sprite.  (Ideally, we would show the sprite in place while explosion plays over the top,
-    // but this is not a common case for now and this keeps the change small.)
-    var explosion = document.getElementById('explosion' + i);
-    if (explosion && explosion.getAttribute('visibility') !== 'hidden') {
-      spriteWalkIcon.setAttribute('visibility', 'hidden');
-      return;
-    }
-
-    // Show walk sprite, and hide regular sprite.
-    spriteRegularIcon.setAttribute('visibility', 'hidden');
-    spriteWalkIcon.setAttribute('visibility', 'visible');
-
-    frameNumbers = imageAssetFrameNumbers({ spriteIndex: i, isWalking: isWalking });
-    xOffset = sprite.drawWidth * frameNumbers.x;
-    yOffset = sprite.drawHeight * frameNumbers.y;
-
-    spriteIcon = spriteWalkIcon;
-    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
-    if (skin[sprite.value].sprite) {
-      unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
-    }
-  } else if (skin[sprite.value] && !skin[sprite.value].sprite && skin[sprite.value].walk) {
-    // We only have a "walking" spritesheet, so use it all the time
-
-    // Show walk sprite, and hide regular sprite.
-    spriteRegularIcon.setAttribute('visibility', 'hidden');
-    spriteWalkIcon.setAttribute('visibility', 'visible');
-
-    frameNumbers = imageAssetFrameNumbers({ spriteIndex: i, isWalking: isWalking });
-    xOffset = sprite.drawWidth * frameNumbers.x;
-    yOffset = sprite.drawHeight * frameNumbers.y;
-
-    spriteIcon = spriteWalkIcon;
-    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
-  } else {
-    // Show regular sprite, and hide walk sprite.
-    spriteRegularIcon.setAttribute('visibility', 'visible');
-    spriteWalkIcon.setAttribute('visibility', 'hidden');
-
-    frameNumbers = imageAssetFrameNumbers({ spriteIndex: i, legacySpriteSheet: true });
-    xOffset = sprite.drawWidth * frameNumbers.x;
-    yOffset = sprite.drawHeight * frameNumbers.y;
-
-    spriteIcon = spriteRegularIcon;
-    spriteClipRect = document.getElementById('spriteClipRect' + i);
-    unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
-  }
-
   var extraOffsetX = 0;
   var extraOffsetY = 0;
 
@@ -3511,35 +3420,37 @@ Studio.displaySprite = function(i, isWalking) {
     extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
     extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
   }
-
   if (sprite.hasActions()) {
     sprite.updateActions();
   } else {
-    var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
-    var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
+    // TODO (cpirich): move this into Sprite object
 
-    var dirPrev = sprite.dir;
-    /* if (dirPrev === Direction.NONE) {
-      // direction not yet set, start at SOUTH (forward facing)
-      sprite.dir = Direction.SOUTH;
-    }
-    else */
-    sprite.dir = Direction.NONE;
-    if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
-      if (sprite.x < xCoordPrev) {
-        sprite.dir |= Direction.WEST;
-      } else if (sprite.x > xCoordPrev) {
-        sprite.dir |= Direction.EAST;
-      }
-      if (sprite.y < yCoordPrev) {
-        sprite.dir |= Direction.NORTH;
-      } else if (sprite.y > yCoordPrev) {
-        sprite.dir |= Direction.SOUTH;
-      }
-    }
+    var newDir = Direction.NONE;
+    var lastDrawPos = sprite.lastDrawPosition;
 
     sprite.displayX = sprite.x;
     sprite.displayY = sprite.y;
+
+    var curDrawPos = sprite.getCurrentDrawPosition();
+
+    if ((curDrawPos.x !== lastDrawPos.x) || (curDrawPos.y !== lastDrawPos.y)) {
+      if (curDrawPos.x < lastDrawPos.x) {
+        newDir |= Direction.WEST;
+      } else if (curDrawPos.x > lastDrawPos.x) {
+        newDir |= Direction.EAST;
+      }
+      if (curDrawPos.y < lastDrawPos.y) {
+        newDir |= Direction.NORTH;
+      } else if (curDrawPos.y > lastDrawPos.y) {
+        newDir |= Direction.SOUTH;
+      }
+    }
+
+    if (newDir !== Direction.NONE || sprite.lastMove === Infinity) {
+      // Don't change to Direction.NONE here once we've captured a lastMove
+      // value, allow the ticksBeforeFaceSouth code to handle that later...
+      sprite.dir = newDir;
+    }
   }
 
   // Turn sprite toward target direction after evaluating actions.
@@ -3551,22 +3462,9 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.displayX - xOffset + extraOffsetX);
-  spriteIcon.setAttribute('y', sprite.displayY - yOffset + extraOffsetY);
-
-  spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-  spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
-
-  // NEW: (may be redundant once we're running)
+  // TODO (cpirich): (may be redundant with displayCollidables(Studio.sprite)
+  // in onTick loop)
   sprite.display();
-
-  if (unusedSpriteClipRect) {
-    // Update the other clip rect too, so that calculations involving
-    // inter-frame differences (just above, to calculate sprite.dir)
-    // are correct when we transition between spritesheets.
-    unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-    unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
-  }
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -4317,61 +4215,74 @@ Studio.showDebugInfo = function (opts) {
 };
 
 Studio.vanishActor = function (opts) {
-  var svg = document.getElementById('svgStudio');
+  var spriteLayer = document.getElementById('spriteLayer');
 
-  var sprite = document.getElementById('sprite' + opts.spriteIndex);
-  var spriteShowing = sprite && sprite.getAttribute('visibility') !== 'hidden';
-  var spriteWalk = document.getElementById('spriteWalk' + opts.spriteIndex);
-  var spriteWalkShowing = spriteWalk && spriteWalk.getAttribute('visibility') !== 'hidden';
+  var spriteIndex = opts.spriteIndex;
+  if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
+    throw new RangeError("Incorrect parameter: " + spriteIndex);
+  }
+  var sprite = Studio.sprite[spriteIndex];
+  var spriteShowing = sprite.visible || sprite.isFading();
 
-  if (!spriteShowing && !spriteWalkShowing) {
+  if (!spriteShowing) {
     return;
   }
 
-  var explosion = document.getElementById('explosion' + opts.spriteIndex);
+  var explosion = document.getElementById('explosion' + spriteIndex);
+  var explosionClipRect;
   if (!explosion) {
+    var explosionClipPath = document.createElementNS(SVG_NS, 'clipPath');
+    explosionClipPath.setAttribute('id', 'explosionClipPath' + spriteIndex);
+    explosionClipRect = document.createElementNS(SVG_NS, 'rect');
+    explosionClipRect.setAttribute('id', 'explosionClipRect' + spriteIndex);
+    // TODO (cpirich): sprite size may change later, so this needs to be fixed
+    explosionClipRect.setAttribute('width', sprite.height);
+    explosionClipRect.setAttribute('height', sprite.width);
+    explosionClipPath.appendChild(explosionClipRect);
+    spriteLayer.appendChild(explosionClipPath);
+
     explosion = document.createElementNS(SVG_NS, 'image');
-    explosion.setAttribute('id', 'explosion' + opts.spriteIndex);
+    explosion.setAttribute('id', 'explosion' + spriteIndex);
     explosion.setAttribute('visibility', 'hidden');
-    svg.appendChild(explosion, sprite);
+    explosion.setAttribute('clip-path', 'url(#explosionClipPath' + spriteIndex + ')');
+    spriteLayer.insertBefore(explosion,
+        sprite.getElement() || sprite.getLegacyElement());
   }
 
-  var spriteClipRect = document.getElementById('spriteClipRect' + opts.spriteIndex);
+  // TODO (cpirich): use displayWidth / displayHeight to make vanish explosions
+  // compatible with sprites that are scaled
+  var frameWidth = sprite.width;
+  var numFrames = skin.explosionFrames;
 
-  var frameWidth = Studio.sprite[opts.spriteIndex].width;
+  var centerPos = sprite.getCurrentDrawPosition();
+  var topLeftPos = {
+    x: centerPos.x - sprite.width / 2,
+    y: centerPos.y - sprite.height / 2
+  };
 
-  explosion.setAttribute('height', Studio.sprite[opts.spriteIndex].height);
-  explosion.setAttribute('x', spriteClipRect.getAttribute('x'));
+  explosion.setAttribute('height', sprite.height);
+  explosion.setAttribute('width', numFrames * frameWidth);
+  explosion.setAttribute('x', topLeftPos.x);
+  explosion.setAttribute('y', topLeftPos.y);
 
   explosion.setAttribute('visibility', 'visible');
 
-  var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
-  var numFrames = skin.explosionFrames;
-  explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
-  explosion.setAttribute('width', numFrames * frameWidth);
+  explosionClipRect = document.getElementById('explosionClipRect' + spriteIndex);
+  explosionClipRect.setAttribute('x', topLeftPos.x);
+  explosionClipRect.setAttribute('y', topLeftPos.y);
 
   if (skin.fadeExplosion) {
-    Studio.sprite[opts.spriteIndex].startFade(
-        skin.explosionFrames * skin.timePerExplosionFrame);
+    sprite.startFade(skin.explosionFrames * skin.timePerExplosionFrame);
   } else {
     Studio.setSprite({
-      spriteIndex: opts.spriteIndex,
+      spriteIndex: spriteIndex,
       value: 'hidden'
     });
   }
 
   _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('x', baseX - i * frameWidth);
-      if (i === 0) {
-        // Sometimes the spriteClipRect still moves a bit before our explosion
-        // starts, so wait until first frame to set y.
-        explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
-      }
-
-      if (skin.fadeExplosion) {
-        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
-      }
+      explosion.setAttribute('x', topLeftPos.x - i * frameWidth);
     }, i * skin.timePerExplosionFrame));
   });
   Studio.perExecutionTimeouts.push(setTimeout(function () {
@@ -4379,12 +4290,11 @@ Studio.vanishActor = function (opts) {
     if (skin.fadeExplosion) {
       // hide the sprite
       Studio.setSprite({
-        spriteIndex: opts.spriteIndex,
+        spriteIndex: spriteIndex,
         value: 'hidden'
       });
-      sprite.removeAttribute('opacity');
-      // TODO (cpirich): switch to this method only
-      Studio.sprite[opts.spriteIndex].setOpacity(1);
+      // restore the normal opacity
+      sprite.setOpacity(1);
     }
   }, skin.timePerExplosionFrame * (numFrames + 1)));
 
@@ -4392,7 +4302,7 @@ Studio.vanishActor = function (opts) {
   // treated as being different, otherwise chrome will animate all existing
   // explosions anytime we try to animate one of them
   explosion.setAttributeNS('http://www.w3.org/1999/xlink',
-    'xlink:href', skin.explosion + "?spriteIndex=" + opts.spriteIndex);
+    'xlink:href', skin.explosion + "?spriteIndex=" + spriteIndex);
 };
 
 Studio.setSpriteEmotion = function (opts) {
@@ -4678,8 +4588,6 @@ Studio.fixSpriteLocation = function () {
  * @param opts.spriteIndex {number} Index of the sprite
  */
 Studio.setSprite = function (opts) {
-  var spriteIndex = opts.spriteIndex;
-  var sprite = Studio.sprite[spriteIndex];
 
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -4691,34 +4599,22 @@ Studio.setSprite = function (opts) {
     spriteValue = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
   }
 
-  var spriteIcon = document.getElementById('sprite' + spriteIndex);
-  var spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
-  if (!spriteIcon && !spriteWalk) {
-    return;
-    // TODO (cpirich): We should probably throw here, but since our JS tutorials
-    // don't allow the student to set the spriteIndex, we will fail silently
-    // in case existing blockly tutorials expect this error to fail quietly
-
-    // throw new RangeError("Incorrect parameter: " + spriteIndex);
-  }
-
   var skinSprite = skin[spriteValue];
   if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
+  var spriteIndex = opts.spriteIndex;
+  if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
+    throw new RangeError("Incorrect parameter: " + spriteIndex);
+  }
+  var sprite = Studio.sprite[spriteIndex];
+
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
-  spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
 
   sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
-  }
-
-  // If this skin has walking spritesheet, then load that too.
-  if (spriteValue !== undefined && skinSprite.walk && skinSprite.sprite) {
-    // If we have two spritesheets, hide the walking sprite at this stage.
-    spriteWalk.setAttribute('visibility', 'hidden');
   }
 
   sprite.frameCounts = skinSprite.frameCounts;
@@ -4745,45 +4641,28 @@ Studio.setSprite = function (opts) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
   }
 
-  if (spriteIcon && skinSprite.sprite) {
-    var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
-    spriteClipRect.setAttribute('width', sprite.drawWidth);
-    spriteClipRect.setAttribute('height', sprite.drawHeight);
-
-    spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
-    spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-    var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
-    spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
-
-    // NEW
+  if (skinSprite.sprite) {
     // TODO: use ImageAsset or similar
     sprite.setLegacyImage(skinSprite.sprite, sprite.frameCounts);
-
   }
 
-  if (spriteWalk && skinSprite.walk) {
-    // And set up the cliprect so we can show the right item from the spritesheet.
-    var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
-    spriteWalkClipRect.setAttribute('width', sprite.drawWidth);
-    spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
-
-    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
-
-    // NEW
+  if (skinSprite.walk) {
     // TODO: use ImageAsset or similar
     sprite.setImage(skinSprite.walk, sprite.frameCounts);
-
-    var extraWidth = (sprite.frameCounts.walkingEmotions || 0) * sprite.drawWidth;
-    if (!skinSprite.sprite) {
-      // If we have only one spritesheet, this one is wider to store idle animations
-      // in an additional column
-      extraWidth += sprite.drawWidth;
-    }
-    spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
-    spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
   }
 
   sprite.createElement(document.getElementById('spriteLayer'));
+
+  var element = sprite.getLegacyElement();
+  if (element) {
+    dom.addMouseDownTouchEvent(sprite.getLegacyElement(),
+        delegate(this, Studio.onSpriteClicked, spriteIndex));
+  }
+  element = sprite.getElement();
+  if (element) {
+    dom.addMouseDownTouchEvent(sprite.getElement(),
+        delegate(this, Studio.onSpriteClicked, spriteIndex));
+  }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
   // First, stop any movement audio for the current character.
