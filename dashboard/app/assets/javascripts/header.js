@@ -226,10 +226,7 @@ dashboard.header = (function () {
 
       var i18n = window.dashboard.i18n;
 
-      // Use a React component so that we can use JSX and to make our dependencies on
-      // dashboard explicit. Render to markup since we are currently still mutating
-      // the generated DOM elsewhere
-      var body = React.renderToStaticMarkup(React.createElement(dashboard.ShareDialogBody, {
+      var bodyReact = React.createElement(dashboard.ShareDialogBody, {
         icon: appOptions.skin.staticAvatar,
         title: i18n.t('project.share_title'),
         shareCopyLink: i18n.t('project.share_copy_link'),
@@ -239,19 +236,36 @@ dashboard.header = (function () {
         isAbusive: dashboard.project.exceedsAbuseThreshold(),
         abuseTos: i18n.t('project.abuse.tos'),
         abuseContact: i18n.t('project.abuse.contact_us'),
-      }));
+      });
 
-      var dialog = new Dialog({body: body});
+      // Use a React component so that we can use JSX and to make our dependencies on
+      // dashboard explicit. Render to markup since we are currently still mutating
+      // the generated DOM elsewhere
+      // var body = React.renderToStaticMarkup(bodyReact);
 
+      // var dialog = new Dialog({body: body});
+
+      var dialog = React.createElement(dashboard.ShareDialog, {
+        body: bodyReact
+      });
+      var target = document.createElement('div');
+      document.body.appendChild(target);
+      React.render(dialog, target);
+
+      // move to share_dialog_body.jsx
       $('a.popup-window').click(window.dashboard.popupWindow);
 
+      // move to share_dialog_body.jsx
       $('#sharing-phone').click(function (event) {
         event.preventDefault();
       });
+
+      // move to send_to_phone.jsx if possible
       $('#phone-submit').click(function (event) {
         event.preventDefault();
       });
 
+      // for better of worse, i dont think we ever hit this for our sharing dialog
       function createHiddenPrintWindow(src) {
         var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
         iframe.appendTo("body");
@@ -260,10 +274,14 @@ dashboard.header = (function () {
         $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
       }
       $('#project-share #print').click(createHiddenPrintWindow);
+
+      // move to share_dialog_body.jsx
       $('#sharing-input').click(function () {
         this.select();
       });
-      dialog.show();
+      // dialog.show();
+
+      // move to jsx
       $('#project-share #sharing-phone').click(function() {
         var sendToPhone = $('#project-share #send-to-phone');
         if (sendToPhone.is(':hidden')) {
@@ -271,6 +289,8 @@ dashboard.header = (function () {
           dashboard.initSendToPhone('#project-share');
         }
       });
+
+      // move to share_dialog_body.jsx
       $('#project-share #continue-button').click(function() {
         dialog.hide();
       });
