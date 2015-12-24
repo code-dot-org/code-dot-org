@@ -44,4 +44,3 @@ Spune-le şi prietenilor tai despre **#HourOfCode**!
 
 [Trimite acest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>) catre reprezentantii locali, consiliului local, inspectorilor scolari si invita-i sa iti viziteze scoala in timpul unui eveniment Hour of Code. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
 
-<%= view :signup_button %>

@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
 require 'cgi'
@@ -98,19 +99,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Table::NotFound'
       end
     end
-
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
-                 '/teacher-dashboard',
-                 '/teacher-dashboard/landing',
-                 '/teacher-dashboard/nav',
-                 '/teacher-dashboard/section_manage',
-                 '/teacher-dashboard/section_progress',
-                 '/teacher-dashboard/sections',
-                 '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student',
-                 '/language_test',
-                 '/starwars']
-    set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
   before do
@@ -119,11 +107,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    settings.vary.each_pair do |header,pages|
-      headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
-    end
-
-    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
+    locale = request.locale
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
@@ -159,6 +143,13 @@ class Documents < Sinatra::Base
     dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
+  end
+
+  # Page mode selection
+  get '/private/pm/*' do |page_mode|
+    dont_cache
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    redirect "/learn?r=#{rand(100000)}"
   end
 
   # /private (protected area)
@@ -415,13 +406,26 @@ class Documents < Sinatra::Base
       full_document
     end
 
+    def log_drupal_link(dir, uri, path)
+      if dir == 'drupal.code.org'
+        Honeybadger.notify(
+          error_class: "Link to v3.sites/drupal.code.org",
+          error_message: "#{uri} fell through to the base config directory",
+          environment_name: "drupal_#{rack_env}",
+          context: {path: path}
+        )
+      end
+    end
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
-        return path if File.file?(path)
+        if File.file?(path)
+          log_drupal_link(dir, uri, path)
+          return path
+        end
       end
       nil
     end
@@ -430,7 +434,10 @@ class Documents < Sinatra::Base
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
-          return path if File.file?(path)
+          if File.file?(path)
+            log_drupal_link(dir, "#{uri}#{extname}", path)
+            return path
+          end
         end
       end
       nil

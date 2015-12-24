@@ -4,8 +4,8 @@ title: <%= hoc_s(:title_hardware_prize_form) %> layout: wide nav: prizes_nav
 
 * * *
 
-# Enter to win $10,000 worth of technology for your school
+# Doe mee om apparatuur ter waarde van $10,000 te winnen voor uw school
 
-If you plan for every student at your school to learn an Hour of Code, you can qualify to win $10,000 worth of technology to keep learning beyond one hour! One public, K-12 school will win in every US state. Complete the form below to be eligible.
+Als u elke leerling op uw school er toe zet om mee te doen met CodeUur, kunt u kans maken op apparatuur ter waarde van $10,000! In elke staat zal één openbare school winnen. Vul het formulier hieronder in om in aanmerking te komen.
 
 <%= view :hardware_prizes_form %>

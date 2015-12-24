@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Παρακάτω είναι ένα δείγμα υποστηρικτικής εκπαίδευσης για την Εβδομάδα της Επιστήμης των Υπολογιστών και τους στόχους της, το οποίο θα μπορούσε να χρησιμοποιηθεί από το κράτος, τοπικούς νομοθέτες, ηγέτες του επιχειρηματικού κόσμου κλπ.
 
@@ -47,4 +46,3 @@ According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million 
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
-<%= view :signup_button %>

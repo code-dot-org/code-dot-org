@@ -161,7 +161,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catMath":function(d){return "Математика"},
 "catProcedures":function(d){return "Functions"},
 "catTurtle":function(d){return "Акции"},
-"catVariables":function(d){return "Варајабли"},
+"catVariables":function(d){return "Променливи"},
 "catLogic":function(d){return "Логика"},
 "colourTooltip":function(d){return "Changes the color of the pencil."},
 "createACircle":function(d){return "create a circle"},

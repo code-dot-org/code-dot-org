@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # პრეს-რელიზი მონაწილე ოფიციალური პირების შესახებ: მაგალითი
 
@@ -49,4 +48,3 @@ nav: promote_nav
   
 
 
-<%= view :signup_button %>

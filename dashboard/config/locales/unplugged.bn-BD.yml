@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: শর্তসমূহ
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.

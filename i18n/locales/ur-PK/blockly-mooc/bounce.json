@@ -1,6 +1,6 @@
 {
   "bounceBall":"اچھال کی گیند",
-  "bounceBallTooltip":"Bounce a ball off of an object.",
+  "bounceBallTooltip":"کسی چیز سے گیند ٹکرا کے اچھل دیں ",
   "continue":"Continue",
   "dirE":"E",
   "dirN":"N",
@@ -14,8 +14,8 @@
   "ifPathAhead":"if path ahead",
   "ifTooltip":"If there is a path in the specified direction, then do some actions.",
   "ifelseTooltip":"If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
-  "incrementOpponentScore":"score opponent point",
-  "incrementOpponentScoreTooltip":"Add one to the current opponent score.",
+  "incrementOpponentScore":"مخالف کے سکور میں اضافہ ",
+  "incrementOpponentScoreTooltip":"مخالف کے سکور میں ایک اور جمع کریں ",
   "incrementPlayerScore":"سکور پوائنٹ",
   "incrementPlayerScoreTooltip":"Add one to the current player score.",
   "isWall":"یہ ایک دیوار ہے",

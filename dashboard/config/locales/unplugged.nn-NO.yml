@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduksjon til datavitskap (informatikk)
+        title: Introduksjon til informatikk
         desc: Denne leksjonen introduserer omgrepet informasjonsvitskap og forklarer
           kva ein informatikar gjer. Den vil også gi elevar høve til å prøve seg som
           informatikar. Etter aktiviteten vil eleven få eit diplom til å ta med heim
@@ -50,16 +50,16 @@
         video: Unplug4
       Unplug5:
         title: Funksjonar
-        desc: I denne leksjonen vil eleverne lage ein solfangar af streng, perler
-          og eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg,
-          og så bli spurt om å identifisere bestemte ferdigheiter", som blir gjentatt
-          fleire gonger. Når desse ferdigheitene er defineret, vil dei bli kalla frå
-          hovedprogrammet og heile den kreative prosessen vil notert på eit enkelt
-          papirark. Det endelige programmet vil felles for heile klassa, uavhengig
-          av type streng, perler og smykker. For å gjere dette effektivt, må elevane
-          "abstraktahere" detaljane i deira specifikke materialer og finne felles
-          begrep for den enkeltes forsyningar.  Denne bruken av generiske plasshaldar
-          er ein nydeleg introduksjoon til variablar.
+        desc: I denne leksjonen vil elevane lage ein solfangar av streng, perler og
+          eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg, og
+          så bli spurt om å identifisere bestemte "oppgåver", som blir gjentatt fleire
+          gonger. Når desse oppgåvene er defineret, vil dei bli kalla frå hovedprogrammet
+          og heile den vakre, skapande prosessen vil bli notert på eit enkelt papirark.
+          Det endelige programmet vil være felles for heile klassa, uavhengig av type
+          streng, perler og smykker. For å gjere dette effektivt, må elevane "abstrahere"
+          detaljane i deira spesifikke materialer og finne felles begrep for den enkeltes
+          forsyningar.  Denne bruken av generiske plasshaldar er ein nydeleg introduksjon
+          til variablar.
         pdfs:
         - unplug5
         video: Unplug5
@@ -73,11 +73,11 @@
         video: Unplug6
       Unplug7:
         title: Låtskriving
-        desc: 'Å lese tekster er et ganske ubevisst vågestykke for de fleste studenter.
-          Vi vil ta en aktivitet som allerede er kjent og skifte den inn til en solid
-          utdannelse på å definere og kalle funksjoner. Når studentene er blitt kjent
-          med definere/samtale prosessen, vi vil legge til ekstra funksjoner som kommer
-          sammen med passerende parametere innenfor de funksjonsanropene. '
+        desc: Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
+          Vi vil ta en aktivitet som allerede er kjent, og benytte den for å gi en
+          god opplæring i å definere og kalle funksjoner. Når elevene er blitt kjent
+          med definere/kalle prosessen, vi vil legge til ekstra funksjoner, kombinert
+          med med passerende parametre.
         pdfs:
         - unplug7
         video: Unplug7
@@ -89,7 +89,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Programmering med relé
+        title: Programmeringsstafett
         desc: 'Denne leksjonen vil ta en ide fra en tidligere aktivitet (4. Millimeterpapir
           programmering) og bruke disse ferdighetene til å understreke alvoret av
           å fullføre programmer som kjøres i sekvenser og ofte sjekke programmer for
@@ -132,7 +132,7 @@
       BuildingAFoundation:
         title: Bygge eit fundament
         desc: 'Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene
-          må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og studentene
+          må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og elevene
           diskuterer ideen om å bli værende når ting blir mer komplisert. '
         video: C1_building_foundation
       GettingLoopy:
@@ -142,7 +142,7 @@
           koreografi, og deretter bli bedt om å gjenta den. '
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programmering med relé
+        title: Programmeringsstafett
         desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for
           å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov
           til å skrive en instruksjon om gangen og dersom det er en feil må de viske
@@ -150,9 +150,9 @@
         video: C2_relay_programming
       Conditionals:
         title: Betingelser
-        desc: For å lære om betinget setninger skal elevene spille et kortspill og
-          lage regler som "Hvis jeg tegner et rødt kort, jeg får en" og "Hvis jeg
-          tegner et svart kort, får du et punkt."
+        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill
+          og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis
+          jeg tegner et svart kort, får du et poeng."
         video: C2_conditionals_with_cards
       BigEvent:
         title: Den store hendinga
@@ -161,7 +161,7 @@
           og elevene svarer basert på hvilken knapp som er trykket.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Går steder trygt
+        title: Går stader trygt
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
           hvordan å være trygg når du navigerer på Internett.
         video: C1_going_places_safely
@@ -185,26 +185,26 @@
         video: C2_binary_bracelets
       DigitalFootprint:
         title: Dine digitale fotspor
-        desc: Lærere introdusere studenter ideen at sette informasjon om seg selv
-          online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+        desc: Lærere introdusere elever ideen at sette informasjon om seg selv online
+          skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
         video: C2_digital_footprint
       ComputationalThinking:
         title: Programmeringstenking
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Elever bruker trinnene i logisk tenkning (bryte ned problemer, finne
+          mønstre, abstrahere, algoritmer) for å finne ut hvordan spille et spill
+          uten instruksjoner.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Fungerande solfangarar
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        desc: Elevene lager en algoritme med variabler og funksjoner (biter med kode
+          som du skal bruke mange ganger) for å lage solfangere ved bruk av tråder
+          og perler.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Låtskriving med parametere
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
+          parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele
+          funksjonen).
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Virkelige algoritmer: Terningrace'
@@ -219,14 +219,15 @@
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Students use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig
+          å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer
+          effektivt enn hvis en elev prøvde det alene.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digitalt statsborgerskap
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        desc: Elevene utforsker forskjellene mellom privat informasjon og personlig
+          informasjon og skiller mellom hva som er sikkert og hva som er usikkert
+          å dele på nett.
       TangramAlgorithms:
         title: Tangram algoritmer
         desc: Denne leksjonen viser oss noe viktig om algoritmer. Hvis du holder en
@@ -241,7 +242,7 @@
           abstraksjon for å virkelig se sammenhengen.
         video: C4_unplugged_variables
       MadGlibs:
-        title: Mad Glibs
+        title: Adjektivhistorie
         desc: Abstraksjon er en av de viktigste ferdighetene for en programmerer å
           forstå.  Denne aktiviteten får elevene analysere historier for å finne ulikheter
           slik at de kan abstrahere dem bort dem bort. Disse abstraherte historiene
@@ -254,23 +255,26 @@
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Låtskriving med parameter
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen.
+          Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke
+          igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt
+          forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
+          nyttig praksis.  '
         video: C4_unplugged_parameters
       BinaryImages:
         title: Binære Bilder
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser
+          vårt forrige kurs elevene at den informasjonen kan bli representert i en
+          rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
+          videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
+          informasjon (som for eksempel bilder og farger) binært også.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: TVspill og koordinatsystemer
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Oppdag hvordan videospillene du elsker å spille faktisk er drevet av
+          algebra! Utforsk hvordan algebra-utrykk og koordinatsystemet kan hjelpe
+          oss med å forstå hvordan videospill fungerer og begynn å planlegg video-spillet
+          du selv skal lage.
         video: alg_11_coordinate_plane
       Contracts:
         title: Kontrakter, domene og rekkevidde
@@ -280,17 +284,30 @@
         video: alg_5_contracts
       DesignRecipe:
         title: Design oppskrifta
-        desc: Design Recipe lesson description
+        desc: På det forrige nivået skrev elevene noen veldig enkle funksjoner - men
+          mer avanserte funksjoner krever en mer gjennomtenkt tilnærming. Tilnærmingen
+          "The Design Recipe" er en strukturert tilnærming for å skrive funksjoner
+          som inkluderer å skrive test-tilfeller for å forsikre seg om at funksjonen
+          gjør det som er forventet av den.
         video: alg_8_design_recipe
       Booleans:
         title: Boolske verdier og logikk
-        desc: Booleans lesson description
+        desc: Bolske uttrykk er den fjerde og siste data-typen som du vil lære om
+          i dette kurset. Du vil lære om hva bolske uttrykk er og hvordan de kan hjelpe
+          oss med å skrive funksjoner som tenker logisk
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Vilkår og stykkevise funksjonar
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Parameterne vi sender til funksjoner gjør at utfallet varierer basert
+          på et mønster. Hvis vi vil at forskjellige verdier i paramterene skal skape
+          forskjellige utfall fra funksjonen, bruker vi forskjellige mønstre for å
+          skille mellom verdiene. Dette er hvor kondisjoner trengs...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Collision Detection og Pytagoras læresetning
+        desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt
+          i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
+          og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
+          på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
+          hverandre.
         video: alg_16_biggame_collision_detection

@@ -148,17 +148,14 @@ module.exports = {
   },
 
   onDeserialize: function (element) {
-    // Don't interfere with focus or clicks in design mode, where the dropdown is
-    // already disabled by jQuery.draggable({cancel: false}).
-    if ($('#divApplab').find(element)[0]) {
-      $(element).on('mousedown', function(e) {
-        if (!Applab.isRunning()) {
-          // Disable dropdown menu unless running
-          e.preventDefault();
-          this.blur();
-          window.focus();
-        }
-      });
-    }
+    // In the future we may want to trigger this on focus events as well.
+    $(element).on('mousedown', function (e) {
+      if (!Applab.isRunning()) {
+        // Disable dropdown menu unless running
+        e.preventDefault();
+        this.blur();
+        window.focus();
+      }
+    });
   }
 };

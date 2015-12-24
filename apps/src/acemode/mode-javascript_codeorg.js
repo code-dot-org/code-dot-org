@@ -30,63 +30,11 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
     oop.inherits(Mode, JavaScriptMode);
 
     (function() {
-
-      // A set of keywords we don't want to autocomplete
-      var excludedKeywords = [
-        'arguments',
-        'ArrayBuffer',
-        'Collator',
-        'decodeURI',
-        'decodeURIComponent',
-        'document',
-        'encodeURI',
-        'encodeURIComponent',
-        'eval',
-        'EvalError',
-        'Float32Array',
-        'Float64Array',
-        'Intl',
-        'Int16Array',
-        'Int32Array',
-        'Int8Array',
-        'Iterator',
-        'isInfinite',
-        'isNaN',
-        'JSON',
-        'Math',
-        'NumberFormat',
-        'Object',
-        'parseFloat',
-        'parseInt',
-        'prototype',
-        'QName',
-        'RangeError',
-        'ReferenceError',
-        'StopIteration',
-        'SyntaxError',
-        'this',
-        'TypeError',
-        'Uint16Array',
-        'Uint32Array',
-        'Uint8Array',
-        'Uint8ClampedArra',
-        'URIError',
-        'window'
-      ];
-
       // Manually create our highlight rules so that we can modify it
       this.$highlightRules = new JavaScriptHighlightRules();
 
-      if (dropletConfig.dontHighlightKeywords) {
-        this.$highlightRules.$keywordList = [];
-      } else {
-        excludedKeywords.forEach(function (keywordToRemove) {
-          var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
-          if (keywordIndex >= 0) {
-            this.$highlightRules.$keywordList.splice(keywordIndex, 1);
-          }
-        }, this);
-      }
+      // We never want to show any of the builtin keywords in autocomplete
+      this.$highlightRules.$keywordList = [];
 
       this.createWorker = function(session) {
         var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");

@@ -1,9 +1,7 @@
 @no_mobile
 @dashboard_db_access
+@as_student
 Feature: App Lab Scenarios
-
-  Background:
-    Given I manually sign in as "ApplabStudent"
 
   Scenario: Template backed level
     # One of two levels backed by the same template

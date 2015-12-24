@@ -33,13 +33,13 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**December 5th Location**
+**February 6th Location**
 
 
-North Point High School
+[North Point High School
 <br/>
 Room 2322<br/>
-2500 Davis Rd<br/> Waldorf, MD 20603
+2500 Davis Rd<br/> Waldorf, MD 20603](https://www.google.com/maps/place/North+Point+High+School/@38.641421,-76.977075,15z/data=!4m2!3m1!1s0x0:0xe09e4df8de5e0883?sa=X&ved=0CG8Q_BIwCmoVChMIisaexqCYyQIVSjqICh2_Tw5f)
 
 Free parking is available in front of the building, and  in the lot near the track.
 
@@ -52,6 +52,10 @@ Green journal
 Snacks
 <br/>
 Water
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+
+More info coming soon!
 
 [**Back to the top**](#top)
 
@@ -76,11 +80,7 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
-
-
 Milestone Complete!
-
-
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
@@ -96,11 +96,11 @@ Semester 2: Monday, April 25, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**November 10th Location**
+**April 25th Location**
 
-Davis Middle School<br/> 
+[Davis Middle School<br/> 
 Room M106<br/>
-2495 Davis Road<br/> Waldorf, MD 20603<br/>
+2495 Davis Road<br/> Waldorf, MD 20603<br/>](https://www.google.com/maps/place/Theodore+G.+Davis+Middle+School/@38.6439309,-76.980812,17z/data=!4m7!1m4!3m3!1s0x89b7a6450a61994f:0x243a36d628a4dc38!2s2495+Davis+Rd,+Waldorf,+MD+20603!3b1!3m1!1s0x0000000000000000:0xdbec86eff9510bcb)
 
 Free parking is located in front of the building.
 
@@ -147,10 +147,10 @@ Breakfast and lunch will be served.
 
 **Location**
 
-North Point High School<br/>
+[North Point High School<br/>
 Room 2322<br/>
 2500 Davis Road<br/> 
-Waldorf, MD 20603
+Waldorf, MD 20603](https://www.google.com/maps/place/North+Point+High+School/@38.641421,-76.977075,15z/data=!4m2!3m1!1s0x0:0xe09e4df8de5e0883?sa=X&ved=0CG8Q_BIwCmoVChMIisaexqCYyQIVSjqICh2_Tw5f)
 
 Free parking is available in front of the building, and also in the lot near the track.
 
@@ -167,56 +167,7 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
 
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Thursday, November 12, 2015 <br/>
-11:00am - 3:00pm
-
-
-**Location**
-
-Charles County Public Schools Central Office<br/>
-Staff Development Room<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Thursday, November 12, 2015 <br/>
-8:00am - 10:00am
-
-**Location**
-
-Charles County Public Schools Central Office<br/>
-Staff Development Room<br/>
-5980 Radio Station Rd.<br/>
-La Plata MD 20646<br/>
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

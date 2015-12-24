@@ -101,7 +101,9 @@ class GatekeeperBase
     env = Rails.env.to_s if defined? Rails
 
     cache_expiration = 5
-    if env == 'test'
+
+    # Use the memory adapter if we're running tests, but not if we running the test Rails server.
+    if env == 'test' && File.basename($0) != 'unicorn'
       adapter = MemoryAdapter.new
     elsif env == 'production'
       cache_expiration = 30

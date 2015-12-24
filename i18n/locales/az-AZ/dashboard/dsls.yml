@@ -434,7 +434,7 @@ az:
         1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         Multiple Choice: Multiple Choice
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Bakı böyük şəhərdir.<br/>Sumqayıt orta şəhərdir.<br/>Horadiz kiçik şəhərdir.'
         _____ is _____ a _____.: _____ is _____ a _____.
         _____ is a _____ city.: _____ is a _____ city.
       4-5 Crowdsourcing Multi 1:

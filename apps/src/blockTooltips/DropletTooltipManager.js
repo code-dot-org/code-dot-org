@@ -87,10 +87,6 @@ DropletTooltipManager.prototype.registerBlocks = function () {
     this.codeFunctions,
     this.autocompletePaletteApisOnly).forEach(
     function (dropletBlockDefinition) {
-      if (dropletBlockDefinition.noAutocomplete) {
-        // Ignore blocks with noAutcomplete set:
-        return;
-      }
       if (this.autocompletePaletteApisOnly &&
           this.codeFunctions &&
           typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {

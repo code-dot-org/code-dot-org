@@ -4,10 +4,6 @@
   %div.nav-item
     %a.nav-link{href: resolve_url('/prizes')}
       = hoc_s(:prizes_nav_home)
-  -if @country == 'us'      
-    %div.nav-item
-      %a.nav-link{href: resolve_url('/prizes/hardware-signup')}
-        = hoc_s(:prizes_nav_hardware)
   %div.nav-item
     %a.nav-link{href: resolve_url('/prizes/terms')}
       = hoc_s(:prizes_nav_terms)

@@ -42,10 +42,10 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-Applications and Research Laboratory (ARL)<br/>
+[Applications and Research Laboratory (ARL)<br/>
 Room B37<br/>
 10920 Clarksville Pike<br/>
-Ellicott City, MD 21042<br/><br/>
+Ellicott City, MD 21042<br/><br/>](https://www.google.com/maps/place/Applications+and+Research+Laboratory/@39.2349191,-76.8947807,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df61228ae963:0x7557056ab12cc472)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -63,6 +63,9 @@ Water
 More info coming soon!
 
 [**Back to the top**](#top)
+
+
+
 
 
 

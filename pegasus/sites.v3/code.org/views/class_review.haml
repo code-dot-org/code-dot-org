@@ -62,8 +62,8 @@
 
   function submitReview(review) {
     $.ajax({
-      url: "/v2/forms/ClassSubmission/#{form.secret}",
-      type: "review",
+      url: "/v2/forms/ClassSubmission/#{form.secret}" + "/review",
+      type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify( { review: review } ),
       success: function() {

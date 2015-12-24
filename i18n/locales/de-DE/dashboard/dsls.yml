@@ -11,7 +11,7 @@ de:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Stimme die Tastenkombination mit den Tanzbewegungen überein.
+        Match the button combination to the dance moves.: Lasse die Tastenkombination mit den Tanzbewegungen übereinstimmen.
         Matching: Passend
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -45,7 +45,7 @@ de:
         Drag the blocks to match.: Verschiebe die Blöcke passend.
         Instructions: Anweisungen
         Match the puzzles to the blocks: Weise die Puzzle den Blöcken zu
-        Maze Match: Labyrinth Spiel
+        Maze Match: Irrgarten Spiel
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png

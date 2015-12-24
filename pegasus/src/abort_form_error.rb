@@ -1,0 +1,2 @@
+class AbortFormError < StandardError
+end

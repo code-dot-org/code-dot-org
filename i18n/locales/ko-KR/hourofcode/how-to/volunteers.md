@@ -4,67 +4,67 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How-to Guide for Volunteers
+# 자원봉사자를 위한 How-to 가이드
 
-## 1. Sign up to volunteer
+## 1. 자원봉사자로 등록하세요.
 
-Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
+컴퓨터과학을 계속해서 학습하도록 학생들을 격려하기 위해 지역의 학교를 방문하세요. [한 시간동안의 자원 봉사.](https://code.org/volunteer/engineer).
 
-## 2. Join a Volunteer Training webinar
+## 2. Join a volunteer info session
 
-We'll be hosting two webinars to explain what a typical volunteer experience will be like. We'll discuss how to coordinate with teachers before their Hour of Code event and also what you should do the day of the event to prepare. Please come with your questions! These webinars will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later.
+We'll be hosting two info sessions to explain what a typical volunteer experience will be like. 선생님들이 Hour of Code 이벤트를 열기 전에 선생님들과 어떻게 조정할 것인지 그리고 또한 여러분이 하루의 이벤트를 위해 무엇을 준비해야 하는지에 대해 논의할 것입니다. 질문을 가지고 오세요! These info sessions will be hosted via Hangouts on Air, so if you miss it you can still catch the recorded session later. [See the agenda](https://docs.google.com/document/d/1y2PjgICSEnYGTD7MT1mvLS6RvA9BJDG4zWheD0ZFIUo/edit?usp=sharing).
 
-| Date        | 시간                    |
-| ----------- | --------------------- |
-| November 16 | 1:00pm - 1:30pm PST   |
-| December 3  | 11:00am - 11:30am PST |
+| 날짜      | 시간                            | Link to info session                                                            |
+| ------- | ----------------------------- | ------------------------------------------------------------------------------- |
+| 11월 16일 | 오후 1:00 - 1:30 PST(태평양 표준시)   | [Link to recording](https://plus.google.com/events/c61fhr7i1rucvlfghv5opqvi8n0) |
+| 12월 3일  | 오전 11:00 - 11:30 PST(태평양 표준시) | [Link to join](https://plus.google.com/events/c1j1vtlf3tdrb4j672tfnt3k0a0)      |
 
-## 3. Spend 30 minutes trying the tutorials beforehand
+## 3. 사전에 30분동안 튜토리얼을 해보세요.
 
-Try the Hour of Code tutorials at [code.org/learn](https://code.org/learn). Pick a few of the most popular tutorials and spend some time to get familiar with each of them. It will take you about 5-10 minutes per tutorial to get a sense of how it works.
+[code.org/learn](https://code.org/learn)에서 Hour of Code 튜토리얼을 해 보세요. 가장 인기있는 튜토리얼 몇 개를 고르고 그것들 각각을 익히기 위해 약간의 시간을 들이세요. 튜토리얼마다 그것이 어떻게 동작하는지 감을 잡기 위해 5-10분 정도 소요될 것입니다.
 
-## 4. Recruit your co-workers to volunteer
+## 4. 자원봉사를 할 동료를 모집하세요.
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteer engineers, so ask them to [sign up as a volunteer](https://code.org/volunteer/engineer).
+여러분의 친구나 동료에게 Hour of Code에 대해 얘기해 주세요. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer).
 
-**Sample email:**
+**이메일 예시:**
 
-**Subject line**: Join me in volunteering for the Hour of Code
+**제목 라인**: Hour of Code를 위한 자원봉사자로 참여해 주세요.
 
-If you remember your very first line of code, you know it shaped the rest of your life.
+여러분이 만약 제일 처음으로 작성했던 코드를 기억하고 있다면 여러분은 그것이 여러분의 남은 삶을 형성하였다는 것을 알고 있을 것입니다.
 
-That’s what the Hour of Code is all about. In the last two years, the movement has shattered stereotypes of what it’s like to code and helped more than 100 million students in 180 countries try computer science for the first time.
+그것이 Hour of Code에 관한 전부입니다. 최근 2년 동안 이 운동은 코드가 어떤 것인지에 대한 고정관념을 산산이 깨고 처음으로 컴퓨터과학을 시도한 180개국의 1억명이 넘는 학생들에게 도움이 되어왔다.
 
-**I signed up to volunteer in local classroom**   
-7,098 teachers have already asked for help. Code.org is matching classrooms with technical volunteers like you who can help students and teachers through their first Hour of Code.
+**저는 지역의 교실에 자원봉사자로 가입했습니다.**   
+7,098명의 선생님들이 이미 도움을 요청했습니다. Code.org는 첫 번째 Hour of Code를 통해 학생들과 선생님들 도울 수 있게 된 여러분과 같은 기숦 자원봉사자를 교실과 매치시켜 줍니다.
 
-Please [volunteer for an hour](https://code.org/volunteer/engineer). After you sign up, local teachers will be able to contact you for help using a secure form.* Can’t volunteer? [Help spread the word about the Hour of Code](https://hourofcode.com/promote).
+[한 시간 동안 봉사](https://code.org/volunteer/engineer)해 주세요. 여러분이 가입한 후에, 지역의 선생님들은 *보안 서식을 사용하여 여러분에게 도움을 요청하는 연락을 할 수 있을 것입니다. 봉사해 주실 수 없나요? [Hour of Code를 전파하도록 도와주세요.](https://hourofcode.com/promote).
 
-**Your experience matters**  
-Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is a chance to inspire at least one young person in your area.
+**여러분의 경험이 중요합니다.**   
+아주 많은 학교들이 여전히 컴퓨터과학을 가르치지 않고 있습니다. 대부분의 학생들은 그것이 커다란 문제를 해결하는 것에 관한 것이며 우리와 연결되어 모두 같이 가까워지는 것이라는 것을 모르고 있습니다. 이것이 여러분의 지역에서 최소한 한 명의 어린 친구에게 영감을 불어넣어 줄 기회입니다.
 
-**[Sign up to volunteer](https://code.org/volunteer/engineer)**
+**[자원봉사자로 등록하십시오.](https://code.org/volunteer/engineer)**
 
-*Your email address will never be shared with teachers.
+*여러분의 이메일 주소는 절대 선생님들과 공유하지 않을 것입니다.
 
-## 5. Ask your employer to get involved
+## 5. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+여러분의 상사 또는 CEO에게 [이 이메일을 보내세요.](https://hourofcode.com/promote/resources#email)
 
-## 6. Promote the Hour of Code in your community
+## 6. 여러분의 지역사회에 Hour of Code를 홍보하세요.
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://hourofcode.com/promote/resources#email).
+지역 그룹을 참여시켜주세요 — 보이/걸 스카우트 클럽, 교회, 대학, 군경, 노동자 그룹 등. 또는 여러분의 이웃들을 위해 Hour of Code "블록파티"를 운영해 주세요. [이 이메일을 보내세요.](https://hourofcode.com/promote/resources#email).
 
-## 7. Read the suggested agenda below so you know what to expect when you visit a classroom.
+## 7. 아래쪽에 제안된 의제들을 읽어보세요. 그러면 여러분은 여러분이 교실을 방문했을 때 무엇을 가대할 수 있을지 알게 됩니다.
 
-# Agenda for Volunteering in a Classroom
+# 교실 자원봉사에 관한 의제
 
-### 1. Sign into the school and greet the teacher. Confirm the agreed schedule and discuss any talking points.
+### 1. 학교에 등록하고 선생님을 만나세요. 합의한 일정을 확인하고 화두에 대해 논의하세요.
 
-### 2. Bring stuff from your company like stickers. Kids love anything they can interact with.
+### 2. 여러분 회사에서 스티커와 같은 물품을 가져오세요. 어린이들은 상호작용할 수 있는 어느 것이든 좋아합니다.
 
-### 3. Spend 5-10 minutes talking about computer science: how it impacted you personally and how it has broad, worldwide impact. Answer any questions from students.
+### 3. 컴퓨터과학에 대해 5-10분 정도 이야기해 주세요: 여러분 개인적으로 그것이 어떻게 영향을 미쳤는지 그리고 어떻게 광범위한 전세계적인 영향을 미쳤는지. 학생들의 질문에 대답해 주세요.
 
-### 4. Play the [Hour of Code video](https://www.youtube.com/watch?v=2DxWIxec6yo)
+### 4. [Hour of Code 동영상](https://www.youtube.com/watch?v=2DxWIxec6yo)을 보여주세요.
 
-### 5. Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright. Instead try asking them questions so they can answer themselves what went wrong.
+### 5. 학생들이 튜토리얼에 뛰어들게 해 주세요. 질문에 대답하고 어려운 퍼즐을 통해 안내하며 교실을 돌아다니세요. 학생들에게 즉각적으로 해답을 주지 마세요. 대신 무엇이 잘못되었는지 그들 스스로 대답할 수 있도록 질문을 해 주세요.

@@ -3,7 +3,7 @@ es-MX:
     unplugged:
       Unplug1:
         title: Introducción al Arte de las Ciencias de la Computación
-        desc: 'Esta clase dará una introducción al concepto de “Ciencias de la Computación” y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad de asumir el rol de un informático. Al finalizar la actividad, cada estudiante tendrá un recordatorio sobre qué aprendió durante la clase. Tal vez Ud. crea que es conveniente evitar enseñar a los niños más pequeños el complejo vocabulario asociado a las clases que siguen, pero presentarlo de manera lúdica y divertida ahora es mucho más productivo que esperar otras oportunidades.'
+        desc: Esta lección introducirá el concepto de Ciencias de la Computación y explica lo que hace un Informático. También dará a los estudiantes la oportunidad de asumir el papel de un Informatico. Al final de la actividad, cada estudiante tendrá un buen recuerdo para llevar a casa de lo que aprendió. Usted puede verse tentado a que los niños se salten el aprendizaje del vocabulario que se asocia con las lecciones que siguen, pero presentándolo de una manera divertida y juguetona ahora, es mucho más productivo que la espera de oportunidades futuras.
         pdfs:
           - unplug1-es-ES
         video: Unplug1
@@ -72,11 +72,11 @@ es-MX:
         desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones) para mover un personaje a través de un laberinto utilizando un solo comando.
         video: C1_mapas_felices_desconectado
       MoveIt:
-        title: Muévelo, muévelo
+        title: Muévelo, Muévelo
         desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones) para mover un personaje a través de un laberinto utilizando un solo comando.
         video: C1_muévelomuévelo_desconectado
       PlantASeed:
-        title: 'Algoritmos de la Vida Real: Planta una Semilla'
+        title: 'Algoritmos de la vida real: Planta una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando el acto de plantar una semilla como ejemplo. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
         video: C1_plantando_semillas
       BuildingAFoundation:
@@ -84,11 +84,11 @@ es-MX:
         desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado. Las estructuras deben completar una tarea (alcanzar una cierta altura o soportar un cierto peso), y los estudiantes discuten la idea de ser persistente cuando las cosas se complican.
         video: C1_construyendo_cimientos
       GettingLoopy:
-        title: Bucleandose
+        title: Ciclándose
         desc: Esta lección introduce el concepto de programación de los bucles (instruciones repetidas) atravéz de una actividad de baile. Los estudiantes aprenderan simple coreografía, despues se les dirá que la repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de relevos
+        title: Programación de Relevos
         desc: 'Los estudiantes corren una carrera de relevos, donde aceleran por el camino para escribir un algoritmo basado en una imagen "Grafica en Papel de Programación". Ellos sólo pueden escribir una instrucción a la vez y si hay algun error en algun lugar, deben borrar todo hasta ese punto.'
         video: C2_programación_relevos
       Conditionals:
@@ -100,7 +100,7 @@ es-MX:
         desc: 'Los estudiantes son introducidos al concepto de "eventos" en programación, que son acciones que una computadora monitorea constantemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.'
         video: C1_granevento_desconectado
       GoingPlacesSafely:
-        title: Ir a Sitios Seguro
+        title: Ir a Sitios con seguridad
         desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
@@ -108,7 +108,7 @@ es-MX:
         desc: 'Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de  comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.'
         video: C2_papel_cuadriculado
       PaperPlanes:
-        title: 'Algoritmos de la vida real : Aviones de papel'
+        title: 'Algoritmos de la vida real: Aviones de papel'
         desc: Esta lección hace ver modos en los que usamos algoritmos en nuestra vida diaria, específicamente haciendo aviones de papel. Esta lección también se enfoca en las ciencias de la computación en general y cómo los algoritmos juegan un papel escencial.
         video: C2_aviones_de_papel
       BinaryBracelets:
@@ -116,7 +116,7 @@ es-MX:
         desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos pueden ser representada y guardados de más de una forma.
         video: C2_pulseras_binarias
       DigitalFootprint:
-        title: Tu huella Digital
+        title: Tu huella digital
         desc: 'Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella digital o un "rastro" que tiene consecuencias.'
         video: C2_digital_footprint
       ComputationalThinking:

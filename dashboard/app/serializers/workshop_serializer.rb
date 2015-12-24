@@ -5,8 +5,8 @@
 #  id           :integer          not null, primary key
 #  name         :string(255)
 #  program_type :string(255)      not null
-#  location     :string(255)
-#  instructions :string(255)
+#  location     :string(1000)
+#  instructions :string(1000)
 #  created_at   :datetime
 #  updated_at   :datetime
 #  phase        :integer

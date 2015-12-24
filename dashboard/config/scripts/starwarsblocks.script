@@ -1,15 +1,15 @@
-title 'Star Wars: Building a Galaxy with Code'
+title 'Star Wars: Building a Galaxy With Code'
 description_short "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
 description "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+hidden 'false'
 
 stage 'Hour of Code 2015'
 
 skin 'hoc2015x'
 
-video_key_for_next_level 'starwars_intro'
+video_key_for_next_level 'starwars_blocks_intro'
 level 'blockly:Studio:hoc2015_blockly_1'
 level 'blockly:Studio:hoc2015_blockly_2'
-video_key_for_next_level 'starwars_typing'
 level 'blockly:Studio:hoc2015_blockly_3'
 level 'blockly:Studio:hoc2015_blockly_4'
 level 'blockly:Studio:hoc2015_blockly_5'
@@ -17,7 +17,7 @@ level 'blockly:Studio:hoc2015_blockly_6'
 
 skin 'hoc2015'
 
-video_key_for_next_level 'starwars_events'
+video_key_for_next_level 'starwars_blocks_events'
 level 'blockly:Studio:hoc2015_blockly_7'
 level 'blockly:Studio:hoc2015_blockly_8'
 level 'blockly:Studio:hoc2015_blockly_9'
@@ -28,5 +28,5 @@ level 'blockly:Studio:hoc2015_blockly_12'
 level 'blockly:Studio:hoc2015_blockly_13'
 level 'blockly:Studio:hoc2015_blockly_14'
 
-video_key_for_next_level 'starwars_congrats'
+video_key_for_next_level 'starwars_blocks_congrats'
 level 'blockly:Studio:hoc2015_blockly_15'

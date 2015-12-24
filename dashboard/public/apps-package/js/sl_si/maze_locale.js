@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Če obstaja pot naprej v določeni smeri, potem naredi nekaj."},
 "ifelseTooltip":function(d){return "Če obstaja pot naprej v določeni smeri, potem naredi prvi blok dejanj. V nasprotnem primeru, naredi drugi blok dejanj."},
 "ifFlowerTooltip":function(d){return "Če v dani smeri obstaja roža satovje, potem izvedi dejanja."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Če obstaja pot naprej v določeni smeri, potem ukrepaj."},
 "ifelseFlowerTooltip":function(d){return "Če v dani smeri obstaja roža/satovje, potem izvedi prvi blok dejanj. Drugače izvedi drugi blok dejanj."},
 "insufficientHoney":function(d){return "Uporabil si prave bloke, vendar moraš narediti pravo količino medu."},
 "insufficientNectar":function(d){return "Uporabil si prave bloke, vendar moraš nabrati pravo količino nektarja."},

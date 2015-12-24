@@ -61,6 +61,17 @@ This Dec 7-13 host an [Hour of Code](https://hourofcode.com) for your class and 
 Please take a moment to complete [this short survey](http://code.org/professional-development-workshop-surveys/<%= workshop_id %>) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3. It will also help us improve our K-5 Professional Development program.
 
 Attached to this email, you will also find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
+<br>
+
+**For a limited time**  
+
+Code.org is offering $50 off [**Dash robots**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid Dec 1-Jan 1, 2016 only. Limited to first 1,000 people.*
+
+**Redemption code for robots: CODE6742**   
+*Valid Dec 1-Jan 1, 2016 only.*
+*Limited to first 1,000*
+
+[Go here](https://help.makewonder.com/) for questions regarding redemption. 
 
 **Need more support?**
 

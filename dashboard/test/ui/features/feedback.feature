@@ -1,8 +1,5 @@
+@as_student
 Feature: Recommended/Required Blocks Feedback
-
-Background:
-  Given I am on "http://learn.code.org/"
-  And I am a student
 
 Scenario: Attempt 2-3 Maze 1
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/3?noautoplay=true"
@@ -15,7 +12,7 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see "#hint-request-button"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
+  And element ".congrats" has text "Not quite. Try using a block you aren’t using yet."
   And element "#hint-request-button" is visible
 
   When I press "hint-request-button"
@@ -36,7 +33,7 @@ Scenario: Attempt 2-3 Maze 1
   And I wait to see "#feedbackBlocks"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
+  And element ".congrats" has text "Not quite. Try using a block you aren’t using yet."
   And element "#feedbackBlocks" is visible
 
   # after we fulfill the requirements of the hint, we see a different

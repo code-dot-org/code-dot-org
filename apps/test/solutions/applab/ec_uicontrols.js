@@ -130,6 +130,43 @@ module.exports = {
       },
     },
     {
+      description: "testDuplicateNamesWarning",
+      editCode: true,
+      xml: "" +
+        "button('button1', 'Button 1 text');" +
+        "button('button1', 'zOMG duplicate');",
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var debugOutput = document.getElementById('debug-output');
+          assert.equal(debugOutput.textContent, "WARNING: Line: 1: button() id parameter refers to an id (button1) which already exists.");
+          Applab.onPuzzleComplete(); 
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+    {
+      description: "testIllegalNameError",
+      editCode: true,
+      xml: "" +
+        "button('runButton', 'Bad name for a button');",
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var debugOutput = document.getElementById('debug-output');
+          assert.equal(debugOutput.textContent, "ERROR: Line: 1: Error: button() id parameter refers to an id " +
+              "(runButton) which is already in use outside of Applab. Choose a different id.");
+          assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: false,
+        testResult: TestResults.RUNTIME_ERROR_FAIL
+      },
+    },
+    {
       description: "setSize",
       editCode: true,
       xml: "" +

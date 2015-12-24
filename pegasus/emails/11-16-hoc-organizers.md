@@ -1,41 +1,64 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: Hour of Code with Star Wars
+subject: Minecraft Hour of Code
 ---
 
-## An Hour of Code with Star Wars!
+## Minecraft joins the Hour of Code!
 
-[![image](https://code.org/images/fit-400/star-wars-announcement.jpg)](https://code.org/starwars)
+[![image](https://code.org/images/mc/fit-500/mc_social.jpg)](https://code.org/mc)
 
-Code.org has a brand new tutorial for the Hour of Code 2015, in partnership with Disney and Lucasfilm — featuring *Star Wars*: The Force Awakens. Work with Rey to guide the new droid BB-8 through a mission. Then, join Leia to create and share your own game in a galaxy far, far away.
+Since the very beginning, probably the #1 Hour of Code request we’ve heard is a tutorial featuring “Minecraft,” a game very special to girls and boys alike. We heard you! Today, we present [Minecraft Hour of Code](https://code.org/mc), in partnership with Microsoft and Mojang AB for the Hour of Code coming in just three weeks.
 
-### Try an early preview of [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars)
+The tutorial introduces learners to basic coding and guides them to mine, build, and explore in a 2-D “Minecraft” world.
 
-<% if international == 'false' %>
-Students will learn to write JavaScript to power their games. For younger learners, a tablet-friendly, drag-and-drop version will be available in the next few weeks. You can also check out [other options for all ages](https://code.org/learn). And stay tuned… more tutorials are coming soon.
-<% else %> 
-Students will learn to write JavaScript to power their games. A tablet-friendly, drag-and-drop version will be available in the next few weeks and translated into 30+ languages soon (if you can help translate, visit [https://code.org/translate](https://code.org/translate)). You can also check out [other options for all ages](https://code.org/learn). And stay tuned… more tutorials are coming soon.
+### Try an early preview of [Minecraft Hour of Code](https://code.org/mc)
+
+<% if international == 'true' %>
+The tutorial will be translated into 30+ languages in the next few weeks (if you can help translate, visit [https://code.org/translate](https://code.org/translate)).
 <% end %>
 
-<% if international == 'false' %>
-#### New prizes, including a behind-the-scenes “Making of Star Wars” experience
-There already 77,000 events worldwide and counting. Please, ask someone you know to join you in the Hour of Code to help us reach 100,000 events before Dec. 7. Every organizer will receive a gift card to Amazon, iTunes or Windows Store. [There are some awesome new prizes too](https://hourofcode.com/prizes).
+<% if organizer == 'true' %>
+### You are leading one of the 99,000(!) Hour of Code events worldwide registered to participate during Dec. 7-13. What should you do now?
 
-You can also now order [custom Hour of Code t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) to celebrate your event when Dec. 7 arrives. Want more inspiration for students? Check out our new Hour of Code video [featuring inspiring women](https://youtu.be/BvRvluhfzf0).  
+1) Check out [more tutorial options](https://code.org/learn) for every age and device. Or, [browse fantastic teacher-led lesson plans](https://code.org/teacher-led) for creative Hour of Code classroom activities.
+
+2) Join upcoming info sessions to ask questions and learn everything you need to know to prep for your Hour of Code.
+
+- [Wednesday, Nov. 18 at 5pm PST](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845): An Educator's Guide to the Hour of Code
+- [Wednesday, Dec. 2 at 5pm PST](http://www.eventbrite.com/e/sneak-peek-2015-hour-of-code-tutorials-tickets-17987437911): Ask final questions, with Code.org founder Hadi Partovi
+
 <% else %>
-#### Spread the word: prizes for every educator
-There are already 77,000 events worldwide and counting. Please, ask someone you know to join you in the Hour of Code. Every organizer will receive a gift card to Amazon, iTunes or Windows Store.
+### Anybody can participate. No experience needed, no computers either.
+You can check out [more tutorial options](https://code.org/learn) for all ages and [browse fantastic teacher-led lesson plans](https://code.org/teacher-led) for creative Hour of Code classroom activities. Then, join the worldwide celebration. There are 99,000(!) Hour of Code events worldwide registered to participate during Dec. 7-13.
+
+[**Sign up to join**](https://hourofcode.com/)
 <% end %> 
 
-I couldn’t be more excited to share [*Star Wars*: Building a Galaxy with Code](https://code.org/starwars) with you today. Code your own game, share it, and tell us what you think.
+<% if international == 'false' %>
+### You can win an inspiring live video chat for your students 
+We just announced an awesome roster of Hour of Code ambassadors who will live chat with classrooms to their first Hour of Code, including Instagram founder Kevin Systrom, BuzzFeed publisher Dao Nguyen and singer/songwriter Aloe Blacc. We’ll contact lucky winners soon, so [make sure your class is signed up](https://hourofcode.com/). 
+
+<% end %>
+
+Together, we have a special opportunity to empower students to impact the world by creating technology of their own. Try [Minecraft Hour of Code](https://code.org/mc) now, share the world you build, and tell us what you think. 
+
 
 Hadi Partovi, <br/>
 Founder, Code.org
 
 <hr>
-
-<small>You’re receiving this email because you signed up to host an Hour of Code on <a href="https://hourofcode.com/">hourofcode.com</a>. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
-<small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
-
+<% if organizer == 'true' %>
+<p><small>You’re receiving this email because you signed up to host an Hour of Code on <a href="https://hourofcode.com/">hourofcode.com</a>. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
+<small><strong>Don't like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
+<p><small>Stay in touch with us. Follow Code.org on
+<a href="https://www.facebook.com/Code.org">Facebook</a>, <a href="https://twitter.com/codeorg">Twitter</a>, <a href="https://instagram.com/codeorg">Instagram</a>.
+</small></p>
+<% else %>
+<p><small>You’re receiving this email because you created an account on <a href="https://code.org/">Code.org</a> or signed our petition. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
+<small><strong>Don't like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe here</a>.</strong></small></p>
+<p><small>Stay in touch with us. Follow Code.org on
+<a href="https://www.facebook.com/Code.org">Facebook</a>, <a href="https://twitter.com/codeorg">Twitter</a>, <a href="https://instagram.com/codeorg">Instagram</a>.
+</small></p>
+<% end %>
 
 ![](<%= tracking_pixel %>)

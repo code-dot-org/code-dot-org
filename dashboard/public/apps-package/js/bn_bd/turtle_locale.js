@@ -195,7 +195,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawStamp":function(d){return "draw stamp"},
 "heightParameter":function(d){return "উচ্চতা"},
 "hideTurtle":function(d){return "hide artist"},
-"jump":function(d){return "jump"},
+"jump":function(d){return "লাফান"},
 "jumpBackward":function(d){return "jump backward by"},
 "jumpForward":function(d){return "jump forward by"},
 "jumpTooltip":function(d){return "Moves the artist without leaving any marks."},

@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Lyfter eller sänker pennan, för att börja eller sluta rita."},
 "penUp":function(d){return "lyft pennan"},
 "reinfFeedbackMsg":function(d){return "Här är din teckning! Fortsätt jobba med den eller gå vidare till nästa pussel."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "sätt alfa"},
 "setColour":function(d){return "Ställ in färg"},
 "setPattern":function(d){return "Ställ in mönster"},
 "setWidth":function(d){return "Ställ in bredd"},

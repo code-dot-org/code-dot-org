@@ -217,7 +217,11 @@
           Maze and Bee: Λαβύρινθος και Μέλισσα
           Artist Binary: Δυαδικοί Καλλιτέχνη
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
-          Super Challenge - Variables: Super Challenge - Variables
+          Super Challenge - Variables: Σούπερ πρόκληση - μεταβλητές
+          Super Challenge - For Loops: Σούπερ πρόκληση - για βρόχους
+          Super Challenge - Functions and Parameters: Σούπερ πρόκληση - λειτουργίες
+            και παραμέτρους
+          Extreme Challenge - Comprehensive: Ακραία πρόκληση - ολοκληρωμένη
         Course4pre:
           title: Προαπαιτούμενα Μαθήματος 4
           description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν
@@ -289,10 +293,10 @@
             Σύγκρουσης (Μεγάλο Παιχνίδι)'
         infinity:
           title: Disney Εργαστήριο Άπειρου Παιχνιδιού
-          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
-            Παιχνιδιού!
-          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
-            Παιχνιδιού!
+          description_short: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
+            ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
+          description: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα
+            παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
           Play Lab: Εργαστήριο Παιχνιδιού
           Infinity: Άπειρο
         algebrademo:
@@ -376,8 +380,8 @@
           description: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής
             και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
             τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Αυτό το 20ωρο μάθημα καλύπτει τα βασικά των εννοιών της
+            επιστήμης των υπολογιστών και του προγραμματισμού στα μαθήματα 2-4.
           Introduction to Computer Science: Εισαγωγή στην Επιστήμη των Υπολογιστών
           The Maze: Ο Λαβύρινθος
           Computational Thinking: Αλγοριθμική Σκέψη
@@ -407,6 +411,7 @@
           The Artist: Ο Καλλιτέχνης
           Play Lab: Εργαστήριο Παιχνιδιού
           Play Lab 2015: Εργαστήριο Παιχνιδιού 2015
+          Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Συμβάντα
           description: Συμβάντα
@@ -419,21 +424,23 @@
           title: Flappy κώδικα
           description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά;
             Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
+            λεπτά!
           Flappy Code: Flappy κώδικα
         jigsaw:
           title: Παζλ
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Δοκιμάστε τον οδηγό παζλ
+          description_short: Δοκιμάστε τον οδηγό παζλ
           Jigsaw: Παζλ
         step:
           title: Βήμα
-          description: ''
-          description_short: Step tutorial
+          description: Οδηγός με βήματα
+          description_short: Οδηγός με βήματα
           Step: Βήμα
         Hour of Code:
           title: Ώρα του Κώδικα 2013
-          description: ''
+          description: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών με χαρακτήρες
+            από τα Θυμωμένα Πουλιά και τα Ζόμπι εναντίων Φυτών!
           description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με
             πολλούς διασκεδαστικούς χαρακτήρες!
           Hour of Code 2013: Ώρα του Κώδικα 2013
@@ -729,6 +736,39 @@
           'Variables: Create, Assign, and Read': 'Variables: Create, Assign, and Read'
           'Variables: Increment, Decrement, Display, and Scope': 'Variables: Increment,
             Decrement, Display, and Scope'
+          User Input and Strings: User Input and Strings
+          Introduction to Digital Assistant: Introduction to Digital Assistant
+          'Improving Digital Assistant: Conditionals': 'Improving Digital Assistant:
+            Conditionals'
+          'Improving Digital Assistant: Functions with Return': 'Improving Digital
+            Assistant: Functions with Return'
+          'Improving Digital Assistant: Complex Conditionals': 'Improving Digital
+            Assistant: Complex Conditionals'
+          Conditionals with Movie Bot: Conditionals with Movie Bot
+          Improving Digital Assistant with Conditionals: Improving Digital Assistant
+            with Conditionals
+          Chained and Nested Conditionals with Movie Bot: Chained and Nested Conditionals
+            with Movie Bot
+          Compound Conditionals with Movie Bot: Compound Conditionals with Movie Bot
+          'Practice PT: Digital Assistant': 'Practice PT: Digital Assistant'
+          Practice PT - Design a Digital Scene: Practice PT - Design a Digital Scene
+          Multi-screen Apps: Multi-screen Apps
+          Controlling Memory with Variables: Controlling Memory with Variables
+          Using Variables in Apps: Using Variables in Apps
+          Introduction to Digital Assistant Project: Introduction to Digital Assistant
+            Project
+          Understanding Program Flow and Logic: Understanding Program Flow and Logic
+          Introduction to Conditional Logic: Introduction to Conditional Logic
+          Compound Conditional Logic: Compound Conditional Logic
+          Digital Assistant Project: Digital Assistant Project
+          While Loops: Επαναλήψεις με "Όσο.."
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -861,8 +901,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -941,8 +981,8 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Evaluation Blocks: Μπλοκ Αξιολόγησης
           Strings and Images: Strings και εικόνες
           Defining Variables: Ορίζοντας μεταβλητές
@@ -989,8 +1029,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1047,8 +1087,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1112,8 +1152,8 @@
           Hour of Code 2015: Ώρα του Κώδικα 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1135,8 +1175,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Wrap-Up: συνοψίζω
           Review StarLogo Nova: Review StarLogo Nova
@@ -1152,8 +1192,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1174,8 +1214,8 @@
         sciencePD2b-iZone:
           Welcome!: Καλώς ήρθατε!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1184,8 +1224,8 @@
           Wrap-Up: συνοψίζω
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           0: |
             Unit 1, Days 1-2
@@ -1208,8 +1248,8 @@
           Wrap-up: συνοψίζω
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+          description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           Welcome!: Καλώς ήρθατε!
           0: |
             Unit 1, Days 1-2
@@ -1382,6 +1422,15 @@
           Day 22-25 Final Project: Day 22-25 Final Project
           'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
             Tables, Lists, Menus'
+          Getting Started: Getting Started
+          Intro to Unit 2: Intro to Unit 2
+          Unit 2 Challenge Preview: Unit 2 Challenge Preview
+          Unit 2 Challenge: Unit 2 Challenge
+          Close & Next Steps: Close & Next Steps
+          Intro to Unit 3: Intro to Unit 3
+          Unit 3 Challenge Preview: Unit 3 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 3 Challenge: Unit 3 Challenge
         ECSPD3-Unit4:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1410,6 +1459,13 @@
           Day 25-30 Final Project: Day 25-30 Final Project
           Unit 4 Challenge Planning: Unit 4 Challenge Planning
           Unit 4 Challenge Creation: Unit 4 Challenge Creation
+          Getting Started: Getting Started
+          Intro to Unit 4: Intro to Unit 4
+          Unit 4 Challenge Preview: Unit 4 Challenge Preview
+          Unit 3 Day-by-Day: Unit 3 Day-by-Day
+          Unit 4 Challenge: Unit 4 Challenge
+          Close & Next Steps: Close & Next Steps
+          Unit 4 Day-by-Day: Unit 4 Day-by-Day
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1461,6 +1517,12 @@
           'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
           'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and
+            Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1496,6 +1558,10 @@
         duino:
           Experimenting with Arduino stuff: Experimenting with Arduino stuff
           Basic Circuits: Basic Circuits
+          description: Testing some tools for teaching with Arduinos
+          Blinky Lights: Blinky Lights
+          Making Music: Making Music
+          JunkBot: JunkBot
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These
@@ -1508,3 +1574,111 @@
             puzzles might not be around long, so enjoy them while you can!
           description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
           Halloween 2015: Halloween 2015
+          description: Something special for those who know it exists. These puzzles
+            might not be around long, so enjoy them while you can!
+        iceage:
+          title: Play Lab Εποχής των Παγετώνων
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
+            Play Lab της Εποχής των Παγετώνων!
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play
+            Lab της Εποχής των Παγετώνων!
+          Ice Age Play Lab: Play Lab Εποχής των Παγετώνων
+        CSPPD3-Unit3:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit3temp:
+          title: CSP Unit 3 - Temp
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          Key Events with Image Scroller: Key Events with Image Scroller
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Επαναλήψεις με "Όσο.."
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+        CSP-Unit3-Support:
+          title: 'Computer Science Principles: Unit 3 PD'
+          description_short: Online Exploration of CSP Unit 3
+          description: Online Exploration of CSP Unit 3
+          Getting Started: Getting Started
+          Unit 3 Overview: Unit 3 Overview
+          Chunk 1 Overview: Chunk 1 Overview
+          Chunk 2 Overview: Chunk 2 Overview
+          Chunk 3 Overview: Chunk 3 Overview
+          Chunk 4 Overview: Chunk 4 Overview
+          Chunk 5 Overview: Chunk 5 Overview
+          Practice Performance Task: Practice Performance Task
+          Challenge Overview: Challenge Overview
+        gumball:
+          title: Play Lab Τσιχλόμπαλα
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το
+            Play Lab της Τσιχλόμπαλας!
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι με το Play
+            Lab της Τσιχλόμπαλας!
+          Gumball Play Lab: Play Lab Τσιχλόμπαλα
+        starwars:
+          title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
+          description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
+            δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+          description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου
+            Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+          Hour of Code 2015: Ώρα του Κώδικα 2015
+        starwarsblocks:
+          title: 'Πόλεμος των Άστρων: Κτίζοντας έναν Γαλαξία με Κώδικα'
+          description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
+            δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+          description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου
+            Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+          Hour of Code 2015: Ώρα του Κώδικα 2015
+        minecraft:
+          title: Minecraft
+          description_short: Use code to survive in a Minecraft world!
+          description: Use code to survive in a Minecraft world!
+          Craft: Craft
+        mc:
+          title: Η Ώρα του Κώδικα με το Minecraft
+          description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
+          description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή τον
+            Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
+          Hour of Code 2015: Ώρα του Κώδικα 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Καλώς ήρθατε!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: συνοψίζω

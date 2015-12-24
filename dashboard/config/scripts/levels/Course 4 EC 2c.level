@@ -10,9 +10,9 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,-16,-14,-12,-10,-8,0,0],[0,-14,-12,-10,-8,-6,0,0],[0,-12,-10,-8,-6,-4,0,0],[0,-10,-8,-6,-4,-2,0,0],[0,-8,-6,-4,-2,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "disable_param_editing": "false",
-    "disable_variable_editing": "true",
+    "disable_variable_editing": "false",
     "start_direction": "0",
     "step_mode": "1",
     "nectar_goal": "0",
@@ -140,7 +140,7 @@
             <title name="VAR">counter2</title>
           </block>
         </category>
-        <category name="Functions">
+        <category name="Functions" custom="PROCEDURE">
   </category>
       </xml>
     </toolbox_blocks>

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Më poshtë gjeni model rezolutë mbështetëse për Javën Edukative në Shkencat Kompjuterike dhe qëllimet e saj që të mund të përdoret nga ligjvënësit e qeverisjes qendrore dhe lokale.
 
@@ -55,4 +54,3 @@ Vendosur, nga [KUVENDI APO SENATI, SHTETI, KOMUNA, QYTETI OSE BORDI SHKOLLËS] -
 
 (5) inkurajo mundësitë, duke përfshirë programet ekzistuese, për femra dhe të pakicave të pa përfaqësuara në shkenca kompjuterike.
 
-<%= view :signup_button %>

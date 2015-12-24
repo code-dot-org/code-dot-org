@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Αν υπάρχει ένα μονοπάτι προς τη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."},
 "ifelseTooltip":function(d){return "Αν υπάρχει ένα μονοπάτι στη συγκεκριμένη κατεύθυνση, τότε εκτέλεσε την πρώτη ομάδα ενεργειών. Διαφορετικά, εκτέλεσε τη δεύτερη ομάδα ενεργειών."},
 "ifFlowerTooltip":function(d){return "Εάν υπάρχει λουλούδι / κυψέλη στη συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργειες."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Αν υπάρχει ένα λουλούδι στην συγκεκριμένη κατεύθυνση, τότε κάνε κάποιες ενέργεις."},
 "ifelseFlowerTooltip":function(d){return "Εάν υπάρχει λουλούδι / κυψέλη στη συγκεκριμένη κατεύθυνση, τότε κάνε το πρώτο σετ από ενέργειες. Διαφορετικά, κάνε το δεύτερο σετ από ενέργειες."},
 "insufficientHoney":function(d){return "Χρησιμοποιείς όλα τα σωστά πλακίδια, αλλά χρειάζεται να φτιάξεις τη σωστή ποσότητα μελιού."},
 "insufficientNectar":function(d){return "Χρησιμοποιείς όλα τα σωστά πλακίδια, αλλά χρειάζεται να μαζέψεις τη σωστή ποσότητα μελιού."},

@@ -21,6 +21,13 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
+  this.className = options.className;
+
+  if (Studio.trackedBehavior.createdItems[this.className] === undefined) {
+    Studio.trackedBehavior.createdItems[this.className] = 0;
+  }
+  Studio.trackedBehavior.createdItems[this.className]++;
+
   this.spritesCounterclockwise = options.spritesCounterclockwise || false;
 
   /**
@@ -62,8 +69,8 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  var frameDirTable = this.spritesCounterclockwise ? 
-    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+  var frameDirTable = this.spritesCounterclockwise ?
+    constants.frameDirTableWalkingWithIdleCounterclockwise :
     constants.frameDirTableWalkingWithIdleClockwise;
 
   return frameDirTable[this.displayDir];
@@ -87,7 +94,7 @@ Item.prototype.createElement = function (parentElement) {
  * options.
  */
 Item.prototype.update = function () {
-  
+
   // Do we have an active location in grid coords?  If not, determine it.
   if (this.gridX === undefined) {
     this.gridX = Math.floor(this.x / Studio.SQUARE_SIZE);
@@ -110,10 +117,10 @@ Item.prototype.update = function () {
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
     Studio.drawDebugRect(
-      "roamGridDest", 
-      this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-      this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-      Studio.SQUARE_SIZE, 
+      "roamGridDest",
+      this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+      this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+      Studio.SQUARE_SIZE,
       Studio.SQUARE_SIZE);
   }
 
@@ -152,10 +159,10 @@ Item.prototype.update = function () {
     var bufferDistance = 60;
 
     // The item can just go up/down/left/right.. no diagonals.
-    var candidateGridLocations = [ 
-      {row: -1, col: 0}, 
+    var candidateGridLocations = [
+      {row: -1, col: 0},
       {row: +1, col: 0},
-      {row: 0, col: -1}, 
+      {row: 0, col: -1},
       {row: 0, col: +1}];
 
     for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
@@ -199,10 +206,10 @@ Item.prototype.update = function () {
 
       if (candidate.score > 0) {
         Studio.drawDebugRect(
-          "roamGridPossibleDest", 
-          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          Studio.SQUARE_SIZE, 
+          "roamGridPossibleDest",
+          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+          Studio.SQUARE_SIZE,
           Studio.SQUARE_SIZE);
       }
       candidates.push(candidate);
@@ -298,7 +305,13 @@ Item.prototype.beginRemoveElement = function () {
  */
 Item.prototype.removeElement = function() {
   this.animation_.removeElement();
+
   Studio.trackedBehavior.removedItemCount++;
+
+  if (Studio.trackedBehavior.removedItems[this.className] === undefined) {
+    Studio.trackedBehavior.removedItems[this.className] = 0;
+  }
+  Studio.trackedBehavior.removedItems[this.className]++;
 };
 
 /**

@@ -2,8 +2,10 @@
 var PropertyRow = require('./PropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
+var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+var DefaultScreenButtonPropertyRow = require('./DefaultScreenButtonPropertyRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -31,6 +33,9 @@ var ScreenProperties = React.createClass({
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
+        <DefaultScreenButtonPropertyRow
+          screenId={elementUtils.getId(element)}
+          handleChange={this.props.handleChange.bind(this, 'is-default')}/>
       </div>);
   }
 });

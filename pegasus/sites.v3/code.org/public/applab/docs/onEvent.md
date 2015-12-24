@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## onEvent(id, type, callbackFunction)
+## onEvent(id, type, callback)
 
 [/name]
 
@@ -19,7 +19,7 @@ Category: UI controls
 
 [short_description]
 
-Executes the *callbackFunction* code when a specific event *type* occurs for the specified UI element *id*.
+Executes the *callback* function code when a specific event *type* occurs for the specified UI element *id*.
 
 [/short_description]
 
@@ -151,7 +151,7 @@ onEvent(id, type, function(event) {
 |-----------------|------|-----------|-------------|
 | id | string | Yes | The ID of the UI control to which this event handler applies. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _.  |
 | type | string | Yes | The type of event to respond to. There are many events that can be used with an event handler to respond to all kinds of actions that a user can take. In block mode you can choose from a dropdown list of more than 10, but some of the most commonly used are shown below. |
-| callbackFunction | function | Yes | The callback function executed in response to an event for the matching UI element *id* of the matching *type*. The function can be inline, or separately defined in your app and called from onEvent(). |
+| callback | function | Yes | The callback function executed in response to an event for the matching UI element *id* of the matching *type*. The function can be inline, or separately defined in your app and called from onEvent(). |
 
 
 | Event Type  | Description                   |

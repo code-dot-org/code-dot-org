@@ -1,5 +1,4 @@
 var constants = require('./constants');
-var readonly = require('./templates/readonly.html.ejs');
 
 var TestResults = constants.TestResults;
 
@@ -52,37 +51,71 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
 
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
-  this.div = document.createElement('div');
-  this.html = readonly({
+  this.iframeOptions = {
     app: options.app,
-    assetUrl: studioApp.assetUrl,
     options: {
       readonly: true,
       locale: studioApp.LOCALE,
       localeDirection: studioApp.localeDirection(),
       baseUrl: studioApp.BASE_URL,
-      cacheBust: studioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: this.xml
     }
-  });
+  };
+
+  this.div = document.createElement('div');
+  this.div.setAttribute('id', 'feedbackBlocksContainer');
+
   this.iframe = document.createElement('iframe');
   this.iframe.setAttribute('id', 'feedbackBlocks');
   this.iframe.setAttribute('allowtransparency', 'true');
+
   this.div.appendChild(this.iframe);
 };
 
 module.exports = FeedbackBlocks;
 
+/**
+ * Generate a url (with params) for the iFrame that's going to hold the
+ * blocks.
+ * TODO(elijah) replace this whole thing with an implementation that
+ * doesn't require an iframe, since we can now have multiple blocklys on
+ * the same page
+ */
+FeedbackBlocks.prototype.readonlyTemplateUrl_ = function () {
+  var params = {
+    app: this.iframeOptions.app,
+    js_locale: this.iframeOptions.options.locale,
+    locale_dir: this.iframeOptions.options.localeDirection
+  };
+
+  // Simple polyfill for $.params
+  var paramString = Object.keys(params).map(function (key) {
+    return key + "=" + encodeURIComponent(params[key]);
+  }).join("&");
+
+  return "/readonly_template?" + paramString;
+};
+
 FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
-  }
+  var iframeOptions = this.iframeOptions;
+  var iframe = this.iframe;
+  iframe.setAttribute('src', this.readonlyTemplateUrl_());
+  iframe.onload = function () {
+    this[iframeOptions.app + "Main"](iframeOptions.options);
+  }.bind(iframe.contentWindow);
+};
+
+FeedbackBlocks.prototype.hideDiv = function() {
+  this.div.className += " hiddenIframe";
+};
+
+FeedbackBlocks.prototype.revealDiv = function() {
+  // this regex should simply match the first FULL WORD instance of
+  // "hiddenIframe"; meaning it will ignore instances of, for example,
+  // "hiddenIframeSomethingElse"
+  this.div.className = this.div.className.replace(/\bhiddenIframe\b/,'');
 };
 
 /**

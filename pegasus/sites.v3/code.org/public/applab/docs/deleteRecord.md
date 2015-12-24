@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## deleteRecord(tableName, record, callbackFunction)
+## deleteRecord(table, record, callback)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, deletes the provided `record` in `tableName`. `record` is an object that must be uniquely identified with its id field. When the call is completed, the `callbackFunction` is called. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, deletes the provided `record` in `table`. `record` is an object that must be uniquely identified with its id field. When the call is completed, the `callbackFunction` is called. Data is accessible to your app and users of your app.
 
 [/short_description]
 
@@ -121,7 +121,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-deleteRecord(tableName, recordId, function(){
+deleteRecord(table, recordId, function(){
     //callback function code goes here
   });
 ```
@@ -134,9 +134,9 @@ deleteRecord(tableName, recordId, function(){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| tableName | string | Yes | The name of the table from which the records should be searched and read. |
+| table | string | Yes | The name of the table from which the records should be searched and read. |
 | record | object | Yes | To identify the record to be deleted, the record needs to be provided in the record object format. Only the id field is mandatory to uniquely identify the record. Examples: {id:recordId}, {id:1}, {id:records[0].id}
-| callbackFunction | function | Yes | A function that is asynchronously called when the call to deleteRecord() is finished.|
+| callback | function | Yes | A function that is asynchronously called when the call to deleteRecord() is finished.|
 
 [/parameters]
 

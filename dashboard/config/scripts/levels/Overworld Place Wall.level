@@ -32,7 +32,7 @@
     "special_level_type": "houseWallBuild",
     "is_daytime": "true",
     "ideal": "4",
-    "video_key": "loop_times",
+    "video_key": "mc_repeat",
     "embed": "false",
     "free_play": "false",
     "available_blocks": "[\"planksBirch\", \"planksOak\"]",

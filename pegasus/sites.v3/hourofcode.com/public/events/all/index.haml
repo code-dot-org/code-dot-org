@@ -30,7 +30,7 @@ nav: events_nav
     %span{style: "font-weight: bold;"}= "United States (#{by_country['US'].count rescue '0'} #{hoc_s(:events)})"
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
       -by_state.each_pair do |state_code, events|
-        -unless state_code.nil_or_empty?
+        -unless state_code.nil_or_empty? || state_code.length > 2
           %li{class: "hoc-event-state"}
             %a{href: "/events/all/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_code} (#{events.count} #{hoc_s(:events)})" : "#{state_code} (#{events.count} #{hoc_s(:event)})"
 %ul

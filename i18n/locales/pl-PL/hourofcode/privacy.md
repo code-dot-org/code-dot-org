@@ -1,6 +1,6 @@
 * * *
 
-title: Privacy Policy
+Tytuł: Polityka prywatności
 
 * * *
 
@@ -184,7 +184,7 @@ If your use of the Code.org Website is in the context of a partnership with your
 
 Part of our educational program is to offer professional development workshops to prepare teachers to offer computer science courses. If you are a teacher participating in one of these workshops, your name and contact information will be shared with the facilitator leading the workshop.
 
-### We may share data with social networks at your request
+### Możemy udostępniać dane do sieci społecznościowych na Twoje żądanie
 
 Some of our Users choose to post their code-creations with social networks. This functionality is entirely optional. When we post content to social networks, the actual content posted is entirely at your control, and never posted automatically on your behalf. Typically this content includes only the code (app or animation or game or other) that you wrote, posted alongside any other remarks you may choose to add to it.
 
@@ -204,7 +204,7 @@ We may publish anonymized information about student performance on our tutorials
 
 In certain occasions, Code.org may work with third parties (such as universities) to improve our services or offerings. We may disclose automatically collected and other aggregate non-personal information to authorized partners to conduct research on online education or assist in understanding the usage, viewing, and demographic patterns for certain programs, content, services, promotions, and/or functionality on the Website.
 
-### We will share data when required by law
+### Udostępniamy dane, gdy jest to wymagane przez prawo
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. In some cases, we may make such disclosures without first providing notice to Users.
 
@@ -236,7 +236,7 @@ Our Website is operated and managed on servers located within the United States.
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### A note to California residents:
+### Uwaga mieszkańcy stanu Kalifornia:
 
 We do not disclose any personal information to third parties for marketing purposes. For additional information about our privacy practices, or to review and request to have deleted any personal information you have shared with us, please send a request to http://code.org/contact.
 

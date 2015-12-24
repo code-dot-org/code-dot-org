@@ -51,6 +51,7 @@ group :development, :test do
   gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
   gem 'timecop'
+  gem 'fake_sqs'
 
   # for ui testing
   gem 'cucumber'
@@ -174,3 +175,4 @@ gem 'net-scp'
 gem 'httparty'
 gem 'jquery-cookie-rails'
 gem 'oj'
+gem 'daemons'

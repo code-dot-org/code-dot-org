@@ -32,13 +32,13 @@ export default class AssetLoader {
       },
       playerSteve: {
         type: 'atlasJSON',
-        pngPath: `${this.assetRoot}images/Steve.png`,
-        jsonPath: `${this.assetRoot}images/Steve.json`
+        pngPath: `${this.assetRoot}images/Steve1013.png`,
+        jsonPath: `${this.assetRoot}images/Steve1013.json`
       },
       playerAlex: {
         type: 'atlasJSON',
-        pngPath: `${this.assetRoot}images/Alex.png`,
-        jsonPath: `${this.assetRoot}images/Alex.json`
+        pngPath: `${this.assetRoot}images/Alex1013.png`,
+        jsonPath: `${this.assetRoot}images/Alex1013.json`
       },
       AO: {
         type: 'atlasJSON',

@@ -4,7 +4,7 @@ title: Politika e Privatësisë
 
 * * *
 
-### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
+### Gjuha detyruese ligjore është në En, dhe mund të gjenden [këtu ](https://code.org/privacy). Më poshtë është një përkthim.
 
 # Politika e Privatësisë
 
@@ -29,7 +29,7 @@ Shenimi jonë i Privatësisë merr jetë nga zotimi jonë mbi Parimet e Privatë
 
 ## Lajmërimi Privatësisë
 
-We are committed to creating a safe and secure environment for learners of all ages on our websites located at <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, other websites, application programming interface (our “API”), and online services (collectively, our “Website”). Vizitorët dhe përdoruesit e Faqes së Internetit dhe pjesëmarrësit në programin tonë edukativ referohen individualisht si "Përdorues" dhe kolektivisht si "Përdoruesit". Si një organizatë jo-për-fitimprurëse, 501 (c)(3), ne përdorim të dhënat që marrim vetëm për aq sa ndihmojnë misionin tonë për të siguruar një edukim të madhe të shkencave kompjuterike për çdo student që e dëshiron atë. Ne jemi themeluar si një organizatë jo-fitimprurëse kështu që një motiv për-përfitim nuk do të ndërhyjë me misionin tonë për të siguruar një burim arsimore të besuar.
+Ne zotohemi për të krijuar një mjedis të sigurt për personat që duan të mësojnë të të gjitha moshave në faqet tona të internetit të ndodhura në <https://code.org>, <https://studio.code.org>, <https://csedweek.org>, <http://computinginthecore.org>, <https://hourofcode.com>, faqe të tjera interneti, application programming interface (“API”) dhe sherbime online. Vizitorët dhe përdoruesit e Faqes së Internetit dhe pjesëmarrësit në programin tonë edukativ referohen individualisht si "Përdorues" dhe kolektivisht si "Përdoruesit". Si një organizatë jo-për-fitimprurëse, 501 (c)(3), ne përdorim të dhënat që marrim vetëm për aq sa ndihmojnë misionin tonë për të siguruar një edukim të madhe të shkencave kompjuterike për çdo student që e dëshiron atë. Ne jemi themeluar si një organizatë jo-fitimprurëse kështu që një motiv për-përfitim nuk do të ndërhyjë me misionin tonë për të siguruar një burim arsimore të besuar.
 
 Lajmërimet e Privacisë tona përshkruajnë çfarë informacionesh ne mbledhim nga Përdoruesitm, si e përdorim atë informacion, dhe çfarë bëjmë ta mbrojtur atë. Përdorimin juaj i faqes së Web-it dhe çdo informacion që ju aprovoni në faqen e Web-it janë subjekt i kushteve të këtij Njoftimi për Privatësinë, që është inkorporuar dhe në subjektin tonë të Kushteve të Përdorimit. Çdo term me germa kapitale i përdorur por jo i përcaktuar brenda këtij Njoftimi për Privatësinë kanë kuptimin e dhënë në [Kushtet e Përdorimit](http://code.org/tos). Duke vizituar ose duke përdorur faqen tonë të Web-it, ju jepni pëlqimin për praktikat e përshkruara në këtë Njoftim për Privatësinë.
 
@@ -94,7 +94,7 @@ Nëse ju vendosni të regjistroheni për Kodin e Studios përmes një Shërbimi 
 
 Ti mund të heqësh dorë nga aksesi i Code.org-së në llogarinë tuaj në çdo Shërbim Vërtetues në çdo kohë duke përditësuar cilësimet e duhura në llogarinë e preferencave të Shërbimit Vërtetues përkatës. Ju duhet të kontrolloni parametrat tuaj të privatësisë në çdo Shërbim Vërtetues për të kuptuar dhe për të ndryshuar informacionin e dërguar përmes çdo Shërbimi Vërtetues. Ju lutemi shqyrtoni me kujdes kushtet për secilin shërbim vertetimi të përdorimit dhe të politikatve të privatësisë para se të përdorni shërbimet e tyre dhe ti lidhni me faqen tonë të Web-it.
 
-## Other Services
+## Shërbimet e tjera
 
 Kur ju keni përdorur disa funksione të tjera të faqes sonë të Web-it, të tilla si forma hyrëse apo peticione për të ndihmuar përkrahjen për Code.org, duke marr pjesë në një workshop, duke sjellë programet e Code.org në shkollën tuaj apo rrethin tuaj, donacionet për Code.org, blerjen e bluzave ose sende të tjera, ose duke marrë pjesë në sondazhet online, Code.org mund t'ju kërkojë që të sigurojë informata personale duke përfshirë emrin tuaj të plotë, adresën e email-it, dhe kodin postar, apo adresën e shkollë, si dhe faturën kur është e nevojshme për të të përfunduar një blerje ose të bëjë një donacion. Informacioni është përdorur për të mundësuar pjesëmarrjen tuaj në funksionin përkatës dhe për t'ju dërguar email-e me informacione të herë pas hershme me informacione në lidhje me Code.org që mund t'ju interesojnë. Të gjitha email-et që ne dërgojmë përfshijnë një link "unsubscribe" i cili menjëherë do t'ju heqi ju nga të gjitha email-et e ardhshme nga Code.org.
 
@@ -126,17 +126,17 @@ Një tag pixel (e njohur edhe si një "GIF e qartë" ose "web beacon") është n
 
 Code.org mund të përdori një shumëllojshmëri të ofruesve të shërbimeve të palëve të treta, të tilla si kompanitë analitike për të kuptuar përdorimin e Website-it, dhe platformat tona të rrjeteve sociale për të organizuar videot tona. Ne mund të lejojmë ofruesit e shërbimeve të palëve së tretë për të vendosur dhe për të lexuar biskotat e tyre, dhe teknologji të ngjashme për të mbledhur informacion përmes internetit. Ky informacion teknik është mbledhur drejtpërdrejt dhe automatikisht nga këto palë të treta.
 
-Code.org does not allow advertising on our Website, and we do not have the ability to collect your web search history across 3rd party Internet websites or search engines. (Nëse ju jeni duke naviguar në Web-in e Code.org nëpërmjet një kërkuesi web, shfletuesi juaj mund që automatikisht të sigurojë për ne termin e kërkimit web që ju përdorni në mënyrë që të gjeni Code.org). Megjithatë, disa entitete të palëve të treta që ne përdorim për të siguruar funksionalitetin e internetit ose shpërndarjen sociale mund të mbledhë Informacione Jo-Personale për qëllime të reklamimit online. Our Website does not respond to “do not track” signals transmitted by web browsers, but we encourage you to visit the following links if you would like to opt out of online behavioral advertising: <http://www.networkadvertising.org/choices> or <http://www.aboutads.info/choices/>. Nëse ju dëshironi të zgjidhni duke përdorur këto mjete, ju duhet të zgjidhin ndaras për secilin nga pajisjet tuaja dhe për çdo browser web në çdo pajisje.
+Code.org nuk lejon reklama në faqen tonë, dhe ne nuk kemi aftësinë për të mbledhur historinë tuaj të kërkimit në internet nëpërmjet palëve të 3-ta të faqes së Web-it apo motorëve të kërkimit. (Nëse ju jeni duke naviguar në Web-in e Code.org nëpërmjet një kërkuesi web, shfletuesi juaj mund që automatikisht të sigurojë për ne termin e kërkimit web që ju përdorni në mënyrë që të gjeni Code.org). Megjithatë, disa entitete të palëve të treta që ne përdorim për të siguruar funksionalitetin e internetit ose shpërndarjen sociale mund të mbledhë Informacione Jo-Personale për qëllime të reklamimit online. Faqja jonë e internetit nuk i përgjigjet "mos e ndiq", sinjale të transmetuara nga shfletuesi i uebit, por ne ju inkurajojmë që të vizitoni lidhjet e mëposhtme në qoftë se ju do të donit që të zgjidhni reklamat online: [ http://www.networkadvertising.org /choices ](http://www.networkadvertising.org/choices) ose [ http://www.aboutads.info/choices/ ](http://www.aboutads.info/choices/). Nëse ju dëshironi të zgjidhni duke përdorur këto mjete, ju duhet të zgjidhin ndaras për secilin nga pajisjet tuaja dhe për çdo browser web në çdo pajisje.
 
 Disa aftësi të lidhura nga uebfaqes së Code.org mund të zbatohen nga palët e treta të cilët mbledhin të dhëna. Për shembull, donacionet për Code.org përpunohen nëpërmjet një pale të tretë që e mbledh dhe mund të ruajë pajisjen e pagesës. Mesazhet mbështetëse apo mesazhet në forumin tonë publik për mësuesit janë të përpunuara nga një faqe interneti e palës së tretë që mund të lejojë përdoruesit për të krijuar profilet, mesazhet e postës, dhe ngarkimin e fotove. Faqet e tjera të internetit të palës së tretë, të tilla si Code.org [ Faqe Facebook ](https://www.facebook.com/Code.org) dhe [ Faqja Twitter ](https://twitter.com/codeorg), mund të jenë marka-kompanie me emrin apo logon tonë. Përdorimi i këtyre shërbimeve të palëve të treta janë krejtësisht fakultative për përdoruesit, në mënyrë tipike të destinuara vetëm për të rriturit, dhe të qeverisura nga Politikat e Privatësisë të këtyre palëve të treta. Ne ju inkurajojmë që të rishikoni rregullat e privatësisë në palët e treta për detaje në lidhje me mënyrën se si ata mund të mbledhin, ruajnë dhe përdorin Informacionin Personal.
 
-## Uploading Custom Content
+## Ngarkim përmbajtje
 
 Profilet e studentëve dhe mësuesve NUK mund tu vihet një foto.
 
 Si pjesë e "App Lab", një mjetë programimi i Code Sudio në shfletues për studentët mbi moshësh 13, studentët mund të ngarkojnë foto, tinguj dhe video në platformën Code Studio për ti përdorur brenda aplikacioneve ose "apps" që ata krijojnë. Këto materiale ruhen në platformën Code Studiom, dhe nuk përdoren nga Code.org për qëllime të tjera vetëm brenda aplikacionit të krijuar nga studentët.
 
-## Message Sending Between Users
+## Mesazhet e Dërguara Mes Përdoruesve
 
 Code.org ka krijuar një mjet të quajtur ["Stimulues Interneti"](/internetsimulator) për përdoeim në klasat e shkollës së mesme për të modeluar se si funksionon interneti. Brenda këtij mjeti, studentët mund të dërgojnë mesazhe me tekst te studentët e tjerë si dhe mësuesit në klasën ku ata janë. Përmbajtja e mesazheve nuk përdoret nga Code.org për ndonjë qëllim përveç se në mjetin edukues.
 
@@ -144,13 +144,13 @@ Në disa kurse, studentëve u kërkohet të japin përgjigje me shkrim apo refle
 
 Përveç kësaj, përdoruesit mund të dërgojnë mesazhe për Code.org për kërkesa specifike.
 
-Other than the above, the Website supports no other form of messaging among Users.
+Ndryshe nga më lart, Websajti suporton mesazhe vetëm nga Përdoruesit.
 
-## Information We Do NOT Collect
+## Informacionet Që Ne Nuk Mbledhim
 
-Code.org nuk mbledh në mënyrë të drejtpërdrejtë ose regjistron pajisjet e pagesave. Donations to Code.org or purchases from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information).
+Code.org nuk mbledh në mënyrë të drejtpërdrejtë ose regjistron pajisjet e pagesave. Donacionet për Code.org apo blerja e bluzave nga dyqani i Code.org përpunohen nëpërmjet palëve të treta, dhe megjithëse Code.org merr një faturë për donacione (për qëllime tatimore), nuk kemi marrë pajisje pagese (të tilla si kartë krediti ose informacion portofoli).
 
-## Children Under the Age 13
+## Femijët nën 13 vjeç
 
 Platforma Studio e Kodit për të mësuarit është projektuar për t'u përdorur nga përdoruesit e të gjitha moshave, përfshirë edhe fëmijët nën moshën 13 me përfshirjen e shkollës së tyre, mësuesve, prindit ose kujdestarit ligjor. Disa veçori, në mënyrë të veçantë veçoritë që përfshinë ngarkimin e materialeve media ose dërgimi i mesazheve, janë të pa arritshme për llogaritë e krijuara nga fëmijët nën moshën 13, në mënyrë që të sigurojmë një mbrojtje më të madhe për këta Përdorues.
 
@@ -170,7 +170,7 @@ Për të marrë pjesë në vlerësim, këtyre rretheve shkollore ju kërkohet t'
 
 Punonjësite Code.org-së agjentët dhe kontraktorët duhet të ketë një arsye të ligjshme të biznesit (të lidhura direkt për të çuar më tej misionin tonë të fokusuar në arsimit) për të aksesuar Të dhënat tuaja personale ju i aprovoni Code.org-së, për shembull të ndihmojë në mbështetjen e produktit. Code.org do t'ju kërkojë punonjësve tanë, agjentëve, dhe kontraktorëve në përputhje me këtë Njoftim Privatësie, dhe për të trajtuar çdo informacion personal të përdoruesve të Code.org si informacion konfidencial. 
 
-## How We Share or Transfer Data
+## Si i shpërndajmë ose transferojmë të dhënat
 
 Ne nuk japim me qira ose shesim Informacionin Personal që ne mbledhim nga përdoruesit, ose ta shfrytëzojmë atë për përfitime financiare në ndonjë mënyrë tjetër. Code.org kurrë nuk do të ndajë Informacionin Personal me organizata të tjera të palëve të treta pa miratimin tuaj, ose përveç si pjesë e një programi ose tipari të veçantë për të cilën ju do të keni aftësinë për të zgjedhur.
 
@@ -196,7 +196,7 @@ Kur ju të na kontaktoni me një kërkesë mbështetje, ju mund të aprovoni Inf
 
 Code.org promovon një student javore dhe një mësues mujor, së bashku me çmime. Këto profile dhe dëshmi të ngjashme publikohen gjithmonë me lejen e studentit pjesëmarrës apo mësuesit dhe, nëse është e aplikueshme, prindi i tyre ose kujdestari ligjor, ose mësues, dhe mund të përfshijnë Informacion Personal të tilla si emri, foto ose video të personit duke e profilizuar.
 
-### Public reporting on student use and performance
+### Raportimi publik mbi Përdorimin dhe Performancën e Studentit
 
 Ne mund të publikojmë informacione anonime në lidhje me performancën e nxënësve në tutorialet tona dhe faqet e web-it, megjithatë, ne nuk ndajmë kurrë publikisht Informacionin tuaj Personal në këto raporte. Të dhënat në lidhje me performancën e studentëve do të mbeten anonime, por të agreguara, të dhëna anonime mbi popullsi të mëdha të studentëve mund të raportohen nga kritere demografike siç janë mosha, lokacioni i përgjithshëm, gjinia, përkatësia etnike, dhe statusi socio-ekonomik.
 
@@ -216,11 +216,11 @@ Code.org mund të zbulojë Informacionin Personal që ne besojmë, në mirë bes
 
 Në rast se Code.org është fituar, kombinuar ose u bashkua me një njësi ekonomike tjetër, ne mund të transferojmë apo të caktojmë Informacionin Personal që kemi mbledhur nga përdoruesit si pjesë e shkrirjes, blerjes, shitjes, ose ndryshimi tjetër të kontrollit. Premtimi ynë për ju është që ndonjë Informacion Personal që ne kemi mbledhur nga Përdoruesit do të ruhen nën të njëjtin nivel të sigurisë dhe privatësisë siç është ofruar nga ky Njoftimi i Privatësisë.
 
-## Our Approach to Data Security
+## Qasja Jonë Me Sigurin e Të Dhënave
 
 ### Siguria e faqes së Web-it është e rëndësishme si për ju dhe për ne
 
-Për të mbrojtur privatësinë tuaj dhe sigurinë, ne bëjmë hapa të arsyeshme për të verifikuar identitetin tuaj para dhënies së aksesit në llogari ose duke bërë korrigjimet për të dhënat tuaja personale. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. Nëse dëshironi një lidhje SSL të enkriptuar ose të enkriptosh të dhënat që ju vendosni ndërsa jeni duke përdorur faqen e web-it, përdorin protokollin HTTPS duke vizituar https://code.org/.
+Për të mbrojtur privatësinë tuaj dhe sigurinë, ne bëjmë hapa të arsyeshme për të verifikuar identitetin tuaj para dhënies së aksesit në llogari ose duke bërë korrigjimet për të dhënat tuaja personale. Për shkak se disa shkolla bllokojnë uebfaqet e siguruara me SSL, Code.org lejon akses me ose pa mbrojtje SSL, në drejtimin e këtyre shkollave. Nëse dëshironi një lidhje SSL të enkriptuar ose të enkriptosh të dhënat që ju vendosni ndërsa jeni duke përdorur faqen e web-it, përdorin protokollin HTTPS duke vizituar https://code.org/.
 
 ### Ne përpiqemi për të siguruar se faqja jonë e Web-it dhe informacioni i dërgouar tek ne janë të sigurtë, por nuk ka masa sigurie të përsosura
 
@@ -234,9 +234,9 @@ Faqja jonë e Web-it është përdorur dhe menaxhuar në serverat e vendosura br
 
 ### Kushtet e përdorimit dhe Njoftimet
 
-If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
+Nëse ju vendosni të vizitoni Code.org, vizita juaj dhe çdo mosmarrëveshje mbi privatësinë është subjekt i Njoftimit të Privatësisë dhe Kushtet tona të Marrëveshjes së Shërbimit, duke përfshirë kufizimet në dëme, arbitrimin e mosmarrëveshjeve, zbatimi i ligjit të Shtetit të Washingtonit dhe për të gjitha mosmarrëveshjet në Seattle, Washington.
 
-### A note to California residents:
+### Një shënim për banorët e Kalifornisë:
 
 Ne nuk zbulojmë ndonjë informacion personale për palët e treta për qëllime marketingu. Për informata shtesë në lidhje me praktikat e privatësisë, ose për të rishikuar dhe për të bërë kërkesë për të fshirë çdo informacion personal që ju keni ndarë me ne, ju lutem dërgoni një kërkesë në http://code.org/contact.
 

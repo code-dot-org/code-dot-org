@@ -1,7 +1,7 @@
-title 'Minecraft'
-description_short "Code your world."
-description "Explore your Minecraft world by dragging and dropping blocks of code."
-hidden 'true'
+title 'Minecraft Hour of Code'
+description_short "Explore a Minecraft world through code"
+description "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world"
+hidden 'false'
 
 stage 'Hour of Code 2015'
 level 'Overworld Move to Sheep'

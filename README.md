@@ -31,6 +31,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Install the right version of node `nvm install v0.12.4`
   1. Make that your default version `nvm alias default v0.12.4`
   1. reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` (can be skipped if your version of node did not just change)
+1. Ensure that openssl is linked (El Capitan issue)
+  1. `brew link --force openssl`
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window  
   1. `ruby --version  # --> ruby 2.2.3`
@@ -43,7 +45,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs`
   * **Hit enter and select default options for any configuration popups**
-1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
+1. Upgrade npm to 2.0. If `npm -v` says less than 2.0 then
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
   * `sudo apt-get update`
   * `sudo apt-get install nodejs`

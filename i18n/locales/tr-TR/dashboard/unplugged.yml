@@ -133,7 +133,7 @@ tr:
         desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
         video: C3_parametreler_ile_şarkıyazımı
       DiceRace:
-        title: Gerçek yaşam algoritması:Zar yarışı
+        title: 'Gerçek yaşam algoritması: Zar Yarışı'
         desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp kaydedecekler.
         video: C3_zar_yarışı
       Internet:
@@ -148,7 +148,7 @@ tr:
         title: Sayısal Vatandaşlık
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram algoritmaları
+        title: Tangram Algoritmaları
         desc: 'Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer algoritmayı basit tutacaksanız bunun bir çok yolu var.Eğer herkesin aynı şey ile sonlandırdığından emin olmak istiyorsanız,algoritmanız daha çok detaya ihtiyaç duyacaktır.'
         video: C4_unplugged_algorithms
       EnvelopeVariables:

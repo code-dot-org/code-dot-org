@@ -2,7 +2,7 @@ require 'user_agent_parser'
 
 class UserAgentParser::UserAgent
   def mobile?
-    name =~ /Mobile/
+    !(name =~ /Mobile/).nil?
   end
 
   def chrome?

@@ -35,7 +35,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Priderink tinklelį prie programos.
         Matching: Sujungimas
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -476,8 +476,7 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: 'Labirintas: parink teisingą atsakymą'
-        Which set of blocks is the correct answer?: Which set of blocks is the correct
-          answer?
+        Which set of blocks is the correct answer?: Kuris blokų derinys yra teisingas?
       4-5 Algorithms Multi 1:
         Baking cookies: Sausainių kepimas
         Banana: Bananas
@@ -867,19 +866,19 @@
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
-          of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        Which boy is the <large>helper</large>?: Which boy is the <large>helper</large>?
+        Driver and Helper: Vairuotojas ir Pagalbininkas
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Vienas
+          iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.
+        Which boy is the <large>helper</large>?: Kuris berniukas yra <large>pagalbininkas</large>?
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
-          of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        This time, which boy is the <large>driver</large>?: This time, which boy is
-          the <large>driver</large>?
+        Driver and Helper: Vairuotojas ir Pagalbininkas
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Vienas
+          iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.
+        This time, which boy is the <large>driver</large>?: Kuris berniukas, šį kartą,
+          yra <large>vairuotojas</large>?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100

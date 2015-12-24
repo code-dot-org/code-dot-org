@@ -99,7 +99,7 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_create_channel_from_src
-    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post '/v3/channels', {abc: 123, hidden: true, frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
     post "/v3/channels?src=#{channel_id}", '', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -109,6 +109,8 @@ class ChannelsTest < Minitest::Test
     response = JSON.parse(last_response.body)
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 123, response['abc']
+    assert_equal false, response['hidden']
+    assert_equal false, response['frozen']
   end
 
   def test_abuse

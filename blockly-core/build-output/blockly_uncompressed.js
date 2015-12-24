@@ -1241,6 +1241,9 @@ BS.INNER_BOTTOM_LEFT_CORNER = "a " + BS.CORNER_RADIUS + "," + BS.CORNER_RADIUS +
 BS.INNER_TOP_LEFT_CORNER_HIGHLIGHT_RTL = "a " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1) + " 0 0,0 " + (-BS.DISTANCE_45_OUTSIDE - 1) + "," + (BS.CORNER_RADIUS - BS.DISTANCE_45_OUTSIDE);
 BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_RTL = "a " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1) + " 0 0,0 " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1);
 BS.INNER_BOTTOM_LEFT_CORNER_HIGHLIGHT_LTR = "a " + (BS.CORNER_RADIUS + 1) + "," + (BS.CORNER_RADIUS + 1) + " 0 0,0 " + (BS.CORNER_RADIUS - BS.DISTANCE_45_OUTSIDE) + "," + (BS.DISTANCE_45_OUTSIDE + 1);
+Blockly.BlockSvg.prototype.getPadding = function() {
+  return{top:0, right:0, bottom:0, left:0}
+};
 function brokenControlPointWorkaround() {
   return Blockly.BROKEN_CONTROL_POINTS ? "c 0,5 0,-5 0,0" : ""
 }
@@ -6009,16 +6012,19 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   var width = metrics ? metrics.viewWidth : 0;
   var cursor = {x:Blockly.RTL ? width - Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT : Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT, y:Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP};
   var positionBlock = function(block) {
+    var padding = block.blockly_block.getSvgPadding() || {top:0, right:0, bottom:0, left:0};
+    var heightWidth = block.blockly_block.getHeightWidth();
     if(isNaN(block.x)) {
-      block.x = cursor.x
+      block.x = cursor.x;
+      block.x += Blockly.RTL ? -padding.right : padding.left
     }else {
       block.x = Blockly.RTL ? width - block.x : block.x
     }
     if(isNaN(block.y)) {
-      block.y = cursor.y;
-      cursor.y += block.blockly_block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y
+      block.y = cursor.y + padding.top;
+      cursor.y += heightWidth.height + Blockly.BlockSvg.SEP_SPACE_Y + padding.bottom + padding.top
     }
-    block.blockly_block.moveBy(block.x, block.y)
+    block.blockly_block.moveTo(block.x, block.y)
   };
   var blocks = [];
   for(var i = 0, xmlChild;xmlChild = xml.childNodes[i];i++) {
@@ -10637,6 +10643,9 @@ Blockly.BlockSvgFramed.prototype.initChildren = function() {
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.FUNCTION_HEADER));
   Blockly.BlockSvgFramed.superClass_.initChildren.call(this)
 };
+Blockly.BlockSvgFramed.prototype.getPadding = function() {
+  return{top:FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT, right:FRAME_MARGIN_SIDE, bottom:FRAME_MARGIN_BOTTOM, left:FRAME_MARGIN_SIDE}
+};
 Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
   Blockly.BlockSvgFramed.superClass_.renderDraw_.call(this, iconWidth, inputRows);
   var groupRect = this.svgPath_.getBoundingClientRect();
@@ -14985,6 +14994,9 @@ Blockly.Block.prototype.getBox = function() {
     xy.x -= Blockly.BlockSvg.TAB_WIDTH
   }
   return new goog.math.Box(xy.y, xy.x + heightWidth.width, xy.y + heightWidth.height, xy.x)
+};
+Blockly.Block.prototype.getSvgPadding = function() {
+  return this.svg_ && this.svg_.getPadding()
 };
 Blockly.Block.prototype.getHeightWidth = function() {
   var bBox;
@@ -23665,14 +23677,14 @@ Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
   return bindData
 };
 Blockly.bindEvent_.TOUCH_MAP = {};
-if("ontouchstart" in document.documentElement) {
-  Blockly.bindEvent_.TOUCH_MAP = {mousedown:"touchstart", mousemove:"touchmove", mouseup:"touchend"}
+if(window.navigator.pointerEnabled) {
+  Blockly.bindEvent_.TOUCH_MAP = {mousedown:"pointerdown", mousemove:"pointermove", mouseup:"pointerup"}
 }else {
-  if(window.navigator.pointerEnabled) {
-    Blockly.bindEvent_.TOUCH_MAP = {mousedown:"pointerdown", mousemove:"pointermove", mouseup:"pointerup"}
+  if(window.navigator.msPointerEnabled) {
+    Blockly.bindEvent_.TOUCH_MAP = {mousedown:"MSPointerDown", mousemove:"MSPointerMove", mouseup:"MSPointerUp"}
   }else {
-    if(window.navigator.msPointerEnabled) {
-      Blockly.bindEvent_.TOUCH_MAP = {mousedown:"MSPointerDown", mousemove:"MSPointerMove", mouseup:"MSPointerUp"}
+    if("ontouchstart" in document.documentElement) {
+      Blockly.bindEvent_.TOUCH_MAP = {mousedown:"touchstart", mousemove:"touchmove", mouseup:"touchend"}
     }
   }
 }

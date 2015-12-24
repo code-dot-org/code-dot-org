@@ -16,4 +16,4 @@ Our partner school districts teach almost **10%** of all U.S. students, and almo
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zYPcjMEiE_Lk.kvcsHLK1SPns" width="750" height="480"></iframe>
 
-[View list of district partners](https://docs.google.com/spreadsheets/d/1BDzs4k6nbZ87KdRZE62gqO_VpBC1yRSRbolWejGtDnU/edit#gid=0)
+[View list of partners & districts](https://docs.google.com/spreadsheets/d/1BDzs4k6nbZ87KdRZE62gqO_VpBC1yRSRbolWejGtDnU/edit#gid=0)

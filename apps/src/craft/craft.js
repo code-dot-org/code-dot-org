@@ -1,3 +1,5 @@
+/* global trackEvent */
+
 /*jshint -W061 */
 // We use eval in our code, this allows it.
 // @see https://jslinterrors.com/eval-is-evil
@@ -13,6 +15,7 @@ var GameController = require('./game/GameController');
 var dom = require('../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
+var MusicController = require('../MusicController');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -42,12 +45,10 @@ var characters = {
 };
 
 var interfaceImages = {
-  1: [
+  DEFAULT: [
     MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
-    MEDIA_URL + "Sliced_Parts/Game_Window_BG_Frame.png",
+    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
     MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
-    MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
     MEDIA_URL + "Sliced_Parts/X_Button.png",
     MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
     MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
@@ -57,6 +58,10 @@ var interfaceImages = {
     MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
     MEDIA_URL + "Sliced_Parts/Reset_Button_Down_Slice.png",
     MEDIA_URL + "Sliced_Parts/Callout_Tail.png",
+  ],
+  1: [
+    MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
+    MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
     characters.Steve.staticAvatar,
     characters.Steve.smallStaticAvatar,
     characters.Alex.staticAvatar,
@@ -76,6 +81,16 @@ var interfaceImages = {
     MEDIA_URL + "Sliced_Parts/House_Option_C_v3.png",
   ]
 };
+
+var MUSIC_METADATA = [
+  {volume: 1, hasOgg: true, name: "vignette1"},
+  {volume: 1, hasOgg: true, name: "vignette2-quiet"},
+  {volume: 1, hasOgg: true, name: "vignette3"},
+  {volume: 1, hasOgg: true, name: "vignette4-intro"},
+  {volume: 1, hasOgg: true, name: "vignette5-shortpiano"},
+  {volume: 1, hasOgg: true, name: "vignette7-funky-chirps-short"},
+  {volume: 1, hasOgg: true, name: "vignette8-free-play"},
+];
 
 var CHARACTER_STEVE = 'Steve';
 var CHARACTER_ALEX = 'Alex';
@@ -111,6 +126,8 @@ Craft.init = function (config) {
     config.level.customSlowMotion = 0.1;
   }
 
+  config.level.disableFinalStageMessage = true;
+
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function() {
     return document.documentMode;
@@ -126,8 +143,13 @@ Craft.init = function (config) {
 
   if (config.level.showPopupOnLoad) {
     config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+      var event = document.createEvent('Event');
+      event.initEvent('instructionsShown', true, true);
+      document.dispatchEvent(event);
+
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
+          trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
           trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
           Craft.updateUIForCharacter(selectedPlayer);
@@ -136,6 +158,7 @@ Craft.init = function (config) {
         });
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
         Craft.showHouseSelectionPopup(function(selectedHouse) {
+          trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             $.extend(config.level, houseLevels[selectedHouse]);
 
@@ -160,6 +183,35 @@ Craft.init = function (config) {
 
   Craft.level = config.level;
   Craft.skin = config.skin;
+
+  var levelTracks = [];
+  if (Craft.level.songs && MUSIC_METADATA) {
+    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+      return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
+    });
+  }
+
+  Craft.musicController = new MusicController(
+      studioApp.cdoSounds,
+      function (filename) {
+        return config.skin.assetUrl(`music/${filename}`);
+      },
+      levelTracks,
+      levelTracks.length > 1 ? 7500 : null
+  );
+
+  // Play music when the instructions are shown
+  var playOnce = function () {
+    document.removeEventListener('instructionsHidden', playOnce);
+    if (studioApp.cdoSounds) {
+      studioApp.cdoSounds.whenAudioUnlocked(function () {
+        var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+        var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
+        Craft.musicController.play(songToPlayFirst);
+      });
+    }
+  };
+  document.addEventListener('instructionsHidden', playOnce);
 
   var character = characters[Craft.getCurrentCharacter()];
   config.skin.staticAvatar = character.staticAvatar;
@@ -202,6 +254,9 @@ Craft.init = function (config) {
         readonlyWorkspace: config.readonlyWorkspace
       }
     }),
+    appStrings: {
+      generatedCodeDescription: craftMsg.generatedCodeDescription(),
+    },
     loadAudio: function () {
     },
     afterInject: function () {
@@ -222,11 +277,21 @@ Craft.init = function (config) {
          * (due to e.g. character / house select popups).
          */
         earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
+        afterAssetsLoaded: function () {
+          // preload music after essential game asset downloads completely finished
+          Craft.musicController.preload();
+        },
         earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
       });
 
       if (!config.level.showPopupOnLoad) {
         Craft.initializeAppLevel(config.level);
+      }
+
+      if (studioApp.hideSource) {
+        // Set visualizationColumn width in share mode so it can be centered
+        var visualizationColumn = document.getElementById('visualizationColumn');
+        visualizationColumn.style.width = this.nativeVizWidth + 'px';
       }
     },
     twitter: {
@@ -235,9 +300,22 @@ Craft.init = function (config) {
     }
   }));
 
+  var interfaceImagesToLoad = [];
+  interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+
   if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-    interfaceImages[config.level.puzzle_number].forEach(function(url) {
-      preloadImage(url);
+    interfaceImagesToLoad =
+        interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+  }
+
+  interfaceImagesToLoad.forEach(function(url) {
+    preloadImage(url);
+  });
+
+  var shareButton = $('.mc-share-button');
+  if (shareButton.length) {
+    dom.addClickTouchEvent(shareButton[0], function () {
+      Craft.reportResult(true);
     });
   }
 };
@@ -283,10 +361,12 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-steve')[0], function () {
     selectedPlayer = CHARACTER_STEVE;
+    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-alex')[0], function () {
     selectedPlayer = CHARACTER_ALEX;
+    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
     popupDialog.hide();
   }.bind(this));
   popupDialog.show();
@@ -314,14 +394,17 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-a')[0], function () {
     selectedHouse = "houseA";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-b')[0], function () {
     selectedHouse = "houseB";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
   dom.addClickTouchEvent($('#choose-house-c')[0], function () {
     selectedHouse = "houseC";
+    trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
     popupDialog.hide();
   }.bind(this));
 
@@ -483,6 +566,20 @@ Craft.runButtonClick = function () {
   studioApp.attempts++;
 
   Craft.executeUserCode();
+
+  if (Craft.level.freePlay && !studioApp.hideSource) {
+    var finishBtnContainer = $('#right-button-cell');
+
+    if (finishBtnContainer.length &&
+        !finishBtnContainer.hasClass('right-button-cell-enabled')) {
+      finishBtnContainer.addClass('right-button-cell-enabled');
+      studioApp.onResize();
+
+      var event = document.createEvent('Event');
+      event.initEvent('finishButtonShown', true, true);
+      document.dispatchEvent(event);
+    }
+  }
 };
 
 Craft.executeUserCode = function () {
@@ -567,6 +664,9 @@ Craft.executeUserCode = function () {
     }
   });
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
+    if (Craft.level.freePlay) {
+      return;
+    }
     this.reportResult(success);
 
     var tileIDsToStore = Craft.initialConfig.level.blocksToStore;
@@ -593,12 +693,12 @@ Craft.executeUserCode = function () {
 };
 
 Craft.getTestResultFrom = function (success, studioTestResults) {
-  if (Craft.initialConfig.level.freePlay) {
-    return TestResults.FREE_PLAY;
-  }
-
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
+  }
+
+  if (Craft.initialConfig.level.freePlay) {
+    return TestResults.FREE_PLAY;
   }
 
   return studioTestResults;
@@ -634,7 +734,8 @@ Craft.reportResult = function (success) {
           nextLevelMsg: craftMsg.nextLevelMsg({
             puzzleNumber: Craft.initialConfig.level.puzzle_number
           }),
-          tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail
+          tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
+          generatedCodeDescription: craftMsg.generatedCodeDescription()
         },
         feedbackImage: Craft.initialConfig.level.freePlay ? Craft.gameController.getScreenshot() : null,
         showingSharing: Craft.initialConfig.level.freePlay
@@ -645,11 +746,11 @@ Craft.reportResult = function (success) {
 
 Craft.replayTextForResult = function (testResultType) {
   if (testResultType === TestResults.FREE_PLAY) {
-    return "Keep Playing";
+    return craftMsg.keepPlayingButton();
   } else if (testResultType <= TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL) {
     return commonMsg.tryAgain();
   } else {
-    return "Replay";
+    return craftMsg.replayButton();
   }
 };
 

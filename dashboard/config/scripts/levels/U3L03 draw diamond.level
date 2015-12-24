@@ -152,7 +152,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "Wau02teIxCqXRecgZXPMquhI4TZojKFCIorK3Xc8jFQZFyOP3GakPtvcRznr\ntBie\n",
-    "markdown_instructions": "###Challenge\r\nWe're finally ready to make our diamond! **Define** a function called `drawDiamond()` that **calls** `drawSide()` multiple times in order to complete the drawing. Your final solution should be triggered by **a single call** to `drawDiamond()`. \r\n\r\n<table>\r\n<tr>\r\n<td><img src=\"https://s3.amazonaws.com/uploads.hipchat.com/65395/961892/NoxVhFlLf9HlybZ/upload.png\" width=200></td>\r\n<td><img src=\"https://images.code.org/dca51c5b17a8c0778787337c3609557c-image-1441802821237.gif\" width=200></td>\r\n</tr>\r\n</table>\r\n\r\n\r\n",
+    "markdown_instructions": "#Do This:\r\nWe're finally ready to make our diamond! **Define** a function called `drawDiamond()` that **calls** `drawSide()` multiple times in order to complete the drawing. Your final solution should be triggered by **a single call** to `drawDiamond()`. \r\n\r\n<table>\r\n<tr>\r\n<td><img src=\"https://s3.amazonaws.com/uploads.hipchat.com/65395/961892/NoxVhFlLf9HlybZ/upload.png\" width=200></td>\r\n<td><img src=\"https://images.code.org/dca51c5b17a8c0778787337c3609557c-image-1441802821237.gif\" width=200></td>\r\n</tr>\r\n</table>\r\n\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "project_template_level_name": "U3L03 - drawDiamond Template",
@@ -160,7 +160,7 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>

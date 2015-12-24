@@ -1,19 +1,20 @@
 "tr":
   devise:
     confirmations:
-      confirmed: Eposta adresiniz başarıyla doğrulandı.
-      send_instructions: Birkaç dakika içinde hesabınızı nasıl aktifleştireceğinizi
-        anlatan bir mail alacaksınız.
-      send_paranoid_instructions: Eğer mail adresiniz bizde kayıtlı ise, birkaç dakika
-        içinde hesabınızı nasıl aktifleştireceğinizi anlatan bir mail alacaksınız.
+      confirmed: Eposta adresin başarıyla onaylandı.
+      send_instructions: Birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan
+        bir e-posta alacaksınız.
+      send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
+        birkaç dakika içinde hesabınızı nasıl onaylayacağınızı anlatan bir e-posta
+        alacaksınız.
     failure:
       already_authenticated: Zaten oturum açtınız.
-      inactive: Hesabınız aktifleştirilmedi.
+      inactive: Hesap henüz aktif değil.
       invalid: Geçersiz e-posta veya şifre.
       invalid_token: Geçersiz kimlik doğrulama belirteci.
       locked: Hesabınız kilitlendi.
       not_found_in_database: Geçersiz e-posta veya şifre.
-      timeout: Oturumunuzun süresi doldu, lütfen devam etmek oturum açın.
+      timeout: Oturumunun süresi doldu, lütfen devam etmek için tekrar oturum aç.
       unauthenticated: Devam etmeden önce kayıt olun veya giriş yapın.
       unconfirmed: Devam etmeden önce hesabınızı onaylamanız gerekir.
     mailer:
@@ -27,17 +28,17 @@
       failure: '%{kind} kimliği %{reason} nedeniyle doğrulanamadı.'
       success: '%{kind} hesabından başarıyla kimlik doğrulandı.'
     passwords:
-      no_token: Parola sıfırlama maili olmadan bu sayfaya erişemezsiniz. Eğer parola
-        sıfırlama mailinden geldiyseniz, lütfen verilen URL'nin tamamını kullandığınızdan
-        emin olun.
-      send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlamanız hakkında
-        talimatlar içeren bir e-posta alacaksınız.
+      no_token: Parola sıfırlama epostası dışından bu sayfaya erişemezsin. Eğer parola
+        sıfırlama epostasından geldiysen, lütfen verilen URL'nin tamamını kullandığından
+        emin ol.
+      send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlayacağınız hakkında
+        talimatlar içeren bir eposta alacaksınız.
       send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
         birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
-      updated: Parolanız başarıyla değiştirildi. Şu anda giriş yaptınız.
+      updated: Parolan başarıyla değiştirildi. Şu anda oturum açtın.
       updated_not_active: Şifreniz başarıyla değiştirildi.
     registrations:
-      destroyed: Hoşça kal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
+      destroyed: Hoşçakal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
         umuyoruz.
       signed_up: Hoşgeldiniz! Kaydınız başarı ile oluşturuldu.
       signed_up_but_inactive: Kaydınız başarı ile oluşturuldu. Ancak hesabınız henüz
@@ -46,10 +47,9 @@
         için giriş yapamıyorsunuz.
       signed_up_but_unconfirmed: E-posta adresine onay bağlantısını içeren bir mesaj
         gönderildi. Lütfen bağlantıyı açarak hesabınızı aktifleştirin.
-      update_needs_confirmation: Hesabınız başarı ile güncelleştirildi, Ancak yeni
-        e-posta adresini doğrulamamız gerekiyor. Lütfen e-posta adresinizi kontrol
-        ederek onay bağlantısına tıklayın ve e-posta hesabınızı onaylama işlemini
-        sonlandırın.
+      update_needs_confirmation: Hesabın başarı ile güncelleştirildi, ancak yeni eposta
+        adresini doğrulamamız gerekiyor. Lütfen eposta adresini kontrol ederek onay
+        bağlantısına tıkla ve eposta hesabını onaylama işlemini bitir.
       updated: Hesabınızı başarı ile güncelleştirdiniz.
     sessions:
       signed_in: ''
@@ -63,33 +63,33 @@
         yapınız.
   errors:
     messages:
-      already_confirmed: zaten onaylandı, lütfen giriş yapmayı deneyiniz
+      already_confirmed: zaten onaylandı, lütfen giriş yapmayı dene
       confirmation_period_expired: '%{period} içinde onaylanması gerekliydi.Lütfen
         yeni bir istekte bulunun'
-      expired: süresi doldu, yeni bir tane isteyiniz
+      expired: süresi doldu, lütfen yeni bir tane iste
       not_found: bulunamadı
       not_locked: kilitli değil
       not_saved:
-        one: '1 hata %{resource} kaynağın kaydedilmesini engelledi:'
+        one: '1 hata %{resource} nesnesinin kaydedilmesini engelledi:'
         other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'
     invitations:
-      send_instructions: '%{email} adresine davetiye e-postası gönderildi.'
-      invitation_token_invalid: Sağlanan davet belirteci geçerli değil!
-      updated: Parolanız başarıyla değiştirildi. Şimdi giriş yaptınız.
+      send_instructions: '%{email} adresine davetiye epostası gönderildi.'
+      invitation_token_invalid: Sağlanan davet işareti geçerli değil!
+      updated: Parolan başarıyla ayarlandı. Şimdi oturum açtın.
       no_invitations_remaining: Davet kalmadı
       invitation_removed: Davetin kaldırıldı.
       new:
         header: Davet gönder
-        submit_button: Davetiye gönder
+        submit_button: Bir davetiye gönder
       edit:
-        header: şifreni belirle
-        submit_button: şifremi belirli
+        header: Parolanı belirle
+        submit_button: Parolamı belirle
     mailer:
       invitation_instructions:
         subject: Davetiye yönergeleri
         hello: Merhaba  %{email}
-        someone_invited_you: Birileri sizi %{url},adrese davet etti. Aşağıdaki bağlantıdan
-          kabul edebilirsiniz.
-        accept: daveti  kabul et
-        ignore: davetiyeyi almak istemiyorsanız, lütfen bu e-postayı yoksayın. .<br
-          /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabınız oluşturulmayacak.
+        someone_invited_you: Birisi seni %{url}, adresine davet etti, aşağıdaki bağlantıdan
+          kabul edebilirsin.
+        accept: Daveti  kabul et
+        ignore: Davetiyeyi almak istemiyorsan, lütfen bu epostayı yoksay. <br /> Aşağıdaki
+          bağlantıya tıklamadan ve parola oluşturmadan hesabın oluşturulmayacak.

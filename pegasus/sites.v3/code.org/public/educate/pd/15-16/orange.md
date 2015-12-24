@@ -9,7 +9,6 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
-- [I'm attending Counselor-Administrator PD](#counselor-admin)
 
 
 <a id="ecs"></a>
@@ -45,14 +44,14 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 7th Location**
+**January 23rd Location**
 
-Orange County Department of Education<br/>
-Building A: Board Room<br/>
+[Orange County Department of Education<br/>
+Room: Esplanade 108B<br/>
 200 Kalmus Dr<br/>
-Costa Mesa, CA 92626
+Costa Mesa, CA 92626](https://www.google.com/maps/place/Orange+County+Department+of+Education/@33.6729962,-117.8832766,17z/data=!4m7!1m4!3m3!1s0x80dcdf02d89983eb:0xade5c39a8aba012d!2s200+Kalmus+Dr,+Costa+Mesa,+CA+92626!3b1!3m1!1s0x0000000000000000:0x4d5cc9efa1e6739a)
 
-Note: you will be in a different building that the 10/3/15 PD. For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
+For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -65,9 +64,40 @@ Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.))
+
+**Save the Dates**
+
+Monday, June 20th - Wednesday, June 22nd
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -105,9 +135,9 @@ Breakfast and lunch will be served.
 
 **Location**
 
-Columbia Memorial Space Center<br/> 
+[Columbia Memorial Space Center<br/> 
 12400 Columbia Way<br/> 
-Downey, CA 90242
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -154,14 +184,11 @@ Semester 2: Saturday, February 20, 2016 in Los Angeles.
 <br/>
 Breakfast and lunch will be served.
 
-**October 17th Location**
+**February 20th Location**
 
-Ball Junior High School<br/>
-Room 37<br/>
-1500 W Ball Rd<br/>
-Anaheim, CA 92802
-
-[Click here for a School Map](/images/ball-jr-high-map.JPG)
+[Columbia Memorial Space Center<br/> 
+12400 Columbia Way<br/> 
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -172,47 +199,6 @@ Curriculum guide
 Snacks
 <br/>
 Water
-
-
-[**Back to the top**](#top)
-
-
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Wednesday, October 21st, 2015 <br/>
-12:00pm - 2:30pm
-
-**Location**
-
-Orange USD<br/> 
-1401 N. Handy Street<br/>
-Board Rooms 1 and 2 <br/>
-Orange, CA 92867 
-
-
-### Administrators##
-
-**Save the date**
-
-Wednesday, October 21st, 2015 <br/>
-3:00pm - 5:00pm
-
-**Location**
-
-Orange USD<br/> 
-1401 N. Handy Street<br/>
-Board Rooms 1 and 2 <br/>
-Orange, CA 92867 
 
 
 [**Back to the top**](#top)

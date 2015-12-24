@@ -43,3 +43,8 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
   background-position: -63px 0px;
   margin-right: 3px;
 }
+
+/* fix transform-origin for IE / RTL in artist levels */
+html[dir="RTL"] div#visualization.responsive > canvas {
+  -ms-transform-origin: 0 0;
+}

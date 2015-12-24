@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Posúva pero hore alebo dole, aby maliar začal alebo prestal kresliť."},
 "penUp":function(d){return "pero hore"},
 "reinfFeedbackMsg":function(d){return "Tu je tvoja kresba! Môžeš na nej ďalej pracovať alebo pokračovať na ďalšiu hádanku."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "nastav alfa"},
 "setColour":function(d){return "nastav farbu"},
 "setPattern":function(d){return "nastav vzor"},
 "setWidth":function(d){return "nastav šírku"},

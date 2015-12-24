@@ -5,10 +5,8 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # 让全校同学都参加
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+组织全校同学参加编程一小时活动的相关信息请参看这里。
 
-<%= view :signup_button %>

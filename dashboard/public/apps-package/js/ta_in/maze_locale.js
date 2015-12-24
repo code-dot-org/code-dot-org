@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "குறிப்பிட்ட திசையில் ஒரு பாதை உள்ளது என்றால், சில செயல்களை செய்ய."},
 "ifelseTooltip":function(d){return "குறிப்பிட்ட திசையில் ஒரு பாதை உள்ளது என்றால், நடவடிக்கைகள் முதல் தொகுதி செய்கிறது. இல்லையெனில், நடவடிக்கைகள் இரண்டாவது தொகுதி செய்கிறது."},
 "ifFlowerTooltip":function(d){return "குறிப்பிட்ட திசையில் மலரோ அல்லது தேன்கூடு இருந்தால் IF, பிறகு / then சில செயல்களை செய்."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "குறிப்பிட்ட திசையில் ஒரு பாதை உள்ளது என்றால், சில செயல்களை செய்ய."},
 "ifelseFlowerTooltip":function(d){return "குறிப்பிட்ட திசையில் மலரோ அல்லது தேன்கூடு இருந்தால் IF, பிறகு / then \nமுதல் தொகுதிசெயல்களை  செய்  அல்லது  இரண்டாம்  தொகுதிசெயல்களை செய்."},
 "insufficientHoney":function(d){return "நீங்கள் சரியான தொகுதிகளை பயன்படுத்துகிறீர்கள், ஆனால் சரியான அளவு தேன் உருவாக்க வேண்டும்."},
 "insufficientNectar":function(d){return "நீங்கள் சரியான தொகுதிகளை பயன்படுத்துகிறீர்கள், ஆனால் சரியான அளவு தேன் சேகரிக்க வேண்டும்."},

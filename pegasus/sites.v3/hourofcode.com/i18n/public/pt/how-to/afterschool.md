@@ -6,9 +6,8 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# Como ensinar uma Hora do Código em uma configuração extracurricular
+# How to teach one Hour of Code in after-school
 
 ## 1) Cadastre-se
 
@@ -96,6 +95,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
   * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/promote/resources#stickers') %>)
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
@@ -124,12 +124,15 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
   * Use este [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para organizar a Hora do Código.
   * Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dos organizadores que já trabalharam na Hora do Código. 
-  * Participe do nosso webinar [Guia da Hora do Código para Educadores](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
   * Visite o [Fórum da Hora do Código](http://forum.code.org/c/plc/hour-of-code) para conseguir conselhos, ideias e apoio de outros organizadores. <% if @country == 'us' %>
   * Veja as [Perguntas Frequentes da Hora do Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## O que vem depois da Hora do Código?
 
-A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar nesta jornada, [incentive seus filhos a aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-<%= view :signup_button %>
+  * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+  * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+

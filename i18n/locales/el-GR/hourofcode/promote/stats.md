@@ -6,15 +6,15 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Blurbs and Useful Stats
+# Περιλήψεις και Χρήσιμα Στατιστικά
 
-## Use this short blurb in newsletters
+## Χρησιμοποιήστε αυτή τη σύντομη περίληψη στα ενημερωτικά δελτία
 
-### Bring computer science to your school. Start with an Hour of Code
+### Φέρτε την επιστήμη των υπολογιστών στο σχολείο σας. Ξεκινήστε με μία Ώρα του Κώδικα
 
-Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. If you heard about the [Hour of Code](%= resolve_url('/') %) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](%= resolve_url('/') %) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](%= resolve_url('/') %) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
+Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. Αν ακούσατε για την [Ώρα του Κώδικα](%= resolve_url('/') %) πέρυσι, ίσως γνωρίζετε ότι έγραψε ιστορία. Στην πρώτη Ώρα του Κώδικα, 15 εκατομμύρια μαθητές δοκίμασαν την επιστήμη των υπολογιστών. Πέρυσι, αυτός ο αριθμός αυξήθηκε σε 60 εκατομμύρια μαθητές! Η [Ώρα του Κώδικα](%= resolve_url('/') %) είναι μία ωριαία εισαγωγή στην επιστήμη των υπολογιστών, σχεδιασμένη για να απομυθοποιήσει τον προγραμματισμό και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. [Εγγραφείτε](%= resolve_url('/') %) για να διοργανώσετε μία Ώρα του Κώδικα στις <%= campaign_date('full') %> κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης στην Επιστήμη των Υπολογιστών. Για να προσθέσετε το σχολείο σας στο χάρτη, πηγαίνετε στο https://hourofcode.com/<%= @country %>
 
-## Infographics
+## Γραφήματα
 
 <%= view :stats_carousel %>
 

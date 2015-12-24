@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "اگر راهی در مسیر مسخصی است,اقداماتی بکن."},
 "ifelseTooltip":function(d){return "اگر راهی در مسیر مشخصی وجود دارد,اولین از سری اقدامات را انجام ده,در غیر این صورت به سراغ دومین اقدام برو."},
 "ifFlowerTooltip":function(d){return "اگر یک گل /کندوی عسل در جهت مشخص شده وجود دارد، آنگاه اقداماتی را انجام بده."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "اگر در جهت مشخص شده راهی هست، چند کار انجام بده."},
 "ifelseFlowerTooltip":function(d){return "اگر یک گل یا کندوی عسل در جهت مشخص شده وجود دارد، آنگاه اولین بلوک اقدامات را انجام بده. در غیر این صورت ، دومین بلوک را انجام بده."},
 "insufficientHoney":function(d){return "تو از بلوک‌های درست استفاده میکنی، اما باید به مقدار صحیح عسل درست کنی."},
 "insufficientNectar":function(d){return "تو از بلوک‌های درست استفاده میکنی، اما باید میزان شهد صحیح را جمع کنی."},

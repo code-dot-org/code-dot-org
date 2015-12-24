@@ -43,29 +43,46 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "cannot create user with panda in name" do
+    user = User.create(@good_data.merge({name: panda_panda}))
+    assert !user.valid?
+    assert user.errors[:name].length == 1
+  end
+
+  test "cannot create user with panda in email" do
+    user = User.create(@good_data.merge({email: "#{panda_panda}@panda.com"}))
+    assert !user.valid?
+    assert user.errors[:email].length == 1
+  end
+
   test "cannot create user with invalid email" do
     user = User.create(@good_data.merge({email: 'foo@bar'}))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:email].length == 1
   end
 
   test "cannot create young user with invalid email" do
     user = User.create(@good_data_young.merge({email: 'foo@bar'}))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:email].length == 1
   end
 
   test "cannot create user with no type" do
     user = User.create(@good_data.merge(user_type: nil))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:user_type].length == 1
   end
 
   test "cannot create user with no name" do
     user = User.create(@good_data.merge(name: nil))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:name].length == 1
   end
 
   test "cannot create user with invalid type" do
     user = User.create(@good_data.merge(user_type: 'xxxxx'))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:user_type].length == 1
   end
 
   test "cannot create user with duplicate email" do
@@ -685,6 +702,9 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       section = create :section, script: Script.find_by_name('course1')
       create :follower, student_user: student, section: section, created_at: assigned_date
+
+      # pretend we created this script before we had the callback to create user_scripts
+      UserScript.last.destroy
 
       assert_creates(UserScript) do
         student.backfill_user_scripts

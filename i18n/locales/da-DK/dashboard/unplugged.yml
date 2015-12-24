@@ -3,7 +3,7 @@ da:
     unplugged:
       Unplug1:
         title: Introduktion til programmering
-        desc: 'Denne lektion vil indføre begrebet datalogi og forklare hvad en programmør gør.  Det vil også give de eleverne en mulighed for at påtage sig rollen som en programmør.  Ved udgangen af aktiviteten, vil hver elev har en tag-med-hjem oplevelse om, hvad han eller hun har lært.  Du kan være fristet til at springe undervisningen med forklaringen af computerord  over, men hvis du præsentere dem for eleverne, på en sjov og legende måde, vil det være langt mere produktivt, end at vente på mere avancerede muligheder.'
+        desc: 'Denne lektion vil indføre begrebet datalogi og forklare hvad en programmør gør.  Det vil også give de eleverne en mulighed for at påtage sig rollen som programmør.  Når aktiviteten er slut, vil hver elev få en påmindelse om, hvad han eller hun har lært.  Hvis du underviser små børn kan du blive fristet til at springe forklaringen af computerord  over, men hvis du præsenterer dem for eleverne på en sjov og legende måde nu, vil det være langt mere produktivt end at vente på mere bedre muligheder senere.'
         pdfs:
           - unplug1
         video: Unplug1
@@ -174,7 +174,7 @@ da:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videospil og koordinere fly
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Opdag, hvordan dine elskede computerspil faktisk er styret af algebra! Udforsk hvordan koordinatsystemet og algebra kan hjælpe os til at forstå hvordan computerspil virker, og begynd så at planlægge det computerspil, du vil bygge.
         video: alg_11_coordinate_plane
       Contracts:
         title: Contracts, Domain, and Range
@@ -182,10 +182,10 @@ da:
         video: alg_5_contracts
       DesignRecipe:
         title: Design opskrift
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'I det sidste trin skrev eleverne nogle meget simple funktioner - men mere sofistikerede funktioner kræver en mere gennemtænkt tilgang. Design Recipe er en struktureret tilgang til at skrive funktioner, som inkluderer afprøvning for at sikre at funktionen fungerer som forventet.'
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans and Logic
+        title: Booleanske værdier og logik
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:

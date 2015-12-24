@@ -251,6 +251,7 @@
         playlab: Izveidot aplikāciju
         artist: Uzzīmēt kaut ko
         calculate: Calculate Something
+        applab: Izveidot aplikāciju
     user:
       classroom: Skolotāju mājas lapa
       district_dashboard: District Dashboard
@@ -274,6 +275,8 @@
       prize_us_only: (Tikai ASV studenti)
       prizes_link: Vairāk informācijas
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Tavs skolotājs:'
       other: 'Tavi skolotāji:'
@@ -460,6 +463,9 @@
     privacy: Privātuma politika
     secure: Droša versija
     report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
   reference_area:
     title: Vajadzīga palīdzība?
     subtitle: Skatīt šos video un padomus
@@ -500,6 +506,7 @@
   pdf_download: Lejupielādēt PDF
   download_coming_soon: Lejupielādējama aktivitāte drīzumā.
   video_coming_soon: Video pieejams drīz!
+  not_started: The student has not attempted this level.
   share_code:
     title: Spied 'Palaist' , lai redzētu programmu darbībā
     bounce_og_title: Apskati manu atsitienu spēli
@@ -546,9 +553,14 @@
       body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
     frozen:
       title: Ledus sirds
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
     students_made_these_with_code: Skolēni izveidoja šos ar kodu!
@@ -693,7 +705,7 @@
     really_delete: Izdzēst?
     delete_yes: Jā
     delete_no: Nē
-    saved: Saved
+    saved: Saglabāts galerijā!
     not_saved: Not saved
     cancel: Atcelt
     delete_confirm_title: Are you sure you want to delete this project?

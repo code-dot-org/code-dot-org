@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, droplet, marked, digestManifest, dashboard */
+/* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
 
 /**
  * For the most part, we depend on dashboard providing us with React as a global.
@@ -29,6 +29,9 @@ var FeedbackUtils = require('./feedback');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 var Alert = require('./templates/alert.jsx');
 var codegen = require('./codegen');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
+var logToCloud = require('./logToCloud');
+var AuthoredHints = require('./authoredHints');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -48,16 +51,12 @@ var MAX_PHONE_WIDTH = 500;
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
+  this.authoredHintsController_ = new AuthoredHints(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
   */
   this.BASE_URL = undefined;
-
-  /**
-  * If truthy, a version number to be appended to asset urls.
-  */
-  this.CACHE_BUST = undefined;
 
   /**
   * The current locale code.
@@ -182,6 +181,16 @@ var StudioApp = function () {
    */
   this.share = false;
 
+  /**
+   * By default, we center our embedded levels. Can be overriden by apps.
+   */
+  this.centerEmbedded = true;
+
+  /**
+   * If set to true, we use our wireframe share (or chromeless share on mobile)
+   */
+  this.wireframeShare = false;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -202,7 +211,6 @@ StudioApp.singleton = new StudioApp();
  */
 StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
-  this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
@@ -239,6 +247,16 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
+  if (config.isLegacyShare && config.hideSource) {
+    $("body").addClass("legacy-share-view");
+    if (dom.isMobile()) {
+      $('#tryHoc').hide();
+    }
+    if (dom.isIOS() && !window.navigator.standalone) {
+      addToHome.show(true);
+    }
+  }
+
   this.setConfigValues_(config);
 
   this.configureDom(config);
@@ -252,18 +270,27 @@ StudioApp.prototype.init = function(config) {
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
       twitter: config.twitter,
-      app: config.app
+      app: config.app,
+      isLegacyShare: config.isLegacyShare
     });
   }
 
   if (config.share) {
     this.handleSharing_({
-      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
       makeUrl: config.makeUrl,
       makeString: config.makeString,
       makeImage: config.makeImage,
       makeYourOwn: config.makeYourOwn
     });
+  }
+
+  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
+  if (config.authoredHintViewRequestsUrl) {
+    this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
+  }
+
+  if (config.puzzleRatingsUrl) {
+    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
 
   // Record time at initialization.
@@ -280,19 +307,25 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result;
+        var nonDropletError = false;
+        // are we trying to toggle from blocks to text (or the opposite)
+        var fromBlocks = this.editor.currentlyUsingBlocks;
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
+          nonDropletError = true;
           result = {error: err};
         }
         if (result && result.error) {
-          // TODO (cpirich) We could extract error.loc to determine where the
-          // error occurred and highlight that error
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+            dropletError: !nonDropletError,
+            fromBlocks: fromBlocks
+          });
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
       }
     }, this));
   }
@@ -324,8 +357,9 @@ StudioApp.prototype.init = function(config) {
     }
   }
 
-  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
-  if(config.embed) {
+  // In embed mode, the display scales down when the width of the
+  // visualizationColumn goes below the min width
+  if(config.embed && config.centerEmbedded) {
     var resized = false;
     var resize = function() {
       var vizCol = document.getElementById('visualizationColumn');
@@ -364,10 +398,12 @@ StudioApp.prototype.init = function(config) {
   var promptDiv = document.getElementById('prompt');
   var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    $(promptDiv).text(config.level.instructions);
+    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
+    $(promptDiv).html(instructionsHtml);
   }
   if (config.level.instructions2) {
-    $(prompt2Div).text(config.level.instructions2);
+    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
+    $(prompt2Div).html(instructions2Html);
     $(prompt2Div).show();
   }
 
@@ -377,10 +413,12 @@ StudioApp.prototype.init = function(config) {
       promptIcon.src = this.smallIcon;
       $('#prompt-icon-cell').show();
     }
+
     var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, _.bind(function() {
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
       this.showInstructions_(config.level, false);
-    }, this));
+    }.bind(this));
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -489,6 +527,19 @@ StudioApp.prototype.init = function(config) {
   }
 };
 
+StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+  if (htmlText) {
+    for (var prop in this.skin.instructions2ImageSubstitutions) {
+      var value = this.skin.instructions2ImageSubstitutions[prop];
+      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
+      var re = new RegExp('\\[' + prop + '\\]', 'g');
+      htmlText = htmlText.replace(re, substitutionHtml);
+    }
+  }
+
+  return htmlText;
+};
+
 StudioApp.prototype.getCode = function () {
   if (!this.editCode) {
     throw "getCode() requires editCode";
@@ -562,27 +613,9 @@ StudioApp.prototype.handleSharing_ = function (options) {
       sliderCell.style.display = 'none';
     }
     if (belowVisualization) {
-      if (options.noButtonsBelowOnMobileShare) {
-        var visualization = document.getElementById('visualization');
-        belowVisualization.style.display = 'none';
-        visualization.style.marginBottom = '0px';
-      } else {
-        belowVisualization.style.display = 'block';
-        belowVisualization.style.marginLeft = '0px';
-        if (this.noPadding) {
-          var shareCell = document.getElementById('share-cell') ||
-              document.getElementById('right-button-cell');
-          if (shareCell) {
-            shareCell.style.marginLeft = '10px';
-            shareCell.style.marginRight = '10px';
-          }
-          var softButtons = document.getElementById('soft-buttons');
-          if (softButtons) {
-            softButtons.style.marginLeft = '10px';
-            softButtons.style.marginRight = '10px';
-          }
-        }
-      }
+      var visualization = document.getElementById('visualization');
+      belowVisualization.style.display = 'none';
+      visualization.style.marginBottom = '0px';
     }
   }
 
@@ -616,7 +649,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
+  return this.BASE_URL + path;
 };
 
 /**
@@ -831,10 +864,13 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
+StudioApp.prototype.onReportComplete = function (response) {
+  this.authoredHintsController_.finishHints(response);
+};
+
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
-  var scrollableSelector;
   var headerElement;
 
   var puzzleTitle = msg.puzzleTitle({
@@ -842,9 +878,11 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     puzzle_number: level.puzzle_number
   });
 
-  if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
-    renderedMarkdown = marked(level.markdownInstructions);
-    scrollableSelector = '.instructions-markdown';
+  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
+  if (markdownMode) {
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text dialog-title';
@@ -856,9 +894,11 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
     puzzleTitle: puzzleTitle,
-    instructions: level.instructions,
-    instructions2: level.instructions2,
+    instructions: this.substituteInstructionImages(level.instructions),
+    instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
+    hintReviewTitle: msg.hintReviewTitle(),
+    authoredHints: this.authoredHintsController_.getSeenHints(),
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
@@ -903,12 +943,13 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
+    markdownMode: markdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
-    scrollContent: !!renderedMarkdown,
-    scrollableSelector: scrollableSelector,
+    scrollContent: true,
+    scrollableSelector: ".instructions-container",
     header: headerElement
   });
 
@@ -985,7 +1026,7 @@ function resizePinnedBelowVisualizationArea() {
   if (designToggleRow) {
     top += $(designToggleRow).outerHeight(true);
   }
-  
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
@@ -1074,6 +1115,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
 
+  var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(this.minVisualizationWidth,
                          Math.min(this.maxVisualizationWidth, width));
   var newVizWidthString = newVizWidth + 'px';
@@ -1104,6 +1146,12 @@ StudioApp.prototype.resizeVisualization = function (width) {
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+
+  if (oldVizWidth < 230 && newVizWidth >= 230) {
+    $('#soft-buttons').removeClass('soft-buttons-compact');
+  } else if (oldVizWidth > 230 && newVizWidth <= 230) {
+    $('#soft-buttons').addClass('soft-buttons-compact');
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
@@ -1254,11 +1302,15 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 */
 StudioApp.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = options;
-  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - this.initTime);
-  report.attempt = this.attempts;
-  report.lines = this.feedback_.getNumBlocksUsed();
+  var report = $.extend({}, options, {
+    pass: this.feedback_.canContinueToNextLevel(options.testResult),
+    time: ((new Date().getTime()) - this.initTime),
+    attempt: this.attempts,
+    lines: this.feedback_.getNumBlocksUsed(),
+  });
+
+  this.lastTestResult = options.testResult;
+
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -1377,6 +1429,8 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
+  this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
+  this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
@@ -1417,7 +1471,9 @@ StudioApp.prototype.setConfigValues_ = function (config) {
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+  this.skin = config.skin;
   this.showInstructions = this.showInstructions_.bind(this, config.level);
+  this.polishCodeHook = config.polishCodeHook;
 };
 
 // Overwritten by applab.
@@ -1496,9 +1552,11 @@ StudioApp.prototype.configureDom = function (config) {
     $(codeWorkspace).addClass('readonly');
   }
 
-  if (config.embed && config.hideSource) {
-    container.className = container.className + " embed_hidesource";
-    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
+  // NOTE: Can end up with embed true and hideSource false in level builder
+  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
+  if (config.embed && config.hideSource && this.centerEmbedded) {
+    container.className = container.className + " centered_embed";
+    visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -1526,49 +1584,51 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
-  if (this.share && options.app === 'applab') {
-    if (dom.isMobile()) {
-      document.getElementById('visualizationColumn').className = 'chromelessShare';
-    } else {
-      document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-      document.getElementById('visualizationColumn').className = 'wireframeShare';
+  if (this.share) {
+    if (options.isLegacyShare || this.wireframeShare) {
+      document.body.style.backgroundColor = '#202B34';
     }
-    document.body.style.backgroundColor = '#202B34';
-  // For share page on mobile, do not show this part.
-  } else if (!options.embed && !(this.share && dom.isMobile())) {
-    var runButton = document.getElementById('runButton');
-    var buttonRow = runButton.parentElement;
-    var openWorkspace = document.createElement('button');
-    openWorkspace.setAttribute('id', 'open-workspace');
-    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-    var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(this.feedback_.createSharingDiv({
-      response: {
-        level_source: window.location,
-        level_source_id: options.level_source_id,
-        phone_share_url: options.phone_share_url
-      },
-      sendToPhone: options.sendToPhone,
-      level: options.level,
-      twitter: options.twitter,
-      onMainPage: true
-    }));
-
-    dom.addClickTouchEvent(openWorkspace, function() {
-      // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.display = '';
-
-      // /c/ URLs go to /edit when we click open workspace.
-      // /project/ URLs we want to go to /view (which doesnt require login)
-      if (/^\/c\//.test(location.pathname)) {
-        location.href += '/edit';
+    if (this.wireframeShare) {
+      if (dom.isMobile()) {
+        document.getElementById('visualizationColumn').className = 'chromelessShare';
       } else {
-        location.href += '/view';
-      }
-    });
+        document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+        document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-    buttonRow.appendChild(openWorkspace);
+        var wireframeSendToPhoneClick = function () {
+          $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
+            .off('click', wireframeSendToPhoneClick);
+          dashboard.initSendToPhone('#wireframeSendToPhone');
+          $('#send-to-phone').show();
+        };
+
+        var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
+        wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
+        wireframeSendToPhone.click(wireframeSendToPhoneClick);
+        $('body').append(wireframeSendToPhone);
+      }
+    } else if (!options.embed && !dom.isMobile()) {
+      var runButton = document.getElementById('runButton');
+      var buttonRow = runButton.parentElement;
+      var openWorkspace = document.createElement('button');
+      openWorkspace.setAttribute('id', 'open-workspace');
+      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+      dom.addClickTouchEvent(openWorkspace, function() {
+        // TODO: don't make assumptions about hideSource during init so this works.
+        // workspaceDiv.style.display = '';
+
+        // /c/ URLs go to /edit when we click open workspace.
+        // /project/ URLs we want to go to /view (which doesnt require login)
+        if (/^\/c\//.test(location.pathname)) {
+          location.href += '/edit';
+        } else {
+          location.href += '/view';
+        }
+      });
+
+      buttonRow.appendChild(openWorkspace);
+    }
   }
 };
 
@@ -1598,6 +1658,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
+    showDropdownInPalette: config.showDropdownInPalette,
+    allowFloatingBlocks: false,
     dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
     enablePaletteAtStart: !config.readonlyWorkspace,
     textModeAtStart: config.level.textModeAtStart
@@ -2186,4 +2248,17 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
       return descendant.getVars().indexOf(varName) !== -1;
     });
   });
+};
+
+/**
+ * Polishes the generated code string before displaying it to the user. If the
+ * app provided a polishCodeHook function, it will be called.
+ * @returns {string} code string that may/may not have been modified
+ */
+StudioApp.prototype.polishGeneratedCodeString = function (code) {
+  if (this.polishCodeHook) {
+    return this.polishCodeHook(code);
+  } else {
+    return code;
+  }
 };

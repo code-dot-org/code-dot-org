@@ -41,47 +41,45 @@
 
 <% environment.context_class.instance_eval { include ApplicationHelper } %>
 
-// Prevent callstack exceptions when opening multiple dialogs
-// http://stackoverflow.com/a/15856139/2506748
-$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+(function () {
 
-// In IE console is only defined when developer tools is open. Define it as a
-// noop when undefined (otherwise exceptions get thrown)
-if (!window.console) {
-  window.console = {};
-}
-if (!window.console.log) {
-  window.console.log = function () { };
-}
+  // Prevent callstack exceptions when opening multiple dialogs
+  // http://stackoverflow.com/a/15856139/2506748
+  $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
-var KEY_ESCAPE = 27;
-
-// Wrap existing window onerror caller with a script error check.  If we have a
-// script error and a url, throw that so that we have the info in new relic.
-var windowOnError = window.onerror;
-window.onerror = function (msg, url, ln) {
-  if (/^Script error/.test(msg) && url) {
-    arguments[0] = 'Script Error: ' + url;
+  // In IE console is only defined when developer tools is open. Define it as a
+  // noop when undefined (otherwise exceptions get thrown)
+  if (!window.console) {
+    window.console = {};
   }
-  if (windowOnError) {
-    return windowOnError.apply(this, arguments);
+  if (!window.console.log) {
+    window.console.log = function () { };
   }
-};
 
-// Prevent escape from canceling page loads.
-$(document).keydown(function(e) {
-  if (e.keyCode === KEY_ESCAPE) {
-    e.stopPropagation();
-    e.preventDefault();
-  }
-});
+  // Wrap existing window onerror caller with a script error check.  If we have a
+  // script error and a url, throw that so that we have the info in new relic.
+  var windowOnError = window.onerror;
+  window.onerror = function (msg, url, ln) {
+    if (/^Script error/.test(msg) && url) {
+      arguments[0] = 'Script Error: ' + url;
+    }
+    if (windowOnError) {
+      return windowOnError.apply(this, arguments);
+    }
+  };
 
-setTimeout(function() {
-  $('#codeApp .slow_load').show();
-}, 10000);
+  // Prevent escape from canceling page loads.
+  var KEY_ESCAPE = 27;
+  $(document).keydown(function(e) {
+    if (e.keyCode === KEY_ESCAPE) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  });
 
-function cache_bust_only() {
-    return 'bust cache';
-}
+  setTimeout(function() {
+    $('#codeApp .slow_load').show();
+  }, 10000);
 
-var CDOSounds = new Sounds();
+  window.CDOSounds = new Sounds();
+})();

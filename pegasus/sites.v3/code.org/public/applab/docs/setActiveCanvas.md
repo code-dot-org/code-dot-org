@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## setActiveCanvas(canvasId);
+## setActiveCanvas(id);
 
 [/name]
 
@@ -132,7 +132,7 @@ setActiveCanvas(id);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| canvasId | string | Yes | The id of the canvas element to activate.  |
+| id | string | Yes | The id of the canvas element to activate.  |
 
 [/parameters]
 

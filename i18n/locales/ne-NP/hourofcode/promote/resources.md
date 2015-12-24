@@ -19,12 +19,6 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## तपाइँको वेबसाइटमा यी ब्यानरहरूको सुविधा
-
-[![छवि](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![छवि](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![छवि](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Post these on social media
@@ -40,6 +34,16 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![छवि](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. "Hour of Code" को लागि कुनै पनि सन्दर्भलाई यसले तपाइँको आफ्नो ब्र्याण्ड नामलाई, तर Hour of Code लाई ग्रामीण स्तरका गतिको रूपमा सन्दर्भित गर्नु भन्दा सुझाव नगर्ने फेसनमा प्रयोग गरिएको हुन्छ। Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. भाषा पृष्ठमा समावेश गर्नुहोस् (वा फुटरमा), निम्न लिखित कुरा भन्ने CSEdWeek र Code.org वेब साइटहरूको लिङ्कहरूको समावेश गर्दैछ:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

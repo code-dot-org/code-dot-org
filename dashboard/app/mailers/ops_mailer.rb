@@ -1,5 +1,3 @@
-require_relative '../../../lib/cdo/activity_constants'
-
 class OpsMailer < ActionMailer::Base
   default from: 'noreply@code.org'
   default to: 'ops@code.org'

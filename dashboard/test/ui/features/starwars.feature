@@ -47,12 +47,25 @@ Feature: Hour of Code 2015 tutorial is completable
     And I wait to see ".modal"
     Then element "#continue-button" is visible
 
-  # Puzzle 3 starts with a video, but we skip it with ?noautoplay=true
-  # Puzzle 3 starts in text mode, so no need to switch to text mode
   Scenario: Solving puzzle 3 in text mode
     Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/3?noautoplay=true"
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 3 of 15"
+    And I close the dialog
+    When I switch to text mode
+    And I append text to droplet "moveUp();\n"
+    And I append text to droplet "moveDown();\n"
+    And I append text to droplet "moveRight();\n"
+    And I press "runButton"
+    And I wait to see ".modal"
+    Then element "#continue-button" is visible
+
+  # Puzzle 4 starts with a video, but we skip it with ?noautoplay=true
+  # Puzzle 4 starts in text mode, so no need to switch to text mode
+  Scenario: Solving puzzle 4 in text mode
+    Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/4?noautoplay=true"
+    And I rotate to landscape
+    And I wait to see a dialog titled "Puzzle 4 of 15"
     And I close the dialog
     When I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
@@ -63,25 +76,11 @@ Feature: Hour of Code 2015 tutorial is completable
     And I wait to see ".modal"
     Then element "#continue-button" is visible
 
-  Scenario: Solving puzzle 4 in text mode
-    Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/4?noautoplay=true"
-    And I rotate to landscape
-    And I wait to see a dialog titled "Puzzle 4 of 15"
-    And I close the dialog
-    When I switch to text mode
-    And I append text to droplet "moveUp();\n"
-    And I append text to droplet "moveDown();\n"
-    And I append text to droplet "moveRight();\n"
-    And I press "runButton"
-    And I wait to see ".modal"
-    Then element "#continue-button" is visible
-
   Scenario: Solving puzzle 5 in text mode
     Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/5?noautoplay=true"
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 5 of 15"
     And I close the dialog
-    When I switch to text mode
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveDown();\n"
@@ -116,7 +115,6 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 5 of 15"
     And I close the dialog
-    When I switch to text mode
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"

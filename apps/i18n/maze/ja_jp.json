@@ -31,7 +31,7 @@
   "ifTooltip": "指定した方向に道がある場合は、いくつかのアクションを行います。",
   "ifelseTooltip": "指定した方向にパスがある場合は、最初のブロックにアクションを行います。それ以外の場合は、2 番目のブロックにアクションを行います。",
   "ifFlowerTooltip": "はなや はちのすがあるときにだけ、どうぐをつかいます。",
-  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip": "指定した方向に花があれば、なにかアクションをおこします",
   "ifelseFlowerTooltip": "はなや はちのすがあるときにだけ、うえのどうぐをつかいます。ないときには、したのどうぐをつかいます。",
   "insufficientHoney": "どうぐをただしくつかうことができたね！ でも、はちみつがたりないよ！",
   "insufficientNectar": "どうぐをただしくつかうことができたね！ でも、はなのみつがたりないよ！",

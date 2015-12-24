@@ -40,7 +40,7 @@
   "drawStamp":"draw stamp",
   "heightParameter":"উচ্চতা",
   "hideTurtle":"hide artist",
-  "jump":"jump",
+  "jump":"লাফান",
   "jumpBackward":"jump backward by",
   "jumpForward":"jump forward by",
   "jumpTooltip":"Moves the artist without leaving any marks.",

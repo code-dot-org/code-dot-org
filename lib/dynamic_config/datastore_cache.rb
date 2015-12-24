@@ -1,3 +1,5 @@
+require 'honeybadger'
+
 # A caching layer that sits in front of a datastore that
 # implements get and set
 
@@ -51,10 +53,12 @@ class DatastoreCache
 
   # Pulls all values from the datastore and populates the local cache
   def update_cache
+    tries ||= 3
     @datastore.all.each do |k, v|
       set_local(k, v)
     end
   rescue => exc
+    retry unless (tries -= 1).zero?
     Honeybadger.notify(exc)
   end
 

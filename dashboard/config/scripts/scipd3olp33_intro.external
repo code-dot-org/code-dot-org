@@ -1,0 +1,23 @@
+name 'sciPD3OLP33 intro'
+title 'Introduction to Phase 3'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Welcome to Pre Phase 3 Part 2 Online 
+
+<img src="https://images.code.org/510e98227197aea590b6c7cdc17661e7-image-1448391982721.05.45.png" width="320" style="float:right; margin-left:30px;" class="roundedPic" />
+
+#### <i>Phase 3 Pre In-Person #2 - Online</i>
+
+Welcome to the online pre-work session for CS in Science Phase 3B.  We are going to walk you through the creation of a rubrick to assess a computer-model project. Take a moment to review one of your favorite modules, then click "Continue" to get started.
+
+> Note: In order for this PD to be considered complete, you must finish this online PD by your final in-person session.
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

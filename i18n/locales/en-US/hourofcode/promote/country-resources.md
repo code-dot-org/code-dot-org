@@ -43,6 +43,10 @@ crwdns50516:0crwdne50516:0
 
 [crwdns50517:0crwdne50517:0](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+crwdns55035:0crwdne55035:0
+
 <% elsif @country == 'uk' %>
 
 # crwdns49387:0crwdne49387:0
@@ -53,9 +57,9 @@ crwdns50516:0crwdne50516:0
 
 ## crwdns50519:0crwdne50519:0
 
-crwdns50520:0crwdne50520:0<%= campaign_date('full') %>.
+crwdns55036:0crwdne55036:0<%= campaign_date('full') %>.
 
-**crwdns50521:0crwdne50521:0**
+**crwdns55037:0crwdne55037:0**
 
   * crwdns49392:0crwdne49392:0
   * crwdns49393:0crwdne49393:0
@@ -64,7 +68,7 @@ crwdns50520:0crwdne50520:0<%= campaign_date('full') %>.
 
 ## crwdns50522:0crwdne50522:0
 
-crwdns50523:0crwdne50523:0
+crwdns55038:0crwdne55038:0
 
   * crwdns49396:0crwdne49396:0
   * crwdns49397:0crwdne49397:0 
@@ -77,13 +81,13 @@ crwdns50523:0crwdne50523:0
 
 ## crwdns50525:0crwdne50525:0
 
-crwdns50526:0crwdne50526:0
+crwdns55039:0crwdne55039:0
 
   * crwdns49405:0crwdne49405:0
   * crwdns49406:0crwdne49406:0
   * [crwdns49407:0crwdne49407:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**crwdns50527:0crwdne50527:0**
+**crwdns55040:0crwdne55040:0**
 
 <% else %>
 

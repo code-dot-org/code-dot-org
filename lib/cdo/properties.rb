@@ -105,6 +105,9 @@ def fetch_hoc_metrics()
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.
   metrics['started'] += 409216
+
+  # temporarily hard-code number served while analyze_hoc_activity is busted
+  metrics['started'] = 189782984
   metrics
 end
 

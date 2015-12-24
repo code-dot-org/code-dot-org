@@ -135,7 +135,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Apply the toUpperCase and toLowerCase string functions to the user's text. (Click to see full instructions) ",
-    "markdown_instructions": "# Why are you yelling at me?! toUpperCase and toLowerCase\r\n\r\nThe main functionality of the Mad Libs app is complete, but there's some finishing touches to add. The user may type input with random letter capitalization, but the Mad Libs output string should be consistently capitalized.\r\n\r\n# Do this\r\n\r\n- Pick one or more pieces of the user's input text to transform into \"yelling\" or emphasized by __making it upper case__ before displaying it\r\n- For the other pieces of the user's input text, __make it lowercase__ before displaying it  \r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nRemember the rules of updating variables! You can update a variable after first getting its current value and then doing something with it. <br> Example: `song = song.toUpperCase();`\r\n</details>",
+    "markdown_instructions": "# Why Are You Yelling At Me?! *toUpperCase* and *toLowerCase*\r\n\r\nThe main functionality of the Mad Libs app is complete, but there are some finishing touches to add. The user may type input with random letter capitalization, but the Mad Libs output string should be consistently capitalized.\r\n\r\n# Do This:\r\n\r\n- Pick one or more pieces of the user's input text to transform into \"yelling\" or emphasize by __making it uppercase__ before displaying it.\r\n- For the other pieces of the user's input text, __make it lowercase__ before displaying it.\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nRemember the rules of updating variables! You can update a variable after first getting its current value and then doing something with it. <br> Example: `song = song.toUpperCase();`\r\n</details>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -163,9 +163,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "AtVzkXxTEFkOudKV/+IcnMNc3NyQ1miItdtmSg6vnaucIt6EXa92SAuVLPoA\nMyMg2U2FDrv/vMd8BR5zbyUfjQ==\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

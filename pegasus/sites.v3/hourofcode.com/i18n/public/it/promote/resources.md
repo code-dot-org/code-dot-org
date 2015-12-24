@@ -128,4 +128,3 @@ La prego di contattarmi a [NUMERO DI TELEFONO O EMAIL]. Attendo con ansia la Sua
 
 Sinceramente, [NOME], [TITOLO]
 
-<%= view :signup_button %>

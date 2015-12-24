@@ -6,20 +6,28 @@ nav: how_to_nav
 
 <h1>How to teach one Hour of Code</h1>
 
-## 1) Sign up
-- Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-- Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
+## 1) Promote your Hour of Code
+Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* 
 
-**All Hour of Code tutorials:**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
 
 - Require minimal prep-time for teachers
 - Are self-guided - allowing students to work at their own pace and skill-level
+
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+
+- Are lesson plans that require some advance teacher preparation
+- Are categorized by grade level *and* by subject area (eg Math, English, etc)
+
+
 
 [<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
 
@@ -35,7 +43,9 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 <img src="/images/fit-350/group_ipad.jpg">
 
 ## 5) Inspire students to start your Hour of Code
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** 
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities with computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+
+[<img src="/images/fit-300/volunteer-map.png">](<%= resolve_url('https://code.org/volunteer/local') %>)
 
 **Show an inspirational video:**
 
@@ -68,6 +78,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
+**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **What to do if a student finishes early?**
 
@@ -117,7 +128,8 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 ## Other Hour of Code resources for educators:
 - Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
-- Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
 <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
@@ -129,4 +141,3 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 - Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 - [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>

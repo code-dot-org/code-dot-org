@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## rect(upperLeftX, upperLeftY, width, height)
+## rect(x, y, width, height)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Canvas
 
 [short_description]
 
-Draws a rectangle onto the active canvas positioned at `upperLeftX` and `upperLeftY`, and size `width` and `height`.
+Draws a rectangle onto the active canvas positioned at `x` and `y`, and size `width` and `height`.
 
 [/short_description]
 
@@ -73,8 +73,8 @@ rect(x, y, width, height);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| upperLeftX | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
-| upperLeftY | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
+| x | number | Yes | The x position in pixels of the upper left corner of the rectangle.  |
+| y | number | Yes | The y position in pixels of the upper left corner of the rectangle.  |
 | width | number | Yes | The horizontal width in pixels of the rectangle.  |
 | height | number | Yes | The vertical height in pixels of the rectangle.  |
 

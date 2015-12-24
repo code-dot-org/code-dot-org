@@ -45,6 +45,7 @@ class Game < ActiveRecord::Base
   MAZE = 'maze'
   CALC = 'calc'
   EVAL = 'eval'
+  TEXT_COMPRESSION = 'text_compression';
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -111,11 +112,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
-  end
-
-  def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT
   end
 
   def flappy?
@@ -131,10 +128,10 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION
   end
 
-  # True if the app takes responsability for showing footer info
+  # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
     app === APPLAB
   end

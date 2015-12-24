@@ -6,15 +6,14 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Como organizar unha Hora do Código
 
 Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
-## 1) Prepare for your event
+## Prepara o teu evento
 
-  * Determine a venue, date and time
+  * Fixa un lugar, unha data e unha hora
   * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
   * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
@@ -59,4 +58,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 | 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
 
-<%= view :signup_button %>

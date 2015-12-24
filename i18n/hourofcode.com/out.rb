@@ -59,6 +59,7 @@ languages = {
   'Romanian' => ['ro-RO', 'ro'],
   'Russian' => ['ru-RU', 'ru'],
   'Serbian (Cyrillic)' => ['sr-SP', 'sr'],
+  'Sinhala' => ['si-LK', 'si'],
   'Slovak' => ['sk-SK', 'sk'],
   'Slovenian' => ['sl-SI', 'sl'],
   'Spanish' => ['es-ES', 'es'],
@@ -70,7 +71,8 @@ languages = {
   'Ukrainian' => ['uk-UA', 'uk'],
   'Urdu (Pakistan)' => ['ur-PK', 'ur'],
   'Uzbek' => ['uz-UZ', 'uz'],
-  'Vietnamese' => ['vi-VN', 'vi']
+  'Vietnamese' => ['vi-VN', 'vi'],
+  'Zulu' => ['zu-ZA', 'zu']
 }
 
 locale_index = 0

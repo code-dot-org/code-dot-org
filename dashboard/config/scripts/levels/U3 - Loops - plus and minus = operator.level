@@ -44,7 +44,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
@@ -52,8 +52,9 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Update the code to use the += operator. (Click to see full instructions)",
-    "markdown_instructions": "# Introducting += and -= Operators\r\n\r\nSometimes you want to add or subtract something *other than 1* from the current value of a variable. If you wanted to add or subtract 3 for example, such as: `count = count+3` or `count = count - 3`.  In that case ++ and -- won’t help. \r\n\r\nIt turns out this is pretty common as well so there is actually a shorthand version of count = count + 3. \r\n\r\n**Introducing +=  and -=**\r\n\r\nWe can use the `+=` operator or `-=` to add or subtract any value we want to the current value of a variable. \r\n\r\nSo, the shorthand versions of `count = count + 3` and `count = count-3` would be:\r\n * `count+=3` \r\n * `count -= 3`.\r\n\r\n**Notice** that these 3 statements: `count = count+1`  `count++` and `count+=1` all do **exactly** the same thing!   \r\n\r\nWhich one you use as a programmer is your choice and in the future you can use either version but try out the new operator here.\r\n\r\n# Do This\r\n\r\n* **Change the code to use `count+=3`** instead of `count = count + 3` so the program will still count up by 3. \r\n\r\n(You'll get to try out -= on the next level)",
-    "start_blocks": "var count = 0;\r\nwhile( count != 30){ \r\n  count = count+3;\r\n  console.log(count); \r\n}"
+    "markdown_instructions": "# Introducing *+=* and *-=* Operators\r\n\r\nSometimes you want to add or subtract something *other than 1* from the current value of a variable. If you wanted to add or subtract 3 for example, such as: `count = count + 3` or `count = count - 3`, `++` and `--` wouldn’t help. \r\n\r\nIt turns out this is pretty common as well so there is actually a shorthand version of `count = count + 3`. \r\n\r\n**Introducing `+=`  and `-=`**!\r\n\r\nWe can use the `+=` or `-=` operator to add or subtract any value we want to the current value of a variable. \r\n\r\nSo, the shorthand versions of `count = count + 3` and `count = count - 3` would be:\r\n * `count += 3` \r\n * `count -= 3`\r\n\r\n**Notice** that these 3 statements: `count = count + 1`,  `count++`, and `count += 1` all do **exactly** the same thing!\r\n\r\nWhich one you use as a programmer is your choice, and in the future you can use either version, but try out the new operator here.\r\n\r\n# Do This:\r\n\r\n* **Change the code to use `count += 3`** instead of `count = count + 3` so the program will still count up by 3. (You'll need to be in text mode to do this.) \r\n\r\n(You'll get to try out `-=` on the next level.)",
+    "start_blocks": "var count = 0;\r\nwhile (count != 30) { \r\n  count = count + 3;\r\n  console.log(count); \r\n}",
+    "encrypted_examples": "WAFmUpvM39sAV+CgOrPV9RXRF0TSsYoPunu+nBlPiZAkLsMraPo3jcxoklew\n3lUM\n"
   }
 }]]></config>
   <blocks/>

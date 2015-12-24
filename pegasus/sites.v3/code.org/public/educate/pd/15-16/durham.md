@@ -48,9 +48,10 @@ Breakfast and lunch will be served.
 
 **November 14th Location**
 
-3001 Cameron Boulevard<br/>
+[Washington Duke Inn & Golf Club <br/>
 Forest Room<br/>
-Durham, NC 27705
+3001 Cameron Boulevard<br/>
+Durham, NC 27705](https://www.google.com/maps/place/Washington+Duke+Inn+%26+Golf+Club/@35.9928247,-78.9496342,17z/data=!3m1!4b1!4m2!3m1!1s0x89ace6bee019e98d:0x35f41a712441051c)
 
 
 
@@ -88,9 +89,10 @@ Wednesday, November 18, 2015 <br/>
 
 **Location**
 
-5001 Red Mill Rd<br/>
+[The School for Creative Studies<br/>
 Room Cybrary<br/>
-Durham, NC 27704
+5001 Red Mill Rd<br/>
+Durham, NC 27704](https://www.google.com/maps/place/The+School+for+Creative+Studies/@36.0721,-78.8244797,17z/data=!4m7!1m4!3m3!1s0x89acfd446210acb7:0xe5de373b53919c77!2s5001+Red+Mill+Rd,+Durham,+NC+27704!3b1!3m1!1s0x0000000000000000:0xbd5ab883c5216002)
 
 Free parking is available in the lot in front of the building. Please only use the unmarked spots.
 
@@ -109,9 +111,10 @@ Wednesday, November 18, 2015 <br/>
 
 **Location**
 
-5001 Red Mill Rd<br/>
+[The School for Creative Studies<br/>
 Room 228<br/>
-Durham, NC 27704
+5001 Red Mill Rd<br/>
+Durham, NC 27704](https://www.google.com/maps/place/The+School+for+Creative+Studies/@36.0721,-78.8244797,17z/data=!4m7!1m4!3m3!1s0x89acfd446210acb7:0xe5de373b53919c77!2s5001+Red+Mill+Rd,+Durham,+NC+27704!3b1!3m1!1s0x0000000000000000:0xbd5ab883c5216002)
 
 **What to bring**
 
