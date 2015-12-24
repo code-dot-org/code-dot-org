@@ -226,8 +226,12 @@ dashboard.header = (function () {
 
       var i18n = window.dashboard.i18n;
 
-      var dialogDom = document.createElement('div');
-      document.body.appendChild(dialogDom);
+      var dialogDom = document.getElementById('project-share-dialog');
+      if (!dialogDom) {
+        dialogDom = document.createElement('div');
+        dialogDom.setAttribute('id', 'project-share-dialog');
+        document.body.appendChild(dialogDom);
+      }
 
       var dialog = React.createElement(dashboard.ShareDialog, {
         i18n: i18n,
@@ -258,11 +262,6 @@ dashboard.header = (function () {
           dashboard.initSendToPhone('#project-share');
         }
       });
-
-      // move to share_dialog_body.jsx
-      // $('#project-share #continue-button').click(function() {
-      //   dialog.hide();
-      // });
     });
   }
 

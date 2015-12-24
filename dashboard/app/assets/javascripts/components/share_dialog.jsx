@@ -20,19 +20,49 @@ window.dashboard.ShareDialog = (function (React) {
       onClickPopup: React.PropTypes.func.isRequired
     },
 
+    getInitialState: function () {
+      return {
+        hidden: false
+      };
+    },
+
+    componentWillReceiveProps: function (newProps) {
+      this.setState({hidden: false});
+    },
+
+    componentDidMount: function () {
+      this.refs.dialog.getDOMNode().focus();
+    },
+
+    componentDidUpdate: function () {
+      if (!this.state.hidden) {
+        this.refs.dialog.getDOMNode().focus();
+      }
+    },
+
+    onKeyDown: function (event) {
+      if (event.key === 'Escape') {
+        this.closeDialog();
+      }
+    },
+
     closeDialog: function () {
-      // TODO - we want this setting state in parent dialog component
-      console.log('close dialog');
+      this.setState({hidden: true});
     },
 
     render: function () {
+      if (this.state.hidden) {
+        return <div/>;
+      }
+
+      // TODO - styling isnt quite right
+      // TODO - figure out how SendToPhone plays with this
       return (
         <div>
-          <div className="modal-backdrop in"></div>
-          <div tabindex="-1" className="modal dash_modal in" aria-hidden={false}>
+          <div className="modal-backdrop in" onClick={this.closeDialog}/>
+          <div tabIndex="-1" className="modal dash_modal in" ref="dialog" onKeyDown={this.onKeyDown}>
             <div className="modal-body dash_modal_body">
-              <div id="x-close" className="x-close" data-dismiss="modal">
-              </div>
+              <div id="x-close" className="x-close" onClick={this.closeDialog}/>
             </div>
             {/* TODO - do we really want this as a separate component? maybe
               if that makes separating out dialog from body easier in general */}
