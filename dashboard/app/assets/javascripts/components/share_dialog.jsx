@@ -55,31 +55,30 @@ window.dashboard.ShareDialog = (function (React) {
         return <div/>;
       }
 
-      // TODO - styling isnt quite right
       // TODO - figure out how SendToPhone plays with this
       return (
         <div>
           <div className="modal-backdrop in" onClick={this.closeDialog}/>
           <div tabIndex="-1" className="modal dash_modal in" ref="dialog" onKeyDown={this.onKeyDown}>
             <div className="modal-body dash_modal_body">
-              <div id="x-close" className="x-close" onClick={this.closeDialog}/>
+              <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
+              {/* TODO - do we really want this as a separate component? maybe
+                if that makes separating out dialog from body easier in general */}
+              <ShareDialogBody
+                i18n={this.props.i18n}
+                icon={this.props.icon}
+                title={this.props.title}
+                shareCopyLink={this.props.shareCopyLink}
+                shareUrl={this.props.shareUrl}
+                encodedShareUrl={this.props.encodedShareUrl}
+                closeText={this.props.closeText}
+                isAbusive={this.props.isAbusive}
+                abuseTos={this.props.abuseTos}
+                abuseContact={this.props.abuseContact}
+                onClickPopup={this.props.onClickPopup}
+                onClickClose={this.closeDialog}
+                />
             </div>
-            {/* TODO - do we really want this as a separate component? maybe
-              if that makes separating out dialog from body easier in general */}
-            <ShareDialogBody
-              i18n={this.props.i18n}
-              icon={this.props.icon}
-              title={this.props.title}
-              shareCopyLink={this.props.shareCopyLink}
-              shareUrl={this.props.shareUrl}
-              encodedShareUrl={this.props.encodedShareUrl}
-              closeText={this.props.closeText}
-              isAbusive={this.props.isAbusive}
-              abuseTos={this.props.abuseTos}
-              abuseContact={this.props.abuseContact}
-              onClickPopup={this.props.onClickPopup}
-              onClickClose={this.closeDialog}
-              />
           </div>
         </div>
       );
