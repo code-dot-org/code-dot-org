@@ -237,7 +237,7 @@ dashboard.header = (function () {
         abuseTos: i18n.t('project.abuse.tos'),
         abuseContact: i18n.t('project.abuse.contact_us'),
         // TODO - might make more sense just living in the component instead
-        // of as a prop
+        // of as a prop. except it's also used by feedback.js
         onClickPopup: window.dashboard.popupWindow,
         onClickContinue: function () {
           // TODO - we want this setting state in parent dialog component
@@ -252,24 +252,10 @@ dashboard.header = (function () {
       document.body.appendChild(target);
       React.render(dialog, target);
 
-      // move to share_dialog_body.jsx
-      // $('a.popup-window').click();
-
-      // move to share_dialog_body.jsx
-      // $('#sharing-phone').click(function (event) {
-      //   event.preventDefault();
-      // });
-
       // move to send_to_phone.jsx if possible
       $('#phone-submit').click(function (event) {
         event.preventDefault();
       });
-
-      // move to share_dialog_body.jsx
-      // $('#sharing-input').click(function () {
-      //   this.select();
-      // });
-      // dialog.show();
 
       // move to send_to_phone.jsx
       $('#project-share #sharing-phone').click(function() {
