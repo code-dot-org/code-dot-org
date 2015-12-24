@@ -101,10 +101,10 @@ window.dashboard.ShareDialogBody = (function (React) {
               {this.props.closeText}
             </button>
             <div className="social-buttons">
-              <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup} style={horzPadding}>
+              <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
                 <i className="fa fa-facebook"></i>
               </a>
-              <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup} style={horzPadding}>
+              <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
                 <i className="fa fa-twitter"></i>
               </a>
               <a id="sharing-phone" href="" style={horzPadding} onClick={preventDefault}>

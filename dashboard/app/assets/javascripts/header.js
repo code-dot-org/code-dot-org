@@ -244,7 +244,6 @@ dashboard.header = (function () {
         isAbusive: dashboard.project.exceedsAbuseThreshold(),
         abuseTos: i18n.t('project.abuse.tos'),
         abuseContact: i18n.t('project.abuse.contact_us'),
-
         onClickPopup: window.dashboard.popupWindow
       });
       React.render(dialog, dialogDom);
