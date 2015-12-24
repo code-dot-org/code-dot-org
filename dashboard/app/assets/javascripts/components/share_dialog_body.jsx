@@ -10,6 +10,14 @@ window.dashboard = window.dashboard || {};
  * will be lost.
  */
 window.dashboard.ShareDialogBody = (function (React) {
+  var preventDefault = function(event) {
+    event.preventDefault();
+  };
+
+  var select = function (event) {
+    event.target.select();
+  };
+
   return React.createClass({
     propTypes: {
       icon: React.PropTypes.string,
@@ -20,7 +28,10 @@ window.dashboard.ShareDialogBody = (function (React) {
       closeText: React.PropTypes.string.isRequired,
       isAbusive: React.PropTypes.bool.isRequired,
       abuseTos: React.PropTypes.string.isRequired,
-      abuseContact: React.PropTypes.string.isRequired
+      abuseContact: React.PropTypes.string.isRequired,
+
+      onClickPopup: React.PropTypes.func.isRequired,
+      onClickContinue: React.PropTypes.func.isRequired
     },
 
     render: function () {
@@ -77,23 +88,25 @@ window.dashboard.ShareDialogBody = (function (React) {
               <input
                 type="text"
                 id="sharing-input"
+                onClick={select}
                 readOnly="true"
                 value={this.props.shareUrl}
                 style={{cursor: 'copy', width: 465}}/>
             </div>
             <button
                 id="continue-button"
-                style={{float: 'right'}}>
+                style={{float: 'right'}}
+                onClick={this.props.onClickContinue}>
               {this.props.closeText}
             </button>
             <div className="social-buttons">
-              <a href={facebookShareUrl} target="_blank" className="popup-window" style={horzPadding}>
+              <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup} style={horzPadding}>
                 <i className="fa fa-facebook"></i>
               </a>
-              <a href={twitterShareUrl} target="_blank" className="popup-window" style={horzPadding}>
+              <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup} style={horzPadding}>
                 <i className="fa fa-twitter"></i>
               </a>
-              <a id="sharing-phone" href="" style={horzPadding}>
+              <a id="sharing-phone" href="" style={horzPadding} onClick={preventDefault}>
                 <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
               </a>
             </div>

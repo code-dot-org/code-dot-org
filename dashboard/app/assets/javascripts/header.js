@@ -236,14 +236,14 @@ dashboard.header = (function () {
         isAbusive: dashboard.project.exceedsAbuseThreshold(),
         abuseTos: i18n.t('project.abuse.tos'),
         abuseContact: i18n.t('project.abuse.contact_us'),
+        // TODO - might make more sense just living in the component instead
+        // of as a prop
+        onClickPopup: window.dashboard.popupWindow,
+        onClickContinue: function () {
+          // TODO - we want this setting state in parent dialog component
+          console.log('clicked continue');
+        }
       });
-
-      // Use a React component so that we can use JSX and to make our dependencies on
-      // dashboard explicit. Render to markup since we are currently still mutating
-      // the generated DOM elsewhere
-      // var body = React.renderToStaticMarkup(bodyReact);
-
-      // var dialog = new Dialog({body: body});
 
       var dialog = React.createElement(dashboard.ShareDialog, {
         body: bodyReact
@@ -253,35 +253,25 @@ dashboard.header = (function () {
       React.render(dialog, target);
 
       // move to share_dialog_body.jsx
-      $('a.popup-window').click(window.dashboard.popupWindow);
+      // $('a.popup-window').click();
 
       // move to share_dialog_body.jsx
-      $('#sharing-phone').click(function (event) {
-        event.preventDefault();
-      });
+      // $('#sharing-phone').click(function (event) {
+      //   event.preventDefault();
+      // });
 
       // move to send_to_phone.jsx if possible
       $('#phone-submit').click(function (event) {
         event.preventDefault();
       });
 
-      // for better of worse, i dont think we ever hit this for our sharing dialog
-      function createHiddenPrintWindow(src) {
-        var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-        iframe.appendTo("body");
-        iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
-        iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
-        $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
-      }
-      $('#project-share #print').click(createHiddenPrintWindow);
-
       // move to share_dialog_body.jsx
-      $('#sharing-input').click(function () {
-        this.select();
-      });
+      // $('#sharing-input').click(function () {
+      //   this.select();
+      // });
       // dialog.show();
 
-      // move to jsx
+      // move to send_to_phone.jsx
       $('#project-share #sharing-phone').click(function() {
         var sendToPhone = $('#project-share #send-to-phone');
         if (sendToPhone.is(':hidden')) {
