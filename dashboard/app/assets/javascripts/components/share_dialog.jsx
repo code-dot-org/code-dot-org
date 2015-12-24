@@ -55,7 +55,7 @@ window.dashboard.ShareDialog = (function (React) {
         return <div/>;
       }
 
-      // TODO - figure out how SendToPhone plays with this
+      // TODO - Can we now make SendToPhone completely Reactified?
       return (
         <div>
           <div className="modal-backdrop in" onClick={this.closeDialog}/>

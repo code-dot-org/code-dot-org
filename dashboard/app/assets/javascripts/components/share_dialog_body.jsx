@@ -83,7 +83,6 @@ window.dashboard.ShareDialogBody = (function (React) {
             <p className="dialog-title">{this.props.title}</p>
             {abuseContents}
             <p>{this.props.shareCopyLink}</p>
-            {/*TODO: de-dup with apps code once JS common-core work is done.*/}
             <div>
               <input
                 type="text"
@@ -93,7 +92,8 @@ window.dashboard.ShareDialogBody = (function (React) {
                 value={this.props.shareUrl}
                 style={{cursor: 'copy', width: 465}}/>
             </div>
-            {/* TODO -rename button, since text is close */}
+            {/* Awkward that this is called continue-button, when text is
+                close, but id is (unfortunately) used for styling */}
             <button
                 id="continue-button"
                 style={{float: 'right'}}
