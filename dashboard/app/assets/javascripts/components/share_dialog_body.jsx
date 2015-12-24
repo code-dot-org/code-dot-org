@@ -31,7 +31,7 @@ window.dashboard.ShareDialogBody = (function (React) {
       abuseContact: React.PropTypes.string.isRequired,
 
       onClickPopup: React.PropTypes.func.isRequired,
-      onClickContinue: React.PropTypes.func.isRequired
+      onClickClose: React.PropTypes.func.isRequired
     },
 
     render: function () {
@@ -93,10 +93,11 @@ window.dashboard.ShareDialogBody = (function (React) {
                 value={this.props.shareUrl}
                 style={{cursor: 'copy', width: 465}}/>
             </div>
+            {/* TODO -rename button, since text is close */}
             <button
                 id="continue-button"
                 style={{float: 'right'}}
-                onClick={this.props.onClickContinue}>
+                onClick={this.props.onClickClose}>
               {this.props.closeText}
             </button>
             <div className="social-buttons">

@@ -226,7 +226,11 @@ dashboard.header = (function () {
 
       var i18n = window.dashboard.i18n;
 
-      var bodyReact = React.createElement(dashboard.ShareDialogBody, {
+      var dialogDom = document.createElement('div');
+      document.body.appendChild(dialogDom);
+
+      var dialog = React.createElement(dashboard.ShareDialog, {
+        i18n: i18n,
         icon: appOptions.skin.staticAvatar,
         title: i18n.t('project.share_title'),
         shareCopyLink: i18n.t('project.share_copy_link'),
@@ -236,21 +240,10 @@ dashboard.header = (function () {
         isAbusive: dashboard.project.exceedsAbuseThreshold(),
         abuseTos: i18n.t('project.abuse.tos'),
         abuseContact: i18n.t('project.abuse.contact_us'),
-        // TODO - might make more sense just living in the component instead
-        // of as a prop. except it's also used by feedback.js
-        onClickPopup: window.dashboard.popupWindow,
-        onClickContinue: function () {
-          // TODO - we want this setting state in parent dialog component
-          console.log('clicked continue');
-        }
-      });
 
-      var dialog = React.createElement(dashboard.ShareDialog, {
-        body: bodyReact
+        onClickPopup: window.dashboard.popupWindow
       });
-      var target = document.createElement('div');
-      document.body.appendChild(target);
-      React.render(dialog, target);
+      React.render(dialog, dialogDom);
 
       // move to send_to_phone.jsx if possible
       $('#phone-submit').click(function (event) {
@@ -267,9 +260,9 @@ dashboard.header = (function () {
       });
 
       // move to share_dialog_body.jsx
-      $('#project-share #continue-button').click(function() {
-        dialog.hide();
-      });
+      // $('#project-share #continue-button').click(function() {
+      //   dialog.hide();
+      // });
     });
   }
 
