@@ -30,7 +30,19 @@ window.dashboard.SendToPhone = (function (React) {
       }
   }
 
+  var baseStyles = {
+    label: {},
+    div: {}
+  };
+
   return React.createClass({
+    propTypes: {
+      styles: React.PropTypes.shape({
+        label: React.PropTypes.object,
+        div: React.PropTypes.object,
+      })
+    },
+
     getInitialState: function () {
       return {
         sendState: SendState.invalidVal
@@ -85,9 +97,10 @@ window.dashboard.SendToPhone = (function (React) {
     },
 
     render: function () {
+      var styles = $.extend({}, baseStyles, this.props.styles);
       return (
         <div id="send-to-phone" className="sharing">
-          <label htmlFor="phone">Enter a US phone number:</label>
+          <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
           <input
             type="text"
             id="phone"
@@ -98,11 +111,11 @@ window.dashboard.SendToPhone = (function (React) {
           </input>
           <button
               id="phone-submit"
-              disabled={this.state.sendState === SendState.invalidval}
+              disabled={this.state.sendState === SendState.invalidVal}
               onClick={this.handleSubmit}>
             {sendButtonString(this.state.sendState)}
           </button>
-          <div id="phone-charges">
+          <div style={styles.div} id="phone-charges">
             A text message will be sent via <a href="http://twilio.com">Twilio</a>.
             Charges may apply to the recipient.
           </div>
