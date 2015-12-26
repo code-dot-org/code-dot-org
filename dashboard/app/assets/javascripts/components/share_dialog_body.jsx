@@ -37,7 +37,6 @@ window.dashboard.ShareDialogBody = (function (React) {
     },
 
     showSendToPhone: function(event) {
-      console.log('show phone');
       this.setState({showSendToPhone: true });
       event.preventDefault();
     },
