@@ -179,45 +179,6 @@ dashboard.header = (function () {
     }
   };
 
-  dashboard.initSendToPhone = function(selector) {
-    // var parent = $(selector);
-    // var phone = parent.find('#phone');
-    // var submitted = false;
-    // var submitButton = parent.find('#phone-submit');
-    // submitButton.attr('disabled', 'true');
-    // phone.mask('(000) 000-0000', {
-    //   onComplete: function(){
-    //     if (!submitted) {
-    //       submitButton.removeAttr('disabled');
-    //     }
-    //   },
-    //   onChange: function () {
-    //     submitButton.attr('disabled', 'true');
-    //   }
-    // });
-    // phone.focus();
-    // submitButton.click(function() {
-    //   var params = jQuery.param({
-    //     type: dashboard.project.getStandaloneApp(),
-    //     channel_id: dashboard.project.getCurrentId(),
-    //     phone: phone.val()
-    //   });
-    //   $(submitButton).val('Sending..');
-    //   phone.prop('readonly', true);
-    //   submitButton.disabled = true;
-    //   submitted = true;
-    //   jQuery.post('/sms/send', params)
-    //       .done(function () {
-    //         $(submitButton).text('Sent!');
-    //         trackEvent('SendToPhone', 'success');
-    //       })
-    //       .fail(function () {
-    //         $(submitButton).text('Error!');
-    //         trackEvent('SendToPhone', 'error');
-    //       });
-    // });
-  };
-
   function shareProject() {
     dashboard.project.save(function () {
       var origin = location.protocol + '//' + location.host;
@@ -247,20 +208,6 @@ dashboard.header = (function () {
         onClickPopup: window.dashboard.popupWindow
       });
       React.render(dialog, dialogDom);
-
-      // move to send_to_phone.jsx if possible
-      $('#phone-submit').click(function (event) {
-        event.preventDefault();
-      });
-
-      // move to send_to_phone.jsx
-      $('#project-share #sharing-phone').click(function() {
-        var sendToPhone = $('#project-share #send-to-phone');
-        if (sendToPhone.is(':hidden')) {
-          sendToPhone.attr('style', 'display:inline-block');
-          dashboard.initSendToPhone('#project-share');
-        }
-      });
     });
   }
 
