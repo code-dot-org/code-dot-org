@@ -6,6 +6,8 @@ window.dashboard = window.dashboard || {};
  * Send-to-phone component used by share project dialog.
  */
 window.dashboard.SendToPhone = (function (React) {
+// TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?  
+
   var SendState = {
     invalidVal: 'invalidVal',
     canSubmit: 'canSubmit',
@@ -99,23 +101,21 @@ window.dashboard.SendToPhone = (function (React) {
     render: function () {
       var styles = $.extend({}, baseStyles, this.props.styles);
       return (
-        <div id="send-to-phone" className="sharing">
+        <div>
           <label style={styles.label} htmlFor="phone">Enter a US phone number:</label>
           <input
             type="text"
-            id="phone"
             ref="phone"
             name="phone"
             disabled={this.state.sendState !== SendState.invalidVal &&
               this.state.sendState !== SendState.canSubmit}>
           </input>
           <button
-              id="phone-submit"
-              disabled={this.state.sendState === SendState.invalidVal}
-              onClick={this.handleSubmit}>
-            {sendButtonString(this.state.sendState)}
+            disabled={this.state.sendState === SendState.invalidVal}
+            onClick={this.handleSubmit}>
+              {sendButtonString(this.state.sendState)}
           </button>
-          <div style={styles.div} id="phone-charges">
+          <div style={styles.div}>
             A text message will be sent via <a href="http://twilio.com">Twilio</a>.
             Charges may apply to the recipient.
           </div>
