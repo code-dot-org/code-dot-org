@@ -10,10 +10,6 @@ window.dashboard = window.dashboard || {};
  * will be lost.
  */
 window.dashboard.ShareDialogBody = (function (React) {
-  var preventDefault = function(event) {
-    event.preventDefault();
-  };
-
   var select = function (event) {
     event.target.select();
   };
@@ -32,6 +28,18 @@ window.dashboard.ShareDialogBody = (function (React) {
 
       onClickPopup: React.PropTypes.func.isRequired,
       onClickClose: React.PropTypes.func.isRequired
+    },
+
+    getInitialState: function () {
+      return {
+        showSendToPhone: false
+      };
+    },
+
+    showSendToPhone: function(event) {
+      console.log('show phone');
+      this.setState({showSendToPhone: true });
+      event.preventDefault();
     },
 
     render: function () {
@@ -76,6 +84,11 @@ window.dashboard.ShareDialogBody = (function (React) {
           textStyle={abuseTextStyle}/>;
       }
 
+      var sendToPhone;
+      if (this.state.showSendToPhone) {
+        sendToPhone = <window.dashboard.SendToPhone showLead={false}/>;
+      }
+
       return (
         <div>
           {image}
@@ -107,11 +120,11 @@ window.dashboard.ShareDialogBody = (function (React) {
               <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
                 <i className="fa fa-twitter"></i>
               </a>
-              <a id="sharing-phone" href="" style={horzPadding} onClick={preventDefault}>
+              <a id="sharing-phone" href="" style={horzPadding} onClick={this.showSendToPhone}>
                 <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
               </a>
             </div>
-            <window.dashboard.SendToPhone/>
+            {sendToPhone}
           </div>
         </div>
       );

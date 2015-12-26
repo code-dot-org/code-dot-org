@@ -184,7 +184,7 @@ dashboard.header = (function () {
     var phone = parent.find('#phone');
     var submitted = false;
     var submitButton = parent.find('#phone-submit');
-    submitButton.attr('disabled', 'true');
+    // submitButton.attr('disabled', 'true');
     phone.mask('(000) 000-0000', {
       onComplete: function(){
         if (!submitted) {
@@ -195,7 +195,7 @@ dashboard.header = (function () {
         submitButton.attr('disabled', 'true');
       }
     });
-    phone.focus();
+    // phone.focus();
     submitButton.click(function() {
       var params = jQuery.param({
         type: dashboard.project.getStandaloneApp(),
