@@ -109,7 +109,6 @@ window.dashboard.SendToPhone = (function (React) {
         );
       }
 
-      // TODO - twilio doesnt work from localhost
       return (
         <div id="send-to-phone" className="sharing">
           <label htmlFor="phone">Enter a US phone number:</label>
