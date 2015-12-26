@@ -1603,8 +1603,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         document.getElementById('visualizationColumn').className = 'wireframeShare';
 
         var div = document.createElement('div');
-        // TODO - id only used for styling. can we move it into component?
-        div.setAttribute("id", "wireframeSendToPhone");
         document.body.appendChild(div);
         React.render(React.createElement(WireframeSendToPhone), div);
       }
