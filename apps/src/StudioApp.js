@@ -33,6 +33,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -1605,9 +1606,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         // TODO - id only used for styling. can we move it into component?
         div.setAttribute("id", "wireframeSendToPhone");
         document.body.appendChild(div);
-        React.render(React.createElement(window.dashboard.SendToPhone, {
-          showLead: true
-        }), div);
+        React.render(React.createElement(WireframeSendToPhone), div);
       }
     } else if (!options.embed && !dom.isMobile()) {
       var runButton = document.getElementById('runButton');
