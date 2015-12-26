@@ -31,13 +31,8 @@ window.dashboard.SendToPhone = (function (React) {
   }
 
   return React.createClass({
-    propTypes: {
-      showLead: React.PropTypes.bool.isRequired
-    },
-
     getInitialState: function () {
       return {
-        showLead: this.props.showLead,
         sendState: SendState.invalidVal
       };
     },
@@ -46,21 +41,10 @@ window.dashboard.SendToPhone = (function (React) {
       this.maskPhoneInput();
     },
 
-    componentDidUpdate: function () {
-      // TODO - only needed because of showLead I think?
-      this.maskPhoneInput();
-    },
-
-    // TODO - lead should maybe be separate component
-    clickLead: function (event) {
-      this.setState({showLead: false});
-    },
-
     maskPhoneInput: function () {
       // TODO - what happens when called multiple times
       if (this.refs.phone) {
         var phone = this.refs.phone.getDOMNode();
-        // TODO - consider case where we showLead to start
         $(phone).mask('(000) 000-0000', {
           onComplete: function () {
             this.setState({sendState: SendState.canSubmit});
@@ -101,14 +85,6 @@ window.dashboard.SendToPhone = (function (React) {
     },
 
     render: function () {
-      if (this.state.showLead) {
-        return (
-          <div onClick={this.clickLead}>
-            <i className="fa fa-mobile"></i> See this app on your phone
-          </div>
-        );
-      }
-
       return (
         <div id="send-to-phone" className="sharing">
           <label htmlFor="phone">Enter a US phone number:</label>

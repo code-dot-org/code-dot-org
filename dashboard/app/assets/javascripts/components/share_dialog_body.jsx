@@ -85,7 +85,7 @@ window.dashboard.ShareDialogBody = (function (React) {
 
       var sendToPhone;
       if (this.state.showSendToPhone) {
-        sendToPhone = <window.dashboard.SendToPhone showLead={false}/>;
+        sendToPhone = <window.dashboard.SendToPhone/>;
       }
 
       return (
