@@ -14,6 +14,8 @@ window.Applab = {
   appHeight: 480
 };
 
+window.dashboard = window.dashboard || {};
+
 var Applab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
@@ -316,6 +318,8 @@ describe('startSharedAppAfterWarnings', function () {
       originalState[item] = Applab[item];
     });
     originalState.dashboard = window.dashboard;
+
+    window.dashboard = window.dashboard || {};
 
     Applab.user = {};
     Applab.channelId = 'current_channel';
