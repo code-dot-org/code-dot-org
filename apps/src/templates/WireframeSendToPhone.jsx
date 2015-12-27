@@ -32,6 +32,11 @@ var styles = {
  * SendToPhone component.
  */
 module.exports = React.createClass({
+  propTypes: {
+    channelId: React.PropTypes.string.isRequired,
+    appType: React.PropTypes.string.isRequired
+  },
+
   getInitialState: function () {
     return {
       clicked: false
@@ -53,7 +58,10 @@ module.exports = React.createClass({
 
     return (
       <div style={styles.main}>
-        <SendToPhone styles={styles.sendToPhone}/>
+        <SendToPhone
+          styles={styles.sendToPhone}
+          channelId={this.props.channelId}
+          appType={this.props.appType}/>
       </div>
     );
   }
