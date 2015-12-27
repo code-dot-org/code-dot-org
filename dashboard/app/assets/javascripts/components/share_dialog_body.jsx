@@ -26,6 +26,10 @@ window.dashboard.ShareDialogBody = (function (React) {
       abuseTos: React.PropTypes.string.isRequired,
       abuseContact: React.PropTypes.string.isRequired,
 
+      // Used by SendToPhone
+      channelId: React.PropTypes.string.isRequired,
+      appType: React.PropTypes.string.isRequired,
+
       onClickPopup: React.PropTypes.func.isRequired,
       onClickClose: React.PropTypes.func.isRequired
     },
@@ -85,7 +89,9 @@ window.dashboard.ShareDialogBody = (function (React) {
 
       var sendToPhone;
       if (this.state.showSendToPhone) {
-        sendToPhone = <window.dashboard.SendToPhone/>;
+        sendToPhone = <window.dashboard.SendToPhone
+          channelId={this.props.channelId}
+          appType={this.props.appType}/>;
       }
 
       return (

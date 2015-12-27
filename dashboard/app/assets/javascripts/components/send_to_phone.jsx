@@ -1,4 +1,4 @@
-/* global React, dashboard, trackEvent */
+/* global React, trackEvent */
 
 window.dashboard = window.dashboard || {};
 
@@ -6,7 +6,7 @@ window.dashboard = window.dashboard || {};
  * Send-to-phone component used by share project dialog.
  */
 window.dashboard.SendToPhone = (function (React) {
-// TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?  
+// TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
 
   var SendState = {
     invalidVal: 'invalidVal',
@@ -39,6 +39,8 @@ window.dashboard.SendToPhone = (function (React) {
 
   return React.createClass({
     propTypes: {
+      channelId: React.PropTypes.string.isRequired,
+      appType: React.PropTypes.string.isRequired,
       styles: React.PropTypes.shape({
         label: React.PropTypes.object,
         div: React.PropTypes.object,
@@ -56,19 +58,20 @@ window.dashboard.SendToPhone = (function (React) {
     },
 
     maskPhoneInput: function () {
-      // TODO - what happens when called multiple times
-      if (this.refs.phone) {
-        var phone = this.refs.phone.getDOMNode();
-        $(phone).mask('(000) 000-0000', {
-          onComplete: function () {
-            this.setState({sendState: SendState.canSubmit});
-          }.bind(this),
-          onChange: function () {
-            this.setState({sendState: SendState.invalidVal});
-          }.bind(this),
-        });
-        phone.focus();
+      if (!this.refs.phone) {
+        return;
       }
+
+      var phone = this.refs.phone.getDOMNode();
+      $(phone).mask('(000) 000-0000', {
+        onComplete: function () {
+          this.setState({sendState: SendState.canSubmit});
+        }.bind(this),
+        onChange: function () {
+          this.setState({sendState: SendState.invalidVal});
+        }.bind(this),
+      });
+      phone.focus();
     },
 
     handleSubmit: function () {
@@ -78,13 +81,11 @@ window.dashboard.SendToPhone = (function (React) {
       }
       var phone = this.refs.phone.getDOMNode();
 
-      // TODO - should we be reaching into dashboard.project, or passing these
-      // funcs in? same with trackEvent
       this.setState({sendState: SendState.sending});
 
       var params = $.param({
-        type: dashboard.project.getStandaloneApp(),
-        channel_id: dashboard.project.getCurrentId(),
+        type: this.props.appType,
+        channel_id: this.props.channelId,
         phone: $(phone).val()
       });
       $.post('/sms/send', params)

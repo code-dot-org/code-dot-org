@@ -1598,7 +1598,10 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         var div = document.createElement('div');
         document.body.appendChild(div);
-        React.render(React.createElement(WireframeSendToPhone), div);
+        React.render(React.createElement(WireframeSendToPhone, {
+          channelId: dashboard.project.getCurrentId(),
+          appType: dashboard.project.getStandaloneApp()
+        }), div);
       }
     } else if (!options.embed && !dom.isMobile()) {
       var runButton = document.getElementById('runButton');
