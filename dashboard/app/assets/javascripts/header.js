@@ -179,45 +179,6 @@ dashboard.header = (function () {
     }
   };
 
-  dashboard.initSendToPhone = function(selector) {
-    var parent = $(selector);
-    var phone = parent.find('#phone');
-    var submitted = false;
-    var submitButton = parent.find('#phone-submit');
-    submitButton.attr('disabled', 'true');
-    phone.mask('(000) 000-0000', {
-      onComplete: function(){
-        if (!submitted) {
-          submitButton.removeAttr('disabled');
-        }
-      },
-      onChange: function () {
-        submitButton.attr('disabled', 'true');
-      }
-    });
-    phone.focus();
-    submitButton.click(function() {
-      var params = jQuery.param({
-        type: dashboard.project.getStandaloneApp(),
-        channel_id: dashboard.project.getCurrentId(),
-        phone: phone.val()
-      });
-      $(submitButton).val('Sending..');
-      phone.prop('readonly', true);
-      submitButton.disabled = true;
-      submitted = true;
-      jQuery.post('/sms/send', params)
-          .done(function () {
-            $(submitButton).text('Sent!');
-            trackEvent('SendToPhone', 'success');
-          })
-          .fail(function () {
-            $(submitButton).text('Error!');
-            trackEvent('SendToPhone', 'error');
-          });
-    });
-  };
-
   function shareProject() {
     dashboard.project.save(function () {
       var origin = location.protocol + '//' + location.host;
@@ -226,10 +187,15 @@ dashboard.header = (function () {
 
       var i18n = window.dashboard.i18n;
 
-      // Use a React component so that we can use JSX and to make our dependencies on
-      // dashboard explicit. Render to markup since we are currently still mutating
-      // the generated DOM elsewhere
-      var body = React.renderToStaticMarkup(React.createElement(dashboard.ShareDialogBody, {
+      var dialogDom = document.getElementById('project-share-dialog');
+      if (!dialogDom) {
+        dialogDom = document.createElement('div');
+        dialogDom.setAttribute('id', 'project-share-dialog');
+        document.body.appendChild(dialogDom);
+      }
+
+      var dialog = React.createElement(dashboard.ShareDialog, {
+        i18n: i18n,
         icon: appOptions.skin.staticAvatar,
         title: i18n.t('project.share_title'),
         shareCopyLink: i18n.t('project.share_copy_link'),
@@ -239,41 +205,11 @@ dashboard.header = (function () {
         isAbusive: dashboard.project.exceedsAbuseThreshold(),
         abuseTos: i18n.t('project.abuse.tos'),
         abuseContact: i18n.t('project.abuse.contact_us'),
-      }));
-
-      var dialog = new Dialog({body: body});
-
-      $('a.popup-window').click(window.dashboard.popupWindow);
-
-      $('#sharing-phone').click(function (event) {
-        event.preventDefault();
+        channelId: dashboard.project.getCurrentId(),
+        appType: dashboard.project.getStandaloneApp(),
+        onClickPopup: dashboard.popupWindow
       });
-      $('#phone-submit').click(function (event) {
-        event.preventDefault();
-      });
-
-      function createHiddenPrintWindow(src) {
-        var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-        iframe.appendTo("body");
-        iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
-        iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
-        $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
-      }
-      $('#project-share #print').click(createHiddenPrintWindow);
-      $('#sharing-input').click(function () {
-        this.select();
-      });
-      dialog.show();
-      $('#project-share #sharing-phone').click(function() {
-        var sendToPhone = $('#project-share #send-to-phone');
-        if (sendToPhone.is(':hidden')) {
-          sendToPhone.attr('style', 'display:inline-block');
-          dashboard.initSendToPhone('#project-share');
-        }
-      });
-      $('#project-share #continue-button').click(function() {
-        dialog.hide();
-      });
+      React.render(dialog, dialogDom);
     });
   }
 
