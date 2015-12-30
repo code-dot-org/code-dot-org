@@ -3914,7 +3914,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
-    animationRate: classProperties.animationRate
+    animationFrameDuration: classProperties.animationFrameDuration
   };
 };
 
@@ -4524,12 +4524,10 @@ Studio.setSprite = function (opts) {
   }
 
   if (skinSprite.sprite) {
-    // TODO: use ImageAsset or similar
     sprite.setLegacyImage(skinSprite.sprite, sprite.frameCounts);
   }
 
   if (skinSprite.walk) {
-    // TODO: use ImageAsset or similar
     sprite.setImage(skinSprite.walk, sprite.frameCounts);
   }
 

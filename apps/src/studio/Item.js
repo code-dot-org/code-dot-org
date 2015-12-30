@@ -37,13 +37,30 @@ var Item = function (options) {
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
   this.normalSpeed = options.normalSpeed || constants.DEFAULT_ITEM_SPEED;
+  this.normalFrameDuration = options.animationFrameDuration ||
+      constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: new StudioSpriteSheet(options),
+    spriteSheet: new StudioSpriteSheet({
+      assetPath: options.image,
+      defaultFramesPerAnimation: options.frames,
+      frameWidth: this.width,
+      frameHeight: this.height,
+      animations: [
+        {
+          type: 'direction',
+          count: 8
+        },
+        {
+          type: 'idle',
+          count: 1
+        }
+      ]
+    }),
     animationFrameDuration: this.getAnimationFrameDuration()
   }));
 };
@@ -327,10 +344,9 @@ Item.prototype.removeElement = function() {
  */
 Item.prototype.getAnimationFrameDuration = function () {
   if (this.dir === Direction.NONE) {
-    return constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
+    return this.normalFrameDuration;
   } else {
-    return constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION *
-        this.normalSpeed / this.speed;
+    return this.normalFrameDuration * this.normalSpeed / this.speed;
   }
 };
 

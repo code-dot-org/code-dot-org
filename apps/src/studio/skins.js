@@ -10,7 +10,6 @@ var msg = require('./locale');
 var commonMsg = require('../locale');
 var constants = require('./constants');
 var studioApp = require('../StudioApp').singleton;
-var ImageAsset = require('./ImageAsset');
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -1210,7 +1209,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.

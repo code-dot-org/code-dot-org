@@ -26,66 +26,57 @@ var utils = require('../utils');
  *
  * @constructor
  * @param {!Object} options
- * @param {!Object} options.imageAsset - ImageAsset instance.
- * @param {!string} options.image - URL of the sprite sheet asset.
- * @param {number} [options.width] - frame width in original asset.  Default 50.
- * @param {number} [options.height] - frame height in original asset. Default 50.
+ * @param {!string} options.assetPath - URL of the sprite sheet asset.
+ * @param {Object} [options.animations] - Array of animation descriptions,
+ *        each containing an Object: {string}type, {number}count, {number}frames
  * @param {number} [options.totalAnimations] - How many animations (columns)
- *        there are in the sprite sheet. Default 9.
- * @param {number} [options.frames] - How many frames (rows) there are per
- *        animation. Default 1.
+ *        there are in the sprite sheet. Don't use with options.animations
+ * @param {number} [options.defaultFramesPerAnimation] - How many frames there
+ *        are per animation. Default 1.
+ * @param {number} [options.packedSheetFrameCount] - How many frames before
+ *        wrapping if animation frames are packed. Defaults to non-packed.
  * @param {boolean} [options.horizontalAnimation] - If animation frames run in
  *        rows instead of columns.
  */
+
 var StudioSpriteSheet = module.exports = function (options) {
-  var imageAsset = options.imageAsset || {
-    spriteSheet: options.image,
-    animations: {
-      direction: {
-        count: 8
-      },
-      idle: {
-        count: 1
-      }
-    },
-    defaultFramesPerAnimation: 1
-  };
-
-  /** @type {string} spritesheet asset path */
-  this.assetPath = imageAsset.spriteSheet;
+  /** @type {Array} */
+  this.animations = options.animations || [];
 
   /** @type {number} */
-  this.frameWidth = utils.valueOr(options.width, 50); // TODO: Magic Number
+  this.frameWidth = options.frameWidth;
 
   /** @type {number} */
-  this.frameHeight = utils.valueOr(options.height, 50); // TODO: Magic Number
+  this.frameHeight = options.frameHeight;
+
+  /** @type {string} */
+  this.assetPath = options.assetPath;
 
   /** @type {number} frames per animation / height in frames of sprite sheet */
-  this.defaultFramesPerAnimation = utils.valueOr(options.frames,
-      imageAsset.defaultFramesPerAnimation);
+  this.defaultFramesPerAnimation = options.defaultFramesPerAnimation || 1;
 
   /** @type {number} If non-zero, the animations are packed in one long strip
    * that wraps around to the next row/column every n frames. The row/column
    * no longer implies the beginning or end of an animation.
-   * (which means this mode requires that imageAsset.animations be supplied)
+   * (which means this mode requires that options.animations be supplied)
    * animationOffsets are stored as an 0-based frame index in this mode.
    */
-  this.packedSheetFrameCount = utils.valueOr(options.packedSheetFrameCount, 0);
+  this.packedSheetFrameCount = options.packedSheetFrameCount;
 
   /** @type {number} animations in sheet / width in frames of sprite sheet */
   this.animationOffsets = {};
   this.animationFrameCounts = {};
   var totalFrames = 0;
   var totalAnimations = 0;
-  for (var name in imageAsset.animations) {
-    this.animationOffsets[name] = this.packedSheetFrameCount ?
+  for (var i = 0; i < this.animations.length; i++) {
+    this.animationOffsets[this.animations[i].type] = this.packedSheetFrameCount ?
         totalFrames : totalAnimations;
-    totalAnimations += imageAsset.animations[name].count;
+    totalAnimations += this.animations[i].count;
     var framesPerThisAnimationType = utils.valueOr(
-        imageAsset.animations[name].frames,
+        this.animations[i].frames,
         this.defaultFramesPerAnimation);
-    this.animationFrameCounts[name] = framesPerThisAnimationType;
-    totalFrames += framesPerThisAnimationType * imageAsset.animations[name].count;
+    this.animationFrameCounts[this.animations[i].type] = framesPerThisAnimationType;
+    totalFrames += framesPerThisAnimationType * this.animations[i].count;
   }
   this.totalAnimations = utils.valueOr(options.totalAnimations, totalAnimations);
   this.totalFrames = totalFrames ||
