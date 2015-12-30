@@ -45,6 +45,20 @@ Sprite.inherits(Collidable);
 module.exports = Sprite;
 
 /**
+ * frameCounts objects are used in setImage and setLegacyImage:
+ *
+ *  walkFrames, idleFrames: frames in each type of animations (spriteSheet)
+ *  walk: default frames in all types of animations (spriteSheet)
+ *  idleNormal, idleEmotions, walkingEmotions: count of each type of animation
+ *    (applies to spriteSheet)
+ *  counterClockwise (boolean): (applies to spriteSheet)
+ *  turns: how many turn animations (applies to spriteSheet && legacySpriteSheet)
+ *  normal, emotions, extraEmotions: (applies to legacySpriteSheet)
+ *  packedSheetFrameCount: count of frames before wrapping for a packed sheet
+ *    (applies to spriteSheet)
+ */
+
+/**
  * Sets (or modifies) the image - we will generate a StudioSpriteSheet and
  * StudioAnimation in response..
  */
@@ -57,23 +71,28 @@ Sprite.prototype.setImage = function (image, frameCounts) {
       opacity: this.opacity,
       loop: this.loop,
       animationFrameDuration: this.animationFrameDuration,
-      width: this.drawWidth,
-      height: this.drawHeight,
-      imageAsset: {
-        spriteSheet: this.image,
-        animations: {
-          'direction': {
-            count: frameCounts.turns || 0
-          },
-          'idle': {
-            count: (frameCounts.idleNormal || 0) + (frameCounts.idleEmotions || 0)
-          },
-          'walkingEmotions': {
-            count: frameCounts.walkingEmotions || 0
-          }
+      frameWidth: this.drawWidth,
+      frameHeight: this.drawHeight,
+      assetPath: this.image,
+      animations: [
+        {
+          type: 'direction',
+          count: frameCounts.turns || 0,
+          frames: frameCounts.walkFrames || frameCounts.walk
         },
-        defaultFramesPerAnimation: frameCounts.walk
-      },
+        {
+          type: 'idle',
+          count: (frameCounts.idleNormal || 0) + (frameCounts.idleEmotions || 0),
+          frames: frameCounts.idleFrames || frameCounts.walk
+        },
+        {
+          type: 'walkingEmotions',
+          count: frameCounts.walkingEmotions || 0,
+          frames: frameCounts.walkFrames || frameCounts.walk
+        }
+      ],
+      packedSheetFrameCount: frameCounts.packedSheetFrameCount,
+      defaultFramesPerAnimation: frameCounts.walk,
       skewAnimations: true
     };
 
@@ -101,18 +120,17 @@ Sprite.prototype.setLegacyImage = function (image, frameCounts) {
       opacity: this.opacity,
       loop: this.loop,
       animationFrameDuration: this.animationFrameDuration,
-      width: this.drawWidth,
-      height: this.drawHeight,
-      imageAsset: {
-        spriteSheet: this.legacyImage,
-        animations: {
-          legacyEmotionRow: {
-            count: rowCount,
-            frames: frameCount
-          }
-        },
-        defaultFramesPerAnimation: frameCount
-      },
+      frameWidth: this.drawWidth,
+      frameHeight: this.drawHeight,
+      assetPath: this.legacyImage,
+      animations: [
+        {
+          type: 'legacyEmotionRow',
+          count: rowCount,
+          frames: frameCount
+        }
+      ],
+      defaultFramesPerAnimation: frameCount,
       horizontalAnimation: true,
       skewAnimations: true
     };
@@ -230,7 +248,7 @@ Sprite.prototype.getDirectionFrame = function() {
   }
   */
 
-  var frameDirTable = this.spritesCounterclockwise ?
+  var frameDirTable = this.frameCounts.counterClockwise ?
     constants.frameDirTableWalkingWithIdleCounterclockwise :
     constants.frameDirTableWalkingWithIdleClockwise;
 

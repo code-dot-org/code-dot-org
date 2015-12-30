@@ -111,12 +111,14 @@ var Projectile = function (options) {
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
 
   /** @private {StudioSpriteSheet} */
-  this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
-    width: options.spriteWidth,
-    height: options.spriteHeight,
+  this.spriteSheet_ = new StudioSpriteSheet({
+    frameWidth: options.spriteWidth,
+    frameHeight: options.spriteHeight,
+    defaultFramesPerAnimation: options.frames,
+    assetPath: options.image,
     horizontalAnimation: true,
     totalAnimations: 1
-  }));
+  });
 
   /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
