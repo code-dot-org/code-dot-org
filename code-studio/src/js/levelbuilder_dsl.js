@@ -7,7 +7,7 @@
 var initializeEmbeddedMarkdownEditor = require('./initializeEmbeddedMarkdownEditor');
 
 // Initialize markdown editors on page load
-$(function () {
+$(document).ready(function () {
   initializeEmbeddedMarkdownEditor(
     $('#level_dsl_text'),
     'markdown_textarea',

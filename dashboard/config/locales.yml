@@ -243,6 +243,12 @@
   native: "Latviešu"
   webfonts: false
 
+"mi": "mi-NZ"
+"mi-NZ":
+  english: "Maori"
+  native: "Māori"
+  debug: true
+
 "mk": "mk-MK"
 "mk-MK":
   english: "Macedonian (FYROM)"

@@ -25,6 +25,8 @@
   twentyhours_heading: נסה את קורס המבוא למדעי המחשב
   twentyhours_text: גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
     בתכנות בקורס הבא הזה.
+  og_title: לכל ילד מגיע הזדמנות
+  og_description: לכל תלמיד בכל מוסד לימודי מגיע הזדמנות ללמוד מדעי המחשב.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
   hoc2014_students: סטודנטים
@@ -41,7 +43,7 @@
   csedweek_map_search_reset: אפס
   csedweek_map_legend_title: מקרא
   csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: אירוע מיוחד
   cded_sign_up: הירשם
   cded_try_it: נסו זאת
   twentyhours_trynow: נסה עכשיו
@@ -70,7 +72,7 @@
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  course_name_accelerated: Accelerated Course
+  course_name_accelerated: קורס מואץ
   course_name_course1: קורס 1
   course_name_course2: קורס 2
   course_name_course3: קורס 3
@@ -297,10 +299,10 @@
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: קלאסי
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: עידן הקרח
   starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: Javascript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
@@ -347,14 +349,15 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: שם
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_name_placeholder: שם מלא
+  volunteer_engineer_submission_field_company: חברה (או אוניברסיטה)
+  volunteer_engineer_submission_field_company_placeholder: חברה (או אוניברסיטה)
   volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_location: מיקום
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -365,9 +368,9 @@
     after the Hour of Code
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_linkedin: פרופיל לינקדאין
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: פרופיל פייסבוק
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: תיאור
   volunteer_engineer_submission_field_description_desc: Describe your computer science
@@ -611,11 +614,11 @@
   dashboard_login_picture: תמונה
   dashboard_login_none: דואר אלקטרוני
   dashboard_new_password: סיסמה חדשה
-  dashboard_progress_not_started: not started
+  dashboard_progress_not_started: לא החל
   dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: לא הושלם
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
+  dashboard_progress_completed_perfect: הושלם, מושלם
   dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_stage: שלב
   dashboard_puzzle: חידה
@@ -641,6 +644,12 @@
   dashboard_faq_k5: שאלות נפוצות למורי יסודי
   dashboard_announcements: הודעות
   dashboard_announce_view_all: הצג הכל
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: למד עוד
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -714,8 +723,8 @@
   mobile_devices: הדרכות עבור התקנים ניידים
   frozen_name: תכנתו עם אנה ואלזה
   starwars_name: 'מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד'
-  codeorg_name: כתוב את תוכנת המחשב הראשונה שלך
-  codeintl_name: כתוב את תוכנת המחשב הראשונה שלך
+  codeorg_name: מבוך קלאסי
+  codeintl_name: מבוך קלאסי
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: מבוא ל-JavaScript
   khanes_name: מבוא ל-JavaScript
@@ -751,8 +760,8 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: אבן, נייר ומספריים
-  hourofcode_name: מחזיק מקום עבור code.org/hoc חדש
-  playlab_name: Play Lab
+  hourofcode_name: מבוך קלאסי
+  playlab_name: מעבדת משחקים
   infinity_name: Infinity Play Lab
   artist_name: אמן
   monstercoding_name: Mystery Island Coding Quest
@@ -1401,13 +1410,3 @@
   infinity_shortcode: inf
   playlab_shortcode: הפעל
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

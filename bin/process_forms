@@ -48,15 +48,20 @@ def process_batch_of_forms(batch_size)
   DB[:forms].where(processed_at: nil).limit(batch_size).each do |form|
     kind = Object.const_get(form[:kind])
 
-    processed_data = {}
-    if kind.respond_to?(:process_)
-      processed_data = kind.process_(form)
-    elsif kind.respond_to?(:process)
-      processed_data = kind.process(JSON.load(form[:data]))
+    begin
+      processed_data = {}
+      if kind.respond_to?(:process_)
+        processed_data = kind.process_(form)
+      elsif kind.respond_to?(:process)
+        processed_data = kind.process(JSON.load(form[:data]))
+      end
+    rescue AbortFormError => e
+      HipChat.log "Unable to process form #{form[:id]} because #{e.message}."
+      DB[:forms].where(id: form[:id]).update(processed_at: 0, indexed_at: 0, notified_at: 0)
+      next
     end
 
     DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)
-
     count += 1
   end
 

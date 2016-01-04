@@ -26,6 +26,9 @@
   twentyhours_heading: Kokeile kurssiamme Johdanto tietojenkäsittelytieteeseen
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä
     ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
     joulukuuta 2014<br/>
   hoc2014_students: Oppilaat
@@ -324,8 +327,8 @@
   starwars_javascript_start_button: Kokeile nyt
   starwars_blocks_title: lohkot
   starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Monia kieliä | Modernit selaimet, älypuhelimet, tabletit
+    | Ikävuodet 6-10
   starwars_blocks_start_button: Kokeile nyt
   starwars_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
   starwars_speak_languages: Puhutko muuta kieltä?
@@ -338,7 +341,7 @@
     läpi Minecraft-maailman.
   mc_gradelevel: 4-104-vuotiaille
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
   minecraft_subtitle: Minecraft Koodaustunti
   volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena
     Koodaustunnille.
@@ -363,6 +366,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Nimi
@@ -499,10 +503,9 @@
   dashboard_course_csina: Tietotekniikkaa algebraan
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csins: Tietotekniikkaa luonnontieteissä
+  dashboard_course_csins_desc: Code.org, yhteistyössä GUTS-projektin kanssa, tarjoavat
+    mallinnus- ja simulointipainotteisen johdannon tietojenkäsittelytieteen käsitteisiin.
   dashboard_course_ecs: Tutustu tietotekniikkaan
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
@@ -630,7 +633,7 @@
   dashboard_student_worksheet: oppilaan tehtävälista
   dashboard_teacher_worksheet: Opettajan tehtävälista
   dashboard_curriculum_csina: 'Tietotekniikkaa algebraan:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csins: 'Tietotekniikkaa luonnontieteissä:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: leikkikoulu
@@ -670,12 +673,19 @@
   dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Lue lisää
   dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus
     on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan
     uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja
     jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä!
+    50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla:
+    Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa.'
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
@@ -745,8 +755,8 @@
   mobile_devices: Oppaat mobiililaitteille
   frozen_name: Koodaa Annan ja Elsan kanssa
   starwars_name: 'Tähtien Sota: Kasaa koodista Galaksi'
-  codeorg_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
-  codeintl_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
+  codeorg_name: Klassinen sokkelo
+  codeintl_name: Klassinen sokkelo
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Johdanto JavaScript kieleen
   khanes_name: Johdanto JavaScript kieleen
@@ -782,7 +792,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
-  hourofcode_name: Paikkamerkki uuteen code.org/hoc
+  hourofcode_name: Klassinen sokkelo
   playlab_name: Pelilabra
   infinity_name: Infinity Pelilabra
   artist_name: Taiteilija
@@ -1466,13 +1476,3 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more
