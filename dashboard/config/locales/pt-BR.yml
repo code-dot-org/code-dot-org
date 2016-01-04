@@ -29,6 +29,8 @@
     code:
       label: 'Adicionar professor:'
       placeholder: Código da seção (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -301,71 +303,16 @@
     remove: (remover professor)
     confirm:
       remove: Você tem certeza que deseja remover esse professor?
-    tools: Ferramentas do professor
-    followers:
-      section: 'Seção:'
-      stages: 'Estágio(s) para exibir:'
-      show_past: 'Exibir as atividades feitas pelo aluno (%{bullet_html}) em:'
-      levels_key: Níveis
-      perfect: Concluído, perfeito
-      completed: Concluído, mas usou blocos demais
-      tried: Tentou, mas ainda não concluiu
-      not_tried: Ainda não tentou
-      activity: Indica as atividades do alunos nas últimas %{hours} %{plural}
-      no_section: Nenhuma seção atribuída
-      trophies: troféus
     students:
-      name: Nome
-      username: Nome de usuário
-      password: senha
-      manage: Gerenciar alunos
       dashboard: Vá para o painel de controle do professor
-      add: Adicionar alunos
-      remove: remover aluno
-      confirm_remove: Você tem certeza de que deseja excluir este aluno?
-      help_reassign: Para dividir sua turma em várias seções, selecione alguns alunos
-        para atribuir a uma nova seção.
-      help_register: Em vez de passar muito tempo importando dados dos alunos individualmente,
-        você pode configurar sua turma rapidamente, pedindo para que eles se cadastrem.
-        Seus alunos terão de escolher nomes de usuário e senhas, mas NÃO serão obrigados
-        a fornecer um endereço de e-mail. Se um aluno esquecer sua senha, você poderá
-        redefini-la para ele.
-      register: Peça para que seus alunos se cadastrem
-      vist: Peça para que seus alunos visitem
-      section_code: 'e digite seu código de seção:'
-      first_please: Em primeiro lugar, %{add_section}
-      for: Para
-      enter: 'digite:'
-    sections:
-      add: Adicionar seção
-      manage: Gerenciar seções
-      section: Turma
-      students: Alunos
-      section_code: Código da turma
-      add_section_code: Adicionar código da seção dos alunos
-      secret: Tipo secreto
-      grade: Grau
-      course: Curso
-      rename: renomear
-      edit: editar
-      delete: excluir
-      confirm_delete: Tem certeza de que deseja excluir esta seção?
-      email: Enviar por e-mail
-    rollup: Painel de controle do progresso
-    activity: Atividade recente de classe
-    user_not_found: O professor ou aluno não pôde ser encontrado
-    cant_remove_student_no_email: '%{student_name} não pode ser removido como seu
-      aluno porque %{student_name} não tem um endereço de email registrado'
-    cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu
-      professor porque você não registrou um endereço de email'
-    student_teacher_disassociated: '%{teacher_name} foi removido como professor de
-      %{student_name}'
+    user_not_found: Esse professor não pôde ser encontrado.
+    student_teacher_disassociated: Você removeu %{teacher_name} como seu professor.
     panel:
       answer_viewer: Visualizador de resposta
       student: Estudante
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
-      section: Turma
+      section: Seção
       example: Solução do Exemplo
       example_with_number: Solução do Exemplo %{solution_number}
       submitted_on: 'Enviado em:'
@@ -448,6 +395,7 @@
     title: Aprenda no Code Studio
     description: Qualquer pessoa pode aprender ciência da computação. Crie jogos,
       aplicativos e arte com a programação.
+    try_hour_of_code: Faça uma Hora do Código!
   gender:
     male: Masculino
     female: Feminino
@@ -464,17 +412,23 @@
       Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar esses materiais.
-    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Todos
-      os direitos reservados.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney
-      e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &amp; &copy; %{current_year}
-      Disney. Todos os direitos reservados.<br />A era do gelo&#8482; &amp; &copy;
-      %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482;
-      &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos
-      reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic
-      Arts Inc. Todos os direitos reservados
-    art_from_html_old: AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment
-      Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy;
-      %{current_year} Electronic Arts Inc. Todos os direitos reservados
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos
+      reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
+      Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney.
+      Todos os direitos reservados.<br />A Era do Gelo&#8482; &copy; %{current_year}
+      20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br
+      />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos
+      os direitos reservados.<br />O Incrível Mundo de Gumball é uma marca registrada
+      e &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os
+      direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
+      Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos
+      os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century
+      Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O
+      Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; são marcas registradas da Code.org.'
@@ -492,6 +446,7 @@
     built_on_code_studio: Criado no Code Studio
     make_my_own_app: Criar meu próprio aplicativo
     how_it_works: Como funciona
+    try_hour_of_code: Faça uma Hora do Código!
   reference_area:
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
@@ -559,7 +514,7 @@
       unused: Níveis não Utilizados
   upsell:
     hoc:
-      title: Hora do Código
+      title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
         já experimentaram.
     flappy:

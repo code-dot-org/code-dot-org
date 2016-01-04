@@ -241,7 +241,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocks.hideDiv();
+        feedbackBlocks.hide();
       }
 
       // If the user requests the hint...
@@ -257,7 +257,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
         // Restore feedback blocks, if present.
         if (feedbackBlocks && feedbackBlocks.div) {
-          feedbackBlocks.revealDiv();
+          feedbackBlocks.show();
         }
 
         // Report hint request to server.
@@ -330,7 +330,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   });
 
   if (feedbackBlocks && feedbackBlocks.div) {
-    feedbackBlocks.show();
+    feedbackBlocks.render();
   }
 };
 
@@ -1113,7 +1113,14 @@ FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
 FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
-    return !block.disabled && block.isEditable() && block.type !== 'when_run';
+    var blockValid = !block.disabled && block.type !== 'when_run';
+    // If Blockly is in readOnly mode, then all blocks are uneditable
+    // so this filter would be useless. Ignore uneditable blocks only if
+    // Blockly is in edit mode.
+    if (!Blockly.mainBlockSpace.isReadOnly()) {
+      blockValid = blockValid && block.isEditable();
+    }
+    return blockValid;
   });
   return blocks;
 };

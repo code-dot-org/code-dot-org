@@ -28,6 +28,8 @@ fi:
     code:
       label: 'Lisää opettaja:'
       placeholder: Osion koodi (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Lisää opettaja
   add_hint_form:
     placeholder: Syötä vihjeesi tähän
@@ -262,57 +264,10 @@ fi:
     remove: (poista opettaja)
     confirm:
       remove: Oletko varma, että haluat poistaa tämän opettajan?
-    tools: Opettajan työkalut
-    followers:
-      section: 'Ryhmä:'
-      stages: 'Taso(ja) esitettäväksi:'
-      show_past: 'Näytä opiskelijoiden toimintahistoria (%{bullet_html}):'
-      levels_key: Tasojen avain
-      perfect: Valmis, täydellistä
-      completed: Valmis, mutta käytit liian montaa lohkoa
-      tried: Kokeiltu, mutta ei valmis
-      not_tried: Ei kokeiltu
-      activity: 'Ilmaisee opiskelijan aktiivisuutta viimeisen %{hours} %{plural} aikana'
-      no_section: Ei valittuja ryhmiä
-      trophies: pokaalit
     students:
-      name: Nimi
-      username: käyttäjätunnus
-      password: Salasana
-      manage: Hallinnoi oppilaita
       dashboard: Siirry opettajan päänäytölle
-      add: Lisää opiskelijoita
-      remove: poista oppilas
-      confirm_remove: Oletko varma että haluat poistaa tämän oppilaan?
-      help_reassign: Jakaaksesi luokkasi useisiin ryhmiin, valitse oppilaat jotka siirretään uuteen ryhmään.
-      help_register: Sen sijaan että käytät paljon aikaa tuodaksesi yksittäisten oppilaiden tiedot, voit perustaa luokkasi nopeasti pyytäen heitä rekisteröitymään. Oppilaidesi tulee valita käyttäjänimet ja salasanat, mutta heitä EI VAADITA antaamaan sähköpostiosoitetta. Jos oppilas unohtaa salasanansa, voit nollata sen heidän puolestaan.
-      register: Pyydä oppilaitasi rekisteröimään itsensä
-      vist: Pyydä oppilaitasi käymään
-      section_code: 'ja anna heidän ryhmän tunnuksensa:'
-      first_please: 'Lisää ensin %{add_section}'
-      for: Varten
-      enter: 'anna:'
-    sections:
-      add: Lisää ryhmä
-      manage: Hallinnoi ryhmiä
-      section: Ryhmä
-      students: Oppilaat
-      section_code: Ryhmän tunnus
-      add_section_code: Lisää oppilaiden ryhmän tunnus
-      secret: Salainen tyyppi
-      grade: Taso
-      course: Kurssi
-      rename: nimeä uudelleen
-      edit: muokkaa
-      delete: poista
-      confirm_delete: Oletko varma että haluat poistaa tämän ryhmän?
-      email: Lähetä sähköpostilla
-    rollup: Edistymistaulu
-    activity: Luokan tapahtumat
-    user_not_found: Opettajaa tai oppilasta ei löytynyt
-    cant_remove_student_no_email: '%{student_name} ei voida poistaa oppilaistasi koska %{student_name} ei ole rekisteröinyt sähköpostiosoitetta'
-    cant_remove_teacher_no_email: '%{teacher_name} ei voida poistaa opettajastasi sillä et ole rekisteröinyt sähköpostiosoitetta'
-    student_teacher_disassociated: 'Opettaja %{teacher_name} on poistettu oppilaalta %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Vastausten tarkastelu
       student: Oppilas
@@ -325,7 +280,7 @@ fi:
       unsubmit: Peruuta lähetys
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
-    email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'
+    email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'
     email_confirm_wrong_email: (Väärä sähköpostiosoite?)
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
@@ -386,6 +341,7 @@ fi:
   share:
     title: Opiskele Code Studio:ssa
     description: Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä, sovelluksia ja taidetta.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mies
     female: Nainen
@@ -397,8 +353,8 @@ fi:
     thank_you: 'Kiitämme <a href="https://code.org/about/donors">lahjoittajia</a>, <a href="https://code.org/about/partners">yhteistyökumppaneita</a>, <a href="https://code.org/about/team">laajennettua tiimiämme</a>, videoiden esiintyjiä, ja <a href="https://code.org/about/advisors">koulutusneuvonantajia</a> heidän tuestaan Code Studion luomisessa.'
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
     help_from_html_old: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitteriltä auttoivat luomaan nämä materiaalit.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Toimii Amazon Web Services -palvelun päällä
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -415,6 +371,7 @@ fi:
     built_on_code_studio: Rakennettu Koodistudiossa
     make_my_own_app: Tee oma sovellukseni
     how_it_works: Miten se toimii
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet
@@ -471,7 +428,7 @@ fi:
       unused: Käyttämättömät tasot
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klassinen sokkelo
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code

@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
 
 gem 'chef', '~> 11.18.12'
 

@@ -172,7 +172,11 @@
   "help": "Tulong",
   "hideToolbox": "(itago)",
   "hintHeader": "Narito ang isang tip:",
+  "hintPrompt": "Kailangan mo ba ng tulong?",
   "hintRequest": "Tingnan ang hint",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Pahiwatig:",
   "ignore": "I-ignore",
   "infinity": "Walang katapusan",
@@ -243,9 +247,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Workspace: "
 }

@@ -18,7 +18,7 @@ At the end of the survey, select a thank-you gift from one of the available opti
 
 Because of your passion, we are changing the face of computer science. Millions of students tried an Hour of Code last week ― coding a few lines (or a few dozen) that are the beginning of new skills and new open doors.
 
-<% if domestic %>  
+<% if domestic == 'true' %>  
 **Beyond one hour**  
 We offer high-quality, zero-cost, 1-day workshops to prepare elementary educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in grades K-5. [Find a workshop near you](http://code.org/professional-development-workshops).  
 <% end %>

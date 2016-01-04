@@ -899,8 +899,9 @@
           бджолу. Коли вона рухається, вона буде збирати листи заклинання сама.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: See if you can spell the word they give you in the box below the stage.
-          But bee careful! Moving the wrong direction will add letters you don't want.
+        text: Подивіться, чи можете Ви вимовити слово по буквах, вони дають Вам в
+          полі нижче етапи. Але будьте обережні! Переміщення неправильного напрямку
+          додасть літери, які Ви не хочете.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
@@ -916,23 +917,20 @@
           електронних листів користувачам Фейсбук з вітаннями до дня народження.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: In this example, your goal is going to be to move the bird to get the
-          pig. Now, we're going to be able to use the repeat block in order to be
-          able to do this very easily. You can either do this by giving the computer
-          a move forward command five times in order to advance the bird one step
-          each time to the pig or you can just tell the computer to move forward once,
-          and then tell it to repeat that five times and it'll do the same thing.
+        text: У цьому прикладі Вашою метою буд рухати птаха для отримання свині. Зараз
+          ми готуємося використовувати блок повтор , щоб зробити це легко. Це можна
+          зробити даючи команду комп’ютеру команду рухатися уперед п’ять  разів для
+          просування птаха на один крок кожного разу або можете вибрати блок рухатися
+          вперед один раз та повторити його п’ять разів.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: In order to do this, you drag your move forward command and then you
-          put it inside the repeat block. And you can click on it and tell it how
-          many times you  to repeat the block to tell it how many steps you want it
-          to take forward.
+        text: Для того, щоб зробити це, перетягніть команду «Хід вперед» у блок повтору.
+          Ви можете натиснути на нього та вказати скільки разів повторювати хід вперед.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: Ще одна річ, що ви можете поставити стільки команд, скільки ви хочете
+          всередині повторення блоку. Таким чином, у цьому прикладі,  Ви кажете рухатися
+          вперед і повернути ліворуч, що він буде робити п'ять разів. Успіху!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
@@ -942,8 +940,8 @@
           out how you continue to figure out how to build performance.
       2:
         image: notes/C2_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: У цьому завданні ви будете художником, який малює фігури за допомогою
+          олівця. Коли художник крокує позаду нього ведется лінія.
       3:
         image: notes/C2_artist_intro_3.png
         text: To move around the canvas, you'll use the move forward block. Here the
@@ -1315,8 +1313,8 @@
           out how you continue to figure out how to build performance.
       2:
         image: notes/C3_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: У цьому завданні ви будете художником, який малює фігури за допомогою
+          олівця. Коли художник крокує позаду нього ведется лінія.
       3:
         image: notes/C3_artist_intro_3.png
         text: To move around the canvas, you'll use the move forward block. Here the

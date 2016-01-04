@@ -170,7 +170,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "ถ้ามีเส้นทางในทิศที่กำหนด ให้กระทำบางอย่าง"},
 "ifelseTooltip":function(d){return "ถ้ามีเส้นทางในทิศที่กำหนด ให้กระทำในบล็อกแรก มิเช่นนั้น ให้กระทำในบล็อกที่สอง"},
 "incrementOpponentScore":function(d){return "ให้คะแนนฝ่ายตรงข้าม"},
-"incrementOpponentScoreTooltip":function(d){return "เพิ่มคะแนนให้กับฝั่งตรงข้าม หนึ่งแต้ม."},
+"incrementOpponentScoreTooltip":function(d){return "เพิ่ม 1 คะแนนให้ฝ่ายตรงข้าม"},
 "incrementPlayerScore":function(d){return "คะแนนที่ได้"},
 "incrementPlayerScoreTooltip":function(d){return "เพิ่มคะแนนผู้เล่น 1 คะแนน"},
 "isWall":function(d){return "นี่คือกำแพงใช่ไหม"},

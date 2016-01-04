@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Pomoč"},
 "hideToolbox":function(d){return "(Skrij)"},
 "hintHeader":function(d){return "Tukaj je namig:"},
+"hintPrompt":function(d){return "Potrebujete pomoč?"},
 "hintRequest":function(d){return "Poglej namig"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Namig:"},
 "ignore":function(d){return "Prezri"},
 "infinity":function(d){return "Neskončnost"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Glej video"},
 "when":function(d){return "ko"},
 "whenRun":function(d){return "ob zagonu"},
-"workspaceHeaderShort":function(d){return "Delovni prostor: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Delovni prostor: "}};

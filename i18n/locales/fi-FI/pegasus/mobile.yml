@@ -20,6 +20,8 @@ fi-FI:
   submit: Jatka
   twentyhours_heading: Kokeile kurssiamme Johdanto tietojenkäsittelytieteeseen
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14. joulukuuta 2014<br/>'
   hoc2014_students: Oppilaat
   hoc2014_try: Kokeile
@@ -290,7 +292,7 @@ fi-FI:
   starwars_javascript_start_button: Kokeile nyt
   starwars_blocks_title: lohkot
   starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Monia kieliä | Modernit selaimet, älypuhelimet, tabletit | Ikävuodet 6-10
   starwars_blocks_start_button: Kokeile nyt
   starwars_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
   starwars_speak_languages: Puhutko muuta kieltä?
@@ -301,16 +303,17 @@ fi-FI:
   mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman.
   mc_gradelevel: 4-104-vuotiaille
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
   minecraft_subtitle: Minecraft Koodaustunti
   volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena Koodaustunnille.
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Nimi
   volunteer_engineer_submission_field_name_placeholder: Koko nimi
@@ -337,7 +340,7 @@ fi-FI:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Jatka
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for signing up to volunteer. Teachers will be using <a href="%{url}">this map</a> to search for and contact volunteers like you.'
   volunteer_engineer_submission_commitment_uncertain: Epävarma
   volunteer_engineer_submission_commitment_one_hr_per_week: tunti viikossa
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 tuntia viikossa
@@ -401,8 +404,8 @@ fi-FI:
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Tietotekniikkaa algebraan
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_csins: Tietotekniikkaa luonnontieteissä
+  dashboard_course_csins_desc: 'Code.org, yhteistyössä GUTS-projektin kanssa, tarjoavat mallinnus- ja simulointipainotteisen johdannon tietojenkäsittelytieteen käsitteisiin.'
   dashboard_course_ecs: Tutustu tietotekniikkaan
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
@@ -508,7 +511,7 @@ fi-FI:
   dashboard_student_worksheet: oppilaan tehtävälista
   dashboard_teacher_worksheet: Opettajan tehtävälista
   dashboard_curriculum_csina: 'Tietotekniikkaa algebraan:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csins: 'Tietotekniikkaa luonnontieteissä:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: leikkikoulu
@@ -545,8 +548,10 @@ fi-FI:
   dashboard_faq_k5: 'Esi- ja alakoulu, usein kysyttyjä kysymyksiä'
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Lue lisää
   dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_playlab: '<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä! 50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla: Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa.'
   code_hoc_coming: 'Koodaustunti on täällä - 8.-14. Joulukuuta!'
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
@@ -603,8 +608,8 @@ fi-FI:
   mobile_devices: Oppaat mobiililaitteille
   frozen_name: Koodaa Annan ja Elsan kanssa
   starwars_name: 'Tähtien Sota: Kasaa koodista Galaksi'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassinen sokkelo
+  codeintl_name: Klassinen sokkelo
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Johdanto JavaScript kieleen
   khanes_name: Johdanto JavaScript kieleen
@@ -640,7 +645,7 @@ fi-FI:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassinen sokkelo
   playlab_name: Pelilabra
   infinity_name: Infinity Pelilabra
   artist_name: Taiteilija
@@ -843,7 +848,7 @@ fi-FI:
   playlab_longdescription: Luo tarina tai tee peli PeliLabralla! Merirosvot, eläimet, ninjat, zombit ja monet muut hahmot liikkuvat, ääntelevät, keräävät pisteitä ja jopa heittävät tulipalloja!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

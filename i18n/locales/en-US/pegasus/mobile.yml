@@ -20,6 +20,8 @@ en-US:
   submit: crwdns3603:0crwdne3603:0
   twentyhours_heading: crwdns4529:0crwdne4529:0
   twentyhours_text: crwdns4530:0crwdne4530:0
+  og_title: crwdns55865:0crwdne55865:0
+  og_description: crwdns55866:0crwdne55866:0
   hoc2014_heading: crwdns20155:0crwdne20155:0
   hoc2014_students: crwdns20156:0crwdne20156:0
   hoc2014_try: crwdns20157:0crwdne20157:0
@@ -283,7 +285,8 @@ en-US:
   volunteer_engineer_submission_intro_background: crwdns50840:0crwdne50840:0
   volunteer_engineer_submission_intro_recruit: crwdns54488:0crwdne54488:0
   volunteer_engineer_submission_intro_signup: crwdns50842:0crwdne50842:0
-  volunteer_engineer_submission_intro_links: 'crwdns54785:0%{learn_more}crwdnd54785:0%{volunteer_local}crwdne54785:0'
+  volunteer_engineer_submission_intro_links: 'crwdns54785:0%{volunteer_local}crwdne54785:0'
+  volunteer_engineer_submission_update_information: crwdns55867:0crwdne55867:0
   volunteer_engineer_submission_header_shared: crwdns50057:0crwdne50057:0
   volunteer_engineer_submission_field_name: crwdns50058:0crwdne50058:0
   volunteer_engineer_submission_field_name_placeholder: crwdns50059:0crwdne50059:0
@@ -518,6 +521,8 @@ en-US:
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
+  dashboard_announce_message: crwdns55868:0crwdne55868:0
+  dashboard_announce_button_text: crwdns55869:0crwdne55869:0
   dashboard_announce_hoc: crwdns50094:0crwdne50094:0
   dashboard_announce_playlab: crwdns55290:0crwdne55290:0
   code_hoc_coming: crwdns25713:0crwdne25713:0

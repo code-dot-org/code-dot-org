@@ -28,6 +28,9 @@
   twentyhours_heading: Încearcă Cursul nostru de Introducere în Informatică
   twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica
     de bază și conceptele programării în cadrul cursului următor.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/>
     8-14 decembrie, 2014 <br/>
   hoc2014_students: Elevi
@@ -331,8 +334,8 @@
   starwars_javascript_start_button: Incearca acum
   starwars_blocks_title: Blocuri
   starwars_blocks_description: Utilizează blocuri drag-drop.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Mai multe limbi|Browsere moderne, smartphones, tablete|Varste
+    6-10
   starwars_blocks_start_button: Află mai mult
   starwars_watch_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
     inspirationale
@@ -346,7 +349,7 @@
     intr-o aventura in acest univers Minecraft.
   mc_gradelevel: 'Varsta: peste 6 ani'
   mc_platformtext: Browsere web moderne, smartphone-uri, tablete
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Mai multe limbi|Browsere moderne si tablete|Varstele 6+
   minecraft_subtitle: Ora de Programare Minecraft
   volunteer_engineer_submission_title: Inspira elevii si voluntarii pentru Ora de
     programare.
@@ -375,6 +378,7 @@
     mai multe</a>despre cum poti organiza propriul eveniment Hour of Code si cum poti
     gasi o scoala locala la care sa fii voluntar<a href="%{volunteer_local}">pe harta
     noastra</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor
     pe harta voluntarilor
   volunteer_engineer_submission_field_name: Nume
@@ -704,11 +708,18 @@
   dashboard_faq_k5: Întrebări frecvente - clasele primare
   dashboard_announcements: Anunțuri
   dashboard_announce_view_all: Vizualizare toate
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Află mai mult
   dashboard_announce_hoc: <b>30 Septembrie 2015</b> - Ora de Cod 2015 se apropie!
     Alatura-te claselor din toata lumea din cadrul celui mai mare eveniment didactic
     din istorie.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>4 Decembrie 2015</b>-Ora de cod este aici! Incearca
+    50 de tutoriale pentru orice varsta sau device. Nou saptamana aceasta: Programeaza-ti
+    propiile povesti sau jocuri in noul Play Lab, Epoca de Gheata si Gumball.'
   code_hoc_coming: 'Ora de Programare este aici: 8-14 decembrie!'
   code_sign_up: Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna
     Informaticii în Educaţie”)
@@ -781,8 +792,8 @@
   mobile_devices: Tutoriale pentru dispozitive mobile
   frozen_name: Programati cu Anna și Elsa
   starwars_name: 'Star Wars: Programarea unei galaxii'
-  codeorg_name: Scrie primul tău program de calculator
-  codeintl_name: Scrie primul tău program de calculator
+  codeorg_name: Labirint Clasic
+  codeintl_name: Labirint Clasic
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: O introducere în JavaScript
   khanes_name: O introducere în JavaScript
@@ -818,16 +829,16 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piatră, hârtie, foarfece
-  hourofcode_name: Calapod pentru noul code.org/hoc
+  hourofcode_name: Labirint Clasic
   playlab_name: Laborator de Joacă
   infinity_name: Laborator de joc Infinity
   artist_name: Artist
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: Misiunea programarii Insulei Misterioase
+  allcancode_name: Fugi Marco!
+  csfirst_name: Prima oara CS
+  boxisland_name: Insula Cutie
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minute de Programat
   teacherled_name: Planuri de lectie pentru Ora de cod
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani
@@ -873,12 +884,12 @@
   infinity_gradelevel: Vârste între 4-104 ani
   artist_gradelevel: Vârste între 4-104 ani
   monstercoding_gradelevel: Vârste între 5-13 ani
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Vârstele 5-10 ani
+  csfirst_gradelevel: Vârstele 9-14 ani
   boxisland_gradelevel: Învățământ primar
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Vârstele 12-14 ani
+  texasinstruments_gradelevel: Vârstele 13-16 ani
+  teacherled_gradelevel: Vârsta 5+ ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
   thinkersmithspanish_platformtext: Unplugged
@@ -920,12 +931,12 @@
   frozen_platformtext: Browsere moderne + tablete
   starwars_platformtext: Browser modern + tableta
   playlab_platformtext: Browsere web moderne, smartphone-uri, tablete
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Browsere moderne IOS, Android
+  allcancode_platformtext: Browsere moderne, iOS
   csfirst_platformtext: Browsere web moderne
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Browsere web moderne
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI Calculcatoare
   teacherled_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeorg_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
   codeintl_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
@@ -987,19 +998,20 @@
   infinity_shortdescription: Folosește Laboratorul de Joacă pentru a crea o poveste
     sau un joc cu personaje Disney Infinity.
   artist_shortdescription: Desenează poze şi proiecte mişto cu Artistul!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  monsterocding_shortdescription: O aventura de programare pentru copii, colorata
+    si auto-ghidata.
+  allcancode_shortdescription: Un joc imersiv pentru a ghida Marco cu un limbaj de
+    programare vizual.
+  csfirst_shortdescription: Anima o poveste despre două caractere pe ocean. Adauga
+    propriul stil!
+  boxisland_shortdescription: Ia parte la o aventura de programat pe Insula Cutie
+    cu bravul Hiro.
+  codesters_shortdescription: Creeaza propiile jocuri, animatii, si opere de arta
+    folosind Python.
+  texasinstruments_shortdescription: Învață programare de bază folosind calculatorul
+    TI-84&#8482; Plus.
+  teacherled_shortdescription: Fi inspirat pentru a proiecta propriile Ore de cod
+    cu aceste planuri de lectie.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
@@ -1167,32 +1179,33 @@
     concepts to children. Each block based activity builds on the previous, introducing
     kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
     colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
+  allcancode_longdescription: Elevii rulează un joc de aventură bazat pe o poveste
+    originală. Ei îl ghidează pe Marco - personajul principal - pe parcursul fiecărui
+    nivel, dându-i instrucțiuni la fiecare pas sub forma limbajului de programare
+    vizual folosit de Hour of Code. Elevii află despre comenzi secvențiale, iterații
+    și condiții, chiar fără să realizeze.
+  csfirst_longdescription: Creează o poveste despre două caractere la mare. Animează
+    apa, şi personalizează peisajul pentru a adăuga propriul reputatie. Folosiţi codul
+    pentru a povesti ce doriţi să-i spuneţi!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
+  codesters_longdescription: 'Creeaza propriile tale jocuri, animatii si arta folosind
+    Python. Odata ce ati terminat impartaseste-le cu prietenii. Programeaza in Python,
+    un limbaj de programare real folosit in fiecare zi in companii- trusa noastra
+    de scule face invatatul mai usor. Incearca sa construiesti un joc de baschet,
+    sa coregrafiezi un dance sau sa creezi o carte animata! '
   texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
     in class as a way to spark students'' interest in coding with the TI technology
     they carry in their backpacks everyday.  Learn the basics of coding using the
     TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
     needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  teacherled_longdescription: Acum, că zeci de mii de cadre didactice au încercat
+    ora de programare, multe săli de clasă sunt gata pentru alte activităţi creative,
+    mai puțin generale, dar din care să se învețe elementele de bază ale informaticii.
+    Pentru a-i ajuta pe profesori să-și găseasă inspiraţia, am adunat şi pregătit
+    planuri de lecție și activități de o oră, cu subiecte diverse, pentru a fi susținute
+    de "veteranii" orei de programare.
   codeorg_beyond_name: Introducere în Informatică (clasele preșcolari-8)
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă
@@ -1543,13 +1556,3 @@
   infinity_shortcode: inf
   playlab_shortcode: joacă
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

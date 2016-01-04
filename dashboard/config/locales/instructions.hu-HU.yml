@@ -410,31 +410,27 @@
         és futtasd a kódot.
       4-5 Artist For Loops 11_instruction: 'Egészítsd ki a "for" blokkot úgy, hogy
         a következőképen számoljon: 0, 20, 40, 60, 80... 200.'
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. \n"
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
+      4-5 Artist For Loops 12_instruction: Mi történik, ha megfordítjuk  a "honnan"
+        és " a " számok  ? Töltsd ki a " A " blokkot úgy, hogy számít a 200 , 180
+        , 160 , 140 , 120 ... 0 .
+      4-5 Artist For Loops 13_instruction: "Ez a terv egy \"for\" ciklus nélkül indult
+        és nagyon sok blokk-ból áll.\nA \"for\" (mert) blokk segítségével fejezhetik
+        be a spirált. \nTipp: Az utólso vonal hossza 250 képpont\n"
+      4-5 Artist For Loops 14_instruction: 'Valaki elkezdte a kódot, de rájött, hogy
+        gyorsabb úton is meg lehet oldani! A,, for" blokk segítségével cseréld ki
+        a blokkot, és készítsd el a háromszög alakú spirált! (segítség: az utolsó
+        vonal hossza 300 képpont)'
+      4-5 Artist For Loops 15_instruction: 'Valaki elkezdte a kódot, de rájött, hogy
+        gyorsabb úton is meg lehet oldani! A,, for" blokk segítségével cseréld ki
+        a blokkot, és készítsd el a hatszögletű spirált! (segítség: az utolsó vonal
+        hossza 200 képpont)'
+      4-5 Artist For Loops 3_instruction: Hogyan tudunk elszámolni 1-től 50-ig?szerkeszd  a
+        ,,for" blokkot!
       4-5 Artist For Loops 4_instruction: |
         Complete the "for" block so that it
         counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+      4-5 Artist For Loops 6_instruction: Rajzolj 50, 60, 70, 80 és 90 képpont oldalú
+        négyzeteket. Ötször lesz szükséged a "négyzet rajzolása" függvényre.
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -443,33 +439,27 @@
         Can you complete the program by placing
         the blocks inside a "for" block that counts from 10 to 200 by 10? You can
         find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+      4-5 Artist For Loops 9_instruction: Ezek a körök 5, 10, 15, 20, 25, 30 és 35
+        méretűek. Rajzold meg a köröket a "for" blokk használatával.
+      4-5 Artist Free Draw 1_instruction: Szabadon rajzolhatsz! Rajzolj bármit, amihez
+        kedved van.
+      4-5 Artist Functions 1_instruction: Használj ciklust a háromszög megrajzolásához.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
         called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+      4-5 Artist Functions 10b_instruction: 'Használd a "hópehely rajzolása" függvényt
+        különböző méretű hópehlyhek készítésére. Tipp: az első hópehely 25 hosszú
+        és minden hópehely kétszer nagyobb az előzőnél.'
+      4-5 Artist Functions 11_instruction: 'Ez a "rajzolj hatszöget" függvény a "rajzolj
+        háromszöget" függvényt használja. Fejezd be a hatszög függvényt. (Tipp: A
+        hatszögnek 6 oldala van, mindegyik 100 pixel hosszú)'
+      4-5 Artist Functions 12_instruction: 'Fejezd be a "Rajzolj hullámokat" függvényt.
+        Minden hullám egy felső hullámból és egy alsó hullámból áll. Tipp: Rajzolj
+        5 kék hullámot.'
+      4-5 Artist Functions 13 Free play_instruction: Van itt néhány függvény bolygók,
+        csillagok, rakéták és robotok rajzolásához. Használd őket bárhogy, ahogy szeretnéd
+        képek készítésére, amiket megoszthatsz a barátaiddal.
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops
@@ -479,41 +469,35 @@
         Assessment:  Use the "draw
         a square" function to create the squares.  The squares are 50, 100, and 150
         pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
+      4-5 Artist Functions 2a_instruction: Most tedd ezeket a blokkokat egy új, "kis
+        háromszög rajzolása" függvénybe és hívd meg.
+      4-5 Artist Functions 2b_instruction: Most hozz létre egy "rajzolj kis háromszöget"
+        nevű függvényt a megadott blokkok segítségével.
+      4-5 Artist Functions 3_instruction: 'Most hozd létre a "rajzolj közepes háromszöget"
+        és a "rajzolj nagy háromszöget" függvényeket. A "rajzolj kis háromszöget"
+        függvény már készen van. A háromszögek oldalainak hossza: 50 (kicsi), 100
+        (közepes) és 150 (nagy). '
+      4-5 Artist Functions 4_instruction: Ennek az új, "rajzolj háromszöget" függvénynek
+        van egy paramétere és képes megcsinálni mindazt, amit a három korábbi függvény.
+        Rajzold meg ugyan azokat a háromszögeket az új függvény használatával.
+      4-5 Artist Functions 5_instruction: Meg tudod változtatni a "rajzolj egy háromszöget"
+        függvényt egy "rajzol egy négyzetet" függvényre a rajz megváltoztatásához?
+      4-5 Artist Functions 6_instruction: 'Használd a "rajzolj egy négyzetet" és a
+        "rajzolj egy háromszöget" függvényeket egy ház megrajzolásához. (Tipp: a négyzet
+        oldalai 200 pixel hosszúak)'
       4-5 Artist Functions 6b_instruction: |
         Use the draw a square and triangle functions
         along with other blocks to create a house by adding them to the 'draw a house"
         function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
+      4-5 Artist Functions 7_instruction: Rajzolj 100 pixeles és 50 pixeles házat
+        a "rajzolj egy házat" függvény segítségével! A két házat 50 pixel válassza
+        el.
+      4-5 Artist Functions 8_instruction: A "virág rajzolása" függvényben van egy
+        paraméter, amivel a szár hosszát lehet állítani. Állítsd be 200-ra és figyeld
+        mi történik.
+      4-5 Artist Functions 9_instruction: Rajzold meg ezt a három virágot! Az első
+        100 magas a következő pedig mindig 50 pixellel magasabb, mint az előző. A
+        virágok között 100 pixel van.
       4-5 Artist Patterns 1_instruction: |
         Can you draw this square using a loop?
         Each side is 20 pixels long.
@@ -721,22 +705,19 @@
         Draw the last row of stars on this flag by
         looping the provided blocks. The stars are 50 pixels apart, but remember that
         the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
-        loop. This is called a nested loop.\r\n"
+      4-5 Nested Loops 11_instruction: Meg tudod rajzolni a járda 10 négyzetét egymásba
+        ágyazott ciklusokkal? Minden négyzet 30 pixeles.
+      4-5 Nested Loops 12_instruction: Meg tudod rajzolni ezt a 36 darab háromszöget
+        egymásba ágyazott ciklusok segítségével?
+      4-5 Nested Loops 2_instruction: 'Most ágyazd be ezt a ciklust egy másik ciklus
+        belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak
+        nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
+      4-5 Nested Loops 3_instruction: "Készíts egy napocskát a kiindulási kód másik
+        ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r\n"
       4-5 Nested Loops 5_instruction: Ismételd meg a megadott kódot annyiszor, hogy
         szélmalmot készíts.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
+      4-5 Nested Loops 6_instruction: Meg tudod rajzolni a hatszöget a háromszög rajzoló
+        kód ciklusba ágyazásával?
       4-5 Nested Loops 7_instruction: |
         Loop this design 10 times. How much do you
         have to turn each time you loop? (Hint: What is 360 divided by 10?)
@@ -744,9 +725,8 @@
         Loop this design 6 times. How much do you
         have to turn each time you loop? (Hint: What is 360 divided by 6?)
       4-5 Nested Loops 9_instruction: Rajzold meg az alligátor alsó fogsorát!
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
+      4-5 Nested Loops Assessment 1_instruction: Használj egymásba ágyazott ciklust
+        az ábra befejezéséhez.
       4-5 While Loops 1_instruction: |
         Move me to the hole and fill it with two shovelfuls
         of dirt, using the "fill" block.
@@ -2396,51 +2376,50 @@
         használatával?
       K-1 Artist Loops 3_instruction: Bele tudod tenni ezeket az elemeket egy ciklusba,
         hogy 6 vonalat rajzoljon?
-      K-1 Artist Loops 4_instruction: |
-        Could a loop help us draw the top of this
-        castle?
-      K-1 Artist Loops 5_instruction: What can you loop 4 times to draw these stairs?
+      K-1 Artist Loops 4_instruction: Segíthet egy ciklus megrajzolni a vár tetejét?
+      K-1 Artist Loops 5_instruction: Meg tudod négyszer ismételni, hogy megrajzoljuk
+        ezeket a csillagokat?
       K-1 Artist Loops 6_instruction: |
         This one needs two loops: one to go up the
         stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
-      K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
-      K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
-      K-1 Artist1 1_instruction: Draw the foot of the man with one line
+      K-1 Artist Loops 7_instruction: Két ciklussal be tudod fejezni ezt a mintát?
+      K-1 Artist Loops 8_instruction: Ezen a lépcsőn hosszabbak a lépcsőfokok.
+      K-1 Artist Loops 9_instruction: 'Értékelés: használd a ciklusokat, hogy megrajzold
+        a csillagokat'
+      K-1 Artist Loops Free Play_instruction: Szabad játék, rajzolj valami mókásat!
+      K-1 Artist1 1_instruction: Rajzold meg az emberke lábát egy vonallal
       K-1 Artist1 10_instruction: |
         Draw and Jump to make the dashed path to the treasure
         X
-      K-1 Artist1 2_instruction: Draw the whisker on the cat with two lines!
-      K-1 Artist1 3_instruction: |
-        Draw two lines east and two lines north to finish
-        the house!
-      K-1 Artist1 4_instruction: Draw lines up, over, and down to complete the castle!
+      K-1 Artist1 2_instruction: Rajzold meg a cica bajszát két vonallal!
+      K-1 Artist1 3_instruction: Rajzolj egy vonalat keletre és egyet északra, hogy
+        befejezd a házat!
+      K-1 Artist1 4_instruction: Rajzolj vonalat előre, fel, tovább és le, hogy befejezd
+        a várat!
       K-1 Artist1 5.5_instruction: |
         Complete the third tower of the castle using
         short lines
-      K-1 Artist1 5_instruction: Draw the stem of this flower with two lines!
+      K-1 Artist1 5_instruction: Rajzold meg a virág szárát két vonallal!
       K-1 Artist1 6_instruction: Fejezd be a képet egy "ugrás" blokk használatával!
-      K-1 Artist1 7_instruction: |
-        Use the jump block to move without drawing. Jump
-        up and draw a line.
+      K-1 Artist1 7_instruction: Használd az ugorj blokkot, hogy rajzolás nélkül tudj
+        mozogni. Ugorj fel és rajzolj egy vonalat.
       K-1 Artist1 8_instruction: |
         Draw the dashed line by using both the jump and
         draw blocks
-      K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
+      K-1 Artist1 9_instruction: Rajzolj és ugorj, hogy szaggatott vonalat rajzolj
       K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
       K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
-      K-1 Artist2 1_instruction: Draw a square below the triangle.
-      K-1 Artist2 2_instruction: Jump and draw a square next to the house.
-      K-1 Artist2 3_instruction: Draw a square above the other square
-      K-1 Artist2 4_instruction: Draw a rectangle to complete the bridge.
-      K-1 Artist2 5_instruction: Draw a rectangle to complete the bridge supports
-      K-1 Artist2 6_instruction: Draw two squares to make a rectangle!
-      K-1 Artist2 Assessment1_instruction: |
-        Assessment: Draw a square next to the
-        other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
-      K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
+      K-1 Artist2 1_instruction: Rajzolj egy négyzetet a háromszög alá.
+      K-1 Artist2 2_instruction: Ugorj és rajzolj egy négyzetet a ház mellé.
+      K-1 Artist2 3_instruction: Rajzolj még egy négyzetet a másik mellé
+      K-1 Artist2 4_instruction: Rajzolj téglalapot, hogy befejezd a hidat.
+      K-1 Artist2 5_instruction: Rajzolj téglalapot, hogy befejezd a híd pillérét
+      K-1 Artist2 6_instruction: Rajzolj két négyzetet, hogy egy téglalapot alkossanak!
+      K-1 Artist2 Assessment1_instruction: 'Értékelés: rajzolj egy négyzetet a másik
+        mellé.'
+      K-1 Artist2 Free Draw_instruction: Rajzolj bármit!
+      K-1 Artist2_7_instruction: Rajzolj egy téglalapot, hogy elkészüljön a fiókos
+        szekrény legfölső fiókja!
       K-1 Bee 1_instruction: Menjünk oda a virághoz, gyűjtsük be a nektárt, majd menjünk
         tovább a mézsejthez és készítsünk mézet
       K-1 Bee 10_instruction: Gyűjts négy nektárt, majd készíts két mézet!
@@ -2491,42 +2470,42 @@
       K-1 Bee Loops Assessment 2_instruction: Ciklusok segítségével gyűjts nektárt
         a méz készítéshez!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
-      K-1 Building a Foundation Assessment_instruction: |
-        Build a three level pyramid,
-        there are no other directions, so just play with the pieces until you get
-        it!
-      k-1 maze 1_instruction: Can you make me move West to get to the pig?
-      K-1 Maze 10_instruction: 'Go around the TNT to get me to the pig! '
+      K-1 Building a Foundation Assessment_instruction: Építsd meg a három emeletes
+        piramist! Nincs más utasítás, csak játssz az elemekkel, amíg sikerrel nem
+        jársz!
+      k-1 maze 1_instruction: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
+      K-1 Maze 10_instruction: 'Kerüljük el a TNT-t, hogy eljussak a malachoz! '
       K-1 Maze 11_instruction: |
         Trace the path and lead me to the silly pig. Avoid
         TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: Move me East to get me to the pig!
-      K-1 Maze 3_instruction: Move me South to get me to the pig!
-      K-1 Maze 4_instruction: Move me North to get me to the pig!
-      K-1 Maze 5_instruction: Move me East to get me to the pig!
-      K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
+      K-1 Maze 2_instruction: Mozgass Keletre, hogy elkapjam a malacot!
+      K-1 Maze 3_instruction: Mozgass Délre, hogy elkapjam a malacot!
+      K-1 Maze 4_instruction: Mozgass Északra, hogy elkapjam a malacot!
+      K-1 Maze 5_instruction: Mozgass Keletre, hogy elkapjam a malacot!
+      K-1 Maze 6_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam
+        a malacot!
+      K-1 Maze 7_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam
+        a malacot!
+      K-1 Maze 8_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam
+        a malacot!
+      K-1 Maze 9_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam
+        a malacot!
       K-1 Maze Assessment 1_instruction: Assessment -- Get me to the pig!
       K-1 Maze Assessment 12_instruction: Assessment Level
       K-1 Maze Assessment 13_instruction: Assessment Level
       K-1 Maze Assessment 2_instruction: Assessment -- Get me to the pig!
-      K-1 maze debug 1_instruction: Change the code to get me to the pig!
+      K-1 maze debug 1_instruction: Változtasd meg a kódot, hogy elkapjam a malacot!
       K-1 maze debug 10_instruction: Keresd meg a hibát és javítsd ki ezen a szinten!
         Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 maze debug 11_instruction: "Ez egy teszt!\r\nKeresd meg a hibát és javítsd
         ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat
         és újakat adsz hozzá!"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Figure out what is missing and then REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
+      K-1 maze debug 2_instruction: Találd ki, mi hiányzik, egészítsd ki a kódot,
+        és juttass el a malachoz!
+      K-1 maze debug 3_instruction: Találd ki, mi hiányzik, aztán TÁVOLÍTS EL blokkokat,
+        hogy eljuttass a malachoz!
+      K-1 maze debug 4_instruction: Nézd át a blokkokat és keresd meg a hibát! Azt
+        hiszem, rossz irányba megyek.
       K-1 maze debug 5_instruction: Keresd meg a hibát és javítsd ki ezen a szinten!
         Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       K-1 maze debug 6_instruction: Keresd meg a hibát és javítsd ki ezen a szinten!
@@ -2541,29 +2520,28 @@
         javítsd ki! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat
         adsz hozzá!
       K-1 Maze Loops 1_instruction: Juttass el a malachoz!
-      K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
-      K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 10_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 11_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 12_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 2_instruction: Használd az Ismételd blokkot és juttass el a malachoz!
+      K-1 Maze Loops 3_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
       K-1 Maze Loops 4_instruction: Juttass el a malachoz!
-      K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 5_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 6_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 7_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
+      K-1 Maze Loops 8_instruction: Juttass el a malachoz! Használd az ismételd ciklust.
       K-1 Maze Loops 9_instruction: Juttass el a malachoz!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
+      K-1 Maze Loops Assessment 1_instruction: 'Értékelés: használj ciklusokat, hogy
+        eljuttass a malachoz!'
+      K-1 Maze Loops Assessment 2_instruction: 'Értékelés: használj ciklusokat, hogy
+        eljuttass a malachoz!'
       K-1 Maze Multi 14_instruction: Assessment Level
       K-1 Maze Multi 15_instruction: Assessment Level
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: "Let's see what you've learned!\r\nMove\none
+        way, then another to get me to the pig."
+      K-1 Maze Sequence Assessment 2_instruction: |
+        Move one way, then another to
+        get me to the pig.
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
@@ -3208,6 +3186,10 @@
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
         it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: |
+        The bee only wants nectar right now.
+        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
+        is hiding a flower. If it is, then you can gather nectar.
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -3415,7 +3397,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indices to change the values in
+        Use indexes to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3425,7 +3407,8 @@
         the randomly generated array by 1. (Click to see full instructions)
       U3 - Arrays - createFirstArray_instruction: |
         Create an array of the even numbers
-        from 0-10 and display its contents with console.log. (Click to see full instructions)
+        from 0 to 10 and display its contents with console.log. (Click to see full
+        instructions)
       U3 - Arrays - Demo App_instruction: |
         Use the "My Favorite Things" app. How
         might this app be making use of an array? (Click to see full instructions)
@@ -3516,15 +3499,15 @@
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
       U3 - Canvas - freePlay_instruction: |
-        Write code that redraws your image using
-        a sketch effect. (Click to see full instructions)
+        Extend the functionality of one of the
+        effects, or create an entirely new one of your own. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
         full instructions)
       U3 - Canvas - movementFunction fix Orig_instruction: |
-        Write a function that
-        takes the movement of the mouse as input and generates a line width as output.
+        Modify the "Original"
+        button event handler so that it takes the movement of the mouse into account.
         (Click to see full instructions)
       U3 - Canvas - movementFunction_instruction: |
         Write a function that takes the
@@ -3532,7 +3515,7 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use offsetX and offsetY with small
+        image using a dot whose x and y locations use offsetX and offsetY with a small
         random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
@@ -3552,7 +3535,7 @@
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
         Update the spray paint code so that
-        redraws your image using multiple random dots instead of one using a nested
+        it redraws your image using multiple random dots instead of using a nested
         for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
@@ -3664,7 +3647,7 @@
         Update the image scroller to
         respond to buttons and key presses. (Click to see full instructions)
       U3 - Keys - Functions_instruction: |
-        Write a doUpArrow and doDownArrow function
+        Write doUpArrow and doDownArrow functions
         and call the functions instead of duplicating the code. (Click to see full
         instructions)
       U3 - Keys - Key Up and Down_instruction: |
@@ -3707,7 +3690,7 @@
         (Click to see full instructions)
       U3 - Loops - 14_instruction: |
         Change the loop condition to prevent the infinite
-        loop and stop counting at once the count is past 30. (Click to see full instructions)
+        loop and stop counting once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
         is 12. (Click to see full instructions)
@@ -3721,7 +3704,7 @@
         Change the if statement to a while loop so the
         program will run until it rolls a 6. (Click to see full instructions)
       U3 - Loops - 4_instruction: |2
-         Use the Debug Commands to to make a list of all
+         Use the Debug Commands to make a list of all
         the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - 5_instruction: |
         Add code inside the while loop which will update
@@ -3777,24 +3760,22 @@
         Design a function that displays
         the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Complete the 'findMinVal'
-        function to find and display the smallest value in an array  (Click to see
-        full instructions)
+        Complete the findMinVal function
+        to find and display the smallest value in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
         Call findMin
         within the console.log statement to calculate the minimum of two values.  (Click
         to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
         Add a second parameter
-        to the 'search' function for the value to search for.  (Click to see full
-        instructions)
+        to the search function for the value to search for.  (Click to see full instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
         Visit every element in
-        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        the array and display "true" if the value is a 5, and "false" otherwise.
         (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
@@ -3806,7 +3787,7 @@
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
         Move the code that
-        searches the list for a 5 into a function called 'search'. (Click to see
+        searches the list for a 5 into a function called "search". (Click to see
         full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
@@ -3816,7 +3797,7 @@
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
         Process the array
-        and display a single 'true' if the array contains a 5 or a single 'false'
+        and display a single "true" if the array contains a 5 or a single "false"
         if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
@@ -3851,13 +3832,32 @@
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto
+        readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table.(Click to see full instructions)\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords
+        call individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin
+        the records return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords
+        return from the readRecords call. (Click to see full instructions)\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Return Values - debuggingConstrain_instruction: |
         Correct the error in
-        constrain so that it correctly reports the maximum value.  (Click to see full
-        instructions)
+        constrain so that it returns the appropriate value.  (Click to see full instructions)
       U3 - Return Values - debuggingMaxVal_instruction: |
         Correct the error in maxVal
         so that it correctly reports the maximum value.  (Click to see full instructions)
@@ -3887,6 +3887,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin
+        2008 and print it out. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing
+        the readRecords search terms. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3895,7 +3907,7 @@
         runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
-        flips! How long did it take? (Click to see full instructions)
+        heads! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
@@ -4474,14 +4486,14 @@
         Play Again button is clicked (Click to see full instructions) \n"
       U3L16 Mad Lib Demo_instruction: Mad Libs Demo - Try it out!
       U3L16 Mad Lib getText_instruction: "Before setting the text area with your\nMad
-        Lib outline, get the user's text and incorporate their responses. (Click\nto
+        Libs outline, get the user's text and incorporate their responses. (Click\nto
         see full instructions) \n"
       U3L16 Mad Lib setText_instruction: "When the Next button is clicked, set the\ntext
-        area to have the main outline of your How-to Mad Lib (without the user's\ninput).
+        area to have the main outline of your How-to Mad Libs (without the user's\ninput).
         (Click to see full instructions) \n"
       U3L16 Mad Lib Student Setup_instruction: |
-        Back to Mad Lib: To get started,
-        set up the two screens for your Mad Lib app (Click to show full instructions)
+        Back to Mad Libs: To get started,
+        set up the two screens for your Mad Libs app (Click to show full instructions)
       U3L16 Mad Lib toUpper_instruction: "Apply the toUpperCase and toLowerCase string\nfunctions
         to the user's text. (Click to see full instructions) \n"
       U3L17 - getAndSetKeyValue_instruction: |
@@ -4766,37 +4778,117 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - add createRecord to contacts App_instruction: |
+        Add code to your contacts
+        app so that newly added contacts are saved in a table. (Click to see full
+        instructions)
+      U4 - Add Row By Hand_instruction: |
+        Add a new record to your table in the Data
+        Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - drawChartsFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - Import Data 1_instruction: |
+        Download the CSV file we’ve provided,
+        and then use the data viewer to import the data from the file into the “mydata”
+        table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Remixing Apps with Data_instruction: |
+        Run this app and see what
+        it prints to the console. Then remix the app and run the remixed version to
+        see what happened to the data. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)
+      U4 - CreateRecord - 2.5_instruction: |
+        Change the table name in createRecord
+        then check the Data Viewer to see the new table. (Click to see  full instructions)
       U4 - CreateRecord - 2_instruction: |
-        Change the table name in create record
-        then check the Data Viewer to see the new table.
+        Change the name from "Alice" to something
+        else in the createRecord command.  Run the program and use the Data Viewer
+        to see the changes to your table. (Click to see full instructions)
       U4 - CreateRecord - 3_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Use createRecord to add the song object
+        as a record to a table. (Click to see full instructions)
       U4 - CreateRecord - 4_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Run the program. Verify the song object
+        was added to the database. Note the callback function now displays the copy
+        of the record sent back back by the database. (Click to see full instructions)
       U4 - CreateRecord - 5_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Add a property to the JavaScript object,
+        then run the program.  View the data table and see how changing the object
+        affects the data table. (Click to see full instructions)
+      U4 - debug column names are case sensitive_instruction: |
+        Change song.title
+        to song.Title (capital T).  And run the program.  Check the data table  (Click
+        to see full instructions)
+      U4 - deleteRecords 0_instruction: |
+        Use the deleteRecord command with default
+        values. Verify the record was deleted. (Click for full instructions).
+      U4 - deleteRecords 1_instruction: |
+        Find the id of "Little Bunny Foo Foo"
+        in the data table "mySongs".  Use the deleteRecord command to delete it.  See
+        what happens when you try to delete an ID a second time. (Click for full Instructions).
+      U4 - deleteRecords 2 delete object_instruction: |
+        Use the song object to delete
+        multiple objects in the database by changing only the "id" property. (Click
+        for full Instructions).
+      U4 - deleteRecords 2_instruction: |
+        Using the data viewer, find the id of a
+        a record you want to delete. Use the deleteRecord command to delete it. (Click
+        for full instructions).
+      U4 - Edit Data Table by Hand_instruction: |
+        View the data table and click edit
+        next to each row.  Add the artists names for each song by hand. (Click to
+        see full instructions)
+      U4 - Exploring Data Tools - Template_instruction: |
+        Use createRecord to add
+        the song object as a record to a table. (Click to see full instructions)
+      U4 - fix contacts by hand in data table_instruction: |
+        Use the data viewer to
+        add rows to the data table.  Add the original hard-coded contacts from your
+        app to the database. (Click to see full instructions)
+      U4 - last stage test adding contcts_instruction: |
+        Confirm that new contacts
+        you add are saved to the database.  Verify that after restarting your app,
+        the contacts you added no longer show in the app, but still exist in the database.
+        (Click to see full instructions)
+      U4 - Objects - accessingPropertiesInArray_instruction: |
+        Access the properties
+        of the objects stored in an array. (Click to see full instructions)
       U4 - Objects - arraysOfObjects_instruction: |
         Create an array called "students"
         and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createContactObject_instruction: |
+        Construct a new object from
+        the user inputs, and append it to your array. (Click to see full instructions)
+      U4 - Objects - createContactsData_instruction: |
+        Add values to the three contact
+        objects provided in the starter code. (Click to see full instructions)
       U4 - Objects - createDotNotation_instruction: |
-        Update your code to add properties
-        to your object one at a time using dot notation. (Click to see full instructions)
+        Create a student Object yourself.
+        Add properties to your object one at a time using dot notation. (Click to
+        see full instructions)
       U4 - Objects - createObject_instruction: |
         Create an object with at least 3
         properties and display it in the Debug Console. (Click to see full instructions)
       U4 - Objects - dotNotation_instruction: |
         Use dot notation to display individual
         properties of the object. (Click to see full instructions)
+      U4 - Objects - eventHandlersToSwitchScreen_instruction: |
+        Attach event handlers
+        to the "Add Contact" and "Go Back" buttons that allow the user to switch
+        screens. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - exemplarContactsApp_instruction: |
+        Use the Contacts app and then
+        add a contact of your own. (Click to see full instructions)
       U4 - Objects - loopingArray_instruction: |
         Loop over your array of students
         and print the name of every students. (Click to see full instructions)
@@ -4811,6 +4903,70 @@
         Loop over your array of student
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
+      U4 - Objects - pullValues_instruction: |
+        Create an event handler for the "Add
+        Contact" button that displays the contents of the 4 text input fields in
+        the console. (Click to see full instructions)
+      U4 - Objects - readStarterCode_instruction: |
+        Familiarize yourself with the
+        starter code and UI elements provided. (Click to see full instructions)
+      U4 - Objects - resetIndexAndShow_instruction: |
+        Add code to your event handler
+        fro the "Add Contact" button so that when a new contact is added the inputs
+        are cleared, the screen is switched, and the correct contact is shown. (Click
+        to see full instructions)
+      U4 - Objects - showContact1_instruction: |
+        Add code to the showCurrentContact
+        function to show the name of the contact stored at the currentIndex of your
+        array. (Click to see full instructions)
+      U4 - Objects - showContact2_instruction: |
+        Add the phone number and birthday
+        text to your text area. (Click to see full instructions)
+      U4 - Objects - showContact3_instruction: |
+        Display the image information for
+        each contact. (Click to see full instructions)
+      U4 - Objects - showSampleImage_instruction: |
+        Attach an event handler to the
+        image URL text input so that the user can confirm their image will work as
+        expected. (Click to see full instructions)
+      U4 - Objects - writeWrap_instruction: |
+        Use the wrap function to prevent currentIndex
+        from leaving the bounds of your array. (Click to see full instructions)
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords
+        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction.
+        (Click to see full instructions)\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby
+        a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table. (Click to see full instructions)\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues
+        in the response from the database. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie
+        in your database. (Click to see full instructions)\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
+        records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - ReadRecords - Contacts App 1_instruction: |
+        Write a function called "updateLocalData"
+        that copies the data in your database into your "contacts" global variable.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 2_instruction: |
+        Create a function called "refreshLocalData"
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 3_instruction: |
+        Add a call to "refreshLocalData"
+        to the callback function of the createRecord you use to add a new contact
+        to your database. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 4_instruction: |
+        Create a "Delete" button.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
+        Create an
+        event handler for the "Delete" button you created. (Click to see full instructions)
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"

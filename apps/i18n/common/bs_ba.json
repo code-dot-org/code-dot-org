@@ -172,7 +172,11 @@
   "help": "Pomoć",
   "hideToolbox": "(Sakrij)",
   "hintHeader": "Evo jedan savjet:",
+  "hintPrompt": "Trebaš li pomoć?",
   "hintRequest": "Pogledaj savjet",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Savjet:",
   "ignore": "Ignoriši",
   "infinity": "Beskonačnost",
@@ -243,9 +247,5 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Radni prostor: "
 }

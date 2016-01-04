@@ -21,6 +21,7 @@ $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
 $options.dashboard_domain = 'test-studio.code.org'
+$options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
@@ -55,6 +56,7 @@ opt_parser = OptionParser.new do |opts|
     $options.local = 'true'
     $options.pegasus_domain = 'localhost.code.org:3000'
     $options.dashboard_domain = 'localhost.studio.code.org:3000'
+    $options.hourofcode_domain = 'localhost.hourofcode.com:3000'
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
     print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
@@ -65,6 +67,9 @@ opt_parser = OptionParser.new do |opts|
     print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
           "Try '-d localhost.studio.code.org:3000' instead (this is the default when using '-l').\n" if d == 'localhost:3000'
     $options.dashboard_domain = d
+  end
+  opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
+    $options.hourofcode = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
     $options.realmobile = 'true'
@@ -211,6 +216,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"

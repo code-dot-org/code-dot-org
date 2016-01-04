@@ -107,7 +107,7 @@ def fetch_hoc_metrics()
   metrics['started'] += 409216
 
   # temporarily hard-code number served while analyze_hoc_activity is busted
-  metrics['started'] = 166726959
+  metrics['started'] = 189782984
   metrics
 end
 

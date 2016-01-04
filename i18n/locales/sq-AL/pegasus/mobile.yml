@@ -20,6 +20,8 @@ sq-AL:
   submit: Dorëzo
   twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
   twentyhours_text: E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim.
+  og_title: Çdo fëmijë meriton mundësinë
+  og_description: Çdo nxënës në çdo shkollë meriton mundësinë të mësojë shkencën kompjuterike.
   hoc2014_heading: 'Bashkohuni në <a href="http://hourofcode.com"> Orën e Kodimit</a><br/>8-14 Dhjetor, 2014<br/>'
   hoc2014_students: Studentët
   hoc2014_try: Provoje
@@ -28,14 +30,14 @@ sq-AL:
   hoc2014_everyone: Të gjithë
   hoc2014_support: 'Mbështete &#x25BE;'
   hoc2014_whatishoc: Çfarë është Ora e Kodimit?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  csedweek_map_header: '#CSEdWeek / Hour of Code ngjarjet në mbarë botën'
+  csedweek_map_signup: Regjistro ngjarjen tënde
+  csedweek_map_search_placeholder: Kërko ngjarjet Hour of Code
+  csedweek_map_search_search: Kërko
   csedweek_map_search_reset: Rivendosni
   csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_event: Ngjarje e Orës së Kodimit
+  csedweek_map_legend_cs_tech_jam: Ngjarje speciale
   cded_sign_up: Rregjistrohu
   cded_try_it: Provoje
   twentyhours_trynow: Provo tani
@@ -55,7 +57,7 @@ sq-AL:
   thank_you_: Faleminderit!
   congratulations: Urime!
   congratulations_on_completing_hoc: Urime që përfunduat një Orë Kodimi
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  congratulations_volunteer: 'Përgëzime: Tani pasiqë keni provuar Orën e Kodimit, <a href="https://code.org/volunteer">regjistrohu të bëhesh vullnetarë në një klasë</a> dhe ndihmo nxënësit të mësojnë një Orë të Kodimit!'
   course_name_accelerated: Kurs i Avancuar
   course_name_course1: Kursi 1
   course_name_course2: Kursi 2
@@ -200,21 +202,21 @@ sq-AL:
   homepage_slot_text_course4: Kursi 4
   homepage_slot_text_shop: Bli
   homepage_slot_text_flappy: Kodi Flappy
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Një Orë e Kodimit për çdo nxënës.
   homepage_action_text_num_served: '# e dorëzuar'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Na u bashko!
   homepage_action_text_sign_up: Rregjistrohu
   homepage_action_text_try_it: Provoje
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Kërkohen vullnetarë teknik
   homepage_action_text_codevideo: Shiko videon
   homepage_action_text_teachervideo: Ndiq videon
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Frymëzo një vajzë
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_signpetition: Nënshkruaj peticionin
   homepage_signpetition_dropdown: 'Jam dakort &#x25BE;'
   homepage_diversity_pledge: Zgjidh zotimin e diversitetit
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: 'Ora e Kodimit po vjen përsëri më 7-13 dhjetor. '
+  homepage_banner_link_prizes: 'Bashkoju ngjarjes më të madhe të mësimit në histori. '
   homepage_banner_text_main: Code.org dhe Bordi i Kolegjit bashkohen për të nxitur larmishmërinë në shkencat kompjuterike.
   homepage_banner_text_link: Mëso më shumë
   homepage_banner_privacy_main: Ne e kemi rifreskuar linjën tonë të privacisë që të përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
@@ -224,7 +226,7 @@ sq-AL:
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
   homepage_slot_text_link_host: Organizo një Orë Kodim
   homepage_slot_text_link_hocserved: '# e dorëzuar'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
   homepage_slot_text_title_students: Studentët
   homepage_slot_text_blurb_students: Eksploro të gjitha tutorialet tona
   homepage_slot_text_link_codestudio: Provo Code Studio (studio e kodimit)
@@ -281,40 +283,41 @@ sq-AL:
   class_submission_level_college: Fakulteti
   class_submission_level_vocational: Profesionale
   class_submission_languages_other: Gjuhë të tjera
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: 'Më shumë<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video frymëzuese</a>nga njerëz të famshëm'
+  playlab_choose_theme: Zgjedhe temën e Play Lab
+  playlab_classic_title: Klasik
+  playlab_gumball_title: Bota Mahnitëse e Gumball
+  playlab_iceage_title: 'Epoka e Akullnajave - Vjen së shpejti'
+  playlab_iceage_title_live: Epoka e Akullnajave
+  starwars_subtitle: Ndërtimi i një galaktike me kodim
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Përdor blloqe me tërheqje-lëshim dhe JavaScript.
+  starwars_javascript_specs: Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+
   starwars_javascript_start_button: Provo tani
   starwars_blocks_title: Blloqet
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
+  starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta | Moshat 6-106
   starwars_blocks_start_button: Provo tani
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Para se të fillosh, shiko një nga këto video frymëzuese
+  starwars_speak_languages: Flet një gjuhë tjetër?
+  starwars_help_translate: Na ndihmo të përkthejmë
   starwars_platform_text: Shfletuesit modern, telefonat e mençur, tabletat
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_name: Ora e Kodimit Minecraft
+  mc_longdescription: "Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft."
+  mc_shortdescription: "Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft."
   mc_gradelevel: Moshat 4-104
   mc_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  mc_specs: Shumë gjuhë | Browserët modern dhe tabletat | Moshat 6-106
+  minecraft_subtitle: Ora e Kodimit Minecraft
+  volunteer_engineer_submission_title: Frymëzo nxënësit dhe vullnetarizo
+  volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} e mësuesve kanë nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju atyre.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+  volunteer_engineer_submission_intro_signup: 'Ju lutemi shkruani të dhënat e mëposhtme në qoftë se jeni student i shkencës kompjuterike ose profesionist i software. Fushat e shënuara me një<span class="form-required-field">*</span>janë të domosdoshme.'
+  volunteer_engineer_submission_intro_links: 'Keni nevojë të gjeni vullnetarë? Gjej një vullnetar vendor në hartën tonë<a href="%{volunteer_local}">të vullnetarëve</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Emri
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -341,7 +344,7 @@ sq-AL:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: Dorëzo
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for signing up to volunteer. Teachers will be using <a href="%{url}">this map</a> to search for and contact volunteers like you.'
   volunteer_engineer_submission_commitment_uncertain: I/e pasigurtë
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 orë në javë
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 orë në javë
@@ -550,6 +553,8 @@ sq-AL:
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Mëso më shumë
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Ora e Kodimit është këtu - Dhjetor 8-14!'
@@ -848,7 +853,7 @@ sq-AL:
   playlab_longdescription: Krijo një histori ose bëj një lojë me Play Lab! Bëj kafshë, piratë, zombi, ninxha, dhe shumë lëvizje të tjera karakteresh, bëj tinguj, shëno pikë dhe madje hidh topa zjarri!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

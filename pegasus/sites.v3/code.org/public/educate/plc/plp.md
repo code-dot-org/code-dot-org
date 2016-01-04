@@ -30,25 +30,25 @@ Each pin on the map below is a city where Code.org is looking for a Professional
 
 ## <a name="commitments"></a>What are the program commitments?
 
-- Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
-- Attend our Facilitation Summit, May 20-22, 2016. Location TBD
-- Attend our 5-day Summer Professional Learning Experience with teachers from your state
+1. Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
+2. Attend our Facilitation Summit, May 20-22, 2016. Location TBD
+3. Attend our 5-day Summer Professional Learning Experience with teachers from your state
 	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, IN, MD, NC, OH, TX)
 	- July 18-22 in Salt Lake City, UT - states attending (WA, CA, ID, AZ, NV, UT)
 	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY)
-- Organize and host quality, local PD for Code.org’s District Partners implementing Code.org’s High School and Middle School programs, with Code.org-accredited facilitators
+4. Organize and host quality, local PD for Code.org’s District Partners implementing Code.org’s High School and Middle School programs, with Code.org-accredited facilitators
 	- In Year 1 (2016-17) this is for the (AP) Computer Science Principles course. 
 	- In Year 2 (2017-18) this is for CS Principles AND an intro course for grades 6-9.
 	- In initial years, this is for four 1-day professional learning workshops during the school year per course, to provide teachers who have attended our summer conferences with continuing professional learning during the school year. Timing of workshops could be adjusted to local needs.
 	- In future years we hope your commitment can eventually include taking full responsibility of all of Code.org’s professional learning programs in the region
-- Contract with and compensate local Code.org-accredited facilitators to lead the professional learning workshops
-- Build, grow and sustain a local community of computer science educators (or join an existing community)
+5. Contract with and compensate local Code.org-accredited facilitators to lead the professional learning workshops
+6. Build, grow and sustain a local community of computer science educators (or join an existing community)
 	- In Year 1 (2016-17): 
 organize informal local meetups for educators, ideally together with a local university or corporation
 promote the December Hour of Code campaign locally 
 	- In Year 2 (2017-18), also organize and host  a spring “CS Fair” for schools
-- Possess existing funding streams, and sufficient funding and finance infrastructure to cover upfront workshop costs and pay facilitators and teachers prior to Code.org reimbursement.
-- Commit to ongoing communication with Code.org on metrics and model improvements, as necessary
-- Comply with Code.org <a href="/privacy" target=_blank>privacy policy</a>
+7. Possess existing funding streams, and sufficient funding and finance infrastructure to cover upfront workshop costs and pay facilitators and teachers prior to Code.org reimbursement.
+8. Commit to ongoing communication with Code.org on metrics and model improvements, as necessary
+9. Comply with Code.org <a href="/privacy" target=_blank>privacy policy</a>
 
 [<button>Apply now</button>](/educate/plc/plp-application)

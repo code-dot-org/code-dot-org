@@ -159,7 +159,7 @@
       2-3 Bee Conditionals 5_instruction: 紫色的花可能有 1 個或 0 個花蜜，但你不知道哪一個有 ! 如果一朵紫色的花沒有任何花蜜，小心不要從中採集花蜜。使用
         if 方塊來檢查是否花蜜數量等於 1 。
       2-3 Bee Conditionals 6_instruction: |
-        以「if」積木塊來確認這朵花，
+        以"如果"積木塊來確認這朵花，
         看看上面有沒有花蜜。
       2-3 Bee Conditionals 7_instruction: 採集有花蜜的花。
       2-3 Bee Conditionals 8_instruction: 這塊地有紅色和紫色的花。紅色的花有已知的花蜜量，但紫色花蜜是未知。收集所有的花蜜。
@@ -198,27 +198,17 @@
       2-3 Bee Functions Assessment 1_instruction: 評估：用給定的函式從每朵花上採集花蜜。
       2-3 Bee Functions Assessment 2_instruction: '評估: 新建一個函數以一次製造3個蜂蜜。'
       2-3 Bee Loops 1_instruction: '每一朵花裡有著一些花蜜，試著從這些花中收集花蜜吧。 '
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 10_instruction: 你可以把while迴圈放進其他兩個迴圈裡來收集所有的花蜜嗎?
+      2-3 Bee Loops 11_instruction: 用while迴圈來採集這個區塊裡所有的花蜜。
+      2-3 Bee Loops 12_instruction: 用while迴圈來採集這個區塊裡所有的花蜜。
+      2-3 Bee Loops 13_instruction: '評估: 重複使用程式積木來收集所有的花蜜。'
       2-3 Bee Loops 1A_instruction: Hi 我是蜜蜂。你能幫助我從這些花朵中收集花蜜嗎？
       2-3 Bee Loops 2_instruction: 使用重複方塊採集花蜜和釀蜜。
       2-3 Bee Loops 2A_instruction: 你能利用重複方塊來使得做相同的任務更容易?
       2-3 Bee Loops 3_instruction: 從每一朵花中採集花蜜，在每一個蜂窩裡釀蜜。
       2-3 Bee Loops 3A_instruction: 你可以使用重複方塊來收集所有的花蜜嗎?
       2-3 Bee Loops 3B_instruction: 現在使用新的重複方塊收集所有花蜜，然後製造所有蜂蜜。
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
+      2-3 Bee Loops 4_instruction: 使用和上一個謎題類似的迴圈，但還要再加上一個轉彎。
       2-3 Bee Loops 4A_instruction: |
         如果你按照這個順序做三次會發生什麼事情呢?
         最後不要忘了做蜂蜜喔!
@@ -229,94 +219,63 @@
         我們不知道這些紫色的花裡面有多少花蜜。
         利用「while nectar」這個迴圈來收集所有的花蜜。
         只要剩下的花蜜大於0，這個迴圈就會一直被執行。
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
-      2-3 Maze 1_instruction: "Can you help me to catch the naughty pig? Stack a\ncouple
-        of \"move forward\" blocks together and press \"Run\". \n"
+      2-3 Bee Loops 9_instruction: While迴圈等同於在迴圈中加上if的敘述。在這個程式碼中加上一個while迴圈來執行同樣的任務。
+      2-3 Bee Loops Assessment 1_instruction: 評估－用while迴圈來收集這朵花上的所有花蜜
+      2-3 Maze 1_instruction: '你可以幫我抓住那些頑皮的豬嗎? 把幾個"前進"的程式積木放在一起，然後按"奔跑"鍵。 '
       2-3 Maze 10_instruction: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
       2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
+        我餓了! 把我送到花從那兒。
+        你需要重複使用幾次程式積木呢?
+      2-3 Maze 12 (copy 1)_instruction: "你可以用兩個程式積木就完成上一題的任務嗎? \n(提示: 使用程式積木\"repeat
+        times\"來建立一個迴圈)\n"
+      2-3 Maze 12 (copy 2)_instruction: "你可以用兩個程式積木就完成上一題的任務嗎? \n(提示: 使用程式積木\"repeat
+        times\"來建立一個迴圈)\n"
+      2-3 Maze 12 (old)_instruction: 帶我到那隻豬旁邊，這次使用重複次數的程式積木。
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: Get me to the pig using only two blocks.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
+        你可以只用兩個程式積木來替代原先的五個程式積木嗎?
+        (提示: 使用程式積木"repeat times"來建立一個迴圈)
+      2-3 Maze 13 (old)_instruction: 帶我到那隻豬旁邊，這次使用條件重複的程式積木。
+      2-3 Maze 13_instruction: 只用兩個積木程式把我帶到那隻豬旁邊。
+      2-3 Maze 14 (old)_instruction: 使用條件重複的程式積木把我帶到那隻豬旁邊。
+      2-3 Maze 14_instruction: 帶我到向日葵那裏！(那個"repeat times"的程式積木在哪呢？)
+      2-3 Maze 15 (old)_instruction: 使用條件重複的程式積木把我帶到那隻豬旁邊。
       2-3 Maze 15_instruction: 使用兩個迴圈到達豬(使用較少的積木)。
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
+      2-3 Maze 16 (old)_instruction: 使用條件重複的程式積木把我帶到那隻豬旁邊。
       2-3 Maze 16 before_instruction: 帶我到那隻豬旁邊！
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
-      2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+      2-3 Maze 16_instruction: 帶我到向日葵那裏。讓程式積木的組合進行迴圈！
+      2-3 Maze 2_instruction: 那隻豬惹毛我了。幫助我到它那裡！
+      2-3 Maze 3_instruction: 順著路走帶我到傻豬那裏。記得不要碰到 TNT，不然我的羽毛會滿天飛！
       2-3 Maze 4_instruction: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
       2-3 Maze 5_instruction: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
-      2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze 6_instruction: 保持冷靜，幫我找到那隻壞豬豬。否則我真的會生氣！
       2-3 Maze 7_instruction: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
       2-3 Maze 8_instruction: 帶我到那隻豬旁邊!
       2-3 Maze 9_instruction: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: 你可以只用5個程式積木就帶我走到豬的位置嗎?
       2-3 Maze Loops 17_instruction: 帶我到那朵向日葵的位置!
       2-3 Maze Loops 18_instruction: 帶我到那朵向日葵的位置!
       2-3 Maze Loops 19_instruction: 帶我到那朵向日葵的位置!
       2-3 Maze Loops 20_instruction: 帶我到那朵向日葵的位置!
       2-3 Maze Loops 21_instruction: 帶我到那朵向日葵的位置!
-      2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower\nusing
-        only 5 blocks! \n"
+      2-3 Maze Loops Assessment 1_instruction: '評估: 只用五個程式積木來把我帶到向日葵那兒。 '
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
       2-3 Maze sq10_instruction: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
       2-3 Maze sq10v2_instruction: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
       2-3 maze sq11_instruction: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+      2-3 maze sq12_instruction: 你能使用"重複次數"的積木來取代先前的答案嗎？
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
+        親愛的... 人類, 我... 殭屍。需要... 到... 向日葵。
+        用 "條件重複" 的程式積木來建立一個迴圈。
+      2-3 maze sq14_instruction: 你能只使用四個程式積木帶我到向日葵那裏嗎？
       2-3 maze sq15_instruction: 你能只使用五個方塊完成一個向日葵嗎?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 maze sq16_instruction: 好，這個雖然也相似，但還是有一些不一樣的地方。你可以只用五個程式積木來完成它嗎？
+      2-3 Maze sq2_instruction: 順著路走把我帶到傻豬那裏。記得不要碰到TNT，否則羽毛會滿天飛！
       2-3 Maze sq3_instruction: 將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)
-      2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze sq4_instruction: 保持冷靜，幫我找到那隻壞豬豬。否則我真的會生氣！
+      2-3 Maze sq5_instruction: 帶我到那隻豬旁邊！你需要重複幾次程式積木呢？
+      2-3 Maze sq6_instruction: 你能夠只用兩個程式積木就完成先前的任務嗎？(提示：用"重複次數"的程式積木來建立一個迴圈)
       2-3 Maze sq7_instruction: 只用三個積木把我送到綠色的入侵者。
       2-3 Maze sq8_instruction: 把我送到這頭豬那裏! (當我需要"重複次數"積木時，它在哪?)
       2-3 Maze sq9_instruction: 創造迴圈 以更少的積木抵達豬那裏。
@@ -329,57 +288,28 @@
       4-5 Artist 11_instruction: 完成綠線。線是 300 個像數長，之間的距離為15 個像數。
       4-5 Artist 2_instruction: 你可以重複程式碼，以完成方塊嗎?
       4-5 Artist 3.5_instruction: 好，現在試著搞清楚如果你執行這段程式碼會發生什麼事(或直接按"執行"試試看)。然後重複它夠多次來完成繪圖。每次的顏色(可能)會不同。
-      4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
+      4-5 Artist 3_instruction: 這個長方形花圃的周長是600。長邊的長度是200。畫出這個長方形。
       4-5 Artist 4_instruction: 一個圓有多少度？藉由迴圈來創造一個有顏色的圓。
       4-5 Artist 5_instruction: 你使用的是那個角度呢？
-      4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
-      4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. \n"
+      4-5 Artist 6_instruction: 這個正三角形角度都是60度。每邊長200像素。繼續畫完這個三角形。
+      4-5 Artist 7_instruction: 這個直角三角形的角度分別是30、60、90度。斜邊長度是100高度像素的二倍。畫完這個三角形。
+      4-5 Artist 8_instruction: 足球場的半場線與邊線互相垂直。這個場地的周長是800像素，長邊是240像素。它的寬度是多少？畫出邊線與半場線。
+      4-5 Artist 9_instruction: 畫出它的另一半，使得這個設計是對稱的。這是個正三角形，邊長50像素。
+      4-5 Artist Assessment 1_instruction: 評估：用迴圈畫出正三角形。每一邊長300像素。
+      4-5 Artist For Loops 1_instruction: 把數字1到10放進寬度的程式積木中，然後執行程式碼。
+      4-5 Artist For Loops 11_instruction: 完成這個 "for" 程式積木, 這樣就可以從0, 20, 40, 60, 80...
+        計數到200。
+      4-5 Artist For Loops 12_instruction: "如果把\"from\"和 \"to\" 的兩個數字互換會發生什麼事情呢?\n試試看,會發現這個
+        \"for\" 程式積木可以從200, 180, 160, 140, 120...計數到0。 \n"
       4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
+        這種沒有"for"迴圈的設計用掉太多的程式積木了!
+        用"for"迴圈來完成這個螺旋。
+        提示: 最後一行的長度是250像素。
+      4-5 Artist For Loops 14_instruction: 有人在開始寫程式碼之後，發現應該有更快的方式！用一個"for"的程式積木來取代其他積木，然後完成這個三角形螺旋。(提示：最後一行的長度是300像素。)
+      4-5 Artist For Loops 15_instruction: 有人在開始寫程式碼之後，發現應該有更快的方式！用一個"for"的程式積木來取代其他積木，然後完成這個六角形螺旋。(提示：最後一行的長度是200像素。)
+      4-5 Artist For Loops 3_instruction: 我們該如何從1數到50？編輯"for"程式積木。
       4-5 Artist For Loops 4_instruction: 完成一個能從1數到10的"for"方塊
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+      4-5 Artist For Loops 6_instruction: 畫出邊長為50、60、70、80、90像素的正方形。你會需要用到「畫正方形」的函式五次。
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -388,13 +318,9 @@
         Can you complete the program by placing
         the blocks inside a "for" block that counts from 10 to 200 by 10? You can
         find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+      4-5 Artist For Loops 9_instruction: 這些圓形的大小分別是5、10、15、20、25、30、35。用"for"程式積木來畫圓形。
+      4-5 Artist Free Draw 1_instruction: 隨便畫吧！把你的靈感變成創作！
+      4-5 Artist Functions 1_instruction: 用一個重複的迴圈來畫這個三角形。
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
@@ -459,111 +385,53 @@
         Draw these 3 flowers. The first one's
         height is 100 and the next flower is always 50 pixels more than the height
         of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Artist Patterns 1_instruction: 你可以用迴圈畫這個正方形嗎? 每一邊長為20像素。
+      4-5 Artist Patterns 10_instruction: '這段代碼畫兩列六邊形 - 重複全部代碼4次來畫出整個蜂窩型。提示: 你需要在你最外層的迴圈往回跳120像素來確保畫家不會跑到螢幕外。'
+      4-5 Artist Patterns 11_instruction: '你需要重複這段代碼多少次來畫出一個半圓? 提示: 如果一個圓有360度，而每一次的循環移動3度，那麼你需要重複多少次來畫出一個完整的圓?'
+      4-5 Artist Patterns 12_instruction: 如果你複製該迴圈並且左轉而不是右轉，會發生什麼事？你能重複這個動作來畫這個波嗎？
+      4-5 Artist Patterns 13_instruction: 現在讓我們重複做這件事4次來創造這個圖框。小心角落 - 你不能就直接轉90度!
+        如果重複60次轉3度會做出一個半圓，那麼使用哪些程式積木可以做出一個四分之一圓用在角落?
+      4-5 Artist Patterns 2_instruction: 如果你把你畫正方形的迴圈放進另一個迴圈內，我們稱這為巢狀迴圈。你需要在你的外層迴圈加上什麼來確保全部15個正方形是緊鄰且排成一直線的?
+      4-5 Artist Patterns 3_instruction: 現在讓我們加深難度! 我們已經把整個代碼區塊嵌進另一個迴圈中，但是你需要讓畫家就定位來畫下一行。你可以在最外層迴圈的底部放置哪些程式積木來畫完整個網格?
+      4-5 Artist Patterns 4_instruction: 這個菱形邊長50像素且角度為120度和60度。用一個迴圈來畫出它。
+      4-5 Artist Patterns 5.5_instruction: 你需要重複這個程式區塊多少次來畫出整個菱形網格?
+      4-5 Artist Patterns 5_instruction: 讓我們重複同樣的事來畫一列6個菱形。注意我們有把我們畫菱形的代碼從原本重複3次改成2次
+        - 你覺得為什麼要這麼做?
+      4-5 Artist Patterns 6_instruction: 你需要重複這個程式區塊多少次來畫出整個菱形網格?
+      4-5 Artist Patterns 7_instruction: 讓我們修改上一題的代碼來畫出這個更複雜的圖案。注意現在菱形是如何重疊的，試著把第一個"向後跳"的像素從100改成50(一半的距離)
+        - 現在畫家應該在第二個"向後跳"改成跳多少像素?
+      4-5 Artist Patterns 8_instruction: 用一個迴圈來畫這個邊長為40像素且角度為60度的六邊形。
+      4-5 Artist Patterns 9.5_instruction: 讓我們來重複這段代碼來畫出兩列六邊形。注意我們第二列是被向右移動的。
+      4-5 Artist Patterns 9_instruction: 現在重複剛剛的代碼3次來畫出這列圖案。提示，每一個六邊形的最左邊的點到最右邊的點距離為80像素。
+      4-5 Artist Patterns Free Play_instruction: 自由發揮 - 試著親手做一個自己的圖案!
+      4-5 Bee Conditionals - FC Test_instruction: 蜂蜜現在只想要花蜜。不是全部的東西都是花朵，所以檢查每朵雲裡面是否藏著花朵。如果是的話，那就可以採集花蜜。
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: 蜜蜂不能分辨那是一朵花朵或是一個蜂巢。先檢查那是花朵還是蜂巢，而我們只能從花朵採集花蜜。
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 2_instruction: 蜜蜂現在只想要花蜜。並非所有的物件都是花朵，所以檢查每朵雲的下面是否藏著一朵花。如果有，那麼你就可以採集花蜜。
+      4-5 Bee Conditionals 3_instruction: 現在蜜蜂只想要製作蜂蜜。我們只能在蜂巢製作蜂蜜，檢查那是不是蜂巢，是的話就製作蜂蜜。
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: 那個不知道是什麼的東西不是花朵就是蜂巢。用"如果-否則"的程式積木，如果那是一朵花就採集花蜜，其他情況則製作蜂蜜(因為它是一個蜂巢)。
       4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+        在那些雲朵底下藏著花叢或蜂窩。
+        用"if/else"的程式積木來判斷雲朵底下藏的是什麼東西,
+        如果是花叢的話, 就採集花蜜,
+        其他的狀況(蜂窩), 那就製作蜂蜜。
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
+      4-5 Bee Conditionals 6_instruction: 這朵紫色的花可能有3或2或1個花蜜。這裡有一個"如果-否則"程式積木組合另一個"如果-否則"程式積木來製作一個"如果-或如果-否則"程式積木。寫出解答來採集不知確切數量的花蜜。
       4-5 Bee Conditionals 7_instruction: 請記住，紫色花朵可以有數量 3、 2 或 1 的花蜜。完成"檢查紫色花朵"的函數並使用它來收集所有花朵的花蜜。
       4-5 Bee Conditionals 8_instruction: |
         完成"檢查花朵，製造蜂密"函數內部程式積木。
@@ -571,10 +439,10 @@
         然後將所有的花蜜收集好並往前移動開始製造花蜜。
       4-5 Bee Conditionals Assessment 1_instruction: '評量 : 這個程式碼有些錯誤。請完成"收集花蜜及製造蜂蜜"的函數，然後呼叫它來收集所有的花蜜及蜂蜜。提醒您：紫色花多可能會有數量3,2或1的花蜜。'
       4-5 Bee Debugging 1_instruction: 這些程式積木的錯誤讓我很頭大。你能幫我把它們修正嗎？
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
+      4-5 Bee Debugging 10_instruction: 找出錯誤的地方並把它們更正。
+      4-5 Bee Debugging 11_instruction: 你覺得這樣的計算對嗎?
       4-5 Bee Debugging 2_instruction: 幫助蜜蜂收集花蜜及製造蜂蜜。
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 3_instruction: 找出錯誤的地方並把它們更正。
       4-5 Bee Debugging 4_instruction: 這些程式積木無法正常動作。你能幫我找出那裡有問題嗎？
       4-5 Bee Debugging 5_instruction: 這裡有些程式積木不太正確...
       4-5 Bee Debugging 6_instruction: 紫色花朵有著不確定數量的花蜜。修正程式積木使它可以收集花朵中所有的花蜜。
@@ -588,32 +456,20 @@
       4-5 Bee Nested Loops 4_instruction: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
       4-5 Bee Nested Loops 5_instruction: 建立一個巢狀迴圈來收集所有的花蜜
       4-5 Bee Nested Loops 6_instruction: 收集所有的花蜜。
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
-        nesting a while loop. Replace the inner repeat times block with a while\nblock.
-        \n"
+      4-5 Bee Nested Loops 7_instruction: 把這個迴圈放入另一個迴圈來建構一個巢狀迴圈並且從花上面採集所有的花蜜。
+      4-5 Bee Nested Loops 8_instruction: '用巢狀的"while"迴圈從這些花中採集到所有的花蜜。用while的積木來取代內部的"重複次數"積木。 '
       4-5 Bee Nested Loops 9_instruction: 透過重複while迴圈來收集所有花朵裡的花蜜
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: 情愛的人類。我是殭屍。必須...到...太陽花.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Bee Nested Loops Assessment 1_instruction: 評量：採集所有的花蜜並且用迴圈來製造蜂蜜。
+      4-5 Bee Nested Loops Rows_instruction: 從這排花中採集花蜜。使用巢狀迴圈。
+      4-5 Maze 1 (copy 1)_instruction: 親愛的... 人類, 我... 殭屍。需要... 到... 向日葵。
+      4-5 Maze 1_instruction: 親愛的... 人類, 我... 殭屍。需要... 到... 向日葵。
+      4-5 Maze 10_instruction: 你能只使用四個程式積木帶我到向日葵那裏嗎？
       4-5 Maze 11_instruction: 你能不能之用6塊的到向日葵？
       4-5 Maze 12_instruction: 好喔，現在有點不一樣了。你能不能只用6塊達成目標？
       4-5 Maze 13_instruction: 帶我到那隻豬旁邊!
       4-5 Maze 14_instruction: 帶我去那隻豬那邊！利用重複達成目標。
-      4-5 Maze 2 (copy 1)_instruction: |
-        Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
+      4-5 Maze 2 (copy 1)_instruction: 讓殭屍到向日葵那，但是要迴避食人花！
+      4-5 Maze 2_instruction: 把殭屍送到向日葵那兒，但是記得要避開食人花！
       4-5 Maze 3 (copy 1)_instruction: 必須...到達...向日葵。
       4-5 Maze 3_instruction: 必須...到達...向日葵。
       4-5 Maze 4 (copy 1)_instruction: 試著使用"重覆"程式積木來減少程式積木的使用量。
@@ -622,108 +478,53 @@
       4-5 Maze 5_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
       4-5 Maze 6 (copy 1)_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
       4-5 Maze 6_instruction: 你有可能使用最少數量的程式積木來完成這個關卡嗎?
-      4-5 Maze 7_instruction: 情愛的人類。我是殭屍。必須...到...太陽花.
+      4-5 Maze 7_instruction: 親愛的... 人類, 我... 殭屍。需要... 到... 向日葵。
       4-5 Maze 8_instruction: 使用"重複"程式積木讓疆屍到達向日葵那裡。(記得避開食人花!)
       4-5 Maze 9_instruction: 使用 "重覆...直到" 程式積木來建立迴圈。
       4-5 Maze Assessment 1_instruction: '評量 : 取得向日葵'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
+      4-5 Maze Conditionals 1_instruction: 使用"repeat until"的方塊來讓殭屍到向日葵那。
+      4-5 Maze Conditionals 10_instruction: 你可以只多加3個程式積木來幫我解決更複雜的迷宮嗎? 如果你的方法正確，不管多長的彎曲路徑我都能走。
+      4-5 Maze Conditionals 2_instruction: 使用"repeat until"的方塊來讓殭屍到向日葵那。
+      4-5 Maze Conditionals 3_instruction: '使用"如果"程式積木來讓我決定什麼時候要轉彎。提示: 你只需要再多加一個程式積木就好了，但請學習我們是如何使用"如果"程式積木，這樣下次你就可以自己做了。'
+      4-5 Maze Conditionals 4_instruction: 好的，這和上一題很像，但是你需要記得如何同時用"如果"和"重複"程式積木。
       4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
+        我想... 吃... 向日葵。
+        用最少的程式積木送殭屍到向日葵那兒。
+        提示: 使用"if"程式積木。
       4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "if/else" block checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
-      4-5 Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
+        我想... 吃... 向日葵。
+        用最少的程式積木送殭屍到向日葵那兒。
+        提示: 使用"if"程式積木。
+      4-5 Maze Conditionals 7_instruction: 好，讓我們再練習一次--這次跟上次差不多，但記得要避開食人花喔 ！
+      4-5 Maze Conditionals 8_instruction: 這個"如果-否則"程式積木會檢查指定的條件，來決定做哪件事情。用這個新的程式積木把我送到向日葵那裏。
+      4-5 Maze Conditionals 9_instruction: 再練習一次"如果-否則"程式積木，你能第一次就成功嗎？
+      4-5 Maze Conditionals Assessment 1_instruction: 用一個"重複 直到"和一個"如果-否則"程式積木來使我走到向日葵的位置，盡量越少程式積木越好。
+      4-5 Nested Loops 1_instruction: '完成代碼來畫這些三角形。第一個三角形的代碼已經幫你打好了。提示: 3個三角形旋轉了360度'
       4-5 Nested Loops 10_instruction: |
         Draw the last row of stars on this flag by
         looping the provided blocks. The stars are 50 pixels apart, but remember that
         the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
-        loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
-      4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 Nested Loops 11_instruction: 你可以用巢狀迴圈來畫出在人行道上的10個正方形嗎? 每一個正方形邊長為30像素。
+      4-5 Nested Loops 12_instruction: 你可以用嵌套的迴圈來畫出這36個三角形嗎?
+      4-5 Nested Loops 2_instruction: '現在把這個迴圈嵌進另一個迴圈內來畫出10個三角形。這被稱作嵌套迴圈。 提示: 全部10個三角形完成了360度的旋轉。  '
+      4-5 Nested Loops 3_instruction: |
+        藉由把起始代碼嵌進另一個迴圈中來畫出一個太陽。 這被稱為巢狀迴圈。
+      4-5 Nested Loops 5_instruction: 重複已給的代碼來畫出一個風車。
+      4-5 Nested Loops 6_instruction: 你可以藉由重複畫三角形的代碼來畫出一個六邊形嗎?
+      4-5 Nested Loops 7_instruction: '重複這個圖案10次。你每次重複畫圖案時需要轉多少度? (提示: 360除以10是多少?)'
+      4-5 Nested Loops 8_instruction: '重複這個圖案6次。你每次重複畫圖案時需要轉多少度? (提示: 360除以6是多少?)'
+      4-5 Nested Loops 9_instruction: 在鱷魚的嘴內畫出牙齒!
+      4-5 Nested Loops Assessment 1_instruction: 用一個巢狀迴圈來完成這個圖案。
+      4-5 While Loops 1_instruction: 把我移動到洞口然後用兩鏟土填平它，用"填充"程式積木。
+      4-5 While Loops 2_instruction: 把我移動到土堆上並挖除五鏟土，用"移除"程式積木。
+      4-5 While Loops 3_instruction: '把我移動到土堆上並把土堆挖平，然後移動到洞口並把洞填平。提示: 用越少程式積木越好。'
+      4-5 While Loops 4_instruction: '哇，我找到一個非常深的洞! 我不知道我需要幾鏟土來填平它。你可以寫一個程式來填洞直到地面平整嗎?
+        提示: 這次試著用"當"迴圈。'
+      4-5 While Loops 5_instruction: 哇，現在有兩個很深的洞! 你可以寫一個程式去填它們直到地面變平整嗎?
+      4-5 While Loops 6_instruction: 哇，現在有一個很大的土堆! 你可以寫一個程式去挖除泥土直到地面變平整嗎?
+      4-5 While Loops 7_instruction: 哇，現在有三堆土堆! 你可以寫一個程式去挖除它們直到地面變平整嗎?
+      4-5 While Loops 8_instruction: ' 有一個非常深的洞和非常大的土堆。需要多少鏟土來把地面變平整? 提示: 填土和挖土都用"當"迴圈'
+      4-5 While Loops Assessment 1_instruction: 有許多洞和土堆。幫我把它們填平或挖平來使地面變平整。
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
@@ -1202,7 +1003,7 @@
       Course 2 Bee Loops 4_instruction: |
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      Course 2 Maze Loops 1_instruction: 你可以只用5個程式積木就帶我走到豬的位置嗎?
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
@@ -1239,9 +1040,7 @@
       Course 4 Artist 6_instruction: |
         完成一份繪製這些三角形的程式碼
         提示:在360度旋轉內有三個三角形，需要多少次才能從3到360?
-      Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
-        triangles. This is called a nested loop. Hint: All 10 triangles complete\na
-        360 degree rotation.  \n"
+      Course 4 Artist 7_instruction: '現在把這個迴圈嵌進另一個迴圈內來畫出10個三角形。這被稱作巢狀迴圈。 提示: 全部10個三角形完成了360度的旋轉。  '
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
         code multiple times.
@@ -1767,7 +1566,7 @@
         Extreme Challenge: No rules. No clues. Just the
         challenge!
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: 小心TNT炸藥!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
@@ -2376,10 +2175,14 @@
       K-1 Bee Loops 11_instruction: '評估: 使用迴圈來採集花蜜和製作蜂蜜!'
       K-1 Bee Loops 12_instruction: '評估: 使用迴圈來採集花蜜、製作蜂蜜和移動!'
       K-1 Bee Loops 2_instruction: 用一個迴圈來移動，然後採集花蜜並做成蜂蜜!
-      K-1 Bee Loops 3_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 3_instruction: |
+        Use three `repeat` loops to get the nectar and
+        make honey!
       K-1 Bee Loops 4_instruction: 用迴圈來採集花蜜、製作蜂蜜和移動!
       K-1 Bee Loops 5_instruction: 用迴圈來採集花蜜和製作蜂蜜!
-      K-1 Bee Loops 6_instruction: Use loops to get the nectar, honey, and to move!
+      K-1 Bee Loops 6_instruction: |
+        Use a `repeat` loop to get the nectar, get honey,
+        and to move!
       K-1 Bee Loops 7_instruction: Use loops to get the nectar and honey!
       K-1 Bee Loops 8_instruction: 用迴圈來採集花蜜和製作蜂蜜!
       K-1 Bee Loops 9_instruction: Use loops to get the nectar, honey, and to move!
@@ -2422,9 +2225,14 @@
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
       K-1 Maze Loops 1_instruction: 帶我到那隻豬旁邊!
-      K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 10_instruction: |
+        Get me to the pig! Using the `repeat` loop
+        will make it much easier.
+      K-1 Maze Loops 11_instruction: "Get me to the pig!  \r\nThe `repeat` loop will\nmake
+        this easier."
+      K-1 Maze Loops 12_instruction: |
+        Get me to the pig! The `repeat` loop will make
+        this easier.
       K-1 Maze Loops 2_instruction: 用"重複"程式積木使我走到豬的位置!
       K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 4_instruction: 帶我到那隻豬旁邊!
@@ -2826,8 +2634,7 @@
       NEW Course 4 Play Labs For Loops 7a_instruction: |
         Using what you learned so
         far, can you have Dinosaur take a step forward every time Penguin counts?
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "It's Free Play\ntime,
-        have fun with all the blocks in your tool box. \n"
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: '到了自由發揮的時間了，用工具箱裡的程式積木來做一些好玩的事吧! '
       NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
         the \"for loop\" to get every actor to go around and say their actor number,\nthen
         vanish from the screen? \n"
@@ -2862,8 +2669,8 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: 碰上 Creeper 可就不妙了，請小心通過 Creeper 旁邊，安全返家。
-      Overworld Chop Tree_instruction: 木頭是非常重要的資源，能製成許多東西。走向樹木後使用「破壞方塊」指令即可砍伐。
+      Overworld Avoid Monsters_instruction: 撞上苦力怕是一件相當糟的事情。小心的從苦力怕身邊通過並安全地抵達你的家裡。
+      Overworld Chop Tree_instruction: 木材是相當重要的資源。有許多物品都是由木材所製成。走到樹木前面使用"摧毀方塊"將它砍下。
       Overworld Chop Trees_instruction: 我們需要在日落之前蓋好一棟房屋，而蓋房屋需要使用大量木材。請將 3 棵樹全部砍倒。
       Overworld Free Play 20x20_instruction: 恭喜！您已解開所有謎題！現在請運用您目前為止所學的一切，開採、建造並創造出獨特的成品。
       Overworld Free Play_instruction: 這塊園地供您遊玩，想建造什麼由您決定。
@@ -2889,8 +2696,10 @@
       Overworld House Frame_instruction: 我們來打造自己的家！這塊地看起來不賴。請在泥土地上搭起一副框架。
       Overworld Minecart Track_instruction: 您已帶著許多地下資源回到地表。現在，我們要沿著從您的房屋所延伸出來的泥土路徑搭建軌道。首先，第一步是清出路徑。請沿著路徑清理樹木。
       Overworld Move to Sheep_instruction: 加上第二個「往前」指令，以到達綿羊的位置。
-      Overworld Place Wall_instruction: 每棟房屋都是從一道牆開始造起；要為您的房屋建造第一部分，請將「放置」與「往前」指令放進重複迴圈中。
-      Overworld Plant Crops_instruction: 預先規劃是好主意。在水體兩側栽種作物，往後就不怕會餓肚子。
+      Overworld Place Wall_instruction: 每一棟房子都從一堵牆壁開始。把「放置」與「向前移動」的命令放到重覆迴圈內，來建造您的房子的第一部分。
+      Overworld Plant Crops_instruction: |
+        提前做好規劃是一件好事！
+        把農作物種在水的兩側，這樣以後才不會肚子餓。
       Overworld Powered Minecart_instruction: 做得好！您已收集許多資源，也蓋了一棟適中的房屋。現在請從地圖邊緣到您房屋的門前鋪設一條軌道。
       Overworld Shear Sheep_instruction: 剪羊毛的時候到了！請使用「修剪」指令從兩隻綿羊身上收集羊毛。
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
@@ -3074,10 +2883,11 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: 蜂蜜現在只想要花蜜。不是全部的東西都是花朵，所以檢查每朵雲裡面是否藏著花朵。如果是的話，那就可以採集花蜜。
+      Ryan - Bee Conditionals_instruction: |
+        The bee only wants nectar right now.
+        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
+        is hiding a flower. If it is, then you can gather nectar.
       Ryan Test Locked Blocks_instruction: |
         Here's a function called "patrol."
         Edit it to move Cat up 400 pixels and then down 400 pixels.
@@ -3248,7 +3058,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indices to change the values in
+        Use indexes to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3258,7 +3068,8 @@
         the randomly generated array by 1. (Click to see full instructions)
       U3 - Arrays - createFirstArray_instruction: |
         Create an array of the even numbers
-        from 0-10 and display its contents with console.log. (Click to see full instructions)
+        from 0 to 10 and display its contents with console.log. (Click to see full
+        instructions)
       U3 - Arrays - Demo App_instruction: |
         Use the "My Favorite Things" app. How
         might this app be making use of an array? (Click to see full instructions)
@@ -3349,15 +3160,15 @@
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
       U3 - Canvas - freePlay_instruction: |
-        Write code that redraws your image using
-        a sketch effect. (Click to see full instructions)
+        Extend the functionality of one of the
+        effects, or create an entirely new one of your own. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
         full instructions)
       U3 - Canvas - movementFunction fix Orig_instruction: |
-        Write a function that
-        takes the movement of the mouse as input and generates a line width as output.
+        Modify the "Original"
+        button event handler so that it takes the movement of the mouse into account.
         (Click to see full instructions)
       U3 - Canvas - movementFunction_instruction: |
         Write a function that takes the
@@ -3365,7 +3176,7 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use offsetX and offsetY with small
+        image using a dot whose x and y locations use offsetX and offsetY with a small
         random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
@@ -3385,7 +3196,7 @@
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
         Update the spray paint code so that
-        redraws your image using multiple random dots instead of one using a nested
+        it redraws your image using multiple random dots instead of using a nested
         for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
@@ -3497,7 +3308,7 @@
         Update the image scroller to
         respond to buttons and key presses. (Click to see full instructions)
       U3 - Keys - Functions_instruction: |
-        Write a doUpArrow and doDownArrow function
+        Write doUpArrow and doDownArrow functions
         and call the functions instead of duplicating the code. (Click to see full
         instructions)
       U3 - Keys - Key Up and Down_instruction: |
@@ -3540,7 +3351,7 @@
         (Click to see full instructions)
       U3 - Loops - 14_instruction: |
         Change the loop condition to prevent the infinite
-        loop and stop counting at once the count is past 30. (Click to see full instructions)
+        loop and stop counting once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
         is 12. (Click to see full instructions)
@@ -3554,7 +3365,7 @@
         Change the if statement to a while loop so the
         program will run until it rolls a 6. (Click to see full instructions)
       U3 - Loops - 4_instruction: |2
-         Use the Debug Commands to to make a list of all
+         Use the Debug Commands to make a list of all
         the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - 5_instruction: |
         Add code inside the while loop which will update
@@ -3610,24 +3421,22 @@
         Design a function that displays
         the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Complete the 'findMinVal'
-        function to find and display the smallest value in an array  (Click to see
-        full instructions)
+        Complete the findMinVal function
+        to find and display the smallest value in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
         Call findMin
         within the console.log statement to calculate the minimum of two values.  (Click
         to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
         Add a second parameter
-        to the 'search' function for the value to search for.  (Click to see full
-        instructions)
+        to the search function for the value to search for.  (Click to see full instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
         Visit every element in
-        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        the array and display "true" if the value is a 5, and "false" otherwise.
         (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
@@ -3639,7 +3448,7 @@
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
         Move the code that
-        searches the list for a 5 into a function called 'search'. (Click to see
+        searches the list for a 5 into a function called "search". (Click to see
         full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
@@ -3649,7 +3458,7 @@
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
         Process the array
-        and display a single 'true' if the array contains a 5 or a single 'false'
+        and display a single "true" if the array contains a 5 or a single "false"
         if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
@@ -3684,13 +3493,32 @@
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto
+        readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table.(Click to see full instructions)\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords
+        call individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin
+        the records return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords
+        return from the readRecords call. (Click to see full instructions)\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Return Values - debuggingConstrain_instruction: |
         Correct the error in
-        constrain so that it correctly reports the maximum value.  (Click to see full
-        instructions)
+        constrain so that it returns the appropriate value.  (Click to see full instructions)
       U3 - Return Values - debuggingMaxVal_instruction: |
         Correct the error in maxVal
         so that it correctly reports the maximum value.  (Click to see full instructions)
@@ -3720,6 +3548,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin
+        2008 and print it out. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing
+        the readRecords search terms. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3728,7 +3568,7 @@
         runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
-        flips! How long did it take? (Click to see full instructions)
+        heads! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
@@ -4307,14 +4147,14 @@
         Play Again button is clicked (Click to see full instructions) \n"
       U3L16 Mad Lib Demo_instruction: Mad Libs Demo - Try it out!
       U3L16 Mad Lib getText_instruction: "Before setting the text area with your\nMad
-        Lib outline, get the user's text and incorporate their responses. (Click\nto
+        Libs outline, get the user's text and incorporate their responses. (Click\nto
         see full instructions) \n"
       U3L16 Mad Lib setText_instruction: "When the Next button is clicked, set the\ntext
-        area to have the main outline of your How-to Mad Lib (without the user's\ninput).
+        area to have the main outline of your How-to Mad Libs (without the user's\ninput).
         (Click to see full instructions) \n"
       U3L16 Mad Lib Student Setup_instruction: |
-        Back to Mad Lib: To get started,
-        set up the two screens for your Mad Lib app (Click to show full instructions)
+        Back to Mad Libs: To get started,
+        set up the two screens for your Mad Libs app (Click to show full instructions)
       U3L16 Mad Lib toUpper_instruction: "Apply the toUpperCase and toLowerCase string\nfunctions
         to the user's text. (Click to see full instructions) \n"
       U3L17 - getAndSetKeyValue_instruction: |
@@ -4599,37 +4439,117 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - add createRecord to contacts App_instruction: |
+        Add code to your contacts
+        app so that newly added contacts are saved in a table. (Click to see full
+        instructions)
+      U4 - Add Row By Hand_instruction: |
+        Add a new record to your table in the Data
+        Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - drawChartsFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - Import Data 1_instruction: |
+        Download the CSV file we’ve provided,
+        and then use the data viewer to import the data from the file into the “mydata”
+        table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Remixing Apps with Data_instruction: |
+        Run this app and see what
+        it prints to the console. Then remix the app and run the remixed version to
+        see what happened to the data. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)
+      U4 - CreateRecord - 2.5_instruction: |
+        Change the table name in createRecord
+        then check the Data Viewer to see the new table. (Click to see  full instructions)
       U4 - CreateRecord - 2_instruction: |
-        Change the table name in create record
-        then check the Data Viewer to see the new table.
+        Change the name from "Alice" to something
+        else in the createRecord command.  Run the program and use the Data Viewer
+        to see the changes to your table. (Click to see full instructions)
       U4 - CreateRecord - 3_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Use createRecord to add the song object
+        as a record to a table. (Click to see full instructions)
       U4 - CreateRecord - 4_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Run the program. Verify the song object
+        was added to the database. Note the callback function now displays the copy
+        of the record sent back back by the database. (Click to see full instructions)
       U4 - CreateRecord - 5_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Add a property to the JavaScript object,
+        then run the program.  View the data table and see how changing the object
+        affects the data table. (Click to see full instructions)
+      U4 - debug column names are case sensitive_instruction: |
+        Change song.title
+        to song.Title (capital T).  And run the program.  Check the data table  (Click
+        to see full instructions)
+      U4 - deleteRecords 0_instruction: |
+        Use the deleteRecord command with default
+        values. Verify the record was deleted. (Click for full instructions).
+      U4 - deleteRecords 1_instruction: |
+        Find the id of "Little Bunny Foo Foo"
+        in the data table "mySongs".  Use the deleteRecord command to delete it.  See
+        what happens when you try to delete an ID a second time. (Click for full Instructions).
+      U4 - deleteRecords 2 delete object_instruction: |
+        Use the song object to delete
+        multiple objects in the database by changing only the "id" property. (Click
+        for full Instructions).
+      U4 - deleteRecords 2_instruction: |
+        Using the data viewer, find the id of a
+        a record you want to delete. Use the deleteRecord command to delete it. (Click
+        for full instructions).
+      U4 - Edit Data Table by Hand_instruction: |
+        View the data table and click edit
+        next to each row.  Add the artists names for each song by hand. (Click to
+        see full instructions)
+      U4 - Exploring Data Tools - Template_instruction: |
+        Use createRecord to add
+        the song object as a record to a table. (Click to see full instructions)
+      U4 - fix contacts by hand in data table_instruction: |
+        Use the data viewer to
+        add rows to the data table.  Add the original hard-coded contacts from your
+        app to the database. (Click to see full instructions)
+      U4 - last stage test adding contcts_instruction: |
+        Confirm that new contacts
+        you add are saved to the database.  Verify that after restarting your app,
+        the contacts you added no longer show in the app, but still exist in the database.
+        (Click to see full instructions)
+      U4 - Objects - accessingPropertiesInArray_instruction: |
+        Access the properties
+        of the objects stored in an array. (Click to see full instructions)
       U4 - Objects - arraysOfObjects_instruction: |
         Create an array called "students"
         and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createContactObject_instruction: |
+        Construct a new object from
+        the user inputs, and append it to your array. (Click to see full instructions)
+      U4 - Objects - createContactsData_instruction: |
+        Add values to the three contact
+        objects provided in the starter code. (Click to see full instructions)
       U4 - Objects - createDotNotation_instruction: |
-        Update your code to add properties
-        to your object one at a time using dot notation. (Click to see full instructions)
+        Create a student Object yourself.
+        Add properties to your object one at a time using dot notation. (Click to
+        see full instructions)
       U4 - Objects - createObject_instruction: |
         Create an object with at least 3
         properties and display it in the Debug Console. (Click to see full instructions)
       U4 - Objects - dotNotation_instruction: |
         Use dot notation to display individual
         properties of the object. (Click to see full instructions)
+      U4 - Objects - eventHandlersToSwitchScreen_instruction: |
+        Attach event handlers
+        to the "Add Contact" and "Go Back" buttons that allow the user to switch
+        screens. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - exemplarContactsApp_instruction: |
+        Use the Contacts app and then
+        add a contact of your own. (Click to see full instructions)
       U4 - Objects - loopingArray_instruction: |
         Loop over your array of students
         and print the name of every students. (Click to see full instructions)
@@ -4644,6 +4564,70 @@
         Loop over your array of student
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
+      U4 - Objects - pullValues_instruction: |
+        Create an event handler for the "Add
+        Contact" button that displays the contents of the 4 text input fields in
+        the console. (Click to see full instructions)
+      U4 - Objects - readStarterCode_instruction: |
+        Familiarize yourself with the
+        starter code and UI elements provided. (Click to see full instructions)
+      U4 - Objects - resetIndexAndShow_instruction: |
+        Add code to your event handler
+        fro the "Add Contact" button so that when a new contact is added the inputs
+        are cleared, the screen is switched, and the correct contact is shown. (Click
+        to see full instructions)
+      U4 - Objects - showContact1_instruction: |
+        Add code to the showCurrentContact
+        function to show the name of the contact stored at the currentIndex of your
+        array. (Click to see full instructions)
+      U4 - Objects - showContact2_instruction: |
+        Add the phone number and birthday
+        text to your text area. (Click to see full instructions)
+      U4 - Objects - showContact3_instruction: |
+        Display the image information for
+        each contact. (Click to see full instructions)
+      U4 - Objects - showSampleImage_instruction: |
+        Attach an event handler to the
+        image URL text input so that the user can confirm their image will work as
+        expected. (Click to see full instructions)
+      U4 - Objects - writeWrap_instruction: |
+        Use the wrap function to prevent currentIndex
+        from leaving the bounds of your array. (Click to see full instructions)
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords
+        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction.
+        (Click to see full instructions)\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby
+        a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table. (Click to see full instructions)\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues
+        in the response from the database. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie
+        in your database. (Click to see full instructions)\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
+        records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - ReadRecords - Contacts App 1_instruction: |
+        Write a function called "updateLocalData"
+        that copies the data in your database into your "contacts" global variable.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 2_instruction: |
+        Create a function called "refreshLocalData"
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 3_instruction: |
+        Add a call to "refreshLocalData"
+        to the callback function of the createRecord you use to add a new contact
+        to your database. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 4_instruction: |
+        Create a "Delete" button.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
+        Create an
+        event handler for the "Delete" button you created. (Click to see full instructions)
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
