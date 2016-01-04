@@ -41,7 +41,6 @@ end
 
 def fetch_metrics()
   Properties.get(:metrics) || {
-  {
     'created_at'=>"2016-01-04T21:37:19+00:00",
     'created_on'=>"2016-01-04",
     'csedweek_organizers'=>38236,
