@@ -38,8 +38,6 @@ window.dashboard.ShareDialog = (function (React) {
       // TODO - Can we now make SendToPhone completely Reactified?
       return (
         <Dialog isOpen={this.state.isOpen} handleClose={this.close}>
-          {/* TODO - do we really want this as a separate component? maybe
-            if that makes separating out dialog from body easier in general */}
           <ShareDialogBody
             i18n={this.props.i18n}
             icon={this.props.icon}

@@ -1,5 +1,11 @@
 window.dashboard = window.dashboard || {};
 
+/**
+ * Dialog
+ * A generic modal dialog that has an x-close in the upper right, and a
+ * semi-transparent backdrop. Can be closed by clicking the x, clicking the
+ * backdrop, or pressing esc.
+ */
 window.dashboard.Dialog = (function (React) {
   return React.createClass({
     propTypes: {
