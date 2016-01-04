@@ -1,99 +1,81 @@
 "gl":
   devise:
     confirmations:
-      confirmed: Tu dirección de correo electrónico ha sido confirmada con éxito.
-      send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en pocos minutos.
-      send_paranoid_instructions: Si tu dirección de email existe en nuestra base
-        de datos, recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en pocos minutos.
+      confirmed: 'O teu enderezo de e-mail foi confirmado con '
+      send_instructions: Vas recibir un e-mail coas instruci
+      send_paranoid_instructions: Se o teu enderezo de e-mail existise na nosa base
+        de datos, recibir
     failure:
-      already_authenticated: Ya has iniciado sesión.
-      inactive: Tu cuenta todavía no fue activada.
-      invalid: Correo electrónico o contraseña inválidos.
-      invalid_token: Token de autenticación no válido.
-      locked: Tu cuenta está bloqueada.
-      not_found_in_database: Correo electrónico o contraseña inválidos.
-      timeout: Tu sesión ha expirado, por favor inicia sesión nuevamente para continuar.
-      unauthenticated: Debes iniciar sesión o registrarte antes de continuar.
-      unconfirmed: Debes confirmar tu cuenta antes de continuar.
+      already_authenticated: Xa iniciaches sesi
+      inactive: A t
+      invalid: O e-mail e o contrasinal non est
+      invalid_token: O token de autenticaci
+      locked: A t
+      not_found_in_database: O e-mail e o contrasinal non est
+      timeout: A t
+      unauthenticated: Tes que iniciar sesi
+      unconfirmed: Tes que confirmar a t
     mailer:
       confirmation_instructions:
-        subject: Instrucciones de confirmación de Code.org
+        subject: Instruci
       reset_password_instructions:
-        subject: Reiniciar las instrucciones de la contraseña de Code.org
+        subject: Instruci
       unlock_instructions:
-        subject: Instrucciones de desbloqueo
+        subject: Instruci
     omniauth_callbacks:
-      failure: No pudimos autenticarte desde %{kind} debido a "%{reason}".
-      success: Autenticado correctamente desde la cuenta %{kind}.
+      failure: Non foi pos
+      success: 'Autenticado con '
     passwords:
-      no_token: No puedes acceder a esta página si no has sido derivado de un correo
-        electrónico para restablecer contraseña. Si vienes de un correo electrónico
-        para restablecer contraseña, por favor asegúrate de haber usado el URL proporcionado
-        completo.
-      send_instructions: Recibirás un correo electrónico con instrucciones sobre cómo
-        restablecer la contraseña en unos minutos.
-      send_paranoid_instructions: Si tu dirección de email existe en nuestra base
-        de datos, recibirás un enlace de recuperación de contraseña en tu dirección
-        de correo electrónico en unos pocos minutos.
-      updated: Tu contraseña fue cambiada con éxito. Ya has iniciado sesión.
-      updated_not_active: Tu contraseña fue cambiada con éxito.
+      no_token: Non podes acceder a esta páxina sen teres vido de un e-mail de reposición
+        da contrasinal. Se ves dun e-mail de reposición da contrasinal, verifica que
+        usache a ligazón completa.
+      send_instructions: Vas recibir un e-mail coas instruci
+      send_paranoid_instructions: Se o teu enderezo de e-mail existise na nosa base
+        de datos, recibir
+      updated: O teu contrasinal foi alterado e iniciaches sesi
+      updated_not_active: 'O teu contrasinal foi alterada con '
     registrations:
-      destroyed: ¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto.
-      signed_up: ¡Bienvenido! Te has registrado exitosamente.
-      signed_up_but_inactive: Te has registrado con éxito. Sin embargo, no has podido
-        iniciar sesión porque tu cuenta todavía no fue activada.
-      signed_up_but_locked: Te has registrado con éxito. Sin embargo, no has podido
-        iniciar sesión porque tu cuenta está bloqueada.
-      signed_up_but_unconfirmed: Un mensaje con un enlace de confirmación ha sido
-        enviado a tu dirección de correo electrónico. Por favor, abre el enlace para
-        activar tu cuenta.
-      update_needs_confirmation: Has actualizado tu cuenta con éxito, pero tenemos
-        que verificar tu nueva dirección de correo electrónico. Por favor revisa tu
-        correo electrónico y haz clic en el enlace de confirmación para finalizar
-        la confirmación de tu nueva dirección de correo electrónico.
-      updated: Has actualizado tu cuenta correctamente.
+      destroyed: Adeus! A t
+      signed_up: Creaches a t
+      signed_up_but_inactive: 'Creaches unha conta con '
+      signed_up_but_locked: 'Creaches unha conta con '
+      signed_up_but_unconfirmed: A mensaxe coa conexi
+      update_needs_confirmation: Atualizaste a t
+      updated: Atualizache a t
     sessions:
       signed_in: ''
-      signed_out: Has cerrado tu sesión con éxito.
+      signed_out: Terminaches sesi
     unlocks:
-      send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en pocos minutos.
-      send_paranoid_instructions: Si existe tu cuenta, recibirás un correo electrónico
-        con instrucciones sobre cómo desbloquearla en pocos minutos.
-      unlocked: Tu cuenta ha sido desbloqueada con éxito. Por favor inicia sesión
-        para continuar.
+      send_instructions: Vas recibir un e-mail coas instruci
+      send_paranoid_instructions: Se a t
+      unlocked: A t
   errors:
     messages:
-      already_confirmed: ya estaba confirmada, por favor, intenta iniciar sesión
-      confirmation_period_expired: tiene que ser confirmada dentro del período de
-        %{period}, por favor, solicita una nueva
-      expired: ha caducado, por favor, solicita una nueva
-      not_found: no encontrado
-      not_locked: No estaba bloqueada
+      already_confirmed: xa foi confirmado, por favor, tenta entrar
+      confirmation_period_expired: ten que ser confirmado dentro de %{period}. Por
+        favor, pide un novo
+      expired: caducou, por favor pide unha nova
+      not_found: non encontrado
+      not_locked: non foi bloqueado
       not_saved:
-        one: '1 error impidió que este %{resource} se guardara:'
-        other: '%{count} errores impiden que este %{resource} sea guardado:'
+        one: '1 erro prohibiu este %{resource} de ser salvo:'
+        other: '%{count} erros non permite que este %{resource} sexa salvo:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Foi enviado un convite por e-mail para %{email}.
+      invitation_token_invalid: 'O teu convite non '
+      updated: A t
+      no_invitations_remaining: Ningún convite restante
+      invitation_removed: O teu convite foi removido.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Enviar convite
+        submit_button: Enviar un convite
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Define a t
+        submit_button: Definir contrasinal
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Instruci
+        hello: Ola, %{email}!
+        someone_invited_you: Algu
+        accept: Aceptar convite
+        ignore: Se non pretenderes aceptar o convite, ignora este e-mail.<br />A t

@@ -7,7 +7,18 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "createRecord": null,
+      "createRecord": {
+        "params": [
+          "\"mytable\"",
+          "{name: \"Alice\"}",
+          "function(){\n  console.log(\"Success! Created Record.\");\n}"
+        ],
+        "paletteParams": [
+          "table",
+          "object",
+          "callback"
+        ]
+      },
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
@@ -15,8 +26,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add the provided javascript object as a record to a table. (Click to see full instructions)",
-    "markdown_instructions": "# Separate Javascript Object\r\n\r\nOften we want to create a javascript object first and then just add it as a record. It is easier to do this by creating the javascript objec then just using its name in the createRecord call.\r\n\r\n# Do This\r\nStarter code has been provided that makes a javascript object of a cartoon character.\r\n\r\n* Add a `createRecord` command.  Change the table name to something descriptive like famousCartoonCharacters.\r\n* Change the second parameter in order to create a record of the provided javascript object.\r\n* Run the program. \r\n* Go look at the table to check that it worked.",
+    "instructions": "Use createRecord to add the song object as a record to a table. (Click to see full instructions)",
+    "markdown_instructions": "# Records are Objects\r\n\r\n**What's a record?**\r\nIn database terminology, each item that is stored in table is called a **record**.  This is why the command is called `createRecord`. In App Lab a **record is an object**, and a data table is essentially a collection of JavaScript objects stored in the cloud. \r\n\r\n**The second parameter** of `createRecord` is the object you are storing in the database.\r\n\r\n* As you have seen you can specify the object using notation like this: `{name:\"Alice\"}` \r\n* But you can **also provide an object variable** and the whole object will be stored.\r\n* App Lab **creates a column for each property of the object**\r\n \r\n# Do This\r\n\r\n**Starter code is provided** that creates a simple JavaScript object representing a song.\r\n\r\n* Drag out the `createRecord` command.  \r\n* **Set the table name** (the first parameter) to something descriptive like \"mySongs\".\r\n* **Set the second parameter** to the name of the object you want to store, in this case `song`.\r\n* **Run the program.**\r\n* In the Data Viewer **verify that a new table was created and that the `song` object was added as a record**.\r\n\r\n![](https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -45,7 +56,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "var mickeyMouse = {};\r\nmickeyMouse.name = \"Mickey Mouse\";\r\nmickeyMouse.gender = \"Male\";"
+    "start_blocks": "var song = {};\r\nsong.title = \"Happy Birthday To You\";\r\nsong.seconds = 15;",
+    "slider_speed": "1.0"
   }
 }]]></config>
   <blocks/>

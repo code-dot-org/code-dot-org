@@ -18,14 +18,12 @@
     %a{href: resolve_url("/events/all")}
       = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
 
-.row
-  .col-sm-12
-    #gmap.full-width
-#belowmaplegend.legend{style: "display: none;"}
+#gmap.full-width
+#belowmaplegend.legend
   .legend-title= hoc_s(:map_legend_title)
-  .color.turquoise
+  .color.brown
   %div= hoc_s(:map_legend_hoc_events)
-  .color.orange
+  .color.teal
   %div= hoc_s(:map_legend_cs_tech_jam)
 
 :javascript
@@ -68,12 +66,12 @@
       styles: [{
         where: "review CONTAINS 'approved'",
         markerOptions: {
-          iconName: "orange_stars"
+          iconName: "ltblu_stars"
         }
       }, {
         where: "review DOES NOT CONTAIN 'approved'",
         markerOptions: {
-          iconName: "measle_turquoise"
+          iconName: "measle_brown"
         }
       }],
     });
@@ -84,7 +82,7 @@
     legend.index = 1;
     $("#belowmaplegend div").clone().appendTo(legend);
 
-    //gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 

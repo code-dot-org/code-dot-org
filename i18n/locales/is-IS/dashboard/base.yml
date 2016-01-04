@@ -253,57 +253,10 @@ is:
     remove: (fjarlægja kennara)
     confirm:
       remove: Ertu viss um að þú viljir fjarlægja þennan kennara?
-    tools: Tæki kennara
-    followers:
-      section: 'Hópur:'
-      stages: 'Áfangar sem á að sýna:'
-      show_past: 'Sýni virkni nemenda (%{bullet_html}) í fortíðinni:'
-      levels_key: Áfangalykill
-      perfect: Lokið og alveg rétt
-      completed: Lokið en með of mörgum kubbum
-      tried: Reynt við en ekki lokið
-      not_tried: Ekki reynt við enn
-      activity: 'Sýnir virkni nemenda síðustu %{hours} %{plural} klst.'
-      no_section: Enginn úthlutaður hópur
-      trophies: bikarar
     students:
-      name: Nafn
-      username: notandanafn
-      password: lykilorð
-      manage: Umsjón nemenda
       dashboard: Fara á stjórnborð kennara
-      add: Bæta við nemendum
-      remove: fjarlægja nemanda
-      confirm_remove: Ertu viss um að þú viljir fjarlægja þennan nemanda?
-      help_reassign: Þú getur skipt bekknum upp í hópa með því að velja nemendur og setja þá í nýjan hóp.
-      help_register: Í stað þess að þú þurfir að eyða tíma í að flytja inn upplýsingar um nemendur getur þú sett bekkinn upp hraðar með því að láta nemendur sjálfa skrá sig. Nemendur þínir þurfa þá að ákveða notendanöfn og aðgangsorð, en þeir munu EKKI ÞURFA að gefa upp netfang. Ef nemandi gleymir aðgangsorði sínu, getur þú endurstillt það fyrir hann.
-      register: Biðja nemendur að skrá sig sjálfa
-      vist: Biðja nemendur að heimsækja
-      section_code: 'og slá inn hópkóðann sinn:'
-      first_please: 'Fyrst þarf að %{add_section}'
-      for: Fyrir
-      enter: 'færa inn:'
-    sections:
-      add: Bæta við hópi
-      manage: Umsjón áfanga
-      section: Hópur
-      students: Nemendur
-      section_code: Hópkóði
-      add_section_code: Bæta við hópkóða nemenda
-      secret: Tegund leyndarmáls
-      grade: Bekkur
-      course: Námskeið
-      rename: endurnefna
-      edit: breyta
-      delete: eyða
-      confirm_delete: Ertu viss um að þú viljir eyða þessum hópi?
-      email: Senda í tölvupósti
-    rollup: Mælaborð árangurs
-    activity: Nýleg virkni bekkjar
-    user_not_found: Kennarinn eða nemandinn fannst ekki
-    cant_remove_student_no_email: 'Ekki hægt að afskrá %{student_name} sem nemanda þinn vegna þess að %{student_name} hefur ekki skráð tölvupóstfang'
-    cant_remove_teacher_no_email: 'Ekki hægt að afskrá %{teacher_name} sem kennara þinn vegna þess að þú hefur ekki skráð tölvupóstfang'
-    student_teacher_disassociated: '%{teacher_name} hefur verið fjarlægð(ur) sem kennari %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Skoða svör
       student: nemandi
@@ -377,6 +330,7 @@ is:
   share:
     title: Lærðu í Kóðastúdíóinu
     description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -388,8 +342,8 @@ is:
     thank_you: 'Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>, <a href="https://code.org/about/partners">samstarfsaðila</a>, <a href="https://code.org/about/team">allra í vinnuteyminu</a>, þeirra sem koma fram í myndböndum og <a href="https://code.org/about/advisors">fræðsluráðgjafa</a> fyrir stuðninginn við gerð Kóðastúdíósins.'
     help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Google, Microsoft, Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
     help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði við gerð þessa kennsluefnis.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Öll réttindi áskilin.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Öll réttindi áskilin.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Öll réttindi áskilin.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Knúið af Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour of Code&reg; eru vörumerki Code.org.'
     copyright: Höfundarréttur
@@ -406,6 +360,7 @@ is:
     built_on_code_studio: Byggt á Kóðastúdíóinu
     make_my_own_app: Búa til mitt eigið app
     how_it_works: Hvernig það virkar
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
@@ -462,7 +417,7 @@ is:
       unused: Ónotaðir áfangar
   upsell:
     hoc:
-      title: Classic Maze
+      title: Hefðbundið völundarhús
       body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
     flappy:
       title: Flappy kóði

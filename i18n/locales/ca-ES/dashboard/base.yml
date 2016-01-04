@@ -250,7 +250,7 @@ ca:
       prize_us_only: (només estudiants EUA)
       prizes_link: Més informació
   teacher:
-    answer: Answer
+    answer: Resposta
     for_teachers_only: Només per a professors
     title:
       one: 'El teu mestre:'
@@ -258,57 +258,10 @@ ca:
     remove: (elimina el mestre)
     confirm:
       remove: Esteu segur que voleu eliminar aquest mestre?
-    tools: Eines del mestre
-    followers:
-      section: 'Secció:'
-      stages: 'Etapa(es) a mostrar:'
-      show_past: "Mostra la activitat (%{bullet_html}) prèvia de l'alumne:"
-      levels_key: Clau de nivell
-      perfect: Completat, perfecte
-      completed: Completat, però amb massa blocs
-      tried: Provat, però no acabat
-      not_tried: No provat encara
-      activity: "Mostra l'activitat dels alumnes durant les últimes %{plural} %{hours}"
-      no_section: Cap secció assignada
-      trophies: trofeus
     students:
-      name: Nom
-      username: "nom d'usuari"
-      password: contrasenya
-      manage: Gestiona els estudiants
       dashboard: Ves al Tauler del Mestre
-      add: Afegeix estudiants
-      remove: "esborra l'alumne"
-      confirm_remove: Segur que voleu esborrar aquest alumne?
-      help_reassign: Per dividir la classe en vàries seccions, selecciona estudiants per assignar-los a una nova secció.
-      help_register: "En comptes d'importar individualment les dades dels alumnes, podeu configurar la classe ràpidament demanant-los que es registrin. Els alumnes hauran d'escollir noms d'usuari i contrasenyes, però NO hauran de proporcionar una adreça de correu electrònic. Si un alumne oblida la seva contrasenya, sereu capaç de restaurar-la."
-      register: Demana als alumnes que es registrin ells mateixos
-      vist: Demana als estudiants que visitin
-      section_code: 'i introduir el seu codi-secció:'
-      first_please: 'En primer lloc, si us plau %{add_section}'
-      for: Per a
-      enter: 'introduïu:'
-    sections:
-      add: Afegeix una secció
-      manage: Gestiona les seccions
-      section: Secció
-      students: Alumnes
-      section_code: Secció Codi
-      add_section_code: Afegir alumnes al codi de secció
-      secret: Tipus secret
-      grade: Grau
-      course: Curs
-      rename: canvia el nom
-      edit: editar
-      delete: suprimir
-      confirm_delete: Estas segur que voles suprimir aquesta secció?
-      email: Enviar al correu electrònic
-    rollup: Tauler de progrés
-    activity: Activitat recent de la classe
-    user_not_found: "No es troba el mestre o l'alumne"
-    cant_remove_student_no_email: '%{student_name} no es pot borrar com a estudiant teu perquè %{student_name} no ha registrat una adreça de correu electrònic'
-    cant_remove_teacher_no_email: "%{teacher_name} no es pot borrar com a mestre perquè no t'has inscrit amb una adreça de correu electrònic"
-    student_teacher_disassociated: "%{teacher_name} s'ha esborrat com a mestre de %{student_name}"
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Visualitzador de respostes
       student: estudiant
@@ -317,7 +270,7 @@ ca:
       section: Secció
       example: Exemple de solució
       example_with_number: 'Exemple de solució %{solution_number}'
-      submitted_on: 'Submitted on:'
+      submitted_on: 'Enviat el:'
       unsubmit: Unsubmit
   user:
     email_confirm_needed: "L'adreça de correu electrònic no ha estat confirmada:"
@@ -384,6 +337,7 @@ ca:
   share:
     title: Aprendre sobre Code Studio
     description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Home
     female: Dona
@@ -394,9 +348,9 @@ ca:
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat a crear aquesta classe.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Tots els drets reservats.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Tots els drets reservats.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    help_from_html_old: Enginyers de Google, Microsoft, Facebook i Twitter han ajudat a crear aquests materials.
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Desenvolupat per Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -405,14 +359,15 @@ ca:
     translate: "Ajuda'ns a traduir al teu idioma"
     support: Suport
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Termes
     tos: "Condicions d'ús"
     privacy: Política de Privacitat
     secure: Versió segura
     report_abuse: Report Abuse
     built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    make_my_own_app: Fer la meva aplicació
+    how_it_works: Com funciona
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells
@@ -625,24 +580,24 @@ ca:
     view_all: Mostra els meus projectes
     remix: Remescla
     click_to_remix: 'Feu clic a "Remix" per iniciar la teva pròpia versió!'
-    edit_project: Edit Project
+    edit_project: Edita el projecte
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      go_to_code_studio: Anar al Code Studio
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
+          email: Si us plau introdueix una adreça de correu electrònic
+          age: Si us plau especifiqueu una edat
           abuse_type: Please answer how this content violates the Terms of Service
           abuse_detail: Please provide details regarding the content you are reporting
         abusive_url: URL of the content being reported
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
           harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          offensive: Contingut ofensiu
+          infringement: Infracció de copyright
           other: Altres
         detail: Please provide as much detail as possible regarding the content you are reporting.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

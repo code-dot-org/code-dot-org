@@ -313,18 +313,17 @@ es-MX:
         studio_playlab_8: ¿Puedes añadir un bloque para anotar un punto y un bloque para reproducir un sonido cuando el unicornio corre hacia el mago y luego moverlo con las flechas hasta que ganes un punto?
         studio_playlab_9: Establecer el fondo para esta invasión alienígena y ayuda al Robot espacial a alcanzar a los alienígenas más rápido cambiando su velocidad. Luego muévelo con las teclas de flechas para llegar al Robot espacial y alertar a los demás
         studio_playlab_10: Crea tu propio juego. Cuando hayas terminado, haz clic en finalizar para que tus amigos prueben tu juego en sus teléfonos.
-        studio_iceage_hello1: |-
-          Sid quiere reunir a todos para una nueva aventura. ¿Puedes ayudarlo a decir '"Hola" arrastrando el bloque 'Decir' en el área de trabajo y tecleando la palabra "Hola" dentro de él?
-        studio_iceage_hello2: 'Sid (actor 1) se encontró a Manny (actor 2) y quiere invitarlo a una aventura. Ayudarlos a saludarse uno al otro usando el bloque "Actor Dice" dos veces.'
-        studio_iceage_move_to_flag: '¡Scrat esta buscando su bellota! Ayúdalo a avanzar los últimos 200 pixeles usando el bloque "Avanzar".'
-        studio_iceage_move_to_actor: 'Diego (actor 1) esta buscando a Manny (actor 2). Ayuda a Diego a moverse 200 pixeles hacia abajo con Manny, utiliza el bloque "mover actor". Después, conecta un bloque a el evento "cuando el actor toque" para reproducir un sonido cuando ellos se encuentren.'
-        studio_iceage_repeat: 'El bloque "repetir por siempre" permite correr el código continuamente. ¿Puedes adjuntar bloques a él para ayudar a Granny a hacer algo de ejercicio al moverse de izquierda a derecha repetidamente?'
-        studio_iceage_click_hello: ¿Puedes ayudar a Sid a decidir por sus amigos cuando le das clic? no olvides dar clic en él después de que oprimas ejecutar.
-        studio_iceage_move_events: '¡Scrat esta buscando bellotas¡ Ayúdale a correr tras de ellas al adjuntar el bloque "mover" a cada uno de los eventos y cambiar de dirección con cada flecha de dirección. Cuando termines, da clic en Ejecutar e intenta recolectar todas las bellotas.'
-        studio_iceage_sound_and_points: 'Te hemos dado la mayoría del código que hace que Granny se mueva a la izquierda y derecha, también el código para mover a Sid por la pantalla. ¿Puedes finalizar el código y agregar bloques al evento "cuando el actor toca" para hacer que se reproduzca un sonido y ganen un punto cuando Sid y Granny se encuentren? Presiona Ejecutar y juega.'
-        studio_iceage_warn_ice_age: '¡Todos necesitan moverse más rápido porque la era de hielo se aproxima! Cambia el fondo a "tempanos" y fija la velocidad de Sid a "rápido", después presiona Ejecutar y muévelo hacia Diego para que se caliente.'
-        studio_iceage_throw_hearts: 'Sid quiere que su abuela Granny sepa que él la ama. ¡Usa el comando "actor lanza" para hacer que Sid (actor1) le lance corazones a Granny (actor 2)! Fija el humor de Granny a feliz cuando le lleguen los corazones.'
-        studio_iceage_free_play: ¡Es hora de crear tu propio juego o historia! Cuando termines, da clic en Terminar y ¡haz que tus amigos jueguen con tu juego en sus teléfonos, tablets o computadoras!
+        studio_iceage_hello1: 'Sid quiere reunir a todos para una nueva aventura. ¿Puede ayudarle a decir "hola" arrastrando el bloque "decir" en el área de trabajo y escribiendo la palabra "hola" dentro?'
+        studio_iceage_hello2: 'Sid ( el actor 1) encontró a Manny (el actor 2)  y quiere invitarlo a una aventura. Ayúdelos a saludarse usando el bloque "actor dice" dos veces.'
+        studio_iceage_move_to_flag: 'Scrat está buscando su bellota. Ayúdelo a avanzar los últimos 200 pixeles usando el bloque "mover".'
+        studio_iceage_move_to_actor: 'Diego (el actor 1) está buscando a Manny (el actor 2). Ayude a Diego a moverse 200 pixeles abajo hacia Manny usando el bloque "mover actor". Luego, enlace el bloque del evento "cuando el actor toque" para hacer un sonido cuando ellos se encuentren.'
+        studio_iceage_repeat: 'El bloque "repetir por siempre" le permite correr un código continuamente. ¿Puede enganchar el bloque al evento para ayudar a Grammy a hacer ejercicio moviéndose a la derecha y a la izquierda repetidas veces?'
+        studio_iceage_click_hello: ¿Puede ayudar a Sid a hacer una llamada final a sus amigos cuando de click? No olvide hacer click en él luego de que haya golpeado el Run.
+        studio_iceage_move_events: '¡Scrat aun está buscando bellotas! Ayúdelo a corretear enganchando el bloque "moverW a cada uno de los eventos y cambiando el directorio de trabajo por cada tecla de flecha. Cuando haya terminado, de click en ejecutar y trate de recolectar todas las bellotas.'
+        studio_iceage_sound_and_points: 'Hemos dispuesto la mayoría de códigos para mantener a Gran y moviéndose de derecha a izquierda, así como el código para mantener a Sid moviéndose al rededor de la pantalla.¿Puede terminar el código y añadir bloques para el evento "cuando toque al actor" de tal modo que ambos hicieran un sonido y se ganara un punto cuando Sid y Granny choquen? Presione ejecutar para jugar.'
+        studio_iceage_warn_ice_age: ¡Todos necesitan moverse más rápido porque una era de hielo ser aproxima! Modifique el fondo a un congelado y haga la velocidad de Sid más rápida, cuando presione ejecutar y lo mueva hacia Diego para calentarlo.
+        studio_iceage_throw_hearts: 'Sid quiere hacer saber a su abuela, Granny, que la ama. ¡Use el comando "actor tira" para hacer que Sid (el actor 1) tire corazones a Granny (el actor 2)! Cambie el estado de ánimo de Granny a feliz cuando la alcancen los corazones.'
+        studio_iceage_free_play: ¡Hora de crear tu propio juego o historia! Cuando esté hecha, ¡Da clic en terminar para que tus amigos prueben el juego en sus teléfonos, tablets o computadoras!
         studio_gumball_hello1: 'Anais quiere hacer nuevos amigos. ¿Puede ayudarla a decir "Hola" arrastrando el bloque de «decir» en el área de trabajo y escribiendo dentro la palabra "Hola"?'
         studio_gumball_hello2: 'Darwin (actor 1) y su hermano Gumball (actor 2) se dirigen a la escuela.  Ayudales a saludarse mediante el uso de los el bloque de "actor dice" dos veces.'
         studio_gumball_move_to_flag: '¡Banana Joe está a punto de ganar una carrera un día de campo!  Ayúdale a ir a los últimas 200 píxeles utilizando el bloque "mover".'
@@ -520,9 +519,9 @@ es-MX:
         gumball_intro: 'Hora del Código de Gumball - introducción'
         gumball_events: 'Hora del Código de Gumball - Eventos'
         gumball_repeat: 'Hora del Código de Gumball - instrucciones Repetir'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Hora de código Era del Hielo - Introducción'
+        iceage_events: 'Hora de Código Era del Hielo - Eventos'
+        iceage_repeat: 'Hora de Código Era del Hielo - Repetir comando'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'

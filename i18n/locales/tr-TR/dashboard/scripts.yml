@@ -146,7 +146,7 @@ tr:
           description_short: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           Maze: Labirent
-          title: Classic Maze
+          title: Klasik Labirent
           description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar biliminin temel öğelerini dene!
         frozen:
@@ -1352,6 +1352,21 @@ tr:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1462,12 +1477,12 @@ tr:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           Hour of Code 2015: Kodlama saati 2015
         starwarsblocks:
-          title: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek'
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           Hour of Code 2015: Kodlama saati 2015

@@ -245,65 +245,18 @@ ja:
       prize_us_only: (米国の学生のみ）
       prizes_link: 情報をもっと見る
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: 答え
+    for_teachers_only: 先生のみ
     title:
       one: あなたの先生：
       other: 'あなたの先生:'
     remove: （先生を削除します)
     confirm:
       remove: この教師を削除してもよろしいですか。
-    tools: 先生向けのツール
-    followers:
-      section: セクション：
-      stages: ステージを表示
-      show_past: '過去の生徒の活動 (%{bullet_html}) を表示：'
-      levels_key: レベルキー
-      perfect: 完了
-      completed: 完了しましたが、ブロックを使いすぎです
-      tried: 未完了
-      not_tried: 未実施
-      activity: '過去 %{hours} %{plural} 時間の生徒の活動を表示：'
-      no_section: 割り当てられたセクションはありません
-      trophies: トロフィー
     students:
-      name: 名前
-      username: ユーザー名
-      password: パスワード
-      manage: 生徒の管理
       dashboard: 先生用のダッシュボードへ
-      add: 生徒を追加する
-      remove: 生徒のデータを削除
-      confirm_remove: この生徒のデータを削除してもよろしいですか？
-      help_reassign: クラスを複数のセクションに分割し、生徒を新しいセクションに割り当てます。
-      help_register: 各生徒のデータを入力する時間をかけるよりも、授業で生徒にアカウントを設定するように指示することをおすすめします。生徒たちはユーザ名とパスワードを設定する必要がありますが、メールアドレスは必須ではありません。生徒がパスワードを忘れた場合リセットすることも可能です。
-      register: 生徒が自分で登録するよう促してください
-      vist: 生徒に訪問してもらう
-      section_code: そして、彼らのセクションコードを入力してください。
-      first_please: 'まず、%{add_section} してください。'
-      for: 対象
-      enter: 入力
-    sections:
-      add: セクションを追加
-      manage: セクションの管理
-      section: セクション
-      students: 生徒
-      section_code: セクション・コード
-      add_section_code: 生徒のセクションコードを追加してください。
-      secret: 秘密の種類
-      grade: 学年
-      course: コース
-      rename: 名前の変更
-      edit: 編集
-      delete: 削除
-      confirm_delete: 本当に、このセクションを削除してもよろしいですか？
-      email: Eメールで送信します。
-    rollup: 進捗状況のダッシュ ボード
-    activity: 最近のクラスの活動
-    user_not_found: 教師、又は、生徒は見つかりませんでした
-    cant_remove_student_no_email: '%{student_name} がEメール アドレスを登録していないために、あなたの学生として  %{student_name} を削除できません。'
-    cant_remove_teacher_no_email: 'Eメール アドレスが登録されていないため、教師として%{teacher_name}を削除できません'
-    student_teacher_disassociated: '%{teacher_name} が  %{student_name}の教師として削除されています'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: 回答者の画面で表示
       student: 生徒
@@ -312,7 +265,7 @@ ja:
       section: セクション
       example: 解答例
       example_with_number: '解答例 %{solution_number}'
-      submitted_on: 'Submitted on:'
+      submitted_on: '提出日時:'
       unsubmit: 取り消す
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
@@ -379,6 +332,7 @@ ja:
   share:
     title: コード スタジオで学ぶ
     description: 誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: 男性
     female: 女性
@@ -390,8 +344,8 @@ ja:
     thank_you: '私たちの <a href="https://code.org/about/donors"> ドナー</a>、<a href="https://code.org/about/partners"> パートナー</a>、 <a href="https://code.org/about/team"> チーム</a>、ビデオ キャスト、<a href="https://code.org/about/advisors"> アドバイザー</a> にコード スタジオのサポートを感謝しています。'
     help_from_html: このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。
     help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのを手伝いました。
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour of Code&reg; は Code.org の商標です'
     copyright: Copyright
@@ -405,9 +359,10 @@ ja:
     privacy: プライバシー ポリシー
     secure: 保護されたバージョン
     report_abuse: 不正を報告
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: コードスタジオに構築された
+    make_my_own_app: 自分のアプリを作る
+    how_it_works: 動作の説明
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
@@ -439,7 +394,7 @@ ja:
   pdf_download: PDF をダウンロード
   download_coming_soon: 間もなく、ダウンロードできる教材が利用できるようになります。
   video_coming_soon: 間もなく、ビデオを視聴できるようになります。
-  not_started: The student has not attempted this level.
+  not_started: 学生は、まだこのレベルを行っていません。
   share_code:
     title: 「実行」をクリックして私のプログラムが動くところを見てください
     bounce_og_title: 私が作った Bounce Game を試してみてください
@@ -464,7 +419,7 @@ ja:
       unused: 未使用のレベル
   upsell:
     hoc:
-      title: Classic Maze
+      title: 古典的な迷路
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
     flappy:
       title: Flappy Code
@@ -488,7 +443,7 @@ ja:
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: マインクラフト
-      body: Explore a Minecraft world through code.
+      body: プログラムを通して、Minecraftの世界を探検しましょう。
   gallery:
     students_drew_these_with_code: これらの作品は、生徒たちがコードを使って描きました！
     students_made_these_with_code: これらの作品は、生徒たちがコードを使って創りました！
@@ -536,7 +491,7 @@ ja:
     ok: OK
     startover_title: 本当に最初からやり直してもよいですか？
     startover_body: パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。
-    startover_ok: 最初からやり直す
+    startover_ok: 最初（さいしょ）からやり直（なお）す。
     startover_cancel: キャンセル
   time:
     hour: 1 時間
@@ -626,18 +581,18 @@ ja:
       contact_us: "これがエラーであると思うなら、 <a href='https://code.org/contact'> こちらからお問い合わせ</a>ください。"
       go_to_code_studio: コードスタジオに行く
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: 不快なコンテンツ、脅迫、ネット上のいじめ、嫌がらせ、またはコードスタジオで構築されたアプリで作成した自身のコンテンツに対する著作権侵害が発生した場合には、以下のフォームへ記入してください。報告された内容については、その内容を真剣に受け止め、調査および適切な処置をとります。
         validation:
           email: メール アドレスを入力してください
           age: 年齢を指定してください
           abuse_type: このコンテンツがどのように利用規約に違反しているか回答してください
           abuse_detail: 報告している内容について詳しく説明してください
-        abusive_url: URL of the content being reported
+        abusive_url: 報告されたコンテンツのURL
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'このコンテンツは、%{link_start}利用規約%{link_end}に対し、どのように違反していますか？'
+          harassment: 脅迫、ネット上のいじめ、嫌がらせ
+          offensive: 不快なコンテンツ
+          infringement: 著作権侵害
           other: その他
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: 報告の対象となるコンテンツについて、できるかぎり多くの詳細を提供してください。
+        acknowledge: 'この情報を送信することにより、報告された内容は %{link_start_privacy}個人情報保護方針%{link_end} および %{link_start_tos}利用規約%{link_end}に基づき、処理されることに同意したとみなされます。'

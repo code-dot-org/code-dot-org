@@ -18,7 +18,8 @@
           "object",
           "callback"
         ]
-      }
+      },
+      "console.log": null
     },
     "edit_code": true,
     "embed": "false",
@@ -49,10 +50,7 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "debugger_disabled": "false"
   }
 }]]></config>
   <blocks/>

@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, mergedActivityCssClass */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
 
@@ -49,7 +49,7 @@ module.exports = function (callback) {
       var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
-          var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+          var status = dashboard.progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
 
           // Clear the existing class and replace
           $('#header-level-' + levelId).attr('class', 'level_link ' + status);

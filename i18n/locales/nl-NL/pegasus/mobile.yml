@@ -20,6 +20,8 @@ nl-NL:
   submit: Insturen
   twentyhours_heading: Probeer onze introductiecursus Informatica
   twentyhours_text: "Klaar met je eerste 'Hour of Code'? Leer meer over Informatica en programmeerconcepten in deze vervolgcursus."
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br />8 - 14 december 2014<br/>'
   hoc2014_students: Leerlingen
   hoc2014_try: Probeer het
@@ -280,7 +282,7 @@ nl-NL:
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title: 'Ice Age - Binnenkort'
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bouw een Heelal met Code
   starwars_javascript_title: JavaScript
@@ -289,7 +291,7 @@ nl-NL:
   starwars_javascript_start_button: Probeer nu
   starwars_blocks_title: Blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Vele talen | Moderne browsers, smartphones, tablets | Leeftijden 6-106
   starwars_blocks_start_button: Probeer nu
   starwars_watch_videos: "Bekijk voor je begint deze inspiratie-video's"
   starwars_speak_languages: Spreek je een andere taal?
@@ -300,7 +302,7 @@ nl-NL:
   mc_shortdescription: Gebruik blokken code om Steve of Alex te helpen op hun avontuur door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Vele talen | Moderne browsers en tablets | Leeftijden 6-106
   minecraft_subtitle: Minecraft Uur Code
   volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger voor het Uur Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit jaar een Uur Code in hun klaslokaal, 7-13 dec 2015. Ze willen jouw hulp! '
@@ -309,7 +311,8 @@ nl-NL:
   volunteer_engineer_submission_intro_recruit: |-
     Deze leerkrachten zijn op zoek naa iemand die <span style="font-family: 'Gotham 7r', sans-serif;">gepassioneerd is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun leerlingen kan <span style="font-family: 'Gotham 7r', sans-serif;">inspireren</span> door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees hier</a> over het organiseren van je eigen Uur Code.
   volunteer_engineer_submission_intro_signup: 'Voer de volgende gegevens in als je een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span> zijn verplicht.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informatie gedeeld met docenten op de vrijwilligerskaart
   volunteer_engineer_submission_field_name: naam
   volunteer_engineer_submission_field_name_placeholder: Volledige Naam
@@ -547,6 +550,8 @@ nl-NL:
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: '<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
@@ -605,8 +610,8 @@ nl-NL:
   mobile_devices: Handleidingen voor mobiele apparaten
   frozen_name: Code met Anna en Elsa
   starwars_name: 'Star Wars: Bouw een Heelal met Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassiek doolhof
+  codeintl_name: Klassiek doolhof
   thinkersmithspanish_name: Mijn Robotvriend
   khan_name: Een inleiding in JavaScript
   khanes_name: Een inleiding in JavaScript
@@ -642,7 +647,7 @@ nl-NL:
   thinkersmith2_name: Binaire kerstballen
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Blad, Steen, Schaar
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassiek doolhof
   playlab_name: Speel Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstenaar
@@ -848,7 +853,7 @@ nl-NL:
   playlab_longdescription: Maak een verhaal of speel een spel met Play Lab! Laat dieren, piraten, zombies, ninjas en nog veel meer bewegen, geluiden maken, punten scoren en zelfs vuurballen gooien!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

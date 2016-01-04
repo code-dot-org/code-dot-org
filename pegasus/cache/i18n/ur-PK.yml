@@ -25,6 +25,9 @@
   twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
@@ -38,7 +41,7 @@
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
-  csedweek_map_search_reset: Reset
+  csedweek_map_search_reset: ری-سیٹ کریں
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
@@ -169,7 +172,7 @@
   studiobar_teacher_title: اساتذہ کے لئے
   studiobar_teacher_body: Code Studio کو اپنی کلاس میں متعارف کروائیں
   studiobar_frozen_title: Hour of Code
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_frozen_body: اینا اور ایلسا کے ساتھ ایک ونٹر ونڈرورلڈ کری-ایٹ کریں
   studiobar_donate_title: عطیہ کریں
   studiobar_donate_body: آپ کے عطیہ کئے گۓ ہر ڈالر سے ایک بچہ سیکھتا ہے
   studiobar_shop_title: دکان
@@ -245,7 +248,7 @@
   homepage_banner_privacy_link: مزید سیکھے
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: کوئی بھی سیکھ سکتا ہے، آج شروع کریں۔
-  homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_link_hoc: آور-آف-کوڈ پر کوشش کریں۔
   homepage_slot_text_link_host: Hour of Code منعقد کریں
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -318,7 +321,7 @@
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
   starwars_javascript_start_button: Try now
-  starwars_blocks_title: Blocks
+  starwars_blocks_title: بلاکس
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
@@ -335,14 +338,15 @@
     this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
+    of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
+    volunteers passionate about computer science education to help with their Hour
+    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -352,14 +356,14 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: نام
@@ -401,7 +405,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: جمع کرائیں
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
     more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
@@ -509,7 +513,7 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: Cancel
+  dashboard_action_cancel: کینسل
   dashboard_action_delete: Delete
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
@@ -664,6 +668,12 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: مزید سیکھے
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -695,7 +705,7 @@
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
@@ -736,7 +746,7 @@
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
-  frozen_name: Code with Anna and Elsa
+  frozen_name: اینا اور ایلسا کے ساتھ کوڈ
   starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Apna pehla Computer ka Program likhiye
   codeintl_name: Apna pehla Computer ka Program likhiye
@@ -771,7 +781,7 @@
   makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
-  blockly_name: Blockly
+  blockly_name: بلاکلی
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
@@ -824,11 +834,13 @@
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
   hourofcode_gradelevel: Ages 4-104
-  frozen_gradelevel: Ages 8+
+  frozen_gradelevel: |
+    Ages 8-108
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
   infinity_gradelevel: Ages 4-104
-  artist_gradelevel: Ages 4-104
+  artist_gradelevel: |
+    Ages 8-108
   monstercoding_gradelevel: Ages 5-13
   allcancode_gradelevel: Ages 5-10
   csfirst_gradelevel: Ages 9-14
@@ -874,8 +886,8 @@
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
-  frozen_platformtext: Modern browsers + tablets
-  starwars_platformtext: Modern browsers + tablets
+  frozen_platformtext: ماڈرن براؤزر + ٹیبلٹس
+  starwars_platformtext: ماڈرن براؤزر + ٹیبلٹس
   playlab_platformtext: Modern browsers, smartphones, tablets
   monstercoding_platformtext: Modern web browsers, iOS, Android
   allcancode_platformtext: Modern web browsers, iOS
@@ -931,8 +943,8 @@
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   hourofcode_shortdescription: Placeholder for new code.org/hoc
-  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice.
+  frozen_shortdescription: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں
+    کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
@@ -1082,9 +1094,10 @@
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
   hourofcode_longdescription: Placeholder for new code.org/hoc
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: آئیں اینا اور ایلسا کو جوائن کرنے کے لیے کوڈ کو استعمال
+    کریں اورسیکھیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔ آپ سنوفلیکس
+    اور پیٹرنز ایسے کری-ایٹ کریں گے جیسا کہ آپ آئس-اسکیٹنگ کر رہے ہوں اور ایسی یادگار
+    سردیاں منائیں جو بعد میں آپ اپنے دوستوں کے ساتھ شیئر بھی کرسکیں!
   starwars_longdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
@@ -1448,3 +1461,13 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

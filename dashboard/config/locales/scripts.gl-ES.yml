@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Rompecabezas: Aprende a arrastrar y soltar'
-          The Maze: El Laberinto
+          The Maze: O Labirinto
           Multi: Multi
           Match: Combinar
           Math Image: Imagen Matemática
@@ -13,234 +13,232 @@
           description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Rompecabezas: Aprende a arrastrar y soltar'
-          'Maze: Sequence': 'Laberinto: Secuencia'
-          'Maze: Debugging': 'Laberinto: Debugging'
-          'Artist 1: Intro': 'Artista 1: Introducción'
+          'Maze: Sequence': 'Labirinto: Secuencia'
+          'Maze: Debugging': 'Labirinto: Debug'
+          'Artist 1: Intro': 'Artista 1: Introdución'
           Artists 2: Artistas 2
-          Spelling Bee: Ortografía
-          Spelling Bee not blockly: Ortografía no blocky
-          'Bee 1: Intro': 'Abeja 1: Introducción'
-          'Maze 2: Loops': 'Laberinto 2: Ciclos'
-          'Bee 2: Loops': 'Abeja 2: Ciclos'
+          Spelling Bee: Soletrando
+          Spelling Bee not blockly: Soletrando sen bloques
+          'Bee 1: Intro': 'Abella 1: Introdución'
+          'Maze 2: Loops': 'Labirinto 2: Bucles'
+          'Bee 2: Loops': 'Abella 2: Bucles'
           Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy no blockly
+          K-1 Flappy: Flappy bird para pré-escolar
+          Flappy non blockly: Flappy bird sen bloques
           title: Curso 1
           Artist 2: Artista 2
           Happy Maps: Mapas Felices
-          Move it, Move it: Muévelo, muévelo
-          'Real-life Algorithms: Plant a Seed': 'Algoritmos de la Vida Real: Planta
-            una Semilla'
-          Building a Foundation: Construyendo una base
-          Getting Loopy: Bucleandose
-          The Big Event: El Gran Evento
-          Going Places Safely: Ir a Sitios Seguro
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Abeja: Secuencia'
-          'Artist: Sequence': 'Secuencia '
+          Move it, Move it: Móveo, móveo
+          'Real-life Algorithms: Plant a Seed': 'Algoritmos da Vida Real: Planta unha
+            Semente'
+          Building a Foundation: Construíndo unha base
+          Getting Loopy: Bucleándose
+          The Big Event: O Gran Evento
+          Going Places Safely: Ir a Sitios en modo Seguro
+          description: O Curso 1 esta deseñado para permitir aos lectores primeirizos
+            crear programas de computador que lles axuden a aprender a colaborar con
+            outros, desenvolver habilidades de solución de problemas, e persistir
+            en tarefas difíciles. Para o final deste curso, os estudantes crean o
+            seu propio xogo personalizado ou historia que poden compartir. Recomendado
+            para primeiro grao de primaria.
+          'Bee: Sequence': 'Abella: Secuencia'
+          'Artist: Sequence': 'Artista: Secuencia'
           'Artist: Shapes': 'Artista: Formas'
-          'Maze: Loops': Bucle
-          'Bee: Loops': 'Abeja: Bucle'
-          'Studio: Create a Story': 'Laboratorio de Juego: Crea un Historia'
+          'Maze: Loops': 'Labirinto: Bucles'
+          'Bee: Loops': 'Abella: Bucle'
+          'Studio: Create a Story': 'Laboratorio de Xogo: Crea unha Historia'
           'Artist: Loops': Bucles
-          description_audience: Edades 4+ (pre lectores)
-          description_short: Start with Course 1 for early readers.
+          description_audience: Idades de 4 a 6 anos
+          description_short: O Curso 1 está deseñado para lectores temperáns.
         course2:
-          The Maze: El Laberinto
+          The Maze: O Labirinto
           Suzi: Suzi
-          The Artist: El artista
-          Artist Debugging: Debugging del Artista
-          Bounce: Rebotar
-          'Studio: Create a Story': 'Laboratorio de Juego: Crea un Historia'
-          Artist Loops: Ciclos del Artista
-          Bee Conditionals: Condiciones de la Abeja
-          Flappy: Flappy
+          The Artist: O Artista
+          Artist Debugging: Debug do Artista
+          Bounce: Rebote
+          'Studio: Create a Story': 'Laboratorio de Xogo: Crea unha Historia'
+          Artist Loops: Bucles do Artista
+          Bee Conditionals: Condicións da Abella
+          Flappy: Flappy bird
           title: Curso 2
-          Bee Loops: Bucles de Abeja
-          Artist Functions: Funciones de artista
-          The Artist Debugging: La Depuración del Artista
-          Bee Debugging: Depuración Abeja
-          Bee Functions: Funciones Abeja
-          Maze Loops: Bucles de Laberinto
-          Graph Paper Programming: Programación en hoja milimétrica
-          'Real-life Algorithms: Paper Planes': 'Algoritmos de la vida real : Aviones
-            de papel'
-          Getting Loopy: Bucleandose
+          Bee Loops: Bucles de Abella
+          Artist Functions: Funcións de artista
+          The Artist Debugging: A Depuración do Artista
+          Bee Debugging: Depuración Abella
+          Bee Functions: Funcións Abella
+          Maze Loops: Bucles de Labirinto
+          Graph Paper Programming: Programación en Papel Cadriculado
+          'Real-life Algorithms: Paper Planes': 'Algoritmos da vida real: avión de
+            papel'
+          Getting Loopy: Bucleándose
           Relay programming: Programación de relevos
-          Conditionals: Condicionales
-          Binary Bracelets: Pulseras Binarias
-          The Big Event: El Gran Evento
-          Your Digital Footprint: Tu huella Digital
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
-          'Maze: Sequence': 'Laberinto: Secuencia'
-          'Artist: Sequence': 'Secuencia '
-          'Maze: Loops': Bucle
+          Conditionals: Condicionais
+          Binary Bracelets: Pulseiras Binarias
+          The Big Event: O Gran Evento
+          Your Digital Footprint: A túa pegada dixital
+          description: O Curso 2 está deseñado para estudantes que poden ler e non
+            teñen experiencia previa en programación. Neste curso os estudantes crearán
+            programas para resolver problemas e desenvolver xogos interactivos ou
+            historias que poden compartir. Recoméndase para os graos 2-5.
+          'Maze: Sequence': 'Labirinto: Secuencia'
+          'Artist: Sequence': 'Artista: Secuencia'
+          'Maze: Loops': 'Labirinto: Bucles'
           'Artist: Loops': Bucles
-          'Bee: Loops': 'Abeja: Bucle'
-          'Bee: Debugging': 'Abeja: Depuración'
+          'Bee: Loops': 'Abella: Bucle'
+          'Bee: Debugging': 'Abella: Depuración'
           'Artist: Debugging': 'Artista: Depuración'
-          'Bee: Conditionals': 'Abeja: Condicionales'
+          'Bee: Conditionals': 'Abella: Condicionais'
           'Artist: Sequence2': 'Artista: Secuencia2'
-          'Maze: Sequence2': 'Laberinto: Secuencia2'
-          'Artist: Nested Loops': 'Artista: Bucles Anidados'
-          description_audience: Edades 6 + (habilidad de lectura requerida)
-          description_short: Start with Course 2 for students who can read.
+          'Maze: Sequence2': 'Labirinto: Secuencia2'
+          'Artist: Nested Loops': 'Artista: Bucles Aniñados'
+          description_audience: Idades de 6 a 18 anos
+          description_short: O Curso 2 está deseñado para estudantes que poden ler.
         course3:
-          The Maze: El Laberinto
-          'Studio: Create a Story': 'Laboratorio de Juego: Crea un Historia'
-          The Artist: El artista
+          The Maze: O Labirinto
+          'Studio: Create a Story': 'Laboratorio de Xogo: Crea unha Historia'
+          The Artist: O Artista
           title: Curso 3
-          Artist Functions: Funciones de artista
-          Artist For Loops: Artista Para Bucles
-          Artist Nested Loops: Bucles Anidados del Artista
-          Bee Conditionals: Condiciones de la Abeja
-          Bee Nested Loops: Bucles Anidados de la Abeja
-          Bee Debuggin: Depuración de la Abeja
-          Bee Debugging: Depuración Abeja
-          Bee Functions: Funciones Abeja
-          Artist Functions with Params: Funciones con parámetros del Artista
-          Bounce: Rebotar
-          Maze Conditionals: Condicionales de Laberinto
-          Artist Functions with Parameters: Funciones con parámetros del Artista
-          Computational Thinking: Pensamiento computacional
-          Functional Suncatchers: Tragaluces Funcionales
+          Artist Functions: Funcións de artista
+          Artist For Loops: Artista Bucles "for"
+          Artist Nested Loops: Bucles Aniñados do Artista
+          Bee Conditionals: Condicións da Abella
+          Bee Nested Loops: Bucles Aniñados da Abella
+          Bee Debuggin: Depuración da Abella
+          Bee Debugging: Depuración Abella
+          Bee Functions: Funcións Abella
+          Artist Functions with Params: Funcións con parámetros do Artista
+          Bounce: Rebote
+          Maze Conditionals: Condicionais de Labirinto
+          Artist Functions with Parameters: Funcións con parámetros do Artista
+          Computational Thinking: Pensamento computacional
+          Functional Suncatchers: Tragaluces Funcionais
           Songwriting Parameters: Parámetros de Composición Musical
-          Dice Race: Carrera de Dados
+          Dice Race: Xogo de dados
           Internet: Internet
-          Crowdsourcing: Colaboración Abierta
-          Digital Citizenship: Ciudadanía Digital
-          Farmer - While Loops: Granjera - Bucles Mientras
-          description: El Curso 3 está diseñado para estudiantes que hayan tomado
-            el Curso 2. Los estudiantes profundizarán más en temas de programación
-            introducidos en los cursos anteriores que dan soluciones flexibles a problemas
-            más complejos. Para el final del curso, los estudiantes crean historias
-            y juegos interactivosyque pueden compartir con cualquiera. Recomendado
-            para los grados 4-5.
-          'Studio: Create a Game': 'Laboratorio de Juegos: Crear un Juego'
-          Maze: Laberinto
+          Crowdsourcing: Colaboración Aberta
+          Digital Citizenship: Cidadanía dixital
+          Farmer - While Loops: Granxeira - Bucles Mentres
+          description: O Curso 3 está deseñado para estudantes que tomasen o Curso
+            2. Os estudantes profundarán máis en temas de programación introducidos
+            nos cursos anteriores que dan solucións flexibles a problemas máis complexos.
+            Para o final do curso, os estudantes crean historias e xogos interactivos
+            e que poden compartir con calquera. Recomendado para os graos 4-5.
+          'Studio: Create a Game': 'Laboratorio de Xogos: Crear un Xogo'
+          Maze: Labirinto
           Artist: Artista
-          'Artist: Functions': 'Artista: Funciones'
-          'Bee: Functions': 'Abeja: Funciones'
-          'Bee: Conditionals': 'Abeja: Condicionales'
-          'Maze: Conditionals': 'Laberinto: Condicionales'
-          'Artist: Nested Loops': 'Artista: Bucles Anidados'
-          'Farmer: While Loops': 'Granjera: Bucles Mientras'
-          'Bee: Nested Loops': 'Abeja: Bucles Anidados'
-          'Bee: Debugging': 'Abeja: Depuración'
-          Maze2: Laberinto2
+          'Artist: Functions': 'Artista: Funcións'
+          'Bee: Functions': 'Abella: Funcións'
+          'Bee: Conditionals': 'Abella: Condicionais'
+          'Maze: Conditionals': 'Labirinto: Condicionais'
+          'Artist: Nested Loops': 'Artista: Bucles Aniñados'
+          'Farmer: While Loops': 'Granxeira: Bucles Mentres'
+          'Bee: Nested Loops': 'Abella: Bucles Aniñados'
+          'Bee: Debugging': 'Abella: Depuración'
+          Maze2: Labirinto2
           Artist2: Artista2
-          'Artist: Functions2': 'Artista: Funciones2'
-          'Bee: Functions2': 'Abeja: Funciones2'
-          'Bee: Conditionals2': 'Abeja: Condicionales2'
-          'Maze: Conditionals2': 'Laberinto: Condicionales2'
-          'Artist: Nested Loops2': 'Artista: Bucles Anidados2'
-          'Farmer: While Loops2': 'Granjera: Bucle de Mientras2'
-          'Bee: Nested Loops2': 'Abeja: Bucles Anidados2'
-          'Bee: Debugging2': 'Abeja: Depuración2'
-          'Artist: Patterns': 'Artista: Patrones'
-          Songwriting: Composición Musical
-          description_audience: Desde los 8 años (después del Curso 2)
-          description_short: El Curso 3 es una continuación del Curso 2.
+          'Artist: Functions2': 'Artista: Funcións2'
+          'Bee: Functions2': 'Abella: Funcións2'
+          'Bee: Conditionals2': 'Abella: Condicionais2'
+          'Maze: Conditionals2': 'Labirinto: Condicionais2'
+          'Artist: Nested Loops2': 'Artista: Bucles Aniñados2'
+          'Farmer: While Loops2': 'Granxeira: Bucle de Mentres2'
+          'Bee: Nested Loops2': 'Abella: Bucles Aniñados2'
+          'Bee: Debugging2': 'Abella: Depuración2'
+          'Artist: Patterns': 'Artista: Patróns'
+          Songwriting: Composición
+          description_audience: Idades de 8 a 18 anos
+          description_short: O Curso 3 é unha continuación do Curso 2.
         playlab:
-          title: Laboratorio de Juegos
-          description: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
-          Play Lab: Laboratorio de Juegos
-          description_short: ¡Crea una historia o haz un juego con Laboratorio de
-            Juegos!
+          title: Laboratorio de Xogos
+          description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
+          Play Lab: Laboratorio de Xogos
+          description_short: Crea unha historia ou fai un xogo con Laboratorio de
+            Xogos!
         artist:
           title: Artista
-          description: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          description: Debuxa imaxes estupendas e deseños co Artista!
           Artist: Artista
-          description_short: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          description_short: Debuxa imaxes estupendas e deseños co Artista!
         hourofcode:
-          Maze: Laberinto
-          title: Hora del código
-          description: ¡Prueba los fundamentos de la informática con los personajes
-            de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!
-          description_short: ¡Prueba los fundamentos de la informática con muchos
-            personajes divertidos!
+          Maze: Labirinto
+          title: Labirinto clásico
+          description: Proba os fundamentos da informática cos personaxes de Angry
+            Birds, Plantas vs Zombies e Scrat da Era do Xeo!
+          description_short: Proba os fundamentos da informática con moitos personaxes
+            divertidos!
         frozen:
-          title: Programa con Ana y Elsa
-          description: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
-            la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida
-            que patinas sobre hielo y harás un paisaje invernal que luego puedes compartir
-            con tus amigos!
+          title: Programa con Ana e Elsa
+          description: Imos usar código para unirnos a Ana e Elsa mentres exploran
+            a maxia e a beleza do xeo. Crearás flocos de neve e patróns a medida que
+            patinas sobre xeo e farás unha paisaxe invernal que logo podes compartir
+            cos teus amigos!
           Artist: Artista
-          description_short: Vamos a usar código para unirnos a Anna y Elsa mientras
-            exploran la magia y la belleza del hielo.
+          description_short: Use a programación para explorar a máxia e a beleza do
+            xeo con Anna e Elsa.
         course4:
-          description_short: Los alumnos que hacen el curso 4 deben haber hecho ya
-            los cursos 2 y 3.
-          description: El Curso 4 está diseñado para alumnos que hayan hecho los cursos
-            2 y 3. Los estudiantes profundizarán en los temas de programación iniciados
-            en los cursos anteriores desde soluciones flexibles hasta problemas más
-            complejos. Al final del curso, los estudiantes crearán historias y juegos
-            interactivos para compartir con cualquiera. Recomendado para los grados
-            4-8.
-          'Artist: Variables': 'Artista: Variables'
-          'Bee: For Loops': 'Abeja: Bucles For'
+          description_short: Os alumnos que fan o curso 4 deben ter feitos xa os cursos
+            2 e 3.
+          description: O Curso 4 está deseñado para alumnos que fixesen os cursos
+            2 e 3. Os estudantes profundarán nos temas de programación iniciados nos
+            cursos anteriores desde solucións flexíbeis até problemas máis complexos.
+            Ao final do curso, os estudantes crearán historias e xogos interactivos
+            para compartir con calquera. Recomendado para os graos 4-8.
+          'Artist: Variables': 'Artista: Variábeis'
+          'Bee: For Loops': 'Abella: Bucles For'
           title: Curso 4
           'Algorithms: Tangrams': 'Algoritmos: Tangrams'
           Variables: Variables
-          'Play Lab: Variables': 'Laboratorio de juegos: Variables'
-          'Play Lab: Functions with Parameters': 'Laboratorio de juegos: Funciones
-            con parámetros'
-          'Bee: Functions with Parameters': 'Abeja: Funciones con parámetros'
-          'Artist: For Loops': 'Artista: Bucles Para'
-          'Play Lab: For Loops': 'Laboratorio de Juegos: Bucles Para'
-          'Artist: Functions': 'Artista: Funciones'
+          'Play Lab: Variables': 'Laboratorio de xogos: Variábeis'
+          'Play Lab: Functions with Parameters': 'Laboratorio de xogos: Funcións con
+            parámetros'
+          'Bee: Functions with Parameters': 'Abella: Funcións con parámetros'
+          'Artist: For Loops': Artista Bucles "for"
+          'Play Lab: For Loops': 'Laboratorio de Xogos: Bucles For'
+          'Artist: Functions': 'Artista: Funcións'
           'Unplugged: Tangrams': 'Desconectado: Tangrams'
           Artist: Artista
-          Bee: Abeja
-          'Unplugged: Envelope Variables': 'Desconectado: Variables de Sobre'
+          Bee: Abella
+          'Unplugged: Envelope Variables': 'Desconectado: Variábeis de Sobre'
           'Unplugged: Madlibs': 'Desconectado: Madlibs'
-          'Unplugged: For Loop Fun': 'Desconectado: Bucles Para divertidos'
+          'Unplugged: For Loop Fun': 'Desconectado: Bucles "for" divertidos'
           'Unplugged: Songwriting with Parameters': 'Desconectado: Composición de
-            canciones con parámetros'
-          'Artist: Functions with Parameters': 'Artista: Funciones con Parámetros'
+            cancións con parámetros'
+          'Artist: Functions with Parameters': 'Artista: Funcións con Parámetros'
           'Unplugged: Binary': 'Desconectado: binario'
-          Bee Binary: Abeja binaria
-          Farmer Binary: Granjero binario
-          Maze and Bee: Laberinto y la abeja
+          Bee Binary: Abella binaria
+          Farmer Binary: Granxeiro binario
+          Maze and Bee: O labirinto e a abella
           Artist Binary: Artista binario
-          description_audience: Edades 10+ (después del Curso 3)
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          description_audience: Idades de 10 a 18 anos
+          Super Challenge - Variables: Super desafio - Variábeis
+          Super Challenge - For Loops: Super reto - bucles "for"
+          Super Challenge - Functions and Parameters: Super reto - funcións e parámetros
+          Extreme Challenge - Comprehensive: Desafío extremo - abranguer
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: Un breve resumen de conceptos para los estudiantes que
-            no han tomado los cursos 2 y 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Prerequisito del Curso 4
-          'Maze: Sequence': 'Laberinto: Secuencia'
-          'Artist: Sequence': 'Secuencia '
+          title: Prerequisito do Curso 4
+          description_short: Un breve resumo de conceptos para os estudantes que non
+            deron os cursos 2 e 3.
+          description: Un breve resumo de conceptos para os estudantes que non deron
+            os cursos 2 e 3.
+          Course 4 Prerequisite: Prerequisito do Curso 4
+          'Maze: Sequence': 'Labirinto: Secuencia'
+          'Artist: Sequence': 'Artista: Secuencia'
           'Artist: Loops': Bucles
-          'Bee: Conditionals': 'Abeja: Condicionales'
-          'Artist: Nested Loops': 'Artista: Bucles Anidados'
-          'Farmer: While Loops': 'Granjera: Bucles Mientras'
-          'Bee: Nested Loops': 'Abeja: Bucles Anidados'
-          'Artist: Functions': 'Artista: Funciones'
-          'Bee: Debugging': 'Abeja: Depuración'
+          'Bee: Conditionals': 'Abella: Condicionais'
+          'Artist: Nested Loops': 'Artista: Bucles Aniñados'
+          'Farmer: While Loops': 'Granxeira: Bucles Mentres'
+          'Bee: Nested Loops': 'Abella: Bucles Aniñados'
+          'Artist: Functions': 'Artista: Funcións'
+          'Bee: Debugging': 'Abella: Depuración'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables y bucles Para
-          Functions and Functions with Parameters: Funciones y funciones con parámetros
+          Intro: Introdución
+          Variables and For Loops: Variábeis e bucles "for"
+          Functions and Functions with Parameters: Funcións e funcións con parámetros
           title: Pruebas de usabilidad
           description_short: ''
           description: Una selección de los niveles del Curso 4 para pruebas de usabilidad.
           Variables: Variables
-          For Loops: Bucles Para
+          For Loops: Bucles "For"
           Binary: Binario
         potus:
           title: especial
@@ -257,17 +255,17 @@
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Desconectado: videojuegos
-            y planos de coordenadas'
+          'Unplugged: Video Games and Coordinate Planes': 'Offline: vídeo-xogos e
+            planos de coordenadas'
           'Calc: Evaluation Blocks': 'Calc: Bloques de evaluación'
-          'Eval: Strings and Images': 'Eval: Cadenas e imágenes'
+          'Eval: Strings and Images': Cadeas de texto e imaxes
           'Unplugged: Contracts': 'Desconectado: contratos'
           'Eval: Writing Contracts': 'Eval: Redacción de contratos'
           'Calc: Defining Variables': 'Calc: Definiendo Variables'
           'Play Lab: Defining Variables (Big Game)': 'Laboratorio de juegos: Definición
             de Variables (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Desconectado: La receta de diseño'
+          'Unplugged: The Design Recipe': 'Desconectado: A receita de deseño'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Laboratorio de juegos: Animación (Big
@@ -276,18 +274,20 @@
           'Eval: Boolean Operators': 'Eval: Operadores booleanos'
           'Play Lab: Booleans': 'Laboratorio de juegos: valores booleanos'
           'Play Lab: Boolean (Big Game)': 'Laboratorio de juegos: Booleano (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Desconectado: Condicionales
-            y funciones por partes'
-          'Eval: Conditionals': 'Eval: condicionales'
+          'Unplugged: Conditionals and Piecewise Functions': 'Desconectado: Condicionais
+            e funcións por partes'
+          'Eval: Conditionals': Condicionais
           'Unplugged: Collision Detection and the Distance Formula': 'Desconectado:
             Detección de colisiones y la fórmula de distancia'
           'Play Lab: Collision Detection (Big Game)': 'Laboratorio de juegos: Detección
             de colisiones (Big Game)'
         infinity:
-          title: Play Lab
-          description_short: Create a story or make a game with Play Lab!
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
+          title: Laboratorio de Xogo Disney Infinity
+          description_short: Utilice o laboratorio de xogos para crear unha historia
+            ou xogo protagonizada por personaxes de Disney Infinity.
+          description: Utilice o laboratorio de xogos para crear unha historia ou
+            xogo protagonizada por personaxes de Disney Infinity.
+          Play Lab: Laboratorio de Xogos
           Infinity: Infinito
         algebrademo:
           title: Algebra Demo
@@ -296,11 +296,11 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bloques de avaliación
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Definición de Variábeis
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita de deseño
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -326,12 +326,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: Simulador de internet
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Internet Simulator: Simulador de internet
+          Unit 1: Unidade 1
+          Unit 2: Unidade 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -365,72 +365,74 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
-          description_audience: Ages 10-18
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
-          Introduction to Computer Science: Introduction to Computer Science
-          The Maze: The Maze
-          Computational Thinking: Computational Thinking
-          Graph Paper Programming: Graph Paper Programming
-          The Artist: The Artist
-          Algorithms: Algorithms
-          The Artist 2: The Artist 2
-          Functions: Functions
-          The Farmer: The Farmer
-          Conditionals: Conditionals
-          The Artist 3: The Artist 3
-          Song Writing: Song Writing
-          The Farmer 2: The Farmer 2
-          Abstraction: Abstraction
-          The Artist 4: The Artist 4
-          Relay Programming: Relay Programming
-          The Farmer 3: The Farmer 3
-          The Internet: The Internet
-          The Artist 5: The Artist 5
-          Wrap-up: Wrap-up
+          title: Curso acelerado de Introdución a programación informática
+          description_audience: Idades de 10 a 18 anos
+          description: Este curso de 20 horas introduce o núcleo da informática e
+            conceptos de programación. O curso está deseñado para o seu uso en aulas
+            para os graos de primaria, pero é divertido aprender en todas as idades!
+          description_short: Este curso de 20 horas cobre os conceptos básicos de
+            informática e programación dos cursos 2-4.
+          Introduction to Computer Science: Introdución á informática
+          The Maze: O Labirinto
+          Computational Thinking: Pensamento computacional
+          Graph Paper Programming: Programación en Papel Cadriculado
+          The Artist: O Artista
+          Algorithms: Algoritmos
+          The Artist 2: O Artista 2
+          Functions: Funcións
+          The Farmer: O Agricultor
+          Conditionals: Condicionais
+          The Artist 3: O Artista 3
+          Song Writing: Escribindo unha Canción
+          The Farmer 2: O Agricultor 2
+          Abstraction: Abstracción
+          The Artist 4: O Artista 4
+          Relay Programming: Programación baixo presión
+          The Farmer 3: O Agricultor 3
+          The Internet: A Internet
+          The Artist 5: O Artista 5
+          Wrap-up: Sumario
         edit-code:
-          title: Edit Code
-          description: ''
-          description_short: Edit Code
-          The Maze: The Maze
+          title: Editar código
+          description: Editar código
+          description_short: Editar código
+          The Maze: O Labirinto
           Applab: Applab
-          The Artist: The Artist
-          Play Lab: Play Lab
-          Play Lab 2015: Play Lab 2015
+          The Artist: O Artista
+          Play Lab: Laboratorio de Xogos
+          Play Lab 2015: Laboratorio de Xogos 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Events
-          description: ''
-          description_short: Events
-          Bounce: Bounce
+          title: Eventos
+          description: Eventos
+          description_short: Eventos
+          Bounce: Rebote
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: Flappy Code
+          title: Código do Flappy bird
+          description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente
+            o noso titorial sobre o Código do Flappy bird!
+          description_short: Escribe o teu propio xogo Flappy en menos de 10 minutos!
+          Flappy Code: Código do Flappy bird
         jigsaw:
-          title: Jigsaw
-          description: ''
-          description_short: Try our Jigsaw tutorial
-          Jigsaw: Jigsaw
+          title: Crebacabezas
+          description: Proba o noso titorial de Jigsaw
+          description_short: Proba o noso titorial de Jigsaw
+          Jigsaw: Crebacabezas
         step:
-          title: Step
-          description: ''
-          description_short: Step tutorial
-          Step: Step
+          title: Paso
+          description: Paso do titorial
+          description_short: Paso do titorial
+          Step: Paso
         Hour of Code:
-          title: Hour of Code 2013
-          description: ''
-          description_short: Try the basics of computer science with many fun characters!
-          Hour of Code 2013: Hour of Code 2013
+          title: Hora de Código 2013
+          description: Proba os fundamentos da informática con personaxes de Angry
+            Birds e Plantas vs. Zombis!
+          description_short: Proba os fundamentos da informática con moitos personaxes
+            divertidos!
+          Hour of Code 2013: Hora de Código 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -462,21 +464,21 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: Un breve resumen de conceptos para los estudiantes que
-            no han tomado los cursos 2 y 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Prerequisito del Curso 4
-          'Maze: Sequence': 'Laberinto: Secuencia'
-          'Artist: Sequence': 'Secuencia '
+          title: Prerequisito do Curso 4
+          description_short: Un breve resumo de conceptos para os estudantes que non
+            deron os cursos 2 e 3.
+          description: Un breve resumo de conceptos para os estudantes que non deron
+            os cursos 2 e 3.
+          Course 4 Prerequisite: Prerequisito do Curso 4
+          'Maze: Sequence': 'Labirinto: Secuencia'
+          'Artist: Sequence': 'Artista: Secuencia'
           'Artist: Loops': Bucles
-          'Bee: Conditionals': 'Abeja: Condicionales'
-          'Artist: Nested Loops': 'Artista: Bucles Anidados'
-          'Farmer: While Loops': 'Granjera: Bucles Mientras'
-          'Bee: Nested Loops': 'Abeja: Bucles Anidados'
-          'Artist: Functions': 'Artista: Funciones'
-          'Bee: Debugging': 'Abeja: Depuración'
+          'Bee: Conditionals': 'Abella: Condicionais'
+          'Artist: Nested Loops': 'Artista: Bucles Aniñados'
+          'Farmer: While Loops': 'Granxeira: Bucles Mentres'
+          'Bee: Nested Loops': 'Abella: Bucles Aniñados'
+          'Artist: Functions': 'Artista: Funcións'
+          'Bee: Debugging': 'Abella: Depuración'
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -522,42 +524,44 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
+          'Unplugged: Video Games and Coordinate Planes': 'Offline: vídeo-xogos e
+            planos de coordenadas'
+          'Calc: Evaluation Blocks': 'Calc: Bloques de avaliación'
+          'Eval: Strings and Images': 'Eval: Cadeas e imaxes'
+          'Unplugged: Contracts': 'Desconectado: contratos'
+          'Eval: Writing Contracts': 'Eval: Redacción de contratos'
+          'Calc: Defining Variables': 'Calc: Definindo Variábeis'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorio de xogos: Definición
+            de Variábeis (Big Game)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': 'Desconectado: A receita de deseño'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          'Play Lab: Animation (Big Game)': 'Laboratorio de xogos: Animación (Big
+            Game)'
+          'Unplugged: Booleans': 'Desconectado: Booleanos'
+          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
+          'Play Lab: Booleans': 'Laboratorio de xogos: valores booleanos'
+          'Play Lab: Boolean (Big Game)': 'Laboratorio de xogos: Booleano (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Desconectado: Condicionais
+            e funcións por partes'
+          'Eval: Conditionals': 'Eval: condicionais'
+          'Unplugged: Collision Detection and the Distance Formula': 'Desconectado:
+            Detección de colisións e a fórmula de distancia'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio de xogos: Detección
+            de colisións (Big Game)'
+          Evaluation Blocks: Bloques de avaliación
+          Strings and Images: Cadeas de texto e imaxes
+          Contracts: Contratos
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita de deseño
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Valores booleanos
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Condicións e funcións definidas por
+            partes
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -571,17 +575,17 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Bloques de avaliación
+          Strings and Images: Cadeas de texto e imaxes
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Valores booleanos
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio de xogos: Detección
+            de colisións (Big Game)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
         text-compression:
@@ -653,7 +657,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: Functions
+          Functions: Funcións
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -706,7 +710,7 @@
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: Creando funcións
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -746,7 +750,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: Bucles mentres
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -763,10 +767,10 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bloques de avaliación
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          Strings and Images: Cadeas de texto e imaxes
+          The Design Recipe: A receita de deseño
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -814,7 +818,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bloques de avaliación
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -827,7 +831,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Bloques de avaliación
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -886,8 +890,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -915,7 +919,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: The Internet
+          description_short: A Internet
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -934,7 +938,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: The Internet
+          The Internet: Internet
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -966,16 +970,16 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          Evaluation Blocks: Bloques de avaliación
+          Strings and Images: Cadeas de texto e imaxes
+          Defining Variables: Definición de Variábeis
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita de deseño
           Big Game - Animation: Big Game - Animation
-          Booleans: Booleans
+          Booleans: Valores booleanos
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -983,16 +987,16 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: Xogo libre
         allthethings:
-          Jigsaw: Jigsaw
-          Maze: Maze
-          Artist: Artist
-          Bee: Bee
+          Jigsaw: Crebacabezas
+          Maze: Labirinto
+          Artist: Artista
+          Bee: Abella
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
-          Bounce: Bounce
+          Flappy: Flappy bird
+          Bounce: Rebote
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -1014,19 +1018,19 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Bloques de avaliación
+          Strings and Images: Cadeas de texto e imaxes
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Definición de Variábeis
+          Defining Functions: Definir funcións
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          'Eval: Conditionals': 'Eval: Conditionals'
+          Booleans: Valores booleanos
+          'Eval: Conditionals': 'Eval: condicionais'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1036,20 +1040,20 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratorio de aplicacións
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Benvido!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratorio de aplicacións
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1072,9 +1076,9 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          Welcome!: Benvido!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1083,7 +1087,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Wrap-up
+          Wrap-up: Sumario
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1128,40 +1132,42 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
-          Hour of Code: Hour of Code
-          Hour of Code 2015: Hour of Code 2015
+          title: Hora do Código 2015
+          description_short: Utiliza o Laboratorio de Xogos para crear unha historia
+            ou un xogo.
+          description: Utiliza o Laboratorio de Xogos para crear unha historia ou
+            un xogo.
+          Hour of Code: Hora de Código
+          Hour of Code 2015: Hora do Código 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Bloques de avaliación
+          Strings and Images: Cadeas de texto e imaxes
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Definición de Variábeis
+          Defining Functions: Definir funcións
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          'Eval: Conditionals': 'Eval: Conditionals'
+          Booleans: Valores booleanos
+          'Eval: Conditionals': 'Eval: condicionais'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
-          The Design Recipe: The Design Recipe
+          Welcome!: Benvido!
+          The Design Recipe: A receita de deseño
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          Welcome!: Benvido!
+          Wrap-Up: Resumo
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1175,15 +1181,15 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          Welcome!: Benvido!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Resumo
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1195,21 +1201,21 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Resumo
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          Welcome!: Benvido!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1228,12 +1234,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Sumario
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          Welcome!: Benvido!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1252,7 +1258,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Sumario
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1293,15 +1299,16 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Graph Paper Programming
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Happy Maps: Mapas Felices
+          Move it, Move it: Móveo, móveo
+          'Real-life Algorithms: Plant a Seed': 'Algoritmos da Vida Real: Planta unha
+            Semente'
+          Graph Paper Programming: Programación en Papel Cadriculado
+          Building a Foundation: Construíndo unha base
+          Getting Loopy: Bucleándose
+          The Big Event: O Gran Evento
+          Binary Bracelets: Pulseiras Binarias
+          Songwriting: Composición
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1350,7 +1357,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1382,7 +1389,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1417,7 +1424,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1452,7 +1459,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1461,7 +1468,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1483,7 +1490,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: Privacy Policy
+          Privacy Policy: Política de Privacidade
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1505,15 +1512,30 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Resumo
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1531,7 +1553,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1548,21 +1570,23 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Idades de 10 a 18 anos
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Idades de 10 a 18 anos
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Idade de xeo xogo de laboratorio
+          description_short: Crea unha historia ou crea un xogo co laboratorio de
+            xogo Idade de Xeo!
+          description: Crea unha historia ou crea un xogo co laboratorio de xogo Idade
+            de Xeo!
+          Ice Age Play Lab: Idade de xeo xogo de laboratorio
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1597,7 +1621,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: Bucles mentres
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1617,35 +1641,37 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Laboratorio de xogo de Gumball
+          description_short: Crea unha historia ou fai un xogo co laboratorio de xogo
+            de Gumball!
+          description: Crea unha historia ou fai un xogo co laboratorio de xogo de
+            Gumball!
+          Gumball Play Lab: Laboratorio de xogo de Gumball
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          title: 'Star Wars: Contruíndo unha Galaxia con Código'
+          description_short: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
+          description: Aprende a programar androides e crea o teu propio xogo Star
+            Wars nunha galaxia moi, moi afastada.
+          Hour of Code 2015: Hora do Código 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          Hour of Code 2015: Hour of Code 2015
+          title: 'Star Wars: Contruíndo unha Galaxia con Código'
+          description_short: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
+          description: Aprende a programar androides e crea o teu propio xogo Star
+            Wars nunha galaxia moi, moi afastada.
+          Hour of Code 2015: Hora do Código 2015
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          Hour of Code 2015: Hour of Code 2015
+          title: Hora do Código Minecraft
+          description_short: Explore o mundo de Minecraft a través do código
+          description: Usa bloques de código para acompañar a Steve ou a Alex nunha
+            aventura polo mundo de Minecraft
+          Hour of Code 2015: Hora do Código 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1657,6 +1683,6 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Benvido!
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Resumo

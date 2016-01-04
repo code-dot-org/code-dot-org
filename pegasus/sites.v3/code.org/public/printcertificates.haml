@@ -37,6 +37,10 @@ theme: none
       %h1 Flappy Bird Certificates
     -when ScriptConstants::MINECRAFT_NAME
       %h1 Minecraft Certificates
+    -when ScriptConstants::INFINITY_NAME
+      %h1 Infinity Certificates
+    -when ScriptConstants::ARTIST_NAME
+      %h1 Artist Certificates
     -else
       %h1 Code.org Certificates
 
@@ -56,7 +60,7 @@ theme: none
 -names = request.params['names']
 -unless names.nil_or_empty?
   -count = 0
-  -names.split("\n").select(&:present?).shift(30).each do |name|
+  -names.split("\n").reject{ |s| s.strip.empty? }.shift(30).each do |name|
     -unless count == 0
       .page-break
     -name.chomp!

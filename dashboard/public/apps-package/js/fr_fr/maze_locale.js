@@ -168,7 +168,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "elseCode":function(d){return "sinon"},
 "fill":function(d){return "remplir 1"},
 "fillN":function(d){return "remplir "+maze_locale.v(d,"shovelfuls")},
-"fillStack":function(d){return "remplir les trous avec "+maze_locale.v(d,"shovefuls")+" "},
+"fillStack":function(d){return "remplir les trous avec "+maze_locale.v(d,"shovelfuls")+" "},
 "fillSquare":function(d){return "remplir le carré"},
 "fillTooltip":function(d){return "placer 1 unité de terre"},
 "finalLevel":function(d){return "Félicitations ! Tu as résolu l'énigme finale."},

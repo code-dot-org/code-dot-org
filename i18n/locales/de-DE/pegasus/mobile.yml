@@ -20,6 +20,8 @@ de-DE:
   submit: Absenden
   twentyhours_heading: 'Teste unseren "Einführung in die Informatik"-Kurs'
   twentyhours_text: 'Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik- und Programmierkonzepte in diesem Folgekurs.'
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Nimm an der <a href="http://hourofcode.com">Hour of Code</a> <br/>8.-14. Dezember 2014  teil<br/>'
   hoc2014_students: Schüler
   hoc2014_try: Versuche es
@@ -277,10 +279,10 @@ de-DE:
   class_submission_level_vocational: Berufliche
   class_submission_languages_other: Andere Sprache(n)
   inspirational_videos_more: 'Weitere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirierende Videos</a>, sortiert nach Rollen und Berühmtheiten'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Wähle dein Spielelabor
+  playlab_classic_title: Klassisch
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title: 'Ice Age - In Kürze'
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Erbaue ein Galaxie mit Code
   starwars_javascript_title: JavaScript
@@ -289,7 +291,7 @@ de-DE:
   starwars_javascript_start_button: Probiere es jetzt aus
   starwars_blocks_title: Bausteine
   starwars_blocks_description: 'Verwende Drag & Drop Blöcke.'
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets | Alter: 6-106'
   starwars_blocks_start_button: Erfahre mehr
   starwars_watch_videos: Bevor du loslegst, sieh dir eines dieser inspirierende Videos an
   starwars_speak_languages: Du sprichst eine andere Sprache?
@@ -300,7 +302,7 @@ de-DE:
   mc_shortdescription: Benutze Codeblöcke, um Steve oder Alex auf ein Abenteuer durch diese Minecraft-Welt zu schicken.
   mc_gradelevel: Ab 6 Jahren
   mc_platformtext: Moderne Browser, Smartphones, Tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets | Alter: 6-106'
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspiriere Schüler und unterstütze Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer führen dieses Jahr eine Hour of Code mit ihren Klassen durch, 7. bis 13. Dezember 2015. Sie brauchen deine Hilfe! '
@@ -310,6 +312,7 @@ de-DE:
     Diese Lehrer würden gerne jemanden haben der <span style="font-family: 'Gotham 7r', sans-serif;">begeistert von der Lehre Informatik ist</span> und so im Klassenzimmer aushelfen kann. Oder jemand der Schüler <span style="font-family: 'Gotham 7r', sans-serif;">inspirieren</span> kann, indem er über die Möglichkeiten der Informatik redet (auch via Videochat möglich). Wenn du nicht beabsichtigst zu helfen, <a href="%{url}">lerne mehr</a> darüber dein eigenes Hore of Code Ereignis zu planen.
   volunteer_engineer_submission_intro_signup: 'Bitte gib die folgenden Information ein, falls du ein Informatikstudent oder professioneller Entwickler bist. Felder mit <span class="form-required-field">*</span> sind pflicht.'
   volunteer_engineer_submission_intro_links: 'Du suchst keine Freiwilligen? <a href="%{learn_more}">Lerne mehr</a> darüber, wie Du Dein eigenes "Hour of Code"-Event organisierst und Freiwillige in Deiner Nähe auf der <a href="%{volunteer_local}">Freiwilligenkarte</a> findest.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Mit Lehrern geteilte Informationen auf der Unterstützerkarte
   volunteer_engineer_submission_field_name: Name
   volunteer_engineer_submission_field_name_placeholder: Vollständiger Name
@@ -544,8 +547,10 @@ de-DE:
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Erfahre mehr
   dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten Galaxie zu erstellen und zu teilen.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_playlab: '<b>4. Dezember 2015</b> - "Hour of Code" ist da! Erkunde 50 Übungen, es spielt keine Rolle wie alt du bist oder welches Gerät du benutzt. Diese Woche neu: Programmiere deine eigenen Geschichten und Spiele in neuen Spielelaboren, Ice Age und Gumball.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr
@@ -602,8 +607,8 @@ de-DE:
   mobile_devices: Anleitungen für mobile Geräte
   frozen_name: Programmiere mit Anna und Elsa
   starwars_name: 'Star Wars: Erbaue eine Galaxie mithilfe von Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassisches Labyrinth
+  codeintl_name: Klassisches Labyrinth
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Eine Einführung in JavaScript
   khanes_name: Eine Einführung in JavaScript
@@ -639,7 +644,7 @@ de-DE:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassisches Labyrinth
   playlab_name: Play Lab
   infinity_name: Infinity Spiele Lab
   artist_name: Künstler
@@ -694,12 +699,12 @@ de-DE:
   infinity_gradelevel: Im Alter von 4-104
   artist_gradelevel: Im Alter von 4-104
   monstercoding_gradelevel: Alter 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 'Alter: 5-10'
+  csfirst_gradelevel: 'Alter: 9-14'
   boxisland_gradelevel: Grundschule
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 'Alter: 12-14'
+  texasinstruments_gradelevel: 'Alter: 13-16'
+  teacherled_gradelevel: 'Alter: 5+'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
   thinkersmithspanish_platformtext: Offline
@@ -741,12 +746,12 @@ de-DE:
   frozen_platformtext: Moderne Browser und Tablets
   starwars_platformtext: Moderne Browser und Tablets
   playlab_platformtext: Moderne Browser, Smartphones, Tablets
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Aktuelle Browser, iOS, Android
+  allcancode_platformtext: Aktuelle Browser, iOS, Android
   csfirst_platformtext: Moderne Web-Browser
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderne Web-Browser
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI-Taschenrechner
   teacherled_platformtext: Moderne Browser, Smartphones, Tablets
   codeorg_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   codeintl_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
@@ -845,7 +850,7 @@ de-DE:
   playlab_longdescription: Erfinde eine Geschichte oder ein Spiel mit dem Spielelabor! Erstelle Tiere, Piraten, Zombies, Ninjas und viele andere Charakter. Erstelle Sounds, erziele Punkte und werfe sogar Feuerbälle!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

@@ -734,10 +734,10 @@
           radslag op de balk te doen, maar blijf er af vallen.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: I ging door elk deel stap voor stap and realiseerde waar ik een fout
+          gemaakt had. Ik zette mijn handen fout op de balk. Dus probeerde ik opnieuw
+          met een andere positie en uiteindelijk lukte het. Ik was super blij dat
+          ik terug handstand op een bal kon doen.
       3:
         image: notes/C1_maze_debugging_3.png
         text: To learn about debugging, we start with a set of blocks already on the
@@ -1014,10 +1014,10 @@
           on a bracelet we can wear and show all our friends!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options.
-          Sometimes people think of this as only 1s and 0s. But you can represent
-          binary with combinations of on or off, up and down, in and out or really
-          any set of opposites.
+        text: Binair is een manier om informatie weer te geven met behulp van slechts
+          twee opties. Soms denken mensen dat dit alleen enen en nullen kunnen zijn.
+          Maar je kunt binair ook weergeven met combinaties als aan en uit, op en
+          neer en werkelijk elk paar tegengestelden.
       3:
         image: notes/C2_binary_bracelets_3.png
         text: Hi, I'm Orion and I program robots here at Play-im. All computer and
@@ -3075,8 +3075,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

@@ -20,6 +20,8 @@ cs-CZ:
   submit: Odeslat
   twentyhours_heading: Vyzkoušej si náš kurz Úvod do Informatiky
   twentyhours_text: 'Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice a programovacích pojmech v  následujícím kurzu.'
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/> 8. až 14. prosince 2014 <br/>'
   hoc2014_students: Studenti
   hoc2014_try: Zkuste to
@@ -292,7 +294,7 @@ cs-CZ:
   starwars_javascript_start_button: Vyzkoušej hned
   starwars_blocks_title: Bloky
   starwars_blocks_description: Použij táhni-pusť bloky.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Mnoho jazyků | Moderní prohlížeče, chytré mobily, tablety | Věk 6-106 let
   starwars_blocks_start_button: Další informace
   starwars_watch_videos: Před zahájením práce, prohlédni si jedno z těchto inspirujících videí
   starwars_speak_languages: Mluvíš dalším jazykem?
@@ -303,7 +305,7 @@ cs-CZ:
   mc_shortdescription: Použij bloky kódu, abys vzal Steva nebo Alexe na dobrodružství po světu Minecraftu.
   mc_gradelevel: Věk 6 +
   mc_platformtext: Moderní prohlížeče, smartphony, tablety
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Mnoho jazyků | Moderní prohlížeče a tablety | Věk 6-106 let
   minecraft_subtitle: Hodina kódu Minecraftu
   volunteer_engineer_submission_title: Inspirujte studenty a dobrovolníky pro Hodinu kódu.
   volunteer_engineer_submission_subtitle_generic: '100 000 učitelů bude hostit Hodinu kódu ve svých třídách letos 7.-13. prosince tohoto roku 2015. Chtějí vaši pomoc! '
@@ -313,6 +315,7 @@ cs-CZ:
     Tito učitelé by rádi našli někoho <span style="font-family: 'Gotham 7r', sans-serif;">nadšeného do výuky informatiky</span>, kdo jim může pomoci v učebně, nebo někoho kodo může <span style="font-family: 'Gotham 7r', sans-serif;">inspirovat</span> jejich studenty přednáškou o šíři možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat svoji vlastní Hodinu kódu.
   volunteer_engineer_submission_intro_signup: 'Zadejte následující informace, pokud jste počítačové vědy student nebo software profesionál, prosím. Pole označená <span class="form-required-field"> *</span> jsou požadovaná.'
   volunteer_engineer_submission_intro_links: 'Nehledáte dobrovolníkas? <a href="%{learn_more}">Dozvi se více</a> o organizování tvé Hodiny kódu a nalezení dobrovolníka v místě na naší <a href="%{volunteer_local}">mapě dobrovolníků</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informace sdílené s učiteli na dobrovolnické mapě
   volunteer_engineer_submission_field_name: Jméno
   volunteer_engineer_submission_field_name_placeholder: Celé jméno
@@ -547,8 +550,10 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
   dashboard_announce_view_all: Zobrazit vše
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Zjisti více
   dashboard_announce_hoc: '<b>15. října 2015</b> - Hodina kódu se blíží &mdash; každý zúčastněný organizátor obdrží dárkovou kartu na Amazon.com nebo Microsoft Windows Store jako dárek. Připojte se učebny po celém světě během prosince 7-13.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_playlab: '<b>4. Prosince 2015</b> Hodinový kód je zde! Zkus 50 návodů pro každou dobu a zařízení. Novinka týdne: Programuj tvůj vlastní příběh a hry v nových herních laboratořích, Doba Ledová a Gumball.'
   code_hoc_coming: 'Hodina kód je zde - prosinec 8-14!'
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace
@@ -605,8 +610,8 @@ cs-CZ:
   mobile_devices: Návody pro mobilní zařízení
   frozen_name: Kóduj s Annou a Elsou
   starwars_name: 'Star Wars: Budování galaxie'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klasické bludiště
+  codeintl_name: Klasické bludiště
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Úvod do JavaScriptu
   khanes_name: Úvod do JavaScriptu
@@ -642,16 +647,16 @@ cs-CZ:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kámen, nůžky, papír
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klasické bludiště
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Umělec
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: Potřebuješ kód tajemný ostrov
+  allcancode_name: Spusť Marca!
+  csfirst_name: CS první
+  boxisland_name: Kostkový ostrov
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minut kódování
   teacherled_name: Učitelské vedení rozvrhu cvičení Hodiny kódu
   codeorg_gradelevel: Věk 4+
   codeintl_gradelevel: Stáří 4-104
@@ -697,12 +702,12 @@ cs-CZ:
   infinity_gradelevel: Stáří 4-104
   artist_gradelevel: Stáří 4-104
   monstercoding_gradelevel: Věk 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Věk 5-10
+  csfirst_gradelevel: Věk 9-14
   boxisland_gradelevel: Základní
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Věk 12-14
+  texasinstruments_gradelevel: Věk 13-16
+  teacherled_gradelevel: Věk 5+
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
   thinkersmithspanish_platformtext: Unplugged
@@ -744,12 +749,12 @@ cs-CZ:
   frozen_platformtext: Moderní prohlížeče + tablety
   starwars_platformtext: Moderní prohlížeče + tablety
   playlab_platformtext: Moderní prohlížeče, smartphony, tablety
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Moderní prohlížeče, iOS a Android
+  allcancode_platformtext: Moderní prohlížeče a iOS
   csfirst_platformtext: Moderní webové prohlížeče
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: Android a iOS
   codesters_platformtext: Moderní webové prohlížeče
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI kalkulačky
   teacherled_platformtext: Moderní prohlížeče, smartphony, tablety
   codeorg_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
   codeintl_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
@@ -794,13 +799,13 @@ cs-CZ:
   playlab_shortdescription: Vytvoř příběh nebo udělej hru s Play Lab!
   infinity_shortdescription: Použij Play Lab k vytvoření příběhu nebo hry s Disney Infinity postavami.
   artist_shortdescription: Bakresli v pohodě obrázky a vzory s umělcem!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using Python.
-  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
+  monsterocding_shortdescription: Barevné poloprogramování pro děti.
+  allcancode_shortdescription: Přitažlivá hra naučí Marca s vizuálními programovacími jazyky.
+  csfirst_shortdescription: Animujte příběh o dvou postavách na moři. Přidej vlastní styl!
+  boxisland_shortdescription: Udělej si programovací výlet s Hiro na Kostkový ostrov.
+  codesters_shortdescription: Vytvoř vlastní hry, animace a kresby pomocí Pythonu.
+  texasinstruments_shortdescription: 'Nauč se základní programovaní použitím TI-84&#8482; Plus kalkulačkou,.'
+  teacherled_shortdescription: Nechte se inspirovat k návrhu vlastní události Hodiny kódu s těmito plány lekcí.
   codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
   codeintl_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
   thinkersmithspanish_longdescription: 'Použitím předdefinovaného "slovníkového Robota" budou žáci vedeni k objevování tak, aby prováděli specifické úkoly bez předchozí instruktáže. Tato pasáž učí žáky spojení mezi symboly a akcí, jakož i cennou dovednost ladění.'
@@ -842,13 +847,13 @@ cs-CZ:
   frozen_longdescription: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení a udělají zimní říši divů, kterou pak můžete sdílet se svými přáteli!
   starwars_longdescription: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
   playlab_longdescription: Vytvoř příběh nebo hru v Play Labu! Tvoř zvířata, piráty, zombík, ninjy a spoustu dalších. Postavy se hýbou, vydávají zvuky, získávají body a dokonce hází ohnivé koule!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
-  allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
-  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
-  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: Tajemný ostrov kódování pro hledání příšer nabízí zábavou naplněné samostatně vedená dobrodružství učící několik klíčových pojmů programování pro děti. Každý blok založený na aktivitě staví na předchozím uvedení dětí do funkcí, logických hodnot, cyklů, If/Else příkazů a polí pomocí barevné animované grafiky, zvukových instrukcí.
+  allcancode_longdescription: 'Studenti hrají dobrodružnou hru založenou na originálním příběhu. Provázejí Marka - hlavní postavu - přes každou úroveň zadáváním podrobných pokynů ve formě vizuálního programovacího jazyka používaného v Hodině kódu. Zavedly se sekvence povelů, opakování a podmínky, aniž by to zpozoroval.'
+  csfirst_longdescription: Vytvořte příběh o dvou postavách na moři. Animujte vodu a upravit scenérie přidáním vlastní světlice. Použijte kód, abyste pověděli příběh, který chcete vyprávět!
+  boxisland_longdescription: Udělejte si výlet na ostrově pokladů a pomozte Hirovi sesbírat všechny hodiny rozptýlené v divočině! V tomto kurzu se naučíte základy algoritmů, posloupností, cyklů a podmínek!
+  codesters_longdescription: 'Vytvořte si své vlastní hry, animace a umělecké práce pomocí Pythonu.  Jakmile budete hotovi, sdílejte je s přáteli! Program v Pythonu, který je skutečný programovací jazyk používaný denně společnosti - náš nástroj používající přetažení a upuštění je snadné se naučit!  Zkuste si vytvořit basketbalovou hru, choreografie tance nebo návrh animované karty! '
+  texasinstruments_longdescription: 'Deseti-minutovou kódovací aktivitu lze použít ve třídě jako  k podnícení zájmu studentů o kódování s technologií Texas Instrument technologií denně v jejich batozích.  Naučte se základům kódování pomocí TI-84 &#8482; Plus a začněte programovat v pouhých 10 minutách – žádné zkušenosti nejsou potřebné!  '
+  teacherled_longdescription: Nyní desítky tisíc pedagogů si zkusili Hodinu kódu, mnoho tříd je připraveno na kreativnější, méně obecné jednorázové aktivity k výuce základů informatiky. K pomoci učitelům najít inspiraci, jsme shromáždili a lektorovali jednohodinové vedené lekce pro učitele a plány činnosti navržené pro různé studijní obory Hodiny kódu pro veterány.
   codeorg_beyond_name: Úvod do informatiky (2. stupeň ZŠ)
   khan_beyond_name: Nauč se programovat počítač
   tynker_beyond_name: Nauč se programovat doma

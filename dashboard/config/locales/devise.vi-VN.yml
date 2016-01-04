@@ -21,16 +21,16 @@
       confirmation_instructions:
         subject: hướng dẫn xác nhận Code.org
       reset_password_instructions:
-        subject: hướng dẫn đặt lại mật khẩu code.org
+        subject: Hướng dẫn đặt lại mật khẩu Code.org
       unlock_instructions:
         subject: Hướng dẫn mở khóa
     omniauth_callbacks:
       failure: không thể xác nhận bạn từ %{kind} vì %{reason}.
       success: Xác thực thành công từ tài khoản %{kind}.
     passwords:
-      no_token: bạn không trể truy cập vào trang này nếu không đến từ một email khôi
-        phục mật khẩu. nếu bạn không đến từ một email khôi phục mật khẩu, hãy chắc
-        chắn rằng bạn sử dụng URL được cung cấp đầy đủ.
+      no_token: Bạn không trể truy cập vào trang này nếu không đến từ một email khôi
+        phục mật khẩu. Nếu bạn đến từ một email khôi phục mật khẩu, hãy chắc chắn
+        rằng bạn sử dụng URL được cung cấp đầy đủ.
       send_instructions: Bạn sẽ nhận được một email hướng dẫn đặt lại mật khẩu của
         bạn trong vài phút.
       send_paranoid_instructions: Nếu địa chỉ email của bạn có trong cơ sở dữ liệu

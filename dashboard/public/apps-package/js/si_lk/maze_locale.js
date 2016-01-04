@@ -182,7 +182,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "honeycombFullError":function(d){return "මෙම මීවදයෙ මී පැනි එකතු කරන්න තව ඉඩ නැත."},
 "ifCode":function(d){return "if"},
 "ifInRepeatError":function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."},
-"ifPathAhead":function(d){return "if path ahead"},
+"ifPathAhead":function(d){return "පාරක් තිබෙයි නම්"},
 "ifTooltip":function(d){return "If there is a path in the specified direction, then do some actions."},
 "ifelseTooltip":function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."},
 "ifFlowerTooltip":function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."},

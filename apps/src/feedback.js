@@ -241,7 +241,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocks.hideDiv();
+        feedbackBlocks.hide();
       }
 
       // If the user requests the hint...
@@ -257,7 +257,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
         // Restore feedback blocks, if present.
         if (feedbackBlocks && feedbackBlocks.div) {
-          feedbackBlocks.revealDiv();
+          feedbackBlocks.show();
         }
 
         // Report hint request to server.
@@ -330,7 +330,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   });
 
   if (feedbackBlocks && feedbackBlocks.div) {
-    feedbackBlocks.show();
+    feedbackBlocks.render();
   }
 };
 
@@ -673,6 +673,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
+
+  // Note: We have a dependency on dashboard here. This dependency has always
+  // been here (we used to mysteriously just always bubble clicks on body to
+  // a.popup-window if it existed), but it is now more explicit
+  if (window.dashboard && window.dashboard.popupWindow) {
+    $(sharingDiv).find('a.popup-window').click(window.dashboard.popupWindow);
+  }
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
@@ -1106,7 +1113,14 @@ FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
 FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
-    return !block.disabled && block.isEditable() && block.type !== 'when_run';
+    var blockValid = !block.disabled && block.type !== 'when_run';
+    // If Blockly is in readOnly mode, then all blocks are uneditable
+    // so this filter would be useless. Ignore uneditable blocks only if
+    // Blockly is in edit mode.
+    if (!Blockly.mainBlockSpace.isReadOnly()) {
+      blockValid = blockValid && block.isEditable();
+    }
+    return blockValid;
   });
   return blocks;
 };
@@ -1304,6 +1318,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.markdownMode
  * @param {boolean} options.scrollContent
  * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
@@ -1321,6 +1336,11 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
   } else {
     options.contentDiv.className += ' no-modal-icon';
   }
+
+  if (options.markdownMode) {
+    modalBody.className += ' markdown';
+  }
+
   options.contentDiv.className += ' modal-content';
   modalBody.appendChild(options.contentDiv);
 

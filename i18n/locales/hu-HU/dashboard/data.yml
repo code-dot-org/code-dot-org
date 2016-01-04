@@ -311,7 +311,7 @@ hu:
         studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja, és egy másik blokkal, ami hangot ad, ha az egyszarvú nekifut egy varázslónak? Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
         studio_playlab_9: Állítsd be ennek a földönkívüli inváziónak a hátterét, és segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd a nyíl billentyűket, hogy elérjen a földönkívülihez, és figyelmeztetni tudjon másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello1: 'Sid összeakar mindenkit gyűjteni egy új kalandra. Tudsz neki segíteni hogy azt mondja "helló" azzal hogy odahúzod a "mond" blokkot a a munkaterületre és beleirod "hello"?'
         studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
         studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
@@ -323,17 +323,17 @@ hu:
         studio_iceage_throw_hearts: |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
         studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_hello1: 'Anais új barátokat szeretne. Tudnál segíteni neki azt mondani, hogy "helló", úgy, hogy a munkafelületre vonszolod a mondd blokkot, és beleírod, hogy "helló"?'
+        studio_gumball_hello2: 'Darwin (1. szereplő) és a testvére, Gumball (2. szereplő) iskolába mennek. Segíts nekik üdvözölni egymást a "szereplő mondja" blokk kétszeri használatával.'
+        studio_gumball_move_to_flag: 'Banán Joe meg fogja nyerni a versenyt a kiránduláson! Segíts neki 200 képpontot mozogni a "mozogj" blokkal.'
+        studio_gumball_move_to_actor: 'Gumball (1. szereplő) és Darwin (2. szereplő) elkésnek a kirándulásról! Segíts Gumballnak 200 képpontot lefelé mozogni a "mozgasd a szereplőt" blokk használatával! Ezután kapcsolj egy blokkot  a "ha a szereplő megérinti" eseményhez, hogy lejátszódjon egy hang, amikor találkoznak.'
+        studio_gumball_repeat: 'Az "ismételd végtelenszer" blokk lehetővé teszi, hogy a kód folyamatosan fusson. Hozzá tudsz fűzni olyan blokkokat, amelyek segítenek Gumballnak folyamatosan balra és jobbra mozogva bemelegíteni?'
+        studio_gumball_click_hello: 'Segítesz Antonnak elindítani a versenyt úgy, hogy azt mondja: "Elkészülni, vigyázz, kész, rajt!"? Hogy teszteld a programod, de felejts el a futtatás után Antonra kattintani!'
+        studio_gumball_move_events: 'Darwin benevezett a zászló gyűjtő versenybe! Segíts neki körbefutni úgy, hogy minden eseményhez hozzáilleszted a "mozogj" blokkot. Ha elkészültél, kattints a futtatásra a zászlók összegyűjtéséhez.'
+        studio_gumball_sound_and_points: 'Megadtuk a legtöbb kódot, amely segít Antonnak (2. szereplő) balra és jobbra mozogni, míg Banán Joe (1. szereplő) körbe jár  a képernyőn. Be tudod fejezni a kódot úgy, hogy olyan blokkokat adsz hozzá a "ha a szereplő megérinti" eseményhez, hogy ha összeütköznek, akkor mindkét szereplő hangot adjon, és pontot is szerezzünk? Kattints a futtatásra a játék kipróbálásához.'
+        studio_gumball_warn_food_fight: Darwin elmenekült az étel csatáról! Változtasd át a hátteret szereplősre, és állítsd át Darwin sebességét gyorsra, majd kattints a futtatásra, hogy Pennyhez menjen és figyelmeztesse.
+        studio_gumball_join_food_fight: 'Csatlakozz az étel csatához! Használd a "szereplő eldobás jobbra" parancsot, hogy Banán Joe (1. szereplő) ételt dobjon Anton felé (2. szereplő)! Állítsd be Anton kedvét haragosra, amikor eltalálják.'
+        studio_gumball_free_play: Készítsd el a saját történeted! Ha elkészültél, kattints a Készre, hogy a barátaid is kipróbálhassák a játékodat telefonon, tableten vagy számítógépen!
         studio_full_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_k1_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_k1_2: Rá tudod bírni először a kutyát, ez után pedig a macskát is, hogy egymás után mondjanak valamit?
@@ -515,9 +515,9 @@ hu:
         mc_if_statements: 'Minecraft - Ha állítások'
         mc_congrats_share: 'Minecraft - Gratulálunk'
         mc_congrats_no_share: 'Minecraft - Gratulálunk'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        gumball_intro: 'Gumball Kódolás órája - Bevezetés'
+        gumball_events: 'Gumball Kódolás őrája - Események'
+        gumball_repeat: 'Gumball Kódolás órája - Ismétlő utasítások'
         iceage_intro: 'Ice Age Hour of Code - Introduction'
         iceage_events: 'Ice Age Hour of Code - Events'
         iceage_repeat: 'Ice Age Hour of Code - Repeat statements'

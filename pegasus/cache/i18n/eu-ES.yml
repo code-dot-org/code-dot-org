@@ -28,6 +28,9 @@
   twentyhours_heading: Probatu Informatikarako sarrera
   twentyhours_text: Bukatu duzu zure Kode Ordua? Ikasi informatika eta programazio
     kontzeptu gehiago ondorengo jarraipen ikastaroan.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Bat egin <a href="http://hourofcode.com">Kode Orduarekin</a><br/>2014ko
     abenduaren 8tik 14era<br/>
   hoc2014_students: Ikasleak
@@ -324,8 +327,8 @@
   starwars_javascript_start_button: Saiatu orain
   starwars_blocks_title: Blokeak
   starwars_blocks_description: Erabili arrastatzeko blokeak.
-  starwars_blocks_specs: Hizkuntza batzuk (laster) | Nabigatzaile modernoak, eskuko
-    telefonoak, tabletak | 6-10 urte bitartekoentzat
+  starwars_blocks_specs: Hizkuntza asko | Arakatzaile modernoak, smartphoneak, tabletak
+    | 6-106 adin bitartea
   starwars_blocks_start_button: Gehiago ikasi
   starwars_watch_videos: Hasi baino lehen, ikus ezazu bideo hauetakoren bat, animatzeko
   starwars_speak_languages: Beste hizkuntza bat erabiltzen duzu?
@@ -338,8 +341,7 @@
     Minecraft mundu honetan.
   mc_gradelevel: 6 urtetik aurrera
   mc_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
-  mc_specs: Hizkuntza batzuk (laster) | Nabigatzaile modernoak eta tabletak | 6 urtetik
-    aurrera
+  mc_specs: Hizkuntza asko | Arakatzaile moderno eta tabletak | 6-106 adin bitartea
   minecraft_subtitle: Minecraft Kode Ordua
   volunteer_engineer_submission_title: Animatu ikasleak Kode Orduan parte hartzeko
     eta egin zaitez boluntario.
@@ -367,6 +369,7 @@
     egiteko? <a href="%{learn_more}">Ikasi gehiago</a> zure Kode Ordu propioa antolatzeari
     buruz eta bertako bolondresak aurkitu gure <a href="%{volunteer_local}">bolondres
     mapan</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informazioa bolondres mapan partekatua
     izango da irakasleekin
   volunteer_engineer_submission_field_name: Izena
@@ -681,12 +684,19 @@
   dashboard_faq_k5: K-5 askoetan galdeturiko galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Ikasi gehiago
   dashboard_announce_hoc: <b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash;
     antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's
     Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean
     Abenduan 7-13 tartean.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>2015eko abenduaren 4a</b> - Kode ordua hemen da!
+    Saiatu edozein adinetarako eta edozein gailurako 50 tutorial. Aste honetan berria:
+    sortu istorio eta jokoak, Ice Age eta Gumball joko laborategi berrietan.'
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
   code_sign_up: Izena eman CS Hezkuntzaren Astean parte hartzeko
   learn_more: Gehiago ikasi
@@ -758,8 +768,8 @@
   mobile_devices: Gailu mugikorretarako tutorialak
   frozen_name: Anna eta Elsarekin programatu
   starwars_name: 'Star Wars: Eraiki galaxia bat Coderen bitartez'
-  codeorg_name: Idatzi zure lehenengo programa informatkoa
-  codeintl_name: Idatzi zure lehenengo programa informatkoa
+  codeorg_name: Labirinto klasikoa
+  codeintl_name: Labirinto klasikoa
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript sarrera bat
   khanes_name: JavaScript sarrera bat
@@ -795,16 +805,16 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Harria, Papera, Gurizeak
-  hourofcode_name: Idatzi zure lehenengo programa informatkoa
+  hourofcode_name: Labirinto klasikoa
   playlab_name: Jokoen Laborategia
   infinity_name: Infinity Jolas Laborategia
   artist_name: Artista
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Irla misteriotsuaren kode bilaketa
+  allcancode_name: Ekin Marco!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: Irla kutxa
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutu kode
   teacherled_name: Irakasleak gidatutako Kode Ordurako irakasgaien plangintza
   codeorg_gradelevel: 4-104 adinentzat
   codeintl_gradelevel: 4-104 adinentzat
@@ -850,12 +860,12 @@
   infinity_gradelevel: 4-104 adinentzat
   artist_gradelevel: 4-104 adinentzat
   monstercoding_gradelevel: 5-13 adinak
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5-10 adin bitartea
+  csfirst_gradelevel: 9-14 adin bitartea
   boxisland_gradelevel: Lehen Hezkuntza
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12-14 adin bitartea
+  texasinstruments_gradelevel: 13-16 adin bitartea
+  teacherled_gradelevel: 5+ adin bitartea
   codeorg_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   codeintl_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   thinkersmithspanish_platformtext: Haririk gabe
@@ -898,12 +908,12 @@
   frozen_platformtext: Nabigatzaile modernoak + tabletak
   starwars_platformtext: Nabigatzaile modernoak + tabletak
   playlab_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Web arakatzaile modernoak, iOS, Android
+  allcancode_platformtext: Web arakatzaile modernoak
   csfirst_platformtext: Web nabigatzaile modernoak
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Web nabigatzaile modernoak
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI kalkulgailuak
   teacherled_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   codeorg_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
   codeintl_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
@@ -965,19 +975,18 @@
   infinity_shortdescription: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin
     istorioak edo jokoak sortzeko
   artist_shortdescription: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  monsterocding_shortdescription: Umeentzako auto gidatutako programazio abentura
+    koloretsua.
+  allcancode_shortdescription: Marco programazio lengoai bisual batekin gidatzeko
+    murgiltze jokoa.
+  csfirst_shortdescription: Ozeanoan kokatutako bi pertsonairi buruzko istorioa animatu.
+    Gehitu zure estiloa!
+  boxisland_shortdescription: Hartu kode bidai bat kutxa irlan Hiro ausartarekin.
+  codesters_shortdescription: Sortu zure joku, animazio eta arte lanak Python erabiliz.
+  texasinstruments_shortdescription: Ikasi kodetze basikoa TI-84&#8482; Plus kalkulagailua
+    erabiliz.
+  teacherled_shortdescription: Inspiratu zure Kode ordu gertaera propioa diseinatzeko
+    eskola plan hauekin.
   codeorg_longdescription: Informatikaren oinarrizko kontzeptuak ikasi "arrastatu
     eta askatu" programazioarekin. Joko tankerako tutorialak dira, Bill Gates, Mark
     Zuckerberg, Angry Birds eta Plants vs Zombies-eko pertsonaiak agertzen direlarik.
@@ -1128,19 +1137,19 @@
   playlab_longdescription: Play Lab-ekin zure istorioa edo jokoa sortu! Animaliak,
     piratak, zonbiak, ninjak eta hamaika pertsonaia gehiago mugitu, soinuak egin,
     puntuak eskuratu eta baita suzko-bolak bota ere!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
+  monstercoding_longdescription: Irla misteriotsuko kode bilaketak, umeei, zenbait
+    programazio kontzeptu gako irakasten dien auto gidatutako eta dibertsioz betetako
+    abentura eiskentzen du. Bloke bakoitzean oinarritutako jarduera, aurrekoan oinarritzen
+    da, umeak, funtzio, balio boolear, begizta, If/Else agindu, eta Arrayetan murgilduz
+    eta horretarako irudi koloretsu animatuak eta audio jarraibideak erabiliz.
+  allcancode_longdescription: Ikasleek istorio original batean oinarritutako abentura
+    joko bat jokatzen dute. Marco -pertsonai nagusia- gidatzen dute maila bakoitzean
+    pausoz-pauso aginduak emanez Kode orduak erabiltzen duen programazio lengoai bisualarekin.
+    Agindu sekuentzietan, iterazioetan eta baldintzetan murgiltzen hasten dira ia
+    ia konturatu gabe.
+  csfirst_longdescription: Sortu itsaoan dauden bi pertsonaien istorioa. Animatu ura,
+    eta egokitu eszenatokia zure neurrira zure distira emateko. Erabili kodea kontatu
+    nahi duzun istorioa kontatzeko!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
@@ -1489,3 +1498,13 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

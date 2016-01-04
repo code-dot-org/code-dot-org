@@ -437,16 +437,16 @@ pl:
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Cześć! Nazywam się Miral Kotb i jestem twórcą Illuminate. W mojej pracy jest coś, czego możemy użyć zarówno w tańcu jak i w programowaniu lightsuits. Są to pętle! Pętla to wielokrotne powtórzenie tej samej akcji.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: Kiedy powtarzasz coś wiele razy, na przykład moje ruchy do utrzymania kręcącego się hula hop, to ja wykonujęswoje ruchy w pętli działań. To jest pętla, To jest pętla. I to też jest pętla.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: Dziś będziemy tańczyć. Będziemy używali pętli dla nowego tańca. Iteracje to wielokrotnie powtarzane sekwencje ruchów. Nauczymy się jak używać pętli na przykładzie tańca. Nauczysz się kilku prostych kroków i powtórzysz je znów i znów, by wypełnić układ taneczny.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: Oto kroki, których trzeba się nauczyć. Klaśnij w dłonie. Umieść ręce za głową. Połóż dłonie na biodrach. Podnieś lewą rękę. Podnieś prawą rękę. Całkiem proste, prawda? Odkryjesz, że możesz skrócić czynności, umieszczając pewne kroki taneczne w pętli.
       5:
         image: notes/C1_getting_loopy_5.png
         text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
@@ -1679,7 +1679,7 @@ pl:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. '
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
