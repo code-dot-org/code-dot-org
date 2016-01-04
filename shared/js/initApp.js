@@ -167,7 +167,7 @@ window.apps = {
       var source;
       if (window.Blockly) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.readOnly ? currentLevelSource :
+        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
           Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
       } else {
         source = window.Applab && Applab.getCode();

@@ -72,13 +72,13 @@
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="3-10">???</title>
         </block>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant_dropdown">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
       </xml>
     </toolbox_blocks>
