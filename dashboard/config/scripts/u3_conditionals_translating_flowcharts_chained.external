@@ -10,7 +10,13 @@ td{
 }
 </style>
 
-<img src="https://images.code.org/825342a08712b7218eaa0119fe21d2f1-image-1446519849087.02.52 PM.png" style="width: 850px"> 
+An `if`-`else` statement allows you to check one condition to determine one of two possible outcomes. What if we have a situation in which we need to check more than one condition and more than two possible outcomes?  Sometimes writing separate or nested `if`-`else` statements doesn’t work, or is inefficient.
+
+This is where `else if` comes in.  An `else if` statement allows you to insert additional conditions into a standard `if`-`else` statement.  This creates a different kind of structure in which each condition is checked one after the other.  The first one that evaluates to true gets executed.  If none are true, the `else` clause at the end gets executed.   Look at the examples below to see how it works.
+
+| Component | Translation |
+| --- | --- |
+|<img src="https://images.code.org/5cc796f6b14d81997fad8564ac673790-image-1449674801294.png" style="width: 350px"> |<img src="https://images.code.org/7ead73114d26f458ec9cdee1d71b02de-image-1449674845629.27.14 AM.png" style="width: 350px">  |
 
 # Examples
 

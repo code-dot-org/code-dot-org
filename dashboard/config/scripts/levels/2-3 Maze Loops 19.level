@@ -35,5 +35,18 @@
       <xml>
 </xml>
     </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+            <block type="maze_moveForward"/>
+          </statement>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Maze>

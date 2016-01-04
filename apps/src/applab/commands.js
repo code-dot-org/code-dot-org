@@ -29,6 +29,13 @@ var applabCommands = module.exports;
 var toBeCached = {};
 
 /**
+ * {Object} map from element id to the last mousemove event which occurred on
+ * that element. This is used to simulate movementX and movementY for browsers
+ * which do not support it natively.
+ */
+var lastMouseMoveEventMap = {};
+
+/**
  * @param value
  * @returns {boolean} true if value is a string, number, boolean, undefined or null.
  *     returns false for other values, including instances of Number or String.
@@ -1100,21 +1107,11 @@ applabCommands.setPosition = function (opts) {
     el.style.position = 'absolute';
     el.style.left = opts.left + 'px';
     el.style.top = opts.top + 'px';
-    var setWidthHeight = false;
-    // don't set width/height if
-    // (1) both parameters are undefined AND
-    // (2) width/height already specified OR IMG element with width/height attributes
-    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
-        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-        setWidthHeight = true;
-      }
-    } else {
-      setWidthHeight = true;
-    }
-    if (setWidthHeight) {
-      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
+    // if we have a width and/or height given, validate args and setSize
+    if (opts.width !== undefined || opts.height !== undefined) {
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number', OPTIONAL);
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number', OPTIONAL);
       setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
@@ -1185,6 +1182,13 @@ applabCommands.getYPosition = function (opts) {
   return 0;
 };
 
+function clearLastMouseMoveEvent(e) {
+  var elementId = e.currentTarget && e.currentTarget.id;
+  if (elementId && (typeof lastMouseMoveEventMap[elementId] !== 'undefined')) {
+    delete lastMouseMoveEventMap[elementId];
+  }
+}
+
 applabCommands.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
     var div = document.getElementById('divApplab');
@@ -1201,7 +1205,7 @@ applabCommands.onEventFired = function (opts, e) {
     var applabEvent = {};
     // Pass these properties through to applabEvent:
     ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'keyLocation', 'location', 'metaKey', 'offsetX',
       'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
       function (prop) {
         if (typeof e[prop] !== 'undefined') {
@@ -1222,6 +1226,29 @@ applabCommands.onEventFired = function (opts, e) {
           applabEvent[prop] = (e[prop] - yOffset) / yScale;
         }
       });
+    // Set movementX and movementY, computing it from clientX and clientY if necessary.
+    // The element must have an element id for this to work.
+    if (typeof e.movementX !== 'undefined' && typeof e.movementY !== 'undefined') {
+      // The browser supports movementX and movementY natively.
+      applabEvent.movementX = e.movementX;
+      applabEvent.movementY = e.movementY;
+    } else if (e.type === 'mousemove') {
+      var currentTargetId = e.currentTarget && e.currentTarget.id;
+      var lastEvent = lastMouseMoveEventMap[currentTargetId];
+      if (currentTargetId && lastEvent) {
+        // Compute movementX and movementY from clientX and clientY.
+        applabEvent.movementX = e.clientX - lastEvent.clientX;
+        applabEvent.movementY = e.clientY - lastEvent.clientY;
+      } else {
+        // There has been no mousemove event on this element since the most recent
+        // mouseout event, or this element does not have an element id.
+        applabEvent.movementX = 0;
+        applabEvent.movementY = 0;
+      }
+      if (currentTargetId) {
+        lastMouseMoveEventMap[currentTargetId] = e;
+      }
+    }
     // Replace DOM elements with IDs and then add them to applabEvent:
     ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
       'toElement'].forEach(
@@ -1318,7 +1345,6 @@ applabCommands.onEvent = function (opts) {
       case 'click':
       case 'change':
       case 'keyup':
-      case 'mousemove':
       case 'dblclick':
       case 'mousedown':
       case 'mouseup':
@@ -1333,6 +1359,16 @@ applabCommands.onEvent = function (opts) {
         domElement.addEventListener(
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
+        break;
+      case 'mousemove':
+        domElement.addEventListener(
+          opts.eventName,
+          applabCommands.onEventFired.bind(this, opts));
+        // Additional handler needed to ensure correct calculation of
+        // movementX and movementY.
+        domElement.addEventListener(
+          'mouseout',
+          clearLastMouseMoveEvent);
         break;
       default:
         return false;
@@ -1497,19 +1533,19 @@ applabCommands.updateRecord = function (opts) {
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
   opts.JSInterpreter = Applab.JSInterpreter;
-  var onSuccess = applabCommands.handleUpdateRecord.bind(this, opts);
+  var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
+  AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
 applabCommands.handleUpdateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
+  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(opts.onComplete, [record]);
   }
 };
 
@@ -1519,19 +1555,19 @@ applabCommands.deleteRecord = function (opts) {
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
   opts.JSInterpreter = Applab.JSInterpreter;
-  var onSuccess = applabCommands.handleDeleteRecord.bind(this, opts);
+  var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
+  AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
 applabCommands.handleDeleteRecord = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess);
+  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(opts.onComplete);
   }
 };
 
@@ -1540,6 +1576,74 @@ applabCommands.getUserId = function (opts) {
     throw new Error("User ID failed to load.");
   }
   return Applab.user.applabUserId;
+};
+
+/**
+ * How to execute the 'drawChart' function.
+ * Delegates most work to ChartApi.drawChart, but a few things are
+ * handled directly at this layer:
+ *   - Type validation (before execution)
+ *   - Queueing callbacks (after execution)
+ *   - Reporting errors and warnings (after execution)
+ * @see {ChartApi}
+ * @param {Object} opts
+ * @param {string} opts.chartId
+ * @param {ChartType} opts.chartType
+ * @param {Object[]} opts.chartData
+ * @param {Object} opts.options
+ * @param {function} opts.callback
+ */
+applabCommands.drawChart = function (opts) {
+  apiValidateType(opts, 'drawChart', 'chartId', opts.chartId, 'string');
+  apiValidateType(opts, 'drawChart', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChart', 'chartData', opts.chartData, 'array');
+  apiValidateType(opts, 'drawChart', 'options', opts.options, 'object', OPTIONAL);
+  apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
+  apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
+
+  // Bind a reference to the current interpreter so we can later make sure we're
+  // not doing anything asynchronous across re-runs.
+  var jsInterpreter = Applab.JSInterpreter;
+
+  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
+
+  var chartApi = new ChartApi();
+
+  /**
+   * What to do after drawing the chart succeeds/completes:
+   *   1. Report any warnings, attributed to the current line.
+   *   2. Queue the user-provided success callback.
+   *
+   * @param {Error[]} warnings - Any non-terminal errors generated by the
+   *        drawChartFromRecords call, which we will report on after the fact
+   *        without halting execution.
+   */
+  var onSuccess = function () {
+    stopLoadingSpinnerFor(opts.chartId);
+    chartApi.warnings.forEach(function (warning) {
+      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+    });
+    queueCallback(jsInterpreter, opts.callback);
+  };
+
+  /**
+   * What to do if something goes wrong:
+   *   1. Report the error.
+   *
+   * @param {Error} error - A rejected promise usually passes an error.
+   */
+  var onError = function (error) {
+    stopLoadingSpinnerFor(opts.chartId);
+    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+  };
+
+  startLoadingSpinnerFor(opts.chartId);
+  chartApi.drawChart(
+      opts.chartId,
+      opts.chartType,
+      opts.chartData,
+      opts.options
+  ).then(onSuccess, onError);
 };
 
 /**

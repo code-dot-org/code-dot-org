@@ -29,6 +29,9 @@
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
   twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról
     és a programozási koncepciókról a következő tanfolyamon.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014.
     December 8-14.<br/>
   hoc2014_students: Tanuló
@@ -256,7 +259,7 @@
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: '# fő már kipróbálta'
   homepage_solot_text_link_volunteer: Önkéntes az kódolás órájához
-  homepage_slot_text_title_students: Diákok
+  homepage_slot_text_title_students: Tanuló
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
   homepage_slot_text_link_local: Keress egy helyi osztályt
@@ -328,8 +331,8 @@
   starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
-  starwars_blocks_specs: 'Több nyelven is (hamarosan) | Modern böngészők, okostelefonok,
-    tabletek | Korosztály: 6-10'
+  starwars_blocks_specs: 'Több nyelv | Modern böngészők, okostelefonok, táblagépek
+    | Korosztál: 6-10 évesek'
   starwars_blocks_start_button: Próbálja ki most
   starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
   starwars_speak_languages: Beszél egy másik nyelven is?
@@ -342,8 +345,7 @@
     a Minecraft világában.
   mc_gradelevel: 4-től 104 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
-  mc_specs: 'Több nyelven is (hamarosan) | Modern böngészők és tabletek | Korosztály:
-    6 +'
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Kódolás Órája
   volunteer_engineer_submission_title: Ösztönözz tanulókat és önkénteseket a Kódolás
     Órájára.
@@ -362,14 +364,14 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Az információ meg lett osztva az önkéntes
     tanárok térképén
   volunteer_engineer_submission_field_name: Név
@@ -685,6 +687,12 @@
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Közlemények
   dashboard_announce_view_all: Összes megtekintése
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Tudj meg többet
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -762,8 +770,8 @@
   mobile_devices: Oktatóanyagok mobile eszközökre
   frozen_name: Kódolás Annával és Elsával
   starwars_name: 'Star Wars: A galaxis építése kódolássa'
-  codeorg_name: Írd meg az első számítógépes programod
-  codeintl_name: Írd meg az első számítógépes programod
+  codeorg_name: Hagyományos Útvesztö
+  codeintl_name: Hagyományos Útvesztö
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Bevezetés a JavaScriptbe
   khanes_name: Bevezetés a JavaScriptbe
@@ -799,7 +807,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kő, papír, olló
-  hourofcode_name: Az új code.org/hoc helyőrzője
+  hourofcode_name: Hagyományos Útvesztö
   playlab_name: Játéklabor
   infinity_name: Infinity játéklabor
   artist_name: Művész
@@ -1511,3 +1519,13 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

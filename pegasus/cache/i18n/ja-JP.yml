@@ -23,6 +23,9 @@
   submit: 送信
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14
     日まで<br/>
   hoc2014_students: 生徒の皆さん
@@ -292,7 +295,8 @@
   starwars_javascript_start_button: 今すぐ試す
   starwars_blocks_title: ブロック達
   starwars_blocks_description: ドラッグアンドドロップできる、ブロックを使います。
-  starwars_blocks_specs: 多くの言語 (近日公開予定) |最新のブラウザー、スマート フォン、タブレット |6-10 歳
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: 今すぐ試す
   starwars_watch_videos: 始める前に、以下のビデオのうち1つを見てみましょう。
   starwars_speak_languages: 別の言語を話しますか？
@@ -303,14 +307,15 @@
   mc_shortdescription: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
   mc_gradelevel: 6歳以上
   mc_platformtext: 最新ブラウザ、スマート フォン、タブレット
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraftプログラミング入門
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
+    of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
+    volunteers passionate about computer science education to help with their Hour
+    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -320,14 +325,14 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: 名前
@@ -369,7 +374,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: 送信
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
     more here.</a>
   volunteer_engineer_submission_commitment_uncertain: その他
   volunteer_engineer_submission_commitment_one_hr_per_week: 週に１時間
@@ -589,6 +594,12 @@
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: もっと詳しく知る
   dashboard_announce_hoc: <B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの
     コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。
   dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
@@ -664,8 +675,8 @@
   mobile_devices: モバイル デバイスのためのチュートリアル
   frozen_name: アナとエルザとコーディング
   starwars_name: 'スター・ウォーズ: コードを書いて銀河をつくろう'
-  codeorg_name: 初めてのコンピュータ プログラムを書く
-  codeintl_name: 初めてのコンピュータ プログラムを書く
+  codeorg_name: 古典的な迷路
+  codeintl_name: 古典的な迷路
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Java スクリプト入門
   khanes_name: Java スクリプト入門
@@ -701,7 +712,7 @@
   thinkersmith2_name: 不要なバイナリ
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: グー、パー、チョキ
-  hourofcode_name: 初めてのコンピュータ プログラムを書く
+  hourofcode_name: 古典的な迷路
   playlab_name: プレイラボ
   infinity_name: インフィニティ プレイ ラボ
   artist_name: アーティスト
@@ -1170,3 +1181,13 @@
   infinity_shortcode: inf
   playlab_shortcode: 再生する
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

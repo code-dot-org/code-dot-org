@@ -47,7 +47,9 @@ module ScriptConstants
         ICEAGE_NAME,
         STARWARS_NAME,
         STARWARS_BLOCKS_NAME,
-        MINECRAFT_NAME
+        MINECRAFT_NAME,
+        INFINITY_NAME,
+        ARTIST_NAME
     ].include? name
   end
 

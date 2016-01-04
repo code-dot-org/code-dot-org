@@ -26,6 +26,9 @@
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
@@ -327,8 +330,8 @@
   starwars_javascript_start_button: Try now
   starwars_blocks_title: Blocks
   starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones,
-    tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Try now
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
@@ -342,7 +345,7 @@
     this Minecraft world.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
@@ -367,6 +370,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Name
@@ -682,6 +686,12 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
   dashboard_announce_hoc: <b>November 23, 2015</b> - Would you like a volunteer passionate
     about computer science education to help during your Hour of Code event? Over
     7,000 volunteers are looking to inspire your students by visiting your classroom
@@ -1468,3 +1478,13 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

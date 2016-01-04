@@ -999,6 +999,11 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U4 - Read Record - Local vs Remote Data External:
+        Local vs. Remote Data: Local vs. Remote Data
+      U4 - Unique Ids Explanation:
+        Records Have Unique IDs: Records Have Unique IDs
+        title: title
       U4 Inspirational Data Video: {}
       U4L01 Student Lesson Introduction:
         description here: description here
@@ -3285,18 +3290,18 @@ en:
         Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
         Why Programming? Question 2: Why Programming? Question 2
       U3L03 - multiselect - properties of functions:
-        Choose Two - True statements about functions: Choose Two - True statements about functions
+        'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
         Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
-        Functions in programming are named groupings of programming instructions.: Functions in programming are named groupings of programming instructions.
-        Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
-        Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
-        Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
+        Functions in programming are named groupings of programming instructions.<br>: Functions in programming are named groupings of programming instructions.<br>
+        Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
+        Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
+        Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
       U3L03 Assessment:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
-        Multiple Choice - False statements about functions: Multiple Choice - False statements about functions
+        'Multiple Choice: False Statements about Functions': 'Multiple Choice: False Statements about Functions'
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
@@ -3313,7 +3318,7 @@ en:
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
         Another name for the purpose of a function.: Another name for the purpose of a function.
         'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
-        para-meter -- a measure of the distance between a function\’s conception and implementation.: para-meter -- a measure of the distance between a function\’s conception and implementation.
+        'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
       U3L06-API-multichoice:
         Abstract Parameter Interface: Abstract Parameter Interface
         Abstract Programming Inheritance: Abstract Programming Inheritance
@@ -3342,7 +3347,7 @@ en:
         Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
         Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
         Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
-        Select the two true statements about functions with parameters: Select the two true statements about functions with parameters
+        'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
         Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
       U3L08 Assessment3:
         'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
@@ -3372,28 +3377,26 @@ en:
         Debugging is the process of locating and correcting errors in a program.: Debugging is the process of locating and correcting errors in a program.
         Error messages help programmers identify problems in their code.: Error messages help programmers identify problems in their code.
         It is common for programs to contain errors the first time they are written.: It is common for programs to contain errors the first time they are written.
-        Multiple Choice - Debugging and Error Messages: Multiple Choice - Debugging and Error Messages
+        'Multiple Choice: Debugging and Error Messages': 'Multiple Choice: Debugging and Error Messages'
         Not all errors in a program will generate an error message.: Not all errors in a program will generate an error message.
         Which of the following statements about debugging and program errors is FALSE?: Which of the following statements about debugging and program errors is FALSE?
       U3L14 - MC Duplicate Ids:
         A warning message will appear for the second button that that ID is already in use.: A warning message will appear for the second button that that ID is already in use.
-        Buttons and IDs: Buttons and IDs
+        'Choose Two: Buttons and IDs': 'Choose Two: Buttons and IDs'
         JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.: JavaScript is flexible. Two buttons with same ID will respond to a single event handler associated with that ID.
         The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.: The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.
         The first button created with the ID will work, the other will not.: The first button created with the ID will work, the other will not.
         Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.: Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.
-        What happens when two buttons are given the same ID?: What happens when two buttons are given the same ID?
+        'What happens when two buttons are given the same ID? Choose two of the following:': 'What happens when two buttons are given the same ID? Choose two of the following:'
       U3L14 - MC order of button and onEvent:
-        Buttons and Event Handlers: Buttons and Event Handlers
         Does the order in which the code for a button and the code for its event handler appear within the program matter?: Does the order in which the code for a button and the code for its event handler appear within the program matter?
+        'Multiple Choice: Buttons and Event Handlers': 'Multiple Choice: Buttons and Event Handlers'
         No, JavaScript is flexible; the button and its event handler can appear in any order in the code.: No, JavaScript is flexible; the button and its event handler can appear in any order in the code.
         Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.: Yes, JavaScript forces you to decouple view and controller. You are required to declare buttons in a separate API.
         Yes, the button, with its ID, must appear in the code AFTER the event handler.: Yes, the button, with its ID, must appear in the code AFTER the event handler.
         Yes, the button, with its ID, must appear in the code BEFORE the event handler.: Yes, the button, with its ID, must appear in the code BEFORE the event handler.
       U3L14 - MC variable reassignment:
         Code does not execute due to error: Code does not execute due to error
-        Variable Check In: Variable Check In
-        'What will be displayed in the console? ': 'What will be displayed in the console? '
         a:10 &nbsp; b:10 &nbsp;  c:20: a:10 &nbsp; b:10 &nbsp;  c:20
         a:10 &nbsp; b:10 &nbsp; c:10: a:10 &nbsp; b:10 &nbsp; c:10
         a:10 &nbsp; b:17 &nbsp;  c:17: a:10 &nbsp; b:17 &nbsp;  c:17
@@ -4670,7 +4673,7 @@ en:
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L03 Free Response Wrap Up:
-        'Reflection: Why functions?': 'Reflection: Why functions?'
+        'Reflection: Why Functions?': 'Reflection: Why Functions?'
       U3L04 Assessment1:
         'Free Response: Top-Down Design': 'Free Response: Top-Down Design'
       U3L04 Free Response Getting Started:
@@ -4730,12 +4733,12 @@ en:
       U3L13 Free Response Getting Started:
         Buttons on the Screen - Getting Started: Buttons on the Screen - Getting Started
       U3L13 Free Response Reflection:
-        Event-Driven Programming Wrap-Up: Event-Driven Programming Wrap-Up
+        'Free Response: Event-Driven Programming Wrap-Up': 'Free Response: Event-Driven Programming Wrap-Up'
       U3L14 - Journal Favorite Event:
         Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.: Pick one of the two prompts below to answer.  Start by copy/pasting the prompt you're responding to.
         'Reflection: Events': 'Reflection: Events'
       U3L15 spot the difference variable debugging:
-        'Free response: Spot and fix the bug': 'Free response: Spot and fix the bug'
+        'Free response: Spot and Fix the Bug': 'Free response: Spot and Fix the Bug'
       U3L16 Assessment Free Response:
         'Beyond Buttons: Assessment': 'Beyond Buttons: Assessment'
       U3L16 Free Response Getting Started:
@@ -4774,7 +4777,7 @@ en:
       U3L23 Free Response Getting Started:
         'Getting Started: A Look at Siri': 'Getting Started: A Look at Siri'
       U3L23 Free Response Wrap Up:
-        Natural Language Processing: Natural Language Processing
+        'Free Response: Natural Language Processing': 'Free Response: Natural Language Processing'
       U3L23 Free Response Wrap Up 2:
         Natural Language Processing: Natural Language Processing
       U3L24 Assessment 3:
@@ -4786,7 +4789,7 @@ en:
       U3L25 Free Response 2:
         'String and Substring: Assessment 2': 'String and Substring: Assessment 2'
       U3L25 Free Response 3:
-        'String and Substring: Assessment 4': 'String and Substring: Assessment 4'
+        'Free Response: String and Substring': 'Free Response: String and Substring'
       U3L25 Free Response Getting Started:
         'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
       U3L25 Free Response Wrap Up:

@@ -29,6 +29,9 @@
   twentyhours_heading: Cobalah pendahuluan pelajaran ilmu Komputer
   twentyhours_text: Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut
     inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a>
     <br/> 8-14 Desember 2014 <br/>
   hoc2014_students: Siswa
@@ -335,8 +338,8 @@
   starwars_javascript_start_button: Coba sekarang
   starwars_blocks_title: Blok
   starwars_blocks_description: Gunakan blok drag-drop.
-  starwars_blocks_specs: Berbagai bahasa (akan segera datang) | Browser modern, smartphone,
-    tablet | Usia 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Pelajari lebih banyak
   starwars_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif ini
   starwars_speak_languages: Berbicara dengan bahasa lain?
@@ -349,16 +352,15 @@
     petualangan dengan dunia Minecraft ini.
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
-  mc_specs: Berbagai bahasa (akan segera datang) | Browser modern dan tablet | Usia
-    6 +
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspirasi siswa dan relawan untuk Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan
     rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh
     bantuan Anda! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
+    volunteers passionate about computer science education to help with their Hour
+    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -368,14 +370,14 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Masukkan informasi berikut jika Anda
     seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai
     dengan <span class="form-required-field"> *</span> diperlukan.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informasi yang dibagi dengan guru-guru
     pada peta relawan
   volunteer_engineer_submission_field_name: Nama
@@ -419,7 +421,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Kirim
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
     more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Belum Pasti
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 jam per minggu
@@ -700,6 +702,12 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada
     di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah
     dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung
@@ -1542,3 +1550,13 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

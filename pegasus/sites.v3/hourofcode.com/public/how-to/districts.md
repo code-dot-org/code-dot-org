@@ -7,6 +7,8 @@ nav: how_to_nav
 
 # How to bring the Hour of Code to your entire school district.
 
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
 ## Get every school participating, every student learning!
 
 1. **Recruit local schools.** Share [this email](<%= resolve_url('/promote/resources#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/how-to') %>), or include a [short blurb](<%= resolve_url('/promote/stats') %>) in newsletters/district communications. 

@@ -431,6 +431,7 @@ instances_to_create.each do |instance_to_create|
       instance_to_create.result = "Failed: #{e}"
     end
   end
+  sleep(1);
 end
 
 instance_creation_threads.each {|thread| thread.join}
