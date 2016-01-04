@@ -126,19 +126,7 @@ class AdminReportsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.csv { render :csv => level_answers_csv }
-    end
-  end
-
-  private
-  def level_answers_csv
-    CSV.generate do |csv|
-      csv << @headers
-      @responses.each do |level_id, level_responses|
-        level_responses.each do |response|
-          csv << response
-        end
-      end
+      format.csv { return level_answers_csv }
     end
   end
 
@@ -334,4 +322,17 @@ class AdminReportsController < ApplicationController
     return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
   end
 
+  def level_answers_csv
+    send_data(
+      CSV.generate do |csv|
+        csv << @headers
+        @responses.each do |level_id, level_responses|
+          level_responses.each do |response|
+            csv << response
+          end
+        end
+        csv
+      end,
+      :type => 'text/csv')
+  end
 end
