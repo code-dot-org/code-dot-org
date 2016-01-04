@@ -88,7 +88,20 @@ def main()
     hoc_company_totals: hoc_company_totals,
   }
 
-  lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.to_i : 0
+  # In the production environment, begin with a known previous value in case we
+  # are unable to obtain a more recent number. The 11151730618 number is from
+  # 2016-01-04.
+  lines_of_code = rack_env?(:production) ? 11151730618 : 0
+  # Since s3 (which the binary relies on) may fail, we retry a few times hoping
+  # for success.
+  3.times do
+    lines_of_code_from_milestone = `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.to_i
+    # If we received a real number, do not continue retrying.
+    if lines_of_code_from_milestone >= 11151730618
+      lines_of_code = lines_of_code_from_milestone
+      break
+    end 
+  end
 
   time = DateTime.now
   Properties.set :metrics, {
@@ -100,7 +113,7 @@ def main()
     csedweek_students:        4875091,
     csedweek_countries:       356,
     petition_signatures:      PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').count,
-    lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
+    lines_of_code:            lines_of_code,
   }
 
   total_females = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'f').exclude(last_sign_in_at: nil).count
