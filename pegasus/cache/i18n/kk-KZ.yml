@@ -30,6 +30,9 @@
   twentyhours_heading: 'Біздің курсты қолданып көріңіз: информатикаға кіріспе'
   twentyhours_text: Бірінші "Код жазу Сағатын" аяқтадыңыз ба? Информатика және бағдарламалау
     ұғымы туралы толығырақ келесі курста біліңіз.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: 8-14 желтоқсан 2014 ж. <br/><a href="http://hourofcode.com">"Код
     жазу Сағатына"</a> қатысыңыз <br/>'
   hoc2014_students: Оқушылар
@@ -78,10 +81,10 @@
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
   course_name_accelerated: Жеделдетілген курс
-  course_name_course1: Course 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
+  course_name_course1: Курс 1
+  course_name_course2: Курс 2
+  course_name_course3: Курс 3
+  course_name_course4: Курс 4
   congratulations_on_completing_course: '%{course} бітіруіңізбен құттықтаймыз'
   congrats_next_tutorials_title: Келесі
   congrats_next_tutorials_desc: 1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің
@@ -216,7 +219,7 @@
   homepage_slot_text_frozen: Анна және Эльзамен Суық жүрек бағдарламасы
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Біздің барлық оқулықтарымыз
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Курс 4
   homepage_slot_text_shop: Дүкен
   homepage_slot_text_flappy: Қанат Қағу Коды
   homepage_action_text_hoc: Кодтау сағаты әр оқушыға.
@@ -313,18 +316,18 @@
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Код арқылу Галактика құру
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_description: Жылжытымды блоктар мен JavaScript-ті қолдан.
   starwars_javascript_specs: Тек ағылшын тілінде | Жаңа браузерлер | 11+ жас аралығы
   starwars_javascript_start_button: Қазір қолданып көріңіз
   starwars_blocks_title: Блоктар
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Жылжытымды блоктарды қолдан.
+  starwars_blocks_specs: Көптеген тілдерде | Заманауи браузерлерде, планшеттерде,
+    смартфондарда | 6-106 жасына
   starwars_blocks_start_button: Қазір қолданып көріңіз
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
+  starwars_watch_videos: Бастар алдында мына шабыттандырушы бейне-роликтерден біреуін
+    қараңыз
   starwars_speak_languages: Басқа тілде сөйлейсіз бе?
-  starwars_help_translate: Басқа тілге аударуға көмектест
+  starwars_help_translate: Басқа тілге аударуға көмектес
   starwars_platform_text: Заманауи браузерлер, смартфондар, планшеттер
   mc_name: Minecraft Кодтау Сағаты
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
@@ -358,6 +361,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Ақпарат еріктілер картасында мұғалімдерге
     көрінеді
   volunteer_engineer_submission_field_name: Атыңыз
@@ -621,7 +625,7 @@
   dashboard_curriculum_overview: Мектепке дейінгі және бастауыш мектеп оқушылары үшін
     бағдарламаны шолу
   dashboard_overview: Қысқаша шолу
-  dashboard_sequence: Sequence
+  dashboard_sequence: Жүйелілік
   dashboard_framework: Құрылым
   dashboard_standards: Стандарттар
   dashboard_implementation_guide: Іске асыру туралы нұсқаулық
@@ -673,6 +677,12 @@
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: толығырақ білу
   dashboard_announce_hoc: <b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында
     басталады! Бүкіләлемдік тарихи оқу шарасына қатыс.
   dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
@@ -713,15 +723,15 @@
   carousel_heading_international: Сіздің тіліңіздегі оқыту нұсқаулығы
   carousel_heading_domestic: Оқыту құралдары ағылшын тілінде қолжетімді
   carousel_heading_beginners: Бастаушылар үшін оқулықтар
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: Бастаушылар үшін оқулықтар
   carousel_heading_javascript: JavaScript тілін үйрену үшін арналған оқулықтар
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: JavaScript тілін үйрену үшін арналған оқулықтар
   carousel_heading_unplugged: Желіге шығуға мүмкіндік жоқ па ? Онда "информатиканы
     оффлайн оқуды" пайдаланып көр
   carousel_heading_devices: Телефон және планшеттер үшін оқыту қосымшалары
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Телефон және планшеттер үшін оқыту қосымшалары
   carousel_heading_languages: Басқа да бағдарламау тілдерінен оқу материалдары
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Басқа да бағдарламау тілдерінен оқу материалдары
   carousel_heading_apps_games: Өзіңнің қосымшаларыңды немесе ойындарыңды жаз
   carousel_heading_university: Университеттің онлайн курстары
   carousel_heading_webpages: Веб-парақтарды жасауды үйрен
@@ -748,10 +758,10 @@
     қажет. Барлық сабақтарға қол жеткізу үшін, <a href="http://browsehappy.com/" target="_blank">браузердің
     жаңа нұсқасын</a> орнатыңыз.
   mobile_devices: Мобильді құралдар үшін оқулықтар
-  frozen_name: Code with Anna and Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Бірінші компьютерлік бағдарламаны жазу
-  codeintl_name: Бірінші компьютерлік бағдарламаны жазу
+  frozen_name: Анна және Эльзамен код жазыңыз
+  starwars_name: 'Жұлдызды соғыстар: Галактиканы код арқылы жаса'
+  codeorg_name: Классикалық лабиринт
+  codeintl_name: Классикалық лабиринт
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript-ке Кіріспе
   khanes_name: JavaScript-ке Кіріспе
@@ -787,10 +797,10 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Тас, қайшы, қағаз
-  hourofcode_name: Жаңадан тіркелушілерге code.org/hoc
-  playlab_name: Play Lab
+  hourofcode_name: Классикалық лабиринт
+  playlab_name: Ойындар Лабораториясы
   infinity_name: Шексіз Ойын Лабораториясы
-  artist_name: Artist
+  artist_name: Кейіпкер
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -837,7 +847,7 @@
   projguts_gradelevel: Жас аралығы 10-13
   hourofcode_gradelevel: Жас аралығы 4-14
   frozen_gradelevel: Жасы 8 +
-  starwars_gradelevel: Жас аралық 6+
+  starwars_gradelevel: Жас аралық 6-106
   playlab_gradelevel: Жас аралығы 4-14
   infinity_gradelevel: Жас аралығы 4-14
   artist_gradelevel: Жасы 8 +
@@ -954,12 +964,12 @@
     үйреніңіз!
   frozen_shortdescription: Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін
     көрсететін кодты пайдаланайық.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  starwars_shortdescription: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
+    ойыныңды алыстағы галактикада жаса.
+  playlab_shortdescription: Оқиға құрыңыз немесе Ойындар Лабораториясымен ойын жасаңыз!
+  infinity_shortdescription: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз
+    Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
+  artist_shortdescription: Тамаша суреттер салыңыз және Кейіпкермен әрлеңіз!
   monsterocding_shortdescription: A colorful self-guided programming adventure for
     children.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming
@@ -1104,11 +1114,11 @@
     "тас-қайшы-қағаз" ойынының әртүрлі нұсқаларын жасау және эксперимент нәтижелерін
     бақылау арқылы таныстырады.
   hourofcode_longdescription: Жаңадан тіркелушілерге code.org/hoc
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  frozen_longdescription: Анна мен Эльзаның мұздың әдемілігі мен сиқырын зерттеулері
+    үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай, қысты көркін
+    келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен бөлісесіз!
+  starwars_longdescription: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
+    ойыныңды алыстағы галактикада жаса.
   playlab_longdescription: Ойын Лабораториясымен әңгіме немесе ойын құрыңыз ! Аңдар,
     зомби, ниндзя, және басқа да көптеген кейіпкерлер сөйлейтін, ұпай жинайтын, тіпті
     аузынан от шашатын бағдарлама жазыңыз!

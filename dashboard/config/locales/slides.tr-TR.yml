@@ -72,9 +72,8 @@
           miktarda labirent bulmacalar engeller dönecek.
       5:
         image: notes/stage5_5.jpg
-        text: Click on the arrow in either of these blocks to change the amount the
-          artist moves forward or turns. Play around to get familiar with these new
-          blocks.
+        text: Sanatçı ileri veya dönüşler hareket miktarını değiştirmek için bu blokların
+          birinde oka tıklayın. Bu yeni bloklar aşina almak için etrafında oynayın.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
@@ -98,9 +97,9 @@
           birisi bilgisayar programının etkileşimli olabilmesidir.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Her zaman birileri tıkladığında veya bir bilgisayar veya telefonla musluklar
+          veya türleri, bu bir OLAY oluşturur ve bir olay meydana geldiğinde ne yapacağını
+          karar bazı kod var.
       3:
         image: notes/flappy03.jpg
         text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
@@ -2491,7 +2490,7 @@
           gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Merhaba, ben Rachel Rose. ILM'de üst düzey bir R&D mühendisiyim, animasyon
+        text: Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon
           ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların
           karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin
           hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside
@@ -2539,17 +2538,17 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: Kullandığımız blokların içinde JavaScript komutları var. JavaScript,
+          profesyonel geliştiriciler için günümüzdeki en popüler programlama dilidir.
+          Bloklar, kodlama öğrenmeye başlamak için harika bir yol. Harvard ve Berkeley
+          gibi en iyi üniversiteler bile bu yöntemi kullanıyor. Temel bilgileri öğrendikten
+          sonra mühendisler yazarak kodlama yapıyor, çünkü bu bizim daha hızlı ilerlememizi
+          sağlıyor.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Araç kutusundan bulup sürüklemek zorunda kalmadan yüzlerce komut yazabiliriz.
+          Öğrenme aşamasında olduğun için başta yazmak yavaş gelebilir ama senin de
+          denemeni istedik.
       3:
         image: notes/starwars_typing_3.JPG
         text: Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar
@@ -2661,19 +2660,19 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: 'Merhaba, ben Star Wars: Güç Uyanıyor''un yapımcısı Kathleen Kennedy.
+          Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel
+          bir droiddir. Yaptığı her şey, her hareketi bir bilgisayar yazılımı ile
+          kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine
+          ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor
+          gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon
+          ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların
+          karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin
+          hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside
+          inandırıcı olmalarını sağlıyor.
       3:
         image: notes/starwars_blocks_intro_3.JPG
         text: Bir saat içerisinde sana programlamanın temellerini öğretecek bir Star
@@ -2682,37 +2681,34 @@
           için Rey ile tüm hurdaları toplamaya gidiyoruz.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta Star Wars oyun alanı
+          bulunuyor, programınız işte burada çalışacak. Her bir seviyenin yönergeleri
+          oyun alanının altında yazılıdır.
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar
           yer alıyor.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Eğer solaİlerle(); blokunu çalışma alanına sürükleyip, oynata basarsam
+          ne olur? BB-8 sola bir kare hareket eder.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: Peki BB-8'in sola ilerledikten sonra başka bir şey yapmak istiyorsam
+          ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle();
+          blokunu seçip renkli ışık belirene kadar solaİlerle(); blokumun altına sürükleyeceğim.
+          Sonra bırakacağım ve iki blok birbirine kenetlenecek.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet
+          kutusuna sürüklemeniz yeterli.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Oynata bastıktan sonra, her zaman sıfırla tuşuna basarak BB-8'in başa
+          dönmesini sağlayabilirsin. Haydi şimdi başlayalım!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
@@ -3057,8 +3053,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada
+          yaparsınız.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

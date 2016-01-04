@@ -247,10 +247,10 @@
       2:
         image: |
           notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: إذا وضعت قطعة "تقدم للامام" في موقع الحدث حيث تقول القطعة "شغل" و "اتجه
+          لليسار" حيث تقول "والا" وهذا يعني أن الزومبي سيختار بين خيارين أثنين. 'اذا'
+          كان الطريق سالكا، الزومبي سوف يتقدم للمام، وإلا  (لن تكون الطرق سالكة)،
+          وسوف يتجه الزومبي يساراً.
       3:
         image: |
           notes/hoc5_3.jpg

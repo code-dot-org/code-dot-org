@@ -251,57 +251,10 @@ bg:
     remove: (премахнете учител)
     confirm:
       remove: Наистина ли искате да премахнете този учител?
-    tools: Инструменти за учителя
-    followers:
-      section: 'Раздел:'
-      stages: 'Етап(и) за показване:'
-      show_past: 'Показва предишната активност на ученика (%{bullet_html}):'
-      levels_key: Ключ за нивата
-      perfect: Завършено, перфектно
-      completed: Завършено, но се използват твърде много блокове
-      tried: Опитано, но не е завършено
-      not_tried: Не е опитано още
-      activity: 'Показва активността на ученика в последните %{hours} %{plural}'
-      no_section: Не е прибавен към раздел
-      trophies: Трофеи
     students:
-      name: Име
-      username: Потребителско име
-      password: Парола
-      manage: Управление на ученици
       dashboard: Отидете в Таблото на учителя
-      add: Добавяне на ученици
-      remove: премахване на ученик
-      confirm_remove: Наистина ли искате да премахнете този ученик?
-      help_reassign: За да разделите класа си в няколко групи(раздели), изберете учениците, които ще отделите в нова група.
-      help_register: За да не губят много време в самостоятелна регистрация учениците ви, можете Вие да създадете и регистрирате вашия клас. На учениците ще предоставите само код, с който те ще се присъединят към създадения клас. Те ще трябва да въведат потребителско име и парола, но няма да се налага да предоставят своята електронна поща. Ако ученик забрави паролата си, Вие можете да я възстановите.
-      register: Помолете вашите ученици да се регистрират сами
-      vist: Поискайте вашите ученици да посетят
-      section_code: 'и да въведат кода си за раздел:'
-      first_please: 'Първо, моля %{add_section}'
-      for: За
-      enter: 'въведете:'
-    sections:
-      add: Добавяне на раздел
-      manage: Управление на раздели
-      section: Раздел
-      students: Ученици
-      section_code: Код за раздел
-      add_section_code: Добави ученически код за раздел
-      secret: Тайна парола
-      grade: Клас
-      course: Курс
-      rename: преименуване
-      edit: редактира
-      delete: изтрива
-      confirm_delete: Наистина ли искате да изтриете този раздел?
-      email: Изпращане по имейл
-    rollup: Табло на прогреса
-    activity: Последните дейности на класа
-    user_not_found: Учителят или ученикът не може да бъде намерен
-    cant_remove_student_no_email: '%{student_name} не може да бъде премахнат като ваш ученик, защото %{student_name} не регистриран с e-mail адрес'
-    cant_remove_teacher_no_email: '%{teacher_name} не може да бъде премахнат като ваш учител, защото не сте регистриран с e-mail адрес'
-    student_teacher_disassociated: '%{teacher_name} е премахнат като учител на %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Преглед на отговора
       student: Ученик
@@ -375,6 +328,7 @@ bg:
   share:
     title: Обучавайте се в Code Studio
     description: Всеки може да учи компютърни науки. Програмирай игри, приложения и изкуство с код.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Мъж
     female: Жена
@@ -386,8 +340,8 @@ bg:
     thank_you: 'Благодарим на нашите <a href="https://code.org/about/donors"> дарители</a>, <a href="https://code.org/about/partners"> партньори</a>, нашия <a href="https://code.org/about/team"> разширен екип</a>, нашите видео гласове и нашите <a href="https://code.org/about/advisors"> образователни съветници</a> за подкрепата им в създаването на Code Studio.'
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на този урок.
     help_from_html_old: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на тези материали.
-    art_from_html: 'Ice Age&#8482; &amp; &copy;%{current_year} 20th Century Fox. Всички права запазени. <br /> Angry Birds&#8482; &amp;&copy; 2009-%{current_year} Rovio Entertainment Ltd. Всички права запазени. < br / > Plants vs. Zombies&#8482; &amp;&copy; %{current_year} Electronic Arts Inc. Всички права запазени'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всички права са запазени.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всички права са запазени'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Създадено с Amazon Web Services
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE logo и Hour of Code&reg; са търговски марки на Code.org.'
     copyright: Авторско право
@@ -404,6 +358,7 @@ bg:
     built_on_code_studio: Направено в Студиото по кодиране
     make_my_own_app: Направих собствено приложение
     how_it_works: Как работи
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Нужда от помощ?
     subtitle: Вижте тези клипове и съвети
@@ -460,7 +415,7 @@ bg:
       unused: Неизползвани нива
   upsell:
     hoc:
-      title: Classic Maze
+      title: Класически лабиринт
       body: Опитайте основите на компютърните науки. Милиони направиха първите си стъпки.
     flappy:
       title: Flappy код

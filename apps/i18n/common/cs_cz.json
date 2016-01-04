@@ -172,7 +172,11 @@
   "help": "Nápověda",
   "hideToolbox": "(Skrýt)",
   "hintHeader": "Zde je rada:",
+  "hintPrompt": "Potřebujete pomoc?",
   "hintRequest": "Viz tip",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Tip:",
   "ignore": "Ignorovat",
   "infinity": "Nekonečno",
@@ -243,9 +247,5 @@
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Pracovní prostor: "
 }

@@ -1,9 +1,8 @@
 "sr":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      not_saved: 'Молим вас исправите следеће грешке:'
+      too_young: Овај садржај има ограничење и није доступан млађим ученицима
   activerecord:
     errors:
       messages:
@@ -28,21 +27,21 @@
   add_teacher_form:
     code:
       label: 'Додај наставника:'
-      placeholder: Section Code (ABCDEF)
+      placeholder: Шифра секције(ABCDEF)
     submit: Додај наставника
   add_hint_form:
     placeholder: Молимо унесите ваш савет овде
     submit: Додај савет
   appname: Code.org
   stage: фаза
-  stage_number: Stage %{number}
+  stage_number: Стаза%{number}
   puzzle: Пузла
   trophies: трофеји
   courses: курсеви
   of: од
   more: ВИШЕ
   less: МАЊЕ
-  beta: beta
+  beta: пробна верзија
   try_hoc: 'Испробајте Hour of Code.Кликните овде >> '
   try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
   k8intro: К-8 курс Увод у рачунарство (15-25 часова)
@@ -67,13 +66,13 @@
     need_confirmation: Нисте примили инструкције за потврду?
     need_unlock: Нисте примили инструкције за откључавање?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: '%{count} ученика се већ пријавило.'
+    teacher_count: '%{count} наставника се већ пријавило.'
+    overview_student: Пријавите се да би сте пратили свој прогрес.Ваш имејл се примарно
+      користи да би се улоговали и да би вратили лозинку.За више информација, погледајте<a
+      href="http://code.org/privacy">Правила приватности</a>.
+    overview_teacher: Научи информатику у својој учионици тако што ћеш се пријавити.<p/>Моћи
+      ћеш да додаш ученика и да пратиш њихово напредовање.
     no_signup_message: Можете <a target="_blank" href="http://learn.code.org">претраживати
       разне нивое и загонетке</a>, али ће те морати да се пријавите како бих запамтили
       ваш напредак.
@@ -88,7 +87,7 @@
     gender: Пол (опционо)
     birthday: Датум рођења (опционо)
     age: Узраст
-    user_type: Are you a student or teacher?
+    user_type: Да ли си ученик или наставник?
     submit: Региструј се
     teacher: Да ли сте наставник?
     valid_username: Доступно!
@@ -113,14 +112,14 @@
     remember: Запамти ме
     submit: Пријави се
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Желиш ли да пробаш програмирање без пријављивања?
     try_hoc: Прво испробај један Сат Кода
     try_20hours: Испробајте наш 20-часовни увод у Рачунарство
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: Добродошли на %{section_name}
     name: Изаберите име
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    picture: Сада пронађи своју тајну слику
+    words: Унесите ваше тајне речи
     login: Пријави се
   password:
     reset_form:
@@ -153,8 +152,8 @@
       no_teacher: Нисмо нашли никога пријавлјеног са '%{teacher_email_or_code}'. Молимо
         затражите да се поновно пријаве и онда их покушајте поновно додати
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      blank_code: Упишите шифру секције
+      cant_join_own_section: Извини, није можеш се придружити својој секцији.
     mail:
       invite_student:
         subject: Придружи се разреду %{teacher_name} на Code.org!
@@ -172,7 +171,7 @@
     code: 'Код:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
+    donorschoose_project: Постави пројекат
     donorschoose_how_to: Како да користите вашу шифру
     success: Ваша је награда успешно откуплјена, погледајте код испод.
     error: Ваша награда није могла бити откуплјена, молимо покушајте поновно.
@@ -257,10 +256,10 @@
       finished_hoc: Завршио сам свој Сат програмирања
       sign_in_to_save: Пријави се да сачуваш напредак
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Направи апликацију
+        artist: Нацртај нешто
         calculate: Calculate Something
-        applab: Make an App
+        applab: Направи апликацију
     user:
       classroom: Почетна страница за учитеље
       district_dashboard: District Dashboard
@@ -271,9 +270,9 @@
       logout: Одјави се
       signin: Пријави се
       signup: Региструј се
-      already_registered: Already registered?
+      already_registered: Већ си регистрован?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: Напредак%{name}
       progress: Напредак
       lines: 'Укупно линија кода: %{lines}'
       close: ЗАТВОРИ
@@ -284,71 +283,17 @@
       prize_us_only: (Само за ученике из САД-а)
       prizes_link: Више информација
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Одговор
+    for_teachers_only: Само за наставнике
     title:
       one: 'Твој учитељ:'
       other: 'Твоји учителји:'
     remove: (уклони учитеља)
     confirm:
       remove: Да ли си сигуран/а да желиш да уклониш овог учитеља?
-    tools: Учителјева помагала
-    followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
-      trophies: трофеји
     students:
-      name: Име
-      username: корисничко име
-      password: Шифра
-      manage: Рспоредити студенте
       dashboard: Go to Teacher Dashboard
-      add: Сви студенти
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
-    sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: преименуј
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Плоча напретка
-    activity: Скорашнје активности разреда
     user_not_found: Учитељ или ученик није пронађен
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
     panel:
@@ -437,6 +382,7 @@
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Мушко
     female: Женско
@@ -476,6 +422,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Требаш помоћ?
     subtitle: Погледај ове снимке и савете

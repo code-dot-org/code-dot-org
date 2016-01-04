@@ -46,7 +46,7 @@
         text: 你好，我叫 JR! 每一个赛车团队都需要计算机科学家来帮助其队伍赢得比赛。他们通过分析数据来帮助赛车跑得更快。
       2:
         image: notes/stage5_2.jpg
-        text: 在下面的这些益智游戏中，你会扮演一名画家，你的任务就是在他们所到之处的后面画一条线。
+        text: 在下面的这些益智游戏中，你会扮演一名小艺术家，你的任务就是在他们所到之处的后面画一条线。
       3:
         image: notes/stage5_3.jpg
         text: 该模块的意思是"向前移动 100 个像素。"像素是构成你屏幕画面的一个个非常小的点。
@@ -156,7 +156,7 @@
         text: 如果语句是计算机科学中非常重要的一种语句。我写的第一个程序是一个井字游戏，在里面，我使用了“如果”语句说，如果对方马上就要赢了，就在那个位置上打上自己的符号。
       7:
         image: notes/hoc4_7.jpg
-        text: 学习如何使用"如果"块
+        text: 学习如何使用"如果"模块
     if_else:
       1:
         image: notes/hoc5_1.jpg
@@ -186,13 +186,13 @@
     function:
       1:
         image: notes/stage13_1.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 你好，我叫布丽娜，我是Instagram 的一名工程师。函数是您想要多次使用的一些代码，有了函数就不需要每次编写该代码，而只用这一个函数模块就可以了。
       2:
         image: notes/stage13_2.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 我们下面学习如何定义函数。函数定义在角上有一颗星作为标示。函数的名称写在顶行。
       3:
         image: notes/stage13_3.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 模块里面的定义告诉我们它的功能。该函数的定义叫做"填充5"而它是由"重复"模块和"填充"模块组成的。
       4:
         image: notes/stage13_4.jpg
         text: 虽然定义放在工作区中，但农民不会运行该函数。除非我们从函数类别中拖出"填充 5"功能块。
@@ -205,36 +205,36 @@
         text: '你好，我是Makinde。让我们一起来学习“当”模块吧。 '
       2:
         image: notes/stage9_6.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 当顶上的语句值为真时，“当”模块将不停执行里面的任何命令。
       3:
         image: notes/stage9_7.jpg
         text: 打个比方，如果农民站在土堆上时，只要她脚底下还有图，她就会不停的移除一铲土。
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 嗨，我是特里纳，我为皮克斯工作。我已经从事于许多部电影，包括《怪物史莱克》。
       2:
         image: notes/stage11_2.jpg
         text: 这是新的“计数”循环。它能反复执行某些操作，你可以对这些操作做少量的修改。
       3:
         image: notes/stage11_3.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 在此示例中，“计数器”循环的内容是：“从 50 加到 90，每次加 10。”。并在循环里面有一个“画一个正方形”模块。将"计数器"模块从"变量"单元拖动到"长度"处。
       4:
         image: notes/stage11_4.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 这表示我们的小艺术家会先画一个边长为50像素的正方形，然后会增加10像素，画一个60像素的正方形。然后会每次增加10像素来画正方形，直到90像素。所以，我们会有50，60，70，80，90像素的正方形。
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 嗨，我是Janete, 我是Zynga的工程师。
       2:
         image: notes/stage15_2.jpg
         text: 如果我们要画出一大堆有着不同边长的三角形，怎么做才好呢？
       3:
         image: notes/stage15_3.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 我们可以一行一行写出所有代码，也可以用用带参数的函数来完成。
       4:
         image: notes/stage15_4.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 要完成此操作，点击“画一个三角形”函数定义上面的蓝色星星，然后拖动“输入名称”到“输入”模块中。
       5:
         image: notes/stage15_5.jpg
         text: 接下来，如果你在写着“x”的区域输入“长度”，然后按下“Enter”键，就可以提你的函数建立一个名为“长度”的输入。
@@ -243,7 +243,7 @@
         text: 然后点击星星。现在，点击的变量类别并将"长度"块拖动到您的函数定义中的"向前"模块内。最后将旧编号块移除。
       7:
         image: notes/stage15_7.jpg
-        text: 我们要工资！我们要工资！翻译尼玛这么多代码还有提示语神马的也不给我们付工资！严正抗议~~~
+        text: 要使用有参数的函数，需要点击函数勒边，然后拖拽出“画一个长度为... 的三角形”函数。
       8:
         image: notes/stage15_8.jpg
         text: 现在你可以使用数字模块输入不同的数字来绘制不同大小的三角形。
@@ -322,64 +322,38 @@
         text: 在计算机科学中最重要的概念之一是如何定义新命令。 大多数计算机编程语言只有约100个左右的关键词和命令。而真正的艺术所在就是如何使用这些已有的模块来定义出你自己的命令。
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: 一旦你教会了计算机如何通过一组指令完成一件事情的命令，你就可以给它取个名字。这样，以后你就能很容易的重复它了。当你定义了这样一个命令，并给它取了名字，这就叫做函数了。
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: 你好，我是杰丝。当你用模块编程时，如果这里有一组指令是经常要重复使用的，可以将它们定义为函数。例如，可以用一个函数来放创建一个正方形的模块。
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: '你可以将这个定义为叫做”创建一个正方形“的函数。 '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: 现在，你有了一个能够多次使用的新模块了。你能用它创建出多个正方形了。
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: 很多简单的形状可以用来创建更复杂的模式。在下一关中，你可以用最近写的画圆来创造一个新的函数，并且用这个函数来画各种大小的圆。你能帮助艾莎在雪里创建复杂而又美丽的模式吗？
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: 我们会用游戏实验室来创建游戏。一个好的游戏会有故事，每个故事都会有演员。我们将要学习让巫师、外星人、动物这样的演员来说话，移动，互动。在这个教程结束的时候，你能从头创建一个游戏，并且分享给朋友。
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: 您的屏幕分为 3 个主要部分。左边是在您的程序将运行的游戏空间。每一关的说明都是写在下面。
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: 中间是工具箱，每个模块都是一段代码。右边的空白区域是工作区，这是我们创建程序的地方。
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: 在开始以前，你需要将模块连接到橙色的“当运行时”模块下面。你可以将多个模块拖到一起，在看到黄线时松开。这样它们就能粘到一起，并按顺序运行了。
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: 在这一关里，我们的演员是一只企鹅，通过拖拽出“说”模块来让它说“你好”吧！将它连接到“当运行时”模块下，并且在里面打出“你好”。我们也可以用向左移动和向右移动的模块让企鹅移动。一旦你将模块放好后，点击“运行”按钮来看看你写的程序。
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: 从头学完后，你能用所有的演员来创建自己的游戏。你能让他们之间能够互动，高兴或伤心，获得分数，互相扔火球，甚至能够消失。你可以随便想象，并做出你的游戏。
     playlab_events:
       1:
         image: notes/playlab_events_1.png
@@ -389,16 +363,10 @@
         text: 一般事件会去侦听的动作有鼠标单击，按下方向键，屏幕触碰。
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: 当点击时当玩家点击这个空间机器人时，让它向人类问好。我们会加一个“说”模块到“当点击时”模块里。当玩家点击空间机器人时，所有在“当点击时”里的模块都会执行。想让你的外星人说什么?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: 这里也有“当按... 方向键时”的模块。如果你将移动模块连接到它们里面后，你就能开始移动你的演员上下左右移动。一步步的，你的游戏变得更加互动了。
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
@@ -615,11 +583,8 @@
           of times and not get bored and be able to carry that out really well.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: 例如，如果我想给 Facebook 上的每个人发一封电子邮件，送上生日祝福，那我恐怕要花100多年写所有的邮件。但只用几行代码，我就能通过一个系统发电子邮件给Facebook
+          上的每个人，祝他们生日快乐。
       3:
         image: notes/C1_maze_loops_3.png
         text: To get the bird to the pig in this level... rather than drag three North
@@ -788,11 +753,8 @@
           of times and not get bored and be able to carry that out really well.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: 例如，如果我想给 Facebook 上的每个人发一封电子邮件，送上生日祝福，那我恐怕要花100多年写所有的邮件。但只用几行代码，我就能通过一个系统发电子邮件给Facebook
+          上的每个人，祝他们生日快乐。
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: In this example, your goal is going to be to move the bird to get the
@@ -1420,26 +1382,16 @@
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: This lesson is functional suncatchers. You'll be creating these pretty
-          suncatchers using functions. There are several steps in creating one of
-          these suncatchers. Some of the steps you have to repeat many times.
+        text: 这一课叫做函数化的吊饰。你将会通过函数来创建漂亮的吊饰。这里有创建吊饰的步骤，有些步骤可能需要重复很多次。
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is
-          figure out what we have to repeat over and over again. We can group these
-          steps into what we call a function.
+        text: 简化创建过程的第一步，是要找出哪些步骤会重复多次。我们可以把这些步骤组合起来放到一个叫做函数的部分里。
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: But there is more to creating a beautiful suncatcher than following
-          precise steps. Sometimes we want to be creative and change the color of
-          the beads we're using. We can make every suncatcher unique if we use different
-          colored beads.
+        text: 如果要创建一个漂亮的吊饰，不能仅仅是完全精确一样的步骤。有时候，我们需要创造新的改变珠子的颜色。通过使用不同的颜色，我们可以让每个吊饰都独一无二。
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the
-          beads as variables which is a word that means a placeholder for information
-          that can change. Have fun creating beautiful suncatchers using functions
-          and variables!
+        text: 当你学会使用叫做“珠子”的变量时，你就能让你的吊饰独一无二了。变量表示一个可以改变的东西，每个变量都有自己的名字。通过使用函数和变量，尽情发挥、做出美丽的吊饰吧！
     C3_internet:
       1:
         image: notes/C3_internet_1.png
@@ -2418,11 +2370,11 @@
         text: 在这里，我们要使 R2-D2 往 上移动并给反叛军飞行员一个消息，然后向下移动到其他的反叛军飞行员。当玩家使用向上/向下箭头键或向上/向下按钮时，将使用事件让它移动。
       6:
         image: notes/starwars_events_6.JPG
-        text: 我们使用 “当箭头键向上” 事件块并将 “移动 向上” 块附在上面。当玩家按下向上箭头键时，附加到 “当箭头键向上” 块中的代码将运行。我们要使
+        text: 我们使用 whenUp() 事件块并将 goUp() 块附在上面。当玩家按下向上箭头键时，附加到 whenUp() 块中的代码将运行。我们要使
           R2-D2 向下移动也会做同样的事。
       7:
         image: notes/starwars_events_7.JPG
-        text: 为此，我们将使用一个叫做“当箭头键向上”的命令。当您从工具箱中拖出这个命令时，您会看到它开头和结尾是用花括号而不是分号。这给了我们可以放其它命令的空间。当玩家按下向上箭头，这些运行括号内的每一个命令。
+        text: 为此，我们将使用一个叫做 whenUp() 命令。当您从工具箱中拖出这个命令时，您会看到它开头和结尾是用花括号而不是分号。这给了我们可以放其它命令的空间。当玩家按下向上箭头，这些运行括号内的每一个命令。
       8:
         image: notes/starwars_events_8.JPG
         text: 我们想要 R2-D2 往上，所以让我们把 “移动 向上” 块放到这个命令中。我们会用同样的方式让 R2-D2往下。
@@ -2499,7 +2451,7 @@
         text: 在这里，我们要使 R2-D2 往 上移动并给反叛军飞行员一个消息，然后向下移动到其他的反叛军飞行员。当玩家使用向上/向下箭头键或向上/向下按钮时，将使用事件让它移动。
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: 我们使用 “当箭头键向上” 事件块并将 “移动 向上” 块附在它上面。当玩家按下向上箭头键时，附加在 “当箭头键向上” 块中的代码将运行。为使
+        text: 我们使用 whenUp() 事件块并将 goUp() 块附在它上面。当玩家按下向上箭头键时，附加在 whenUp() 块中的代码将运行。为使
           R2-D2 向下移我们可同样做。现在取代事先编写所有的代码控制我们的机器人，我们可以让 R2-D2 对按钮按下事件做出反应在屏幕中移动。
       7:
         image: notes/starwars_blocks_events_7.JPG
@@ -2571,7 +2523,7 @@
         text: 在 我的世界 中，我最喜欢的事情就是探索。我喜欢在洞穴中冒险，看看能找到些什么。跟本身不是程序员的人一样，我非常期待能学习 我的世界 课程，并真正学到了一些编码知识。
       3:
         image: notes/mc_repeat_3.JPG
-        text: 最后关卡需要大量 前进(); 方块。如果我们能告诉计算机执行四或五次前进命令，就会简单得多。幸运的是，计算机真的非常擅于重复执行具有重复循环的命令。
+        text: 最后关卡需要大量 moveForward(); 块。如果我们能告诉计算机执行四或五次前进命令，就会简单得多。幸运的是，计算机真的非常擅于重复执行具有重复循环的命令。
       4:
         image: notes/mc_repeat_4.JPG
         text: 在建造 我的世界 时，我们使用重复循环放置所有用于创造新世界的原始材料。那可是成千上万的方块。在细小的环节上，我们也会使用循环，例如让艾莉克斯的腿在走路时反复交替。重复循环可是编程的一大利器。
@@ -2687,9 +2639,7 @@
           performed.
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: 这里也有“当按... 方向键时”的模块。如果你将移动模块连接到它们后，你就能开始移动你的演员上下左右移动。一点点的，你的游戏变得更加互动了。
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
@@ -2736,8 +2686,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: 右边的空白区域称为工作区，是我们建立程序的地方。
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -2771,9 +2720,7 @@
           performed.
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
+        text: 这里也有“当按... 方向键时”的模块。如果你将移动模块连接到它们后，你就能开始移动你的演员上下左右移动。一点点的，你的游戏变得更加互动了。
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG

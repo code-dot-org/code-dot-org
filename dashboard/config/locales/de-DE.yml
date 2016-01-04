@@ -140,7 +140,7 @@
 
       %{link}
 
-      Die Anleitungen machen Spass, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
+      Die Anleitungen machen Spaß, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
 
       %{name}
   follower:
@@ -301,63 +301,9 @@
     remove: (entferne Lehrer)
     confirm:
       remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
-    tools: Werkzeuge für Lehrer
-    followers:
-      section: 'Abschnitt:'
-      stages: 'Teil(e) zum anzeigen:'
-      show_past: 'Zeige die Schüleraktivität (%{bullet_html}) in der Vergangenheit:'
-      levels_key: Ebenen-Schlüssel
-      perfect: Abgeschlossen, perfekt
-      completed: Abgeschlossen, aber du hast zu viele Blöcke verwendet
-      tried: Versucht, aber nicht abgeschlossen
-      not_tried: Bisher wurde es nicht versucht.
-      activity: Zeigt Aktivitäten in den letzten %{hours} %{plural}
-      no_section: Kein Abschnitt zugewiesen
-      trophies: Trophäen
     students:
-      name: Name
-      username: Benutzername
-      password: Passwort
-      manage: Schüler verwalten
       dashboard: Gehen Sie zum Lehrer-Dashboard!
-      add: Schüler hinzufügen
-      remove: Schüler entfernen
-      confirm_remove: Sind Sie sicher, dass Sie diesen Schüler entfernen möchten?
-      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie
-        die Schüler aus, die einem neuen Abschnitt zugewiesen werden sollen.
-      help_register: Anstatt viel Zeit damit zu verbringen die Schülerdaten zu importieren,
-        können Sie ihre Klasse registrieren indem sich jeder Schüler selbst anmeldet.
-        Ihre Schüler müssen dazu einen Username und ein Passwort angeben, jedoch keine
-        Email-Adresse. Falls ein Schüler sein Passwort vergessen sollte, so können
-        Sie dieses für ihn zurücksetzen.
-      register: Fordern Sie ihre Schüler auf, sich selbst anzumelden
-      vist: Fordern Sie Ihre Schüler auf, die Seite zu besuchen
-      section_code: 'und geben Sie ihren Abschnitt-Code ein:'
-      first_please: Zuerst, bitte %{add_section}
-      for: Für
-      enter: 'Eingabe:'
-    sections:
-      add: Abschnitt hinzufügen
-      manage: Sektionen verwalten
-      section: Abschnitt
-      students: Schüler
-      section_code: Abschnitt-Code
-      add_section_code: Schüler Abschnitt-Code hinzufügen
-      secret: Geheimer Typ
-      grade: Note
-      course: Kurs
-      rename: umbenennen
-      edit: Bearbeiten
-      delete: löschen
-      confirm_delete: Diesen Abschnitt wirklich löschen?
-      email: Als e-Mail senden
-    rollup: Fortschrittsanzeige
-    activity: Letzte Aktivitäten der Klasse
     user_not_found: Der Lehrer oder Schüler konnte nicht gefunden werden
-    cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt
-      werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
-    cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt
-      werden, da du keine E-Mail-Adresse registriert hast'
     student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name}
       entfernt'
     panel:
@@ -446,6 +392,7 @@
     title: Lernen Sie von Code Studio
     description: Jeder kann Informatik lernen. Erstelle Spiele, Apps und Kunst durch
       Code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Männlich
     female: Weiblich
@@ -482,9 +429,10 @@
     privacy: Datenschutzerklärung
     secure: Sichere Version
     report_abuse: Missbrauch melden
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
+    built_on_code_studio: Erstellt auf Code Studio
+    make_my_own_app: Meine eigene App entwickeln
     how_it_works: So funktioniert es
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -553,7 +501,7 @@
       unused: Unbenutzte Levels
   upsell:
     hoc:
-      title: Programmierstunde
+      title: Klassisches Labyrinth
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben
         es schon probiert.
     flappy:

@@ -172,7 +172,11 @@
   "help": "Ohje",
   "hideToolbox": "(Piilota)",
   "hintHeader": "Tässä on Vihje:",
+  "hintPrompt": "Tarvitsetko apua?",
   "hintRequest": "Katso vihje",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Vihje:",
   "ignore": "Hylkää",
   "infinity": "Ääretön",
@@ -243,9 +247,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Työtila: "
 }

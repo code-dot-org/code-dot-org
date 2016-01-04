@@ -172,7 +172,11 @@
   "help": "Справка",
   "hideToolbox": "(Скрыть)",
   "hintHeader": "Подсказка:",
+  "hintPrompt": "Нужна помощь?",
   "hintRequest": "Посмотреть подсказку",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Подсказка:",
   "ignore": "Игнорировать",
   "infinity": "Бесконечность",
@@ -243,9 +247,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

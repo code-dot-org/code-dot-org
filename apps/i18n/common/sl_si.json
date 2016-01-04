@@ -172,7 +172,11 @@
   "help": "Pomoč",
   "hideToolbox": "(Skrij)",
   "hintHeader": "Tukaj je namig:",
+  "hintPrompt": "Potrebujete pomoč?",
   "hintRequest": "Poglej namig",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Namig:",
   "ignore": "Prezri",
   "infinity": "Neskončnost",
@@ -243,9 +247,5 @@
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Delovni prostor: "
 }

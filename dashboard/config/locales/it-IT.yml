@@ -308,65 +308,9 @@
     remove: (rimuovi insegnante)
     confirm:
       remove: Sei sicuro di voler rimuovere questo insegnante?
-    tools: Strumenti dell'insegnante
-    followers:
-      section: 'Classe:'
-      stages: 'Lezione/i da visualizzare:'
-      show_past: 'Mostra l''attività svolta dallo studente (%{bullet_html}):'
-      levels_key: Chiave dei livelli
-      perfect: Completato, perfettamente
-      completed: Completato, ma usando troppi blocchi
-      tried: Provato, ma non completato
-      not_tried: Non ancora provato
-      activity: Indica le attività degli studenti nelle ultime %{hours} %{plural}
-      no_section: Non hai creato alcuna classe
-      trophies: Trofei
     students:
-      name: Nome
-      username: Nome utente
-      password: Password
-      manage: Gestisci i tuoi studenti
       dashboard: Vai al Cruscotto di controllo dell'insegnante
-      add: Aggiungi i tuoi studenti
-      remove: rimuovi studente
-      confirm_remove: Sei sicuro di voler rimuovere questo studente?
-      help_reassign: Per dividere i tuoi studenti fra più classi, scegli gli studenti
-        da assegnare alla nuova classe.
-      help_register: Invece di farti spendere un sacco di tempo importando individualmente
-        i dati di ogni studente, puoi definire rapidamente la tua classe chiedendo
-        ai tuoi studenti di iscriversi. I tuoi studenti dovranno scegliere uno username
-        e una password, ma loro NON sono obbligati a fornire un indirizzo di posta
-        elettronica. Se uno studente perde la sua password, potrai definirne una nuova
-        per lui.
-      register: Chiedi ai tuoi studenti di iscriversi
-      vist: Chiedi ai tuoi studenti di visitare
-      section_code: 'e inserire il loro codice-classe:'
-      first_please: Per favore, aggiungi prima %{add_section}
-      for: Per
-      enter: 'entrare:'
-    sections:
-      add: Aggiungi classe
-      manage: Gestisci le classi
-      section: Classe
-      students: Studenti
-      section_code: Codice-Classe
-      add_section_code: Aggiungere il codice-classe degli studenti
-      secret: Tipo di password
-      grade: Livello
-      course: Corso
-      rename: rinomina
-      edit: modifica
-      delete: cancella
-      confirm_delete: Sei sicuro di voler cancellare questa classe?
-      email: Invita uno studente mediante un messaggio di posta elettronica
-    rollup: Cruscotto di avanzamento
-    activity: Attività recenti della classe
     user_not_found: L'insegnante o lo studente non è stato trovato
-    cant_remove_student_no_email: '%{student_name} non può essere rimosso come tuo
-      studente perché %{student_name} non si è iscritto con un indirizzo di posta
-      elettronica'
-    cant_remove_teacher_no_email: '%{teacher_name} non può essere rimosso come tuo
-      insegnante perché non si è iscritto con un indirizzo di posta elettronica'
     student_teacher_disassociated: '%{teacher_name} è stato rimosso come insegnante
       per %{student_name}'
     panel:
@@ -459,6 +403,7 @@
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
       artistici con la programmazione.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Maschile
     female: Femminile
@@ -498,9 +443,10 @@
     privacy: Informativa sulla privacy
     secure: Versione sicura
     report_abuse: Segnala un abuso
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Crea in Code Studio
+    make_my_own_app: Crea la tua App
+    how_it_works: Come funziona
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti

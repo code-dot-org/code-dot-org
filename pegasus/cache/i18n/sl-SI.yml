@@ -27,6 +27,9 @@
   twentyhours_heading: Poskusite naš tečaj Uvod v Računalništvo
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
     programiranja v tem spremljanjem tečaju.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a>
     <br/> 8. do 14. decembra, 2014 <br/>
   hoc2014_students: Učenci
@@ -367,6 +370,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Ime
@@ -676,6 +680,12 @@
   dashboard_faq_k5: Pogosta vprašanja, prva petletka
   dashboard_announcements: Obvestila
   dashboard_announce_view_all: Poglej vse
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Več o tem
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -751,8 +761,8 @@
   mobile_devices: Vaje za mobilne naprave
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Napiši svoj prvi računalniški program
-  codeintl_name: Napiši svoj prvi računalniški program
+  codeorg_name: Klasičen labirint
+  codeintl_name: Klasičen labirint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Uvod v JavaScript
   khanes_name: Uvod v JavaScript
@@ -788,9 +798,9 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamen, papir, škarje
-  hourofcode_name: Prostor za novi code.org/hoc
+  hourofcode_name: Klasičen labirint
   playlab_name: Play Lab
-  infinity_name: Infinity Play Lab
+  infinity_name: Neskončen igralni laboratorij
   artist_name: Artist
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!

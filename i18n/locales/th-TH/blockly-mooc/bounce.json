@@ -15,7 +15,7 @@
   "ifTooltip":"ถ้ามีเส้นทางในทิศที่กำหนด ให้กระทำบางอย่าง",
   "ifelseTooltip":"ถ้ามีเส้นทางในทิศที่กำหนด ให้กระทำในบล็อกแรก มิเช่นนั้น ให้กระทำในบล็อกที่สอง",
   "incrementOpponentScore":"ให้คะแนนฝ่ายตรงข้าม",
-  "incrementOpponentScoreTooltip":"เพิ่มคะแนนให้กับฝั่งตรงข้าม หนึ่งแต้ม.",
+  "incrementOpponentScoreTooltip":"เพิ่ม 1 คะแนนให้ฝ่ายตรงข้าม",
   "incrementPlayerScore":"คะแนนที่ได้",
   "incrementPlayerScoreTooltip":"เพิ่มคะแนนผู้เล่น 1 คะแนน",
   "isWall":"นี่คือกำแพงใช่ไหม",

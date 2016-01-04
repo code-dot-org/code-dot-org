@@ -255,57 +255,10 @@ lt:
     remove: (pašalinti mokytoją)
     confirm:
       remove: Ar tikrai nori pašalinti šį mokytoją?
-    tools: Mokytojo įrankiai
-    followers:
-      section: 'Grupė:'
-      stages: 'Rodyti etapą(-us):'
-      show_past: 'Rodyti ankstesnį mokinių aktyvumą (%{bullet_html}):'
-      levels_key: Lygio raktas
-      perfect: Puikiai išspręsta
-      completed: Išspręsta, tačiau naudojant per daug blokų
-      tried: Bandyta, bet neišspręsta
-      not_tried: Dar nebandyta
-      activity: 'Rodo mokinių veiklą prieš %{hours}%{plural}'
-      no_section: Nepriskirta grupė
-      trophies: Laimėjimai
     students:
-      name: Vardas
-      username: Naudotojo vardas
-      password: Slaptažodis
-      manage: Tvarkyti ir pridėti mokinius
       dashboard: Eiti į mokytojo puslapį
-      add: Pridėti mokinius
-      remove: pašalinti mokinį
-      confirm_remove: Ar tikrai norite pašalinti šį mokinį?
-      help_reassign: 'Kad padalytumėte savo klasę į keletą grupių, pažymėkite mokinius ir priskirkite jiems  grupę.'
-      help_register: Vietoj to, kad praleistumėte daug laiko, kad gauti mokinių duomenis, Jūs galite paprašyti mokinių, kad jie prisiregistruotų. Jūsų mokiniai turės susigalvoti prisijungimo vardus ir slaptažodžius ir jiems NEREIKĖS įvesti el. pašto adreso. Jeigu mokinys užmirš savo slaptažodį, galėsite jam jį pakeisti.
-      register: Paprašykite, kad mokiniai prisiregistruotų patys
-      vist: Pasakykite, kad Jūsų mokiniai apsilankytų
-      section_code: 'ir įvestų savo grupės kodą:'
-      first_please: 'Visų pirma  %{add_section}'
-      for: Už
-      enter: 'įveskite:'
-    sections:
-      add: Pridėti grupę
-      manage: Tvarkyti grupes
-      section: Grupė
-      students: Mokiniai
-      section_code: Sekcijos kodas
-      add_section_code: Pridėti grupės kodą
-      secret: Prisijungimo rakto tipas
-      grade: Kelinta klasė
-      course: Kursas
-      rename: pervadinti
-      edit: redaguoti
-      delete: pašalinti
-      confirm_delete: Ar tikrai norite pašalinti šią grupę?
-      email: Siųsti el. paštu
-    rollup: Mokinių pažanga
-    activity: Paskutinė klasės veikla
-    user_not_found: Mokytojo arba mokinio nepavyko rasti
-    cant_remove_student_no_email: '%{student_name} negalima pašalinti, nes %{student_name} neprisiregistravo su el. pašto adresu'
-    cant_remove_teacher_no_email: '%{teacher_name} negalima pašalinti, nes tu neprisiregistravai su savo el. pašto adresu'
-    student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Atsakymų apžvalga
       student: Mokinys
@@ -379,6 +332,7 @@ lt:
   share:
     title: Mokytis su Code Studio
     description: Kiekvienas gali išmokti informatikos. Programuodami daryti žaidimus, programėles ir grafikos elementus.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Vyras
     female: Moteris
@@ -390,8 +344,8 @@ lt:
     thank_you: 'Mes dėkojame mūsų <a href="https://code.org/about/donors">rėmėjams</a>, <a href="https://code.org/about/partners">partneriams</a>,mūsų <a href="https://code.org/about/team"> plačiai komandai</a>, mūsų video grupei ir mūsų <a href="https://code.org/about/advisors">mokymų patarėjams</a> už jų pagalbą kuriant Code Studio.'
     help_from_html: Mes ypatingai norime padėkoti inžinieriams iš Google, Microsoft, Facebook, Twitter ir daugeliui kitų, kurie padėjo sukurti šias pamokėles.
     help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft, Facebook ir Twitter.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Visos teisės saugomos.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Visos teisės saugomos.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Visos teisės saugomos.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Visos teisės saugomos'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: 'Rėmėjas: Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir Hour of Code&reg; yra Code.org priklausantys prekės ženklai.'
     copyright: Autorinės teisės
@@ -408,6 +362,7 @@ lt:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Reikia pagalbos?
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus

@@ -276,7 +276,7 @@
   "moveTooltip":"Move an actor.",
   "nextLevel":"অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।",
   "no":"না",
-  "numBlocksNeeded":"This puzzle can be solved with %1 blocks.",
+  "numBlocksNeeded":"এই ধাঁধাটি %1 ব্লক দিয়ে সমাধান করা যেতে পারে।",
   "onEventTooltip":"Execute code in response to the specified event.",
   "ouchExclamation":"Ouch!",
   "playSoundCrunch":"কড়মড়ে শব্দ বাজান",

@@ -297,63 +297,9 @@
     remove: (müəllimi sil)
     confirm:
       remove: Are you sure you want to remove this teacher?
-    tools: Müəllim üçün alətlər
-    followers:
-      section: 'Bölmə:'
-      stages: 'Göstəriləcək mərhələ(lər):'
-      show_past: 'Keçmiş şagird fəaliyyətini (%{bullet_html}) göstər:'
-      levels_key: Levels key
-      perfect: Tamamlandı, mükəmməldir
-      completed: Tamamlandı, lakin lazım olandan çox bloklar istifadə olunaraq
-      tried: Sınaqdan keçirilib, lakin tamamlanmayıb
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
-      trophies: kuboklar
     students:
-      name: Ad
-      username: istifadəçi adı
-      password: parol
-      manage: Şagirdlərə nəzarət edin
       dashboard: Go to Teacher Dashboard
-      add: Şagirdləri əlavə edin
-      remove: şagirdi sil
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
-    sections:
-      add: Add section
-      manage: Manage sections
-      section: Bölmə
-      students: Şagirdlər
-      section_code: Bölmə kodu
-      add_section_code: Add Students Section-Code
-      secret: Məxfi kodun növü
-      grade: Grade
-      course: Kurs
-      rename: adını dəyiş
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Gedişat paneli
-    activity: Ən son sinif işləri
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
     panel:
@@ -442,6 +388,7 @@
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Kişi
     female: Qadın
@@ -482,6 +429,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
