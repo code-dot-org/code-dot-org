@@ -190,7 +190,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifelseFlowerTooltip":function(d){return "如果在指定的方向有花或蜂巢，执行第一部分的操作。否则，执行第二部分的操作。"},
 "insufficientHoney":function(d){return "你正确地使用了所有的块，但是你需要得到正确数量的蜂蜜。"},
 "insufficientNectar":function(d){return "你正确地使用了所有的块，但是你需要收集正确数量的花蜜。"},
-"make":function(d){return "使"},
+"make":function(d){return "制作"},
 "moveBackward":function(d){return "向后移动"},
 "moveEastTooltip":function(d){return "把我向东移一步。"},
 "moveForward":function(d){return "向前移动"},

@@ -331,7 +331,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintRequest":function(d){return "Poglej namig"},
 "hintReviewTitle":function(d){return "Review Your Hints"},
 "hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"},
+"hintSelectNewHint":function(d){return "Pridobi nov namig"},
 "hintTitle":function(d){return "Namig:"},
 "ignore":function(d){return "Prezri"},
 "infinity":function(d){return "Neskončnost"},

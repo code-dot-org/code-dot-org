@@ -232,7 +232,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "turnTooltip":function(d){return "Turns me left or right by 90 degrees."},
 "uncheckedCloudError":function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."},
 "uncheckedPurpleError":function(d){return "Make sure to check all purple flowers to see if they have nectar"},
-"whileMsg":function(d){return "while"},
+"whileMsg":function(d){return "جب تک"},
 "whileTooltip":function(d){return "Repeat the enclosed actions until finish point is reached."},
 "word":function(d){return "Find the word"},
 "yes":function(d){return "Yes"},
