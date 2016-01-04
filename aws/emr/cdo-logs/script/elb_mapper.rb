@@ -84,20 +84,18 @@ ARGF.each do |line|
   date = line[0..9]
 
   tutorials.each do |t|
-    if line.include? t
-      # The GET request is surrounded by double quotes, so we exploit this as a
-      # delimiter.
-      get_request = /GET [^"]*/.match(line).to_s
-      # Since the certificate pages have a custom hash, we do not track them.
-      # Also, to avoid counting random URLs, we restrict by length.
-      if get_request != "" && !(/certificate64/.match(line)) &&
-        get_request.length < 75
-        # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
-        # aggregate. Using the date and GET request as the key gives breakdowns by
-        # day and GET request.
-        puts LONG_VALUE_SUM + date + " " + get_request + "\t" + "1"
-        break
-      end
+    # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
+    # aggregate. Using the date, type (e.g., begin, beginpng, and 443), and 
+    # tutorial as the key gives breakdowns by day, type, and tutorial.
+    if line.include? "begin" + "\/" + t
+      puts LONG_VALUE_SUM + date + " begin " + t + "\t" + "1"
+      break
+    elsif (line.include? "begin_" + t + ".png")
+      puts LONG_VALUE_SUM + date + " beginpng " + t + "\t" + "1"
+      break
+    elsif (line.include? "443" + "\/" + t)
+      puts LONG_VALUE_SUM + date + " 443 " + t + "\t" + "1"
+      break
     end
   end
 end
