@@ -26,7 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier."
+    "markdown_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier.",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -46,7 +47,7 @@
         <block type="maze_moveNorth"/>
         <block type="maze_moveEast"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="2-6">3</title>
         </block>
       </xml>
     </recommended_blocks>
