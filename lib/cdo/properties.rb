@@ -40,19 +40,17 @@ class Properties
 end
 
 def fetch_metrics()
-  # TODO(asherkach): Reenable Properties.get(:metrics). It is being disabled
-  # as we are seeing 0 lines of code being returned.
-  # Properties.get(:metrics) || {
+  Properties.get(:metrics) || {
   {
-    'created_at'=>"2015-11-04T21:11:40+00:00",
-    'created_on'=>"2015-11-04",
+    'created_at'=>"2016-01-04T21:37:19+00:00",
+    'created_on'=>"2016-01-04",
     'csedweek_organizers'=>38236,
     'csedweek_teachers'=>24025,
     'csedweek_entire_schools'=>12754,
     'csedweek_students'=>4875091,
     'csedweek_countries'=>356,
-    'petition_signatures'=>1922485,
-    'lines_of_code'=>8412317091,
+    'petition_signatures'=>2053571,
+    'lines_of_code'=>11151730618,
   }
 end
 
