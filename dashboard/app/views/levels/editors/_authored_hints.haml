@@ -40,6 +40,25 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
+
+      // A markdown parser that supports a subset of rules; specifically,
+      // those rules that we feel comfortable entrusting to translators
+      var limitedMarked = (function () {
+
+        var renderer = new marked.Renderer();
+        renderer.link = function (href, title, text) {
+          return text;
+        };
+
+        return function (input) {
+          return marked(input, {
+            renderer: renderer,
+            sanitize: true
+          });
+        };
+
+      })();
+
       jsonEditor("#authored_hints", {
         json_textarea: '#level_authored_hints',
         add_button: '#add_authored_hint',
@@ -53,15 +72,27 @@
         onNewSpace: function (space) {
           var editor = CodeMirror.fromTextArea(space.find(".hint_markdown").get(0), {
             mode: 'markdown',
-            htmlMode: false,
             viewportMargin: Infinity,
-            matchTags: {bothTags: true},
-            autoCloseTags: true,
             lineWrapping: true
           });
-          editor.on('change', function(editor, change){
+
+          // TODO (elijah) move this into code-studio
+          inlineAttach.attachToCodeMirror(editor, {
+            uploadUrl: '/level_assets/upload',
+            uploadFieldName: 'file',
+            downloadFieldName: 'newAssetUrl',
+            allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
+            progressText: '![Uploading file...]()',
+            urlText: "![]({filename})", // `{filename}` tag gets replaced with URL
+            errorText: "Error uploading file",
+            extraHeaders: {
+              'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+
+          editor.on('change', function (editor, change) {
             space.find('.markdown_preview')
-              .html(marked(editor.getValue()))
+              .html(limitedMarked(editor.getValue()))
               .children('details').details();
 
             space.find(".hint_markdown").val(editor.getValue());
