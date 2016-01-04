@@ -142,7 +142,7 @@
           liczby bloków. Spróbuj za pomocą więcej niż jednego bloku powtórz razy.
         maze_2_8: 'Gdy blok jest szary, oznacza to, że nie można go usunąć. Rozwiąż
           tę łamigłówkę za pomocą bloku "powtórz", który powtarza 3 razy. Postaraj
-          się umieścić w tym szarym bloku "powtórz" 3 bloki: przesuń, przesuń, skręć.'
+          się umieścić w tym szarym bloku3 bloki: idź, idź, skręć.'
         maze_2_9: OK, spróbuj użyć nowego bloku powtórz aż - będzie powtarzał, aż
           dorwę irytującą świnkę.
         maze_2_10: OK, ostatni raz na próbę - czy potrafisz rozwiązać tę łamigłówkę
@@ -151,7 +151,7 @@
           Czy potrafisz mnie tam przeprowadzić używając zaledwie 5 bloków?
         maze_2_12: OK, to jest podobne, ale jednak trochę inne. Czy potrafisz to wykonać
           używając zaledwie 5 bloków?
-        maze_2_13: 'Użyj nowego bloku jeśli, abym mógł zdecydować, kiedy mam skręcić.
+        maze_2_13: 'Użyj nowego bloku "jeśli", abym mógł zdecydować, kiedy mam skręcić.
           Wskazówka: potrzebujesz do tego tylko jednego dodatkowego bloku, ale przyjrzyj
           się jak to zrobiliśmy, abyś następnym razem potrafił zrobić to sam.'
         maze_2_14: OK, ta łamigłówka jest podobna do poprzedniej, ale tym razem musisz
@@ -404,13 +404,13 @@
           "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca
           docelowego.
         flappy_2: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie na
-          ziemię".  Twój kod powinien kończyć grę, gdy Flappy rozbija się.
+          ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
         flappy_3: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu gry.
           Spróbuj ustawić poziom prędkości i pofrunąć do miejsca docelowego.
         flappy_4: Flappy poleci przez przeszkody chyba, że napiszesz kod, który spowoduje,
           że się rozbije. Dołącz blok do bloku "kiedy uderzy w przeszkodę". Twój kod
-          powinien kończyć grę, gdy Flappy rozbija się na pierwszym zestawie rur.
-        flappy_5: Dodajmy tablicę wyników i liczmy punkty, gdy Flappy mija przeszkody.
+          powinien kończyć grę, kiedy Flappy rozbija się na pierwszym zestawie rur.
+        flappy_5: Dodajmy tablicę wyników i liczmy punkty, kiedy Flappy mija przeszkody.
           Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt
           przelatując Flappym przez pierwszy zestaw rur.
         flappy_6: Zobacz, czy potrafisz zdobywać punkty, gdy Flappy fruwa na małą
@@ -418,11 +418,11 @@
         flappy_7: Następnie, spróbuj zmienić scenę dołączając inny blok do bloku "po
           uruchomieniu".
         flappy_8: Efekty wizualne możesz ustawić w dowolnym momencie, nie tylko, gdy
-          gra się zaczyna.  Spróbuj ustawić losową scenę, gdy dzieje się coś innego,
-          na przykład, gdy Flappy mija przeszkodę.
+          gra się zaczyna. Spróbuj ustawić losową scenę, kiedy dzieje się coś innego,
+          na przykład, kiedy Flappy mija przeszkodę.
         flappy_9: Dla zmyłki, po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
           ustawić wynik z powrotem na 0.
-        flappy_11: Utwórz swoją własną grę Flappy'ego. Możesz zmienić wszystkie efekty
+        flappy_11: Utwórz swoją własną grę z Flappym. Możesz zmienić wszystkie efekty
           wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
           przycisk "Zakończ", aby swoim znajomym udostępnić grę na telefony.
         flappy_k1_1: Zagraj z Flappym
@@ -430,14 +430,14 @@
           "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca
           docelowego.
         flappy_k1_3: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie
-          na ziemię".  Twój kod powinien kończyć grę, gdy Flappy rozbija się.
+          na ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
         flappy_k1_4: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu
           gry. Spróbuj ustawić poziom prędkości i pofrunąć do miejsca docelowego.
         flappy_k1_5: Flappy poleci przez przeszkody chyba, że napiszesz kod, który
           spowoduje, że się rozbije. Dołącz blok do bloku "kiedy uderzy w przeszkodę".
-          Twój kod powinien kończyć grę, gdy Flappy rozbija się na pierwszym zestawie
+          Twój kod powinien kończyć grę, kiedy Flappy rozbija się na pierwszym zestawie
           rur.
-        flappy_k1_6: Dodajmy tablicę wyników i liczmy punkty, gdy Flappy mija przeszkody.
+        flappy_k1_6: Dodajmy tablicę wyników i liczmy punkty, kiedy Flappy mija przeszkody.
           Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt
           przelatując Flappym przez pierwszy zestaw rur.
         flappy_k1_7: Zobacz, czy możesz zdobyć wiele punktów przechodząc kilka przeszkód
@@ -469,9 +469,10 @@
         studio_c2_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie
           się do kota?
         studio_c2_4: Czy mógłbyś napisać program, który sprawia, że pies porusza się
-          w kierunku kota i powoduje, że kot mówi "hello", gdy pies dochodzi do niego?
+          w kierunku kota i powoduje, że kot mówi "Hello!", kiedy pies dochodzi do
+          niego?
         studio_c2_5: Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi
-          "hello", po kliknięciu na niej?
+          "Hello!", po kliknięciu na niej?
         studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin porusza
           się za pomocą przycisków w górę / w dół / w lewo/w prawo, by uderzyć we
           wszystkie cele?
@@ -481,7 +482,7 @@
         studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk trafienia,
           gdy wpadnie na dinozaura. Następnie przenieś go za pomocą strzałek, aby
           się to stało?
-        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada
+        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin wpada
           na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
           punkt?
         studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
@@ -495,15 +496,15 @@
         studio_c3_story_3: Czy mógłbyś napisać program, który spowoduje, że ten pies
           przesunie się do kota?
         studio_c3_story_4: Czy mógłbyś napisać program, który sprawia, że pies porusza
-          się w kierunku kota i powoduje, że kot mówi "hello", gdy pies dochodzi do
-          niego?
+          się w kierunku kota i powoduje, że kot mówi "Hello!", kiedy pies dochodzi
+          do niego?
         studio_c3_story_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje
           się szczęśliwie?
         studio_c3_story_6: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk
           "Zakończ", aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich
           telefonach.
         studio_c3_game_1: Czy mógłbyś napisać program, który powoduje, że ośmiornica
-          mówi "hello", po kliknięciu na niej?
+          mówi "Hello!", po kliknięciu na niej?
         studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin
           porusza się za pomocą przycisków w górę /w dół /w lewo/w prawo, by uderzyć
           we wszystkie cele?
@@ -513,8 +514,8 @@
         studio_c3_game_4: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk
           "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek,
           aby się to stało?
-        studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada
-          na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
+        studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin
+          wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
           punkt?
         studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
           a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz
@@ -527,8 +528,8 @@
           dwa razy blok "powiedz"?
         studio_playlab_3: Czy mógłbyś pomóc tenisistce dostać się do flagi?
         studio_playlab_4: Czy możesz pomóc tenisiście (postać 1) dotrzeć do tenisistki
-          (postać 2) i odtworzyć dźwięk, gdy tam dotrze?
-        studio_playlab_5: Czy możesz pomóc, by Spacebot powiedział "pozdrowienia dla
+          (postać 2) i odtworzyć dźwięk, kiedy tam dotrze?
+        studio_playlab_5: Czy możesz pomóc, by Spacebot powiedział "Pozdrowienia dla
           Ziemian" po kliknięciu na nim? Nie zapomnij kliknąć na nim, po kliknięciu
           przycisku "Uruchom"
         studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać się za pomocą
@@ -538,84 +539,85 @@
           kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że czarodziej
           porusza się w górę i w dół bez przerwy?
         studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania
-          dźwięku, gdy jednorożec wpada na kreatora, następnie przenoś go za pomocą
+          dźwięku, kiedy jednorożec wpada na kreatora, następnie przenoś go za pomocą
           strzałek aż zdobędziesz punkt?
         studio_playlab_9: Ustaw tło dla tej inwazji obcych i pomóż Spacebot dotrzeć
           do obcych szybciej zmieniając jego prędkość. Następnie przenoś go za pomocą
           klawiszy strzałek, aby dostać się do Spacebot i zaalarmować wszystkich pozostałych
         studio_playlab_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-        studio_iceage_hello1: Sid chcę zabrać wszystkich za nową przygodę. Możesz
-          pomóc mu powiedzieć "cześć" za pomocą przeciągania bloczka "powiedz" na
-          teren pracy i wpisaniu słowa "cześć" do środka?
-        studio_iceage_hello2: Sid (actor 1) znalazł Mańka (actor 2) i chce zaprosić
-          go na przygodę. Pomóż im się przywitać dwukrotnie używając bloku "actor
-          say".
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) szuka Mańka (actor 2). Pomóż
-          Diego przejść 200 pikseli w dół do Mańka używając bloku "move actor". Następnie
-          połącz blok ze zdarzeniem "when actor touches", aby odtworzyć dźwięk kiedy
-          się odnajdą.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
-        studio_gumball_hello1: Anals chce poznać kilku nowych przyjaciół. Możesz pomóc
-          jej powiedzieć "cześć" przeciągając blok "powiedz" do obszaru roboczego
-          i wpisując słowo "cześć" wewnątrz?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Stwórz swoją własną grę lub opowieść. Kiedy skończysz,
-          kliknij Zakończ, aby udostępnić swoją pracę innym!
+        studio_iceage_hello1: Sid chce zabrać wszystkich za nową przygodę. Pomóż mu
+          powiedzieć "Cześć!" przeciągając blok "powiedz" do obszaru roboczego i wpisując
+          w nim "Cześć!"?
+        studio_iceage_hello2: Sid (postać 1) znalazł Manny'ego (postać 2) i chce zaprosić
+          go na przygodę. Pomóż im się przywitać, dwukrotnie używając bloku "postać
+          mówi".
+        studio_iceage_move_to_flag: Wiewiórka Scrat szuka żołędzia!  Pomóż jej przejść
+          ostatnie 200 pikseli przy użyciu bloku "idź".
+        studio_iceage_move_to_actor: Diego (postać 1) szuka Manny'ego (postać 2).
+          Pomóż Diego przejść 200 pikseli w dół do Manny'ego używając bloku "przenieś
+          postać". Następnie połącz blok ze zdarzeniem "kiedy postać dotyka", aby
+          zagrać dźwięk, gdy się odnajdą.
+        studio_iceage_repeat: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki, by pomóc Granny poćwiczyć
+          ruchy w lewo i w prawo w nieskończoność?
+        studio_iceage_click_hello: Pomóż Sidowi, aby ostatni raz zaprosił znajomych
+          po kliknięciu? Nie zapomnij kliknąć na nim po kliknięciu na "Uruchom".
+        studio_iceage_move_events: Wiewiórka Scrat nadal szuka żołędzi! Pomóż jej
+          pognać dookoła dołączając blok "idź" do każdego zdarzenia i zmieniając kierunki
+          dla każdego klawisza ze strzałkami. Kiedy skończysz, kliknij "Uruchom" i
+          postaraj się zebrać wszystkie żołędzie.
+        studio_iceage_sound_and_points: Zamieściliśmy większość kodu, który porusza
+          Granny w lewo i w prawo, jak również porusza Sida po ekranie. Ukończ ten
+          kod dodając bloki do zdarzenie "kiedy postać dotyka", aby zagrali oni dźwięk
+          i zdobyli punkt, kiedy wpadną na siebie. Naciśnij "Uruchom", by rozpocząć
+          grę.
+        studio_iceage_warn_ice_age: Wszyscy muszą poruszać się szybciej, ponieważ
+          nadchodzi era lodowcowa! Zmień tło na oblodzone tło oraz ustaw prędkość
+          Sida na szybką, a następnie naciśnij "Uruchom" i przesuń go do Diego, aby
+          go ostrzec.
+        studio_iceage_throw_hearts: Sid chce, by jego babcia Granny wiedziała, że
+          ją kocha. Użyj polecenia "rzut postaci", aby Sid (postać 1) mógł rzucić
+          sercami w bacię (postać 2)! Ustaw nastrój Granny jako pełny szczęścia, gdy
+          zostanie trafiona sercami.
+        studio_iceage_free_play: Czas, aby utworzyć własną grę lub historyjkę! Kiedy
+          skończysz, kliknij przycisk "Zakończ", aby umożliwić znajomym pograć na
+          swoich telefonach, tabletach lub komputerach!
+        studio_gumball_hello1: Anals chce poznać kilku nowych przyjaciół. Czy mógłbyś
+          jej pomóc powiedzieć "Cześć!" przeciągając blok "powiedz" do obszaru roboczego
+          i wpisując słowo "Cześć!" wewnątrz tego bloku?
+        studio_gumball_hello2: Darwin (postać 1) i jego brat Gumball (postać 2) idą
+          do szkoły.  Pomóż im pozdrowić się nawzajem używając dwa razy bloku "postać
+          mówi".
+        studio_gumball_move_to_flag: Bananowy Joe zaraz wygra bieg!  Pomóż mu przebiec
+          ostatnie 200 pikseli używając bloku "idź".
+        studio_gumball_move_to_actor: Gumball (postać 1) i Darwin (postać 2) są spóźnieni
+          na pole zabaw! Pomóż Gumball przejść 200 pikseli do dołu w kierunku Darwina
+          używając bloku "przenieś postać".  Następnie podłącz blok do zdarzenia "kiedy
+          postać dotyka", aby zagrać dźwięk, kiedy się spotkają.
+        studio_gumball_repeat: Blok "powtarzaj w nieskończoność" umożliwia ciągłe
+          wykonywanie kodu. Czy mógłbyś dołączyć do niego bloki, aby pomóc Gumball
+          rozgrzać się przez wielokrotne poruszanie się w lewo i w prawo?
+        studio_gumball_click_hello: Pomóż Antonowi rozpocząć bieg przez wypowiedzenie
+          "Do biegu, gotowi, start!" Aby przetestować swój program, nie zapomnij kliknąć
+          na Antonie po kliknięciu na "Uruchom"!
+        studio_gumball_move_events: Darwin bierze udział w konkursie zbierania flag!
+          Pomóż mu poruszać się po planszy doczepiając blok "idź" do każdego zdarzenia.
+          Gdy skończysz, naciśnij "Uruchom" i zbierz wszystkie flagi.
+        studio_gumball_sound_and_points: Mamy większość kodu, który porusza Antona
+          (postać 2) w lewo i w prawo, jak również porusza Bananowego Joe (postać
+          1).  Ukończ ten kod dodając bloki do zdarzenie "kiedy postać dotyka", aby
+          zagrali oni dźwięk i zdobyli punkt, kiedy wpadną na siebie. Naciśnij "Uruchom",
+          by rozpocząć grę.
+        studio_gumball_warn_food_fight: Darwin właśnie uniknął walki żywności! Ustaw
+          tło postaci i prędkość Darwina na szybką. Następnie naciśnij "Uruchom" i
+          przesuwaj go w kierunku Penny, by ją ostrzec.
+        studio_gumball_join_food_fight: Przyłącz się do walki żywnością! Użyj bloku
+          "rzut postaci w prawo", aby Bananowy Joe (postać 1) rzucił pożywieniem w
+          Antona (postać 2). Ustaw, by Anton się zezłościł, kiedy zostanie trafiony.
+        studio_gumball_free_play: Utwórz własną grę lub historyjkę! Kiedy skończysz,
+          kliknij przycisk "Zakończ", aby umożliwić znajomym pograć na swoich telefonach,
+          tabletach lub komputerach!
         studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk
           Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_k1_1: Czy mógłbyś spowodować, aby ten pies powiedział "hello world"?
@@ -623,8 +625,8 @@
           by kot coś powiedział po nim?
         studio_k1_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie
           się do kota?
-        studio_k1_4: Spowoduj, że pies przesuwa się w kierunku kota i kot mówi "hello",
-          gdy dociera do niego pies.
+        studio_k1_4: Spowoduj, że pies przesuwa się w kierunku kota i kot mówi "Hello!",
+          kiedy dociera do niego pies.
         studio_k1_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się
           szczęśliwa?
         studio_k1_6: Utwórz własną historię! Przesuwaj kota i psa i spraw, że będą
@@ -820,12 +822,12 @@
         mc_if_statements: Minecraft - instrukcje warunkowe "Jeśli"
         mc_congrats_share: Minecraft - Gratulacje
         mc_congrats_no_share: Minecraft - Gratulacje
-        gumball_intro: Gumball Godzina Kodowania- wprowadzenie
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        gumball_intro: Gumball w Godzinie Kodowania - Wprowadzenie
+        gumball_events: Gumball w Godzinie Kodowania - Zdarzenia
+        gumball_repeat: Gumball w Godzinie Kodowania - Instrukcje powtarzania
+        iceage_intro: Ice Age w Godzinie Kodowania - Wprowadzenie
+        iceage_events: Ice Age w Godzinie Kodowania - Zdarzenia
+        iceage_repeat: Ice Age w Godzinie Kodowania - Instrukcje powtarzania
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
@@ -928,7 +930,7 @@
         Infinity_move_directions_callout: Który blok powoduje, że Baymax porusza się
           do góry, po naciśnięciu strzałki w górę?
         Infinity_move_directions_callout_arrow: Użyj tych strzałek do sterowania
-        Infinity_move_collide_callout: Odtwórz dźwięk, gdy wystąpi to zdarzenie.
+        Infinity_move_collide_callout: Odtwórz dźwięk, kiedy wystąpi to zdarzenie.
         Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia
         craft_run_button_callout: Wciśnij przycisk uruchamiania, aby wypróbować swój
           program

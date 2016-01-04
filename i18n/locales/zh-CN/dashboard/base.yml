@@ -28,6 +28,8 @@ zh:
     code:
       label: '添加一个老师:'
       placeholder: 单元代码(ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的密码提示
@@ -327,7 +329,7 @@ zh:
   share:
     title: 在代码工作室学习
     description: 任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: 试试《编程一小时》！
   gender:
     male: 男性
     female: 女性
@@ -339,8 +341,8 @@ zh:
     thank_you: '我们感谢 <a href="https://code.org/about/donors"> 捐助者</a>、 <a href="https://code.org/about/partners"> 合作伙伴</a>、 <a href="https://code.org/about/team"> 扩展团队</a>、视频演员、<a href="https://code.org/about/advisors"> 教育顾问</a>在创建代码工作室中给予的支持。'
     help_from_html: 特别感谢来自谷歌、 微软、 Facebook 和 Twitter 的工程师帮助创建了本教程。
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; 2015 卡通网络.'
+    art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
     powered_by_aws: 由亚马逊网络服务
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
     copyright: 版权
@@ -357,7 +359,7 @@ zh:
     built_on_code_studio: 在代码工作室中建立
     make_my_own_app: 制作我自己的应用程序
     how_it_works: 它是如何工作的
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: 试试《编程一小时》！
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示

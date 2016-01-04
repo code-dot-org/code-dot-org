@@ -20,8 +20,8 @@ is-IS:
   submit: Senda inn
   twentyhours_heading: Prófaðu námskeiðið okkar Inngangur að tölvunarfræði
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Hvert barn á skilið tækifæri
+  og_description: Sérhver nemandi í sérhverjum skóla ætti að fá tækifæri til að læra tölvunarfræði.
   hoc2014_heading: 'Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8. - 14. desember 2014<br/>'
   hoc2014_students: Nemendur
   hoc2014_try: Prófið hana
@@ -37,7 +37,7 @@ is-IS:
   csedweek_map_search_reset: Endurstilla
   csedweek_map_legend_title: Skýring
   csedweek_map_legend_event: Klukkustund kóðunar
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Sérstakur viðburður
   cded_sign_up: Skráning
   cded_try_it: Prófið hana
   twentyhours_trynow: Prófa núna
@@ -287,7 +287,7 @@ is-IS:
   inspirational_videos_more: 'Fleiri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">hvatningarmyndbönd</a> með fyrirmyndum og frægu fólki'
   playlab_choose_theme: Veldu þema fyrir Leikjasmiðjuna
   playlab_classic_title: Klassískt
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: 'Ice Age - kemur brátt'
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Gerð Vetrarbrautar með Kóða
@@ -306,19 +306,19 @@ is-IS:
   mc_name: Klukkustund kóðunar með Minecraft
   mc_longdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
   mc_shortdescription: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
-  mc_gradelevel: Aldur 6+
+  mc_gradelevel: Aldur 6-106
   mc_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   mc_specs: Mörg tungumál | Nýlegir vafrar og spjaldtölvur | Aldur 6-106
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
-  volunteer_engineer_submission_title: Vertu nemendum hvatning og hjálpaðu til við Klukkustund kóðunar.
+  volunteer_engineer_submission_title: Vertu nemendum hvatning með liðveislu
   volunteer_engineer_submission_subtitle_generic: '100.000 kennarar ætla að halda Klukkustund kóðunar í skólastofunni 7.-13. des. 2015. Þeir þurfa aðstoð þína! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} kennara vantar sjálfboðaliða með brennandi áhuga á fræðslu í tölvunarfræði til að hjálpa til við Klukkustund kóðunar nú í desember.<br>%{num_volunteers} sjálfboðaliðar hafa skráð sig. Vertu með.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} kennara vantar sjálfboðaliða.<br>%{num_volunteers} sjálfboðaliðar hafa skráð sig. Slástu í hópinn.'
   volunteer_engineer_submission_intro_background: Klukkustund kóðunar er alheimsátak í að prófa einnar klukkustundar inngang að tölvunarfræði. Það nær til tuga miljóna nemenda í 180+ löndum. Taktu þátt á einhvern hátt í Fræðsluviku tölvunarfræði 7.-13. desember.
   volunteer_engineer_submission_intro_recruit: |-
     Þessir kennarar mundu gjarnan vilja fá einhvern <span style="font-family: 'Gotham 7r', sans-serif;">með brennandi áhuga á að fræða um tölvunarfræði</span> sem getur hjálpað í skólastofunni eða einhvern sem getur <span style="font-family: 'Gotham 7r', sans-serif;">hvatt</span> nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta gæti farið fram með netspjalli).
   volunteer_engineer_submission_intro_signup: 'Vinsamlegast skráðu eftirfarandi upplýsingar ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span class="form-required-field">*</span> þarf að fylla út.'
-  volunteer_engineer_submission_intro_links: 'Liðveisla ekki í myndinni? <a href="%{learn_more}">Fáðu upplýsingar</a> um að skipuleggja þinn eigin atburð með Klukkustund kóðunar og finna nálægan sjálfboðaliða á <a href="%{volunteer_local}">liðveislukortinu</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: 'Þarft þú að finna sjálfboðaliða? Finndu nálægan sjálfboðaliða á <a href="%{volunteer_local}">liðveislukortinu</a> okkar.'
+  volunteer_engineer_submission_update_information: Uppfærðu upplýsingar þínar
   volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða
   volunteer_engineer_submission_field_name: Nafn
   volunteer_engineer_submission_field_name_placeholder: Fullt nafn
@@ -345,7 +345,7 @@ is-IS:
   volunteer_engineer_submission_final_paragraph: Þú verður sýndur á korti fyrir kennara á svæðinu að hafa samband í tengslum við Klukkustund kóðunar eða önnur tækifæri til sjálfboðaliðastarfa. Netfangi þínu og nákvæmu heimilisfangi verður ALDREI deilt af okkur. En hinar upplýsingarnar (þ. á m. lausleg staðsetning) verða sýnilegar kennurum á svæðinu.
   volunteer_engineer_submission_checkbox_contact: Ég samþykki að kennarar megi hafa samband við mig vegna mögulegra sjálfboðaliðastarfa (Ath. netfangi þínu verður ekki deilt)
   volunteer_engineer_submission_submit: Senda inn
-  volunteer_engineer_submission_thankyou: 'Takk fyrir að bjóða liðveislu með Klukkustund kóðunar. Um undirbúning fyrir Klukkustund kóðunar og það að virkja aðra sjálfboðaliða eru <a href="%{url}">nánari upplýsingar hér.</a>'
+  volunteer_engineer_submission_thankyou: 'Takk fyrir að bjóða liðveislu. Kennarar munu nota <a href="%{url}">þetta kort</a> til að leita að og hafa samband við sjálfboðaliða eins og þig.'
   volunteer_engineer_submission_commitment_uncertain: Óvíst
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 klst. á viku
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 klst. á viku
@@ -555,7 +555,7 @@ is-IS:
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>16. desember 2015.</b> - Takk fyrir að taka þátt í Klukkustund kóðunar 2015! Vistun framvindu er nú aftur virk í öllu kennsluefni Kóðastúdíósins. Ath.: Skrifstofur Code.org verða lokaðar 19. desember - 3. janúar. Vinsamlegast gerið ráð fyrir að fyrirspurnum verði ekki svarað fyrr en 4. janúar.'
   dashboard_announce_button_text: Læra meira
   dashboard_announce_hoc: '<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund kóðunar? Meira en 7.000 sjálfboðaliðar eru tilbúnir að veita nemendum hvatningu með því að heimsækja bekkinn þinn eða spjalla á netinu. Skoðaðu liðveislukortið til að ná sambandi við sjálfboðaliða á þínu svæði.'
   dashboard_announce_playlab: '<b>4. desember 2015</b> - Klukkustund kóðunar er hér! Prófaðu 50 kennslustundir fyrir alla aldurshópa og öll tæki. Nýtt þessa viku: Kóðaðu þínar eigin sögur og leiki í nýjum Leikjasmiðjum, Ísöld og Gumball.'

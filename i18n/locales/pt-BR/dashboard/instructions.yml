@@ -399,17 +399,17 @@ pt-BR:
         vezes!
       2-3 Maze 12_instruction: |
         Você pode substituir esses cinco blocos por apenas dois blocos?
-        (Dica: crie um laço usando um bloco "repita vezes")
+        (Dica: você precisa criar um laço usando um bloco "repita" para passar deste nível.)
       2-3 Maze 13 (old)_instruction: |
         Leve-me até o porco, agora com o bloco repita
         até!
-      2-3 Maze 13_instruction: Leve-me até o porco usando apenas dois blocos.
+      2-3 Maze 13_instruction: "Leve-me até o porco usando apenas dois blocos.\r\n(Dica:\nvocê precisa usar o bloco \"repita\" para passar deste nível)"
       2-3 Maze 14 (old)_instruction: Leve-me até o porco com o bloco repita até!
       2-3 Maze 14_instruction: |
         Leve-me até o girassol! (Onde está o bloco "repita
         vezes" quando eu preciso dele?)
       2-3 Maze 15 (old)_instruction: Leve-me até o porco com o bloco repita até!
-      2-3 Maze 15_instruction: Use dois laços para chegar até o porco usando menos blocos.
+      2-3 Maze 15_instruction: 'Use dois laços "repita" para chegar até o porco usando o menor número de blocos.'
       2-3 Maze 16 (old)_instruction: Leve-me até o porco com o bloco repita até!
       2-3 Maze 16 before_instruction: Leve-me até o porco.
       2-3 Maze 16_instruction: Leve-me até o girassol. Repita a sequência!
@@ -427,7 +427,7 @@ pt-BR:
       2-3 Maze 9_instruction: Leve-me até a maldade verde! (Cuidado com a dinamite)
       2-3 Maze Loops 1_instruction: Você pode me levar até o porco usando 5 blocos?
       2-3 Maze Loops 17_instruction: Leve-me até o girassol!
-      2-3 Maze Loops 18_instruction: Leve-me até o girassol!
+      2-3 Maze Loops 18_instruction: "Leve-me até o girassol!\r\n(Dica: você\nterá de usar um laço \"repita\" dentro de outro\npara passar deste nível.)"
       2-3 Maze Loops 19_instruction: Leve-me até o girassol!
       2-3 Maze Loops 20_instruction: Leve-me até o girassol!
       2-3 Maze Loops 21_instruction: Leve-me até o girassol!
@@ -988,7 +988,7 @@ pt-BR:
       Big Game Animation 1_instruction: |
         Agora que você aprendeu a escrever funções lineares
         simples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.
-        Clique em Executar para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que
+        Clique em "Executar" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que
         você quiser e depois clique em Concluir para seguir em frente.
       Big Game Animation 2 (copy 1)_instruction: |
         The function 'update-target'
@@ -1002,26 +1002,24 @@ pt-BR:
         adicionar a x, mais rápido será o alvo.
       Big Game Animation 3_instruction: |
         A função "atualize-inimigo" deve funcionar
-        como a função "atualize-alvo", exceto pelo fato de o perigo se mover do lado direito
-        em direção à esquerda. Complete a função "atualize-inimigo" para fazer
+        como a função "atualize-alvo", exceto pelo fato de o inimigo deve se mover do lado direito
+        para o lado esquerdo. Complete a função "atualize-inimigo" para fazer
         o inimigo voar pela tela.
       Big Game Animation 4_instruction: |
         Nesse ponto do seu jogo, seu inimigo deve
         percorrer a tela da direita para a esquerda e seu alvo deve percorrer a tela
         da esquerda para a direita. Eles nunca voltam para a tela uma vez que tenham saído,
         mas cuidaremos disso depois. Analise seu jogo para ver se ele está
-        funcionando como você gostaria e então clique em Concluir para seguir em frente.
+        funcionando como você gostaria e então clique em "Concluir" para seguir em frente.
       Big Game Booleans 1_instruction: |
         Da última vez que você trabalhou em seu jogo fizemos
         nossos alvo e inimigo voarem pela tela, mas eles nunca
-        voltaram. Clique em Executar para ver como seu jogo está funcionando agora e depois clique
+        voltaram. Clique em "Executar" para ver como seu jogo está funcionando agora e depois clique
         em concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem
         saído.
       Big Game Booleans 2_instruction: |
-        Agora que sua função na-tela? está verificando
-        esquerda-segura? e direita-segura? podemos completar essas funções. Vá até a seção
-        "Funções" da caixa de ferramentas e complete a função esquerda-segura? para que ela retorne
-        verdadeiro se a coordenada de x do inimigo for mais que -50. Se você for bem sucedido,
+        Vá até a seção "Funções" da caixa de ferramentas e complete a função esquerda-segura? para que ela retorne
+        verdadeiro se a coordenada de x do inimigo for mais que -50. Se você for bem-sucedido,
         você deve ver o inimigo sair pelo lado esquerdo e retornar pelo lado direito.
       Big Game Booleans 3_instruction: |
         Agora que você completou esquerda-segura?, vamos preencher
@@ -1030,11 +1028,8 @@ pt-BR:
         você deve ver o alvo sair pelo lado direito da tela e retornar pela
         esquerda.
       Big Game Booleans 4_instruction: |
-        Fornecemos algumas funções vazias
-        para esquerda-segura? e direita-segura?. A primeira coisa que você precisa fazer é completar
-        a função na-tela? para que ela verifique se esquerda-segura? e direita-segura?
-        são verdadeiras. Dica - mesmo depois de adicionar esquerda-segura? e direita-segura? seus
-        objetos não vão retornar à tela - porque você acha que isso acontece?
+        Complete a função na-tela? para que ela verifique se esquerda-segura? e direita-segura?
+        são verdadeiras.
       Big Game Booleans 5_instruction: |
         Nesse ponto do seu jogo, seu inimigo deve percorrer
         a tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para
@@ -1061,17 +1056,12 @@ pt-BR:
         Edite a função "atualizar-jogador" para que ela mova o jogador para cima quando 
         a seta para cima está pressionada, ou para baixo quando a seta para baixo está pressionada.
       Big Game Collision 3_instruction: |
-        Vamos consertar essa função de distância para que nossa
-        detecção de colisão funcione corretamente. Use a fórmula da distância para que a função
+        Use a fórmula da distância para que a função
         de distância retorne a distância entre as coordenadas centrais do jogador (px,
-        py) e as coordenadas centrais de outro objeto (cx, cy). Fornecemos uma função
-        de uma linha que funciona para lhe ajudar.
+        py) e as coordenadas centrais de outro objeto (cx, cy).
       Big Game Collision 4_instruction: |
-        A função "distância" retorna a distância
-        entre dois objetos. Complete a função "colisão?" para que ela retorne
-        verdadeiro se a distância entre dois pontos for menor que 100 pixels. Se
-        completá-la corretamente, seus objetos vão colidir instantaneamente - por que você
-        acha que isso acontece?
+        Complete a função colisão? para que ela retorne
+        verdadeiro se a distância entre dois pontos for menor que 100 pixels.
       Big Game Complete_instruction: |
         Uma demonstração do projeto Grande Jogo da Álgebra em CC
         completo
@@ -2570,25 +2560,27 @@ pt-BR:
       K-1 Bee Assessment 1_instruction: Colete néctar para fabricar mel!
       K-1 Bee Assessment 2_instruction: Colete néctar para fabricar mel!
       K-1 Bee Loops 1_instruction: Colete o néctar para fabricar mel!
-      K-1 Bee Loops 10_instruction: Use laços para coletar néctar, fabricar mel, e para mover!
-      K-1 Bee Loops 11_instruction: |
-        Avaliação: use laços e obtenha o néctar e o
-        mel!
-      K-1 Bee Loops 12_instruction: |
-        Avaliação: use laços para obter néctar, mel
-        e para mover!
+      K-1 Bee Loops 10_instruction: |
+        Colete todo o néctar e faça todo o
+        mel.
+      K-1 Bee Loops 11_instruction: Colete todo o néctar e o mel!
+      K-1 Bee Loops 12_instruction: Colete todo o néctar e todo o mel.
       K-1 Bee Loops 2_instruction: |
-        Use um laço para mover e então coletar o néctar e
+        Use um laço "repita" para mover e então coletar o néctar e
         produzir mel!
-      K-1 Bee Loops 3_instruction: Use laços para coletar o néctar e fabricar o mel!
+      K-1 Bee Loops 3_instruction: |
+        Use três laços "repita" para coletar o néctar
+        e
+        fabricar o mel!
       K-1 Bee Loops 4_instruction: |
-        Use laços para obter néctar, produzir mel e
+        Use laços "repita" para obter néctar, produzir
+        mel e
         para mover!
-      K-1 Bee Loops 5_instruction: Use laços para obter néctar e mel!
-      K-1 Bee Loops 6_instruction: Use laços para coletar néctar, fabricar mel, e para mover!
-      K-1 Bee Loops 7_instruction: Use laços para coletar o néctar e fabricar o mel!
-      K-1 Bee Loops 8_instruction: Use laços para coletar o néctar e fabricar o mel!
-      K-1 Bee Loops 9_instruction: Use laços para coletar néctar, fabricar mel, e para mover!
+      K-1 Bee Loops 5_instruction: 'Use laços "repita" para obter néctar e mel!'
+      K-1 Bee Loops 6_instruction: 'Use um laço "repita" para coletar néctar, fabricar mel, e para mover!'
+      K-1 Bee Loops 7_instruction: Colete o néctar e produza mel!
+      K-1 Bee Loops 8_instruction: Colete o néctar e produza mel!
+      K-1 Bee Loops 9_instruction: Colete todo o néctar e produza todo o mel.
       K-1 Bee Loops Assessment 1_instruction: |
         Obtenha néctar para produzir mel e use laços
         para mover!
@@ -2617,58 +2609,64 @@ pt-BR:
       K-1 Maze Assessment 2_instruction: 'Avaliação: leve-me até o porco!'
       K-1 maze debug 1_instruction: Altere o código para me levar até o porco!
       K-1 maze debug 10_instruction: |
-        Depure esse nível reorganizando e adicionando
+        Depure esse nível reorganizando e trocando
         blocos para me levar até o porco!
-      K-1 maze debug 11_instruction: "Isso é um teste!\r\nDepure esse nível reorganizando\ne adicionando blocos para me levar até o porco"
+      K-1 maze debug 11_instruction: "Isso é um teste!\r\nDepure esse nível reorganizando\ne trocando blocos para me levar até o porco"
       K-1 maze debug 2_instruction: |
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
       K-1 maze debug 3_instruction: |
-        Descubra o que está faltando e então REMOVA blocos
+        Descubra o que está faltando e então REMOVA
+        blocos
         para me levar até o porco!
       K-1 maze debug 4_instruction: |
         Passe por esses blocos e conserte-os! Eu acho
         que estou indo na direção errada.
       K-1 maze debug 5_instruction: |
-        Depure esse nível reorganizando e adicionando blocos
+        Depure esse nível reorganizando e trocando blocos
         para me levar até o porco!
       K-1 maze debug 6_instruction: |
-        Depure esse nível reorganizando e adicionando
+        Depure esse nível reorganizando e trocando
         blocos para me levar até o porco!
       K-1 maze debug 7_instruction: |
-        Depure esse nível reorganizando e adicionando
+        Depure esse nível reorganizando e trocando
         blocos para me levar até o porco!
       K-1 maze debug 8_instruction: |
-        Depure esse nível reorganizando e adicionando blocos
+        Depure esse nível reorganizando e adicionando
+        blocos
         para me levar até o porco!
       K-1 maze debug 9_instruction: |
-        Depure esse nível reorganizando e adicionando
+        Depure esse nível reorganizando e trocando
         blocos para me levar até o porco!
       K-1 Maze debug Assessment 1_instruction: |
         Avaliação -- depure esse nível
         reorganizando e adicionando blocos para me levar até o porco!
       K-1 Maze Loops 1_instruction: Leve-me até o porco!
-      K-1 Maze Loops 10_instruction: Leve-me até o porco! Use o laço repita.
-      K-1 Maze Loops 11_instruction: Leve-me até o porco! Use o laço repita.
-      K-1 Maze Loops 12_instruction: Leve-me até o porco! Use o laço repita.
-      K-1 Maze Loops 2_instruction: Use o bloco repita para me levar até o porco!
-      K-1 Maze Loops 3_instruction: Leve-me até o porco! Use o laço repita.
+      K-1 Maze Loops 10_instruction: |
+        Leve-me até o porco! O laço "repita"
+        vai tornar tudo muito mais fácil.
+      K-1 Maze Loops 11_instruction: "Leve-me até o porco!\r\nO laço \"repita\" vai\nfacilitar as coisas."
+      K-1 Maze Loops 12_instruction: |
+        Leve-me até o porco! O laço "repita" vai
+        facilitar as coisas.
+      K-1 Maze Loops 2_instruction: 'Use o bloco "repita" para me levar até o porco!'
+      K-1 Maze Loops 3_instruction: 'Leve-me até o porco! Não deixe de usar laços "repita".'
       K-1 Maze Loops 4_instruction: Leve-me até o porco!
-      K-1 Maze Loops 5_instruction: Leve-me até o porco! Use o laço repita.
-      K-1 Maze Loops 6_instruction: Leve-me até o porco! Use o laço repita.
-      K-1 Maze Loops 7_instruction: Leve-me até o porco! Use o laço repita.
-      K-1 Maze Loops 8_instruction: Leve-me até o porco! Use o laço repita.
+      K-1 Maze Loops 5_instruction: 'Leve-me até o porco! Use laços "repita".'
+      K-1 Maze Loops 6_instruction: 'Leve-me até o porco! Use laços "repita".'
+      K-1 Maze Loops 7_instruction: 'Leve-me até o porco! Use laços "repita".'
+      K-1 Maze Loops 8_instruction: 'Use o laço "repita" para me levar até o porco.'
       K-1 Maze Loops 9_instruction: Leve-me até o porco!
       K-1 Maze Loops Assessment 1_instruction: |
-        Avaliação -- use laços para me levar
-        até o poco!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Avaliação -- use laços para me levar
-        até o poco!
+        Veja só o que nós aprendemos! Use um
+        laço "repita" para me levar até o porco!
+      K-1 Maze Loops Assessment 2_instruction: 'Use um laço "repita" para me levar até o porco!'
       K-1 Maze Multi 14_instruction: Avaliação de nível
       K-1 Maze Multi 15_instruction: Avaliação de nível
-      K-1 Maze Sequence Assessment 1_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco"
-      K-1 Maze Sequence Assessment 2_instruction: "Isso é um teste!\r\nMova-me por um caminho e então\npor outro para me levar até o porco."
+      K-1 Maze Sequence Assessment 1_instruction: "Vejamos o que você aprendeu!\r\nMova-me\npor um caminho e então por outro para me levar até o porco."
+      K-1 Maze Sequence Assessment 2_instruction: |
+        Mova-me por um caminho e então
+        por outro para me levar até o porco.
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,
@@ -3294,9 +3292,9 @@ pt-BR:
         Nem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se
         ela está escondendo uma flor. Se estiver, então você pode coletar o néctar.
       Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+        Agora, a abelha só quer néctar.
+        Nem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se
+        ela está escondendo uma flor. Se estiver, então você pode coletar o néctar.
       Ryan Test Locked Blocks_instruction: |
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
@@ -4891,6 +4889,9 @@ pt-BR:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4898,6 +4899,7 @@ pt-BR:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

@@ -77,7 +77,7 @@
   "turnTooltip": "Turns me left or right by 90 degrees.",
   "uncheckedCloudError": "Make sure to check all clouds to see if they're flowers or honeycombs.",
   "uncheckedPurpleError": "Make sure to check all purple flowers to see if they have nectar",
-  "whileMsg": "while",
+  "whileMsg": "جب تک",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
   "yes": "Yes",

@@ -221,10 +221,7 @@ hu:
       4-5 Artist For Loops 4_instruction: |
         Complete the "for" block so that it
         counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+      4-5 Artist For Loops 6_instruction: 'Rajzolj 50, 60, 70, 80 és 90 képpont oldalú négyzeteket. Ötször lesz szükséged a "négyzet rajzolása" függvényre.'
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -233,33 +230,17 @@ hu:
         Can you complete the program by placing
         the blocks inside a "for" block that counts from 10 to 200 by 10? You can
         find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+      4-5 Artist For Loops 9_instruction: 'Ezek a körök 5, 10, 15, 20, 25, 30 és 35 méretűek. Rajzold meg a köröket a "for" blokk használatával.'
+      4-5 Artist Free Draw 1_instruction: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved van.
+      4-5 Artist Functions 1_instruction: Használj ciklust a háromszög megrajzolásához.
       4-5 Artist Functions 10a_instruction: |
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
         called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+      4-5 Artist Functions 10b_instruction: 'Használd a "hópehely rajzolása" függvényt különböző méretű hópehlyhek készítésére. Tipp: az első hópehely 25 hosszú és minden hópehely kétszer nagyobb az előzőnél.'
+      4-5 Artist Functions 11_instruction: 'Ez a "rajzolj hatszöget" függvény a "rajzolj háromszöget" függvényt használja. Fejezd be a hatszög függvényt. (Tipp: A hatszögnek 6 oldala van, mindegyik 100 pixel hosszú)'
+      4-5 Artist Functions 12_instruction: 'Fejezd be a "Rajzolj hullámokat" függvényt. Minden hullám egy felső hullámból és egy alsó hullámból áll. Tipp: Rajzolj 5 kék hullámot.'
+      4-5 Artist Functions 13 Free play_instruction: Van itt néhány függvény bolygók, csillagok, rakéták és robotok rajzolásához. Használd őket bárhogy, ahogy szeretnéd képek készítésére, amiket megoszthatsz a barátaiddal.
       4-5 Artist Functions 14 Free play_instruction: |
         Here, we've provided you with
         several functions.  Use them any way you like inside of one or more loops
@@ -269,42 +250,19 @@ hu:
         Assessment:  Use the "draw
         a square" function to create the squares.  The squares are 50, 100, and 150
         pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: |
-        Now create the functions "draw a medium
-        triangle" and "draw a large triangle". The "draw a small triangle" function
-        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
-        and 150 (large). 
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
+      4-5 Artist Functions 2a_instruction: 'Most tedd ezeket a blokkokat egy új, "kis háromszög rajzolása" függvénybe és hívd meg.'
+      4-5 Artist Functions 2b_instruction: 'Most hozz létre egy "rajzolj kis háromszöget" nevű függvényt a megadott blokkok segítségével.'
+      4-5 Artist Functions 3_instruction: 'Most hozd létre a "rajzolj közepes háromszöget" és a "rajzolj nagy háromszöget" függvényeket. A "rajzolj kis háromszöget" függvény már készen van. A háromszögek oldalainak hossza: 50 (kicsi), 100 (közepes) és 150 (nagy). '
+      4-5 Artist Functions 4_instruction: 'Ennek az új, "rajzolj háromszöget" függvénynek van egy paramétere és képes megcsinálni mindazt, amit a három korábbi függvény. Rajzold meg ugyan azokat a háromszögeket az új függvény használatával.'
+      4-5 Artist Functions 5_instruction: 'Meg tudod változtatni a "rajzolj egy háromszöget" függvényt egy "rajzol egy négyzetet" függvényre a rajz megváltoztatásához?'
+      4-5 Artist Functions 6_instruction: 'Használd a "rajzolj egy négyzetet" és a "rajzolj egy háromszöget" függvényeket egy ház megrajzolásához. (Tipp: a négyzet oldalai 200 pixel hosszúak)'
       4-5 Artist Functions 6b_instruction: |
         Use the draw a square and triangle functions
         along with other blocks to create a house by adding them to the 'draw a house"
         function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
+      4-5 Artist Functions 7_instruction: 'Rajzolj 100 pixeles és 50 pixeles házat a "rajzolj egy házat" függvény segítségével! A két házat 50 pixel válassza el.'
+      4-5 Artist Functions 8_instruction: 'A "virág rajzolása" függvényben van egy paraméter, amivel a szár hosszát lehet állítani. Állítsd be 200-ra és figyeld mi történik.'
+      4-5 Artist Functions 9_instruction: Rajzold meg ezt a három virágot! Az első 100 magas a következő pedig mindig 50 pixellel magasabb, mint az előző. A virágok között 100 pixel van.
       4-5 Artist Patterns 1_instruction: |
         Can you draw this square using a loop?
         Each side is 20 pixels long.
@@ -452,21 +410,12 @@ hu:
         Draw the last row of stars on this flag by
         looping the provided blocks. The stars are 50 pixels apart, but remember that
         the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: |
-        Now nest this loop inside another loop to
-        draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
-        complete a 360 degree rotation.  
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop. This is called a nested loop.\r\n"
+      4-5 Nested Loops 11_instruction: Meg tudod rajzolni a járda 10 négyzetét egymásba ágyazott ciklusokkal? Minden négyzet 30 pixeles.
+      4-5 Nested Loops 12_instruction: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba ágyazott ciklusok segítségével?
+      4-5 Nested Loops 2_instruction: 'Most ágyazd be ezt a ciklust egy másik ciklus belsejébe, hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak nevezik. Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
+      4-5 Nested Loops 3_instruction: "Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r\n"
       4-5 Nested Loops 5_instruction: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot készíts.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
+      4-5 Nested Loops 6_instruction: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba ágyazásával?
       4-5 Nested Loops 7_instruction: |
         Loop this design 10 times. How much do you
         have to turn each time you loop? (Hint: What is 360 divided by 10?)
@@ -474,9 +423,7 @@ hu:
         Loop this design 6 times. How much do you
         have to turn each time you loop? (Hint: What is 360 divided by 6?)
       4-5 Nested Loops 9_instruction: Rajzold meg az alligátor alsó fogsorát!
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
+      4-5 Nested Loops Assessment 1_instruction: Használj egymásba ágyazott ciklust az ábra befejezéséhez.
       4-5 While Loops 1_instruction: |
         Move me to the hole and fill it with two shovelfuls
         of dirt, using the "fill" block.
@@ -4134,6 +4081,9 @@ hu:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4141,6 +4091,7 @@ hu:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

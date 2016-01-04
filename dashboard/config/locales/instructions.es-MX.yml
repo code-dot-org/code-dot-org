@@ -466,14 +466,14 @@
         copo de nieve" y reemplaza el 50 con el parámetro "tamaño". La función está
         lista para dibujar un copo de nieve de 100 píxeles.
       4-5 Artist Functions 10b_instruction: |
-        Utilice la función "draw a snowflake" para crear copos de diverso tamaño.  Sugerencia:
-        El primer copo de nieve es de un tamaño de 25 en longitud y cada copo de nieve es el doble del anterior.
-      4-5 Artist Functions 11_instruction: "La  función \"draw a hexagon\" utiliza
-        la función \"draw a triangle\". Completa la función del hexágono. \nPista:\nUn
-        hexágono tiene 6 lados, y cada lado con 100 píxeles de largo\n"
-      4-5 Artist Functions 12_instruction: "Completa la función 'draw waves'.  \nCada
-        onda está compuesta por una onda superior y una inferior.  \n Sugerencia:
-        \nDibujar 5 ondas azules.\n"
+        Utilice la función "dibujar un copo de nieve" para crear copos de diferente tamaño.  Sugerencia:
+        El primer copo de nieve es de un tamaño de 25 en longitud y cada copo de nieve es doble del anterior.
+      4-5 Artist Functions 11_instruction: 'La "dibujar un hexágono" función se utiliza
+        en la función "dibujar un triángulo". Completa la función del hexágono. (Sugerencia:
+        un hexágono tiene 6 lados, cada 100 píxeles de largo.)'
+      4-5 Artist Functions 12_instruction: 'Completa la "ondas de empate" función.
+        Cada onda está écho por una onda mas chica. (Sugerencia: dibuja cinco ondas
+        azules.)'
       4-5 Artist Functions 13 Free play_instruction: "Aquí están algunas funciones
         para dibujar los planetas, las estrellas, los cohetes y los robots. \nUtiliza
         cualquier forma que te guste para hacer imagenes que puedas compartir con
@@ -486,34 +486,34 @@
         píxeles.\n"
       4-5 Artist Functions 2a_instruction: Ahora utiliza esos bloques en una nueva
         función llamada "dibuja un pequeño triángulo" y llámalo.
-      4-5 Artist Functions 2b_instruction: Ahora cree una función llamada "dibuja
-        un triangulo chico" usando los bloques proporcionados.
-      4-5 Artist Functions 3_instruction: "Ahora crear las funciones \"dibuja un triangulo
-        mediano\" y \"dibujar un triángulo grande\".\n La función \"dibuja un triangulo
-        chico\" está hecha para ti. \nLos triángulos tienen longitudes laterales de
-        50 (chico), 100 (medio) y 150 (grande). \n"
-      4-5 Artist Functions 4_instruction: "Esta nueva función de \"dibuja un triangulo\"
-        tiene un parámetro y puede hacer el trabajo de las tres funciones de antes.
-        \nDibujar los mismos triángulos usando esta nueva función.\n"
-      4-5 Artist Functions 5_instruction: ¿Puedes modificar la función "dibuja un
-        triangulo" en una función "dibuja un cuadrado" y cambiar el dibujo?
-      4-5 Artist Functions 6_instruction: "Utilice \"dibuja un cuadrado\" y \"dibuja
-        un triangulo\" para dibujar una casa. \n(Sugerencia:\nLos lados del cuadrado
-        son de 200 píxeles)\n"
-      4-5 Artist Functions 6b_instruction: Utilice "dibuja un cuadrado" y funciones
-        de triángulo junto con otros bloques para crear una casa añadiéndolos a la
-        funcion "dibuja una casa" y llamala.
-      4-5 Artist Functions 7_instruction: Utilice la función "'dibuja una casa" para
-        dibujar casas de 100 píxeles y 50 píxeles. Las dos casas están separadas por
-        50 píxeles.
-      4-5 Artist Functions 8_instruction: La función de "dibuja una flor" tiene un
-        parámetro que le permite ajustar la altura del tallo.  Establézcalo en 200
-        y vea qué pasa.
-      4-5 Artist Functions 9_instruction: Dibujar estas 3 flores. La primera de una
-        altura de 100 y la siguiente flor es siempre de 50 píxeles más que la altura
-        de la anterior. Las flores también son separadas por 100 píxeles.
-      4-5 Artist Patterns 1_instruction: ¿Puedes dibujar esta cuadro utilizando un
-        bucle? Cada lado es de 20 píxeles de largo.
+      4-5 Artist Functions 2b_instruction: Ahora cree una función llamada ¨Dibuja
+        un triangulo peqeñio"usando los bloques proporcionados.
+      4-5 Artist Functions 3_instruction: Ahora cree las funciónes ¨dibuja un triángulo
+        mediano" y ¨dibuja un triángulo grande¨. La función ¨dibuja un triángulo pequeñio¨
+        esta echa para ti. Los triángulos tienen lados longitudes de cincuenta (pequeñio),
+        cien (mediano), y cien cinquenta (grande).
+      4-5 Artist Functions 4_instruction: Esta nueva ¨dibuja un triangulo¨ función
+        tiene un parámetro y puede hacer el trabajo de las tres funciónes de antes.
+        Dibuja los mismos triángulos usando el nuevo función.
+      4-5 Artist Functions 5_instruction: ¿Puedes modifar la función ¨dibuja un triángulo¨
+        en una función ¨dibuja un cuadrado¨ y cambiar el dibujo?
+      4-5 Artist Functions 6_instruction: 'Usa el ¨dibuja un cuadro¨ y ¨dibuja un
+        triángulo funciónes¨ para dibujar una casa. (Sugerencia: Los lados del cuadro
+        son dos cientos píxeles)'
+      4-5 Artist Functions 6b_instruction: Usa ¨dibuja un cuadro y triángulo funciónes
+        junto con otros bloques para creer una casa añadiéndolos a la función ¨dibuja
+        una casa¨ y llamala.
+      4-5 Artist Functions 7_instruction: Usa el ¨dibuja una casa¨ función para dibujar
+        casas de cien píxeles y cinquenta píxeles. Las dos casas son separadas por
+        cinquenta píxeles.
+      4-5 Artist Functions 8_instruction: La función ¨dibuja una flor¨ tiene un parámetro
+        que le permite ajustar la altura del tallo. Esteblézcalo en dos cientos y
+        vea que pasa.
+      4-5 Artist Functions 9_instruction: Dibuja estas tres flores. La primera de
+        una altura de cien y la siguiente flor es siempre cinquenta píxeles mas que
+        la altura de la anterior. Las flores también son separadas por cien píxeles.
+      4-5 Artist Patterns 1_instruction: ¿Puedes dibujar este cuadro por usando un
+        bucle? Cada lado es de vente píxeles largo.
       4-5 Artist Patterns 10_instruction: "Este código dibuja dos filas de hexágonos
         -utilice un bucle de 4 veces para dibujar el panal entero. \nConsejo:\n Tendrás
         que retroceder 120 píxeles en su bucle para asegurarse de que el artista no
@@ -1551,11 +1551,11 @@
         código?
       Course 4 Artist Vars 5_instruction: Utiliza las variable "caras" para controlar
         cuántas veces el bucle se repite.
-      Course 4 Artist Vars 6_instruction: 'Hmmm, trata de cambiar la variable "lados"
-        a 4 del código en el problema anterior, pero sigue dibujando un triángulo.
-        ¿Puedes usar la variable "caras" (junto a un bloque de matemáticas) para asegurarse
-        de que se especifico la cantidad correcta? Sugerencia: 360 dividido por el
-        número de lados le dará el número de grados a girar.'
+      Course 4 Artist Vars 6_instruction: "Aquí hay un código que puede dibujar cualquier
+        polígono regular. Hay una nueva variable llamada lados que se inicializa a
+        4. ¿Puedes usar la variable lados (junto con el bloque de matemáticas) para
+        activar la cantidad correcta independientemente de cuantos lados hay en el
+        polígono?\r\n\r\n¡Click aquí para regresar a la pista!"
       Course 4 Artist Vars 7_instruction: "Utiliza lo que aprendiste en el rompecabezas
         anterior para crear el hexagono usando la variable \"lados\"\r\n\r\nVe como
         puedes cambiar solo una varable para dibujar un traingulo, cuadrado, pentagono,
@@ -3072,10 +3072,9 @@
       Ryan - 4-5 Bee Conditionals 2_instruction: La abeja sólo quiere néctar ahora.
         No todo los objetos son flores, así que compruebe debajo de cada nube para
         ver si está ocultando una flor. Si es así, puede recolectar néctar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos
+        los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo
+        si esta escondiendo una flor. Si es así, puedes coger néctar.
       Ryan Test Locked Blocks_instruction: Aquí hay una función denominada "patrulla".
         Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400
         píxeles.
@@ -4658,6 +4657,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4665,6 +4667,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

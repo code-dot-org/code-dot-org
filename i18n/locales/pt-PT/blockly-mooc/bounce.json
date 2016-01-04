@@ -59,7 +59,7 @@
   "putdownTower":"coloca a torre em baixo",
   "reinfFeedbackMsg":"Podes clicar no botão \"Voltar a tentar\" para voltares a jogar o teu jogo.",
   "removeSquare":"remove o quadrado",
-  "repeatUntil":"repita até",
+  "repeatUntil":"repetir até",
   "repeatUntilBlocked":"enquanto houver caminho em frente",
   "repeatUntilFinish":"repete até terminar",
   "scoreText":"Pontuação: {playerScore} - {opponentScore}",

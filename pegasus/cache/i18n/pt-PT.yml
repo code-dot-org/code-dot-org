@@ -29,9 +29,9 @@
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Todos os alunos merecem uma oportunidade
+  og_description: Todos os alunos de todas as escolas merecem a oportunidade de ter
+    uma disciplina de informática.
   hoc2014_heading: Participa na <a href="http://hourofcode.com">Hora de Código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -85,7 +85,7 @@
   course_name_course3: Curso 3
   course_name_course4: Curso 4
   congratulations_on_completing_course: Parabéns por ter completado %{course}
-  congrats_next_tutorials_title: De seguida tenta estes tutoriais
+  congrats_next_tutorials_title: A seguir, experimenta estes tutoriais
   congrats_next_tutorials_desc: Experimenta este tutoriais mais curtos de 1 hora ou
     experimenta um <a href="%{current_path}/next">Tutorial de um parceiro</a>.
   get_a_certificate_of_achievement: Obtem um certificado de realização
@@ -110,8 +110,8 @@
   gender: Género
   boys: Rapazes
   girls: Raparigas
-  give_my_hour: 'Dar minha hora para:'
-  girls_team: Equipa de meninas
+  give_my_hour: 'Dar a minha Hora de Código a:'
+  girls_team: Equipa das raparigas
   boys_team: Equipa dos rapazes
   tell_the_world: Dizer ao mundo!
   thanks_for_voting: Obrigado por votar!
@@ -151,20 +151,20 @@
   what_gender: Qual é o teu género?
   girl: Rapariga
   boy: Rapaz
-  help_recruit_coders: Ajude-nos a recrutar mais programadores para a sua equipe!
-  help_recruit: Ajude-nos a recrutar mais programadores!
+  help_recruit_coders: Ajuda-nos a recrutar mais programadores para a tua equipa!
+  help_recruit: Ajuda-nos a recrutar mais programadores!
   lines_of_code: MAIS DE <b># LINHAS DE CÓDIGO</b> ESCRITAS ATÉ AGORA.
   lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ALUNOS
-  who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
+  who_has_done_hoc: 'Quem participou na #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
   students_and_lines: '%{students} os estudantes fizeram a Hora de Código e escreveram
     %{lines} linhas de código.'
   start_hoc: Começa agora a Hora de Código
-  contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
+  contact_form_topic_press: Imprensa (entrevista ou palestra)
   stats_nina: '"Quando falo em programar, a reação é sempre a mesma: entusiasmo a
     100%." - Nina Nichols Peery, Professora'
-  stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate,
-    aluna do 5º ano'
+  stats_student: '"Eu sabia que isto era uma oportunidade <b>única</b>." - Mariana
+    Alzate, Aluna do 5.º Ano'
   stats_michael: '"<b>Nunca vi</b> os meus alunos tão interessados em explorar um
     assunto." - Michael Clark, Professor'
   studiobar_title: Explora o <a href='http://studio.code.org'>Code Studio</a>
@@ -172,9 +172,9 @@
   studiobar_elementary_title: Cursos elementares
   studiobar_elementary_body: Os nossos três cursos para alunos do 1.º Ciclo
   studiobar_hoc_title: A Hora de Código
-  studiobar_hoc_body: Aprenda a programar com o Angry Birds
+  studiobar_hoc_body: Aprende a programar com o Angry Birds
   studiobar_flappy_title: Flappy Bird
-  studiobar_flappy_body: Cria e partilha a tua própria versão do jogo "Flappy Bird"
+  studiobar_flappy_body: Cria e partilha a tua própria versão do jogo “Flappy Bird”
   studiobar_teacher_title: Salas de aula únicas
   studiobar_teacher_body: Se for Professor, pode usar o Code Studio na sala de aula
   studiobar_frozen_title: Hora de Código
@@ -232,7 +232,7 @@
     &ldquo;Este programa consegue que os meus
     alunos se empenhem a 100% em tudo o que fazem.&rdquo;
     Adam, Professor
-  homepage_hero_text_stat_loc: '#loc linhas de código escritas por alunos'
+  homepage_hero_text_stat_loc: 2,5 milhões de raparigas estão a aprender no Code Studio
   homepage_hero_text_stat_students: '#student_count de contas de alunos no Code Studio'
   homepage_hero_text_stat_served: 'Hora de Código: #served de alunos já experimentaram'
   homepage_slot_text_hoc: A Hora de Código
@@ -250,13 +250,12 @@
   homepage_action_text_volunteers: Precisam-se voluntários com conhecimentos técnicos
   homepage_action_text_codevideo: Vê o vídeo
   homepage_action_text_teachervideo: Vê o vídeo
-  homepage_action_text_girlvideo: Inspira uma rapariga
+  homepage_action_text_girlvideo: Inspirar uma rapariga
   homepage_action_text_learn: Começa a aprender
   homepage_action_text_signpetition: Assina a petição
   homepage_signpetition_dropdown: Assina a nossa petição &#x25BE;
   homepage_diversity_pledge: Aceite a promessa de diversidade
-  homepage_banner_text_prizes: 'Está a chegar novamente a Hora do Código, 7 a 13 de
-    dezembro. '
+  homepage_banner_text_prizes: 'A Hora de Código está de volta, de 7 a 13 de dezembro. '
   homepage_banner_link_prizes: 'Junte-se ao maior evento de aprendizagem da história. '
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para
     aumentar a diversidade na ciência da computação.
@@ -285,7 +284,7 @@
   homepage_slot_text_title_advocates: Advogados
   homepage_slot_text_blurb_advocates: Apoie nosso trabalho
   homepage_slot_text_link_stats: Vê as estatísticas
-  homepage_slot_text_link_buy: Participe
+  homepage_slot_text_link_buy: Colaborar
   homepage_slot_text_link_donate: Faz uma doação
   homepage_header_codestudio: Criações de alunos no Code Studio
   homepage_header_donors: Agradecemos a quem nos apoia
@@ -350,7 +349,7 @@
     Ages 6-10
   starwars_blocks_start_button: Experimentar agora
   starwars_watch_videos: Antes de começares, vê um destes vídeos inspiradores
-  starwars_speak_languages: Falas outra língua?
+  starwars_speak_languages: Falas outro idioma?
   starwars_help_translate: Ajuda-nos a traduzir
   starwars_platform_text: Navegadores modernos, smartphones e tablets
   mc_name: Hora do Código de Minecraft
@@ -392,7 +391,7 @@
   volunteer_engineer_submission_header_shared: Informações partilhadas com os professores
     no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
-  volunteer_engineer_submission_field_name_placeholder: Nome Completo
+  volunteer_engineer_submission_field_name_placeholder: Nome completo
   volunteer_engineer_submission_field_company: Empresa (ou Universidade)
   volunteer_engineer_submission_field_company_placeholder: Empresa (ou Universidade)
   volunteer_engineer_submission_field_experience_level: Nível de experiência
@@ -459,14 +458,14 @@
     de universidade (ou pesquisador)
   volunteer_engineer_submission_experience_software_professional: Profissional na
     área de software
-  volunteer_engineer_submission_distance_8: 8 quilómetros
-  volunteer_engineer_submission_distance_16: 15 quilómetros
-  volunteer_engineer_submission_distance_24: 25 quilómetros
-  volunteer_engineer_submission_distance_32: 20 Milhas
-  volunteer_engineer_submission_num_volunteers_5: 5 Voluntários
-  volunteer_engineer_submission_num_volunteers_10: 10 Voluntários
-  volunteer_engineer_submission_num_volunteers_25: 25 Voluntários
-  volunteer_engineer_submission_num_volunteers_50: 50 Voluntários
+  volunteer_engineer_submission_distance_8: 5 milhas
+  volunteer_engineer_submission_distance_16: 10 milhas
+  volunteer_engineer_submission_distance_24: 15 milhas
+  volunteer_engineer_submission_distance_32: 20 milhas
+  volunteer_engineer_submission_num_volunteers_5: 5 voluntários
+  volunteer_engineer_submission_num_volunteers_10: 10 voluntários
+  volunteer_engineer_submission_num_volunteers_25: 25 voluntários
+  volunteer_engineer_submission_num_volunteers_50: 50 voluntários
   volunteer_engineer_submission_type_task_onsite: Eu quero que tu visites a minha
     turma para apoio técnico e inspiração
   volunteer_engineer_submission_type_task_remote: Eu quero que tu visites via Skype
@@ -499,8 +498,8 @@
   dashboard_landing_video_player: Teste nosso novo player de vídeo na sua escola
   dashboard_landing_progress_title: Progresso da turma principal
   dashboard_landing_progress_biggest: Este é o progresso da tua maior turma.
-  dashboard_landing_view_progress: Visualizar progresso de %{biggest_section}
-  dashboard_landing_print_progress: Progresso da Impressão
+  dashboard_landing_view_progress: Ver o progresso de %{biggest_section}
+  dashboard_landing_print_progress: Imprimir progresso
   dashboard_landing_available_title: Cursos disponíveis
   dashboard_landing_available_courses: Aqui estão os cursos actualmente disponíveis
     para si e os seus alunos.
@@ -738,9 +737,9 @@
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+  learn_educator_resources_button: Recursos para professores
+  learn_are_you_educator: É professor? Veja <a href="http://hourofcode.com/resources/how-to">como
+    ensinar uma Hora de Código</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
@@ -778,10 +777,10 @@
   carousel_heading_ide: Plataformas populares entre professores
   educator_notes: Observações do professor
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: Vê a <a href="https://code.org/educate/allhourofcode">lista
+    completa de tutorias da Hora de Código</a>. Para veres as regras de submissão
+    de tutoriais da Hora de Código, <a href="https://hourofcode.com/tutorial-guidelines">clica
+    aqui.</a>
   how_to_teach_hoc: Como dar uma aula da "Hora de Código"
   more_resources_educators: Mais recursos para professores
   beyond_submission: Deseja enviar um tutorial para Além de uma hora? Veja os critérios
@@ -839,12 +838,12 @@
   playlab_name: Laboratório
   infinity_name: Laboratório infinito
   artist_name: Artista
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Desafio de programação da Ilha do Mistério
+  allcancode_name: Corre, Marco!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutos de código
   teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: Dos 4 aos 104 anos
   codeintl_gradelevel: Dos 4 aos 104 anos
@@ -890,12 +889,12 @@
   infinity_gradelevel: Dos 4 aos 104 anos
   artist_gradelevel: Dos 4 aos 104 anos
   monstercoding_gradelevel: Dos 5 aos 13 anos
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Dos 5 aos 10 anos
+  csfirst_gradelevel: Dos 9 aos 14 anos
   boxisland_gradelevel: 1.º Ciclo do Ensino Básico
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Dos 12 aos 14 anos
+  texasinstruments_gradelevel: Dos 13 aos 16 anos
+  teacherled_gradelevel: Maiores de 5 anos
   codeorg_platformtext: Navegadores modernos, smartphones e tablets
   codeintl_platformtext: Navegadores modernos, smartphones e tablets
   thinkersmithspanish_platformtext: Desligado
@@ -937,12 +936,12 @@
   frozen_platformtext: Navegadores modernos + tablets
   starwars_platformtext: Navegadores modernos + tablets
   playlab_platformtext: Navegadores modernos, smartphones e tablets
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Navegadores atualizados, iOS e Android
+  allcancode_platformtext: Navegadores atualizados e iOS
   csfirst_platformtext: Navegadores atualizados
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: Android e iOS
   codesters_platformtext: Navegadores atualizados
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: Calculadoras da TI
   teacherled_platformtext: Navegadores modernos, smartphones e tablets
   codeorg_shortdescription: Aprende a programar com Mark Zuckerberg e com os Angry
     Birds!
@@ -973,7 +972,8 @@
   codemonkey_shortdescription: Os alunos programam um macaco para pegar bananas.
   codeavengers_shortdescription: Aprenda sobre a programação JavaScript em um navegador
     da Web
-  processing_shortdescription: Tutorial de uma hora sobre a linguagem Processing
+  processing_shortdescription: Tutorial de uma hora acerca da linguagem de programação
+    Processing
   robomind_shortdescription: Programa um robô virtual
   groklearning_shortdescription: Ensine "Eliza", o chatbot, a enganar seus amigos
     e fazê-los acreditar que ela é humana!
@@ -1361,13 +1361,13 @@
   kidsruby_beyond_shortdescription: Aprenda a programar em Ruby
   w3schools_beyond_shortdescription: Aprenda a criar sites
   codeavengers_beyond_shortdescription: Aprenda a programar jogos e sites
-  mozilla_beyond_shortdescription: Crie e compartilhe páginas Web
+  mozilla_beyond_shortdescription: Cria e partilha páginas Web
   codecombat_beyond_shortdescription: Jogue e aprenda sobre JavaScript para vencer
   codea_beyond_shortdescription: Crie aplicativos em seu iPad
   lego_beyond_shortdescription: Crie e programe um robô
   finch_beyond_shortdescription: Um robô para ensinar ciência da computação
   arduino_beyond_shortdescription: Aprenda Arduino com a Digital Sandbox do Sparkfun.
-  processing_beyond_shortdescription: Aprenda a linguagem Processing
+  processing_beyond_shortdescription: Aprende as linguagens de programação Processing
   alice_beyond_shortdescription: Ensine programação num ambiente 3D
   sphero_beyond_shortdescription: As lições do SPRK dão às crianças um curso rápido
     e divertido sobre programação de robôs, e, ao mesmo tempo, melhoram habilidades
@@ -1564,13 +1564,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

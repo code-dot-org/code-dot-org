@@ -28,6 +28,8 @@
     code:
       label: 'Dodaj nauczyciela:'
       placeholder: Kod sekcja (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Dodaj nauczyciela
   add_hint_form:
     placeholder: Wprowadź tutaj swoją wskazówkę
@@ -299,9 +301,8 @@
       remove: Czy na pewno chcesz usunąć tego nauczyciela?
     students:
       dashboard: Przejdź do Panelu Nauczyciela
-    user_not_found: Nie można odnaleźć nauczyciela lub ucznia
-    student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel
-      %{student_name}'
+    user_not_found: Nie można odnaleźć nauczyciela.
+    student_teacher_disassociated: Usunąłeś %{teacher_name} jako swojego nauczyciela.
     panel:
       answer_viewer: Podgląd odpowiedzi
       student: Uczeń
@@ -388,7 +389,7 @@
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Wypróbuj Godzinę Kodowania!
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -406,17 +407,24 @@
       te materiały.
     help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli
       utworzyć te materiały.
-    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Wszystkie
-      prawa zastrzeżone. <br />Star Wars&#8482; &amp; &copy; %{current_year} Disney
-      and Lucasfilm. Wszystkie prawa zastrzeżone. <br />Frozen&#8482; &amp; &copy;
-      %{current_year} Disney. Wszystkie prawa zastrzeżone. <br />Ice Age&#8482; &amp;
-      &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. <br />Angry
-      Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie
-      prawa zastrzeżone. <br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year}
-      Electronic Arts Inc. Wszystkie prawa zastrzeżone
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
+      zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
+      Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
+      Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th
+      Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
+      < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon
+      Network.
+    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
+      zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
+      Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
+      Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th
+      Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone.
+      < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon
+      Network.
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
       of Code&reg; są znakami handlowymi Code.org.'
@@ -431,10 +439,10 @@
     privacy: Polityka prywatności
     secure: Bezpieczna wersja
     report_abuse: Zgłoś nadużycie
-    built_on_code_studio: Zbudowane w Code Studio
-    make_my_own_app: Stwórz własną aplikację
+    built_on_code_studio: Zbudowane na Code Studio
+    make_my_own_app: Utwórz własną aplikację
     how_it_works: Jak to działa
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Wypróbuj Godzinę Kodowania!
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -547,8 +555,8 @@
     caption_by_name_age: przez %{name}, w wieku %{age}
     caption_time_ago: '%{time_ago} temu'
     header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artysta/Wykonawca
+    header_playlab: Opowiadania i gry
+    header_artist: Sztuka kodu
   landing:
     prerelease: Ten kurs jest w <span class='betatext'> wersji beta</span>.  Oznacza
       to, że to nie jest ostateczna jego wersja, podlega on rewizji na podstawie otrzymanych

@@ -22,8 +22,8 @@ it-IT:
   submit: Invia
   twentyhours_heading: "Prova la nostra introduzione all'Informatica"
   twentyhours_text: "Hai terminato la tua prima Ora del Codice? Impara un altro po' di concetti di informatica e di programmazione in quest'altro corso."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: "Ogni bambino merita un'opportunità"
+  og_description: "Ogni alunno in ogni scuola merita l'opportunità di studiare informatica."
   hoc2014_heading: 'Iscriviti alla <a href="http://hourofcode.com/it">Ora del Codice</a> <br/>8-14 dicembre 2014 <br/>'
   hoc2014_students: Studenti
   hoc2014_try: Prova
@@ -325,7 +325,7 @@ it-IT:
   volunteer_engineer_submission_intro_signup: 'Compila i campi sottostanti se sei uno studente di informatica o uno sviluppatore professionista. I campi contrassegnati con un <span class="form-required-field">*</span> sono obbligatori.'
   volunteer_engineer_submission_intro_links: |-
     Non vuoi offrirti volontario? <a href="%{learn_more}">Scopri di più</a> riguardo organizzare il tuo evento dell' Ora del Codice e trova un volontario locale sulla nostra <a href="%{volunteer_local}">Mappa Volontari</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Aggiorna le tue informazioni
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
   volunteer_engineer_submission_field_name_placeholder: Cognome e nome
@@ -347,10 +347,10 @@ it-IT:
   volunteer_engineer_submission_field_description_placeholder: "Descrizione dell'esperienza e/o partecipazione"
   volunteer_engineer_submission_header_private: Le informazioni sono mantenute private e mai condivise
   volunteer_engineer_submission_field_email: Indirizzo di posta elettronica
-  volunteer_engineer_submission_field_email_desc: Il tuo indirizzo email non sarà mai condiviso. Ti invieremo le richieste da parte degli insegnanti.
+  volunteer_engineer_submission_field_email_desc: Il tuo indirizzo di posta elettronica non sarà mai condiviso. Ti invieremo le richieste da parte degli insegnanti.
   volunteer_engineer_submission_field_email_placeholder: Indirizzo di posta elettronica
-  volunteer_engineer_submission_final_paragraph: "Sarai segnalato su una mappa così da poter essere contattato dagli insegnanti locali per l'Ora di Codice o altre opportunità di volontariato. Non comunicheremo MAI la tua email e l'indirizzo esatto. Le altre informazioni invece (inclusa la localizzazione approssimata) saranno pubblicamente accessibili dagli insegnanti locali."
-  volunteer_engineer_submission_checkbox_contact: "Sono d'accordo che gli insegnanti possono contattarmi per opportunità di volontariato (Nota: il tuo indirizzo email non sarà condivisa)"
+  volunteer_engineer_submission_final_paragraph: "Sarai segnalato su una mappa così da poter essere contattato dagli insegnanti locali per l'Ora di Codice o altre opportunità di volontariato. Non comunicheremo MAI il tuo indirizzo di posta elettronica e l'indirizzo esatto. Le altre informazioni invece (inclusa la localizzazione approssimata) saranno pubblicamente accessibili dagli insegnanti locali."
+  volunteer_engineer_submission_checkbox_contact: "Sono d'accordo che gli insegnanti possano contattarmi per richiedere attività di volontariato (Nota: il tuo indirizzo di posta elettronica non sarà condiviso)"
   volunteer_engineer_submission_submit: Invia
   volunteer_engineer_submission_thankyou: |-
     Grazie per il l'attività di volontariato per l'Ora di Codice. Pre prepararsi all'Ora del Codice e reclutare altri appassionati, <a href="%{url}"> per saperne di più.</a>
@@ -566,7 +566,7 @@ it-IT:
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: "<b>16 Dicembre 2015</b> - Grazie per aver partecipato all'Ora di Codice 2015! I risultati e i progressi delle esercitazioni e delle lezioni di coding saranno registrati e salvati. Nota: gli uffici di Code.org rimarranno chiusi dal 19 dicembre al 4 gennaio. Aspettatevi un leggero ritardo per eventuali domande inviate fino al 4 gennaio."
   dashboard_announce_button_text: Ulteriori informazioni
   dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando! Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
   dashboard_announce_playlab: "<b>4 Dicembre, 2015</b> - L'Ora del Codice è qua! Prova uno dei 50 corsi per tutte le età e tutti i dispositivi. Novità della settimana: programma le tue storie e i tuoi giochi con i nuovi corsi del Laboratorio: L'Era Glaciale e Gumball."

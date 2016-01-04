@@ -21,8 +21,8 @@ vi-VN:
   submit: Chấp nhận
   twentyhours_heading: Hãy thử xem bản giới thiệu của khóa học khoa học máy tính
   twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Mỗi đứa trẻ xứng đáng có được cơ hội
+  og_description: Mỗi học sinh/sinh viên xứng đáng có được cơ hội học công nghệ thông tin.
   hoc2014_heading: 'Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng 8 đến 14 tháng 12, 2014 <br/>'
   hoc2014_students: học viên
   hoc2014_try: Hãy thử nó
@@ -251,16 +251,16 @@ vi-VN:
   class_submission_in_school_summer_school_cs_program: Chương trình hè KHMT
   class_submission_in_school_exploring_computer_science: Khám phá Khoa học Máy tính
   class_submission_in_school_other: một lớp khác trong trường
-  class_submission_out_of_school: Out of school
+  class_submission_out_of_school: Hoạt động ngoại khóa
   class_submission_out_of_school_summer_camp: Trại hè
   class_submission_out_of_school_afterschool_program: Chương trình phụ đạo
   class_submission_out_of_school_all-day_workshop: Hội thảo cả ngày (đến 1 tuần)
   class_submission_out_of_school_multi-week_workshop: Hội thảo nhiều tuần
-  class_submission_out_of_school_other: Other out of school
+  class_submission_out_of_school_other: Bên ngoài trường học
   class_submission_online: Trực tuyến
   class_submission_online_programming_class: Lớp học lập trình trực tuyến
   class_submission_online_teacher_resource: Tài nguyên trực tuyến cho giáo viên
-  class_submission_online_other: Other online
+  class_submission_online_other: Trực tuyến khác
   class_submission_level_preschool: Mẫu giáo
   class_submission_level_elementary: Tiểu học
   class_submission_level_middle_school: Trung học cơ sở
@@ -269,81 +269,81 @@ vi-VN:
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
+  playlab_classic_title: Cổ điển
   playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: Kỉ băng hà -sắp ra mắt
   playlab_iceage_title_live: Kỉ băng hà
   starwars_subtitle: Xây dựng vũ trụ bằng mã lập trình
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Sử dụng các khối kéo-thả và JavaScript.
+  starwars_javascript_specs: Chỉ sử dụng Tiếng Anh | Các trình duyệt hiện đại | Tuổi 11+
   starwars_javascript_start_button: Thử ngay bây giờ
   starwars_blocks_title: các khối
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
+  starwars_blocks_description: Sử dụng các khối kéo-thả.
+  starwars_blocks_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại, điện thoại thông minh, máy tính bảng | Tuổi từ 6-106
   starwars_blocks_start_button: Thử ngay bây giờ
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Trước khi bạn bắt đầu, hãy xem một trong những video truyền cảm hứng này
+  starwars_speak_languages: Bạn nói một ngôn ngữ khác?
+  starwars_help_translate: Giúp chúng tôi phiên dịch
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_longdescription: Sử dụng các khối mã để mang Steve hoặc Alex đến với chuyến phiêu lưu khám phá thế giới Minecraft này.
+  mc_shortdescription: Sử dụng các khối mã để mang Steve hoặc Alex đến với chuyến phiêu lưu khám phá thế giới Minecraft này.
   mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
+  mc_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi 6-106
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_title: Truyền cảm hứng cho sinh viên và tình nguyện viên
+  volunteer_engineer_submission_subtitle_generic: '100,000 giáo viên sẽ hướng dẫn một lớp Hour of Code trong lớp học của họ vào năm nay, từ ngày 7 đến 13 tháng 12, 2015. Họ cần sự trợ giúp từ bạn! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} giáo viên cần tình nguyện viên. <br>%{num_volunteers} tình nguyện viên đã đăng ký. Tham gia cùng họ.'
+  volunteer_engineer_submission_intro_background: Hour of Code là một bước ngoặt toàn cầu về việc giới thiệu công nghệ thông tin trong một giờ đồng hồ, với mười triệu học sinh/sinh viên ở 180+ quốc gia. Xin vui lòng tham gia Tuần Lễ Công Nghệ Thông Tin, từ ngày 7 đến 13 tháng 12.
   volunteer_engineer_submission_intro_recruit: |-
-    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    Các giáo viên đang cần sự giúp đỡ từ một vài người <span style="font-family: 'Gotham 7r', sans-serif;"> đam mê về việc giảng dạy công nghệ thông tin </span>, những người có thể trợ giúp trong lớp học, hoặc những người có thể <span style="font-family: 'Gotham 7r', sans-serif;"> truyền cảm hứng </span> đến học sinh/sinh viên thông qua việc trò chuyện chi tiết về công nghệ thông tin (có thể được thực hiên bằng một cuộc gọi video).
+  volunteer_engineer_submission_intro_signup: 'Xin vui lòng nhập vào thông tin sau đây nếu bạn là một sinh viên ngành công nghệ thông tin hay chuyên gia phần mềm. Những mục đánh dấu với <span class="form-required-field">*</span> là bắt buộc.'
+  volunteer_engineer_submission_intro_links: 'Bạn có cần tìm tình nguyện viên? Hãy tìm một tình nguyện viên ở khu vực của bạn trên <a href="%{volunteer_local}"> bản đồ tình nguyện viên của chúng tôi </a>.'
+  volunteer_engineer_submission_update_information: Cập nhật thông tin của bạn
+  volunteer_engineer_submission_header_shared: Thông tin chia sẻ với các giáo viên trên bản đồ tình nguyện viên
   volunteer_engineer_submission_field_name: Tên
   volunteer_engineer_submission_field_name_placeholder: Họ tên đầy đủ
   volunteer_engineer_submission_field_company: Công ty (hoặc Đại Học)
   volunteer_engineer_submission_field_company_placeholder: Công ty (hoặc Đại Học)
   volunteer_engineer_submission_field_experience_level: Kinh nghiệm
   volunteer_engineer_submission_field_location: Địa điểm
-  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country, or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_location_desc: Vị trí của bạn sẽ được sử dụng để cho phép các giáo viên để tìm kiếm các tình nguyện viên gần đó và sẽ được hiển thị như một nút ghim trên bản đồ. Nếu bạn lo lắng về vấn đề bảo mật, xin vui lòng sử dụng địa chỉ công việc/trường học của bạn hoặc thành phố của bạn.
+  volunteer_engineer_submission_field_location_placeholder: Mã vùng, thành phố và tiểu bang/vùng, hoặc địa chỉ
+  volunteer_engineer_submission_field_location_flexibility: Tôi có thể trợ giúp Hour of Code bằng cách... (chọn các mục tương ứng)
+  volunteer_engineer_submission_checkbox_after_hoc: Tôi quan tâm đến việc tham gia tình nguyện sau chương trình Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Thời gian cam kết sau chương trình Hour of Code
+  volunteer_engineer_submission_field_linkedin: Hồ sơ LinkedIn
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/tên_bạn
+  volunteer_engineer_submission_field_facebook: Trang Facebook
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/tên_bạn
   volunteer_engineer_submission_field_description: Mô tả
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: Mô tả kinh nghiệm lập trình của bạn và cách mà bạn muốn tham gia như một tình nguyện viên cho giáo viên địa phương.
+  volunteer_engineer_submission_field_description_placeholder: Mô tả về kinh nghiệm và/hoặc hoạt động đã tham gia. Nếu bạn nói được ngôn ngữ khác ngoài tiếng Anh, hãy chắc chắn thêm nó ở đây.
+  volunteer_engineer_submission_header_private: Thông tin giữ kín và không bao giờ bị chia sẻ
   volunteer_engineer_submission_field_email: Địa chỉ Email
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: Địa chỉ email của bạn sẽ không bao giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên.
   volunteer_engineer_submission_field_email_placeholder: Địa chỉ Email
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: Bạn sẽ được liệt kê trên một bản đồ cho các giáo viên địa phương liên hệ với bạn cho chương trình Hour of Code hoặc cơ hội tình nguyện viên khác. Email và địa chỉ chính xác của bạn sẽ không bao giờ được chia sẻ của chúng tôi. Tuy nhiên, thông tin khác (bao gồm cả vị trí gần đúng) sẽ được công khai có thể xem được bởi giáo viên địa phương.
+  volunteer_engineer_submission_checkbox_contact: 'Tôi đồng ý rằng giáo viên có thể liên hệ với tôi để cơ hội tình nguyện viên (lưu ý: địa chỉ email sẽ không được chia sẻ)'
   volunteer_engineer_submission_submit: Chấp nhận
-  volunteer_engineer_submission_thankyou: 'Thank you for signing up to volunteer. Teachers will be using <a href="%{url}">this map</a> to search for and contact volunteers like you.'
+  volunteer_engineer_submission_thankyou: 'Cảm ơn bạn đã đăng ký tham gia cho công việc tình nguyện này. Giáo viên sẽ sử dụng <a href="%{url}"> bản đồ này</a> để tìm kiếm và liên hệ với những tình nguyện viên như bạn.'
   volunteer_engineer_submission_commitment_uncertain: Không chắc chắn
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 giờ mỗi tuần
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 giờ mỗi tuần
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 giờ mỗi tuần
   volunteer_engineer_submission_commitment_now_and_then: Mỗi bây giờ và sau đó
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: '2 - 3 lần mỗi năm'
+  volunteer_engineer_submission_commitment_monthly: Một vài giờ mỗi tháng
+  volunteer_engineer_submission_commitment_weekly: Một vài giờ mỗi tuần
   volunteer_engineer_submission_commitment_more: Nhiều hơn
   volunteer_engineer_submission_location_flexibility_onsite: Ngay trong khuôn viên tại một trường học
   volunteer_engineer_submission_location_flexibility_remote: Cố vấn từ xa (giáo viên hoặc sinh viên)
   volunteer_engineer_submission_location_flexibility_curriculum: Sẵn sàng để giúp đỡ đóng góp cho các dự án mã nguồn mở chương trình giảng dạy
   volunteer_engineer_submission_experience_unspecified: Không xác định
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Không phải kỹ sư tại một công ty công nghệ
   volunteer_engineer_submission_experience_university_student_or_researcher: Đang là sinh viên đại học (hoặc Nghiên cứu sinh sau đại học)
   volunteer_engineer_submission_experience_software_professional: Chuyên gia phần mềm
   volunteer_engineer_submission_distance_8: 5 miles

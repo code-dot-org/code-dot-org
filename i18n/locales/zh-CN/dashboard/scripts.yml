@@ -100,7 +100,7 @@ zh:
           Bounce: 跳
           Maze Conditionals: 迷宫：条件
           Artist Functions with Parameters: 小艺术家：函数参数
-          Computational Thinking: 计算性思维
+          Computational Thinking: 计算式思维技巧
           Functional Suncatchers: 函数化的吊饰
           Songwriting Parameters: 歌曲创作参数
           Dice Race: 骰子比赛
@@ -328,7 +328,7 @@ zh:
           description_short: 在这20小时的课程中，课程2-4会介绍核心的计算机编程概念。
           Introduction to Computer Science: 计算机科学导论
           The Maze: 迷宫
-          Computational Thinking: 计算式思维
+          Computational Thinking: 计算式思维技巧
           Graph Paper Programming: 图纸上编程
           The Artist: 小艺术家
           Algorithms: 算法
@@ -680,6 +680,7 @@ zh:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1234,6 +1235,7 @@ zh:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.

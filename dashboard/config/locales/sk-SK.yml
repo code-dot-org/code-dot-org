@@ -29,6 +29,8 @@
     code:
       label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadajte Váš tip sem
@@ -378,7 +380,7 @@
     title: Informácie o Code štúdiu
     description: Ktokoľvek sa môže naučiť informatiku. Programujte hry a aplikácie
       s Code štúdiom.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Vyskusaj lekciu kódovania!
   gender:
     male: Muž
     female: Žena
@@ -418,7 +420,7 @@
     built_on_code_studio: Vyvinuté v Code Studio
     make_my_own_app: Urob svoju vlastnú aplikáciu
     how_it_works: Ako to funguje
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Vyskusaj lekciu kódovania!
   reference_area:
     title: Potrebujete pomôcť?
     subtitle: Pozrite si tieto videá a tipy

@@ -534,60 +534,63 @@
           көмектесе аласын ба?'
         studio_iceage_click_hello: Түймеше басылғанда Сидке соңғы шақыру жасауға көметесе
           аласын ба? Орындауды басқаннан кейін оған басуды умытпа.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
-          him go the last 200 pixels using the "move" block.
-        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
-          "move actor" block.  Next, connect a block to the "when actor touches" event
-          to play a sound when they find each other.
-        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
-          you attach blocks to it to help Gumball warm up for his race by moving left
-          and right repeatedly?
-        studio_gumball_click_hello: Can you help Anton announce the start of a race
-          by saying "Ready, set, go!"? To test your program, don’t forget to click
-          Anton after you click Run!
-        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
-          him run around by attaching the "move" block to each of the events. When
-          you’re done, click Run and try to collect all of the flags.
-        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
-          Anton (actor 2) moving left and right, as well as the code to move Banana
-          Joe (actor 1) around the screen.  Can you finish the code and add blocks
-          to the "when actor touches" event to make it so that you both play a sound
-          and score a point when Banana Joe and Anton collide?  Press Run to play
-          the game.
-        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
-          background to "characters" and set Darwin’s speed to fast, then press Run
-          and move him to Penny to warn her.
-        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
-          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
-          2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
+        studio_iceage_move_events: Скрат әлі жаңғақтарды іздеуде! Бағыт пернесін басқанда,
+          бағытын өзгертіп жүгіруі үшін, "жылжыту" бөлігін әрбір оқиғамен байланыстыр.
+          Аяқтаған соң, "Жіберу" батырмасына бас және барлық жаңғақтарды жинап көр.
+        studio_iceage_sound_and_points: Гренниге солға және оңға қозғалуға, сонымен
+          қатар Сидке экранмен қозғалуға мүмкіндік беретін бағдарламаның көп бөлігі
+          жазылып қойылған. Сид және Греннидің соқтығысуы кезінде ұпай қосылып, ән
+          ойнайтындай "кейіпкер соқтығысқанда" оқиғасына бөлшектерді қосып кодты аяқтай
+          аласың ба? Ойынды іске қосу үшін "Жіберу" батырмасына бас.
+        studio_iceage_warn_ice_age: Мұзды дәуір басталып келе жатыр, сондықтан тезірек
+          қозғалу керек! "Мұзды" фонын таңдап Сидтің жылдамдығын арттыр. Содан кейін
+          "Жіберу" батырмасына басып Диегоны ескерту үшін соған қарай қозғалтыңыз.
+        studio_iceage_throw_hearts: Сид өзінің әжесі, Гренниді, жақсы көретінін білгенін
+          қалайды. Гренниге (кейіпкер 2) Сидтің (кейіпкер 1) жүрек жолдауы үшін "Кейіпкер
+          жолдайды" пәрменін пайдаланыңыз! Гренни жүректі ұстап алғанда бақытты көңіл-күйге
+          ауыстыр.
+        studio_iceage_free_play: Өзіңіздің ойыныңызды немесе оқиғаңызды құрыңыз. Аяқтағаннан
+          соң, сіз жасаған ойынды немесе оқиғаны достарыңыз өз телефонында, планшеттерінде
+          немесе компьютерлерінде байқап көрулері үшін "Аяқтау" батырмасына басыңыз!
+        studio_gumball_hello1: Анаис жаңа достар тапқысы келеді. Жұмыс орнына "Сәлем"
+          бөлігін жылжытып және ішіне "Сәлем" сөзін жазу арқылы оған "Сәлем" деп айтуға
+          көмектесе аласың ба?
+        studio_gumball_hello2: Дарвин (кейіпкер 1) және оның ағасы Гамбол (кейіпкер
+          2) мектепке қарай бет алды. Олардың бір-бірімен сәлемдесулері үшін, "кейіпкер
+          сөйлейді" бөлігін екі рет пайдаланыңыз.
+        studio_gumball_move_to_flag: Банан Джо жүгіру сайысында жеңуді қалайды! "Жылжыту"
+          бөлігін пайдаланып, оған соңғы 200 пикселді еңсеруге көмектес.
+        studio_gumball_move_to_actor: Гамбол (кейіпкер 1) мен Дарвин (кейіпкер 2)
+          жарысқа кешігіп қалды! "Кейіпкерді қозғалту" бөлігін пайдаланып, Гамболга
+          Дарвинге дейін 200 пиксел түсуге көмектес. Одан кейін екеуі кездескенде
+          ән ойнауы үшін, "кейіпкер соқтығысқанда" бөлігімен оқиғаны байланыстыр.
+        studio_gumball_repeat: '"Мәңгілік қайталау" блогы код фрагментін тоқтатусыз
+          қайталауға мүмкіндік береді. Гамбол жүгіруден алдын оңға және солға қозғала
+          отырып бойын жазу үшін "мәңгілік қайталау" блогына басқа блоктарды орналастыра
+          аласың ба?'
+        studio_gumball_click_hello: Сіз Антонға жарыстың басталғандығын "На старт!
+          Внимание! Марш!" сөздерімен жариялауға көмектесе аласыз ба? Бағдарламаны
+          тексеру үшін "Старт"-ты басқаннан соң Антонды шертуді ұмытпаңыз!
+        studio_gumball_move_events: Дарвин жалаушаларды жинау жарысына қатысуда. Ол
+          жалаушаларды жинай алу үшін "орнын ауыстыру" блогын барлық оқиғалармен байланыстыр.
+          Аяқтаған сәтте "Орындау"-ды басып, барлық жалаушаларды жинап көр.
+        studio_gumball_sound_and_points: Антонға (2-кейіпкер) оңға және солға дүріп
+          отыруға, ал БананаДжоға (1-кейіпкер) экран бойынша -қозғалуға мүмкіндік
+          беретін бағадарламаның көп бөлігі жазылып қойған. "Кейіпкер қозғалған кезде"
+          оқиғасына БананаДжо мен Антон соқтығысқан кезде әуен ойнап, ұпай саналатындай
+          қылып блокктарды қоса аласыз ба? Ойынды қосу үшін "Орындау" басыңыз.
+        studio_gumball_warn_food_fight: Дарвин қазір ғана тамақ лақтырысудан аман
+          қалды. Артқы фонды "Кейіпкерлер"-ге өзгерт және Дарвиннің жылдамдығын көбейт.
+          Кейіннен "Орындау" батырмасын басып, Дарвинді ескерте алуы үшін Пенниге
+          алып бар.
+        studio_gumball_join_food_fight: Тамақ лақтырысу ойынына қосыл! БананаДжо (1-кейіпкер)
+          Антонға (2-кейіпкер) тамақ лақтыра алуы үшін "кейіпкер нысанды солға лақтырады"
+          командасын қолдан. Антонға тиген сәтте оның көңіл күйі ашуланған болып өзгеретіндей
+          қылып жаса.
+        studio_gumball_free_play: Өзіңіздің ойыныңызды немесе оқиғаңызды құрыңыз.
+          Аяқтағаннан соң, сіз жасаған ойынды немесе оқиғаны достарыңыз өз телефонында,
+          планшеттерінде немесе компьютерлерінде байқап көрулері үшін "Аяқтау" батырмасына
+          басыңыз!
         studio_full_sandbox: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың
           оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
         studio_k1_1: Итке "сәлем, әлем" деп айтқыза аласыз ба?

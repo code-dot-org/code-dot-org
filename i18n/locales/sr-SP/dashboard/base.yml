@@ -28,6 +28,8 @@ sr:
     code:
       label: 'Додај наставника:'
       placeholder: Шифра секције(ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Додај наставника
   add_hint_form:
     placeholder: Молимо унесите ваш савет овде
@@ -90,9 +92,9 @@ sr:
     valid_password: Валидна лозинка!
     invalid_password: Лозинка мора имати барем 6 знакова
     mismatch_password: Лозинке се не поклапају
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "Слажем се са Code.org <a href='http://code.org/tos'>условима коришћења</a>. Уколико имам мање од 13 година старости, потврђивањем ове форме показујем да имам сагласност родитеља или правног старатеља да користим сервисе овог сајта.<br/>За кориснике који имају мање од 13 година, електронска пошта се чува на начин да не можемо да их контактирамо."
+    teacher_terms: "Слажем се са Code.org <a href='http://code.org/tos'>условима коришћења</a>."
+    additional_information: Потребне су нам додатне информације како би смо могли да наставимо са процесом регистрације.
   signin_form:
     title: Већ имате налог? Пријавите се
     login: E-mail или корисничко име
@@ -138,7 +140,7 @@ sr:
       username_not_found: 'Корисничко име %{username} није пронађено'
       username_in_use: '%{username} је заузето, молимо узмите друго'
       no_teacher: "Нисмо нашли никога пријавлјеног са '%{teacher_email_or_code}'. Молимо затражите да се поновно пријаве и онда их покушајте поновно додати"
-      section_not_found: "Could not find a section with code '%{section_code}'."
+      section_not_found: "Није могуће наћи део кода '%{section_code}'."
       blank_code: Упишите шифру секције
       cant_join_own_section: Извини, није можеш се придружити својој секцији.
     mail:
@@ -155,8 +157,8 @@ sr:
     title: 'Откупи награду: %{name}'
     provider: 'Пружаоц услуга:'
     code: 'Код:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    redeem_header: 'Да се надокнади:'
+    donorschoose_register: Региструјте се као наставник на DonorsChoose.org
     donorschoose_project: Постави пројекат
     donorschoose_how_to: Како да користите вашу шифру
     success: Ваша је награда успешно откуплјена, погледајте код испод.
@@ -190,8 +192,8 @@ sr:
       choose: 'Изабери награду:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Заслужили сте награду! (само за студенте САД-а)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
+      not_earned_title: Заврши туторијал и освоји награде(само за ученике из УН)
+      not_earned: 'Научи све научне принципе рачунарства, сакупи све %{num_trophies} трофеје, и заради праве награде. Можеш да бираш између 10ГБ бесплатног простора на Дропбоксу, $10 Скајп кредита и бесплатно преузимање игара. Напомена: понуда важи само за УН ученике и док трају залихе.'
       teacher:
         earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
@@ -254,30 +256,30 @@ sr:
     confirm:
       remove: Да ли си сигуран/а да желиш да уклониш овог учитеља?
     students:
-      dashboard: Go to Teacher Dashboard
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+      dashboard: Иди на страницу наставника
+    user_not_found: Наставник није пронађен.
+    student_teacher_disassociated: 'Уклонили сте %{teacher_name} из листе ваших наставника.'
     panel:
       answer_viewer: Answer Viewer
       student: студент
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Види решење
+      try_it_yourself: Испробај
       section: Section
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on:'
-      unsubmit: Unsubmit
+      example: Пример решења
+      example_with_number: 'Пример решења %{solution_number}'
+      submitted_on: 'Предато:'
+      unsubmit: Откажи предају
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
-    email_resend_confirm: Resend confirmation instructions
+    email_confirm_needed: 'Електронска пошта није потврђена:'
+    email_confirm_needed_required: 'Ваша електронска пошта %{email} није потврђена:'
+    email_confirm_wrong_email: (Погрешна електронска пошта?)
+    email_resend_confirm: Поново пошаљи упутства о потврди
     new_password_hint: (остави празно ако не желиш промијенити)
     current_password_hint: (потребна нам је твоја тренутна лозинка како би потврдили твоје промјене)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Обришите ваш налог
+    delete_text: Обришите ваш налог кликом на доње дугме.
+    delete_text_teacher_note: 'Напомена: брисање вашег налога неће резултирати брисањем налога ваших ученика.'
+    delete_confirm: Да ли сте сигурни да желите да обришете свој налог?
   user_level:
     completed: Готово
     tried: Покушао
@@ -287,20 +289,20 @@ sr:
     classroom_activity: Unplugged Activity
   home:
     title: Мој напредак
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: 'Already registered? %{link}'
+    description: У Студију за кодирање се налазе сви курсеви које је креирао Code.org
+    lines_of_code: '%{lines_count} ЛИНИЈЕ КОДА КОЈЕ СУ НАПИСАЛИ УЧЕНИЦИ'
+    lines_of_code_linebreak: '%{lines_count} ЛИНИЈЕ КОДА<br/>КОЈЕ ЈЕ НАПИСАЛО %{students_count} МИЛИОН УЧЕНИКА'
+    all_courses: Преглед Курса 1, 2 и 3
+    lesson_plans: План лекција
+    signin_message: 'Већ имаш свој налог? %{link}'
     student_reg_link: Регистрација за Ученике
     teacher_reg_link: Регистрација за Учитеље
-    signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
+    signin_directions: 'Користи налог како би пратио свој напредак.<br/> Наставници, будите у току са својим одељењем.'
     teacher_dashboard: Видјети плочу напретка
     teacher_student_count_one: 'Имате %{count} студената.'
     teacher_student_count: 'Ви имате %{count} студената.'
     teacher_averages: 'У просјеку су ваши студенти зарадили %{trophy_average} од %{trophy_max} "Concept Mastery" трофеја.'
-    teacher_print_certificates: Print certificates for students who finish this course
+    teacher_print_certificates: Штампај потврде ученицима који су завршили курс
     teacher_read_blog: Read about news and updates to our materials at our Educator Blog
     classroom: Ваша учионица
     student_progress: Ваш напредак у ученју

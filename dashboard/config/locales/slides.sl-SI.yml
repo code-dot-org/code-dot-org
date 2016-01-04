@@ -51,24 +51,23 @@
           gumb "Reset"
       13:
         image: notes/hoc1_13.jpg
-        text: Let's go get those pigs!
+        text: Gremo nad te pujse!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
+        text: Zdravo, sem JR! vsaka avtomobilska ekipa potrebuje računalniškega strokovnjaka
+          da zmaga. Podatke iz avta analizira, da lahko avto vozi še hitreje.
       2:
         image: notes/stage5_2.jpg
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
+        text: V teh sestavljankah boš umetnik, ki riše sled za sabo, kamorkoli gre.
       3:
         image: notes/stage5_3.jpg
         text: Ta blok pravi "premakni se za 100 slikovnih pik naprej". Slikovne pike
           so res drobne pike na vašem zaslonu.
       4:
         image: notes/stage5_4.jpg
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
+        text: Ta blok pravi "obrni se za 90 stopinj desno". To bo tvojega risarja
+          obrnilo za enako vrednost kot "obrni" blok v labirintih.
       5:
         image: notes/stage5_5.jpg
         text: Click on the arrow in either of these blocks to change the amount the

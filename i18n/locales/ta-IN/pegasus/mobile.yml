@@ -1,5 +1,5 @@
 ta-IN:
-  hour_of_code: Hour of Code
+  hour_of_code: நிரல்வரி நேரம்
   hello: ஹலோ உலகம்
   select_language: உங்கள் மொழியை தேர்ந்தெடுக்கவும்
   en: கணினி அறிவியல்
@@ -143,7 +143,7 @@ ta-IN:
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: நிரல்வரி நேரம்
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
@@ -230,7 +230,7 @@ ta-IN:
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Learn more
-  homepage_slot_text_title_hoc: Hour of Code
+  homepage_slot_text_title_hoc: நிரல்வரி நேரம்
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
@@ -343,7 +343,7 @@ ta-IN:
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Description
+  volunteer_engineer_submission_field_description: விளக்கம்
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
   volunteer_engineer_submission_header_private: Information kept private and never shared
@@ -513,7 +513,7 @@ ta-IN:
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
-  dashboard_sequence: Sequence
+  dashboard_sequence: தொடர்வரிசை
   dashboard_framework: Framework
   dashboard_standards: Standards
   dashboard_implementation_guide: Implementation Guide

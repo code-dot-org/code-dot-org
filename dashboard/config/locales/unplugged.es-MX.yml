@@ -69,9 +69,8 @@
         video: Unplug5
       Unplug6:
         title: Condiciones
-        desc: La clase trata de un juego.  Después de introducir la idea de condicionales,
-          sentencias “si”, y bucles, la clase puede practicar en conjunto el uso de
-          un programa ya escrito, con un mazo de tarjetas y suerte.
+        desc: 'Este es un juego de la clase. Después de introducir la idea de condicionales,
+          sentencias '
         pdfs:
         - unplug6-es-ES
         video: Unplug6

@@ -28,6 +28,8 @@ ta:
     code:
       label: 'Add a teacher:'
       placeholder: Section Code (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: ஆசிரியரை சேர்
   add_hint_form:
     placeholder: உங்கள் குறிப்பை இங்கே உள்ளிடவும்
@@ -553,7 +555,7 @@ ta:
     delete: Delete
     exit: Return to Course
     my_projects: My Projects
-    share: பகிர்ந்துகொள்
+    share: பகிர்
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close

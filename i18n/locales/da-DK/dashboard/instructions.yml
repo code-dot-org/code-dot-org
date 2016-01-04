@@ -285,121 +285,63 @@ da:
       4-5 Artist Patterns 3_instruction: Lad os nu gå et niveau dybere! Vi har indlejret hele blokken af kode inde i en anden løkke, men du skal få kunstneren tilbage på plads for at trække den næste linje. Hvilke af disse kodeblokke kan du placere i slutningen af den yderste loop for at tegne hele nettet?
       4-5 Artist Patterns 4_instruction: Denne diamant har 50 pixel sider og vinkler af 120 og 60 grader. Brug en løkke til at tegne den.
       4-5 Artist Patterns 5.5_instruction: Hvor mange gange har du brug at gentage denne blok for at tegne det fulde net af diamanter?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
+      4-5 Artist Patterns 5_instruction: 'Lad os gentage dette, for at lave en række af 6 diamanter. Bemærk, at vi ændret vores diamant kode til gentag 3 gange i stedet for 2 - Hvorfor tror du at det er sådan?'
+      4-5 Artist Patterns 6_instruction: Hvor mange gange har du brug at gentage denne blok for at tegne det fulde net af diamanter?
+      4-5 Artist Patterns 7_instruction: 'Lad os ændre koden fra den sidste puslespil for at lave dette mere komplekse mønster. Bemærk, hvordan diamanter nu overlapper, prøv at ændre, den første "hop baglæns" fra 100 til 50 (halvt så langt) - hvor langt bør kunstneren nu gå i den anden "hop baglæns"?'
+      4-5 Artist Patterns 8_instruction: Brug en løkke til at tegne denne sekskant med 40 pixels sider og 60 graders vinkler.
+      4-5 Artist Patterns 9.5_instruction: Lad os gentage denne kode for at tegne to rækker af sekskanter. Bemærk, hvordan vores anden række er flyttet til højre.
+      4-5 Artist Patterns 9_instruction: Gentag nu koden 3 gange for at tegne hele rækken. Tip, hver sekskant er 80 pixels bred fra længst punkterne til venstre mod højre.
       4-5 Artist Patterns Free Play_instruction: 'Fri leg - prøv at lave dit eget mønster!'
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Bee Conditionals - FC Test_instruction: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: Bien kan ikke fortælle, hvis dette er en blomst eller en honning celle. Samle nektar fra blomster, men tjek først om det er en blomst eller en honning celle.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right now. Not
-        all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding
-        a flower. If it is, then you can gather nectar.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 2_instruction: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
+      4-5 Bee Conditionals 3_instruction: Bien vil bare lave honning nu. Kontroller for kun at lave honning på honning celler.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |
-        The unknown object is either a flower
-        or a honeycomb. Use the if/else block to collect nectar if it is a flower,
-        else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 5_instruction: |
-        There might be a flower or a honeycomb
-        under those clouds. Use the if/else block to collect nectar if there is a
-        flower, else to make honey (because there is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: Det ukendte objekt er enten en blomst eller en honning celle. Brug hvis/ellers blokken for at samle nektar hvis det er en blomst, ellers lav honning (fordi det så er en honning celle).
+      4-5 Bee Conditionals 5_instruction: Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write inside the function "check flower
-        make honey". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
-      4-5 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Can you
-        fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
-      4-5 Bee Debugging 5_instruction: "Something isn't right here..."
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
+      4-5 Bee Conditionals 6_instruction: 'Denne lilla blomst kan have 3, 2 eller 1 nektar. Her er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at oprette en "hvis, ellers-hvis, ellers" blok. Færdiggør løsning til at indsamle den ukendte mængde nektar.'
+      4-5 Bee Conditionals 7_instruction: 'Husk at lilla blomster kan have 3, 2 eller 1 nektar. Færdiggør funktionen "tjek lilla blomst" og bruge det til at samle alt nektaren på blomsterne.'
+      4-5 Bee Conditionals 8_instruction: 'Skrive inde i funktionen "tjek blomst lave honning". Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle alt nektaren. Derefter, gå videre og lav honning.'
+      4-5 Bee Conditionals Assessment 1_instruction: 'Vurdering: Denne kode er forkert. Færdiggør funktionen "saml nektar eller lav honning", kald den derefter for at indsamle alt nektar og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar.'
+      4-5 Bee Debugging 1_instruction: Disse blokke driller mig virkelig. Kan du lave dem?
+      4-5 Bee Debugging 10_instruction: Find fejlene, og afhjælp dem.
+      4-5 Bee Debugging 11_instruction: Tæller dette korrekt?
+      4-5 Bee Debugging 2_instruction: Hjælpe bien med at samle nektar og lave honning.
+      4-5 Bee Debugging 3_instruction: Find fejlene, og afhjælp dem.
+      4-5 Bee Debugging 4_instruction: Disse blokke virker ikke. Hvad er mønsteret?
+      4-5 Bee Debugging 5_instruction: Noget er ikke korrekt her...
+      4-5 Bee Debugging 6_instruction: Den lilla blomst har en ukendt mængde nektar. Reparere blokkene for at få alt nektaren fra blomsten.
+      4-5 Bee Debugging 7_instruction: Funktionen mangler noget...
+      4-5 Bee Debugging 8_instruction: Denne funktion er lavet korrekt, men den bliver ikke brugt korrekt.
+      4-5 Bee Debugging 9_instruction: Hvorfor laver bien ikke nok honning?
+      4-5 Bee Debugging Assessment 1_instruction: 'Vurdering: Reparer koden.'
+      4-5 Bee Nested Loops 1_instruction: Bruge en løkke til at indsamle al nektaren.
       4-5 Bee Nested Loops 2_instruction: |
-        Collect all of the nectar from each flower.
-        Use a nested loop. 
+        Saml al nektaren fra hver blomst.
+        Brug et indlejret loop. 
       4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: |
-        Collect all of the nectar from each flower
-        and make honey at each honeycomb. Use a nested loop. 
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
+        Saml al nektaren ved at sætte 
+        startkoden ind i en indlejret løkke.
+      4-5 Bee Nested Loops 4_instruction: 'Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. '
+      4-5 Bee Nested Loops 5_instruction: Indsaml al nektar ved hjælp af indlejrede løkker.
+      4-5 Bee Nested Loops 6_instruction: Indsaml al nektar.
+      4-5 Bee Nested Loops 7_instruction: Sæt denne løkke ind i en anden løkke for at lave en indlejret løkke, og indsaml al nektar fra blomsterne.
       4-5 Bee Nested Loops 8_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop. Replace the inner repeat times block with a while
@@ -2047,7 +1989,7 @@ da:
       K-1 artist 1 level 10_instruction: 'Tegn den stiplede linje ved brug af både hoppe- og tegneblokke'
       K-1 artist 1 level 9_instruction: Tegn dette ved brug af tre streger
       K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
+      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
@@ -2795,10 +2737,7 @@ da:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
@@ -4343,6 +4282,9 @@ da:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4350,6 +4292,7 @@ da:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

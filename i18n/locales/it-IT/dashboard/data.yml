@@ -157,7 +157,7 @@ it:
         turtle_1_5: Ora, per fare esercizio, disegna un triangolo e poi un quadrato in modo da riprodurre una busta.
         turtle_1_6: 'Riesci a capire come disegnare il triangolo e il quadrato? Suggerimento: disegna prima il triangolo, poi cerca di capire di quanto devi girare prima di iniziare a disegnare il quadrato.'
         turtle_1_7: "Ok, ora è un po' più difficile: vedi se riesci a disegnare questi occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!"
-        turtle_1_8: 'Cerca di immaginare cosa succede se si esegue questo codice (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
+        turtle_1_8: 'Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o premi "Esegui" per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi per disegnare un cerchio?
         turtle_1_10: |-
           Ce l'hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune idee divertenti: una figura stilizzata, un fiocco di neve o una spirale. Prova anche il nuovo blocco "imposta la larghezza". Buon divertimento!
@@ -330,7 +330,7 @@ it:
         studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: 'Il pinguino vuole dire "ciao" - puoi aiutarlo?'
         studio_playlab_2: 'Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio 2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il personaggio ... dice"?'
-        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandiera?
+        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandierina?
         studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
         studio_playlab_5: 'Puoi aiutare il robot spaziale a dire "salve terrestri" quando clicchi su di lui? Dopo aver cliccato su "Esegui", ricordati di cliccare sul robot spaziale!'
         studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco magiche?
@@ -365,7 +365,7 @@ it:
           Gumball (personaggio 1) e Darwin (personaggio 2) sono in ritardo per una giornata di gare all'aperto. Aiuta Gumball ad avvicinarsi a Darwin di 200 pixel usando il blocco "sposta il personaggio". Poi unisci un blocco all'evento "quando un personaggio tocca ..." per riprodurre un suono quando si incontrano.
         studio_gumball_repeat: 'Il blocco "ripeti per sempre" permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra e a sinistra?'
         studio_gumball_click_hello: 'Puoi aiutare Anton a dare inizio alla gara pronunciando le parole "Pronti, partenza, via!"? Per provare il tuo programma, non dimenticarti di cliccare su Anton dopo aver cliccato su "Esegui"!'
-        studio_gumball_move_events: 'Darwin partecipa alla gara di raccolta delle bandiere. Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..." a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare tutte le bandiere.'
+        studio_gumball_move_events: 'Darwin partecipa alla gara di raccolta delle bandierine. Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..." a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare tutte le bandierine.'
         studio_gumball_sound_and_points: |-
           Ti abbiamo dato del codice già scritto che permette ad Anton (il personaggio 2) di muoversi a destra e a sinistra, e permette a Banana Joe (il personaggio 1) di muoversi sullo schermo. Puoi completare questo codice aggiungendo dei blocchi all'evento "quando il personaggio ... tocca" per fare in modo che entrambi i personaggi riproducano un suono e guadagnino un punto quando Banana Joe e Anton si scontrano? Clicca su "Esegui" per lanciare il gioco.
         studio_gumball_warn_food_fight: 'Darwin è appena sfuggito a una battaglia del cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad avvertirla.'
@@ -481,7 +481,7 @@ it:
         C4_for_loops: Cicli con Contatore
         C4_for_loops_bee: Cicli con Contatore
         C4_for_loops_no_bee: Cicli con Contatore
-        C4_math_artist: "Programmazione de L'Artista con la matematica"
+        C4_math_artist: "Programmare l'Artista usando la matematica"
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
         C4_function_parameters: Funzioni con parametri

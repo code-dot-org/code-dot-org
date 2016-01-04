@@ -28,6 +28,8 @@ bn:
     code:
       label: 'শিক্ষক যুক্ত করুন:'
       placeholder: অংশের কোড (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: শিক্ষক যুক্ত করুন
   add_hint_form:
     placeholder: আপনার সংকেত দিন
@@ -168,13 +170,13 @@ bn:
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
-      title: Please Confirm
+      title: অনুগ্রহ করে নিশ্চিত করুন
       "no": না
       "yes": '"হ্যাঁ"'
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg_visit_website: ওয়েব সাইট ভিজিট করুন
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -237,7 +239,7 @@ bn:
       progress_for_user: "%{name}'s progress"
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
+      close: বন্ধ
       mastery: Concepts
       puzzle_map: ষ্টেজসমূহ
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
@@ -245,8 +247,8 @@ bn:
       prize_us_only: (U.S. students only)
       prizes_link: আরও তথ্য
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: উত্তর
+    for_teachers_only: শুধু শিক্ষকদের জন্য
     title:
       one: 'আপনার শিক্ষক:'
       other: 'আপনার শিক্ষক:'
@@ -261,8 +263,8 @@ bn:
       answer_viewer: Answer Viewer
       student: ছাত্র
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
-      section: Section
+      try_it_yourself: নিজে চেষ্টা করুন
+      section: শাখা
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
@@ -280,9 +282,9 @@ bn:
     delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
-    tried: Tried
+    tried: চেষ্টা করা হয়েছে
   user_stats:
-    recent_activity: Recent activity
+    recent_activity: সাম্প্রতিক কর্মকান্ড
     show_more: Show more
     classroom_activity: Unplugged Activity
   home:
@@ -291,8 +293,8 @@ bn:
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: 'Already registered? %{link}'
+    lesson_plans: পাঠ পরিকল্পনা
+    signin_message: 'ইতিমধ্যে রেজিস্ট্রেশন করেছেন? %{link}'
     student_reg_link: Student Sign Up
     teacher_reg_link: Teacher Sign Up
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
@@ -309,8 +311,8 @@ bn:
     student_left_off: 'Where you left off:'
     student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
-    online: online
-    see_details: See details
+    online: অনলাইন
+    see_details: বিস্তারিত দেখুন
     view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -319,7 +321,7 @@ bn:
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    use_as_teacher: শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'

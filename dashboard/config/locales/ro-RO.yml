@@ -29,6 +29,8 @@
     code:
       label: 'Adaugă un profesor:'
       placeholder: Secțiune Cod (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
@@ -304,9 +306,8 @@
       remove: Ești sigur(ă) că vrei să elimini acest profesor?
     students:
       dashboard: Du-te la Tabloul de Instrumente al Profesorilor
-    user_not_found: Profesorul sau studentul nu poate fi găsit
-    student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor
-      pentru %{student_name}'
+    user_not_found: Profesorul nu a putut fi găsit.
+    student_teacher_disassociated: Ai eliminat pe %{teacher_name} ca profesor.
     panel:
       answer_viewer: Indicator răspuns
       student: elev
@@ -394,7 +395,7 @@
     title: Învață in Atelierul de programare
     description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu
       programare.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Încearcă Ora de Programare!
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -434,7 +435,7 @@
     built_on_code_studio: Construit pe Code Studio
     make_my_own_app: Realizeaza propria mea aplicatie
     how_it_works: Cum funcționează
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Încearcă Ora de Programare!
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii

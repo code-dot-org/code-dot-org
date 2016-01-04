@@ -819,11 +819,11 @@
         mc_congrats_share: Minecraft - Gratulálunk
         mc_congrats_no_share: Minecraft - Gratulálunk
         gumball_intro: Gumball Kódolás órája - Bevezetés
-        gumball_events: Gumball Kódolás őrája - Események
-        gumball_repeat: Gumball Kódolás órája - Ismétlő utasítások
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        gumball_events: Gumball Kódolás Órája – Események
+        gumball_repeat: Gumball Kódolás Órája – Ismétlő utasítások
+        iceage_intro: Jégkorszak Kódolás Órája – Bevezetés
+        iceage_events: Jégkorszak Kódolás Órája – Események
+        iceage_repeat: Jégkorszak Kódolás Órája – Ismétlő utasítások
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

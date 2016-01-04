@@ -29,6 +29,8 @@
     code:
       label: 'Dodajte učitelja:'
       placeholder: Šifra odjeljenja (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
@@ -290,8 +292,8 @@
       remove: Jeste li sigurni da želite ukloniti ovog učitelja?
     students:
       dashboard: Idi na upravljačku ploču učitelja
-    user_not_found: Učitelj ili učenik nije pronađen
-    student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
+    user_not_found: Učitelj nije pronađen.
+    student_teacher_disassociated: Uklonili ste %{teacher_name} kao svog učitelja.
     panel:
       answer_viewer: Pregled odgovora
       student: Učenik
@@ -378,7 +380,7 @@
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije
       i kodirati.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Pokušajte sat vremena programiranja!
   gender:
     male: Muško
     female: Žensko
@@ -395,12 +397,22 @@
       napraviti ovaj tutorijal.
     help_from_html_old: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su
       pomogli napraviti ove materijale za učenje.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Sva prava pridržana.
-    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
-      Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year}
-      Electronic Arts Inc. (sva prava pridržana).
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Sva prava pridržana.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Sva prava pridržana.
+      < br / > Snježno kraljevstvo &#8482; © %{current_year} Disney. Sva prava pridržana.
+      < br / > Ledeno doba &#8482; © %{current_year} 20th Century Fox. Sva prava pridržana.
+      < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio zabava D. o. o. Sva
+      prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
+      Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
+      znak i © 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Sva prava pridržana.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Sva prava pridržana.
+      < br / > Snježno kraljevstvo &#8482; © %{current_year} Disney. Sva prava pridržana.
+      < br / > Ledeno doba &#8482; © %{current_year} 20th Century Fox. Sva prava pridržana.
+      < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio zabava D. o. o. Sva
+      prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
+      Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
+      znak i © 2015 Cartoon Network.
     powered_by_aws: Potpomognuto s Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour
       of Code&reg; su zaštitni znaci tvrtke Code.org.'
@@ -418,7 +430,7 @@
     built_on_code_studio: 'Izradio: Code Studio'
     make_my_own_app: Izradi moju aplikaciju
     how_it_works: Kako radi
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Pokušajte sat vremena programiranja!
   reference_area:
     title: Trebate pomoć?
     subtitle: Pogledajte ove videozapise i savjete
