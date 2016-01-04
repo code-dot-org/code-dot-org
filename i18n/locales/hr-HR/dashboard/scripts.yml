@@ -146,7 +146,7 @@ hr:
           description_short: Nacrtaj cool slike i uzorke pomoću Umjetnika!
         hourofcode:
           Maze: Labirint
-          title: Classic Maze
+          title: Klasični labirint
           description: Isprobaj osnove informatike s likovima kao što su Angry Birds, Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
           description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
         frozen:
@@ -1352,6 +1352,21 @@ hr:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1463,13 +1478,13 @@ hr:
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
-          description_short: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
-          description: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
+          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
+          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
           Hour of Code 2015: Sat kodiranja 2015
         starwarsblocks:
           title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
-          description_short: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
-          description: Nauči programirati droide, te kreiraj svoju Zvjezdani ratovi igricu u dalekoj, dalekoj galaksiji.
+          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
+          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
           Hour of Code 2015: Sat kodiranja 2015
         minecraft:
           title: Minecraft

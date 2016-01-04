@@ -312,10 +312,10 @@ pl:
         studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania dźwięku, gdy jednorożec wpada na kreatora, następnie przenoś go za pomocą strzałek aż zdobędziesz punkt?
         studio_playlab_9: Ustaw tło dla tej inwazji obcych i pomóż Spacebot dotrzeć do obcych szybciej zmieniając jego prędkość. Następnie przenoś go za pomocą klawiszy strzałek, aby dostać się do Spacebot i zaalarmować wszystkich pozostałych
         studio_playlab_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_hello1: 'Sid chcę zabrać wszystkich za nową przygodę. Możesz pomóc mu powiedzieć "cześć" za pomocą przeciągania bloczka "powiedz" na teren pracy i wpisaniu słowa "cześć" do środka?'
+        studio_iceage_hello2: 'Sid (actor 1) znalazł Mańka (actor 2) i chce zaprosić go na przygodę. Pomóż im się przywitać dwukrotnie używając bloku "actor say".'
         studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) szuka Mańka (actor 2). Pomóż Diego przejść 200 pikseli w dół do Mańka używając bloku "move actor". Następnie połącz blok ze zdarzeniem "when actor touches", aby odtworzyć dźwięk kiedy się odnajdą.'
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
         studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
         studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'

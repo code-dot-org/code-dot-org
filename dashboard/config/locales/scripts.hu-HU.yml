@@ -163,7 +163,7 @@
           description_short: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
         hourofcode:
           Maze: Labirintus
-          title: A kódolás órája
+          title: Hagyományos Útvesztö
           description: Ismerd meg a számítógép-tudomány alapjait közösen a Dühös Madarak,
             a Növények kontra Zombik karaktereivel és a Motkányal a Jégkorszakból!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok
@@ -1514,6 +1514,21 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1628,10 +1643,11 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumball játéklabor
+          description_short: írj egy történetet vagy készíts egy játékot a Gumball
+            játéklaborban!
+          description: írj egy történetet vagy készíts egy játékot a Gumball játéklaborban!
+          Gumball Play Lab: Gumball játéklabor
         starwars:
           title: 'Star Wars: A galaxis építése kóddal'
           description_short: Tanulj meg droidokat programozni és készítsd el a saját

@@ -253,57 +253,10 @@ nn:
     remove: (Fjern lærar)
     confirm:
       remove: Er du sikker på at du vil fjerne denne læraren?
-    tools: Verkty for lærarar
-    followers:
-      section: 'Seksjon:'
-      stages: 'Nivå å vise:'
-      show_past: 'Vis elev-aktivitetar (%{bullet_html}) frå tidlegare:'
-      levels_key: Nivånøklar
-      perfect: Perfekt fullført
-      completed: Fullført, men brukte for mange blokker
-      tried: Prøvde, men fullførte ikkje
-      not_tried: Ikkje prøvd enno
-      activity: 'Viser elevens aktivitet i dei siste %{hours} %{plural}'
-      no_section: Ikkje tilordna ein seksjon
-      trophies: Pokalar
     students:
-      name: Namn
-      username: Brukarnamn
-      password: Passord
-      manage: Administrer elevar
       dashboard: Gå til læraren sitt oversyn
-      add: Legg til elevar
-      remove: fjern elev
-      confirm_remove: Er du sikker på at du vil fjerne denne eleven?
-      help_reassign: For å dele klassa inn i fleire seksjonar, vel ut dei elevane som skal med i den nye seksjonen!
-      help_register: I staden for å bruke mykje tid på å legge informasjon om kvar elev, kan du be klassa din om registrere seg sjølve. Elevane dine vil trenge brukarnamn og passord, men dei trenger ikkje å oppgi epost-adressa si. Viss ein elev gløymer passordet sitt, kan du sette det på nytt for dei.
-      register: Be elevane om å registrere seg sjølve
-      vist: Be elevane om å besøke
-      section_code: 'og oppgi seksjonskoden deira:'
-      first_please: 'Først kan du %{add_section}'
-      for: For
-      enter: 'oppgi:'
-    sections:
-      add: Legge til seksjon
-      manage: Administrere delar
-      section: Seksjon
-      students: Elevar
-      section_code: Seksjonskode
-      add_section_code: Legg til elevenes seksjonskode
-      secret: Hemmelegheit
-      grade: Trinn
-      course: Leksjon
-      rename: gje nytt namn
-      edit: rediger
-      delete: slett
-      confirm_delete: Er du sikker på at du vil slette denne seksjonen?
-      email: Send e-post
-    rollup: Framdrift Oversyn
-    activity: Siste aktivitetar i klassa
-    user_not_found: Læraren eller eleven fans ikkje
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernast som din elev fordi %{student_name} ikkje har registrert ei e-postadresse'
-    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernast som læraren din fordi du ikkje har registrert ei e-postadresse'
-    student_teacher_disassociated: '%{teacher_name} er fjerna som lærar for %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Svarviser
       student: Elev
@@ -377,6 +330,7 @@ nn:
   share:
     title: Lær i Code Studio
     description: Alle kan lære programmering. Lag spel, appar og kunst med kode.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mann
     female: Kvinne
@@ -388,8 +342,8 @@ nn:
     thank_you: 'Vi takkar våre <a href="https://code.org/about/donors"> sponsorer</a>, <a href="https://code.org/about/partners">samarbeidspartnere</a>, våre<a href="https://code.org/about/team">medhjelparar</a>, våre skodespelarar og våre <a href="https://code.org/about/advisors">utdanningsrådgjevarar</a> for deira støtte i å lage Code Studio.'
     help_from_html: Ingeniørar frå Google, Microsoft, Facebook og Twitter hjelpte til med å lage denne guiden.
     help_from_html_old: Utviklarar frå Google, Microsoft, Facebook og Twitter har hjelpt til med å lage dette materialet.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Alle rettar reserverte.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney og Lucasfilm. Alle rettar reserverte.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Alle rettar reserverte.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Alle rettar reserverte.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle rettar reserverte.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Alle rettar reserverte'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Alle rettigheter tilhøyrer Rovio Entertainment Ltd. <br /> Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Alle rettigheter tilhøyrer Electronic Arts Inc.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Drive av Amazon Web Services
     trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, CODE-logoen og Hour of Code (Kodetimen)&reg; er varmerker tilhøyrande Code.org.'
     copyright: Opphavsrett
@@ -406,6 +360,7 @@ nn:
     built_on_code_studio: Bygd i Code Studio
     make_my_own_app: Lag min eigen app
     how_it_works: Slik virker det
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
@@ -462,7 +417,7 @@ nn:
       unused: Ubrukte nivå
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klassisk labyrint
       body: Prøv grunnleggjande informatikk. Millionar andre har prøvd.
     flappy:
       title: Flakse-kode
@@ -497,7 +452,7 @@ nn:
     caption_by_name_age: 'av %{name}, %{age} år'
     caption_time_ago: '%{time_ago} sidan'
     header: Galleri
-    header_playlab: Spel-lab
+    header_playlab: Historier og spel
     header_artist: Kunstnar
   landing:
     prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det tyder at det ikkje er den endelege versjonen av kurset, men at det blir endra når vi får tilbakemeldingar og forbedtringar har blitt laga."

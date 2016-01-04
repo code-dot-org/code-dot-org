@@ -224,7 +224,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatUntil":function(d){return "重复直到"},
 "repeatUntilBlocked":function(d){return "当前面有路"},
 "repeatUntilFinish":function(d){return "重复直到完成"},
-"step":function(d){return "踏步"},
+"step":function(d){return "下一步"},
 "totalHoney":function(d){return "蜂蜜总量"},
 "totalNectar":function(d){return "花蜜总量"},
 "turnLeft":function(d){return "向左转"},

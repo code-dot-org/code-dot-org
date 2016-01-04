@@ -195,9 +195,9 @@ eu:
         maze_karel_2_3: 'Erabil ezazu "bete 5" funtzio-bloke berria zulo guztiak bete ditzadan. "bete 5" blokea "Funtzioak" kategoriatik kanpo arrastatu beharko duzu.'
         maze_karel_2_4: Defini ezazu funtzio berri bat 7 paletakada kentzeko. Ondoren, erabil ezazu funtzio hori programa bat idazteko meta guztiak desegiten lagundu diezadan.
         maze_karel_2_5: Idatz ezazu funtzio berri bat meta batetik 6 paletakada kentzeko eta erabil ezazu meta guztiak desegiten lagundu diezadan.
-        maze_karel_2_6: 'Erabil itzazu bi funtzio berri, "bete 8" eta "kendu 8", niri laguntzeko meta desegiten eta zuloa betetzen.'
+        maze_karel_2_6: 'Erabil itzazu bi funtzio berri, "bete 8" eta "ezabatu 8", niri laguntzeko meta desegiten eta zuloa betetzen.'
         maze_karel_2_7: Badago behi bat nire larrean! Idatz ezazu funtzio berri bat niri laguntzeko behia saihesten eta meta desegiten. Jar itzazu zure bloke guztiak funtzio berriaren barruan.
-        maze_karel_2_8: 'Erabil ezazu funtzio berria, "saihestu behia eta kendu 1", niri laguntzeko meta guztiak desegiten.'
+        maze_karel_2_8: 'Erabil ezazu funtzio berria, "saihestu behia eta ezabatu 1", niri laguntzeko meta guztiak desegiten.'
         maze_karel_2_9: Ondo da. Hona hemen funtzio bat zutabe bertikal batean lerrokatuta dauden 4 lur-meta desberdin desegiteko. Saia zaitez funtzio hori sartzen begizta baten barruan, lur-meta guztiak desegiteko bloke berri gutxi batzuk erabiliz.
         maze_karel_2_10: Mugi nazazu eremuan zehar, eta erabil itzazu bi funtzio hauek niri laguntzeko meta guztiak desegiten eta zulo guztiak betetzen.
         turtle_3_1: 'Puzle honek erakusten dizu nola dauden definituta "marraztu karratu bat" eta "marraztu zirkulu bat" funtzioak. Funtzio bat definitzean, haren blokeak ez dira exekutatzen. "marraztu karratu bat" blokea erabili beharko duzu karratu bat marrazteko.'
@@ -313,21 +313,21 @@ eu:
         studio_playlab_8: Gehi dezakezu bloke bat puntu bat lortzeko eta bloke bat soinu bat erreproduzitzeko adarbakarra aztiarenganaino iristean? Programa martxan dagoenean, mugitu adarbakarra geziekin puntu bat lortu arte
         studio_playlab_9: Ezarri atzealdea estralurtarren inbasio honetarako eta lagundu espazioko robotari estralurtarrengana azkarrago iristen haren abiadura aldatuz. Mugiarazi gezien bidez beste guztiei abisatzeko
         studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_iceage_hello1: 'Sid-ek guztiak bildu nahi ditu abentura berri batean. Lagundu diezaiokezu "kaixo" esaten, `esan` blokea lan-ermeuan arrastatu eta barruan "kaixo" idatziz?'
+        studio_iceage_hello1: 'Sid-ek guztiak bildu nahi ditu abentura berri batean. Lagundu diezaiokezu "kaixo" esaten, "esan" blokea lan-eremuan arrastatu eta barruan "kaixo" idatziz?'
         studio_iceage_hello2: 'Sid-ek (1 aktoreak) Manny (2 aktorea) topatu du eta abenturara gonbidatu nahi du. Lagundu iezaiezu elkarri agurtzen "aktoreak dio" blokea birritan erabiliz.'
         studio_iceage_move_to_flag: 'Scrat bere ezkurraren bila dabil! Lagundu iezaziozu azken 200 pixeletan aurrera egiten "mugitu" blokea erabiliz.'
         studio_iceage_move_to_actor: 'Diego (1 aktorea) Manny-ren (2 aktorearen) bilda dabil. Lagundu iezaiozu Diegori 200 pixel behera egiten Manny-rengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ikutzen duenean" blokearekin elkar aurkitzen dutenean soinu bat jotzeko.'
         studio_iceage_repeat: '"errepikatu betirako" blokearen bidez zure kodea modu jarraituan exekutatzen da. Elkartu al ditzakezu blokeak Granny-k ariketa fisikoa egin dezan ezkerrera eta eskuinera etengabe mugituz?'
-        studio_iceage_click_hello: 'Lagundu al diezaiokezu Sid-i lagunei azkeneko deia egiteko klik egiterakoan? Ez ahaztu klik egin behar duzula "Hasi" sakatu ondoren.'
+        studio_iceage_click_hello: 'Lagundu al diezaiokezu Sid-i lagunei azkeneko deia egiten klik egiterakoan? Ez ahaztu bere gainean klik egin behar duzula "Hasi" sakatu ondoren.'
         studio_iceage_move_events: 'Scrat oraindik ezkurren bila dabil! Lagundu iezaiozu noraezean ibiltzen "mugitu" blokea gertaera bakoitzari lotuz eta norabide aldaketa eraginez gezidun tekla bakoitza sakatzerakoan, Amaitzen duzunean, sakatu "Hasi" eta saiatu ezkur guztiak biltzen.'
         studio_iceage_sound_and_points: 'Granny ezker eta eskuinera mugitzeko, eta Sid pantailan zehar mugitzeko behar den kode gehiena eman dizugu. Amaitu dezakezu kodea eta "aktoreak ikutzen duenean" gertaerari blokeak gehitu, Sid-ek eta Granny-k tupust egiten dutenean hots bat egin eta puntu bat eskuratzeko? Sakatu Hasi jokatzeko.'
-        studio_iceage_warn_ice_age: 'Guztiak mugitu behar dira azkar izotz aldia datorrelako! Jarri "izozmendiak" atzealdea eta ezarri "Sid"-en abiadura azkarra, ondoren sakatu Hasi eta mugitu Diegorengana jakinaren gainean jartzeko.'
+        studio_iceage_warn_ice_age: 'Guztiak mugitu behar dira azkar izotz aldia datorrelako! Jarri "izozmendiak" atzealdea eta ezarri "Sid"-en abiadura azkarra, ondoren sakatu Hasi, eta mugitu Diegorengana jakinaren gainean jartzeko.'
         studio_iceage_throw_hearts: 'Sid-ek bere amona Granny-ri maite duela jakinarazi nahi dio. Erabili "aktoreak bota" komandoa Sid-ek (1 aktoreak) Granny-ri (2 aktoreari) bihotzak botatzeko! Ezarri Granny-ren aldartea onera bihotzekin talka egiten duenean.'
         studio_iceage_free_play: 'Zure joko edo historioa sortzeko garaia! Amaitu duzunean, sakatu "Amaitu" zure lagunei beraien telefono, tableta edo konputagailuetan zure jokoa probatzeko aukera emateko!'
         studio_gumball_hello1: 'Anaisek lagun berriak egin nahi ditu. Lagundu diezaiokezu "kaixo" esaten "esan" blokea arrastatuz lan eremura eta horren barruan "kaixo" idazten?'
         studio_gumball_hello2: 'Darwin (1. aktorea) eta haren neba Gumball (2. aktorea) eskolarako bidean doaz. Lagun iezaiezu elkarri agurtzen "aktoreak esan" blokea bi aldiz erabiliz.'
         studio_gumball_move_to_flag: 'Banana Joe txango eguneko lasterketa irabazteko zorian dago. Lagun iezaiozu azken 200 pixelak ibiltzen "mugitu" blokea erabiliz.'
-        studio_gumball_move_to_actor: 'Gumball (1. aktorea) eta Darwin (2. aktorea) berandu dabiltza txango egunerako. Lagun iezaiozu Gumballi 200 pixel hurbiltzen Darwinengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ukitzean" gertaerari soinu bat ateratzeko bi aktoreak gerturatzen direnean.'
+        studio_gumball_move_to_actor: 'Gumball (1. aktorea) eta Darwin (2. aktorea) berandu dabiltza txango egunerako! Lagun iezaiozu Gumballi 200 pixel hurbiltzen Darwinengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ukitzean" gertaerari soinu bat ateratzeko bi aktoreak elkartzen direnean.'
         studio_gumball_repeat: '"errepikatu betirako" blokeak ahalbidetzen dizu kodea etengabe exekutatzea. Beste bloke batzuk gehitu ditzakezu bloke horren barruan, Gumballi laguntzeko lasterketarako beroketa ariketak egiten, etengabe ezker eta eskuin mugitzen?'
         studio_gumball_click_hello: 'Lagun diezaiokezu Antoni lasterketari hasiera ematen "Gertu, adi, irten!"esanez? Zure programa probatzeko, ez ahaztu Antonen gainean klikatu behar duzula "Hasi" sakatu ondoren!'
         studio_gumball_move_events: 'Darwin parte hartzen ari da banderak biltzeko lehiaketan. Lagun iezaiozu korrika egiten "mugitu" blokea itsasten gertaera bakoitzari. Bukatutakoan, klikatu "Hasi" eta saiatu bandera guztiak biltzen.'
@@ -519,9 +519,9 @@ eu:
         gumball_intro: 'Gumballen Kode Ordua - Sarrera'
         gumball_events: 'Gumballen Kode Ordua - Gertaerak'
         gumball_repeat: 'Gumballen Kode Ordua - "errepikatu" aginduak'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Ice Afe kode ordua - Sarrera'
+        iceage_events: 'Ice Age kode ordua - Gertaerak'
+        iceage_repeat: 'Ice Age kode ordua - Errepikatu aginduak'
     callout:
       text:
         drag_blocks: 'Arrastatu "mugitu" blokea eta lotu beste blokearen azpian'

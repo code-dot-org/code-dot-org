@@ -299,63 +299,9 @@
     remove: (remover professor)
     confirm:
       remove: Tens a certeza de que pretendes remover este professor?
-    tools: Ferramentas do Professor
-    followers:
-      section: 'Turma:'
-      stages: 'Níveis a mostrar:'
-      show_past: 'Exibir as atividades feitas pelo aluno (%{bullet_html}) em:'
-      levels_key: Níveis
-      perfect: 'Concluído: Perfeito'
-      completed: 'Concluído: Usou demasiados blocos'
-      tried: 'Tentou: Por concluir'
-      not_tried: Ainda não tentou
-      activity: Indica as atividades do alunos nas últimas %{hours} %{plural}
-      no_section: Nenhuma seção atribuída
-      trophies: troféus
     students:
-      name: Nome
-      username: nome de utilizador
-      password: Palavra-passe
-      manage: Gerir alunos
       dashboard: Vá para o painel de controle do professor
-      add: Adicionar alunos
-      remove: remover aluno
-      confirm_remove: Tem a certeza de que pretende remover este aluno?
-      help_reassign: Para dividir sua turma em várias seções, selecione alguns alunos
-        para atribuir a uma nova seção.
-      help_register: Em vez de passar muito tempo importando dados dos alunos individualmente,
-        você pode configurar sua turma rapidamente, pedindo para que eles se cadastrem.
-        Seus alunos terão de escolher nomes de usuário e senhas, mas NÃO serão obrigados
-        a fornecer um endereço de e-mail. Se um aluno esquecer sua senha, você poderá
-        redefini-la para ele.
-      register: Peça para que seus alunos se cadastrem
-      vist: Peça para que seus alunos visitem
-      section_code: 'e digite seu código de seção:'
-      first_please: Em primeiro lugar, %{add_section}
-      for: Para
-      enter: 'digite:'
-    sections:
-      add: Adicionar turma
-      manage: Gerir turmas
-      section: Turma
-      students: Alunos
-      section_code: Código
-      add_section_code: Adicionar código-seção dos alunos
-      secret: Tipo secreto
-      grade: Ano
-      course: Curso
-      rename: renomear
-      edit: editar
-      delete: apagar
-      confirm_delete: Tem a certeza de que pretende apagar esta turma?
-      email: Enviar por e-mail
-    rollup: Painel de controlo do Progresso
-    activity: Atividade recente da turma
     user_not_found: Não é possível localizar o professor ou aluno
-    cant_remove_student_no_email: '%{student_name} não pode ser eliminado como seu
-      aluno porque %{student_name} não tem um endereço de email registrado'
-    cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu
-      professor porque não registou o seu endereço de email'
     student_teacher_disassociated: '%{teacher_name} foi removido como professor de
       %{student_name}'
     panel:
@@ -445,6 +391,7 @@
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
       com código.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Masculino
     female: Feminino
@@ -484,6 +431,7 @@
     built_on_code_studio: Construído no "Code Studio"
     make_my_own_app: Fazer a minha própria "app"
     how_it_works: Como funciona
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -551,7 +499,7 @@
       unused: Níveis por utilizar
   upsell:
     hoc:
-      title: Hora de Código
+      title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
         já experimentaram.
     flappy:

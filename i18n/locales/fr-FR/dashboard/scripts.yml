@@ -146,7 +146,7 @@ fr:
           description_short: "Dessinez des super images et schémas avec l'Artiste!"
         hourofcode:
           Maze: Labyrinthe
-          title: Classic Maze
+          title: Labyrinthe classique
           description: "Apprends à programmer avec les personnages d'Angry Birds, de Plantes contre Zombies et Scrat de l'age de glace !"
           description_short: Apprends à programmer avec des personnages rigolos !
         frozen:
@@ -949,7 +949,7 @@ fr:
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: "Simulateur d'Internet"
-          App Lab: Labo des applis
+          App Lab: Applications Web
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: Bienvenue !
@@ -961,7 +961,7 @@ fr:
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: "Simulateur d'Internet"
-          App Lab: Labo des applis
+          App Lab: Applications Web
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1352,6 +1352,21 @@ fr:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

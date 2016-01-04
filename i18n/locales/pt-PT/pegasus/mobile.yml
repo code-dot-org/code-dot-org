@@ -20,6 +20,8 @@ pt-PT:
   submit: OK
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência da computação e seus conceitos nesse curso.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Participa na <a href="http://hourofcode.com">Hora de Código</a><br/>de 8 a 14 de dezembro de 2014<br/>'
   hoc2014_students: Alunos
   hoc2014_try: Experimentar
@@ -294,10 +296,10 @@ pt-PT:
   class_submission_languages_other: Outro(s) idioma(s)
   inspirational_videos_more: 'Mais <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> vídeos inspiradores</a> por modelos e celebridades'
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_classic_title: Clássico
+  playlab_gumball_title: The Amazing World of Gumball
+  playlab_iceage_title: 'Idade do gelo - brevemente'
+  playlab_iceage_title_live: Idade do gelo
   starwars_subtitle: Construindo uma galáxia com código
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Utiliza blocos de arrastar-soltar e JavaScript.
@@ -305,7 +307,7 @@ pt-PT:
   starwars_javascript_start_button: Experimentar agora
   starwars_blocks_title: Blocos
   starwars_blocks_description: Utiliza blocos de arrastar-soltar.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Experimentar agora
   starwars_watch_videos: Antes de começares, vê um destes vídeos inspiradores
   starwars_speak_languages: Falas outra língua?
@@ -316,7 +318,7 @@ pt-PT:
   mc_shortdescription: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft.
   mc_gradelevel: Idades 6 +
   mc_platformtext: Navegadores modernos, smartphones e tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Hora do Código de Minecraft
   volunteer_engineer_submission_title: Inspire alunos e seja um voluntário na Hora do Código.
   volunteer_engineer_submission_subtitle_generic: '100.000 professores vão ser anfitriões de uma Hora do Código na sua sala de aula este ano, de 7 a 13 de dezembro de 2015. Eles querem a sua ajuda! '
@@ -326,6 +328,7 @@ pt-PT:
     Estes professores adorariam ter alguém <span style="font-family: 'Gotham 7r', sans-serif;"> apaixonado sobre o ensino de Ciências da Computação</span> que possa ajudar na sala de aula, ou alguém que possa <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar</span> os seus alunos falando sobre o mundo de possibilidades que se abre à Ciência da Computação (que pode ser feito através de um chat vídeo).
   volunteer_engineer_submission_intro_signup: 'Por favor, insira as seguintes informações, se você é um estudante de Informática ou um profissional da área. Os campos marcados com um <span class="form-required-field"> *</span> são obrigatórios.'
   volunteer_engineer_submission_intro_links: 'Não quer ser voluntário? <a href="%{learn_more}"> Saiba mais</a> sobre como organizar o seu próprio evento da Hora do Código e encontrar um voluntário local no nosso <a href="%{volunteer_local}"> mapa de voluntários</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informações partilhadas com os professores no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
   volunteer_engineer_submission_field_name_placeholder: Nome Completo
@@ -560,6 +563,8 @@ pt-PT:
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver Todos
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Saber mais
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
@@ -618,8 +623,8 @@ pt-PT:
   mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Programa com a Anna e com a Elsa
   starwars_name: 'Star Wars: Construir uma Galáxia com Código'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Labirinto clássico
+  codeintl_name: Labirinto clássico
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Uma introdução ao JavaScript
   khanes_name: Uma introdução ao JavaScript
@@ -655,7 +660,7 @@ pt-PT:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, papel ou tesoura
-  hourofcode_name: Classic Maze
+  hourofcode_name: Labirinto clássico
   playlab_name: Laboratório
   infinity_name: Laboratório infinito
   artist_name: Artista
@@ -857,7 +862,7 @@ pt-PT:
   playlab_longdescription: Crie uma história ou faça um jogo no Laboratório! Faça animais, piratas, zumbis, ninjas e muitos outros personagens se moverem, fazer sons, marcar pontos e até mesmo lançar bolas de fogo!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

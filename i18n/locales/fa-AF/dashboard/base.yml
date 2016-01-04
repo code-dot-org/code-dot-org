@@ -251,57 +251,10 @@ fa-AF:
     remove: (حذف معلم)
     confirm:
       remove: آیا برای حذف این معلم مطمئت هستبد؟
-    tools: ابزار معلم
-    followers:
-      section: 'بخش:'
-      stages: 'مرحله (ها) برای نمایش:'
-      show_past: 'نمایش فعالیت دانشجویی (%{bullet_html})  در گذشته :'
-      levels_key: سطوح کلیدی
-      perfect: تکمیل, کامل
-      completed: تکمیل شد ، اما با استفاده از بلوک های زیادی
-      tried: سعی کردم، اما کامل نیست
-      not_tried: هنوز امتحان نشده
-      activity: 'فعالیتهای دانش آموز در آخرین %{plural} %{hours} را نشان میدهد'
-      no_section: بدون بخش اختصاص داده شده
-      trophies: جایزها
     students:
-      name: نام
-      username: نام کاربری
-      password: رمز عبور
-      manage: مدیریت دانش آموزان
       dashboard: رفتن به صفحهٔ معلم
-      add: افزودن دانش آموزان
-      remove: حذف کردن دانش آموز
-      confirm_remove: آیا مطمئن هستید می خواهید این دانش آموز را حذف کنید؟?
-      help_reassign: برای تقسیم بندی کلاس خود به بخشهای مختلف ، دانش آموز مورد نظر را برای اختصاص به بخش جدید انتخاب کنبد .
-      help_register: در عوض صرف وقت زیاد برای وارد کردن اطلاعات دانش آموزان به صورت جداگانه ، شما می توانید کلاس خود را با درخواست ثبت نام از آنها به سرعت تشکیل دهید .دانش آموزانتان به یک نام کاربری و کلمه عبور نیاز خواهند داشت ، اما آنها برای اینکار نیازی به داشتن آدرس ایمیل ندارند. اگر دانش آموزی کلمه عبور خود را فراموش کند ، شما امکان بازنشانی را برای آنها خواهید داشت .
-      register: از دانش آموزانتان بخواهید خودشان ثبت نام کنند
-      vist: از دانش آموزان بخواهید ببینند
-      section_code: 'و  کد  بخش  را وارد کنید:'
-      first_please: 'اول، لطفا %{add_section}'
-      for: برای
-      enter: 'وارد کردن :'
-    sections:
-      add: اضافه کردن بخش
-      manage: مدیریت بخش‌ها
-      section: بخش
-      students: دانش آموزان
-      section_code: بخش کد
-      add_section_code: اضافه کردن دانش آموزان بخش-کد
-      secret: نوع مخفی
-      grade: درجه
-      course: دوره
-      rename: تغییر نام
-      edit: ویرایش
-      delete: حذف
-      confirm_delete: مطمئن هستید که می خواهید این بخش را حذف کنید؟
-      email: ارسال در ایمیل
-    rollup: داشبورد پیشرفت
-    activity: آخرین فعالیت های کلاس
-    user_not_found: معلم یا دانش آموز مورد نظر یافت نشد
-    cant_remove_student_no_email: '%{student_name} به عنوان دانش آموز شما نمیتواند حذف شود چون %{student_name} نشانی پست الکترونیکی ثبت نکرده است'
-    cant_remove_teacher_no_email: '%{teacher_name} به عنوان معلم شما نمیتواندحذف شود زیرا شما آدرس پست الکترونیکی ثبت نکرده اید'
-    student_teacher_disassociated: '%{teacher_name}  به عنوان یک معلم برای %{student_name} حذف شده است'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: بیننده پاسخ
       student: دانش آموز
@@ -310,7 +263,7 @@ fa-AF:
       section: بخش
       example: راه حل مثال
       example_with_number: 'راه حل مثال%{solution_number}'
-      submitted_on: 'Submitted on:'
+      submitted_on: 'ارسال شده در:'
       unsubmit: ثبت نشده
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
@@ -375,6 +328,7 @@ fa-AF:
   share:
     title: در استودیو ی کد یاد بگیرید
     description: هرکسی می تواند علوم کامپیوتر را بیاموزد. با کد نویسی بازی، نرم افزار و هنر ایجاد کنید.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: مرد
     female: زن
@@ -386,8 +340,8 @@ fa-AF:
     thank_you: 'ما از <a href="https://code.org/about/donors"> اهدا کنندگانمان</a>،<a href="https://code.org/about/partners"> همکارانمان</a>، <a href="https://code.org/about/team"> تیم گسترده مان</a>، گروه فیلم برداری مان، و <a href="https://code.org/about/advisors"> مشاوران آموزشیمان</a> برای همکاریشان در ایجاد استودیو ی کد سپاسگزاریم.'
     help_from_html: مهندسین از گوگل , مایکروسافت ، فیس بوک و توییتر در ایجاد این آموزش کمک کردند
     help_from_html_old: مهندسینی از گوگل، مایکروسافت، فیسبوک، و توییتر به تولید این محتوا کمک کردند.
-    art_from_html: 'نام و علامت تجاری پرندگان خشمگین متعلق به 2009-2014 Rovio Entertainment می باشد و  کلیه حقوق محفوظ است. <br/> نام و علامت تجاری گیاهان در مقابل زامبی متعلق به 2014 شرکت الکترونیک آرتز می باشد و کلیه حقوق  محفوظ است.'
-    art_from_html_old: 'پرنده های خشمگین &#8482;&amp;&copy; 2009-%{current_year} کمپانی سرگرمی روویو. تمامی حقوق محفوظ است.<br />گیاهان در برابر زامبی ها&#8482;&amp;&copy;%{current_year} شرکت هنرهای الکترونیک. تمامی حقوق محفوظ است'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و ساعت کد نویسی &reg; علائم تجاری Code.org هستند.'
     copyright: حق کپی برداری و نشر
@@ -401,9 +355,10 @@ fa-AF:
     privacy: قوانین حفظ حریم خصوصی
     secure: نسخهٔ امن
     report_abuse: گزارش سوء استفاده
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: ساخته شده در کد استودیو
+    make_my_own_app: برنامه ی خودم را بساز
+    how_it_works: چگونه کار می کند
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: کمک نیاز دارید؟
     subtitle: دیدن این فیلم ها و نکات
@@ -460,7 +415,7 @@ fa-AF:
       unused: مراحل استفاده نشده
   upsell:
     hoc:
-      title: Classic Maze
+      title: هزارتوی کلاسیک
       body: مفاهیم اساسی علم کامپیوتر را امتحان کنید. میلیون‌ها نفر آن را امتحان کرده‌اند.
     flappy:
       title: کدنویسی Flappy
@@ -483,8 +438,8 @@ fa-AF:
       title: آزمایشگاه بازی نامحدود
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
-      title: Minecraft
-      body: Explore a Minecraft world through code.
+      title: ماینکرفت
+      body: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
   gallery:
     students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
     students_made_these_with_code: دانش آموزان اینها را با کد ساخته اند !
@@ -622,18 +577,18 @@ fa-AF:
       contact_us: "اگه باور دارید این یه اشتباهه لطفا، <a href='https://code.org/contact'>با ما تماس بگیرید.</a>"
       go_to_code_studio: رفتن به استودیو کد
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: 'چنانچه  هنگام استفاده از برنامه های ساخته شده در کد استودیو با مطالب اهانت آمیز، ارعاب، تهدید سایبری، آزار و اذیت، و یا هر نمونه نقض قانون کپی برداری در مورد محتویاتی که شما مالک آن هستید، مواجه شدید، لطفا فرم زیر را پر نمایید. ما گزارش شما را بسیار جدی انگاشته، به طور شایسته بررسی کرده، و اقدام مناسب را انجام می دهیم.'
         validation:
           email: لطفا آدرس ایمیل را مشخص کنید
           age: لطفا سن را مشخص کنید
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          abuse_type: لطفا پاسخ دهید که چگونه این مطلب شرایط سرویس را نقض می کند
+          abuse_detail: لطفا جزئیات را در مورد مطلبی که گزارش می دهید ارائه دهید.
+        abusive_url: آدرس اینترنتی (URL) مطلبی که در مورد آن گزارش داده می شود
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'این مطالب به چه نحوی %{link_start} شرایط سرویس %{link_end} را نقض می کند؟'
+          harassment: ارعاب، تهدید سایبری، آزار و اذیت
+          offensive: مطالب توهین آمیز
+          infringement: نقض قانون کپی برداری
           other: دیگر
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: لطفا تا حد امکان جزئیات را در مورد مطلبی که گزارش می دهید ارائه کنید.
+        acknowledge: 'با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy} حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با موضوع برخورد می شود.'

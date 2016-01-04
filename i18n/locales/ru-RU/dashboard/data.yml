@@ -311,29 +311,28 @@ ru:
         studio_playlab_8: Можете разместить блоки так, чтобы добавлялся балл и исполнялся звук каждый раз, когда единорог прикасается к волшебнику, и переместить его стрелками, чтобы проверить свою программу?
         studio_playlab_9: Установите фон для сцены инопланетного вторжения, и помогите Космоботу добраться до Инопланетянина быстрее, изменяя его скорость. Затем с помощью стрелок переместите Инопланетянина в Космобота и предупредите всех о вторжении
         studio_playlab_10: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
-        studio_iceage_hello1: 'Сид хочет собрать всех для нового приключения. Не поможешь ему сказать "hello"? Для этого перетащи блок "Высказывания" в рабочую область и напечатай внутри блока "hello" .'
-        studio_iceage_hello2: 'Сид (персонаж 1) нашел Мэнни (персонаж 2) и хочет пригласить его принять участие в приключении. Помоги им поприветствовать друг друга,  дважды использовав блок "Высказывания персонажа".'
-        studio_iceage_move_to_flag: 'Скрат ищет свой желудь. Помоги ему пройти последние 200 пикселей, использую для этого блок "Переместить".'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Сид хочет собрать всех для нового приключения. Не поможешь ему сказать "Привет"? Для этого перетащи блок "сказать" в рабочую область и напечатай внутри блока "Привет" .'
+        studio_iceage_hello2: 'Сид (персонаж 1) нашел Мэнни (персонаж 2) и хочет пригласить его принять участие в приключении. Помоги им поприветствовать друг друга,  дважды использовав блок "персонаж говорит".'
+        studio_iceage_move_to_flag: 'Скрат ищет свой желудь. Помоги ему пройти последние 200 пикселей, использую для этого блок "переместить".'
+        studio_iceage_move_to_actor: 'Диего (персонаж 1) ищет Мэнни (персонаж 2). Используй блок "переместить персонажа", чтобы помочь Диего опуститься на 200 пикселей навстречу Мэнни. Затем для того, чтобы при их встречи заиграл звуковой сигнал, соедини блок с событием "когда персонаж касается ".'
+        studio_iceage_repeat: 'Блок "повторять бесконечно" позволяет выполнять фрагмент кода непрерывно. Можешь присоединить блоки к блоку "повторять бесконечно", чтобы Гренни повторно ходил вправо и влево?'
+        studio_iceage_click_hello: 'Поможешь Сиду позвать друзей, когда по нему кликнут "мышкой"? Не забудь нажать на него после запуска программы.'
+        studio_iceage_move_events: 'Скрат все еще ищет желуди! Соедини блок "переместить" с каждым из событий, чтобы при нажатии на клавиши с изображением стрелки он мог бегать, меняя направление. Когда закончишь, нажми "Выполнить" и попробуй собрать все желуди.'
+        studio_iceage_sound_and_points: 'Большая часть программы, позволяющая Гренни ходить влево и вправо, а также Сиду двигатьтся по экрану, уже написана. Закончишь код, добавив блоки к событию "когда персонаж касается", чтобы заиграла музыка и насчитывалось очко при столкновении Сида и Гренни? Нажми "Выполнить", чтобы запустить игру.'
+        studio_iceage_warn_ice_age: 'Ледниковый период наступает, поэтому всем нужно двигаться быстрее! Измени фон на "ледянной" и увеличь скорость Сида. Потом нажми "Выполнить" и перемести его по направлению к Диего, чтобы он смог его предупредить.'
+        studio_iceage_throw_hearts: 'Сид хочет, чтобы его бабушка, Гренни, знала, что он ее любит. Используй комманду "персонаж посылает", чтобы Сид (персонаж 1) послал сердечки Гренни (персонаж 2)! Установи у Гренни счастливое настроение, когда она поймает сердечки.'
+        studio_iceage_free_play: 'Пришло время создать собственную игру или историю! После того, как закончишь, нажми "Финиш", чтобы твои друзья смогли запустить твою игру на своих телефонах, планшетах и компьютерах!'
+        studio_gumball_hello1: 'Анаис желает завести новых друзей. Можешь помочь ей сказать "Привет", перетащив блок "Привет" в рабочую область и напечатав слово "Привет" внутри?'
+        studio_gumball_hello2: 'Дарвин (персонаж 1) и его брат Гамбол (персонаж 2) направляются в школу. Используй дважды блок "персонаж говорит", чтобы они могли поприветствовать друг друга.'
+        studio_gumball_move_to_flag: 'Банан Джо собирается победить в забеге! Помоги ему преодолеть последние 200 пикселей, использовав для этого блог "переместить".'
+        studio_gumball_move_to_actor: 'Гамбол (персонаж 1) и Дарвин (персонаж 2) опоздали на соревнования! Используя блок "переместить персонажа", помоги Гамболу опуститься на 200 пикселей к Дарвину. Затем соедини блок с событием "когда персонаж касается" для того, чтобы при их встречи заиграл звуковой сигнал.'
+        studio_gumball_repeat: 'Блок "повторять бесконечно" позволяет непрерывно выполнять фрагмент кода. Можешь присоединить блоки к блоку "повторять бесконечно", чтобы Гамбол размялся перед забегом, перемещаясь вправо и влево?'
+        studio_gumball_click_hello: 'Можете помочь Антону объявить старт гонки словами "На старт! Внимание! Марш!"? Для проверки программы не забудьте кликнуть на Антона после того, как нажали "Старт"!'
+        studio_gumball_move_events: 'Дарвин участвует в соревновании по собиранию флажков! Соедини блок "переместить" с каждым из событий, чтобы он смог собрать флажки. Когда закончишь, нажми "Выполнить" и попробуй собрать все флажки.'
+        studio_gumball_sound_and_points: 'Большая часть программы, позволяющая Антону (персонаж 2) ходить влево и вправо, а также Банану Джо (персонаж 1) двигатьтся по экрану, уже написана. Закончишь код, добавив блоки к событию "когда персонаж касается", чтобы заиграла музыка и насчитывалось очко при столкновении Банана Джо и Антона? Нажми "Выполнить", чтобы запустить игру.'
+        studio_gumball_warn_food_fight: 'Дарвин только что избежал обкидывания едой! Поменяй фон на "персонажи" и увеличь скорость Дарвина. Потом нажми кнопку "Выполнить" и направь Дарвина к Пенни, чтобы он смог предупредить ее.'
+        studio_gumball_join_food_fight: 'Присоединяйся к обкидыванию едой! Чтобы Банан Джо (персонаж 1) смог бросить еду в Антона (персонаж 2), используй комманду "персонаж бросает объект вправо"! Сделай так, чтобы при попадании в Антона, его настроение менялось на злое.'
+        studio_gumball_free_play: 'Создайте собственную игру или историю. После того, как закончите, нажмите "Финиш" для того, чтобы ваши друзья смогли запустить созданную вами игру или историю на своих телефонах, планшетах или компьютерах!'
         studio_full_sandbox: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
         studio_k1_1: Вы можете заставить собаку сказать «hello world»?
         studio_k1_2: Можешь сделать так, чтобы сначала заговорила собака, а потом и кошка?
@@ -515,12 +514,12 @@ ru:
         mc_if_statements: 'Minecraft - оператор «если»'
         mc_congrats_share: 'Minecraft - поздравляем'
         mc_congrats_no_share: 'Minecraft - поздравляем'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        gumball_intro: '"Час Кода": Гамбол - Вступление'
+        gumball_events: '"Час Кода": Гамбол - События'
+        gumball_repeat: '"Час кода". "Гамбол" - Операторы цикла'
+        iceage_intro: '"Час Кода": Ледниковый период - Вступление'
+        iceage_events: '"Час Кода": Ледниковый период - События'
+        iceage_repeat: '"Час кода".  "Ледниковый период" - Операторы цикла'
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

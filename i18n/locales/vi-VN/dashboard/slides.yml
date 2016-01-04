@@ -96,7 +96,7 @@ vi:
         text: Trong mỗi câu đố của hoạt động này, chúng tôi sẽ giới thiệu các loại sự kiện mới tương ứng với các khối xanh lá cây trong khu làm việc, và bạn sẽ quyết định gắn khối lệnh thích hợp để đáp lại các sự kiện trên.
       9:
         image: notes/flappy09.jpg
-        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
+        text: Khi bạn thấy một mũi tên xổ dọc xuống như thế này, điều đó có nghĩa là bạn có thể chỉnh sửa cài đặt trong game.
       10:
         image: notes/flappy10.jpg
         text: Trong câu đố cuối cùng, có thể bạn sẽ tạo ra trò chơi của riêng bạn và chia sẻ nó với bạn bè của bạn. Chúc vui vẻ!
@@ -172,7 +172,7 @@ vi:
           Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Bây giờ, hãy đá đít lũ thây ma ấy nào!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -214,7 +214,7 @@ vi:
           Hi, I'm Makinde! Let's learn about the "while block."
       2:
         image: notes/stage9_6.jpg
-        text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'
+        text: Khối màu trắng sẽ làm mọi thứ bạn bỏ vào trong nó miễn sao các khối ở trên đều đã lập trình đúng.
       3:
         image: notes/stage9_7.jpg
         text: For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her.
@@ -1370,7 +1370,7 @@ vi:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1426,7 +1426,7 @@ vi:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1501,7 +1501,7 @@ vi:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1702,7 +1702,7 @@ vi:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

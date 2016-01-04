@@ -225,6 +225,56 @@ describe("throwOnInvalidExampleBlocks", function () {
   });
 });
 
+describe("getUserBlocks_", function () {
+  var studioApp;
+
+  // create our environment
+  beforeEach(function () {
+    testUtils.setupTestBlockly();
+    studioApp = testUtils.getStudioAppSingleton();
+  });
+
+  function validateNumUserBlocks(blockXml, expectedNum) {
+    studioApp.loadBlocks(blockXml);
+
+    // make sure we loaded correctly. text wont match exactly, but make sure if
+    // we had xml, we loaded something
+    var loaded = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+    assert(loaded, "we didn't correctly load our test blocks");
+
+    var userBlocks = studioApp.feedback_.getUserBlocks_();
+    assert.equal(userBlocks.length, expectedNum);
+  }
+
+  it("usually ignores noneditable blocks", function () {
+    var testBlockXml = [
+      '<xml>',
+      '<block editable="false" type="text_print"></block>',
+      '<block editable="false" type="text"><title name="TEXT">TextContent</title></block>',
+      '<block editable="false" type="math_number"><title name="NUM">10</title></block>',
+      '</xml>'
+    ];
+
+    validateNumUserBlocks(testBlockXml.join(''), 0);
+  });
+
+  it("considers noneditable blocks when Blockly.readOnly === true", function () {
+    var testBlockXml = [
+      '<xml>',
+      '<block editable="false" type="text_print"></block>',
+      '<block editable="false" type="text"><title name="TEXT">TextContent</title></block>',
+      '<block editable="false" type="math_number"><title name="NUM">10</title></block>',
+      '</xml>'
+    ];
+
+    var readOnly = Blockly.readOnly;
+    Blockly.readOnly = true;
+    validateNumUserBlocks(testBlockXml.join(''), 3);
+    Blockly.readOnly = readOnly;
+  });
+});
+
+
 /**
  * Loads options.startBlocks into the workspace, then calls
  * getMissingBlocks and validates that the result matches the

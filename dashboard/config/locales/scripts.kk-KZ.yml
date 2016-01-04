@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: Лабиринт
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -13,227 +13,226 @@
           description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
+          'Maze: Sequence': 'Лабиринт: Тізбектер'
+          'Maze: Debugging': 'Лабиринт: Бағдарламаны ретке келтіру'
+          'Artist 1: Intro': 'Кейіпкер 1: Кіріспе'
+          Artists 2: Кейіпкер 2
+          Spelling Bee: Сөз жазушы Ара
+          Spelling Bee not blockly: Блоксыз сөз жазушы Ара
+          'Bee 1: Intro': 'Ара 1: Кіріспе'
+          'Maze 2: Loops': 'Лабиринт 2: Ілмектер'
+          'Bee 2: Loops': 'Ара 2: Ілмектер'
+          Multi & Match: Бірнеше & Сәйкестік
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4-6
-          description_short: Start with Course 1 for early readers.
+          Flappy non blockly: Блоксыз Flappy
+          title: Курс 1
+          Artist 2: Кейіпкер 2
+          Happy Maps: Көңілді Карталар
+          Move it, Move it: Қозғал, Қозғал
+          'Real-life Algorithms: Plant a Seed': 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+          Building a Foundation: Ғимарат Салу
+          Getting Loopy: Ілмектерді үйрену
+          The Big Event: Үлкен Оқиға
+          Going Places Safely: Қауіпсіз Жерді Табу
+          description: Енді бастаушылар Курс 1 - ден бастаңыздар. Оқушылар басқалармен
+            бірлесіп жұмыс, мәселелерді шешу дағдыларын дамыта отырып, компьютерлік
+            бағдарламалар жасайды. Курс соңында оқушылар бөлісе алатындай өздерінің
+            ойындарын немесе оқиғаларын жасайды. K-1 оқушыларына пайдалануға кеңес
+            береміз.
+          'Bee: Sequence': 'Ара: Тізбектер'
+          'Artist: Sequence': 'Кейіпкер: Тізбектер'
+          'Artist: Shapes': 'Кейіпкер: Фигуралар'
+          'Maze: Loops': 'Лабиринт: Ілмектер'
+          'Bee: Loops': 'Ара: Циклдер'
+          'Studio: Create a Story': 'Ойындар Лабораториясы: Оқиға құрыңыз'
+          'Artist: Loops': 'Кейіпкер: Ілмектер'
+          description_audience: 4-6 жастағылар үшін
+          description_short: Енді бастаушылар Курс 1 - ден бастаңыздар.
         course2:
-          The Maze: The Maze
-          Suzi: Suzi
-          The Artist: Артист
-          Artist Debugging: Artist Debugging
-          Bounce: Bounce
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          The Maze: Лабиринт
+          Suzi: Сюзи
+          The Artist: Кейіпкер
+          Artist Debugging: Кейіпкер бағдарламасын ретке келтіру
+          Bounce: Секіру
+          'Studio: Create a Story': 'Ойындар Лабораториясы: Оқиға құрыңыз'
+          Artist Loops: Кейіпкер Циклдері
+          Bee Conditionals: Ара Шарттары
           Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
-          Conditionals: Conditionals
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages 6-18
-          description_short: Start with Course 2 for students who can read.
+          title: Курс 2
+          Bee Loops: Ара Циклдері
+          Artist Functions: Кейіпкер Функциялары
+          The Artist Debugging: Кейіпкер бағдарламасын ретке келтіру
+          Bee Debugging: Ара бағдарламасын ретке келтіру
+          Bee Functions: Ара Функциялары
+          Maze Loops: Лабиринт Ілмектер
+          Graph Paper Programming: Миллиметрлік Бағдарламалау
+          'Real-life Algorithms: Paper Planes': 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
+          Getting Loopy: Ілмектерді үйрену
+          Relay programming: Релелік Бағдарламалау
+          Conditionals: Шарттар
+          Binary Bracelets: Екілік Білезіктер
+          The Big Event: Үлкен Оқиға
+          Your Digital Footprint: Сіздің сандық іздеріңіз
+          description: Курс 2 оқи алатын және бағдарламалаудан тәжірибелері жоқ оқушыларға
+            арналған. Бұл курста оқушылар бөлісе алатын, мәселерді шешетін және интерактивті
+            ойындар немесе оқиға жасауды үйренеді. 2-5 сынып оқушыларына пайдалануға
+            кеңес береміз.
+          'Maze: Sequence': 'Лабиринт: Тізбектер'
+          'Artist: Sequence': 'Кейіпкер: Тізбектер'
+          'Maze: Loops': 'Лабиринт: Ілмектер'
+          'Artist: Loops': 'Кейіпкер: Ілмектер'
+          'Bee: Loops': 'Ара: Циклдер'
+          'Bee: Debugging': 'Ара: Бағдарламаны ретке келтіру'
+          'Artist: Debugging': 'Кейіпкер: Бағдарламаны ретке келтіру'
+          'Bee: Conditionals': 'Ара: Шарттар'
+          'Artist: Sequence2': 'Кейіпкер: Тізбектер2'
+          'Maze: Sequence2': 'Лабиринт: Тізбектер2'
+          'Artist: Nested Loops': 'Кейіпкер: Біріккен Ілмектер'
+          description_audience: 6-18 жастағылар үшін
+          description_short: Жазу танитын оқушылар Курс 2 - ден бастаңыздар.
         course3:
-          The Maze: The Maze
-          'Studio: Create a Story': 'Play Lab: Create a Story'
-          The Artist: Артист
-          title: Course 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
-          Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Course 3 is designed for students who have taken Course 2.
-            Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': 'Play Lab: Create a Game'
-          Maze: Maze
-          Artist: Artist
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
-          'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
-          description_audience: Ages 8-18
-          description_short: Course 3 is a follow-up to Course 2.
+          The Maze: Лабиринт
+          'Studio: Create a Story': 'Ойындар Лабораториясы: Оқиға құрыңыз'
+          The Artist: Кейіпкер
+          title: Курс 3
+          Artist Functions: Кейіпкер Функциялары
+          Artist For Loops: Кейіпкер For Ілмектері
+          Artist Nested Loops: Кейіпкер Біріккен Ілмектері
+          Bee Conditionals: Ара Шарттары
+          Bee Nested Loops: Ара Біріккен Ілмектері
+          Bee Debuggin: Ара бағдарламасын ретке келтіру
+          Bee Debugging: Ара бағдарламасын ретке келтіру
+          Bee Functions: Ара Функциялары
+          Artist Functions with Params: Параметрлі Кейіпкер Функциялары
+          Bounce: Секіру
+          Maze Conditionals: Лабиринт Шарттары
+          Artist Functions with Parameters: Параметрлі Кейіпкер Функциялары
+          Computational Thinking: Есептегіштік ойлау
+          Functional Suncatchers: Функционалдық Күн сәулесін аулаушы
+          Songwriting Parameters: Ән Жазу Параметрлері
+          Dice Race: Ойын Сүйектерінің Жарысы
+          Internet: Ғаламтор
+          Crowdsourcing: Кроудсорсинг
+          Digital Citizenship: Сандық Азаматтық
+          Farmer - While Loops: Фермер - While (Шарт орындалғанша) Ілмектері
+          description: Курс 3 Курс 2-ні бітірген оқушыларға арналған. Оқушылар алдыңғы
+            сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып, аса күрделі
+            мәселерді икемді тәсілдермен шешуді үйренеді. 4-5 сынып оқушыларына пайдалануға
+            кеңес береміз.
+          'Studio: Create a Game': 'Ойындар Лабораториясы: Ойын Құру'
+          Maze: Лабиринт
+          Artist: Кейіпкер
+          'Artist: Functions': 'Кейіпкер: Функциялар'
+          'Bee: Functions': 'Ара: Функциялар'
+          'Bee: Conditionals': 'Ара: Шарттар'
+          'Maze: Conditionals': 'Лабиринт: Шарттар'
+          'Artist: Nested Loops': 'Кейіпкер: Біріккен Ілмектер'
+          'Farmer: While Loops': 'Фермер: While (Шарт орындалғанша) Ілмектері'
+          'Bee: Nested Loops': 'Ара: Біріккен Ілмектер'
+          'Bee: Debugging': 'Ара: Бағдарламаны ретке келтіру'
+          Maze2: Лабиринт2
+          Artist2: Кейіпкер2
+          'Artist: Functions2': 'Кейіпкер: Функциялар2'
+          'Bee: Functions2': 'Ара: Функциялар2'
+          'Bee: Conditionals2': 'Ара: Шарттар2'
+          'Maze: Conditionals2': 'Лабиринт: Шарттар2'
+          'Artist: Nested Loops2': 'Кейіпкер: Біріккен Ілмектер2'
+          'Farmer: While Loops2': 'Фермер: Шарт орындалғанша Ілмектері2'
+          'Bee: Nested Loops2': 'Ара: Біріккен Ілмектер2'
+          'Bee: Debugging2': 'Ара: Бағдарламаны ретке келтіру2'
+          'Artist: Patterns': 'Кейіпкер: Үлгілер'
+          Songwriting: Ән Жазу
+          description_audience: 8-18 жастағылар үшін
+          description_short: Курс 3 Курс 2-нің жалғасы болып табылады.
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Ойындар Лабораториясы
+          description: Оқиға құрыңыз немесе Ойындар Лабораториясымен ойын жасаңыз!
+          Play Lab: Ойындар Лабораториясы
+          description_short: Оқиға құрыңыз немесе Ойындар Лабораториясымен ойын жасаңыз!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Кейіпкер
+          description: Тамаша суреттер салыңыз және Кейіпкермен әрлеңіз!
+          Artist: Кейіпкер
+          description_short: Тамаша суреттер салыңыз және Кейіпкермен әрлеңіз!
         hourofcode:
-          Maze: Maze
-          title: Код Жазу Сағаты
-          description: Компьютер ғылымының негіздерін Энгри Бердс, Өсімдіктер Зомбилерге
-            қарсы және Мұз Дәуіріндегі Скрат тәріздес кейіпкерлермен үйрен!
-          description_short: Компьютер ғылымының негіздерін көптеген қызықты кейіпкерлермен
-            үйрен!
+          Maze: Лабиринт
+          title: Классикалық лабиринт
+          description: Ашулы Құстар, Өсімдіктер Зомбилерге Қарсы және Мұзды Дәуірдегі
+            Скрат кейіпкерлерімен информатика негіздерін оқып көріңіз!
+          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
+            оқыңыз!
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
-          Artist: Artist
+          title: Анна және Эльзамен код жазыңыз
+          description: Анна мен Эльзаның мұздың әдемілігі мен сиқырын зерттеулері
+            үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай,
+            қысты көркін келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен
+            бөлісесіз!
+          Artist: Кейіпкер
           description_short: Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін
             көрсететін кодты пайдаланайық.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған.
+          description: Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған. Оқушылар
+            алдыңғы сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып,
+            аса күрделі мәселерді икемді тәсілдермен шешуді үйренеді. Курс соңында
+            оқушылар достарымен бөлісе алатын интерактивті оқиғалар мен ойындар жасайды.
+            4-8 сынып оқушыларына пайдалануға кеңес береміз.
+          'Artist: Variables': 'Кейіпкер: Айнымалылар'
+          'Bee: For Loops': 'Ара: For ілмектері'
+          title: Курс 4
+          'Algorithms: Tangrams': 'Алгоритмдер: Танграмдар'
           Variables: Айнымалылар
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10-18
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          'Play Lab: Variables': 'Ойындар Лабораториясы: Айнымалылар'
+          'Play Lab: Functions with Parameters': 'Ойындар Лабораториясы: Параметрлері
+            бар Функциялар'
+          'Bee: Functions with Parameters': 'Ара: Параметрлері бар Функциялар'
+          'Artist: For Loops': 'Кейіпкер: For ілмектері'
+          'Play Lab: For Loops': 'Ойындар Лабораториясы: For ілмектері'
+          'Artist: Functions': 'Кейіпкер: Функциялар'
+          'Unplugged: Tangrams': 'Kомпьютерсіз: Танграмдар'
+          Artist: Кейіпкер
+          Bee: Ара
+          'Unplugged: Envelope Variables': 'Kомпьютерсіз: Ауыспалы Айнымалылар'
+          'Unplugged: Madlibs': 'Kомпьютерсіз: Мадлибс'
+          'Unplugged: For Loop Fun': 'Kомпьютерсіз: Көңілді For ілмектері'
+          'Unplugged: Songwriting with Parameters': 'Kомпьютерсіз: Параметрлермен
+            Ән Жазу'
+          'Artist: Functions with Parameters': 'Кейіпкер: Параметрлері бар Функциялар'
+          'Unplugged: Binary': 'Kомпьютерсіз: Екілік жүйе'
+          Bee Binary: Ара Екілік жүйе
+          Farmer Binary: Фермер Екілік жүйе
+          Maze and Bee: Лабиринт және Ара
+          Artist Binary: Кейіпкер Екілік жүйе
+          description_audience: 10-18 жастағылар үшін
+          Super Challenge - Variables: Қиын жаттығулар - Aйнымалылар
+          Super Challenge - For Loops: Қиын жаттығулар - For Ілмектері
+          Super Challenge - Functions and Parameters: Қиын жаттығулар - Фунциялар
+            және Параметрлер
+          Extreme Challenge - Comprehensive: Өте Қиын жаттығулар - Kешенді
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          title: Курс 4 Қажетті шарттар
+          description_short: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          Course 4 Prerequisite: Курс 4 Қажетті шарттар
+          'Maze: Sequence': 'Лабиринт: Тізбектер'
+          'Artist: Sequence': 'Кейіпкер: Тізбектер'
+          'Artist: Loops': 'Кейіпкер: Ілмектер'
+          'Bee: Conditionals': 'Ара: Шарттар'
+          'Artist: Nested Loops': 'Кейіпкер: Біріккен Ілмектер'
+          'Farmer: While Loops': 'Фермер: While (Шарт орындалғанша) Ілмектері'
+          'Bee: Nested Loops': 'Ара: Біріккен Ілмектер'
+          'Artist: Functions': 'Кейіпкер: Функциялар'
+          'Bee: Debugging': 'Ара: Бағдарламаны ретке келтіру'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Intro: Кіріспе
+          Variables and For Loops: Айнымалылар және For ілмектері
+          Functions and Functions with Parameters: Функциялар және Параметрлі Функциялар
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: Айнымалылар
-          For Loops: For Loops
-          Binary: Binary
+          For Loops: For ілмектері
+          Binary: Бинарлы
         potus:
           title: special
           description_short: special
@@ -244,21 +243,21 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: Бинарлы
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
+          'Unplugged: Video Games and Coordinate Planes': 'Kомпьютерсіз: Видео Ойындар
+            және Кеңістіктегі координаталар'
           'Calc: Evaluation Blocks': Evaluation Blocks and Arithmetic Expressions
-          'Eval: Strings and Images': Strings and Images
+          'Eval: Strings and Images': Жолдар және Суреттер
           'Unplugged: Contracts': 'Unplugged: Contracts, Domain, and Range'
           'Eval: Writing Contracts': Writing Contracts
           'Calc: Defining Variables': Defining Variables and Substitution
           'Play Lab: Defining Variables (Big Game)': The Big Game - Variables
           'Eval: Defining Functions': Composite Functions
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': 'Kомпьютерсіз: Құрастырушы Кеңес'
           'Play Lab: Defining Functions': Rocket Height
           'Eval: Functions': Solving Word Problems with the Design Recipe
           'Play Lab: Animation (Big Game)': The Big Game - Animation
@@ -266,19 +265,19 @@
           'Eval: Boolean Operators': Boolean Operators
           'Play Lab: Booleans': Sam the Bat
           'Play Lab: Boolean (Big Game)': The Big Game - Booleans
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': Conditionals
+          'Unplugged: Conditionals and Piecewise Functions': 'Kомпьютерсіз: Шарттар
+            және Бөлшекті Функциялар'
+          'Eval: Conditionals': Шарттар
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Pythagorean Theorem'
           'Play Lab: Collision Detection (Big Game)': The Big Game - Collision Detection
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney
-            Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity
-            characters.
-          Play Lab: Play Lab
+          title: Диснейдің Шексіз Ойындар Лабораториясы
+          description_short: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз
+            Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
+          description: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің
+            танымал кейіпкерлерімен ойын жасаңыз.
+          Play Lab: Ойындар Лабораториясы
           Infinity: Шексіздік
         algebrademo:
           title: Algebra Demo
@@ -287,11 +286,11 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Бағалау Блоктары
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Айнымалыларды анықтау
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Графика салу әдістері
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -317,12 +316,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: Ғаламтор Симуляторы
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Internet Simulator: Ғаламтор Симуляторы
+          Unit 1: Бөлім 1
+          Unit 2: Бөлім 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -356,48 +355,48 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
-          description: This 20-hour course covers the core computer science and programming
-            concepts in courses 2-4. The course is designed for use with ages 10-18.
-            Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
-          Introduction to Computer Science: Introduction to Computer Science
-          The Maze: The Maze
-          Computational Thinking: Computational Thinking
-          Graph Paper Programming: Graph Paper Programming
-          The Artist: Артист
-          Algorithms: Algorithms
-          The Artist 2: Артист 2
-          Functions: Functions
-          The Farmer: The Farmer
-          Conditionals: Conditionals
-          The Artist 3: Артист 3
-          Song Writing: Song Writing
-          The Farmer 2: The Farmer 2
-          Abstraction: Abstraction
-          The Artist 4: Артист 4
-          Relay Programming: Relay Programming
-          The Farmer 3: The Farmer 3
-          The Internet: The Internet
-          The Artist 5: Артист 5
-          Wrap-up: Wrap-up
+          title: Информатика Курсына жеделдетілген кіріспе
+          description_audience: 10-18 жастағылар үшін
+          description: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің
+            2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп оқу үшін
+            2-4 курстарды қараңыз!
+          description_short: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау
+            негіздерінің 2-4 курсын қамтиды.
+          Introduction to Computer Science: Информатика пәніне кіріспе
+          The Maze: Лабиринт
+          Computational Thinking: Есептегіштік ойлау
+          Graph Paper Programming: Миллиметрлік Бағдарламалау
+          The Artist: Кейіпкер
+          Algorithms: Алгоритмдер
+          The Artist 2: Кейіпкер 2
+          Functions: Функциялар
+          The Farmer: Фермер
+          Conditionals: Шарттар
+          The Artist 3: Кейіпкер 3
+          Song Writing: Ән Жазу
+          The Farmer 2: Фермер 2
+          Abstraction: Абстракция
+          The Artist 4: Кейіпкер 4
+          Relay Programming: Релелік Бағдарламалау
+          The Farmer 3: Фермер 3
+          The Internet: Ғаламтор
+          The Artist 5: Кейіпкер 5
+          Wrap-up: Орау
         edit-code:
           title: Кодты өзгерту
           description: Кодты өзгерту
           description_short: Кодты өзгерту
-          The Maze: The Maze
+          The Maze: Лабиринт
           Applab: Applab
-          The Artist: Артист
-          Play Lab: Play Lab
-          Play Lab 2015: Play Lab 2015
+          The Artist: Кейіпкер
+          Play Lab: Ойындар Лабораториясы
+          Play Lab 2015: Ойындар Лабораториясы 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: Шаралар
           description: Шаралар
           description_short: Шаралар
-          Bounce: Bounce
+          Bounce: Секіру
           Studio: Studio
           Calc: Calc
           Eval: Eval
@@ -405,24 +404,24 @@
           title: Қанат Қағу Коды
           description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
             Қанат Қағу Коды сабағын байқап көріңіз!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Flappy ойынын 10 минут ішінде жазыңыз!
           Flappy Code: Қанат Қағу Коды
         jigsaw:
-          title: Jigsaw
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
-          Jigsaw: Jigsaw
+          title: Бас қатырғыш
+          description: Біздің Jigsaw сабағымызды байқап көріңіз
+          description_short: Біздің Jigsaw сабағымызды байқап көріңіз
+          Jigsaw: Бас қатырғыш
         step:
           title: Қадам
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Қадам сабағы
+          description_short: Қадам сабағы
           Step: Қадам
         Hour of Code:
           title: Код Жазу Сағаты 2013
-          description: Компьютер ғылымының негіздерін Энгри Бердс және Өсімдіктер
-            Зомбилерге қарсы кейіпкерлерімен үйрен!
-          description_short: Компьютер ғылымының негіздерін көптеген қызықты кейіпкерлермен
-            үйрен!
+          description: Ашулы Құстар және Өсімдіктер Зомбилерге Қарсы кейіпкерлерімен
+            информатика негіздерін оқып көріңіз!
+          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
+            оқыңыз!
           Hour of Code 2013: Код Жазу Сағаты 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -455,21 +454,19 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          title: Курс 4 Қажетті шарттар
+          description_short: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          Course 4 Prerequisite: Курс 4 Қажетті шарттар
+          'Maze: Sequence': 'Лабиринт: Тізбектер'
+          'Artist: Sequence': 'Кейіпкер: Тізбектер'
+          'Artist: Loops': 'Кейіпкер: Ілмектер'
+          'Bee: Conditionals': 'Ара: Шарттар'
+          'Artist: Nested Loops': 'Кейіпкер: Біріккен Ілмектер'
+          'Farmer: While Loops': 'Фермер: While (Шарт орындалғанша) Ілмектері'
+          'Bee: Nested Loops': 'Ара: Біріккен Ілмектер'
+          'Artist: Functions': 'Кейіпкер: Функциялар'
+          'Bee: Debugging': 'Ара: Бағдарламаны ретке келтіру'
         cspunit1:
           title: CSP Unit 1 - Digital Information
           description_short: Explore how digital information is represented and transferred
@@ -517,42 +514,44 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
+          'Unplugged: Video Games and Coordinate Planes': 'Kомпьютерсіз: Видео Ойындар
+            және Кеңістіктегі координаталар'
+          'Calc: Evaluation Blocks': 'Есептеу: Бағалау блоктары'
+          'Eval: Strings and Images': 'Eval: Жолдар және Суреттер'
+          'Unplugged: Contracts': 'Компьютерсіз: Келісімшарттар'
+          'Eval: Writing Contracts': 'Eval: Келісімшарттарды жазу'
+          'Calc: Defining Variables': 'Есептеу: Айнымалыларды анықтау'
+          'Play Lab: Defining Variables (Big Game)': 'Ойындар Лабораториясы: Айнымалыларды
+            анықтау (Үлкен Ойын)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Unplugged: The Design Recipe': 'Kомпьютерсіз: Құрастырушы Кеңес'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          'Play Lab: Animation (Big Game)': 'Ойындар Лабораториясы: Анимация (Үлкен
+            Ойын)'
+          'Unplugged: Booleans': 'Компьютерсіз: Бульдік тип'
+          'Eval: Boolean Operators': 'Eval: Бульдік Оператор'
+          'Play Lab: Booleans': 'Ойындар Лабораториясы: Бульдік тип'
+          'Play Lab: Boolean (Big Game)': 'Ойындар Лабораториясы: Бульдік тип (Үлкен
+            Ойын)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Kомпьютерсіз: Шарттар
+            және Бөлшекті Функциялар'
+          'Eval: Conditionals': 'Eval: Шарттар'
+          'Unplugged: Collision Detection and the Distance Formula': 'Компьютерсіз:
+            Қақтығыстарды анықтау және Арақашықтық Формуласы'
+          'Play Lab: Collision Detection (Big Game)': 'Ойындар Лабораториясы: Қақтығыстарды
+            анықтау (Үлкен Ойын)'
+          Evaluation Blocks: Бағалау Блоктары
+          Strings and Images: Жолдар және Суреттер
+          Contracts: Келісімшарттар
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Графика салу әдістері
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Бульдік тип
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Шарттар және Функция бөліктері
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -566,17 +565,17 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Бағалау Блоктары
+          Strings and Images: Жолдар және Суреттер
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Бульдік тип
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Ойындар Лабораториясы: Қақтығыстарды
+            анықтау (Үлкен Ойын)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
         text-compression:
@@ -652,7 +651,7 @@
             the programming environment to build apps, but the concepts learned in
             these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
-          Functions: Functions
+          Functions: Функциялар
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -705,7 +704,7 @@
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: Функцияларды Құру
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -745,7 +744,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: Шарт орындалғанша Циклдері
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -762,10 +761,10 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Бағалау Блоктары
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          Strings and Images: Жолдар және Суреттер
+          The Design Recipe: Графика салу әдістері
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -813,7 +812,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Бағалау Блоктары
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -826,7 +825,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Бағалау Блоктары
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -885,8 +884,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -914,7 +913,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: The Internet
+          description_short: Ғаламтор
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -933,7 +932,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: The Internet Is for Everyone
+          The Internet: Ғаламтор бәрі үшін
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -966,16 +965,16 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          Evaluation Blocks: Бағалау Блоктары
+          Strings and Images: Жолдар және Суреттер
+          Defining Variables: Айнымалыларды анықтау
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Графика салу әдістері
           Big Game - Animation: Big Game - Animation
-          Booleans: Booleans
+          Booleans: Бульдік тип
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -983,16 +982,16 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: Тегін Ойнау
         allthethings:
-          Jigsaw: Jigsaw
-          Maze: Maze
-          Artist: Artist
-          Bee: Bee
+          Jigsaw: Бас қатырғыш
+          Maze: Лабиринт
+          Artist: Кейіпкер
+          Bee: Ара
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: Bounce
+          Bounce: Секіру
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -1014,19 +1013,19 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Бағалау Блоктары
+          Strings and Images: Жолдар және Суреттер
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Айнымалыларды анықтау
+          Defining Functions: Функцияларды анықтау
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          'Eval: Conditionals': 'Eval: Conditionals'
+          Booleans: Бульдік тип
+          'Eval: Conditionals': 'Eval: Шарттар'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1036,20 +1035,20 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: Ғаламтор Симуляторы
+          App Lab: Қосымшалар Лабораториясы
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: Ғаламтор Симуляторы
+          App Lab: Қосымшалар Лабораториясы
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1072,9 +1071,9 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          Welcome!: Қош келдіңіз!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1083,7 +1082,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Wrap-up
+          Wrap-up: Орау
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1128,40 +1127,40 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Кодтау сағаты 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Кодтау Сағаты 2015
+          description_short: Ойындар Лабораториясын пайдаланып оқиға немесе ойын жасаңыз.
+          description: Ойындар Лабораториясын пайдаланып оқиға немесе ойын жасаңыз.
           Hour of Code: Код Жазу Сағаты
-          Hour of Code 2015: Кодтау сағаты 2015
+          Hour of Code 2015: Кодтау Сағаты 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Бағалау Блоктары
+          Strings and Images: Жолдар және Суреттер
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Айнымалыларды анықтау
+          Defining Functions: Функцияларды анықтау
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
-          'Eval: Conditionals': 'Eval: Conditionals'
+          Booleans: Бульдік тип
+          'Eval: Conditionals': 'Eval: Шарттар'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
-          The Design Recipe: The Design Recipe
+          Welcome!: Қош келдіңіз!
+          The Design Recipe: Графика салу әдістері
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          Welcome!: Қош келдіңіз!
+          Wrap-Up: Аяқтау
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1175,15 +1174,15 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          Welcome!: Қош келдіңіз!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Аяқтау
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1195,21 +1194,21 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Аяқтау
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          Welcome!: Қош келдіңіз!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1228,12 +1227,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Орау
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          Welcome!: Қош келдіңіз!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1252,7 +1251,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Wrap-up
+          Wrap-up: Орау
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1293,15 +1292,15 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: Graph Paper Programming
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Happy Maps: Көңілді Карталар
+          Move it, Move it: Қозғал, Қозғал
+          'Real-life Algorithms: Plant a Seed': 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+          Graph Paper Programming: Миллиметрлік Бағдарламалау
+          Building a Foundation: Ғимарат Салу
+          Getting Loopy: Ілмектерді үйрену
+          The Big Event: Үлкен Оқиға
+          Binary Bracelets: Екілік Білезіктер
+          Songwriting: Ән Жазу
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1354,7 +1353,7 @@
           description: Refer to this online professional development content throughout
             the 2015-16 school year as you plan, deliver and reflect on Unit 2 of
             the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1388,7 +1387,7 @@
           description: Refer to this online professional development content throughout
             the 2015-16 school year as you plan, deliver and reflect on Unit 3 of
             the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1425,7 +1424,7 @@
           description: Refer to this online professional development content throughout
             the 2015-16 school year as you plan, deliver and reflect on Unit 4 of
             the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1460,7 +1459,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1469,7 +1468,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1513,15 +1512,30 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Аяқтау
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1539,7 +1553,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1556,21 +1570,23 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 10-18 жастағылар үшін
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: 10-18 жастағылар үшін
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Mұзды дәуірі ойын лабораториясы
+          description_short: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы
+            ойын жаса!
+          description: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы ойын
+            жаса!
+          Ice Age Play Lab: Mұзды дәуірі ойын лабораториясы
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1605,7 +1621,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: Шарт орындалғанша Циклдері
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1625,24 +1641,25 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumball ойын лабораториясы
+          description_short: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын
+            жаса!
+          description: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын жаса!
+          Gumball Play Lab: Gumball ойын лабораториясы
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          Hour of Code 2015: Кодтау сағаты 2015
+          title: 'Жұлдызды соғыстар: Галактиканы код арқылы жаса'
+          description_short: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
+            ойыныңды алыстағы галактикада жаса.
+          description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
+            ойыныңды алыстағы галактикада жаса.
+          Hour of Code 2015: Кодтау Сағаты 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          Hour of Code 2015: Кодтау сағаты 2015
+          title: 'Жұлдызды соғыстар: Галактиканы код арқылы жаса'
+          description_short: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
+            ойыныңды алыстағы галактикада жаса.
+          description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
+            ойыныңды алыстағы галактикада жаса.
+          Hour of Code 2015: Кодтау Сағаты 2015
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
@@ -1650,10 +1667,10 @@
           Craft: Craft
         mc:
           title: Minecraft Кодтау Сағаты
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          Hour of Code 2015: Кодтау сағаты 2015
+          description_short: Код арқылы Minecraft әлемін тану
+          description: Стив пен Алекс-ты Minecraft әлемінің шытырман оқиғаларымен
+            таныстуры ушин код блоктарын колданыңыз
+          Hour of Code 2015: Кодтау Сағаты 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1665,6 +1682,6 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Қош келдіңіз!
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Аяқтау

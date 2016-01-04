@@ -253,57 +253,10 @@ lv:
     remove: (noņemt skolotāju)
     confirm:
       remove: Vai tu esi drošs, ka vēlies noņemt šo skolotāju?
-    tools: Skolotāja rīki
-    followers:
-      section: 'Sadaļa:'
-      stages: 'Skatuve(s), kuras parādīt:'
-      show_past: 'Parādīt skolēnu aktivitāti (%{bullet_html}) iepriekš:'
-      levels_key: Līmeņu atslēga
-      perfect: Pabeigts, izcili
-      completed: Pabeigts, bet lietots pārāk daudz bloku
-      tried: Mēģināts, bet nepabeigts
-      not_tried: Nav vēl mēģināts
-      activity: 'Norāda skolēna aktivitāti pēdējās %{hours} %{plural}'
-      no_section: Nav piešķirta sadaļa
-      trophies: Trofejas
     students:
-      name: Vārds
-      username: Lietotājvārds
-      password: Parole
-      manage: Pārvaldīt skolēnus
       dashboard: Doties uz Skolotāja paneli
-      add: Pievienot skolēnus
-      remove: noņemt skolēnus
-      confirm_remove: Vai tiešām vēlaties noņemt šo skolēnu?
-      help_reassign: Lai sadalītu savu klasi vairākās grupās, izvēlies skolēnus, ko pievienot jaunajai grupai.
-      help_register: Tā vietā, lai pavadītu daudz laika ievadot katra skolēna datus, var ātri sagatavot savu klasi un likt skolēniem tajā reģistrēties. Skolēniem būs jāizvēlas lietotāju vārdi un paroles, bet viņiem nebūs prasīts norādīt e-pasta adreses. Ja skolēns aizmirsīs savu paroli, skolotājam ir iespēja to atjaunot.
-      register: Paprasiet saviem skolēniem, lai viņi reģistrējas paši
-      vist: Aiciniet savus skolēnus apmeklēt
-      section_code: 'un ievadi sekcijas kodu:'
-      first_please: 'Pirmkārt, lūdzu %{add_section}'
-      for: Pa
-      enter: 'ievadiet:'
-    sections:
-      add: Pievienot sadaļu
-      manage: Pārvaldīt sadaļu
-      section: Sadaļa
-      students: Skolēni
-      section_code: Sadaļas kods
-      add_section_code: Pievienot studentu sekcijas kodu
-      secret: Slepenais tips
-      grade: Vērtējums
-      course: Kurss
-      rename: pārdēvēt
-      edit: rediģēt
-      delete: dzēst
-      confirm_delete: Vai tiešām vēlaties dzēst šo sadaļu?
-      email: Nosūtīt uz e-pastu
-    rollup: Progresa josla
-    activity: Nesenās klases aktivitātes
-    user_not_found: Skolotājs vai skolnieks netika atrasts
-    cant_remove_student_no_email: '%{student_name} skolnieks nevar tikt dzēsts, jo %{student_name}, jo nav reģistrēta e-pasta adrese'
-    cant_remove_teacher_no_email: '%{teacher_name} nevarat noņemt savu pasniedzēju, jo jūs neesat reģistrējis e-pasta adresi'
-    student_teacher_disassociated: 'Pasniedzējs %{teacher_name} ir noņemts no skolēna %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Answer Viewer
       student: Students
@@ -377,6 +330,7 @@ lv:
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Vīrietis
     female: Sieviete
@@ -388,8 +342,8 @@ lv:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt šo pamācību.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Angry Birds&trade;&copy;2009. - 2014. Rovio Entertainment Ltd. Visas tiesības rezervētas.<br/> Plants vs.  Zombies&trade; & &copy; 2014 Electronic Arts Inc. Visas tiesības rezervētas.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Nodrošina Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -406,6 +360,7 @@ lv:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Vajadzīga palīdzība?
     subtitle: Skatīt šos video un padomus

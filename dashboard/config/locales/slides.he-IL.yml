@@ -231,7 +231,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: עכשיו בואו נעזור לסקראט הסנאי להגיע לבלוט הזה!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -355,18 +355,16 @@
           students learn the basics. Under the hood, you're still creating code.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: תוכנה היא אוסף הוראות שאומרות למחשב מה לעשות. בואו נבנה קוד או תוכנה
+          שיעזרו לאלזה ליצור קו פשוט. נשתמש בו בהמשך כדי ליצור צורות מורכבות יותר.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: המסך שלך מחולק לשלושה חלקים עיקריים. משמאל, זהו משטח הקרח שבו תריץ את
+          התוכנה שלך. ההוראות לכל שלב כתובות בדיוק מתחת למשטח.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: החלק האמצעי הזה הוא ארגז הכלים, וכל אחד מהבלוקים האלו הוא פעולה שאלזה
+          ואנה יכולות לבצע.
       7:
         image: notes/frozen1_7.jpg
         text: The white space on the right is called the workspace, and this is where
@@ -387,8 +385,8 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: זכור, אתה יכול לשנות את מספר הפיקסלים והמעלות על ידי לחיצה על החצים
+          שלידם.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -415,8 +413,8 @@
           Right" block inside a "Repeat" block.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: זכור, אתה יכול לשנות את המספר בבלוק "חזור שוב" לכל מספר שתרצה, והפעולה
+          תחזור על עצמה לפי אותו מספר.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg

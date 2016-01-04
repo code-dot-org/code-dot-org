@@ -166,7 +166,7 @@ zh:
     error_already_redeemed: 您獲得的獎項已經兌現。
     no_prizes_available: 很抱歉，目前我們無法提供獎品。
     teacher_info_required: '教師的獎勵需要學校名稱跟地址:'
-    teacher_email_required: 老師獎需要一個已確認電子郵件地址：
+    teacher_email_required: 老師的獎項需要一個已確認電子郵件地址：
     confirm:
       title: 請確認
       "no": 否
@@ -190,7 +190,7 @@ zh:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 你贏得了獎品！（僅適用於美國學生）
-      not_earned_title: 完成本教程，賺取報酬 (僅適用于美國學生)
+      not_earned_title: 完成此課程，並領取獎賞 (僅適用美國學生)
       not_earned: '學習所有的電腦科學概念，並收集完所有 %{num_trophies}個獎盃，就能獲得真實世界的獎品。您可以選擇 10 GB 的 Dropbox 空間，10美元的Skype儲值或是免費遊戲下載。注意：獎項僅適用於美國學生，並僅有在獎品供應持續的情況下適用。'
       teacher:
         earned: '15 個以上的學生已經收集完所有 %{num_trophies} 個獎盃。您贏得了教師獎章！(僅限美國教師)'
@@ -256,57 +256,10 @@ zh:
     remove: （將教師移除）
     confirm:
       remove: 你確認要刪除這個老師嗎？
-    tools: 教師工具
-    followers:
-      section: 班别：
-      stages: '要顯示的階段:'
-      show_past: '顯示之前的學生活動 (%{bullet_html})：'
-      levels_key: 關卡精髓
-      perfect: 完美完成
-      completed: 完成了，但是用到太多程式積木
-      tried: 試過，但未完成
-      not_tried: 還沒試過
-      activity: '顯示過去學生 %{hours} %{plural} 的活動'
-      no_section: 沒有指定班級
-      trophies: 獎盃
     students:
-      name: 你的名字
-      username: '使用者名稱 '
-      password: 密碼
-      manage: 學生管理
       dashboard: 到教師主控台
-      add: 新增學生
-      remove: 刪除學生
-      confirm_remove: 你確定要刪除這個學生嗎？
-      help_reassign: 要將你的學生分成不同班級，請選取要指派到新班級的學生
-      help_register: 與其花大量的時間一個人輸入所有學生的資料，不如請學生們各自註冊，可以更快建立您的班級。您的學生必須選擇使用者名稱和密碼，但我們不會要求他們提供電子信箱地址。如果學生忘記密碼，您也可以幫他們重新設置。
-      register: 請學生自行註冊
-      vist: 要求你的學生去參觀
-      section_code: '並輸入他們的班級代碼:'
-      first_please: '首先，請 %{add_section}'
-      for: 為
-      enter: '輸入:'
-    sections:
-      add: 增加班級
-      manage: 管理班級
-      section: 班級
-      students: 學生
-      section_code: 班級代碼
-      add_section_code: 增加學生班級代碼
-      secret: 密碼類型
-      grade: 年級
-      course: 課程
-      rename: 重新命名
-      edit: 編輯
-      delete: 刪除
-      confirm_delete: 你確定要刪除這個班級嗎？
-      email: 在電子郵件中發送
-    rollup: 進度表
-    activity: 最近的班級活動
-    user_not_found: 無法找到該名老師或學生
-    cant_remove_student_no_email: '因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name} 從你的學生中移除'
-    cant_remove_teacher_no_email: '因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}'
-    student_teacher_disassociated: '%{teacher_name}已經從%{student_name}的老師名單中移除'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: 答案檢視器
       student: '學生 '
@@ -380,6 +333,7 @@ zh:
   share:
     title: 在程式碼工作室中學習
     description: 任何人都可以學習電腦科學並透過程式碼來設計遊戲、app及藝術創作。
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: 男性
     female: 女性
@@ -391,8 +345,8 @@ zh:
     thank_you: '我們感謝 <a href="Https://code.org/about/donors"> 捐助者</a>、 <a href="Https://code.org/about/partners"> 合作夥伴</a>、 我們的 <a href="Https://code.org/about/team"> 擴展的團隊</a>，我們視頻的演員陣容，我們的 <a href="Https://code.org/about/advisors"> 教育顧問</a> 的支援，建立Code工作室'
     help_from_html: 從Google, Microsoft, Facebook, and Twitter的工程師在幫忙創建本教程。
     help_from_html_old: 來自google 微軟 Fb及推特的工程師的協助創造了這些元素
-    art_from_html: '憤怒鳥&trade; & &copy; 2009年-2014 Rovio 娛樂有限公司版權所有。<br/>植物與僵屍&trade; & &copy; 2014 EA美商藝電公司版權所有。'
-    art_from_html_old: '憤怒鳥&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment Ltd. 版權所有。<br /> 植物大戰僵屍&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. 版權所有'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: 由亞馬遜網路服務系統提供服務
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of Code&reg; 都是 Code.org.的注冊商標。'
     copyright: 版權所有
@@ -409,6 +363,7 @@ zh:
     built_on_code_studio: 在 Code Studio 上建立
     make_my_own_app: 製作自己的 app
     how_it_works: 它是如何運作的
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: 需要幫忙嗎？
     subtitle: 看看這些影片和提示

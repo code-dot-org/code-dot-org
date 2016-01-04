@@ -161,7 +161,7 @@
             ერთად!
         hourofcode:
           Maze: ლაბირინთი
-          title: კოდის ერთი საათი
+          title: კლასიკური ლაბირინთი
           description: სცადეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ის და
             Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ის Scrat-თან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
@@ -1516,6 +1516,21 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1630,10 +1645,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball - თამაშების ლაბორატორია
-          description_short: შექმენით ისტორია ან თამაში Gumball თამაშების ლაბორატორიაში!
-          description: შექმენით ისტორია ან თამაში Gumball თამაშების ლაბორატორიაში!
-          Gumball Play Lab: Gumball - თამაშების ლაბორატორია
+          title: გამბოლი - თამაშების ლაბორატორია
+          description_short: შექმენით ისტორია ან თამაში გამბოლის თამაშების ლაბორატორიაში!
+          description: შექმენით ისტორია ან თამაში გამბოლის თამაშების ლაბორატორიაში!
+          Gumball Play Lab: გამბოლი - თამაშების ლაბორატორია
         starwars:
           title: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით'
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი

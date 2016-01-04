@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Помощ"},
 "hideToolbox":function(d){return "(Скрий)"},
 "hintHeader":function(d){return "Ето един съвет:"},
+"hintPrompt":function(d){return "Нужда от помощ?"},
 "hintRequest":function(d){return "Вижте съвета"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Съвет:"},
 "ignore":function(d){return "Игнорирай"},
 "infinity":function(d){return "Инфинити"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Гледайте видеото"},
 "when":function(d){return "когато"},
 "whenRun":function(d){return "при стартиране"},
-"workspaceHeaderShort":function(d){return "Работна област: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Работна област: "}};

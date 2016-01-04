@@ -253,57 +253,10 @@ pl:
     remove: (usuń nauczyciela)
     confirm:
       remove: Czy na pewno chcesz usunąć tego nauczyciela?
-    tools: Narzędzia Nauczyciela
-    followers:
-      section: 'Sekcja:'
-      stages: 'Etap(y) do wyświetlenia:'
-      show_past: 'Pokaż aktywność ucznia (%{bullet_html}) w przeszłości:'
-      levels_key: Klucz poziomów
-      perfect: Wykonane, doskonale
-      completed: Wykonane, ale przy użyciu zbyt wielu bloków
-      tried: Próbowano, ale nie zakończono
-      not_tried: Jeszcze nie próbowano
-      activity: 'Wskazuje aktywność ucznia w ostatnich %{hours} %{plural}'
-      no_section: Brak przypisanej sekcji
-      trophies: trofea
     students:
-      name: Imię/Nazwisko
-      username: nazwa użytkownika
-      password: hasło
-      manage: Zarządzaj uczniami
       dashboard: Przejdź do Panelu Nauczyciela
-      add: Dodaj uczniów
-      remove: usuń ucznia
-      confirm_remove: Czy na pewno chcesz usunąć tego ucznia?
-      help_reassign: Aby podzielić klasę na wiele sekcji, wybierz uczniów, aby zapisać ich do nowej sekcji.
-      help_register: Zamiast spędzać dużo czasu indywidualnie importując dane uczniów, możesz szybko utworzyć swoją klasę prosząc uczniów, by się zarejestrowali. Będą oni musieli wybrać nazwy użytkowników i hasła, ale nie będą musieli podać adresu e-mail. Jeśli uczeń zapomni swojego hasło, to będziesz mógł je zresetować.
-      register: Zachęć swoich uczniów, aby się sami zarejestrowali
-      vist: Zachęć swoich uczniów do odwiedzenia
-      section_code: 'i podaj ich kod sekcji:'
-      first_please: 'Po pierwsze, proszę o %{add_section}'
-      for: Dla
-      enter: 'wprowadź:'
-    sections:
-      add: Dodaj sekcję
-      manage: Zarządzaj sekcjami
-      section: Sekcja
-      students: Uczniowie
-      section_code: Kod Sekcji
-      add_section_code: Dodaj kod sekcji uczniów
-      secret: Tajny typ
-      grade: Poziom/Ocena
-      course: Kurs
-      rename: zmień nazwę
-      edit: edytuj
-      delete: usuń
-      confirm_delete: Czy na pewno chcesz usunąć tę sekcję?
-      email: Wyślij e-mail
-    rollup: Tablica Postępów
-    activity: Ostatnia aktywność klasy
-    user_not_found: Nie można odnaleźć nauczyciela lub ucznia
-    cant_remove_student_no_email: '%{student_name} nie może być usunięty jako Twój uczeń, ponieważ %{student_name} nie zarejestrował adresu e-mail'
-    cant_remove_teacher_no_email: '%{teacher_name} nie może być usunięty jako Twój nauczyciel, ponieważ nie zarejestrowałeś adresu e-mail'
-    student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Podgląd odpowiedzi
       student: Uczeń
@@ -377,6 +330,7 @@ pl:
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -388,8 +342,8 @@ pl:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: Szczególnie chcielibyśmy podziękować inżynierom z firm Google, Microsoft, Facebook i Twitter, jak i wielu innym, którzy pomogli nam utworzyć te materiały.
     help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli utworzyć te materiały.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Wszystkie prawa zastrzeżone. <br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. <br />Frozen&#8482; &amp; &copy; %{current_year} Disney. Wszystkie prawa zastrzeżone. <br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. <br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
     copyright: Prawa autorskie
@@ -403,9 +357,10 @@ pl:
     privacy: Polityka prywatności
     secure: Bezpieczna wersja
     report_abuse: Zgłoś nadużycie
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Zbudowane w Code Studio
+    make_my_own_app: Stwórz własną aplikację
+    how_it_works: Jak to działa
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -462,7 +417,7 @@ pl:
       unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
     flappy:
       title: Flappy Code

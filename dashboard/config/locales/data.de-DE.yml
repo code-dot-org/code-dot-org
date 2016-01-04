@@ -575,27 +575,27 @@
           und benachrichtige alle anderen.
         studio_playlab_10: Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke
           auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
+        studio_iceage_hello1: Sid möchte jeden für ein neues Abenteuer begeistern.
+          Kannst Du ihm dabei helfen "Hallo" zu sagen, indem du den "sagen" Block
+          in den Arbeitsbereich ziehst und das Wort "Hallo" eintippst?
+        studio_iceage_hello2: Sid (Schauspieler 1) hat Manny (Schauspieler 2) gefunden
+          und will ihn auf ein Abendteuer einladen. Helfe ihnen sich gegenseitig zu
+          begrüßen indem du den "Schauspieler sagt" Block zweimal benutzt.
+        studio_iceage_move_to_flag: Scrat sucht nach seiner Eichel! Hilf ihm dabei
+          die letzten 200 Pixel zurückzulegen, indem du den "bewegen"-Baustein benutzt.
+        studio_iceage_move_to_actor: Diego (Figur 1) sucht nach Manni (Figur 2). Hilf
+          Diego dabei sich 200 Pixel nach unten zu bewegen, indem du den Block "Figur
+          bewegen" benutzt. Danach verbindest du einen Block mit dem "wenn Figur berührt
+          wird" Ereignis, um einen Ton zu generieren, sobald die beiden sich finden.
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
         studio_iceage_click_hello: Can you help Sid do a final call for friends when
           clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
+        studio_iceage_move_events: Scrat sucht immer noch nach Eicheln! Hilf ihm dabei,
+          indem du den "Bewegen" Block mit jedem der Ereignisse verknüpfst und durch
+          drücken der Pfeiltasten seine Richtung geändert wird. Wenn du fertig bist,
+          drücke auf "Ausführen", um alle Eicheln einzusammeln.
         studio_iceage_sound_and_points: We’ve provided most of the code that keeps
           Granny moving left and right, as well as the code to move Sid around the
           screen. Can you finish the code and add blocks to the "when actor touches"
@@ -714,7 +714,7 @@
         C1_moveitmoveit_unplugged: Bewegung, Bewegung
         C1_bigevent_unplugged: Der große Event
         C1_getting_loopy: Schöne Schleifen
-        C1_pair_programming: Paar Programmierung
+        C1_pair_programming: Paarprogrammierung
         C1_maze_intro_sequencing: Labyrinth-Sequenzierung-Intro
         C1_maze_debugging: 'Labyrinth: Debuggen'
         C1_bee_level_intro: Bienen Level - Intro
@@ -848,7 +848,7 @@
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
         iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
+        iceage_events: Ice Age Programmierstunde - Ereignisse
         iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:

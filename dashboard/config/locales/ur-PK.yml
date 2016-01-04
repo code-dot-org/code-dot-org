@@ -49,7 +49,7 @@
   k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
   already_started: 'شروع کر چکے ہیں؟ جاری رکھیے>> '
   demos: 'ایڈمن: تمام demos'
-  continue: Continue
+  continue: جاری رکھیے
   prize: انعام
   more_info: مزید معلومات
   auth:
@@ -292,63 +292,9 @@
     remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
-    tools: Teacher Tools
-    followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
-      trophies: ٹرافیاں
     students:
-      name: نام
-      username: یوزر کا نام
-      password: پاس ورڈ
-      manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: Add students
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
-    sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Progress Dashboard
-    activity: Recent class activity
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
     panel:
@@ -436,6 +382,7 @@
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Male
     female: Female
@@ -475,6 +422,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -557,12 +505,12 @@
         2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: فروزن
     starwars:
       title: Star Wars
     infinity:
@@ -624,12 +572,12 @@
     open_response_title: Thanks
     open_response_body: Thanks for your response!
   dialog:
-    ok: OK
-    startover_title: Are you sure you want to start over?
+    ok: اوکے
+    startover_title: کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: Start Over
-    startover_cancel: Cancel
+    startover_ok: اسٹارٹ اوور
+    startover_cancel: کینسل
   time:
     hour: 1 hour
     day: day
@@ -717,7 +665,7 @@
     delete_no: 'No'
     saved: Saved
     not_saved: Not saved
-    cancel: Cancel
+    cancel: کینسل
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able

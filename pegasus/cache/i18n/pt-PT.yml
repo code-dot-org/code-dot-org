@@ -29,6 +29,9 @@
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Participa na <a href="http://hourofcode.com">Hora de Código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -332,10 +335,10 @@
   inspirational_videos_more: Mais <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     vídeos inspiradores</a> por modelos e celebridades
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Clássico
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: Idade do gelo - brevemente
+  playlab_iceage_title_live: Idade do gelo
   starwars_subtitle: Construindo uma galáxia com código
   starwars_javascript_title: Javascript
   starwars_javascript_description: Utiliza blocos de arrastar-soltar e JavaScript.
@@ -385,6 +388,7 @@
   volunteer_engineer_submission_intro_links: Não quer ser voluntário? <a href="%{learn_more}">
     Saiba mais</a> sobre como organizar o seu próprio evento da Hora do Código e encontrar
     um voluntário local no nosso <a href="%{volunteer_local}"> mapa de voluntários</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informações partilhadas com os professores
     no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
@@ -712,6 +716,12 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver Todos
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Saber mais
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -788,8 +798,8 @@
   mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Programa com a Anna e com a Elsa
   starwars_name: 'Star Wars: Construir uma Galáxia com Código'
-  codeorg_name: Aprende a programar e cria o teu primeiro programa
-  codeintl_name: Aprende a programar e cria o teu primeiro programa
+  codeorg_name: Labirinto clássico
+  codeintl_name: Labirinto clássico
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Uma introdução ao JavaScript
   khanes_name: Uma introdução ao JavaScript
@@ -825,7 +835,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, papel ou tesoura
-  hourofcode_name: Aprende a programar e cria o teu primeiro programa
+  hourofcode_name: Labirinto clássico
   playlab_name: Laboratório
   infinity_name: Laboratório infinito
   artist_name: Artista

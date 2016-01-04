@@ -156,7 +156,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).bounce_locale = {
 "bounceBall":function(d){return "اچھال کی گیند"},
 "bounceBallTooltip":function(d){return "کسی چیز سے گیند ٹکرا کے اچھل دیں "},
-"continue":function(d){return "Continue"},
+"continue":function(d){return "جاری رکھیے"},
 "dirE":function(d){return "E"},
 "dirN":function(d){return "N"},
 "dirS":function(d){return "S"},

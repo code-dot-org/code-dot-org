@@ -257,7 +257,7 @@
       classroom: Домашняя страница Преподавателя
       district_dashboard: Панель управления области
       label: Привет, %{username}
-      stats: Мои результаты
+      stats: '"Студия Кода"'
       settings: Моя регистрация
       prizes: Призы
       logout: Выйти
@@ -284,64 +284,9 @@
     remove: (удалить учителя)
     confirm:
       remove: Вы уверены, что хотите удалить этого учителя?
-    tools: Инструментарий учителя
-    followers:
-      section: 'Раздел:'
-      stages: 'Этап(ы) для отображения:'
-      show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
-      levels_key: Ключевые уровни
-      perfect: Завершено, отлично
-      completed: Завершено, но использовано слишком много блоков
-      tried: Пытался, но не завершено
-      not_tried: Ещё не пытался
-      activity: Показывает активность студента за последние %{plural} %{hours}
-      no_section: Нет назначенного раздела
-      trophies: трофеи
     students:
-      name: Имя
-      username: имя пользователя
-      password: пароль
-      manage: Управление учениками
       dashboard: Перейти к панели учитель
-      add: Пригласить учеников
-      remove: удалить ученика
-      confirm_remove: Вы уверены, что хотите удалить этого ученика?
-      help_reassign: Чтобы разделить класс на несколько групп выберите студентов и
-        привяжите их к новой группе.
-      help_register: Вместо того, чтобы терять время на добавление данных о своих
-        студентах, Вы можете быстро получить информацию о своих учениках попросив
-        их зарегистрироваться на сайте. Вашим студентам потребуется выбрать имя пользователя
-        и пароль, но им НЕ НУЖНО предоставлять адрес электронной почты. Если студент
-        забудет свой пароль, Вы будете иметь возможность сбросить пароль за него.
-      register: Попросите ваших учеников зарегистрироваться самостоятельно
-      vist: Предложите Вашим ученикам посетить
-      section_code: 'И ввести их в section-code:'
-      first_please: Во-первых, пожалуйста %{add_section}
-      for: Для
-      enter: 'введите:'
-    sections:
-      add: Добавить раздел
-      manage: Управление классами
-      section: Раздел
-      students: Ученики
-      section_code: Код раздела
-      add_section_code: Добавить раздел Студенты в раздел кода
-      secret: Секретный тип
-      grade: Оценка
-      course: Курс
-      rename: переименовать
-      edit: редактировать
-      delete: удалить
-      confirm_delete: Вы уверены, что хотите удалить этот раздел?
-      email: Отправить письмо
-    rollup: Панель контроля хода выполнения
-    activity: Последние данные по работе класса
     user_not_found: Преподаватель или ученик не может быть найден
-    cant_remove_student_no_email: '%{student_name} не может быть удален из списка
-      Ваших  учеников,, поскольку %{student_name} не зарегистрировал адрес электронной
-      почты'
-    cant_remove_teacher_no_email: Учитель %{teacher_name} не может быть удален, поскольку  Вы
-      не зарегистрировали адрес электронной почты
     student_teacher_disassociated: Учитель %{teacher_name} удалён у ученика %{student_name}
     panel:
       answer_viewer: Просмотр ответов
@@ -419,17 +364,19 @@
       школы
     use_as_teacher: Используйте этот сайт как учитель
     heading_hoc2014: <h2>Час Кода для</h2><h1>Для всех возрастов</h1>
-    heading_elementary: <h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>
+    heading_elementary: <h2>20-часовые курсы по</h2><h1>Основам Информатики (для всех
+      возрастов)</h1>ы
     heading_apps: <h2>Развлечения для</h2><h1>всех</h1>
     heading_legacy: <h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
-    no_primary_course: Попробуйте курс Студии Кода
-    choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
+    no_primary_course: Попробуйте курс "Студии Кода"
+    choose_next_course: Попробуйте курс "Студии Кода", выбрав один из вариантов ниже
     print_certificate: Распечатать сертификат
   share:
-    title: Учиться в Студии кода
+    title: Учиться в "Студии Кода"
     description: Любой человек может обучиться информатике. Создавайте игры, приложения
-      и искусство с помощью кода.
+      и произведения искусства с помощью программного кода.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Мужской
     female: Женский
@@ -438,15 +385,15 @@
     student: Ученик
     teacher: Учитель
   footer:
-    thank_you: Мы благодарим наших <a href="https://code.org/about/donors">доноров</a>,
-      <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team">
-      большую команду</a>, наши участников видеозаписей и наших <a href="https://code.org/about/advisors">
-      консультантов по вопросам образования</a> за их поддержку в создании Студии
-      Кода.
-    help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
-      этот учебник.
-    help_from_html_old: Инженеры из Google, Microsoft, Facebook, и Twitter помогли
-      с созданием этих материалов.
+    thank_you: Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает
+      нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>,
+      нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников
+      наших видеозаписей, а также наших <a href="https://code.org/about/advisors">
+      консультантов по вопросам образования</a> за поддержку в создании "Студии Кода".
+    help_from_html: Мы хотим особенно отметить инженеров компаний Google, Microsoft,
+      Facebook, Twitter и многих других, которые помогали нам в создании этих материалов.
+    help_from_html_old: При создании данных материалов нам помогали инженеры из компаний
+      Google, Microsoft, Facebook, и Twitter.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Все права защищены.
@@ -467,9 +414,10 @@
     privacy: Правила конфиденциальности
     secure: Защищенная версия
     report_abuse: Сообщить о нарушении
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Создать в "Студии Кода"
+    make_my_own_app: Создать собственное приложение
+    how_it_works: Как это работает
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -537,7 +485,7 @@
       unused: Неиспользованные уровни
   upsell:
     hoc:
-      title: Hour of Code
+      title: Классический лабиринт
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
     flappy:
       title: Порхающий код
@@ -730,7 +678,7 @@
         Code.org, о чем было уведомлено, связи с этим проектом нельзя поделиться.
       contact_us: Если вы считаете, что произошла ошибка, пожалуйста, <a href='https://code.org/contact'>свяжитесь
         с нами.</a>
-      go_to_code_studio: Перейти в студию кода
+      go_to_code_studio: Перейти в "Студию Кода"
       report_abuse_form:
         intro: Если вы столкнулись с оскорбительным содержанием, угрозой, киберзапугиванием,
           домогательством или нарушением вашего авторского права, во время работы

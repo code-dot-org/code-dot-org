@@ -1191,10 +1191,12 @@ fr:
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: |-
+          Dans chaque équipe, la personne qui instruit et qui tient le papier, doit comprendre quel sera leur symbole "On" et quel sera leur symbole "Off". En binaire, c'est un genre d'alphabet, mais avec deux lettres. C'est comme si l'alphabet n'était constitué que des lettres A et B, mais à la place c'est 0 et 1.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: |-
+          La manière la plus courante d'utiliser le binaire, c'est dans une instruction de type "if". C'est une chose classique dans la programmation. Le programme s'exécute et dit : Si ceci est vrai, alors fait cela. Ou, si ce n'est pas vrai, fais autre chose. Mais que se passe-t-il quand on veut faire quelque chose d'un peu plus compliqué ? Plutôt qu'une instruction if, on voudra travailler avec quelque chose comme une image, ou un son dans un ordinateur.
       3:
         image: notes/C4_unplugged_binary_3.png
         text: "Un ordinateur ne connait que le binaire, mais une image, ce n'est pas binaire, ce n'est pas des zéros et des uns, alors comment faire ? Voilà un exemple : tu as cette magnifique image. Maintenant, une image est en gros une forme d'information. Toutes les informations peuvent être encodées en binaire, d'une manière ou d'une autre, il suffit de trouver comment."
@@ -1204,50 +1206,50 @@ fr:
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: "This lesson is called for loop fun. In this lesson, we'll use a number line to play a dice game. Each player will roll three times to assign a starting value, a stopping value, and our interval. During each turn, we circle our starting value, and every value that is the same number of steps forward as our interval value. We stop circling when we get to our stopping value. The person with the highest score wins!"
+        text: "Cette leçon est ici pour le plaisir de la boucle. Dans cette leçon, nous utiliserons une ligne de nombre pour jouer à un jeu de dé. Chaque joueur devra assigner trois fois une valeur de départ, une valeur d'arrêt, et notre intervalle. Durant chaque tour, on entoure sa valeur de départ, et toutes les valeurs qui ont le même nombre d'étapes que notre valeur d'intervalle. On arrête d'entourer quand on obtient notre valeur d'arrêt. La personne avec le plus grand score gagne !"
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
+        text: Les boucles peuvent être utilisées dans de nombreuses situations et si vous deveniez météorologue, vous utiliseriez des boucles tout le temps. Salut, je suis Becky. Je travaille chez EverPower Renewables comme météorologue vent. Je prévois la vitesse du vent pour la région de la Columbia River Gorge où la société possède des parcs éoliens.
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+        text: "Nous essayons de comprendre la quantité de vent qu'il va y avoir pour que nous sachions combien d'électricité va être produite. Nous donnons cette information en temps réel aux traders d'énergie. Ils achètent et vendent l'électricité suivant les informations qu'on leur donne pour être sûrs que le réseau électrique est équilibré, que vos lumières restent allumées, et que la quantité d'énergie obtenue à partir des parcs soit maximisée."
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
+        text: "Nous sommes au centre de contrôle nation d'EverPower Renewables à Portland et c'est ici que les informations arrivent en provenance de toutes nos fermes à travers le pays. Même les ordinateurs les plus puissants aujourd'hui ne peuvent pas simuler l'atmosphère dans le monde. Dans les modèles de prévision par ordinateur, nous avons ce que nous appelons une grille. Chaque point de la grille est une latitude, longitude. Nous devons calculer la physique et essayer de déterminer la vitesse du vent, la température, la pression, ce genre de choses."
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: "Since these are fairly big grids and we're doing this in a lot of points we're looping over these things millions and millions of times. Everything I do I'll use for loops. Here for example is a for loop right there. When you're forecasting wind, there's so many different parameters that go into it it would be impossible for a human to sit down and do all those calculations. There's so many different aspects to what's going to be affecting what's happening to the wind that we need a computer model in order to forecast it."
+        text: "Comme ce sont plutôt de grosses grilles et que nous faisons ça dans beaucoup de points nous sommes en boucle sur ces choses des millions et des millions de fois. Tout ce que je fais je vais l'utiliser pour des boucles. Voici par exemple une boucle juste là. Quand vous prévoyez le vent, il y a tellement de paramètres différents qu'il serait impossible pour un humain de s'asseoir et de faire tous ces calculs. Il y a tellement d'aspects différents à tout ce qui va affecter le vent que nous avons besoin d'un modèle informatique pour le prévoir."
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: "In this lesson, we'll be playing with some fill in the blank stories. You have a template that you can fill in to create similar stories that have very amusing differences."
+        text: "Dans cette leçon, nous allons jouer à remplir les blancs dans l'histoire. Vous avez un modèle que vous pouvez compléter pour créer des histoires similaires qui ont des différences très amusantes."
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
+        text: "Dans cette leçon, nous avons également appris comment faire un modèle abstrait à partir de deux histoires qui ont déjà été créées. L'abstraction est l'art de supprimer les différences et les détails pour que l'on puisse voir comment une solution pourrait marcher pour de nombreux problèmes. C'est très utile en informatique parce que ça nous permet de créer des fonctions qui peuvent être utiles dans différentes situations."
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: "This lesson is called songwriting with parameters. We're going to be writing some songs here. Sometimes the chorus is just a little bit different each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o. The small change in each chorus can be shown using something we call parameters."
+        text: "Cette leçon s'appelle écrire une chanson à paramètres. Nous allons écrire des chansons maintenant. Parfois, le refrain est juste légèrement différent à chaque fois que tu le chantes. Te souviens-tu de la ferme du vieux MacDonald ? Le refrain est légèrement différent pour chaque animal. Et dans cette ferme, il y a une vache, hiya hiya ho. Le petit changement dans chaque refrain peut être exprimé en utilisant ce que nous appelons des paramètres."
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece of information you can pass to a function to customize it for a special need. When you make ice cream sundaes with your friends, you are using a process similar to parameters in a computer program.
+        text: "Parfois, une fonction a besoin d'un paramètre. Un paramètre est une information supplémentaire que tu peux passer à une fonction pour la personnaliser pour un besoin spécifique. Quand tu fais des coupes de glaces avec tes amis, tu utilises un procédé similaire à la paramétrisation dans un programme informatique."
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: "The disk of vanilla ice cream might be the same for every sundae but when you ask your friends which two toppings they'd like, you could get lots of different combinations. Topping is the function name but each type of topping is a parameter. Functions and parameters work together to make great computer programs and great sundaes too."
+        text: "La boule de glace vanille sera peut être la même pour toutes les coupes de glace, mais quand tu demandes à tes amis quelles garnitures ils veulent, tu peux obtenir beaucoup de combinaisons différentes. Garniture est le nom de la fonction, et chaque type de garniture est un paramètre. Les fonctions et les paramètres s'associent pour créer de super programmes informatiques, et de bonnes coupes de glaces également."
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: "This lesson is called variables in envelopes. We're going to learn how we can build sentences when we're still missing pieces of information. Most of us are already familiar with the idea of filling in a blank. We do it when we're putting our name on our homework. Sometimes there's more than one word that needs to be filled out and in that case, we give that blank a label so that we know which piece of information goes where."
+        text: "Cette leçon s'appelle variables dans des enveloppes. Nous allons apprendre comment nous pouvons construire des phrases quand il nous manque encore des éléments d'information. La plupart d'entre nous sont déjà familier avec l'idée de combler un vide. Nous le faisons lorsque nous mettons notre nom sur nos devoirs. Parfois, il n'y a plus d'un mot qui doit être rempli et dans ce cas, nous donnons ce vide une étiquette afin que nous sachions quel élément d'information va où plus précisement."
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
+        text: "Les variables sont des espaces réservés pour les éléments d'information qui peuvent changer. En utilisant une variable pour les informations manquantes, nous pouvons continuer à travailler sur tout ce qui nous faisaient et laisser quelqu'un d'autre à compléter les informations manquantes par la suite. Dans le logiciel, nous utilisons beaucoup les variables. Nous utilisons les variables comme marque substitutive pour les nom, adresse e-mail et même username. De cette façon, nous pouvons faire le programme savoir où ces détails seront affiche quand l'utilisateur renseigne les. Nous utilisons les variables tout le temps dans notre travail."
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+        text: "A n'importe quel moment ou vous devez stocker un élément d'information pour plus tard, nous utilisons évidement une variable. Disons que nous avons besoin de compter le nombre de fois où que l'utilisateur a tweeter. Chaque fois que l'utilisateur tweets, nous allons ajouter un à ce nombre et chaque fois que l'utilisateur supprime un tweet, nous allons réduire ce nombre par un. Chaque fois que nous avons besoin de savoir combien de fois que l'utilisateur a tweeter, nous regarderons seulement cette variable."
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: "Une variable est un conteneur, dans que vous pouvez stocker une valeur. Lorsque vous utilisez cette variable dans un algorithme, il ouvre le conteneur et se penche sur la valeur à l'intérieur. Cela vous permet d'écrire des algorithmes intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
         image: notes/C4_variables_artist_2.png
         text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
@@ -1424,7 +1426,7 @@ fr:
         text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: Tout le monde ici à a Code.org, nous espérons que vous avez eu une tonne de joie lors de ce cours. Et si votre rêve est de créer la meilleure nouvelle application, utiliser la programmation pour aider à guérir les maladies, ou vous voulez juste être un programmateur stellaire, ce cours a été la première étape dans la réalisation de ses rêves.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -1462,10 +1464,10 @@ fr:
         text: "Dans les blocs que nous utilisons se trouvent des commandes JavaScript. JavaScript est le langage de programmation plus utilisé par les développeurs professionnels de nos jours. Les blocs sont une excellente façon de commencer l'apprentissage du code et, en fait, les meilleures universités comme Harvard et Berkeley commencent à enseigner de cette façon. Mais une fois que l'on a appris les bases, les ingénieurs écrivent du code en tapant parce que cela leur permet d'aller plus vite."
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: "Nous pouvons taper des centaines de commandes sans avoir à les trouver dans la boîte à outils ou faites-les glisser vers. Vous apprendrez la dactylographie, c'est peut être plus lent au début, mais nous vous souhaitons vous voir essayer."
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: "Dans le coin supérieur droit sur votre espace de travail, vous pouvez cliquer sur le bouton afficher le texte sur n'importe quel puzzle pour passer de blocs à taper le code sous forme de texte."
       4:
         image: notes/starwars_typing_4.JPG
         text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
@@ -1477,11 +1479,11 @@ fr:
         text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: "Si tu es bloqué, tu peux toujours recommencer avec le bouton de Recommencer et tu peux basculer en mode bloc à tout moment en cliquant dans le coin supérieur droit. Ok, essayons de taper du texte ! Et si tu fais des erreurs, ne soit pas déçu. Aucun programmeur n'y arrive du premier coup."
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Bonjour, mon nom est Charita Carter et je suis Manager à Walt Disney Imagineering. Je suis chargée de diriger les équipes qui produisent effectivement les attractions que nos invités viennent essayer. Nous cherchons toujours des moyens pour améliorer cette expérience pour nos clients et la technologie est au cœur de cela.
       2:
         image: notes/starwars_events_2.JPG
         text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant que tu as appris les rudiments de la programmation, nous retournons dans le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
@@ -1558,7 +1560,7 @@ fr:
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Bonjour, mon nom est Charita Carter et je suis Manager à Walt Disney Imagineering. Je suis chargée de diriger les équipes qui produisent effectivement les attractions que nos invités viennent essayer. Nous cherchons toujours des moyens pour améliorer cette expérience pour nos clients et la technologie est au cœur de cela.
       2:
         image: notes/starwars_blocks_events_2.JPG
         text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense que nous sommes prêts pour quelque chose de plus difficile. Allons-y. Maintenant que tu as appris les rudiments de la programmation, nous retournons dans le temps pour construire ton propre jeu, mettant en vedette R2-D2 et C3PO.
@@ -1763,30 +1765,31 @@ fr:
         text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: "Ton écran se divise en trois parties. A la gauche, se trouve l'espace de jeu où le programme va s'exécuter. Les instructions pour chaque niveau sont écrites en dessous."
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Cette zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: "L'espace blanc à droite est appelé espace de travail : c'est là que nous allons créer notre programme."
       7:
         image: notes/iceage_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: |-
+          Pour commencer, tu devras relier tes blocs au bloc "lors du lancement". Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu voies la ligne jaune, et il s'emboiteront alors ensemble.
       8:
         image: notes/iceage_intro_8.JPG
         text: |-
           In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
       9:
         image: notes/iceage_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: "Commence, et d'ici à la fin, tu sera capable de créer ton propre jeu, avec toutes sortes de joueurs qui peuvent interagir, marquer des points, jeter des objets, et se faire disparaitre. Ça ne dépend que de toi !"
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: "Maintenant nous allons apprendre quelque chose que tous les programmeurs de jeu utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d'écouter jusqu’à ce qu'il ce passe quelque chose, et quand ça arrive, le jeu exécute une action."
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: "Des exemples d’événements sont l'écoute d'un clic de souris ou d'une touche flèche haut ou flèche bas, ou même une tape sur l'écran."
       3:
         image: notes/iceage_events_3.JPG
         text: |-
@@ -1797,10 +1800,10 @@ fr:
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: "Peux-tu imaginer si tu avais à répéter quelque chose à l'infini? Heureusement tu n'auras jamais à le faire car les ordinateurs sont vraiment bons à répéter les choses."
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: "C'est le bloc 'répète à jamais'. Tout ce qui se trouve dans ce bloc se produira 'à jamais' dans le jeu. Si nous voulons qu'un élément fasse quelque chose de façon répétée, continuellement, sans que le joueur ai à intervenir, nous placerons ces blocs à l'intérieur du bloc 'répète à jamais'."
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: "Dans ce puzzle, notre objectif est d'aider l'élément à faire un travail en continu. Apprendre à utiliser la commande 'répéter' te permettras de gagner énormément de temps plus tard quand tu construiras ton propre jeu."

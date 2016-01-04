@@ -308,13 +308,13 @@
       4-5 Bee Debugging Assessment 1_instruction: 'Lekse: Fiks koden.'
       4-5 Bee Nested Loops 1_instruction: Bruk en løkke til å samle inn all nektaren.
       4-5 Bee Nested Loops 2_instruction: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
-      4-5 Bee Nested Loops 3_instruction: Put koden som er lagt til i en nestet løkke til å samle inn alt nektaren.
+      4-5 Bee Nested Loops 3_instruction: Putt koden som er lagt til i en løkke i løkke til å samle inn alt nektaren.
       4-5 Bee Nested Loops 4_instruction: Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.
-      4-5 Bee Nested Loops 5_instruction: Samle inn all nektaren ved å bruke en nestet løkke.
+      4-5 Bee Nested Loops 5_instruction: Samle inn all nektaren ved å bruke en løkke i løkke.
       4-5 Bee Nested Loops 6_instruction: Samle all nektaren.
-      4-5 Bee Nested Loops 7_instruction: Putt denne løkken inni en annen løkke for å opprette en nestet løkke til å samle inn all nektaren fra blomstene.
+      4-5 Bee Nested Loops 7_instruction: Putt denne løkken inni en annen løkke for å opprette en løkke i løkke til å samle inn all nektaren fra blomstene.
       4-5 Bee Nested Loops 8_instruction: 'Samle all nektaren fra disse blomstene ved å bruke løkke i en annen mens-løkke. Erstatt den indre repeter antall-blokka med en mens-løkke. '
-      4-5 Bee Nested Loops 9_instruction: Samle inn all nektaren fra disse blomstene ved å bruke en nøstet mens-løkke ini en gjenta blokk.
+      4-5 Bee Nested Loops 9_instruction: 'Samle inn all nektaren fra disse blomstene ved å bruke en løkke i løkke ved å legge "så lenge"-brikken i en "gjenta"-brikke.'
       4-5 Bee Nested Loops Assessment 1_instruction: 'Lekse - Samle inn all nektaren og lag all honningen ved bruk av løkker.'
       4-5 Bee Nested Loops Rows_instruction: Samle nektar fra radene med blomster! Bruk løkke i løkke.
       4-5 Maze 1 (copy 1)_instruction: Kjære person. Meg zombie. Må... komme... til solsikke.
@@ -351,16 +351,16 @@
       4-5 Maze Conditionals Assessment 1_instruction: 'Bruk en "gjenta til"- og en "hvis eller"-blokk for å få meg til solsikken med så få blokker som mulig.'
       4-5 Nested Loops 1_instruction: 'Fullfør koden for å tegne disse triangelen. Den første er gjort ferdig for deg. Tips: 3 triangler rotert til sammen 360 grader.'
       4-5 Nested Loops 10_instruction: Tegn den siste raden med stjerner på flagget ved å kjøre en løkke over de gitte blokkene. Stjernene er 50 piksler fra hverandre, men husk at stjernene er 30 piksler i bredde.
-      4-5 Nested Loops 11_instruction: Klarer du å tegne de 10 firkantene på fortauet ved å bruke en nestet løkke? Hver firkant er 30 piksler.
-      4-5 Nested Loops 12_instruction: 'Får du til å tegne disse  36 trianglene ved hjelp av en nestet løkke?'
-      4-5 Nested Loops 2_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en nestet løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
-      4-5 Nested Loops 3_instruction: "Tegn en sol ved å nøste koden fra utgangspunktet inni en annen løkke.  Dette kalles en nestet løkke.\r\n"
+      4-5 Nested Loops 11_instruction: Klarer du å tegne de 10 firkantene på fortauet ved å bruke en løkke i løkke? Hver firkant er 30 piksler.
+      4-5 Nested Loops 12_instruction: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
+      4-5 Nested Loops 2_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en løkke i løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
+      4-5 Nested Loops 3_instruction: "Tegn en sol ved å legge koden fra utgangspunktet inni en annen løkke. Dette kalles en løkke i løkke.\r\n"
       4-5 Nested Loops 5_instruction: Bruk koden som er lagt inn som utgangspunkt og repeter den for å lage en vindmølle.
       4-5 Nested Loops 6_instruction: Får til til å tegne en sekskant ved å repetere triangelkoden?
       4-5 Nested Loops 7_instruction: 'Repeter designet 10 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 10?)'
       4-5 Nested Loops 8_instruction: 'Repeter designet 6 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)'
       4-5 Nested Loops 9_instruction: Tegn tennene i munnen til alligatoren!
-      4-5 Nested Loops Assessment 1_instruction: Bruk en nøstet løkke for å fullføre designet.
+      4-5 Nested Loops Assessment 1_instruction: Bruk en løkke i løkke for å fullføre designet.
       4-5 While Loops 1_instruction: 'Flytt meg til hullet og bruk en "fylle"-blokk til å fylle det med to spader med jord.'
       4-5 While Loops 2_instruction: 'Flytt meg til jordhaugen og bruk "Fjern 1" blokken til å fjern den på fem spadetak.'
       4-5 While Loops 3_instruction: 'Flytt meg til jordhaugen og fjern alt sammen. Etterpå flytter du meg til hullet og fyller det helt opp. Tips: bruk så få blokker som mulig.'
@@ -413,7 +413,7 @@
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      Artist - Nested Loops Assessment 1_instruction: Bruk en nøstet løkke for å fullføre designet.
+      Artist - Nested Loops Assessment 1_instruction: Bruk en løkke i løkke for å fullføre designet.
       Auto Open Function Editor_instruction: 'Du kan kalle på funksjoner fra innsiden av andre funksjoner! Bruk "figur"-funksjonen som grunnlag, opprett 3 hus-figurer som hver er 20 piksler større enn den forrige. Den første starter på 50 piksler i lengde. Å bruke en teller-løkke kan være nyttig. '
       Bee Recommended Blocks test_instruction: 'Lilla blomster har enten 1 eller 0 nektar, men du vet ikke hvilken! Pass på at du ikke prøver å samle inn nektar fra blomster som ikke har nektar. Sjekk om nektar er lik 1 ved å bruke en "hvis"-blokk.'
       Big Game Animation 1 (copy 1)_instruction: |
@@ -1423,7 +1423,7 @@
       K-1 Bee Loops 5_instruction: Bruk løkker til å hente nektar og honning!
       K-1 Bee Loops 6_instruction: Bruk løkker for å hente nektar, honning og for å bevege deg!
       K-1 Bee Loops 7_instruction: Bruk løkker til å hente nektar og lage honning!
-      K-1 Bee Loops 8_instruction: Bruk løkker til å hente nektar og honning!
+      K-1 Bee Loops 8_instruction: Bruk løkker til å hente nektar og lage honning!
       K-1 Bee Loops 9_instruction: Bruk løkker for å hente nektar, honning og for å bevege deg!
       K-1 Bee Loops Assessment 1_instruction: Hent nektar for å lage honning og bruk løkker til å bevege deg!
       K-1 Bee Loops Assessment 2_instruction: Hent nektar for å lage honning ved å bruke løkker!
@@ -1451,10 +1451,10 @@
       K-1 maze debug 3_instruction: Finn ut hva som mangler og så FJERN brikker for å få meg bort til grisen!
       K-1 maze debug 4_instruction: Kjør disse brikkene og fiks dem! Jeg tror jeg går i feil retning.
       K-1 maze debug 5_instruction: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
-      K-1 maze debug 6_instruction: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
-      K-1 maze debug 7_instruction: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
+      K-1 maze debug 6_instruction: Rett opp feil i denne levelen ved å flytte rundt på og legge til brikker, slik at jeg kommer meg bort til grisen!
+      K-1 maze debug 7_instruction: Rett opp feil i denne levelen ved å flytte rundt på og legge til brikker, slik at jeg kommer meg bort til grisen!
       K-1 maze debug 8_instruction: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
-      K-1 maze debug 9_instruction: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
+      K-1 maze debug 9_instruction: Rett opp feil i denne levelen ved å flytte rundt på og legge til brikker, slik at jeg kommer meg bort til grisen!
       K-1 Maze debug Assessment 1_instruction: 'Oppgave - Feilfiks dette nivået ved å endre på rekkefølgen og ved å legge til brikker, slik at jeg kan komme meg til grisen!'
       K-1 Maze Loops 1_instruction: Få meg til grisen!
       K-1 Maze Loops 10_instruction: Få meg bort til grisen! Bruk gjenta-brikken.
@@ -1933,6 +1933,10 @@
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: Bien vil bare ha nektar akkura nå. Ikke alle objektene er blomster, så sjekk under HVER ENESTE SKY for å se om det gjemmer seg en blomst der. Hvis det gjør det kan du samle nektar.
+      Ryan - Bee Conditionals_instruction: |
+        The bee only wants nectar right now.
+        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
+        is hiding a flower. If it is, then you can gather nectar.
       Ryan Test Locked Blocks_instruction: 'Her er en funksjon kalt "patruljer". Endre den slik at Katt beveger seg opp 400 piksler og så ned 400 piksler.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -2082,7 +2086,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indices to change the values in
+        Use indexes to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -2092,7 +2096,8 @@
         the randomly generated array by 1. (Click to see full instructions)
       U3 - Arrays - createFirstArray_instruction: |
         Create an array of the even numbers
-        from 0-10 and display its contents with console.log. (Click to see full instructions)
+        from 0 to 10 and display its contents with console.log. (Click to see full
+        instructions)
       U3 - Arrays - Demo App_instruction: |
         Use the "My Favorite Things" app. How
         might this app be making use of an array? (Click to see full instructions)
@@ -2183,15 +2188,15 @@
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
       U3 - Canvas - freePlay_instruction: |
-        Write code that redraws your image using
-        a sketch effect. (Click to see full instructions)
+        Extend the functionality of one of the
+        effects, or create an entirely new one of your own. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
         full instructions)
       U3 - Canvas - movementFunction fix Orig_instruction: |
-        Write a function that
-        takes the movement of the mouse as input and generates a line width as output.
+        Modify the "Original"
+        button event handler so that it takes the movement of the mouse into account.
         (Click to see full instructions)
       U3 - Canvas - movementFunction_instruction: |
         Write a function that takes the
@@ -2199,7 +2204,7 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use offsetX and offsetY with small
+        image using a dot whose x and y locations use offsetX and offsetY with a small
         random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
@@ -2219,7 +2224,7 @@
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
         Update the spray paint code so that
-        redraws your image using multiple random dots instead of one using a nested
+        it redraws your image using multiple random dots instead of using a nested
         for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
@@ -2329,7 +2334,7 @@
         Update the image scroller to
         respond to buttons and key presses. (Click to see full instructions)
       U3 - Keys - Functions_instruction: |
-        Write a doUpArrow and doDownArrow function
+        Write doUpArrow and doDownArrow functions
         and call the functions instead of duplicating the code. (Click to see full
         instructions)
       U3 - Keys - Key Up and Down_instruction: |
@@ -2372,7 +2377,7 @@
         (Click to see full instructions)
       U3 - Loops - 14_instruction: |
         Change the loop condition to prevent the infinite
-        loop and stop counting at once the count is past 30. (Click to see full instructions)
+        loop and stop counting once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
         is 12. (Click to see full instructions)
@@ -2386,7 +2391,7 @@
         Change the if statement to a while loop so the
         program will run until it rolls a 6. (Click to see full instructions)
       U3 - Loops - 4_instruction: |2
-         Use the Debug Commands to to make a list of all
+         Use the Debug Commands to make a list of all
         the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - 5_instruction: |
         Add code inside the while loop which will update
@@ -2442,24 +2447,22 @@
         Design a function that displays
         the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Complete the 'findMinVal'
-        function to find and display the smallest value in an array  (Click to see
-        full instructions)
+        Complete the findMinVal function
+        to find and display the smallest value in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
         Call findMin
         within the console.log statement to calculate the minimum of two values.  (Click
         to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
         Add a second parameter
-        to the 'search' function for the value to search for.  (Click to see full
-        instructions)
+        to the search function for the value to search for.  (Click to see full instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
         Visit every element in
-        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        the array and display "true" if the value is a 5, and "false" otherwise.
         (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
@@ -2471,7 +2474,7 @@
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
         Move the code that
-        searches the list for a 5 into a function called 'search'. (Click to see
+        searches the list for a 5 into a function called "search". (Click to see
         full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
@@ -2481,7 +2484,7 @@
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
         Process the array
-        and display a single 'true' if the array contains a 5 or a single 'false'
+        and display a single "true" if the array contains a 5 or a single "false"
         if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
@@ -2516,13 +2519,22 @@
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table.(Click to see full instructions)\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords call individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin the records return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords return from the readRecords call. (Click to see full instructions)\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Return Values - debuggingConstrain_instruction: |
         Correct the error in
-        constrain so that it correctly reports the maximum value.  (Click to see full
-        instructions)
+        constrain so that it returns the appropriate value.  (Click to see full instructions)
       U3 - Return Values - debuggingMaxVal_instruction: |
         Correct the error in maxVal
         so that it correctly reports the maximum value.  (Click to see full instructions)
@@ -2552,6 +2564,12 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin 2008 and print it out. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing the readRecords search terms. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor have a population of 2,000,000. (Click to see full instructions)\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -2560,7 +2578,7 @@
         runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
-        flips! How long did it take? (Click to see full instructions)
+        heads! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
@@ -3134,18 +3152,18 @@
       U3L16 Mad Lib Clear Input_instruction: |
         Clear the user's previous text when
         the Play Again button is clicked (Click to see full instructions) 
-      U3L16 Mad Lib Demo_instruction: 'Mad Lib Demo - Try it out!'
+      U3L16 Mad Lib Demo_instruction: 'Mad Libs Demo - Try it out!'
       U3L16 Mad Lib getText_instruction: |
         Before setting the text area with your
-        Mad Lib outline, get the user's text and incorporate their responses. (Click
+        Mad Libs outline, get the user's text and incorporate their responses. (Click
         to see full instructions) 
       U3L16 Mad Lib setText_instruction: |
         When the Next button is clicked, set the
-        text area to have the main outline of your How-to Mad Lib (without the user's
+        text area to have the main outline of your How-to Mad Libs (without the user's
         input). (Click to see full instructions) 
       U3L16 Mad Lib Student Setup_instruction: |
-        Back to Mad Lib: To get started,
-        set up the two screens for your Mad Lib app (Click to show full instructions)
+        Back to Mad Libs: To get started,
+        set up the two screens for your Mad Libs app (Click to show full instructions)
       U3L16 Mad Lib toUpper_instruction: |
         Apply the toUpperCase and toLowerCase string
         functions to the user's text. (Click to see full instructions) 
@@ -3419,27 +3437,96 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - add createRecord to contacts App_instruction: |
+        Add code to your contacts
+        app so that newly added contacts are saved in a table. (Click to see full
+        instructions)
+      U4 - Add Row By Hand_instruction: |
+        Add a new record to your table in the Data
+        Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartsFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - Import Data 1_instruction: |
+        Download the CSV file we’ve provided,
+        and then use the data viewer to import the data from the file into the “mydata”
+        table. (Click to see full instructions)
+      U4 - Charts - Remixing Apps with Data_instruction: |
+        Run this app and see what
+        it prints to the console. Then remix the app and run the remixed version to
+        see what happened to the data. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)
+      U4 - CreateRecord - 2.5_instruction: |
+        Change the table name in createRecord
+        then check the Data Viewer to see the new table. (Click to see  full instructions)
       U4 - CreateRecord - 2_instruction: |
-        Change the table name in create record
-        then check the Data Viewer to see the new table.
+        Change the name from "Alice" to something
+        else in the createRecord command.  Run the program and use the Data Viewer
+        to see the changes to your table. (Click to see full instructions)
       U4 - CreateRecord - 3_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Use createRecord to add the song object
+        as a record to a table. (Click to see full instructions)
       U4 - CreateRecord - 4_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Run the program. Verify the song object
+        was added to the database. Note the callback function now displays the copy
+        of the record sent back back by the database. (Click to see full instructions)
       U4 - CreateRecord - 5_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Add a property to the JavaScript object,
+        then run the program.  View the data table and see how changing the object
+        affects the data table. (Click to see full instructions)
+      U4 - debug column names are case sensitive_instruction: |
+        Change song.title
+        to song.Title (capital T).  And run the program.  Check the data table  (Click
+        to see full instructions)
+      U4 - deleteRecords 0_instruction: |
+        Use the deleteRecord command with default
+        values. Verify the record was deleted. (Click for full instructions).
+      U4 - deleteRecords 1_instruction: |
+        Find the id of "Little Bunny Foo Foo"
+        in the data table "mySongs".  Use the deleteRecord command to delete it.  See
+        what happens when you try to delete an ID a second time. (Click for full Instructions).
+      U4 - deleteRecords 2 delete object_instruction: |
+        Use the song object to delete
+        multiple objects in the database by changing only the "id" property. (Click
+        for full Instructions).
+      U4 - deleteRecords 2_instruction: |
+        Using the data viewer, find the id of a
+        a record you want to delete. Use the deleteRecord command to delete it. (Click
+        for full instructions).
+      U4 - Edit Data Table by Hand_instruction: |
+        View the data table and click edit
+        next to each row.  Add the artists names for each song by hand. (Click to
+        see full instructions)
+      U4 - Exploring Data Tools - Template_instruction: |
+        Use createRecord to add
+        the song object as a record to a table. (Click to see full instructions)
+      U4 - fix contacts by hand in data table_instruction: |
+        Use the data viewer to
+        add rows to the data table.  Add the original hard-coded contacts from your
+        app to the database. (Click to see full instructions)
+      U4 - last stage test adding contcts_instruction: |
+        Confirm that new contacts
+        you add are saved to the database.  Verify that after restarting your app,
+        the contacts you added no longer show in the app, but still exist in the database.
+        (Click to see full instructions)
+      U4 - Objects - accessingPropertiesInArray_instruction: |
+        Access the properties
+        of the objects stored in an array. (Click to see full instructions)
       U4 - Objects - arraysOfObjects_instruction: |
         Create an array called "students"
         and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createContactObject_instruction: |
+        Construct a new object from
+        the user inputs, and append it to your array. (Click to see full instructions)
+      U4 - Objects - createContactsData_instruction: |
+        Add values to the three contact
+        objects provided in the starter code. (Click to see full instructions)
       U4 - Objects - createDotNotation_instruction: |
-        Update your code to add properties
-        to your object one at a time using dot notation. (Click to see full instructions)
+        Create a student Object yourself.
+        Add properties to your object one at a time using dot notation. (Click to
+        see full instructions)
       U4 - Objects - createObject_instruction: |
         Create an object with at least 3
         properties and display it in the Debug Console. (Click to see full instructions)
@@ -3447,10 +3534,17 @@
       U4 - Objects - dotNotation_instruction: |
         Use dot notation to display individual
         properties of the object. (Click to see full instructions)
+      U4 - Objects - eventHandlersToSwitchScreen_instruction: |
+        Attach event handlers
+        to the "Add Contact" and "Go Back" buttons that allow the user to switch
+        screens. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - exemplarContactsApp_instruction: |
+        Use the Contacts app and then
+        add a contact of your own. (Click to see full instructions)
       U4 - Objects - loopingArray_instruction: |
         Loop over your array of students
         and print the name of every students. (Click to see full instructions)
@@ -3465,6 +3559,61 @@
         Loop over your array of student
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
+      U4 - Objects - pullValues_instruction: |
+        Create an event handler for the "Add
+        Contact" button that displays the contents of the 4 text input fields in
+        the console. (Click to see full instructions)
+      U4 - Objects - readStarterCode_instruction: |
+        Familiarize yourself with the
+        starter code and UI elements provided. (Click to see full instructions)
+      U4 - Objects - resetIndexAndShow_instruction: |
+        Add code to your event handler
+        fro the "Add Contact" button so that when a new contact is added the inputs
+        are cleared, the screen is switched, and the correct contact is shown. (Click
+        to see full instructions)
+      U4 - Objects - showContact1_instruction: |
+        Add code to the showCurrentContact
+        function to show the name of the contact stored at the currentIndex of your
+        array. (Click to see full instructions)
+      U4 - Objects - showContact2_instruction: |
+        Add the phone number and birthday
+        text to your text area. (Click to see full instructions)
+      U4 - Objects - showContact3_instruction: |
+        Display the image information for
+        each contact. (Click to see full instructions)
+      U4 - Objects - showSampleImage_instruction: |
+        Attach an event handler to the
+        image URL text input so that the user can confirm their image will work as
+        expected. (Click to see full instructions)
+      U4 - Objects - writeWrap_instruction: |
+        Use the wrap function to prevent currentIndex
+        from leaving the bounds of your array. (Click to see full instructions)
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare read from the new table. (Click to see full instructions)\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues in the response from the database. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall individually. (Click to see full instructions)\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - ReadRecords - Contacts App 1_instruction: |
+        Write a function called "updateLocalData"
+        that copies the data in your database into your "contacts" global variable.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 2_instruction: |
+        Create a function called "refreshLocalData"
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 3_instruction: |
+        Add a call to "refreshLocalData"
+        to the callback function of the createRecord you use to add a new contact
+        to your database. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 4_instruction: |
+        Create a "Delete" button.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
+        Create an
+        event handler for the "Delete" button you created. (Click to see full instructions)
       U4L02 - Objects - createObject_instruction: |
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
@@ -3473,10 +3622,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-        
+      U4L02 - Objects - Template1_instruction: Template
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

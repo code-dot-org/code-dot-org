@@ -14,9 +14,9 @@
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
           'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          'Maze: Debugging': 'Lavirint: Ispravljanje grešaka'
+          'Artist 1: Intro': 'Umetnik 1: Uvod'
+          Artists 2: Umetnik 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'Bee 1: Intro'
@@ -1496,6 +1496,21 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1613,14 +1628,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'Zvezdani ratovi: Izgradi galaksiju pomoću koda'
           description_short: Научите да програмирате дроиде и креирате сопствену игру
             Ратова звезда у галаксији далеко, далеко.
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова
             звезда у галаксији далеко, далеко.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: 'Zvezdani ratovi: Izgradi galaksiju pomoću koda'
           description_short: Научите да програмирате дроиде и креирате сопствену игру
             Ратова звезда у галаксији далеко, далеко.
           description: Научите да програмирате дроиде и креирате сопствену игру Ратова
@@ -1632,7 +1647,7 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft sat programiranja
+          title: Мајнкрафт час програмирања
           description_short: Истражите Мајнкрафт свет кроз кôд
           description: Користите блокове кода да поведете Стива или Алекс у авантуру
             кроз овај Мајнкрафт свет

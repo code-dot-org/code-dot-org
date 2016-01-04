@@ -11,7 +11,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
   n_have_learned_an_hoc: <h1>尝试</h1><h2>编程一小时</h2><h3># 送达</h3>
-  anybody_can_learn: 人人都可以学。
+  anybody_can_learn: 任何人都可以学习。
   learn_now: 现在开始学习
   petition_message: 在每个学校每个学生都应该有机会学习计算机科学
   petition_sign_message: 如果你同意，签上你的名字。加入#其他人。
@@ -23,6 +23,8 @@
   submit: 提交
   twentyhours_heading: 看看我们对计算机科学课程的简介
   twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。
+  og_title: 每个孩子都应该有机会
+  og_description: 每个学校的每个学生都应该有机会学习计算机科学
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
   hoc2014_students: 学生
   hoc2014_try: 体验一下
@@ -38,7 +40,7 @@
   csedweek_map_search_reset: 重置
   csedweek_map_legend_title: 图例
   csedweek_map_legend_event: 编程一小时活动
-  csedweek_map_legend_cs_tech_jam: 计算机技术展会
+  csedweek_map_legend_cs_tech_jam: 特别活动
   cded_sign_up: 注册
   cded_try_it: 体验一下
   twentyhours_trynow: 现在就试试
@@ -173,7 +175,7 @@
   homepage_hero_text_teacher2: '&ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;亚当，老师'
   homepage_hero_text_stat_loc: 两百五十万女孩已经在编程工作室里注册了。
   homepage_hero_text_stat_students: '代码工作室有 #student_count 个学生帐户'
-  homepage_hero_text_stat_served: '编程一小时：已有 #served 参与'
+  homepage_hero_text_stat_served: '编程一小时：已有 #served 次参与'
   homepage_slot_text_hoc: 编程一小时
   homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
   homepage_slot_text_teacher: Teacher Dashboard
@@ -182,7 +184,7 @@
   homepage_slot_text_shop: 商店
   homepage_slot_text_flappy: 飞扬的代码
   homepage_action_text_hoc: 编程一小时提供给每一个学生
-  homepage_action_text_num_served: '# 服务'
+  homepage_action_text_num_served: '# 次参与'
   homepage_action_text_join_us: 加入我们
   homepage_action_text_sign_up: 注册
   homepage_action_text_try_it: 试一试
@@ -205,7 +207,7 @@
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
   homepage_slot_text_link_host: 举办一次“编程一小时”活动
-  homepage_slot_text_link_hocserved: '# 服务'
+  homepage_slot_text_link_hocserved: '# 次参与'
   homepage_solot_text_link_volunteer: 成为编程一小时志愿者
   homepage_slot_text_title_students: 学生
   homepage_slot_text_blurb_students: 体验我们所有的教程
@@ -266,11 +268,11 @@
   class_submission_languages_other: 其他语言
   inspirational_videos_more: 更多<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> 榜样和名人激励人心的视频
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
+  playlab_choose_theme: 选择你的游戏实验室主题
+  playlab_classic_title: 经典
+  playlab_gumball_title: 阿甘妙世界
   playlab_iceage_title: 冰河世纪-即将推出
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: 冰河世纪
   starwars_subtitle: 用代码来建立一个星系
   starwars_javascript_title: Javascript
   starwars_javascript_description: 使用拖放块和 JavaScript。
@@ -278,47 +280,35 @@
   starwars_javascript_start_button: 现在就试试
   starwars_blocks_title: 模块
   starwars_blocks_description: 使用拖放块。
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: 多语言 | 最新浏览器、智能手机、平板电脑 | 适用年龄6岁以上
   starwars_blocks_start_button: 现在就试试
   starwars_watch_videos: 在开始之前，看一段鼓舞人心的视频
   starwars_speak_languages: 另一种语言?
   starwars_help_translate: 帮我们翻译
   starwars_platform_text: 最新的浏览器，智能手机，平板电脑
   mc_name: 我的世界 编程一小时
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_longdescription: 使用代码模块，带史蒂夫或艾莉克斯在《我的世界》的这个游戏中，展开一场冒险。
+  mc_shortdescription: 使用代码模块，带史蒂夫或艾莉克斯在《我的世界》的这个游戏中，展开一场冒险。
   mc_gradelevel: 6岁以上
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: 多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上
   minecraft_subtitle: 我的世界 编程一小时
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
-    volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
-  volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_title: 激励学生和志愿者
+  volunteer_engineer_submission_subtitle_generic: '2015年12月7-13日，约有10万名教师在他们的课堂上主办编程一小时活动。他（她）们需要你的帮助！ '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} 老师们需要志愿者。<br>%{num_volunteers}
+    志愿者已经报名了。加入他们的行列。'
+  volunteer_engineer_submission_intro_background: 编程一小时是一次全球范围的活动，尝试在一个小时的时间里为数以千万计的
+    180 多个国家的学生介绍计算机科学方面的知识。请在计算机科学教育周（12 月 7-13 日）积极参与本次活动。
+  volunteer_engineer_submission_intro_recruit: '这些教师希望有<span style="font-family: ''Gotham
+    7r'', sans-serif;"> 热衷于计算机科学教育的人士</span> 能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性
+    （也可以通过视频聊天的方式讨论）<span style="font-family: ''Gotham 7r'', sans-serif;">激发 </span>
+    他们学生的热情。'
+  volunteer_engineer_submission_intro_signup: 如果您是计算机科学专业的学生或软件专家，请输入以下信息。用 <span
+    class="form-required-field"> *</span> 标记的字段是必填项。
+  volunteer_engineer_submission_intro_links: 需要找志愿者吗? 用<a href="%{volunteer_local}">
+    志愿者地图</a> 找到本地的志愿者。
+  volunteer_engineer_submission_update_information: 更新你的信息
+  volunteer_engineer_submission_header_shared: 在志愿者地图上与教师们共享的信息
   volunteer_engineer_submission_field_name: 姓名
   volunteer_engineer_submission_field_name_placeholder: 姓名
   volunteer_engineer_submission_field_company: 公司 (或大学)
@@ -326,53 +316,39 @@
   volunteer_engineer_submission_field_experience_level: 经验水平
   volunteer_engineer_submission_field_location: 所在地区
   volunteer_engineer_submission_field_location_desc: 您所在的位置将被用作教师寻找附近志愿者的参考，并且会以大头针的形式标注在地图上。如果您很在意隐私问题，请使用您工作或者学校的地址，亦或只使用城市名称。
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_location_placeholder: 邮编、 城市和省/国家或街道地址
+  volunteer_engineer_submission_field_location_flexibility: 编程一小时活动中我可以帮助......（请选择所有适用项）
+  volunteer_engineer_submission_checkbox_after_hoc: 参与了编程一小时活动之后，我对志愿工作很感兴趣
+  volunteer_engineer_submission_field_time_commitment: 编程一小时活动之后能贡献的时间
+  volunteer_engineer_submission_field_linkedin: 领英帐号
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/你的_姓名
+  volunteer_engineer_submission_field_facebook: 脸谱上的个人资料
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/你的_姓名
   volunteer_engineer_submission_field_description: 描述
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: 写明你在计算机科学方面的经验以及你想以什么方式作为一名志愿者，为当地的教师提供帮助。
+  volunteer_engineer_submission_field_description_placeholder: 写明经验和 (或) 参与方式。如果你能讲除英语以外的语言，请一定要在这里列出。
+  volunteer_engineer_submission_header_private: 信息保密，决不公开。
   volunteer_engineer_submission_field_email: 电子邮件地址
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: 您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。
   volunteer_engineer_submission_field_email_placeholder: 电子邮件地址
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_final_paragraph: 作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。
+  volunteer_engineer_submission_checkbox_contact: '我同意教师们可以就志愿者服务机会联系我 （注: 您的电子邮件地址不会泄漏）'
   volunteer_engineer_submission_submit: 提交
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: 感谢你参与编程一小时志愿者活动。老师们会用<a href="%{url}">这张地图</a>来联系更多像你一样的志愿者。
   volunteer_engineer_submission_commitment_uncertain: 不确定
   volunteer_engineer_submission_commitment_one_hr_per_week: 每周 1 小时
   volunteer_engineer_submission_commitment_three_hrs_per_week: 每周 3 小时
   volunteer_engineer_submission_commitment_five_hrs_per_week: 每周 5 小时
   volunteer_engineer_submission_commitment_now_and_then: 从现在开始
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 每年2-3 次
+  volunteer_engineer_submission_commitment_monthly: 每个月几小时
+  volunteer_engineer_submission_commitment_weekly: 每周几个小时
   volunteer_engineer_submission_commitment_more: 更多
   volunteer_engineer_submission_location_flexibility_onsite: 到学校访问（一到两个小时的班级或学校活动）
   volunteer_engineer_submission_location_flexibility_remote: 远程回答问题（通过短视频会议）
   volunteer_engineer_submission_location_flexibility_curriculum: 为开源课程项目做出贡献
   volunteer_engineer_submission_experience_unspecified: 未指定
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: 科技公司非工程师人士
   volunteer_engineer_submission_experience_university_student_or_researcher: 大学计算机科学专业的学生
   volunteer_engineer_submission_experience_software_professional: 软件专业人士
   volunteer_engineer_submission_distance_8: 5 英里
@@ -383,12 +359,9 @@
   volunteer_engineer_submission_num_volunteers_10: 10 名志愿者
   volunteer_engineer_submission_num_volunteers_25: 25 名志愿者
   volunteer_engineer_submission_num_volunteers_50: 50 名志愿者
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_type_task_onsite: 我邀请你访问我的课堂提供技术帮助和激励故事
+  volunteer_engineer_submission_type_task_remote: 我邀请你通过 Skype 参与我的课堂，说几句对孩子们富有启示的话
+  volunteer_engineer_submission_type_task_mentor: 我正在寻找一位导师，帮助我备课，以使我能与我的学生写代码。
   petition_age: 年龄
   dashboard_landing_title: 教师主页
   dashboard_landing_welcome: 欢迎您来到我们最新改进的教师控制台。
@@ -409,44 +382,33 @@
   dashboard_landing_progress_title: 主要课程进度
   dashboard_landing_progress_biggest: 这是您主要课程的进度。
   dashboard_landing_view_progress: 查看%{biggest_section}的进度
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: 打印你的进展
   dashboard_landing_available_title: 可用课程
   dashboard_landing_available_courses: 这些是目前可供您和您的学生使用的课程。
   dashboard_landing_more_tutorials: 想看更多教程吗？
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！
   dashboard_hoc_courses: 《代码一小时》适合所有年龄的人。
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
+  dashboard_hoc_courses_desc: 和你的学生一同尝试任何这些不到 1 小时的辅导！
+  dashboard_hoc_courses_desc_and_cta: 与你的学生一起尝试这些简短的一个小时的辅导。在计算机科学教育周期间 <a href="https://hourofcode.com">
+    加入编程一小时活动</a>。
   dashboard_k5_courses: 适合K-5的20小时课程
   dashboard_k5_courses_desc: 这些课程有可以让学生自学并自己控制进度的网上教程，也有根本不需要电脑的“脱机”教程。每一个课程都大约有20节课，可能会分为几个章节和单元。即使是幼儿园的学龄前学生都可以参加。我们在美国各地提供了专业、高质量的免费学习研讨会。<a
     href="/professional-development-workshops">看看你附近的课程吧！</a>
   dashboard_middle_courses: 20小时的中学课程
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_middle_courses_desc: 在中学数学和理科范围内，我们中学课程使用计算机科学及编程，作为一种工具来教导数学和科学理念。注册开发专业研讨会，申请与
+    Code.org <a href="/educate/districts"> 建立全区合作伙伴关系</a>。
   dashboard_high_courses: 为期一年的高中课程
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_high_courses_desc: 通过面向现有教学人员提供这一新领域的培训，我们的高中组项目能帮助学区提供全年计算机科学类编写课程。注册开发专业研讨会，申请与
+    Code.org 的 <a href="/educate/districts"> 全区建立合作伙伴关系</a>。
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csina_desc: Code.org 与Bootstrap教程合作，开发一套通过计算机编程教授代数和几何概念的课程。
+  dashboard_course_csins: 理科中的计算机科学
+  dashboard_course_csins_desc: Code.org 与GUTS项目合作交付计算机科学概念导论，范围包括建模与仿真。
   dashboard_course_ecs: 探索计算机科学
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: '计算机科学探索是为期一年的课程，由 6 个部分组成: 人机交互、 解决问题的能力、 网页设计、 编程、
+    计算和数据分析以及机器人。'
+  dashboard_course_csp: AP® 计算机科学原则
+  dashboard_course_csp_desc: Code.org 设计了严谨、 紧密和容易接受的课程，专门探索计算相关的基本思想。
   dashboard_landing_loading: 正在载入...​​​
   dashboard_action_edit: 编辑
   dashboard_action_save: 保存​​
@@ -469,7 +431,7 @@
   dashboard_navigation_section_speakers: 计算机科学 <br/> 特邀演讲人
   dashboard_navigation_all_sections: 学生账户和进度
   dashboard_navigation_view_progress: 查看进度
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: 查看文字回应
   dashboard_navigation_add_students: 添加学生
   dashboard_navigation_manage_students: 管理学生
   dashboard_navigation_lesson_plans_resources: 课程计划及资源
@@ -529,7 +491,7 @@
   dashboard_students_print_page: 打印此页面
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">点击这里</a>以获取我们的隐私文件，您可以跟您的学生共享此文件或打印分发给他们的。
-  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_k5_title: K-5 教育人才资源
   dashboard_curriculum_middle_title: 初中教育资源
   dashboard_curriculum_high_title: 高中教育资源
   dashboard_lesson_plans: 课程计划
@@ -537,7 +499,7 @@
   dashboard_course1: '课程 1:'
   dashboard_course2: 课程 2：
   dashboard_course3: 课程 3：
-  dashboard_course4: 'Course 4 (beta): '
+  dashboard_course4: '课程 4 (测试版)： '
   dashboard_curriculum: 课程
   dashboard_curriculum_overview: K-5课程概述
   dashboard_overview: 概览
@@ -553,8 +515,8 @@
   dashboard_teacher_worksheet: 教师工作表
   dashboard_curriculum_csina: '代数中的计算机科学:'
   dashboard_curriculum_csins: '科学中的计算机科学:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csp: AP® 计算机科学原则：
+  dashboard_curriculum_ecs: 探索计算机科学：
   dashboard_grade_k: 学前
   dashboard_grade_other: 其他
   dashboard_login_word: 单词
@@ -570,7 +532,7 @@
   dashboard_stage: 阶段
   dashboard_puzzle: 关卡
   dashboard_question: 问题
-  dashboard_response: Response
+  dashboard_response: 回答
   stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
   stats_hoc_2013_image_alt: 2013年编程一小时统计数据
   dashboard_teacher: 老师
@@ -586,36 +548,33 @@
   dashboard_sections_password_account_creation: 学生创建的文本密码
   dashboard_sections_login_type_explanation: 此表可以帮助解释您想要为学习小组选择哪种登录类型，<b>图片，词语或电子邮件</b>。
   dashboard_faq: 常见的问题
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_faq_k5: K-5 组的常见问题
+  dashboard_announcements: 公告
+  dashboard_announce_view_all: 查看全部
+  dashboard_announce_message: <b>2015年12月16日</b> - 谢谢您参与《编程一小时》2015！现在所有代码工作室的教程和课程的进度都已经恢复了。注意：Code.org办公室将在12月19日到明年1月3日关闭。您询问的问题可能会延迟到1月4日才会有答复。
+  dashboard_announce_button_text: 了解详情
+  dashboard_announce_hoc: <b>2015 年 11 月 23 日</b>-在你发起的编程一小时活动期间，你是否需要一名热衷于计算机科学教育的志愿者提供帮助？逾7,000
+    名志愿者正在寻找通过参与您的课堂或远程视频聊天的形式激发你学生的潜质。查看你所在地区的志愿者分布地图并取得的联系。
+  dashboard_announce_playlab: <b>2015 年 12 月 4 日</b>-编程一小时就在这里！面向所有年龄段、通过所有类型的设备尝试
+    50 节教程。本周新内容：在全新的游戏实验室里用冰河世纪和陶阿甘编写你自己的代码故事和游戏。
   code_hoc_coming: 代码小时就在这里 — — 12 月 8-14 ！
   code_sign_up: 注册以便在计算机科学教育周期间参加
   learn_more: 现在就试试
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
+  learn_sign_up_description: 报名参与在计算机科学教育周期间的编程一小时活动。
   learn_sign_up_button: 注册
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_videos_watch: 在课堂上观看这段鼓舞人心的视频
+  learn_videos_show: 在你的课堂上播放这段鼓舞人心的视频
+  learn_videos_before_hoc: 在你启动编程一小时代码小时活动之前观看一段励志视频
+  learn_educator_resources_description: 学习如何教授编程一小时
   learn_educator_resources_button: 教育资源
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_are_you_educator: 你是一名教育工作者吗？学习 <a href="http://hourofcode.com/resources/how-to">
+    如何教授编程一小时</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local"> 找到当地志愿者</a> 为你的编程一小时课程提供帮助
+  learn_teacher_led_lesson_plans: 得到 <a href="https://code.org/teacher-led"> 发起编程一小时教案的老师给你的</a>
+    启发
+  learn_how_to_hoc: 按照 <a href="https://hourofcode.com/how-to"> 我们的指南</a> 教授编程一小时
   learn_hoc_prizes: 了解更多关于每个教育者的奖项
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: 通过展示 <a href="https://code.org/educate/inspire"> 这些视频</a>启发学生
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
   hoc2014_try_new_tutorial: 试试我们新的测试版的编程一小时教程
   hoc2014_try_scrat: 愤怒的小鸟、植物大战僵尸和斯奎特
@@ -629,7 +588,7 @@
   carousel_heading_beginners: K-8教程
   carousel_heading_beyond_beginners: 初学者教程
   carousel_heading_javascript: 教 JavaScript 的教程
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: 辅导 JavaScript 的教程
   carousel_heading_unplugged: 没有设备或互联网接入？试试’离线‘计算机科学课程
   carousel_heading_devices: 为手机和平板电脑定制的教程应用
   carousel_heading_beyond_devices: 为手机和平板电脑定制的教程应用
@@ -641,11 +600,10 @@
   carousel_heading_robots: 学习使用机器人进行编程
   carousel_heading_ide: 在教师中流行的平台
   educator_notes: 教育家笔记
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  teach_led_lesson_plans: 由老师引导的教案
+  learn_footer_all_tutorials: 查看 <a href="https://code.org/educate/allhourofcode">
+    编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a href="https://hourofcode.com/tutorial-guidelines">
+    请点击这里。</a>
   how_to_teach_hoc: 如何教授代码一小时
   more_resources_educators: 给教师和教育工作者们的更多资源
   beyond_submission: 想要提交一小时学编程的教程吗? 请参阅标准和提交表单。
@@ -658,10 +616,10 @@
   older_systems_subheading: 这些应该能在较旧的网页浏览器上运行。若要访问所有教程，请升级到 <a href="http://browsehappy.com/"target="_blank">
     最新的网页浏览器。</a>
   mobile_devices: 用于移动设备的教程
-  frozen_name: Code with Anna and Elsa
+  frozen_name: 和安娜、爱莎一起编程
   starwars_name: '星球大战: 用代码构建一个星系'
-  codeorg_name: 编写你的第一个计算机程序
-  codeintl_name: 编写你的第一个计算机程序
+  codeorg_name: 经典迷宫
+  codeintl_name: 经典迷宫
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 简介
   khanes_name: JavaScript 简介
@@ -697,17 +655,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 石头、剪子、布
-  hourofcode_name: 编写你的第一个计算机程序
+  hourofcode_name: 经典迷宫
   playlab_name: 游戏实验室
   infinity_name: 无限发挥游戏实验室
-  artist_name: 艺术家
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  artist_name: 小艺术家
+  monstercoding_name: 神秘岛编程探索
+  allcancode_name: 运行马可！
+  csfirst_name: 计算机科学当先
+  boxisland_name: 盒子岛
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
+  texasinstruments_name: 编程十分钟
+  teacherled_name: 由老师引导的教案
   codeorg_gradelevel: 适合年龄 4 岁以上
   codeintl_gradelevel: 适合年龄 4 岁以上
   thinkersmithspanish_gradelevel: Por todos
@@ -752,12 +710,12 @@
   infinity_gradelevel: 适合年龄 6 岁以上
   artist_gradelevel: 适合年龄 8 岁以上
   monstercoding_gradelevel: 适合年龄 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 年龄段 5-10
+  csfirst_gradelevel: 9-14 岁
   boxisland_gradelevel: 小学
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12-14 岁
+  texasinstruments_gradelevel: 13-16 岁
+  teacherled_gradelevel: 5岁以上年龄组
   codeorg_platformtext: 最新的浏览器，智能手机，平板电脑
   codeintl_platformtext: 最新的浏览器，智能手机，平板电脑
   thinkersmithspanish_platformtext: 不用电脑的
@@ -799,12 +757,12 @@
   frozen_platformtext: 最新的浏览器 + 平板电脑
   starwars_platformtext: 最新的浏览器 + 平板电脑
   playlab_platformtext: 最新的浏览器，智能手机，平板电脑
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: 网络浏览器、iOS、安卓系统
+  allcancode_platformtext: 网络浏览器、 iOS
   csfirst_platformtext: 现代网络浏览器
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: 安卓、iOS
   codesters_platformtext: 现代网络浏览器
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI图形计算器
   teacherled_platformtext: 最新的浏览器，智能手机，平板电脑
   codeorg_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
   codeintl_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
@@ -847,22 +805,15 @@
   frozen_shortdescription: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
   starwars_shortdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
   playlab_shortdescription: 通过游戏实验室创建故事或制作游戏！
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  infinity_shortdescription: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
+  artist_shortdescription: 和小艺术家一起设计出很酷的图形！
+  monsterocding_shortdescription: 儿童专用彩色自学编程游戏。
+  allcancode_shortdescription: 身临其境的游戏指导马可学习可视化编程语言。
+  csfirst_shortdescription: 两个人物的故事在海上的动画。添加你自己的风格！
+  boxisland_shortdescription: 与勇敢的阿宽在盒子岛上共赴编程之旅。
+  codesters_shortdescription: 开发您自己的游戏、 动画并使用 Python 进行艺术编程。
+  texasinstruments_shortdescription: 使用 TI-84&#8482; +计算器。
+  teacherled_shortdescription: 从这些课件中得到启发，设计您自己的编程一小时活动。
   codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。
   codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
@@ -912,42 +863,20 @@
   kodableunplugged_longdescription: '使用普通纸的设计，fuzzFamily Frenzy教导5 岁以上的孩子的程式设计逻辑。老师应解释这个游戏，然后学生结伴来完成一个简单的障碍课程。 '
   projguts_longdescription: 这次"不插电"活动由一群学生玩不同版本的剪刀/ 石头/ 布的游戏，以协助学生学习如何建模与模拟运作原理，并查看不同的模型的实验结果。
   hourofcode_longdescription: 新 code.org/hoc 的占位符
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
   starwars_longdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
   playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: 由怪物编码提供的神秘岛编程要求设计了充满乐趣的几个关键的编程概念教给孩子们自学。以每个模块为基础，构建活动，使用彩色动画的图形，音频说明，为孩子们介绍功能、
+    布尔值、 循环、 如果/否则语句和数组。
+  allcancode_longdescription: 学生们玩一款基于原型的故事冒险游戏。他们指导马可-游戏里的主人公 — — 由编程一小时使用的可视化编程语言的形式，通过给他分步骤的指导，最终通过每一关。他们不知不觉会了解到测序命令模块、
+    迭代和条件。
+  csfirst_longdescription: 编写一个关于两个人物在海上的故事。动画处理水，并定制不同风景来添加你这个故事的吸引力。应用编程来讲这个故事！
+  boxisland_longdescription: 在盒子岛上旅行，帮助阿宽收集散落在荒野中的所有时钟！在这套课件里你将学习关于算法、 序列、 循环和条件的基础知识！
+  codesters_longdescription: '开发您自己的游戏、 动画并使用 Python 进行艺术编程。一旦你完成了，与朋友分享！在 Python（每天都被软件公司使用的真正编程语言）
+    中，我们拖、放工具包，让它简单易学！尝试设计一场篮球比赛，编排一套舞蹈，或者设计动画卡片！ '
+  texasinstruments_longdescription: '10 分钟编程活动可以用在课堂上，来激发学生编程的兴趣，让他们经常把TI 技术教材放在书包里。
+    使用 TI-84 &#8482;+学习基本的编码。并且开始编程，只需 10 分钟 — — 不需要任何经验!  '
+  teacherled_longdescription: 如今，成千上万的教育工作者已经尝试了编程一小时，许多课堂更有创意、 减少那些千篇一律、只教授计算机科学的基本知识的活动。为了帮助教师找到灵感，我们收集和策划老师引导的课时，为编程一小时的老学员设计不同主题领域的活动计划。
   codeorg_beyond_name: 介绍电脑科学 (8 年级）
   khan_beyond_name: 学习电脑程序设计
   tynker_beyond_name: 在家学习电脑程序设计

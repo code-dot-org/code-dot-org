@@ -20,6 +20,8 @@ ar-SA:
   submit: تسجيل
   twentyhours_heading: 'جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر'
   twentyhours_text: 'أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب ومفاهيم البرمجة الأساسية في الدورة التالية.'
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/> 8-14 كانون الأول/ديسمبر، عام 2014 <br/>'
   hoc2014_students: الطلاب
   hoc2014_try: جربها
@@ -256,11 +258,11 @@ ar-SA:
   class_submission_level_vocational: المهني
   class_submission_languages_other: اللغات الأخرى
   inspirational_videos_more: 'المزيد من <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> مقاطع الفيديو الملهمة</a> من المشاهير و الشخصيات'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_choose_theme: اختر سمة مختبر لعبك
+  playlab_classic_title: كلاسيكي
+  playlab_gumball_title: جومبول
+  playlab_iceage_title: 'العصر الجليدي - قريباً'
+  playlab_iceage_title_live: العصر الجليدي
   starwars_subtitle: بناء مجرة باستعمال البرمجة
   starwars_javascript_title: جافا سكريبت
   starwars_javascript_description: استعمل تعنية سحب و اسقاط القطع و جافا سكريبت.
@@ -268,7 +270,7 @@ ar-SA:
   starwars_javascript_start_button: جرب الآن
   starwars_blocks_title: مربعات برمجية
   starwars_blocks_description: استخدام تقنية سحب و اسقاط القطع.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
+  starwars_blocks_specs: العديد من اللغات | المتصفحات الحديثة والهواتف الذكية والاجهزة اللوحية | الذين تتراوح أعمارهم بين 6-10
   starwars_blocks_start_button: جرب الآن
   starwars_watch_videos: قبل البدء، شاهد أحد هذه المقاطع الملهمة
   starwars_speak_languages: تتكلم لغة أخرى؟
@@ -279,7 +281,7 @@ ar-SA:
   mc_shortdescription: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم ماين كرافت.
   mc_gradelevel: الاعمار 6 +
   mc_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
+  mc_specs: العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح أعمارهم بين 6-106
   minecraft_subtitle: ساعة البرمجة ماين كرافت
   volunteer_engineer_submission_title: 'ألهم الطلاب و تطوع لأجل "Hour of code".'
   volunteer_engineer_submission_subtitle_generic: '100.000 مدرس سيقدمون فعالية "ساعة برمجة" في أقسامهم هذه السنة، من 07 إلى 13 ديسمبر 2015. إنهم يحتاجون ساعدتكم'
@@ -288,7 +290,8 @@ ar-SA:
   volunteer_engineer_submission_intro_recruit: |-
     سيحب المعلمين الحصول على أشخاص <span style="font-family: 'Gotham 7r', sans-serif;"> شغوفين بتعليم علوم الحاسوب </span> و يستطيعون المساعدة في الفصول او اشخاص يستطيعون <span style="font-family: 'Gotham 7r', sans-serif;"> الهام </span> طلابهم عن طريق التحدث معهم عن الامكانيات المهولة المتاحة عن طريق علوم الحاسوب ( و يكمن عمل هذا عن طريق محادثة مُصورة عبر الانترنت). اذا كنت لا تريد ان تتطوع <a href="%{url}"> تعلم المزيد </a> عن تنظيم "Hour of code" الخاص بك.
   volunteer_engineer_submission_intro_signup: 'الرجاء إدخال المعلومات التالية إذا كنت طالب علوم الحاسوب أو مختص في البرمجة. ادخال الحقول ب  <span class="form-required-field"> *</span> لازمة.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'لا تنوي التطوع ؟ <a href="%{learn_more}"> معرفة المزيد</a> حول تنظيمك حدث "ساعة برمجة" الخاص بك والعثور على أحد متطوعين المحليين على موقعنا <a href="%{volunteer_local}"> خريطة المتطوعين</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: معلومات مشتركة مع المدرسيين علي خريطة التطوع
   volunteer_engineer_submission_field_name: الاسم
   volunteer_engineer_submission_field_name_placeholder: الأسم بالكامل
@@ -525,6 +528,8 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: اعرف المزيد
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: إرسال رسالة إلكترونية
@@ -583,8 +588,8 @@ ar-SA:
   mobile_devices: دروس للأجهزة المحمولة
   frozen_name: برمج مع آنا و إلسا
   starwars_name: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: المتاهة الكلاسيكية
+  codeintl_name: المتاهة الكلاسيكية
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: مقدمة لجافا سكريبت
   khanes_name: مقدمة لجافا سكريبت
@@ -620,7 +625,7 @@ ar-SA:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: الصخرة، الورقة، المقص
-  hourofcode_name: Classic Maze
+  hourofcode_name: المتاهة الكلاسيكية
   playlab_name: مختبر اللعب
   infinity_name: لعبة مختبر اللعب اللانهائية
   artist_name: الرسام
@@ -822,7 +827,7 @@ ar-SA:
   playlab_longdescription: 'تخيّل قصة أو إصنع لعبة مع "مختبر اللعب"! جعل الحيوانات، القراصنة، الكسالى، النينجا، و شخصيّات اخرى تتحرك، تصدر الأصوات، تسجل نقاط، و تطلق الكرات النّارية !'
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

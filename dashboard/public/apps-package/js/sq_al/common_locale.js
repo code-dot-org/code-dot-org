@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Ndihmë"},
 "hideToolbox":function(d){return "(Fsheh)"},
 "hintHeader":function(d){return "Ja ku është një këshillë:"},
+"hintPrompt":function(d){return "Keni nevojë për ndihmë?"},
 "hintRequest":function(d){return "Shiko ndihmën"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Ndihmë:"},
 "ignore":function(d){return "Injoro"},
 "infinity":function(d){return "Pafundësi"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Shiko Videon"},
 "when":function(d){return "kur"},
 "whenRun":function(d){return "kur vrapon"},
-"workspaceHeaderShort":function(d){return "Vendi i punës: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Vendi i punës: "}};
