@@ -62,21 +62,13 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="maze_moveForward">
-          <next>
-            <block type="maze_turn">
-              <title name="DIR">turnRight</title>
-              <next>
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
         </block>
       </xml>
     </recommended_blocks>
