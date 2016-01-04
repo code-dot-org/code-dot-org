@@ -1,0 +1,24 @@
+name 'sciPD33 refresh2'
+title 'Designing a Rubric for Assessing a Model'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+
+### Complex Systems and Feedback Loops
+
+<br/>
+Feedback loops are often an important component of complex adaptive systems which can lead to emergent phenomena.  This TED Ed lesson on feedback loops begins with a short video and has a series of interactive tasks that allow us to connect with the concepts on a deeper level.
+
+
+- <a href="http://ed.ted.com/lessons/feedback-loops-how-nature-gets-its-rhythms-anje-margriet-neutel" target="_new">TED Ed Lesson Feedback Loops: How nature gets its rhythms</a>
+
+> Task: After going throug the Feedback Loops lesson, reflect on examples of feedback loops that already exist in your curriculum and ways to engage students in making connections to these examples.
+<br/>
+
+When you're done with with the TED Ed lesson, click below to move on to the next task.
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+</div>
+MARKDOWN

@@ -4,7 +4,7 @@ subject: "Your Windows Store gift"
 ---
 Thank you for participating in the Hour of Code. Here is your $10.00 Windows Store gift code.
  
-<XXXXX-XXXXX-XXXXX-XXXXX-XXXXX>
+`<%= prize_code_s %>`
  
 **To redeem:**
   

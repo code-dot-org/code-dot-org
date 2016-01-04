@@ -44,6 +44,7 @@ languages = {
   'Kurdish' => ['ku-IQ', 'ku'],
   'Latvian' => ['lv-LV', 'lv'],
   'Lithuanian' => ['lt-LT', 'lt'],
+  'Maori' => ['mi-NZ', 'mi'],
   'Macedonian (FYROM)' => ['mk-MK', 'mk'],
   'Malay' => ['ms-MY', 'ms'],
   'Maltese' => ['mt-MT', 'mt'],
