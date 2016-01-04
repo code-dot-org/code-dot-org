@@ -1,5 +1,5 @@
-name 'sciPD3 thanks'
-title 'Great Job!'
+name 'sciPD33 thanks'
+title 'Designing a Rubric for Assessing a Model'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
@@ -7,7 +7,8 @@ markdown <<MARKDOWN
 
 ### Way to Go!
 
-<br/><br/><img src="https://c1.staticflickr.com/5/4038/4294686346_fa10e0e9c7_z.jpg" class="lefted roundedPic" width="350px"/>Congratulations, by this point, you have nearly completed all of Phase 3!
+<br/><br/>
+<img src="https://images.code.org/13fecd53c29e37ba126338773b129d0c-image-1450477341760.gif" class="lefted roundedPic" width="350px"/>Congratulations! At this point, you are nearly done with all of Phase 3!
 
 As you wrap up, remember that Code.org will continue to be available as you proceed through the steps necessary to keep your classroom going.
 
@@ -19,6 +20,4 @@ For all other issues, please contact us at <a href="mailto:pd@code.org">pd@code.
 
 <br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
 MARKDOWN
