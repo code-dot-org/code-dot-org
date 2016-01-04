@@ -7,7 +7,7 @@ tutorials = [
     "russia_mc",
     "static_mc",
     "mc",
-    "disney_static_starwarsblocks"
+    "disney_static_starwarsblocks",
     "disney_static_starwars",
     "static_starwars",
     "starwarsblocks",
@@ -73,7 +73,7 @@ tutorials = [
     "texasinstruments",
     "baymaxes",
     "pixies",
-    "finchrobot",
+    "finchrobot"
   ]
 
 LONG_VALUE_SUM = "LongValueSum:"
