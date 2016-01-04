@@ -5,10 +5,8 @@
 
 %form{method: 'get'}
   Please enter the (production) level IDs for the levels you'd like to see user
-  responses. Use the "Levels" box if you want to see the raw response and the
-  "Multiple Choice" box if you want to see the text associated with a multiple
-  choice question. Note that this page will return at most one hundred responses
-  per question.
+  responses. Note that this page will return at most one hundred responses per
+  question.
 
   %p
 
@@ -18,11 +16,6 @@
         Levels
       %td
         %input.text{name: "levels", id: "levels", value: params[:levels]}
-    %tr
-      %td
-        Multiple Choice
-      %td
-        %input.text{name: "mc_levels", id: "mc_levels", value: params[:mc_levels]}
 
   %br
 
