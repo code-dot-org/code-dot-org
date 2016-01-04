@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "AND 부울 연산자"},
 "dropletBlock_orOperator_description":function(d){return "Logical OR of two booleans"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "OR boolean operator"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "최소"},
 "dropletBlock_randomNumber_param0_description":function(d){return "가장 작은 수를 찾아 줍니다."},
 "dropletBlock_randomNumber_param1":function(d){return "최대"},
@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "비디오 보기"},
 "when":function(d){return "~할 때"},
 "whenRun":function(d){return "실행하면"},
-"workspaceHeaderShort":function(d){return "작업 영역: "}};
+"workspaceHeaderShort":function(d){return "작업 영역: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};

@@ -142,3 +142,44 @@ function test_blockSpaceAutoPositioning() {
     assertEquals(expected_positions[i][1], position.y);
   }
 }
+
+function test_blockSpace_isReadOnly() {
+  Blockly.Test.testWithReadOnlyBlockSpaceEditor(function(blockSpaceEditor) {
+    var blockSpace = blockSpaceEditor.blockSpace;
+    // default values; Blockly.readOnly = false, blockSpaceEditor.readOnly_ = true
+    assertEquals(blockSpaceEditor.readOnly_, true);
+    assertEquals(Blockly.readOnly, false);
+    assertEquals(blockSpaceEditor.isReadOnly(), true);
+    assertEquals(blockSpace.isReadOnly(), true);
+
+    // Blockly.readOnly = false, blockSpaceEditor.readOnly_ = false
+    blockSpaceEditor.readOnly_ = false;
+    Blockly.readOnly = false;
+    assertEquals(blockSpaceEditor.readOnly_, false);
+    assertEquals(Blockly.readOnly, false);
+    assertEquals(blockSpaceEditor.isReadOnly(), false);
+    assertEquals(blockSpace.isReadOnly(), false);
+
+    // Blockly.readOnly = true, blockSpaceEditor.readOnly_ = false
+    blockSpaceEditor.readOnly_ = false;
+    Blockly.readOnly = true;
+    assertEquals(blockSpaceEditor.readOnly_, false);
+    assertEquals(Blockly.readOnly, true);
+    assertEquals(blockSpaceEditor.isReadOnly(), true);
+    assertEquals(blockSpace.isReadOnly(), true);
+
+    // reset to defaults for next run
+    blockSpaceEditor.readOnly_ = false;
+    Blockly.readOnly = false;
+  });
+}
+
+function test_readOnlyBlockSpaceCanRender() {
+  Blockly.Test.testWithReadOnlyBlockSpaceEditor(function(blockSpaceEditor) {
+    var blockSpace = blockSpaceEditor.blockSpace;
+    var blockXML = '<xml><block type="math_number"><title name="NUM">0</title></block></xml>';
+    Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(blockXML));
+    var numberBlock = blockSpace.getTopBlocks()[0];
+    assertEquals(numberBlock.isEditable(), false);
+  });
+}

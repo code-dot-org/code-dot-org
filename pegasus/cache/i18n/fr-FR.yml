@@ -329,8 +329,8 @@
   starwars_javascript_start_button: Essaie maintenant
   starwars_blocks_title: Blocs
   starwars_blocks_description: Utilise les blocs.
-  starwars_blocks_specs: Plusieurs langues (à venir) | navigateurs modernes, smartphones,
-    tablettes | 6-10 ans
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: En savoir plus
   starwars_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
   starwars_speak_languages: Vous parlez une autre langue ?
@@ -343,8 +343,7 @@
     de Minecraft avec Steve ou Alex.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs récents, smartphones, tablettes
-  mc_specs: Plusieurs langues (à venir) | navigateurs modernes et tablettes | 6 ans
-    et plus
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Une Heure de Code Minecraft
   volunteer_engineer_submission_title: Soyez une source d'inspiration et bénévoles
     pour Une Heure de Code.
@@ -1561,3 +1560,13 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

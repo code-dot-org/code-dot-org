@@ -6,6 +6,8 @@ window.dashboard = window.dashboard || {};
 
 /**
  * The body of our share project dialog.
+ * Note: The only consumer of this calls renderToStaticMarkup, so any events
+ * will be lost.
  */
 window.dashboard.ShareDialogBody = (function (React) {
   return React.createClass({

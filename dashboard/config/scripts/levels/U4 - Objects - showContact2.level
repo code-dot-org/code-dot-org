@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Add the phone number and birthday text to your text area. (Click to see full instructions)"
   }
 }]]></config>

@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "διαδικός τελεστής ΚΑΙ"},
 "dropletBlock_orOperator_description":function(d){return "Επιστρέφει αληθές όταν οποιαδήποτε είναι αληθής, διαφορετικά επιστρέφει ψευδές"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "διαδικός τελεστής Ή"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "ελάχιστο"},
 "dropletBlock_randomNumber_param0_description":function(d){return "Επιστρέφεται ο ελάχιστον αριθμός"},
 "dropletBlock_randomNumber_param1":function(d){return "μέγιστο"},
@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Δείτε το βίντεο"},
 "when":function(d){return "όταν"},
 "whenRun":function(d){return "όταν εκτελείται"},
-"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "}};
+"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};

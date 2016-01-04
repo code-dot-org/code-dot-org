@@ -23,7 +23,7 @@ Tests whether a value is greater than or equal to another value.
 
 [/short_description]
 
-Your apps will sometimes need to check the relative size of two values, and then possibly perform some specific action using an if or if-else block. < returns true if the value on the left-hand side of the opertor is greater than or equal to the value on the right-hand side of the operator.
+Your apps will sometimes need to check the relative size of two values, and then possibly perform some specific action using an *if*, *if-else*, or *while* block. < returns true if the value on the left-hand side of the opertor is greater than or equal to the value on the right-hand side of the operator.
 
 [/description]
 

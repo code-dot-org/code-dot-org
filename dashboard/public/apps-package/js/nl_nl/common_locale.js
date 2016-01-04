@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "NIET booleaanse operator"},
 "dropletBlock_orOperator_description":function(d){return "Dit geeft waar terug als de expressie waar is, anders wordt onwaar teruggegeven"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "OF booleaanse operator"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
 "dropletBlock_randomNumber_param0_description":function(d){return "Het minimum getal geretourneerd"},
 "dropletBlock_randomNumber_param1":function(d){return "max"},
@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Bekijk de video"},
 "when":function(d){return "wanneer"},
 "whenRun":function(d){return "als gestart"},
-"workspaceHeaderShort":function(d){return "Werkplaats: "}};
+"workspaceHeaderShort":function(d){return "Werkplaats: "},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};

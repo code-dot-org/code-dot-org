@@ -458,7 +458,7 @@ window.apps = {
       var source;
       if (window.Blockly) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.readOnly ? currentLevelSource :
+        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
           Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
       } else {
         source = window.Applab && Applab.getCode();
@@ -475,7 +475,7 @@ window.apps = {
 };
 
 },{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
-/* global dashboard, appOptions, mergedActivityCssClass */
+/* global dashboard, appOptions */
 
 var renderAbusive = require('./renderAbusive');
 
@@ -526,7 +526,7 @@ module.exports = function (callback) {
       var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {
-          var status = mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+          var status = dashboard.progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
 
           // Clear the existing class and replace
           $('#header-level-' + levelId).attr('class', 'level_link ' + status);

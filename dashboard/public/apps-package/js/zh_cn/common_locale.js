@@ -286,7 +286,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "AND boolean operator"},
 "dropletBlock_orOperator_description":function(d){return "Logical OR of two booleans"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "或布尔运算符"},
-"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range"},
+"dropletBlock_randomNumber_min_max_description":function(d){return "Returns a random number in the closed range from min to max."},
 "dropletBlock_randomNumber_param0":function(d){return "最小"},
 "dropletBlock_randomNumber_param0_description":function(d){return "返回的最小值"},
 "dropletBlock_randomNumber_param1":function(d){return "最大"},
@@ -398,4 +398,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "观看视频"},
 "when":function(d){return "当"},
 "whenRun":function(d){return "当运行时"},
-"workspaceHeaderShort":function(d){return "工作区域"}};
+"workspaceHeaderShort":function(d){return "工作区域"},
+"hintPrompt":function(d){return "Need help?"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"}};

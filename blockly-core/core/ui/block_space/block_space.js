@@ -203,6 +203,13 @@ var fireGlobalChangeEventPid_ = null;
 Blockly.BlockSpace.prototype.scrollbarPair = null;
 
 /**
+ * @returns {boolean}
+ */
+Blockly.BlockSpace.prototype.isReadOnly = function() {
+  return (Blockly.readOnly || this.blockSpaceEditor.isReadOnly());
+};
+
+/**
  * Sets up debug console logging for events
  */
 Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
@@ -306,7 +313,7 @@ Blockly.BlockSpace.prototype.dispose = function() {
  * Add a trashcan.
  */
 Blockly.BlockSpace.prototype.addTrashcan = function() {
-  if (Blockly.hasTrashcan && !Blockly.readOnly) {
+  if (Blockly.hasTrashcan && !this.isReadOnly()) {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
     this.svgBlockCanvas_.appendChild(svgTrashcan);

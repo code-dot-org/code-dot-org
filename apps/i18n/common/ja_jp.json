@@ -131,7 +131,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "OR boolean operator",
-  "dropletBlock_randomNumber_min_max_description": "Returns a random number ranging from the first number (min) to the second number (max), including both numbers in the range",
+  "dropletBlock_randomNumber_min_max_description": "Returns a random number in the closed range from min to max.",
   "dropletBlock_randomNumber_param0": "最小",
   "dropletBlock_randomNumber_param0_description": "返される範囲で最小の数",
   "dropletBlock_randomNumber_param1": "最大",
@@ -243,5 +243,9 @@
   "watchVideo": "ビデオを見る",
   "when": "とき",
   "whenRun": "実行した時",
-  "workspaceHeaderShort": "ワークスペース："
+  "workspaceHeaderShort": "ワークスペース：",
+  "hintPrompt": "Need help?",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint"
 }
