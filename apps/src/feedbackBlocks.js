@@ -68,18 +68,7 @@ FeedbackBlocks.prototype.render = function () {
     return;
   }
 
-  // This is sort of a nasty hack. Throughout the blockly code,
-  // constructors look at Blockly.readOnly to determine if they're
-  // supposed to be readonly. Because we want this BlockSpace to be
-  // readonly regardless of the global setting, we temporarily override
-  // the value while we build what we want, then restore it at the end.
-  // Similarly for languageTree, which is supposed to define the toolbox
-  var readOnly = Blockly.readOnly;
-  var languageTree = Blockly.languageTree;
-
-  Blockly.readOnly = true;
-  Blockly.languageTree = null;
-
+  // Initialize a new readOnly blockSpaceEditor with some custom sizing
   this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
     var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
     if (!metrics) {
@@ -90,14 +79,11 @@ FeedbackBlocks.prototype.render = function () {
     return metrics;
   }, function (xyRatio) {
     Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
-  }, true);
+  }, true, true);
 
   var blockSpace = this.blockSpaceEditor.blockSpace;
   var parsedXml = parseXmlElement(this.xml);
   Blockly.Xml.domToBlockSpace(blockSpace, parsedXml);
-
-  Blockly.readOnly = readOnly;
-  Blockly.languageTree = languageTree;
 };
 
 FeedbackBlocks.prototype.show = function () {
