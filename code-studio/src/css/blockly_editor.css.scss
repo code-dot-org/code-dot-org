@@ -1,8 +1,5 @@
-/*
- *= require codemirror
- *= require_self
- *= require jquery.handsontable.full
- */
+@import "codemirror/lib/codemirror";
+
 .CodeMirror {
   border: 1px solid #eee;
   height: auto;
