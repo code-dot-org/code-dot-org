@@ -29,6 +29,9 @@
   twentyhours_heading: Hãy thử xem bản giới thiệu của khóa học khoa học máy tính
   twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các
     khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
+  og_title: Mỗi đứa trẻ xứng đáng có được cơ hội
+  og_description: Mỗi học sinh/sinh viên xứng đáng có được cơ hội học công nghệ thông
+    tin.
   hoc2014_heading: Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng
     8 đến 14 tháng 12, 2014 <br/>
   hoc2014_students: học viên
@@ -85,8 +88,8 @@
   congratulations_on_completing_course: Xin chúc mừng đã hoàn thành %{course} khóa
     học
   congrats_next_tutorials_title: Thực hiện các hướng dẫn tiếp theo
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_desc: Hảy thữ những bài hướng dẫn ngắn hơn (dài khoảng 1
+    tiếng), hoặc là thử <a href="%{current_path}/next"> đối tác hướng dẫn</a>.
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
   enter_valid_age: Vui lòng chọn tuổi hợp lệ
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
@@ -228,15 +231,15 @@
   homepage_slot_text_course4: Khóa học 4
   homepage_slot_text_shop: Mua sắm
   homepage_slot_text_flappy: Lập trình Flappy
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: Một Giờ Mã Lập Trình dành cho tất cả học sinh.
   homepage_action_text_num_served: phục vụ
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Hãy tham gia với chúng tôi
   homepage_action_text_sign_up: Đăng ký
   homepage_action_text_try_it: Hãy thử nó
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Cần tình nguyện viên kỹ thuật
   homepage_action_text_codevideo: Xem video
   homepage_action_text_teachervideo: Xem video
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Truyền cảm hứng cho một cô gái
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
@@ -298,16 +301,16 @@
   class_submission_in_school_summer_school_cs_program: Chương trình hè KHMT
   class_submission_in_school_exploring_computer_science: Khám phá Khoa học Máy tính
   class_submission_in_school_other: một lớp khác trong trường
-  class_submission_out_of_school: Out of school
+  class_submission_out_of_school: Hoạt động ngoại khóa
   class_submission_out_of_school_summer_camp: Trại hè
   class_submission_out_of_school_afterschool_program: Chương trình phụ đạo
   class_submission_out_of_school_all-day_workshop: Hội thảo cả ngày (đến 1 tuần)
   class_submission_out_of_school_multi-week_workshop: Hội thảo nhiều tuần
-  class_submission_out_of_school_other: Other out of school
+  class_submission_out_of_school_other: Bên ngoài trường học
   class_submission_online: Trực tuyến
   class_submission_online_programming_class: Lớp học lập trình trực tuyến
   class_submission_online_teacher_resource: Tài nguyên trực tuyến cho giáo viên
-  class_submission_online_other: Other online
+  class_submission_online_other: Trực tuyến khác
   class_submission_level_preschool: Mẫu giáo
   class_submission_level_elementary: Tiểu học
   class_submission_level_middle_school: Trung học cơ sở
@@ -317,109 +320,119 @@
   class_submission_languages_other: Ngôn ngữ khác
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
+  playlab_classic_title: Cổ điển
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  playlab_iceage_title: Kỉ băng hà -sắp ra mắt
+  playlab_iceage_title_live: Kỉ băng hà
+  starwars_subtitle: Xây dựng vũ trụ bằng mã lập trình
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Sử dụng các khối kéo-thả và JavaScript.
+  starwars_javascript_specs: Chỉ sử dụng Tiếng Anh | Các trình duyệt hiện đại | Tuổi
+    11+
   starwars_javascript_start_button: Thử ngay bây giờ
   starwars_blocks_title: các khối
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Sử dụng các khối kéo-thả.
+  starwars_blocks_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại, điện thoại thông
+    minh, máy tính bảng | Tuổi từ 6-106
   starwars_blocks_start_button: Thử ngay bây giờ
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_watch_videos: Trước khi bạn bắt đầu, hãy xem một trong những video truyền
+    cảm hứng này
+  starwars_speak_languages: Bạn nói một ngôn ngữ khác?
+  starwars_help_translate: Giúp chúng tôi phiên dịch
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_longdescription: Sử dụng các khối mã để mang Steve hoặc Alex đến với chuyến phiêu
+    lưu khám phá thế giới Minecraft này.
+  mc_shortdescription: Sử dụng các khối mã để mang Steve hoặc Alex đến với chuyến
+    phiêu lưu khám phá thế giới Minecraft này.
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi
+    6-106
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
-    an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
-    volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
-  volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
+  volunteer_engineer_submission_title: Truyền cảm hứng cho sinh viên và tình nguyện
+    viên
+  volunteer_engineer_submission_subtitle_generic: '100,000 giáo viên sẽ hướng dẫn
+    một lớp Hour of Code trong lớp học của họ vào năm nay, từ ngày 7 đến 13 tháng
+    12, 2015. Họ cần sự trợ giúp từ bạn! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} giáo viên cần
+    tình nguyện viên. <br>%{num_volunteers} tình nguyện viên đã đăng ký. Tham gia
+    cùng họ.'
+  volunteer_engineer_submission_intro_background: Hour of Code là một bước ngoặt toàn
+    cầu về việc giới thiệu công nghệ thông tin trong một giờ đồng hồ, với mười triệu
+    học sinh/sinh viên ở 180+ quốc gia. Xin vui lòng tham gia Tuần Lễ Công Nghệ Thông
+    Tin, từ ngày 7 đến 13 tháng 12.
+  volunteer_engineer_submission_intro_recruit: 'Các giáo viên đang cần sự giúp đỡ
+    từ một vài người <span style="font-family: ''Gotham 7r'', sans-serif;"> đam mê
+    về việc giảng dạy công nghệ thông tin </span>, những người có thể trợ giúp trong
+    lớp học, hoặc những người có thể <span style="font-family: ''Gotham 7r'', sans-serif;">
+    truyền cảm hứng </span> đến học sinh/sinh viên thông qua việc trò chuyện chi tiết
+    về công nghệ thông tin (có thể được thực hiên bằng một cuộc gọi video).'
+  volunteer_engineer_submission_intro_signup: Xin vui lòng nhập vào thông tin sau
+    đây nếu bạn là một sinh viên ngành công nghệ thông tin hay chuyên gia phần mềm.
+    Những mục đánh dấu với <span class="form-required-field">*</span> là bắt buộc.
+  volunteer_engineer_submission_intro_links: Bạn có cần tìm tình nguyện viên? Hãy
+    tìm một tình nguyện viên ở khu vực của bạn trên <a href="%{volunteer_local}">
+    bản đồ tình nguyện viên của chúng tôi </a>.
+  volunteer_engineer_submission_update_information: Cập nhật thông tin của bạn
+  volunteer_engineer_submission_header_shared: Thông tin chia sẻ với các giáo viên
+    trên bản đồ tình nguyện viên
   volunteer_engineer_submission_field_name: Tên
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_name_placeholder: Họ tên đầy đủ
+  volunteer_engineer_submission_field_company: Công ty (hoặc Đại Học)
+  volunteer_engineer_submission_field_company_placeholder: Công ty (hoặc Đại Học)
+  volunteer_engineer_submission_field_experience_level: Kinh nghiệm
+  volunteer_engineer_submission_field_location: Địa điểm
+  volunteer_engineer_submission_field_location_desc: Vị trí của bạn sẽ được sử dụng
+    để cho phép các giáo viên để tìm kiếm các tình nguyện viên gần đó và sẽ được hiển
+    thị như một nút ghim trên bản đồ. Nếu bạn lo lắng về vấn đề bảo mật, xin vui lòng
+    sử dụng địa chỉ công việc/trường học của bạn hoặc thành phố của bạn.
+  volunteer_engineer_submission_field_location_placeholder: Mã vùng, thành phố và
+    tiểu bang/vùng, hoặc địa chỉ
+  volunteer_engineer_submission_field_location_flexibility: Tôi có thể trợ giúp Hour
+    of Code bằng cách... (chọn các mục tương ứng)
+  volunteer_engineer_submission_checkbox_after_hoc: Tôi quan tâm đến việc tham gia
+    tình nguyện sau chương trình Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Thời gian cam kết sau chương
+    trình Hour of Code
+  volunteer_engineer_submission_field_linkedin: Hồ sơ LinkedIn
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/tên_bạn
+  volunteer_engineer_submission_field_facebook: Trang Facebook
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/tên_bạn
   volunteer_engineer_submission_field_description: Mô tả
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: Mô tả kinh nghiệm lập trình
+    của bạn và cách mà bạn muốn tham gia như một tình nguyện viên cho giáo viên địa
+    phương.
+  volunteer_engineer_submission_field_description_placeholder: Mô tả về kinh nghiệm
+    và/hoặc hoạt động đã tham gia. Nếu bạn nói được ngôn ngữ khác ngoài tiếng Anh,
+    hãy chắc chắn thêm nó ở đây.
+  volunteer_engineer_submission_header_private: Thông tin giữ kín và không bao giờ
+    bị chia sẻ
   volunteer_engineer_submission_field_email: Địa chỉ Email
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: Địa chỉ email của bạn sẽ không bao
+    giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên.
   volunteer_engineer_submission_field_email_placeholder: Địa chỉ Email
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_final_paragraph: Bạn sẽ được liệt kê trên một bản
+    đồ cho các giáo viên địa phương liên hệ với bạn cho chương trình Hour of Code
+    hoặc cơ hội tình nguyện viên khác. Email và địa chỉ chính xác của bạn sẽ không
+    bao giờ được chia sẻ của chúng tôi. Tuy nhiên, thông tin khác (bao gồm cả vị trí
+    gần đúng) sẽ được công khai có thể xem được bởi giáo viên địa phương.
+  volunteer_engineer_submission_checkbox_contact: 'Tôi đồng ý rằng giáo viên có thể
+    liên hệ với tôi để cơ hội tình nguyện viên (lưu ý: địa chỉ email sẽ không được
+    chia sẻ)'
   volunteer_engineer_submission_submit: Chấp nhận
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Cảm ơn bạn đã đăng ký tham gia cho công
+    việc tình nguyện này. Giáo viên sẽ sử dụng <a href="%{url}"> bản đồ này</a> để
+    tìm kiếm và liên hệ với những tình nguyện viên như bạn.
   volunteer_engineer_submission_commitment_uncertain: Không chắc chắn
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 giờ mỗi tuần
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 giờ mỗi tuần
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 giờ mỗi tuần
   volunteer_engineer_submission_commitment_now_and_then: Mỗi bây giờ và sau đó
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2 - 3 lần mỗi năm
+  volunteer_engineer_submission_commitment_monthly: Một vài giờ mỗi tháng
+  volunteer_engineer_submission_commitment_weekly: Một vài giờ mỗi tuần
   volunteer_engineer_submission_commitment_more: Nhiều hơn
   volunteer_engineer_submission_location_flexibility_onsite: Ngay trong khuôn viên
     tại một trường học
@@ -428,7 +441,8 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Sẵn sàng để giúp
     đỡ đóng góp cho các dự án mã nguồn mở chương trình giảng dạy
   volunteer_engineer_submission_experience_unspecified: Không xác định
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Không phải kỹ sư tại một
+    công ty công nghệ
   volunteer_engineer_submission_experience_university_student_or_researcher: Đang
     là sinh viên đại học (hoặc Nghiên cứu sinh sau đại học)
   volunteer_engineer_submission_experience_software_professional: Chuyên gia phần
@@ -681,6 +695,12 @@
   dashboard_faq_k5: Câu thường hỏi tiểu học
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Tìm hiểu thêm
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -696,9 +716,9 @@
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
+  learn_educator_resources_button: Tài nguyên giáo dục
+  learn_are_you_educator: Bạn có phải giáo viên? Xem <a href="http://hourofcode.com/resources/how-to">cách
+    dạy Hour of code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
     to help during your Hour of Code
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
@@ -714,20 +734,20 @@
     tôi
   hoc2014_try_scrat: Angry Birds, PvZ, và Scrat
   hoc2014_try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg: Hướng dẫn bởi Code.org
+  carousel_heading_codeorg_any_device: Hướng dẫn bởi Code.org ( cho tất cả thiết bị)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Các hướng dẫn bằng ngôn ngữ của bạn
   carousel_heading_domestic: Hướng dẫn có sẵn bằng tiếng Anh
   carousel_heading_beginners: Hướng dẫn cho người mới bắt đầu
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: Hướng dẫn cho người mới bắt đầu
   carousel_heading_javascript: Hướng dẫn dạy JavaScript
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Không có thiết bị hoặc internet? Thử rút khỏi khoa học
     máy tính
   carousel_heading_devices: Hướng dẫn viết ứng dụng cho điện thoại và máy tính bảng
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Hướng dẫn cho điện thoại hoặc máy tính bảng
   carousel_heading_languages: Các hướng dẫn trong các ngôn ngữ lập trình khác
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Làm ứng dụng hoặc trò chơi của riêng bạn
@@ -757,8 +777,8 @@
   mobile_devices: Hướng dẫn cho thiết bị di động
   frozen_name: Mã hóa cùng  Anna và Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Viết chương trình máy tính đầu tiên của bạn
-  codeintl_name: Viết chương trình máy tính đầu tiên của bạn
+  codeorg_name: Mê cung cổ điển
+  codeintl_name: Mê cung cổ điển
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Giới thiệu chung về JavaScript
   khanes_name: Giới thiệu chung về JavaScript
@@ -794,7 +814,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Viết chương trình máy tính đầu tiên của bạn
+  hourofcode_name: Mê cung cổ điển
   playlab_name: Phòng trò chơi
   infinity_name: Phòng thí nghiệm Vui Chơi Bất Tận
   artist_name: Nghệ sĩ
@@ -903,15 +923,15 @@
   codesters_platformtext: Modern web browsers
   texasinstruments_platformtext: TI Calculators
   teacherled_platformtext: Modern browsers, smartphones, tablets
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeorg_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
+  codeintl_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  khanpt_shortdescription: Learn to draw in JavaScript
-  khanhe_shortdescription: Learn to draw in JavaScript
-  khanfr_shortdescription: Learn to draw in JavaScript
-  khanpl_shortdescription: Learn to draw in JavaScript
+  khan_shortdescription: Học cách vẽ trên JavaScript
+  khanes_shortdescription: Học cách vẽ trên JavaScript
+  khanpt_shortdescription: Học cách vẽ trên JavaScript
+  khanhe_shortdescription: Học cách vẽ trên JavaScript
+  khanfr_shortdescription: Học cách vẽ trên JavaScript
+  khanpl_shortdescription: Học cách vẽ trên JavaScript
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own
     mobile games.
   scratch_shortdescription: Create interactive games, stories, and animations.
@@ -952,7 +972,7 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
@@ -1256,8 +1276,9 @@
   processing_beyond_platformtext: Modern web browsers
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
+  codeorg_beyond_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry
+    Birds!
+  khan_beyond_shortdescription: Học cách vẽ trên JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create interactive games, stories, and animations.
@@ -1473,13 +1494,3 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more
