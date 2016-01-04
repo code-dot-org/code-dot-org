@@ -26,6 +26,9 @@
   twentyhours_heading: Prøv vår introduksjonskurs til koding
   twentyhours_text: Fullført din første kodetime? Lær meir grunnleggjande koding og
     programmering i dette oppfølgingskurset.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Bli med på <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elevar
@@ -309,10 +312,10 @@
   inspirational_videos_more: Fleire <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspirerande videoar</a> av rollemodellar og kjendisar
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Klassisk
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: Istid - kommer snart
+  playlab_iceage_title_live: Istid
   starwars_subtitle: Bygg ein galakse med kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Bruk dra-og-slepp blokker og JavaScript.
@@ -361,6 +364,7 @@
   volunteer_engineer_submission_intro_links: Ser du ikke etter en frivillig? <a href="%{learn_more}">
     Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal
     frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informasjon vert delt med lærarar på
     eit kart over frivillige
   volunteer_engineer_submission_field_name: Namn
@@ -673,6 +677,12 @@
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjeringar
   dashboard_announce_view_all: Sjå alle
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Lær meir
   dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er
     her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede
     nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele
@@ -748,8 +758,8 @@
   mobile_devices: Leksjonar for mobile einingar
   frozen_name: Koding med Anna og Elsa
   starwars_name: 'Star Wars: Bygg ein galakse med kode'
-  codeorg_name: Skriv ditt første dataprogram
-  codeintl_name: Skriv ditt første dataprogram
+  codeorg_name: Klassisk labyrint
+  codeintl_name: Klassisk labyrint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ein introduksjon til JavaScript
   khanes_name: Ein introduksjon til JavaScript
@@ -785,16 +795,16 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
-  hourofcode_name: Skriv ditt første dataprogram
+  hourofcode_name: Klassisk labyrint
   playlab_name: Spel-lab
   infinity_name: Infinity Spill-lab
   artist_name: Kunstnar
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
-  csfirst_name: CS First
+  csfirst_name: CS først
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutter med kode
   teacherled_name: Lærarrettleiing til Kodetimen
   codeorg_gradelevel: Frå 4 - 104 år
   codeintl_gradelevel: Frå 4 - 104 år
@@ -848,7 +858,7 @@
   teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
-  thinkersmithspanish_platformtext: Straumlaust
+  thinkersmithspanish_platformtext: Trådlaust
   khan_platformtext: Moderne nettlesarar
   khanes_platformtext: Moderne nettlesarar
   khanpt_platformtext: Moderne nettlesarar
@@ -858,7 +868,7 @@
   tynker_platformtext: Moderne nettlesarar
   scratch_platformtext: Berre for nettlesarar på datamaskin (ikkje nettbrett)
   lightbot_platformtext: ALLE nettlesarar og iOS, Android eller spelkonsoll
-  thinkersmith_platformtext: Straumlaust
+  thinkersmith_platformtext: Trådlaust
   condcards_platformtext: Struamlaust
   lightbotintl_platformtext: iOS, Android (eller nettlesar)
   codehs_platformtext: Moderne nettlesere. (Oppfølgingskurs krev $$)
@@ -880,9 +890,9 @@
   touchdevelop_platformtext: Moderne nettlesarar, smarttelefonar, alle einingar
   appinventor_platformtext: Moderne nettlesarar + Android
   blockly_platformtext: Berre moderne nettlesarar
-  thinkersmith2_platformtext: Straumlaust
-  kodableunplugged_platformtext: Straumlaust
-  projguts_platformtext: Straumlaust
+  thinkersmith2_platformtext: Trådlaust
+  kodableunplugged_platformtext: Trådlaust
+  projguts_platformtext: Trådlaust
   hourofcode_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   frozen_platformtext: Moderne nettlesarar + nettbrett
   starwars_platformtext: Moderne nettlesarar + nettbrett

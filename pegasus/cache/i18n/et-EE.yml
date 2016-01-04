@@ -27,6 +27,9 @@
   twentyhours_heading: Proovige meie arvutiteaduse sissejuhatavat kursust
   twentyhours_text: Lõpetasid oma esimese KoodiTunni? Õpi rohkem informaatika ja programmeerimise
     mõistete kohta selle järgneva kursuse abil.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Liitu <a href="http://hourofcode.com">KoodiTunniga</a><br/>8-14
     detsembril, 2014<br/>
   hoc2014_students: Õpilased
@@ -315,8 +318,8 @@
   starwars_javascript_start_button: Proovi nüüd
   starwars_blocks_title: Plokid
   starwars_blocks_description: Kasuta "sikuta ja lase lahti" plokke.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Palju keeli | Kaasaegsed brauserid, nutitelefonid, tahvlid
+    | Vanuses 6-10
   starwars_blocks_start_button: Proovi nüüd
   starwars_watch_videos: Enne alustamist vaata ühte nendest inspireerivatest videotest.
   starwars_speak_languages: Kas räägid mõnda muud keelt?
@@ -329,7 +332,7 @@
     Minecrafti maailmas.
   mc_gradelevel: Vanusele 4-104
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
   minecraft_subtitle: Minecrafti KoodiTund
   volunteer_engineer_submission_title: Inspireeri õpilasi ja ole KoodiTunni vabatahtlik
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015.
@@ -356,6 +359,7 @@
     lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta ja selle kohta,
     kuidas leida kohalik vabatahtlik meie <a href="%{volunteer_local}">vabatahtlike
     kaardilt</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Vabatahtlike kaardil õpetajatega jagatud
     informatsioon
   volunteer_engineer_submission_field_name: Nimi
@@ -665,12 +669,19 @@
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
   dashboard_announce_view_all: Vaata kõiki
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Lisateave
   dashboard_announce_hoc: <b>23. november 2015</b> - Kas otsid arvutiteaduse õpetamist
     armastavat vabatahtlikku, kes aitaks sind KoodiTunni sündmusega? Üle 7000 vabatahtliku
     soovib inspireerida sinu õpilasi, külastades sinu klassiruumi või kaugvideovestluse
     teel. Vaata vabatahtlike kaardilt sinu läheduses paiknevate vabatahtlike kontaktandmeid.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>4. detsembril 2015</b> - KoodiTund on siin! Proovige
+    50 õpetust, mis on sobilikud igale vanusele ja igas seadmes. Uus sel nädalal:
+    programmeeri enda lood ja mängud uues keskkonnas Play Lab, Jääaeg ja Gumball.'
   code_hoc_coming: KoodiTund on siin - 8.-14. detsember!
   code_sign_up: Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal
   learn_more: Lisateave
@@ -741,8 +752,8 @@
   mobile_devices: Juhendid mobiiliseadmetele
   frozen_name: Kirjuta koodi Anna ja Elsa'ga
   starwars_name: 'Star Wars: galaktika loomine koodiga'
-  codeorg_name: Kirjuta oma esimene arvutiprogramm
-  codeintl_name: Kirjuta oma esimene arvutiprogramm
+  codeorg_name: Klassikaline labürint
+  codeintl_name: Klassikaline labürint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Sissejuhatus JavaScripti
   khanes_name: Sissejuhatus JavaScripti
@@ -778,16 +789,16 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, paber, käärid
-  hourofcode_name: Koht uue code.org/hoc jaoks
+  hourofcode_name: Klassikaline labürint
   playlab_name: Play Lab
   infinity_name: Lõpmatu Play Lab
   artist_name: Kunstnik
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: Salapärase saare programmeerimise otsing
+  allcancode_name: Jookse Marco!
+  csfirst_name: Esmalt CS
+  boxisland_name: Kasti saar
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutit koodi
   teacherled_name: Õpetaja juhitud KoodiTunni tunnikavad
   codeorg_gradelevel: Vanusele 4-104
   codeintl_gradelevel: Vanusele 4-104
@@ -833,12 +844,12 @@
   infinity_gradelevel: Vanusele 4-104
   artist_gradelevel: Vanusele 8+
   monstercoding_gradelevel: Vanusele 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Vanusele 5-10
+  csfirst_gradelevel: Vanusele 9-14
   boxisland_gradelevel: Algkool
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Vanusele 12-14
+  texasinstruments_gradelevel: Vanusele 13-16
+  teacherled_gradelevel: Vanusele 5+
   codeorg_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeintl_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   thinkersmithspanish_platformtext: Ilma tehnikata tegevused
@@ -880,12 +891,12 @@
   frozen_platformtext: Tänapäevased veebilehitsejad + tahvelarvutid
   starwars_platformtext: Tänapäevased veebilehitsejad + tahvelarvutid
   playlab_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Kaasaegsed veebilehitseja, iOS, Android
+  allcancode_platformtext: Kaasaegne veebilehitseja, iOS
   csfirst_platformtext: Tänapäevased veebibrauserid
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Tänapäevased veebibrauserid
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI kalkulaator
   teacherled_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeorg_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
   codeintl_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
@@ -946,19 +957,18 @@
   infinity_shortdescription: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
     Disney Infinity tegelased.
   artist_shortdescription: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  monsterocding_shortdescription: Värviline iseseisvalt tehtav programmeerimise seiklus
+    lastele.
+  allcancode_shortdescription: Kaasahaarav mäng, et juhendada Marcot läbi visuaalse
+    programmeerimise keele.
+  csfirst_shortdescription: Kujunda lugu kahest tegelasest ookeanis. Lisa enda stiil!
+  boxisland_shortdescription: Mine programmeerimise reisile Kasti saarele vapra Hiroga.
+  codesters_shortdescription: Loo enda mängud, animatsioonid ja kunstiteosed kasutades
+    Pythonit.
+  texasinstruments_shortdescription: Õpi programmeerimise algeid kasutades TI-84 &#8482;
+    kalkulaatorit.
+  teacherled_shortdescription: Saa inspiratsiooni, et panna kokku enda KoodiTunni
+    üritus, kasutades neid tunnikavasid.
   codeorg_longdescription: Õpi arvutiteaduse algpõhimõtteid "sikuta ja lase lahti"
     programmeerimise abil. See mängusarnane iseõppimise videos esinevad Bill Gates,
     Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Õpi kordusi, tingimuslauseid
@@ -1096,37 +1106,33 @@
   playlab_longdescription: Loo oma lugu või mäng Play Labi abil! Pane loomad, piraadid,
     zombid, ninjad ja paljud teised tegelased liikuma, hääli tegema, punkte koguma
     ja isegi tulepalle viskame!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: Salapärase saare programmeerimise otsimine, mille
+    looja on Monster Coding, pakub lõbusat seiklust, mis õpetab lastele mitmeid programmeerimise
+    mõisteid ja nad saavad selle õppimisega ise hakkama. Iga plokkidel põhinev tegevus
+    täiendab eelmist, et lapsed saaksid aimu funktsioonidest, kordustest, tingimuslausetest
+    ja nooltest, kasutades värvilist animeeritud graafikat ja hääljuhendeid.
+  allcancode_longdescription: Õpilased mängivad seiklusmängu, mis põhineb originaalsel
+    lool. Nad juhendavad Marcot - peategelast - läbi igast tasemest, andes talle juhiseid
+    visuaalse programmeerimsie keele abil. Sel viisil saavad nad tuttavaks käskudega,
+    kordustega ja tingimuslausetega, ilma, et and seda ise märkaksid.
+  csfirst_longdescription: Loo lugu kahest tegelasest mere ääres. Kujuta vett ja loo
+    oma taust. Kasuta koodi, et rääkida enda lugu!
+  boxisland_longdescription: Mine reisile Kasti saarele ja aita Hirol koguda kokku
+    kõik kellad, mis on metsikusse loodusesse peidetud. Selles juhendis sa õpid algoritme,
+    järgnevusi, korduseid (tsükleid) ja tingimuslauseid!
+  codesters_longdescription: 'Loo iseenda mängud, animatsioonid ja kunstiteosed kasutades
+    Pythonit. Kui sa lõpetad, jaga neid sõpradega! Programmeeri Pythonis, mis on reaalne
+    programmeerimise keel, mida kasutatakse igapäevaselt ettevõtetes - meie "tiri
+    ja aseta" süsteem, teeb selle õppimise lihtsaks. Proovi luua korvpallimängu, olla
+    tantsuetenduse koreograaf või disaini animeeritud kaart! '
+  texasinstruments_longdescription: '10 minutit programeerimist on heaks võimaluseks,
+    et tekitada õpilastes huvi programeerimsie vastu TI tehnoloogiat kasutades. Õpi
+    programmeerima kasutades TI-84 &#8482; saad hakata programmeerima 10 minuti jooksul,
+    varasemat kogemust pole vaja!  '
+  teacherled_longdescription: Nüüd, kui juba kümned tuhanded õpetajad on proovinud
+    KoodiTundi, on paljud klassid loovamad, ja vähem toimub üksluised tegevusi, mida
+    traditsiooniline arvutiõpe sisaldab. Et ka õpetajad leiaksid inspiratsiooni, panid
+    KoodiTunni veteranid kokku tunniajalise näidistunni ja tegevuskava.
   codeorg_beyond_name: Sissejuhatus arvutiteadusesse (K-8)
   khan_beyond_name: Õpi programmeerimist
   tynker_beyond_name: Õpi programmeerimist kodus

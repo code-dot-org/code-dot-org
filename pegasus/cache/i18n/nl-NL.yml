@@ -29,6 +29,9 @@
   twentyhours_heading: Probeer onze introductiecursus Informatica
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br
     />8 - 14 december 2014<br/>
   hoc2014_students: Leerlingen
@@ -326,7 +329,7 @@
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Ice Age - Binnenkort
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bouw een Heelal met Code
   starwars_javascript_title: Javascript
@@ -335,8 +338,8 @@
   starwars_javascript_start_button: Probeer nu
   starwars_blocks_title: Blokken
   starwars_blocks_description: Gebruik klik-en-sleep-blokken.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Vele talen | Moderne browsers, smartphones, tablets | Leeftijden
+    6-106
   starwars_blocks_start_button: Probeer nu
   starwars_watch_videos: Bekijk voor je begint deze inspiratie-video's
   starwars_speak_languages: Spreek je een andere taal?
@@ -349,7 +352,7 @@
     door deze Minecraft-wereld.
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Vele talen | Moderne browsers en tablets | Leeftijden 6-106
   minecraft_subtitle: Minecraft Uur Code
   volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger
     voor het Uur Code.
@@ -375,6 +378,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informatie gedeeld met docenten op
     de vrijwilligerskaart
   volunteer_engineer_submission_field_name: naam
@@ -689,6 +693,12 @@
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: <b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
     deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel
     als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.
@@ -763,8 +773,8 @@
   mobile_devices: Handleidingen voor mobiele apparaten
   frozen_name: Code met Anna en Elsa
   starwars_name: 'Star Wars: Bouw een Heelal met Code'
-  codeorg_name: Schrijf je eerste computerprogramma
-  codeintl_name: Schrijf je eerste computerprogramma
+  codeorg_name: Klassiek doolhof
+  codeintl_name: Klassiek doolhof
   thinkersmithspanish_name: Mijn Robotvriend
   khan_name: Een inleiding in JavaScript
   khanes_name: Een inleiding in JavaScript
@@ -800,7 +810,7 @@
   thinkersmith2_name: Binaire kerstballen
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Blad, Steen, Schaar
-  hourofcode_name: Schrijf je eerste computerprogramma
+  hourofcode_name: Klassiek doolhof
   playlab_name: Speel Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstenaar
