@@ -595,9 +595,9 @@ bs:
         Infinity_move_collide_callout: Oglasite zvuk nakon što se ovaj događaj desi.
         Infinity_repeat_callout: Ovdje unutra postavite blokove za pomjeranje
         craft_run_button_callout: 'Klikni na "Pokreni" da isprobaš svoj program'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: 'Pomjeri "pokreniNaprijed();" blok i zakači ga ispod drugog bloka'
+        craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
+        craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
+        craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?
+        craft_what_is_iron: Iskopaj ovo željezo!
+        craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?

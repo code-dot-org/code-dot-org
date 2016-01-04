@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "Můžeš stisknout \"Hraj dál\" k vrácení do tvé hry.",
   "replayButton": "Přehrát",
   "selectChooseButton": "Vybrat",
-  "tooManyBlocksFail": "Hádanka {puzzleNumber} dokončen. Blahopřejeme! Je též možné dokončit s {numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail": "Hádanka {puzzleNumber} dokončena. Blahopřejeme! Je možné ji dokončit s {numBlocks, plural, one {1 blokem} other {# bloky}}."
 }

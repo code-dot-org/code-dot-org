@@ -156,7 +156,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).craft_locale = {
 "blockDestroyBlock":function(d){return "uništi blok"},
 "blockIf":function(d){return "ako"},
-"blockIfLavaAhead":function(d){return "ukoliko je lava ispred"},
+"blockIfLavaAhead":function(d){return "ako je lava ispred"},
 "blockMoveForward":function(d){return "idi naprijed"},
 "blockPlaceTorch":function(d){return "postavite baklju"},
 "blockPlaceXAheadAhead":function(d){return "ispred"},
@@ -170,7 +170,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeBedrock":function(d){return "temelj"},
 "blockTypeBricks":function(d){return "blokovi"},
 "blockTypeClay":function(d){return "glina"},
-"blockTypeClayHardened":function(d){return "cigla"},
+"blockTypeClayHardened":function(d){return "tvrda glina"},
 "blockTypeCobblestone":function(d){return "kaldrma"},
 "blockTypeDirt":function(d){return "blato"},
 "blockTypeDirtCoarse":function(d){return "krupno blato"},

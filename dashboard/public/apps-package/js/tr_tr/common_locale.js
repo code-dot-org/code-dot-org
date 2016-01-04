@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Yardım"},
 "hideToolbox":function(d){return "(Gizle)"},
 "hintHeader":function(d){return "İşte bir ipucu:"},
+"hintPrompt":function(d){return "Yardım ister misiniz?"},
 "hintRequest":function(d){return "İpucunu gör"},
+"hintReviewTitle":function(d){return "ipuçlarını gözden geçir"},
+"hintSelectInstructions":function(d){return "Yönergeler ve önceki ipuçlar"},
+"hintSelectNewHint":function(d){return "Yeni bir ipucu al"},
 "hintTitle":function(d){return "İpucu:"},
 "ignore":function(d){return "Yoksay"},
 "infinity":function(d){return "Sonsuz"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoyu İzle"},
 "when":function(d){return "Ne zaman"},
 "whenRun":function(d){return "Çalıştığı zaman"},
-"workspaceHeaderShort":function(d){return "Çalışma alanı: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Çalışma alanı: "}};

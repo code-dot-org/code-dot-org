@@ -29,6 +29,8 @@
     code:
       label: 'Legg til ein lærar:'
       placeholder: Seksjonskode (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Legg til lærar
   add_hint_form:
     placeholder: Skriv inn eit hint her
@@ -292,62 +294,9 @@
     remove: (Fjern lærar)
     confirm:
       remove: Er du sikker på at du vil fjerne denne læraren?
-    tools: Verkty for lærarar
-    followers:
-      section: 'Seksjon:'
-      stages: 'Nivå å vise:'
-      show_past: 'Vis elev-aktivitetar (%{bullet_html}) frå tidlegare:'
-      levels_key: Nivånøklar
-      perfect: Perfekt fullført
-      completed: Fullført, men brukte for mange blokker
-      tried: Prøvde, men fullførte ikkje
-      not_tried: Ikkje prøvd enno
-      activity: Viser elevens aktivitet i dei siste %{hours} %{plural}
-      no_section: Ikkje tilordna ein seksjon
-      trophies: Pokalar
     students:
-      name: Namn
-      username: Brukarnamn
-      password: Passord
-      manage: Administrer elevar
       dashboard: Gå til læraren sitt oversyn
-      add: Legg til elevar
-      remove: fjern elev
-      confirm_remove: Er du sikker på at du vil fjerne denne eleven?
-      help_reassign: For å dele klassa inn i fleire seksjonar, vel ut dei elevane
-        som skal med i den nye seksjonen!
-      help_register: I staden for å bruke mykje tid på å legge informasjon om kvar
-        elev, kan du be klassa din om registrere seg sjølve. Elevane dine vil trenge
-        brukarnamn og passord, men dei trenger ikkje å oppgi epost-adressa si. Viss
-        ein elev gløymer passordet sitt, kan du sette det på nytt for dei.
-      register: Be elevane om å registrere seg sjølve
-      vist: Be elevane om å besøke
-      section_code: 'og oppgi seksjonskoden deira:'
-      first_please: Først kan du %{add_section}
-      for: For
-      enter: 'oppgi:'
-    sections:
-      add: Legge til seksjon
-      manage: Administrere delar
-      section: Seksjon
-      students: Elevar
-      section_code: Seksjonskode
-      add_section_code: Legg til elevenes seksjonskode
-      secret: Hemmelegheit
-      grade: Trinn
-      course: Leksjon
-      rename: gje nytt namn
-      edit: rediger
-      delete: slett
-      confirm_delete: Er du sikker på at du vil slette denne seksjonen?
-      email: Send e-post
-    rollup: Framdrift Oversyn
-    activity: Siste aktivitetar i klassa
     user_not_found: Læraren eller eleven fans ikkje
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernast som din elev
-      fordi %{student_name} ikkje har registrert ei e-postadresse'
-    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernast som læraren din
-      fordi du ikkje har registrert ei e-postadresse'
     student_teacher_disassociated: '%{teacher_name} er fjerna som lærar for %{student_name}'
     panel:
       answer_viewer: Svarviser
@@ -431,6 +380,7 @@
   share:
     title: Lær i Code Studio
     description: Alle kan lære programmering. Lag spel, appar og kunst med kode.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mann
     female: Kvinne
@@ -474,6 +424,7 @@
     built_on_code_studio: Bygd i Code Studio
     make_my_own_app: Lag min eigen app
     how_it_works: Slik virker det
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa
@@ -541,7 +492,7 @@
       unused: Ubrukte nivå
   upsell:
     hoc:
-      title: Kodetimen
+      title: Klassisk labyrint
       body: Prøv grunnleggjande informatikk. Millionar andre har prøvd.
     flappy:
       title: Flakse-kode
@@ -583,7 +534,7 @@
     caption_by_name_age: av %{name}, %{age} år
     caption_time_ago: '%{time_ago} sidan'
     header: Galleri
-    header_playlab: Spel-lab
+    header_playlab: Historier og spel
     header_artist: Kunstnar
   landing:
     prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det tyder

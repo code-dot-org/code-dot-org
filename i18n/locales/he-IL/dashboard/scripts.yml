@@ -27,7 +27,7 @@ he:
           Flappy non blockly: Flappy non blockly
           title: קורס 1
           Artist 2: אמן 2
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -120,7 +120,7 @@ he:
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
+          Maze2: מבוך2
           Artist2: אמן 2
           "Artist: Functions2": 'Artist: Functions2'
           "Bee: Functions2": 'Bee: Functions2'
@@ -135,9 +135,9 @@ he:
           description_audience: גילאי 8-18
           description_short: קורס 3 הינו המשך לקורס 2.
         playlab:
-          title: Play Lab
+          title: מעבדת משחקים
           description: ליצור סיפור או משחק עם Play Lab!
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           description_short: ליצור סיפור או משחק עם Play Lab!
         artist:
           title: אמן
@@ -146,7 +146,7 @@ he:
           description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
         hourofcode:
           Maze: מבוך
-          title: Classic Maze
+          title: מבוך קלאסי
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
         frozen:
@@ -249,7 +249,7 @@ he:
           title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           Infinity: אינסוף
         algebrademo:
           title: Algebra Demo
@@ -353,7 +353,7 @@ he:
           The Maze: המבוך
           Applab: Applab
           The Artist: האמן
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
@@ -380,10 +380,10 @@ he:
           description_short: Step tutorial
           Step: צעד
         Hour of Code:
-          title: Hour of Code 2013
+          title: שעה של קוד 2013
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: שעה של קוד 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -680,6 +680,7 @@ he:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1164,7 +1165,7 @@ he:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Graph Paper Programming: תכנות לנייר משבצות
@@ -1234,6 +1235,7 @@ he:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,21 @@ he:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

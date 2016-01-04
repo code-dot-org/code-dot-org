@@ -30,6 +30,8 @@ sv:
     code:
       label: 'Lägg till lärare:'
       placeholder: Avsnitt kod (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Lägg till lärare
   add_hint_form:
     placeholder: Skriv in ditt tips här
@@ -74,7 +76,7 @@ sv:
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org"> Bläddra bland de olika stadierna och pusslen</a>, men du måste registrera dig för att spara dina framsteg.'
     teacher_educator_guide: Se pedagogguiden
     teacher_pitch: Skapa konto på Code.org som lärare
-    teacher_title: Lärare, anmäl här
+    teacher_title: Skapa konto för lärare
     student_pitch: Skapa konto på Code.org som elev
     student_title: Skapa konto för elever
     school_name: Skolans namn (valfritt)
@@ -102,7 +104,7 @@ sv:
     remember: Kom ihåg mig
     submit: Logga in
   signin:
-    try_heading: Vill du prova kodning utan att logga in?
+    try_heading: Vill du prova koda utan att skapa ett konto?
     try_hoc: Börja med att pröva Timme med Kod
     try_20hours: Prova vår 20 timmars Introduktion till datavetenskap
   signinsection:
@@ -220,7 +222,7 @@ sv:
     access_denied: 'Du har inte tillgång till denna %{model}.'
   nav:
     header:
-      finished_hoc: Jag är klar med min Timme med Kod
+      finished_hoc: Jag är klar med min Kodtimme
       sign_in_to_save: Logga in för att spara framsteg
       free_play:
         playlab: Skapa en App
@@ -258,59 +260,10 @@ sv:
     remove: (ta bort lärare)
     confirm:
       remove: Är du säker du vill ta bort denna lärare?
-    tools: Lärar-verktyg
-    followers:
-      section: 'Grupp:'
-      stages: 'Nivå(er) att visa:'
-      show_past: 'Visa elevaktivitet (%{bullet_html}) i det förflutna:'
-      levels_key: Nivåer nyckel
-      perfect: Avklarad perfekt
-      completed: Avklarat, men med för många block
-      tried: Provat, men inte avklarat
-      not_tried: Inte provat ännu
-      activity: 'Anger elevaktivitet i den förra %{hours} %{plural}'
-      no_section: Ingen tilldelad sektion
-      trophies: troféer
     students:
-      name: Namn
-      username: |
-        användarnamn
-        
-      password: Lösenord
-      manage: Hantera elever
       dashboard: Gå till Dashboard för lärare
-      add: Lägg till elever
-      remove: ta bort elev
-      confirm_remove: Är du säker på att du vill ta bort denna elev?
-      help_reassign: För att dela in klassen i flera sektioner, väljer du vilka elever som ska tilldelas ett nytt avsnitt.
-      help_register: Istället för att importera individuella elev-data kan du be dina elever att registrera sig själva. Dina elever måste välja egna användarnamn och lösenord, men de behöver INTE ange en email-adress. Om en elev glömmer sitt lösenord, kan du ge dem ett nytt.
-      register: Be dina elever att registrera sig själva
-      vist: Be dina elever att besöka
-      section_code: 'och ange sin avsnitts-kod:'
-      first_please: 'Först, vänligen %{add_section}'
-      for: för
-      enter: 'Retur:'
-    sections:
-      add: Lägg till avsnitt
-      manage: Hantera sektioner
-      section: Grupp
-      students: Elever
-      section_code: Avsnitt kod
-      add_section_code: Lägg till elevernas avsnitts-kod
-      secret: Typ av hemlighet
-      grade: Årskurs
-      course: Kurs
-      rename: ge nytt namn
-      edit: Redigera
-      delete: Ta bort
-      confirm_delete: Är du säker du vill ta bort det här avsnittet?
-      email: Skicka e-post
-    rollup: Framstegsmeny
-    activity: Senaste klasshändelserna
-    user_not_found: Läraren eller eleven kunde inte hittas
-    cant_remove_student_no_email: '%{student_name} kan inte tas bort som din elev eftersom %{student_name} inte har registrerat en e-postadress'
-    cant_remove_teacher_no_email: '%{teacher_name} kan inte tas bort som din lärare eftersom du inte har registrerat en e-postadress'
-    student_teacher_disassociated: '%{teacher_name} har tagits bort som lärare för %{student_name}'
+    user_not_found: Läraren kunde inte hittas.
+    student_teacher_disassociated: 'Du har tagit bort %{teacher_name} som din lärare.'
     panel:
       answer_viewer: Svar ruta
       student: Student
@@ -384,6 +337,7 @@ sv:
   share:
     title: Lär med Code Studio
     description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
+    try_hour_of_code: Prova en kodtimme!
   gender:
     male: Man
     female: Kvinna
@@ -395,8 +349,8 @@ sv:
     thank_you: 'Vi tackar våra <a href="https://code.org/about/donors"> givare</a>, <a href="https://code.org/about/partners"> partners</a>, vårt <a href="https://code.org/about/team"> utökade team</a>, vårt video team och våra <a href="https://code.org/about/advisors"> utbildningsrådgivare</a> för deras stöd i att skapa Code Studio.'
     help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte till med att skapa denna övning.
     help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte till med att skapa detta material.
-    art_from_html: 'Angry Birds ™ & © 2009-2014 Rovio Entertainment Ltd. Alla rättigheter reserverade. <br/> Plants vs Zombies ™ & © 2014 Electronic Arts Inc. Alla rättigheter reserverade.'
-    art_from_html_old: 'Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Alla rättigheter reserverade. < br / > Plants vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc. Alla rättigheter reserverade'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Drivs av Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och Hour of Code&reg; är varumärken som tillhör Code.org.'
     copyright: Copyright
@@ -410,9 +364,10 @@ sv:
     privacy: Sekretesspolicy
     secure: Skyddad version
     report_abuse: Rapportera missbruk
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Skapad i Code Studio
+    make_my_own_app: Göra min egen app
+    how_it_works: Hur det fungerar
+    try_hour_of_code: Prova en kodtimme!
   reference_area:
     title: Behöver du hjälp?
     subtitle: Se dessa filmer och tips
@@ -469,7 +424,7 @@ sv:
       unused: Oanvända nivåer
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
       title: Flappy kod

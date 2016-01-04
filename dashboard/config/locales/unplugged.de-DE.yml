@@ -42,10 +42,11 @@
       Unplug4:
         title: Algorithmen
         desc: Diese Lektion behandelt Algorithmen.  Mit Tangram-Formen und Millimeterpapier
-          wird die erste Übung zeigen wie wichtig es ist, jede Anweisung so klar und
-          eindeutig wie möglich zu machen.  Danach wird die Klasse untersuchen wie
-          viele Möglichkeiten es gibt um ein Papier in ein Rechteck zu falten, wobei
-          sie feststellen das einige Methoden mehr oder weniger Faltungen erlauben.
+          wird die erste Übung zeigen, wie wichtig es ist, jede Anweisung so klar
+          und eindeutig wie möglich zu machen.  Danach wird die Klasse untersuchen,
+          wie viele Möglichkeiten es gibt, ein Blatt Papier in ein Rechteck zu falten,
+          und feststellen, dass manche Methoden mehr oder weniger Faltungen erlauben
+          als andere.
         pdfs:
         - unplug4
         video: Unplug4
@@ -67,9 +68,10 @@
         video: Unplug5
       Unplug6:
         title: Bedingungen
-        desc: Dies ist ein Klassen-Spiel.  Nach der Einführung der Idee von Bedingungen,
-          Wenn-Anweisungen und Schleifen, kann die Klasse,  zusammen mit einem zuvor
-          erstellte Programm, einem Kartenspiel und ein bisschen Glück, üben.
+        desc: Dies ist ein Klassen-Spiel.  Nach der Einführung der Konzepte von Bedingungen,
+          Wenn-Anweisungen und Schleifen kann die Klasse gemeinsam üben, und zwar
+          mit einem zuvor erstellten Programm, einem Kartenspiel und ein bisschen
+          Glück.
         pdfs:
         - unplug6
         video: Unplug6
@@ -306,5 +308,9 @@
         video: alg_10_conditionals
       CollisionDetection:
         title: Kollisionserkennung und der Satz des Pythagoras
-        desc: Beschreibung der Lektion zur Erzeugung eines Zusammenstosses
+        desc: Bestimmen, wann Objekte auf dem Bildschirm einander berühren, ist ein
+          wichtiger Aspekt vieler Spiele. In dieser Lektion betrachten, wie der Satz
+          des Pythagoras und die Distanz-Formel verwendet werden können, um die Entfernung
+          zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden, ob
+          sich diese zwei Punkte (oder Spielcharaktere) berühren.
         video: alg_16_biggame_collision_detection

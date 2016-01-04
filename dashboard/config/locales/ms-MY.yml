@@ -29,6 +29,8 @@
     code:
       label: 'Tambahkan guru:'
       placeholder: Kod Seksyen (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
@@ -293,63 +295,9 @@
     remove: (keluarkan guru)
     confirm:
       remove: Adakah anda pasti anda mahu keluarkan guru ini?
-    tools: Peralatan Guru
-    followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
-      trophies: Piala
     students:
-      name: Nama
-      username: nama pengguna
-      password: kata laluan
-      manage: Mengurus pelajar
       dashboard: Go to Teacher Dashboard
-      add: Menambah pelajar
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
-    sections:
-      add: Add section
-      manage: Urus bahagian
-      section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Dasbor Perkembangan
-    activity: Aktiviti kelas terkini
     user_not_found: Guru atau pelajar tidak dapat dijumpai
-    cant_remove_student_no_email: '%{student_name} tidak dapat dikeluarkan sebagai
-      pelajar anda kerana %{student_name} belum mendaftar alamat e-mel'
-    cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dikeluarkan sebagai
-      guru anda kerana anda belum mendaftarkan alamat e-mel'
     student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru
       %{student_name}'
     panel:
@@ -438,6 +386,7 @@
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Lelaki
     female: Perempuan
@@ -477,6 +426,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Perlukan bantuan?
     subtitle: Lihat video dan petunjuk ini
@@ -627,10 +577,10 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
-    startover_title: Are you sure you want to start over?
+    startover_title: Adakah anda pasti anda ingin bermula?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: Start Over
+    startover_ok: Mula Sekali Lagi
     startover_cancel: Batal
   time:
     hour: 1 hour

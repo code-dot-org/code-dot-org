@@ -487,17 +487,17 @@ nl:
         text: Debuggen is het vinden en oplossen van problemen. Er zijn veel manieren om problemen te debuggen. Een van de makkelijkste is om stap voor stap te gaan tot je iets vindt dat verkeerd gaat. Hier probeer ik een achterwaartse radslag op de balk te doen, maar blijf er af vallen.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
+        text: I ging door elk deel stap voor stap and realiseerde waar ik een fout gemaakt had. Ik zette mijn handen fout op de balk. Dus probeerde ik opnieuw met een andere positie en uiteindelijk lukte het. Ik was super blij dat ik terug handstand op een bal kon doen.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "To learn about debugging, we start with a set of blocks already on the stage. You'll notice that these blocks won't get you to the goal. We need to debug the solution and fix it. What went wrong? You'll notice that you needed to keep going west one more block."
+        text: Om te leren debuggen beginnen we al met een paar blokken op het veld. Je kan misschien wel zien dat de blokken je niet naar het doel zullen krijgen. We zullen de oplossing moeten debuggen en het repareren. Wat is er mis gegaan? Je zal zien dat je één blok meer naar het westen had moeten gaan.
       4:
         image: notes/C1_maze_debugging_4.png
         text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle and see what directions it needs to take.
+        text: Voor deze puzzel moet de vogel naar het varken. Kijk naar de puzzel en zoeken voor de weg die de vogel moet nemen.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: |-
@@ -627,7 +627,7 @@ nl:
         text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken. Geniet van het tekenen met uw artiest!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -644,7 +644,7 @@ nl:
         text: This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites.
+        text: Binair is een manier om informatie weer te geven met behulp van slechts twee opties. Soms denken mensen dat dit alleen enen en nullen kunnen zijn. Maar je kunt binair ook weergeven met combinaties als aan en uit, op en neer en werkelijk elk paar tegengestelden.
       3:
         image: notes/C2_binary_bracelets_3.png
         text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
@@ -830,7 +830,7 @@ nl:
         text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken. Geniet van het tekenen met uw artiest!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -1364,7 +1364,7 @@ nl:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1420,7 +1420,7 @@ nl:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1495,7 +1495,7 @@ nl:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1698,7 +1698,7 @@ nl:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

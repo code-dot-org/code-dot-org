@@ -28,22 +28,24 @@ ko:
     code:
       label: '선생님 추가:'
       placeholder: 섹션 코드(ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: 선생님 추가하기
   add_hint_form:
     placeholder: 도움내용을 입력하세요.
     submit: 도움말 추가하기
   appname: Code.org
-  stage: stage
-  stage_number: '스테이지 %{number}'
+  stage: 단계
+  stage_number: '단계 %{number}'
   puzzle: Puzzle
-  trophies: trophies
+  trophies: 트로피들
   courses: courses
   of: 중
   more: 전체단계
   less: 현재단계
   beta: 베타
   try_hoc: 'Hour of Code 해보기! >> '
-  try_k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스(15-25시간) 를 해보세요.
+  try_k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 과정(15-25시간) 해보기
   k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
   already_started: '학습 계속하기 >>'
   demos: '관리자: 모든 퍼즐'
@@ -51,8 +53,8 @@ ko:
   prize: 상품
   more_info: 자세히
   auth:
-    sign_in_with: '%{provider} 계정으로 로그인'
-    signed_in: 로그인 되었습니다!
+    sign_in_with: '%{provider} 로그인'
+    signed_in: 로그인 됨
     signed_out: '<a href="%{url}">Code.org</a> 을 로그아웃하였습니다.'
     sign_out_of: '%{provider} 를 사용해 로그인하였습니다. %{provider}<a href="%{url}">로그아웃하기</a>.'
     already_signedup: 이미 가입했나요?
@@ -67,13 +69,13 @@ ko:
   signup_form:
     student_count: '%{count} 학생 들은 이미 가입했습니다.'
     teacher_count: '%{count} 선생님들은 이미 가입했습니다.'
-    overview_student: '진도를 확인하기 위해서는 로그인하세요. 이메일 주소는 비밀번호 복구를 위해 사용됩니다.  <a href="http://code.org/privacy">개인정보보호 정책</a>.'
+    overview_student: '진도를 확인하기 위해서 로그인하세요. 이메일 주소는 비밀번호 복구를 위해 사용됩니다. <a href="http://code.org/privacy">개인정보보호 정책</a>.'
     overview_teacher: 계정을 이용해 로그인하고 수업에서 컴퓨터과학(정보과학)을 교육하세요. 학생들을 추가하고 진도를 확인할 수 있습니다.
     no_signup_message: '여러 개의 단계로 이루어진 퍼즐들을 살펴보세요. <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a> 해결한 퍼즐을 저장하려면 가입해야 합니다.'
     teacher_educator_guide: 교육자 가이드
-    teacher_pitch: 교사 로그인
-    teacher_title: 선생님으로 등록하기
-    student_pitch: 학생 로그인
+    teacher_pitch: 선생님 가입(Code.org)
+    teacher_title: 선생님 가입
+    student_pitch: 학생 가입(Code.org)
     student_title: 학생 가입
     school_name: 학교 이름 (옵션)
     school_address: 학교 주소 (옵션)
@@ -101,8 +103,8 @@ ko:
     submit: 로그인
   signin:
     try_heading: 가입하지 않고 코딩을 해보시겠습니까?
-    try_hoc: Hour of Code 한시간 해보기
-    try_20hours: 20시간 코스의 컴퓨터과학(CS, 정보과학) 해보기
+    try_hoc: 1시간짜리 Hour of Code 해보기
+    try_20hours: 20시간짜리 컴퓨터과학(CS, 정보과학) 소개 과정 해보기
   signinsection:
     welcome: '%{section_name} 섹션에 온 것을 환영합니다.'
     name: 이름을 선택 하세요.
@@ -155,7 +157,7 @@ ko:
     title: 'Redeem 상품: %{name}'
     provider: '제공:'
     code: 'Redeem 코드:'
-    redeem_header: 'To redeem:'
+    redeem_header: '상품 교환:'
     donorschoose_register: DonorsChoose.org 에서 선생님으로 등록하세요.
     donorschoose_project: 프로젝트 제출
     donorschoose_how_to: 리딤(redeem)코드 사용
@@ -205,7 +207,7 @@ ko:
     show: 보기
     edit: 편집
     edit_model: '%{model} 수정'
-    update: 갱신
+    update: 업데이트
     destroy: 삭제
     back: 뒤로
     confirm: 확실한가요?
@@ -216,7 +218,7 @@ ko:
   nav:
     header:
       finished_hoc: Hour of Code 완료
-      sign_in_to_save: 로그인(저장하기)
+      sign_in_to_save: 로그인(진도 저장)
       free_play:
         playlab: 앱 만들기
         artist: 아무거나 그리기
@@ -231,7 +233,7 @@ ko:
       prizes: 상품
       logout: 로그아웃
       signin: 로그인
-      signup: 가입 신청하기
+      signup: 가입하기
       already_registered: 이미 등록하였나요?
     popup:
       progress_for_user: '%{name} 의 진도'
@@ -239,7 +241,7 @@ ko:
       lines: '총 %{lines} 라인'
       close: CLOSE
       mastery: 개념
-      puzzle_map: Stages
+      puzzle_map: 단계들
       prizes: '트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!'
       prize_earned: '트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!'
       prize_us_only: (U.S. students only)
@@ -253,66 +255,19 @@ ko:
     remove: (선생님 삭제하기)
     confirm:
       remove: 선생님을 삭제하시겠습니까?
-    tools: 선생님 메뉴
-    followers:
-      section: '섹션:'
-      stages: '단계 선택: '
-      show_past: '지금까지의 학생활동(%{bullet_html}) 살펴보기:'
-      levels_key: 단계 키
-      perfect: 완벽히 완료하였습니다.
-      completed: 완료하였습니다만, 너무 많은 블럭들을 사용했습니다.
-      tried: 시도했습니다만, 완료되지 않았습니다.
-      not_tried: 아직 시도하지 않았습니다.
-      activity: '지난 %{hours} %{plural} 동안의 학생 활동 살펴보기'
-      no_section: 섹션이 없습니다.
-      trophies: trophies
     students:
-      name: 이름
-      username: username
-      password: password
-      manage: 학생 관리
       dashboard: 선생님용 대시보드 가기
-      add: 학생 추가
-      remove: 학생 삭제하기
-      confirm_remove: 이 학생을 삭제하시겠습니까?
-      help_reassign: 학급을 여러 개의 섹션으로 나누기 위해서는 학생들을 새로운 섹션으로 할당하세요.
-      help_register: 학생들의 데이터를 가져오기 위해 많은 시간을 들일 필요가 없이, 학생들에게 등록하도록 할 수 있습니다. 학생들은 사용자이름과 비밀번호를 사용할 수 있으며, 추가적인 이메일 주소가 필요없습니다. 학생이 비밀 번호를 잊어버리면, 학생의 비밀 번호를 재설정 할 수 있습니다.
-      register: 학생들이 등록하도록 요청하기
-      vist: 학생들이 방문하도록 요청하기
-      section_code: 그리고 섹션코드를 입력하세요.
-      first_please: '먼저, %{add_section} 하세요.'
-      for: ~에 대해서
-      enter: '입력:'
-    sections:
-      add: 섹션 추가하기
-      manage: 섹션 관리하기
-      section: 섹션
-      students: 학생들
-      section_code: 섹션 코드
-      add_section_code: 학생 섹션코드 추가하기
-      secret: 비밀번호 입력
-      grade: 등급
-      course: 코스
-      rename: rename
-      edit: 수정하기
-      delete: 삭제하기
-      confirm_delete: 이 섹션을 삭제하시겠습니까?
-      email: 이메일 보내기
-    rollup: 학습 현황
-    activity: 최근 학습 활동
-    user_not_found: 선생님이나 학생을 찾을 수 없습니다.
-    cant_remove_student_no_email: '%{student_name} 학생은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다.'
-    cant_remove_teacher_no_email: '%{teacher_name} 선생님은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다.'
-    student_teacher_disassociated: '%{teacher_name} 선생님은 %{student_name} 학생의 선생님에서 삭제되었습니다.'
+    user_not_found: 선생님을 찾을 수 없습니다.
+    student_teacher_disassociated: '%{teacher_name} 선생님을 삭제하였습니다.'
     panel:
       answer_viewer: 답변 뷰어
       student: student
       viewing_solution: 솔루션 살펴보기
-      try_it_yourself: 스스로 시도해 보세요
+      try_it_yourself: 혼자 힘으로 해보세요
       section: 섹션
       example: 예시 해법
       example_with_number: '예시 해법 %{solution_number}'
-      submitted_on: '제출일:'
+      submitted_on: '제출:'
       unsubmit: 제출 취소
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
@@ -327,7 +282,7 @@ ko:
     delete_confirm: 정말로 당신의 계정을 삭제하시겠습니까?
   user_level:
     completed: 완료
-    tried: 시도
+    tried: 시도함
   user_stats:
     recent_activity: 최근 활동
     show_more: 자세히
@@ -340,8 +295,8 @@ ko:
     all_courses: 코스1, 2, 3 살펴보기
     lesson_plans: 레슨 계획
     signin_message: '이미 등록되어있나요? %{link}'
-    student_reg_link: 학생 가입하기
-    teacher_reg_link: 선생님 가입하기
+    student_reg_link: 학생 가입
+    teacher_reg_link: 선생님 가입
     signin_directions: '진도를 기록하기 위해 계정을 사용하세요.<br/> 선생님들은 여러분의 모든 과정을 살펴볼 수 있습니다.'
     teacher_dashboard: 학습 현황
     teacher_student_count_one: '나의 학생들은 %{count} 명 입니다.'
@@ -363,7 +318,7 @@ ko:
     trynow: 지금 해보기
     add_hint_help: Code.org 튜토리얼을 위해 참신한 도움 내용을 만드는 것을 도와주세요.
     20hour_overview: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
-    test_videos_help: 새로 만든 비디오 플레이어를 테스트해 보세요.
+    test_videos_help: 새로운 동영상 플레이어를 학교에서 사용해보세요.
     try_beta_courses: K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.
     use_as_teacher: 선생님으로 사이트 사용하기
     heading_hoc2014: '<h1>어떠한 나이에도 가능한</h1> <h2>Hour of Code</h2>'
@@ -371,12 +326,13 @@ ko:
     heading_apps: '<h1> 누구나 </h1><h2> 재미있게 </h2>'
     heading_legacy: '<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>'
     your_gallery: 갤러리
-    no_primary_course: Code Studio 코스를 시도해보세요
-    choose_next_course: 아래 중 하나를 선택하여 Code Studio 과정 학습하기
+    no_primary_course: Code Studio 과정들을 해보세요.
+    choose_next_course: 아래의 Code Studio 과정을 해보세요.
     print_certificate: 인증서 인쇄
   share:
     title: Code Studio 배우기
     description: 누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다.
+    try_hour_of_code: Hour of Code 를 해보세요!
   gender:
     male: 남
     female: 여
@@ -388,31 +344,32 @@ ko:
     thank_you: '우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors"> 기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team"> 확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의 지원에 감사 드립니다.'
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
     help_from_html_old: 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: 저작권
     more: 더 많은
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
-    support: 고객지원
+    support: 지원
     support_url: http://support.code.org
-    tos_short: 이용 약관
+    tos_short: 약관
     tos: 이용 약관
     privacy: 개인정보보호 정책
     secure: 보안 버전
     report_abuse: 악용 사례 신고
-    built_on_code_studio: 코드 스튜디오 기반
+    built_on_code_studio: 코드 스튜디오 내장
     make_my_own_app: 나만의 앱 만들기
     how_it_works: 작동하는 방법
+    try_hour_of_code: Hour of Code 를 해보세요!
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
     teacher: 해법 보기
     auth_error: 해법 보기 권한이 없습니다.
-    submit: 예술가 위치 업데이트
-    direction: 시작 방향(학년에 따른)
+    submit: 아티스트 위치 업데이트
+    direction: 시작 안내(학년 기준)
   video:
     tab: 소개 동영상.
     notes: 소개 프레젠테이션.
@@ -427,9 +384,9 @@ ko:
     upgrade:
       header: 웹 브라우져를 업그레이드 하세요.
       message: "Code.org는 웹 페이지를 보다 빠르게 동작하도록 하기 위해 최신 웹 기술을 사용합니다. 지금 사용하고 있는 웹 브라우져는 모든 기술을 지원하지 않습니다. <br/><br/> 테스트해보시려면 <a href='#'>테스트페이지 확인</a> 하지만, 제대로 실행되지 않을 것입니다."
-      button: 지원 웹 브라우저 알아보기
+      button: 권장 웹브라우저
   slow_loading: 연결이 느립니다.
-  try_reloading: 페이지를 새로고침 해보세요
+  try_reloading: 페이지를 다시 로드 해 보세요.
   next_stage: 모두 완료했습니다! 다음 단계를 계속하세요
   download_pdf: Open Lesson Plan
   lesson_plan: 수업 계획
@@ -462,8 +419,8 @@ ko:
       unused: 비사용 레벨
   upsell:
     hoc:
-      title: Classic Maze
-      body: 컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다.
+      title: 고전 미로게임
+      body: 컴퓨터과학(CS, 정보과학)의 기초/개념/원리들을 경험 해보세요. 수 백 만 가지를 가능하게 합니다.
     flappy:
       title: 플래피 코드
       body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
@@ -488,8 +445,8 @@ ko:
       title: 마인크래프트
       body: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
   gallery:
-    students_drew_these_with_code: 학생들이 코드로 그려낸 것들!
-    students_made_these_with_code: 학생들이 만든 작품
+    students_drew_these_with_code: 학생들이 그린 작품!
+    students_made_these_with_code: 학생들이 만든 작품!
     picture_count: '지난 <b>%{days}</b> 일 동안, <b>%{count}</b> 개의 그림을 프로그래밍으로 그렸습니다. 각 프로그램을 살펴보려면 그림을 누르세요.'
     activity_count: '지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로 만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다.'
     want_to_make_your_own: 자기 코드를 만들겠습니까?
@@ -497,7 +454,7 @@ ko:
     caption_by_name_age: '%{age}살, %{name}가'
     caption_time_ago: '%{time_ago} 전에'
     header: 갤러리
-    header_playlab: Play Lab
+    header_playlab: 스토리 및 게임
     header_artist: 화가
   landing:
     prerelease: "이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의 코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."
@@ -508,14 +465,14 @@ ko:
     support_url: //support.code.org
   multi:
     wrong_title: 오답
-    wrong_body: 정답이 안닙니다. 다시 시도해 보세요.
+    wrong_body: 정답이 아닙니다. 다시 시도해 보세요.
     correct_title: 정답
     correct_body: 정답입니다.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: 정답이 아닌 답안
-    wrong_body: 제출한 답안은 정답이 아닙니다. 다시 시도해 보세요.
+    wrong_body: 정답이 아닙니다. 다시 시도해 보세요.
     correct_title: 정답
     correct_body: 정답입니다.
   contract_match:
@@ -529,7 +486,7 @@ ko:
   text_match:
     placeholder: 이름을 입력하세요.
     open_response_title: 감사합니다,
-    open_response_body: 귀하의 회신에 감사드립니다!
+    open_response_body: 답변해 주셔서 감사합니다!
   dialog:
     ok: 확인
     startover_title: 정말 다시 시작하겠습니까?

@@ -29,6 +29,8 @@
     code:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: ගුරුවරයෙක් එකතු කරන්න
   add_hint_form:
     placeholder: කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න
@@ -93,12 +95,12 @@
     user_type: ඔබ සිසුවෙක් හෝ ගුරුවරයෙක් ද?
     submit: Sign up
     teacher: ඔබ ගුරුවරයෙක් ද?
-    valid_username: Available!
+    valid_username: ලබාගත හැක !
     invalid_username: Username must be at least 5 characters
     taken_username: Username is already taken
-    valid_password: Valid password!
+    valid_password: මුර පදය වලංගුයි!
     invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
-    mismatch_password: The two passwords you entered do not match
+    mismatch_password: යෙදු මුර පද දෙක සමාන වී නැත
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
@@ -112,14 +114,14 @@
     title: Have an account already? Sign in
     login: Email or username
     password: මුර පදය
-    remember: Remember me
+    remember: මා මතක තබා ගන්න
     submit: Sign in
   signin:
     try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
+    try_hoc: කේතන පැය උත්සහ කර බලන්න
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: පිළිගන්නවා  %{section_name} වෙත
     name: ඔබේ නම තෝරන්න
     picture: දැන් ඔබේ රහස් රූපය සොයන්න
     words: දැන් ඔබේ රහස් වචනය සොයන්න
@@ -269,7 +271,7 @@
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
       label: ආයුබෝවන් %{username}
-      stats: Code Studio
+      stats: කේත මැදිරිය
       settings: මාගේ ගිණුම
       prizes: තෑගි
       logout: Sign out
@@ -280,79 +282,25 @@
       progress_for_user: '%{name} ගේ ප්‍රගතිය'
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
-      mastery: Concepts
+      close: වහන්න
+      mastery: අදහස්
       puzzle_map: Stages
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: (U.S. students only)
       prizes_link: වැඩිදුර තොරතුරු
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: පිළිතුර
+    for_teachers_only: ගුරුවරුන්ට පමණි
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
     remove: (ගුරුවරයා ඉවත්කරන්න)
     confirm:
       remove: Are you sure you want to remove this teacher?
-    tools: Teacher Tools
-    followers:
-      section: 'අංශය:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: දැනට උත්සහ කර නැත
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
-      trophies: ඵලකයන්
     students:
-      name: නම
-      username: පරිශීලක නාමය
-      password: මුර පදය
-      manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: ශිෂ්‍යයින් ඇතුලත්කරන්න
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: සඳහා
-      enter: 'enter:'
-    sections:
-      add: අංශයක් අතුලත්කරන්න
-      manage: Manage sections
-      section: අංශය
-      students: සිසුන්
-      section_code: අංශ කේතය
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: ශේණිය
-      course: පාඨමාලාව
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Progress Dashboard
-    activity: Recent class activity
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
     panel:
@@ -385,7 +333,7 @@
     show_more: Show more
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: කේත මැදිරිය
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
@@ -440,6 +388,7 @@
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: පිරිමි
     female: ගැහැණු
@@ -482,6 +431,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: උදව්වක් අවශ්‍යද?
     subtitle: See these videos and hints
@@ -656,7 +606,7 @@
           title: කේතය සකසන්න
           description: ''
         events:
-          title: Events
+          title: සිද්ධීන්
           description: ''
         builder:
           title: Builder

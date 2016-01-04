@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Můžeš stisknout \"Hraj dál\" k vrácení do tvé hry."},
 "replayButton":function(d){return "Přehrát"},
 "selectChooseButton":function(d){return "Vybrat"},
-"tooManyBlocksFail":function(d){return "Hádanka "+craft_locale.v(d,"puzzleNumber")+" dokončen. Blahopřejeme! Je též možné dokončit s "+craft_locale.p(d,"numBlocks",0,"cs",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Hádanka "+craft_locale.v(d,"puzzleNumber")+" dokončena. Blahopřejeme! Je možné ji dokončit s "+craft_locale.p(d,"numBlocks",0,"cs",{"one":"1 blokem","other":craft_locale.n(d,"numBlocks")+" bloky"})+"."}};

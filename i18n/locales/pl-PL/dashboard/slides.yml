@@ -288,7 +288,7 @@ pl:
         text: 'Po prawej stronie znajduje się obszar roboczy, gdzie będziemy budować nasz program. Do poruszania się po powierzchni lodu będziemy używać bloku "idź do przodu".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Tutaj, blok "idź do przodu" oznacza "idź do przodu 100 pikseli". Co się dzieje, gdy naciśniemy "Uruchom"?. Elsa przesunie się do przodu o określoną odległość na ekranie, w rzeczywistości o 100 pikseli! Piksele to niewielkie kwadraciki na ekranie Twojego komputera.'
+        text: 'Tutaj, blok "idź do przodu" oznacza "idź do przodu 100 pikseli". Co się dzieje, kiedy naciśniemy "Uruchom"?. Elsa przesunie się do przodu o określoną odległość na ekranie, w rzeczywistości o 100 pikseli! Piksele to niewielkie kwadraciki na ekranie Twojego komputera.'
       9:
         image: notes/frozen1_9.jpg
         text: 'Innym blokiem, jaki mamy w tej łamigłówce, jest "skręć w prawo o 90 stopni". Użycie tego bloku powoduje, że Elsa obraca się o pewien kąt. Możesz poeksperymentować z obrotami Elsy. Kąt jest mierzony od ścieżki przed Elsą. To jest obrót o 90 stopni, a to jest obrót o 120 stopni.'
@@ -323,7 +323,7 @@ pl:
         text: Jeśli już nauczyliście komputer pewnego działania przy użyciu sekwencji poleceń, to możecie nadać temu działaniu swoją nazwę tak, aby później łatwiej było je wykonać ponownie. W ten sposób definiujemy funkcję, jako własne polecenie z nazwą.
       4:
         image: notes/frozen3_4.jpg
-        text: Witam, jestem Jess. Podczas programowania z użyciem bloków, będziecie używać funkcji, gdy jakiś zestaw akcji chcielibyście wykonywać wiele razy. Na przykład, napisaliście kod do tworzenia kwadratów.
+        text: Witam, jestem Jess. Podczas programowania z użyciem bloków, będziecie używać funkcji, kiedy jakiś zestaw akcji chcielibyście wykonywać wiele razy. Na przykład, napisaliście kod do tworzenia kwadratów.
       5:
         image: notes/frozen3_5.jpg
         text: 'Możecie to zdefiniować w postaci funkcji o nazwie "create a square" (utwórz/narysuj kwadrat). '
@@ -348,7 +348,7 @@ pl:
         text: 'Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do pomarańczowego bloku "po uruchomieniu". Można połączyć ze sobą wiele bloków przeciągając je aż pojawi się żółta linia - wtedy bloki połączą się ze sobą.'
       5:
         image: notes/playlab_intro_5.png
-        text: 'W tej pierwszej łamigłówce postacią jest pingwin i spowodujemy, by mówił "Hello!" przez przeciągnięcie bloku "powiedz", podłączeniem go pod blok "po uruchomieniu" i wpisaniu "Hello". Możemy również spowodować, że pingwin porusza się za pomocą bloków "idź". Po skompletowaniu bloków, naciśnij przycisk "Uruchom", aby zobaczyć program w działaniu.'
+        text: 'W tej pierwszej łamigłówce postacią jest pingwin i spowodujemy, by mówił "Hello!" przez przeciągnięcie bloku "powiedz", podłączeniem go pod blok "po uruchomieniu" i wpisaniu "Hello!". Możemy również spowodować, że pingwin porusza się za pomocą bloków "idź". Po skompletowaniu bloków, naciśnij przycisk "Uruchom", aby zobaczyć program w działaniu.'
       6:
         image: notes/playlab_intro_6.png
         text: Zacznijcie i na końcu będziecie umieć utworzyć własną grę z różnego rodzaju postaciami, które mogą wchodzić w interakcje, stają się szczęśliwe lub smutne, zdobywają punkty, rzucają ognistymi kulami, a nawet znikają. To wszystko zależy od Ciebie i gry, jaką chcesz stworzyć.
@@ -374,14 +374,14 @@ pl:
         text: 'Jeśli chcemy, aby postać powtarzała jakąś akcję bez interwencji gracza, to bloki tej akcji należy umieścić wewnątrz bloku "powtarzaj w nieskończoność".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: W tej następnej łamigłówce naszym celem jest pomóc czarownicy w patrolowaniu granic królestwa, z lewej i prawej. Nauczyliśmy się już powtarzać polecenia, pozwoli to nam zaoszczędzić mnóstwo czasu później, gdy będziemy tworzyć własną grę.
+        text: W tej następnej łamigłówce naszym celem jest pomóc czarownicy w patrolowaniu granic królestwa, z lewej i prawej. Nauczyliśmy się już powtarzać polecenia, pozwoli to nam zaoszczędzić mnóstwo czasu później, kiedy będziemy tworzyć własną grę.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
         text: To bloki do rysowania. Użyj odpowiednich aby przemieścić artystę w miejsca, w których musi wypełnić szare linie.
       2:
         image: notes/C1_artist_intro_2.png
-        text: To bloki skoku. Przy ich użyciu artysta przemieszcza się ale nie rysuje. Wykorzystaj je aby przeskoczyć do kolejnej szarej linii.
+        text: To bloki skoku. Przy ich użyciu artysta przemieszcza się, ale nie rysuje. Wykorzystaj je, aby przeskoczyć do kolejnej szarej linii.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -408,7 +408,7 @@ pl:
         text: Na tej lekcji będziesz kontrolowany za pomocą papierowego pilota zdalnego sterowania. To jest jak gra komputerowa w świecie rzeczywistym.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: Zdarzenie jest czynnością, która powoduje, że coś się dzieje. Jak wtedy gdy klikniesz przycisk myszy i ładuje się strona internetowa. To właśnie jest zdarzenie. Kiedy dotykasz ekranu tableta, żeby przewinąć zawartość to też jest zdarzenie. Zdarzenia są świetnym sposobem, pozwalającym użytkownikom pokierować programem kiedykolwiek tego potrzebują lub chcą.
+        text: Zdarzenie jest czynnością, która powoduje, że coś się dzieje. Jak wtedy, kiedy klikniesz przycisk myszy i ładuje się strona internetowa. To właśnie jest zdarzenie. Kiedy dotykasz ekranu tabletu, żeby przewinąć jego zawartość, to również jest to zdarzenie. Zdarzenia są świetnym sposobem, umożliwiającym użytkownikom pokierowanie programem, kiedykolwiek tego potrzebują lub chcą.
       4:
         image: notes/C1_bigevent_unplugged_4.png
         text: 'Zdarzają się sytuacje, na które wszyscy reagujemy. Jesteśmy głodni - zaglądamy do lodówki. Słyszymy jak listonosz umieszcza pocztę w skrzynce - idziemy ją odebrać. To są zdarzenia podobne do wciskania przycisku lub poruszania dżojstikiem. Są wydarzeniami powodującymi wykonanie akcji przez nas.'
@@ -430,26 +430,26 @@ pl:
         text: Może się zdarzyć, że coś nam nie wyszło. Może się zdarzyć, że jesteśmy sfrustrowani i chcemy się poddać. Może być wiele takich chwil. Ale jeśli będziemy próbować, starać się uzyskać najlepszy wynik w kółko, to z pewnością uda się to nam niedługo.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Upór to jest wszystko na czym się można oprzeć, gdy naprawdę chcesz zrezygnować. Jeśli chcesz stworzyć coś nowego i innego, to pewnie będzie dużo przeszkód na drodze.
+        text: Upór tym, na czym można się oprzeć, gdy naprawdę chcesz zrezygnować. Jeśli chcesz utworzyć coś nowego i innego, to zapewne będzie dużo przeszkód i niepowodzeń na drodze.
       5:
         image: notes/C1_building_foundation_5.jpg
         text: Trik z uporem to wybranie kontynuowania i uczenia się na porażkach zamiast porzucenia zadania, bo jesteście sfrustrowani. Frustracja w istocie oznacza tylko, że coś wspaniałego czeka za rogiem. Więc nie kończcie zanim do tego dotrzecie. Och!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: Cześć! Nazywam się Miral Kotb i jestem twórcą Illuminate. W mojej pracy jest coś, czego możemy użyć zarówno w tańcu jak i w programowaniu lightsuits. Są to pętle! Pętla to wielokrotne powtórzenie tej samej akcji.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
+        text: Kiedy powtarzasz coś wiele razy, na przykład ruchy do utrzymania kręcącego się hula hop, to wykonujesz ruchy w kółko. To jest pętla, To jest pętla. I to też jest pętla.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Today we're going to have a dance party. We'll act out loops with a new dance. The Iteration. We're going to learn about loops using a dance. You will learn a couple of easy steps and repeat them over and over to complete the dance."
+        text: Dziś będziemy tańczyć. Będziemy używali pętli dla nowego tańca. Iteracje to wielokrotnie powtarzane sekwencje ruchów. Nauczymy się jak używać pętli na przykładzie tańca. Nauczysz się kilku prostych kroków i powtórzysz je znów i znów, by wypełnić układ taneczny.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
+        text: Oto kroki, których trzeba się nauczyć. Klaśnij w dłonie. Umieść ręce za głową. Połóż dłonie na biodrach. Podnieś lewą rękę. Podnieś prawą rękę. Całkiem proste, prawda? Odkryjesz, że możesz skrócić czynności, umieszczając pewne kroki taneczne w pętli.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: "My faktycznie nie wolno używać pętli w nasz taniec. Tancerze są noszenia komputery, wszystkie w tej samej sieci. Mogę owinąć wiązkę światła przez samych tancerzy wielokrotnie. W pętli i widziałaby w iteracji gdzie ja'll powiedzieć chcesz trafić pętla tych sześciu tancerzy wielokrotnie, a następnie w pętli chcesz zwiększyć prędkość światła. I czy's wszystkie utworzone przez pętle. Pętle są ważne w computer science, ponieważ czynią nasze prace krótsze i prostsze."
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -1679,7 +1679,7 @@ pl:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie będzie powstawał nasz program. '
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

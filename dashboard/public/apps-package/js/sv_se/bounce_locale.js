@@ -244,7 +244,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleSpeedFast":function(d){return "ange snabb hastighet på paddeln"},
 "setPaddleSpeedVeryFast":function(d){return "ange väldigt snabb hastighet på paddeln"},
 "setPaddleSpeedTooltip":function(d){return "Anger hastigheten på paddeln"},
-"shareBounceTwitter":function(d){return "Kolla in Bounce spelet jag gjort. Jag skrev det själv med @codeorg"},
+"shareBounceTwitter":function(d){return "Kolla in Bounce-spelet jag gjort. Jag skrev det själv med @codeorg"},
 "shareGame":function(d){return "Dela ditt spel:"},
 "turnLeft":function(d){return "sväng vänster"},
 "turnRight":function(d){return "sväng höger"},

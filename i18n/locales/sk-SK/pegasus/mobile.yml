@@ -20,6 +20,8 @@ sk-SK:
   submit: Odoslať
   twentyhours_heading: Skúste náš úvod do kurzu Počítačovej vedy
   twentyhours_text: 'Hotový s prvou Hodinou programovania? Nauč sa viac o základoch počítačovej vedy a programovacích konceptoch  v nasledujúcom kurze.'
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Pridajte sa k <a href="http://hourofcode.com">Hodine Programovania</a> <br/> 8. až 14. Decembra 2014 <br/>'
   hoc2014_students: Študenti
   hoc2014_try: Skúste to
@@ -28,7 +30,7 @@ sk-SK:
   hoc2014_everyone: Ktokoľvek
   hoc2014_support: 'Podporte ju &#x25BE;'
   hoc2014_whatishoc: Čo je to Hodina programovania?
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
+  csedweek_map_header: '# CSEdWeek / Hodina kódu-udalosť vo svete'
   csedweek_map_signup: Zaregistrujte Vašu akciu
   csedweek_map_search_placeholder: Hľadať Hour of Code udalosti
   csedweek_map_search_search: Hľadať
@@ -55,15 +57,15 @@ sk-SK:
   thank_you_: Ďakujeme!
   congratulations: Gratulujem!
   congratulations_on_completing_hoc: Gratulujeme k absolvovaniu jednej Hodiny programovania
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
+  congratulations_volunteer: 'Gratulujeme: Teraz keď si skúsil Hodinu kódu, <a href="https://code.org/volunteer">prihlás sa dobrovoľníkovi v triede</a> a pomôž študentom učiť sa Hodinu kódu!'
   course_name_accelerated: Zrýchlený kurz
   course_name_course1: Kurz 1
   course_name_course2: Course 2
   course_name_course3: Course 3
   course_name_course4: Course 4
-  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congratulations_on_completing_course: 'Gratulujeme k dokončeniu %{course}'
   congrats_next_tutorials_title: Skúste nasledujúce návody
-  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
+  congrats_next_tutorials_desc: 'Vyskúšajte tieto kratšie, jednohodinové výuky alebo zkúste <a href="%{current_path}/next"> partnerská výuka</a>.'
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
   enter_valid_age: Zvoľte prosím platný vek
   enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
@@ -137,7 +139,7 @@ sk-SK:
   studiobar_elementary_body: 'Naše tri nové kurzy pre K&#8209;5'
   studiobar_hoc_title: Hodina Kódu
   studiobar_hoc_body: Naučte sa programovať s Angry Birds
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Flappy kód
   studiobar_flappy_body: Vytvor a zdieľaj svoju vlastnú hru Flappy
   studiobar_teacher_title: Pripravené pre učitelov
   studiobar_teacher_body: Zaveďte Štúdio Programovania (Code Studio) do vašej triede
@@ -204,8 +206,8 @@ sk-SK:
   homepage_slot_text_studio: Všetky naše tutoriály
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Obchod
-  homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_slot_text_flappy: Flappy kód
+  homepage_action_text_hoc: Hodina kódu pre každého študenta.
   homepage_action_text_num_served: '# účastníkov'
   homepage_action_text_join_us: Pridaj sa k nám
   homepage_action_text_sign_up: Zaregistrovať sa
@@ -217,7 +219,7 @@ sk-SK:
   homepage_action_text_learn: Spustiť
   homepage_action_text_signpetition: Podpísať petíciu
   homepage_signpetition_dropdown: 'Súhlasím &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
+  homepage_diversity_pledge: Zajistite rozmanitosť
   homepage_banner_text_prizes: 'Hour of Code príde znova, 7 - 13 decembra. '
   homepage_banner_link_prizes: 'Pripojte sa k najväčšej vzdelávacej aktivite v histórii. '
   homepage_banner_text_main: Code.org a College Board vytvorili alianciu s cieľom zlepšiť rozmanitosť v programovaní.
@@ -286,65 +288,66 @@ sk-SK:
   class_submission_level_college: Vysoká škola
   class_submission_level_vocational: Odborné
   class_submission_languages_other: Ostatné jazyky
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  inspirational_videos_more: 'Dalšie <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> inšpiratívne videá</a> vzorov a celebrít'
+  playlab_choose_theme: Vyber si tému Play Lab
+  playlab_classic_title: Klasické
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  playlab_iceage_title: 'Doba ľadová - už čoskoro'
+  playlab_iceage_title_live: Doba ľadová
+  starwars_subtitle: Budovánie Galaxie s kódom
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bloky presúvajte myšou spolu s JavaScript-om.
   starwars_javascript_specs: Iba anglicky | Moderné prehliadače | Od 11 rokov
   starwars_javascript_start_button: Skús teraz
   starwars_blocks_title: Bloky
   starwars_blocks_description: Pre pohyb blokov použite myš.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Mnoho jazykov | Moderné prehliadače, chytré telefóny, tablety | Vek 6-106 rokov
   starwars_blocks_start_button: Skús teraz
   starwars_watch_videos: Skôr než začnete, prezrite si niektoré zaujímavé videá
   starwars_speak_languages: Hovoríte iným jazykom?
   starwars_help_translate: Pomôžte nám s prekladom
   starwars_platform_text: Moderné prehliadače, smartfóny, tablety
   mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+  mc_longdescription: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
+  mc_shortdescription: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
   mc_gradelevel: Vek 4-104
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Mnoho jazykov| Moderní prehliadače a tablety | Vek 6-106 rokov
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_title: Inšpirujte študentov a dobrovoľníkov pre Hodinu kódu.
+  volunteer_engineer_submission_subtitle_generic: '100 000 učiteľov bude hostiť Hodinu kódu vo svojich triedach tento rok, 7.-13. decembra 2015. Chcú vašu pomoc! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} učiteľov zháňa dobrovoľníkov nadšených pre výuku informatiky, aby im pomohli s Hodinou kódu tento rok v decembri.<br>%{num_volunteers} dobrovoľníkov sa prihlásilo. Pridajte sa k ním.'
+  volunteer_engineer_submission_intro_background: Hodina kódu je globálne hnutie na skúšku hodiny Úvodu do informatiky dosahujúcu desiatky miliónov študentov v 180+ zemiach. Zapojte sa prosím, behom týždňa počítačovej vedy vzdelávania 7.-13. Decembra.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
+    Títo učitelia by radi našli niekoho <span style="font-family: 'Gotham 7r', sans-serif;">nadšeného do výuky informatiky</span>, kto im môže pomôcť v učebni, alebo niekoho kto môže <span style="font-family: 'Gotham 7r', sans-serif;">inšpirovať</span> ich študentov prednáškou o šírke možností v informatike (to je možné vykonať pomocou videokonferencie).
+  volunteer_engineer_submission_intro_signup: 'Zadajte prosím následujúce informácie, ak ste študent počítačovej vedy alebo software profesionál. Pole označená <span class="form-required-field"> *</span> sú požadované.'
+  volunteer_engineer_submission_intro_links: 'Nehľadáte dobrovoľníka? <a href="%{learn_more}">Dozveď sa viac</a> o organizovaní tvojej vlastnej Hodiny kódu a hľadaní dobrovoľníka v mieste na našej <a href="%{volunteer_local}">mape dobrovoľníkov</a>.'
+  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_header_shared: Informácie zdielané s učitelmi na dobrovoľnickej mape
   volunteer_engineer_submission_field_name: Meno
   volunteer_engineer_submission_field_name_placeholder: Celé meno
   volunteer_engineer_submission_field_company: Firma (alebo škola)
   volunteer_engineer_submission_field_company_placeholder: Firma (alebo škola)
   volunteer_engineer_submission_field_experience_level: Úroveň skúseností
   volunteer_engineer_submission_field_location: Lokácia
-  volunteer_engineer_submission_field_location_desc: Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only.
+  volunteer_engineer_submission_field_location_desc: Vaša poloha bude použitá k umožneniu učiteľom nájsť najbližších dobrovoľníkov a budú zobrazené ako bod na mape. Ak máte obavy o vaše súkromie, použite adresu vašej práce/školy alebo len mesta.
   volunteer_engineer_submission_field_location_placeholder: PSČ, mesto a štát/krajina alebo poštová adresa
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
+  volunteer_engineer_submission_field_location_flexibility: Môžem prispieť k Hodine Kódu pomocou... (zaškrtnite všetko čo platí)
+  volunteer_engineer_submission_checkbox_after_hoc: Mám záujem o dobrovoľníctvo po Hodine Kódu
+  volunteer_engineer_submission_field_time_commitment: Časový záväzok po Hodine Kódu
+  volunteer_engineer_submission_field_linkedin: LinkedIn profil
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook profil
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Popis
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_field_description_desc: Popíšte svoje skúsenosti v počítačovej informatike a ako by ste sa chcel zapojiť ako dobrovoľník pre miestnych učiteľov.
+  volunteer_engineer_submission_field_description_placeholder: Popis skúsenosti alebo účasti. Ak hovoríš iným jazykom (jazykmi) ako je Angličtina, uisti sa že si ich zahrnul.
+  volunteer_engineer_submission_header_private: Informácie sú uschovávané v súkromí a nikdy nebudú zdieľané
   volunteer_engineer_submission_field_email: E-mailová adresa
-  volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
+  volunteer_engineer_submission_field_email_desc: Vaša e-mailová adresa nebude nikdy zdielaná, ale zašleme vám žiadosti od učiteľov.
   volunteer_engineer_submission_field_email_placeholder: E-mailová adresa
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
+  volunteer_engineer_submission_final_paragraph: Budete zalistovaní na mape pre miestnych učiteľov, aby vás kontaktovali o Hodine Kódu nebo iné príležitosti pre dobrovoľníkov. Váš email a přesnou adresu se nikdy nesdílíme. Ale ostatní informácie (vrátane približného umiestnenia) bude verejne viditeľné pre miestnych učiteľov.
+  volunteer_engineer_submission_checkbox_contact: 'Súhlasím, že učitelia ma môžu kontaktovať pre dobrovoľné priespievanie (Poznámka: Vaša e-mailová adresa nebude zverejnená)'
   volunteer_engineer_submission_submit: Odoslať
   volunteer_engineer_submission_thankyou: 'Ďakujeme vám za prístup pre Hour of Code. Buďte pripravený pre Hour of Code a oslovenie ďalších dobrovoľníkov, <a href="%{url}">viac informácií.</a>'
   volunteer_engineer_submission_commitment_uncertain: Nejasné
@@ -352,28 +355,28 @@ sk-SK:
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hodiny týždenne
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hodín týždenne
   volunteer_engineer_submission_commitment_now_and_then: Občas
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: '2 - 3 krát ročne'
+  volunteer_engineer_submission_commitment_monthly: Pár hodín mesačne
+  volunteer_engineer_submission_commitment_weekly: Za pár hodín týždenne
   volunteer_engineer_submission_commitment_more: Viac
   volunteer_engineer_submission_location_flexibility_onsite: Na mieste (on-site) v škole
   volunteer_engineer_submission_location_flexibility_remote: Vzdialený mentoring (učitelia alebo študenti)
   volunteer_engineer_submission_location_flexibility_curriculum: Ochotný pomôcť prispievať do projektov open source osnov
   volunteer_engineer_submission_experience_unspecified: Nešpecifikované
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Nie-inžinier v technologickej spoločnosti
   volunteer_engineer_submission_experience_university_student_or_researcher: Súčasný vysokoškolský študent (alebo výskumný pracovník)
   volunteer_engineer_submission_experience_software_professional: Vývojár softvéru
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
+  volunteer_engineer_submission_distance_8: 5 míľ
+  volunteer_engineer_submission_distance_16: 10 míľ
+  volunteer_engineer_submission_distance_24: 15 míľ
+  volunteer_engineer_submission_distance_32: 20 míľ
+  volunteer_engineer_submission_num_volunteers_5: 5 dobrovoľníkov
+  volunteer_engineer_submission_num_volunteers_10: 10 dobrovoľníkov
+  volunteer_engineer_submission_num_volunteers_25: 25 dobrovoľníkov
+  volunteer_engineer_submission_num_volunteers_50: 50 dobrovoľníkov
+  volunteer_engineer_submission_type_task_onsite: Chcem, aby ste návštívil mou triedu pre technickú pomoc a inšpiráciu
+  volunteer_engineer_submission_type_task_remote: Chcem, aby si pomocov Skype povedal mojej triede pár slov k inšpirácií detí
+  volunteer_engineer_submission_type_task_mentor: Hľadám mentora, aby mi pomohol pripraviť sa na kódovanie s mojimi študentmi
   petition_age: Vek
   dashboard_landing_title: Domovská stránka učiteľa
   dashboard_landing_welcome: Vítame vás na novom a vylepšenom paneli učiteľa.
@@ -394,17 +397,17 @@ sk-SK:
   dashboard_landing_progress_title: Pokrok vašich študentov
   dashboard_landing_progress_biggest: Pokrok pre vašu najväčšiu sekciu.
   dashboard_landing_view_progress: 'Zobraziť pokrok pre %{biggest_section}'
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Tlačový postup
   dashboard_landing_available_title: Dostupné kurzy
   dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre vás a vašich študentov.
   dashboard_landing_more_tutorials: Chcete vidieť ešte viac návodov?
   dashboard_landing_more_tutorials_desc: '<a href="/learn/beyond">Naši partneri vám ponúkajú</a> ďalšie návody. Naučte sa programovať s robotmi, vyrábajte webstránky, urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!'
   dashboard_hoc_courses: Hodina kódu pre všetky vekové kategórie
   dashboard_hoc_courses_desc: Skúste s vašimi študentmi niektorý z týchto hodinových návodov!
-  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
+  dashboard_hoc_courses_desc_and_cta: 'Skúste tieto krátke jedno-hodinové cvičenia so študentmi. <a href="https://hourofcode.com"> pripojte sa k hnutiu Hodina Kódu</a> a počas týždňa vyučovania informatiky.'
   dashboard_k5_courses: 20-hodinové kurzy pre K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: 20 hodin kurzov pre stredné školy
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_high_courses: Year-long High School Courses
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
@@ -503,7 +506,7 @@ sk-SK:
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_curriculum: Osnovy
   dashboard_curriculum_overview: Prehľad učiva 1. stupňa ZŠ
   dashboard_overview: Prehľad
   dashboard_sequence: Postupnosť
@@ -534,7 +537,7 @@ sk-SK:
   dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
   dashboard_stage: Etapa
   dashboard_puzzle: Úloha
-  dashboard_question: Question
+  dashboard_question: Otázka
   dashboard_response: Response
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom jediného týždňa:'
   stats_hoc_2013_image_alt: Štatistika z Hodiny Kódu 2013
@@ -552,8 +555,10 @@ sk-SK:
   dashboard_sections_login_type_explanation: 'Táto tabuľka pomáha vysvetliť, ktoré z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať pre vašu skupinu.'
   dashboard_faq: Často kladené otázky
   dashboard_faq_k5: Často kladené otázky – prvý stupeň
-  dashboard_announcements: Announcements
+  dashboard_announcements: Oznámenia
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Dozvedieť sa viac
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Hodina kódu je tu - 8.-14. december!'
@@ -612,8 +617,8 @@ sk-SK:
   mobile_devices: Kurzy pre mobilné zariadenia
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klasické bludisko
+  codeintl_name: Klasické bludisko
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Úvod do JavaScriptu
   khanes_name: Úvod do JavaScriptu
@@ -649,16 +654,16 @@ sk-SK:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kameň, papier, nožnice
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klasické bludisko
   playlab_name: Play Lab
   infinity_name: Neobmedzená Play Lab
   artist_name: Artist
   monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  allcancode_name: Bež Marko!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minút kódu
   teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: Vek 4-104
   codeintl_gradelevel: Vek 4-104
@@ -704,12 +709,12 @@ sk-SK:
   infinity_gradelevel: Vek 4-104
   artist_gradelevel: Vek 8+
   monstercoding_gradelevel: Vek 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Vek 5-10
+  csfirst_gradelevel: Vek 9-14
   boxisland_gradelevel: Základná
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Vek 12-14
+  texasinstruments_gradelevel: Vek 13-16
+  teacherled_gradelevel: Vek 5+
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Unplugged
@@ -751,8 +756,8 @@ sk-SK:
   frozen_platformtext: Moderné prehliadače + tablety
   starwars_platformtext: Moderné prehliadače + tablety
   playlab_platformtext: Moderné prehliadače, smartfóny, tablety
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Moderné webové prehliadače, iOS, Android
+  allcancode_platformtext: Moderné webové prehliadače, iOS
   csfirst_platformtext: Moderné prehliadače
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderné prehliadače
@@ -851,7 +856,7 @@ sk-SK:
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

@@ -36,7 +36,12 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "project_template_level_name": "U4 - Charts - Line Chart Template"
+    "project_template_level_name": "U4 - Charts - Line Chart Template",
+    "instructions": "Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)",
+    "markdown_instructions": "You’ve seen a few examples of scatter charts already, but **there are other chart types that may be better-suited to create a visualization** from your data set. In the next few levels, you will learn about one of these chart types: the **line chart.**\r\n\r\n# Line Charts\r\n\r\nYour database has been populated with records about the **popularity of different hashtags** over time. In this level, you will use this data to **create a line chart that shows how the popularity of “#tbt” has changed over time.**\r\n\r\n# Do This:\r\n\r\n* **Open the data viewer** and look at the data you’ve been provided.\r\n* **Add a chart UI element** to your app.\r\n* Use the `drawChartFromRecords` block to create a line chart.\r\n\t* **Make sure `chartID` matches** the ID of your UI chart.\r\n\t* **Change `chartType`** to “line.”\r\n\t* **Change `tableName`** to match the name of the table in your database.\r\n\t* **Fill in the `columns` array.** For this chart, you’ll want the **months since January 2012 on your x-axis** and the **#tbt popularity on your y-axis.**\r\n* **Run the app** and see the results.\r\n\t* Now that your chart has meaningful labels, **what conclusions can you draw about the data set?** What trends do you notice in the popularity of #tbt over time? When was the hashtag most popular? Least popular? How might this information be utilized by people who use hashtags to publicize their posts?\r\n",
+    "encrypted_examples": [
+
+    ]
   }
 }]]></config>
   <blocks/>

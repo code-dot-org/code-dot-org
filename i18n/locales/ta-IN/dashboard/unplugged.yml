@@ -8,7 +8,7 @@ ta:
           - unplug1
         video: Unplug1
       Unplug2:
-        title: Computational Thinking
+        title: கணினிபூர்வமான சிந்தனை
         desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
         pdfs:
           - unplug2
@@ -45,7 +45,7 @@ ta:
           - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
+        title: நுண்புல
         desc: "This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction."
         pdfs:
           - unplug8
@@ -122,7 +122,7 @@ ta:
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Computational Thinking
+        title: கணினிபூர்வமான சிந்தனை
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
