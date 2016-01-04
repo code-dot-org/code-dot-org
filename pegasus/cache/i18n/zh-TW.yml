@@ -306,9 +306,8 @@
     來幫助學生<span style="font-family: ''Gotham 7r'', sans-serif;">激發</span>出靈感的人。'
   volunteer_engineer_submission_intro_signup: '如果你是在學習電腦科學的學生或是軟體的專業人士，請輸入下列資訊。此為必填:
     <span class="form-required-field">*</span>'
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: 你需要找到志願者嗎? 在我們 的<a href="%{volunteer_local}">
+    志願者的地圖</a> 上找到當地的志願者。
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: 在志工地圖上與老師共用的資訊
   volunteer_engineer_submission_field_name: 你的名字
@@ -643,8 +642,8 @@
   mobile_devices: 用於行動裝置的自學教案
   frozen_name: 與 Anna 和 Elsa 一起寫程式吧
   starwars_name: 星際大戰：用程式建立一個銀河系
-  codeorg_name: 編寫您的第一個電腦程式
-  codeintl_name: 編寫您的第一個電腦程式
+  codeorg_name: 經典迷宮
+  codeintl_name: 經典迷宮
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 簡介
   khanes_name: JavaScript 簡介
@@ -680,7 +679,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭，布
-  hourofcode_name: 編寫您的第一個電腦程式
+  hourofcode_name: 經典迷宮
   playlab_name: 播放實驗室
   infinity_name: Infinity Play Lab
   artist_name: 畫家
@@ -1167,13 +1166,3 @@
   infinity_shortcode: inf
   playlab_shortcode: 玩
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

@@ -29,9 +29,9 @@
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Każde dziecko zasługuje na szansę
+  og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
+    informatyki.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -48,7 +48,7 @@
   csedweek_map_search_reset: Zresetuj
   csedweek_map_legend_title: Opis
   csedweek_map_legend_event: Wydarzenie Godziny Kodowania
-  csedweek_map_legend_cs_tech_jam: Jam CS Tech
+  csedweek_map_legend_cs_tech_jam: Wydarzenie specjalne
   cded_sign_up: Zarejestruj się
   cded_try_it: Wypróbuj
   twentyhours_trynow: Spróbuj teraz
@@ -316,7 +316,7 @@
     inspirujących filmów </a> z udziałem osobistości i gwiazd
   playlab_choose_theme: Wybierz własny motyw Play Lab
   playlab_classic_title: Klasyczny
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Niesamowity świat Gumball
   playlab_iceage_title: Epoka lodowcowa - już wkrótce
   playlab_iceage_title_live: Epoka lodowcowa
   starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
@@ -344,32 +344,28 @@
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   mc_specs: Wiele języków | Nowoczesne przeglądarki i tablety | W wieku 6 - 106
   minecraft_subtitle: Godzina Kodowania z Minecraft
-  volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy dla Godziny
-    Kodowania.
+  volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy
   volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
     Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
     Twojej pomocy! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} nauczycieli potrzebuje
-    ochotników-pasjonatów edukacji informatycznej do pomocy z Godziną Kodowania w
-    grudniu. <br>%{num_volunteers} wolontariuszy już się zarejestrowało. Dołącz do
+    wolontariuszy. <br>%{num_volunteers} zarejestrowanych wolontariuszy. Dołącz do
     nich.'
   volunteer_engineer_submission_intro_background: Godzina Kodowania jest globalną
     inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
     milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
     Edukacji Informatycznej w dniach 7-13 grudnia.
-  volunteer_engineer_submission_intro_recruit: 'Ci nauczyciele byliby szczęśliwi mając
+  volunteer_engineer_submission_intro_recruit: 'Nauczyciele byliby szczęśliwi mając
     kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji
     informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span
-    style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> ich uczniów
-    opowiadając o szerokich możliwościach informatyki (na przykład za pośrednictwem
-    wideo czatu).'
+    style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając
+    o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
   volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
     jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span
     class="form-required-field"> *</span> są wymagane.
-  volunteer_engineer_submission_intro_links: Nie chcesz być wolontariuszem? <a href="%{learn_more}">
-    Dowiedz się więcej</a> o organizacji swojej własnej Godziny Kodowania i jak znaleźć
+  volunteer_engineer_submission_intro_links: Czy chcesz znaleźć wolontariusza? Odszukaj
     wolontariusza w okolicy na naszej <a href="%{volunteer_local}"> mapie wolontariuszy</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Uaktualnij informacje o sobie
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
     na mapie wolontariuszy
   volunteer_engineer_submission_field_name: Nazwa
@@ -412,9 +408,9 @@
   volunteer_engineer_submission_checkbox_contact: 'Zgadzam się, by nauczyciele kontaktowali
     się ze mną z prośbą o wsparcie (Uwaga: Twój adres e-mail nie będzie udostępniony)'
   volunteer_engineer_submission_submit: Wyślij
-  volunteer_engineer_submission_thankyou: Dziękujemy za bycie ochotnikiem dla Godziny
-    Kodowania. Aby przygotować się na Godzinę Kodowania i zaangażować innych inżynierów,
-    <a href="%{url}"> dowiedz się więcej tutaj.</a>
+  volunteer_engineer_submission_thankyou: Dziękujemy za zarejestrowanie się jako wolontariusz.
+    Nauczyciele, używając <a href="%{url}"> tej mapy,</a> będą wyszukiwać i kontaktować
+    się z wolontariuszami, jak Ty.
   volunteer_engineer_submission_commitment_uncertain: Niepewny
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 godzina tygodniowo
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 godziny tygodniowo
@@ -694,11 +690,11 @@
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+  dashboard_announce_message: '<b>16 grudnia 2015</b> - Dziękuję za udział w Godzinie
+    Kodowania 2015! Wznowiliśmy śledzenie i zapisywanie postępów we wszystkich samouczkach
+    i kursach Code Studio. Uwaga: Biura Code.org będą zamknięte w dniach od 19 grudnia
+    do 3 stycznia. Proszę spodziewać się opóźnienia odpowiedzi na wszelkie pytania
+    wysłane przed 4 stycznia.'
   dashboard_announce_button_text: Ucz się więcej
   dashboard_announce_hoc: <b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata
     edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000
@@ -825,7 +821,7 @@
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artysta
-  monstercoding_name: Tajemnicza wyspa Zadanie Kodowania
+  monstercoding_name: Tajemnicza wyspa Wyzwań Kodowania
   allcancode_name: Biegnij Marco!
   csfirst_name: Najpierw informatyka
   boxisland_name: Kartonowa Wyspa (Box Island)
@@ -1162,32 +1158,30 @@
   playlab_longdescription: Utwórz historyjkę lub grę posługując się Play Lab! Twórz
     zwierzęta, piratów, zombie, ninja i wiele innych postaci przejść, twórz dźwięki,
     zbieraj punkty, a nawet ciskaj ognistymi kulami!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
+  monstercoding_longdescription: Coding Quest Tajemniczej Wyspy z Potworem Kodowania
+    oferuje zabawną przygodę bez przewodnika, która uczy dzieci kilku kluczowych pojęć
+    programowania. Każdy blok aktywności bazuje na poprzednim i wprowadza dzieci do
+    funkcji, wartości logicznych, pętli, instrukcji warunkowych i tablice przy użyciu
+    kolorowej grafiki animowanej i dźwiękowych instrukcji.
+  allcancode_longdescription: Uczniowie grają w przygodową grę opartą na oryginalnej
+    historii. Prowadzą oni Marco - głównego bohatera - przez kolejne poziomy instruując
+    go krok po kroku z wykorzystaniem wizualnego języka programowania używanego w
+    Godzinie Kodowania. Zostają przy tym wprowadzeni do korzystania z ciągu poleceń,
+    iteracji i warunków nawet o tym nie wiedząc.
+  csfirst_longdescription: Utwórz opowieść o dwóch postaciach na morzu. Animuj wodę
+    i dostosuj krajobraz do własnego stylu. Użyj kodu, aby opowiedzieć swoją historię!
   boxisland_longdescription: Wybierz się na wycieczkę po Kartonowej Wyspie (Box island)
     oraz pomóż Hiro zebrać wszystkie zegary porozrzucane na pustkowiu! W tym samouczku
     poznasz podstawy algorytmów, sekwencje, pętle i warunki!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
+  codesters_longdescription: 'Utwórz własne gry, animacje i grafiki używając języka
+    Python.  Gdy skończysz, podziel się nimi z przyjaciółmi! Programuj w języku Python,
+    używanym na co dzień w firmach - nasz przybornik ułatwia naukę metodą przeciągnij
+    i upuść. Spróbuj utworzyć mecz koszykówki, choreograficzny taniec, lub zaprojektuj
+    animowaną kartkę! '
+  texasinstruments_longdescription: '10 minut kodowania może zostać wykorzystane w
+    klasie, aby wzbudzić zainteresowanie uczniów kodowaniem z użyciem technologii
+    TI, którą noszą w plecakach  Naucz się podstaw kodowania przy użyciu TI-84 &#8482;
+    Plus i zacznij programować w zaledwie 10 minut – nie jest wymagane żadne doświadczenie!  '
   teacherled_longdescription: Dziesiątki tysięcy nauczycieli skorzystało z Godziny
     Kodowania, wiele klas jest przygotowanych na bardziej kreatywne, nie takie same
     dla wszystkich działania, które uczą podstaw informatyki. Aby zainspirować nauczycieli,
@@ -1545,13 +1539,3 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

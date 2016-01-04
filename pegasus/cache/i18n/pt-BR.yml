@@ -28,9 +28,9 @@
   twentyhours_heading: Experimente nosso Curso de Introdução à Ciência da Computação
   twentyhours_text: Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência
     da computação e seus conceitos nesse curso.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Toda criança deve ter uma oportunidade
+  og_description: Todos os alunos, em todas as escolas, devem ter a oportunidade de
+    aprender ciência da computação.
   hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -240,7 +240,7 @@
   homepage_slot_text_shop: Loja
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_hoc: Uma Hora do Código para cada aluno.
-  homepage_action_text_num_served: '# served'
+  homepage_action_text_num_served: número de alunos atendidos
   homepage_action_text_join_us: Participe
   homepage_action_text_sign_up: Registrar
   homepage_action_text_try_it: Experimente
@@ -262,7 +262,7 @@
   homepage_banner_privacy_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
-  homepage_slot_text_link_hoc: Tente a Hour of Code
+  homepage_slot_text_link_hoc: Faça uma Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# served'
   homepage_solot_text_link_volunteer: Voluntário da Hora do Código
@@ -330,7 +330,7 @@
     inspiradores</a> por modelos e celebridades
   playlab_choose_theme: Escolha seu tema do Laboratório
   playlab_classic_title: Clássico
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: O Incrível Mundo de Gumball
   playlab_iceage_title: Era do Gelo - em breve
   playlab_iceage_title_live: Era do Gelo
   starwars_subtitle: Construindo uma galáxia com código
@@ -342,8 +342,8 @@
   starwars_blocks_title: Blocos
   starwars_blocks_description: Use blocos de arrastar-soltar.
   starwars_blocks_specs: Vários idiomas | Navegadores modernos, smartphones, tablets
-    | De 6 a 10 anos
-  starwars_blocks_start_button: Saiba Mais
+    | De 6 a 106 anos
+  starwars_blocks_start_button: Experimente agora
   starwars_watch_videos: Antes de começar, assista um desses vídeos inspiradores
   starwars_speak_languages: Fala outra língua?
   starwars_help_translate: Ajude-nos a traduzir
@@ -353,24 +353,22 @@
     pelo mundo do Minecraft.
   mc_shortdescription: Use blocos de código para levar Steve ou Alex a uma aventura
     pelo mundo do Minecraft.
-  mc_gradelevel: A partir de 6 anos
+  mc_gradelevel: De 6 a 106 anos de idade
   mc_platformtext: Navegadores modernos, smartphones, tablets
-  mc_specs: Muitos idiomas | Navegadores modernos e tablets | Maiores de 6 anos
+  mc_specs: Muitos idiomas | Navegadores modernos e tablets | De 6 a 106 anos de idade
   minecraft_subtitle: Hora do Código Minecraft
-  volunteer_engineer_submission_title: Inspirar alunos e voluntários para a Hora do
-    Código.
+  volunteer_engineer_submission_title: Inspire alunos e voluntários
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores
     vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro
     de 2015. Eles querem a sua ajuda! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} professores querem
-    voluntários apaixonados por ciências da computação para ajudar com suas Horas
-    do Código neste mês de dezembro.<br>%{num_volunteers} voluntários já se inscreveram.
-    Junte-se a eles.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} professores estão
+    em busca de voluntários. <br>%{num_volunteers} voluntários se inscreveram. Junte-se
+    a eles.'
   volunteer_engineer_submission_intro_background: A Hora do Código é um movimento
     global que oferece uma introdução de uma hora à ciência da computação e que atinge
     dezenas de milhões de estudantes em mais de 180 países. Participe você também
     durante a Semana da Educação em Ciência da Computação, de 7 a 13 de dezembro.
-  volunteer_engineer_submission_intro_recruit: 'Estes professores adorariam ter alguém<span
+  volunteer_engineer_submission_intro_recruit: 'Os professores adorariam ter alguém<span
     style="font-family: ''Gotham 7r'', sans-serif;">apaixonado pelo ensino da ciência
     da computação</span> que pudesse ajudá-los em suas aulas, ou alguém que pudesse<span
     style="font-family: ''Gotham 7r'', sans-serif;">inspirar</span> seus alunos falando
@@ -379,10 +377,9 @@
   volunteer_engineer_submission_intro_signup: Forneça as seguintes informações se
     você é um estudante de ciência da computação ou um profissional de software. Os
     campos marcados com um <span class="form-required-field">*</span> são obrigatórios.
-  volunteer_engineer_submission_intro_links: Não quer ser voluntário? <a href="%{learn_more}">Saiba
-    mais</a> sobre como organizar o seu próprio evento da Hora do Código e encontrar
-    um voluntário local no nosso <a href="%{volunteer_local}">mapa de voluntários</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: Quer encontrar voluntários? Encontre
+    um voluntário na sua região em nosso <a href="%{volunteer_local}">mapa de voluntários</a>.
+  volunteer_engineer_submission_update_information: Atualize suas informações
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores
     no mapa de voluntários
   volunteer_engineer_submission_field_name: Nome
@@ -416,10 +413,10 @@
     essa informação aqui.
   volunteer_engineer_submission_header_private: As informações são privadas e nunca
     compartilhadas
-  volunteer_engineer_submission_field_email: Endereço de email
+  volunteer_engineer_submission_field_email: Endereço de e-mail
   volunteer_engineer_submission_field_email_desc: Seu endereço de e-mail nunca será
     compartilhado, mas enviaremos solicitações dos professores.
-  volunteer_engineer_submission_field_email_placeholder: Endereço de email
+  volunteer_engineer_submission_field_email_placeholder: Endereço de e-mail
   volunteer_engineer_submission_final_paragraph: Você será listado em um mapa para
     que professores da região entrem em contato com você para a Hora do Código ou
     para outras oportunidades de voluntariado. Seu e-mail e endereço exatos NUNCA
@@ -429,9 +426,9 @@
     possam entrar em contato comigo para oportunidades de voluntariado. (Observação:
     seu endereço de e-mail não será compartilhado)'
   volunteer_engineer_submission_submit: Enviar
-  volunteer_engineer_submission_thankyou: Obrigado por se voluntariar para a Hora
-    do Código. Para se preparar para a Hora do Código e recrutar outros voluntários,
-    <a href="%{url}">saiba mais aqui.</a>
+  volunteer_engineer_submission_thankyou: Obrigado por se voluntariar. Os professores
+    utilizarão <a href="%{url}">este mapa</a> para buscar e entrar em contato com
+    voluntários como você.
   volunteer_engineer_submission_commitment_uncertain: Incerto
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
@@ -560,7 +557,7 @@
   dashboard_navigation_home_page: Página inicial do professor
   dashboard_navigation_section_student_progress: Contas e progresso do aluno
   dashboard_navigation_section_teacher_progress: Seu progresso no curso
-  dashboard_navigation_section_lesson_plans: Planos e recursos da aula
+  dashboard_navigation_section_lesson_plans: Planos e recursos de aula
   dashboard_navigation_section_community: Ajuda e Comunidade
   dashboard_navigation_section_pd: Desenvolvimento profissional
   dashboard_navigation_section_speakers: Ciência da computação <br/> Palestrantes
@@ -690,8 +687,8 @@
   dashboard_progress_completed_too_many_blocks: concluído, muitos blocos
   dashboard_progress_completed_perfect: concluído, perfeito
   dashboard_progress_furthest_level_attempted: tentativa para o nível mais avançado
-  dashboard_stage: fase
-  dashboard_puzzle: Quebra-cabeça
+  dashboard_stage: Fase
+  dashboard_puzzle: Desafio
   dashboard_question: Pergunta
   dashboard_response: Resposta
   stats_hoc_2013_heading: 'Estatísticas incríveis da Hora do Código do ano passado.
@@ -715,11 +712,11 @@
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+  dashboard_announce_message: '<b>16 de dezembro de 2015</b> - Obrigado por participar
+    da Hora do Código 2015! Começamos o monitoramento e registro de todos os tutoriais
+    e cursos do Code Studio. Observação: os escritórios da Code.org estarão fechados
+    de 19 de dezembro até 3 de janeiro. Portanto, as perguntas enviadas nesse período
+    só devem ser respondidas após 4 de janeiro.'
   dashboard_announce_button_text: Saiba mais
   dashboard_announce_hoc: '<b>9 de novembro 2015</b> - Um novo tutorial da Hora do
     Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força.
@@ -733,7 +730,7 @@
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
-  learn_more: Saiba Mais
+  learn_more: Experimente agora
   learn_sign_up_description: Cadastre-se para participar da Hora do Código durante
     a Semana da Educação em Ciência da Computação
   learn_sign_up_button: Registrar
@@ -888,12 +885,12 @@
   thinkersmith2_gradelevel: A partir de 8 anos
   kodableunplugged_gradelevel: De 8 a 13 anos
   projguts_gradelevel: De 10 a 13 anos
-  hourofcode_gradelevel: De 4 a 104 anos
+  hourofcode_gradelevel: De 6 a 106 anos de idade
   frozen_gradelevel: De 8 a 108 anos
-  starwars_gradelevel: Idade 6+
+  starwars_gradelevel: De 6 a 106 anos de idade
   playlab_gradelevel: De 6 a 14 anos
-  infinity_gradelevel: De 4 a 104 anos
-  artist_gradelevel: De 4 a 104 anos
+  infinity_gradelevel: De 6 a 14 anos
+  artist_gradelevel: De 8 a 108 anos
   monstercoding_gradelevel: De 5 a 13 anos
   allcancode_gradelevel: De 5 a 10 anos
   csfirst_gradelevel: De 9 a 14 anos
@@ -1566,13 +1563,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more
