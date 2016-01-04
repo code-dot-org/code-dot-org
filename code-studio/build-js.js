@@ -38,7 +38,7 @@ function main() {
   // Run build
   var buildCommands = [
     ensureDirectoryExists(BUILD_PATH),
-    browserifyCommand(program.min)
+    browserifyCommand(SRC_PATH, BUILD_PATH, FILES, program.min)
   ].join(" && \\\n");
   console.log(buildCommands);
 
@@ -72,26 +72,35 @@ function ensureDirectoryExists(dir) {
  * Generate command to:
  * Bundle JavaScript files using Browserify, break out common code using
  * factor-bundle, and (optionally) minify output using uglify.
- * @param {boolean} [shouldMinify]
+ * @param {string} srcPath - Path to root of JavaScript source files, absolute
+ *        or relative to execution path for this script (which is the code-studio
+ *        folder for this build system), with trailing slash.
+ * @param {string} buildPath - Path to root of output directory, absolute or
+ *        relative to execution path for this script (which is the code-studio
+ *        folder for this build system), with trailing slash.
+ * @param {string[]} files - List of files to build, given as paths rooted at
+ *        the srcPath given.  Each will map to an output file.
+ * @param {boolean} [shouldMinify] if provided and TRUE, will build minified
+ *        output files (with .min.js extensions) instead of unminified output.
  * @returns {string}
  */
-function browserifyCommand(shouldMinify) {
-  var browserifyInputFiles = FILES.map(function (file) {
-    return SRC_PATH + file;
+function browserifyCommand(srcPath, buildPath, files, shouldMinify) {
+  var browserifyInputFiles = files.map(function (file) {
+    return srcPath + file;
   }).join(' ');
 
   if (shouldMinify) {
     return [
         'browserify ' + browserifyInputFiles,
-        "-p [ factor-bundle -o 'uglifyjs > " + BUILD_PATH + "`basename $FILE .js`.min.js' ]",
-        '| uglifyjs -o ' + BUILD_PATH + 'code-studio-common.min.js'
+        "-p [ factor-bundle -o 'uglifyjs > " + buildPath + "`basename $FILE .js`.min.js' ]",
+        '| uglifyjs -o ' + buildPath + 'code-studio-common.min.js'
     ].join(" \\\n    ");
   }
 
   return [
     'browserify --debug ' +  browserifyInputFiles,
-    "-p [ factor-bundle -o '> " + BUILD_PATH + "`basename $FILE .js`.js' ]",
-    '-o ' + BUILD_PATH + 'code-studio-common.js'
+    "-p [ factor-bundle -o '> " + buildPath + "`basename $FILE .js`.js' ]",
+    '-o ' + buildPath + 'code-studio-common.js'
   ].join(" \\\n    ");
 }
 
