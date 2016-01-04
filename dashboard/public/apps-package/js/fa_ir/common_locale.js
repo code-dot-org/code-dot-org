@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "راهنما"},
 "hideToolbox":function(d){return "(پنهان کردن)"},
 "hintHeader":function(d){return "این هم یک راهنمایی:"},
+"hintPrompt":function(d){return "کمک نیاز دارید؟"},
 "hintRequest":function(d){return "راهنمایی را ببینید"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "راهنمایی:"},
 "ignore":function(d){return "صرف نظر کن"},
 "infinity":function(d){return "بی نهایت"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویدیو را ببینید"},
 "when":function(d){return "وقتی"},
 "whenRun":function(d){return "زمان اجرا"},
-"workspaceHeaderShort":function(d){return "محیط کار: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "محیط کار: "}};

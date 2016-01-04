@@ -208,7 +208,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "loopVariable":function(d){return "räknare"},
 "moveBackward":function(d){return "gå bakåt med"},
 "moveEastTooltip":function(d){return "Flyttar konstnären österut."},
-"moveForward":function(d){return "gå framåt med"},
+"moveForward":function(d){return "flytta framåt med"},
 "moveForwardTooltip":function(d){return "Flyttar konstnären framåt."},
 "moveNorthTooltip":function(d){return "Flyttar konstnären norrut."},
 "moveSouthTooltip":function(d){return "Flyttar konstnären söderut."},

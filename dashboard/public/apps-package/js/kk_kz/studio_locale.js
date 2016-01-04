@@ -200,7 +200,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catEvents":function(d){return "Шаралар"},
 "catLogic":function(d){return "Логика"},
 "catMath":function(d){return "Математика"},
-"catProcedures":function(d){return "Functions"},
+"catProcedures":function(d){return "Функциялар"},
 "catText":function(d){return "Мәтін"},
 "catVariables":function(d){return "Айнымалылар"},
 "changeScoreTooltip":function(d){return "Ұпай санына 1 ұпай қосу немесе жою."},
