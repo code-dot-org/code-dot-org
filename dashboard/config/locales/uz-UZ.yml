@@ -29,6 +29,8 @@
     code:
       label: 'O`qituvchi qo`shing:'
       placeholder: Bo`lim kodi
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: O`qituchi qo`shish
   add_hint_form:
     placeholder: Iltimos, ko`makchi so`zni shu yerga kiriting

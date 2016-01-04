@@ -28,6 +28,8 @@ he:
     code:
       label: 'הוסף מורה:'
       placeholder: אזור קוד (אבגדהו)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: הוסף מורה
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן
@@ -264,7 +266,7 @@ he:
     students:
       dashboard: לגשת לתצגת המורה
     user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'הסרת את %{teacher_name} כמורה שלך.'
     panel:
       answer_viewer: הצגת תשובה
       student: תלמיד

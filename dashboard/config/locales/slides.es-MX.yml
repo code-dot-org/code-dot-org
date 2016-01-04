@@ -239,7 +239,7 @@
           sino" seguirá comprobando si hay espacio para girar.
       4:
         image: notes/hoc5_4.jpg
-        text: ¡Ahora llevemos a esos zombies a donde pertenecen!
+        text: Ahora, a conseguir esos zombies donde pertenecen!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -248,9 +248,9 @@
           ardilla.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: Este bloque se ve igual que el bloque "si", pero hay una pieza extra
-          en la parte inferior que dice "sino". Si ponemos un bloque "avanzar" donde
-          dice "hacer" y un bloque "girar a la izquierda" donde dice "sino", eso significa
+        text: Este bloque se ve igual que el bloque ¨si¨, pero hay una pieza extra
+          en la parte inferior que dice ¨sino¨. Si ponemos un bloque ¨avanzar¨ donde
+          dice ¨hacer¨ y un bloque ¨girar a la izquierda¨ donde dice ¨sino¨, eso significa
           que la ardilla Scrat avanzará si hay un camino delante. Si no hay un camino
           a seguir, Scrat girará a la izquierda.
       3:
@@ -264,14 +264,14 @@
     function:
       1:
         image: notes/stage13_1.jpg
-        text: '!Hola! soy Brina, una ingeniera de Instagram. Una función es un conjunto
-          de líneas de código que quieres usar una y otra vez, así que en vez de escribir
-          ese código cada vez, puedes usar solo un bloque.'
+        text: 'Hola! soy Brina,una ingeniera de instagram.Una función es un conjunto
+          de líneas de código que quieres usar una y otra  vez,asi que en vez de escribir
+          el código cada vez, Usted puede usar solo un    bloque. '
       2:
         image: notes/stage13_2.jpg
-        text: Vamos a aprender cómo definir funciones. Las definiciones de funciones
-          tienen una estrella en la esquina. El nombre de la función está escrito
-          en la línea superior.
+        text: Vamos a aprender cómo definir funciones.Las definiciones de funciones
+          tienen una estrella en lá esquina.El nombre de la Función esta escrito en
+          la linea superior.
       3:
         image: notes/stage13_3.jpg
         text: Los bloques que se encuentran dentro de la definición nos dicen qué

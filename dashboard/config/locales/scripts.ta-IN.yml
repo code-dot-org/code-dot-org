@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: The Maze
+          The Maze: புதிர்பாதை
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -49,7 +49,7 @@
           description_audience: Ages 4+ (pre-readers)
           description_short: Start with Course 1 for early readers.
         course2:
-          The Maze: The Maze
+          The Maze: புதிர்பாதை
           Suzi: Suzi
           The Artist: கலைஞர்
           Artist Debugging: Artist Debugging
@@ -91,7 +91,7 @@
           description_audience: Ages  6+ (reading required)
           description_short: Start with Course 2 for students who can read.
         course3:
-          The Maze: The Maze
+          The Maze: புதிர்பாதை
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: கலைஞர்
           title: Course 3
@@ -107,7 +107,7 @@
           Bounce: Bounce
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: Computational Thinking
+          Computational Thinking: கணினிபூர்வமான சிந்தனை
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -316,10 +316,10 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: இணைய மாதிரி
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
+          Internet Simulator: இணைய மாதிரி
           Unit 1: Unit 1
           Unit 2: Unit 2
           Sending Bits: Sending Bits
@@ -363,8 +363,8 @@
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
           Introduction to Computer Science: கணினி அறிவியலின் அறிமுகம்
-          The Maze: The Maze
-          Computational Thinking: Computational Thinking
+          The Maze: புதிர்பாதை
+          Computational Thinking: கணினிபூர்வமான சிந்தனை
           Graph Paper Programming: வரைதாள் செய்நிரல்
           The Artist: கலைஞர்
           Algorithms: வழிமுறைகள்
@@ -375,7 +375,7 @@
           The Artist 3: கலைஞர் 3
           Song Writing: பாடல் எழுதுதல்
           The Farmer 2: விவசாயி 2
-          Abstraction: Abstraction
+          Abstraction: நுண்புல
           The Artist 4: கலைஞர் 4
           Relay Programming: Relay Programming
           The Farmer 3: விவசாயி 3
@@ -386,7 +386,7 @@
           title: குறியீட்டை திருத்து
           description: குறியீட்டை திருத்து
           description_short: குறியீட்டை திருத்து
-          The Maze: The Maze
+          The Maze: புதிர்பாதை
           Applab: Applab
           The Artist: கலைஞர்
           Play Lab: Play Lab
@@ -744,6 +744,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1026,7 +1027,7 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: இணைய மாதிரி
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1038,7 +1039,7 @@
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: இணைய மாதிரி
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1121,7 +1122,7 @@
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: Hour of Code
+          Hour of Code: நிரல்வரி நேரம்
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1368,6 +1369,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development

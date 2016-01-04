@@ -146,14 +146,14 @@
           description_short: Курс 3 Курс 2-нің жалғасы болып табылады.
         playlab:
           title: Ойындар Лабораториясы
-          description: Оқиға құрыңыз немесе Ойындар Лабораториясымен ойын жасаңыз!
+          description: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
           Play Lab: Ойындар Лабораториясы
-          description_short: Оқиға құрыңыз немесе Ойындар Лабораториясымен ойын жасаңыз!
+          description_short: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
         artist:
           title: Кейіпкер
-          description: Тамаша суреттер салыңыз және Кейіпкермен әрлеңіз!
+          description: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
           Artist: Кейіпкер
-          description_short: Тамаша суреттер салыңыз және Кейіпкермен әрлеңіз!
+          description_short: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
         hourofcode:
           Maze: Лабиринт
           title: Классикалық лабиринт
@@ -752,6 +752,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1381,6 +1382,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.

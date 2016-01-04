@@ -29,6 +29,8 @@
     code:
       label: 'Мұғалімді қосу:'
       placeholder: Бөлім Коды (ABCDEF)
+      instructions: Оқытушымен бөлісіп код жазыңыз өтініш. 6 әріптен тұратын код яғни
+        "ABCDEF".
     submit: Мұғалімді қосу
   add_hint_form:
     placeholder: Өтінеміз, мұнда көмек сөзін қосыңыз
@@ -290,9 +292,8 @@
       remove: Сіз бұл оқытушыны өшіргіңіз келеді ме?
     students:
       dashboard: Оқытушылар Терезесіне өту
-    user_not_found: Оқушы немесе оқытушы табылмады
-    student_teacher_disassociated: '%{teacher_name} оқытушы, %{student_name} оқушының
-      мұғалімдер тізімінен өшірілді'
+    user_not_found: Оқытушы табылмады.
+    student_teacher_disassociated: Сіз %{teacher_name} оқытушылар тізімінен алып тастадыңыз.
     panel:
       answer_viewer: Жауаптарды көру
       student: Оқушы
@@ -382,7 +383,7 @@
     title: Код Студиясында үйрену
     description: Информатика пәнін барлығы үйрене алады. Ойындар, қосымшалар және
       сурет салыңыз.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Код Жазу Сағатын байқап көріңіз!
   gender:
     male: Ер
     female: Әйел
@@ -400,14 +401,24 @@
       алғысымызды айтамыз.
     help_from_html_old: Google, Microsoft, Facebook, және Twitter инженерлері бұл
       материалдарды жасауға көмектесті.
-    art_from_html: Мұзды Дәуір&#8482; &amp; &copy; %{current_year} 20th Century Fox.
-      Барлық құқығы қорғалған.<br />Ашулы Құстар&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Барлық құқығы қорғалған.<br />Өсімдіктер Зомбилерге
-      қарсы&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Барлық құқығы
-      қорғалған
-    art_from_html_old: Ашулы Құстар&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Барлық құқығы қорғалған.<br />Өсімдіктер Зомбилерге қарсы&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Барлық құқығы қорғалған
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар
+      қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және
+      Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year}
+      Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year}
+      20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br
+      />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
+      Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
+      болып табылады және &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар
+      қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және
+      Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year}
+      Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year}
+      20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br
+      />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
+      Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
+      болып табылады және &copy; 2015 Cartoon Network.
     powered_by_aws: Amazon Web Services серверінде жұмыс істейді
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және
       Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады.'
@@ -425,7 +436,7 @@
     built_on_code_studio: Код Студияда жасалған
     make_my_own_app: Өзімнің бағдарламамды жасау
     how_it_works: Қалай жұмыс істейді
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Код Жазу Сағатын байқап көріңіз!
   reference_area:
     title: Көмек керек пе?
     subtitle: Видеолар мен көмексөздерді көру

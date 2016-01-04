@@ -205,7 +205,7 @@ de:
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, Ich bin Makinde! Lernen wir was über den "solange" Baustein. '
+        text: 'Hi, Ich bin Makinde! Ich zeige euch etwas über den "solange"-Baustein '
       2:
         image: notes/stage9_6.jpg
         text: 'Der "solange"-Baustein wird alles, was du hereintust, ausführen, SOLANGE die Anweisung darüber WAHR ist.'

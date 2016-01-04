@@ -59,22 +59,19 @@
         Savjet: Kut je premalen za 60 stupnjeva'
       2-3 Artist Debugging Assessment 1_instruction: 'Ovaj oblik je premalen. Možeš
         li ga povećati? Savjet: svaka stranica bi trebala biti 75 piksela duža.'
-      2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
+      2-3 Artist Free Play_instruction: Besplatna igra! Nacrtaj što god želiš.
+      2-3 Artist Functions 1_instruction: 'Pozdrav. Ja zombi umjetnik. Ja voljeti
+        crtati! Pomozi mi nacrtati kvadratne naočale.  Savjet: most između čaše je
+        kraći od kvadrata duljine 25 piksela.'
+      2-3 Artist Functions 10_instruction: Evo dvije funkcije, jedna za crtanje velikog
+        zupčanika i jedna za crtanje malog zupčanika. Koristite ih za crtanje unutar
+        stroja!
+      2-3 Artist Functions 11.5_instruction: Ovdje je ta ista "Nacrtati šesterokut"
+        funkcija. Što ako samo okrenete za 60 stupnjeva kod svakog ponavljanja?
+      2-3 Artist Functions 11_instruction: Promijenili smo naziv funkcije "nacrtaj
+        kvadrat" u funkciju "nacrtaj šesterokut", ali još uvijek crta samo kvadrate!
+        Možete li izmijeniti "nacrtaj šesterokut" funkciju da crta šesterokute sa
+        stranicom od 50 pixela i zatim je nacrtati pomoću funkcije?
       2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
         things multiple times. Can you use the \"draw a flower\" function\nto fill
         the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
@@ -5047,6 +5044,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -5054,6 +5054,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

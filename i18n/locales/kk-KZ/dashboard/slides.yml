@@ -3,7 +3,7 @@ kk:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: 'Кодтың алғашқы сағатына қош келдіңіз! Өзіміздің алғашқы бағдарламалаудың дәм татуымызды батайық. '
+        text: Кодтың алғашқы сағатына қош келдіңіз! Өзіміздің алғашқы бағдарламалаудың дәм татуымызды бастайық.
       2:
         image: notes/hoc1_2.jpg
         text: Біз код жазу үшін блоктарды алып-қосуға болатын визуалды Blockly бағдарламалау тілін қолданатын боламыз.
@@ -33,7 +33,7 @@ kk:
         text: 'Әрбір блок бір нұсқаны білдіреді. Егер сіз "алға жылжу" блогын жұмыс аймағына қойып, "Бағдарламаны орындау" батырмасын бассаңыз, құс лабиринт бойымен бір орынға жылжиды.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Бір әрекеттен гөрі көп әрекетті жасау үшін, басқа блоктарды сіздің жұмыс үстеліңізге орналастырып, оларды бір-бірімен қосамыз. Сонда құс сіздің құрастырған коммандасына үстінен астыға бағынады.
       12:
         image: notes/hoc1_12.jpg
         text: 'Егер сіз бағдарламаны орындап, оны түзетіп басынан орындағыңыз келсе, "Түсіру" батырмасын басыңыз.'
@@ -485,8 +485,7 @@ kk:
         text: Сіз блоктарды жабдықтар панелінен жұмыс облысына көшіруіңіз қажет. Блоктың ағымда тұрғанына көз жеткізіп алыңыз, дұрыс бағытты тапқаныңызға сенімді болған кезіңізде “Орындау ” пернесін басып, құстың доңызға барғанын көруіңізге болады.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: 'Сізге үстінде блогын элементтер панелінен жұмыс үстеліне көшіру қажет, олар "қосу кезінде" блогының астында тұрғандығына көз жеткізіңіз де, өзіңіздің шешіміңіздің дұрыстығына сенімді болған кезде "Қосу" батырмасын басыңыз да құсытың торайға қарай орын ауыстыруын бақылаңыз.'
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
@@ -616,7 +615,7 @@ kk:
         text: Бұл біз қанша нектар немесе қанша бал алу керек екендігін білмеген кезде пайдасы тиіп қалар.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Осы жердегі сұрақ белгісінен көріп тұрғанымыздай бізге алуға болатын бал немесе шырын саны қаша екендігін білген пайдалы.
       3:
         image: notes/C2_bee_conditionals_3.png
         text: 'Бұл мысалда біз мына күлгін гүлде нектар 0-ден көп көп болса, нектарды жинау  бұйрығын береміз. Демек, біздің ара, егер бұл күлгін гүлде нектар болса, оны біткенінше жинайды, демек 0 болғанынша жинайды. Та-дам!'
@@ -787,10 +786,10 @@ kk:
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+        text: Программалаудын ең ағзам жері ол сіз компьютерді, жағдайды калай орындауға, деген сияқты үйретсеңіз, сіз сол функцияны қайта шақыра аласыз.Сіз оған есім бересіз, және тағаййындай аласыз. Бұл шынымен тілдін кеңейтілгені сияқты.
       2:
         image: notes/C3_artist_functions_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square, so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code. It will get done for us. We've added that concept to our programming language."
+        text: 'Программады біз құрдық,білдік, квадратты төрт рет орналастырып айналдырып салуға болатындығын.Біз бұл функцияны алып есім бере аламыз, және кез келген  біз қалаған уақытта,квадрат салу деген команданы жазып аталған функцияны шақырып  аламыз.Бұл біз үшін жасалынған.Біз программалау тіл концепциясын қостық.'
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -810,17 +809,17 @@ kk:
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: "When you put a loop inside of another loop, we call that a nested loop. For example, here we're given the code already to draw one triangle with sides of length 100 pixels using the repeat times block set to three, once for each side of a triangle."
+        text: 'Сіз циклдін ішіне цикл қойған кезде біз оны күрделі цикл дейміз. Мысалы: Бұл жерде біз үшбұрыш бүйірлері 100 пиксел деген коды берілген, блоктар жиымын бір қайталымын 3 рет орындау, біріншісін ұшбұрыштын бүйірлері үшін.'
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+        text: 'Бірақ біз алты ұшбұрыш аңғарғымыз келеді.Ол үшін  біз циклді қолданып және оны басқасына еңгізіп блоктаймыз.Өте жақсы!!!'
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
         text: Бұл біз қанша нектар немесе қанша бал алу керек екендігін білмеген кезде пайдасы тиіп қалар.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Осы жердегі сұрақ белгісінен көріп тұрғанымыздай бізге алуға болатын бал немесе шырын саны қаша екендігін білген пайдалы.
       3:
         image: notes/C3_bee_conditionals_3.png
         text: 'Бұл мысалда біз мына күлгін гүлде нектар 0-ден көп көп болса, нектарды жинау  бұйрығын береміз. Демек, біздің ара, егер бұл күлгін гүлде нектар болса, оны біткенінше жинайды, демек 0 болғанынша жинайды. Та-дам!'
@@ -837,134 +836,134 @@ kk:
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define new commands, how to add your own words to a computer language. Most computer languages have only about one hundred words or commands. The art and magic is in defining your own new words out of these building blocks.
+        text: Информатиадағы маңызды мәселердің бірі болып қалай жаңа камандаларды анықтауға, өзіңіздің жеке сөзіңізді бағдарламалау тіліне қалай қосуға болатындығында. Көптеген бағдарламалау тілдерінде тек қана жүзге жуық сөздер мен командалар саны бар. Осы құрылыс блоктары өзіңіздің жеке сөздеріңіз бен командаларыңызды анықтау жолдары өнері мен дағдысын кқрсетеді.
       2:
         image: notes/C3_bee_functions_2.png
-        text: "We do this all the time in sports. For example, in basketball, you start by learning how to dribble, how to do a lay-up, how to rebound. Once you've learned these really basic moves, you learn new moves and put together these building blocks, like a pick and roll or give and go. You can then go from there to do more complex plays. Once you learn that play and give it a name, everybody on the team knows how to do it."
+        text: Біз мұны әрдайым спортта пайдаланамыз. Мысалы баскетболда сіз бастапқыда допты қалай ертіп жүру қажеттігін, қалай жоспарлау, қалай секірту қажеттігін үйренесіз. Сіз осы расында да негізгі қадамдарды үйреніп болғаннан соң сіз осы блоктарды біріктіріру арқылы допты алу, алдау және беру жолдары секілді жаңа қадамдарды үйренесіз. Сіз ол жерден қиынырақ ойындарды жасауға келуіңіз мүмкін. Сіз не ойнау қажеттігін шешіп, оған бергеннен бастап командалардың барлық мүшелері оны қалай жасау қажеттігін біліп отырады.
       3:
         image: notes/C3_bee_functions_3.png
-        text: "Similarly once you've taught a computer how to do an action once using these sequences of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function. Now we're going to use functions to help the bee."
+        text: Дәл осы жолмен сіз компьютерге осы командалар тізбегін қолдана отырып осы іс-әрекеттер тізбегі қалай орындау қажеттігін көрсеткеннен соң сіз осы іс әрекеттер кейінірек қайталауға оңай болуы үшін өзіңіздің жеке атыңызды бере аласыз, бұл функция деп аталады. Енді біз бал арасына көмектесу үшін функцияларды қолданбақпыз.
       4:
         image: notes/C3_bee_functions_4.png
-        text: "In this example, our function is called get 2 nectar, this green block right here. We know what get 2 nectar does by looking at this grey box which is the function definition. If we look inside there, the get 2 nectar is going to get nectar and then get nectar again. Always look at what's inside the grey box so that you know what these green function blocks can do."
+        text: Бұл мысалдағы біздің функция 2 шырын алу деп аталады, ол дәл осы жердегі жасыл бло. Біз 2 шырын алу не істейтіндігін функция анықтаиасы болып табылатын сұр аумаққа қарап біле аламыз. Егер де ол жерге қарайтын болсақ онда 2 шырын алу функциясы алғашқы шырынды және оның артынша екінші шырынды қалай алатындығын көре аламыз. Әрдайым сары аумақ ішінде не бар екендігіне назар аударыңыз, лсыдайша сіз осы жасыл функциналдық блоктар не жасай алатындығын көре аласыз.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: "Now we're going to use nested loops with the bee. We're given some starter code which tells the bee to move forward and get nectar three times and then turn right. Let's take that whole piece of code and nest it inside another repeat block and set to repeat three times. Done!"
+        text: 'Енді біз ара мен еңгізілген циклді қолданғалы жатырмыз. Біз бастапқы кодтарды еңгізгенбіз, ол араны алға қозғалту үшін және нектарды үш рет алу үшін және оңға бұру үшін қажет. Егер кодтын барлық бөлігі және ара ұяшығы  бір қайталағыш блоктын ішінде деп алып, оны үш рет қайтала.Дайын!'
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: "You're going to be creating your very own bounce game that you'll be able to share with your friends! How cool!"
+        text: Сіз өзіңіздің жеке ойын құрғай жатырсыз, және сіз өз достарыңызбен бөлісе аласыз! Қалай қызық!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow keys on our keyboard.
+        text: 'Ең алдымен, біздің пернетақтадағы бағытша батырмаларын  басқару элементтеріне байланыстыруымыз қажет.'
       3:
         image: notes/C3_bounce_3.png
-        text: "We can do this by linking the when left arrow block to the move left block and the when right arrow block to the move right block. Give it a go and you'll be programming your own bounce game in no time!"
+        text: Біз бұны былай жасай аламыз, солға қарай бағытталған батырманы солға қарай жылжумен блогымен байланыстыру, және оң жақты оң блогына байланыстыру арқылы.Оны жүргізіңіз және сіз өзіңіздің программалау ойыныңызды аз уақытта жасай аласыз.
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: "This lesson is computational thinking. Sometimes learning a new game can be tough, right? At first it might seem really confusing and sometimes, there's no one there to teach you the rules, so you have to figure it out on your own."
+        text: Бұл есетегіштік ойлау сабағы. Кейде жаңа ойынды үйрену қиын болуы мүмкін, солай емес пе? Бастапқыда ол шатыстырарлық болып көрінуі мүмкін, ал кей кездері сізді үйрететін нұсқаулықтар болмағандықтан сізге өздігіңізден үйрену қажеттіліг туады.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
+        text: Сіз кейбір ойлау әдістерін қолдана отырып заттарды өзіңіздің қалауыңыз бойынша қарасытра білу жақсы жаңалық болып табылады. Бұл әдістер есептің шешімін табу үшін қайталанбас болып келеді. Бұл сабақта сіз шамамен төртке жуық әдістерді үйреніп, ойын шартын үйрену үшін өз достарыңызбен тәжірибеде қолданасыз.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+        text: Күрделі есепті шағын есептерге бөлгенде, сіз күрделі есепке анализ жасайсыз. Күрделі есепті шағын есептерге бөлген соң, біз қима жасау атты келесі тақырыпқа көше аламыз.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+        text: 'Екі заттың ұқсастығын салыстырғанда, егер бір ұқсас нәрсе тауып алсым, мен қайндай айырмашылық бар екенін көре аламын. Айырмашылықтарды жою - абстракция деймиз.'
       5:
         image: notes/C3_computational_thinking_5.png
-        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+        text: Есепті шешіп алған соң, мен есептін шешу алгоритмын құра аламын. Алгоритм дегеніміз есепті шешу үшін амалдарды дұрыс ретімен орындау. Осы 4 қадамды қолданып, ережесі жоқ ойынды ойнау үйренеміз. Ойынның сонына қартай осындай ойынды ойнай алатын боласын!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: "This lesson is called crowdsourcing. In this lesson we'll use a deck of cards to learn about how much easier some things can be to do in groups instead of trying to do them all alone. So grab some friends and make something awesome. Crowdsourcing is getting help from a large group of people to finish something faster."
+        text: Бұл сабақ краудсорсинг деп аталады. Осы сабақта біз колода картасы арқылы сізге топпен жұмыс істеудін, жалғыз жұмыс істеуден тиімді екенін көрсетеміз. Сондықтан барлық достарынды жина. Краудсорсинг деген үлкен топ арқылы бір тапсырманы тез аяқтау.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of amateurs and professionals link their computers together to search through billions and billions of pieces of information. Looking for things like the next Marsenne prime number, or even possible alien communications.
+        text: Информатикада краудсорсинг жиі қолданылады. Мыңдаған информатиктер бірге қосылып милиондаған информациялар жинайды. Мысалға Мерсенн жай сандарын іздеу немесе бөтен коммуникацияларды ұстау.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: "When you see a movie, each second of the movie is 24 individual pictures, we call those frames. So every one of those pictures needs to be created and rendered and put all together. My team and I, we're all software developers. We all work together to create a piece of software that actually creates an image, creates the final image that you see on screen. That's a tool that artists and other developers can use as part of their teamwork and their process to be able to create the images that they want on screen."
+        text: Сіз кино қарап жатқанда, киноның әрбір секунды 24 жеке сурет. Біз оны кадр деп атаймыз. Сондықтан әрбір сурет құрастырылып орындарына тұру керек. Мен және менің командам бағдарламаушылармыз. Біз барлығымыз сіз экранда көретін кадрларды жасайтын бағдарламаларды құрастырамыз. Бұл құрал, суретшілермен бағдарламашылар кадрларды жасауға қолданатын құрал.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
+        text: Мысалы, Немоны Іздеу мультфильмінде Краш, Прыск және олардың барлық достары Шығыс Австралиялық ағыспен жүзгенде, сіз су ағындарының суретін, тасбақанын артынағы түрлі түстер, балықтардың денелерін. Бұның барлығы математика және компьютерлік бағдарламалар арқылы жазылып, суретшілердің өңделуінен өтіп, сурет әдемі және қызықты болады.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
+        text: Осы сабақ Dice Race деп аталады. Түгелге жуығымыз компьютер ойындарын ойнағанды жақсы көреміз. Компьютер бағдарламалары ойын қадамдарын қалай бағдарламаға қалай айналдыратынын ойланып көрмедіндер ма? Ойының бағдарламасын жасаудағы және кез-келген есепті шығарудағы бірінші қадам ойлану және план құру.
       2:
         image: notes/C3_dice_race_2.png
-        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+        text: Есеп шығарудың ойлану қадамында алгоритм құралады, бұл тапсырманы орындау планын құрастырады. Осы сабақта сіз Dice Race ойынының алгоритммын құрасыз. Кейін осы алгоритмды достарыңыз өте алама екенін тексеруге сұрайсыз. Бағдарламалаушы алгоритмы дұрыс болғанына көзі жеткенде, ол өз алгоритмын бағдарламалау тіліне айналдырып, бағдарламасын жазады.
       3:
         image: notes/C3_dice_race_3.png
-        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+        text: Біз күнделікті жасайтын барлық нәрсе алгоритмды қажет етеді, тапсырманы орындау үшін қажет амалдар. Мысалға мектепке дайындық, достармен қызызты жерге баруды ойластыру немесе бір затты жөндеу барлығы алгоритмды қажет етеді. Кез келген тапсырманы орындау үшін оны шағын тапсырмаларға бөліп, шешіп, оны керек ретпен орындау қажет.
       4:
         image: notes/C3_dice_race_4.png
-        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+        text: Сэндвич жасау туралы ойланыңызшы. Оны жасағанда кез-келген ингридиентты кез-келген ретпен салуға болады. Бірақ сіз банканы ашпай жержаңғақ майын нанға жаға алмайсыз. Компьютерге адам ойланбай жасайтын кез-келген қарапайым затты жасау үшін алгоритм қажет.
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
+        text: Дұрыс алгоритм компьютерге берілмей тұрып не болатынын болжап тұрады. Тапсырманы шағын бөліктерге бөлу, алгоритм құрастыру кей кезде күрделі. Бірақ кез кез келген қабілет сияқты оны дамытуға болады.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: "While loops are pretty similar to what you do in everyday life. Imagine you are washing your car, you'll keep scrubbing until it's clean. While it's not clean, continue to scrub. You're evaluating these things all the time."
+        text: Шартты циклдар жұмысы, біз күнделікті өмірде істеп жүрген заттарымызға ұқсайды. Мысалға машина тазалауды қарастырайық, сіз оны таза болғанға шейін жуасыз. Бұл заттарды әр қашан есептеп отырасыз.
       2:
         image: notes/C3_farmer_while_2.png
-        text: "We've got a new look to help your farmer out. It's called a while-block. It's pretty simple actually. While a statement at the top is true, do something. For example, while there's a pile move one hayful. Go ahead and give it a try with your farmer."
+        text: Біз фермерге көмектесудін жаңа амалын таптық. Шартты блок деп аталады. Бұл өте оңай. Жоғарыдағы сөйлем дұрыс болғанша, бір нәрсе істе. Мысалы, шөп үймесі бар болғанша шөпті тасы. Енді фермерге көмектес.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "This lesson is functional suncatchers. You'll be creating these pretty suncatchers using functions. There are several steps in creating one of these suncatchers. Some of the steps you have to repeat many times."
+        text: Осы сабақ күннін көзін жинау функциясы деп аталады. Осы күннін көзін жинау тұмарларын жасау функцияларын құрастырамыз. Бұл тұмарларды жасаудын бірнеше жолы бар. Кейбір амалдар бірнеше рет орындалу қажет.
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: The first step in simplifying the process of making a suncatcher is figure out what we have to repeat over and over again. We can group these steps into what we call a function.
+        text: Тұмарды жасау үдерісінің жеңілдету бірінші қадамы біз нені қайта-қайта қайталау керек екенін анықтау керек. Бұл барлық қадамдарды біз функцияға топтай аламыз.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: "But there is more to creating a beautiful suncatcher than following precise steps. Sometimes we want to be creative and change the color of the beads we're using. We can make every suncatcher unique if we use different colored beads."
+        text: 'Келесі нақты қадамдарға қарағанда бұл әдемі suncatcher құру емес.Кей кезде біз  өзімізді ерекше сезініп өзіміз қолданатын шарлардын түсін өзгерткіміз келеді.егер біз барлық шарларды әртүрлі түсте қолдансақ, онда біз әрбір suncatcher-ді дара қыла аламыз.'
       4:
         image: notes/C3_functional_suncatchers_4.png
-        text: Your suncatcher will be uniquely yours when you learn to think of the beads as variables which is a word that means a placeholder for information that can change. Have fun creating beautiful suncatchers using functions and variables!
+        text: Егер сіз бисерлі ойлана алсаңыз , анықтама толықтырғыш және ол өзгеруі мүмкін, онда сіздің suncatcher шынымен сыйлы бола алады. Функция мен айнымалыларды қолданып әдемі suncatcher құруыңызға сәттілік.
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place and similar to this busy road. Messages like cars are zooming along to get to their destinations. Messages move through the internet very quickly.
+        text: Бұл сабақтар интернет жайлы. Интернет бұл өте қозғалмалы орын, және қоғалысы көп жолдарға ұқсайды. Хабарлама, белгіліенген орынға автокөлікті бағыттағышпен калай жете алады. Хабарлама, Интернет арқылы жету өте тез.
       2:
         image: notes/C3_internet_2.png
-        text: "Acting out how the internet works will help you understand what's happening when you use the internet. You'll learn how messages get from your computer to a favorite website or from a friend to an email inbox. Just like it's easier to navigate busy roads when you know the roads and can read the signs, traveling the internet is not so complicated when you know what goes on behind the scenes."
+        text: Сіз интернет қолданған кезде не болып жатқанын жұмыс істегенде байқайсыз.Сіз өз компьютеріңізден веб-сайтыңыздан немесе жақын досыңыздан жеке почтаңызға хабарлама алуға болатындығын біле аласыз. Және тағы кептеліс болып жатқан жолдарды іріктей аласыз, және белгілерді біле аласыз.Интернет ішінде саяхаттау қйын емес себебі сіз жолдарды білесіз.
       3:
         image: notes/C3_internet_3.png
-        text: "Sending messages on the internet is a little bit like sending messages in the mail but with a few differences. I'm here at Google.com. The IP address for this website is this number. You can think of an IP address as your return address in the mail. Let's imagine that I want to send a message in the mail to someone in the office down the there. Do you see URL and the IP address on that door? I've written this message and hit send."
+        text: 'Хабарламаны Интернетке жіберу ол почтаға хабарлама жіберу сияқты бірақ кішкене айырмашылығы бар. Google.com IP-адрес бұл сайттарға сандығы көп. Сіз  IP-адресті сіздін почтаңызға кері қайту адресі деп ойлай аласыз. Біз төменде офисте отырған кез келген адамға почта арқылы хабарлама жібереміз деп аңғарайық. Сіз  URL және IP-адресті есік деп көресізба? Мен бұл хабарламаны жаздым және жіберу батырмасын басыңыз.'
       4:
         image: notes/C3_internet_4.png
-        text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
+        text: Почталық қызмет көрсетуіндегі айырмашылық, біріншісі интернет хабарламаны ұсақ бөліктерге бөліп тастайды, және ол хабарламаны жіберуді жеңілдетеді.Бұл ұсақ бөліктер пакеттер деп аталады.Әрбір пакет хабарламасы қажет орынға бір-бірлеп жетеді.Бұл пакеттердін барлығын, қабылдағыш ол хабарламаны дұрыс оқығандай етіп, дұрыс тізімде алғанда.Интернеттін қалай жұмыс істейтінін білу үшін әліде көп ұсақ белгілер бар, және бұл жақсы бастама. Сіз интернет-қолданушы тағасын құруда өзіңіздің жолыңыздасыз! Сенімді болыңыз жанұяңызға және достарыңызға не білгеніңізді айту үшін.
       5:
         image: notes/C3_internet_5.png
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: Менің атым Аманда Камп және мен Гугл компаниясының инженер бағдармашысымын. Менің командам профильдар мен контактыларды сақтайтын ішкі серверде жұмыс істейді. Менің жұмысымда біз контактты басқа құрылғыларға қалай жіберу керегін ойластырамыз, мысалы сіздің телефоныңызға. Көпшілікте көп контакттылар бар, мысалы біз 1000 контактыны бір телефонға бір мезетте жібергіміз келмейді, себебі бұл өте үлкен информация. Біз интернет информацияны қабылдайтындай концепцияны қолдандық. Телефонға 100 контакт жіберген соң, ол оны қабылдап реттегеннен кейін тағы 100 контакт жібереміз.
       6:
         image: notes/C3_internet_6.png
-        text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
+        text: Бағдарламаның ең қызығы – ол барлық әлемге әсер ете алады. Мен 19 жасымда бағдарламалауды үйрендім. Мен коледждін екінші немесе үшінші курсында болғам. Менің бірінші бағдарламам Цельсиден Фаренгейтке мәндерді айналдырады. Мен бағдарламалауды жақсы көретін себебім, мен адамдарға көмектескенді жақсы көремін. Мен Гуглға програмаларымды жазып, дүние жүзінің барлық адамдарына көмектесе аламын. Бұл өте тамаша.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+        text: Адамдар күнделікті шешім қабылдайды. Мысалы, тысқа шығу үшін сізде егер амалы бар, егер далада жаңбыр жауып тұрса, маған куртка қажет болады. Осы барлық мәселелерді шешіп тастасан компьютерлер оны ғажайып жылдамдықпен орындайды. Компьютерлік бағдарлама бұл математикамен егер амалдарының қосындысы.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: "The if block helps the zombie make a decision. It checks something. For example, let's use the block that says if there's a path to the left, and put a turn left command inside it. We're telling the zombie to check its surroundings, see if there's a path on the left and if so, make that turn."
+        text: Блок шарты зомбиға шешім табуға көмектеседі.Ол бір нәрсені тексереді. Мысалы, егер солға қарай жол болса онда солға бұрылыс қойсын деген ішіндегі командалы блокты қолданайық.Біз зомби туралы айтып тұрмыз, оның жан жағын тексеру үшін, егер солға бұрылыс болса онда сол бұрылысты жасау.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: "Then we use the move forward block inside this repeat to get it to keep moving forward as long as it just wants to go straight. Then when there's a turn, the if block will tell it to make that turn to the left. You can see that if we do that, if we take the turn to the left and otherwise moving forward, we'll achieve our goal."
+        text: Келесі тек алға командасын ішінде, оны алға жылжыту үшін, қайталау блогын қолданамыз, қазір ол тек алға жүргісі келеді. Егер оған солға бұрыл деген блоктын кезегі келсе онда солға бұрылу керек.Сіз көре аласыз егер бұл бұрылысты жасап алға жылжитын болсақ онда біз өз мақсатымызға жетеміз.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: "It's an example of using an if statement which is really a fundamental concept in computer programming. One of the first things I learned was how to write a program that played tic-tac-toe. I had if statements to say, ok, if the other person is about to win, go ahead and block that spot. Have fun learning how to use if statements, it's a key concept."
+        text: Бұл мысалдар егер программалау тілінде фундаменталды анықтама болса ғана қолданылады.Бірінші заттардын бірі, мен крестик және нолик ойынын программасын қалай жазу керектігін білдім.Егер қарсылас сені жеңгей жатса онда ол блокты жауып тастау керек деген шарт қойдым. Оқытылуға сәттілік, шарт ол кілтті сөз.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block.
+        text: Бұл мысалда сіздің мақсатыңыз зомбиді алу. Біз бес қозғалыс блоктарын қолдана алатын едік, және былай айтуға болады, компьютер алға қозғалу үшін және бір бұрылыспен бес рет қайталатқызса болады.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower.
+        text: Бұл уақытты үнемдетеді және оны оңтайландырады. Оны қолдану үшін тек алға қозғалу блогын және оның ішіне қайталауды қою қажет.Орындау батырмасын басыңыз, зомби алға жылжитын болады және бес рет күнбағысты айнала алады.
     C3_playlab_create_game:
       1:
         image: notes/C3_playlab_create_game_1.png
@@ -975,24 +974,24 @@ kk:
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program. The written notes and words tell the singer exactly what to do. Some parts of music are used over and over again.
+        text: Бұл сабақты жазу өлені.Музыка өте көп, компьютердін программасындағыдай. Жазбаша ескертулер және сөздері дұрыс айтылған.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program that are used over and over again are called functions. When you read song lyrics and it says the word chorus, do you sing the word chorus? No, you look at the top of the page to see what words make up the chorus.
+        text: Біз бұны хор деп атаймыз.Компьютерлі программада, программа бөліктерінде қайта-қацта қолданылатындар функция деп аталады.Сіз өленнін сөдерін оқығанда, және ол хормен айтылса, сіз хормен айтасыз? Жоқ, сіз үстінгі парақша бөлігін көресіз қандай сөздер хормен айтылатындығын.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: "In this lesson, you'll learn a silly little song called little bunny foo foo. The song has a chorus that you will sing several times over and over again. A function is a piece of code that you can call and use over and over again. It makes programming easier and more efficient so you don't have to write out the steps of your function over and over again. You can just write it once!"
+        text: Бұл сабақта кішкентай қоян фо фо атты әнді үйренесіз. Әнде хормен айтатын орындарды бірнеше рет қайталау керек болады. Функция бұл қайта-қайта қолданыла алатын кодтын шағын бөлігі. Бұл функциялар бағдарламалауды жеңлдетеді, себебі бір затты қайта-қайта жаза беру қажет емес.
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: "This is the conditional block. It says if you're at the flower or the honeycomb, then do something. This is useful when we don't know how much honey or nectar to get as we see here with this question mark."
+        text: Бұл шартты блок. Егер сіз гул немесе балауыз онда амал жасау. Бұл пайдалы, егер біз онда қанша бал немесе нектар бар екенін білгіміз келсе онда сұрақ белгісін қоямыз.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: "In this example, we're going to say, if it's a flower, get all the nectar and then use another one to say, if it's a honeycomb, make honey. Ta-dah!"
+        text: Бұл мысалда біз былай айтқымыз келіп тұр, барлық нектарды алу егер бұл гул болса, және келесін қолданамыз, егер балауыз онда бал жасау. Та-да!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: "We have a new block that's called the if/else block. It's a conditional statement just like the if block you've used in the puzzles before. But now there's a new part at the bottom that says else. The if/else block lets the bee make a decision between two sets of actions. If the bee is at a flower, the bee will do the set of actions you put in the first part where it says do. If the bee is not at a flower, the bee will do the set of actions you put in the slot where it says else."
+        text: Егер/әйтпесе жаңа блогын қарсы ал! Бұл шартты амал, алдындағы тапсырмалардағы егер блогы сияқты. Бірақ мында енді әйтпесе амалы қосылған. Мысалы, ара екі шешімнің бірін қабылдасын. Егер ара гүлдін қасында болса онда ол бірінші шешімді істесін. Егер ара гүлдін қасында болмаса, онда ара әйтпеседегі екінші шешімді қабылдасын.
       2:
         image: notes/C4_conditionals_2.png
         text: "If statements are how computers are able to make decisions. Humans set up conditions for the computer that say if the computer is presented with a certain situation do this. Else, which just means otherwise, do that. The top of our if/else block says if at flower. But the top of our block could say other things, like if nectar equals 2 or if there's a path ahead, our block will behave in the same way. That if the statement at the top is true it will do the first set of actions. But if the statement at the top is false, it will do the second set of actions."
@@ -1042,10 +1041,10 @@ kk:
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: "One of the great things in computer programming is once you've taught a computer how to do an action, you can call that function again. You give it a name and then you can call it. That's really like extending the language."
+        text: Программалаудын ең ағзам жері ол сіз компьютерді, жағдайды калай орындауға, деген сияқты үйретсеңіз, сіз сол функцияны қайта шақыра аласыз.Сіз оған есім бересіз, және тағаййындай аласыз. Бұл шынымен тілдін кеңейтілгені сияқты.
       2:
         image: notes/C4_function_edit_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code and it will get done for us. We've added that concept to our programming language."
+        text: Біз құрған бағдарлмада шаршыны төрт рет орналастырып айналдырып салуға болатындығын үйреніп білдік. Біз бұл функцияны алып оған есім бере аламыз, және кез келген, біз қалаған уақытта шаршы салу деген команданы жазып аталған функцияны шақырып аламыз. Бұл біз үшін жасалынған. Біз бағдарламалу тілі концепциясын қостық.
       3:
         image: notes/C4_function_edit_3.png
         text: "In this puzzle, we have already created a draw a square function for you. You'll see it in the toolbox as a green block. What you'll need to do is write the same code you wrote before to draw a square and put it in this function. To do that, click on the edit option in the green draw a square block. This will open up the function editor. The function editor has three parts. A place where you name your function. This will appear on the green block before that function. Then write out a short description of what your function is supposed to do."
@@ -1061,7 +1060,7 @@ kk:
         text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
       3:
         image: notes/C4_function_parameters_3.png
-        text: "Click save and close and drag out your new create a square block from the functions category in the toolbox. You'll notice there's an empty space next to length because the function wants to know what value the parameter Length should have. Drag a number block from the Math category and place it in this space. See how you can use the function again and again with different lengths to make squares of different sizes? Try it for yourself!"
+        text: Сақтау және жабу батырмасын басыңыз, және панель инструментов ішіндегі функция котегориясындағы квадратты блок құру ына жаңадан апарыңыз. Сіз аңғарасыз бұл жай ғана ұзындық қасындағы кеңістік, себебі ұзындық анықтамасы болу қажеттігін функция білгісі келеді. Сандық блокты математика категориясынан ауыстырып сол кеңістікке орналастырыңыз. Біліңіз, әртүрлі ұзындықпен функцияны қайта-қайта қалай қолдануға болады, және квадраттар әртүрлі өлшемде? Өзіңіз үшін істеп көріңіз!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1071,114 +1070,113 @@ kk:
         text: 'Blockly үш негізгі бөліктерге бөлінген. Сол жағында біздің бағдарлама жұмыс істейтін құстық лабиринт бар. Әрбір деңгейдің нұсқауы лабиринттің төменгі бөлігінде жазылған. Ортадағы аудан toolbox болып табылады және әрбір блок  құс түсінетін команда болып есептеледі. Оң жақтағы ақ аудан жұмыс орны деп аталады және біз бұл жерде бағдарламамызды құрамыз. '
       3:
         image: notes/C4_intro_3.png
-        text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: 'Егер мен блокты біздің жұмыс орнымызға сүйресем және "Run" батырмасын бассам, не болады? Құс тордың ішінде бір қорапқа алға жылжиды. Ал, егер мен құстың бір қорапқа алға жылжыған соң тағы бір басқа іс-әрекетті орындасын десем ше? Онда мен біздің бағдарламамызға тағы бір блок қосу керек боламын.'
       4:
         image: notes/C4_intro_4.png
-        text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+        text: 'Мен блоктың орнын ауыстыру үшін «turn right» батырмасын таңдамақшымын және оны сары нұсқар пайда болмағанша блоктың орнын ауыстырайын деп жатырмын. Кейін блокты түсірген соң, екі блок  бір біріне тартыла бастайды. Мен «Run» батырмасын тағы да басқанда, жоғарыдан төмен қарай  командалар тізбегі жұмыс орнында орындала бастайды.'
       5:
         image: notes/C4_intro_5.png
         text: 'Егер сіз керек кезде блокты жойғыңыз келсе, жай ғана оны стектен өшіре салыңыз және қоқыс жәшігіне жіберіңіз. Шығып кеткеннен кейін жұмысты қайта бастау үшін қайта қосу батырмасын басуға болады. Ендігі кезекте  осы білімді торайларды ұстау үшін қолданып көріңіз!  '
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: "If I want to draw a rectangle 50 pixels tall and that is twice as wide as it is tall, how would I program the computer to do that? Well, I could tell the artist to go up fifty, turn right, and then go over 100 and move the whole thing twice. But then I'm doing the math for the computer."
+        text: Егер мен тікбұрышты 50 пиксель биік және екі есе кеңірек істегім келсе, мен компьютерді қалай программалауым керек? Мен айта алам суретшіге, алдымен 50-ге көтеріл сосын оңға бұрылып 100 жасап және осының барін екі есе істеу. Бірақ мен компьютерге математикасын жасап жатырм.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
+        text: Қйындығы елуді екіге көбейту баста істей алмайды, бірақ компьютер математиканы жақсы есептейді сондықтан оларға қалдырайық, іске асатындықтан. Егер мен жай ғана биіктік айнымалысын қолдансам онда мен елуге дейін биіктігін оңай ауыстыра алатын едім, кейін өз алгоритімімді өзгертер едім суретшіге жоғары биіктікке көтерілсін, оңға бұрылсын кейін екі есе биіктікке жоғары деп, бізге тікбұрышты беретіндей.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: "This lesson is called Tangram Algorithms. A tangram is a puzzle with seven pieces that can be put together to make other shapes. You'll be using an algorithm to explain to your partner how to put the puzzle together."
+        text: Бұл сабақ Tangram алгоритімі деп аталады. Tangram басқа форма жасау үшін қолданылатын жеті бөліктен тұратын басқатырғыш. Қалай барлық басқатырғышты бірге қоюға болатындығын әріптесіңізге түсіндіру үшін алгоритмді қолданасыз.
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a task. We use them every day with things like shopping lists and recipes. If you keep an algorithm simple, there are lots of ways to interpret it and whoever performs that algorithm might not get exactly what you wanted. If you want to make sure that everyone ends up with the exact same thing, then your algorithm will need to be detailed and very specific.
+        text: Алгоритм ол есепті орындауда қолданатын қадамдар тізімі. Біз оны күнде қолданамыз, яғни киімдер сатып алу тізімі және рецептер. Егер сіз алгоритмді оңтайлы ұстасаңыз, онда оны интерпретациялаудын бірнеше түрі бар және сол алгоритмді қолданғандар дәл сіз қалағанды ала алмайды. Егер сіз басқалардын алғанын қаласаңыз онда нақты және дәл сол алгоритм қажет.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: "I'm using an algorithm today to complete a painting. I wanted to try doing a painting of some wolves but I'm not the most amazing painter. Luckily for people by me, there is paint by numbers. There are forty colors and it has little letters and numbers that tell you which color to paint each section. Paint by numbers tells me exactly what color to use and where."
+        text: Суретті аяақтау үшін алгоритмді қолдандым. Мен кейбір қасқырларды басқа түсте жасағым келген, бірақ мен жақсы суретші емеспін. Адамдар үшін түстердін коп түрі бар. Қырық түс бар, және олар қай түспен секцияны бояу керектігін айтады. Нөмерлі түстер қай жерде түс қолданатындығын айтады.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "It's very specific so I'm able to follow directions and the painting will come out looking awesome. It's a great algorithm. If the instructions weren't specific enough, my wolves wouldn't look as good. When you really want something to turn out exactly the way that you planned it, it's best to be extremely precise."
+        text: Бұл өте өзгеше, сондықтан мен тапсырмаларға сай жасауым керек сонда сурет өте қызықты болып шығады. Бұл жақсы алгоритм. Егер шарттар жеткілікті тиянақты болмаса онда менін қасқырларын жақсы болмайды. Егер сіз дәл өзіңіз қалағандай болсын десеңіз онды осы алгоритммен жұмыс жасау керек.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: "Each team, the person who's instructing that's the person who's holding the paper, has to figure out what their off symbol is going to be and what their on symbol is going to be. In binary, it's kind of like an alphabet with two letters. Like having A and B be your entire alphabet but you've got a 0 and a 1."
+        text: Әрбір команда және нұсқаулар қағаздарын ұстайтын адам символдарды түсіну қажет. Екілікте ол екі әріптен тұратын алфавит сияқты. А және В әріптері сияқты бірақ 0 және 1 сандары.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "The most common way you use binary is in an if statement. It's a classic thing from programming. The program runs along and it says if something is true, then do this. Or it's not true and you do something else. What if you want to do something maybe a little more complicated. Instead an if statement, you want to work with something like an image or a sound in a computer."
+        text: Қолданудын көпше түрі мәлімдемеде орналасқан. Бұл программалаудын классикалық түрі. Программа жағалай жұмыс жасайды, егер шындық болса жасайды немесе бірдене жетпесе айтады. Не істейміз егер сіз қйындау нәрсе жасағыңыз келсе. Мәлімдеменің орнына сіз суретпен немесе музыкамен компьютерде жұмыс жасағыңыз келсе.
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: "A computer only knows binary but an image, it's not binary, it's not ones and zeros so how do you do that? Here's an example: You have this beautiful picture. Now a picture is basically a form of information. All information can be encoded in binary one way or another, you just have to figure out how to do it."
+        text: Компьютер бинарды біледі, бейнелеу ол нөл мен бірден тұратын бинар емес, себебі сіз оны жасайсыз? Мысалы, сізде осы әдемі сурет бар. Енді сурет негізгі формасы ақпарат. Барлық ақпарат кодталған болуы мүмкін екілік жүйеде бір жаққа қарай, сіз жай ғана бұл қалай істелетіндігін білу керексіз.
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: "You imagine that we're going to put a grid over this panda bear and for each square, we're going to decide whether that square is more black or more white. And then we're going to color it that way. Now each cell on the grid is either black or white and then the black squares we say those are zeros (binary digit) and the white squares are ones, the other binary digit. At the end, you're left with just a bunch of ones and zeros. That's how you represent this image in binary."
+        text: Сіз елестетіп көріңіз, біз панда аюына квадрат торқапшығын және әрбір квадратқа торқапшық жасағымыз келеді, және бұл квадраттар қаралау немесе ақшылдау екендігін шешкіміз келеді. Кейін біз түсі сондай болды. Енді торқапшығындағы ұяшықтар қара немесе ақшыл, кейін квадраттар қара деп нолед (екілік жүйеде), ақшыл келесі квадрат ол басқа екілік разряд. Соңына қарай сіз нөл мен бірлермен қалдыңыз. Солай сіздің суретіңіз екілік жүйеде жазылады.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: "This lesson is called for loop fun. In this lesson, we'll use a number line to play a dice game. Each player will roll three times to assign a starting value, a stopping value, and our interval. During each turn, we circle our starting value, and every value that is the same number of steps forward as our interval value. We stop circling when we get to our stopping value. The person with the highest score wins!"
+        text: Бұл сабақ ілмек ляззатын алып келді. Бұл сабақта біз жолдар нөмерін қолданамыз, сүйек ойынын ойнау үшін. Әрбір ойыншы үш рет айналдырады, алғашқыны анықтау үшін, және орналасуды. Әр айналым сайын алғашқы анықталады, және дәл сондай бірнеше қадам алға ол реттік сан. Біз тоқтаймыз, өзіміздін бекетімізге жеткеннен кейін. Ұпайы көп адам жеңімпаз болады!
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: "For loops can come in handy a lot of places and if you were to become a meteorologist, you would use for loops all the time. Hi, I'm Becky. I work at EverPower Renewables as a wind meteorologist. I forecast wind speeds for the Columbia River Gorge area where the company owns wind farms."
+        text: Шалулар барлық жерлерде керек болуы мүмкін,егер сіз метеоролог болсаңыз онда сіз әрдайым цикл қолданасыз. Салем, мен Бекки.Мен EverPower Renewables-та жұмыс істеймін метеоролог болып. Мен Колумбия жырағындағы су жағалауындағы жел жылдамдығын болжамдаймын,компания желдеме бар жерлерді.
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: "We're trying to understand how much wind is going to be there so that we know how much power is going to be outputted. We give that information to real time energy traders. They buy and sell power based on how much power we tell them is going to be there in order to make sure the power grid is balanced, your lights stay on, and that we maximize the amount of energy we get out of our farms."
+        text: 'Қаншалық онда жел болатындығын анықтағымыз келеді, қанша басқарушы шығатындығын түсінгіміз келеді.Біз бұл ақпаратты қазіргі уақытқа дейін  энергетикалық трейдерлерге жібереміз.Олар бізден сатып алып энергияны басқаларға сатып, энергожүйесінде баланс болу үшін,және сіздердін жарықтарыңызды максималды жағып энергияны көбейтеміз,және көбінесе біз энергияны өзіміздін шаруашылығымыздан аламыз. '
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: "We're at the national control center for EverPower Renewables here in Portland and this is where we have information coming in from all our farms across the country. Even the highest power computers today can't simulate the atmosphere everywhere. In computer forecasting models, we have what we call a grid. Each grid point is a latitude, longitude. We have to calculate the physics and try and figure out the wind speed, temperature,  pressure, that sort of thing."
+        text: 'Біз EverPower Renewables –ке  арналған Портленде орналасқан ұлттық басқару орталығындамыз,және бұл жан-жақтағы фирмалардан келетін ақпараттар жиналатын орын.Ең жақсы қазіргі замандағы компьютерлар бүкіл әлемдегі атмосфераны импорттай алмайды.Компьютерлер жақсы алғашқы моделдер,біз тор деп атайтынымыз бар. Тордын әрбір нүктесі еңдік,ұзақтық.Біз физикалық тұрғыда желдін жылдамдығын, температурасын,тығыздығын осындай заттарды анықтауымыз қажет.'
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: "Since these are fairly big grids and we're doing this in a lot of points we're looping over these things millions and millions of times. Everything I do I'll use for loops. Here for example is a for loop right there. When you're forecasting wind, there's so many different parameters that go into it it would be impossible for a human to sit down and do all those calculations. There's so many different aspects to what's going to be affecting what's happening to the wind that we need a computer model in order to forecast it."
+        text: 'Бұл торлар үлкен болғандықтан біз милиондап жүгіріп өтеміз.Мен істегеннің барлығын мен ілмек үшін қолданамын.Мысалы: Цикл түзу алға.Сіз желді болжамдаған кезде әртүрлі параметрлер бар, онын ішіне жай ғана отырып   адамға қолжетімсіз есептеулер бар. Онда әртүрлі не болып жатқандығы туралы аспектілер,желмен не болатындығы, және болжамдауға программа қажет.'
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: "In this lesson, we'll be playing with some fill in the blank stories. You have a template that you can fill in to create similar stories that have very amusing differences."
+        text: Бұл сабақта, біз тарихтағы бос орындарды толықтыру ойынын ойнаймыз.Сізде орынды толтыратын, әртүрлі айырмашылықтары бар тарихты жаңарту үшін, үлгі бар.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: "In this lesson, we also learned how to make an abstracted template from two stories that have already been created. Abstraction is the art of removing differences and details so that you can see how one solution might work for many different problems. It's very helpful in computer science because it allows us to create functions that may be useful in several different situations."
+        text: Бұл сабақта біз бұрын құрылған екі тарихтан абстрактілі улгіні қалай жасау керек екендігін білдік. Абстракция бұл детал мен айырмашылықты аңғара ала білетін өнер,сіз бір шешімді бірнеше мәселеге қоюға болатындығын білетін боласыз. Бұл компьютерлік ілімде өте пайдалы, сондықтан ол бізге әртүрле кезде қажет болатын функция құрғызады.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: "This lesson is called songwriting with parameters. We're going to be writing some songs here. Sometimes the chorus is just a little bit different each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o. The small change in each chorus can be shown using something we call parameters."
+        text: Бұл сабақ жазбаша түрдегі,параметрдегі әуен деп аталады. Біз кейбір әуендерді осында жазбақшымыз.Кейде хор айырықшаланады орындаған сайын.Сіздін есіңізде ме, Макдонольд Шалының фермасы болған?Хор әр жануарға айырықшаланады.Және бұл фермадада ол сиырға я-е-я-о.Хордын кішкене айырықшаланғанын параметрлерді қолданып көрсетуге болады.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece of information you can pass to a function to customize it for a special need. When you make ice cream sundaes with your friends, you are using a process similar to parameters in a computer program.
+        text: Кейде функцияда параметр болу керек.Параметр негізделген керектілікке икемделген керек емес ақпарат бөлігі.Сіз достарыңызбен балмұздақ жасағанда, сіз, компьютерлік программадағы қарапайым параметрлерді, ұдерістерді пайдаланасыздар.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: "The disk of vanilla ice cream might be the same for every sundae but when you ask your friends which two toppings they'd like, you could get lots of different combinations. Topping is the function name but each type of topping is a parameter. Functions and parameters work together to make great computer programs and great sundaes too."
+        text: Ванильді балмұздаққа арналған диск басқа балмұздақтарғада қолданылады,бірақ егер сіз достарыңыздан сұрасаңыз олар екі салмамен сұраған екен, онда сіз әртүрлі көп амал әрекеттер алатын едіңіз. Топпинг функция аты, бірақ әрбір айқарма түрі параметр болып саналады.Функция мен параметр үлкен компьютерлі программалар жасау үшін және үлкен балмұздақ жасау үшін бірге жұмыс атқарады.
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: "This lesson is called variables in envelopes. We're going to learn how we can build sentences when we're still missing pieces of information. Most of us are already familiar with the idea of filling in a blank. We do it when we're putting our name on our homework. Sometimes there's more than one word that needs to be filled out and in that case, we give that blank a label so that we know which piece of information goes where."
+        text: Бұл сабақ конверттегі айнымалы деп аталады.Біз сөйлемді қалай құрамыз ақпараттар жеткіліксіз болған жағдайда соны білгіміз келеді.Біздін арамызда көбі дайындау орнын толықтыру жайлы идеямен таныс.Біз бұны істейміз сонда біз өз аты жөнімізді үй жұмысына жасап келеміз.Кейде бір сөзден де көп толықтыру қажет болады,бұндай жағдайда біз ақпараттын қай бөлігі қайда кететіндігін білу үшін бос жарлық береміз.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
+        text: Анықтаманың бөліктері үшін толықтыру айнымалысы қзгеруі мүмкін.Жетіспейтін анықтама үшін қолданатын айнымалымен жұмысты ары қарай жалғастыра басқа орындарды толықтырып,және басқада адам кейін оны жалғастыра алады.Бағдарламаны жабдықтағышта біз айнымалыны көп қолданамыз.Біз айнымалыны адам аттарын толықтыру,электронды почта адрес, қолданушынын атын қосу үшін қолданамыз.Осылайша біз бағдарламаға қолданушы толықтырған жағдайда детальдар қайда пайда болатындығын білдіре аламыз.Біздін жұмыста біз Салль айнымалысын қолданамыз .
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+        text: 'Сізге ақпараттын бөлігін кейінгіге сақтап қалу үшін біз айнымалыны қолданамыз.Айтарлық, бізге қолданушы қанша рет жазғанын санау керек.Әр кезде қолданушы твит косса онда бір қосамыз осы нөмерге, қолданушы твитті жойса онда бірді алып тастаймыз.Кез келген уақытта біз қолданушы қанша рет жазғанын білу керекпіз,біз оны айнымалыдан қарай саламыз.  '
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Айнымалы тиянақты және онын ішіне сақтауға болады.Бұл айнымалыларды алгоритмде қолданған жағдайда контейнерді ашады және онын ішіндегі мағыналарды көреді. Бұл өздерін мағынасына қарай әртүрлі көрсететін,айнымалыда сақталған интелектуалды алгоритмдер жазуға рұқсат етеді .
       2:
         image: notes/C4_variables_artist_2.png
-        text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
+        text: 'Мысалы, Туған Күніңмен айту үшін алгоритм жазғыңыз келсе, 10! Айналасын, егер келесі жылы құтықтағым келсе онда 11! Айналасын. Мен жас атты айнымалы құра аламын бауырымнын жасын сақтап қалу үшін, және алгоритмді былай жазар едім Туған Күніңмен, "жас " дегенге айналасын. Себебі айнымалы өзгеруі мүмкін, және әр жылы мен " жас " айнымалысын жаңартуыма болады, ол үшін " жас" плюс 1 деп жазам.'
       3:
         image: notes/C4_variables_artist_3.png
-        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+        text: Бұл бас ауырқышта біз суретші сызатын жол ұзындығын беретін айнымалыны қолданғалы жатырмыз.Кейін кодта,алға жылжу бұл ұзындық айнымалысында көрінетін болады, оны көру үшін оны орнату қажет.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Айнымалы тиянақты және онын ішіне сақтауға болады.Бұл айнымалыларды алгоритмде қолданған жағдайда контейнерді ашады және онын ішіндегі мағыналарды көреді. Бұл өздерін мағынасына қарай әртүрлі көрсететін,айнымалыда сақталған интелектуалды алгоритмдер жазуға рұқсат етеді .
       2:
         image: notes/C4_variables_playlab_2.png
-        text: "Now you're going to try playlab where you are given different games and you can change the values of variables like speed, height, score, in order to change the game. You won't have to change the algorithm of the game to change how it plays, just the variable."
+        text: 'Енді сіз, әр түрлі ойындар берілетін, зертханалық ойынды ойнағалы жатырсыз, және сіз айнымалылар анықтарын , яғни жылдамдығын, биіктігін, бағасын ойынды өзгерту үшін өзгерте аласыз.  Сізге ойынның алгоритімін өзгертіп қажеті жоқ тек қана айнымалысын.'
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in many different ways. One way that you can use a variable is to store page numbers of a book. A user can increase and decrease the size of the font on a page. Based on the font size, the number of pages in the book can change. We can adjust it by storing the number of pages in the variable.
+        text: 'Өз жұмысымдағы Kindle және кітаптар рентгені үшін біз әртүрлі айнымалылар қолданамыз.  Амалдардын бірі, ол кітаптардын беттерінінсанын сақтай алатын айнымалыны қолдану.Қолданушы беттердегі шрифтерді кішірейте және үлкейте алады. Шрифтін көлеміне байланысты беттер саныда өзгереді.Біз оның сақталу бетін айнымалыда сақтаймыз. '
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: "Now we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. And then when it does, it performs an action. Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen."
+        text: 'Енді біз барлық ойын программистары күнде не қолданатындығын білуіміз қажет.Олар оқиға деп аталады. Оқиға бір нәрсе болғанын есту үшін өз бағдарламасын айтады.Кейін  ол орындалғанда ол әрекет жасайды. Оқиғаның кейбір мысалдары ол тышқанды есту және бағытты батырмалар немесе экрандағы басылымдар.'
       2:
         image: notes/infinity_playlab_events_2.png
         text: |-
@@ -1376,333 +1374,329 @@ kk:
         text: Біз құралдар жинақтамасынан іздемей-ақ немесе әкелмей-ақ жүздеген командаларды енгізе аламыз. Сіз енгізуді үйреніп жатқандықтан басында ақырын болуы мүмкін, бірақ біз сіздің талпынып көруіңізді қалаймыз.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: 'Кез келген бас қатырғыш жұмыс аумағының жоғарғы оң жақ бұрышындағы "Мәтінді көрсету" батырмасын сіз блоктардан мәтіндік кодқа ауысу үшін шерте аласыз.'
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: Келесі сабақта біз теруді бастаймыз. Бұл жерде сіз құрал жабдықтар тақтасынан блоктарды көшіре немесе команда атын енгізе аласыз. Енгізу кезінде сіз мүмкін командалар тізімін енгізіп отырған аумақтан көре аласыз, Бүкіл команданы толық енгізудің орнына сіз жылдамырақ қозғалу үшін олардың бірін таңдай аласыз. Менің жұмысымда мен осы авто толтыру функциясын кодтты теру кезінде қолданамын.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Сіз кодты терген кезде мұқиат болуыңыз қажет. Сіз команда атын дұрыс жазуыңыз, дұрыс Бас немесе жолдық әріптерді қолдануыңыз және де жақшалар мен үтір нүктелерді дұрыс қолдана білуіңіз қажетү Тіпті бір шағынға қателіктен, ВВ-8 сіздің кодыңыздын түсінбей, қозғала алмай қалады.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Егерде сіз қателік жіберетін болсаңыз мәтіндік редактор сіз қателікті тауып түзет алу үшін бұл қатарды ерекшелеп көрсетеді.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Егер де сіз тығырыққа тірелетін болсаңыз басынан бастау батырмасын басыңыз және жоғарғы оң жақ бұрыштағы батырманы басыр блоктарға қайта оралыңыз. Егер қателіктетер жасасаңыз көңіліңізді түсірмеңіз. Әр бір оқушы дұрыс жасауға дейін бірнеше рет жасап көруі қажет.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Сәлеметсіз бе, менің есімім Карита Картер. Мен Walt Disney Imagineering-де бас креатив продюсерімін және де біздің қонақтар үшін көңіл көтеру бағдарламаларының құрастыратын топтардың жұмысына жауаптымын. Біз әрдайым қонақтарымыздың көңілін көтерудің жаңа әліс тәсілдерін табуға тырысамыз, ал бүл істе бізге технологиялар көмектеседі.
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
+        text: Құттықтаймыз, сіз оны жасай алдыңыз! Сіз ВВ-8-ді бағдарламаладыңыз. Ендігі кезекте біз күрделірек бір дүние дайынбыз деп ойлаймын. Ендеше алдыға. Енді сіз бағдарламалау негіздерін үйренген кезде, біз өткенге өзіміздің жеке басты кейіпкер ретінде R2-D2 және C-3PO бар ойынымызды жасауға қайта оралмақпыз.
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'Ойын құру үшін бізге бағдарламалаушылар күнделікті өмірде кеңінен қолданатын әдісті игеру қажет, ол - оқиғалар. Оқиғалар бағдарламадағы қандайда бір әрекеттің орындалғандығын күтіп, сол іс-әерекет орындалған кезде жауап қайтарады.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Кейбір оқиғалардың мысалдрары тышқанды, бағдары бар батырмаларды немесе экранды шертуді тыңдап әрекет жасайды.
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Біз болсақ R2-D2 көтерілісшілер ұшқышына хабарламаны жеткізу үшін жоғары, ал кейіннен басқа ұшқышқа төмен жүргізуіміз қажет. Ол қозғалуы үшін оқиғаларды қолданамыз. Ойыншы жоғары/төмен пернелерін немесе батырмаларын қолданады.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: 'Біз "Жоғары көтерілігенде" оқиғасы блогын алып оған "жоғары қозғалу" блогын байланыстырамыз. Ойыншы жоғары батырмасын басөан кезде осы блокка байланыстырылған код орындалады. Дәл осылайша біз R2-D2-ны төмен қарай қозғалтамыз.'
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: 'Мұны жасау үшін біз "Жоғары көтерілгенде" блогын қолданамыз. Сіз команданы құрал-жабдықтар панелінен көшірген кезде ол жүйелі жақшадан басталып дәл сол жүйелік жақша және үтір нүктемен бірге аяқталатынын байқайсыз. Бұл сізге өзіңіздің командаларыңызды ортасына салу үшін қажет жұмыс аумағын береді. Бұл жақша ішіндегі барлық командалар ойыншы жоғары бағдары бар пернені басқан кезде орындалады.'
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Біз R2-D2 жоғары жүргенін қалаймыз, сол себепті жоғары жүру блогын команда ішіне қосыңыз. R2-D2 төмен жүруі үшін дәл осылай жасаңыз.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: Ендігі кезекте дроидты басқару кодын толықтай алдын ала жазып отырудың орнына R2-D2 батырмалардың басылғандығына жауап қайтаратындай қылып алдын ала жасап қоюға болады. Әрбір қадам сайын ойынның интерактивтілігі арта түсуде.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Сәлем, менің есімім Алиса, және де мен Code.org инженерлер тобын басқарамын. Мен сіз дәл қазіргі уақытта ойнап отырған осы үйрету курсын жасап шығардым.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 'Біз соңғы деңгейге де келіп жеттік. Біз өзіміздің жеке "Жұлдызды соғыс" ойынымызды құру үшін қажет барлық білімді алдық. Сол себептен ендігі кезекте ешқандай нұсқаулықтар немесе тапсырмалар болмайды. Өзіңіздің жеке ойыныңызды құрып, оның алай жұмыс жасайтындығын таңдай аласыз. Және де сізге ойдағыдан да арттық қылып жасауға мүмкіндік беретін жаңа дыбыстар мен командалар қол жетімді болады.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[оқушылар сөйлеуде]. Біз сен торайды жинаған сәтте ұпай алатын ойын жасап шықтық. Ең басты бөгет - сен торайды түрткен сайын шабуылдаушы пайда болады. Әйтсек те барлық экран торайға толы, сен 10000 торай жинаған сәтте сен жеңімпаз атанасың.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[оқушылар сөйлеуде]. Біз сен жеңіле алмайтындай қылып ойын жасадық, мұнда сен жинаған барлық заттар саған ұпай береді. Өзімнің бағдарламам үшін мен пернелердің орынын ауыстырып жібердім. Сол себепті сен жоғары пернесін басқан кезде кейіпер төмен қозғалады, ал оңға пернесін бассаң кейіпкер солға қозғалады. Бұл өте қиын! Кей кездері ойынды өзің құрастырғандығыңнан пайдаға қол жеткізсең болады!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: 'Ойынды құруды аяқтағаннан кейін, сілтемені алып өз еңбегіңізді достарыңызға көрсету үшін немесе ұялы телефонда ойнай алу үшін "Бөлісу"-ді баса аласыз. Көңіл көтер!'
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Сәлем, менің есімім Кэтлин Кеннеди. Мен "Жұлдызды соғыс; күштің оянуы" филмінің продюсерімін. Бүгін сіз біздің жұлдызымыз ВВ-8-бен жұмыс жасайсыз. ВВ-8 бұл сфералық дроид. Оның әрбір қимылы және әрекеті бағдарламалық жабдықтамамен басқарылады. Информатика маркетингтен бастап денсаулық сақтау қызметіне дейінгі әрбір бөлімге әсер етеді. Шын мәнісінде "Күштің оянуы" фильмінің үстінен жүздеген компьютерлік инженерлер жұмыс жасады.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+        text: 'Сәлем, менің есімім Рэйчел Роуз. Мен анимацияларды және мәтінді құрастыру басшысы және ILM-дегі R&D бас инженерімін. Мен суретшілерге кейіпкерлердің бір бөлімі болып табылатын құрылғыларды жобалауда көмектесемін. Олар кейіпкерге алыс галактикаларда шынайы көрінуге мүмкіндік береді.'
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
+        text: 'Келесі сағатта біз өзіміздің "Жұлдыздар шайқасы" ойынын құрастырып, бағдарламалау негіздерін үйренеміз. Әдетте кодтар мәтін ретінде жазылады, бірақ біз кодты блоктармен құрамыз. Бірінші Рэймен ВВ-8 - ді барлық темірді жинауға бағдарламалаймыз.'
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: 'Экран үшке бөлінген. Сол жақта "Жұлдыздар шайқасынын" ойын аланы тұр, осында нәтижелер көрінетін болады. Әр деңгей үшін нұсқаулар төменде берілген.'
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: Егер мен солға жүру блогын біздің жұмыс аймағымызға тастап, орындауды бассам, не болады? ВВ-8 торда бір блок солға жылжиды. Ал егер мен ВВ-8 солға жылжығаннан кейін тағы бір нәрсе істегенін қаласам ше? Мен біздің бағдарламаға басқа блок қоса аламын. Мен жоғарыға жүру блогын таңдамақшымын және мен оны солға жүру блогының астына белгіленген аймақ пайда болғанша ұстап жылжытамын. Мен оны тастаймын және екі блок бірігеді.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: 'Оң жақтағы ақ алаң - жұмыс орны. Бұнда біз бағдарламамызды жазамыз.'
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: 'Егер "сол жаққа қозғалт" блогын жұмыс орнына апарсақ не болады? ВВ-8 бір блокқа солға жылжиды.'
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: 'Ал егер мен ВВ-8 орын ауыстырудан кейін тағы да бір жұмыс жасағанын қаласам ше? Мен жаңа бір блок қоса аламын. Мен "Жоғары көшіру" блогын таңдаймын, және оны қызғылт жолақ пайда болғанша алдыңғы блоктың астына көшіремін. Кейіннен мен осы екі блокты өзара байланыстарамын. Мен "Орындауды" қайта басқан кезде, ВВ-8 барлық командаларды жоғарыдан төмен қарай реттілікпен орындап шығады.'
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Егер де сіздің блокты жойғыңыз елсе бар болғаны оны қайта командалар жиымына көшірсеңіз жеткілікті.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Орындауды басқаннан кейін, ВВ-8-ді бастапқы күйге қайта келтіру үшін сіз әрдайым түсіру батырмасын баса аласыз. Енді жұмысқа кірсейік!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Сәлеметсіз бе, менің есімім Карита Картер. Мен Walt Disney Imagineering-де бас креатив продюсерімін және де біздің қонақтар үшін көңіл көтеру бағдарламаларының құрастыратын топтардың жұмысына жауаптымын. Біз әрдайым қонақтарымыздың көңілін көтерудің жаңа әліс тәсілдерін табуға тырысамыз, ал бүл істе бізге технологиялар көмектеседі.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
+        text: Құттықтаймыз, сіз оны жасай алдыңыз! Сіз ВВ-8-ді бағдарламаладыңыз. Ендігі кезекте біз күрделірек бір дүние дайынбыз деп ойлаймын. Ендеше алдыға. Енді сіз бағдарламалау негіздерін үйренген кезде, біз өткенге өзіміздің жеке басты кейіпкер ретінде R2-D2 және C-3PO бар ойынымызды жасауға қайта оралмақпыз.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'Ойын құру үшін бізге бағдарламалаушылар күнделікті өмірде кеңінен қолданатын әдісті игеру қажет, ол - оқиғалар. Оқиғалар бағдарламадағы қандайда бір әрекеттің орындалғандығын күтіп, сол іс-әерекет орындалған кезде жауап қайтарады.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Кейбір оқиғалардың мысалдрары тышқанды, бағдары бар батырмаларды немесе экранды шертуді тыңдап әрекет жасайды.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Біз болсақ R2-D2 көтерілісшілер ұшқышына хабарламаны жеткізу үшін жоғары, ал кейіннен басқа ұшқышқа төмен жүргізуіміз қажет. Ол қозғалуы үшін оқиғаларды қолданамыз. Ойыншы жоғары/төмен пернелерін немесе батырмаларын қолданады.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Біз ЖоғарыБолғанда() оқиғасы блогын қолданамыз және де оған ЖоғарыЖүру() блогын байланыстырамыз. Ойыншы жоғары батырмасын басқан кезде ЖоғарыБолғанда() блогындағы код орындалады. Және де біз R2-D2 төмен қарай қозғалу үшін дәл осылай жасаймыз. Енді алдын ала дроидты бпасқару үшін барлық кодты жазыр отырғаннан гөрі R2-D2 батырмаларды басып отырған кездегі оны экранда қозғалтатын оқиғаларға жауап қайтарады.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Әр қадам сайын сіздің ойыныңыздың интерактивтілігі артуда.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Сәлем, менің есімім Алиса, және де мен Code.org инженерлер тобын басқарамын. Мен сіз дәл қазіргі уақытта ойнап отырған осы үйрету курсын жасап шығардым.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 'Біз соңғы деңгейге де келіп жеттік. Біз өзіміздің жеке "Жұлдызды соғыс" ойынымызды құру үшін қажет барлық білімді алдық. Сол себептен ендігі кезекте ешқандай нұсқаулықтар немесе тапсырмалар болмайды. Өзіңіздің жеке ойыныңызды құрып, оның алай жұмыс жасайтындығын таңдай аласыз. Және де сізге ойдағыдан да арттық қылып жасауға мүмкіндік беретін жаңа дыбыстар мен командалар қол жетімді болады.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[оқушылар сөйлеуде]. Біз сен торайды жинаған сәтте ұпай алатын ойын жасап шықтық. Ең басты бөгет - сен торайды түрткен сайын шабуылдаушы пайда болады. Әйтсек те барлық экран торайға толы, сен 10000 торай жинаған сәтте сен жеңімпаз атанасың.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[оқушылар сөйлеуде]. Біз сен жеңіле алмайтындай қылып ойын жасадық, мұнда сен жинаған барлық заттар саған ұпай береді. Өзімнің бағдарламам үшін мен пернелердің орынын ауыстырып жібердім. Сол себепті сен жоғары пернесін басқан кезде кейіпер төмен қозғалады, ал оңға пернесін бассаң кейіпкер солға қозғалады. Бұл өте қиын! Кей кездері ойынды өзің құрастырғандығыңнан пайдаға қол жеткізсең болады!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: 'Ойынды құруды аяқтағаннан кейін, сілтемені алып өз еңбегіңізді достарыңызға көрсету үшін немесе ұялы телефонда ойнай алу үшін "Бөлісу"-ді баса аласыз. Көңіл көтер!'
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Менің аты-жөнім Йенс Бергенстен, алайда мені көбінде Джеб леген атпен таниды. Мен Mojang Стокгольмдік компаниясында Minecraft ойынының жетекші құрастырушысымын. Менімше мен бағдарламалауды бастаған кезде жасым 11 немесе 12 жаста болатын, менің ойын құрастырғым келетін. Менің досымның әкесі маған ойын құру үшін бағдарламалауды үйрену қажет деп ойлайтын. Осылайша мен бағдарламалумен айналыса бастадым. Маған әр түрлі заттардың құрылымын ойлап табу және құрастыру ұнайды. Minecraft ойынында мені қызықтыратыны дәл осы.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: Келесі сағатта сіз Алекс пен Стивті Minecraft құрастырлған әлемінде қощғалту арқылы компьютерлік бағдарламалау негіздерін оқып үйренесіз.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Әдетте бағдарламашылар мәтінмен жұмыс жасайды, алайда біз бағдарлама жазу үшін блоктарды орналыстыру қажет жүйемен жұмыс жасаймыз. Нәтижесінде сіз Javascript кодын құрастырасыз.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Сіз үйренгелі жатқан қағидалар игформатика секілді ғылымның негізі болып табылады және бағдарламалаушылар күнделікті өмірінде кеңінен қолданылады. Біз Minecraft-та Minecraft ойынын құрастыру кезінде дәл осы қағидаларды қолданамыз.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Алдымен сізге өз кейіпкеріңізді тағдау қажет, мен Алексті таңдаймын. Кейіпкерге экранда қозғалуға мүмкіндік беретін бағдарламаның кодын жазайық.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: 'Экран үш негізгі аймақтарға бөлінген. Сол жақта Minecraft ойын кеңістігі: бұл жерде сіздің бағдарламағыз жүзеге асады. Төменде біз әрбір деңгей үшін нұсқаулықтарды жазамыз.'
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Орталық аумақ ішінде әрқайсысы Алкес үшін анықталған командалар жиыны орналасқан аумақ болып табылады.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Оң жақтағы ақ аумақ - біз бағдарламаны жазатын жұмыс аумағы.'
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: 'Егер де біз жұмыс аумағына "алдыға жүру" блогын көшіріп, "орындау"-ды басатын болсақ келесі әрекет орындалады: Алекс ойында бір торға алдыға қозғалады.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: 'Егерде бізге оның алдыға қозғалғаннан кейін бір нәрсе жасағаны қажет болса ше? Біздің бағдарламаға тағы да бір блок қосу қажет. Мен "Солға бұрылу" блогын таңдаймын және оны "Алдыға қозғалу" блогының астына қызғылт жолақ пайда болғанға дейін көшіремін. Кейіннен мен блокты жібергенде, бұл екі блок өзара байланысады. Біз "Орындауды" басқан кезде Алекс біздің жұмыс кеңістігімізде орналасқан барлық командаларды жоғарыдан төмен қарайғы реттілікпен орындап шығады.'
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Егерде сіздің блокиы жойғыңыз келсе бар болғаны оны жұмыс аумағынан қайта командалар жиынына көшірсеңіз жеткілікті.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Өзгерістерді кері қайтарып, деңгейді бастапқы қалпына келтіргіңіз келсе жұмыс кеңістігінің жоғарғы оң жақ бұрышында орналасқан "басынан бастау" батырмасын бассаңыз жеткілікті. Және де: сіз бұрылу командалары бар блоктардағы жасыл үшбұрыштарды көріп тұрсыз ба? Бұл үшбұрыштар командалардың басқа нұсқаларын таңдауға мүмкіндік береді!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Мен Mojang брендінің басқарушысы Линда Винтерспін. Minecraft ойынын құрастырған біздің комапания болып табылады.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Minecraft-та мені ең қатты қызықтыратыны бұл әлемді зерттеу. Үңгірлерге кіріп алып онда не бар екендігін қарағанды жақсы көремін. Мен мүлдем бағдарламашы емеспін, және де мені бұл Minecraft курсын өту және бағдарламалауда жаңа білімді үйрену мүмкіндігі тамсандырады.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: 'Бірінші деңгейде көптеген "алдыға қозғалу" блоктарын қолдану қажет болған. Компьютерге "алдыға қозғалу" омандасын төрт-бес рет орындатудың жолы болса жақсы болар еді. Қуанышқа орай, бұл мәселенің шешімі оңай табылады: бар боғланы қайталау циклдарын қолдансақ жеткілікті.'
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: 'Minecraft ойынын құрастырған кезде жаңа әлемдегі материалдарды орындарына қою үшін қайталау циклдарын қолданамыз. Ал мыңдаған блоктар! Біз циклдарды оданда шағын есептерге қолданамыз, мысалы, Алекс жүргенде аяқтары артқа-алға қозғалғандай. Қайталау циклдары - бағдарламалаудын маңызды бөлігі.'
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: 'Түн келе жатыр. Сондықтан келесі екі деңгейде бізге үй салу керек. Үй салу үдерісін жеңілдету үшін "қайталау" блогын қолдан.'
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: Үйдін қабырғасын салу үшін, біз Алекске 4 рет алға жылжып, тақтаны қой деп бұйрық бере аламыз немесе 1 рет алға жылжып, тақтаны қой деп бұйрық беріп сосын оны қайталау блогына орнатып, қанша рет керек, сонша рет қайталаймыз. Енді қайталау блогына басып Алекс қанша рет бізге керек әрекетті орындау керегін енгізейік. Түн түспегенге шейін үй салайық! Сәттілік!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: 'Қазір мен сізге "егер" операторы, дәлірек айтсақ шартты операторлар жайлы айтып өтемін. "Егер" операторы бағдарламалаудағы негізгі ұғымдардың бірі болып табылады, және де компьютерге шешім қабылдауға көмектеседі.'
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: Барлық компьютерлер, менің ұялы телефоным қоса шартты өрнекті қолданады. Мысалы, мен телефонымды бұғаттан шығарғанда, ол меннен код сұрайды. Егер мен кодты дұрыс терсем ол бұғаттан шығады, әйтпесе қателік хабарламасын шығарады.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: 'Бағдарламада "егер" операторын қолданып, Стив пен Алекс ойынды ойна алатындай қылып істе. Мысалы, егер алдарында тас жатса солға бұрылағандай. Ал ағаш болса, оңға бұрылғандай.'
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: Лаваға түсіп кетпес үшін шартты операторды да қолдануға болады. Егерде ол экранда көрініп тұрса лаваны айналып өту қиын жұмыс емес. Ал егер лава жердің астында болса ше?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: 'Тасты өндіргеннен кейін, ол жерде тас бар немесе жоқтығын тексеріп кейін ғана қозғалысты жалғастыру қажет. Егерде алдыңызда лава бар болсағ кейіпкер алдына тасты орналастырып кейін қозғалысты жалғастыру қажет, бұл жағдайда лавадан ешқандай зиан келмейді. Келіңіздер тағы да бір зат өндірейік. Бірақ "егер" операторын қолдануды естен шығармағаныңыз жөн.'
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Құттықтаймыз! Сіз қазір ғана бағдарламалаудың неігздерін оқып үйрендіңіз.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Ендігі кезекте сіз бұл біліміңізді өзіңіздің жеке бағдарламаларыңыз бен әлеміңізді құру үшін қолдана аласыз. Менде сіз үшін басқа тапсырмалар мен нұсқаулықтар қалған жоқ. Сіз өзіңіз қалаған дүниені өзіңіз құрастыра аласыз. Таңдау сізде.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[оқушылар сөйлеуде] Міне, енді ұқсайын деді..... Қырқу.... Мен шырақтардың көмегімен "L" әріпін жасап шығардым. Ал мен болсам "А" әріпін қайың тақталарынан жасадым. Қолымыздан келді! Қолымыздан келді! Біз жүннен үй тұрғыза алдық!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: 'Жұмысты аяқтағаннан кейін, сілтемені алып өз еңбегіңізді достарыңызға көрсету үшін "Бөлісу"-ді таңдаңыз. Сәттілік!'
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Құттықтаймыз! Сіз қазір ғана бағдарламалаудың неігздерін оқып үйрендіңіз.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Ендігі кезекте сіз бұл біліміңізді өзіңіздің жеке бағдарламаларыңыз бен әлеміңізді құру үшін қолдана аласыз. Менде сіз үшін басқа тапсырмалар мен нұсқаулықтар қалған жоқ. Сіз өзіңіз қалаған дүниені өзіңіз құрастыра аласыз. Таңдау сізде.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[оқушылар сөйлеуде] Міне, енді ұқсайын деді..... Қырқу.... Мен шырақтардың көмегімен "L" әріпін жасап шығардым. Ал мен болсам "А" әріпін қайың тақталарынан жасадым. Қолымыздан келді! Қолымыздан келді! Біз жүннен үй тұрғыза алдық!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Енді сіз қалаған нәрсеңізді құрастыра аласыз. Сәттілік!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: Егерде сіз өзіңіңздің жеке ойыныңызды құрғыңыз келсе, бұл оңай екендігін білгеніңіз жөн. Сізге керегі және өзіңіз құрған ойынды ойнау үшін бар болғаны бағдарламалаудың кейбір негіздерін үйренсеңіз жеткілікті.
       2:
         image: notes/gumball_intro_2.JPG
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Сіздің сүйікті бейне ойыныңыз бар ма? Біз Ойындар лабараториясындағы іспеттес ойын жасауға тағы бір қадам жасамақпыз. Жақсы ойындардың жақсы оқиғасы, ал кез келген оқиғада кейіпкерлер бар болып келеді. Кейіперлер сөйлеу немесе бір бірімен әрекеттесу секілді іс-әрекеттерді жасайды, ойын ережелерінің негізінде болуы да мүмкін. Біз қызықтырарлық кейіперлермен бірге осы заттарды бірінен кейін бірін орындауға тырысамыз, және де ұялы телефонмен ойнауға болатын ойында басынан бастап құрып көреміз.
       3:
         image: notes/gumball_intro_3.JPG
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Бүгін, біз осы ойындарды барлығын қалай жасау керегін үйренеміз. Кейін ойынды телефонда бөлісіп ойнауға болады.
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Экран үш негізгі бөлікке бөлінген. Сол жақ бөлігінде сіздің бағдарламаңыздың жұмысы көрсетілетін кеңістік орналасқан. Әр бір деңгейдің нұсқаулары төменде көрсетілген.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Бұл орта аймық саймандар қорабы және әрбір блок 1 кодтын бөлігі.
       6:
         image: notes/gumball_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Оң жақтағы ақ аумақ - біз бағдарламаны жазатын жұмыс аумағы.'
       7:
         image: notes/gumball_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: Бастапқыда сізге өз блоктарыңызды сарғылт «Қосылу кезінде» блогымен байланыстыру қажет. Сіз бернеше блоктарды бірге сары сызық пайда болғанға дейңн орнын ауысытып көшіру арқылы байланыстыра аласыз. Бұл кезде олар бірін бірі өзара тартады.
       8:
         image: notes/gumball_intro_8.JPG
-        text: |-
-          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+        text: Бұл бірінші бас қатырғышта, біз сөйлеу блогын қолданып, сөздерін теріп кейіпкерлерді бір нәрсе сөйлеткіздіреміз. Блокты орнына қойғанда, орындау батырмасын басып, не бағдарламағанынды тексер.
       9:
         image: notes/gumball_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: Бастайық. Курстын соңында сіз кейіпкерлері сөйлесе алатын, ұпай жинайтын және заттарды лақтыра алатын өзіңіздің ойыныңызды құрастыра алатын боласыз!
     gumball_events:
       1:
         image: notes/gumball_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: Ендігі кезекте біз ойын бағдарламалаушылары күнделікті өмірде кеңінен қолданатын дүние, оқиғалар жайлы оқып үйренеміз. Оқиғалар іс-әрекеттің орындалғандығын аңдып отырады, және оқиға орындалған кезде ойын іс әрекетті орындайтын өзіндік бағдарлама болып табылады.
       2:
         image: notes/gumball_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Кейбір оқиғалар тінтуірдің басылуын, жоғары немесе төмен бағдары бар батырмаларды немесі тіпті экранның басылуын тыңдап отырады.
       3:
         image: notes/gumball_events_3.JPG
-        text: |-
-          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+        text: 'Бұл жерде біз ойыншы кейіпкерге шерткен кезде кейіпкердің бір зат айтуын жасамақпыз. Біз "басқан кезде" блогын оған "сөйлеу" блогын біріктіру арқылы қолданбақпыз. Ойыншы кейіпкерді шерткен кезде осы блокка кіріктіріліп байланыстырылған барлық блоктар орындалады.'
       4:
         image: notes/gumball_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+        text: 'Бұл жерде және де "бағдар... болса" блогы да бар. Егерде сіз орын ауыстыру блоктарын осы блокпен байланыстыратын болсаңыз сіз кейіпкерді оңға, солға, жоғары немесе төмен бағдары бар пернелердің көмегіиен қозғалта аласыз. Уақыт өте сіздің ойыныңыз барынша интерактивті болып келеді.'
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: Сіз өзіңізге бір затты мәңгілік қайталау қажеттігін елестете аласыз ба? Сізге бұл күн ешқашан түспейді деп үміттенеміз, себебі компьютерлер қайталау жұмыстарын жақсы атқарады.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: 'Бұл "мәңгілік қайталу" блогы. Бұл блоктың ішіндегі барлық заттар ойында мәңгі болады. Егерде біз кейіпкер бір іс-әрекетті ойфншфнфң қатысуынсыз жасағанын қалайтын болсақ, біз осы блоктарды "мәңгілік қайталау" блогының ішіне орналастырамыз.'
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Келесі басқатырғыштағы біздің тапсырма кейіпкерге жұмысты үздіксіз жасауға көмектесу. Қайталау командаларымен жұмыс жасап үйрену бірнеше жылдар өте сіз өзіңіздің жеке ойыныңызды жасайтын кезде көптеген уақытыңызды үнемдейді.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+        text: Егерде сіз өзіңіңздің жеке ойыныңызды құрғыңыз келсе, бұл оңай екендігін білгеніңіз жөн. Сізге керегі және өзіңіз құрған ойынды ойнау үшін бар болғаны бағдарламалаудың кейбір негіздерін үйренсеңіз жеткілікті.
       2:
         image: notes/iceage_intro_2.JPG
-        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Сіздің сүйікті бейне ойыныңыз бар ма? Біз Ойындар лабараториясындағы іспеттес ойын жасауға тағы бір қадам жасамақпыз. Жақсы ойындардың жақсы оқиғасы, ал кез келген оқиғада кейіпкерлер бар болып келеді. Кейіперлер сөйлеу немесе бір бірімен әрекеттесу секілді іс-әрекеттерді жасайды, ойын ережелерінің негізінде болуы да мүмкін. Біз қызықтырарлық кейіперлермен бірге осы заттарды бірінен кейін бірін орындауға тырысамыз, және де ұялы телефонмен ойнауға болатын ойында басынан бастап құрып көреміз.
       3:
         image: notes/iceage_intro_3.JPG
-        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+        text: Бүгін, біз осы ойындарды барлығын қалай жасау керегін үйренеміз. Кейін ойынды телефонда бөлісіп ойнауға болады.
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Экран үш негізгі бөлікке бөлінген. Сол жақ бөлігінде сіздің бағдарламаңыздың жұмысы көрсетілетін кеңістік орналасқан. Әр бір деңгейдің нұсқаулары төменде көрсетілген.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece of code.
+        text: Бұл орта аймық саймандар қорабы және әрбір блок 1 кодтын бөлігі.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 'Оң жақтағы ақ аумақ - біз бағдарламаны жазатын жұмыс аумағы.'
       7:
         image: notes/iceage_intro_7.JPG
-        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+        text: Бастапқыда сізге өз блоктарыңызды сарғылт «Қосылу кезінде» блогымен байланыстыру қажет. Сіз бернеше блоктарды бірге сары сызық пайда болғанға дейңн орнын ауысытып көшіру арқылы байланыстыра аласыз. Бұл кезде олар бірін бірі өзара тартады.
       8:
         image: notes/iceage_intro_8.JPG
-        text: |-
-          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+        text: Бұл бірінші бас қатырғышта, біз сөйлеу блогын қолданып, сөздерін теріп кейіпкерлерді бір нәрсе сөйлеткіздіреміз. Блокты орнына қойғанда, орындау батырмасын басып, не бағдарламағанынды тексер.
       9:
         image: notes/iceage_intro_9.JPG
-        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+        text: Бастайық. Курстын соңында сіз кейіпкерлері сөйлесе алатын, ұпай жинайтын және заттарды лақтыра алатын өзіңіздің ойыныңызды құрастыра алатын боласыз!
     iceage_events:
       1:
         image: notes/iceage_events_1.JPG
-        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+        text: Ендігі кезекте біз ойын бағдарламалаушылары күнделікті өмірде кеңінен қолданатын дүние, оқиғалар жайлы оқып үйренеміз. Оқиғалар іс-әрекеттің орындалғандығын аңдып отырады, және оқиға орындалған кезде ойын іс әрекетті орындайтын өзіндік бағдарлама болып табылады.
       2:
         image: notes/iceage_events_2.JPG
-        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+        text: Кейбір оқиғалар тінтуірдің басылуын, жоғары немесе төмен бағдары бар батырмаларды немесі тіпті экранның басылуын тыңдап отырады.
       3:
         image: notes/iceage_events_3.JPG
-        text: |-
-          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+        text: 'Бұл жерде біз ойыншы кейіпкерге шерткен кезде кейіпкердің бір зат айтуын жасамақпыз. Біз "басқан кезде" блогын оған "сөйлеу" блогын біріктіру арқылы қолданбақпыз. Ойыншы кейіпкерді шерткен кезде осы блокка кіріктіріліп байланыстырылған барлық блоктар орындалады.'
       4:
         image: notes/iceage_events_4.JPG
-        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+        text: 'Бұл жерде және де "бағдар... болса" блогы да бар. Егерде сіз орын ауыстыру блоктарын осы блокпен байланыстыратын болсаңыз сіз кейіпкерді оңға, солға, жоғары немесе төмен бағдары бар пернелердің көмегіиен қозғалта аласыз. Уақыт өте сіздің ойыныңыз барынша интерактивті болып келеді.'
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+        text: Сіз өзіңізге бір затты мәңгілік қайталау қажеттігін елестете аласыз ба? Сізге бұл күн ешқашан түспейді деп үміттенеміз, себебі компьютерлер қайталау жұмыстарын жақсы атқарады.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: 'Бұл "мәңгілік қайталу" блогы. Бұл блоктың ішіндегі барлық заттар ойында мәңгі болады. Егерде біз кейіпкер бір іс-әрекетті ойфншфнфң қатысуынсыз жасағанын қалайтын болсақ, біз осы блоктарды "мәңгілік қайталау" блогының ішіне орналастырамыз.'
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+        text: Келесі басқатырғыштағы біздің тапсырма кейіпкерге жұмысты үздіксіз жасауға көмектесу. Қайталау командаларымен жұмыс жасап үйрену бірнеше жылдар өте сіз өзіңіздің жеке ойыныңызды жасайтын кезде көптеген уақытыңызды үнемдейді.

@@ -25,9 +25,8 @@
   twentyhours_heading: 컴퓨터과학(정보과학) 과정을 시도해 보세요.
   twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍
     기초개념들을 학습해 보세요.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: 모든 아이들에게 기회가 주어져야 합니다.
+  og_description: 모든 학교의 모든 학생들은 컴퓨터과학(정보과학) 을 배울 수 있어야 합니다.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
     8 - 14, 2014<br/>
   hoc2014_students: 학생들
@@ -44,7 +43,7 @@
   csedweek_map_search_reset: 처음 상태로
   csedweek_map_legend_title: 찾아보기
   csedweek_map_legend_event: Hour of Code 행사
-  csedweek_map_legend_cs_tech_jam: 컴퓨터과학(정보과학) Tech Jam
+  csedweek_map_legend_cs_tech_jam: 스페셜 이벤트
   cded_sign_up: 가입 신청
   cded_try_it: 해보기
   twentyhours_trynow: 해보기
@@ -290,7 +289,7 @@
     주는 동영상들</a> 에는 다양한 직업과 유명인들이 나옵니다.
   playlab_choose_theme: Play Lab 테마 선택
   playlab_classic_title: 클래식
-  playlab_gumball_title: 검볼
+  playlab_gumball_title: 검볼의 어메이징 월드
   playlab_iceage_title: 아이스 에이지 - 예정
   playlab_iceage_title_live: 아이스 에이지
   starwars_subtitle: 코드로 은하계 건설하기
@@ -313,12 +312,11 @@
   mc_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   mc_specs: 여러 언어 | 최신 웹브라우저, 태블릿 | 6-106 세
   minecraft_subtitle: 마인크래프트 Hour of Code
-  volunteer_engineer_submission_title: 학생들에게 꿈과 희망을 주고, Hour of Code 에 자원봉사해 주세요.
+  volunteer_engineer_submission_title: 학생들과 자원봉사자들에게 꿈과 희망을 불어넣어 주세요.
   volunteer_engineer_submission_subtitle_generic: '올 해 12월7일-13일까지 100,000 명의 선생님들이
     수업 중에 Hour of Code 행사를 운영할 예정입니다. 선생님들은 여러분들의 도움이 필요합니다! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} 명의 선생님들이 이번 12월
-    Hour of Code 수업을 도와주실, 컴퓨터과학(정보과학) 교육에 열정적인 자원봉사자를 필요로 하고 있습니다.<br>%{num_volunteers}
-    명의 자원봉사자들이 등록되어 있습니다. 함께 해주세요.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} 명의 선생님들이 자원봉사자를
+    필요로 하고 있습니다.<br>%{num_volunteers} 명의 자원봉사자들이 등록되어 있습니다. 함께 해주세요.'
   volunteer_engineer_submission_intro_background: Hour of Code 는 전세계 180개 이상의 나라에서
     수 억명의 학생들에게 컴퓨터과학(정보과학) 을 소개하는 한 시간 짜리 활동을 해보도록 하는 전세계적인 운동입니다. 12월7일-13일 컴퓨터과학교육주간
     동안 저희와 함께 해주세요.
@@ -326,13 +324,12 @@
     style="font-family: ''Gotham 7r'', sans-serif;">컴퓨터과학(정보과학) 교육에 열정적인 전문가</span>
     로써 수업을 도와주시거나, 학생들에게<span style="font-family: ''Gotham 7r'', sans-serif;">꿈과 희망을
     심어 주실 수 있는 분으로서,</span> 컴퓨터과학(정보과학) 으로 가능한 다양한 것들에 대해서 이야기해 주시길 원하고 있습니다.(화상 회의로도
-    가능합니다.) 자원봉사를 원하지 않으신다면, Hour of Code 행사 운영에 대해서 <a href="%{url}">더 살펴봐주세요.</a>'
+    가능합니다.)'
   volunteer_engineer_submission_intro_signup: 컴퓨터과학/공학/교육과 대학생이거나 소프트웨어 개발자이시면 <span
     class="form-required-field">*</span> 표 있는 곳을 채워주세요.
-  volunteer_engineer_submission_intro_links: 자원봉사를 찾고 있나요? <a href="%{learn_more}">여기서
-    더 살펴보세요.</a> Hour of Code 행사를 운영하는 것에 대한 방법과, 자원봉사자를 찾는 것은 다음 지도를 살펴보세요 <a href="%{volunteer_local}">자원봉사
-    지도</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: 자원봉사를 찾고 있나요? <a href="%{volunteer_local}">
+    자원봉사자 맵</a>에서 살펴보세요.
+  volunteer_engineer_submission_update_information: 정보 업데이트
   volunteer_engineer_submission_header_shared: 자원봉사자 지도에 선생님에게 공유되는 정보
   volunteer_engineer_submission_field_name: 이름
   volunteer_engineer_submission_field_name_placeholder: 성명
@@ -369,8 +366,8 @@
   volunteer_engineer_submission_checkbox_contact: '선생님들이 자원봉사자를 구하실 때 저에게 연락주시는 것에
     동의합니다. (참고: 여러분의 이메일 주소가 공유 되지는 않을 것입니다.)'
   volunteer_engineer_submission_submit: 제출하기
-  volunteer_engineer_submission_thankyou: Hour of Code 행사를 위해 자원해주셔서 감사드립니다. Hour
-    of Code 행사를 준비하고 다른 자원봉사자들을 모집하기 위해 <a href="%{url}">여기를 좀 더 자세히 살펴봐주세요.</a>
+  volunteer_engineer_submission_thankyou: 자원봉사를 지원해주셔서 감사드립니다. 선생님들은 <a href="%{url}">이
+    지도</a>를 사용해 여러분과 같은 자원봉사자들을 찾게될 것입니다.
   volunteer_engineer_submission_commitment_uncertain: 소속없음
   volunteer_engineer_submission_commitment_one_hr_per_week: 1주일에 1시간
   volunteer_engineer_submission_commitment_three_hrs_per_week: 1주일에 3시간
@@ -608,11 +605,9 @@
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: 공시사항
   dashboard_announce_view_all: 모두 보기
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+  dashboard_announce_message: '<b>2015년 12월 16일</b> - 2015 Hour of Code에 참여해 주셔서 감사합니다.
+    모든 Code Studio의 튜토리얼과 과정들에서 이제 다시 시작됩니다. 참고: Code.org 사무실이 12월 19일부터 3월 3일까지 문을
+    닫습니다. 3월 4일이 될 때까지 여러분이 제출하는 질문에 대해 답변이 지연되더라도 기다려 주세요.'
   dashboard_announce_button_text: 더 알아보기
   dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을
     소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요.
@@ -1270,13 +1265,3 @@
   infinity_shortcode: inf
   playlab_shortcode: 실행
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

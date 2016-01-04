@@ -28,6 +28,8 @@
     code:
       label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
@@ -287,8 +289,8 @@
       remove: هل أنت متأكد من أنك تريد إزالة هذا المعلم؟
     students:
       dashboard: انتقل إلى لوحة المعلم
-    user_not_found: تعذر العثور على المعلم أو الطالب
-    student_teacher_disassociated: تم إزالة %{teacher_name} كمدرس لـ %{student_name}
+    user_not_found: لا يمكن العثور على المعلمة.
+    student_teacher_disassociated: لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك.
     panel:
       answer_viewer: عارض الأجوبة
       student: طالب

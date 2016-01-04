@@ -1934,9 +1934,9 @@ ka:
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: ფუტკარს ახლა მხოლოდ ნექტარი სურს. ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+        ფუტკარს ახლა მხოლოდ ნექტარი სურს.
+        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს.
+        თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       Ryan Test Locked Blocks_instruction: 'ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -3442,6 +3442,9 @@ ka:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -3449,6 +3452,7 @@ ka:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
@@ -3620,7 +3624,7 @@ ka:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: Template
+      U4L02 - Objects - Template1_instruction: მოდელი
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

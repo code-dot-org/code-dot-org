@@ -2919,10 +2919,9 @@
       Ryan - 4-5 Bee Conditionals 2_instruction: Včela chce právě teď jen nektar.
         Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM se zjistí, jestli
         se skrývá květ. Pokud ano, můžeš získat nektar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Včela chce právě teď jen nektar. Ne všechny
+        objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá
+        květ. Pokud ano, můžeš získat nektar.
       Ryan Test Locked Blocks_instruction: Zde je funkce nazvaná "hlídka." Uprav ji
         k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
@@ -4508,6 +4507,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4515,6 +4517,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

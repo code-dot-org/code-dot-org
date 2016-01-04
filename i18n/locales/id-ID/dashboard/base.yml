@@ -28,6 +28,8 @@ id:
     code:
       label: 'Tambahkan seorang guru:'
       placeholder: Kode Bagian (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Cantumkan nama guru
   add_hint_form:
     placeholder: Masukkan pentunjuk anda disini

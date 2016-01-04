@@ -20,8 +20,8 @@ cs-CZ:
   submit: Odeslat
   twentyhours_heading: Vyzkoušej si náš kurz Úvod do Informatiky
   twentyhours_text: 'Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice a programovacích pojmech v  následujícím kurzu.'
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Každé dítě si zaslouží příležitost
+  og_description: Každý student v každé škole si zaslouží možnost studovat informatiku.
   hoc2014_heading: 'Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/> 8. až 14. prosince 2014 <br/>'
   hoc2014_students: Studenti
   hoc2014_try: Zkuste to
@@ -315,7 +315,7 @@ cs-CZ:
     Tito učitelé by rádi našli někoho <span style="font-family: 'Gotham 7r', sans-serif;">nadšeného do výuky informatiky</span>, kdo jim může pomoci v učebně, nebo někoho kodo může <span style="font-family: 'Gotham 7r', sans-serif;">inspirovat</span> jejich studenty přednáškou o šíři možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat svoji vlastní Hodinu kódu.
   volunteer_engineer_submission_intro_signup: 'Zadejte následující informace, pokud jste počítačové vědy student nebo software profesionál, prosím. Pole označená <span class="form-required-field"> *</span> jsou požadovaná.'
   volunteer_engineer_submission_intro_links: 'Nehledáte dobrovolníkas? <a href="%{learn_more}">Dozvi se více</a> o organizování tvé Hodiny kódu a nalezení dobrovolníka v místě na naší <a href="%{volunteer_local}">mapě dobrovolníků</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Aktualizujte vaše informace
   volunteer_engineer_submission_header_shared: Informace sdílené s učiteli na dobrovolnické mapě
   volunteer_engineer_submission_field_name: Jméno
   volunteer_engineer_submission_field_name_placeholder: Celé jméno
@@ -550,7 +550,7 @@ cs-CZ:
   dashboard_faq_k5: K-5, nejčastější dotazy
   dashboard_announcements: Oznámení
   dashboard_announce_view_all: Zobrazit vše
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>16. prosince 2015</b> - Děkujeme za účast v Hodině kódu 2015! Sledování a ukládání pokrok předpokládali jsme nyní ve všech Code Studio výukových programech a kurzech. Poznámka: Code.org kanceláře se uzavřou 19. prosince - 3. ledna. Prosím očekávejte zpožděné odpovědi na všechny otázky, které odesíláte až do ledna 4.'
   dashboard_announce_button_text: Zjisti více
   dashboard_announce_hoc: '<b>15. října 2015</b> - Hodina kódu se blíží &mdash; každý zúčastněný organizátor obdrží dárkovou kartu na Amazon.com nebo Microsoft Windows Store jako dárek. Připojte se učebny po celém světě během prosince 7-13.'
   dashboard_announce_playlab: '<b>4. Prosince 2015</b> Hodinový kód je zde! Zkus 50 návodů pro každou dobu a zařízení. Novinka týdne: Programuj tvůj vlastní příběh a hry v nových herních laboratořích, Doba Ledová a Gumball.'

@@ -6,7 +6,7 @@
         desc: Esta lección vai introducir o concepto de Informática e explicar o que
           fai un informático. Tamén vai dar aos alumnos a oportunidade de asumir o
           papel dun informático. Ao final da actividade, cada alumno vai levar para
-          casa unha lembranza do que aprenderon. Pode pensar en non ensinar aos nenos
+          casa unha lembranza do que aprendeu. Pode pensar en non ensinar aos nenos
           máis cativos as palabras do vocabulário relacionado ás leccións a seguir,
           pero presentalas de forma divertida e descontraída agora é moito máis produtivo
           que esperar oportunidades futuras.
@@ -146,7 +146,7 @@
           aprender unha coreografia simple e daquela se lles dirá que a repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de relevos
+        title: Programación por relevos
         desc: Os alumnos participan dunha carreira de relevos na cal deben atravesar
           o patio para escribir un algoritmo baseado nunha imaxe en "papel cadriculado
           de programación". Eles só poden escribir unha instrución por vez, e, se
@@ -253,7 +253,7 @@
           tórnanse modelos para novas historias tolas e divertidas.
         video: C4_bibliotecas_locas_sin_conexión
       ForLoopFun:
-        title: Diversión con bucles "for"
+        title: Diversión con bucles "para" (for)
         desc: Sabemos que os bucles nos permiten facer algo repetidas veces, pero
           agora imos aprender como usalos con estruturas adicionais.
         video: C4_bucles_for_sin_conexión
@@ -276,10 +276,10 @@
         video: C4_binario_sin_conexión
       VideoGamesCoordinatePlanes:
         title: Vídeo xogos e planos cartesianos
-        desc: Descubra como os vídeo xogos cos que gosta xogar son, na verdade, conducidos
-          pola álxebra! Explore como as expresións algébricas e o plano cartesiano
-          poden nos axudar a entender como funcionan os vídeo xogos e entón comece
-          a planear o xogo que vai crear.
+        desc: Descubre como os vídeo xogos cos que gostas xogar son, na verdade, conducidos
+          pola álxebra! Explora como as expresións alxebraicas e o plano cartesiano
+          poden nos axudar a entender como funcionan os vídeo xogos e entón comeza
+          a planear o xogo que vas crear.
         video: alg_11_coordinate_plane
       Contracts:
         title: Contratos, dominio e imaxe
@@ -310,7 +310,7 @@
         video: alg_10_conditionals
       CollisionDetection:
         title: Detección de colisións e o teorema de Pitágoras
-        desc: Determinar cando os obxectos na pantalla se tocan é un aspecto importante
+        desc: Determinar cando se tocan os obxectos na pantalla é un aspecto importante
           na maioría dos xogos. Nesta lección, imos ver como o teorema de Pitágoras
           e a fórmula da distancia poden ser usados para medir a distancia entre dous
           puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo)

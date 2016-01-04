@@ -24,7 +24,7 @@
   "COLOUR_RGB_RED":"punainen",
   "COLOUR_RGB_TITLE":"väri, jossa on",
   "COLOUR_RGB_TOOLTIP":"Luo väri, jossa on annettu määrä punaista, vihreää ja sinistä. Kaikkien arvojen tulee olla välillä 0-100.",
-  "CONFIRM_DELETE_FUNCTION_MESSAGE":"Varoitus! Oletko varma, että haluat poistaa %1?",
+  "CONFIRM_DELETE_FUNCTION_MESSAGE":"Varoitus! Oletko varma, että haluat poistaa funktion %1?",
   "CONTRACT_EDITOR_HEADER":"Suunnitteluresepti",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"poistu silmukasta",

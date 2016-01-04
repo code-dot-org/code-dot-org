@@ -29,6 +29,8 @@
     code:
       label: 'ٹیچر شامل کریں:'
       placeholder: Section Code (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: استاد شامل کریں
   add_hint_form:
     placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
@@ -262,7 +264,7 @@
         calculate: Calculate Something
         applab: Make an App
     user:
-      classroom: Teacher Home Page
+      classroom: استاد کی ہوم پیج
       district_dashboard: District Dashboard
       label: Hi %{username}
       stats: My progress
@@ -409,7 +411,7 @@
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
-    more: More
+    more: مزید
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
@@ -572,12 +574,12 @@
     open_response_title: Thanks
     open_response_body: Thanks for your response!
   dialog:
-    ok: اوکے
+    ok: ٹھيک ہے
     startover_title: کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: اسٹارٹ اوور
-    startover_cancel: کینسل
+    startover_ok: آغاز(اسٹارٹ اوور)
+    startover_cancel: منسوخ کریں
   time:
     hour: 1 hour
     day: day
@@ -652,7 +654,7 @@
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
-    more: More
+    more: مزید
     name: نام
     updated: Updated
     project_type: Project Type
@@ -665,7 +667,7 @@
     delete_no: 'No'
     saved: Saved
     not_saved: Not saved
-    cancel: کینسل
+    cancel: منسوخ کریں
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able

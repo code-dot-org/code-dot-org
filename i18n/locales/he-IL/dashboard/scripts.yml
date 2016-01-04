@@ -27,7 +27,7 @@ he:
           Flappy non blockly: Flappy non blockly
           title: קורס 1
           Artist 2: אמן 2
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -680,6 +680,7 @@ he:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1164,7 +1165,7 @@ he:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Graph Paper Programming: תכנות לנייר משבצות
@@ -1234,6 +1235,7 @@ he:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.

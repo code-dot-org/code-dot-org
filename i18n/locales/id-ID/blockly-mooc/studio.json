@@ -78,7 +78,7 @@
   "dropletBlock_moveSlow_description":"Ubah karakter-karakter untuk bergerak lebih lambat.",
   "dropletBlock_moveSlow_param0":"tipe",
   "dropletBlock_moveSlow_param0_description":"The type of characters to be changed ('random', 'Stormtrooper', 'RebelPilot', 'PufferPig', 'Mynock', 'MouseDroid', 'Tauntaun', or 'Probot').",
-  "dropletBlock_moveNormal_description":"Changes a set of characters to move at a normal speed.",
+  "dropletBlock_moveNormal_description":"Mengubah satu set karakter untuk bergerak dengan kecepatan normal.",
   "dropletBlock_moveNormal_param0":"tipe",
   "dropletBlock_moveNormal_param0_description":"The type of characters to be changed ('random', 'Stormtrooper', 'RebelPilot', 'PufferPig', 'Mynock', 'MouseDroid', 'Tauntaun', or 'Probot').",
   "dropletBlock_moveFast_description":"Changes a set of characters to move quickly.",

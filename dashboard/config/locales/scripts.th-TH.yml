@@ -47,7 +47,7 @@
           'Bee: Loops': 'เขาวงกต: Loops'
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'ศิลปิน: Loops'
-          description_audience: Ages 4+ (pre-readers)
+          description_audience: อายุ 4-6 ปี
           description_short: คอร์ส 1 is designed for early readers.
         course2:
           The Maze: เขาวงกต
@@ -412,10 +412,10 @@
           description_short: Try our Jigsaw tutorial
           Jigsaw: Jigsaw
         step:
-          title: Step
+          title: ขั้นตอน
           description: ''
           description_short: Step tutorial
-          Step: Step
+          Step: ขั้นตอน
         Hour of Code:
           title: Hour of Code 2013
           description: ''
@@ -744,6 +744,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1369,6 +1370,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1647,7 +1649,7 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft ชั่วโมงแห่งการโค้ด
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
           description: ใช้บล็อกของโค้ดเพื่อนำ Steve หรือ Alex ในการผจญภัยผ่านโลก Minecraft
             นี้

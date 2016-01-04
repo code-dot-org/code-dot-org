@@ -204,7 +204,7 @@ eu:
         turtle_3_2: '"marraztu karratu bat" funtzioa adibide gisa erabiliz, idatz ezazu "marraztu triangelu bat" funtzioa eta erabil ezazu.'
         turtle_3_3: 'Marraztu hesi triangeluarrak katuen inguruan eta hesi karratu bat behiaren inguruan. Iradokizuna: egiaztatu programa idatzi ahala.'
         turtle_3_4: 'Ea gai zaren asmatzeko nola erabili "marraztu karratu bat" eta "marraztu triangelu bat" (eta beste bloke batzuk) etxetxo bat marrazteko lehoiaren inguruan.'
-        turtle_3_5: 'Orain, idatzi "marraztu etxe bat" funtzio berri bat eta erabil ezazu bi katu aterpetzeko. Iradokizuna: sortu funtzio berri bat "zerbait egin" blokea erabiliz eta idatzi nahi duzuna blokea izendatzeko.'
+        turtle_3_5: 'Orain, idatzi "marraztu etxe bat" funtzio berri bat eta erabil ezazu bi katu aterpetzeko. Iradokizuna: sortu funtzio berri bat "zerbait egin" blokea erabiliz eta idatzi nahi duzun funtzioaren izena blokea izendatzeko.'
         turtle_3_6: '"marraztu karratu bat" adibide gisa erabiliz, gehitu "luzera" izeneko sarrera bat "marraztu triangelu bat" funtzioari. Ondoren, marraztu neurri desberdinetako triangeluak. (Pista: klikatu izarrean funtzio bati sarrera bat gehitzeko)'
         turtle_3_7: 'Gehitu "luzera" izeneko sarrera bat "marraztu etxe bat" funtzioari eta eraiki etxe handi bat elefantearentzat (aldeen luzera 150 pixelekoa izan dadin)'
         turtle_3_8: 'Eraldatu "marraztu etxe bat" ni beheko eskuineko izkinara joateko etxe berri bat marraztu ondoren. Erabili funtzio eraldatu hori hiru etxe marrazteko.'
@@ -229,8 +229,8 @@ eu:
         maze_3_2: Idatzi programa bat niretzat, txerriarenganaino iritsi ahal izateko.
         maze_3_3: Nola iritsiko naiz txerriarenganaino? Ziurtatu ez naizela TNT kaxatik pasatuko!
         maze_3_4: Ene! Idatz iezaidazu programa bat TNT sahiestu eta txerriarenganaino iristeko
-        bounce_1: 'Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari eta sakatu "Hasi". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako helburura iristeko.'
-        bounce_2: 'Itsatsi bloke bat "eskuineko gezia sakatzean" eta "ezkerreko gezia sakatzean" blokei. Mugitu erraketa bukaerako bi helburuetara iristeko.'
+        bounce_1: 'Itsatsi bloke bat "ezkerrerako gezia sakatzean" blokeari eta sakatu "Hasi". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako helburura iristeko.'
+        bounce_2: 'Itsatsi bloke bat "eskuinerako gezia sakatzean" eta "ezkerrerako gezia sakatzean" blokei. Mugitu erraketa bukaerako bi helburuetara iristeko.'
         bounce_3: 'Orain, saiatu antzeko zerbait "gorako gezia sakatzean" blokearekin. Mugitu erraketa goi parteko bukaerako helbururaino.'
         bounce_4: Orain, lau bloke gehitu behar dituzu. Mugitu erraketa bukaerako lau helburuetaraino ariketa honi amaiera emateko.
         bounce_5: 'Pilota bat botako dugu erraketarantz. Itsatsi bloke bat "pilotak erraketa jotzen duenean" blokeari ziurtatzeko pilota bukaerako helburura iristen dela.'
@@ -380,7 +380,7 @@ eu:
         Unplug6: Baldintzak
         Unplug7: Musika idazten
         Unplug8: Abstrakzioa
-        Unplug9: Erreleen programazioa
+        Unplug9: Txandaka programatzen
         Unplug10: Internet
         Unplug11: Ixtea
         C1_happy_maps_unplugged: Mapa Zoriontsuak
@@ -393,50 +393,50 @@ eu:
         C1_bee_level_intro: 'Erle maila - Sarrera'
         C1_artist_intro: Artistara sarrera
         C1_spelling_bee_intro: 'Sarrera: Letraz letra jolasa'
-        C1_zuck_repeat_loop: Labiriontoaren begiztak
-        C1_bee_loops: Erlearen begiztak
-        C1_maze_loops: Labiriontoaren begiztak
+        C1_zuck_repeat_loop: 'Labirintoa: Begiztak'
+        C1_bee_loops: 'Erlea: Begiztak'
+        C1_maze_loops: 'Labirintoa: Begiztak'
         C1_playlab_storytelling: Jolas laborategia. Istorio bat sortu
         C1_planting_seed: Hazi bat ereiten
         C1_building_foundation: Oinarri bat Eraikitzen
         C1_going_places_safely: Joan segurtasunez
         C2_maze_intro: Labirintora sarrera
         C2_artist_intro: Artistara sarrera
-        C2_zuck_repeat_loop: Labiriontoaren begiztak
-        C2_artist_loops: Artistaren begiztak
-        C2_artist_debugging: Artistaren arazketa
-        C2_bee_loops: Erlearen begiztak
-        C2_bee_debugging: Erlearen arazketa
-        C2_bee_conditionals: Erlearen baldintzazkoak
+        C2_zuck_repeat_loop: 'Labirintoa: Begiztak'
+        C2_artist_loops: 'Artista: Begiztak'
+        C2_artist_debugging: 'Artista: Arazketa'
+        C2_bee_loops: 'Erlea: Begiztak'
+        C2_bee_debugging: 'Erlea: Arazketa'
+        C2_bee_conditionals: 'Erlea: Baldintzak'
         C2_playlab_createstory: Jolas laborategia. Istorio bat sortu
         C2_graph_paper: Paper grafiko programazioa
         C2_conditionals_with_cards: Baldintzak
-        C2_binary_bracelets: Eskumuturreko binarioak
+        C2_binary_bracelets: Eskumuturreko bitarrak
         C2_relay_programming: Errele programazioa
         C2_paper_airplanes: Paperezko hegazkinak
         C2_digital_footprint: Zure aztarna digitala
         C2_digital_footprint_v2: Zure aztarna digitala
-        C3_maze_level_4: Labiriontoaren begiztak
+        C3_maze_level_4: 'Labirintoa: Begiztak'
         C3_artist_intro: Artistara sarrera
-        C3_artist_functions: Artistaren funtzioak
-        C3_bee_functions: Erlearen funtzioak
-        C3_bee_conditionals: Erlearen baldintzazkoak
+        C3_artist_functions: 'Artista: Funtzioak'
+        C3_bee_functions: 'Erlea: Funtzioak'
+        C3_bee_conditionals: 'Erlea: Baldintzak'
         C3_maze_conditionals: Labirintoaren baldintzazkoak
         C3_artist_nested_loops: Kabiatutako begiztak
         C3_farmer_while: '"Bitartean" begiztak'
         C3_bee_nested_loops: Kabiatutako begiztak
-        C3_bee_debugging: Erlearen arazketa
+        C3_bee_debugging: 'Erlea: Arazketa'
         C3_bounce: Errebotea
         C3_playlab_create_game: 'Jolas laborategia - Jolas bat sortu'
         C3_computational_thinking: Pentsamendu konputazionala
         C3_dice_race: Dado lasterketa
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Argizulo funtzionalak
+        C3_functional_suncatchers: Funtzioak aztertzen
         C3_songwriting_with_parameters: Abestiak sortzen parametroekin
         C4_intro: Sarrera
         C4_loops_zombie: Itzuliak
-        C4_bee_conditional: Erlearen baldintzazkoak
+        C4_bee_conditional: 'Erlea: Baldintzak'
         C4_variables_artist: 'Aldagaiak - Artista'
         C4_variables_playlab: 'Aldaerak - Jolas laborategia'
         C4_for_loops: For begiztak

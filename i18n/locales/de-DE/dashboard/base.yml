@@ -28,6 +28,8 @@ de:
     code:
       label: 'Lehrer hinzufügen:'
       placeholder: Code für diese Sektion (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -258,8 +260,8 @@ de:
       remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
     students:
       dashboard: Gehen Sie zum Lehrer-Dashboard!
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Lehrerin oder Lehrer konnte nicht gefunden werden.
+    student_teacher_disassociated: 'Du hast %{teacher_name} als Lehrerin/Lehrer entfernt.'
     panel:
       answer_viewer: Antwortenansicht
       student: Schüler
@@ -333,7 +335,7 @@ de:
   share:
     title: Lernen Sie von Code Studio
     description: Jeder kann Informatik lernen. Erstelle Spiele, Apps und Kunst durch Code.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: 'Probiere die "Hour of Code" aus!'
   gender:
     male: Männlich
     female: Weiblich
@@ -345,8 +347,8 @@ de:
     thank_you: 'Wir bedanken uns bei unseren <a href="https://code.org/about/donors">Spendern</a>, <a href="https://code.org/about/partners">Partnern</a>, our <a href="https://code.org/about/team">unserem erweiterten Team</a>, unseren Stimmen in den Einspielern sowie unseren <a href="https://code.org/about/advisors">Lern-Beratern</a> für ihre Unterstützung bei der Erstellung von Code-Studio.'
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu beigetragen, dieses Tutorial zu erstellen.
     help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben geholfen diese Materialien zu erstellen.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm. Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm. Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.'
     powered_by_aws: Betrieben von Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und Hour of Code&reg; sind eingetragene Marken der Code.org.'
     copyright: Copyright
@@ -363,7 +365,7 @@ de:
     built_on_code_studio: Erstellt auf Code Studio
     make_my_own_app: Meine eigene App entwickeln
     how_it_works: So funktioniert es
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: 'Probiere die "Hour of Code" aus!'
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an

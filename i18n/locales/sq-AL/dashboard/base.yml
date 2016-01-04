@@ -28,6 +28,8 @@ sq:
     code:
       label: 'Shto një mësues:'
       placeholder: Kodi i Seksionit (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu

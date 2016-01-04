@@ -160,23 +160,20 @@ vi:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Chào, tên tôi là Saloni. Tôi sử dụng khoa học máy tính để giúp giải quyết các vấn đề sức khỏe và y học. Hãy tìm hiểu về các khối "if else". Cũng giống như khối "if", nhưng nó có một phần phụ vào cuối là "else".'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Nếu tôi đặt một khối "di chuyển về phía trước" ở vị trí "làm" và một khối "rẽ trái" ở vị trí "khác" có nghĩa là các zombie sẽ lựa chọn giữa 2 lựa chọn. Nếu có một con đường phía trước, zombie sẽ di chuyển về phía trước, và nếu không (không có một con đường phía trước), zombie sẽ rẽ trái.'
       3:
         image: notes/hoc5_3.jpg
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: 'Giống như các khối "nếu", chúng tôi có thể đặt khối "nếu khác" bên trong khối "lặp lại", zombie sẽ giữ di chuyển và các "nếu khối khác" sẽ kiểm tra nếu có một nơi nào đó để chuyển, sẽ di chuyển theo hướng đó.'
       4:
         image: notes/hoc5_4.jpg
         text: Bây giờ, hãy đá đít lũ thây ma ấy nào!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: Một tuyên bố khác nếu là một quyết định giữa hai điều. Chúng ta hãy xem làm thế nào chúng tôi có thể sử dụng một tuyên bố khác với bạn của chúng tôi, chú sóc Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
         text: |-
@@ -187,22 +184,21 @@ vi:
           It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Giờ chúng ta hãy giúp chú sóc Scrat lấy được quả hạch đó!
     function:
       1:
         image: notes/stage13_1.jpg
         text: Xin chào, tôi là Brina, một kỹ sư tại Instagram. Có một chức năng mà một số dòng mã bạn muốn sử dụng nhiều, thay vì viết mã trong mọi lúc, bạn có thể chỉ cần sử dụng một khối.
       2:
         image: notes/stage13_2.jpg
-        text: "We're going to learn how to define functions. Function definitions have a star in the corner. The name of the function is written on the top line."
+        text: Chúng ta sẽ tìm hiểu làm thế nào để xác định chức năng. Định nghĩa chức năng có một ngôi sao trong góc. Tên của các chức năng được viết trên dòng trên cùng.
       3:
         image: notes/stage13_3.jpg
         text: |-
           The blocks that go inside the definition tell us what it does. So this function definition is called "fill 5" and it's made up of a "repeat" block and a "fill" block.
       4:
         image: notes/stage13_4.jpg
-        text: |-
-          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
+        text: 'Định nghĩa ngồi trên không gian làm việc, nhưng người nông dân của chúng ta sẽ không cho chạy các chức năng đến khi ta kéo "fill 5" khối chức năng từ thể loại chức năng ra.'
       5:
         image: notes/stage13_5.jpg
         text: |-
@@ -217,14 +213,14 @@ vi:
         text: Khối màu trắng sẽ làm mọi thứ bạn bỏ vào trong nó miễn sao các khối ở trên đều đã lập trình đúng.
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: Ví dụ, nếu người nông dân đang đứng trên một đống, cô ta sẽ tiếp tục xóa 1 đồ mang được trên xẻng khi vẫn còn một đống dưới cô.
     loop_for:
       1:
         image: notes/stage11_1.jpg
         text: "Hi, I 'm Trina, và tôi làm việc cho Pixar. Tôi đã làm việc trên một loạt các phim, trong đó có Shrek."
       2:
         image: notes/stage11_2.jpg
-        text: 'This is our new "counter" loop. It will perform actions over and over again and you can make the actions change slightly each time.'
+        text: 'Đây là vòng "truy cập" mới của chúng tôi. Nó sẽ biểu diễn hành động hơn và hơn nữa rồi bạn có thễ chuyển các hành động mỗi lần một chút.'
       3:
         image: notes/stage11_3.jpg
         text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'

@@ -28,6 +28,8 @@
     code:
       label: 'Legg til en lærer:'
       placeholder: Seksjonskode (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Legg til lærer
   add_hint_form:
     placeholder: Skriv inn et hint her

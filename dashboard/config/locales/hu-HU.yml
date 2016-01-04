@@ -29,6 +29,8 @@
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -291,9 +293,8 @@
       remove: Biztosan el szeretné bocsátani ezt a tanárt?
     students:
       dashboard: Vissza a Tanári Nyitólapra
-    user_not_found: A tanár vagy a diák nem található
-    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára
-      a rendszerben'
+    user_not_found: Ez a tanár nem található.
+    student_teacher_disassociated: Eltávolítottad %{teacher_name} a tanáraid közül.
     panel:
       answer_viewer: Válasz megtekintő
       student: Diák
@@ -380,7 +381,7 @@
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
       alkalmazásokat vagy alkoss a kódolás segítségével!
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   gender:
     male: Férfi
     female: Nő
@@ -421,7 +422,7 @@
     built_on_code_studio: Készült a Code Studio seggítségével
     make_my_own_app: Készítsd el saját alkalmazásod
     how_it_works: Hogyan működik
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat

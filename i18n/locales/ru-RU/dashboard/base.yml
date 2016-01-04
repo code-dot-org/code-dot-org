@@ -28,6 +28,8 @@ ru:
     code:
       label: 'Добавить учителя:'
       placeholder: Код раздела (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Добавить учителя
   add_hint_form:
     placeholder: Пожалуйста, введите Вашу подсказку здесь
@@ -250,8 +252,8 @@ ru:
       remove: Вы уверены, что хотите удалить этого учителя?
     students:
       dashboard: Перейти к панели учитель
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Не удалось найти учителя.
+    student_teacher_disassociated: 'Вы удалили %{teacher_name} как вашего учителя.'
     panel:
       answer_viewer: Просмотр ответов
       student: Ученик
@@ -325,7 +327,7 @@ ru:
   share:
     title: 'Учиться в "Студии Кода"'
     description: Любой человек может обучиться информатике. Создавайте игры, приложения и произведения искусства с помощью программного кода.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Попробуй Час Кода!
   gender:
     male: Мужской
     female: Женский
@@ -337,8 +339,8 @@ ru:
     thank_you: 'Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников наших видеозаписей, а также наших <a href="https://code.org/about/advisors"> консультантов по вопросам образования</a> за поддержку в создании "Студии Кода".'
     help_from_html: Мы хотим особенно отметить инженеров компаний Google, Microsoft, Facebook, Twitter и многих других, которые помогали нам в создании этих материалов.
     help_from_html_old: При создании данных материалов нам помогали инженеры из компаний Google, Microsoft, Facebook, и Twitter.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола является торговой маркой и &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой и &copy; 2015 Cartoon Network.'
     powered_by_aws: Создано с помощью Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour of Code&reg; являются товарными знаками Code.org.'
     copyright: Авторское право
@@ -355,7 +357,7 @@ ru:
     built_on_code_studio: 'Создать в "Студии Кода"'
     make_my_own_app: Создать собственное приложение
     how_it_works: Как это работает
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Попробуй Час Кода!
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки

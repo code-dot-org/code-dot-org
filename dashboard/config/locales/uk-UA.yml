@@ -28,6 +28,8 @@
     code:
       label: 'Додати учителя:'
       placeholder: Код групи (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Додати викладача
   add_hint_form:
     placeholder: Будь ласка, введіть сюди підказку
@@ -294,8 +296,8 @@
       remove: Ви впевнені, що хочете вилучити цього вчителя?
     students:
       dashboard: Перейти до панелі керування вчителя
-    user_not_found: Не вдається знайти вчителя чи учня
-    student_teacher_disassociated: '%{teacher_name} вилучений як вчитель для %{student_name}'
+    user_not_found: Такий викладач не знайдено.
+    student_teacher_disassociated: Ви видалили %{teacher_name} як вашoго викладача.
     panel:
       answer_viewer: Перегляд відповідей
       student: учень

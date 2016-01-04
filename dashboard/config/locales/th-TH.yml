@@ -28,6 +28,8 @@
     code:
       label: 'เพิ่มครู:'
       placeholder: ส่วนรหัส (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: เพิ่มครู
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
@@ -231,10 +233,10 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
             used by teachers in U.S. public schools.
   crud:
-    new_model: New %{model}
-    show: Show
-    edit: Edit
-    edit_model: Edit %{model}
+    new_model: '%{model} ใหม่'
+    show: แสดง
+    edit: แก้ไข
+    edit_model: แก้ไข %{model}
     update: Update
     destroy: Destroy
     back: Back
@@ -255,9 +257,9 @@
     user:
       classroom: หน้าแรกของคุณครู
       district_dashboard: District Dashboard
-      label: Hi %{username}
+      label: สวัสดี %{username}
       stats: My progress
-      settings: My account
+      settings: บัญชีของฉัน
       prizes: รางวัล
       logout: ออกจากระบบ
       signin: เข้าสู่ระบบ
@@ -278,8 +280,8 @@
     answer: Answer
     for_teachers_only: For Teachers Only
     title:
-      one: 'Your teacher:'
-      other: 'Your teachers:'
+      one: 'อาจารย์ของคุณ:'
+      other: 'อาจารย์ของคุณ:'
     remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
@@ -292,7 +294,7 @@
       answer_viewer: Answer Viewer
       student: นักเรียน
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      try_it_yourself: ลองด้วยตัวเอง
       section: Section
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
@@ -311,11 +313,11 @@
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
   user_level:
-    completed: Completed
+    completed: สมบูรณ์
     tried: Tried
   user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
+    recent_activity: กิจกรรมล่าสุด
+    show_more: แสดงเพิ่มเติม
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
@@ -326,20 +328,20 @@
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
-    student_reg_link: Student Sign Up
-    teacher_reg_link: Teacher Sign Up
+    student_reg_link: ลงทะเบียนนักเรียน
+    teacher_reg_link: ลงทะเบียนครู
     signin_directions: Use an account to track progress.<br/> Teachers, track your
       entire class.
     teacher_dashboard: See progress dashboard
-    teacher_student_count_one: You have %{count} student.
-    teacher_student_count: You have %{count} students.
+    teacher_student_count_one: คุณมีนักเรียน %{count} คน
+    teacher_student_count: คุณมีนักเรียน %{count} คน.
     teacher_averages: On average your students have earned %{trophy_average} out of
       %{trophy_max} "Concept Mastery" trophies.
-    teacher_print_certificates: Print certificates for students who finish this course
+    teacher_print_certificates: พิมพ์ใบรับรองสำหรับนักเรียนที่จบหลักสูตรนี้
     teacher_read_blog: Read about news and updates to our materials at our Educator
       Blog
-    classroom: Your classroom
-    student_progress: Your learning progress
+    classroom: ห้องเรียนของคุณ
+    student_progress: พัฒนาการเรียนรู้ของคุณ
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
@@ -365,18 +367,18 @@
       (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
-    your_gallery: Gallery
+    your_gallery: แกลเลอรี่
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: พิมพ์ใบรับรอง
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
       code.
     try_hour_of_code: Try an Hour of Code!
   gender:
-    male: Male
-    female: Female
+    male: ชาย
+    female: หญิง
     none: Prefer not to answer
   user_type:
     student: นักเรียน
@@ -498,7 +500,7 @@
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: แกลเลอรี่
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
@@ -523,7 +525,7 @@
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
-    header: Gallery
+    header: แกลเลอรี่
     header_playlab: Play Lab
     header_artist: ศิลปิน
   landing:
@@ -601,7 +603,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: Step
+          title: ขั้นตอน
           description: ''
         sample_level_builder:
           title: Sample Level Builder

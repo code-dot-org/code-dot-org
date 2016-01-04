@@ -859,7 +859,7 @@ eu:
         text: Hasi ahal izateko erraketaren kontrolak teklatuaren gezidun teklekin lotu behar ditugu.
       3:
         image: notes/C3_bounce_3.png
-        text: 'Hau egin dezakegu "ezkerreko gezia sakatzean" blokea "mugitu ezkerrera" blokera lotuz eta gauza bera "eskuineko gezia sakatzean" eta "mugitu eskuinera" blokeekin eginez. Saiatu zaitez eta gutxi barru zure errebote jokoa programatzen ariko zara!'
+        text: 'Hau egin dezakegu "ezkerrerako gezia sakatzean" blokea "mugitu ezkerrera" blokera lotuz eta gauza bera "eskuinerako gezia sakatzean" eta "mugitu eskuinera" blokeekin eginez. Saiatu zaitez eta gutxi barru zure errebote jokoa programatzen ariko zara!'
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
