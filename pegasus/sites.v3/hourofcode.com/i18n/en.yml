@@ -14,6 +14,7 @@
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
   front_volunteers: 'Technical volunteers wanted'
+  front_start_learning: 'Start learning'
 
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
@@ -272,6 +273,7 @@
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
+  map_title: "Hour of Code map"
   map_header: '# Hour of Code events around the world'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
@@ -283,9 +285,9 @@
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
 
-  meta_tag_og_title: 'The Hour of Code is here'
+  meta_tag_og_title: 'Every child deserves opportunity'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
-  meta_tag_twitter_title: 'The Hour of Code is here'
+  meta_tag_twitter_title: 'Every child deserves opportunity'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
@@ -318,7 +320,7 @@
   hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='%{codeorg_url}'>Check out the tutorials</a>."
   hoc_faq_last_year: "Try the tutorials"
   hoc_faq_when_is_hoc_q: 'When is the Hour of Code?'
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. You're welcome to split up the Hour of Code into multiple sessions so long as your students finish the Hour of Code tutorial. Just do whatever works best for you and your students. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='http://csedweek.org'>Computer Science Education Week</a>. Computer Science Education Week was December 7-13, 2015, but you can host an Hour of Code all year round."
   hoc_faq_why_cs_q: 'Why computer science?'
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
@@ -357,6 +359,8 @@
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_posters_q: "Where are my posters?"
   hoc_faq_posters_a: "We are so sorry to share that we ran out of posters to send everyone who requested them. We've more than tripled signups from last year which means we grossly underestimated how many posters to print for organizers. We are working to find a solution to distribute more. You can always print posters yourself on our <a href='/promote/resources'>resources page</a>."
+  hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
+  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."

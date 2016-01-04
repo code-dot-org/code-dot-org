@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions": "Create an event handler for the \"Add Contact\" button that displays the contents of the 4 text input fields in the console. (Click to see full instructions)"
   }
 }]]></config>

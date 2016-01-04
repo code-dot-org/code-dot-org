@@ -89,7 +89,7 @@ social:
               %div#tryittext.ctatext
                 %a#tryitbutton.ctabuttonatag{href: resolve_url('https://code.org/learn')}
                   %button.ctabutton
-                    =hoc_s(:get_started)
+                    =hoc_s(:front_start_learning)
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
               %div.watch-video-small{onclick: "return startVideo();"}
                 =hoc_s(:front_watch_regular_video)
@@ -179,14 +179,6 @@ social:
       %p=hoc_s(:stats_girls_more)
       %img{src: "/images/stats-info3.jpg", style: "width: 100%;"}
         %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
-
-  %div
-    .row
-      .col-md-6
-        =view :prizes_announce
-      .col-md-1
-      .col-md-5
-        =view :join_us_description
 
   -# FAQ
 

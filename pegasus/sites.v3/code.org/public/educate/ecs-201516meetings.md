@@ -6,9 +6,9 @@ Each month, Code.org is pleased to host a free, online webinar for ECS teachers.
 
 ## When do the monthly meetings occur?
 
-ECS Monthly Meetings take place on the first Tuesday of every month at 7:00 pm Central Time (GMT-5:00). Below is a list of all the monthly meetings scheduled for the 2015-16 school year.
+Below is a list of all the monthly meetings scheduled for the 2015-16 school year.
 
-|Monthly Meeting | Date & Time | Registration Link|
+|Monthly Meeting | Date & Time | Recording Link|
 |------------ | ------------- | ------------|
 |[September](https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468) | September 1, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>View Recording</button>](https://youtu.be/Bph8a7GZaQg)|
 |[October](https://www.eventbrite.com/e/ecs-monthly-meeting-october-tickets-17789153838) | October 6, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>View Recording</button>](https://youtu.be/Z4KazjGQRaQ)|
@@ -19,4 +19,4 @@ ECS Monthly Meetings take place on the first Tuesday of every month at 7:00 pm C
 A calendar of all future monthly meetings is available at [http://cs10kcommunity.org](https://cs10kcommunity.org/calendar/month)
 <br />
 
-[<button>View Full Schedule of Code.org Live Events</button>](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577)
+[<button>View Full Schedule of Code.org Live Events</button>](/educate/events)

@@ -6,6 +6,7 @@ At the end of the course, students will have written programs to build composite
 
 CS in Algebra is aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](/curriculum/docs/algebra/standards).
 
+<a name="start"><a/>
 ## How do I start teaching CS in Algebra?
 
 To offer CS in Algebra in your school, teachers are required to attend a multi-phased professional development program. The professional development program is only available in the context of a full school district partnership with Code.org. [Inquire about a District Partnership](/educate/districts) to bring CS in Algebra to your entire district. Or learn more about [middle school professional development](/educate/professional-development).

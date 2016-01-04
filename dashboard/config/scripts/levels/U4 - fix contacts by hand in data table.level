@@ -166,9 +166,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "markdown_instructions": "# Add contacts to the data table by hand\r\n\r\nWhen you originally created this app you hard-coded at least **three contacts\"** that were added to your contacts list every time the program started running. You'll want to move their information into the database as well.\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* In the Data Viewer go to the table you are using to store your contacts.\r\n* Add rows to the table and copy in the url, name, phone number, etc. for each of the hard-coded contacts in your app.\r\n* **Don't actually delete your hard-coded contacts from your code**",
-    "encrypted_examples": [
-
-    ],
     "slider_speed": "1.0",
     "instructions": "Use the data viewer to add rows to the data table.  Add the original hard-coded contacts from your app to the database. (Click to see full instructions)"
   }

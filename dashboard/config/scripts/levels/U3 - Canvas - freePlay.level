@@ -39,10 +39,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Canvas - Template",
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "U3 - Canvas - Template"
   }
 }]]></config>
   <blocks/>

@@ -878,7 +878,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     puzzle_number: level.puzzle_number
   });
 
-  if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
+  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
+  if (markdownMode) {
     var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
     renderedMarkdown = marked(markdownWithImages);
     instructionsDiv.className += ' markdown-instructions-container';
@@ -941,6 +943,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }, this);
 
   this.instructionsDialog = this.createModalDialog({
+    markdownMode: markdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',

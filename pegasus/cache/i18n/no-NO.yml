@@ -149,7 +149,8 @@
   lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
+  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines}
+    kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
@@ -320,8 +321,8 @@
   starwars_javascript_start_button: Prøv nå
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slipp blokker.
-  starwars_blocks_specs: Mange språk (kommer snart) | Moderne nettlesere, smart-telefoner,
-    nettbrett | Alderen 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
+    Ages 6-10
   starwars_blocks_start_button: Lær mer
   starwars_watch_videos: Før du starter, se en av disse videoene
   starwars_speak_languages: Snakker du et annet språk?
@@ -334,8 +335,7 @@
     i Minecraft.
   mc_gradelevel: Passer for de som er 6 år og eldre
   mc_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
-  mc_specs: Mange språk (kommer snart) | Moderne nettlesere og nettbrett | Alder 6
-    +
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Kodetimen med Minecraft
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer
     elevene.
@@ -1461,3 +1461,13 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  volunteer_engineer_submission_update_information: Update your information
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more

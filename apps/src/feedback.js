@@ -674,6 +674,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     options: options
   });
 
+  // Note: We have a dependency on dashboard here. This dependency has always
+  // been here (we used to mysteriously just always bubble clicks on body to
+  // a.popup-window if it existed), but it is now more explicit
+  if (window.dashboard && window.dashboard.popupWindow) {
+    $(sharingDiv).find('a.popup-window').click(window.dashboard.popupWindow);
+  }
+
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
     dom.addClickTouchEvent(sharingInput, function() {
@@ -1304,6 +1311,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.markdownMode
  * @param {boolean} options.scrollContent
  * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
@@ -1321,6 +1329,11 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
   } else {
     options.contentDiv.className += ' no-modal-icon';
   }
+
+  if (options.markdownMode) {
+    modalBody.className += ' markdown';
+  }
+
   options.contentDiv.className += ' modal-content';
   modalBody.appendChild(options.contentDiv);
 
