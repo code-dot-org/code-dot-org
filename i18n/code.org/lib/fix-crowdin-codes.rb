@@ -42,6 +42,7 @@ locales = {
   'Kurdish' => 'ku-IQ',
   'Latvian' => 'lv-LV',
   'Lithuanian' => 'lt-LT',
+  'Maori' => 'mi-NZ',
   'Macedonian (FYROM)' => 'mk-MK',
   'Malay' => 'ms-MY',
   'Maltese' => 'mt-MT',

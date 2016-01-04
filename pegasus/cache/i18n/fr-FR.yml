@@ -29,9 +29,8 @@
   twentyhours_heading: Essaie notre introduction au cours de Programmation Informatique
   twentyhours_text: Tu as fini ta première heure de programmation ? Apprend encore
     plus sur les concepts fondamentaux de l'informatique dans la suite ce cours.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Chaque enfant mérite sa chance
+  og_description: Chaque élève de chaque école mérite la chance d'étudier l'informatique.
   hoc2014_heading: Rejoignez<a href="http://hourofcode.com"> l'heure de Code</a> <br/>
     le 8-14 décembre 2014 <br/>
   hoc2014_students: Élèves
@@ -348,7 +347,8 @@
     de Minecraft avec Steve ou Alex.
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs récents, smartphones, tablettes
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Plusieurs langages | Les fureteurs modernes et les tablettes | De 6 à
+    106 ans
   minecraft_subtitle: Une Heure de Code Minecraft
   volunteer_engineer_submission_title: Soyez une source d'inspiration et bénévoles
     pour Une Heure de Code.
@@ -377,7 +377,7 @@
     href="%{learn_more}">Apprenez plus</a> sur l'organisation de votre propre Heure
     de Code et trouvez un bénévole local sur notre <a href="%{volunteer_local}">carte
     des bénévoles</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Mettre à jour vos informations
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants
     sur la carte des bénévoles
   volunteer_engineer_submission_field_name: Nom
@@ -710,11 +710,12 @@
   dashboard_faq_k5: GS - CM2 Questions Fréquemment Posées
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Voir tous
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+  dashboard_announce_message: '<b>16 décembre 2015</b> - Merci de votre participation
+    à l''Heure du Code 2015 ! Le suivi et l''enregistrement de la progression ont
+    maintenant repris pour l''ensemble des cours et tutoriels de Code Studio. N.B.
+    : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Vous pouvez
+    vous attendre à des délais pour recevoir réponse aux questions que vous poserez
+    d''ici au 4 janvier.'
   dashboard_announce_button_text: Pour en savoir plus
   dashboard_announce_hoc: <b>15 octobre 2015</b> - Une Heure de Code arrive &mdash;
     chaque organisateur participant recevra une carte-cadeau Amazon.com ou Microsoft
@@ -776,10 +777,10 @@
   carousel_heading_ide: Plateformes populaires parmi les enseignants
   educator_notes: Notes de l'enseignant
   teach_led_lesson_plans: Plan de cours Une Heure de Code pour les enseignants
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: Voir la <a href="https://code.org/educate/allhourofcode">
+    liste complète des tutoriels de l'Heure du Code</a>. Pour voir nos critères et
+    directives de soumission pour les tutoriels de l'Heure du Code, <a href="https://hourofcode.com/tutorial-guidelines">
+    cliquez ici.</a>
   how_to_teach_hoc: Comment enseigner une Heure de Code
   more_resources_educators: Plus de ressources pour enseignants et éducateurs
   beyond_submission: Tu veux soumettre un tutoriel pour Au-delà d'Une Heure? Consulte
@@ -1007,8 +1008,8 @@
   artist_shortdescription: Dessine des super images et schémas avec l'Artiste!
   monsterocding_shortdescription: Une aventure colorée autoguidée de programmation
     pour les enfants.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
+  allcancode_shortdescription: Un jeu immersif pour guider Marco à l'aide d'un langage
+    de programmation visuelle.
   csfirst_shortdescription: Animer une histoire sur deux personnages sur l'océan.
     Ajouter votre propre style !
   boxisland_shortdescription: Faites une excursion de développement sur l'île de la
@@ -1576,13 +1577,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more
