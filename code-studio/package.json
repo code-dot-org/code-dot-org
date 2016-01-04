@@ -10,29 +10,21 @@
   },
   "scripts": {
     "postinstall": "linklocal",
+    "build": "browserify --debug src/js/blockly_editor.js -o build/js/blockly_editor.js",
+    "build:min": "browserify src/js/blockly_editor.js | uglifyjs -o build/js/blockly_editor.min.js",
+    "prebuild": "mkdir -p build/js",
+    "prebuild:min": "mkdir -p build/js",
     "clean": "rm -rf build",
-    "lint": "npm run lint-js -s && npm run lint-css -s",
-    "lint-css": "sass-lint src/css/*css",
-    "lint-js": "jshint src/js/*.js",
-    "build": "npm run build-js && npm run build-css",
-    "build:min": "npm run build-js:min && npm run build-css:min",
-    "build-css": "node-sass --include-path node_modules src/css/blockly_editor.css.scss build/css/blockly_editor.css",
-    "prebuild-css": "mkdir -p build/css",
-    "build-css:min": "node-sass --output-style compressed --include-path node_modules src/css/blockly_editor.css.scss build/css/blockly_editor.min.css",
-    "prebuild-css:min": "mkdir -p build/css",
-    "build-js": "browserify --debug src/js/blockly_editor.js -o build/js/blockly_editor.js",
-    "prebuild-js": "mkdir -p build/js",
-    "build-js:min": "browserify src/js/blockly_editor.js | uglifyjs -o build/js/blockly_editor.min.js",
-    "prebuild-js:min": "mkdir -p build/js",
+    "env": "env",
+    "lint": "npm run lint:js -s",
+    "lint:js": "jshint src/js/*.js",
     "start": "echo \"Unimplemented.\"",
     "stop": "echo \"Unimplemented.\"",
-    "test": "echo \"Unimplemented.\""
+    "test": "test"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
     "jshint": "^2.8.0",
-    "node-sass": "^3.4.2",
-    "sass-lint": "^1.4.0",
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
