@@ -25,6 +25,9 @@
   twentyhours_heading: جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
     8-14 كانون الأول/ديسمبر، عام 2014 <br/>
   hoc2014_students: الطلاب
@@ -299,11 +302,11 @@
   class_submission_languages_other: اللغات الأخرى
   inspirational_videos_more: المزيد من <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     مقاطع الفيديو الملهمة</a> من المشاهير و الشخصيات
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_choose_theme: اختر سمة مختبر لعبك
+  playlab_classic_title: كلاسيكي
+  playlab_gumball_title: جومبول
+  playlab_iceage_title: العصر الجليدي - قريباً
+  playlab_iceage_title_live: العصر الجليدي
   starwars_subtitle: بناء مجرة باستعمال البرمجة
   starwars_javascript_title: جافا سكريبت
   starwars_javascript_description: استعمل تعنية سحب و اسقاط القطع و جافا سكريبت.
@@ -311,8 +314,8 @@
   starwars_javascript_start_button: جرب الآن
   starwars_blocks_title: مربعات برمجية
   starwars_blocks_description: استخدام تقنية سحب و اسقاط القطع.
-  starwars_blocks_specs: العديد من اللغات (ستتوفر قريبا) | المتصفحات الحديثة والهواتف
-    الذكية و الألواح الرقميّة | الذين تتراوح أعمارهم بين 6-10
+  starwars_blocks_specs: العديد من اللغات | المتصفحات الحديثة والهواتف الذكية والاجهزة
+    اللوحية | الذين تتراوح أعمارهم بين 6-10
   starwars_blocks_start_button: جرب الآن
   starwars_watch_videos: قبل البدء، شاهد أحد هذه المقاطع الملهمة
   starwars_speak_languages: تتكلم لغة أخرى؟
@@ -325,8 +328,8 @@
     ماين كرافت.
   mc_gradelevel: الاعمار 6 +
   mc_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
-  mc_specs: العديد من اللغات (ستتوفر قريبا) للمتصفحات الحديثة و الحواسيب المحمولة
-    الصغيرة | الاعمار 6 +
+  mc_specs: العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح أعمارهم
+    بين 6-106
   minecraft_subtitle: ساعة البرمجة ماين كرافت
   volunteer_engineer_submission_title: ألهم الطلاب و تطوع لأجل "Hour of code".
   volunteer_engineer_submission_subtitle_generic: 100.000 مدرس سيقدمون فعالية "ساعة
@@ -347,9 +350,10 @@
   volunteer_engineer_submission_intro_signup: الرجاء إدخال المعلومات التالية إذا كنت
     طالب علوم الحاسوب أو مختص في البرمجة. ادخال الحقول ب  <span class="form-required-field">
     *</span> لازمة.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: لا تنوي التطوع ؟ <a href="%{learn_more}">
+    معرفة المزيد</a> حول تنظيمك حدث "ساعة برمجة" الخاص بك والعثور على أحد متطوعين
+    المحليين على موقعنا <a href="%{volunteer_local}"> خريطة المتطوعين</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: معلومات مشتركة مع المدرسيين علي خريطة
     التطوع
   volunteer_engineer_submission_field_name: الاسم
@@ -649,6 +653,12 @@
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   dashboard_announcements: إعلانات
   dashboard_announce_view_all: عرض الكل
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: اعرف المزيد
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -723,8 +733,8 @@
   mobile_devices: دروس للأجهزة المحمولة
   frozen_name: برمج مع آنا و إلسا
   starwars_name: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
-  codeorg_name: اكتب برنامجك الاول
-  codeintl_name: اكتب برنامجك الاول
+  codeorg_name: المتاهة الكلاسيكية
+  codeintl_name: المتاهة الكلاسيكية
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: مقدمة لجافا سكريبت
   khanes_name: مقدمة لجافا سكريبت
@@ -760,7 +770,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: الصخرة، الورقة، المقص
-  hourofcode_name: اكتب برنامجك الاول
+  hourofcode_name: المتاهة الكلاسيكية
   playlab_name: مختبر اللعب
   infinity_name: لعبة مختبر اللعب اللانهائية
   artist_name: الرسام

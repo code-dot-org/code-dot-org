@@ -25,6 +25,9 @@
   twentyhours_heading: 컴퓨터과학(정보과학) 과정을 시도해 보세요.
   twentyhours_text: Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍
     기초개념들을 학습해 보세요.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
     8 - 14, 2014<br/>
   hoc2014_students: 학생들
@@ -285,20 +288,19 @@
   class_submission_languages_other: 다른 프로그래밍언어
   inspirational_videos_more: 더 많은 <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">영감을
     주는 동영상들</a> 에는 다양한 직업과 유명인들이 나옵니다.
-  playlab_choose_theme: 플레이 랩 테마 선택
+  playlab_choose_theme: Play Lab 테마 선택
   playlab_classic_title: 클래식
   playlab_gumball_title: 검볼
-  playlab_iceage_title: 아이스 에이지 - 출시 예정
+  playlab_iceage_title: 아이스 에이지 - 예정
   playlab_iceage_title_live: 아이스 에이지
   starwars_subtitle: 코드로 은하계 건설하기
   starwars_javascript_title: 자바스크립트
   starwars_javascript_description: 끌어서 놓기 블록들과 자바스크립트를 사용하세요.
   starwars_javascript_specs: 영어만 가능 | 최신 브라우저 | 11살 이상
-  starwars_javascript_start_button: 지금 해보기
+  starwars_javascript_start_button: 해보기
   starwars_blocks_title: 블럭
   starwars_blocks_description: 끌어서 놓기 블록들을 이용하세요.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: 여러 언어 | 최신 웹브라우저, 스마트폰, 태블릿 | 6-106 세
   starwars_blocks_start_button: 지금 해보기
   starwars_watch_videos: 시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요.
   starwars_speak_languages: 다른 언어를 할 줄 아나요?
@@ -309,7 +311,7 @@
   mc_shortdescription: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
   mc_gradelevel: 6세 이상
   mc_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: 여러 언어 | 최신 웹브라우저, 태블릿 | 6-106 세
   minecraft_subtitle: 마인크래프트 Hour of Code
   volunteer_engineer_submission_title: 학생들에게 꿈과 희망을 주고, Hour of Code 에 자원봉사해 주세요.
   volunteer_engineer_submission_subtitle_generic: '올 해 12월7일-13일까지 100,000 명의 선생님들이
@@ -330,6 +332,7 @@
   volunteer_engineer_submission_intro_links: 자원봉사를 찾고 있나요? <a href="%{learn_more}">여기서
     더 살펴보세요.</a> Hour of Code 행사를 운영하는 것에 대한 방법과, 자원봉사자를 찾는 것은 다음 지도를 살펴보세요 <a href="%{volunteer_local}">자원봉사
     지도</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: 자원봉사자 지도에 선생님에게 공유되는 정보
   volunteer_engineer_submission_field_name: 이름
   volunteer_engineer_submission_field_name_placeholder: 성명
@@ -605,11 +608,18 @@
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: 공시사항
   dashboard_announce_view_all: 모두 보기
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: 더 알아보기
   dashboard_announce_hoc: '<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을
     소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요.
     그리고나서 여러분이 만든 게임을 은하계멀리 멀리 공유하세요.'
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>2015년 12월 4일</b> - Hour of Code 가 돌아왔습니다! 모든 나이와
+    장치에서 가능한 50개의 튜토리얼들을 해보세요. 이번 주 최신: 새로운 Play Labs, 아이스 에이지, 검볼에서 자신만의 이야기들과 게임들을
+    만들어보세요.'
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 지금 해보기
@@ -647,7 +657,7 @@
   carousel_heading_beyond_javascript: Javascript 를 교육할 수 있는 튜토리얼들
   carousel_heading_unplugged: 적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요.
   carousel_heading_devices: 스마트폰과 태블릿들을 위한 협찬 튜토리얼 앱들
-  carousel_heading_beyond_devices: 스마트폰과 패드를 위한 튜토리얼 앱
+  carousel_heading_beyond_devices: 스마트폰과 태블릿을 위한 튜토리얼 앱
   carousel_heading_languages: 다른 프로그래밍언어로 되어있는 협찬 튜토리얼들
   carousel_heading_beyond_languages: 다른 프로그래밍 언어에 대한 튜토리얼들
   carousel_heading_apps_games: 앱이나 게임을 직접 만들어보세요.
@@ -674,8 +684,8 @@
   mobile_devices: 모바일 기기를 위한 파트너 튜토리얼들
   frozen_name: 안나, 엘사와 함께하는 코드
   starwars_name: '스타워즈: 코드로 은하계 건설하기'
-  codeorg_name: 컴퓨터 프로그램을 직접 만들어 보세요
-  codeintl_name: 컴퓨터 프로그램을 직접 만들어 보세요
+  codeorg_name: 고전 미로게임
+  codeintl_name: 고전 미로게임
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 소개
   khanes_name: JavaScript 소개
@@ -711,14 +721,14 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 가위, 바위, 보
-  hourofcode_name: 컴퓨터 프로그램을 직접 만들어 보세요
+  hourofcode_name: 고전 미로게임
   playlab_name: Play Lab
   infinity_name: 무한 Play Lab
   artist_name: 예술가
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: 미스테리 아일랜드 코딩 퀘스트
+  allcancode_name: 달려 마르코!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: 박스 아일랜드
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: 교사 주도 Hour of Code 수업 계획
@@ -750,7 +760,7 @@
   kodable_gradelevel: 초등학교
   tynkerapp_gradelevel: 나이 5세-13세
   robomindnl_gradelevel: 나이 8세-13세
-  flappy_gradelevel: 나이 4세-104세
+  flappy_gradelevel: 6-106 세
   bitsbox_gradelevel: 초등학교
   makeschool_gradelevel: 고등학교
   touchdevelop_gradelevel: 고등학교
@@ -760,18 +770,18 @@
   kodableunplugged_gradelevel: 나이 8세-13세
   projguts_gradelevel: 나이 10세-13세
   hourofcode_gradelevel: 나이 4세-104세
-  frozen_gradelevel: 나이 8세이상
+  frozen_gradelevel: 8-108 세
   starwars_gradelevel: 6세 이상
-  playlab_gradelevel: 나이 4세-104세
+  playlab_gradelevel: 6-14 세
   infinity_gradelevel: 나이 4세-104세
   artist_gradelevel: 나이 4세-104세
   monstercoding_gradelevel: 나이 5세-13세
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5-10 세
+  csfirst_gradelevel: 9-14 세
   boxisland_gradelevel: 초등학교
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12-14 세
+  texasinstruments_gradelevel: 13-16 세
+  teacherled_gradelevel: 5 세 이상
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   thinkersmithspanish_platformtext: 언플러그드
@@ -811,14 +821,14 @@
   projguts_platformtext: 언플러그드
   hourofcode_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   frozen_platformtext: 최신 웹 브라우져 + 태블릿
-  starwars_platformtext: 최신 웹 브라우져 + 태블릿
+  starwars_platformtext: 최신 웹브라우져 + 태블릿
   playlab_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: 최신 웹브라우져, iOS, 안드로이드
+  allcancode_platformtext: 최신 웹브라우져, iOS
   csfirst_platformtext: 최신 웹 브라우져
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: 안드로이드, iOS
   codesters_platformtext: 최신 웹 브라우져
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI 계산기
   teacherled_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeorg_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
   codeintl_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
@@ -864,19 +874,13 @@
   playlab_shortdescription: Play Lab을 이용해 스토리나 게임을 만드세요!
   infinity_shortdescription: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
   artist_shortdescription: 화가를 이용해 멋진 그림과 디자인을 만들어보세요!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  monsterocding_shortdescription: 아이들을 위한, 자기주도 프로그래밍 모험
+  allcancode_shortdescription: 비주얼 프로그래밍 언어를 이용해 마르코를 안내하는 가상 현실 게임
+  csfirst_shortdescription: 바다의 두 캐릭터에 대한 이야기를 만들어보세요. 여러분이 원하는 스타일을 추가해보세요!
+  boxisland_shortdescription: 용감한 히로와 함께 박스 아일랜드로의 코딩 여행을 해보세요.
+  codesters_shortdescription: 파이썬(Python) 을 사용해서 원하는 프로그램, 애니메이션, 아트워크를 만들어 보세요.
+  texasinstruments_shortdescription: TI-84&#8482; Plus 계산기를 이용해 프로그래밍 기초를 배워보세요.
+  teacherled_shortdescription: 이 레슨 플랜들을 사용해서 여러분의 Hour of Code 행사들을 설계해보세요.
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
     빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택
     실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
@@ -980,37 +984,25 @@
   starwars_longdescription: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
   playlab_longdescription: 플레이 랩으로 이야기나 게임을 만들어보세요! 동물, 해적, 좀비, 닌자 등 여러 가지 캐릭터들을 움직이고,
     소리내고, 점수를 올리고, 파이어볼을 쏘는 등의 움직임들이 가능합니다.
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: 몬스터 코딩의 미스터리 아일랜드 코딩 퀘스트는 몇 가지 핵심 프로그래밍 개념들을 배울 수
+    있는, 재미있는 자기주도 어드벤쳐입니다. 각 블록은 함수, 불 값, 반복, 조건/선택, 배열을 아이들에게 소개하는 블록 기반 활동으로 구성되어있습니다.
+    애니메이션 그래픽과 오디오 설명이 함께 제공됩니다.
+  allcancode_longdescription: 학생들은 원래의 스토리를 기초로한 어드벤쳐 게임을 합니다. Hour of Code 에서 사용되었던
+    비주얼 프로그래밍 언어로 코딩하여, 주인공 캐릭터인 마르코를 이용해 한 단계씩 통과해 나아가게 됩니다. 학생들은 자기도 모르게 순차 실행,
+    반복, 조건/선택을 배우게 됩니다.
+  csfirst_longdescription: 바다에서의 두 캐릭터에 대한 이야기를 만들어보세요. 물결을 치게 만들고, 자신만의 섬광 불빛을 만들어
+    배경을 바꿔보세요. 여러분이 이야기하고 싶은 이야기들을 코드로 만들어보세요!
+  boxisland_longdescription: 박스 아일랜드를 여행하며 흩어져있는 시계들을 히로가 모을 수 있게 도와주세요! 여러분들은 이 튜토리얼에서
+    알고리즘, 순차실행, 반복, 조건/선택의 기초들을 배우게 될 것입니다!
+  codesters_longdescription: '파이썬 언어를 이용해서 자신만의 게임, 애니메이션, 아트워크를 만들어보세요. 다 만들고 난 후,
+    친구들에게 공유해보세요! 파이썬은 여러 회사들에서 사용하고 있는 진짜 프로그래밍 언어입니다. - 드래그 앤 드롭 도구상자는 파이썬을 쉽게 배울
+    수 있게 해줍니다! 농구 게임, 춤 안무, 애니메이션 카드를 만드는데 사용해 보세요! '
+  texasinstruments_longdescription: '10 Minutes of Code 활동은 학생들이 가지고 다니는 TI(텍사스 인스투르먼트)
+    계산기에 프로그래밍해서, 학생들의 관심을 불러일으킬 수 있는 학급활동입니다. TI-84&#8482; Plus 계산기로 프로그래밍을 해보는데에는
+    10분이면 충분합니다. 어떤 사전 지식도 필요하지 않습니다!  '
+  teacherled_longdescription: 지금까지 수 만 명의 선생님들이 Hour of Code 를 해보았고, 많은 학급들은 컴퓨터과학의
+    기초/개념/원리들을 넘어, 더 재미있은 것들을 해볼 수 있는 준비가 되었습니다. 적극적인 선생님들을 위해, Hour of Code 활동을 충분히
+    경험한 학생들을 위해 준비한 다양한 주제와 영역들로 1시간 짜리 교사 주도형 수업과 활동 계획을 모으고 정비해 왔습니다.
   codeorg_beyond_name: 컴퓨터과학(정보과학) 소개 코스(유치원-중2)
   khan_beyond_name: 컴퓨터 프로그래밍 배우기
   tynker_beyond_name: 집에서 프로그래밍 배우기

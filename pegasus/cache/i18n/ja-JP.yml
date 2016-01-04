@@ -23,6 +23,9 @@
   submit: 送信
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14
     日まで<br/>
   hoc2014_students: 生徒の皆さん
@@ -329,6 +332,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: 名前
@@ -590,6 +594,12 @@
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: もっと詳しく知る
   dashboard_announce_hoc: <B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの
     コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。
   dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
@@ -665,8 +675,8 @@
   mobile_devices: モバイル デバイスのためのチュートリアル
   frozen_name: アナとエルザとコーディング
   starwars_name: 'スター・ウォーズ: コードを書いて銀河をつくろう'
-  codeorg_name: 初めてのコンピュータ プログラムを書く
-  codeintl_name: 初めてのコンピュータ プログラムを書く
+  codeorg_name: 古典的な迷路
+  codeintl_name: 古典的な迷路
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Java スクリプト入門
   khanes_name: Java スクリプト入門
@@ -702,7 +712,7 @@
   thinkersmith2_name: 不要なバイナリ
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: グー、パー、チョキ
-  hourofcode_name: 初めてのコンピュータ プログラムを書く
+  hourofcode_name: 古典的な迷路
   playlab_name: プレイラボ
   infinity_name: インフィニティ プレイ ラボ
   artist_name: アーティスト

@@ -27,6 +27,9 @@
   twentyhours_heading: ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา
   twentyhours_text: เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์
     และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: เข้าร่วม <a href="http://hourofcode.com">Hour of Code</a><br/>
     ในวันที่ 8 - 14 ธันวาคม 2014<br/>
   hoc2014_students: Students
@@ -372,6 +375,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: ชื่อ
@@ -661,6 +665,12 @@
   dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
   dashboard_announcements: ประกาศ
   dashboard_announce_view_all: ดูทั้งหมด
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: สิ่งที่น่าเรียนรู้ยังมีอีก
   dashboard_announce_hoc: <b>15 ตุลาคม 2015</b> - Hour of Code กำลังมา &mdash; ทุกคนที่เข้าร่วมจะได้รับบัตรของขวัญสำหรับซื้อสินค้าใน
     Amazon.com หรือ Microsoft.com เป็นของขวัญขอบคุณ เข้าร่วมห้องเรียนทั่วโลกในระหว่างวันที่
     7-13 ธันวาคม
