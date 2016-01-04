@@ -385,6 +385,12 @@ end.parse!
 environment = @options['environment']
 raise OptionParser::MissingArgument, 'Environment is required' if environment.nil?
 
+raise OptionParser::MissingArgument, 'Name is required when creating one new instance' if @options['count'].nil? &&
+  @options['name'].nil?
+
+raise OptionParser::MissingArgument, 'Prefix is required when creating multiple instances' if !@options['count'].nil? &&
+  @options['prefix'].nil?
+
 role = @options['role'] || ROLE_MAP[environment]
 raise "Unsupported environment #{environment}" unless role
 
