@@ -8,7 +8,6 @@
 var gulp = require('gulp');
 var del = require('del');
 var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
 var rename = require('gulp-rename');
 
 var browserify = require('./lib/frontend/browserify');
@@ -16,26 +15,6 @@ var browserify = require('./lib/frontend/browserify');
 var watchEnabled = false;
 
 var BUILD_TARGET = './build/package/js';
-
-gulp.task('lint', function () {
-  // TODO (brent) - should we share jshint config between different packages
-  return gulp.src([
-      '*.js'
-    ])
-    .pipe(jshint({
-      curly: true,
-      node: true,
-      mocha: true,
-      browser: true,
-      undef: true,
-      globals: {
-        $: true,
-        jQuery: true
-      }
-    }))
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail')); // report error code on failure
-});
 
 gulp.task('enable-watch', function () {
   watchEnabled = true;
@@ -75,4 +54,4 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', ['enable-watch', 'bundle-js']);
-gulp.task('default', ['lint', 'compress']);
+gulp.task('default', ['compress']);
