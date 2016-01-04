@@ -95,6 +95,7 @@ StudioAnimation.prototype.getElement = function () {
 
 /**
  * Create an image element with a clip path
+ * (if the element and clip path already exist, update the dimensions and URL)
  */
 StudioAnimation.prototype.createElement = function (parentElement) {
   if (this.element_ && this.clipPath_) {

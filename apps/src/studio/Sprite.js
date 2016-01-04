@@ -233,20 +233,7 @@ Sprite.prototype.getLegacyElement = function () {
 /**
  * Returns the frame of the spritesheet for the current walking direction.
  */
-Sprite.prototype.getDirectionFrame = function() {
-  // Every other frame, if we aren't yet rendering in the correct direction,
-  // assign a new displayDir from state table; only one turn at a time.
-
-  // TODO (cpirich): re-enable this or place in display or update
-
-  // temporarily disabled as it is redundant
-  /*
-  if (this.dir !== this.displayDir && this.displayDir !== undefined) {
-    if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
-      this.displayDir = NextTurn[this.displayDir][this.dir];
-    }
-  }
-  */
+Sprite.prototype.getDirectionFrame = function () {
 
   var frameDirTable = this.frameCounts.counterClockwise ?
     constants.frameDirTableWalkingWithIdleCounterclockwise :

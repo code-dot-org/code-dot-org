@@ -142,7 +142,6 @@ function loadGumball(skin, assetUrl) {
         turns: 8,
         walkingEmotions: 3,
       },
-      animationFrames: skin.walkValues[i],
       animationFrameDuration: 3
     };
   });
@@ -328,7 +327,6 @@ function loadIceAge(skin, assetUrl) {
         turns: 8,
         walkingEmotions: 3,
       },
-      animationFrames: 12,
       animationFrameDuration: 3
     };
   });
@@ -465,7 +463,6 @@ function loadInfinity(skin, assetUrl) {
       animations: {
         turns: 8
       },
-      animationFrames: 12,
       animationFrameDuration: 3
     };
   });
@@ -824,7 +821,6 @@ function loadHoc2015(skin, assetUrl) {
       animations: {
         turns: 8
       },
-      animationFrames: name == 'r2-d2' ? 14 : 8,
       animationFrameDuration: 3
     };
   });
@@ -1289,7 +1285,6 @@ function loadHoc2015x(skin, assetUrl) {
       animations: {
         turns: 8
       },
-      animationFrames: 19,
       animationFrameDuration: 3
     };
   });
