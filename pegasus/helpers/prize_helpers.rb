@@ -1,7 +1,8 @@
 require src_dir 'abort_form_error'
 
 def request_ip
-  defined? request ? request.ip : nil
+  return nil unless defined? request
+  request.ip
 end
 
 def claim_prize_code(type, email, purpose, params={})
