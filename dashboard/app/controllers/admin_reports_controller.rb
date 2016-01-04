@@ -94,7 +94,7 @@ class AdminReportsController < ApplicationController
     @headers = ['Level ID', 'User Email', 'Data']
     @responses = {}
     @response_limit = 100
-    if params[:levels] || params[:mc_levels]
+    if params[:levels]
       # Parse the parameters, namely the set of levels to grab answers for.
       @levels = params[:levels] ? params[:levels].split(',') : []
 
