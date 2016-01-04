@@ -60,8 +60,13 @@ Code.org's online platform [Code Studio](http://studio.code.org) enables student
 
 [<button>Learn more</button>](http://studio.code.org)
 
+<!--
 ## Spend 10 minutes adding "hints" to our tutorials
+
 With millions of students trying the Hour of Code, and hundreds of thousands doing the Code.org introductory online courses, we could use your help adding helpful hints for students who make mistakes. In just 10 minutes you can help improve our courses.
 
-[<button>Learn more</button>](/hints)
+[<button>Learn more</button>](http://code.org/hints)
+
+-->
+
 
