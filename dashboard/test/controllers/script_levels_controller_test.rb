@@ -897,4 +897,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
+  test 'static site redirect on #reset' do
+    sign_in(create(:user))
+
+    script_name = Script::STARWARS_NAME
+    static_url = 'https://static-site.com'
+    DCDO.set("static_script_#{script_name}", static_url)
+
+    get :reset, script_id: script_name
+    assert_redirected_to "/s/#{script_name}/stage/1/puzzle/1"
+
+    Gatekeeper.set('redirect_static_script', where: { script_name: script_name }, value: true)
+    get :reset, script_id: script_name
+    assert_redirected_to static_url
+
+    Gatekeeper.set('redirect_static_script', where: { script_name: script_name }, value: false)
+    get :reset, script_id: script_name
+    assert_redirected_to "/s/#{script_name}/stage/1/puzzle/1"
+  end
+
 end
