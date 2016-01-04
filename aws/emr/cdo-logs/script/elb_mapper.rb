@@ -85,8 +85,8 @@ ARGF.each do |line|
 
   tutorials.each do |t|
     # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
-    # aggregate. Using the date, type (e.g., begin, beginpng, and 443), and 
-    # tutorial as the key gives breakdowns by day, type, and tutorial.
+    # aggregate. Using the date, type (begin, beginpng, 443), and tutorial as
+    # the key gives breakdowns by day, type, and tutorial.
     if line.include? "begin" + "\/" + t
       puts LONG_VALUE_SUM + date + " begin " + t + "\t" + "1"
       break
