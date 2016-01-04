@@ -1113,7 +1113,14 @@ FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
 FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
-    return !block.disabled && block.isEditable() && block.type !== 'when_run';
+    var blockValid = !block.disabled && block.type !== 'when_run';
+    // If Blockly is in readOnly mode, then all blocks are uneditable
+    // so this filter would be useless. Ignore uneditable blocks only if
+    // Blockly is in edit mode.
+    if (!Blockly.mainBlockSpace.isReadOnly()) {
+      blockValid = blockValid && block.isEditable();
+    }
+    return blockValid;
   });
   return blocks;
 };
