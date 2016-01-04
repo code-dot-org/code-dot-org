@@ -49,9 +49,5 @@ gulp.task('compress', ['bundle-js'], function () {
     .pipe(gulp.dest(BUILD_TARGET));
 });
 
-gulp.task('clean', function (cb) {
-  del(BUILD_TARGET, cb);
-});
-
 gulp.task('watch', ['enable-watch', 'bundle-js']);
 gulp.task('default', ['compress']);
