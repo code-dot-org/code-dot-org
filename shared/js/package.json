@@ -9,7 +9,7 @@
   "scripts": {
     "gulp": "gulp",
     "build": "gulp -- bundle-js",
-    "clean": "gulp -- clean",
+    "clean": "rm -rf ./build/package/js",
     "lint": "jshint *.js",
     "dev": "gulp -- watch"
   },
