@@ -27,6 +27,15 @@ class FollowersControllerTest < ActionController::TestCase
     assert !assigns(:user).persisted?
   end
 
+
+  test "student_user_new without section code" do
+    get :student_user_new
+
+    assert_response :success
+    # form to type in section code
+    assert_select 'input#section_code'
+  end
+
   test "student_user_new when signed in" do
     sign_in @student
 
@@ -41,6 +50,16 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal @student, follower.student_user
     assert_equal @chris, follower.user
     assert_equal @chris_section, follower.section
+  end
+
+  test "student_user_new when signed in without section code" do
+    sign_in @student
+
+    get :student_user_new
+
+    assert_response :success
+    # form to type in section code
+    assert_select 'input#section_code'
   end
 
   test "student_user_new when already followed by a teacher switches sections" do
@@ -212,15 +231,15 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal "Could not find a section with code '2323232'.", flash[:alert]
   end
 
-  test "create without section code gives error message" do
+  test "create without section code redirects to join" do
     sign_in @student
 
     assert_does_not_create(Follower) do
       post :create, redirect: '/'
     end
 
-    assert_redirected_to '/'
-    assert_equal "Please enter a section code", flash[:alert]
+    assert_response :redirect
+    assert_redirected_to '/join'
   end
 
   test "remove has nice error when student does not actually have teacher" do
