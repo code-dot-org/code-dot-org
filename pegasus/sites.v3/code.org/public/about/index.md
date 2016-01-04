@@ -13,7 +13,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 [col-25]
 
-# Diversity across 7M students in our courses
+# Diversity across 8M students in our courses
 
 [/col-25]
 
