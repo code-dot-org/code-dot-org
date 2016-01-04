@@ -26,7 +26,7 @@
 
 - if @responses.size > 0
   %h3
-    #{link_to 'Download CSV', {:format => :csv, :levels => params[:levels], :mc_levels => params[:mc_levels]}}
+    #{link_to 'Download CSV', {:format => :csv, :levels => params[:levels]}}
 
   - @responses.each do |level_id, level_responses|
     %h3
