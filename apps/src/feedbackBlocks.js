@@ -69,17 +69,21 @@ FeedbackBlocks.prototype.render = function () {
   }
 
   // Initialize a new readOnly blockSpaceEditor with some custom sizing
-  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
-    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
-    if (!metrics) {
-      return null;
-    }
-    // Expand the view so we don't see scrollbars
-    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
-    return metrics;
-  }, function (xyRatio) {
-    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
-  }, true, true);
+  // TODO: replace custom sizing with "scrollbars: fase" once that
+  // setting becomes available
+  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, {
+    getMetrics: function () {
+      var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+      if (!metrics) {
+        return null;
+      }
+      // Expand the view so we don't see scrollbars
+      metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+      return metrics;
+    },
+    hideTrashRect: true,
+    readOnly: true
+  });
 
   var blockSpace = this.blockSpaceEditor.blockSpace;
   var parsedXml = parseXmlElement(this.xml);

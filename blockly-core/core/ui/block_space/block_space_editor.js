@@ -43,18 +43,15 @@ goog.require('goog.style');
  * readOnly mode if this BlockSpaceEditor.readOnly OR Blockly.readOnly
  * are true
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect, opt_readOnly) {
-  if (opt_getMetrics) {
-    this.getBlockSpaceMetrics_ = opt_getMetrics;
-  }
-  if (opt_setMetrics) {
-    this.setBlockSpaceMetrics_ = opt_setMetrics;
-  }
-  if (opt_hideTrashRect) {
-    this.hideTrashRect_ = opt_hideTrashRect;
-  }
+Blockly.BlockSpaceEditor = function(container, options) {
 
-  this.readOnly_ = !!opt_readOnly;
+  options = options || {};
+
+  this.getBlockSpaceMetrics_ = options.getMetrics || this.getBlockSpaceMetrics_;
+  this.setBlockSpaceMetrics_ = options.setMetrics || this.setBlockSpaceMetrics_;
+  this.hideTrashRect_ = options.hideTrashRect || this.hideTrashRect_;
+  this.readOnly_ = !!options.readOnly;
+
   /**
    * @type {Blockly.BlockSpace}
    */
