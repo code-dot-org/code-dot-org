@@ -30,6 +30,9 @@
   twentyhours_heading: دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید
   twentyhours_text: اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
     برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از
     8 تا 14 دسامبر  2014<br/>
   hoc2014_students: دانش آموزان
@@ -44,9 +47,9 @@
   csedweek_map_search_placeholder: جست و جو برای رویداد های "ساعت کدنویسی"
   csedweek_map_search_search: جستجو کن
   csedweek_map_search_reset: تنظیم مجدد
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: افسانه
+  csedweek_map_legend_event: ساعت کد رویداد
+  csedweek_map_legend_cs_tech_jam: رویدادهای ویژه
   cded_sign_up: ثبت نام
   cded_try_it: آن را امتحان کنید
   twentyhours_trynow: هم اکنون شروع کنید
@@ -237,7 +240,7 @@
   homepage_slot_text_flappy: کدنویسی Flappy
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: '# تائید شده'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: به ما بپیوندید
   homepage_action_text_sign_up: ثبت نام
   homepage_action_text_try_it: آن را امتحان کنید
   homepage_action_text_volunteers: Technical volunteers wanted
@@ -324,24 +327,24 @@
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: کلاسیک
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: عصر یخ--به زودی
+  playlab_iceage_title_live: عصر یخبندان
   starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_title: ویژوال بیسیک
+  starwars_javascript_description: استفاده از کشیدن و رها کردن بلوک و جاوا اسکریپت.
+  starwars_javascript_specs: فقط انگلیسی | مرورگرهای مدرن | سنین 11 +
   starwars_javascript_start_button: هم اکنون شروع کنید
   starwars_blocks_title: بلوک ها
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: استفاده از کشیدن و رها کردن بلوک.
+  starwars_blocks_specs: بسیاری از زبان | مرورگرهای مدرن, تلفن های هوشمند, تبلت |
+    سنین 6-106
   starwars_blocks_start_button: هم اکنون شروع کنید
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_speak_languages: به یک زبان دیگر صحبت کنید?
+  starwars_help_translate: کمک به ما در ترجمه
   starwars_platform_text: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
@@ -375,18 +378,21 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: به روز رسانی اطلاعات شما
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: نام
   volunteer_engineer_submission_field_name_placeholder: نام و نام خانوادگی
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
+  volunteer_engineer_submission_field_company: شرکت (یا دانشگاه)
+  volunteer_engineer_submission_field_company_placeholder: شرکت (یا دانشگاه)
+  volunteer_engineer_submission_field_experience_level: سطح تجربه
+  volunteer_engineer_submission_field_location: مکان
+  volunteer_engineer_submission_field_location_desc: به مکان شما اجازه می دهد تا برای
+    جستجو برای نزدیک ترین داوطلب ، معلمان مورد استفاده قرار گیرد و به عنوان یک سنجاق
+    و یا پین در نقشه نشان داده می شود. اگر شما نگران هستید در مورد حفظ حریم خصوصی،
+    لطفا آدرس کار/مدرسه یا شهر خود را تنها فقط وارد کنید.
+  volunteer_engineer_submission_field_location_placeholder: کد پستی شهر و ایالت در
+    کشور یا آدرس خیابان
   volunteer_engineer_submission_field_location_flexibility: I can help during the
     Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
@@ -394,8 +400,8 @@
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
   volunteer_engineer_submission_field_linkedin: پروفایل لینکداین
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/نام_شما
+  volunteer_engineer_submission_field_facebook: پروفایل فیس بوک
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: توضیحات
   volunteer_engineer_submission_field_description_desc: Describe your computer science
@@ -547,7 +553,7 @@
   dashboard_navigation_section_speakers: علوم کامپیوتر <br/> سخنرانا مهمان
   dashboard_navigation_all_sections: حساب کاربری دانش‌ آموزان و پیشرفت آنها
   dashboard_navigation_view_progress: نمایش پیشرفت
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: مشاهده متن پاسخ
   dashboard_navigation_add_students: افزودن دانش آموز
   dashboard_navigation_manage_students: مدیریت دانش آموزان
   dashboard_navigation_lesson_plans_resources: برنامه‌ها و منابع درس
@@ -693,8 +699,14 @@
     بخش انتخاب کنید کمک می کند.
   dashboard_faq: پرسش و پاسخ‌های متداول
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
-  dashboard_announcements: Announcements
+  dashboard_announcements: اطلاعیه‌ها
   dashboard_announce_view_all: مشاهده همه
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: بیشتر بیاموزید
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -727,8 +739,8 @@
   hoc2014_try_new_tutorial: ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید
   hoc2014_try_scrat: پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات
   hoc2014_try_frozen: هنرمندی با آنا و السا, از کارتون منجمد
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg: آموزش توسط Code.org
+  carousel_heading_codeorg_any_device: آموزش توسط Code.org (برای همه دستگاه ها)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: آموزش به زبان شما
@@ -769,9 +781,9 @@
     دهید.</a>
   mobile_devices: آموزش هایی برای دستگاه های همراه
   frozen_name: کدنویسی با آنا و السا
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: اولین برنامه کامپیوتر خودت را بنویس
-  codeintl_name: اولین برنامه کامپیوتر خودت را بنویس
+  starwars_name: 'جنگ ستارگان: ساختمان کهکشان با کد'
+  codeorg_name: هزارتوی کلاسیک
+  codeintl_name: هزارتوی کلاسیک
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: آشنایی با جاوا اسکریپت
   khanes_name: آشنایی با جاوا اسکریپت
@@ -807,14 +819,14 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: سنگ، کاغذ، قیچی
-  hourofcode_name: اولین برنامه کامپیوتر خودت را بنویس
+  hourofcode_name: هزارتوی کلاسیک
   playlab_name: آزمایشگاه بازی
   infinity_name: آزمایشگاه بازی نامحدود
   artist_name: هنرمند
   monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  allcancode_name: مارکو را اجرا کنید!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: جعبه جزیره
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
@@ -862,12 +874,12 @@
   infinity_gradelevel: سنین 4 تا 104
   artist_gradelevel: سنین بالای 8
   monstercoding_gradelevel: سنین 5 تا 13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: سنین 5-10
+  csfirst_gradelevel: سنین 9-14
   boxisland_gradelevel: دبستان
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: سنین 12-14
+  texasinstruments_gradelevel: سنین 13-16
+  teacherled_gradelevel: سنین 5 +
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   thinkersmithspanish_platformtext: آنپلاگد
@@ -910,12 +922,12 @@
   frozen_platformtext: مرورگرهای جدید +تبلت
   starwars_platformtext: مرورگرهای جدید +تبلت
   playlab_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: مرورگرهای وب مدرن, iOS, اندروید
+  allcancode_platformtext: مرورگرهای وب مدرن iOS
   csfirst_platformtext: مرورگرهای وب مدرن
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: اندورید, ایفون
   codesters_platformtext: مرورگرهای وب مدرن
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: ماشین حساب TI
   teacherled_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeorg_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   codeintl_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
@@ -975,8 +987,8 @@
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
+  infinity_shortdescription: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+    شخصیت های دیزنی بی نهایت.
   artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
   monsterocding_shortdescription: A colorful self-guided programming adventure for
     children.
@@ -1516,13 +1528,3 @@
   infinity_shortcode: inf
   playlab_shortcode: بازی کن
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

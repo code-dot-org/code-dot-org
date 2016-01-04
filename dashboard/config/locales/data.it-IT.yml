@@ -189,9 +189,10 @@
         turtle_1_7: 'Ok, ora è un po'' più difficile: vedi se riesci a disegnare questi
           occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti
           tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!'
-        turtle_1_8: Cerca di immaginare cosa succede se si esegue questo codice (o
-          premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente
-          a completare il disegno. I colori saranno diversi ogni volta.
+        turtle_1_8: Cerca di immaginare cosa succede se si eseguono questi blocchi
+          di codice già pronti (o premi "Esegui" per verificarlo). Poi, ripetili una
+          quantità di volte sufficiente a completare il disegno. I colori saranno
+          diversi ogni volta.
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi
           per disegnare un cerchio?
         turtle_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
@@ -553,7 +554,7 @@
         studio_playlab_2: Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio
           2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il
           personaggio ... dice"?
-        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandiera?
+        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandierina?
         studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la
           tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
         studio_playlab_5: Puoi aiutare il robot spaziale a dire "salve terrestri"
@@ -635,10 +636,10 @@
         studio_gumball_click_hello: Puoi aiutare Anton a dare inizio alla gara pronunciando
           le parole "Pronti, partenza, via!"? Per provare il tuo programma, non dimenticarti
           di cliccare su Anton dopo aver cliccato su "Esegui"!
-        studio_gumball_move_events: Darwin partecipa alla gara di raccolta delle bandiere.
+        studio_gumball_move_events: Darwin partecipa alla gara di raccolta delle bandierine.
           Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..."
           a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare
-          tutte le bandiere.
+          tutte le bandierine.
         studio_gumball_sound_and_points: Ti abbiamo dato del codice già scritto che
           permette ad Anton (il personaggio 2) di muoversi a destra e a sinistra,
           e permette a Banana Joe (il personaggio 1) di muoversi sullo schermo. Puoi
@@ -779,7 +780,7 @@
         C4_for_loops: Cicli con Contatore
         C4_for_loops_bee: Cicli con Contatore
         C4_for_loops_no_bee: Cicli con Contatore
-        C4_math_artist: Programmazione de L'Artista con la matematica
+        C4_math_artist: Programmare l'Artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
         C4_function_parameters: Funzioni con parametri

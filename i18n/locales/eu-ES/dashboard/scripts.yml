@@ -13,14 +13,14 @@ eu:
           description_short: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Buruhaustea: ikasi arrastatu eta askatzen'
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Maze: Debugging": 'Labirintoa: Arazketa'
           "Artist 1: Intro": 'Artista 1: Sarrera'
           Artists 2: Artistak 2
           Spelling Bee: Letraz-letra
           Spelling Bee not blockly: Letraz-letra ez blocky
           "Bee 1: Intro": 'Erlea 1: Sarrera'
-          "Maze 2: Loops": 'Labirinto 2: Begiztak'
+          "Maze 2: Loops": 'Labirintoa 2: Begiztak'
           "Bee 2: Loops": 'Erle 2: Begiztak'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: LH-1 Flappy
@@ -35,46 +35,46 @@ eu:
           The Big Event: Gertaera Handia
           Going Places Safely: Joan segurtasunez
           description: 'Lehenengo kurtsoa erabiltzaile berriei zuzenduta dago. Ikasleek programazioko oinarrizko kontzeptuak ulertuko dituzte, beste batrzuekin lan egiten ikasten duten bitartean.  Problemak ebazteklo gaitasunak eta lan gogorren aurrean dirautzeko gaitasuna garatzen laguntzen du. Kurtso bukaerarako, ikasleak beraien joku edo historio sortu ahal izango dute, eta elkarbanatu.'
-          "Bee: Sequence": 'Erelea: sekuentzia'
+          "Bee: Sequence": 'Erlea: sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
           "Artist: Shapes": 'Artista: Formak'
-          "Maze: Loops": 'Labirinto: Begiztak'
-          "Bee: Loops": 'Erle: Begiztak'
-          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
-          "Artist: Loops": 'Artista: begiztak'
+          "Maze: Loops": 'Labirintoa: Begiztak'
+          "Bee: Loops": 'Erlea: Begiztak'
+          "Studio: Create a Story": 'Jolas laborategia: sortu istorioa'
+          "Artist: Loops": 'Artista: Begiztak'
           description_audience: 4-6 urte
-          description_short: Hasi 1 kurtsoarekin irakurle goiztiarrekin.
+          description_short: Hasi 1. kurtsoarekin irakurle goiztiarrekin.
         course2:
           The Maze: labirintoa
           Suzi: Suzi
           The Artist: Artista
-          Artist Debugging: Artistaren arazketa
+          Artist Debugging: 'Artista: Arazketa'
           Bounce: Errebotea
-          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
-          Artist Loops: Artistaren begiztak
-          Bee Conditionals: Erlearen baldintzazkoak
+          "Studio: Create a Story": 'Jolas laborategia: sortu istorioa'
+          Artist Loops: 'Artista: Begiztak'
+          Bee Conditionals: 'Erlea: Baldintzak'
           Flappy: Flappy
           title: 2. Kurtsoa
-          Bee Loops: Erlearen begiztak
-          Artist Functions: Artistaren funtzioak
-          The Artist Debugging: Artistaren arazketa
-          Bee Debugging: Erlearen arazketa
-          Bee Functions: Erlearen funtzioak
-          Maze Loops: Labiriontoaren begiztak
+          Bee Loops: 'Erlea: Begiztak'
+          Artist Functions: 'Artista: Funtzioak'
+          The Artist Debugging: 'Artista: Arazketa'
+          Bee Debugging: 'Erlea: Arazketa'
+          Bee Functions: 'Erlea: Funtzioak'
+          Maze Loops: 'Labirintoa: Begiztak'
           Graph Paper Programming: Paper grafiko programazioa
           "Real-life Algorithms: Paper Planes": 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
           Getting Loopy: Iteratzen
-          Relay programming: Erreleen programazioa
+          Relay programming: Txandaka programatzen
           Conditionals: Baldintzak
-          Binary Bracelets: Eskumuturreko binarioak
+          Binary Bracelets: Eskumuturreko bitarrak
           The Big Event: Gertaera Handia
           Your Digital Footprint: Zure aztarna digitala
           description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
-          "Maze: Loops": 'Labirinto: Begiztak'
-          "Artist: Loops": 'Artista: begiztak'
-          "Bee: Loops": 'Erle: Begiztak'
+          "Maze: Loops": 'Labirintoa: Begiztak'
+          "Artist: Loops": 'Artista: Begiztak'
+          "Bee: Loops": 'Erlea: Begiztak'
           "Bee: Debugging": 'Erlea: Arazketa'
           "Artist: Debugging": 'Artista: arazketa'
           "Bee: Conditionals": 'Erlea: baldintzazkoak'
@@ -85,23 +85,23 @@ eu:
           description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
         course3:
           The Maze: labirintoa
-          "Studio: Create a Story": 'Joku laborategia: sortu istorioa'
+          "Studio: Create a Story": 'Jolas laborategia: sortu istorioa'
           The Artist: Artista
           title: 3. Kurtsoa
-          Artist Functions: Artistaren funtzioak
+          Artist Functions: 'Artista: Funtzioak'
           Artist For Loops: Artista begiztentzako
           Artist Nested Loops: Artistaren habiatutako begiztak
-          Bee Conditionals: Erlearen baldintzazkoak
+          Bee Conditionals: 'Erlea: Baldintzak'
           Bee Nested Loops: Erlearen habiatutako begiztak
           Bee Debuggin: Erlearen arazketa
-          Bee Debugging: Erlearen arazketa
-          Bee Functions: Erlearen funtzioak
+          Bee Debugging: 'Erlea: Arazketa'
+          Bee Functions: 'Erlea: Funtzioak'
           Artist Functions with Params: Artistaren parametrodun funtzioak
           Bounce: Errebotea
           Maze Conditionals: Labirintoaren baldintzazkoak
           Artist Functions with Parameters: Artistaren parametrodun funtzioak
           Computational Thinking: Pentsamendu konputazionala
-          Functional Suncatchers: Argizulo funtzionalak
+          Functional Suncatchers: Funtzioak aztertzen
           Songwriting Parameters: Abesti konposaketaren parametroak
           Dice Race: Dado lasterketa
           Internet: Internet
@@ -146,7 +146,7 @@ eu:
           description_short: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
         hourofcode:
           Maze: Labirintoa
-          title: Classic Maze
+          title: Labirinto klasikoa
           description: Informatikaren oinarriak ikasi itzazu Angry Birds, Plants vs Zombies eta Ice Age-ko Scrat-ekin!
           description_short: Informatikaren oinarriak ikasi itzazu pertsonaia alaiekin!
         frozen:
@@ -191,9 +191,9 @@ eu:
           description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           Course 4 Prerequisite: 4 kurtsoko aurrebaldintza
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
-          "Artist: Loops": 'Artista: begiztak'
+          "Artist: Loops": 'Artista: Begiztak'
           "Bee: Conditionals": 'Erlea: baldintzazkoak'
           "Artist: Nested Loops": 'Artista: habiatutako begiztak'
           "Farmer: While Loops": 'Nekazaria: While begiztak'
@@ -421,9 +421,9 @@ eu:
           description_short: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           description: Bigarren eta hirugarren kurtsoak landu ez dituzten ikasleentzako laburpena
           Course 4 Prerequisite: 4 kurtsoko aurrebaldintza
-          "Maze: Sequence": 'Labirinto: Sekuentzia'
+          "Maze: Sequence": 'Labirintoa: Sekuentzia'
           "Artist: Sequence": 'Artista: sekuentzia'
-          "Artist: Loops": 'Artista: begiztak'
+          "Artist: Loops": 'Artista: Begiztak'
           "Bee: Conditionals": 'Erlea: baldintzazkoak'
           "Artist: Nested Loops": 'Artista: habiatutako begiztak'
           "Farmer: While Loops": 'Nekazaria: While begiztak'
@@ -682,6 +682,7 @@ eu:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1173,7 +1174,7 @@ eu:
           Building a Foundation: Oinarri bat Eraikitzen
           Getting Loopy: Iteratzen
           The Big Event: Gertaera Handia
-          Binary Bracelets: Eskumuturreko binarioak
+          Binary Bracelets: Eskumuturreko bitarrak
           Songwriting: Musika idazten
         afterschool1:
           title: Afterschool 1
@@ -1236,6 +1237,7 @@ eu:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1354,6 +1356,21 @@ eu:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1464,12 +1481,12 @@ eu:
           description: Gumball joku laborategiarekin sortu istorio bat edo egin joku bat!
           Gumball Play Lab: Gumball joko laborategia
         starwars:
-          title: 'Star Wars: Galaxia bat Coderekin eraikiz'
+          title: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           Hour of Code 2015: 2015 Code ordua
         starwarsblocks:
-          title: 'Star Wars: Galaxia bat Coderekin eraikiz'
+          title: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           Hour of Code 2015: 2015 Code ordua

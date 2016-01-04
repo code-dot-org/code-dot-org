@@ -172,7 +172,11 @@
   "help": "Kömək",
   "hideToolbox": "(Gizlət)",
   "hintHeader": "Məsləhət belədir:",
+  "hintPrompt": "Kömək lazımdır?",
   "hintRequest": "Məsləhətə baxın",
+  "hintReviewTitle": "Review Your Hints",
+  "hintSelectInstructions": "Instructions and old hints",
+  "hintSelectNewHint": "Get a new hint",
   "hintTitle": "Məsləhət:",
   "ignore": "Nəzərə alma",
   "infinity": "Sonsuzluq",
@@ -243,9 +247,5 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "iş sahəsi: "
 }

@@ -4,7 +4,7 @@ subject: "Your Amazon.com gift"
 ---
 Thank you for participating in the Hour of Code. Here is your $10.00 Amazon.com gift code.
  
-UNIQUE CODE GOES HERE
+`<%= prize_code_s %>`
  
 **To redeem:**
 

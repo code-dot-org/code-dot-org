@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Ohje"},
 "hideToolbox":function(d){return "(Piilota)"},
 "hintHeader":function(d){return "Tässä on Vihje:"},
+"hintPrompt":function(d){return "Tarvitsetko apua?"},
 "hintRequest":function(d){return "Katso vihje"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Vihje:"},
 "ignore":function(d){return "Hylkää"},
 "infinity":function(d){return "Ääretön"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Katso video"},
 "when":function(d){return "kun"},
 "whenRun":function(d){return "suoritettaessa"},
-"workspaceHeaderShort":function(d){return "Työtila: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Työtila: "}};

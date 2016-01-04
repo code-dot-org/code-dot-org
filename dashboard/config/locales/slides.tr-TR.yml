@@ -23,15 +23,15 @@
           kümesidir.
       6:
         image: notes/hoc1_6.jpg
-        text: İlk programınızın amacı, Yeşil Domuzu vurmak için labirent aracılığıyla
-          bir Angry Bird elde etmektir.
+        text: İlk programınızın amacı, Yeşil Domuzu vurmak için labirentten geçerek
+          bir Kızgın Kuş elde etmektir.
       7:
         image: notes/hoc1_7.jpg
-        text: Sol taraf programın çalıştığı labirenttir. Her bulmaca için talimatlar
-          labirent altındadır.
+        text: Sol taraf programın çalıştığı labirenttir. Her bulmacanın talimatları
+          labirentin altında yer almaktadır.
       8:
         image: notes/hoc1_8.jpg
-        text: Ortadaki araç kutusu Angry Bird için komutlara sahiptir. Kodunuzu oluşturmak
+        text: Ortadaki araç kutusu Kızgın Kuş için komutlara sahiptir. Kodunuzu oluşturmak
           için bunları kullanacaksınız.
       9:
         image: notes/hoc1_9.jpg
@@ -44,9 +44,9 @@
           hareket eder.
       11:
         image: notes/hoc1_11.jpg
-        text: Birden fazla eylem yapmak için, birden fazla bloğu çalışma alanına sürükleyebilir
-          ve birbirlerine ekleyebilirsiniz. Kuş komutları yukarıdan aşağıya doğru
-          yapacaktır.
+        text: Birden fazla eylemi gerçekleştirmek için, birden fazla bloğu çalışma
+          alanına sürükleyebilir ve birbirlerine ekleyebilirsiniz. Kuş komutları yukarıdan
+          aşağıya doğru yapacaktır.
       12:
         image: notes/hoc1_12.jpg
         text: Eğer bir programı çalıştırmak ve düzeltme yapıp tekrar denemek istiyorsanız
@@ -57,8 +57,9 @@
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Merhaba, ben JR! Her yarış araba takımı kazanmak için bilgisayar mühendislerine
-          ihtiyaç duyar. Arabanın daha hızlı gitmesi için verileri analiz eder.
+        text: Merhaba, ben JR! Her yarış arabası takımı, kazanmak için bilgisayar
+          mühendislerine ihtiyaç duyar. Onlar arabanın daha hızlı gitmesi için verileri
+          analiz eder.
       2:
         image: notes/stage5_2.jpg
         text: Bu bulmacalarda, gidebildikleri yere kadar giden çizgileri çizen sanatçı
@@ -68,18 +69,18 @@
         text: Bu blok "100 piksel ilerle" diyor. Pikseller, ekranındaki ufacık noktalardır.
       4:
         image: notes/stage5_4.jpg
-        text: Bu blok " 90 derece dönün." diyor. Bu senin sanatçı "dönüş" olarak aynı
-          miktarda labirent bulmacalar engeller dönecek.
+        text: Bu blok " 90 derece dönün." diyor. Bu senin sanatçını bulmacada "dönüş"
+          sayısı kadar döndürecek.
       5:
         image: notes/stage5_5.jpg
-        text: Click on the arrow in either of these blocks to change the amount the
-          artist moves forward or turns. Play around to get familiar with these new
-          blocks.
+        text: Sanatçının ileri veya dönüşler hareket sayısını değiştirmek için bu
+          blokların birinde yer alan aşağı oka tıklayın. Bu yeni blokları tanımak
+          için onlar ile bol miktarda oynayın.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
         text: Merhaba, ben Paola! Bu bulmacalarda sen, arazisini dümdüz yapıp ekinler
-          dikmek isteyen bir çiftçisin.
+          ekmek isteyen bir çiftçisin.
       2:
         image: notes/stage9_2.jpg
         text: Ona çamur yığınlarını kaldırmak ve tüm delikleri doldurmak için yardım
@@ -90,7 +91,7 @@
       4:
         image: notes/stage9_4.jpg
         text: Farklı boyutlarda yığın ve delikler olduğu için çiftçiye kaç kürek dolusu
-          toprak kullanacağını/alacağını söylemelisin.
+          toprak atması gerektiğini söylemelisin.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
@@ -98,43 +99,45 @@
           birisi bilgisayar programının etkileşimli olabilmesidir.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Her zaman birileri tıkladığında veya bir bilgisayar veya telefonla musluklar
+          veya türleri, bu bir OLAY oluşturur ve bir olay meydana geldiğinde ne yapacağını
+          karar bazı kod var.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'Örneğin sizin bir "farenin tuşuna basıldığında, ses çal" OLAY-TETİKLEYİCİ''niz
+          olabilir '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: FlappyBird oyununu hiç duydunuz mu? Olay tetikleyicileri kullanarak
+          kendimize özel FlappyBird programı geliştirmeyi öğreneceğiz!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: 'Sürükle bırak yöntemi ile blokları kullanarak program geliştireceksiniz,
+          bu bloklar bilgisayar komutlarına tekabül edecek. Esasında bu blokların
+          arkasında gerçek kod parçacıkları bulunmaktadır. '
       6:
         image: notes/flappy06.jpg
-        text: 'Workspace''e bir göz atarsanız, sizin için doldurulan bazı yeşil bloklar
-          göreceksiniz - bunlar "event handlers" '
+        text: 'Çalışma alanına göz atarsanız, sizin için doldurulmuş olan bazı yeşil
+          bloklar göreceksiniz - bunlar "olay işleyicileri"dir. '
       7:
         image: notes/flappy07.jpg
-        text: Fareyi tıkladığınızda kuşun UÇMAsını istiyorsanız, işleyici olayı özelleştirmek
-          için "UÇMA" bloğunu ekleyerek yapabilirsiniz.
+        text: Fareyi tıkladığınızda kuşun kant ÇIRPMAsını istiyorsanız, olay işleyicisine
+          "ÇIRP" bloğunu ekleyerek yapabilirsiniz, bu durumda oyununuzda fare ile
+          kuşa tıklandığında kuş kanat çırpma hareketi yapacaktır.
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: Bu faliyetin her bulmacasında size yeni yeşil bloklar ile ifade edilen
+          yeni tür olayları tanıtacağız ve bu bloklar için siz uygun olan olayları
+          belirleyip çalışma alanına yerleşriyor olacaksınız.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: Aşağı açılır menüde içinde buna benzer aşağı işret eden ok gördüğünüzde,
+          flappy yere çarptığında çıkarttığı sesi değiştirebileceğiniz anlamına gelmekte.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: |
+          Son bulmacada kendi oyununuzu oluşturup arkadaşlarınız ile paylaşabileceksiniz.
+          İyi eğlenceler!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -147,7 +150,7 @@
           istiyoruz.
       3:
         image: notes/hoc2_3.jpg
-        text: Biz bize yardımcı olması için yeni "tekrar" bloğunu kullanabiliriz.
+        text: Bize yardımcı olması için yeni "tekrar" bloğunu kullanabiliriz.
       4:
         image: notes/hoc2_4.jpg
         text: 5 "ilerle" blogunu dışarı sürüklemek yerine...
@@ -172,17 +175,17 @@
         text: Eğer kuşun domuzu alması için gitmesi gereken uzaklığı bilmeseydik?
       3:
         image: notes/hoc3_3.jpg
-        text: Eğer, "ilerle" blogunu "repeat until" blogunun içine koyarsak, kuş domuzu
-          alana kadar (veya bir duvara çarpana kadar) ilerler.
+        text: Eğer, "ilerle" blogunu "kadar tekrarlayın" blogunun içine koyarsak,
+          kuş domuzu alana kadar (veya bir duvara çarpana kadar) ilerler.
       4:
         image: notes/hoc3_4.jpg
-        text: 'bu önemli: önceki gibi, "repeat until" blogunun içine birden fazla
+        text: 'Bu önemli: önceki gibi, "kadar tekrarlayın" blogunun içine birden fazla
           blok yerleştirebiliriz ve bunların tamamı tekrarlanır.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Selam, ben Bill! Hadi, yeni bir temel kavram öğrenelim: "eğer" komutları.
-          Bilgisayarlar bu komut ile karar alırlar.'
+        text: 'Merhaba, ben Bill! Yeni bir temel kavram öğrenelim: "Eğer" deyimleri.
+          Bunlar bilgisayarların nasıl karar aldığını gösterir.'
       2:
         image: notes/hoc4_2.jpg
         text: Sen de "eğer" ifadesini her gün kullanıyorsun. Her sabah dışarı çıkmadan
@@ -224,17 +227,17 @@
           and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: '"eğer" bloğunda olduğu gibi, tekrar bloğuna "eğer değilse" bloğu da
+          ekleyebiliriz, bu durumda zombi hareket etmeye devam edecek ve "eğer değilse"
+          bloğu farklı bir yöne dönüp dönemeceğini kontrol edecek.'
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Şimdi, bu zombileri ait oldukları yere yerleştir!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: '"eğer değilse" ifadesi iki şeyin arasında bir karardır. Dostumuz sincap
+          Scrat ile "eğer başka" ifadesiniz nasıl kullanabileceğimizi görelim.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
         text: This block looks the same as the "if" block, but there's an extra part
@@ -244,12 +247,12 @@
           path ahead, Scrat will turn left.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Bu bir karar alma eylemidir ve bu karara göre iki eylemden biri uygulanır.
+          Ve "Eğer" blokları gibi "eğer değilse" blokları "tekrar" blokları içine
+          koyabilirsin.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Ve şimdi sincap Scrat'a o meşe palamudunu alması için yardım edelim!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -278,12 +281,12 @@
         text: 'Selam, ben Makinde! Hadi, "süresince bloğu." hakkında bir şeyler öğrenelim. '
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: '"süresince bloğu" bloğunun içerisine konulanlar üstündeki koşul geçerli
+          olduğu sürece tekrarlanmaya devam eder.'
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: Örnek olarak, eğer çiftçi bir yığının üstünde duruyor ise, altındaki
+          yığını SÜRESİNCE birer birer kürekdolusu kaldırmaya devam edecek.
     loop_for:
       1:
         image: notes/stage11_1.jpg
@@ -322,8 +325,8 @@
           Daha sonra "isim giriniz" bloğunu "girdi" bloğuna sürükleyin.
       5:
         image: notes/stage15_5.jpg
-        text: Then if you write "length" in the spot where it says "x" and press "Enter"
-          you'll create a length input for your function.
+        text: Sonrasında eğer "x" yazan yere "uzunluk" yazar ve "Enter" tuşuna basar
+          iseniz uzunluk işlevi için girdi oluşturmuş olursunuz.
       6:
         image: notes/stage15_6.jpg
         text: Then click on the star. Now, you want to click on the variables category
@@ -395,9 +398,9 @@
           that Elsa and Anna can do.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Ekranın sağında yer alan beyaz alana çalışma alanı deniyor ve programlarımızı
+          bu alanda oluşturacağız. Buzdan oluşan nesneyi hareket ettirebilmek için
+          "İleriye taşı" bloğunu göreceksiniz.
       8:
         image: notes/frozen1_8.jpg
         text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
@@ -1544,10 +1547,10 @@
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While loops are pretty similar to what you do in everyday life. Imagine
-          you are washing your car, you'll keep scrubbing until it's clean. While
-          it's not clean, continue to scrub. You're evaluating these things all the
-          time.
+        text: Süresince döngüleri günlük hayatta yaptıklarımıza çok benziyor. Arabamızı
+          yıkadığımızı düşünelim tam olarak temiz olana kadar yıkamaya devam ederiz.
+          Ve yıkanan her kısım sonrasında tam olarak yıkanıp yıkanmadığını kontrol
+          ederiz, temizlenmiş ise temizleme işlemini sonlandırırız.
       2:
         image: notes/C3_farmer_while_2.png
         text: We've got a new look to help your farmer out. It's called a while-block.
@@ -2491,7 +2494,7 @@
           gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Merhaba, ben Rachel Rose. ILM'de üst düzey bir R&D mühendisiyim, animasyon
+        text: Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon
           ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların
           karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin
           hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside
@@ -2539,17 +2542,17 @@
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
+        text: Kullandığımız blokların içinde JavaScript komutları var. JavaScript,
+          profesyonel geliştiriciler için günümüzdeki en popüler programlama dilidir.
+          Bloklar, kodlama öğrenmeye başlamak için harika bir yol. Harvard ve Berkeley
+          gibi en iyi üniversiteler bile bu yöntemi kullanıyor. Temel bilgileri öğrendikten
+          sonra mühendisler yazarak kodlama yapıyor, çünkü bu bizim daha hızlı ilerlememizi
+          sağlıyor.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Araç kutusundan bulup sürüklemek zorunda kalmadan yüzlerce komut yazabiliriz.
+          Öğrenme aşamasında olduğun için başta yazmak yavaş gelebilir ama senin de
+          denemeni istedik.
       3:
         image: notes/starwars_typing_3.JPG
         text: Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar
@@ -2661,19 +2664,19 @@
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
+        text: 'Merhaba, ben Star Wars: Güç Uyanıyor''un yapımcısı Kathleen Kennedy.
+          Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel
+          bir droiddir. Yaptığı her şey, her hareketi bir bilgisayar yazılımı ile
+          kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine
+          ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor
+          gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
+        text: Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon
+          ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların
+          karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin
+          hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside
+          inandırıcı olmalarını sağlıyor.
       3:
         image: notes/starwars_blocks_intro_3.JPG
         text: Bir saat içerisinde sana programlamanın temellerini öğretecek bir Star
@@ -2682,37 +2685,34 @@
           için Rey ile tüm hurdaları toplamaya gidiyoruz.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
+        text: Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta Star Wars oyun alanı
+          bulunuyor, programınız işte burada çalışacak. Her bir seviyenin yönergeleri
+          oyun alanının altında yazılıdır.
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar
           yer alıyor.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
+        text: Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
+        text: Eğer solaİlerle(); blokunu çalışma alanına sürükleyip, oynata basarsam
+          ne olur? BB-8 sola bir kare hareket eder.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
+        text: Peki BB-8'in sola ilerledikten sonra başka bir şey yapmak istiyorsam
+          ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle();
+          blokunu seçip renkli ışık belirene kadar solaİlerle(); blokumun altına sürükleyeceğim.
+          Sonra bırakacağım ve iki blok birbirine kenetlenecek.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
+        text: Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet
+          kutusuna sürüklemeniz yeterli.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
+        text: Oynata bastıktan sonra, her zaman sıfırla tuşuna basarak BB-8'in başa
+          dönmesini sağlayabilirsin. Haydi şimdi başlayalım!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
@@ -3057,8 +3057,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Sağ taraftaki beyaz bölgenin adı iş alanıdır ve programınızı işte burada
+          yaparsınız.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

@@ -638,9 +638,10 @@ ca:
         Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
         Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins
         craft_run_button_callout: 'Fes clic a "Executa" per provar el teu programa'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: |-
+          Arrossega un "moveForward()"; bloc i porta'l sota l'altre bloc
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+        craft_inside_repeat: "Repeteix accions posant blocs d'aquí"
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
+        craft_what_is_iron: Aquest ferro és meu!
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?

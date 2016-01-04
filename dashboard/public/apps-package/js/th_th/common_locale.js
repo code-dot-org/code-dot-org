@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "ขอความช่วยเหลือ"},
 "hideToolbox":function(d){return "(ซ่อน)"},
 "hintHeader":function(d){return "เคล็ดลับ:"},
+"hintPrompt":function(d){return "Need help?"},
 "hintRequest":function(d){return "ดูคำแนะนำ"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "คำแนะนำ:"},
 "ignore":function(d){return "เพิกเฉย"},
 "infinity":function(d){return "ไม่จำกัด"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ดูวีดีโอ"},
 "when":function(d){return "เมื่อ"},
 "whenRun":function(d){return "เมื่อเรียกให้ทำงาน"},
-"workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "}};

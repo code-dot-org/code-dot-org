@@ -28,6 +28,8 @@ da:
     code:
       label: 'Tilføje en lærer:'
       placeholder: Afsnitskode (SOVS)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -253,63 +255,16 @@ da:
     remove: (Fjern lærer)
     confirm:
       remove: Er du sikker på, at du vil fjerne denne lærer?
-    tools: Lærer redskaber
-    followers:
-      section: 'Afsnit:'
-      stages: 'Etaper som vises:'
-      show_past: 'Vis tidligere elevaktivitet (%{bullet_html}):'
-      levels_key: Niveau nøgle
-      perfect: Afsluttet, perfekt
-      completed: Afsluttet, men du brugte for mange blokke
-      tried: Forsøgt, men ikke afsluttet
-      not_tried: Ikke prøvet endnu
-      activity: 'Angiver elevaktivitet i de sidste %{hours} %{plural}'
-      no_section: Ikke tildelt sektion
-      trophies: trofæer
     students:
-      name: Navn
-      username: brugernavn
-      password: adgangskode
-      manage: Administrer elever
       dashboard: Gå til lærer Dashboard
-      add: Tilføj elever
-      remove: fjern elev
-      confirm_remove: Sikker på, at du ønsker at fjerne denne elev?
-      help_reassign: For at opdele din klasse i flere grupper, skal du vælge de elever du ønsker at flytte til en ny gruppe.
-      help_register: I stedet for at du bruger en masse tid individuelt på at indlæse elevernes data, kan du oprette din klasse hurtigt ved at spørge dem om selv at tilmelde sig. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin adgangskode, vil du kunne nulstille det til dem.
-      register: Bed dine elever om selv at registrere sig
-      vist: Spørg dine elever til at besøge
-      section_code: 'og indtaste deres afsnit-kode:'
-      first_please: 'Først, venligst %{add_section}'
-      for: For
-      enter: 'angiv:'
-    sections:
-      add: Tilføj afsnit
-      manage: Administrere sektioner
-      section: Afsnit
-      students: Studerende
-      section_code: Afsnitskode
-      add_section_code: Tilføje elev afsnit-kode
-      secret: Hemmelig type
-      grade: Graduering
-      course: Kursus
-      rename: omdøb
-      edit: rediger
-      delete: slet
-      confirm_delete: Er du sikker på du vil slette dette afsnit?
-      email: Send i e-mail
-    rollup: Fremskridts oversigt
-    activity: Seneste klasse aktivitet
-    user_not_found: Lærer eller elev kunne ikke findes
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din elev, fordi %{student_name} ikke har registreret en e-mailadresse'
-    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer, fordi du ikke har registreret en e-mailadresse'
-    student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for %{student_name}'
+    user_not_found: Læreren kunne ikke findes.
+    student_teacher_disassociated: 'Du har fjernet %{teacher_name} som din lærer.'
     panel:
       answer_viewer: Svar Viser
       student: Elev
       viewing_solution: Vis løsningsforslag
       try_it_yourself: Prøv selv
-      section: Afsnit
+      section: Hold
       example: Løsningseksempel
       example_with_number: 'Løsningseksempel %{solution_number}'
       submitted_on: 'Indsendt den %{date}'
@@ -377,6 +332,7 @@ da:
   share:
     title: Lære om Code Studio
     description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.
+    try_hour_of_code: Prøv en Time med kode!
   gender:
     male: Mand
     female: Kvinde
@@ -388,8 +344,8 @@ da:
     thank_you: 'Vi takker vores <a href="https://code.org/about/donors"> støtter</a>, <a href="https://code.org/about/partners"> partnere</a>, vores <a href="https://code.org/about/team">team</a>, vores video stemmer og vores <a href="https://code.org/about/advisors"> rådgivere</a> for deres støtte til at skabe Code Studio.'
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
     help_from_html_old: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
-    art_from_html: 'Angry Birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd. Alle rettigheder forbeholdes. <br/>Plants vs zombies&trade; & &copy; & © 2013 Electronic Arts Inc. Alle rettigheder forbeholdes.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheder forbeholdes. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm. Alle rettigheder forbeholdes. < br / > Frozen &#8482; © %{current_year} Disney. Alle rettigheder forbeholdes. < br / > Ice Age &#8482; © %{current_year} 20th Century Fox. Alle rettigheder forbeholdes. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Alle rettigheder forbeholdes. < br / > Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheder forbeholdes. < br / > The Amazing World of Gumball er varemærke og © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: Copyright
@@ -406,6 +362,7 @@ da:
     built_on_code_studio: Bygget på Code Studio
     make_my_own_app: Byg min egen app
     how_it_works: Sådan fungerer det
+    try_hour_of_code: Prøv en Time med kode!
   reference_area:
     title: Brug for hjælp?
     subtitle: Se disse videoer og tips
@@ -462,7 +419,7 @@ da:
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klassisk labyrint
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
     flappy:
       title: Flappy kode

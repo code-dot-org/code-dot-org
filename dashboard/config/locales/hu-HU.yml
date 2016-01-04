@@ -29,6 +29,8 @@
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -289,65 +291,10 @@
     remove: (tanár eltávolítása)
     confirm:
       remove: Biztosan el szeretné bocsátani ezt a tanárt?
-    tools: Tanári eszközök
-    followers:
-      section: 'Szakasz:'
-      stages: 'Elérhető szintek:'
-      show_past: 'Mutasd meg a diákok tevékenységét (%{bullet_html}):'
-      levels_key: Szint kódja
-      perfect: Tökéletesen megcsináltad
-      completed: Sikeresen megcsináltad de túl sok blokkot használtál
-      tried: Megpróbáltad, de nem sikerült
-      not_tried: Még nem próbáltam
-      activity: Diákok tevékenységét jelzi az utóbbi %{hours}%{plural} órában
-      no_section: Nincs feladott szakasz
-      trophies: trófeák
     students:
-      name: Név
-      username: felhasználónév
-      password: jelszó
-      manage: Diákok kezelése
       dashboard: Vissza a Tanári Nyitólapra
-      add: Diákok hozzáadása
-      remove: diák eltávolítása
-      confirm_remove: Biztos el akarod távolítani ezt a diákot?
-      help_reassign: Ahhoz, hogy az osztályodat több részre oszd, válassz ki néhány
-        diákot, és adj fel nekik egy új szakaszt.
-      help_register: Ahelyett, hogy neked kéne sok időt töltened azzal, hogy egyesével
-        hozzáadd a diákjaidat a csoportodhoz, megkérheted őket, hogy regisztráljanak
-        az osztályodba. A diákjaidnak meg kell adniuk egy felhasználó nevet és jelszót,
-        de nekik NEM kell e-mail címet megadniuk. ha egy diák elfelejti a jelszavát,
-        te újat tudsz neki adni.
-      register: Kérd meg a diákjaidat, hogy regisztrálják magukat
-      vist: Kérd meg a diákjaidat, hogy látogassák meg
-      section_code: 'és írják be ezt a kódot:'
-      first_please: Először is kérjük, %{add_section}
-      for: nak
-      enter: 'írd be:'
-    sections:
-      add: Adj hozzá egy szakaszt
-      manage: Vezetési szakasz
-      section: Szakasz
-      students: Diákok
-      section_code: Szakasz kódja
-      add_section_code: Adj a listához diákokat a kódjukkal
-      secret: Titkos
-      grade: Évfolyam
-      course: Tanfolyam
-      rename: átnevezés
-      edit: szerkeszt
-      delete: törlés
-      confirm_delete: Biztos vagy benne, hogy törölni szeretnéd ezt a szakaszt?
-      email: Küldj e-mailt
-    rollup: Nyomonkövetési felület
-    activity: Legutóbbi osztálytermi aktivitás
-    user_not_found: A tanár vagy a diák nem található
-    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert
-      %{student_name} nem regisztrált e-mail címet'
-    cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál
-      e-mail címet'
-    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára
-      a rendszerben'
+    user_not_found: Ez a tanár nem található.
+    student_teacher_disassociated: Eltávolítottad %{teacher_name} a tanáraid közül.
     panel:
       answer_viewer: Válasz megtekintő
       student: Diák
@@ -434,6 +381,7 @@
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
       alkalmazásokat vagy alkoss a kódolás segítségével!
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   gender:
     male: Férfi
     female: Nő
@@ -471,9 +419,10 @@
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Készült a Code Studio seggítségével
+    make_my_own_app: Készítsd el saját alkalmazásod
+    how_it_works: Hogyan működik
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
@@ -542,7 +491,7 @@
       unused: Nem használt szintek
   upsell:
     hoc:
-      title: A kódolás órája
+      title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód

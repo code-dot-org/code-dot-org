@@ -5,10 +5,10 @@
   en: Bilgisayar Bilimi
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
   csedweek_dates: 8-14 Aralık 2014
-  csedweek_banner_hoc: 'T<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Kodlama Saati</a> geliyor. Öğretmenleri organizatörleri , <a
-    href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama
-    Saati Planlamaya</a> davet ediyoruz'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Kodlama Saati</a> yaklaşıyor. Öğretmen ve organizatörleri, <a
+    href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">kendi
+    Kodlama Saati''nizi Planlamaya</a> davet ediyoruz'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
     bakın</a>'
@@ -28,6 +28,8 @@
   twentyhours_heading: Bilgisayar Bilimlerine Giriş kursumuzu deneyin
   twentyhours_text: İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin.
+  og_title: Her çocuk uygun fırsatı hak ediyor
+  og_description: Okullarda her öğrenci bilgisayar bilimini okumayı hak ediyor.
   hoc2014_heading: <a href="http://hourofcode.com">Kodlama Saatine </a><br/> katılın  8
     - 14 Aralık, 2014<br/>
   hoc2014_students: Öğrenciler
@@ -37,14 +39,14 @@
   hoc2014_everyone: Herkes
   hoc2014_support: Destekleyin &#x25BE;
   hoc2014_whatishoc: Kodlama Saati nedir?
-  csedweek_map_header: '# CSEdWeek / saat kodu etkinliği dünya çapında'
-  csedweek_map_signup: Kendi etkinliğine kaydol
-  csedweek_map_search_placeholder: Bir saatlik kod etkinliklerini ara
+  csedweek_map_header: '# CSEdWeek / kodlama saati ''nin dünya çapındaki etkinlikleri'
+  csedweek_map_signup: Etkinliğinizi kaydettirin
+  csedweek_map_search_placeholder: Kod Saati etkinlikleri ara
   csedweek_map_search_search: Arama
   csedweek_map_search_reset: Yeniden başla
-  csedweek_map_legend_title: Efsane
-  csedweek_map_legend_event: Kodlama Saati Etkinliği
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: Açıklama
+  csedweek_map_legend_event: Kod Saati Etkinliği
+  csedweek_map_legend_cs_tech_jam: Bilgisayar Bilimi Teknolojisi Yarışı
   cded_sign_up: Kaydol
   cded_try_it: Deneyin
   twentyhours_trynow: Şimdi dene
@@ -82,7 +84,7 @@
   course_name_course4: Ders 4
   congratulations_on_completing_course: '%{course} kursunu tamamladığınız için tebrikler'
   congrats_next_tutorials_title: Sonrasında bu eğitim setlerini dene
-  congrats_next_tutorials_desc: 1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">partner
+  congrats_next_tutorials_desc: 1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">ortaklık
     eğitimini</a> dene.
   get_a_certificate_of_achievement: Başarı belgesi alın
   enter_valid_age: Lütfen geçerli bir yaş seçin
@@ -326,8 +328,8 @@
   starwars_javascript_start_button: Şimdi dene
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Sürükle-bırak blokları kullan.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar,
+    tabletler | 6-10 yaş
   starwars_blocks_start_button: Şimdi dene
   starwars_watch_videos: Başlamadan önce bu ilham verici videolardan birini izle
   starwars_speak_languages: Farklı bir dili mi konuşuyorsunuz?
@@ -340,7 +342,7 @@
     kod blokları kullan.
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş
   minecraft_subtitle: Minecraft Kod Saati
   volunteer_engineer_submission_title: Hour of Code etkinliği için gönüllü ol ve öğrencilere
     ilham kaynağı ol.
@@ -364,9 +366,10 @@
   volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
     yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
     *</span> ile işaretlenmiş alanların doldurulması zorunludur.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: Kendi Kod Saati etkinliğini düzenlemek
+    ve <a href="%{volunteer_local}">yerel gönüllü haritamızdan</a> gönüllü bulmak
+    için <a href="%{learn_more}">daha fazlasını öğren.</a>.
+  volunteer_engineer_submission_update_information: Bilgilerinizi güncelleyin
   volunteer_engineer_submission_header_shared: Bilgiler gönüllüler haritasındaki öğretmenlerle
     paylaşıldı
   volunteer_engineer_submission_field_name: İsim
@@ -375,41 +378,42 @@
   volunteer_engineer_submission_field_company_placeholder: Şirket (veya Üniversite)
   volunteer_engineer_submission_field_experience_level: Deneyim seviyesi
   volunteer_engineer_submission_field_location: Konum
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+  volunteer_engineer_submission_field_location_desc: Konumuz, öğretmenlerin yakınlarındaki
+    gönülleri bulmaları için kullanılacak ve en kısa zamanda haritada iğnelenmiş olarak
+    görülecektir. Gizlilik konusunda düşünceliyseniz, lütfen iş/okul adresinizi veyahut
+    sadece şehir bilginizi giriniz.
+  volunteer_engineer_submission_field_location_placeholder: Posta kodu, şehir ve devlet/ülke
+    veya sokak adresi
+  volunteer_engineer_submission_field_location_flexibility: Kod Saati süresince ...(uygun
+    olanlarının hepsini seçiniz)... ile yardımcı olabilirim
+  volunteer_engineer_submission_checkbox_after_hoc: Kod Saati bitimi sonrasında gönüllü
+    olmak istiyorum
+  volunteer_engineer_submission_field_time_commitment: Kod Saati'nden sonra ayırabileceğiniz
+    zaman süresi
   volunteer_engineer_submission_field_linkedin: LinkedIn profili
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/sizin_adiniz
   volunteer_engineer_submission_field_facebook: Facebook profili
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/sizin_adiniz
   volunteer_engineer_submission_field_description: Tanım
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_desc: Bilgisayar bilgisi deneyiminizi
+    ve yerel öğretmen olarak bize nasıl katkı sağlayabileceğinizi anlatınız.
+  volunteer_engineer_submission_field_description_placeholder: Deneyim ve/veya katılım
+    açıklaması. İngilizce'den başka dil biliyorsanız, buraya eklediğinizden emin olun.
+  volunteer_engineer_submission_header_private: Bilgiler gizli tutulur ve asla paylaşılmaz
   volunteer_engineer_submission_field_email: E-posta adresi
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: E-posta adresiniz asla paylaşılmaz,
+    ancak öğretmenlerden size istekler göndereceğiz.
   volunteer_engineer_submission_field_email_placeholder: E-posta adresi
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
     (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
+  volunteer_engineer_submission_checkbox_contact: 'Öğretmenlerin gönüllülük fırsatları
+    için benimle iletişime geçmesini kabul ediyorum (Not: Mail adresiniz paylaşılmaz)'
   volunteer_engineer_submission_submit: Gönder
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Hour of Code gönüllüsü olduğunuz için teşekkür
+    ederiz. Hour of Code 'a hazırlanmak ve diğer projelere gönüllü olmak için daha
+    fazlasını <a href="%{url}">buradan</a> öğrenebilirsiniz.
   volunteer_engineer_submission_commitment_uncertain: Belirsiz
   volunteer_engineer_submission_commitment_one_hr_per_week: haftada 1 saat
   volunteer_engineer_submission_commitment_three_hrs_per_week: Haftada 3 saat
@@ -438,10 +442,10 @@
   volunteer_engineer_submission_num_volunteers_10: 10 gönüllü
   volunteer_engineer_submission_num_volunteers_25: 25 gönüllü
   volunteer_engineer_submission_num_volunteers_50: 50 gönüllü
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
+  volunteer_engineer_submission_type_task_onsite: Teknik yardımda bulunmanız ve esin
+    kaynağı olmanız için sınıfıma gelmenizi istiyorum
+  volunteer_engineer_submission_type_task_remote: Çocuklara esin kaynağı olabilecek
+    bir çift söz etmeniz için Skype ile sınıfıma bağlanmanızı istiyorum
   volunteer_engineer_submission_type_task_mentor: Öğrencilerime kodlama öğretebilmem
     için bana yardımcı olabilecek rehber arıyorum
   petition_age: Yaş
@@ -449,7 +453,7 @@
   dashboard_landing_welcome: Yeni ve geliştirilmiş öğretmen panosuna hoş geldiniz.
   dashboard_landing_video: Bu videoyu izleyin
   dashboard_landing_watch_video: Yeni özelliklere bir göz atmak için!
-  dashboard_landing_view_as_student: Bu site bir öğrenci olarak görüntüle
+  dashboard_landing_view_as_student: Bu siteyi öğrenci olarak görüntüle
   dashboard_landing_students_title: Öğrencileriniz
   dashboard_landing_students_manage: Öğrencileri görüntüleme ve yönetme
   dashboard_landing_news_title: K-5 Eğitici Kaynakları (sadece ingilizce)
@@ -479,9 +483,9 @@
   dashboard_hoc_courses: Her yaş için Kod Saati
   dashboard_hoc_courses_desc: Öğrencileriniz ile birlikte 1 saatlik eğitimlerden birisini
     uygulayın!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
+  dashboard_hoc_courses_desc_and_cta: 'Bu bir saatlik kısa eğitimleri öğrencilerinizle
+    deneyin ve Bilgisayar Bilimi Eğitimi Haftasında <a href="https://hourofcode.com">Kod
+    Saati hareketine katılın.</a> '
   dashboard_k5_courses: K-5 için 20 saatlik kurslar
   dashboard_k5_courses_desc: Bu kurslar kolay ve hiçbir bilgisayar gerektirmeyen kodlamayı
     kendi kendine öğreten derslerden oluşmaktadır. Her ders tek başına uygulanabilir
@@ -499,20 +503,19 @@
     this new field. To register for professional development workshops, apply for
     a <a href="/educate/districts">district-wide partnership</a> with Code.org.
   dashboard_course_csina: Cebirde Bilgisayar Bilimi
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csina_desc: Code.org Bootstrap işbirliği ile bilgisayar programlama
+    ile cebirsel ve geometrik kavramları öğreten müfredat geliştirmiştir.
   dashboard_course_csins: Bilimde Bilgisayar Bilimleri
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csins_desc: Code.org GUTS Projesi işbirliği ile modelleme ve simülasyon
+    yöntemleri kullanarak bilgisayar bilimine giriş kavramlarını geliştirmeye başlamıştır.
   dashboard_course_ecs: Bilgisayar Bilimlerini Keşfedin
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
-  dashboard_landing_loading: Yükleme...
+  dashboard_course_csp: AP® Bilgisayar Bilimi İlkeleri
+  dashboard_course_csp_desc: Code.org titiz, ilgi çekici ve anlaşılır bir şekilde
+    bilgisayar bilimlerinin keşfedilmesi için kurslar tasarlamıştır.
+  dashboard_landing_loading: Yükleniyor...
   dashboard_action_edit: Düzenle
   dashboard_action_save: Kaydet
   dashboard_action_save_all: Tümünü Kaydet
@@ -534,7 +537,7 @@
   dashboard_navigation_section_speakers: Bilgisayar Bilimi<br/>Davetli Konuşmacılar
   dashboard_navigation_all_sections: Öğrenci hesapları ve ilerleme
   dashboard_navigation_view_progress: İlerlemeyi Görüntüle
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Yanıtları Görüntüle
   dashboard_navigation_add_students: Öğrenci EKle
   dashboard_navigation_manage_students: Öğrencileri Yönet
   dashboard_navigation_lesson_plans_resources: Ders planları ve kaynaklar
@@ -679,6 +682,12 @@
   dashboard_faq_k5: K-5 Sık Sorulan Sorular
   dashboard_announcements: Bildirimler
   dashboard_announce_view_all: Tümünü Gör
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Daha fazlasını öğren
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -687,34 +696,34 @@
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   learn_more: Daha Fazla Bilgi Edinin
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
+  learn_sign_up_description: Bilgisayar Bilimi Eğitim Haftası süresinde Kod Saati'ne
+    dahil olmak için kayıt olun
   learn_sign_up_button: Kaydol
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_videos_before_hoc: Kodlama Saati'nden önce ilham verici video izleyin
+  learn_educator_resources_description: Kodlama Saati'ni nasıl öğreteceğinizi öğrenin
   learn_educator_resources_button: Öğretim kaynakları
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
+  learn_are_you_educator: Eğitimci misiniz? <a href="http://hourofcode.com/resources/how-to">Kodlama
+    Saati'ni nasıl öğreteceğinizi öğrenin</a>
+  learn_find_volunteer: Kod Zamanı süresince yardım edecek<a href="https://code.org/volunteer/local">Yerel
+    bir gönüllü bulun</a>
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
     led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_how_to_hoc: Kod Saati'ni öğretmek için<a href="https://hourofcode.com/how-to">nasıl
+    yapılır rehberimizi</a> takip edin
   learn_hoc_prizes: Eğiticilere sunulan ödüller hakkında <a href="https://hourofcode.com/prizes">daha
     fazlası</a>.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Bu <a href="https://code.org/educate/inspire">videolar</a>
+    ile öğrenciler ilham verin
   hoc2014_try_new_tutorials: Yeni Hour of Code eğitimlerimizi deneyin
   hoc2014_try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
   hoc2014_try_scrat: Angry Birds, PvZ  ve Scrat
   hoc2014_try_frozen: Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Code.org eğitimleri
+  carousel_heading_codeorg_any_device: Code.org tarafından (bütün cihazlar için) eğitimler
+  carousel_heading_3rd_party: Üçüncü taraf eğitimleri
+  carousel_heading_third_party: Üçüncü taraf eğitimleri
   carousel_heading_international: Kendi dilinizde eğitimler
   carousel_heading_domestic: Eğitimlerin ingilizcesi mevcut
   carousel_heading_beginners: Yeni başlayanlar için dersler
@@ -726,14 +735,14 @@
   carousel_heading_devices: Tabletler ve telefonlar için eğitim uygulamaları
   carousel_heading_beyond_devices: Telefon ve tabletler için dersler
   carousel_heading_languages: Diğer programlama dilleri için eğitimler
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Diğer programlama dilleri için eğitimleri
   carousel_heading_apps_games: Kendi oyununuzu ya da uygulamanızı yapın
   carousel_heading_university: Online üniversite dersleri
   carousel_heading_webpages: Nasıl web sayfası yapılacağını öğrenin
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: Öğretmenler arasında popüler platformlar
   educator_notes: Eğitimci notları
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Öğretmenler Ders Planlarını Hazırlar
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
@@ -754,8 +763,8 @@
   mobile_devices: Mobil cihazlar için eğitimler
   frozen_name: Anna ve Elsa ile kodlama yap
   starwars_name: 'Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek'
-  codeorg_name: İlk bilgisayar programınızı yazın
-  codeintl_name: İlk bilgisayar programınızı yazın
+  codeorg_name: Klasik Labirent
+  codeintl_name: Klasik Labirent
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript'e giriş
   khanes_name: JavaScript'e giriş
@@ -784,24 +793,24 @@
   robomindnl_name: Sanal robot programlama
   flappy_name: Bir Flappy oyunu yapın
   bitsbox_name: Bitsbox - bir oyun yapın
-  makeschool_name: Build an iPhone game in your browser!
+  makeschool_name: Tarayıcınızda bir iPhone oyunu yapın!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kodlama Saati
   blockly_name: Parçalı
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Taş,Kağıt, Makas
-  hourofcode_name: Yeni code.org/hoc için placeholder
+  hourofcode_name: Klasik Labirent
   playlab_name: Oyun Laboratuvarı
   infinity_name: Sınırsız oyun laboratuarı
   artist_name: Aktör
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: Gizemli Ada Kodlama Macerası
+  allcancode_name: Çalış Maco!
+  csfirst_name: Öncelikle CS
+  boxisland_name: Kutu Adası
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
+  texasinstruments_name: 10 Dakika Kod
+  teacherled_name: Öğretmenler Ders Planlarını Hazırlar
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
@@ -846,12 +855,12 @@
   infinity_gradelevel: 4-104 Yaş
   artist_gradelevel: 8 + Yaş grubu
   monstercoding_gradelevel: 5-13 yaş grubu
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5-10 yaş
+  csfirst_gradelevel: 9-14 yaş
   boxisland_gradelevel: İlköğretim
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12-14 yaş
+  texasinstruments_gradelevel: 13-16 yaş
+  teacherled_gradelevel: 5+ yaş
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   thinkersmithspanish_platformtext: İnternetsiz
@@ -893,12 +902,12 @@
   frozen_platformtext: Modern tarayıcılar + Tablet
   starwars_platformtext: Modern tarayıcılar + tabletler
   playlab_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Modern web tarayıcıları, iOS, Android
+  allcancode_platformtext: Modern web tarayıcıları, iOS
   csfirst_platformtext: Modern Web tarayıcıları
-  boxisland_platformtext: Android, iOS
+  boxisland_platformtext: Android, IOS
   codesters_platformtext: Modern Web tarayıcıları
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI hesap makineleri
   teacherled_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeorg_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   codeintl_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
@@ -938,8 +947,8 @@
   flappy_shortdescription: Kendi oyununuzu yapın - Flappy Bird, Shark veya Denizaltı
   bitsbox_shortdescription: Gerek JavaScript kullanaraki oynanacak ve paylaşılacak
     oyunlar için bir dizi kodlama yap.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
+  makeschool_shortdescription: Bir iPhone oyunu yap! Kod yazarak Canavarınıza yeni
+    hareketler öğretin!
   touchdevelop_shortdescription: 'Telefonunuz üzerinden yapbozlar çözün, oyunlar yaratın
     ve kodlama öğrenin. '
   appinventor_shortdescription: Kendi uygulamanızı yapın! (Sadece android)
@@ -959,8 +968,8 @@
   artist_shortdescription: Sanatçı ile harika resimler ve tasarımlar yap!
   monsterocding_shortdescription: A colorful self-guided programming adventure for
     children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
+  allcancode_shortdescription: Marco, görsel programlama dilini öğrenmek için sürükleyici
+    bir oyun.
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add
     your own style!
   boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
@@ -1158,7 +1167,7 @@
   groklearning_beyond_name: Python programlama öğren
   hacketyhack_beyond_name: Ruby öğren
   robomind_beyond_name: Sanal robot programlama
-  makeschool_beyond_name: Build an iPhone game in your browser!
+  makeschool_beyond_name: Tarayıcınızda bir iPhone oyunu yapın!
   appinventor_beyond_name: AppInventor Kodlama Saati
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Karel ile Kodlama Öğren
@@ -1477,13 +1486,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

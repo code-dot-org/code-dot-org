@@ -42,7 +42,7 @@
   "CONTROLS_FOR_INPUT_WITH": "गन सगै ",
   "CONTROLS_FOR_TOOLTIP": "%1 variable linus, pahilo number dekhi antim number samma values linus, tokiyeko number le count gardai, ani tokiyeko block ko adesh garnus.",
   "CONTROLS_IF_ELSEIF_TOOLTIP": "If block ma condition thapnus.",
-  "CONTROLS_IF_ELSE_TOOLTIP": "Add a final, catch-all condition to the if block.",
+  "CONTROLS_IF_ELSE_TOOLTIP": "अन्तिम एउटा catch-all condition, if block मा थपनुस.",
   "CONTROLS_IF_HELPURL": "http://code.google.com/p/blockly/wiki/If_Then",
   "CONTROLS_IF_IF_TOOLTIP": "Add, remove, or reorder sections to reconfigure this if block.",
   "CONTROLS_IF_MSG_ELSE": "नत्र",

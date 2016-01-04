@@ -177,7 +177,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeEmpty":function(d){return "vazio"},
 "blockTypeFarmlandWet":function(d){return "terra arada"},
 "blockTypeGlass":function(d){return "vidro"},
-"blockTypeGrass":function(d){return "vidro"},
+"blockTypeGrass":function(d){return "grama"},
 "blockTypeGravel":function(d){return "cascalho"},
 "blockTypeLava":function(d){return "lava"},
 "blockTypeLogAcacia":function(d){return "madeira de acácia"},
@@ -215,7 +215,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "houseSelectLetsBuild":function(d){return "Vamos construir uma casa."},
 "houseSelectMedium":function(d){return "Médio"},
 "keepPlayingButton":function(d){return "Continuar jogando"},
-"level10FailureMessage":function(d){return "Cobra a lava para atravessar, então minere dois dos blocos de ferro do outro lado."},
+"level10FailureMessage":function(d){return "Cubra a lava para poder atravessar e, em seguida, minere dois blocos de ferro do outro lado."},
 "level11FailureMessage":function(d){return "Lembre-se de colocar pedregulhos à sua frente se houver lava no caminho. Isso permitirá que você minere esta fila de recursos em segurança."},
 "level12FailureMessage":function(d){return "Lembre-se de minerar 3 blocos de redstone. Isso combina o que você aprendeu ao construir a sua casa e sobre usar comandos \"se\" para evitar cair na lava."},
 "level13FailureMessage":function(d){return "Coloque \"trilho\" ao longo do caminho de terra que vai da sua porta até a borda do mapa."},
@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Você pode pressionar \"Continuar jogando\" para voltar a jogar o seu jogo."},
 "replayButton":function(d){return "Jogar novamente"},
 "selectChooseButton":function(d){return "Selecione"},
-"tooManyBlocksFail":function(d){return "Quebra-cabeças "+craft_locale.v(d,"puzzleNumber")+" concluído. Parabéns! Também é possível concluí-lo com "+craft_locale.p(d,"numBlocks",0,"pt",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Desafio "+craft_locale.v(d,"puzzleNumber")+" concluído. Parabéns! Também é possível concluí-lo com "+craft_locale.p(d,"numBlocks",0,"pt",{"one":"1 bloco","other":craft_locale.n(d,"numBlocks")+" blocos"})+"."}};

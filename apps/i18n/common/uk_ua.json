@@ -172,7 +172,11 @@
   "help": "Довідка",
   "hideToolbox": "(Приховати)",
   "hintHeader": "Підказка:",
+  "hintPrompt": "Потрібна допомога?",
   "hintRequest": "Подивитись підказку",
+  "hintReviewTitle": "Переглянути Ваші Підказки",
+  "hintSelectInstructions": "Інструкції та попередні підказки",
+  "hintSelectNewHint": "Отримати нову підказку",
   "hintTitle": "Підказка:",
   "ignore": "Ігнорувати",
   "infinity": "Infiinty",
@@ -243,9 +247,5 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Робоча область: "
 }

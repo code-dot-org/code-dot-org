@@ -4,7 +4,7 @@ subject: "Your 10GB of Dropbox space"
 ---
 Thank you for participating in the Hour of Code. Here is your code for 10GB of Dropbox space.
  
-UNIQE CODE GOES HERE
+`<%= prize_code_s %>`
  
 **To redeem:**
 

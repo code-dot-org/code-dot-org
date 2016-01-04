@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Palīdzība"},
 "hideToolbox":function(d){return "(Paslēpt)"},
 "hintHeader":function(d){return "Padoms:"},
+"hintPrompt":function(d){return "Vajadzīga palīdzība?"},
 "hintRequest":function(d){return "Apskatīt padomu"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Padoms:"},
 "ignore":function(d){return "Ignorēt"},
 "infinity":function(d){return "Bezgalība"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Noskaties video"},
 "when":function(d){return "kad"},
 "whenRun":function(d){return "kad izpilda"},
-"workspaceHeaderShort":function(d){return "Darba virsma: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Darba virsma: "}};

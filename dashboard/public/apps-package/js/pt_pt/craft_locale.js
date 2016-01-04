@@ -233,7 +233,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level9FailureMessage":function(d){return "Não te esqueças de colocar pelo menos 2 tochas para iluminares o teu caminho e escava pelo menos 2 carvões."},
 "minecraftBlock":function(d){return "bloco"},
 "nextLevelMsg":function(d){return "Quebra-cabeças "+craft_locale.v(d,"puzzleNumber")+" concluído. Parabéns!"},
-"playerSelectChooseCharacter":function(d){return "Escolha seu personagem."},
+"playerSelectChooseCharacter":function(d){return "Escolhe a tua personagem."},
 "playerSelectChooseSelectButton":function(d){return "Selecione"},
 "playerSelectLetsGetStarted":function(d){return "Vamos começar."},
 "reinfFeedbackMsg":function(d){return "Podes premir \"continuar a jogar\" para voltares a jogar o teu jogo."},

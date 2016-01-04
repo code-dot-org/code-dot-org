@@ -29,6 +29,8 @@
     code:
       label: 'Мұғалімді қосу:'
       placeholder: Бөлім Коды (ABCDEF)
+      instructions: Оқытушымен бөлісіп код жазыңыз өтініш. 6 әріптен тұратын код яғни
+        "ABCDEF".
     submit: Мұғалімді қосу
   add_hint_form:
     placeholder: Өтінеміз, мұнда көмек сөзін қосыңыз
@@ -39,7 +41,7 @@
   puzzle: Басқатырғыш
   trophies: Кубоктар
   courses: Курстар
-  of: of
+  of: дан
   more: КӨБІРЕК
   less: АЗЫРАҚ
   beta: бета
@@ -60,7 +62,7 @@
     already_signedup: Тіркеліп қойдыңыз ба?
     notyet_signedup: Сіз әлі бізге қосылмадыңыз ба?
     google_oauth2: Google Аккаунт
-    twitter: Twitter
+    twitter: Твиттер
     facebook: Facebook
     windowslive: Microsoft Аккаунт
     forgot_password: Құпия сөзіңізді ұмыттыңыз ба?
@@ -250,13 +252,13 @@
     access_denied: '%{model} моделіне сізге рұқсат жоқ.'
   nav:
     header:
-      finished_hoc: Менің Код Жазу Сағатымды аяқтадыңыз
+      finished_hoc: Мен Код Жазу Сағатымды аяқтадым
       sign_in_to_save: Прогрессті сақтау үшін тіркеліңіз
       free_play:
-        playlab: Қосымша жасау
-        artist: Кез келген нәрсе Салу
+        playlab: Қосымша бағдарлама жасау
+        artist: Кез келген нәрсе салу
         calculate: Calculate Something
-        applab: Қосымша жасау
+        applab: Қосымша бағдарлама жасау
     user:
       classroom: Оқытушының жеке парақшасы
       district_dashboard: Ақпарат панелі
@@ -277,75 +279,21 @@
       puzzle_map: Деңгейлер
       prizes: Барлық %{total_trophies} кубоктар мен сыйлықтар жинаңыз!
       prize_earned: Барлық %{total_trophies} кубок жиналды. Жүлдені ұттыңыз!
-      prize_us_only: (Қ.Ш. студенттері ғана)
+      prize_us_only: (А.Қ.Ш. студенттері ғана)
       prizes_link: көбірек білу
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Жауап
+    for_teachers_only: Тек Мұғалімдерге арналған
     title:
       one: 'Сіздің оқытушыңыз:'
       other: 'Сіздің оқытушыларыңыз:'
     remove: (оқытушыны алып тастау)
     confirm:
       remove: Сіз бұл оқытушыны өшіргіңіз келеді ме?
-    tools: Оқытушылар оқу-құралдары
-    followers:
-      section: 'Секция:'
-      stages: 'Көрсетілген деңгей(лер):'
-      show_past: 'Оқушының соңғы сабақ оқу барысын (%{bullet_html}) көрсету:'
-      levels_key: Негізгі деңгейлер
-      perfect: Аяқталды, тамаша
-      completed: Аяқталды, бірақ тым көп бөлімдер пайдаланылды
-      tried: Байқап көрдім, бірақ аяқтамадым
-      not_tried: Әлі байқап көрмедіңіз бе
-      activity: Соңғы %{hours} ішіндегі оқушылар іс-әрекеттерін көрсетеді %{plural}
-      no_section: Секцияға тағайындалмаған
-      trophies: Кубоктар
     students:
-      name: Атыңыз
-      username: Логин
-      password: Құпия сөз
-      manage: Оқушыларды басқару
       dashboard: Оқытушылар Терезесіне өту
-      add: Оқушыны қосу
-      remove: оқушыны өшіру
-      confirm_remove: Сіз бұл оқушыны өшіргіңіз келеді ме?
-      help_reassign: Сыныбыңызды бірнеше топқа бөліңіз және жаңа топқа тағайындау
-        үшін оқушыларды таңдаңыз.
-      help_register: Әрбір оқушыны жеке тіркеп уақытты жоғалтқанша, оқушылардан тіркелуін
-        сұрау арқылы тез баптаңыз. Сіздің оқушыларыңыз логин және құпия сөзді ғана
-        еңгізеді, бірақ электрондық пошталарын КӨРСЕТПЕСЕ болады. Егер оқушы құпия
-        сөзін ұмытқан болса, онда сіз өзіңіз қалпына келтіре аласыз.
-      register: Оқушыларыңыздан тіркелуін сұраңыз
-      vist: Оқушыларыңыздан кіруін
-      section_code: 'және олардың секция кодтарын еңгізуін сұраңыз:'
-      first_please: Өтінеміз, алдымен %{add_section}
-      for: үшін
-      enter: 'еңгізу:'
-    sections:
-      add: Секцияны қосу
-      manage: Секцияны басқару
-      section: Секция
-      students: Оқушылар
-      section_code: Секция Коды
-      add_section_code: Оқушылар Секция-Кодын еңгізу
-      secret: Құпия түрі
-      grade: Сынып
-      course: Курс
-      rename: атын өзгерту
-      edit: өзгерту
-      delete: өшіру
-      confirm_delete: Сіз бұл секцияны өшіргіңіз келеді ме?
-      email: Электронды поштаға жіберу
-    rollup: Прогресс панелі
-    activity: Сыныптың соңғы іс-әрекеттері
-    user_not_found: Оқушы немесе оқытушы табылмады
-    cant_remove_student_no_email: '%{student_name} оқушыны өшіре алмайсыз, себебі
-      %{student_name} электрондық поштасын тіркемеген'
-    cant_remove_teacher_no_email: '%{teacher_name} оқытушыны өшіре алмайсыз, себебі
-      сіз электрондық поштаңызды тіркемедіңіз'
-    student_teacher_disassociated: '%{teacher_name} оқытушы, %{student_name} оқушының
-      мұғалімдер тізімінен өшірілді'
+    user_not_found: Оқытушы табылмады.
+    student_teacher_disassociated: Сіз %{teacher_name} оқытушылар тізімінен алып тастадыңыз.
     panel:
       answer_viewer: Жауаптарды көру
       student: Оқушы
@@ -422,11 +370,11 @@
       көріңіз
     use_as_teacher: Бұл сайтты оқытушы ретінде қолдану
     heading_hoc2014: <h2>Код Жазу Сағаты</h2><h1>Барлық жастағылар үшін</h1>
-    heading_elementary: <h1>Информатика пәні негіздерінен (барлық жастағылар үшін)</h1><h2>20
-      сағаттық курс</h2>
+    heading_elementary: <h2>20 сағаттық курс</h2><h1>Информатика пәні негіздерінен
+      (барлық жастағылар үшін)</h1>
     heading_apps: <h1>Барлығына</h1><h2>қызықты</h2>
-    heading_legacy: <h1>Барлық жастағыларға арналған</h1><h2>Біздің жеделдетілген
-      курстарымыз</h2>
+    heading_legacy: <h2>Біздің жеделдетілген курстарымыз</h2><h1>Барлық жастағыларға
+      арналған</h1>
     your_gallery: Галерея
     no_primary_course: Код Студиясы курсын байқап көру
     choose_next_course: Төмендегі Код Студиясы курсының біреуін байқап көріңіз
@@ -435,6 +383,7 @@
     title: Код Студиясында үйрену
     description: Информатика пәнін барлығы үйрене алады. Ойындар, қосымшалар және
       сурет салыңыз.
+    try_hour_of_code: Код Жазу Сағатын байқап көріңіз!
   gender:
     male: Ер
     female: Әйел
@@ -452,14 +401,24 @@
       алғысымызды айтамыз.
     help_from_html_old: Google, Microsoft, Facebook, және Twitter инженерлері бұл
       материалдарды жасауға көмектесті.
-    art_from_html: Мұзды Дәуір&#8482; &amp; &copy; %{current_year} 20th Century Fox.
-      Барлық құқығы қорғалған.<br />Ашулы Құстар&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Барлық құқығы қорғалған.<br />Өсімдіктер Зомбилерге
-      қарсы&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Барлық құқығы
-      қорғалған
-    art_from_html_old: Ашулы Құстар&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Барлық құқығы қорғалған.<br />Өсімдіктер Зомбилерге қарсы&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Барлық құқығы қорғалған
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар
+      қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және
+      Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year}
+      Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year}
+      20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br
+      />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
+      Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
+      болып табылады және &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Барлық құқықтар
+      қорғалған.<br />Жұлдызды Соғыстар&#8482; &copy; %{current_year} Disney және
+      Lucasfilm. Барлық құқықтар қорғалған.<br />Frozen&#8482; &copy; %{current_year}
+      Disney. Барлық құқықтар қорғалған.<br />Мұзды Дәуір&#8482; &copy; %{current_year}
+      20th Century Fox. Барлық құқықтар қорғалған.<br />Ашулы Құстар&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Барлық құқықтар қорғалған.<br
+      />Өсімдіктер Зомбилерге қарсы&#8482; &copy; %{current_year} Electronic Arts
+      Inc. Барлық құқықтар қорғалған.<br />Гамболаның таңғажайып әлемі сауда белгісі
+      болып табылады және &copy; 2015 Cartoon Network.
     powered_by_aws: Amazon Web Services серверінде жұмыс істейді
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE логотипі және
       Код Жазу Сағаты&reg; Code.org сауда белгісі болып табылады.'
@@ -474,9 +433,10 @@
     privacy: Құпиялылық саясаты
     secure: Қауіпсіз Нұсқасы
     report_abuse: Құқық бұзушылық туралы хабарлау
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Код Студияда жасалған
+    make_my_own_app: Өзімнің бағдарламамды жасау
+    how_it_works: Қалай жұмыс істейді
+    try_hour_of_code: Код Жазу Сағатын байқап көріңіз!
   reference_area:
     title: Көмек керек пе?
     subtitle: Видеолар мен көмексөздерді көру
@@ -517,7 +477,7 @@
   pdf_download: PDF файлды жүктеп алу
   download_coming_soon: Жүктеп алу қызметі жақында.
   video_coming_soon: Видеосы Жақында!
-  not_started: The student has not attempted this level.
+  not_started: Оқушы бұл деңгейді бастаған жоқ.
   share_code:
     title: Бағдарламаның жұмыс істеу барысын көру үшін 'Іске қосу' батырмасын шертіңіз
     bounce_og_title: Менің Шар Ойынымды тексеру
@@ -545,7 +505,7 @@
       unused: Пайдаланылмаған деңгей
   upsell:
     hoc:
-      title: Код Жазу Сағаты
+      title: Классикалық лабиринт
       body: Информатика пәні негіздерін оқыңыз. Миллиондаған адам байқап көрді.
     flappy:
       title: Қанат Қағу Коды
@@ -553,9 +513,9 @@
         Коды сабағын байқап көріңіз!
     20-hour:
       title: Жеделдетілген курс
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
+      body: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің
+        2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп оқу үшін
+        2-4 курстарды қараңыз!
       body_short: 2-4 сабақтан тұратын информатика пәнінің жеделдетілген курсын оқыңыз.
     hoc2014:
       try_new_tutorial: Біздің жаңа Код Жазу Сағаты сабағын бета нұсқасында көріңіз
@@ -567,13 +527,14 @@
     frozen:
       title: Мұзды жүрек
     starwars:
-      title: Star Wars
+      title: Жұлдызды Соғыстар
     infinity:
       title: Шексіз Ойын Лабораториясы
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің танымал
+        кейіпкерлерімен ойын жасаңыз.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Код арқылы Minecraft әлемінде саяхаттаңыз.
   gallery:
     students_drew_these_with_code: Оқушылар кодпен бірге суретін салады!
     students_made_these_with_code: Оқушылар кодын жазады!
@@ -588,8 +549,8 @@
     caption_by_name_age: '%{name}, жасы %{age}'
     caption_time_ago: '%{time_ago} бұрын'
     header: Галерея
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Хикаялар мен ойындар
+    header_artist: Өнерді кодтау
   landing:
     prerelease: Бұл курс <span class='betatext'>бета нұсқада</span>. Бұл деген курстың
       әлі толық жасалып бітпегенін көрсетеді және кері байланыс кезінде өзгертулер
@@ -662,7 +623,7 @@
           description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
             Қанат Қағу Коды сабағын байқап көріңіз!
         jigsaw:
-          title: Jigsaw
+          title: Бас қатырғыш
           description: ''
         step:
           title: Қадам

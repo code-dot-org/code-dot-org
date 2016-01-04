@@ -833,10 +833,10 @@
           solamente hablo con la gente que conozco.
       5:
         image: notes/C1_going_places_safely_5.png
-        text: Lo que más me gusta en la Internet es obtengo juegos divertidos. ¡Puntos!
-          También me gusta dibujar y crear cosas nuevas y compartir con mis amigos.
-          ¡Genial! A veces visito sitios donde aprendo cosas nuevas pero siempre sitios
-          web que son adecuados para mí. ¡Oh, dinosaurios!
+        text: Lo que más me gusta de Internet es que puedo encontrar juegos divertidos.
+          ¡Puntos! También me gusta dibujar y crear cosas nuevas y compartirlas con
+          mis amigos. ¡Estupendo! Algunas veces visito sitios web donde aprendo cosas
+          nuevas pero siempre me quedo en sitios ideales para mí. ¡Guau, dinosaurios!
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'Internet es un lugar super divertido. Pero al igual que cruzar la calle
@@ -970,10 +970,9 @@
           5 veces, y hará la misma cosa.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: La orden de esto es, arrastrar el comando avanzar y luego insertarlo
-          dentro del bloque de repetición. Puedes hacer clic en él y decir cuantas
-          veces quieres que se repita el bloque, para repetir la cantidad de pasos
-          que deseas que avance.
+        text: Para hacer esto, arrastra el comando mover hacia adelante y colócalo
+          dentro del bloque repetir. Puedes hacer clic en él y decirle cuántas veces
+          repetir el bloque para indicarle cuantos pasos quieres mover hacia adelante.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
         text: Una cosa más, puedes insertar tantos comandos como quieras dentro del
@@ -1260,10 +1259,10 @@
           quotidiano.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: Hoje, vamos fazer, criar e testar um algorismo para um avião de papel.
-          Mas primeiro, necessitamos de separar este grande projecto em passos mais
-          facéis de seguir. Para fazer um avião de papel, necessitamos de decidir
-          que passos seguir e em que ordem devemos seguí-los.
+        text: Hoy vamos a realizar, crear y probar un algoritmo para un avión de papel.
+          Pero primero, necesitamos romper este gran proyecto en pasos más pequeños
+          y fáciles de seguir. Para hacer un avión de papel, necesitamos decidir qué
+          pasos tomar y en qué orden realizarlos.
       3:
         image: notes/C2_paper_airplanes_3.png
         text: Crearás tu algoritmo con primero cortando aparte las fotos. Luego, selecciorás

@@ -29,6 +29,8 @@
     code:
       label: 'Lisää opettaja:'
       placeholder: Osion koodi (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Lisää opettaja
   add_hint_form:
     placeholder: Syötä vihjeesi tähän
@@ -284,63 +286,9 @@
     remove: (poista opettaja)
     confirm:
       remove: Oletko varma, että haluat poistaa tämän opettajan?
-    tools: Opettajan työkalut
-    followers:
-      section: 'Ryhmä:'
-      stages: 'Taso(ja) esitettäväksi:'
-      show_past: 'Näytä opiskelijoiden toimintahistoria (%{bullet_html}):'
-      levels_key: Tasojen avain
-      perfect: Valmis, täydellistä
-      completed: Valmis, mutta käytit liian montaa lohkoa
-      tried: Kokeiltu, mutta ei valmis
-      not_tried: Ei kokeiltu
-      activity: Ilmaisee opiskelijan aktiivisuutta viimeisen %{hours} %{plural} aikana
-      no_section: Ei valittuja ryhmiä
-      trophies: pokaalit
     students:
-      name: Nimi
-      username: käyttäjätunnus
-      password: Salasana
-      manage: Hallinnoi oppilaita
       dashboard: Siirry opettajan päänäytölle
-      add: Lisää opiskelijoita
-      remove: poista oppilas
-      confirm_remove: Oletko varma että haluat poistaa tämän oppilaan?
-      help_reassign: Jakaaksesi luokkasi useisiin ryhmiin, valitse oppilaat jotka
-        siirretään uuteen ryhmään.
-      help_register: Sen sijaan että käytät paljon aikaa tuodaksesi yksittäisten oppilaiden
-        tiedot, voit perustaa luokkasi nopeasti pyytäen heitä rekisteröitymään. Oppilaidesi
-        tulee valita käyttäjänimet ja salasanat, mutta heitä EI VAADITA antaamaan
-        sähköpostiosoitetta. Jos oppilas unohtaa salasanansa, voit nollata sen heidän
-        puolestaan.
-      register: Pyydä oppilaitasi rekisteröimään itsensä
-      vist: Pyydä oppilaitasi käymään
-      section_code: 'ja anna heidän ryhmän tunnuksensa:'
-      first_please: Lisää ensin %{add_section}
-      for: Varten
-      enter: 'anna:'
-    sections:
-      add: Lisää ryhmä
-      manage: Hallinnoi ryhmiä
-      section: Ryhmä
-      students: Oppilaat
-      section_code: Ryhmän tunnus
-      add_section_code: Lisää oppilaiden ryhmän tunnus
-      secret: Salainen tyyppi
-      grade: Taso
-      course: Kurssi
-      rename: nimeä uudelleen
-      edit: muokkaa
-      delete: poista
-      confirm_delete: Oletko varma että haluat poistaa tämän ryhmän?
-      email: Lähetä sähköpostilla
-    rollup: Edistymistaulu
-    activity: Luokan tapahtumat
     user_not_found: Opettajaa tai oppilasta ei löytynyt
-    cant_remove_student_no_email: '%{student_name} ei voida poistaa oppilaistasi koska
-      %{student_name} ei ole rekisteröinyt sähköpostiosoitetta'
-    cant_remove_teacher_no_email: '%{teacher_name} ei voida poistaa opettajastasi
-      sillä et ole rekisteröinyt sähköpostiosoitetta'
     student_teacher_disassociated: Opettaja %{teacher_name} on poistettu oppilaalta
       %{student_name}
     panel:
@@ -355,7 +303,7 @@
       unsubmit: Peruuta lähetys
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
-    email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'
+    email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'
     email_confirm_wrong_email: (Väärä sähköpostiosoite?)
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
@@ -426,6 +374,7 @@
     title: Opiskele Code Studio:ssa
     description: Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä,
       sovelluksia ja taidetta.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mies
     female: Nainen
@@ -465,6 +414,7 @@
     built_on_code_studio: Rakennettu Koodistudiossa
     make_my_own_app: Tee oma sovellukseni
     how_it_works: Miten se toimii
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet
@@ -530,7 +480,7 @@
       unused: Käyttämättömät tasot
   upsell:
     hoc:
-      title: Koodaustunti
+      title: Klassinen sokkelo
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code

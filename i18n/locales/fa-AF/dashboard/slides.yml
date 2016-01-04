@@ -173,18 +173,16 @@ fa-AF:
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: 'گزاره "اگر-در غیر این صورت" برای تصمیم گیری بین دو چیز هست. بیاید ببینیم چه جوری میتونیم از یک گزاره "اگر-در غیر این صورت" با دوستمون اسکرت سنجابه استفاده کنیم.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'این بلوک خیلی شبیه به بلوک "اگر" هست اما یک بخش اضافه در پایین برای "در غیر این صورت" وجود داره. اگر من بلوک " برو جلو" رو بذارم جایی که میگه "انجام بده" و یکبار بلوک "به سمت چپ بپیچ" رو جایی که "در غیر این صورت" هست بذارم یعنی سکرت سنجابه تا جایی که راهی برای جلو رفتن وجود داره به سمت جلو حرکت میکنه. اگرهم راهی به سمت جلو نبود, سکرت به سمت چپ میپیچه.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'انجام یکی از دو عمل بر اساس تصمیم انجام میگیره. و مثل بلوک های "اگر" شما میتونید بلوک های "اگر-در غیر این صورت" رو داخل بلوک های "تکرار" قرار بدید.'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: حالا بیاید به سکرت سنجابه کمک کنیم که به بلوطش برسه!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -269,26 +267,25 @@ fa-AF:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: سلام، اسم من لینزی هست. من مدل سازی ، اجرا و نوشتن اپلیکیشن های خودم رو انجام میدم. بیاید از کد استفاده کنیم تا به آنا و السا ملحق بشیم وقتی دارن معجزه و زیبایی یخ رو کشف میکنن.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: شما وقتی رو یخ اسکیت میکنید دونه های برف و الگوهایی رو می سازید و یک سرزمین عجایب زمستونی رو درست میکنید که میتونید اون رو با دوستتاتون به اشتراک بگذارید.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: در یک ساعت آینده، شما مقدمات کدنویسی رو یاد میگیرید. برنامه نویسی ستنی معمولا با با نوشتن متن هست اما ما از Blockly (بلوکی) استفاده میکنیم که با استفاده از بلوک های بصری هستند. شما میتونید با گرفتن و انداختن اون ها برنامه هاتون رو بنویسید. این روشی هست که دانشجوهای دانشگاه هم برای یادگیری ابتدایی ازش استفاده میکنند. در قسمت اجرایی بلوک ها شما هنوز دارید کد مینویسید.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: یک برنامه مجموعه ای از دستورالعمل هاست که به کامپیوتر میگه که چه کار باید بکنه. بیاید یک کد یا یک برنامه بسازیم که به السا منم کنه یک خط ساده بسازه. اما بعد ها از همین برای ساختن الگوهای پیچیده تر استفاده خواهیم کرد.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: صفحه شما به سه بخش تقسیم میشه. در بخش چپ، سطح یخ وجود داره که شما میتونید برنامه تون رو اجرا کنید. دستورالعمل ها برای هر مرحله درست زیر این سطح نوشته شده اند.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: بخش میانی جعبه ابزار هست و هر کدوم از بلوک ها نشون دهنده عملی هست که اکسا و آنا میتونند انجام بدهند.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'بخش سفید در قسمت راست فضای کار نامیده میشه، که جایی هست که ما برنامه مون رو می سازیم. برای حرکت دادن سطح یخ، شما باید از بلوک "به سمت جلو حرکت کن" استفاده کنید.'
       8:
         image: notes/frozen1_8.jpg
         text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
@@ -1362,7 +1359,7 @@ fa-AF:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1418,7 +1415,7 @@ fa-AF:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1493,7 +1490,7 @@ fa-AF:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."

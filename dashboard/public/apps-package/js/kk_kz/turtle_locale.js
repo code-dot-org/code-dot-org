@@ -159,7 +159,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catColour":function(d){return "Түс"},
 "catControl":function(d){return "Ілмек"},
 "catMath":function(d){return "Математика"},
-"catProcedures":function(d){return "Functions"},
+"catProcedures":function(d){return "Функциялар"},
 "catTurtle":function(d){return "Іс-әрекеттер"},
 "catVariables":function(d){return "Айнымалылар"},
 "catLogic":function(d){return "Логика"},

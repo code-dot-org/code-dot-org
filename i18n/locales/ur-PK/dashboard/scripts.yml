@@ -150,10 +150,10 @@ ur:
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: اینا اور ایلسا کے ساتھ کوڈ
+          description: آئیں اینا اور ایلسا کو جوائن کرنے کے لیے کوڈ کو استعمال کریں اورسیکھیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔ آپ سنوفلیکس اور پیٹرنز ایسے کری-ایٹ کریں گے جیسا کہ آپ آئس-اسکیٹنگ کر رہے ہوں اور ایسی یادگار سردیاں منائیں جو بعد میں آپ اپنے دوستوں کے ساتھ شیئر بھی کرسکیں!
           Artist: Artist
-          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+          description_short: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
@@ -161,7 +161,7 @@ ur:
           "Bee: For Loops": 'Bee: For Loops'
           title: Course 4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: Variables
+          Variables: متغیرات
           "Play Lab: Variables": 'Play Lab: Variables'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
@@ -207,7 +207,7 @@ ur:
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
-          Variables: Variables
+          Variables: متغیرات
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -647,7 +647,7 @@ ur:
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: Variables
+          Variables: متغیرات
           Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
           Multi-screen App: Multi-screen App
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
@@ -680,6 +680,7 @@ ur:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1234,6 +1235,7 @@ ur:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,21 @@ ur:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1477,7 +1494,7 @@ ur:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft کوڈ کی گھڑی
           description_short: Explore a Minecraft world through code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: Hour of Code 2015

@@ -172,7 +172,11 @@
   "help": "Abi",
   "hideToolbox": "(Peida)",
   "hintHeader": "Vihje:",
+  "hintPrompt": "Vajad abi?",
   "hintRequest": "Anna vihje",
+  "hintReviewTitle": "Vaata Sinu vihjeid",
+  "hintSelectInstructions": "Juhised ja vanad vihjed",
+  "hintSelectNewHint": "Saa uus vihje",
   "hintTitle": "Vihje:",
   "ignore": "Eira",
   "infinity": "Lõpmatus",
@@ -243,9 +247,5 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "pärast käivitamist",
-  "workspaceHeaderShort": "Tööruum: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Tööruum: "
 }

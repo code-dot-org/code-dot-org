@@ -179,7 +179,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawACircle":function(d){return "marraztu zirkulu bat"},
 "drawAFlower":function(d){return "marraztu lore bat"},
 "drawAHexagon":function(d){return "marraztu hexagono bat"},
-"drawAHouse":function(d){return "marraztu etxea bat"},
+"drawAHouse":function(d){return "marraztu etxe bat"},
 "drawAPlanet":function(d){return "marraztu planeta bat"},
 "drawARhombus":function(d){return "marraztu erronbo bat"},
 "drawARobot":function(d){return "marraztu robot bat"},

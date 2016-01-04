@@ -96,7 +96,7 @@
         text: I hver oppgave i denne aktiviteten vil vi introdusere nye typer hendelser som grønne blokker i arbeidsområdet, og du kan bestemme de relevante blokkene å legge til i respons til de hendelsene.
       9:
         image: notes/flappy09.jpg
-        text: 'Når du ser en nedtrekksboks som denne, så betyr det at du kan endre instillingene - for eksempe lyden som spilles av når flappy treffer bakken.'
+        text: 'Når du ser en nedtrekksboks som denne, så betyr det at du kan endre instillingene - for eksempel lyden som spilles av når flappy treffer bakken.'
       10:
         image: notes/flappy10.jpg
         text: I siste puslespillet vil du kunne lage et spill og dele den med dine venner. ha det gøy!
@@ -364,7 +364,7 @@
         text: 'Her skal vi gjøre romboten hilse på jordboerene når en spiller klikker på ham. Vi bruker "ved klikk"-blokken og fester "si"-blokken til den. Når spilleren klikker på romboten vil alt knyttet til denne "ved klikk"-hendelsesblokken utføres. Hva gjør ditt romvesen si?'
       4:
         image: notes/playlab_events_4.png
-        text: 'Det finnes også "når pilen"-blokker. Hvis du kobler "flytt"-blokker til disse, kan du begynne å flytte aktører opp, ned, til venstre eller høyre. Trinnvis blir spillet ditt mer interaktiv.'
+        text: 'Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre. Trinnvis blir spillet ditt mer interaktiv.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
@@ -731,7 +731,7 @@
         text: 'Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet. Hva hvis jeg vil at fuglen skal gjøre noe annet etterpå? Da legger jeg til en blokk til i programmet vårt.'
       4:
         image: notes/C2_maze_intro_4.png
-        text: 'Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil feste seg sammen. Når jeg trykker på "kjør" igjen, vil fuglen gjøre kommandoene som er stablet i arbeidsområdet fra toppen og nedover.'
+        text: 'Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil feste seg sammen. Når jeg trykker på "Kjør" igjen, vil fuglen gjøre kommandoene som er stablet i arbeidsområdet fra toppen og nedover.'
       5:
         image: notes/C2_maze_intro_5.png
         text: 'Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra den til søppelkassen. Etter at du trykker "kjør", kan du alltid velge "nullstill" for å få fuglen tilbake til start. La oss fange grisene!'
@@ -754,7 +754,7 @@
         text: Så langt har du lagd en animasjon eller en historie som gjør akkurat det samme hver gang du kjører den. Nå kan du lage et interaktivt spill som du faktisk kan spille.
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: 'Her er "når pilen"-blokk og "Flytt aktør"-blokk. Du kan sette disse blokkene sammen for å flytte figurene rundt med piltastene.'
+        text: 'Her er en "når pil"-blokk og en "flytt figur"-blokk. Du kan sette disse blokkene sammen for å flytte figurene rundt med piltastene.'
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
@@ -810,7 +810,7 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: 'Når du setter en løkke inni en annen løkke, kaller vi det en nøstet løkke. For eksempel, her er koden for å tegne en trekant med sider som er 100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre - en for hver side av trekanten.'
+        text: 'Når du setter en løkke inni en annen løkke, kaller vi det en løkke i løkke. For eksempel, her er koden for å tegne en trekant med sider som er 100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre - en for hver side av trekanten.'
       2:
         image: notes/C3_artist_nested_loops_2.png
         text: Men vi vil tegne seks trekanter. For å gjøre det, må vi ta løkken og plassere den inni en annen gjenta-ganger-blokk. Ganske kult!
@@ -850,7 +850,7 @@
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Nå skal vi bruke nøstede løkker med bien. Vi har fått litt kode å starte med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter snu seg mot høyre. La oss ta hele kodestykket og nøste det inni en annen gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
+        text: Nå skal vi bruke løkker i løkker med bien. Vi har fått litt kode å starte med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter snu seg mot høyre. La oss ta hele kodestykket og legge det inni en annen gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
@@ -860,7 +860,7 @@
         text: For å komme i gang må vi koble styringen av rekkerten til piltastene på tastaturet.
       3:
         image: notes/C3_bounce_3.png
-        text: 'Dette gjør vi ved å koble "når venstre pil"-blokken til "flytt til venstre"-blokken, og "når høyre pil"-blokken til "flytt til høyre"-blokken. Prøv det, så er du i gang med å programmere ditt eget sprettespill så fort som bare det!'
+        text: 'Dette gjør vi ved å koble "når pil venstre"-blokken til "flytt venstre"-blokken, og "når pil høyre"-blokken til "flytt høyre"-blokken. Prøv det, så er du i gang med å programmere ditt eget sprettespill så fort som bare det!'
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -971,7 +971,7 @@
         text: Så langt har du lagd en animasjon eller en historie som gjør akkurat det samme hver gang du kjører den. Nå kan du lage et interaktivt spill som du faktisk kan spille.
       2:
         image: notes/C3_playlab_create_game_2.png
-        text: 'Her er "når pilen"-blokk og "Flytt aktør"-blokk. Du kan sette disse blokkene sammen for å flytte figurene rundt med piltastene.'
+        text: 'Her er en "når pil"-blokk og en "flytt figur"-blokk. Du kan sette disse blokkene sammen for å flytte figurene rundt med piltastene.'
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
@@ -1395,7 +1395,7 @@
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1470,7 +1470,7 @@
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1671,7 +1671,7 @@
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger opp programmet.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

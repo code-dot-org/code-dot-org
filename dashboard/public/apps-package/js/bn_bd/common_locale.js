@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "সাহায্য"},
 "hideToolbox":function(d){return "(লুকান)"},
 "hintHeader":function(d){return "এখানে একটি ইঙ্গিত:"},
+"hintPrompt":function(d){return "Need help?"},
 "hintRequest":function(d){return "ইঙ্গিত দেখুন"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "সংকেত:"},
 "ignore":function(d){return "উপেক্ষা করুন"},
 "infinity":function(d){return "অসীম"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ভিডিও দেখুন"},
 "when":function(d){return "যখন"},
 "whenRun":function(d){return "চালানোর সময়"},
-"workspaceHeaderShort":function(d){return "কর্মপরিসর:"},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "কর্মপরিসর:"}};
