@@ -85,9 +85,9 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     // don't result in cursor changing to an arrow momentarily.
     if (opt_svg) {
       if (cursor == Blockly.Css.Cursor.OPEN) {
-        Blockly.removeClass_(opt_svg, 'dragging');
+        Blockly.removeClass_(opt_svg.parentNode, 'dragging');
       } else {
-        Blockly.addClass_(opt_svg, 'dragging');
+        Blockly.addClass_(opt_svg.parentNode, 'dragging');
       }
     }
   }
@@ -100,7 +100,7 @@ Blockly.Css.CONTENT = [
   '.blocklyDraggable {',
   '  cursor: url(/blockly/media/handopen.cur) 8 5, auto;',
   '}',
-  '.dragging, .dragging .blocklyDraggable {',
+  '.dragging, .dragging .blocklySvg, .dragging .blocklyDraggable {',
   '  cursor: url(/blockly/media/handclosed.cur) 7 3, auto !important;',
   '}',
   '#%CONTAINER_ID% {',
