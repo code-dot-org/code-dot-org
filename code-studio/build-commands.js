@@ -96,19 +96,16 @@ exports.execute = function (commands) {
  * @returns {string}
  */
 exports.sassCommand = function (srcPath, buildPath, files, includePaths, shouldMinify) {
+  var command = 'node-sass' + (shouldMinify ? ' --output-style compressed' : '');
+  var extension = (shouldMinify ? '.min.css' : '.css');
   var includePathArgs = includePaths.map(function (path) {
     return '--include-path ' + path;
   }).join(' ');
 
   return files.map(function (file) {
-    if (shouldMinify) {
-      return 'node-sass --output-style compressed ' + includePathArgs + ' ' +
-          srcPath + file + ' ' +
-          buildPath + path.basename(file, '.scss') + '.min.css';
-    }
-
-    return 'node-sass ' + includePathArgs + ' ' +
-        srcPath + file + ' ' +
-        buildPath + path.basename(file, '.scss') + '.css';
+    return command + ' ' +
+        includePathArgs + ' ' +
+        srcPath + file  + ' ' +
+        buildPath + path.basename(file, '.scss') + extension;
   }).join(" && \\\n");
 };
