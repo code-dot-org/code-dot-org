@@ -1,20 +1,9 @@
 - content_for(:head) do
   = javascript_include_tag 'js/leveltype_widget'
-%link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
-= stylesheet_link_tag 'levels/widget', media: 'all'
-= render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
+  %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
+  = stylesheet_link_tag 'levels/widget', media: 'all'
 
-:javascript
-  var script_path = location.pathname;
-  apps.setupApp(appOptions);
-  appOptions.showInstructionsWrapper(dashboard.dialog.showInstructionsDialog);
-  function getResult() {
-    return {
-      response: 'ok',
-      result: true
-    };
-  }
-  var options = appOptions.level;
+= render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
 
 #external
   / Load the external file through ActionView templates.
