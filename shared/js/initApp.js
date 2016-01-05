@@ -1,8 +1,6 @@
 // TODO (brent) - way too many globals
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
-console.log('hello from init app2');
-
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
