@@ -1796,7 +1796,7 @@ Studio.init = function(config) {
     assetUrl: studioApp.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlsRow = require('./extraControlRows.html.ejs')({
+  var extraControlRows = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     finishButton: !finishButtonFirstLine && showFinishButton
   });
@@ -1807,7 +1807,7 @@ Studio.init = function(config) {
       localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
-      extraControlRows: extraControlsRow,
+      extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
