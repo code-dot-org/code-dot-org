@@ -4,7 +4,7 @@
 'use strict';
 
 var build_commands = require('./build-commands');
-var program = require('commander');
+var commander = require('commander');
 
 /** @const {string} */
 var SRC_PATH = './src/js/';
@@ -26,14 +26,14 @@ var FILES = [
 
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
-program
+commander
     .option('--min', 'Build minified output', false)
     .parse(process.argv);
 
 // Run build (exits on failure)
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
-  build_commands.browserifyCommand(SRC_PATH, BUILD_PATH, FILES, program.min)
+  build_commands.browserifyCommand(SRC_PATH, BUILD_PATH, FILES, commander.min)
 ]);
 
 console.log("code-studio js built\n");
