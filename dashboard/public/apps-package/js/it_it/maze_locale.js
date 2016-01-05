@@ -201,7 +201,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveWestTooltip":function(d){return "Sposta di una casella verso ovest."},
 "nectar":function(d){return "prendi il nettare"},
 "nectarRemaining":function(d){return "nettare"},
-"nectarTooltip":function(d){return "Prende il nettare dal fiore"},
+"nectarTooltip":function(d){return "Raccoglie il nettare dal fiore"},
 "nextLevel":function(d){return "Complimenti! Hai completato questo esercizio."},
 "no":function(d){return "No"},
 "noPathAhead":function(d){return "la strada è bloccata"},

@@ -233,7 +233,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_moveSlow_description":function(d){return "Ubah karakter-karakter untuk bergerak lebih lambat."},
 "dropletBlock_moveSlow_param0":function(d){return "tipe"},
 "dropletBlock_moveSlow_param0_description":function(d){return "The type of characters to be changed ('random', 'man', 'pilot', 'pig', 'bird', 'mouse', 'roo', or 'spider')."},
-"dropletBlock_moveNormal_description":function(d){return "Changes a set of characters to move at a normal speed."},
+"dropletBlock_moveNormal_description":function(d){return "Mengubah satu set karakter untuk bergerak dengan kecepatan normal."},
 "dropletBlock_moveNormal_param0":function(d){return "tipe"},
 "dropletBlock_moveNormal_param0_description":function(d){return "The type of characters to be changed ('random', 'man', 'pilot', 'pig', 'bird', 'mouse', 'roo', or 'spider')."},
 "dropletBlock_moveFast_description":function(d){return "Changes a set of characters to move quickly."},

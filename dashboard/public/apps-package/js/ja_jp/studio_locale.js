@@ -567,7 +567,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "saySpriteChoices_14":function(d){return "悪くないです"},
 "saySpriteChoices_15":function(d){return "頑張ってください"},
 "saySpriteChoices_16":function(d){return "はい"},
-"saySpriteChoices_17":function(d){return "いいえ"},
+"saySpriteChoices_17":function(d){return "ちがいます"},
 "saySpriteChoices_18":function(d){return "オッケー"},
 "saySpriteChoices_19":function(d){return "いい投球です！"},
 "saySpriteChoices_20":function(d){return "良い1日を"},

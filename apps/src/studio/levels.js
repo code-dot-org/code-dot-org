@@ -1837,6 +1837,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     "setSpritePosition": { 'category': 'Play Lab', noAutocomplete: false  },
     "setSpriteSpeed": { 'category': 'Play Lab', noAutocomplete: false  },
     "setSpriteEmotion": { 'category': 'Play Lab', noAutocomplete: false  },
+    "setSpriteSize": { 'category': 'Play Lab', noAutocomplete: false  },
     "throwProjectile": { 'category': 'Play Lab', noAutocomplete: false  },
     "vanish": { 'category': 'Play Lab', noAutocomplete: false  },
     "onEvent": { 'category': 'Play Lab', noAutocomplete: false  },
