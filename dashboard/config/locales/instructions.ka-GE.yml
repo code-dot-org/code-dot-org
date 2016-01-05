@@ -2953,9 +2953,9 @@
         ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ
         არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+        ფუტკარს ახლა მხოლოდ ნექტარი სურს.
+        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს.
+        თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       Ryan Test Locked Blocks_instruction: ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ
         ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
@@ -4537,6 +4537,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4544,6 +4547,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
@@ -4722,9 +4726,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: მოდელი
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis

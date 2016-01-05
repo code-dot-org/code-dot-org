@@ -28,6 +28,8 @@
     code:
       label: 'Voeg een leraar toe:'
       placeholder: Sectiecode (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: voeg leraar toe
   add_hint_form:
     placeholder: Voer hier uw hint
@@ -304,9 +306,8 @@
       remove: Weet je zeker dat je deze leraar wilt verwijderen?
     students:
       dashboard: Leerkrachten Dashboard
-    user_not_found: De leraar of leerling kan niet worden gevonden
-    student_teacher_disassociated: '%{teacher_name} is verwijderd als een leraar voor
-      %{student_name}'
+    user_not_found: De leerkracht is niet gevonden.
+    student_teacher_disassociated: Je hebt %{teacher_name} verwijderd als jouw leerkracht.
     panel:
       answer_viewer: Antwoord Viewer
       student: Leerling
@@ -392,7 +393,7 @@
   share:
     title: Leer meer op Code Studio
     description: Iedereen kan informatica leren. Maak games, apps en kunst met code.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Probeer een Hour of Code!
   gender:
     male: Man
     female: Vrouw
@@ -409,13 +410,22 @@
       bij het samenstellen van deze opdracht.
     help_from_html_old: Ontwikkelaars van Google, Microsoft, Facebook en Twitter hebben
       bijgedragen aan het samenstellen van deze opdrachten.
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Alle
-      rechten voorbehouden.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Alle rechten voorbehouden.<br/>Plants vs. Zombies;&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Alle rechten voorbehouden. <br />Plants vs. Zombies &#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden
+    art_from_html: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle rechten
+      voorbehouden. < br / >Star Wars &#8482; &copy; %{current_year} Disney en Lucasfilm.
+      Alle rechten voorbehouden. < br / >Frozen&#8482; &copy; %{current_year} Disney.
+      Alle rechten voorbehouden. < br / >Ice Age &#8482; &copy; %{current_year} 20th
+      Century Fox. Alle rechten voorbehouden. < br / >Angry Birds &#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle rechten voorbehouden. < br / >Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. < br
+      / >The Amazing World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle rechten
+      voorbehouden. Star Wars &#8482; &copy; %{current_year} Disney en Lucasfilm.
+      Alle rechten voorbehouden. Frozen&#8482; &copy; %{current_year} Disney. Alle
+      rechten voorbehouden. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
+      Alle rechten voorbehouden. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Alle rechten voorbehouden. Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. The Amazing
+      World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
     powered_by_aws: Aangedreven door Amazon webservices
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
       Hour of Code&reg; zijn handelsmerken van Code.org.'
@@ -433,7 +443,7 @@
     built_on_code_studio: Gemaakt met Code Studio
     make_my_own_app: Maak mijn eigen app
     how_it_works: Hoe het werkt
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Probeer een Hour of Code!
   reference_area:
     title: Hulp nodig?
     subtitle: Bekijk deze video's en hints

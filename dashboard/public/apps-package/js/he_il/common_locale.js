@@ -401,5 +401,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "wantToLearn":function(d){return "רוצה ללמוד לתכנת?"},
 "watchVideo":function(d){return "צפה בסרטון"},
 "when":function(d){return "מתי"},
-"whenRun":function(d){return "מתי לרוץ"},
+"whenRun":function(d){return "התחל ריצה"},
 "workspaceHeaderShort":function(d){return "סביבת העבודה: "}};

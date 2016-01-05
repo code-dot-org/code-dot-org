@@ -3,7 +3,7 @@ gl:
     unplugged:
       Unplug1:
         title: Introdución á informática
-        desc: Esta lección vai introducir o concepto de Informática e explicar o que fai un informático. Tamén vai dar aos alumnos a oportunidade de asumir o papel dun informático. Ao final da actividade, cada alumno vai levar para casa unha lembranza do que aprenderon. Pode pensar en non ensinar aos nenos máis cativos as palabras do vocabulário relacionado ás leccións a seguir, pero presentalas de forma divertida e descontraída agora é moito máis produtivo que esperar oportunidades futuras.
+        desc: Esta lección vai introducir o concepto de Informática e explicar o que fai un informático. Tamén vai dar aos alumnos a oportunidade de asumir o papel dun informático. Ao final da actividade, cada alumno vai levar para casa unha lembranza do que aprendeu. Pode pensar en non ensinar aos nenos máis cativos as palabras do vocabulário relacionado ás leccións a seguir, pero presentalas de forma divertida e descontraída agora é moito máis produtivo que esperar oportunidades futuras.
         pdfs:
           - unplug1
         video: Unplug1
@@ -88,7 +88,7 @@ gl:
         desc: Esta clase introduce o concepto de programación de bucles (loops, ou instrucións repetidas) por medio dunha actividade de danza. Os alumnos van aprender unha coreografia simple e daquela se lles dirá que a repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de relevos
+        title: Programación por relevos
         desc: 'Os alumnos participan dunha carreira de relevos na cal deben atravesar o patio para escribir un algoritmo baseado nunha imaxe en "papel cadriculado de programación". Eles só poden escribir unha instrución por vez, e, se houbese un erro nalgún lugar teñen que eliminar todo e refacer os pasos a partir daquel punto.'
         video: C2_relay_programming
       Conditionals:
@@ -159,7 +159,7 @@ gl:
         desc: A abstracción é unha das habilidades máis importantes que un informático debe coñecer. Esa actividade fará que os seus alumnos analicen as diferenzas entre historias para que poidan, entón, abstraelas. Esas historias abstraídas tórnanse modelos para novas historias tolas e divertidas.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: 'Diversión con bucles "for"'
+        title: 'Diversión con bucles "para" (for)'
         desc: Sabemos que os bucles nos permiten facer algo repetidas veces, pero agora imos aprender como usalos con estruturas adicionais.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
@@ -172,7 +172,7 @@ gl:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Vídeo xogos e planos cartesianos
-        desc: Descubra como os vídeo xogos cos que gosta xogar son, na verdade, conducidos pola álxebra! Explore como as expresións algébricas e o plano cartesiano poden nos axudar a entender como funcionan os vídeo xogos e entón comece a planear o xogo que vai crear.
+        desc: Descubre como os vídeo xogos cos que gostas xogar son, na verdade, conducidos pola álxebra! Explora como as expresións alxebraicas e o plano cartesiano poden nos axudar a entender como funcionan os vídeo xogos e entón comeza a planear o xogo que vas crear.
         video: alg_11_coordinate_plane
       Contracts:
         title: Contratos, dominio e imaxe
@@ -192,5 +192,5 @@ gl:
         video: alg_10_conditionals
       CollisionDetection:
         title: Detección de colisións e o teorema de Pitágoras
-        desc: Determinar cando os obxectos na pantalla se tocan é un aspecto importante na maioría dos xogos. Nesta lección, imos ver como o teorema de Pitágoras e a fórmula da distancia poden ser usados para medir a distancia entre dous puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo) están se tocando.
+        desc: Determinar cando se tocan os obxectos na pantalla é un aspecto importante na maioría dos xogos. Nesta lección, imos ver como o teorema de Pitágoras e a fórmula da distancia poden ser usados para medir a distancia entre dous puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo) están se tocando.
         video: alg_16_biggame_collision_detection

@@ -28,6 +28,8 @@
     code:
       label: 'Dodaj učitelja/ico:'
       placeholder: Koda razdelka (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Dodaj učitelja/ico
   add_hint_form:
     placeholder: Prosim vnesite vaš namig tukaj

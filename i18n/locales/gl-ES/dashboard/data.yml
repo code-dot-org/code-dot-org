@@ -68,7 +68,7 @@ gl:
           desc: Labirinto (beta)
           MazeStep: Paso da etapa
         wordsearch:
-          desc: Soletrando (beta)
+          desc: Abella que Soletrea (beta)
           WordSearch: 1.ª ETAPA
     game:
       name:
@@ -115,11 +115,11 @@ gl:
     concept:
       description:
         sequence: Secuencia
-        if: Bloque Se
-        if_else: Bloque Se-Senón
-        loop_times: Bloque Repetir Veces
-        loop_until: Bloque Repetir Até
-        loop_while: Bloque Mentres
+        if: 'Bloque "Se" (if)'
+        if_else: 'Bloque "Se-Senón" (if-else)'
+        loop_times: 'Bloque "Repetir Veces"'
+        loop_until: 'Bloque "Repetir Até" (Until)'
+        loop_while: 'Bloque "Mentres" (While)'
         loop_for: Bloque Contador
         function: Funcións
         parameters: Funcións con parámetros
@@ -207,7 +207,7 @@ gl:
         turtle_3_7: 'Agrega unha entrada chamada "altura" para "debuxar unha casa" e constrúe unha casa grande para o elefante ( con arestas de 150 píxeles de lonxitude)'
         turtle_3_8: 'Modifique "debuxar unha casa" para que eu termine de debuxar unha nova casa no recanto inferior dereito. Use esa función modificada para debuxar tres casas.'
         turtle_3_9: 'Podes recrear a función "debuxar unha casa" sen axuda? Tenta, e despois debuxa unha fileira de casas.'
-        turtle_3_10: Aprendiche muito! Agora, xa consegues debuxar o que quixeres. Tenta debuxar unha estrela, ou unha espiral ou un floco de neve extravagante.
+        turtle_3_10: Aprendiches muito! Agora, xa consegues debuxar o que quixeres. Tenta debuxar unha estrela, ou unha espiral ou un floco de neve extravagante.
         maze_karel_debug_seq_1: Benvido á depuración! O meu código non funciona ben. Consegues detectar o problema e corrixilo para que eu poida ficar co meu campo plano e preparado para comezar a plantar?
         maze_karel_debug_seq_2: O que hai de errado neste programa? Como debes correxilo para que eu poida remover aquel monte?
         maze_karel_debug_repeat: Corrixe este programa por min para que o meu campo fique plano e bonito.
@@ -225,7 +225,7 @@ gl:
         turtle_5_6: Tenta executar este programa e fai as alteracións para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo por algo totalmente distinto)
         maze_3_1: Eu preciso de conseguir aquel porco! Teclea chamadas move(); para eu poder ter os meus ovos de volta.
         maze_3_2: Escríbeme un programa para que eu poida facer todo o camiño até ao porco.
-        maze_3_3: Como debo chegar ao porco? Asegurate que non vas contra a caixa de TNT!
+        maze_3_3: Como debo chegar ao porco? Asegúrate que non vas contra a caixa de TNT!
         maze_3_4: Argh! Escríbeme un programa que me faga pasar polo TNT e chegar ao porco.
         bounce_1: 'Conecte un bloque ao bloque "cando premer na frecha para a esquerda" e clic en "Executar". Mova a raqueta usando a frecha para a esquerda para alcanzar o obxectivo final.'
         bounce_2: 'Conecte un bloque aos bloques "cando premer na frecha para a dereita" e "cando premer na frecha para a esquerda". Mova a raqueta para alcanzar ambos os obxectivos finais.'
@@ -380,7 +380,7 @@ gl:
         Unplug6: Condicionais
         Unplug7: Composición
         Unplug8: Abstracción
-        Unplug9: Programación de relevos
+        Unplug9: Programación por relevos
         Unplug10: Internet
         Unplug11: Sumario
         C1_happy_maps_unplugged: Mapas Felices
@@ -393,21 +393,21 @@ gl:
         C1_bee_level_intro: Introdución ao nivel da abella
         C1_artist_intro: Introdución ao artista
         C1_spelling_bee_intro: Introdución ao soletrando
-        C1_zuck_repeat_loop: Bucles de Labirinto
-        C1_bee_loops: Bucles de Abella
-        C1_maze_loops: Bucles de Labirinto
+        C1_zuck_repeat_loop: Bucles do Labirinto
+        C1_bee_loops: Bucles da Abella
+        C1_maze_loops: Bucles do Labirinto
         C1_playlab_storytelling: 'Laboratorio - Cree unha historia'
         C1_planting_seed: Plantando unha semente
         C1_building_foundation: Construíndo unha base
         C1_going_places_safely: Ir a Sitios en modo Seguro
         C2_maze_intro: Introdución ao labirinto
         C2_artist_intro: Introdución ao artista
-        C2_zuck_repeat_loop: Bucles de Labirinto
+        C2_zuck_repeat_loop: Bucles do Labirinto
         C2_artist_loops: Bucles do Artista
-        C2_artist_debugging: Debug do Artista
-        C2_bee_loops: Bucles de Abella
-        C2_bee_debugging: Depuración Abella
-        C2_bee_conditionals: Condicións da Abella
+        C2_artist_debugging: Depuración (Debug) do Artista
+        C2_bee_loops: Bucles da Abella
+        C2_bee_debugging: Depuración (debug) da Abella
+        C2_bee_conditionals: Condicionais da Abella
         C2_playlab_createstory: 'Laboratorio - Cree unha historia'
         C2_graph_paper: Programación en Papel Cadriculado
         C2_conditionals_with_cards: Condicionais
@@ -416,16 +416,16 @@ gl:
         C2_paper_airplanes: Avións de papel
         C2_digital_footprint: A túa pegada dixital
         C2_digital_footprint_v2: A túa pegada dixital
-        C3_maze_level_4: Bucles de Labirinto
+        C3_maze_level_4: Bucles do Labirinto
         C3_artist_intro: Introdución ao artista
         C3_artist_functions: Funcións de artista
-        C3_bee_functions: Funcións Abella
-        C3_bee_conditionals: Condicións da Abella
+        C3_bee_functions: Funcións da Abella
+        C3_bee_conditionals: Condicionais da Abella
         C3_maze_conditionals: Condicionais de Labirinto
         C3_artist_nested_loops: Bucles aniñados
         C3_farmer_while: Bucles mentres
         C3_bee_nested_loops: Bucles aniñados
-        C3_bee_debugging: Depuración Abella
+        C3_bee_debugging: Depuración (debug) da Abella
         C3_bounce: Rebote
         C3_playlab_create_game: 'Laboratorio - Cree un xogo'
         C3_computational_thinking: Pensamento computacional
@@ -436,12 +436,12 @@ gl:
         C3_songwriting_with_parameters: Escribindo unha canción con parámetros
         C4_intro: Introdución
         C4_loops_zombie: Bucles
-        C4_bee_conditional: Condicións da Abella
+        C4_bee_conditional: Condicionais da Abella
         C4_variables_artist: 'Variábeis - Artista'
         C4_variables_playlab: 'Variábeis - Laboratorio'
-        C4_for_loops: 'Bucles "For"'
-        C4_for_loops_bee: 'Bucles "For"'
-        C4_for_loops_no_bee: 'Bucles "For"'
+        C4_for_loops: 'Bucles "Para" (For)'
+        C4_for_loops_bee: 'Bucles "Para" (For)'
+        C4_for_loops_no_bee: 'Bucles "Para" (For)'
         C4_math_artist: Programación do Artista con matemáticas
         C4_function_edit: Editando funcións
         C4_function_create: Creando funcións
@@ -450,7 +450,7 @@ gl:
         C4_unplugged_algorithms: Algoritmos con tangrams
         C4_unplugged_madlibs: Bibliotecas tolas
         C4_unplugged_variables: Variábeis en sobres
-        C4_unplugged_forloops: 'Bucles "For"'
+        C4_unplugged_forloops: 'Bucles "Para" (For)'
         C4_unplugged_parameters: Composición de música con parámetros
         C4_unplugged_binary: Binario
         frozen_intro: Introdución á Hora de Código

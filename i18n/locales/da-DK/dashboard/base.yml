@@ -28,6 +28,8 @@ da:
     code:
       label: 'Tilføje en lærer:'
       placeholder: Afsnitskode (SOVS)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -255,8 +257,8 @@ da:
       remove: Er du sikker på, at du vil fjerne denne lærer?
     students:
       dashboard: Gå til lærer Dashboard
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Læreren kunne ikke findes.
+    student_teacher_disassociated: 'Du har fjernet %{teacher_name} som din lærer.'
     panel:
       answer_viewer: Svar Viser
       student: Elev
@@ -330,7 +332,7 @@ da:
   share:
     title: Lære om Code Studio
     description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time med kode!
   gender:
     male: Mand
     female: Kvinde
@@ -342,7 +344,7 @@ da:
     thank_you: 'Vi takker vores <a href="https://code.org/about/donors"> støtter</a>, <a href="https://code.org/about/partners"> partnere</a>, vores <a href="https://code.org/about/team">team</a>, vores video stemmer og vores <a href="https://code.org/about/advisors"> rådgivere</a> for deres støtte til at skabe Code Studio.'
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
     help_from_html_old: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget til at skabe denne øvelse.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheder forbeholdes. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm. Alle rettigheder forbeholdes. < br / > Frozen &#8482; © %{current_year} Disney. Alle rettigheder forbeholdes. < br / > Ice Age &#8482; © %{current_year} 20th Century Fox. Alle rettigheder forbeholdes. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Alle rettigheder forbeholdes. < br / > Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheder forbeholdes. < br / > The Amazing World of Gumball er varemærke og © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
@@ -360,7 +362,7 @@ da:
     built_on_code_studio: Bygget på Code Studio
     make_my_own_app: Byg min egen app
     how_it_works: Sådan fungerer det
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time med kode!
   reference_area:
     title: Brug for hjælp?
     subtitle: Se disse videoer og tips

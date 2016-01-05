@@ -242,25 +242,22 @@ ar:
         image: |
           notes/hoc5_3.jpg
           
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: 'تماما مثل قطعة "اذا"، يمكننا أن نضع قطع "اذا والا" داخل قطع "أكرر" بحيث تستمر الزومبي بمتابعة التقدم وسوف تستمر قطعة "اذا والا" من التحقق إذا كان هناك أي مكان أخر للإنعطاف.'
       4:
         image: |
           notes/hoc5_4.jpg
           
-        text: Now, get those zombies where they belong!
+        text: الآن، وصل هؤلاء الزومبي إلى حيث ينتمون!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: 'بيان إذا-آخر هو قرار بين شيئين. دعونا نرى كيف يمكننا استخدام عبارة إذا-آخر مع شركائنا الأصدقاء "Scrat" السنجاب.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'هذه الكتلة تبدو نفس كتلة "لو"، ولكن هناك جزءا إضافية في أسفل التي تقول "آخر". إذا وضعت كتلة "المضي قدما" حيث تقول "لا" و كتلة "الاتجاه يسارا" حيث تقول "آخر"، وهذا يعني "Scrat" السنجاب سوف يتحرك إلى الأمام إذا كان هناك مسار أو طريق مفتوح. إذا لم يكن هناك مسار للتقدم، سوف يتحول "Scrat" إلى اليسار.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'إتخاذ القرار والقيام بأحد الإجراءات الأثنين بناء على هذا القرار. وتماما مثل كتلة "لو"، يمكنك وضع كتل "إذا-آخر" داخل كتلة "تكرار".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: "Now let's help Scrat the squirrel get that acorn!"

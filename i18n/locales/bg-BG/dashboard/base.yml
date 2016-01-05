@@ -28,6 +28,8 @@ bg:
     code:
       label: 'Добавете учител:'
       placeholder: Код по раздел(ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Добавяне на учител
   add_hint_form:
     placeholder: Моля, въведете вашата препоръка
@@ -253,8 +255,8 @@ bg:
       remove: Наистина ли искате да премахнете този учител?
     students:
       dashboard: Отидете в Таблото на учителя
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Учителят не може да бъде намерен.
+    student_teacher_disassociated: 'Премахнати сте%{teacher_name} от учителя си.'
     panel:
       answer_viewer: Преглед на отговора
       student: Ученик
@@ -328,7 +330,7 @@ bg:
   share:
     title: Обучавайте се в Code Studio
     description: Всеки може да учи компютърни науки. Програмирай игри, приложения и изкуство с код.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Опитайте Hour of Code!
   gender:
     male: Мъж
     female: Жена
@@ -340,8 +342,8 @@ bg:
     thank_you: 'Благодарим на нашите <a href="https://code.org/about/donors"> дарители</a>, <a href="https://code.org/about/partners"> партньори</a>, нашия <a href="https://code.org/about/team"> разширен екип</a>, нашите видео гласове и нашите <a href="https://code.org/about/advisors"> образователни съветници</a> за подкрепата им в създаването на Code Studio.'
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на този урок.
     help_from_html_old: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на тези материали.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Всички права запазени. < br / > Междузвездни войни &#8482; © %{current_year} Дисни и Lucasfilm. Всички права запазени. < br / > замразени &#8482; © %{current_year} Disney. Всички права запазени. < br / > Ледена епоха &#8482; © %{current_year} 20th Century Fox. Всички права запазени. < br / > ядосан птици &#8482; © 2009-%{current_year} Rovio Ентъртеймънт Оод Всички права запазени. < br / > растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк. Всички права запазени. < br / > Невероятният свят на Гъмбол е запазена марка и © 2015 Картун Нетуърк.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Всички права запазени. Междузвездни войни &#8482; © %{current_year} Дисни и Lucasfilm. Всички права запазени. Замразени &#8482; © %{current_year} Disney. Всички права запазени. Ледена епоха &#8482; © %{current_year} 20th Century Fox. Всички права запазени. Ядосан птици &#8482; © 2009-%{current_year} Rovio Ентъртеймънт Оод Всички права запазени. Растения срещу зомбита &#8482; © %{current_year} Electronic Arts Инк. Всички права запазени. Невероятният свят на Гъмбол е запазена марка и © 2015 Картун Нетуърк.'
     powered_by_aws: Създадено с Amazon Web Services
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE logo и Hour of Code&reg; са търговски марки на Code.org.'
     copyright: Авторско право
@@ -358,7 +360,7 @@ bg:
     built_on_code_studio: Направено в Студиото по кодиране
     make_my_own_app: Направих собствено приложение
     how_it_works: Как работи
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Опитайте Hour of Code!
   reference_area:
     title: Нужда от помощ?
     subtitle: Вижте тези клипове и съвети

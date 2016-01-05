@@ -1252,38 +1252,37 @@ fr:
         text: "Une variable est un conteneur, dans que vous pouvez stocker une valeur. Lorsque vous utilisez cette variable dans un algorithme, il ouvre le conteneur et se penche sur la valeur à l'intérieur. Cela vous permet d'écrire des algorithmes intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
         image: notes/C4_variables_artist_2.png
-        text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
+        text: "Par exemple, si vous vouliez écrire un algorithme permettant de dire joyeux anniversaire, vous l'utiliserez 10 fois ! pour mon petit frère, c'est très bien maintenant, mais quand je le lance l'année prochaine je voudrais lui dire, joyeux anniversaire, vous l’exécuterez une 11 fois ! Je pourrais créer une variable appelée âge pour stocker l'âge de mon frère et écrire mon algorithme pour dire joyeux anniversaire, vous avez « âge » à la place. Parce que la variable peut changer, chaque année je peux mettre à jour la variable « âge » égale à « âge » plus 1."
       3:
         image: notes/C4_variables_artist_3.png
-        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+        text: "Dans ce puzzle, nous allons utiliser une variable qui définit la longueur de la ligne de que notre artiste dessine. Par la suite dans notre code, le bloc avant déménagement se penchera sur cette variable de longueur pour voir quelle valeur vous avez mis à l'interieur."
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: "Une variable est un conteneur, dans que vous pouvez stocker une valeur. Lorsque vous utilisez cette variable dans un algorithme, il ouvre le conteneur et se penche sur la valeur présente à l'intérieur. Cela vous permet d'écrire des algorithmes intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
         image: notes/C4_variables_playlab_2.png
-        text: "Now you're going to try playlab where you are given different games and you can change the values of variables like speed, height, score, in order to change the game. You won't have to change the algorithm of the game to change how it plays, just the variable."
+        text: "Maintenant, vous allez essayer le playlab où vous trouverez différents jeux et vous pouvez modifier les valeurs des variables comme la vitesse, hauteur, score, afin de changer le jeu. Vous n'aurez pas à changer l'algorithme du jeu pour changer comment il se joue, juste la variable."
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in many different ways. One way that you can use a variable is to store page numbers of a book. A user can increase and decrease the size of the font on a page. Based on the font size, the number of pages in the book can change. We can adjust it by storing the number of pages in the variable.
+        text: "Dans mon travail pour Kindle et sur des rayons x pour les livres, nous appliquons des variables de différentes manières. Une façon que vous pouvez utiliser une variable consiste à stocker les numéros de page d'un livre. Un utilisateur peut augmenter et diminuer la taille de la police sur une page. Basé sur la taille de la police, le nombre de pages dans le livre peut changer. Nous pouvons ajuster il en mémorisant le nombre de pages dans la variable."
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
         text: "À présent, nous allons apprendre une chose que tous les programmeurs de jeu utilisent tous les jours. On appelle ça des événements. Un événement dit à ton programme d'écouter lorsque quelque chose se produit. Quand cette chose arrive, il effectue une action. Quelques exemples d'évènements sont l'écoute des clics de souris, une touche fléchée, ou un effleurement de l'écran."
       2:
         image: notes/infinity_playlab_events_2.png
-        text: |-
-          Here, we're going to make Baymax move up to touch Hiro and move down to touch Rapunzel when the player uses the up/down arrow keys or the up/down buttons. We'll use the when up arrow block and attach the move actor up block to it, so when the player presses the up arrow key, everything attached to the "when up arrow" block is run. We'll do the same thing to make Baymax move down. Step by step your game is getting more interactive.
+        text: "Ici, nous allons faire déplacer Baymax jusqu'à ce qu'il rencontre Hiro et descendre jusqu'à toucher Rapunzel lorsque le joueur utilise le haut/bas touches de direction ou les touches haut/bas. Nous allons utiliser le bloc de flèche et attacher l'acteur de déplacer vers le haut de bloc, donc lorsque le joueur appuie sur la touche flèche haut, tout attaché au « quand flèche vers le haut » est exécuté. Nous ferons la même chose pour faire les Baymax à se déplacer vers le bas. Étape par étape votre jeu devient plus interactif."
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: "So what grade are you in? Second. Tenth grade. First grade. I was in eighth grade when I learned to program. I got my first computer when I was in sixth grade. What gets me excited is being able to fix people's problems. You can express yourself, you can build things from an idea."
+        text: "Alors à quelle niveau vous êtes ? débutant. J'ai été en Cm2 quand j'ai appris à programmer. J'ai eu mon premier ordinateur quand j'étais en sixième. Ce qui m'excite c'est être en mesure de résoudre les problèmes du peuple. Vous pouvez vous exprimer, vous pouvez construire des choses à partir d'une idée."
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: "Computer science is the basis for a lot of the things that college students and professionals will do for the next twenty or thirty years. I like programming because I like helping people. I get the opportunity to build something that's gonna make people's lives easier. I think it's the closest thing we have to a superpower. Getting started is the most important part. I'm a beginner myself and I want you to learn with me."
+        text: "L'informatique est la base pour beaucoup de choses que les professionnels et étudiants du Collège vont faire pour les vingt ou trente prochaines années. J'aime la programmation parce que j'aime aider les gens. J'ai l'occasion de construire quelque chose qui va rendre la vie plus facile. Je pense que c'est la chose la plus proche qu'il faut une superpuissance. La mise en route est la partie la plus importante. Je suis un débutant moi-même et je veux que l'on apprenne ensemble."
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: "I'm John Vechey, I'm one of the co-founders of PopCap Games. We make games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games isn't how perfect your code is, it's not how perfect your art is, it's about how does it feel and how much fun it is. You can only get that sense by trying it, by doing it, by learning and adapting and iterating your own skills of making games."
+        text: "Mon nom est John Vechey, je suis l'un des co-fondateurs de PopCap Games. Nous faisons des jeux comme Bejeweled, les Plants vs Zombies et Peggle. Beaucoup de jeux ne sont pas parfait comment votre code, ce n'est pas comment parfait votre art , il s'agit de ce que ça fait et combien c'est amusement. Vous ne pouvez obtenir de sens en l'essayant, en le fabriquant, en apprenant et en adaptant mais vos compétences seront la seul chose qui va faire des jeux."
       4:
         image: notes/infinity_playlab_intro_4.png
         text: "Do you have a favorite video game? Well, we're going to take one step towards creating games just like that using Play Lab. Good games have a story and every story has actors. Actors do things like speak, move, and interact with each other. Maybe even score points based on the rules of the game. Today we'll be learning how to do all these things, one by one, with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll build a game from scratch that can be shared and played on a phone."

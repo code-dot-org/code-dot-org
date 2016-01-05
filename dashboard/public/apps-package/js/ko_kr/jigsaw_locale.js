@@ -157,7 +157,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "계속하기"},
 "nextLevel":function(d){return "축하합니다! 퍼즐을 해결했습니다."},
 "no":function(d){return "아니요"},
-"numBlocksNeeded":function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."},
+"numBlocksNeeded":function(d){return "%1 개의 블록으로 퍼즐을 해결할 수 있습니다."},
 "reinfFeedbackMsg":function(d){return "다시 시도하기 버튼을 눌러 게임을 다시 시작할 수 있습니다."},
 "share":function(d){return "공유하기"},
 "shareGame":function(d){return "게임 공유하기:"},

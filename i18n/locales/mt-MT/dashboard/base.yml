@@ -28,6 +28,8 @@ mt:
     code:
       label: 'Żid Għalliem:'
       placeholder: Sezzjoni kodiċi (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Żid għalliem
   add_hint_form:
     placeholder: Daħħal suġġeriment tiegħek hawn

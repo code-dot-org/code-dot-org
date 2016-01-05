@@ -680,6 +680,7 @@ es:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1234,6 +1235,7 @@ es:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1478,13 +1480,13 @@ es:
           Gumball Play Lab: Laboratorio de juego de Gumball
         starwars:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
-          description_short: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
-          description: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
+          description: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
           Hour of Code 2015: Hora del Código 2015
         starwarsblocks:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
-          description_short: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
-          description: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+          description_short: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
+          description: Aprende a programar droides y crea tu propio juego de Star Wars en una lejana galaxia muy, muy lejana.
           Hour of Code 2015: Hora del Código 2015
         minecraft:
           title: Minecraft

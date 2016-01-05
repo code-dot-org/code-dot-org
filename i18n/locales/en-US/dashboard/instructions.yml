@@ -1559,8 +1559,10 @@ en:
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
       U4 - add createRecord to contacts App_instruction: crwdns55808:0crwdne55808:0
       U4 - Add Row By Hand_instruction: crwdns55809:0crwdne55809:0
+      U4 - Charts - drawChartFromRecords 1_instruction: crwdns55881:0crwdne55881:0
       U4 - Charts - drawChartsFromRecords 1_instruction: crwdns55810:0crwdne55810:0
       U4 - Charts - Import Data 1_instruction: crwdns55811:0crwdne55811:0
+      U4 - Charts - Line Chart Template_instruction: crwdns55882:0crwdne55882:0
       U4 - Charts - Remixing Apps with Data_instruction: crwdns55812:0crwdne55812:0
       U4 - CreateRecord - 1_instruction: crwdns55162:0crwdne55162:0
       U4 - CreateRecord - 2.5_instruction: crwdns55813:0crwdne55813:0

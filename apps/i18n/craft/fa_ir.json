@@ -75,7 +75,7 @@
   "level6FailureMessage": "بگذارید بلوک در طرح خاک تا کامل کنید پازل را",
   "level7FailureMessage": "Use the \"plant\" command to place crops on each patch of dark tilled soil.",
   "level8FailureMessage": "اگر شما به کریپر بخورید منفجر خواهد شد. حرکت کنید در اطراف انها و به خانه وارد شوید",
-  "level9FailureMessage": "Don't forget to place at least 2 torches to light your way AND mine at least 2 coal.",
+  "level9FailureMessage": "فراموش نکنید که به جای حداقل 2 مشعل راه خود را به نور و معدن حداقل 2 ذغال سنگ است.",
   "minecraftBlock": "بلوک",
   "nextLevelMsg": "{puzzleNumber} پازل تکمیل شد. تبریک میگم!",
   "playerSelectChooseCharacter": "شخصیت خود را انتخاب کنید.",

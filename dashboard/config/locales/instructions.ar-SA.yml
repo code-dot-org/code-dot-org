@@ -348,27 +348,24 @@
       2-3 maze sq12_instruction: |
         هل يمكنك استبدال الاجابة السابقة بدورة
         بإستخدام "مرات التكرار" المربعات البرمجية؟
-      2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 maze sq13_instruction: عزيزي الشخص. انا زومبي. علي... الذهاب... إلى زهرة
+        دوار الشمس. أنشئ حلقة مع مكعب "قم بتكرار حتى".
+      2-3 maze sq14_instruction: هل يمكنك الحصول على زهرة دوار الشمس باستخدام أربعة
+        مكعبات فقط؟
+      2-3 maze sq15_instruction: هل يمكنك الحصول على زهرة دوار الشمس باستخدام أربعة
+        قطع برمجية فقط؟
+      2-3 maze sq16_instruction: حسناً، هذا يبدو مشابهاً، ولكنه مختلف قليلاً. أيمكنك
+        أن تفعل ذلك بإستخدامك 5 قطع برمجية فقط؟
+      2-3 Maze sq2_instruction: تتبع المسار وساعدني بالوصول إلى الخنزير المغفل. تجنّب
+        المتفجرات وإلا سوف يطير الريش!
       2-3 Maze sq3_instruction: ارشدني الى الشر الاخضر (تجنب من مادة تي ان تي)
       2-3 Maze sq4_instruction: |
         التزم الهدوء وساعدني للعثور على الخنزير السيء. وإلا
         قد اصبح غاضباً!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze sq5_instruction: انقلني إلى الخنزير! كم عدد المرات التي لديك لتكرر
+        قطعة برمجية؟
+      2-3 Maze sq6_instruction: 'هل يمكنك استبدال الإجابة السابقة بقطعتي برمجة فقط؟
+        (تلميح: أنشئ حلقة باستخدام قطعة البرمجة "كرر مرات".)'
       2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
       2-3 Maze sq8_instruction: |
         Get me to the pig! (Where is that "repeat times"
@@ -688,7 +685,8 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: هل يمكنك الحصول على زهرة دوار الشمس باستخدام أربعة
+        مكعبات فقط؟
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -4908,6 +4906,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4915,6 +4916,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

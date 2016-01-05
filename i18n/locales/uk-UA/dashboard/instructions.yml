@@ -146,13 +146,13 @@ uk:
       2-3 Maze 12 (copy 2)_instruction: 'Зможеш замінити попередню відповідь лише двома блоками? (Підказка: Створи цикл використовуючи блок "повторити разів".)'
       2-3 Maze 12 (old)_instruction: 'Приведи мене до свині, тепер за допомогою блоку "повторити разів"!'
       2-3 Maze 12_instruction: |-
-        Можеш замінити ці п'ять блоків лише двома? (Підказка: створи цикл використовуючи блоки "повторити разів".)
+        Можеш замінити ці п'ять блоків лише двома? (Підказка: створи цикл використовуючи блоки "повторити".)
       2-3 Maze 13 (old)_instruction: 'Приведи мене до свині, тепер за допомогою блоку "повторювати доки"!'
-      2-3 Maze 13_instruction: Доведи мене до свині використовуючи лише два блоки.
+      2-3 Maze 13_instruction: Доведи мене до свині використовуючи лише два блоки
       2-3 Maze 14 (old)_instruction: 'Доведи мене до свині використовуючи блок "повторювати доки"!'
       2-3 Maze 14_instruction: 'Доведи мене до соняшника! (Де ж ці блоки "повторювати доки", коли вони так потрібні?)'
       2-3 Maze 15 (old)_instruction: 'Доведи мене до свині використовуючи блок "повторювати доки"!'
-      2-3 Maze 15_instruction: Склади два цикли, щоб дійти до свині, використовуючи декілька блоків.
+      2-3 Maze 15_instruction: Використай два цикли, щоб дійти до свині, використовуючи найменшу кількість блоків.
       2-3 Maze 16 (old)_instruction: 'Доведи мене до свині використовуючи блок "повторювати доки"!'
       2-3 Maze 16 before_instruction: Доведи мене до свині.
       2-3 Maze 16_instruction: Доведи мене до соняшника. Застосуй циклічну послідовність!
@@ -1403,9 +1403,9 @@ uk:
       K-1 Bee Assessment 1_instruction: Збери нектар, щоб зробити мед!
       K-1 Bee Assessment 2_instruction: Збери нектар, щоб зробити мед!
       K-1 Bee Loops 1_instruction: Збери нектар, щоб зробити мед!
-      K-1 Bee Loops 10_instruction: Скористайся циклами, щоб зібрати нектар, зробити мед і рухатися!
-      K-1 Bee Loops 11_instruction: 'Оцінювання: Використай цикли, щоб взяти нектар і мед!'
-      K-1 Bee Loops 12_instruction: 'Оцінювання: Скористайся циклами, щоб отримати нектар, мед і рухатися!'
+      K-1 Bee Loops 10_instruction: Збери весь нектар та зроби мед.
+      K-1 Bee Loops 11_instruction: Збери весь нектар та мед!
+      K-1 Bee Loops 12_instruction: Збери весь нектар та мед.
       K-1 Bee Loops 2_instruction: Використай цикл, щоб пересуватись, а потім збери нектар і зроби мед!
       K-1 Bee Loops 3_instruction: Використай цикли, щоб зібрати нектар і зробити мед!
       K-1 Bee Loops 4_instruction: Використай цикли, щоб зібрати нектар, зробити мед і рухатися!
@@ -1929,10 +1929,7 @@ uk:
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Зараз бджолі потрібен тільки нектар. Не всі об'єкти є квітами, тож перевіряй під кожною хмаринкою, чи приховує вона квітку. Якщо так, то можна збирати нектар."
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: "Бджола хоче збирати лише нектар. Пам'ятай, що не всі об'єкти є квітами, тож спершу перевіряй кожну хмаринку, щоб побачити, чи приховує вона квітку. Якщо так, то можна збирати нектар."
       Ryan Test Locked Blocks_instruction: 'Ось функції, яка називається "патрулювати." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -3438,6 +3435,9 @@ uk:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -3445,6 +3445,7 @@ uk:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

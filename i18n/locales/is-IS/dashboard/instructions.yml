@@ -146,13 +146,13 @@ is:
       2-3 Maze 12 (copy 1)_instruction: 'Getur þú nú leyst þetta með aðeins tveimur kubbum? (Vísbending: Búðu til lykkju með "endurtaka" kubbi.)'
       2-3 Maze 12 (copy 2)_instruction: 'Getur þú nú leyst þetta með aðeins tveimur kubbum? (Vísbending: Búðu til lykkju með "endurtaka" kubbi.)'
       2-3 Maze 12 (old)_instruction: 'Komdu mér til svínsins - í þetta sinn með "endurtaka" kubbnum!'
-      2-3 Maze 12_instruction: 'Getur þú skipt þessum fimm kubbum út fyrir aðeins tvo? (Vísbending: Búðu til lykkju með "endurtaka" kubbi.)'
+      2-3 Maze 12_instruction: 'Getur þú skipt þessum fimm kubbum út fyrir aðeins tvo? (Vísbending: Þú þarft að búa til lykkju með "endurtaka" kubbi til að ljúka þessu borði.)'
       2-3 Maze 13 (old)_instruction: 'Komdu mér til svínsins - í þetta sinn með "endurtaka þar til" kubbnum!'
-      2-3 Maze 13_instruction: Komdu mér til svínsins með því að nota bara tvo kubba.
+      2-3 Maze 13_instruction: "Komdu mér til svínsins með því að nota bara tvo kubba.\r\n(Vísbending: Þú verður að nota \"endurtaka\" kubbinn til að ljúka þessu borði)"
       2-3 Maze 14 (old)_instruction: 'Komdu mér til svínsins með "endurtaka þar til" kubbi!'
       2-3 Maze 14_instruction: 'Komdu mér til sólblómsins! (Hvar er þessi "endurtaka" kubbur þegar ég þarf hann?)'
       2-3 Maze 15 (old)_instruction: 'Komdu mér til svínsins með "endurtaka þar til" kubbi!'
-      2-3 Maze 15_instruction: Notaðu tvær lykkjur til að ná svíninu með færri kubbum.
+      2-3 Maze 15_instruction: 'Notaðu tvær "endurtaka" lykkjur til að ná svíninu með sem fæstum kubbum.'
       2-3 Maze 16 (old)_instruction: 'Komdu mér til svínsins með "endurtaka þar til" kubbi!'
       2-3 Maze 16 before_instruction: Komdu mér til svínsins.
       2-3 Maze 16_instruction: Komdu mér til sólblómsins. Settu kubbana í lykkju!
@@ -166,7 +166,7 @@ is:
       2-3 Maze 9_instruction: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)
       2-3 Maze Loops 1_instruction: Getur þú komið mér til svínsins með 5 kubbum?
       2-3 Maze Loops 17_instruction: Komdu mér til sólsblómsins!
-      2-3 Maze Loops 18_instruction: Komdu mér til sólsblómsins!
+      2-3 Maze Loops 18_instruction: "Komdu mér til sólsblómsins!\r\n(Vísbending: Þú verður að nota einn \"endurtaka\" kubb innan í öðrum til að ljúka þessu borði)"
       2-3 Maze Loops 19_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops 20_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops 21_instruction: Komdu mér til sólsblómsins!
@@ -935,17 +935,17 @@ is:
       K-1 Bee Assessment 1_instruction: Sæktu blómasafa til að búa til hunang!
       K-1 Bee Assessment 2_instruction: Sæktu blómasafa til að búa til hunang!
       K-1 Bee Loops 1_instruction: Sæktu blómasafann til að búa til hunang!
-      K-1 Bee Loops 10_instruction: Notaðu lykkjur til að sækja blómasafann, búa til hunang og færa!
-      K-1 Bee Loops 11_instruction: 'Mat: Notaðu lykkjur til að sækja blómasafa og búa til hunang!'
-      K-1 Bee Loops 12_instruction: 'Mat: Notaðu lykkjur til að sækja blómasafa, búa til hunang og hreyfast!'
-      K-1 Bee Loops 2_instruction: Notaðu lykkju til að hreyfast og sæktu svo blómasafann og búðu til hunang!
-      K-1 Bee Loops 3_instruction: Notaðu lykkjur til að sækja blómasafann og búa til hunang!
-      K-1 Bee Loops 4_instruction: Notaðu lykkjur til að sækja blómasafann, búa til hunang og hreyfast!
-      K-1 Bee Loops 5_instruction: Notaðu lykkjur til að sækja blómasafann og búa til hunang!
-      K-1 Bee Loops 6_instruction: Notaðu lykkjur til að sækja blómasafann, búa til hunang og færa!
-      K-1 Bee Loops 7_instruction: Notaðu lykkjur til að sækja blómasafann og búa til hunang!
-      K-1 Bee Loops 8_instruction: Notaðu lykkjur til að sækja blómasafann og búa til hunang!
-      K-1 Bee Loops 9_instruction: Notaðu lykkjur til að sækja blómasafann, búa til hunang og færa!
+      K-1 Bee Loops 10_instruction: Sæktu allan blómasafann og búðu til allt hunangið.
+      K-1 Bee Loops 11_instruction: Náðu í allan blómasafann og hunangið!
+      K-1 Bee Loops 12_instruction: Sæktu allan blómasafann og búðu til allt hunangið.
+      K-1 Bee Loops 2_instruction: 'Notaðu "endurtaka" lykkju til að hreyfast og sæktu svo blómasafann og búðu til hunang!'
+      K-1 Bee Loops 3_instruction: 'Notaðu þrjár "endurtaka" lykkjur til að sækja blómasafann og búa til hunang!'
+      K-1 Bee Loops 4_instruction: 'Notaðu "endurtaka" lykkjur til að sækja blómasafann, búa til hunang og hreyfast!'
+      K-1 Bee Loops 5_instruction: 'Notaðu "endurtaka" lykkjur til að sækja blómasafann og búa til hunang!'
+      K-1 Bee Loops 6_instruction: 'Notaðu "endurtaka" lykkju til að sækja blómasafann, búa til hunang og færa!'
+      K-1 Bee Loops 7_instruction: Sæktu blómasafann og búðu til hunang!
+      K-1 Bee Loops 8_instruction: Sæktu blómasafann og búðu til hunang!
+      K-1 Bee Loops 9_instruction: Sæktu allan blómasafann og búðu til allt hunangið.
       K-1 Bee Loops Assessment 1_instruction: Sæktu blómasafa til að búa til hunang og notaðu lykkjur til að færa!
       K-1 Bee Loops Assessment 2_instruction: Notaðu lykkjur til að sækja blómasafa til að búa til hunang!
       K-1 Bee Puzzle 12_instruction: Sæktu þrjá blómasafa og búðu svo til tvo hunang
@@ -966,35 +966,35 @@ is:
       K-1 Maze Assessment 13_instruction: Matsáfangi
       K-1 Maze Assessment 2_instruction: 'Mat: Komdu mér til svínsins!'
       K-1 maze debug 1_instruction: Breyttu kóðanum svo ég komist til svínka!
-      K-1 maze debug 10_instruction: Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!
-      K-1 maze debug 11_instruction: "Þetta er próf!\r\nLeiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins"
+      K-1 maze debug 10_instruction: Leiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins!
+      K-1 maze debug 11_instruction: "Þetta er próf!\r\nLeiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins"
       K-1 maze debug 2_instruction: Finndu hvað vantar og bættu svo við kubbum til að koma mér til svínsins!
-      K-1 maze debug 3_instruction: Finndu hvað vantar og FJARLÆGÐU svo kubba til að koma mér til svínsins!
+      K-1 maze debug 3_instruction: Eitthvað er ekki í lagi. FJARLÆGÐU kubba til að koma mér til svínsins!
       K-1 maze debug 4_instruction: Farðu yfir þessa kubba og lagaðu þá! Ég held ég sé að fara í öfuga átt.
-      K-1 maze debug 5_instruction: Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!
-      K-1 maze debug 6_instruction: Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!
-      K-1 maze debug 7_instruction: Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!
-      K-1 maze debug 8_instruction: Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!
-      K-1 maze debug 9_instruction: Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!
+      K-1 maze debug 5_instruction: Leiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins!
+      K-1 maze debug 6_instruction: Leiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins!
+      K-1 maze debug 7_instruction: Leiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins!
+      K-1 maze debug 8_instruction: Leiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins!
+      K-1 maze debug 9_instruction: Leiðréttu þetta borð með því að raða og bæta við kubbum svo ég komist til svínsins!
       K-1 Maze debug Assessment 1_instruction: 'Mat - Leiðréttu þetta forrit með því að raða og bæta við kubbum svo ég komist til svínsins!'
       K-1 Maze Loops 1_instruction: Komdu mér til svínsins!
-      K-1 Maze Loops 10_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
-      K-1 Maze Loops 11_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
-      K-1 Maze Loops 12_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
+      K-1 Maze Loops 10_instruction: 'Komdu mér til svínsins! Notaðu "endurtaka" lykkju til að auðvelda það.'
+      K-1 Maze Loops 11_instruction: "Komdu mér til svínsins! \r Það er auðveldara með \"endurtaka\" lykkju."
+      K-1 Maze Loops 12_instruction: 'Komdu mér til svínsins! "Endurtaka" lykkjan gerir það auðveldara.'
       K-1 Maze Loops 2_instruction: 'Notaðu "endurtaka" kubbinn til að koma mér til svínsins!'
-      K-1 Maze Loops 3_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
+      K-1 Maze Loops 3_instruction: 'Komdu mér til svínsins! Gættu þess að nota "endurtaka" lykkjur.'
       K-1 Maze Loops 4_instruction: Komdu mér til svínsins!
-      K-1 Maze Loops 5_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
-      K-1 Maze Loops 6_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
-      K-1 Maze Loops 7_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
-      K-1 Maze Loops 8_instruction: Komdu mér til svínsins! Notaðu endurtekningarlykkju.
+      K-1 Maze Loops 5_instruction: 'Komdu mér til svínsins! Gættu þess að nota "endurtaka" lykkjur.'
+      K-1 Maze Loops 6_instruction: 'Komdu mér til svínsins! Gættu þess að nota "endurtaka" lykkjur.'
+      K-1 Maze Loops 7_instruction: 'Komdu mér til svínsins! Gættu þess að nota "endurtaka" lykkjur.'
+      K-1 Maze Loops 8_instruction: 'Notaðu "endurtaka" lykkjur til að koma mér til svínsins.'
       K-1 Maze Loops 9_instruction: Komdu mér til svínsins!
-      K-1 Maze Loops Assessment 1_instruction: 'Mat: Notaðu lykkjur til að koma mér til svínsins!'
-      K-1 Maze Loops Assessment 2_instruction: 'Mat: Notaðu lykkjur til að koma mér til svínsins!'
+      K-1 Maze Loops Assessment 1_instruction: 'Sjáðu hvað við höfum lært mikið! Notaðu "endurtaka" lykkju til að koma mér til svínsins!'
+      K-1 Maze Loops Assessment 2_instruction: 'Notaðu "endurtaka" lykkjur til að koma mér til svínsins!'
       K-1 Maze Multi 14_instruction: Matsáfangi
       K-1 Maze Multi 15_instruction: Matsáfangi
-      K-1 Maze Sequence Assessment 1_instruction: "Þetta er próf!\r\nFærðu mig í eina átt, svo í aðra, til að koma mér að svíninu"
-      K-1 Maze Sequence Assessment 2_instruction: "Þetta er próf!\r\nFarðu í eina átt, svo í aðra, til að koma mér að svíninu."
+      K-1 Maze Sequence Assessment 1_instruction: "Athugum hvað þú hefur lært!\r\nFærðu mig í eina átt, svo í aðra, til að koma mér til svínsins."
+      K-1 Maze Sequence Assessment 2_instruction: Farðu í eina átt, svo í aðra, til að koma mér að svíninu.
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: 'Velkomin á pítsustað Luigi! Pantaðu pítsu með því að skrifa heiti áleggs í fallið "verð" og það gefur þér verðið. Prófaðu að panta pepperóní (pepperoni) til að byrja með.'
       Luigi's Pizza 2 (copy 1)_instruction: |
@@ -1329,10 +1329,7 @@ is:
       Play Lab Rocket 5_instruction: Miklu betra, en skrifum eitt fall enn með einfaldri hröðun. Í þetta sinn á flaugin að vera komin 15 metra eftir 1 sekúndu, 45 eftir 2, 95 eftir 3 og 165 metra eftir 4 sekúndur.
       Play Lab Rocket Free Play_instruction: 'Frjáls æfing: Gerðu tilraunir með fallið "rocket-height" (hæð-flaugar) til að láta eldflaugina fljúga á mismunandi vegu. Smelltu svo á "Ljúka".'
       Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan Test Locked Blocks_instruction: 'Hér er fallið "rása". Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: Þetta fiðrildi heitir Sammi og leiksvæðið er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.
@@ -2725,6 +2722,9 @@ is:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -2732,6 +2732,7 @@ is:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

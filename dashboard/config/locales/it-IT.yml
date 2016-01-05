@@ -29,6 +29,8 @@
     code:
       label: 'Aggiungi un insegnante:'
       placeholder: Codice Classe (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
@@ -310,9 +312,8 @@
       remove: Sei sicuro di voler rimuovere questo insegnante?
     students:
       dashboard: Vai al Cruscotto di controllo dell'insegnante
-    user_not_found: L'insegnante o lo studente non è stato trovato
-    student_teacher_disassociated: '%{teacher_name} è stato rimosso come insegnante
-      per %{student_name}'
+    user_not_found: L' insegnante non può essere trovato.
+    student_teacher_disassociated: Hai rimosso %{teacher_name} come tuo insegnante.
     panel:
       answer_viewer: Visualizzatore delle risposte
       student: Studente
@@ -403,7 +404,7 @@
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
       artistici con la programmazione.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prova un Ora di Programmazione!
   gender:
     male: Maschile
     female: Femminile
@@ -420,15 +421,22 @@
       Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno
       contribuito a creare questi materiali.
-    art_from_html: |
-      Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Tutti i diritti riservati.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. Tutti i diritti riservati.<br />
-      Frozen&#8482; &amp; &copy; %{current_year} Disney. Tutti i diritti riservati.<br />
-      Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
-      AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br />
-      Plants vs Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti
+      riservati.<br />Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti
+      riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti
+      i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati
+      &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The
+      Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti
+      i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti
+      riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti
+      riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball
+      è un marchio registrato e &copy; 2015 Cartoon Network.
     powered_by_aws: Eseguito su Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org.'
@@ -446,7 +454,7 @@
     built_on_code_studio: Crea in Code Studio
     make_my_own_app: Crea la tua App
     how_it_works: Come funziona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prova un Ora di Programmazione!
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -710,7 +718,7 @@
     edit_project: Modifica progetto
     abuse:
       tos: Questo progetto è stato segnalato per una violazione dei <a href='http://code.org/tos'>
-        Termini di servizio</a> di Code.org e non può essere condivisa con altri.
+        Termini di servizio</a> di Code.org e non può essere condiviso con altri.
       contact_us: Se credi che questo sia un errore, si prega di <a href='https://code.org/contact'>
         contattarci.</a>
       go_to_code_studio: Vai al Code Studio
@@ -721,7 +729,7 @@
           in seria considerazione la vostra segnalazione, indagheremo e prenderemo
           i provvedimenti opportuni.
         validation:
-          email: Si prega di fornire un indirizzo email
+          email: Fornisci per favore un indirizzo di posta elettronica
           age: Si prega di specificare un'età
           abuse_type: Indicate come questo contenuto violi i Termini del servizio
           abuse_detail: Si prega di fornire i dettagli concernenti il contenuto che

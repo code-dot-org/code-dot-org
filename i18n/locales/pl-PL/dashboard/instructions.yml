@@ -34,20 +34,20 @@ pl:
       2-3 Artist Free Play_instruction: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Functions 1_instruction: 'Cześć. Mnie jest zombie artysta. Mnie podoba się rysowanie! Pomóż mi narysować kwadratowe okulary.  Wskazówka: połączenie między szkłami okularów jest o 25 pikseli krótsze niż wielkość kwadratu.'
       2-3 Artist Functions 10_instruction: 'Oto dwie funkcje, jedna do rysowania dużego trybu ("big gear"), a druga do rysowania małego trybu ("small gear"). Użyj ich, by narysować wnętrze maszyny!'
-      2-3 Artist Functions 11.5_instruction: 'Tutaj jest ta sama funkcja "draw a hexagon" (narysuj sześciokąt). Co się stanie, jeśli obrócisz się tylko o 60 stopni w każdym obrocie pętli?'
-      2-3 Artist Functions 11_instruction: 'Zmieniliśmy nazwę funkcji "draw a square" (narysuj kwadrat) na "draw a hexagon" (narysuj sześciokąt), ale ona nadal rysuje tylko kwadraty! Czy mógłbyś zmodyfikować funkcję "draw a hexagon", by rysowała sześciokąt o boku 50 pikseli, i wykonaj rysunek używając tej funkcji?'
-      2-3 Artist Functions 12_instruction: 'Funkcje są naprawdę świetne do rysowania złożonych rzeczy wiele razy. Czy mógłbyś użyć funkcji "draw a flower" (narysuj kwiat), aby wypełnić resztę pola plantatora? (Wskazówka: Wszystkie rośliny są oddalone od siebie o 100 pikseli)  '
+      2-3 Artist Functions 11.5_instruction: 'Tutaj jest ta sama funkcja "draw a hexagon" (rysuj sześciokąt). Co się stanie, jeśli obrócisz się tylko o 60 stopni w każdym obrocie pętli?'
+      2-3 Artist Functions 11_instruction: 'Zmieniliśmy nazwę funkcji "draw a square" (rysuj kwadrat) na "draw a hexagon" (rysuj sześciokąt), ale ona nadal rysuje tylko kwadraty! Czy mógłbyś zmodyfikować funkcję "draw a hexagon", by rysowała sześciokąt o boku 50 pikseli, i wykonaj rysunek używając tej funkcji?'
+      2-3 Artist Functions 12_instruction: 'Funkcje są naprawdę świetne do rysowania złożonych rzeczy wiele razy. Czy mógłbyś użyć funkcji "draw a flower" (rysuj kwiat), aby wypełnić resztę pola plantatora? (Wskazówka: Wszystkie rośliny są oddalone od siebie o 100 pikseli)  '
       2-3 Artist Functions 13_instruction: 'Daliśmy ci cztery funkcje. Skorzystaj z nich, jak chcesz, wewnątrz jednej lub więcej pętli, by wykonać obrazek, którym mógłbyś podzielić się ze swoimi znajomymi. Naciśnij przycisk "Uruchom", aby zobaczyć przykład.'
-      2-3 Artist Functions 2_instruction: 'Funkcje umożliwiają definiowanie nowych bloków! Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie "draw a square" (narysuj kwadrat). Czy mógłbyś posłużyć się tą funkcją, aby narysować okulary? Kwadraty są oddalone od siebie o 75 pikseli.'
+      2-3 Artist Functions 2_instruction: 'Funkcje umożliwiają definiowanie nowych bloków! Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie "draw a square" (rysuj kwadrat). Czy mógłbyś posłużyć się tą funkcją, aby narysować okulary? Kwadraty są oddalone od siebie o 75 pikseli.'
       2-3 Artist Functions 3_instruction: Zmodyfikuj funkcję, aby narysować kwadrat o boku długości 115 i narysuj większe okulary. Kwadraty są teraz oddalone od siebie o 45 pikseli.
       2-3 Artist Functions 4_instruction: 'Użyj bloku "powtórz", aby narysować te 3 kwadraty.'
-      2-3 Artist Functions 7_instruction: 'Użyj funkcji "draw a house" (narysuj dom), aby narysować dwa domy używając dwóch różnych parametrów. (Wskazówka: pierwszy dom ma 100 pikseli).'
-      2-3 Artist Functions 9_instruction: 'Tutaj jest funkcja "draw a snowflake" (narysuj płatek śniegu). Poeksperymentuj z nią, by utworzyć zimową scenę! To jest zabawa, nie ma więc łamigłówki do rozwiązania. Baw się dobrze!'
+      2-3 Artist Functions 7_instruction: 'Użyj funkcji "draw a house" (rysuj dom), aby narysować dwa domy używając dwóch różnych parametrów. (Wskazówka: pierwszy dom ma 100 pikseli).'
+      2-3 Artist Functions 9_instruction: 'Tutaj jest funkcja "draw a snowflake" (rysuj płatek śniegu). Poeksperymentuj z nią, by utworzyć zimową scenę! To jest zabawa, nie ma więc łamigłówki do rozwiązania. Baw się dobrze!'
       2-3 Artist Loops 1_instruction: Czy mógłbyś utworzyć sześciokąt o bokach długości 100 pikseli, aby ukończyć rysowanie komórki? Pamiętaj, że oznacza to, iż będzie trzeba obracać się o 60 stopni!
       2-3 Artist Loops 10_instruction: Jaki będzie efekt, jeśli nasz ostatni krok do przodu będzie o połowę krótszy?
       2-3 Artist Loops 11_instruction: Teraz umieśćmy cały nasz wytwór w pętli! Nie zapomnij dodać kąta na końcu zewnętrznej pętli.
       2-3 Artist Loops 2_instruction: 'Teraz użyj bloku "powtórz", aby z komórki utworzyć powłokę.'
-      2-3 Artist Loops 4_instruction: Czy chcesz zobaczyć, co się stanie, gdy będziemy powtarzać ten kształt wiele razy za pomocą pętli?
+      2-3 Artist Loops 4_instruction: Czy chcesz zobaczyć, co się stanie, kiedy będziemy powtarzać ten kształt wiele razy za pomocą pętli?
       2-3 Artist Loops 5_instruction: Zmieńmy nieco pętlę i zobaczmy, jak zmieni się obrazek.
       2-3 Artist Loops 6_instruction: Dodaj jeszcze jeden ruch i obrót wewnątrz pętli i zobacz, jak zmieni się twój obrazek.
       2-3 Artist Loops 7_instruction: 'Posługując się pętlami możemy tworzyć różnego rodzaju wielokąty.  Czy mógłbyś utworzyć romb wewnątrz tego sześciokąta?'
@@ -145,13 +145,13 @@ pl:
       2-3 Maze 12 (copy 1)_instruction: 'Czy możesz zastąpić poprzednią odpowiedź przez tylko dwa bloki? (Wskazówka: utwórz pętlę z użyciem bloku "powtórz razy")'
       2-3 Maze 12 (copy 2)_instruction: 'Czy możesz zastąpić poprzednią odpowiedź przez tylko dwa bloki? (Wskazówka: utwórz pętlę z użyciem bloku "powtórz razy")'
       2-3 Maze 12 (old)_instruction: 'Doprowadź mnie do świnki, teraz z użyciem bloku "powtórz razy"!'
-      2-3 Maze 12_instruction: 'Czy możesz zastąpić te pięć bloków tylko dwoma blokami? (Wskazówka: Utwórz pętlę z użyciem bloku "powtórz razy".)'
+      2-3 Maze 12_instruction: 'Czy możesz zastąpić te pięć bloków tylko dwoma blokami? (Wskazówka: Utwórz pętlę z użyciem bloku "powtórz", by przejść ten poziom.)'
       2-3 Maze 13 (old)_instruction: 'Doprowadź mnie do świnki, teraz z użyciem bloku "powtarzaj aż"!'
-      2-3 Maze 13_instruction: Doprowadź mnie do świnki z użyciem tylko dwóch bloków.
+      2-3 Maze 13_instruction: "Doprowadź mnie do świnki z użyciem tylko dwóch bloków.\r (Wskazówka: Musisz użyć bloku \"powtórz\", by przejść ten poziom.)"
       2-3 Maze 14 (old)_instruction: 'Doprowadź mnie do świnki z użyciem bloku "powtarzaj aż"!'
-      2-3 Maze 14_instruction: 'Doprowadź mnie do słonecznika! (Gdzie jest ten blok "powtórz razy", gdy go potrzebuję?)'
+      2-3 Maze 14_instruction: 'Doprowadź mnie do słonecznika! (Gdzie jest ten blok "powtórz razy", kiedy go potrzebuję?)'
       2-3 Maze 15 (old)_instruction: 'Doprowadź mnie do świnki z użyciem bloku "powtarzaj aż"!'
-      2-3 Maze 15_instruction: Użyj dwóch pętli, aby dostać się do świnki za pomocą mniejszej liczby bloków.
+      2-3 Maze 15_instruction: 'Użyj dwóch pętli "powtórz", aby dotrzeć do świnki za pomocą mniejszej liczby bloków.'
       2-3 Maze 16 (old)_instruction: 'Doprowadź mnie do świnki z użyciem bloku "powtarzaj aż"!'
       2-3 Maze 16 before_instruction: Doprowadź mnie do świnki.
       2-3 Maze 16_instruction: Doprowadź mnie do słonecznika. Ustaw ciąg bloków w pętli!
@@ -187,7 +187,7 @@ pl:
       2-3 Maze sq5_instruction: Doprowadź mnie do świnki! Ile razy musisz powtórzyć blok?
       2-3 Maze sq6_instruction: 'Czy potrafisz zastąpić poprzednią odpowiedź tylko z dwoma blokami? (Wskazówka: Utwórz pętlę z użyciem bloku "powtórz razy".)'
       2-3 Maze sq7_instruction: Doprowadź mnie do tego zielonego intruza używając tylko trzech bloków.
-      2-3 Maze sq8_instruction: 'Doprowadź mnie do świnki! (Gdzie jest ten blok "powtórz razy", gdy go potrzebuję?)'
+      2-3 Maze sq8_instruction: 'Doprowadź mnie do świnki! (Gdzie jest ten blok "powtórz razy", kiedy go potrzebuję?)'
       2-3 Maze sq9_instruction: Utwórz pętlę, aby dotrzeć do świnki używając mniejszej liczby bloków.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
@@ -214,28 +214,28 @@ pl:
       4-5 Artist For Loops 15_instruction: 'Ktoś zaczął pisać kod, ale uświadomił sobie, że musi istnieć szybszy sposób! Użyj bloku "dla", by zastąpić inne bloki i ukończyć sześciokątną spiralę. Wskazówka: Długość ostatniej linii wynosi 200 pikseli.'
       4-5 Artist For Loops 3_instruction: 'Jak możemy liczyć od 1 do 50? Zmodyfikuj blok "dla".'
       4-5 Artist For Loops 4_instruction: 'Uzupełnij blok "dla" tak, że liczy on od 1 co 1 do 10.'
-      4-5 Artist For Loops 6_instruction: 'Narysuj kwadraty o bokach 50, 60, 70, 80 i 90 pikseli. Musisz użyć funkcji "draw a square" (narysuj kwadrat) pięć razy.'
+      4-5 Artist For Loops 6_instruction: 'Narysuj kwadraty o bokach 50, 60, 70, 80 i 90 pikseli. Musisz użyć funkcji "draw a square" (rysuj kwadrat) pięć razy.'
       4-5 Artist For Loops 7_instruction: 'Narysuj takie same kwadraty, ale użyj bloku "count with" (licz z), dla zmiany rozmiaru. Umieść blok "counter" (licznik) w funkcji "draw a square" (rysuj kwadrat). Wskazówka: ten blok znajduje się w kategorii "Variables" (Zmienne).'
       4-5 Artist For Loops 8_instruction: 'Czy potrafisz ukończyć program umieszczając w bloku "dla" bloki, które liczą od 10 do 200 co 10? Blok "dla" możesz znaleźć w kategorii "Loops" (Pętle).'
       4-5 Artist For Loops 9_instruction: 'Te okręgi mają rozmiar 5, 10, 15, 20, 25, 30 i 35. Narysuj je przy użyciu bloku "dla".'
       4-5 Artist Free Draw 1_instruction: 'Wolny wybór!  Narysuj cokolwiek, co inspiruje Cię do kreatywności.'
       4-5 Artist Functions 1_instruction: 'Użyj pętli "powtórz", aby narysować ten trójkąt.'
-      4-5 Artist Functions 10a_instruction: 'Umieść ten kod w funkcji "draw a snowflake" (narysuj płatek śniegu) i zastąp 50 przez parametr "size" (rozmiar). Ta funkcja jest już wywoływana, by utworzyć płatek śniegu, który ma 100 pikseli.'
-      4-5 Artist Functions 10b_instruction: 'Użyj funkcji "draw a snowflake" (narysuj płatek śniegu) do tworzenia płatków różnej wielkości.  Wskazówka: pierwszy płatek śniegu ma długość 25 i każdy następny płatek śniegu jest dwa razy większy niż poprzedni płatek.'
-      4-5 Artist Functions 11_instruction: 'Funkcja "draw a hexagon" (narysuj sześciokąt) wykorzystuje funkcję "draw a triangle" (narysuj trójkąt). Ukończ funkcję rysującą sześciokąt. (Wskazówka: sześciokąt ma 6 boków, każdy o długości 100 pikseli)'
-      4-5 Artist Functions 12_instruction: 'Ukończ funkcję "draw waves" (narysuj fale).  Każda fala składa się z jednej fali górnej i jednej fali dolnej.   Wskazówka: Narysuj 5 błękitnych fal.'
+      4-5 Artist Functions 10a_instruction: 'Umieść ten kod w funkcji "draw a snowflake" (rysuj płatek śniegu) i zastąp 50 przez parametr "size" (rozmiar). Ta funkcja jest już wywoływana, by utworzyć płatek śniegu, który ma 100 pikseli.'
+      4-5 Artist Functions 10b_instruction: 'Użyj funkcji "draw a snowflake" (rysuj płatek śniegu) do tworzenia płatków różnej wielkości.  Wskazówka: pierwszy płatek śniegu ma długość 25 i każdy następny płatek śniegu jest dwa razy większy niż poprzedni płatek.'
+      4-5 Artist Functions 11_instruction: 'Funkcja "draw a hexagon" (rysuj sześciokąt) wykorzystuje funkcję "draw a triangle" (rysuj trójkąt). Ukończ funkcję rysującą sześciokąt. (Wskazówka: sześciokąt ma 6 boków, każdy o długości 100 pikseli)'
+      4-5 Artist Functions 12_instruction: 'Ukończ funkcję "draw waves" (rysuj fale).  Każda fala składa się z jednej fali górnej i jednej fali dolnej.   Wskazówka: Narysuj 5 błękitnych fal.'
       4-5 Artist Functions 13 Free play_instruction: Oto niektóre funkcje do rysowania planet, gwiazd, rakiet i robotów. Skorzystaj z nich, by wykonać rysunki, którymi podzielisz się ze swoim znajomymi.
       4-5 Artist Functions 14 Free play_instruction: 'Tutaj udostępniamy Ci kilka funkcji.  Użyj ich jak uważasz wewnątrz jednej lub wielu pętli, by wykonać rysunki, którymi podzielisz się ze swoimi znajomymi. Kliknij przycisk "Uruchom", aby zobaczyć, jak wyglądają.'
-      4-5 Artist Functions 15 Assessment_instruction: 'Sprawdzian: Użyj funkcji "draw a square" (narysuj kwadrat), by tworzyć kwadraty. Kwadraty mają boki długości 50, 100 i 150 pikseli.'
-      4-5 Artist Functions 2a_instruction: 'Teraz umieść te bloki w nowej funkcji o nazwie "draw a small triangle" (narysuj mały trójkąt) i wywołaj ją.'
-      4-5 Artist Functions 2b_instruction: 'Teraz utwórz funkcję o nazwie "draw a small triangle" (narysuj mały trójkąt) przy użyciu dostępnych bloków.'
-      4-5 Artist Functions 3_instruction: 'Teraz utwórz funkcje "draw a medium triangle" (narysuj średni trójkąt) i "draw a large triangle" (narysuj duży trójkąt). Funkcję "draw a small triangle" (narysuj mały trójkąt) wykonaliśmy już dla Ciebie. Długości boków trójkątów wynoszą 50 (mały), 100 (średni) i 150 (duży). '
-      4-5 Artist Functions 4_instruction: 'Ta nowa funkcja "draw a triangle" (narysuj trójkąt) ma parametr i może wykonać to, co robią wszystkie trzy wcześniejsze funkcje. Narysuj te same trójkąty przy użyciu tej nowej funkcji.'
-      4-5 Artist Functions 5_instruction: 'Czy potrafisz zmodyfikować funkcję "draw a triangle" (narysuj trójkąt) jako "draw a square" (narysuj kwadrat), aby zmienić rysunek?'
-      4-5 Artist Functions 6_instruction: 'Użyj funkcji "draw a square" (narysuj kwadrat) i "draw a triangle" (narysuj trójkąt), aby narysować dom. (Wskazówka: Boki kwadratu mają długość 200 pikseli)'
-      4-5 Artist Functions 6b_instruction: 'Użyj funkcji służących do rysowania kwadratu i trójkąta wraz z innymi blokami, aby utworzyć dom, dodając je do funkcji "draw a house" (narysuj dom) a następnie wywołaj ją.'
-      4-5 Artist Functions 7_instruction: 'Użyj funkcji "draw a hause" (narysuj dom), aby narysować domy, które mają 100 pikseli i 50 pikseli. Te dwa domy są oddalone od siebie o 50 pikseli.'
-      4-5 Artist Functions 8_instruction: 'Funkcja "draw a flower" (narysuj kwiat) ma parametr, który pozwala ustawić wysokość łodygi.  Ustaw go na 200 i obserwuj, co się dzieje.'
+      4-5 Artist Functions 15 Assessment_instruction: 'Sprawdzian: Użyj funkcji "draw a square" (rysuj kwadrat), by tworzyć kwadraty. Kwadraty mają boki długości 50, 100 i 150 pikseli.'
+      4-5 Artist Functions 2a_instruction: 'Teraz umieść te bloki w nowej funkcji o nazwie "draw a small triangle" (rysuj mały trójkąt) i wywołaj ją.'
+      4-5 Artist Functions 2b_instruction: 'Teraz utwórz funkcję o nazwie "draw a small triangle" (rysuj mały trójkąt) przy użyciu dostępnych bloków.'
+      4-5 Artist Functions 3_instruction: 'Teraz utwórz funkcje "draw a medium triangle" (rysuj średni trójkąt) i "draw a large triangle" (rysuj duży trójkąt). Funkcję "draw a small triangle" (rysuj mały trójkąt) wykonaliśmy już dla Ciebie. Długości boków trójkątów wynoszą 50 (mały), 100 (średni) i 150 (duży). '
+      4-5 Artist Functions 4_instruction: 'Ta nowa funkcja "draw a triangle" (rysuj trójkąt) ma parametr i może wykonać to, co robią wszystkie trzy wcześniejsze funkcje. Narysuj te same trójkąty przy użyciu tej nowej funkcji.'
+      4-5 Artist Functions 5_instruction: 'Czy potrafisz zmodyfikować funkcję "draw a triangle" (rysuj trójkąt) jako "draw a square" (rysuj kwadrat), aby zmienić rysunek?'
+      4-5 Artist Functions 6_instruction: 'Użyj funkcji "draw a square" (rysuj kwadrat) i "draw a triangle" (rysuj trójkąt), aby narysować dom. (Wskazówka: Boki kwadratu mają długość 200 pikseli)'
+      4-5 Artist Functions 6b_instruction: 'Użyj funkcji służących do rysowania kwadratu i trójkąta wraz z innymi blokami, aby utworzyć dom, dodając je do funkcji "draw a house" (rysuj dom) a następnie wywołaj ją.'
+      4-5 Artist Functions 7_instruction: 'Użyj funkcji "draw a hause" (rysuj dom), aby narysować domy, które mają 100 pikseli i 50 pikseli. Te dwa domy są oddalone od siebie o 50 pikseli.'
+      4-5 Artist Functions 8_instruction: 'Funkcja "draw a flower" (rysuj kwiat) ma parametr, który pozwala ustawić wysokość łodygi.  Ustaw go na 200 i obserwuj, co się dzieje.'
       4-5 Artist Functions 9_instruction: Narysuj te 3 kwiaty. Pierwszy ma ma wysokość 100 i kolejny kwiat jest zawsze 50 pikseli wyższy niż poprzedni kwiat. Odległość między kwiatami wynosi 100 pikseli.
       4-5 Artist Patterns 1_instruction: Czy potrafisz narysować ten kwadrat używając pętli? Każdy z boków ma długość 20 pikseli.
       4-5 Artist Patterns 10_instruction: 'Ten kod rysuje dwa rzędy sześciokątów - całość powtórz w pętli 4 razy, by narysować cały plaster miodu. Wskazówka: Musisz skoczyć z powrotem 120 pikseli w najbardziej zewnętrznej pętli, by mieć pewność, że artysta nie rysuje poza ekranem.'
@@ -344,9 +344,7 @@ pl:
       4-5 While Loops 8_instruction: ' To naprawdę jest głęboki dół i duża kupa śmieci.  Ile trzeba usunąć szufli śmieci, aby wyrównać teren do poziomu ziemi?  Wskazówka: Użyj pętli "dopóki".'
       4-5 While Loops Assessment 1_instruction: 'Jest tutaj wiele otworów i stert.  Pomóż mi wypełnić otwory i usunąć sterty, by wyrównać teren.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      AllTheThings Applab - Turtle move with button_instruction: |
-        Add a button that
-        moves the turtle when clicked.  (Click to see full instructions)
+      AllTheThings Applab - Turtle move with button_instruction: 'Dodaj przycisk, który przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)'
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
@@ -387,7 +385,7 @@ pl:
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
       Artist - Nested Loops Assessment 1_instruction: Użyj zagnieżdżonej pętli, aby ukończyć projekt.
-      Auto Open Function Editor_instruction: 'Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji "draw a shape" (narysuj kształt), utwórz 3 kształty domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od 50 pikseli. Pomocne może być użycie pętli licznikowej. '
+      Auto Open Function Editor_instruction: 'Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji "draw a shape" (rysuj kształt), utwórz 3 kształty domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od 50 pikseli. Pomocne może być użycie pętli licznikowej. '
       Bee Recommended Blocks test_instruction: 'Fioletowe kwiaty mogą mieć 1 lub 0 nektaru, ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".'
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
@@ -809,7 +807,7 @@ pl:
       Course 2 Maze Loops 1_instruction: Czy potrafisz doprowadzić mnie do świnki przy użyciu 5 bloków?
       Course 4 2_instruction: Pszczółka chce nektaru. Pamiętaj, że nie wszystkie obiekty są kwiatami, upewniaj się więc, że nektar jest zbierany tylko z kwiatów.
       Course 4 Artist 1_instruction: 'Pomóż mi ukończyć rysowanie mojego pudełka. (Każda linia ma długość 200 pikseli) '
-      Course 4 Artist 10_instruction: "Kliknij tutaj, aby ponownie zobaczyć wskazówki! \r\n\r\nTutaj jest kod ciekawego kształtu. Co się dzieje, gdy go powtórzysz wiele razy, skręcając między każdą iteracją? Zauważ, że suma skrętów przy rysowaniu tego kształtu wynosi 420 stopni. Oznacza to, że gdy twój artysta wykona rysunek, to będzie skierowany w innym kierunku niż wtedy, gdy zaczynał rysować. Ten nowy kierunek jest dokładnie 60 stopni w prawo od kierunku, w którym zaczynał."
+      Course 4 Artist 10_instruction: "Kliknij tutaj, aby ponownie zobaczyć wskazówki! \r\n\r\nTutaj jest kod ciekawego kształtu. Co się dzieje, kiedy go powtórzysz wiele razy, skręcając między każdą iteracją? Zauważ, że suma skrętów przy rysowaniu tego kształtu wynosi 420 stopni. Oznacza to, że gdy twój artysta wykona rysunek, to będzie skierowany w innym kierunku niż wtedy, kiedy zaczynał rysować. Ten nowy kierunek jest dokładnie 60 stopni w prawo od kierunku, w którym zaczynał."
       Course 4 Artist 11_instruction: Czas na wyzwanie! Oto kompozycja, która używa tylko tych bloków, które już poznałeś. Czy mógłbyś określić, jak została utworzona? Nie bój się popełniać błędów i próbować. Nie oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij tutaj, jeśli chcesz zobaczyć więcej wskazówek!
       Course 4 Artist 12_instruction: "Czy potrzebujesz ponownie spojrzeć na inspirującą kompozycję lub na wskazówkę? Kliknij tutaj!\r\n\r\nW przeciwnym razie wykonaj własną kompozycję!"
       Course 4 Artist 13_instruction: Nadal grasz? Tutaj jest czyste płótno, na którym możesz zaprojektować cokolwiek chcesz!
@@ -823,8 +821,8 @@ pl:
       Course 4 Artist 8_instruction: Narysuj to słońce powtarzając ten blok kodu 12 razy.
       Course 4 Artist 8a_instruction: "Czy pamiętasz ten kształt?  Teraz chcemy zachęcić Cię do utworzenia tego samego kształtu, ale nie dajemy Ci żadnych bloków, abyś mógł zacząć! \r Wskazówka: Mamy 3 trójkąty w rotacji w zakresie 360 stopni... ile razy ma 3 mieści się 360?"
       Course 4 Artist 9_instruction: 'Powtórz ten wzór 10 razy i bądź pewien, że skręcasz między każdymi dwoma kształtami. Oto wskazówka, ile ma wynosić skręt: ile wynosi 360 podzielone przez 10?'
-      Course 4 Artist Binary 1_instruction: "Oto funkcja, która na podstawie binarnego łańcucha złożonego z jedynek i zer kieruje artystę od lewej do prawej, od góry do dołu. Artysta wypełnia kwadraty, gdy widzi 1, a ignoruje kwadraty, gdy widzi 0. \r\n\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch, by narysować ten wzorek."
-      Course 4 Artist Binary 1a_instruction: "Oto funkcja, która na podstawie binarnego łańcucha złożonego z jedynek i zer kieruje artystę od lewej do prawej, od góry do dołu. Artysta wypełnia kwadraty, gdy widzi 1, a ignoruje kwadraty, gdy widzi 0. \r\n\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch, by narysować ten wzorek."
+      Course 4 Artist Binary 1_instruction: "Oto funkcja, która na podstawie binarnego łańcucha złożonego z jedynek i zer kieruje artystę od lewej do prawej, od góry do dołu. Artysta wypełnia kwadraty, kiedy widzi 1, a ignoruje kwadraty, gdy widzi 0. \r\n\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch, by narysować ten wzorek."
+      Course 4 Artist Binary 1a_instruction: "Oto funkcja, która na podstawie binarnego łańcucha złożonego z jedynek i zer kieruje artystę od lewej do prawej, od góry do dołu. Artysta wypełnia kwadraty, kiedy widzi 1, a ignoruje kwadraty, gdy widzi 0. \r\n\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch, by narysować ten wzorek."
       Course 4 Artist Binary 2_instruction: Które z tych binarnych łańcuchów możesz powtórzyć 8 razy, aby narysować ten obraz?
       Course 4 Artist Binary 3_instruction: Czy potrafisz narysować ten wzorek powtarzając binarny łańcuch złożony z trzech cyfr?
       Course 4 Artist Binary 4_instruction: Każdy binarny łańcuch reprezentuje jeden wiersz tego obrazka. Czy potrafisz je zmienić tak, aby była rysowana uśmiechnięta buźka, a nie zmartwiona twarz?
@@ -832,13 +830,13 @@ pl:
       Course 4 Artist Binary 6_instruction: Jaki jest najkrótszy łańcuch binarny, który możesz powtórzyć, by narysować ten obraz?
       Course 4 Artist Binary 7_instruction: Ukończ ten rysunek.
       Course 4 Artist Binary Free Play 2_instruction: 'Czas na zabawę: Tutaj jest dla Ciebie czyste płótno do rysowania na nim. Dobrej zabawy!'
-      Course 4 Artist Binary Free Play 2a_instruction: "Oto obszar do rysowania o większej rozdzielczości - 16 na 16 pikseli!\r\r Co się stanie, gdy zaczniemy tworzyć z użyciem bitów?"
+      Course 4 Artist Binary Free Play 2a_instruction: "Oto obszar do rysowania o większej rozdzielczości - 16 na 16 pikseli!\r\r Co się stanie, kiedy zaczniemy tworzyć z użyciem bitów?"
       Course 4 Artist Binary Free Play 2b_instruction: Kliknij tutaj, by zobaczyć podpowiedzi.
       Course 4 Artist Binary Free Play_instruction: 'Czas na zabawę: Narysuj z binary cokolwiek chcesz!'
       Course 4 Artist Binary pre1_instruction: "Kod binarny to sposób reprezentowania informacji przy użyciu tylko dwóch stanów. Tutaj będziemy używać stanu \"off\" (wyłączony), reprezentowanego przez 0, i \"on\" (włączony), reprezentowanego przez 1). \r \r Udostępniliśmy Ci siatkę \"pikseli\", po której możesz chodzić i tworzyć wzory przez włączanie pewnych kwadratów. Czy mógłbyś spowodować, by artysta narysował \"01010101\" binarnie w pierwszym rzędzie?"
       Course 4 Artist Binary ryan_instruction: "Kod binarny to sposób reprezentowania informacji przy użyciu tylko dwóch stanów. Tutaj będziemy używać stanu \"off\" (wyłączony), reprezentowanego przez 0, i \"on\" (włączony), reprezentowanego przez 1). \r \r Udostępniliśmy Ci siatkę \"pikseli\", po której możesz chodzić i tworzyć wzory przez włączanie pewnych kwadratów. Czy mógłbyś spowodować, by artysta narysował \"01010101\" binarnie w pierwszym rzędzie?"
-      Course 4 Artist For  Functions 10_instruction: 'Idźmy dalej, czy potrafisz narysować gwiazdę za pomocą funkcji "draw a square line" (narysuj rząd kwadratów)? Powodzenia!'
-      Course 4 Artist For  Functions 11_instruction: 'Idźmy dalej, czy potrafisz narysować gwiazdę za pomocą funkcji "draw a square line" (narysuj rząd kwadratów)? Powodzenia!'
+      Course 4 Artist For  Functions 10_instruction: 'Idźmy dalej, czy potrafisz narysować gwiazdę za pomocą funkcji "draw a square line" (rysuj rząd kwadratów)? Powodzenia!'
+      Course 4 Artist For  Functions 11_instruction: 'Idźmy dalej, czy potrafisz narysować gwiazdę za pomocą funkcji "draw a square line" (rysuj rząd kwadratów)? Powodzenia!'
       Course 4 Artist For Loops 1_instruction: 'Narysuj ten trójkąt, który ma boki długości 50 pikseli. Wskazówka: Użyj bloku "powtórz".'
       Course 4 Artist For Loops 10_instruction: Czas dowolnej zabawy! Ciesz się rysując cokolwiek chcesz za pomocą bloków, których nauczyłeś się używać
       Course 4 Artist For Loops 11_instruction: 'Czy pamiętasz, gdy na poprzednim poziomie użyliśmy zmiennej do kontroli liczby boków w kształcie? Teraz wykonamy to samo ze zmienną "counter" (licznik). Ten wzór zaczyna się od trójkąta i dodawany jest jeden bok, aż zostanie narysowany dziesięciokąt foremny (z 10 bokami). Każdy bok powinien mieć 100 pikseli długości. Wskazówka: 360 podzielone przez liczbę boków w kształcie jest liczbą stopni, o którą należy skręcić.'
@@ -863,29 +861,29 @@ pl:
       Course 4 Artist For Loops inspire_instruction: "Dowolne inspiracje: Nauczyłeś się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według własnego pomysłu.\r\n\r\nJeśli potrzebujesz wskazówki, to kliknij tutaj."
       Course 4 Artist Functions 1_instruction: Czy potrafisz za pomocą pętli narysować kwadrat, który ma bok o długości 100 pikseli?
       Course 4 Artist Functions 10_instruction: Który blok musisz dodać, aby otrzymać trójkąt leżący na kwadracie?
-      Course 4 Artist Functions 11_instruction: 'Sprawdź ten kod, który rysuje kostkę (sześcian) - czy potrafisz zamienić go na funkcję o nazwie "narysuj sześcian" (draw a cube)'
+      Course 4 Artist Functions 11_instruction: 'Sprawdź ten kod, który rysuje kostkę (sześcian) - czy potrafisz zamienić go na funkcję o nazwie "draw a cube" (rysuj sześcian)'
       Course 4 Artist Functions 12.1_instruction: 'Stwórzmy funkcję o nazwie "draw an octagon 20" (rysuj ośmiokąt 20), która rysuje ośmiokąt z bokami o długości 20 pikseli.'
       Course 4 Artist Functions 12_instruction: Powtórz w pętli funkcję rysującą kwadrat, by narysować rząd kwadratów
       Course 4 Artist Functions 13.1_instruction: "Teraz utwórzmy funkcję \"jump to upper right\" (skocz do prawego górnego rogu), która przeniesie artystę do prawego górnego rogu ośmiokąta, właśnie narysowanego, abyśmy mogli zakończyć wzór.\r\n\r\nWskazówka: Aby dostać się do prawego górnego roku, spróbuj przeskakiwać według wzoru, który tworzy 3/8 ośmiokąta."
-      Course 4 Artist Functions 13_instruction: 'Sprawdź, mamy nową funkcję "draw a line of squares" (narysuj rząd kwadratów). Przyjrzyj się, jak ta funkcja została utworzona. Kliknij "Uruchom", gdy jesteś gotowy na następną łamigłówkę.'
+      Course 4 Artist Functions 13_instruction: 'Sprawdź, mamy nową funkcję "draw a line of squares" (rysuj rząd kwadratów). Przyjrzyj się, jak ta funkcja została utworzona. Kliknij "Uruchom", kiedy jesteś gotowy na następną łamigłówkę.'
       Course 4 Artist Functions 14.1_instruction: 'Teraz utwórzmy funkcję "jump to upper right" (skocz do prawego górnego rogu), która przeniesie artystę do prawego górnego rogu ośmiokąta, właśnie narysowanego, abyśmy mogli zakończyć wzór.'
-      Course 4 Artist Functions 14_instruction: 'Świetnie sobie radzisz! Użyj swojej nowej funkcji "draw a line of squares" (narysuj rząd kwadratów), by narysować kwadratowy kształt. Pamiętaj, że każdy kwadrat ma bok o długości 40 pikseli.'
-      Course 4 Artist Functions 15_instruction: 'Zróbmy krok dalej - czy potrafisz narysować kształt gwiazdy za pomocą funkcji "draw a line od squares" (narysuj rząd kwadratów)? Powodzenia! Wskazówka: być może musisz skręcić o 144 stopnie'
+      Course 4 Artist Functions 14_instruction: 'Świetnie sobie radzisz! Użyj swojej nowej funkcji "draw a line of squares" (rysuj rząd kwadratów), by narysować kwadratowy kształt. Pamiętaj, że każdy kwadrat ma bok o długości 40 pikseli.'
+      Course 4 Artist Functions 15_instruction: 'Zróbmy krok dalej - czy potrafisz narysować kształt gwiazdy za pomocą funkcji "draw a line od squares" (rysuj rząd kwadratów)? Powodzenia! Wskazówka: być może musisz skręcić o 144 stopnie'
       Course 4 Artist Functions 2_instruction: 'Czy mógłbyś narysować 3 kwadraty oddalone od siebie o 20 pikseli? Wskazówka: bok każdego kwadratu ma 100 pikseli'
       Course 4 Artist Functions 3_instruction: "Używając funkcji \"draw a square\" (narysuj kwadrat), czy mógłbyś narysować ten obrazek? Wskazówka: kwadraty są oddalone od siebie o 120 pikseli.\r\n"
-      Course 4 Artist Functions 4_instruction: 'Czy jesteś gotowy do utworzenia własnej funkcji? Kliknij na "Functions" (Funkcje) w polu narzędzi, a później na "Utwórz funkcję" i nazwij funkcję "narysuj trójkąt" (draw a triangle), a następnie utwórz trójkąt, jak to zrobiłeś wcześniej z użyciem bloków działania i pętli. Następnie kliknij przyciski "Zapisz i Zamknij" w prawym górnym rogu. Wskazówka: Utwórz trójkąt, który ma boki o długości 100 pikseli. Powodzenia!'
+      Course 4 Artist Functions 4_instruction: 'Czy jesteś gotowy do utworzenia własnej funkcji? Kliknij na "Functions" (Funkcje) w polu narzędzi, a później na "Utwórz funkcję" i nazwij funkcję "draw a triangle" (rysuj trójkąt), a następnie utwórz trójkąt, jak to zrobiłeś wcześniej z użyciem bloków działania i pętli. Następnie kliknij przyciski "Zamknij" w prawym górnym rogu. Wskazówka: Utwórz trójkąt, który ma boki o długości 100 pikseli. Powodzenia!'
       Course 4 Artist Functions 5 OLD_instruction: 'Spróbujmy użyć naszych dwóch funkcji, by narysować dom - co trzeba ustalić w tym kodzie, aby prawidłowo narysować dom?'
-      Course 4 Artist Functions 5_instruction: "Używając bloku \"draw a square\" (narysuj kwadrat), czy mógłbyś narysować ten obrazek? Wskazówka: kwadraty są oddalone od siebie o 120 pikseli.\r\n"
+      Course 4 Artist Functions 5_instruction: "Używając bloku \"draw a square\" (rysuj kwadrat), czy mógłbyś narysować ten obrazek? Wskazówka: kwadraty są oddalone od siebie o 120 pikseli.\r\n"
       Course 4 Artist Functions 6_instruction: Który blok musisz dodać, aby otrzymać trójkąt leżący na kwadracie?
       Course 4 Artist Functions 7_instruction: Czy potrafisz narysować rząd kwadratów przy użyciu funkcji do rysowania kwadratu? Każdy kwadrat ma bok o długości 40 pikseli.
-      Course 4 Artist Functions 8_instruction: 'Czy poznałeś już, jak używać bloków funkcyjnych? Zmodyfikujmy ten kwadrat tak, aby miał boki o długości 200 pikseli. Wskazówka: Kliknij na "edytuj", aby zmienić w edytorze funkcji "draw a square" (narysuj kwadrat) rozmiar kwadratu. Kliknij na "Zapisz i Zamknij", by wyjść z edytora funkcji. '
+      Course 4 Artist Functions 8_instruction: 'Czy poznałeś już, jak używać bloków funkcyjnych? Zmodyfikujmy ten kwadrat tak, aby miał boki o długości 200 pikseli. Wskazówka: Kliknij na "edytuj", aby zmienić w edytorze funkcji "draw a square" (rysuj kwadrat) rozmiar kwadratu. Kliknij na "Zamknij", by wyjść z edytora funkcji. '
       Course 4 Artist Functions 9_instruction: Daliśmy Ci większość kodu, aby utworzyć funkcję. Jednak wydaje się, że czegoś brakuje. Czy potrafisz zakończyć tworzenie tego bloku funkcji?
       Course 4 Artist Functions challenge_instruction: Kliknij tutaj, aby ponownie zobaczyć wskazówki.
       Course 4 Artist Functions Inspiration_instruction: Kliknij tutaj, aby ponownie zobaczyć wskazówki.
       Course 4 Artist Functions inspire_instruction: Kliknij tutaj, aby ponownie zobaczyć inspirujący obraz.
       Course 4 Artist Inspire_instruction: "Czy potrzebujesz ponownie spojrzeć na inspirującą kompozycję lub na wskazówkę? Kliknij tutaj!\r\n\r\nW przeciwnym razie wykonaj własną kompozycję!"
       Course 4 Artist Params 1_instruction: Napisz funkcję, która rysuje kwadrat o boku 50 pikseli
-      Course 4 Artist Params 10_instruction: 'Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji "draw a shape" (narysuj kształt), utwórz 3 kształty domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od 50 pikseli. Pomocne może być użycie pętli licznikowej. '
+      Course 4 Artist Params 10_instruction: 'Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji "draw a shape" (rysuj kształt), utwórz 3 kształty domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od 50 pikseli. Pomocne może być użycie pętli licznikowej. '
       Course 4 Artist Params 11_instruction: 'Co z funkcją "pinweel" (wiatraczek), który przyjmuje trzy parametry - "sides" (boki), "length" (długość) i "repeat" (powtórz). Możesz obliczyć wielkość obrotu po każdym kształcie za pomocą tej samej matematyki, której użyłeś obliczenia wielkości obrotu dla kształtu "sides" (boki). Czy potrafisz odtworzyć ten obrazek? Oto wskazówka: każdy kształt ma długość 100 pikseli.'
       Course 4 Artist Params 12_instruction: 'Użyj funkcji "pinwheel" (wiatraczek), aby narysować każdy z tych kształtów. Bok każdego z obrazków ma długość 50.'
       Course 4 Artist Params 13_instruction: 'Czas na zabawę: Masz tutaj funkcje, które napisałeś i inne, abyś mógł pobawić się nimi. Narysuj coś niesamowitego!'
@@ -897,23 +895,23 @@ pl:
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
       Course 4 Artist Params 3_instruction: 'Niesamowite, czy potrafisz narysować każdy z tych trójkątów przy użyciu tej nowej funkcji? Pierwszy z nich ma bok długości 25 pikseli, drugi 50 pikseli, a trzeci 75 pikseli. '
       Course 4 Artist Params 4_instruction: |
-        Czy potrafisz dodać nową funkcję o nazwie "draw a square" (narysuj kwadrat)? 
+        Czy potrafisz dodać nową funkcję o nazwie "draw a square" (rysuj kwadrat)? 
         Podobnie, jak w przypadku rysowania trójkąta, powinna mieć parametr "length" (długość). Tym razem narysuj 3 kwadraty o bokach długości 25, 50 i 75 pikseli, oddalone od siebie o 100 pikseli.
       Course 4 Artist Params 5_instruction: |
         Użyj obu swoich nowych funkcji, aby narysować ten obrazek. Aby ułatwić to sobie, użyj pętli z parametrem "counter" (licznik).
         
-      Course 4 Artist Params 6_instruction: 'Przeredaguj tę funkcję "draw a shape" (narysuj kształt). Ma ona już parametru "length" (długość). Teraz, dodaj parametr "sides" (boki). Pamiętaj, że kąt obrotu dla danego kształtu wynosi 360 podzielone przez liczbę boków, które zawiera. Wskazówka: długości poszczególnych kształtów wynoszą 100 pikseli dla trójkąta, 25 pikseli dla sześciokąta i 50 pikseli dla kwadratu. '
+      Course 4 Artist Params 6_instruction: 'Przeredaguj tę funkcję "draw a shape" (rysuj kształt). Ma ona już parametru "length" (długość). Teraz, dodaj parametr "sides" (boki). Pamiętaj, że kąt obrotu dla danego kształtu wynosi 360 podzielone przez liczbę boków, które zawiera. Wskazówka: długości poszczególnych kształtów wynoszą 100 pikseli dla trójkąta, 25 pikseli dla sześciokąta i 50 pikseli dla kwadratu. '
       Course 4 Artist Params 7_instruction: 'Czy potrafisz narysować ten kształt wypełniając znaki "???" Kwadrat i trójkąt mają boki o długości 100 pikseli, a sześciokąt - 75 pikseli. '
       Course 4 Artist Params 8_instruction: |
         Czy domyślasz się, jak narysować ten kształt? Oto podpowiedź: utwórz nową funkcję z 6 bokami, zwaną sześciokątem.
         
-      Course 4 Artist Params 9_instruction: 'Czy pamiętasz, jak użyliśmy pętli z "counter" (licznikiem), ale z usuniętą pętlą wewnętrzną? Zabawmy się teraz i użyjmy funkcji "draw a shape" (narysuj kształt) z parametrami "sides" (boki) i "length" (długość). Czy potrafisz ponownie utworzyć te kształty? Licznik dla kwadratu powinien być 5/100/5, dla trójkąta - 10/100/10 i dla sześciokąta - 2/100/2.'
+      Course 4 Artist Params 9_instruction: 'Czy pamiętasz, jak użyliśmy pętli z "counter" (licznikiem), ale z usuniętą pętlą wewnętrzną? Zabawmy się teraz i użyjmy funkcji "draw a shape" (rysuj kształt) z parametrami "sides" (boki) i "length" (długość). Czy potrafisz ponownie utworzyć te kształty? Licznik dla kwadratu powinien być 5/100/5, dla trójkąta - 10/100/10 i dla sześciokąta - 2/100/2.'
       Course 4 Artist Var 9_instruction: 'Oto jest algorytm do rysowania trójkąta. Zmodyfikuj go tak, aby używał zmiennej "sides" (boki). Zastąp liczbę 3 zmienną "sides" (boki). Wskazówka: Pamiętaj, aby użyć bloku "przypisz sides wartość".'
       Course 4 Artist Vars 1_instruction: Czy możesz mi pomóc narysować trójkąt? Wszystkie jego boki mają długość 100 pikseli.
       Course 4 Artist Vars 10_instruction: 'Tutaj jest algorytm, który rysuje trójkąt z mniejszych trójkątów. Czy mógłbyś go tak zmodyfikować, by używał zmiennej "sides" (boki) do narysowania każdego trójkąta? Przejrzyj kod i za każdym razem, gdy widzisz liczbę 3, zastąp ją przez zmienną "sides" (boki). Pamiętaj, aby użyć bloku "przypisz sides wartość".'
       Course 4 Artist Vars 11_instruction: 'Tutaj jest bardziej skomplikowany kod wykorzystujący pojęcia z ostatniej łamigłówki - co należy przypisać zmiennej "sides" (boki), aby narysować tę kompozycję złożoną z kwadratów?'
       Course 4 Artist Vars 12_instruction: 'Ustawmy wartość zmiennej "sides" (boki) na 5. Im więcej boków dodamy do tego algorytmu, tym większy otrzymamy rysunek! Mamy teraz nową zmienną o nazwie "length" (długość) i możemy jej użyć wszędzie tam, gdzie mamy "iść do przodu." Ustaw wartość zmiennej "length" na 75 dla tego kształtu.'
-      Course 4 Artist Vars 13_instruction: "Gdy kształt składa się z wielu boków, każdy z tych boków powinien być krótszy jeśli chcesz, by cały wzór zmieścił się na ekranie.\n\r\nStwórzmy jeszcze raz algorytm do tego niesamowitego wzoru, lecz zamiast ręcznie ustawiać zmienną \"długość\" (\"length\"), użyjmy bloku matematycznego ze zmienną \"bok\" (\"sides\") - to zapewni, że każdy kształt dopasuje się prawidłowo. Obwód każdego wielokąta wynosi 300 pixeli. \r\nJeśli potrzebujesz wskazówek - kliknij tutaj."
+      Course 4 Artist Vars 13_instruction: "Kiedy kształt składa się z wielu boków, każdy bok powinien być krótszy, jeśli cały wzór ma zmieścić się na ekranie.\n\r\nUtwórzmy jeszcze raz algorytm dla tego niesamowitego wzoru, lecz zamiast ręcznie ustawiać zmienną \"length\" (długość), użyjmy bloku matematycznego ze zmienną \"sides\" (boki), by zapewnić, że każdy kształt zmieści się prawidłowo. Obwód każdego wielokąta ma 300 pikseli. \r\nJeśli potrzebujesz wskazówek - kliknij tutaj."
       Course 4 Artist Vars 14_instruction: "Czas na zabawę: Sprawdź, teraz Twój algorytm jest zagnieżdżony w dodatkowej pętli. Poeksperymentuj ze zmianą wartości dwóch zmiennych, by rysować fajne wzorki.\r\n\r\nBy uzyskać więcej efektów, pobaw się kolorami! Użyj losowych kolorów wewnątrz pętli, by zobaczyć, jak zmieniają Twój obrazek."
       Course 4 Artist Vars 2_instruction: 'Zamiast bloku "idź do przodu o 150," blok "idź" odwołuje się teraz do zmiennej "length" (długość). Czy mógłbyś ustawić wartość zmiennej "length" na 150, by narysować ten nowy trójkąt?'
       Course 4 Artist Vars 3_instruction: 'Tutaj jest pętla, która rysuje kwadrat, ale czegoś brakuje. Czy mógłbyś ją naprawić tak, aby używała zmiennej "length" (długość) do określania, jaka powinna być długość każdego boku? '
@@ -942,11 +940,11 @@ pl:
       Course 4 Bee For Loops 8_instruction: Czy potrafisz użyć zmiennej w pętli, aby kontrolować ruch i zbieranie nektaru?
       Course 4 Bee For Loops 9_instruction: 'Ostatnia liczba w Twojej pętli "licz z" ma nazwę "przyrost", i za każdym obrotem pętli licznik pętli zmienia się o ten "przyrost". Spróbuj zebrać te kwiaty używając przyrostu o wartości 2.'
       Course 4 Bee Loops 5 NEW_instruction: Tutaj są trzy kwiaty. Czy potrafisz znaleźć układ instrukcji, które trzeba powtórzyć 3 razy, aby zebrać nektar z użyciem możliwie najmniejszej liczby bloków?
-      Course 4 Bee Loops 5a NEW_instruction: Teraz użyj pętli, aby pomóc pszczółce zebrać cały nektar na jej drodze do plastra miodu, z jak najmniejszą liczbą bloków. Gdy tam dotrze, nie zapomnij by zrobiła miód!
+      Course 4 Bee Loops 5a NEW_instruction: Teraz użyj pętli, aby pomóc pszczółce zebrać cały nektar na jej drodze do plastra miodu, z jak najmniejszą liczbą bloków. Kiedy tam dotrze, nie zapomnij by zrobiła miód!
       Course 4 Bee Params 1_instruction: 'Użyj funkcji "get 3 nectar" (zbierz 3 nektary), w której pszczółka skręca, porusza się i zbiera nektar, a następnie wraca do początkowej lokalizacji. Zbierz cały nektar używając sekwencji funkcji "get 3 nectar".'
       Course 4 Bee Params 2_instruction: 'Zmodyfikuj funkcję "get 3 nectar" (zbierz 3 nektary) tak, by pszczółka skręcała do kwiatów w prawo zamiast w lewo.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'Teraz kwiaty są po obu stronach! Może potrafisz tak użyć parametru, aby ta sama funkcja działała dla kwiatów po obu stronach. Dodano do funkcji parametr o nazwie "direction" (kierunek). Jeśli ten parametr jest równy 0, to należy skręcić w lewo, jeśli jest równy 1, to należy skręcić w prawo.'
-      Course 4 Bee Params 3_instruction: 'Teraz kwiaty są po obu stronach! Dodano do funkcji parametr "direction" (kierunek). Użyj zmiennych "left" (w lewo) i "right" (w prawo) do kontroli kierunku. Wypełnij resztę definicji funkcji, a następnie kliknij przycisk "Zapisz i Zamknij."'
+      Course 4 Bee Params 3_instruction: 'Teraz kwiaty są po obu stronach! Dodaliśmy zmienne "left" (w lewo) i "right" (w prawo) i oraz parametr "direction" (kierunek) do funkcji "get 3 nectar" (zbierz 3 nektary). Zmodyfikuj tę funkcję tak, aby pszczółka skręcała w odpowiednim kierunku, kiedy zmienne "left" lub "right" są przekazywane do funkcji.  '
       Course 4 Bee Params 4 (copy 1)_instruction: Spróbuj używając swojej nowej funkcji zebrać wszystkie kwiaty. Pamiętaj, 0 = w lewo i 1 = w prawo.
       Course 4 Bee Params 4 - Two WhenRun_instruction: 'Używając swojej nowej funkcji spróbuj zebrać z wszystkich kwiatów. Pamiętaj, aby użyć zmiennych "left" (w lewo) i "right" (w prawo).'
       Course 4 Bee Params 4 backup_instruction: 'Byłoby miło, gdybyśmy mogli zebrać cały nektar za pomocą jednej funkcja. Spróbuj dodać nowy parametr do swojej funkcji o nazwie "nectars" (nektary), aby kontrolować ilości nektaru do zebrania. Prawdopodobnie będziesz chciał również zmienić nazwę funkcji!'
@@ -988,32 +986,32 @@ pl:
       Course 4 Maze 6_instruction: Czy potrafisz rozwiązać tę łamigłówkę używając możliwie najmniejszej liczby bloków?
       Course 4 Play Lab For Loops 2_instruction: Tym razem, spróbujmy policzyć, ile jest nieparzystych liczb między 1 a 100.
       Course 4 Play Lab Params 1_instruction: 'Tutaj jest funkcja o nazwie "jump" (skocz), która powoduje, że Twój główny bohater skacze do 100 pikseli. Użyj tej funkcji, by zebrać wszystkie flagi.'
-      Course 4 Play Lab Params 10_instruction: "Dodaliśmy dla Ciebie jeszcze jedną funkcję. \r\n\r\nUżywając składni \"if\", zaprogramuj swoją grę wywołując funkcję \"level_up\" (poziom wyżej), jeśli liczba \"player_points\" (punkty gracza) przekroczy jakąś liczbę. \r\n\r\nNa przykład: \"player_score\" > 6\r\n\r\nZagraj w tę grę i spowoduj, że przejdziesz poziom 4, aby przejść do następnej łamigłówki. "
+      Course 4 Play Lab Params 10_instruction: "Dodaliśmy dla Ciebie jeszcze jedną funkcję. \r\n\r\nUżyj instrukcji \"jeśli\" i zaprogramuj swoją grę wywołując funkcję \"level_up\" (poziom wyżej), jeśli \"player_score\" (wynik gracza) przekroczy pewną liczbę. \r\n\r\nNa przykład: \"player_score\" > 6\r\n\r\nZagraj w tę grę i spowoduj, że przejdziesz poziom 4, aby przejść do następnej łamigłówki. "
       Course 4 Play Lab Params 2_instruction: "Mamy tutaj flagi, które są zbyt wysokie dla aktualnego skoku! Używaj strzałek \"do góry\" (up) i \"do dołu\" (down), by wielokrotnie skakać. \r\n\r\nMusimy dodać parametr \"height\" (wysokość) do naszej funkcji \"jump\" (podskocz). Strzałka do góry powinna powodować skok o 200 pikseli, a do dołu - tylko o 100 pikseli. \n\r\n\r\nWskazówka: Kliknij przycisk \"edytuj\" na funkcji \"jump\" i popraw ją, by używała parametru \"height\"."
       Course 4 Play Lab Params 3_instruction: 'Dodaliśmy kolejny parametr do funkcji "jump" (skocz), by mogła być użyta z innymi postaciami. Każda postać jest reprezentowana przez liczbę, począwszy od 1. Zmodyfikuj funkcję "jump", by używała parametru "actor" (postać) i zapewniała właściwy skok postaci. '
       Course 4 Play Lab Params 4_instruction: 'Mamy tu funkcję "patrol" (patrol). Zmień ją tak, by Kot przeszedł 400 pikseli w górę, po czym 400 pikseli w dół.'
       Course 4 Play Lab Params 5_instruction: 'Zmień funkcję "patrol" (patrol) dodając parametr "actor" (postać), by można było wywołać tę funkcję dla każdej postaci na ekranie. Pamiętaj, postaciom odpowiadają liczby 1, 2 i 3.'
       Course 4 Play Lab Params 6_instruction: 'Dodaj kolejny parametr "speed" (prędkość) do funkcji "patrol" (patrol). Używając bloku "set speed" (ustaw prędkość) z nowym parametrem "speed", spróbuj pomóc Pingwinowi zdobyć obie flagi zanim inne duszki zdobędą chociaż jedną.'
       Course 4 Play Lab Params 7_instruction: "Zabawmy się. Przejrzyj ten kod i spróbuj określić, co robi każdy z bloków. \r\n\r\nJeśli już wiesz, użyj klawiszy ze strzałkami, by pokierować Psem, i zbierz wszystkie flagi."
-      Course 4 Play Lab Params 8_instruction: 'Użyj bloku "kiedy dotyka", by wysłać Psa z powrotem do góry po lewej tylko wtedy, gdy dotknie on jakąkolwiek inną postać.'
-      Course 4 Play Lab Params 9_instruction: "Oto nasza gra z poprzedniego etapu, ale większość kodu jest ukryta. Jest też nowa funkcja: \"score_points\" \r\n\r\nZmień funkcję tak, by \"punkty\" (\"points\") zostały dodane do zmiennej \"player_score\" (\"wynik gracza\"). \r\n\r\nWartość zmiennej \"player_score\" powinna się zwiększać za każdym razem gdy Pies otaguje kota sercami i powinna się zmniejszać, gdy kot otaguje psa sercami. \r\n\r\nUwaga:\nGdy skończysz kliknij \"Run\" by uruchomić grę. Gdy pies otrzyma 6 punktów przejdziesz dalej. "
-      Course 4 Play Lab Vars 1_instruction: 'Tym razem nie musisz pisać żadnego kodu, wystarczy nacisnąć "Uruchom", aby zagrać! W tej grze jesteś psem (Dog), który stara się zebrać więcej flag niż kot (Cat). Użyj strzałki w dół do poruszania psa. Naciśnij przycisk "Zakończ", po zakończeniu gry.'
+      Course 4 Play Lab Params 8_instruction: 'Użyj bloku "kiedy postać dotyka", by wysłać Psa z powrotem do góry po lewej tylko wtedy, kiedy dotknie on jakąkolwiek inną postać.'
+      Course 4 Play Lab Params 9_instruction: "Oto nasza gra z wcześniejszego etapu, ale większość kodu jest ukryta. Jest też nowa funkcja \"score_points\" (zdobądź punkty)\r\n\r\nZmień tę funkcję tak, aby parametr \"points\" (punkty) został dodany do zmiennej \"player_score\" (wynik gracza). \r\n\r\nWartość \"player_score\" powinna się zwiększać za każdym razem, kiedy Pies dosięgnie Kota sercami, i zmniejszać, kiedy Kot dosięgnie Psa sercami. \r\n\r\nUwaga:\nGdy skończysz kliknij \"Uruchom\", by uruchomić grę. Kiedy Pies zdobędzie 6 punktów, przejdziesz do następnej łamigłówki. "
+      Course 4 Play Lab Vars 1_instruction: 'Tym razem nie musisz pisać żadnego kodu, wystarczy nacisnąć "Uruchom", aby zagrać! W tej grze jesteś Psem, który stara się zebrać więcej flag niż Kot. Użyj strzałki w dół do poruszania psa. Naciśnij przycisk "Zakończ", po zakończeniu gry.'
       Course 4 Play Lab Vars 2_instruction: 'Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy! Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz zebrać więcej flag niż kot. Wygrywa ten, kto pierwszy zbierze 10 flag!'
       Course 4 Play Lab Vars 3_instruction: Oto nowy rodzaj gry! Używaj strzałek w lewo i w prawo, aby się przesunąć, i strzałki do góry, aby podskoczyć. Spróbuj, czy potrafisz zebrać wszystkie flagi.
       Course 4 Play Lab Vars 4_instruction: 'Używamy teraz zmiennej "height" (wysokość) do ustalenia, jak wysoko pies może podskoczyć. Zaktualizuj wartość zmiennej "height" (wysokość) tak, że pies podskakuje wystarczająco wysoko, aby dosięgnąć wszystkich flag. Wskazówka: nowe flagi są na wysokości 200 pikseli.'
       Course 4 Play Lab Vars 5_instruction: 'Zbudujmy grę! Najpierw potrzebujemy wyniku. Zmodyfikuj kod z poprzedniej łamigłówki, aby ustawić wynik na 10. '
-      Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Spoko, mamy zmienną na wynik, ale jak z niej skorzystać? A co jeśli zwiększysz zmienną wynik za każdym razem, gdy trafisz przeciwnika? Użyj zdarzenia "kiedy postać 2 dotyka czegoś", by uaktualnić wynik, gdy pocisk trafi kota. Możesz zwiększyć wartość wyniku (points) przypisując points = points + 1. Aby ukończyć tę grę, otrzymaj wynik równy 10 (powiększając go co jeden!).'
-      Course 4 Play Lab Vars 6_instruction: "Użyj strzałki w prawo, aby strzelać sercami. \r \r \nJak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej \"points\" za każdym razem, gdy pies trafi kota sercem. Użyj zdarzenia \"kiedy postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj wynik równy 10 (powiększając go co jeden!)."
+      Course 4 Play Lab Vars 6 (copy 1)_instruction: 'Spoko, mamy zmienną na wynik, ale jak z niej skorzystać? A co, jeśli zwiększysz zmienną wynik za każdym razem, kiedy trafisz przeciwnika? Użyj zdarzenia "kiedy postać 2 dotyka czegoś", by uaktualnić wynik, kiedy pocisk trafi kota. Możesz zwiększyć wartość wyniku (points) przypisując points = points + 1. Aby ukończyć tę grę, otrzymaj wynik równy 10 (powiększając go co jeden!).'
+      Course 4 Play Lab Vars 6_instruction: "Użyj strzałki w prawo, aby strzelać sercami. \r \r \nJak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej \"points\" za każdym razem, gdy Pies trafi Kota sercem. Użyj zdarzenia \"kiedy postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj wynik równy 10 (powiększając go co jeden!)."
       Course 4 Play Lab Vars 7_instruction: 'Ładnie, teraz spowodujmy, że ta gra nie jest zbyt łatwa - za każdym razem, gdy pies (postać 1) zostaje trafiony żółtymi sercami przez kota (postać 2) powinieneś stracić punkt. Zacznij z 10 punktami, aby nie było to zbyt trudne. Do ukończenia tej łamigłówki, niech Twój wynik zmniejszy się od 10 do 0.'
       Course 4 Play Lab Vars 8 (copy 1)_instruction: 'OK, ostatnia już rzecz dla tej gry - tak ustawmy, by gracz mógł wygrać (lub przegrać). Użyj pętli "powtarzaj w nieskończoność" (forever) do sprawdzania wyniku (score) - jeśli wynik jest większy niż 20, to powoduj zniknięcie wroga. Jeśli wynik jest mniejszy niż 0, to powoduj zniknięcie gracza. Kliknij przycisk "Zakończ", gdy gra działa, jak tego chcesz.'
       Course 4 Play Lab Vars 8_instruction: 'Ustawmy tę grę tak, aby Pies mógł wygrać (lub przegrać). Za pomocą pętli "powtarzaj w nieskończoność" sprawdzaj wartość wyniku (score) - jeśli wynik jest większy niż 20, to powoduj, że wróg (Kot) znika. Jeśli wynik jest mniejszy od 0, to powoduj, że gracz (Pies) znika. Kliknij przycisk "Zakończ", gdy gra działa, jak chcesz go.'
-      Course 4 Play Lab Vars 9_instruction: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których używaliśmy na tym etapie, jak również kilka dodatkowych, gdyby były potrzebne. \r\n\r\nMamy teraz w przyborniku tak wiele bloków, że powinny być uporządkowane. Każdy z nich przydzieliliśmy więc do odpowiedniej kategorii. Poświęć trochę czasu, by poznać, jakie bloki są dostępne. Gdy już przejrzysz wszystko, utwórz grę lub historyjkę, która korzysta z powtórzeń, zmiennych i zdarzeń. \r\n\r\nWskazówka: przewiń ekran do dołu, aby zobaczyć wszystkie polecenia w polu roboczym."
+      Course 4 Play Lab Vars 9_instruction: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których używaliśmy na tym etapie, jak również kilka dodatkowych, gdyby były potrzebne. \r\n\r\nMamy teraz w przyborniku tak wiele bloków, że powinny być uporządkowane. Każdy z nich przydzieliliśmy więc do odpowiedniej kategorii. Poświęć trochę czasu, by poznać, jakie bloki są dostępne. Kiedy już przejrzysz wszystko, utwórz grę lub historyjkę, która korzysta z powtórzeń, zmiennych i zdarzeń. \r\n\r\nWskazówka: przewiń ekran do dołu, aby zobaczyć wszystkie polecenia w polu roboczym."
       Course 4 Play Lab Vars_instruction: 'OK, ostatnia już rzecz dla tej gry - tak ustawmy, by gracz mógł wygrać (lub przegrać). Użyj pętli "powtarzaj w nieskończoność" (forever) do sprawdzania wyniku (score) - jeśli wynik jest większy niż 20, to powoduj zniknięcie wroga. Jeśli wynik jest mniejszy niż 0, to powoduj zniknięcie gracza.'
       Course 4 Play Labs For Loops 1_instruction: 'Spowoduj, aby pies wypowiadał każdą liczbę między 1 i 100. Użyj pętli i bloku "counter" (licznik), aby wartość "counter" była wypowiadana przy każdym obrocie pętli.'
       Course 4 Play Labs For Loops 2_instruction: Tym razem, spróbujmy policzyć, ile jest nieparzystych liczb między 1 a 100.
       Course 4 Play Labs For Loops 3_instruction: Licząc z większym krokiem (przyrostem) możemy w tym samym czasie policzyć do większej liczby. Spowoduj, by pies liczył od 10 co 10 aż do 1000.
       Course 4 Play Labs For Loops 4_instruction: Zmiana wartości przyrostu może być pomocna, ale wciąż liczymy liniowo (każda liczba jest w takiej samej odległości od poprzedniej). A co zrobić, jeśli chcielibyśmy liczyć wykładniczo? Bez zmiany ustawień w tej pętli, czy potrafisz liczyć 1, 4, 9, 16, 25... (kolejne kwadraty)?
-      Course 4 Play Labs For Loops 4a_instruction: "Teraz pomieszajmy zmienne z Etapu 7 razem z Twoją zmienną \"licznika\" aby trochę to zaczarować.  \r\n\r\nW tym puzzlu, pies będzie odliczał od 0 do 1000, dodając do poprzedniej wartości określoną liczbę - to \"inkrementacja\". Na początku swojego kodu ustaw wartość zmiennej \"inkrementacji\" na 10 i zobacz co się stanie."
+      Course 4 Play Labs For Loops 4a_instruction: "Teraz połączmy zmienne z Etapu 7 z Twoją zmienną \"counter\" (licznika), aby stworzyć coś magicznego.  \r\n\r\nW tej łamigłówce, Pies będzie odliczał od 0 do 1000, używając zmiennej \"przyrost\". Na początku swojego kodu ustaw wartość tej zmiennej na 10 i zobacz, co się stanie."
       Course 4 Play Labs For Loops 5_instruction: 'W poprzedniej łamigłówce liczyliśmy kwadraty kolejnych liczb. Spróbuj zamienić "counter ^ 2" na "counter ^ 3", aby liczyć sześciany kolejnych liczb (1, 8, 27, 64, 125, 216, 343...)'
       Course 4 Play Labs For Loops 5a_instruction: |
         W tym puzzlu, pies będzie zatrzyma Twój czas.
@@ -1023,11 +1021,11 @@ pl:
         
         Uruchom pętlę kilka razy, klikając na psa przed każdą z nich.
       Course 4 Play Labs For Loops 6_instruction: 'Przypomnij sobie, że liczba pierwsza to liczba całkowita, która dzieli się tylko przez siebie i przez 1. Użyj funkcji "is_prime" (czy to liczba pierwsza), by wypowiadać tylko liczb pierwsze miedzy 1 a 100.'
-      Course 4 Play Labs For Loops 6a_instruction: "Pies będzie nadal pilnował czasu licząc za pomocą naszej pętli \"for loop\" co jedno \"increment\" (\"zwiększenie\"), ale teraz wmieszamy w to jeszcze Czarodzieja.  Czy możesz zmienić kod, żeby \"zwiększenie\" szło w górę o dwa za każdym razem, kiedy klikniemy na Czarodzieja?\r\n\r\nUważaj! Czarodziej porusza się bardzo szybko!"
+      Course 4 Play Labs For Loops 6a_instruction: "Pies będzie nadal pilnował czasu licząc za pomocą pętli \"dla\" używając zmiennej \"przyrost\", ale teraz wmieszamy w to jeszcze Czarodzieja.  Czy możesz zmienić kod tak, aby zmienna \"przyrost\" zwiększała się o dwa za każdym razem, gdy klikniemy na Czarodzieju?\r\n\r\nUważaj! Czarodziej porusza się bardzo szybko!"
       Course 4 Play Labs For Loops 7_instruction: 'Czy mógłbyś użyć pętli "dla", aby mi pomóc wypowiedzieć ciąg: 1, 4, 7, 10, 13, 16, 19, 22, 25?'
-      Course 4 Play Labs For Loops 7a_instruction: "Nareszcie dokądś zmierzamy! Co powiesz na to byśmy zaczęli liczyć ile razy możemy kliknąć na Czarodzieja zanim pies dojdzie do 30?\r\n\r\nZakończ dodając bloki do Czarodzieja tak, by za każdym razem gdy się na niego kliknie, zmienna \"clicked\" (\"kliknęty\") zwiększa się o jeden. Możesz pominąć \"increment\" (\"przyrost\") na razie.\r\n\r\nPies zacznie liczyć gdy klikniesz \"Run\"."
+      Course 4 Play Labs For Loops 7a_instruction: "Nareszcie dokądś zmierzamy! Co powiesz, byśmy zaczęli liczyć, ile razy możemy kliknąć na Czarodzieju zanim Pies osiągnie 30?\r\n\r\nZakończ dodając bloki do Czarodzieja tak, by za każdym razem, kiedy się na niego kliknie, zmienna \"clicked\" (kliknięty) zwiększa się o jeden. Możesz pominąć \"przyrost\" na razie.\r\n\r\nPies zacznie liczyć, kiedy klikniesz \"Uruchom\"."
       Course 4 Play Labs For Loops 8_instruction: "Teraz pomóż postaciom poruszać się, gdy liczą.  \r \r Pies powinien poruszać się i liczyć co 2 (counter + 2) za każdym razem.  Kot będzie przemieszczał się i liczył mnożąc przez 2 (counter * 2) za każdym razem. Pingwin będzie przemieszczał się i podnosił do potęgi 2 (counter ^ 2) za każdym razem.  Kto pierwszy dojdzie do swoich flag?"
-      Course 4 Play Labs For Loops 8a_instruction: "Aby zakończyć naszą grę, musimy przywrócić zmienną \"increment\" (\"przyrost\")! Powiążmy ją z poziomem gry.\r\n\r\n1) Śledź ile razy ktoś kliknie na Czarodzieja \r\n2) Jeśli Czarodziej zostanie kliknięty co najmniej 10 razy zanim pies doliczy do 30, zwiększ \"increment\" (\"przyrost\") o 1 i zacznij od nowa.\r\n3) Jeśli Czarodziej nie zostanie kliknięty co najmniej 10 razy gra się kończy."
+      Course 4 Play Labs For Loops 8a_instruction: "Aby zakończyć naszą grę, musimy przywrócić zmienną \"przyrost\"! Powiążmy ją z poziomem gry.\r\n\r\n1) Śledź, ile razy Czarodziej będzie kliknięty \r\n2) Jeśli Czarodziej zostanie kliknięty co najmniej 10 razy, zanim pies doliczy do 30, zwiększ \"przyrost\" o 1 i zacznij od nowa.\r\n3) Jeśli Czarodziej nie zostanie kliknięty co najmniej 10 razy, gra kończy się."
       Course 4 SCF 1_instruction: Użyj sugerowanych funkcji, aby narysować cztery rzędy sześciokątów. Czy widzisz, jak nasze parzyste rzędy są przesunięte w prawo?
       Course 4 SCF 1a_instruction: Spróbuj zebrać cały nektar, używając jak najmniejszej liczby bloków.
       Course 4 SCF 1b_instruction: Spróbuj zebrać cały nektar, używając jak najmniejszej liczby bloków.
@@ -1051,7 +1049,7 @@ pl:
       Course 4 SCFP 1_instruction: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując liczby dodatnie i ujemne).
       Course 4 SCV 1_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
       Course 4 SCV 2_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
-      Course 4 SCV 3_instruction: "Teraz gra w oznaczanie!  Zaznacz Kota, aby zdobyć 2 punkty. Znacz Pingwina, aby zdobyć 3 punkty.  Uzyskaj 10 punktów, aby wygrać! \r Ale uważaj, gdy Kot i Pingwin oznaczą się nawzajem, zabierają punkty z powrotem. \r \r Dodaj niezbędne bloki, by gra przebiegała, jak to zostało wyjaśnione.  Jak spowodujesz, by Pies poruszał się we wszystkich kierunkach przy użyciu klawiszy ze strzałkami?  Jak będziesz dodawać punkty, gdy Pies zaznaczy Kota lub Pingwina?  Jak będziesz odejmować punktów, gdy dotkną się Kot z Pingwinem?"
+      Course 4 SCV 3_instruction: "Teraz gra w oznaczanie!  Zaznacz Kota, aby zdobyć 2 punkty. Znacz Pingwina, aby zdobyć 3 punkty.  Uzyskaj 10 punktów, aby wygrać! \r Ale uważaj, gdy Kot i Pingwin oznaczą się nawzajem, zabierają punkty z powrotem. \r \r Dodaj niezbędne bloki, by gra przebiegała, jak to zostało wyjaśnione.  Jak spowodujesz, by Pies poruszał się we wszystkich kierunkach przy użyciu klawiszy ze strzałkami?  Jak będziesz dodawać punkty, kiedy Pies zaznaczy Kota lub Pingwina?  Jak będziesz odejmować punktów, kiedy dotkną się Kot z Pingwinem?"
       Course 4 SCV 4_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 5_instruction: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 6_instruction: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
@@ -1333,7 +1331,7 @@ pl:
       frozen square snowflake_instruction: 'Czy potrafisz narysować śnieżynkę używając bloku "powtórz", powtarzając tworzenie kwadratu 10 razy i bloku "skręć" aby obrócić się o 36 stopni po każdym kwadracie?'
       Infinity_catch_instruction: 'Czy za pomocą klawiszy ze strzałkami możesz spowodować, że Elsa ("postać 2") dogoni Annę?'
       Infinity_finale_instruction: Utwórz cokolwiek, co Ci się podoba, i podziel się tym!
-      Infinity_move_collide_instruction: 'Hiro to "postać 1".  Przenieś go blisko Baymax i zagraj jakiś dźwięk, gdy się dotkną.'
+      Infinity_move_collide_instruction: 'Hiro to "postać 1".  Przenieś go blisko Baymax i zagraj jakiś dźwięk, kiedy się dotkną.'
       Infinity_move_directions_instruction: 'Baymax to "postać 2".  Dodaj bloki "przenieś postać", a następnie przenieś Baymax za pomocą klawiszy ze strzałkami.  Spowoduj, że dotknie dwie inne postacie.'
       Infinity_move_right_instruction: 'Hiro to "postać 1". Użyj bloku "przenieś postać", aby Hiro dotknął Baymax.'
       Infinity_repeat_instruction: 'Użyj bloku "powtarzaj w nieskończoność", aby Anna przeniosła się w górę i w dół 400 pikseli.'
@@ -1343,7 +1341,7 @@ pl:
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Dotknij nawet więcej płatków śniegu!
       Infinity_touch_four_instruction: Przenieś Annę w górę, do dołu na lewo i na prawo, aby dotknęła każdego z czterech płatków śniegu.
-      Infinity_touch_score_instruction: 'Dodaj punkt do wyniku Anny, gdy dotyka płatka śniegu.  Następnie kliknij "Uruchom" i pokieruj nią, aby dotknęła każdy płatek śniegu raz.'
+      Infinity_touch_score_instruction: 'Dodaj punkt do wyniku Anny, kiedy dotyka płatka śniegu.  Następnie kliknij "Uruchom" i pokieruj nią, aby dotknęła każdy płatek śniegu raz.'
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Narysuj krótką linię do góry a długą w prawo!
@@ -1400,17 +1398,17 @@ pl:
       K-1 Bee Assessment 1_instruction: Zbierz nektar, aby zrobić miód!
       K-1 Bee Assessment 2_instruction: Zbierz nektar, aby zrobić miód!
       K-1 Bee Loops 1_instruction: Zbierz nektar, aby zrobić miód!
-      K-1 Bee Loops 10_instruction: Użyj pętli, by zebrać nektar, zrobić miód i przesunąć się!
-      K-1 Bee Loops 11_instruction: 'Sprawdzian: Użyj pętli i zbierz nektar oraz zrób miód!'
-      K-1 Bee Loops 12_instruction: 'Sprawdzian: Użyj pętli, aby zebrać nektar, zrobić miód i przesunąć się!'
-      K-1 Bee Loops 2_instruction: Użyj pętli, aby przesunąć się a później zebrać nektar i zrobić miód!
-      K-1 Bee Loops 3_instruction: Użyj pętli, aby zebrać nektar i zrobić miód!
-      K-1 Bee Loops 4_instruction: Użyj pętli, aby zebrać nektar, zrobić miód i przesunąć się!
-      K-1 Bee Loops 5_instruction: Użyj pętli, aby zebrać nektar i zrobić miód!
-      K-1 Bee Loops 6_instruction: Użyj pętli, by zebrać nektar, zrobić miód i przesunąć się!
-      K-1 Bee Loops 7_instruction: Użyj pętli, aby zebrać nektar i zrobić miód!
-      K-1 Bee Loops 8_instruction: Użyj pętli, aby zebrać nektar i zrobić miód!
-      K-1 Bee Loops 9_instruction: Użyj pętli, by zebrać nektar, zrobić miód i przesunąć się!
+      K-1 Bee Loops 10_instruction: Zbierz cały nektar i zrób cały miód.
+      K-1 Bee Loops 11_instruction: Zbierz cały nektar i miód!
+      K-1 Bee Loops 12_instruction: Zbierz cały nektar i cały miód.
+      K-1 Bee Loops 2_instruction: 'Użyj pętli "powtórz", aby przesunąć się a później zebrać nektar i zrobić miód!'
+      K-1 Bee Loops 3_instruction: 'Użyj trzech pętli "powtórz", aby zebrać nektar i zrobić miód!'
+      K-1 Bee Loops 4_instruction: 'Użyj pętli "powtórz", aby zebrać nektar, zrobić miód i przesunąć się!'
+      K-1 Bee Loops 5_instruction: 'Użyj pętli "powtórz", aby zebrać nektar i zrobić miód!'
+      K-1 Bee Loops 6_instruction: 'Użyj pętli "powtórz", aby zebrać nektar, zrobić miód i przesunąć się!'
+      K-1 Bee Loops 7_instruction: Zbierz nektar i zrób miód!
+      K-1 Bee Loops 8_instruction: Zbierz nektar i zrób miód!
+      K-1 Bee Loops 9_instruction: Zbierz cały nektar i zrób cały miód.
       K-1 Bee Loops Assessment 1_instruction: Zbierz nektar, aby zrobić miód i użyj pętli, aby się przemieszczać!
       K-1 Bee Loops Assessment 2_instruction: Za pomoc pętli, zbierz nektar, by zrobić miód!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
@@ -1431,35 +1429,35 @@ pl:
       K-1 Maze Assessment 13_instruction: Poziom Sprawdzianu
       K-1 Maze Assessment 2_instruction: 'Sprawdzian: Doprowadź mnie do świnki!'
       K-1 maze debug 1_instruction: Zmień kod, aby doprowadzić mnie do świnki!
-      K-1 maze debug 10_instruction: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
-      K-1 maze debug 11_instruction: "To jest test! \r Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki"
+      K-1 maze debug 10_instruction: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
+      K-1 maze debug 11_instruction: "To jest test! \r Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki"
       K-1 maze debug 2_instruction: Zorientuj się, czego brakuje, a następnie dodaj bloki, by doprowadzić mnie do świnki!
-      K-1 maze debug 3_instruction: Zorientuj się, czego brakuje, a następnie usuń bloki, aby doprowadzić mnie do świnki!
+      K-1 maze debug 3_instruction: Coś tutaj nie gra. Usuń bloki, aby doprowadzić mnie do świnki!
       K-1 maze debug 4_instruction: Przejrzyj te bloki i popraw je! Wydaje mi się, będę podążać w złym kierunku.
       K-1 maze debug 5_instruction: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
-      K-1 maze debug 6_instruction: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
-      K-1 maze debug 7_instruction: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
+      K-1 maze debug 6_instruction: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
+      K-1 maze debug 7_instruction: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
       K-1 maze debug 8_instruction: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
-      K-1 maze debug 9_instruction: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
+      K-1 maze debug 9_instruction: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
       K-1 Maze debug Assessment 1_instruction: 'Sprawdzian - Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!'
       K-1 Maze Loops 1_instruction: Doprowadź mnie do świnki!
-      K-1 Maze Loops 10_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
-      K-1 Maze Loops 11_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
-      K-1 Maze Loops 12_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
+      K-1 Maze Loops 10_instruction: 'Doprowadź mnie do świnki! Użycie pętli "powtórz" ułatwi Ci zadanie.'
+      K-1 Maze Loops 11_instruction: "Doprowadź mnie do świnki! \r Użycie pętli \"powtórz\" ułatwi Ci zadanie."
+      K-1 Maze Loops 12_instruction: 'Doprowadź mnie do świnki! Użycie pętli "powtórz" ułatwi Ci zadanie.'
       K-1 Maze Loops 2_instruction: 'Użyj bloku "powtórz", aby doprowadzić mnie do świnki!'
-      K-1 Maze Loops 3_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
+      K-1 Maze Loops 3_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtórz".'
       K-1 Maze Loops 4_instruction: Doprowadź mnie do świnki!
-      K-1 Maze Loops 5_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
-      K-1 Maze Loops 6_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
-      K-1 Maze Loops 7_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
-      K-1 Maze Loops 8_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtarzaj".'
+      K-1 Maze Loops 5_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtórz".'
+      K-1 Maze Loops 6_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtórz".'
+      K-1 Maze Loops 7_instruction: 'Doprowadź mnie do świnki! Użyj pętli "powtórz".'
+      K-1 Maze Loops 8_instruction: 'Użyj pętli "powtórz", aby doprowadzić mnie do świnki.'
       K-1 Maze Loops 9_instruction: Doprowadź mnie do świnki!
-      K-1 Maze Loops Assessment 1_instruction: 'Sprawdzian: Użyj pętli, aby doprowadzić mnie do świnki!'
-      K-1 Maze Loops Assessment 2_instruction: 'Sprawdzian: Użyj pętli, aby doprowadzić mnie do świnki!'
+      K-1 Maze Loops Assessment 1_instruction: 'Zobacz, czego nauczyliśmy się! Użyj pętli "powtórz", aby doprowadzić mnie do świnki!'
+      K-1 Maze Loops Assessment 2_instruction: 'Użyj pętli "powtórz", aby doprowadzić mnie do świnki!'
       K-1 Maze Multi 14_instruction: Poziom Sprawdzianu
       K-1 Maze Multi 15_instruction: Poziom Sprawdzianu
-      K-1 Maze Sequence Assessment 1_instruction: "To jest test! \r Idź w jedną stronę, a później w drugą, by doprowadzić mnie do świnki"
-      K-1 Maze Sequence Assessment 2_instruction: "To jest test! \r Idź w jedną stronę, a później w drugą, by doprowadzić mnie do świnki."
+      K-1 Maze Sequence Assessment 1_instruction: "Zobacz, czego nauczyliśmy się!\r Idź w jedną stronę, a później w drugą, by doprowadzić mnie do świnki."
+      K-1 Maze Sequence Assessment 2_instruction: Idź w jedną stronę, a później w drugą, by doprowadzić mnie do świnki.
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
@@ -1637,22 +1635,22 @@ pl:
       NEW Course 4 Artist Functions 10.1_instruction: Użyj funkcji z poprzednich łamigłówek, aby narysować ten wzór.
       NEW Course 4 Artist Functions 10_instruction: 'Kliknij na "edytuj", by wypełnić bloki w definicji funkcji, aby utworzyć kwadrat o bokach 40 pikseli.'
       NEW Course 4 Artist Functions 11_instruction: "Teraz chcemy utworzyć nową funkcję \"draw a line of squares\" (rysuj rząd kwadratów), która rysuje sześć kwadratów w rzędzie. Czy możesz ją zbudować korzystając z funkcji \"draw a square 20\" (rysuj kwadrat 20), którą już utworzyliśmy? Uwaga: Zauważ, że zmieniliśmy pióro na znacznie cieńsze. Kliknij przycisk \"edytuj\" na funkcji \"draw a square 20\", aby zobaczyć jak! \r\n"
-      NEW Course 4 Artist Functions 12_instruction: 'Użyj funkcji "draw a line of square" (narysuj rząd kwadratów) z poprzedniej łamigłówki, by narysować ten wzór.'
-      NEW Course 4 Artist Functions 13_instruction: 'Czy potrafisz narysować kształt gwiazdy używając funkcji "draw a line of squares" (narysuj rząd kwadratów)? Wskazówka: Zmień funkcję draw a line of squares", by nie wywoływać jej dwa razy. Zauważ, będziesz musiał iść do przodu pewną liczbę pikseli i obrócić się o 144 stopnie.'
+      NEW Course 4 Artist Functions 12_instruction: 'Użyj funkcji "draw a line of square" (rysuj rząd kwadratów) z poprzedniej łamigłówki, by narysować ten wzór'
+      NEW Course 4 Artist Functions 13_instruction: 'Czy potrafisz narysować kształt gwiazdy używając funkcji "draw a line of squares" (rysuj rząd kwadratów)? Wskazówka: Zmień funkcję draw a line of squares", by nie wywoływać jej dwa razy. Zauważ, będziesz musiał iść do przodu pewną liczbę pikseli i obrócić się o 144 stopnie.'
       NEW Course 4 Artist Functions 14_instruction: 'Czas zabawy! '
       NEW Course 4 Artist Functions 2_instruction: 'Czy mógłbyś narysować 3 kwadraty oddalone od siebie o 20 pikseli? Wskazówka: bok każdego kwadratu ma 100 pikseli'
       NEW Course 4 Artist Functions 3_instruction: 'Oto nowy typ bloku. Nazywa się "Funkcja". Kliknij przycisk "edytuj" a następnie wypełnij go kodem do rysowania kwadratu o boku 100 pikseli. Po zakończeniu edycji funkcji, kliknij przycisk "Zamknij", aby wrócić do programu.'
-      NEW Course 4 Artist Functions 4_instruction: 'Użyj funkcji "draw a square" (narysuj kwadrat), by narysować ten wzór. Wskazówka: Będziesz musiał użyć bloku "skręć w prawo o 120 stopni" po każdym kwadracie.'
-      NEW Course 4 Artist Functions 5_instruction: 'Jak blok "draw a square" (narysuj kwadrat) wie, które wykonać polecenie? Kliknij na "edytuj" w bloku funkcji "draw a square". Bloki w edytorze funkcji definiują znaczenie funkcji. Po ukończeniu edycji funkcji, kliknij przycisk "Zapisz i Zamknij" a następnie "Uruchom"'
-      NEW Course 4 Artist Functions 6_instruction: "Czy potrafisz narysować ten obrazek używając funkcji \"draw a square\" (narysuj kwadrat)? Wskazówka: każdy kwadrat jest oddalony o 20 pikseli.\r\n"
-      NEW Course 4 Artist Functions 7_instruction: 'Czy poznałeś już, jak używać bloków funkcyjnych? Zmodyfikuj ten kwadrat tak, aby miał bok o długości 200 pikseli. Wskazówka: Kliknij na "edytuj", aby zmienić w edytorze funkcji "draw a square" (narysuj kwadrat) rozmiar kwadratu. Pamiętaj, aby kliknąć na "Zapisz i Zamknij" , by wyjść z edytora funkcji. '
+      NEW Course 4 Artist Functions 4_instruction: 'Użyj funkcji "draw a square" (rysuj kwadrat), by narysować ten wzór. Wskazówka: Będziesz musiał użyć bloku "skręć w prawo o 120 stopni" po każdym kwadracie.'
+      NEW Course 4 Artist Functions 5_instruction: 'Jak blok "draw a square" (rysuj kwadrat) wie, które wykonać polecenie? Kliknij na "edytuj" w bloku funkcji "draw a square". Bloki w edytorze funkcji definiują znaczenie funkcji. Po ukończeniu edycji funkcji, kliknij przycisk "Zamknij" a następnie "Uruchom"'
+      NEW Course 4 Artist Functions 6_instruction: "Czy potrafisz narysować ten obrazek używając funkcji \"draw a square\" (rysuj kwadrat)? Wskazówka: każdy kwadrat jest oddalony o 20 pikseli.\r\n"
+      NEW Course 4 Artist Functions 7_instruction: 'Czy poznałeś już, jak używać bloków funkcyjnych? Zmodyfikuj ten kwadrat tak, aby miał bok o długości 200 pikseli. Wskazówka: Kliknij na "edytuj", aby zmienić w edytorze funkcji "draw a square" (rysuj kwadrat) rozmiar kwadratu. Pamiętaj, aby kliknąć na "Zamknij", by wyjść z edytora funkcji. '
       NEW Course 4 Artist Functions 8_instruction: 'Utworzyliśmy dla Ciebie nową funkcję "draw a triangle" (rysuj trójkąt).  Czy mógłbyś wypełnić definicję tej funkcji, by rysowała trójkąt o bokach 100 pikseli?'
       NEW Course 4 Artist Functions 9_instruction: Czy mógłbyś to rozwiązać dodając tylko jeden blok?
       NEW Course 4 Artist Functions inspire_instruction: Kliknij tutaj, aby ponownie zobaczyć inspirujący obraz.
-      New Course 4 Artist Functions Level 4_instruction: 'Użyj funkcji "draw a square" (narysuj kwadrat) do narysowania tego wzoru.'
+      New Course 4 Artist Functions Level 4_instruction: 'Użyj funkcji "draw a square" (rysuj kwadrat) do narysowania tego wzoru.'
       NEW Course 4 Artist Params 1_instruction: 'Zdefiniuj funkcję do rysowania kwadratu o boku długości 50 pikseli. Kliknij "edytuj", aby zacząć.'
       NEW Course 4 Artist Params 10_instruction: |
-        Utwórz blok funkcji "draw a hexagon" (narysuj sześciokąt), która będzie mieć parametr "length" (długość boku). 
+        Utwórz blok funkcji "draw a hexagon" (rysuj sześciokąt), która będzie mieć parametr "length" (długość boku). 
         Wskazówka: ten sześciokąta ma boki długości 100 pikseli. 
       NEW Course 4 Artist Params 11_instruction: |
         Czy wiesz, jak narysować ten kształt? 
@@ -1664,14 +1662,14 @@ pl:
       NEW Course 4 Artist Params 13_instruction: "Zredaguj funkcję \"draw a polygon\" (rysuj wielokąt). Ma ona już parametr \"sides (boki). Teraz dodaj parametr \"length\" (długość). \r\nWskazówka: Obwód każdego kształtu ma 200 pikseli. Czy pamiętasz równanie do rysowania kształtów o tym samym obwodzie, ale o różnej liczbie boków?"
       NEW Course 4 Artist Params 14_instruction: 'Zmodyfikuj funkcję "draw a spiral edge" (rysuj spiralną krawędź), by korzystała z parametrów "length" (długość) i "sides" (boki), a następnie odtwórz te kształty.'
       NEW Course 4 Artist Params 15_instruction: 'Czas na zabawę: To są funkcje, które napisałeś do tej pory, oraz kilka dodatkowych. Narysuj coś wspaniałego! Poeksperymentuj z szerokością pisaka, żeby zobaczyć jak zmieniają się Twoje rysunki!'
-      NEW Course 4 Artist Params 2_instruction: 'Utwórz funkcję "narysuj trójkąt" (draw a triangle) o długości boków 50 pikseli'
+      NEW Course 4 Artist Params 2_instruction: 'Utwórz funkcję "draw a triangle" (rysuj trójkąt) o długości boków 50 pikseli'
       NEW Course 4 Artist Params 3_instruction: "Teraz użyj funkcji, by narysować rząd 5 trójkątów. Wskazówka: trójkąty są oddalone o 30 pikseli.\r\n"
       NEW Course 4 Artist Params 4_instruction: 'Czy zauważyłeś jakieś różnice w tych blokach funkcji? Kliknij przycisk "Uruchom", aby zobaczyć co się dzieje.'
       NEW Course 4 Artist Params 5_instruction: 'Wypełnij ??? w bloku wejściowym parametru "length" (długość). Wskazówka: Pięciokąt ma boki o długości 100 pikseli. '
       NEW Course 4 Artist Params 6_instruction: 'Wypełnij parametr "length" (długość), aby rysować te kształty, zastępując "???" odpowiednią liczbą. Kwadrat i trójkąt mają boki o długości 100 pikseli, a bok sześciokąta ma długość 75 pikseli.'
       NEW Course 4 Artist Params 7_instruction: 'Czy mógłbyś ukończyć ten rysunek? Wskazówka: każdy trójkąt ma o 25 pikseli dłuższe boki niż poprzedni trójkąt. Pierwszy trójkąt ma boki długości 25 pikseli.'
       NEW Course 4 Artist Params 8_instruction: Kod tej funkcji trójkąta jest uszkodzony. Czy mógłbyś w opcji edycji funkcji naprawić ten błąd a następnie tworzyć trójkąty o długościach boków 25, 50 i 75?
-      NEW Course 4 Artist Params 9_instruction: 'Kliknij przycisk "edytuj", aby wypełnić definicję funkcji "draw a square" (narysuj kwadratu) i dodać parametr. Parametr powinien odpowiadać długości boków, jak w przypadku trójkąta. Tym razem narysuj 3 kwadraty o długościach boków 25, 50 i 75 pikseli oddalone od siebie o 100 pikseli.'
+      NEW Course 4 Artist Params 9_instruction: 'Kliknij przycisk "edytuj", aby wypełnić definicję funkcji "draw a square" (rysuj kwadratu) i dodać parametr. Parametr powinien odpowiadać długości boków, jak w przypadku trójkąta. Tym razem narysuj 3 kwadraty o długościach boków 25, 50 i 75 pikseli oddalone od siebie o 100 pikseli.'
       NEW Course 4 Artist Params inspire_instruction: "Dowolne inspiracje: Nauczyłeś się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według własnego pomysłu.\r\n\r\nCzy chcesz wiedzieć, jak powstał nasz wzór? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Przejrzyj ten kod. Czy widzisz, jak bloki "przypisz length " (set length) i "length" (długość) współpracują ze sobą? Kliknij na "Uruchom", aby zobaczyć je w akcji. '
       NEW Course 4 Artist Vars 12_instruction: Zmodyfikuj algorytm z poprzedniej łamigłówki i utwórz pięciokąt o bokach długości 150.
@@ -1692,7 +1690,7 @@ pl:
       NEW Course 4 Bee For Loops 5_instruction: 'Możesz również użyć pętli "ile/dla", by odliczać do dołu. Spróbuj zebrać ten nektar odliczając w dół od 5 co 1 do 1.'
       NEW Course 4 Bee For Loops 6_instruction: 'Ostatnia liczba w pętli "licz z" to "przyrost", i za każdym obrotem pętli "counter" (licznik) zmienia się o ten przyrost. Spróbuj zebrać cały nektar z tych kwiatów używając przyrostu o wartości 2.'
       NEW Course 4 Bee For Loops 7_instruction: "Teraz połączmy zmienną \"counter\" (licznik) z blokiem matematycznym! Jak użyjesz zmiennej \"counter\" (licznik), aby przejść przez ten ogród z możliwie najmniejszą liczbą bloków? Co trzeba zrobić, aby zebrać 3, 6, 9, 12, 15 nektarów tym razem? Tajemnica tkwi w zmiennej \"counter\" (licznik)! \r \r Pamiętaj: Jeśli Twoja pętla liczy do przodu, to przyrost jest dodawany do zmiennej \"counter\" (licznik) w każdym obrocie pętli."
-      NEW Course 4 Bee For Loops 8_instruction: "Masz teraz to! Jaki powinien być przyrost (increment), aby zebrać 3, 6, 9, 12, 15 nektarów? \r\nWskazówka: Ile należy dodać do liczby, aby otrzymać liczbę po niej?"
+      NEW Course 4 Bee For Loops 8_instruction: "Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów? \r\nWskazówka: Ile należy dodać do liczby, aby otrzymać liczbę po niej?"
       NEW Course 4 Bee For Loops 9_instruction: Jeśli Twoja pętla odlicza do dołu, to przyrost jest odejmowany od licznika w każdej pętli. Jaki powinien być przyrost, aby zebrać 9, potem 6, a następnie 3 nektary?
       NEW Course 4 Bee For Loops 95_instruction: 'Spójrz na każdą część pętli "ile/dla", którą właśnie utworzyłeś.  Czy potrafisz określić, które liczby trzeba podwoić, by rozwiązać tę łamigłówkę? Dlaczego to działa?'
       NEW Course 4 Play Lab Params 11_instruction: 'Czas na zabawę! Miłej zabawy z wszystkimi blokami. '
@@ -1817,7 +1815,7 @@ pl:
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: 'Funkcje umożliwiają definiowanie nowych bloków! Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie "draw a square" (narysuj kwadrat). Czy mógłbyś posłużyć się tą funkcją, aby narysować okulary? Kwadraty są oddalone od siebie o 75 pikseli.'
+      PDK5 Functions 2_instruction: 'Funkcje umożliwiają definiowanie nowych bloków! Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie "draw a square" (rysuj kwadrat). Czy mógłbyś posłużyć się tą funkcją, aby narysować okulary? Kwadraty są oddalone od siebie o 75 pikseli.'
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -1925,10 +1923,7 @@ pl:
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan Test Locked Blocks_instruction: 'Mamy tu funkcję "patrol" (patrol). Zmień ją tak, by Kot przeszedł 400 pikseli w górę, po czym 400 pikseli w dół.'
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -2004,7 +1999,7 @@ pl:
       Standalone_Artist_5_instruction: Ile razy musisz powtórzyć w pętli ten diament, aby narysować kwiat?
       Standalone_Artist_6_instruction: 'Powtórz 6 razy w pętla ten kod sześciokąta, aby utworzyć ten wzór. O ile stopni będziesz musiał skręcić za każdym razem? Wskazówka: podziel liczbę stopni w kole przez liczbę obrotów w pętli.'
       Standalone_Artist_7_instruction: 'Funkcja jest kolejnym narzędziem programowania, które pomaga unikać powtarzania. Ta funkcja rysuje kwiat, możesz zatem użyć jej za każdym razem, gdy tylko chcesz narysować kwiat. Użyj tej funkcji i nowego bloku "skocz", by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
-      Standalone_Artist_8_instruction: 'Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy, by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie eksperymentuj z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować, by rysowała wzory złożone z kwadratów, trójkątów lub ośmiokątów?'
+      Standalone_Artist_8_instruction: 'Tutaj jest funkcja o nazwie "rysuj kształt", którą zaprogramowaliśmy, by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie eksperymentuj z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować, by rysowała wzory złożone z kwadratów, trójkątów lub ośmiokątów?'
       Standalone_Artist_9_instruction: |
         Teraz przejdź dalej i wykonaj rysunek, na jaki masz ochotę! 
         Dostępna jest pusta funkcja, z którą możesz zrobić, co chcesz!
@@ -3360,9 +3355,7 @@ pl:
         Set up an event handler to respond
         to keypress events, and display event.key in the console. Hit keys on the
         keyboard to see what happens. (Click to see full instructions)
-      U3L25 - play sound when up key_instruction: |
-        Change the code so the sound will
-        only play when the up arrow is pressed. (Click to see full instructions)
+      U3L25 - play sound when up key_instruction: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       U3L25 Chatbot Strings_instruction: |
         1. Adjust your digital assistant to evaluate
         inputs the same way whether the inputs are capitalized or lowercase. 2. If
@@ -3436,6 +3429,9 @@ pl:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -3443,6 +3439,7 @@ pl:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

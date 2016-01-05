@@ -26,9 +26,9 @@
   twentyhours_heading: Prøv vores intro til programmeringskursus
   twentyhours_text: Færdig med din første Hour of Code? Lær flere centrale datalogi-
     og programmeringbegreber i dette opfølgende kursus.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Ethvert barn fortjener muligheder
+  og_description: Alle elev i alle skoler fortjener muligheden for at studere computer
+    science.
   hoc2014_heading: Vær med i <a href="http://hourofcode.com">Hour of Code</a> <br/>8.
     - 14. December 2014 <br/>
   hoc2014_students: Elever
@@ -368,7 +368,7 @@
     href="%{learn_more}"> Lær mere</a> om at organisere din egen kodetime begivenhed
     og finde en lokal frivillig på vores <a href="%{volunteer_local}"> frivillige
     kort</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Opdater dine oplysninger
   volunteer_engineer_submission_header_shared: Oplysninger, der deles med lærere på
     kort over frivillige
   volunteer_engineer_submission_field_name: Navn
@@ -429,7 +429,7 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Villige til at bidrage
     til open source læseplans projekter
   volunteer_engineer_submission_experience_unspecified: Ikke angivet
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Ikke-ingeniør på en teknologivirksomhed
   volunteer_engineer_submission_experience_university_student_or_researcher: Nuværende
     universitetsstuderende (eller forsker)
   volunteer_engineer_submission_experience_software_professional: Software professional
@@ -476,47 +476,49 @@
   dashboard_landing_available_courses: Her er kurserne som lige nu er tilgængelige
     for dig og dine elever.
   dashboard_landing_more_tutorials: Vil du se flere tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_landing_more_tutorials_desc: Der er flere tutorials <a href="/learn/beyond">
+    udbudt af vores partnere.</a> Lære at programmere med robotter, lave websider,
+    lav din egen app eller udforske andre sprog som C ++, Ruby eller Python!
+  dashboard_hoc_courses: En Times Kodning til alle aldre
+  dashboard_hoc_courses_desc: Prøv nogen af disse kortere 1 times tutorial med dine
+    elever!
+  dashboard_hoc_courses_desc_and_cta: Prøv disse korte, en times tutorial med dine
+    elever. <a href="https://hourofcode.com"> Tilslut dig En Times Kodning bevægelsen</a>
+    i løbet af Computer Videnskabs Uddannelses Uge.
+  dashboard_k5_courses: 20-timers kurser for K-5
+  dashboard_k5_courses_desc: Disse kurser blander online, selv-guidede og selvstyrede
+    tutorials med aktiviteter, der slet ikke kræver en computer. Hvert kursus består
+    af ca. 20 lektioner, der kan gennemføres som en enhed eller i løbet af et semester.
+    Selv børn i børnehave-alderen uden læse-færdigheder kan deltage. For at hjælpe
+    dig i gang, tilbyder vi faglige udviklingsworkshops af høj kvalitet rundt omkring
+    i USA, gratis. <a href="/professional-development-workshops">Find en her!</a>
+  dashboard_middle_courses: 20-timers høje klassetrins kurser
+  dashboard_middle_courses_desc: Vores pensum for mellemskolen bruger datalogi og
+    programmering i forbindelse med matematik og naturvidenskab, som et redskab til
+    at undervise i begreber indenfor matematik og naturvidenskab. For at tilmelde
+    dig til faglige udviklingsworkshops, så ansøge om et <a href="/educate/districts">
+    regionalt partnerskab</a> med Code.org.
+  dashboard_high_courses: Kurser for et helt undervisningsår for gymnasiet
+  dashboard_high_courses_desc: Vores gymnasie program hjælper skoledistrikter med
+    at tilbyde helårlige kurser i computervidenskab ved at forberede eksisterende
+    undervisningspersonale til at tilbyde denne nye emne. For at tilmelding til faglige
+    udviklingsworkshops, så ansøg om et <a href="/educate/districts"> regionalt partnerskab</a>
+    med Code.org.
   dashboard_course_csina: Datalogi i Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csina_desc: Code.org har indgået et samarbejde med Bootstrap om
+    at udvikle en læseplan, der omhandler læring af algebraiske og geometriske begreber
+    gennem edb-programmering.
+  dashboard_course_csins: Datalogi i Videnskab
+  dashboard_course_csins_desc: Code.org har indgået et samarbejde med projekt GUTS
+    til at levere en introduktion til begreber i computervidenskab inden for rammerne
+    af relateret til modellering og simulering.
   dashboard_course_ecs: På opdagelse i programmering
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: 'Udforskning af Computervidenskab er et helårs-kursus
+    bestående af 6 enheder: Menneskelig interaktion med computere, Problemløsning,
+    Webdesign, Programmering, Beregning og Dataanalyse, og Robotteknologi.'
+  dashboard_course_csp: AP® Principper i Computervidenskab
+  dashboard_course_csp_desc: Code.org har designet et stringent, engagerende og imødekommende
+    kursus, der udforsker de fundamentale ideer i computing.
   dashboard_landing_loading: Indlæser...
   dashboard_action_edit: Rediger
   dashboard_action_save: Gem
@@ -539,7 +541,7 @@
   dashboard_navigation_section_speakers: Find en<br/> gæstetaler
   dashboard_navigation_all_sections: Elevernes konti og fremskridt
   dashboard_navigation_view_progress: Se fremskridt
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Vis tekstsvar
   dashboard_navigation_add_students: Tilføj elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lektionsplaner og ressourcer
@@ -594,7 +596,10 @@
   dashboard_students_share_section: 'Del dette holds loginside med dine elever:'
   dashboard_students_print_info: Udskrive kort med dine elever login-oplysninger.
   dashboard_students_secret_picture_title: Hemmeligt billede
-  dashboard_students_secret_picture: Hemmeligt billede
+  dashboard_students_secret_picture: Dette afsnit bruger <b>billede</b> som dets hemmelige
+    type.  Det betyder, at hver af dine elever har et hemmelig billede i stedet for
+    en adgangskode til at logge på.  Eleverne skal bruge tegnet i webadressen angivet
+    ovenfor til at logge på.
   dashboard_students_reset_picture: Du kan nulstille en elevs hemmelige billede til
     enhver tid ved at vælge <b>Vis hemmeligt</b>, og derefter <b>Nulstille hemmeligt</b>.
     Et nyt hemmeligt billede vil blive genereret for den studerende at bruge, når
@@ -614,18 +619,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Klik her</a> for vores privatlivspolitik, der kan deles eller udskrives til dine
     elever.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5 Ressourcer for Undervisere
+  dashboard_curriculum_middle_title: Mellemskole Ressourcer for Undervisere
+  dashboard_curriculum_high_title: Gymnasium Ressourcer for Undervisere
+  dashboard_lesson_plans: Lektionsplaner
   dashboard_view_all_lesson_plans: Se alle lektionsplaner
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'Kursus 4 (beta): '
+  dashboard_curriculum: Læseplan
   dashboard_curriculum_overview: Indskoling og mellemtrin (0.-5. klasse)
-  dashboard_overview: Overview
+  dashboard_overview: Oversigt
   dashboard_sequence: Sekvens
   dashboard_framework: Værktøjskasse
   dashboard_standards: Standarder
@@ -636,10 +641,10 @@
   dashboard_puzzle_solving: 'Opgaveløsning:'
   dashboard_student_worksheet: Elev regneark
   dashboard_teacher_worksheet: lærer regneark
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: 'Datalogi i Algebra:'
+  dashboard_curriculum_csins: 'Datalogi i Videnskab:'
+  dashboard_curriculum_csp: 'AP® Principper i Datalogi:'
+  dashboard_curriculum_ecs: 'Udforsk i Datalogi:'
   dashboard_grade_k: K
   dashboard_grade_other: Andre
   dashboard_login_word: Ord
@@ -655,7 +660,7 @@
   dashboard_stage: trin
   dashboard_puzzle: Opgave
   dashboard_question: Spørgsmål
-  dashboard_response: Response
+  dashboard_response: Svar
   stats_hoc_2013_heading: 'Utrolige statistikker fra sidste års "Hour of Code". I
     en uge alene:'
   stats_hoc_2013_image_alt: Statistik fra 2013 "Hour of Code"
@@ -675,57 +680,60 @@
     typer login, <b>billede, ord, eller e-mail</b>, du med fordel kan vælge for et
     hold.
   dashboard_faq: Ofte stillede spørgsmål
-  dashboard_faq_k5: K-5 Frequently Asked Questions
-  dashboard_announcements: Announcements
+  dashboard_faq_k5: K-5 Ofte stillede spørgsmål
+  dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+  dashboard_announce_message: '<b>16. December 2015</b> - Tak for deltagelse i Hour
+    of Code 2015! Følg og gem fremskridt er nu genoptaget i alle Kode-Studio tutorials
+    og kurser. Bemærk: Code.org''s kontorer vil være lukket 19. december - 3. januar.
+    Forbehold for forsinkede svar på eventuelle spørgsmål, som du indsender i perioden
+    indtil 4. januar.'
   dashboard_announce_button_text: Lær mere
-  dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
-    every participating organizer will receive a gift card to Amazon.com or Microsoft's
-    Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_hoc: <b>23 November 2015</b> - Ønsker du en frivillig, som er
+    dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over
+    7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse
+    eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit
+    område.
+  dashboard_announce_playlab: '<b>4. December 2015</b> - The Hour of Code er her!
+    Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne
+    historier og spil i nye Spil-Labs, Ice Age og Gumball.'
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
+  learn_sign_up_description: Tilmeld dig til at deltage i Hour of Code i løbet af
+    CS Education Week
   learn_sign_up_button: Tilmeld
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Se denne inspirerende video sammen med din klasse
+  learn_videos_show: Vis denne inspirerende video til din klasse
+  learn_videos_before_hoc: Se en inspirerende video før din Hour of Code
   learn_educator_resources_description: Tricks til at undervise i "Hour of Code"
-  learn_educator_resources_button: Educator resources
+  learn_educator_resources_button: Ressourcer for undervisere
   learn_are_you_educator: Er du underviser? Se hvordan til <a href="http://hourofcode.com/resources/how-to">
     at undervise i Hour of Code</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a lokal frivillig</a>
+    til at hjælpe dig under Hour of Code
+  learn_teacher_led_lesson_plans: Bliv inspireret af <a href="https://code.org/teacher-led">lærer-styrede
+    Hour of Code lektionsplaner</a>
+  learn_how_to_hoc: Følg <a href="https://hourofcode.com/how-to"> vores vejledning</a>
+    til undervisning i Hour of Code
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Lær mere</a> om præmier
+    for hver underviser, så længe lager haves
+  learn_inspirational_videos: Inspirerer elever ved at vise dem <a href="https://code.org/educate/inspire">
+    disse videoer</a>
   hoc2014_try_new_tutorials: Prøv vores nye Hour of Code tutorials
   hoc2014_try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Kunstner med Anna og Elsa, fra Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutorials af Code.org
+  carousel_heading_codeorg_any_device: Tutorials af Code.org (for alle enheder)
+  carousel_heading_3rd_party: Tutorials af samarbejdspartnere
+  carousel_heading_third_party: Tutorials af samarbejdspartnere
   carousel_heading_international: Vejledninger på dit sprog
   carousel_heading_domestic: Tutorials på engelsk
   carousel_heading_beginners: Tutorials for begyndere
   carousel_heading_beyond_beginners: Tutorials for begyndere
   carousel_heading_javascript: Øvelser, hvor du lærer Javascript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutorials hvor du lærer Javascript
   carousel_heading_unplugged: Ingen enhed eller internettet? Prøv "unplugged" kodning
   carousel_heading_devices: Tutorial apps for mobiler og tablets
   carousel_heading_beyond_devices: Tutorial apps for mobiler og tablets
@@ -738,10 +746,10 @@
   carousel_heading_ide: Platforme populære blandt lærere
   educator_notes: Lærervejledning
   teach_led_lesson_plans: Lærerstyret Hour of Code lektions planer
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: Se denne <a href="https://code.org/educate/allhourofcode">
+    omfattende liste med Hour of Code tutorials</a>. Se vores kriterier og retningslinjer
+    for indsendelse til Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">
+    Klik her.</a>
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
   beyond_submission: Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
@@ -799,12 +807,12 @@
   playlab_name: Spille Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstner
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Kodningsjagten på den mystiske ø
+  allcancode_name: Kør Marco!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: Kasse-øen
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutters kode
   teacherled_name: Lærerstyret Hour of Code lektions planer
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
@@ -850,12 +858,12 @@
   infinity_gradelevel: For 4-104-årige
   artist_gradelevel: For 4-104-årige
   monstercoding_gradelevel: I alderen 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: I alderen 5-10
+  csfirst_gradelevel: I alderen 9-14
   boxisland_gradelevel: Folkeskole
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: I alderen 12-14
+  texasinstruments_gradelevel: I alderen 13-16
+  teacherled_gradelevel: I alderen 5 +
   codeorg_platformtext: Moderne browsere, smartphones, tabletter
   codeintl_platformtext: Moderne browsere, smartphones, tabletter
   thinkersmithspanish_platformtext: Ikke tilsluttet
@@ -897,12 +905,12 @@
   frozen_platformtext: Moderne webbrowsere og tablets
   starwars_platformtext: Moderne webbrowsere og tablets
   playlab_platformtext: Moderne browsere, smartphones, tabletter
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Moderne webbrowsere, iOS, Android
+  allcancode_platformtext: Moderne browsere, iOS
   csfirst_platformtext: Moderne web-browsere
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderne web-browsere
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI lommeregnere
   teacherled_platformtext: Moderne browsere, smartphones, tabletter
   codeorg_shortdescription: Lære at kode med Mark Zuckerberg og Angry Birds!
   codeintl_shortdescription: Lære at kode med Mark Zuckerberg og Angry Birds!
@@ -958,19 +966,18 @@
   infinity_shortdescription: Brug Play Lab til at skabe en historie eller et spil
     med karakterer fra Disneys Infinity
   artist_shortdescription: Tegn seje billeder og designs!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  monsterocding_shortdescription: En farverig selv-guidet programmerings eventyr for
+    børn.
+  allcancode_shortdescription: Et fordybende spil i at guide Marco med en visuel programmeringssprog.
+  csfirst_shortdescription: Animer en historie om to karakterer på havet. Tilføj din
+    egen stil!
+  boxisland_shortdescription: Tag en kode-tur på Kasse-øen med den modige Hiro.
+  codesters_shortdescription: Oprette dine egne spil, animationer og illustrationer
+    ved hjælp af Python.
+  texasinstruments_shortdescription: Lær grundlæggende kodning ved hjælp af TI-84
+    &#8482; Plus Lommeregner.
+  teacherled_shortdescription: Bliv inspireret til at designe din egen En Times Kodning
+    begivenhed med disse undervisningsplaner.
   codeorg_longdescription: Lær de grundlæggende begreber i computer videnskab med
     træk og slip-programmering. Dette er et spil-lignende, selvstyret opgaveforløb
     med stjernespækket video foredrag af Bill Gates, Mark Zuckerberg, Angry Birds
@@ -1115,37 +1122,36 @@
   playlab_longdescription: Skab en historie eller lav et spil i Play Lab! Få dyr,
     pirater, zombier, ninjaer og mange flere figurer til at bevæge sig. Lav lyde,
     scor point og endda kaste med ildkugler!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: Mysteriums-øens Kodnings-mission af Monster Kodning
+    tilbyder en sjov, selv-guidedt eventyr, der lærer flere centrale programmering
+    begreber til børn. Hver blok baseret aktivitet bygger på det tidligere, for at
+    introducere funktioner, booleske værdier, sløjfer, If/Else sætninger og Arrays
+    til børn, ved brug af farverig animeret grafik og lyd-instruktioner.
+  allcancode_longdescription: Elever spiller et adventurespil baseret på en original
+    historie. De guider Marco - hovedpersonen - gennem hvert niveau ved at give ham
+    en trinvis vejledning i form af visuel programmeringssprog brugt i En Times Kodning.
+    De bliver introduceret til sekvensering af kommandoer, iterationer og betingelser
+    uden selv at bemærke det.
+  csfirst_longdescription: Oprette en historie om to tegn på havet. Animere vandet,
+    og tilpasse landskab for at tilføje din egen stilart. Brug kode til at fortælle
+    historien som du ønsker at fortælle!
+  boxisland_longdescription: Tag en tur på Kasse-øen og hjælpe Hiro med at indsamle
+    alle de spredt ure i ørkenen! I denne vejledning vil du lære grundlæggende algoritmer,
+    sekvenser, løkker og betingelser!
+  codesters_longdescription: 'Opret dine egne spil, animationer og illustrationer
+    ved hjælp af Python.  Når du er færdig, kan du dele dem med venner! Programmer
+    i Python, er rigtigt programmeringssprog brugt hver dag i virksomheder - vores
+    træk og slip værktøjspakke gør det nemt at lære!  Prøve at bygge et basketball
+    spil, koreografi til dans, eller designe et animeret kort! '
+  texasinstruments_longdescription: '10 Minutter med Kode aktiviteter kan bruges i
+    klassen som en måde til at fange elevernes interesse for kodning med den TI teknologi
+    de bærer i deres rygsække hverdagen.  Lær grundlæggende kodning ved hjælp af TI-84
+    &#8482; Plus og få gang i programmering på bare 10 minutter - ingen erfaring nødvendig!  '
+  teacherled_longdescription: Nu, hvor titusinder af pædagoger har prøvet En Times
+    Kodning, er mange klasseværelser klar til mere kreative, mindre standardiseret
+    aktiviteter, der lærer grundlæggende i datalogi. For at hjælpe lærere med at finde
+    inspiration, har vi indsamlet og organiseret En Times lærer-ledet lektion og aktivitetsplaner
+    designet til forskellige emneområder for øvede i En Times Kodning.
   codeorg_beyond_name: Intro til kodning (8. klasse)
   khan_beyond_name: Lær programmering
   tynker_beyond_name: Lær programmering i hjemmet
@@ -1475,13 +1481,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspil
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

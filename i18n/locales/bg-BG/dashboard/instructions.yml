@@ -1839,10 +1839,7 @@ bg:
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
       Ryan - 4-5 Bee Conditionals 2_instruction: Пчела иска нектар точно сега. Не всички обекти са цветя, така че проверете всеки ОБЛАК, за да се види дали отдолу се крие цвете. Ако е така, тогава можете да съберете нектар.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Пчелата иска само нектар сега. Не всички обекти под облачетата са цветя, така че направете проверка и събирайте нектар само от цветята.
       Ryan Test Locked Blocks_instruction: |
         Тази функция се нарича "патрул". 
         Редактирайте я, за да преместите котката с 400 пиксела нагоре или надолу.
@@ -3341,6 +3338,9 @@ bg:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -3348,6 +3348,7 @@ bg:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

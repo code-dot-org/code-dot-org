@@ -221,7 +221,7 @@ fa-AF:
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
       2-3 Maze 7_instruction: منو به سمت این شیطان سبز راهنمایی کن! (حواست به بمب ها باشه)
-      2-3 Maze 8_instruction: Get me to the pig!
+      2-3 Maze 8_instruction: من را به خوک برسان!
       2-3 Maze 9_instruction: منو به سمت این شیطان سبز راهنمایی کن! (حواست به بمب ها باشه)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
@@ -291,7 +291,7 @@ fa-AF:
       4-5 Artist 4_instruction: |
         How many degrees are in a circle?  Loop the blocks
         to create a circle of colors.
-      4-5 Artist 5_instruction: What angle do you use?
+      4-5 Artist 5_instruction: چه زاویه ای را استفاده می کنید؟
       4-5 Artist 6_instruction: |
         This equilateral triangle has angles of 60, 60,
         and 60 degrees. Each side is 200 pixels. Complete the drawing.
@@ -595,7 +595,7 @@ fa-AF:
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: Get me to the pig!
+      4-5 Maze 13_instruction: من را به خوک برسان!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
@@ -605,15 +605,11 @@ fa-AF:
       4-5 Maze 3_instruction: Must... get... to sunflower.
       4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
-      4-5 Maze 5 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+      4-5 Maze 5 (copy 1)_instruction: قادر به حل این معما با استفاده از کمترین تعداد بلوک ممکن هستید؟
       4-5 Maze 5_instruction: |
         Can you solve this puzzle using the fewest number
         of blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: |
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+      4-5 Maze 6 (copy 1)_instruction: قادر به حل این معما با استفاده از کمترین تعداد بلوک ممکن هستید؟
       4-5 Maze 6_instruction: |
         Can you solve this puzzle using the fewest number
         of blocks possible?
@@ -1420,12 +1416,8 @@ fa-AF:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Functions challenge_instruction: |
-        Click here to see the hints
-        again.
-      Course 4 Artist Functions Inspiration_instruction: |
-        Click here to see the hints
-        again.
+      Course 4 Artist Functions challenge_instruction: اینجا را کلیک کنید برای دیدن نکات دیگر.
+      Course 4 Artist Functions Inspiration_instruction: اینجا را کلیک کنید برای دیدن نکات دیگر.
       Course 4 Artist Functions inspire_instruction: |
         Click here to see the inspiration
         picture again.
@@ -1736,7 +1728,7 @@ fa-AF:
         Extreme Challenge: No rules. No clues. Just the
         challenge!
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: اجتناب کنید از تی ان تی!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
@@ -2316,8 +2308,8 @@ fa-AF:
       K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
       K-1 Maze Assessment 1_instruction: 'Assessment -- Get me to the pig!'
-      K-1 Maze Assessment 12_instruction: Assessment Level
-      K-1 Maze Assessment 13_instruction: Assessment Level
+      K-1 Maze Assessment 12_instruction: ارزیابی سطح
+      K-1 Maze Assessment 13_instruction: ارزیابی سطح
       K-1 Maze Assessment 2_instruction: 'Assessment -- Get me to the pig!'
       K-1 maze debug 1_instruction: Change the code to get me to the pig!
       K-1 maze debug 10_instruction: |
@@ -2351,7 +2343,7 @@ fa-AF:
       K-1 Maze debug Assessment 1_instruction: |
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Get me to the pig!
+      K-1 Maze Loops 1_instruction: من را به خوک برسان!
       K-1 Maze Loops 10_instruction: |
         Get me to the pig! Using the `repeat` loop
         will make it much easier.
@@ -2361,20 +2353,20 @@ fa-AF:
         this easier.
       K-1 Maze Loops 2_instruction: Use the `repeat` block to get me to the pig!
       K-1 Maze Loops 3_instruction: Get me to the pig! Be sure to use `repeat` loops.
-      K-1 Maze Loops 4_instruction: Get me to the pig!
+      K-1 Maze Loops 4_instruction: من را به خوک برسان!
       K-1 Maze Loops 5_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 6_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 7_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 8_instruction: Use `repeat` loops to get me to the pig.
-      K-1 Maze Loops 9_instruction: Get me to the pig!
+      K-1 Maze Loops 9_instruction: من را به خوک برسان!
       K-1 Maze Loops Assessment 1_instruction: |
         Look at all we've learned! Use a
         `repeat` loop to get me to the pig!
       K-1 Maze Loops Assessment 2_instruction: |
         Use `repeat` loops to get me to the
         pig!
-      K-1 Maze Multi 14_instruction: Assessment Level
-      K-1 Maze Multi 15_instruction: Assessment Level
+      K-1 Maze Multi 14_instruction: ارزیابی سطح
+      K-1 Maze Multi 15_instruction: ارزیابی سطح
       K-1 Maze Sequence Assessment 1_instruction: "Let's see what you've learned!\r\nMove\none way, then another to get me to the pig."
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
@@ -4571,6 +4563,9 @@ fa-AF:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4578,6 +4573,7 @@ fa-AF:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

@@ -29,6 +29,8 @@
     code:
       label: 'Tilføje en lærer:'
       placeholder: Afsnitskode (SOVS)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -298,9 +300,8 @@
       remove: Er du sikker på, at du vil fjerne denne lærer?
     students:
       dashboard: Gå til lærer Dashboard
-    user_not_found: Lærer eller elev kunne ikke findes
-    student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
-      %{student_name}'
+    user_not_found: Læreren kunne ikke findes.
+    student_teacher_disassociated: Du har fjernet %{teacher_name} som din lærer.
     panel:
       answer_viewer: Svar Viser
       student: Elev
@@ -386,7 +387,7 @@
   share:
     title: Lære om Code Studio
     description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time med kode!
   gender:
     male: Mand
     female: Kvinde
@@ -403,9 +404,14 @@
       til at skabe denne øvelse.
     help_from_html_old: Ingeniører fra Google, Microsoft, Facebook og Twitter har
       bidraget til at skabe denne øvelse.
-    art_from_html: Angry Birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd.
-      Alle rettigheder forbeholdes. <br/>Plants vs zombies&trade; & &copy; & © 2013
-      Electronic Arts Inc. Alle rettigheder forbeholdes.
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheder
+      forbeholdes. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm.
+      Alle rettigheder forbeholdes. < br / > Frozen &#8482; © %{current_year} Disney.
+      Alle rettigheder forbeholdes. < br / > Ice Age &#8482; © %{current_year} 20th
+      Century Fox. Alle rettigheder forbeholdes. < br / > Angry Birds &#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle rettigheder forbeholdes. < br / > Plants vs. Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheder forbeholdes.
+      < br / > The Amazing World of Gumball er varemærke og © 2015 Cartoon Network.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
@@ -426,7 +432,7 @@
     built_on_code_studio: Bygget på Code Studio
     make_my_own_app: Byg min egen app
     how_it_works: Sådan fungerer det
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time med kode!
   reference_area:
     title: Brug for hjælp?
     subtitle: Se disse videoer og tips

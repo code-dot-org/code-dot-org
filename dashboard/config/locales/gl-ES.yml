@@ -3,7 +3,7 @@
     messages:
       not_saved: 'Por favor, corrixe os seguintes erros:'
       too_young: Este contido ten restricións de idade e non está disponíbel para
-        os alumnos máis xoves
+        os alumnos máis novos
   activerecord:
     errors:
       messages:
@@ -29,6 +29,8 @@
     code:
       label: 'Agrega un profesor:'
       placeholder: Código da sección (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Agregar profesor
   add_hint_form:
     placeholder: Por favor, dixite a súa pista aquí
@@ -59,14 +61,14 @@
     sign_out_of: Vostede usou %{provider} para entrar. <a href="%{url}">Clique aquí</a>
       para saír de %{provider}.
     already_signedup: Xa estás rexistrado?
-    notyet_signedup: Aínda non creache unha conta?
+    notyet_signedup: Aínda non creaches unha conta?
     google_oauth2: Conta do Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Conta da Microsoft
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
-    need_unlock: Non recibiche as instrucións de desbloqueo?
+    need_unlock: Non recibiches as instrucións de desbloqueo?
   signup_form:
     student_count: '%{count} alumnos xa crearon unha conta.'
     teacher_count: '%{count} profesores xa crearon unha conta.'
@@ -98,7 +100,7 @@
     taken_username: O nome de usuario xa existe
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
-    mismatch_password: Os dous contrasinais que metiche non se corresponden
+    mismatch_password: Os dous contrasinais que metiches non se corresponden
     student_terms: Concordo cos<a href='http://code.org/tos'>Termos de utilización</a>
       da Code.org. Se tivese menos de 13 anos, declaro, ao enviar este formulario,
       que teño autorización dos meus pais para usar os servizos da Code.org.<br/>No
@@ -155,7 +157,7 @@
       no_teacher: Non foi posíbel encontrar ninguén que teña entrado con '%{teacher_email_or_code}'.
         Por favor, pídelles para se rexistaren aquí e tente agregalos novamente
       section_not_found: Non foi posíbel atopar unha sección co código '%{section_code}'.
-      blank_code: Insira un código de seción
+      blank_code: Insira un código de sección
       cant_join_own_section: Non podes entrar na túa propria sección.
     mail:
       invite_student:
@@ -163,7 +165,7 @@
       student_disassociated:
         subject: 'Notificación de Code.org: %{student_name} deixou de ser o seu alumno.'
       teacher_disassociated:
-        subject: 'Notificación de Code.org: %{teacher_name} deixou de ser o seu profesor.'
+        subject: 'Notificación de Code.org: %{teacher_name} deixou de ser o teu profesor.'
   reports:
     error:
       access_denied: Non ten acceso ás estatísticas desta persoa
@@ -207,8 +209,8 @@
     msg:
       choose: 'Escoje un premio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Gañache un premio! (só para alumnos dos USA)
-      not_earned_title: Termine o tutorial e gañe recompensas (só para alumnos dos
+      earned: Gañaches un premio! (só para alumnos dos USA)
+      not_earned_title: Termine o titorial e gañe recompensas (só para alumnos dos
         EUA)
       not_earned: 'Aprenda todos os conceptos da Informática , gañe os %{num_trophies}
         trofeos e premios reais. Pode escoller entre 10GB de armacenamento gratuíto
@@ -263,12 +265,12 @@
       sign_in_to_save: Inicia sesión para gardares o teu progreso
       free_play:
         playlab: Desenvolver unha aplicación
-        artist: Deseñar algunha cousa
+        artist: Debuxar algunha cousa
         calculate: Calculate Something
         applab: Desenvolver unha aplicación
     user:
       classroom: Páxina inicial do profesor
-      district_dashboard: Painel do distrito
+      district_dashboard: Panel do distrito
       label: Olá, %{username}
       stats: Mi progreso
       settings: A miña conta
@@ -276,7 +278,7 @@
       logout: Pechar sesión
       signin: Iniciar Sesión
       signup: Crear conta
-      already_registered: Xa creache unha conta?
+      already_registered: Xa creaches unha conta?
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso
@@ -285,7 +287,7 @@
       mastery: Conceptos
       puzzle_map: Etapas
       prizes: Recolle todos os %{total_trophies} trofeos e gaña premios!
-      prize_earned: Recollidos todos os %{total_trophies} trofeos. Gañache premio!
+      prize_earned: Recollidos todos os %{total_trophies} trofeos. Gañaches premio!
       prize_us_only: (Só para estudantes dos E.U.A.)
       prizes_link: máis información
   teacher:
@@ -298,10 +300,9 @@
     confirm:
       remove: Tes a certeza de que pretendes remover este profesor?
     students:
-      dashboard: Ir ao painel de control do profesor
-    user_not_found: El profesor o el estudiante no se encontró
-    student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor
-      de %{student_name}'
+      dashboard: Ir ao panel de control do profesor
+    user_not_found: Non se pode atopar o profesor.
+    student_teacher_disassociated: Eliminaches como profesor teu a %{teacher_name}.
     panel:
       answer_viewer: Ver Resposta
       student: Estudante
@@ -345,19 +346,19 @@
     teacher_reg_link: Crear conta de profesor
     signin_directions: Crea unha conta para poder seguir o progreso.<br/> E os Profesores,
       poden seguir o progreso do grupo enteiro.
-    teacher_dashboard: Consulte o painel de control do progreso
+    teacher_dashboard: Consulte o panel de control do progreso
     teacher_student_count_one: Ten %{count} alumnos.
     teacher_student_count: Ten %{count} alumnos.
-    teacher_averages: De media os seus alumnos gañaram %{trophy_average} de %{trophy_max}
+    teacher_averages: De media os seus alumnos gañaron %{trophy_average} de %{trophy_max}
       trofeos "Mestría de Conceptos".
-    teacher_print_certificates: Imprima certificados para os alumnos que terminarem
+    teacher_print_certificates: Imprima certificados para os alumnos que terminaron
       este curso
     teacher_read_blog: Lea sobre noticias e actualizacións nos materiais dispoñíbeis
       no noso Blog do Profesor
     classroom: A súa clase
     student_progress: O teu progreso de aprendizaxe
-    student_stats: Gañache %{trophy_count} de %{trophy_max} trofeos "Mestría de Conceptos".
-    student_left_off: 'Onde parache:'
+    student_stats: Gañaches %{trophy_count} de %{trophy_max} trofeos "Mestría de Conceptos".
+    student_left_off: 'Onde paraches:'
     student_finished: Vostede completou todos os titoriais, escolla outra clase en
       %{online_link} ou %{local_school_link}
     local_school: escola local
@@ -389,7 +390,7 @@
     title: Aprende no Code Studio
     description: Todos poden aprender a programar. Constrúe xogos, aplicacións e deseños
       con código.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proba unha hora do Código!
   gender:
     male: Masculino
     female: Feminino
@@ -406,12 +407,22 @@
       crear este titorial.
     help_from_html_old: Engeñeiros da Google, Microsoft, Facebook e Twitter axudaron
       a crear estes materiais.
-    art_from_html: Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos
-      los derechos reservados. <br/>Plantas vs. Zombies&trade;&&copy; 2013 Electronic
-      Arts Inc. Todos los derechos reservados.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os dereitos
+      reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Todos os dereitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney.
+      Todos os dereitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th
+      Century Fox. Todos os dereitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing
+      World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos
+      reservados. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os
+      dereitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Todos os dereitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball
+      é marca rexistrada e &copy; 2015 Cartoon Network.
     powered_by_aws: Sostido por Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
       e Hora do Código&reg; son marcas rexistradas da Code.org.'
@@ -429,7 +440,7 @@
     built_on_code_studio: Creado no Code Studio
     make_my_own_app: Facer a miña propia aplicación
     how_it_works: Como funciona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proba unha hora do Código!
   reference_area:
     title: Necesitas axuda?
     subtitle: Ve estes vídeos e suxestións
@@ -506,9 +517,9 @@
         titorial sobre o Código do Flappy bird!
     20-hour:
       title: Curso acelerado
-      body: Este curso de 20 horas introduce o núcleo da informática e conceptos de
-        programación. O curso está deseñado para o seu uso en aulas para os graos
-        de primaria, pero é divertido aprender en todas as idades!
+      body: Este curso de 20 horas introduce o núcleo da informática e os conceptos
+        da programación. O curso está deseñado para o seu uso en clase para os cursos
+        de primaria pero é divertido aprender con calquera idade!
       body_short: Aprenda os fundamentos da informática en unha versión acelerada
         dos cursos 2 a 4.
     hoc2014:
@@ -525,7 +536,7 @@
       title: Star Wars
     infinity:
       title: Laboratorio infinito
-      body: Utilice o laboratorio de xogos para crear unha historia ou xogo protagonizada
+      body: Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada
         por personaxes de Disney Infinity.
     minecraft:
       title: Minecraft
@@ -570,10 +581,10 @@
     correct_body: A túa resposta é correcta.
   contract_match:
     wrong_title: Resposta incorrecta
-    badname: O seu contrato ten o nome errado.
+    badname: O teu contrato ten o nome errado.
     badname_case: Os nomes das funcións diferencian letras maiúsculas de minúsculas.
       Tente alterar o uso de maiúsculas e minúsculas no nome do seu contrato.
-    badrange: O seu contrato ten a imaxe errada.
+    badrange: O teu contrato ten a imaxe errada.
     baddomainsize: O seu contrato non ten o número correcto de elementos no dominio.
     baddomainname: Un ou máis dos seus elementos de dominio teñen o nome errado.
     baddomaintype: Un ou máis dos seus elementos de domínio teñen o tipo errado, ou
@@ -586,7 +597,7 @@
     ok: OK
     startover_title: Estás seguro de que queres empezar de novo?
     startover_body: Esta acción vai reiniciar o teu puzzle ao estado inicial e reiniciar
-      todos os datos que agregache ou alterache.
+      todos os datos que agregaches ou alteraches.
     startover_ok: Empezar de novo
     startover_cancel: Cancelar
   time:
@@ -680,7 +691,7 @@
     cancel: Cancelar
     delete_confirm_title: Tes a certeza de que pretendes eliminar este proxecto?
     delete_confirm_text: Ao eliminares este proxecto estás a removelo permanentemente
-      de “Os meus proxectos”. Os usuarios con quen compartiche a ligazón para este
+      de “Os meus proxectos”. Os usuarios con quen compartiches a ligazón para este
       proxecto deixarán de poder velo.
     view_all: Ver os meus proxectos
     remix: Remix

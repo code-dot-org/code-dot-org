@@ -68,10 +68,7 @@
         video: Unplug10
       Unplug11:
         title: まとめ
-        desc: The final wrap-up in the first 20-hour series will help the class relive
-          all of their favorite moments, while giving them next steps that they can
-          take on their own if they are interested in continuing their computer science
-          journey.
+        desc: 最初の20時間のシリーズについての最後のまとめは、クラスの参加者たちに、彼らが楽しんだすべての時間を追体験させることを助けるものとなります。それは同時に、コンピュータ科学の旅を続けていくことに興味を持っている人を対象に、彼らが取り組むべき次のステップを与えることにもなります。
         pdfs:
         - unplug11
         video: Unplug11

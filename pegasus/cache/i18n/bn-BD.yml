@@ -29,12 +29,12 @@
   twentyhours_heading: আমাদের কম্পিউটার সায়েন্স কোর্সের সূচনাটি করার চেষ্টা করুন।
   twentyhours_text: আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান
     এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: প্রতিটি শিশু সুযোগের দাবীদার
+  og_description: প্রত্যেক স্কুলে প্রতিটি ছাত্র কম্পিউটার বিজ্ঞানের পড়াশোনা করার
+    সুযোগের দাবীদার।
   hoc2014_heading: যুক্ত হন <a href="http://hourofcode.com"> Hour of Code</a><br/>
     ডিসেম্বর 8-14, ২০১৪ <br/>
-  hoc2014_students: Students
+  hoc2014_students: ছাত্র
   hoc2014_try: এটা চেষ্টা করুন।
   hoc2014_teachers: শিক্ষকদের
   hoc2014_host: এটা উদযাপন করুন
@@ -249,7 +249,7 @@
   homepage_slot_text_link_host: কোডের ঘন্টার নিমন্ত্রক হন
   homepage_slot_text_link_hocserved: '# সেবা'
   homepage_solot_text_link_volunteer: কোড ঘন্টা জন্য স্বেচ্ছাসেবা করুন
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_title_students: ছাত্র
   homepage_slot_text_blurb_students: আমাদের সব টিউটোরিয়াল অনুসন্ধান করুন
   homepage_slot_text_link_codestudio: কোড স্টুডিও চেষ্টা করুন।
   homepage_slot_text_link_local: স্থানীয় শ্রেণী সন্ধান করুন
@@ -362,7 +362,7 @@
   volunteer_engineer_submission_intro_links: স্বেচ্ছাসেবক খুজছেন না? এখনে নিজের এক
     ঘন্টা কোড আয়োজন করার জন্য <a href="%{learn_more}">আরো জানুন</a>  <a href="%{volunteer_local}">
     </a> এবং স্বেচ্ছাসেবক মানচিত্রে স্থানীয় স্বেচ্ছাসেবক খুজুন।
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: আপনার তথ্য হালনাগাদ করুন
   volunteer_engineer_submission_header_shared: স্বেচ্ছাসেবকদের মানচিত্রে শিক্ষকদের
     সাথে তথ্য শেয়ার করা
   volunteer_engineer_submission_field_name: নাম
@@ -548,12 +548,12 @@
   dashboard_sections_jumbotron_instruction: নতুন বিভাগ খুলে  শিক্ষার্থীদের তাতে  যুক্ত
     করুন। বিভাগ  শিক্ষার্থীদের  ছোট ছোট দলে বিভক্ত হতে সাহায্য করে যার মাধ্যমে আপনি
     তাদের আগ্রগতি পর্যবেক্ষণ  এবং তাদের অ্যাকাউন্ট পরিচলনা করতে পারেন।
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: শাখা
   dashboard_sections_table_secret: লগ-ইনের ধরণ
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_grade: গ্রেড
+  dashboard_sections_table_course: কোর্স
+  dashboard_sections_table_students: ছাত্র
+  dashboard_sections_table_code: শাখা কোড
   dashboard_sections_name: শাখার নাম
   dashboard_sections_choose_secret: আপনি কি আপনার ছাত্রদের হিসাবে প্রদান করতে চান,
     তাহলে গুপ্ত ধরনের "শব্দ" বা ওই অংশের জন্য "চিত্র" চয়ন করুন।
@@ -739,10 +739,10 @@
   carousel_heading_ide: শিক্ষকদের মধ্যে জনপ্রিয় প্ল্যাটফর্ম
   educator_notes: শিক্ষকের টীকা
   teach_led_lesson_plans: শিক্ষক পরিচালিত পাঠ পরিকল্পনা
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode">এক
+    ঘন্টার কোডের বিস্তৃত টিউটোরিয়াল তালিকা</a> দেখুন। এক ঘন্টার কোডের টিউটোরিয়াল
+    জমা দেবার জন্য আমাদের শর্তাবলী ও দাখিল নির্দেশিকা দেখার জন্য , <a href="https://hourofcode.com/tutorial-guidelines">
+    এখানে ক্লিক করুন।</a>
   how_to_teach_hoc: কিভাবে এক ঘন্টার কোড শিক্ষাবেন
   more_resources_educators: শিক্ষক ও শিক্ষাবিদদের জন্য তথ্য
   beyond_submission: এক ঘন্টার কোডের বাইরে টিউটোরিয়াল জমা করতে চান? শর্ত ও জমা ফর্ম
@@ -1041,10 +1041,10 @@
     quizzes, slides, and a completed project for students at the end.
   codecombat_longdescription: এই মহাকাব্যিক খেলায় পাইথন বা জাভাস্ক্রিপ্ট শিখতে, রাক্ষসদের
     পরাজিত করুন।
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
-    a real programming language! Students program a monkey to catch bananas while
-    it gets slightly more complicated on each level. They get star scores on each
-    solution and can share it in a single click. '
+  codemonkey_longdescription: CodeMonkey একটি অনলাইন খেলা যা একটি বাস্তব প্রোগ্রামিং
+    ভাষায় কোডিং শেখায়! শিক্ষার্থীরা একটি বানর কলা ধরা জন্য প্রোগ্রাম লিখে যা প্রতিটি
+    স্তরে সামান্য বেশি জটিল পায়। তারা প্রতিটি সমাধানে তারকা স্কোর পায় এবং একটি ক্লিকেই
+    এ শেয়ার করতে পারেন।
   codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
     in 10 short tasks. Then continue learning some basics of programming (variables
     and if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -1052,39 +1052,39 @@
   processing_longdescription: ভিজুয়াল আর্টের মাধ্যমে প্রসেসিং প্রোগ্রামিং ভাষা ব্যবহার
     করে প্রোগ্রামিং এর ভূমিকা। কোড অনুশীলনের জন্য ছোট ভিডিও পাঠ যা পরস্পর ক্রিয়াশীল
     অঙ্কন প্রোগ্রাম ডিজাইন করতে সাহায্য করে।
-  robomind_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_longdescription: Use the programming language Python to build a chatbot
-    called "Eliza" to act as a robot psychotherapist. You'll teach Eliza how to talk
-    and the right thing to say. Can she fool your friends into thinking she's a human
-    not a computer?
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
+  robomind_longdescription: শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ করে
+    প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
+    সংক্ষিপ্ত উপস্থাপনা, চলচ্চিত্র, ক্যুইজ এবং স্বয়ংক্রিয় নির্দেশিকা/ইঙ্গিত পূর্ণ
+    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।
+  groklearning_longdescription: একটি রোবট মনবিজ্ঞানী হিসাবে কাজ করতে "এলিজা" নামের
+    একটি চ্যাটবট নির্মাণের জন্য পাইথন প্রোগ্রামিং ভাষা ব্যবহার করুন। আপনি এলিজাকে
+    কিভাবে কথা বলতে এবং সঠিক জিনিস বলেতে হয় তা শেখাবেন। আপনার বন্ধুরা কি তাকে একজন
+    মানুষ না কম্পিউটার এই ভেবে বোকা হয়?
+  quorum_longdescription: এই টিউটোরিয়ালটি দৃষ্টি-প্রতিবন্ধী জন্য ব্যবহারযোগ্য এবং
+    স্ক্রিন সঙ্গে কাজ করে। মেরী সাথে কোরাম প্রোগ্রামিং ভাষা শেখার সফরে যোগ দিন যখন
+    সে একজন প্রোগ্রামার হিসাবে একটি জীববিজ্ঞান ল্যাব যোগদান করে। এই টিউটোরিয়ালটি
+    ছাত্র নির্দেশিত যার সাথে অনলাইন উদাহরণস্বরূপ কার্যক্রম আছে।
   codespark_longdescription: ফুস প্রোগ্রামিং শেখার জন্য একটি মজার, শিশু সুলভ খেলা।
     ধাঁধা সমাধান করতে ও ভার্চুয়াল জগত জীবন্ত করার জন্য আকর্ষণীয় রোবট প্রোগ্রাম করুন।  সমস্ত
     খেলা 'শব্দটি ছাড়া' তাই সবাই খেলতে পারে!
   kodable_longdescription: Kodable একটি স্ব-নির্দেশিত আইপ্যাডের গেম যা ৫ বছরের বেশি
     বয়সি শিশুদের প্রোগ্রামিং মৌলিক বিষয়গুলির সাথে পরিচিত করায়। শিক্ষক বা মা-বাবা কাছাকাছি
     থাকা সন্তোষজনক, কিন্তু প্রয়োজন নয়।
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily
-    build games and stories using with themed graphics, 10+ game-kits and customizable
-    characters. No Internet connectivity required. You can also access your creations
-    on the web.
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
+  tynkerapp_longdescription: মজার কোডিং পাজল সমাধান দ্বারা প্রোগ্রাম শিখুন।সহজে থিমযুক্ত
+    গ্রাফিক্স, ১০ এর অধিক খেলা সজ্জা ও স্বনির্ধারিত চরিত্র ব্যবহার করে গেম এবং গল্প
+    নির্মাণ করুন।কোন ইন্টারনেট সংযোগ প্রয়োজন নেই, এছাড়াও আপনি ওয়েব থেকে আপনার তৈরি
+    জিনিসে প্রবেশ করতে পারেন।
+  robomindnl_longdescription: শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
+    করে প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
+    সংক্ষিপ্ত উপস্থাপনা, চলচ্চিত্র, ক্যুইজ এবং স্বয়ংক্রিয় নির্দেশিকা/ইঙ্গিত পূর্ণ
+    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।
   flappy_longdescription: নিজের ফ্লাপি বার্ড গেম তৈরির জন্য ড্রাগ ও ড্রপ প্রোগ্রামিং
     ব্যবহার করুন এবং এটিকে আপনার পছন্দমত (ফ্লাপি হাঙ্গর, ফ্লাপি সান্তা, বা যাই হোক
     না কেন) দেখতে বানান। এক ক্লিক-এ আপনার ফোনে খেলাটি যোগ করুন।
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real JavaScript, and the more advanced you are the further you'll
-    go.
+  bitsbox_longdescription: আপনার নিজস্ব ভার্চুয়াল ট্যাবলেটের পছন্দসই-বিন্যাস করুন,
+    তারপর অনেকগুলি অ্যাপ ক্রমাগত কোড করে খেলুন এবং শেয়ার করুন। সরল সম্পূর্ণ করার
+    কৌশল এমনকি ছোট শিশুদের জন্যও আসল JavaScript প্রোগ্রামিং করা সম্ভব করে এবং আপনি
+    যত সামনে যাবেন তত উন্নীত হবেন।
   makeschool_longdescription: Learn to code by making an iPhone game using a brand
     new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
     action game and write code to teach your monster new moves. You will learn how
@@ -1097,19 +1097,19 @@
     own apps before you know it. Imagine sharing your own app creations with your
     friends! These activities are suitable for individuals and for teachers leading
     classes.
-  blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
+  blockly_longdescription: ধীর  ইন্টারনেট (বা ইন্টারনেট নেই) এমন পিসি ব্যবহার করেন?
+    Code.org টিউটোরিয়াল এর পূর্বগামী Blockly টিউটোরিয়াল ডাউনলোড করুন যা একটি ৩ এমবি
+    জিপ ফাইল যেকোন কম্পিউটারে লোড করে অথবা মেমরী স্টিক থেকে ব্যবহার করা যায়।
   thinkersmith2_longdescription: শিক্ষার্থী খোলা এবং বন্ধ কার্যাবলী হিসাবে, বাইনারি
     সংখ্যা ব্যবহার করে অক্ষর প্রতীকী ও সংরক্ষণ করা শেখে। শেষে, তারা সঙ্কেতাক্ষরে লিখা
     তাদের নিজস্ব আদ্যক্ষর তাদের সঙ্গে বাড়িতে নিয়ে যায়।
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  kodableunplugged_longdescription: 'fuzzFamily Frenzy ৫ বা তার বেশি বয়সের শিশুদের
+    প্রোগ্রামিং যুক্তির ভূমিকা হিসাবে কাজ করে, শুধু কাগজের সাথে ব্যবহারের জন্য ডিজাইন
+    করা। শিক্ষক খেলা ব্যাখ্যা করা উচিত, তারপর ছাত্ররা সরল বাধা টপকানোরে জন্য সঙ্গীকে
+    প্রোগ্রাম করবে। '
+  projguts_longdescription: এই "অসংযুক্ত" কার্যকলাপ ছাত্রদের একটি দলে পাথর / কাগজ
+    / কাঁচি গেম এর বিভিন্ন সংস্করণ খেলার এবং বিভিন্ন মডেলিং পরীক্ষার ফলাফল দেখার মাধ্যমে
+    মডেলিং ও সিমুলেশন কিভাবে কাজ করে তা শিখতে সাহায্য করে।
   hourofcode_longdescription: code.org/hoc এর জন্য প্লেসহোল্ডার
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
@@ -1336,10 +1336,9 @@
   kodable_beyond_longdescription: Kodable একটি স্ব-নির্দেশিত আইপ্যাডের গেম যা ৫ বছরের
     বেশি বয়সি শিশুদের প্রোগ্রামিং মৌলিক বিষয়গুলির সাথে পরিচিত করায়। শিক্ষক বা মা-বাবা
     কাছাকাছি থাকা সন্তোষজনক, কিন্তু প্রয়োজন নয়।
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
-    that enables young children to create their own interactive stories and games.
-    Children snap together graphical programming blocks to make characters move, jump,
-    dance, and sing
+  scratchjr_beyond_longdescription: ScratchJr এমন একটি প্রোগ্রামিং ভাষা যা ছেলেমেয়েরা
+    তাদের নিজের পরস্পর ক্রিয়াশীল গল্প এবং খেলা তৈরি করতে সক্ষম করে। ছেলেমেয়েরা গ্রাফিক্যাল
+    প্রোগ্রামিং ব্লক একসঙ্গে করে তাহের চরিত্রকে সরতে,লাফাত, নাচ ও গান গাওয়াতে পারবে।
   hopscotch_beyond_longdescription: হপস্কছ(Hopscotch) প্রোগ্রামিং ভাষায় আইপ্যাড ব্যবহার
     করে ছাত্র-নির্দেশিত টিউটোরিয়াল। ছাত্ররা তাদের আইপ্যাডে তাদের আইপ্যাডের জন্য অ্যাপ
     তৈরী করবে। ছাত্র পৃথক পৃথকভাবে বা বন্ধুদের সঙ্গে (প্রতি আইপ্যাডে ৩ জন) কাজ করতে
@@ -1357,10 +1356,10 @@
     With Hackety Hack, you''ll learn the Ruby programming language. Ruby is used for
     all kinds of programs, including desktop applications and websites. [Note: Desktop
     install required]'
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
+  robomind_beyond_longdescription: শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
+    করে প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
+    সংক্ষিপ্ত উপস্থাপনা, চলচ্চিত্র, ক্যুইজ এবং স্বয়ংক্রিয় নির্দেশিকা/ইঙ্গিত পূর্ণ
+    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।
   makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
     game in an hour! We'll guide you through the process, to code, test, and play
     your game entirely in the browser and then share it on Facebook for friends to
@@ -1408,20 +1407,20 @@
     in computer science and enough programming to be able to write Python programs
     to solve problems on your own. This course will prepare you to move on to intermediate-level
     computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
+  teachingtree_beyond_longdescription: TeachingTree একটি উন্মুক্ত প্ল্যাটফর্ম যা যে
+    কেউকে শিক্ষাগত কন্টেন্ট সংগঠিত করতে দেয়। ছাত্র দ্রুত পৃথক ধারণা শিখতে যাতে তারা
+    প্রয়োজন সঠিক ক্লিপ পায় তা নিশ্চিত করাই আমাদের লক্ষ্য। প্রত্যেকেই ভিডিও যোগ করা
+    অথবা ধারণা ট্যাগিং করে সাহায্য করার জন্য প্রণোদিত করা হয়।
   kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
     a simple visual programming language. Kodu can be used to teach creativity, problem
     solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
     young children as well as adults with no design or programming skills. Kodu for
     the PC is available to download for free. Kodu for the XBox is also available
     in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
+  cargobot_beyond_longdescription: Cargo-Bot একটি ধাঁধার খেলা যেখানে আপনি একটি রোবট
+    কিভাবে বাক্স সরায় তা শেখান। শুনতে সহজ, ঠিক? এতে ৩৬ টি বন্ধুসুলভ চতুর পাজল, গা
+    ছমছমে গান এবং চোখ ধাঁধানো গ্রাফিক্স আছে। এমনকি আপনি আপনার সমাধান রেকর্ড করতে পারেন
+    এবং আপনার বন্ধুদের দেখানোর জন্য YouTube- এ শেয়ার করে পারেন।
   kidsruby_beyond_longdescription: 'মজা করুন এবং খেলার তৈরি করুন অথবা রুবি ব্যবহার
     করে আপনার বাড়ির কাজ সহজ (হ্যাক) করুন! আপনার বাবা-মা বলবে বা শিক্ষকে বলুন আপনি
     রুবি প্রোগ্রামিং শেখছেন ;)। বিনামূল্যে এবং যে কোন কম্পিউটারে কাজ করেন। [দ্রষ্টব্য:
@@ -1434,10 +1433,10 @@
     instructions and great help when you need it. Our HTML, CSS and JavaScript courses
     include code challenges and revision games that make learning fun and effective
     for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
+  mozilla_beyond_longdescription: Thimble আপনার নিজস্ব ওয়েব পেজ তৈরি এবং শেয়ার করা
+    হাস্যকর ভাবে সহজ করে তোলে। HTML এবং CSS সরাসরি আপনার ব্রাউজারে লিখুন ও সম্পাদন
+    করুন এবং তারপর অবিলম্বে আপনার কাজ পূর্বরূপ দেখুন। একটি ক্লিকেই আপনার সমাপ্ত প্রকল্পের
+    হোস্ট এবং শেয়ার করুন। একইভাবে শিক্ষানবিস ও বিশেষজ্ঞদের জন্য উপযোগী।
   codecombat_beyond_longdescription: একজন জাদুকর হয়ে কোড (জাদু) ব্যবহার করে আপনার
     বীরদের নিয়ন্ত্রণ, গোলকধাঁধা পরিভ্রমণ, রাক্ষস হারানো, শত্রুদের প্রতারিত এবং মিত্রশক্তিকে
     উদ্ধার করুন! HTML 5 ব্যবহার করে তৈরি ওয়েব খেলায় সম্পূর্ণ নতুন হয়েও জাভাস্ক্রিপ্ট
@@ -1487,13 +1486,3 @@
   infinity_shortcode: inf
   playlab_shortcode: খেলুন
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

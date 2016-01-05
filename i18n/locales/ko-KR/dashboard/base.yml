@@ -28,6 +28,8 @@ ko:
     code:
       label: '선생님 추가:'
       placeholder: 섹션 코드(ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: 선생님 추가하기
   add_hint_form:
     placeholder: 도움내용을 입력하세요.
@@ -255,8 +257,8 @@ ko:
       remove: 선생님을 삭제하시겠습니까?
     students:
       dashboard: 선생님용 대시보드 가기
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: 선생님을 찾을 수 없습니다.
+    student_teacher_disassociated: '%{teacher_name} 선생님을 삭제하였습니다.'
     panel:
       answer_viewer: 답변 뷰어
       student: student
@@ -330,7 +332,7 @@ ko:
   share:
     title: Code Studio 배우기
     description: 누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Hour of Code 를 해보세요!
   gender:
     male: 남
     female: 여
@@ -360,7 +362,7 @@ ko:
     built_on_code_studio: 코드 스튜디오 내장
     make_my_own_app: 나만의 앱 만들기
     how_it_works: 작동하는 방법
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Hour of Code 를 해보세요!
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트

@@ -183,9 +183,9 @@ it:
           Artist Binary: 'Artista: Binario'
           description_audience: Da 10 anni in su (dopo il Corso 3)
           Super Challenge - Variables: 'Super Sfida - Variabili'
-          Super Challenge - For Loops: 'Super Sfida - Per Cicli'
+          Super Challenge - For Loops: 'Super Sfida - Cicli con Contatore'
           Super Challenge - Functions and Parameters: 'Super Sfida - Funzioni e Parametri'
-          Extreme Challenge - Comprehensive: 'Sfida Estrema - Completata'
+          Extreme Challenge - Comprehensive: 'Super Sfida Finale - Completa'
         Course4pre:
           title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli studenti che non hanno svolto i Corsi 2 e 3.
@@ -682,6 +682,7 @@ it:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1236,6 +1237,7 @@ it:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.

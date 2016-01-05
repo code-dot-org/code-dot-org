@@ -1,10 +1,7 @@
 ur:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
+      2-3 Artist 1 new_instruction: آداب، میں ایک فنکار ہوں ۔ آپ مجھے تقریباً کچھ بھی متوجہ کرنے کے لیے کوڈ لکھ سکتے ہیں ۔ چند بلاکس کی دوری مجھے تصویر میں گرے لائنوں پر متوجہ کرنے کے لئے استعمال کریں ۔ (ہر سطر 100 دانے طویل ہے)
       2-3 Artist 11_instruction: |
         Give the stop sign a border by making an octagon
         with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
@@ -42,7 +39,7 @@ ur:
         Complete the rooms for each of the animals by splitting
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
+      2-3 Artist 9_instruction: یہ پتنگ مکمل کریں
       2-3 Artist Assessment 1_instruction: |
         Assessment: Finish drawing the last tooth,
         25 pixels wide and 25 pixels tall.
@@ -174,16 +171,16 @@ ur:
       2-3 Artist Loops New 14_instruction: |
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+      2-3 Artist Loops New 15_instruction: کچھ تفریحی بنائیں ۔
       2-3 Artist Loops New 2_instruction: |
         Here's some of the code you used to draw
         that square. What happens if you use the repeat block to run this code 4 times?
       2-3 Artist Loops New 9_instruction: |
         Draw a simple V where both sides are 50
         pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
+      2-3 Artist Match Hex Pic_instruction: 'میچ: مسدس کی تکمیل میں مدد کریں.'
       2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
+      2-3 Artist Match Sq Pic_instruction: 'میچ: غائب کوڈ مکمل کیجیئے'
       2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
       2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
       2-3 Artist Nested Loops 10_instruction: |
@@ -243,7 +240,7 @@ ur:
       2-3 Bee Conditionals 14_instruction: |
         Collect nectar and make honey. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
+      2-3 Bee Conditionals 15_instruction: امرت چاروں پھولوں سے جمع کریں ۔
       2-3 Bee Conditionals 2_instruction: |
         Hi, I'm a bee! Help me collect all of
         the nectar from the flowers. Use a loop.
@@ -304,14 +301,8 @@ ur:
       2-3 Bee Debugging 9_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
+      2-3 Bee Debugging Assessment 1_instruction: 'تشخیص: یہ ٹکڑے واقعی مجھے تنگ کر رہے ہیں ۔ امرت کی تمام جمع کرتے ہیں اور تمام شہد بنانے کے نقائص کو درست کریں ۔'
+      2-3 Bee Functions 1_instruction: 'افعال بلاکس کوڈ کے کام انجام دیتے ہیں ۔ ہر پھول سے امرت جمع کرنے کے لیے "2 امرت حاصل کریں" فعل استعمال کریں ۔'
       2-3 Bee Functions 10_instruction: |
         Purple flowers may have either 1 or 0 nectar.  Create
         a function that collects nectar only from purple flowers that have nectar.
@@ -2470,7 +2461,7 @@ ur:
         jump and draw blocks
       K-1 artist 1 level 9_instruction: Draw this using three lines
       K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
+      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
@@ -2479,9 +2470,9 @@ ur:
       K-1 Artist Loops 6_instruction: |
         This one needs two loops: one to go up the
         stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
+      K-1 Artist Loops 7_instruction: Loops can help you finish this pattern.
       K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
+      K-1 Artist Loops 9_instruction: What is the easiest way to draw these stairs?
       K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
       K-1 Artist1 1_instruction: Draw the foot of the man with one line
       K-1 Artist1 10_instruction: |
@@ -3467,9 +3458,9 @@ ur:
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2 frequency caesar_instruction: Instructions
-      U2 frequency random sub_instruction: Instructions
-      U2 vigenere cipher_instruction: Instructions
+      U2 frequency caesar_instruction: ہدایات
+      U2 frequency random sub_instruction: ہدایات
+      U2 vigenere cipher_instruction: ہدایات
       U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
@@ -4858,6 +4849,9 @@ ur:
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4865,6 +4859,7 @@ ur:
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

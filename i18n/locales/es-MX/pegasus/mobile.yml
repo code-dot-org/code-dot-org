@@ -20,8 +20,8 @@ es-MX:
   submit: Enviar
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: ¿Terminaste tu primera Hora de Código? Conoce más sobre informática y conceptos de programación en este curso de seguimiento.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Todos los niños meresen la oportunidad de
+  og_description: Cada estudiante en cada escuela merese la opurtunidad de estudiar ciencia de computadoras.
   hoc2014_heading: 'Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre 8 - 14, 2014<br/>'
   hoc2014_students: Alumnos
   hoc2014_try: Pruébalo
@@ -268,11 +268,11 @@ es-MX:
   class_submission_level_vocational: Vocacional
   class_submission_languages_other: Otros idiomas
   inspirational_videos_more: 'Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> videos inspiradores</a> de modelos y celebridades'
-  playlab_choose_theme: Escoge el tema para tu laboratorio de juego
+  playlab_choose_theme: Elige un tema para tu jugar laboratorio
   playlab_classic_title: Clásico
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'La Era de Hielo - Próximamente'
-  playlab_iceage_title_live: La Era de Hielo
+  playlab_gumball_title: El asombroso mundo de Gumball
+  playlab_iceage_title: 'La era de hielo- proximamente'
+  playlab_iceage_title_live: Hera de hielo
   starwars_subtitle: Construyendo una Galaxia con Código
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Usa los bloques y JavaScript.
@@ -280,7 +280,7 @@ es-MX:
   starwars_javascript_start_button: Probar ahora
   starwars_blocks_title: Bloques
   starwars_blocks_description: Arrastra los bloques.
-  starwars_blocks_specs: Muchos lenguajes|Smartphones, tablets, navegadores actuales | Edad 6-106
+  starwars_blocks_specs: Munchas lenjuas | los navegadores modernos, smartphones, tablets |Edad 6 -106
   starwars_blocks_start_button: Probar ahora
   starwars_watch_videos: Antes de empezar, mira uno de estos videos motivadores
   starwars_speak_languages: ¿Hablas otro idioma?
@@ -291,18 +291,24 @@ es-MX:
   mc_shortdescription: Utiliza bloques de código para llevar a Esteban o Ale en una aventura a través del mundo de Minecraft.
   mc_gradelevel: Edad 4-104
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
-  mc_specs: Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106
+  mc_specs: Muchas lenguas | Los navegadores modernos y tabletas | Edad 6-106
   minecraft_subtitle: Minecraft de la Hora del Código
   volunteer_engineer_submission_title: Inspirar a los estudiantes y voluntarios para la Hora del Código.
   volunteer_engineer_submission_subtitle_generic: 100.000 docentes van a realizar una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda!
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} maestros requieren voluntarios apasionados por educacion computacional para aydar con su Hora de Codigo este diciembre.<br>%{num_volunteers} voluntarios se han inscrito. Unete a ellos.'
   volunteer_engineer_submission_intro_background: La Hora de Codigo es un movimiento global para intentar una hora introduccion a la ciencia computacional alcanzando diez millone sde estudiantes en mas de 180 paises. Porfavor unete a esta iniciativa durante la semana d educacion de ciencias de la computacion, del 7 al 13 de diciembre.
   volunteer_engineer_submission_intro_recruit: |-
-    Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
-  volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
-  volunteer_engineer_submission_intro_links: '¿No está buscando ser voluntario? <a href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.'
-  volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
+    Los maestros les encantaría tener a alguien < span style = " font-family: ' Gotham 7r ', sans- serif;"> un apasionado de la educación informática < / span > que puede ayudar en el aula, o para alguien que puede < span style = " font-family: ' Gotham 7r ', sans- serif;"> inspirar < / span > a sus estudiantes por hablar de la amplitud de posibilidades con la informática ( que podría hacerse a través de un chat de vídeo).
+  volunteer_engineer_submission_intro_signup: |2
+    Por favor, introduzca la siguiente información si usted es un estudiante de ciencias de la computación o software profesional. Los campos marcados con un <span class = " forma necesaria de campo "> * < / span > se requieren.
+     
+    Contexto | Solicitud Contexto.
+  volunteer_engineer_submission_intro_links: |2
+    ¿Necesita encontrar voluntarios? Encuentra un voluntario local en nuestra <a href="%{volunteer_local}"> mapa voluntario </a>.
+     
+    Contexto | Solicitud Contexto.
+  volunteer_engineer_submission_update_information: Actualisa tu informasion
+  volunteer_engineer_submission_header_shared: La informasion esta compartida con los maestros voluntarios del mapa
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
   volunteer_engineer_submission_field_company: Empresa (o Universidad)

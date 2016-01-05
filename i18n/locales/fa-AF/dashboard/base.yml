@@ -28,6 +28,8 @@ fa-AF:
     code:
       label: 'افزودن یک معلم:'
       placeholder: انتخاب کد (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: افزودن معلم
   add_hint_form:
     placeholder: لطفا پیشنهادتان را اینجا وارد کنید
@@ -436,7 +438,7 @@ fa-AF:
       title: جنگ ستارگان
     infinity:
       title: آزمایشگاه بازی نامحدود
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
     minecraft:
       title: ماینکرفت
       body: یک جهان ماینکرفتی را از طریق کد کاوش کنید.

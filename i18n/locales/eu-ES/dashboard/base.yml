@@ -28,6 +28,8 @@ eu:
     code:
       label: 'Irakaslea gehitu:'
       placeholder: Atal Kodea (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
@@ -255,8 +257,8 @@ eu:
       remove: Ziur zaude irakasle hau ezabatu nahi duzula?
     students:
       dashboard: Joan irakaslearen mahaigainera
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Irakaslea ezin izan da aurkitu.
+    student_teacher_disassociated: '%{teacher_name} zure irakasleetatik ezabatu duzu.'
     panel:
       answer_viewer: Erantzun Ikusgailua
       student: Ikaslea
@@ -330,7 +332,7 @@ eu:
   share:
     title: Ezagutu Code Studio
     description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu programazioaren bidez.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Saiatu Kode Ordu bat!
   gender:
     male: Gizona
     female: Emakumea
@@ -342,8 +344,8 @@ eu:
     thank_you: 'Eskerrak eman gure <a href="https://code.org/about/donors">emaileei</a>, <a href="https://code.org/about/partners">kideei</a>, gure <a href="https://code.org/about/team">talde zabalari</a>, gure bideo zerrendari, eta gure <a href="https://code.org/about/advisors">hezkuntza aholkulariei</a> Code Studio sortzen emandako babesagatik.'
     help_from_html: Bereziki eskertu nahi diegu Google, Microsoft, Facebook, eta Twitter-eko ingeniariei, eta material hauek sortzen lagundu duten guztiei.
     help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material hau sortzen lagundu dute.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide guztiak erreserbatuta.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Eskubide guztiak erreserbatuta.<br />Frozen&#8482; &copy; %{current_year} Disney. Eskubide guztiak erreserbatuta.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Eskubide guztiak erreserbatuta.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak erreserbatuta.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta.<br />The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide guztiak erreserbatuta. Star Wars&#8482; &copy; %{current_year} Disney eta Lucasfilm. Eskubide guztiak erreserbatuta. Frozen&#8482; &copy; %{current_year} Disney. Eskubide guztiak erreserbatuta. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Eskubide guztiak erreserbatuta. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak erreserbatuta. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta. The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon Network.'
     powered_by_aws: Amazon Web Servicesek sostengatua
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode Ordua&reg; Code.org-ren marka bereziak dira.'
     copyright: Egile-eskubideak
@@ -360,7 +362,7 @@ eu:
     built_on_code_studio: Code Studio-n eraikia
     make_my_own_app: Nire app-a egin
     how_it_works: Funtzionamendua
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Saiatu Kode Ordu bat!
   reference_area:
     title: Laguntzarik behar?
     subtitle: Ikusi bideo eta aholku hauek

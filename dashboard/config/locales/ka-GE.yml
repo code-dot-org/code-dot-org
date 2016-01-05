@@ -29,6 +29,8 @@
     code:
       label: 'მასწავლებლის დამატება:'
       placeholder: სექციის კოდი (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: მასწავლებლის დამატება
   add_hint_form:
     placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
