@@ -40,6 +40,8 @@ class Properties
 end
 
 def fetch_metrics()
+  # Include stale default values as of 2016-01-04 so we never show 0. These
+  # would be used, for example, if the DB is unavailable.
   Properties.get(:metrics) || {
     'created_at'=>"2016-01-04T21:37:19+00:00",
     'created_on'=>"2016-01-04",
@@ -54,7 +56,8 @@ def fetch_metrics()
 end
 
 def fetch_hoc_metrics()
-  # Include stale default values as of 2015-11-04 so we never show 0.
+  # Include stale default values as of 2015-11-04 so we never show 0. These
+  # would be used, for example, if the DB is unavailable.
   metrics = Properties.get(:hoc_metrics) || {
     'started'=>136340020,
     'finished'=>23600234,
