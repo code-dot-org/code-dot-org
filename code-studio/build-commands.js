@@ -73,7 +73,9 @@ exports.execute = function (commands) {
       stdio: 'inherit'
     });
   } catch (e) {
-    process.exit(e.status);
+    console.log("\nError: " + e.message);
+    warnIfWrongNodeVersion();
+    process.exit(e.status || 1);
   }
 };
 
@@ -109,3 +111,13 @@ exports.sassCommand = function (srcPath, buildPath, files, includePaths, shouldM
         buildPath + path.basename(file, '.scss') + extension;
   }).join(" && \\\n");
 };
+
+/**
+ * Checks current node version, prints a warning if the expected version is not
+ * currently being used.
+ */
+function warnIfWrongNodeVersion() {
+  if (!/0\.12/.test(process.version)) {
+    console.log('You are using node ' + process.version + '. This build script expects v0.12.x.');
+  }
+}
