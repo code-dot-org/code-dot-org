@@ -446,7 +446,7 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
   }
 */
   throw err;
-}
+};
 
 /**
  * Executes an API command.
