@@ -33,24 +33,16 @@ var FILES = [
   'leveltype_widget.scss'
 ];
 
-/**
- * Build script main entry point.
- */
-function main() {
-  // Use commander to parse command line arguments
-  // https://github.com/tj/commander.js
-  program
-      .option('--min', 'Build minified output', false)
-      .parse(process.argv);
+// Use commander to parse command line arguments
+// https://github.com/tj/commander.js
+program
+    .option('--min', 'Build minified output', false)
+    .parse(process.argv);
 
-  // Run build (exits on failure)
-  build_commands.execute([
-    build_commands.ensureDirectoryExists(BUILD_PATH),
-    build_commands.sassCommand(SRC_PATH, BUILD_PATH, FILES, INCLUDE_PATHS, program.min)
-  ]);
+// Run build (exits on failure)
+build_commands.execute([
+  build_commands.ensureDirectoryExists(BUILD_PATH),
+  build_commands.sassCommand(SRC_PATH, BUILD_PATH, FILES, INCLUDE_PATHS, program.min)
+]);
 
-  console.log("code-studio css built\n");
-}
-
-// Execute build script
-main();
+console.log("code-studio css built\n");

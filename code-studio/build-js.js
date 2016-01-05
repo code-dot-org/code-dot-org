@@ -24,24 +24,16 @@ var FILES = [
   'leveltype_widget.js'
 ];
 
-/**
- * Build script main entry point.
- */
-function main() {
-  // Use commander to parse command line arguments
-  // https://github.com/tj/commander.js
-  program
-      .option('--min', 'Build minified output', false)
-      .parse(process.argv);
+// Use commander to parse command line arguments
+// https://github.com/tj/commander.js
+program
+    .option('--min', 'Build minified output', false)
+    .parse(process.argv);
 
-  // Run build (exits on failure)
-  build_commands.execute([
-    build_commands.ensureDirectoryExists(BUILD_PATH),
-    build_commands.browserifyCommand(SRC_PATH, BUILD_PATH, FILES, program.min)
-  ]);
+// Run build (exits on failure)
+build_commands.execute([
+  build_commands.ensureDirectoryExists(BUILD_PATH),
+  build_commands.browserifyCommand(SRC_PATH, BUILD_PATH, FILES, program.min)
+]);
 
-  console.log("code-studio js built\n");
-}
-
-// Execute build script
-main();
+console.log("code-studio js built\n");
