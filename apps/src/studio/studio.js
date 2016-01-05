@@ -1054,7 +1054,7 @@ Studio.onTick = function() {
     // After 5 ticks of no movement, turn sprite forward.
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
-      Studio.sprite[i].dir = Direction.NONE;
+      Studio.sprite[i].setDirection(Direction.NONE);
       Studio.movementAudioOff();
     }
 
@@ -3331,7 +3331,7 @@ Studio.displaySprite = function (i) {
     if (newDir !== Direction.NONE || sprite.lastMove === Infinity) {
       // Don't change to Direction.NONE here once we've captured a lastMove
       // value, allow the ticksBeforeFaceSouth code to handle that later...
-      sprite.dir = newDir;
+      sprite.setDirection(newDir);
     }
   }
 
@@ -4194,7 +4194,7 @@ Studio.setSpriteEmotion = function (opts) {
 Studio.setSpriteSpeed = function (opts) {
   var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
       constants.SpriteSpeed.VERY_FAST);
-  Studio.sprite[opts.spriteIndex].speed = speed;
+  Studio.sprite[opts.spriteIndex].setSpeed(speed);
 };
 
 var DROID_SPEEDS = {
@@ -4454,7 +4454,7 @@ Studio.fixSpriteLocation = function () {
               skin.wallCollisionRectOffsetX;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
               skin.wallCollisionRectOffsetY;
-            sprite.dir = Direction.NONE;
+            sprite.setDirection(Direction.NONE);
 
             return;
           }
@@ -4500,7 +4500,7 @@ Studio.setSprite = function (opts) {
   }
 
   sprite.frameCounts = skinSprite.frameCounts;
-  sprite.animationFrameDuration = skinSprite.animationFrameDuration || 1;
+  sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
   sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
   // Reset height and width:
   if (level.gridAlignedMovement) {
@@ -4523,13 +4523,8 @@ Studio.setSprite = function (opts) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
   }
 
-  if (skinSprite.sprite) {
-    sprite.setLegacyImage(skinSprite.sprite, sprite.frameCounts);
-  }
-
-  if (skinSprite.walk) {
-    sprite.setImage(skinSprite.walk, sprite.frameCounts);
-  }
+  sprite.setImage(skinSprite.walk, sprite.frameCounts);
+  sprite.setLegacyImage(skinSprite.sprite, sprite.frameCounts);
 
   sprite.createElement(document.getElementById('spriteLayer'));
 
@@ -5096,7 +5091,7 @@ Studio.setSpritePosition = function (opts) {
   sprite.displayX = sprite.x = opts.x;
   sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
-  sprite.dir = Direction.NONE;
+  sprite.setDirection(Direction.NONE);
 };
 
 Studio.setSpriteXY = function (opts) {
@@ -5113,7 +5108,7 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayX = sprite.x = x;
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
-  sprite.dir = Direction.NONE;
+  sprite.setDirection(Direction.NONE);
 };
 
 Studio.getPlayspaceBoundaries = function(sprite)

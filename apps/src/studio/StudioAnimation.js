@@ -95,26 +95,8 @@ StudioAnimation.prototype.getElement = function () {
 
 /**
  * Create an image element with a clip path
- * (if the element and clip path already exist, update the dimensions and URL)
  */
 StudioAnimation.prototype.createElement = function (parentElement) {
-  if (this.element_ && this.clipPath_) {
-
-    // Update the clip rect
-    var clipRect = this.clipPath_.childNodes[0];
-    clipRect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
-    clipRect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
-
-    // Update the image and asset rect
-    this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-       this.spriteSheet_.assetPath);
-    this.element_.setAttribute('height',
-        this.spriteSheet_.assetHeight() * this.renderScale_);
-    this.element_.setAttribute('width',
-        this.spriteSheet_.assetWidth() * this.renderScale_);
-
-    return;
-  }
 
   this.animId = (uniqueId++);
 
@@ -252,6 +234,13 @@ StudioAnimation.prototype.setCurrentAnimation = function (animationType, animati
 /**
  * Creates a new special animation types based on specific frames to play from
  * the sprite sheet.
+ *
+ * A special animation is an animation created in code (or from metadata)
+ * without regard to where the frames exist within the spritesheet. Each frame
+ * from the new animation is specified according to how it was encoded by the
+ * original AnimationDescription object when the StudioSpriteSheet object was
+ * created.
+ *
  * @param {!string} type - the name of the new animation type
  * @param {!number} index - the index of the new animation
  * @param {!array} animationList - an array with frame information

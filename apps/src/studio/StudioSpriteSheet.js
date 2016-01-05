@@ -16,6 +16,13 @@
 var utils = require('../utils');
 
 /**
+ * @typedef AnimationDescription
+ * @property {string} type Descriptive unique name for this animation type
+ * @property {number} count Number of animations of this type
+ * @property {number} frames Number of frames in each animation of this type
+ */
+
+/**
  * Provider of metadata about a particular sprite sheet, to help find frames
  * within it.
  *
@@ -27,8 +34,7 @@ var utils = require('../utils');
  * @constructor
  * @param {!Object} options
  * @param {!string} options.assetPath - URL of the sprite sheet asset.
- * @param {Object} [options.animations] - Array of animation descriptions,
- *        each containing an Object: {string}type, {number}count, {number}frames
+ * @param {AnimationDescription[]} [options.animations] - Animation descriptions
  * @param {number} [options.totalAnimations] - How many animations (columns)
  *        there are in the sprite sheet. Don't use with options.animations
  * @param {number} [options.defaultFramesPerAnimation] - How many frames there
