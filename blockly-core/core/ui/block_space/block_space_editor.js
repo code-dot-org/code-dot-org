@@ -32,25 +32,42 @@ goog.require('goog.style');
  * Handles constructing a top-level SVG element, and positioning, sizing,
  * and certain focus/mouse handling operations for itself.
  * @constructor
- * @param {boolean} opt_hideTrashRect The trash rectangle is a dark grey
+ * @param {Element} container The DOM Element into which to insert this
+ * BlockSpace
+ * @param {Object} options
+ * @param {boolean} options.hideTrashRect The trash rectangle is a dark grey
  * rectangle covering the entire toolbox area, and is faded in when the user
  * drags a block towards the toolbox to delete it.  However, when creating a
  * blockspace for something like the function editor, we don't want to create
  * an additional one, relying on the main blockspace editor's one instead.
- * @param {boolean} opt_readOnly whether or not to initialize this
+ * @param {boolean} options.readOnly whether or not to initialize this
  * workspace in readOnly mode. All Blockly elements that are (or can be)
  * aware of this BlockSpaceEditor will consider Blockly to be in
  * readOnly mode if this BlockSpaceEditor.readOnly OR Blockly.readOnly
  * are true
+ * @param {boolean} options.hasVerticalScrollbars
+ * @param {boolean} options.hasHorizontalScrollbars
+ * @param {function} options.modifyMetrics Some BlockSpaces (such as the
+ * function editor) have additional sizing requirements, and use the
+ * modifyMetrics hook to dynamically resize themselves relative to
+ * default
+ * @param {function} options.onSetMetrics Some BlockSpaces (such as the
+ * function editor) have additional resizing options that need to be
+ * applied in addition to default
  */
 Blockly.BlockSpaceEditor = function(container, options) {
 
   options = options || {};
 
-  this.getBlockSpaceMetrics_ = options.getMetrics || this.getBlockSpaceMetrics_;
-  this.setBlockSpaceMetrics_ = options.setMetrics || this.setBlockSpaceMetrics_;
-  this.hideTrashRect_ = options.hideTrashRect || this.hideTrashRect_;
+  // Function Overrides
+  this.modifyMetrics_ = options.modifyMetrics;
+  this.onSetMetrics_ = options.onSetMetrics;
+
+  // Boolean Flags
+  this.hideTrashRect_ = !!options.hideTrashRect;
   this.readOnly_ = !!options.readOnly;
+  this.hasVerticalScrollbars_ = !!options.hasVerticalScrollbars;
+  this.hasHorizontalScrollbars_ = !!options.hasHorizontalScrollbars;
 
   /**
    * @type {Blockly.BlockSpace}
@@ -479,9 +496,9 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.flyout_.show(Blockly.languageTree.childNodes);
     }
   }
-  if (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars) {
+  if (this.hasVerticalScrollbars_ || this.hasHorizontalScrollbars_) {
     this.blockSpace.scrollbarPair = new Blockly.ScrollbarPair(
-      this.blockSpace, Blockly.hasHorizontalScrollbars, Blockly.hasVerticalScrollbars);
+      this.blockSpace, this.hasHorizontalScrollbars_, this.hasVerticalScrollbars_);
     this.blockSpace.scrollbarPair.resize();
   }
 };
@@ -821,7 +838,7 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var viewHeight = svgSize.height;
   var viewTop = this.blockSpace.getScrollOffsetY();
 
-  return {
+  var metrics = {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
     viewTop: viewTop,
@@ -833,6 +850,12 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
     absoluteTop: 0,
     absoluteLeft: absoluteLeft
   };
+
+  if (this.modifyMetrics_) {
+    metrics = this.modifyMetrics_(metrics);
+  }
+
+  return metrics;
 };
 
 /**
@@ -879,6 +902,10 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
   this.blockSpace.getCanvas().setAttribute('transform', translation);
   this.blockSpace.getDragCanvas().setAttribute('transform', translation);
   this.blockSpace.getBubbleCanvas().setAttribute('transform', translation);
+
+  if (this.onSetMetrics_) {
+    this.onSetMetrics_(xyRatio);
+  }
 };
 
 /**
@@ -895,6 +922,10 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
     this.blockSpace.getDragCanvas().setAttribute('transform', translation);
     this.blockSpace.getBubbleCanvas().setAttribute('transform',
       translation);
+  }
+
+  if (this.setMetrics_) {
+    this.setMetrics_(xyRatio);
   }
 };
 

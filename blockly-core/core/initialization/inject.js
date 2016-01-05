@@ -58,10 +58,17 @@ Blockly.inject = function(container, opt_options, opt_audioPlayer) {
     Blockly.registerUISounds_(Blockly.audioPlayer);
   }
 
+  // TODO(elijah) break this out into a function to exist alongside Blockly.parseOptions
+  var blockSpaceOptions = {
+    readOnly: opt_options.readOnly,
+    hasVerticalScrollbars: opt_options.scrollbars || opt_options.hasVerticalScrollbars,
+    hasHorizontalScrollbars: opt_options.scrollbars || opt_options.hasHorizontalScrollbars
+  };
+
   /**
    * @type {Blockly.BlockSpaceEditor}
    */
-  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container, blockSpaceOptions);
 
   /**
    * @type {Blockly.BlockSpace}
@@ -70,11 +77,11 @@ Blockly.inject = function(container, opt_options, opt_audioPlayer) {
 
   if (Blockly.useModalFunctionEditor) {
     /** @type {Blockly.FunctionEditor} */
-    Blockly.functionEditor = new Blockly.FunctionEditor();
+    Blockly.functionEditor = new Blockly.FunctionEditor(blockSpaceOptions);
   } else if (Blockly.useContractEditor) {
     Blockly.functionEditor = new Blockly.ContractEditor({
       disableExamples: opt_options && opt_options.disableExamples
-    });
+    }, blockSpaceOptions);
     /** @type {Blockly.ContractEditor} */
     Blockly.contractEditor = Blockly.functionEditor;
   }
@@ -134,10 +141,6 @@ Blockly.parseOptions_ = function(options) {
       grayOutUndeletableBlocks = false;
     }
   }
-  if (options['scrollbars']) {
-    options['hasVerticalScrollbars'] = true;
-    options['hasHorizontalScrollbars'] = true;
-  }
   return {
     RTL: !!options['rtl'],
     collapse: hasCollapse,
@@ -147,8 +150,6 @@ Blockly.parseOptions_ = function(options) {
       return './' + path;
     },
     hasCategories: hasCategories,
-    hasHorizontalScrollbars: options['hasHorizontalScrollbars'],
-    hasVerticalScrollbars: options['hasVerticalScrollbars'],
     customSimpleDialog: options['customSimpleDialog'],
     hasTrashcan: hasTrashcan,
     varsInGlobals: options['varsInGlobals'] || false,

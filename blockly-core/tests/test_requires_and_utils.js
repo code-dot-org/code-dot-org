@@ -44,8 +44,9 @@ Blockly.Test.initializeBlockSpaceEditor = function () {
   container.style.height = 500 + 'px';
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject(container);
-  Blockly.hasVerticalScrollbars = true;
-  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container, {
+    hasVerticalScrollbars: true,
+  });
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   return container;
 };
