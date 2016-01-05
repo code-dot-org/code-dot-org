@@ -130,9 +130,7 @@ Item.prototype.update = function () {
   if (this.activity === 'watchActor') {
     return;
   } else if (this.activity === 'none') {
-    this.dir = Direction.NONE;
-    // Update this because animation speed may change as we alter direction:
-    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+    this.setDirection(Direction.NONE);
 
     this.destGridX = undefined;
     this.destGridY = undefined;
@@ -244,6 +242,7 @@ Item.prototype.update = function () {
       }
     }
 
+    var newDirection = Direction.NONE;
     if (candidates.length > 0) {
       // shuffle everything (so that even scored items are shuffled, even after the sort)
       candidates = _.shuffle(candidates);
@@ -258,31 +257,25 @@ Item.prototype.update = function () {
 
       // update towards the next location
       if (this.destGridX > this.gridX && this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTHEAST;
+        newDirection = Direction.SOUTHEAST;
       } else if (this.destGridX > this.gridX && this.destGridY < this.gridY) {
-        this.dir = Direction.NORTHEAST;
+        newDirection = Direction.NORTHEAST;
       } else if (this.destGridX < this.gridX && this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTHWEST;
+        newDirection = Direction.SOUTHWEST;
       } else if (this.destGridX < this.gridX && this.destGridY < this.gridY) {
-        this.dir = Direction.NORTHWEST;
+        newDirection = Direction.NORTHWEST;
       } else if (this.destGridX > this.gridX) {
-        this.dir = Direction.EAST;
+        newDirection = Direction.EAST;
       } else if (this.destGridX < this.gridX) {
-        this.dir = Direction.WEST;
+        newDirection = Direction.WEST;
       } else if (this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTH;
+        newDirection = Direction.SOUTH;
       } else if (this.destGridY < this.gridY) {
-        this.dir = Direction.NORTH;
-      } else {
-        this.dir = Direction.NONE;
+        newDirection = Direction.NORTH;
       }
-    } else {
-      this.dir = Direction.NONE;
     }
+    this.setDirection(newDirection);
   }
-
-  // Update this because animation speed may change as we alter direction:
-  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
 };
 
 /**
@@ -310,11 +303,15 @@ Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
   var SQUARED_MINIMUM_DISTANCE = 25;
   if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
     Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
-    this.dir = constants.getClosestDirection(deltaX, deltaY);
+    this.setDirection(constants.getClosestDirection(deltaX, deltaY));
   }
 };
 
-Item.prototype.setActivity = function(type) {
+/**
+ * Sets the activity property for this item.
+ * @param {string} type Valid options are: none, watchActor, roam, chase, or flee
+ */
+Item.prototype.setActivity = function (type) {
   this.activity = type;
 };
 
@@ -328,7 +325,7 @@ Item.prototype.beginRemoveElement = function () {
 /**
  * Remove our element/clipPath/animator
  */
-Item.prototype.removeElement = function() {
+Item.prototype.removeElement = function () {
   this.animation_.removeElement();
 
   Studio.trackedBehavior.removedItemCount++;
@@ -419,6 +416,16 @@ Item.prototype.moveToNextPosition = function () {
  */
 Item.prototype.setSpeed = function (speed) {
   this.speed = speed;
+  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+};
+
+/**
+ * Sets the direction and changes the animation frame duration to match.
+ * @param {number} direction
+ */
+Item.prototype.setDirection = function (direction) {
+  this.dir = direction;
+  // Update this because animation speed may change as we alter direction:
   this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
 };
 
