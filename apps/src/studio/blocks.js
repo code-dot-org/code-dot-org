@@ -620,9 +620,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_setItemSpeed.VALUES =
       [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
-       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
-       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.SLOW'],
-       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST']];
+       [msg.setSpriteSpeedSlow(), '"slow"'],
+       [msg.setSpriteSpeedNormal(), '"normal"'],
+       [msg.setSpriteSpeedFast(), '"fast"']];
 
   generator.studio_setItemSpeed = function () {
     return generateSetterCode({
