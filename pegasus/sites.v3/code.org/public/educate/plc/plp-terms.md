@@ -10,11 +10,13 @@ The ideal Professional Learning Partner is a regional education unit, a non-prof
 
 All Professional Learning Partners selected to participate in the program will send a program manager to attend a 2.5 day, all-expense-paid Facilitation Summit in TBD (May 20-22, 2016) and a 5-day regional summer professional learning experience (see below for dates). Code.org will pay for round-trip airfare, hotel and meals for both of these events. 
 
-During the 2.5-day Facilitation Summit, Code.org will prepare your organization’s program manager to organize in-person workshops for local educators interested in teaching computer science using Code.org curricula in their classrooms. The Facilitation Summit is designed to be a fabulous experience to welcome Professional Learning Partners and facilitators to the extended Code.org family. During the 5-day summer professional learning experience, your program manager will have an opportunity to see examples of strong computer science facilitation, learn how to run a regional conference, and meet the new teachers who will be part of the local CS community, and attend workshops hosted by your organization for the next year.
+The Facilitation Summit is designed to be a fabulous experience to welcome Professional Learning Partners and facilitators to the extended Code.org family. During the 2.5-day Facilitation Summit, Code.org will prepare your organization’s program manager to organize in-person workshops for local educators interested in teaching computer science using Code.org curricula in their classrooms. 
+
+During the 5-day summer professional learning experience, your program manager will have an opportunity to see examples of strong computer science facilitation, learn how to run a regional conference, and meet the new teachers who will be part of the local CS community, and attend workshops hosted by your organization for the next year.
 
 In addition to this training, we will provide each Professional Learning Partner with support, and initial funding to host local workshops and build local community around computer science. 
 
-## Your Committment (Professional Learning Partner)
+## Your Commitment (Professional Learning Partner)
 
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
 - Attend our Facilitation Summit, May 20-22, 2016. Location TBD
@@ -37,7 +39,7 @@ promote the December Hour of Code campaign locally
 - Commit to ongoing communication with Code.org on metrics and model improvements, as necessary
 - Comply with Code.org <a href="/privacy" target=_blank>privacy policy</a>
 
-## Code.org Committment
+## Code.org Commitment
 - Host the Facilitation Summit in TBD.
 - Pay for round-trip airfare, hotel, ground transportation to and from the airport, and meals during the Facilitation Summit and the summer professional development workshop in Year 1 of the partnership.
 - Host the 5-day summer professional development workshop for CS Principles starting with Year 1 of the partnership, and for the Code.org intro CS course starting with Year 2.
@@ -52,7 +54,7 @@ promote the December Hour of Code campaign locally
 - Provide the workshop supplies as well as materials for teachers such as a virtual curriculum guide containing course lesson plans, certificates of completion, and classroom supplies for some activities.
 - Evaluate your success based on a mixture of factors, which could include a count of teachers participating in workshops, workshop evaluation reports, teacher surveys, and actual participation/performance by students in classrooms hosted by these teachers.
 
-## Joint Committment
+## Joint Commitment
 - We will cooperate together to transition your work to 100% local funding. Our vision for this is that the long-term funding comes from state or local sources. We will provide you guidance, introductions, sample grant applications, etc., and establish you as a Code.org-accredited provider. In some regions, we may also be able to connect you to local philanthropists.
 - We will collaborate to establish your organization as a certified regional provider of computer science PD, so teachers from local districts can receive formal PD credit.
 - We will cooperate to identify, recruit, build and maintain local facilitator capacity. Facilitators need to meet Code.org’s established selection criteria.
