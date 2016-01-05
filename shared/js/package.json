@@ -7,22 +7,21 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "gulp": "gulp",
-    "build": "gulp -- bundle-js",
+    "build": "npm run build-js",
+    "build-js": "./build-js.js",
+    "build-js:min": "./build-js.js --min",
     "clean": "rm -rf ./build/package/js",
-    "lint": "jshint *.js",
-    "dev": "gulp -- watch"
+    "lint": "jshint *.js"
   },
   "devDependencies": {
     "browserify": "10.2.4",
     "browserify-shim": "3.8.9",
-    "del": "1.2.0",
-    "glob": "5.0.14",
-    "gulp": "3.9.0",
-    "gulp-rename": "1.2.2",
-    "gulp-uglify": "1.2.0",
+    "commander": "^2.9.0",
+    "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
+    "lodash": "^3.10.1",
     "mkdirp": "0.5.1",
+    "uglify-js": "^2.6.1",
     "watchify": "3.2.3"
   }
 }
