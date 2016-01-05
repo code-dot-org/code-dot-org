@@ -1,7 +1,7 @@
 - content_for(:head) do
   = javascript_include_tag 'js/leveltype_widget'
   %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
-  = stylesheet_link_tag 'levels/widget', media: 'all'
+  = stylesheet_link_tag 'css/leveltype_widget', media: 'all'
 
 = render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
 
