@@ -79,50 +79,14 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     return;
   }
 
-  if (Blockly.Css.currentCursor_ != cursor) {
-    Blockly.Css.currentCursor_ = cursor;
-
-    /*
-    Hotspot coordinates are baked into the CUR file, but they are still
-    required in the CSS due to a Chrome bug.
-    https://code.google.com/p/chromium/issues/detail?id=1446
-    */
-    if (cursor == Blockly.Css.Cursor.OPEN) {
-      var xy = '8 5';
-    } else {
-      var xy = '7 3';
-    }
-    var cursorRuleRHS = 'url(' +
-    Blockly.assetUrl('media/' + cursor + '.cur') +
-    ') ' + xy + ', auto';
-    var rule = '.blocklyDraggable {\ncursor: ' + cursorRuleRHS + ';\n}\n';
-    var ruleIndex = 0;
-    // Guard against empty stylesheet for tests.
-    if (Blockly.Css.styleSheet_ && Blockly.Css.styleSheet_.cssRules.length > ruleIndex) {
-      // There are potentially hundreds of draggable objects.  Changing their style
-      // properties individually is too slow, so change the CSS rule instead.
-      goog.cssom.replaceCssRule('', rule, Blockly.Css.styleSheet_, ruleIndex);
-    }
-  }
-
-  var setCursorOnBackgroundElement = function(element) {
-    if (cursor == Blockly.Css.Cursor.OPEN) {
-      element.style.cursor = '';
-    } else {
-      element.style.cursor = cursorRuleRHS;
-    }
-  };
-
-  // There is probably only one toolbox, so just change its style property.
-  var toolboxen = document.getElementsByClassName('blocklyToolboxDiv');
-  for (var i = 0, toolbox; toolbox = toolboxen[i]; i++) {
-    setCursorOnBackgroundElement(toolbox);
-  }
-
   // Set cursor on the SVG surface as well, so that rapid movements
   // don't result in cursor changing to an arrow momentarily.
   if (opt_svg) {
-    setCursorOnBackgroundElement(opt_svg);
+    if (cursor == Blockly.Css.Cursor.OPEN) {
+      Blockly.removeClass_(opt_svg, 'dragging');
+    } else {
+      Blockly.addClass_(opt_svg, 'dragging');
+    }
   }
 };
 
@@ -131,7 +95,10 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
  */
 Blockly.Css.CONTENT = [
   '.blocklyDraggable {',
-    // Placeholder for cursor rule. Must be first rule (index 0).
+  '  cursor: url(/blockly/media/handopen.cur) 8 5, auto;',
+  '}',
+  '.dragging, .dragging .blocklyDraggable {',
+  '  cursor: url(/blockly/media/handclosed.cur) 7 3, auto !important;',
   '}',
   '#%CONTAINER_ID% {',
   '  border: 1px solid #ddd;',
