@@ -39,6 +39,72 @@ exports.browserifyCommand = function (srcPath, buildPath, files, shouldMinify) {
     "-p [ factor-bundle -o '> " + buildPath + "`basename $FILE .js`.js' ]",
     '-o ' + buildPath + 'code-studio-common.js'
   ].join(" \\\n    ");
+
+  // This should work (I think) but untested
+  // return exports.browserifyExt({
+  //   srcPath: srcPath,
+  //   buildPath: buildPath,
+  //   files: files.map(function (file) { return [file, file]; }),
+  //   shouldMinify: shouldMinify,
+  //   shouldWatch: false
+  // });
+};
+
+/**
+ * Generate command to:
+ * Bundle JavaScript files using Browserify, break out common code using
+ * factor-bundle, and (optionally) minify output using uglify and (optionally)
+ * run watch in watch mode using watchify
+ * @param {object} config
+ * @param {string} config.srcPath - Path to root of JavaScript source files, absolute
+ *        or relative to execution path for this script (which is the code-studio
+ *        folder for this build system), with trailing slash.
+ * @param {string} config.buildPath - Path to root of output directory, absolute or
+ *        relative to execution path for this script (which is the code-studio
+ *        folder for this build system), with trailing slash.
+ * @param {(string[])[]} config.filenames - List of tuples. Each tuple contains the
+          src filename (relative to srcPath) and the resulting output filename
+          (relative to buildPath)
+ * @param {boolean} config.shouldMinify if true, will build minified
+ *        output files (with .min.js extensions) instead of unminified output.
+ * @param {boolean} config.shouldWatch if true, will watch file system for
+ *        changes, and rebuild when it detects them
+ * @returns {string}
+ */
+exports.browserifyExt = function (config) {
+  var srcPath = config.srcPath;
+  var buildPath = config.buildPath;
+  var filenames = config.filenames;
+  var commonFile = config.commonFile;
+  var shouldMinify = config.shouldMinify;
+  var shouldWatch = config.shouldWatch;
+
+  // list of input files
+  var browserifyInputFiles = filenames.map(function (filePair) {
+    return srcPath + filePair[0];
+  }).join(' ');
+
+  var browserifyOutputs = filenames.map(function (filePair) {
+    if (shouldMinify) {
+      // todo - path.basename
+      var minFile = path.basename(filePair[1], '.js') + '.min.js';
+      return "-o 'uglifyjs > " + buildPath + minFile + "'";
+    }
+    return '-o ' + buildPath + filePair[1];
+  }).join(' ');
+
+  var command = (shouldWatch ? 'watchify -v' : 'browserify') +
+    (shouldMinify ? '' : ' --debug');
+
+  var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
+    '-o ' + buildPath + path.basename(commonFile, '.js') +
+    (shouldMinify ? '.min.js' : '.js');
+
+  return [
+    command + ' ' + browserifyInputFiles,
+    "-p [ factor-bundle " + browserifyOutputs + ']',
+    commonOutput
+  ].join(" \\\n    ");
 };
 
 /**
