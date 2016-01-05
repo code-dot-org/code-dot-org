@@ -33,8 +33,7 @@ goog.require('goog.cssom');
  */
 Blockly.Css.Cursor = {
   OPEN: 'handopen',
-  CLOSED: 'handclosed',
-  DELETE: 'handdelete'
+  CLOSED: 'handclosed'
 };
 
 /**
