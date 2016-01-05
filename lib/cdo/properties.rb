@@ -105,9 +105,14 @@ def fetch_hoc_metrics()
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.
   metrics['started'] += 409216
+  # Increase the 'started' metric by 14.8M to reflect undercounting by the
+  # database in comparison to Google Analytics and Amazon Elastic Load Balancing
+  # logs between 2015-11-07 and 2015-12-18 (inclusive).
+  # Discussion of the problem, links to the computation of the 14.8M number, and
+  # discussion of ways to resolve the problem can be found in this document:
+  # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
+  metrics['started'] += 14861327
 
-  # temporarily hard-code number served while analyze_hoc_activity is busted
-  metrics['started'] = 189782984
   metrics
 end
 
