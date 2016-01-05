@@ -64,7 +64,6 @@ Blockly.Css.inject = function(container) {
     .replace(/%CONTAINER_ID%/g, container.id)
     .replace(/%TREE_PATH%/g, Blockly.assetUrl('media/tree.png'));
   Blockly.Css.styleSheet_ = goog.cssom.addCssText(text).sheet;
-  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
 };
 
 /**
@@ -79,13 +78,17 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     return;
   }
 
-  // Set cursor on the SVG surface as well, so that rapid movements
-  // don't result in cursor changing to an arrow momentarily.
-  if (opt_svg) {
-    if (cursor == Blockly.Css.Cursor.OPEN) {
-      Blockly.removeClass_(opt_svg, 'dragging');
-    } else {
-      Blockly.addClass_(opt_svg, 'dragging');
+  if (Blockly.Css.currentCursor_ !== cursor) {
+    Blockly.Css.currentCursor_ = cursor;
+
+    // Set cursor on the toolbox and SVG surface, so that rapid movements
+    // don't result in cursor changing to an arrow momentarily.
+    if (opt_svg) {
+      if (cursor == Blockly.Css.Cursor.OPEN) {
+        Blockly.removeClass_(opt_svg, 'dragging');
+      } else {
+        Blockly.addClass_(opt_svg, 'dragging');
+      }
     }
   }
 };
