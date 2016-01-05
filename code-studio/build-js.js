@@ -23,6 +23,7 @@ var FILES = [
   'levelbuilder.js',
   'levelbuilder_dsl.js',
   'levelbuilder_studio.js',
+  'leveltype_widget.js'
 ];
 
 /**

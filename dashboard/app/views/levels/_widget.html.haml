@@ -1,6 +1,6 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
 = stylesheet_link_tag 'levels/widget', media: 'all'
-= javascript_include_tag 'levels/widget'
+= javascript_include_tag 'js/leveltype_widget'
 = render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
 
 :javascript
