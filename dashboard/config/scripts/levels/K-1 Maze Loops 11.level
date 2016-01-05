@@ -26,8 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier.",
-    "maze_data": null
+    "markdown_instructions": "Get me to the pig!  \r\nThe `repeat` loop will make this easier."
   }
 }]]></config>
   <blocks>

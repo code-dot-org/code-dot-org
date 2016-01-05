@@ -38,10 +38,7 @@
     "debugger_disabled": "false",
     "instructions": "Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)",
     "markdown_instructions": "In the last level, you created a line chart that shows the change in popularity of one hashtag, but you may have noticed that **the “hashtags” table also has a column of information about a second hashtag, “#nofilter”.** Ideally, it would be helpful if your chart could show lines for **both** hashtags, so you could **compare the relationship** between the two.\r\n\r\n# Plotting Additional Columns\r\n\r\nFortunately, the `columns` parameter allows you to add additional elements to the array. You already learned that the first element in `columns` specifies which table column to use for the x-axis of your chart. It turns out that ***each additional element* will be plotted as a separate line on the y-axis.** This means that, if there are three elements total in `columns`, then there will be *two* separate lines plotted on your line chart.\r\n\r\nLet’s try an example of this now. \r\n\r\n# Do This:\r\n\r\n* Your code with the line chart from the previous level has been provided.\r\n* **Add a third element to the `columns` array**, to display another line that shows the change in popularity of #nofilter over time. Your code should look something like this (click image to enlarge):\r\n\r\n<a href=\"https://images.code.org/e3239e1f87fc0283ffef918fbbf7aef8-image-1450401624351.20.07.png\" target=\"_blank\">![](https://images.code.org/e3239e1f87fc0283ffef918fbbf7aef8-image-1450401624351.20.07.png)</a>\r\n\r\n* **Run the app** and see the results.\r\n\t* What relationships do you notice between the two lines? What conclusions can you draw from this? Which hashtag would you want to use if you were trying to publicize your post to the most people?\r\n\r\n",
-    "project_template_level_name": "U4 - Charts - Line Chart Template",
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "U4 - Charts - Line Chart Template"
   }
 }]]></config>
   <blocks/>
