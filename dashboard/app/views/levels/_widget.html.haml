@@ -5,6 +5,9 @@
 
 = render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
 
+:javascript
+  dashboard.setupWidgetLevel();
+
 #external
   / Load the external file through ActionView templates.
   - href = asset_path(@level.properties['href'])
