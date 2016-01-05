@@ -20,7 +20,7 @@ var BUILD_PATH = './build/package/js/';
  * @type {string[]}
  */
 var FILES = [
-  'initApp.js'
+  ['initApp.js', 'shared.js']
 ];
 
 /**
@@ -31,6 +31,7 @@ function main() {
   // https://github.com/tj/commander.js
   program
       .option('--min', 'Build minified output', false)
+      .option('--watch', 'Watch file system', false)
       .parse(process.argv);
 
   var extension = program.min ? '.min.js' : '.js';
@@ -38,8 +39,7 @@ function main() {
   // Run build
   var buildCommands = [
     ensureDirectoryExists(BUILD_PATH),
-    browserifyCommand(SRC_PATH, BUILD_PATH, FILES, 'shared-common', program.min),
-    moveFile(BUILD_PATH + 'initApp' + extension, BUILD_PATH + 'shared' + extension)
+    browserifyCommand(SRC_PATH, BUILD_PATH, FILES, 'shared-common', program.min, program.watch)
   ].join(" && \\\n");
   console.log(buildCommands);
 
@@ -54,12 +54,9 @@ function main() {
     });
     console.log("shared built\n");
   } catch (e) {
+    console.log('ERROR');
     process.exit(e.status);
   }
-}
-
-function moveFile(src, dest) {
-  return 'mv ' + src + ' ' + dest;
 }
 
 /**
@@ -93,23 +90,34 @@ function ensureDirectoryExists(dir) {
 // BRENT
 // Things I changed from Brad's version:
 // - commonFile param
-function browserifyCommand(srcPath, buildPath, files, commonFile, shouldMinify) {
-  var browserifyInputFiles = files.map(function (file) {
-    return srcPath + file;
+function browserifyCommand(srcPath, buildPath, files, commonFile, shouldMinify, shouldWatch) {
+  // list of input files
+  var browserifyInputFiles = files.map(function (filePair) {
+    var srcFile = filePair.length ? filePair[0] : filePair;
+    return srcPath + srcFile;
   }).join(' ');
 
-  if (shouldMinify) {
-    return [
-        'browserify ' + browserifyInputFiles,
-        "-p [ factor-bundle -o 'uglifyjs > " + buildPath + "`basename $FILE .js`.min.js' ]",
-        '| uglifyjs -o ' + buildPath + commonFile + '.min.js'
-    ].join(" \\\n    ");
-  }
+  var browserifyOutputs = files.map(function (filePair) {
+    var destFile = filePair.length ? filePair[1] : filePair;
+    if (shouldMinify) {
+      // todo - path.basename
+      var minFile = path.basename(destFile, '.js') + '.min.js';
+      return "-o 'uglifyjs > " + buildPath + minFile + "'";
+    }
+    return '-o ' + buildPath + destFile;
+  }).join(' ');
+
+  var command = (shouldWatch ? 'watchify -v' : 'browserify') +
+    (shouldMinify ? '' : ' --debug');
+
+  var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
+    '-o ' + buildPath + commonFile +
+    (shouldMinify ? 'min.js' : '.js');
 
   return [
-    'browserify --debug ' +  browserifyInputFiles,
-    "-p [ factor-bundle -o '> " + buildPath + "`basename $FILE .js`.js' ]",
-    '-o ' + buildPath + commonFile + '.js'
+    command + ' ' + browserifyInputFiles,
+    "-p [ factor-bundle " + browserifyOutputs + ']',
+    commonOutput
   ].join(" \\\n    ");
 }
 
