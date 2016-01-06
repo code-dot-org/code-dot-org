@@ -2,6 +2,7 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
 var studioApp = require('./StudioApp').singleton;
+var authoredHintUtils = require('./authoredHintUtils');
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
@@ -42,6 +43,10 @@ module.exports = function(app, levels, options) {
           options.level.levelBuilderRecommendedBlocks);
     }
 
+    if (options.level.authoredHints) {
+      level.authoredHints = authoredHintUtils.generateAuthoredHints(options.level.authoredHints);
+    }
+
     options.level = level;
   }
 
@@ -52,7 +57,8 @@ module.exports = function(app, levels, options) {
   if (studioApp.isUsingBlockly()) {
     var blockInstallOptions = {
       skin: options.skin,
-      isK1: options.level && options.level.isK1
+      isK1: options.level && options.level.isK1,
+      level: options.level
     };
 
     if (options.level && options.level.edit_blocks) {

@@ -28,6 +28,8 @@ ro:
     code:
       label: 'Adaugă un profesor:'
       placeholder: Secțiune Cod (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
@@ -42,7 +44,7 @@ ro:
   more: MAI MULT
   less: MAI PUŢIN
   beta: beta
-  try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
+  try_hoc: 'Încearcă Ora de Programare, faceți clic aici >> '
   try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
   already_started: 'Ai început deja? Rezumă aici >>'
@@ -101,7 +103,7 @@ ro:
     submit: Loghează-te
   signin:
     try_heading: Dorești să încerci să programezi fără a te înregistra?
-    try_hoc: Încearcă prima dată o Oră de Cod
+    try_hoc: Încearcă prima dată o Oră de Programare
     try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
   signinsection:
     welcome: 'Bine ai venit la %{section_name}'
@@ -215,17 +217,18 @@ ro:
     access_denied: 'Nu ai acces la această %{model}.'
   nav:
     header:
-      finished_hoc: Am terminat Ora mea de Cod
+      finished_hoc: Am terminat Ora mea de Programare
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
         playlab: Creează o aplicație
         artist: Desenează ceva
         calculate: Calculate Something
+        applab: Creează o aplicație
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
       label: 'Salut %{username}'
-      stats: Studio-ul Code
+      stats: Atelierul de programare
       settings: Contul meu
       prizes: Premii
       logout: Deloghează-te
@@ -244,63 +247,18 @@ ro:
       prize_us_only: (Numai pentru studenţii din SUA)
       prizes_link: Mai multe informaţii
   teacher:
+    answer: Răspuns
+    for_teachers_only: Doar pentru profesori
     title:
       one: 'Profesorul tău:'
       other: 'Profesorii tăi:'
     remove: (elimină profesor)
     confirm:
       remove: Ești sigur(ă) că vrei să elimini acest profesor?
-    tools: Instrumente pentru profesor
-    followers:
-      section: 'Secţiunea:'
-      stages: 'Etapa(Etapele) de afişat:'
-      show_past: 'Arată activitatea anterioară a elevului (%{bullet_html}):'
-      levels_key: Cheia nivelurilor
-      perfect: Finalizat, perfect
-      completed: Finalizat, dar ai folosit prea multe blocuri
-      tried: Încercat, dar neterminat
-      not_tried: Nu a fost încă încercat
-      activity: 'Indică activitatea elevului din ultimele %{hours} %{plural}'
-      no_section: Nici o secţiune atribuită
-      trophies: trofee
     students:
-      name: Nume
-      username: nume de utilizator
-      password: parolă
-      manage: Gestionează elevi
       dashboard: Du-te la Tabloul de Instrumente al Profesorilor
-      add: Adaugă elevi
-      remove: elimină elev
-      confirm_remove: Ești sigur că vrei să elimini acest elev?
-      help_reassign: Pentru a-ţi împărţi clasa în mai multe secţiuni, alege elevii pe care îi atribui unei secţiuni noi.
-      help_register: În loc să petreci mult timp importând datele fiecărui student, îţi poţi configura clasa foarte repede rugându-i pe aceștia să se înregistreze ei. Elevii tăi vor fi nevoiţi să îşi aleagă numele de utilizator şi parole, dar NU vor fi nevoiți să introducă o adresă de e-mail. Dacă un elev își uită parola, vei putea să o resetezi tu pentru el/ea.
-      register: Roagă-i pe elevii tăi să se înregistreze singuri
-      vist: Cere elevilor să viziteze
-      section_code: 'şi să îşi introducă codul lor de secţiune:'
-      first_please: 'În primul rând, te rugăm să %{add_section}'
-      for: Pentru
-      enter: 'introdu:'
-    sections:
-      add: Adaugă secţiune
-      manage: Gestionează secţiuni
-      section: Secţiune
-      students: Elevi
-      section_code: Cod de Secţiune
-      add_section_code: Adaugă Cod de Secţiune al Elevilor
-      secret: Tip secret
-      grade: Notă
-      course: Curs
-      rename: redenumește
-      edit: editează
-      delete: şterge
-      confirm_delete: Eşti sigur că vrei să ştergi această secţiune?
-      email: Trimite e-mail
-    rollup: Grilă de progress
-    activity: Activitatea recentă a clasei
-    user_not_found: Profesorul sau studentul nu poate fi găsit
-    cant_remove_student_no_email: '%{student_name} nu se poate elimina ca student, deoarece %{student_name} nu a înregistrat o adresă de e-mail'
-    cant_remove_teacher_no_email: '%{teacher_name} nu poate fi eliminat ca profesor al tău pentru că nu ai înregistrat o adresă de e-mail'
-    student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor pentru %{student_name}'
+    user_not_found: Profesorul nu a putut fi găsit.
+    student_teacher_disassociated: 'Ai eliminat pe %{teacher_name} ca profesor.'
     panel:
       answer_viewer: Indicator răspuns
       student: elev
@@ -309,7 +267,7 @@ ro:
       section: Secţiune
       example: Exemplu soluţie
       example_with_number: 'Exemplu soluţie %{solution_number}'
-      submitted_on: 'Înregistrat la %{date}'
+      submitted_on: 'Trimis la data %{date}'
       unsubmit: Retrage
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
@@ -363,17 +321,18 @@ ro:
     test_videos_help: Testează noul nostru video player la şcoala ta
     try_beta_courses: Nou! Încearcă cursurile noastre beta pentru elevi de clasele 1-5
     use_as_teacher: Foloseşte acest site în calitate de profesor
-    heading_hoc2014: '<h2>Ora de Cod pentru</h2><h1>toate vârstele</h1>'
+    heading_hoc2014: '<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>'
     heading_elementary: '<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
-    no_primary_course: Încearcă un curs la Studio-ul Code
-    choose_next_course: Încearcă un curs la Studio-ul Code alegând unul de mai jos
+    no_primary_course: Încearcă un curs cu Atelierul de programare
+    choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de mai jos
     print_certificate: Tipărește certificatul
   share:
-    title: Învață pe Code Studio
-    description: Oricine poate învăţa ştiinţa calculatoarelor. Face jocuri, aplicaţii şi artă cu cod.
+    title: Învață in Atelierul de programare
+    description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu programare.
+    try_hour_of_code: Încearcă Ora de Programare!
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -382,13 +341,13 @@ ro:
     student: elev
     teacher: Profesor
   footer:
-    thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Code Studio.'
+    thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Atelierului de programare.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
     help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestor materiale.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
-    art_from_html_old: 'Păsări nervoase &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. < br / > plante vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc Toate drepturile rezervate'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Susținut de Amazon Web Services
-    trademark: '© Code.org, %{current_year}. Code.org®, cod logo-ul şi ora de cod ® sunt mărci comerciale ale Code.org.'
+    trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour of Code&reg; sunt mărci comerciale ale Code.org.'
     copyright: Drept de autor
     more: Mai mult
     feedback: Oferă feedback
@@ -400,6 +359,10 @@ ro:
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
     report_abuse: Raportează abuz
+    built_on_code_studio: Construit pe Code Studio
+    make_my_own_app: Realizeaza propria mea aplicatie
+    how_it_works: Cum funcționează
+    try_hour_of_code: Încearcă Ora de Programare!
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
@@ -431,6 +394,7 @@ ro:
   pdf_download: Descarcă PDF
   download_coming_soon: Activitatea se va putea descărca curând.
   video_coming_soon: Video disponibil în scurt timp!
+  not_started: Studentul nu a încercat acest nivel.
   share_code:
     title: "Fă clic pe 'Rulează' pentru a-mi vedea programul în acţiune"
     bounce_og_title: Aruncă-ți o privire asupra jocului meu Bounce
@@ -455,32 +419,37 @@ ro:
       unused: Niveluri neutilizate
   upsell:
     hoc:
-      title: Oră de Cod
-      body: Încearcă elementele de bază informaticii. Milioane de oameni au încercat.
+      title: Labirint Clasic
+      body: Încearcă bazele programarii. Milioane de oameni au încercat.
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
     20-hour:
       title: Curs intensiv
       body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
-      body_short: Învață informatică de bază în cadrul unei versiuni intensive ale cursurilor 2-4.
+      body_short: Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor 2-4.
     hoc2014:
-      try_new_tutorial: Încearcă noul nostru tutorial Ora de cod în versiune beta
+      try_new_tutorial: Încearcă noul nostru tutorial Ora de Programare în versiune beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
     gallery:
       title: Galerie
       body: Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laborator de joc Infinity
       body: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Exploreaza o lume Minecraft prin cod.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
     picture_count: 'În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b> imagini scriind propriile programe de calculator. Fă clic pe imagini pentru a vedea fiecare program în acțiune.'
     activity_count: 'În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b> aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.'
-    want_to_make_your_own: Vrei să creezi propriul tău program?
+    want_to_make_your_own: Vrei să realizezi propriul tău program?
     more: 'Mai mult &rarr;'
     caption_by_name_age: 'de %{name}, vârsta %{age}'
     caption_time_ago: 'cu %{time_ago} în urmă'
@@ -509,14 +478,14 @@ ro:
   contract_match:
     wrong_title: Răspuns incorect
     badname: Contractul tău are numele greşit.
-    badname_case: Numele funcțiilor cad sub incidența caracterelor mici sau mari folosite. Încearcă să schimbi tipul literelor folosite la scrierea numelui contractului tău.
+    badname_case: Numele funcțiilor diferentiaza caracterele mici de cele mari. Încearcă să schimbi tipul literelor folosite la scrierea numelui contractului tău.
     badrange: Contractul tău este greşit.
     baddomainsize: Contractul tău are un număr incorect de elemente în domeniu.
     baddomainname: Unul sau mai multe elemente din domeniul tău are un nume greșit.
     baddomaintype: Unul sau mai multe elemente ale domeniului tău sunt de tip greșit sau sunt în ordine greșită.
   text_match:
     placeholder: Completează răspunsul tău aici
-    open_response_title: Mulţumesc
+    open_response_title: Mulţumim
     open_response_body: Îți mulţumim pentru răspuns!
   dialog:
     ok: OK
@@ -535,7 +504,7 @@ ro:
           title: Cursul Introducere K-8 in Programare (15-25 ore)
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
-          title: Ora de cod 2013
+          title: Ora de Programare 2013
           description: '[șir gol]'
         edit-code:
           title: Editează Codul

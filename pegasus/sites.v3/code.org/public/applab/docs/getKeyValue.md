@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## getKeyValue(key, callbackFunction)
+## getKeyValue(key, callback)
 
 [/name]
 
@@ -20,11 +20,11 @@ Category: Data
 
 [short_description]
 
-Retrieves the value stored at the provided `key` name in App Lab's key/value data storage. The value is returned as a parameter to `callbackFunction` when the retrieval is finished. Data is accessible to your app and users of your app.
+Retrieves the value stored at the provided `key` name in App Lab's key/value data storage. The value is returned as a parameter to `callback` function when the retrieval is finished. Data is accessible to your app and users of your app.
 
 [/short_description]
 
-App Lab's remote key/value data storage enables persistent data storage for an app. Consider a variable that is declared in an app such as `var highscore = 10;`. 'highscore' will get recreated with a value of 10 every time the app loads. `getKeyValue` can be used with `setKeyValue` to retrieve the value of a stored variable in the cloud that the app can access across app refreshes. You can think of the `key` parameter as similar to the variable name (e.g. "highscore") and the `value` that is returned as similar to the variable value (e.g. 10). When the value is retrieved, the callbackFunction is asynchronously called. Use with [setKeyValue()](/applab/docs/setKeyValue)
+App Lab's remote key/value data storage enables persistent data storage for an app. Consider a variable that is declared in an app such as `var highscore = 10;`. 'highscore' will get recreated with a value of 10 every time the app loads. `getKeyValue` can be used with `setKeyValue` to retrieve the value of a stored variable in the cloud that the app can access across app refreshes. You can think of the `key` parameter as similar to the variable name (e.g. "highscore") and the `value` that is returned as similar to the variable value (e.g. 10). When the value is retrieved, the callback function is asynchronously called. Use with [setKeyValue()](/applab/docs/setKeyValue)
 
 **Note:** View your app's key/value data by clicking 'View data' in App Lab and clicking 'View key/value pairs'
 
@@ -115,14 +115,14 @@ getKeyValue(key, function(value){
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
 | key | string | Yes | The name of the key to be retrieved.  |
-| callbackFunction | function | yes | A function that is asynchronously called when the call to getKeyValue is finished. callbackFunction is passed a single parameter that stores the value.  |
+| callback | function | yes | A function that is asynchronously called when the call to getKeyValue is finished. callback  is passed a single parameter that stores the value.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-When `getKeyValue` is finished executing, `callbackFunction` is automatically called, passing `value` as a parameter. If `key` does not exist, `value` will be `undefined`.
+When `getKeyValue` is finished executing, `callback` function is automatically called, passing `value` as a parameter. If `key` does not exist, `value` will be `undefined`.
 
 [/returns]
 

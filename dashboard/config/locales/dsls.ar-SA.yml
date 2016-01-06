@@ -770,7 +770,8 @@
         /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
         Multiple Choice: إختيارات متعددة
-        Which choice should be the final block?: ينبغي أن يكون الاختيار الذي حظر نهائي؟
+        Which choice should be the final block?: ما هو الإختيار الذي يجب أن يكون هو
+          الجزء الأخير؟
       K-1 Maze Loops Multi 1:
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png,
           300
@@ -844,15 +845,15 @@
         SET: تعيين
         SOUTH: الجنوب
         SQUARE: مربع
-        Which word is spelled?: أي كلمة مكتوبة؟
+        Which word is spelled?: أي كلمة هي التي نُطِقَتْ؟
       K-1 multi 4:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: سائق ومساعد
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: واحد
-          من هؤلاء الأولاد هو <b>السائق</b>.  وواحد هو <b>مساعد</b>.
-        Which boy is the <large>helper</large>?: الصبي الذي هو <large>مساعد</large>؟
+          من هؤلاء الأولاد هو <b>السائق</b>.  و واحد هو <b>المساعد</b>.
+        Which boy is the <large>helper</large>?: أي صبي هو <large>المساعد</large>؟
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
@@ -860,8 +861,7 @@
         Driver and Helper: سائق ومساعد
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: واحد
           من هؤلاء الأولاد هو <b>السائق</b>.  وواحد هو <b>مساعد</b>.
-        This time, which boy is the <large>driver</large>?: هذه المرة، الصبي الذي
-          هو <large>السائق</large>؟
+        This time, which boy is the <large>driver</large>?: هذه المرة، أي صبي هو <large>السائق</large>؟
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100

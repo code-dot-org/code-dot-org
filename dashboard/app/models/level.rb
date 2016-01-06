@@ -47,6 +47,7 @@ class Level < ActiveRecord::Base
     callout_json
     instructions
     markdown_instructions
+    authored_hints
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -216,7 +217,7 @@ class Level < ActiveRecord::Base
   # on that level.
   def channel_backed?
     return false if self.try(:is_project_level)
-    self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
+    self.project_template_level || self.game == Game.applab || self.game == Game.pixelation
   end
 
   def key
@@ -237,6 +238,10 @@ class Level < ActiveRecord::Base
 
   def strip_name
     self.name = name.to_s.strip unless name.nil?
+  end
+
+  def self.cache_find(id)
+    Script.cache_find_level(id)
   end
 
   private

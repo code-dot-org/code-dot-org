@@ -50,7 +50,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "markdown_instructions": "### Challenge\r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Work with your partner to discuss possible solutions. Try more than one path. Testing your ideas on paper might be a faster way to brainstorm.\r\n\r\n",
+    "markdown_instructions": "# Do This: \r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Work with your partner to discuss possible solutions. Try more than one path. Testing your ideas on paper might be a faster way to brainstorm.\r\n\r\n",
     "instructions": "Draw a 3x3 grid to the front and right of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction. (Click to see full instructions)",
     "examples_required": "false",
     "encrypted_examples": "UdvayYdSjDLGOBFxB4iJXCRJPj5C4V0KwlqKx5jOZOgGYJHgKm2i9ReCsa6L\n7N0N\n",

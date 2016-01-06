@@ -43,6 +43,10 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
 
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
@@ -51,7 +55,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 [<%= localized_image('/images/fit-500x300/corporations.png') %>](%= localized_file('/files/corporations.pdf') %)
 
-## 1) Try the tutorials:
+## ١) آموزش ها را تجربه كنيد:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
@@ -62,7 +66,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## ٢) براي نيازهاي سخت افزاري تان برنامه ريزي كنيد- داشتن كامپيوتر انتخابي است
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -70,20 +74,20 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **از پيش نگاهي به صفحه تبريك بياندازيد** تا ببينيد دانش آموزان به هنگام اتمام هر فعاليت چه چيزي را خواهند ديد. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Plan ahead based on your technology available
+## ٣) بر اساس تكنولوژي موجودتان از پيش برنامه ريزي كنيد
 
   * **وسايل كافي در اختيار نداريد؟** به طور [گروهي](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) برنامه‌نويسي كنيد. When participants partner up, they help each other and rely less on the teacher.
   * **پهناي باند كمي داريد؟** ويدئوها را براي كل كلاس نمايش دهيد، در اين صورت هر دانش آموز بطور جداگانه ويدئوها را دانلود نخواهد كرد. و يا از آموزش‌هاي آفلاين استفاده كنيد.
 
-## 4) Inspire students - show them a video
+## ٤) به دانش آموزان انگيزه دهيد- با نشان دادن يك ويدئو
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+برای شروع برنامه ساعت کد نویسی به دانش آموزانتان فیلم های الهام بخش نشان دهید . برای مثال :
 
   * سایت code.org فیلم هایی از بیل گیتز ، مارک زوکربرگ ، و ستاره ان بی ای کریس بوش آماده کرده است .( فیلم ها در نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای ](https://www.youtube.com/watch?v=nKIu9yen5nc)و [9 دقیقه ای ](https://www.youtube.com/watch?v=dU1xS07N-FA)موجودند )
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [آقای اوباما رییس جمهور آمریکا به تمام دانش آموزان می گوید که کامپیوتر بیاموزند](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**با مقدمه كوتاهي دانش آموزان تان را سر شوق بياوريد**
 
 <% else %>
 

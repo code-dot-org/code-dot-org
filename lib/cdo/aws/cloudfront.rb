@@ -7,6 +7,10 @@ require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFront
+
+    ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
+    CACHED_METHODS = %w(HEAD GET OPTIONS)
+
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
 
@@ -36,6 +40,15 @@ module AWS
           bucket: 'cdo-logs',
           prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
         }
+      },
+      hourofcode: {
+        aliases: [CDO.hourofcode_hostname],
+        origin: "#{ENV['RACK_ENV']}-origin.hourofcode.com",
+        ssl_cert: 'hourofcode-cloudfront',
+        log: {
+          bucket: 'cdo-logs',
+          prefix: "#{ENV['RACK_ENV']}-hourofcode-cdn"
+        }
       }
     }
 
@@ -48,6 +61,20 @@ module AWS
       puts "CONFIG: #{CONFIG}"
     end
 
+    # Manually sorts the array-types in the distribution config object,
+    # so we can compare against the existing config to detect whether an update is needed.
+    def self.sort_config!(config)
+      config[:cache_behaviors][:items].sort_by!{|item| item[:path_pattern]}
+      config[:cache_behaviors][:items].each do |item|
+        item[:forwarded_values][:headers][:items].sort!
+        name = item[:forwarded_values][:cookies][:whitelisted_names]
+        name[:items].sort! if name
+      end
+      config[:aliases][:items].sort!
+      config[:origins][:items].sort!
+      config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
+    end
+
     # Creates or updates the CloudFront distribution based on the current configuration.
     # Calls to this method should be idempotent, however CloudFront distribution updates can take ~15 minutes to finish.
     #
@@ -58,19 +85,27 @@ module AWS
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
       cloudfront = Aws::CloudFront::Client.new
-      ids = %i(pegasus dashboard).map do |app|
+      ids = CONFIG.keys.map do |app|
         distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
           i.aliases.items.include?(CDO.method("#{app}_hostname").call)
         end
         if distribution
           id = distribution.id
           distribution_config = cloudfront.get_distribution_config(id: id)
-          cloudfront.update_distribution(
-            id: id,
-            if_match: distribution_config.etag,
-            distribution_config: config(app, distribution_config.distribution_config.caller_reference)
-          )
-          puts "#{app} distribution updated!"
+          old_config = distribution_config.distribution_config.to_hash
+          new_config = config(app, distribution_config.distribution_config.caller_reference)
+          sort_config! old_config
+          sort_config! new_config
+          if old_config == new_config
+            puts "#{app} distribution not modified."
+          else
+            cloudfront.update_distribution(
+              id: id,
+              if_match: distribution_config.etag,
+              distribution_config: config(app, distribution_config.distribution_config.caller_reference)
+            )
+            puts "#{app} distribution updated!"
+          end
         else
           resp = cloudfront.create_distribution(
             distribution_config: config(app)
@@ -91,9 +126,9 @@ module AWS
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.
     # Syntax reference: http://docs.aws.amazon.com/sdkforruby/api/Aws/CloudFront/Types/DistributionConfig.html
-    # `app` is a symbol containing the app name (:pegasus or :dashboard)
+    # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
     def self.config(app, reference = nil)
-      config = HTTP_CACHE[app]
+      config = app == :hourofcode ? HTTP_CACHE[:pegasus] : HTTP_CACHE[app]
       cloudfront = CONFIG[app]
       behaviors = config[:behaviors].map do |behavior|
         paths = behavior[:path]
@@ -159,8 +194,7 @@ module AWS
             get_server_certificate(server_certificate_name: ssl_cert).
             server_certificate.server_certificate_metadata.server_certificate_id,
           ssl_support_method: 'vip', # accepts sni-only, vip
-          minimum_protocol_version: 'TLSv1', # accepts SSLv3, TLSv1
-          cloud_front_default_certificate: false
+          minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
           cloud_front_default_certificate: true,
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
@@ -213,10 +247,10 @@ module AWS
         min_ttl: 0, # required
         allowed_methods: {
           quantity: 7, # required
-          items: %w(HEAD DELETE POST GET OPTIONS PUT PATCH), # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
+          items: ALLOWED_METHODS, # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
           cached_methods: {
             quantity: 3, # required
-            items: %w(HEAD GET OPTIONS), # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
+            items: CACHED_METHODS, # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
           },
         },
         smooth_streaming: false,

@@ -1,4 +1,5 @@
 @import "color";
+//@import "mixins"; TODO(bjordan/bbuchanan): fix sprockets?
 @import "style-constants";
 @import "skins/base.scss";
 @import "skins/modern.scss";
@@ -227,24 +228,76 @@ div#visualizationResizeBar {
   }
 }
 
+#wireframeSendToPhone {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  text-shadow: #000 -1px -1px 0;
+  &, .sharing label {
+    font: 12pt "Gotham 5r", sans-serif;
+    color: #8F9499;
+  }
+  i {
+    font-size: 1.5em
+  }
+  .sharing div {
+    margin: 0;
+  }
+}
+
 #visualizationColumn.chromelessShare {
   #designToggleRow, #gameButtons {
     display: none;
   }
 }
 
-#divApplab, #designModeViz {
+#divApplab, #designModeViz, #visualizationOverlay {
   overflow: hidden;
   outline: none;
+  -webkit-touch-callout: none;
+
+  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+#divApplab {
   position: relative;
   z-index: 1;
   background-color: white;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+}
+
+#visualizationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  // This is a hack that enables pointer-events: none on this absolutely-
+  // positioned SVG element in IE9.
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=0);
+}
+
+.crosshair-overlay {
+  line {
+    stroke: #aaa;
+    stroke-width: 1.8px;
+    stroke-dasharray: 6.5px;
+  }
+
+  rect {
+    stroke: #bdc3c7;
+    stroke-width: 2px;
+    fill: rgba(255,255,255,0.8);
+  }
+
+  text {
+    text-anchor: middle;
+  }
 }
 
 #divApplab canvas, #designModeViz canvas {
@@ -253,6 +306,41 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1;
+}
+
+/* When not running, show default arrow cursor for all UI elements
+   so that they do not look active. */
+#divApplab.notRunning {
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+    cursor: default;
+  }
+}
+
+#divApplab.notRunning.withCrosshair {
+  cursor: crosshair;
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+    cursor: crosshair;
+  }
+}
+
+/* In design mode, show grab/grabbing cursor for all UI elements
+ * so that they look draggable. */
+#designModeViz {
+  button, label, select, input, img, div.chart, canvas, div[contenteditable=true] {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+  }
+
+  &.withCrosshair {
+    cursor: crosshair;
+  }
 }
 
 $resize-bar-width: 13px;

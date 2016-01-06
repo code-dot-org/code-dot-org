@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## createRecord(tableName, record, callbackFunction)
+## createRecord(table, record, callback)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, creates a record with a unique id in the table name provided, and calls the callbackFunction when the action is finished. The record created is passed as a parameter to the callback function. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, creates a record with a unique id in the table name provided, and calls the callback function when the action is finished. The record created is passed as a parameter to the callback function. Data is accessible to your app and users of your app.
 
 [/short_description]
 
@@ -91,7 +91,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-createRecord(tableName, record, function(record){
+createRecord(table, record, function(record){
     //callback function code goes here
   });
 ```
@@ -104,16 +104,16 @@ createRecord(tableName, record, function(record){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| tableName | string | Yes | The name of the table the record should be added to. `tableName` gets created if it doesn't exist.  |
+| table | string | Yes | The name of the table the record should be added to. `table` gets created if it doesn't exist.  |
 | record | object | Yes | The data to be stored. Object syntax: An object begins with { (left brace) and ends with } (right brace). Each column name is followed by : (colon) and the name/value pairs are separated by , (comma). Values can be strings, numbers, arrays, or objects. e.g. {column1:"a string", column2:10, column3:[1,2,3,4]}.  |
-| callbackFunction | function | No | A function that is asynchronously called when the call to createRecord() is finished. The created record object is passed as a parameter to the callback function. The unique ID of the new record can be accessed via record.id  |
+| callback | function | No | A function that is asynchronously called when the call to createRecord() is finished. The created record object is passed as a parameter to the callback function. The unique ID of the new record can be accessed via record.id  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-When `createRecord()` is finished executing, `callbackFunction` is automatically called and is passed the created record object as a parameter.
+When `createRecord()` is finished executing, `callback` is automatically called and is passed the created record object as a parameter.
 
 [/returns]
 

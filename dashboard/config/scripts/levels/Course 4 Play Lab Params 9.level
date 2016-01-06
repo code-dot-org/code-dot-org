@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Here's our game from earlier but most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit the function so that a \"points\" parameter is added to the \"player_score\" variable. \r\n\r\nThe variable \"player_score\" should increase each time Dog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote: When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle. ",
+    "instructions": "Here's our game from an earlier stage, but most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit the function so that a \"points\" parameter is added to the \"player_score\" variable. \r\n\r\nThe variable \"player_score\" should increase each time Dog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote: When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Here's our game from earlier but most of the code is hidden. We've added a new function called `score_points.`\r\n<br/>\r\n<hr>\r\n<br/>\r\n<h4>\r\nEdit the function so that a `points` parameter is added to the `player_score` variable.  \r\n<br/>\r\nThe variable `player_score` should increase each time Dog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n</h4>\r\n<br/>\r\n<hr>\r\n*Note: When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle.*",
+    "markdown_instructions": "Here's our game from an earlier stage but most of the code is hidden. We've added a new function called `score_points.`\r\n<br/>\r\n<hr>\r\n<br/>\r\n<h4>\r\nEdit the function so that a `points` parameter is added to the `player_score` variable.  \r\n<br/>\r\nThe variable `player_score` should increase each time Dog tags Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n</h4>\r\n<br/>\r\n<hr>\r\n*Note: When you're done, click \"Run\" to play.  When Dog scores 6 points, you will move on to the next puzzle.*",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

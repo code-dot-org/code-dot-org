@@ -18,7 +18,7 @@
 'use strict';
 /* global google */
 
-var Promise = require('es6-promise').Promise;
+require("babelify/polyfill"); // required for Promises in IE / Phantom
 require('../utils');
 
 /**

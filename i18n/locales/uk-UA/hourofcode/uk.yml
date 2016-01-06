@@ -1,7 +1,7 @@
 uk:
   site_name: Година Коду
   hour_of_code: Година коду
-  language: Українська
+  language: Українською
   front_title: 'Приєднуйтесь до найбільшої освітньої події в історії, %{campaign_date}, 2015'
   coming_soon: Незабаром
   campaign_date_start_short: 7 грудня
@@ -12,6 +12,7 @@ uk:
   front_intro_default: 'Година Коду є глобальним заходом, який залучає десятки мільйонів учнів у більш, як 180 країнах світу. Кожен може організувати заходи в рамках Години Коду. Одно-годинний курс доступний більш, як 40 мовами. Без попередніх вимог. <strong>Для всіх віком від 4 до 104.</strong>'
   front_watch_video: Дивіться новий ролик
   front_watch_regular_video: Дивіться відео
+  front_volunteers: Technical volunteers wanted
   header_menu_resources: Ресурси
   header_menu_faq: Часті питання
   header_menu_prizes: Призи
@@ -125,6 +126,7 @@ uk:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -155,9 +157,9 @@ uk:
   how_to_nav_districts: Для районів
   how_to_nav_assemblies: Для шкільних зборів
   how_to_nav_organizations: Для організацій
-  how_to_nav_companies: For companies
+  how_to_nav_companies: Для компаній
   how_to_nav_afterschool_educators: Для позашкілля
-  how_to_nav_volunteers: For volunteers
+  how_to_nav_volunteers: Для волонтерів
   prizes_nav_title: Призи
   prizes_nav_home: Усі призи
   prizes_nav_hardware: Реєстрація на апаратні призи
@@ -170,14 +172,14 @@ uk:
   prizes_nav_brilliant: $2,000 на проект Brilliant Labs
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_header: Prizes for every educator
-  prizes_10k: One public school in every US state (and Washington D.C.) will win $10,000 worth of technology
-  prizes_gift_cards: '<i>Every</i> organizer will receive <b>$10 to Amazon.com, iTunes or Windows Store</b> as a thank-you gift!'
+  prizes_header: Призи для кожного педагога
+  prizes_10k: У кожному зі штатів США одна зі шкіл отримає техніку на $10,000
+  prizes_gift_cards: '<i>Кожен</i> організатор отримає <b>$10 на Amazon.com, iTunes або магазин Windows</b> у якості подяки!'
   whats_next_header: Що далі?
   whats_next_description: "Ми надішлемо вам матеріали та корисні поради для вашого заходу. Незабаром виходять нові підручники 2015 року для різних браузерів, смартфонів, та навіть безмашинні вправи! <a href='http://code.org/learn'>Спробуйте ці підручники </a>"
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
+  whats_next_how_to: "<a href='/how-to'> Як провести Годину коду</a>"
+  whats_next_promote: "<a href='/promote'> Сприяти Годині коду</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Як просувати Годину коду</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Як поширювати Годину коду</a>"
   whats_next_try: "<a href='http://code.org/learn'>Спробуйте підручники</a>"
   whats_next_try_button: Спробуйте підручники
@@ -194,18 +196,22 @@ uk:
   front_join_us_button: Приєднуйтесь до нас
   front_what_is_hoc: Що таке Година коду?
   front_join_us_header: Кожен може навчитися основам і отримати від цього задоволення!
+  front_join_us_volunteer_header: Волонтери для Години коду
   front_join_us_teacher: Ви вчитель?
   front_join_us_inspire: Надихайте учнів
   front_join_us_inspire_link: Годиною коду на уроці.
   front_join_us_teacher_link: Надихайте учнів Годиною коду на уроці
+  front_join_us_teacher_volunteer: "Знайдіть місцевих волонтерів, які можуть відвідати Ваш клас, або зв'язатись із Вами віддалено"
   front_join_us_parent: Ви батько/мати?
   front_join_us_ask_link: Попросіть місцеву школу
   front_join_us_ask: провести Годину коду.
   front_join_us_parent_link: Попросіть місцеву школу провести Годину коду
   front_join_us_computer_science: Просто любите інформатику?
+  front_join_us_cs_volunteer: Захоплені інформатичною освітою?
   front_join_us_spread: Поширюйте інформацію.
   front_join_us_spread_word: Поширюйте інформацію у своїй спільноті
   front_join_us_spread_word_work: Поширюйте інформацію у своїй спільноті чи на роботі
+  front_join_us_sign_up_volunteer: Зареєструйтесь волонтером для місцевої школи або відео-чату
   front_join_us_organize: Або самі організуйте захід Години коду.
   front_join_us_how_to_run: Як можна провести Годину коду
   front_join_us_help_promote: Допоможіть поширити Годину коду
@@ -218,7 +224,7 @@ uk:
   front_join_us_support: Підтримайте
   front_join_us_more_info: "Для отримання додаткової інформації, відвідайте <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: Для отримання додаткової інформації, відвідайте code.org
-  front_join_us_n_students_served: '# учнів спробували'
+  front_join_us_n_students_served: '# учнів вже спробували'
   signup_header: 'Організуйте захід Години коду протягом %{campaign_date}, та зареєструйте його тут.'
   signup_name_label: "Ваше ім'я"
   signup_email_label: Ваша скринька
@@ -233,6 +239,7 @@ uk:
   signup_whole_school_flag_label: Захід для усієї школи
   signup_your_event: Зареєструйте свій захід
   signup_match_volunteer: Допоможіть знайти місцевого програміста, щоб надихнути моїх учнів
+  signup_multiple_event_warning: Якщо Ви проводите кілька заходів, заповніть унікальну назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією назви та електронної скриньки.
   signup_name_placeholder: "Ваше ім'я"
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Наприклад, СЗШ № 89
@@ -248,16 +255,16 @@ uk:
   map_header: Заходи Години коду по всьому світу
   see_all_events: Переглянути всі події
   map_header_company: '# від організаторів'
-  map_header_country: '# in %{country}'
+  map_header_country: '# в %{country}'
   map_search_placeholder: Пошук заходів Години коду
   map_search_search: Пошук
   map_search_reset: Скидання
-  map_legend_title: Legend
-  map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: CS Tech Jam
-  meta_tag_og_title: Прийшла Година коду
+  map_legend_title: Умовні позначення
+  map_legend_hoc_events: Заходи Години коду
+  map_legend_cs_tech_jam: Технічні студії
+  meta_tag_og_title: Наближається Година коду
   meta_tag_og_description: Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш як 180 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104.
-  meta_tag_twitter_title: Прийшла Година коду
+  meta_tag_twitter_title: Наближається Година коду
   meta_tag_twitter_description: Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш як 180 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104.
   twitter_default_text: 'Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg'
   hardware_prizes_form_name_label: "Ваше ім'я"
@@ -277,7 +284,7 @@ uk:
   hardware_prizes_form_title_I_school_help_text: Title I schools are schools with high numbers or high percentages of children from low-income families that receive federal funds to help ensure that all children meet challenging state academic standards.
   hardware_prizes_form_number_students_label: Кількість учнів, котрі беруть участь
   hardware_prizes_form_number_students_placeholder: Кількість учнів
-  hardware_prizes_form_technology_plan_label: How will you use new technology to help expand computer science instruction in your school?
+  hardware_prizes_form_technology_plan_label: Як ви будете використовувати нові технології для розширення викладання інформатики у вашій школі?
   hardware_prizes_form_technology_plan_placeholder: План використання нових технологій
   hardware_prizes_form_plan_file_label: Завантажте свій план заходів для Години Коду
   hardware_prizes_form_plan_file_description: 'Завантажте простий графік того, як ви збираєтесь організувати роботу учнів у Годині Коду в своїй школі. Переглянути зразок: #PDF# | #Word#'
@@ -291,19 +298,19 @@ uk:
   hoc_faq_why_cs_q: Чому інформатика?
   hoc_faq_why_cs_a: "<i>Кожен</i> учень повинен мати можливість вивчати інформатику. Вона допомагає розвивати навички розв'язання задач, логіку та творчість. Розпочинаючи вивчення рано, учні отримують основу для успіху в будь-якій кар'єрі 21 століття. Ознайомтеся зі статистикою <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Як взяти участь у Годині коду?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Розпочніть планування</a> переглянувши інструкції. Можете організувати захід Години коду в своїй школі чи спільноті &mdash; наприклад у клубі чи громадській організації. Або спробуйте самі, коли настане %{campaign_date}."
   hoc_faq_behind_hoc_q: Хто стоїть за Годиною коду?
   hoc_faq_behind_hoc_a: "Година коду проводиться громадською неприбутковою організацією <a href='http://code.org'>Code.org</a>, яка має на меті поширення інформатики у школах, а також залучення більшої кількості жінок та національних меншин до цієї галузі. Вони зібрали <a href='http://code.org/about/partners'>безпрецедентну коаліцію партнерів</a> для проведення Години коду &mdash; включно із Microsoft, Apple, Amazon, Boys and Girls Clubs of America та College Board."
   hoc_faq_host_q: Я нічого не знаю про програмування. Я все-таки можу організувати захід?
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
+  hoc_faq_host_a: "Звичайно. Завдання Години коду призначені для самостійного вивчення. Все, що потрібно зробити - це <a href='%{codeorg_url}/learn'><a href='/how-to'>обрати підручник</a> та виділити годину &mdash; ми подбаємо про решту. У нас є різні варіанти завдань для різного віку та рівня попередніх знань, починаючи із дитсадка. Розпочинайте планування своїх заходів з цих <a href='/how-to'>інструкцій</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: "Чи потрібні комп'ютери для кожного учасника?"
   hoc_faq_need_computers_a: "Ні. Підручники Години коду працюють на персональних комп'ютерах, смартфонах, планшетах, а деякі з них взагалі не потребують комп'ютерної техніки! Можна приєднатись з будь-якого місця, використовуючи будь-які наявні ресурси. <p><i>Ось кілька варіантів:</i> <br> <ul><li><b>Працювати у парах.</b> Дослідження свідчать, що учні краще навчаються при <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>парному програмуванні</a>, працюючи за одним комп'ютером. Заохочуйте учнів сідати по двоє. <li><b>Використати проектор.</b> Якщо у вас є проектор та комп'ютер з доступом до Інтернету, можна виконувати Годину коду всім класом. Разом переглядайте відео-ролики та по черзі розв'язуйте задачі і давайте відповіді на питання. <li><b>Скористатись безмашинним варіантом.</b> Ми пропонуємо вправи, що не потребують використання комп'ютера. </ul>"
   hoc_faq_international_q: 'Я з <country>. Як взяти участь на міжнародному рівні?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
+  hoc_faq_international_a: "Кожен в будь-якому місці в будь-якому місці може організувати заходи Години коду. Минулого року учні по всьому світу об'єдналися для Години коду. Дізнайтеся більше <a href='/promote'>за посиланням</a>."
   hoc_faq_tutorial_q: Я можу створити підручник для Години коду?
-  hoc_faq_tutorial_a: "Якщо ви зацікавлені у створенні власного підручника, <a href='target-tutorial-guidelines'>ознайомтесь із нашими рекомендаціями та інструкціями</a>. Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці."
-  hoc_faq_more_questions_q: Все ще маєте питання?
-  hoc_faq_more_questions_a: "Спробуйте знайти відповідь на <a href='http://support.code.org'>форумі</a>."
+  hoc_faq_tutorial_a: "Якщо ви зацікавлені у створенні власного підручника, <a href='/tutorial-guidelines'>ознайомтесь із нашими рекомендаціями та інструкціями</a>. Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці."
   hoc_faq_account_q: Учням потрібно реєструвати облікові записи?
   hoc_faq_account_a: "Ні, для учнів не потрібна реєстрація чи вхід в обліковий запис для Години коду. Більшість <a href='http://code.org/learn/beyond'>подальших курсів</a> вимагають реєстрації для відстеження успішності користувачів."
   hoc_faq_frozen_q: Де підручник з Анною та Ельзою?
@@ -313,7 +320,17 @@ uk:
   hoc_faq_scratch_q: Я провожу Годину коду на Scratch, але що робити, якщо мої учні мають iPad, а не ноутбуки?
   hoc_faq_scratch_a: "Scratch не працює на планшетах. Для молодших учнів можна скористатись програмою ScratchJR для iPad. Серед підручників на <a href='http://code.org/learn'>Code.org/learn</a>, можна знайти такі, що підійдуть для iPad - від Code.org, Tynker, Lightbot, чи CodeSpark."
   hoc_faq_count_hoc_q: Як ви рахуєте Години коду?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "Відстежувач Години коду не забезпечує точного вимірювання. Ми не рахуємо унікальні ідентифікатори учнів, коли обліковуємо участь у Годині коду, зокрема тому, що не вимагаємо реєстрації чи входу з паролем. В результаті, ми можемо як перебільшити, так і применшити кількість учасників. Більше інформації за <a href='%{codeorg_url}/loc'> посиланням</a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: Все ще маєте питання?
+  hoc_faq_more_questions_a: "Спробуйте знайти відповідь на <a href='http://support.code.org'>форумі</a>."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: Статистика Години Коду 2013 року
   stats_growth: Це було найшвидшим залученням 15 мільйонів користувачів.
   stats_i18n: Учні навчаються 40 мовами
@@ -367,9 +384,9 @@ uk:
   title_how_to_districts: Інструкції Години коду для районів
   title_how_to_events: Інструкції для заходів Години коду
   title_how_to_organizations: 'Як провести Годину коду - Організаціям'
-  title_how_to_companies: 'How to host an Hour of Code - Companies'
+  title_how_to_companies: 'Як провести Годину коду - компанії'
   title_how_to_officials: Керівництво для органів влади
-  title_how_to_volunteers: How-to guide for Hour of Code volunteers
+  title_how_to_volunteers: Інструкції з Години коду для волонтерів
   title_how_to: Інструкції
   title_press_release: Прес-реліз Години коду для виборних посадових осіб
   title_op_ed: Зразок заяви у підтримку тижня інформатики та Години коду

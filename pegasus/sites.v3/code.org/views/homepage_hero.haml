@@ -1,7 +1,7 @@
 #hero
-
   -# Generate a random set of hero images alternating between non-celeb and celeb.
   - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+  - hero_display_time = 13 * 1000
 
   - if rack_env != :production && request.params["preview"]
     -# on non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
@@ -23,12 +23,6 @@
     - if heroes_celeba.length > 0
       - heroes_celeba.shuffle!
       - heroes_arranged.unshift(heroes_celeba.first)
-    - hero_display_time = 13 * 1000
-
-    -# handy debug output:
-    -# heroes_arranged.each do |hero|
-      - puts hero[:param2_s]
-
 
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
@@ -85,34 +79,17 @@
 
     #actions.col-33
       - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
-
-      -# begin temporary
-      #title
-        Star Wars
-        %div{style: "font-size: 18px"}
-          Building a Galaxy with Code
-      -# end temporary
-
       - actions.each_with_index do |entry, index|
         - display = entry[:active_s] == "hide" ? "none" : "block"
         .action{style: "display: #{display}; opacity: 0"}
-          - if entry[:param1_s] == "hoc_title"
-            #title= I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "num_served"
-            #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          - elsif entry[:param1_s] == "hoc_buttons"
-            .buttongroup
-              %a{href: entry[:param3_s]}
-                %button.herohocbutton= I18n.t(entry[:text1_s])
-              %a{href: entry[:param4_s]}
-                %button.herohocbutton= I18n.t(entry[:param2_s])
-            %div{style: "clear: both;"}
-          - elsif entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
+          - if entry[:param1_s] == "video"
+            %img#playimage{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();"}
             %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
-          - elsif entry[:param1_s] == "volunteers"
-            #volunteeraction
-              %a{href: "/volunteer"}= I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "learn"
+            %a#herolearnlink{href: entry[:param2_s]}
+              %button#herolearnbutton= I18n.t(entry[:text1_s])
+          .actiongap
+            &nbsp;
 
     #blankspaceleftmobile.mobile-feature
 
@@ -127,6 +104,13 @@
     $(".widehero").css({display: "block", opacity: 0});
 
     $("#fullwidth0").fadeTo(4000, 1);
+
+    if ("#{page_mode}" == "feature-starwars") {
+      $("#captionarea_sw").fadeTo(4000, 1);
+    }
+    else {
+      $("#captionarea_mc").fadeTo(4000, 1);
+    }
 
     showQuote(null, 0);
 
@@ -165,6 +149,18 @@
     $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
   }
 
+  function showCaption()
+  {
+    if ($("#captionarea_sw").is(':visible') && $("#captionarea_sw").css('opacity') == 1) {
+      $("#captionarea_sw").fadeTo(4000, 0);
+      $("#captionarea_mc").fadeTo(4000, 1);
+    }
+    else {
+      $("#captionarea_sw").fadeTo(4000, 1);
+      $("#captionarea_mc").fadeTo(4000, 0);
+    }
+  }
+
   function adjustScroll(destination)
   {
     $('html, body').animate({
@@ -187,9 +183,14 @@
     currentImage = nextImage;
 
     showQuote(lastImage, currentImage);
+    showCaption();
   }
 
   $.ready()
   {
-    timerId = setInterval(cycleImage, #{hero_display_time});
+    var numWideHeroes = $(".widehero").length;
+
+    if (numWideHeroes > 1) {
+      timerId = setInterval(cycleImage, #{hero_display_time});
+    }
   }

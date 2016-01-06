@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Çizimi başlatmak için veya durdurmak için kalemi kaldırır ya da indirir."},
 "penUp":function(d){return "Kalemi kaldır"},
 "reinfFeedbackMsg":function(d){return "Çiziminiz burada!Çiziminizin üzerinde çalışmaya devam et veya devam etmek için sonraki bulmaca geç"},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "alpha ayarla"},
 "setColour":function(d){return "renk ayarla"},
 "setPattern":function(d){return "deseni ayarla"},
 "setWidth":function(d){return "genişliği ayarla"},

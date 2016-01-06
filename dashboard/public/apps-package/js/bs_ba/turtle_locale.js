@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Podiže ili spušta olovku da bi počeo/la ili prestao/la crtati."},
 "penUp":function(d){return "podigni olovku"},
 "reinfFeedbackMsg":function(d){return "Evo tvog crteža! Nastavi raditi na njemu ili prijeđi na slijedeći zadatak."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "postavi alfa"},
 "setColour":function(d){return "postavi boju"},
 "setPattern":function(d){return "postavi uzorak"},
 "setWidth":function(d){return "postavi širinu"},

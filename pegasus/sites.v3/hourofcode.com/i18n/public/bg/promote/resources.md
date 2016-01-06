@@ -11,7 +11,7 @@ nav: promote_nav
 
 # Насърчаване на Часът на кода
 
-## Домакинли сте на часът на кода? <a href="<%= resolve_url('/how-to') %>">Вижте помощното ръководство</a>
+## Домакинли сте на часът на кода? [Вижте помощното ръководство](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -20,12 +20,6 @@ nav: promote_nav
 ## Окачете тези плакати във Вашето училище
 
 <%= view :promote_posters %>
-
-<a id="banners"></a>
-
-## Поставете тези банери на Вашия сайт
-
-[![изображение](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="social"></a>
 
@@ -42,6 +36,16 @@ nav: promote_nav
 [![изображение](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Изтегли версии с висока резолюция](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Всяко позоваване на "Часът на кодирането" трябва да се използва по начин, който не предполага, че това е ваша собствена търговска марка, но по-скоро да се разбира, че Часът на кодирането е вид масово движение. Добър пример: "Участвайте в Hour of Code на ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Обяснете нашата кампания на вашият език на страницата ви(или в допълнителна опция), като включите връзки към CSEdWeek и Code.org сайтовете, както и следното:
+    
+    *"Hour of Code ™" е национална инициатива на Csew [csedweek.org] и Code.org[code.org] да се подпомогнат милиони ученици с един час в компютърните науки и по компютърно програмиране."*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -76,7 +80,7 @@ nav: promote_nav
 
 Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Момичета не проявяват интерес към тях. Добрата новина е, че ние сме на път да се променим това.
 
-С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Над 100 партньори се събраха в подкрепа на това движение. Миналата година, всеки Apple Магазин в света стана домакин на Часът на кода и дори президента Обама написа своята първа линия код като част от кампанията.
+С часа на кода, компютърните науки бяха на началните страници на Google, MSN, Yahoo! и Дисни. Над 100 партньора се събраха в подкрепа на това движение. Миналата година, всеки Apple Магазин в света стана домакин на Часът на кода и дори президента Обама написа своята първа линия код като част от кампанията.
 
 Ето защо всеки един [X] ученик от [името на училището] може да се присъедини към най-голямото обучително събитие в историята: Часът на кодирането, през декември 7-13.
 
@@ -128,4 +132,3 @@ nav: promote_nav
 
 Искрено Ваш/а, [NAME], [TITLE]
 
-<%= view :signup_button %>

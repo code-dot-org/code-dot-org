@@ -1,16 +1,6 @@
 if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
-  module SimpleCov::Configuration
-    def clean_filters
-      @filters = []
-    end
-  end
-
-  SimpleCov.configure do
-    clean_filters
-    load_profile 'test_frameworks'
-  end
 end
 
 require 'minitest/reporters'
@@ -69,6 +59,12 @@ class ActiveSupport::TestCase
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
     set_env :test
+  end
+
+  def panda_panda
+    # this is the panda face emoji which is a 4 byte utf8 character
+    # (some of our db tables can't handle these)
+    "Panda\u{1F43C}"
   end
 
   def set_env(env)

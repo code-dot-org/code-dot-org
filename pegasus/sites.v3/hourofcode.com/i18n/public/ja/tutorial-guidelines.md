@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -151,7 +150,7 @@ Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and 
   * 学年レベルの中には、推奨されるコンピューター科学の知識（初心者、中級、上級）も含めてください。 Hour of Code のウェブサイトは初心者向けの活動を最も目立つように強調表示します。 If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * 技術的要件: 
       * 参加をより正確に追跡するため、各サードパーティーのチュートリアルパートナーに、Hour of Code チュートリアルの最初と最後のページに 1 ピクセルのトラッキング画像を入れていただくようお願いしています。 最初のページには最初の画像を、最後のページには最後の画像を配置してください。 中間のページには配置しないでください）。 詳細については下記のトラッキングピクセルの節を参照してください。 
-      * あなたの活動を終えた時には、ユーザーは [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
+      * あなたの活動を終えた時には、ユーザーは [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) にリダイレクトされるべきです。そこでユーザーは次のことができます: 
           * Hour of Code を完了したことをソーシャルメディアで共有する
           * Hour of Code を完了した証明書を受け取る
           * Hour of Code 活動への参加率が最も高い国/都市についてのリーダーボードを見る
@@ -215,13 +214,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 混乱を防ぐために商標「Hour of Code」を保護するというのもその一つです。 チュートリアルパートナーの多くがウェブサイトに「Hour of Code」を使用してきました。 私たちはこの使い方を引き止めるわけではありませんが、いくつかの制限を満たすようにしたいと思っています:
 
-  1. いかなる「Hour of Code」への言及も、それがあなたの独自のブランド名だと示唆する形ではなく、Hour of Code を草の根運動として参照する形で使われるべきです。 Good example: "Participate in the Hour of Code™ at ACMECorp.com". 悪い例:「ACME Corp の Hour of Code を試す」
-  2. ウェブサイトとアプリの説明の両方で、「Hour of Code」について言及するもっとも目立った場所に上付き文字の「TM」を使ってください。
+  1. いかなる「Hour of Code」への言及も、それがあなたの独自のブランド名だと示唆する形ではなく、Hour of Code を草の根運動として参照する形で使われるべきです。 Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. ページに（またはフッターに）、CSEdWeek と Code.org へのリンクを含めて次の言葉を含めてください:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. アプリ名に「Hour of Code」を使用しないでください。
+  4. No use of "Hour of Code" in app names.
 
 [**トップに戻る**](#top)
 
@@ -265,4 +264,3 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**トップに戻る**](#top)
 
-<%= view :signup_button %>

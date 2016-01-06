@@ -89,17 +89,17 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">10</title>
-        </block>
         <block type="jump_by_constant_dropdown">
           <title name="DIR">jumpForward</title>
           <title name="VALUE" config="25,50,100,150,200,300">25</title>
         </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
+        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

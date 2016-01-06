@@ -25,7 +25,7 @@
   "COLOUR_RGB_TITLE":"warna dengan",
   "COLOUR_RGB_TOOLTIP":"Pilih satu warna dengan jumlah ditentukan dari merah, hijau, dan biru. Semua nilai perlu di antara 0 dan 100.",
   "CONFIRM_DELETE_FUNCTION_MESSAGE":"Awas! Adakah anda pasti mahu menghapus %1?",
-  "CONTRACT_EDITOR_HEADER":"Design Recipe",
+  "CONTRACT_EDITOR_HEADER":"Rahsia Reka Bentuk",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"Keluar daripada gelung lingkaran",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"Teruskan dengan pengulangan seterusnya gelung",

@@ -46,7 +46,6 @@ social:
 | Maryland | Math |
 | Michigan | Math |
 | Minnesota | Math |
-| Missouri | Math |
 | New York | Math |
 | North Carolina | Math |
 | Ohio | Math |

@@ -5,7 +5,7 @@ title: "Ops Dashboard"
 ---
 - authentication_required!
 - forbidden! unless have_permission?('district_contact') || have_permission?('facilitator') || dashboard_user[:admin]
-- require 'cdo/activity_constants'
+- require 'cdo/workshop_constants'
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -70,31 +70,11 @@ title: "Ops Dashboard"
     }]);
   services.factory('programTypesService', [
     function() {
-      var program_types = {
-        1: {id: 1, short_name: "#{ ActivityConstants::PROGRAM_TYPES[1][:short_name]}", long_name: "#{ ActivityConstants::PROGRAM_TYPES[1][:long_name]}"},
-        2: {id: 2, short_name: "#{ ActivityConstants::PROGRAM_TYPES[2][:short_name]}", long_name: "#{ ActivityConstants::PROGRAM_TYPES[2][:long_name]}"},
-        3: {id: 3, short_name: "#{ ActivityConstants::PROGRAM_TYPES[3][:short_name]}", long_name: "#{ ActivityConstants::PROGRAM_TYPES[3][:long_name]}"},
-        4: {id: 4, short_name: "#{ ActivityConstants::PROGRAM_TYPES[4][:short_name]}", long_name: "#{ ActivityConstants::PROGRAM_TYPES[4][:long_name]}"},
-        5: {id: 5, short_name: "#{ ActivityConstants::PROGRAM_TYPES[5][:short_name]}", long_name: "#{ ActivityConstants::PROGRAM_TYPES[5][:long_name]}"},
-        6: {id: 6, short_name: "#{ ActivityConstants::PROGRAM_TYPES[6][:short_name]}", long_name: "#{ ActivityConstants::PROGRAM_TYPES[6][:long_name]}"}
-      };
-
-      return program_types;
+      return #{WorkshopConstants::PROGRAM_TYPES.to_json};
   }]);
   services.factory('phaseInfoService', [
     function() {
-      var phases = {
-        1: {id: 1, short_name: "#{ ActivityConstants::PHASES[1][:short_name]}", long_name: "#{ ActivityConstants::PHASES[1][:long_name]}"},
-        2: {id: 2, short_name: "#{ ActivityConstants::PHASES[2][:short_name]}", long_name: "#{ ActivityConstants::PHASES[2][:long_name]}"},
-        3: {id: 3, short_name: "#{ ActivityConstants::PHASES[3][:short_name]}", long_name: "#{ ActivityConstants::PHASES[3][:long_name]}"},
-        4: {id: 4, short_name: "#{ ActivityConstants::PHASES[4][:short_name]}", long_name: "#{ ActivityConstants::PHASES[4][:long_name]}"},
-        5: {id: 5, short_name: "#{ ActivityConstants::PHASES[5][:short_name]}", long_name: "#{ ActivityConstants::PHASES[5][:long_name]}"},
-        6: {id: 6, short_name: "#{ ActivityConstants::PHASES[6][:short_name]}", long_name: "#{ ActivityConstants::PHASES[6][:long_name]}"},
-        7: {id: 7, short_name: "#{ ActivityConstants::PHASES[7][:short_name]}", long_name: "#{ ActivityConstants::PHASES[7][:long_name]}"},
-        8: {id: 8, short_name: "#{ ActivityConstants::PHASES[8][:short_name]}", long_name: "#{ ActivityConstants::PHASES[8][:long_name]}"}
-      };
-
-      return phases;
+      return #{WorkshopConstants::PHASES.to_json};
   }]);
   services.factory('workshopsService', ['$resource',
     function($resource){
@@ -635,8 +615,10 @@ title: "Ops Dashboard"
 
   controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService', 'phaseInfoService',
     function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService, phaseInfoService) {
-      $scope.workshop = workshopsService.get({id: $routeParams.id});
-      $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      if ($routeParams.id) {
+        $scope.workshop = workshopsService.get({id: $routeParams.id});
+        $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
+      }
       $scope.program_types = programTypesService;
       $scope.phases = phaseInfoService;
       $scope.cohorts = cohortsService.query();

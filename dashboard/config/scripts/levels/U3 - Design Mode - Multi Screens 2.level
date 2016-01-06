@@ -128,7 +128,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Make a 2 screen app which can switch back and forth between a black screen and a white screen using buttons. (Click to see detailed instructions.)",
-    "markdown_instructions": "# Switching Screens\r\n\r\nIn the last level you made two screens, a black one and a white one. However when you ran the app you probably noticed that you had no way to see the second screen. Let's fix that.\r\n\r\nIn order to switch between screens we have added a new command: `setScreen()`. Read the documentation to figure out how this command works.\r\n\r\n<img src=\"https://images.code.org/152f45b312da467f0b553efc9fba20a7-image-1444354703453.gif\" style=\"width: 250px; float: right\">\r\n\r\n**Goal:** Make a 2 screen app which can switch back and forth between a black screen and a white screen using buttons.\r\n\r\n# Do This\r\n\r\n* **Put a button on each screen**.  \r\n\r\n* **Set up event handlers** for each of your buttons. \r\n\r\n* **Use the `setScreen` block to switch screens** when the buttons are clicked.\r\n\r\n* Test out your app to make sure you can switch back and forth between the two screens.",
+    "markdown_instructions": "# Switching Screens\r\n\r\nIn the last level you made two screens, a black one and a white one. However when you ran the app you probably noticed that you had no way to see the second screen. Let's fix that.\r\n\r\nIn order to switch between screens we have added a new command: `setScreen`. Read the documentation to figure out how this command works.\r\n\r\n<img src=\"https://images.code.org/152f45b312da467f0b553efc9fba20a7-image-1444354703453.gif\" style=\"width: 250px; float: right\">\r\n\r\n**Goal:** Make a 2 screen app which can switch back and forth between a black screen and a white screen using buttons.\r\n\r\n# Do This:\r\n\r\n* **Put a button on each screen**.  \r\n\r\n* **Set up event handlers** for each of your buttons. \r\n\r\n* **Use the `setScreen` block to switch screens** when the buttons are clicked.\r\n\r\n* Test out your app to make sure you can switch back and forth between the two screens.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -156,7 +156,9 @@
     "encrypted_examples": "DMYb0MSu+hAAr6oDUklAhX16zwzmyRcW/g3R2YFaZnvfk1XOi3scbkBJ6Rpj\nbecZ\n",
     "project_template_level_name": "U3 - Design Mode - Multi Screens",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

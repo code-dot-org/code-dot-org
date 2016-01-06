@@ -24,7 +24,7 @@ fr:
         <strong>P</strong>: '<strong>P</strong>'
         <strong>Q</strong>: '<strong>Q</strong>'
         Matching: Correspondance
-        Use the key to match each code to its letter: Utilise la touche pour assigner chaque code à sa lettre
+        Use the key to match each code to its letter: Utilise la touche pour associer chaque code à sa lettre
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -32,7 +32,7 @@ fr:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Attribue la grille au bon programme.
+        Match the grid to the program.: Associe la grille au bon programme.
         Matching: Correspondance
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -42,10 +42,10 @@ fr:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Faites glisser les blocs correspondants.
+        Drag the blocks to match.: Fais glisser les blocs pour les faire correspondre.
         Instructions: Consignes
-        Match the puzzles to the blocks: Assortir les puzzles aux blocs
-        Maze Match: Labyrinthe correspondance
+        Match the puzzles to the blocks: Associes les puzzles aux blocs
+        Maze Match: Correspondance de labyrinthes
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -53,7 +53,7 @@ fr:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Attribue la grille au bon programme
+        Match the grid to the program: Associe la grille au bon programme
         Matching: Correspondance
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -65,7 +65,7 @@ fr:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Artiste : les boucles première correspondance'
-        Match the loop to the shape: Assortissez la boucle à la forme
+        Match the loop to the shape: Associez la boucle à la forme
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -76,7 +76,7 @@ fr:
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
         Artist Matching: "Correspondance d'artistes"
-        Match the shape with the blocks that complete it.: Assortir la forme avec les blocs qui la complètent.
+        Match the shape with the blocks that complete it.: Associe la forme avec les blocs qui la complètent.
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -89,7 +89,7 @@ fr:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Correspondance des rebonds
-        Match the events with the actions: Associes les événements aux actions
+        Match the events with the actions: Associe les événements aux actions
         Matching: Correspondance
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
@@ -126,9 +126,9 @@ fr:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Roues/côté: 2 <br/>Fenêtres/côté: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Roues/côté: 2 <br/>Fenêtres/côté: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Roues/côté: 2 <br/>Fenêtres/côté: 6</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Roues/côté: 2<br/>Fenêtres/côté: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Roues/côté: 2<br/>Fenêtres/côté: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Roues/côté: 2<br/>Fenêtres/côté: 6</h3>'
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Roues/côté: 3<br/>Fenêtres/côté: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Chacun de ces véhicules a été décomposé en de plus petits morceaux. Associe chaque véhicule avec sa liste décomposée.
         Matching: Correspondance
@@ -160,9 +160,9 @@ fr:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/> <br/> au-dessus'
-        <br/><br/>below: '<br/> <br/> en-dessous'
-        <br/><br/>next to: '<br/> <br/> à côté'
+        <br/><br/>above: '<br/> <br/>au-dessus'
+        <br/><br/>below: '<br/> <br/>en-dessous'
+        <br/><br/>next to: '<br/> <br/>à côté'
         Is the square next to, above, or below the ball?: Le carré est-il à côté, au-dessus, ou au-dessous de la balle ?
         Matching: Correspondance
       K-1 Artist 2 Match 2:
@@ -479,7 +479,7 @@ fr:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Questions à choix multiples
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: "Quelle est la plus grande portion de cette chanson qui puisse être définie comme le refrain, de sorte que le refrain se répète correctement à chaque fois qu'il est appelé ?"
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: "Quelle est la plus grande portion de cette chanson qui puisse être définie comme le refrain, de façon à ce que le refrain se répète exactement à chaque fois qu'il est appelé?"
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png

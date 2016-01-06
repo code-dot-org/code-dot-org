@@ -32,6 +32,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
   gem 'konacha'  # Mocha + Chai JS testing in Rails
@@ -51,6 +52,7 @@ group :development, :test do
   gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
   gem 'timecop'
+  gem 'fake_sqs'
 
   # for ui testing
   gem 'cucumber'
@@ -167,10 +169,11 @@ gem 'rack-ssl-enforcer'
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
 
-gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
 gem 'jquery-cookie-rails'
 gem 'oj'
+gem 'daemons'

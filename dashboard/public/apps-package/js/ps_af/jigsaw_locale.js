@@ -159,6 +159,6 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "no":function(d){return "No"},
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try Again\" button to go back to playing your game."},
-"share":function(d){return "Share"},
+"share":function(d){return "له نورو سره یي شریک کړۍ"},
 "shareGame":function(d){return "Share your game:"},
 "yes":function(d){return "Yes"}};

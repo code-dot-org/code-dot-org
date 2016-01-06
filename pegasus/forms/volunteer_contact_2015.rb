@@ -30,7 +30,7 @@ class VolunteerContact2015
   end
 
   def self.type_tasks()
-    @type_tasks ||= type_tasks_with_i18n_labels(
+    (@type_tasks ||= {})[I18n.locale] ||= type_tasks_with_i18n_labels(
       'onsite',
       'remote',
       'mentor',

@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Lyfter eller sænker blyanten for at starte eller stoppe tegning."},
 "penUp":function(d){return "blyant op"},
 "reinfFeedbackMsg":function(d){return "Her er din tegning! Fortsæt med at arbejde på den eller gå videre til næste opgave."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "sæt alfa"},
 "setColour":function(d){return "sæt farve"},
 "setPattern":function(d){return "juster mønster"},
 "setWidth":function(d){return "indstil bredde"},

@@ -1,0 +1,24 @@
+title 'Computer Science in Science PD Pre-Phase 3B'
+description "Phase 3 Academic Year Development"
+description_short "Phase 3 Academic Year Development"
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'sciPD3OLP33 intro'
+level 'sciPD2 timeline'
+level 'ECSPD PD details'
+level 'PD check your progress'
+
+stage 'Assessing Computer Models'
+level 'sciPD33 rubric'
+level 'sciPD33 implement2'
+
+stage '(optional) Refresh your connection to Complex Adaptive Systems'
+level 'sciPD33 refresh'
+level 'sciPD33 refresh2'
+
+stage 'Wrap-Up'
+level 'sciPD33 thanks'
+level 'sciPD33 reflection'
+level 'sciPD33 end'

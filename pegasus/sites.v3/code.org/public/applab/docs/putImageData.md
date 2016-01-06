@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## putImageData(imageData, startX, startY)
+## putImageData(imgData, x, y)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Canvas
 
 [short_description]
 
-Puts the input image data onto the current canvas element starting at position startX, startY.
+Puts the input image data onto the active canvas element starting at position x, y.
 
 [/short_description]
 
@@ -96,7 +96,7 @@ function removeRed(thisImageData){
         for(var x=0; x < thisImageData.width; x++) { //An inner loop over each pixel in x axis
             setRed(thisImageData, x, y, 0); //Use x and y in our loops to set each pixel's red value to 0
         }
-        putImageData(thisImageData, 0, 0); //We update the whole canvas for every pixel in our loops
+        putImageData(thisImageData, 0, 0); //We update the whole canvas for every row of pixels in our loop
     }
 }
 
@@ -119,7 +119,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-putImageData(imageData, startX, startY);
+putImageData(imgData, x, y);
 ```
 
 [/syntax]
@@ -130,9 +130,9 @@ putImageData(imageData, startX, startY);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| imageData | object | Yes | The image data object that describes data captured from a canvas element (use [getImageData()](/applab/docs/getImageData))    |
-| startX | number | Yes | The x position in pixels starting from the upper left corner of image to place the data on the canvas.  |
-| startY | number | Yes | The y position in pixels starting from the upper left corner of image to place the data on the canvas.  |
+| imgData | object | Yes | The image data object that describes data captured from a canvas element (use [getImageData()](/applab/docs/getImageData))    |
+| x | number | Yes | The x position in pixels starting from the upper left corner of image to place the data on the canvas.  |
+| y | number | Yes | The y position in pixels starting from the upper left corner of image to place the data on the canvas.  |
 
 [/parameters]
 

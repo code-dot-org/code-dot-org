@@ -1,5 +1,8 @@
+/* global google, Maplace */
+
 var gmap;
 var gmap_loc;
+var selectize;
 
 $(document).ready(function() {
   initializeMap();
@@ -111,8 +114,9 @@ function getLocations(results) {
 
     for(var index = 0; index < volunteers_count; index++){
       var coordinates = volunteers[index].location_p.split(',');
-      var lat = coordinates[0];
-      var lon = coordinates[1];
+      // 0.01 degree is approximately 1km. randomize within this 1km to avoid showing exact addresses
+      var lat = coordinates[0] - 0.005 + (0.01 * Math.random());
+      var lon = coordinates[1] - 0.005 + (0.01 * Math.random());
       var title = volunteers[index].name_s;
       var id = volunteers[index].id;
       var html = compileHTML(index, volunteers[index]);
@@ -170,7 +174,7 @@ function loadMap(locations) {
 
   // Reset the map.
   $('#gmap').html('');
-  gmap = new Maplace;
+  gmap = new Maplace();
 
   var mapOptions = {
     mapOptions: {
@@ -253,7 +257,7 @@ function compileContact(index, location)
   var details =  location.name_s + ' (' + i18n(location.experience_s) + ')';
   var html = '<div id="addressee-details-' + index + '">' + details + '</div>';
   $('#allnames').append(html);
-  
+
   return html;
 }
 
@@ -285,7 +289,7 @@ function processResponse(data)
 function processError(data)
 {
   $('.has-error').removeClass('has-error');
-  
+
   var errors = Object.keys(data.responseJSON);
   var errors_count = errors.length;
 
@@ -294,7 +298,7 @@ function processError(data)
     error_id = error_id.replace(/-[sb]s?$/, '');
     $(error_id).parents('.form-group').addClass('has-error');
   }
-  
+
   var error = '<font color="#a94442">An error occurred. All fields are required Please check that all fields have been filled out properly.</font>';
   $('#error-message').html(error).show();
   $('#success-message').hide();

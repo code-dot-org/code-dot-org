@@ -10,7 +10,7 @@
         blank: gerekli
     attributes:
       user:
-        name: Görünen isim
+        name: Görünen İsim
         email: E-posta
         username: kullanıcı adı
         password: şifre
@@ -28,8 +28,10 @@
   add_teacher_form:
     code:
       label: 'Öğretmen ekleyin:'
-      placeholder: Bölüm kodu (ABCDEF)
-    submit: Öğretmen ekle
+      placeholder: Bölüm Kodu (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
+    submit: Öğretmeni ekle
   add_hint_form:
     placeholder: Lütfen ipucunu buraya girin
     submit: İpucu ekle
@@ -257,6 +259,7 @@
         playlab: Uygulama oluşturun
         artist: Bir şeyler çizin
         calculate: Calculate Something
+        applab: Uygulama oluşturun
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
@@ -280,70 +283,18 @@
       prize_us_only: (Sadece ABD öğrencileri)
       prizes_link: Daha fazla bilgi
   teacher:
+    answer: Cevap
+    for_teachers_only: Sadece Öğretmenler İçin
     title:
       one: 'Öğretmenin :'
       other: 'Öğretmeniniz:'
     remove: (öğretmeni kaldır)
     confirm:
       remove: Bu öğretmeni kaldırmak istediğinizden emin misiniz?
-    tools: Öğretmen Araçları
-    followers:
-      section: 'Bölüm:'
-      stages: 'Görüntülenecek kademe(ler):'
-      show_past: 'Geçmiş öğrenci aktivitelerini göster (%{bullet_html}):'
-      levels_key: Level anahtarı
-      perfect: Tamamlandı, mükemmel
-      completed: Tamamlandı, fakat çok fazla blok kullanıldı
-      tried: Denendi ama tamamlanmadı
-      not_tried: Daha denenmedi
-      activity: Son %{hours} %{plural} içerisindeki öğrenci aktivitesini gösterir
-      no_section: Atanan bölüm yok
-      trophies: kupalar
     students:
-      name: İsim
-      username: kullanıcı adı
-      password: şifre
-      manage: Öğrencileri yönet
       dashboard: Öğretmen Panosuna Git
-      add: Öğrenciler Ekle
-      remove: öğrenciyi sil
-      confirm_remove: Bu öğrenciyi çıkarmak istediğinden emin misin?
-      help_reassign: Sınıfınızı birden çok bölüme ayırmak istiyorsan, yeni bölüme
-        atayacağın öğrencileri seç.
-      help_register: Öğrenci verilerini tek tek içe aktararak fazladan zaman kaybetmek
-        yerine, hızlıca sınıfını giriş yapmaya çağırarak ayarlayabilirsin. Öğrencilerin
-        kullanıcı adı ve parola seçmelidir, fakat e-posta adresi girmeleri gerekmez.
-        Eğer bir öğrenci parolasını unutursa, onlar için sıfırlayabilirsin.
-      register: Öğrencilerinize kaydolmalarını söyleyin
-      vist: Öğrencilerinize ziyaret etmelerini söyleyin
-      section_code: 've onların bölge-kodunu girin:'
-      first_please: İlk olarak, lütfen %{add_section}
-      for: İçin
-      enter: 'girin:'
-    sections:
-      add: Bölüm ekle
-      manage: Bölümleri yönetmek
-      section: Bölüm
-      students: Öğrenciler
-      section_code: Bölge Kodu
-      add_section_code: Öğrencilerin Bölge-Kodunu Girin
-      secret: Gizlilik türü
-      grade: Sınıf
-      course: Kurs
-      rename: yeniden adlandır
-      edit: düzenle
-      delete: sil
-      confirm_delete: Bu bölümü silmek istediğinden emin misin?
-      email: Eposta içinde gönder
-    rollup: İlerleme Kontrol Paneli
-    activity: Son sınıf etkinlikleri
-    user_not_found: Öğrenci ve öğretmen bulunamadı
-    cant_remove_student_no_email: Öğrenciniz olan %{student_name} çıkarılamaz çünkü
-      %{student_name} için kayıtlı bir e-posta adresi yok
-    cant_remove_teacher_no_email: Öğretmeniniz olan %{teacher_name} çıkarılamaz çünkü
-      kayıtlı bir e-posta adresiniz yok
-    student_teacher_disassociated: '% {teacher_name},  % {student_name} ''in öğretmeni
-      olmaktan kaldırıldı'
+    user_not_found: Öğretmen bulunamadı.
+    student_teacher_disassociated: Öğretmenin %{teacher_name} olmayacak şekilde çıkartıldı.
     panel:
       answer_viewer: cevap gözlemleyicisi
       student: öğrenci
@@ -352,8 +303,8 @@
       section: Bölüm
       example: Örnek Çözüm
       example_with_number: Örnek Çözüm %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: '%{date} tarihinde gönderildi'
+      unsubmit: Gönderme
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -429,6 +380,7 @@
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
       ve sanat yarat.
+    try_hour_of_code: Kod Saatini dene!
   gender:
     male: Erkek
     female: Kadın
@@ -464,7 +416,11 @@
     tos: Şartlar
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm
-    report_abuse: Report Abuse
+    report_abuse: Hata Rapor Et
+    built_on_code_studio: Kod Stüdyosunda Yapıldı
+    make_my_own_app: Kendi programımı yap
+    how_it_works: Nasıl çalışır
+    try_hour_of_code: Kod Saatini dene!
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
@@ -505,6 +461,7 @@
   pdf_download: PDF İndir
   download_coming_soon: İndirilebilir aktivite yakında geliyor.
   video_coming_soon: Video Yakında Geliyor!
+  not_started: Öğrenciler bu bölüm için henüz giriş yapmadılar.
   share_code:
     title: Benim programımın çalışırını görmek için, 'Çalıştır' seçeneğini tıklayın
     bounce_og_title: Benim Bounce oyunuma göz atın
@@ -531,7 +488,7 @@
       unused: Kullanılmamış Seviyeler
   upsell:
     hoc:
-      title: Saat Kodu
+      title: Klasik Labirent
       body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
     flappy:
       title: Flappy Kod
@@ -553,10 +510,15 @@
         görsellerine göz atın
     frozen:
       title: Donmuş
+    starwars:
+      title: Star Wars
     infinity:
       title: Sınırsız oyun laboratuarı
       body: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play
         Lab'i kullanın.
+    minecraft:
+      title: Minecraft
+      body: Kod aracılığıyla Minecraft dünyasını keşfedin.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -709,33 +671,31 @@
     remix: |
       karıştır.
     click_to_remix: Kendi sürümünüzü yaratmak için 'Remix'e basın!
-    edit_project: Edit Project
+    edit_project: Projeyi Düzenle
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
-      go_to_code_studio: Go to Code Studio
+      tos: Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a>
+        ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz.
+      contact_us: Eğer bir hata olduğunu düşünüyorsanız, lütfen <a href='https://code.org/contact'>bizimle
+        iletişime geçin.</a>
+      go_to_code_studio: Kod Stüdyosu'na git
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Rahatsız edici, tehdit, sanal kabadayılık, taciz yada telif hakkı ihlali
+          içeren bir içerikle karşılaşırsanız lütfen aşağıdaki formu doldurun. Raporunuzu
+          çok ciddiye alacağız ve dikkatlice inceleyip gereken eylemi yerine getireceğiz.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Lütfen E-posta adresinizi belirtiniz
+          age: Lütfen yaşınızı belirtiniz
+          abuse_type: Lütfen bu içeriğin Hizmet Şartlarını nasıl ihlal ettiğini açıklayın
+          abuse_detail: Bildirmekte olduğunuz içeriği açıklayın
+        abusive_url: Raporlamış olduğunuz içeriğin URL'si
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Bu içerik %{link_start}Hizmet Şartlarını%{link_end} nasıl ihlal
+            ediyor?
+          harassment: Tehditler, klavye delikanlılığı, zorbalık
+          offensive: Rahatsız edici içerik
+          infringement: Telif Hakkı İhlali
           other: Diğer
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Bildirmekte olduğunuz içerik ile ilgili mümkün olduğunca fazla ayrıntı
+          veriniz.
+        acknowledge: Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end}
+          ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz

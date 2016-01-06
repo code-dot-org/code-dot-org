@@ -44,24 +44,24 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Course_4 _Play_Lab_Params_2_1\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to update this function so that it uses the height parameter.\",\r\n  \"element_id\": \"#callJump\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 55,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "maze_data": null
+    "min_workspace_height": "1400"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenArrow" deletable="false" movable="false">
+        <block type="studio_whenArrow" deletable="false">
           <title name="VALUE">up</title>
           <next>
-            <block type="procedures_callnoreturn" deletable="false" movable="false" id="callJump">
+            <block type="procedures_callnoreturn" deletable="false" id="callJump">
               <mutation name="jump"/>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false">
+        <block type="studio_whenArrow" deletable="false">
           <title name="VALUE">down</title>
           <next>
-            <block type="procedures_callnoreturn" deletable="false" movable="false">
+            <block type="procedures_callnoreturn" deletable="false">
               <mutation name="jump"/>
             </block>
           </next>

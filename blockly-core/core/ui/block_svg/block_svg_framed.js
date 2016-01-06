@@ -55,6 +55,18 @@ Blockly.BlockSvgFramed.prototype.initChildren = function () {
   Blockly.BlockSvgFramed.superClass_.initChildren.call(this);
 };
 
+/**
+ * @override
+ */
+Blockly.BlockSvgFramed.prototype.getPadding = function() {
+  return {
+    top: FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT,
+    right: FRAME_MARGIN_SIDE,
+    bottom: FRAME_MARGIN_BOTTOM,
+    left: FRAME_MARGIN_SIDE
+  };
+};
+
 Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
   Blockly.BlockSvgFramed.superClass_.renderDraw_.call(this, iconWidth, inputRows);
 

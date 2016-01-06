@@ -2,11 +2,11 @@ requires_hoc_secret:
 - rule:
   where:
     script_name: starwars
-  value: true
+  value: false
 - rule:
   where:
     script_name: edit-code
-  value: true
+  value: false
 puzzle_rating:
 - rule:
   where:
@@ -32,3 +32,6 @@ hint_view_request:
   where:
     script_name: starwars
   value: false
+hoc_activity_writes_disabled:
+- rule:
+  value: true

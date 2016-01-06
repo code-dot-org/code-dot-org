@@ -319,8 +319,9 @@
           ved siden af trekanten
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start med et kvadrat<br/>Sæt en trekant til højre for kvadratet <br/>Sæt
-          et parallelogram under kvadratet<br/>Sæt trekant til højre for parallelogram
+        : Start med et kvadrat <br/> Sæt en trekant til højre for kvadratet <br/>
+          Sæt et parallelogram nedenunder kvadratet <br/> sæt trekanten til højre
+          for parallelogrammet
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -469,8 +470,8 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: Labyrint Multiple Choice 1
-        Which set of blocks is the correct answer?: Which set of blocks is the correct
-          answer?
+        Which set of blocks is the correct answer?: Hvilket sæt af blokke er det korrekte
+          svar?
       4-5 Algorithms Multi 1:
         Baking cookies: Bage småkager
         Banana: Banan
@@ -554,8 +555,8 @@
         Multiple Choice: Multiple Choice
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        : Hvad er den største del af denne sang, som du kan definere som omkvædet,
+          så koret gentages præcis hver gang det bliver kaldt?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png

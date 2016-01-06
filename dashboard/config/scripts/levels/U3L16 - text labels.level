@@ -72,7 +72,7 @@
     "app_width": "320",
     "app_height": "480",
     "encrypted_examples": "UePZ0hkrO4lJkjvoK1iA414SispDzEPEfXzugMZ/Zc3yWs1XhBdvo5p1OsUN\n3N+t\n",
-    "markdown_instructions": "# New Elements and Events: Text Labels\r\n<img src=\"https://images.code.org/20d50fd324908fc48633e1325cc37603-image-1444662791509.png\" style=\"float: right\">\r\nThe UI controls toolbox contains an element called `textLabel`. A text label is what it sounds like: plain text that you can put in your app. Even though it's just plain text you can still move and resize it using `setPosition`, and you can attach event handlers to it as well.\r\n\r\n**NOTE:** resizing a text label does not change the font size of the text.  We'll learn how to do that later.  \r\n\r\n# Do This\r\n\r\n* **Read the documentation** for `textLabel`<img src=\"https://images.code.org/fe2ce5f335fd124dc3052270ca0af31f-image-1444336014658.gif\" style=\"float: right; width: 150px\">.\r\n* **Modify** the program so that your button is now a text label. Just as before, it should move randomly around the screen when clicked. You can make the text whatever you like.\r\n* **Tip:** If you reuse your button's ID you'll only need to change a single line of code to make your program work. Once you have your program working **choose a descriptive and meaningful ID** for your text label and make the appropriate changes in the event handler.\r\n\r\n<br>\r\n<br>\r\n<br>\r\n\r\n",
+    "markdown_instructions": "# New Elements and Events: Text Labels\r\n<img src=\"https://images.code.org/20d50fd324908fc48633e1325cc37603-image-1444662791509.png\" style=\"float: right\">\r\nThe UI controls toolbox contains an element called `textLabel`. A text label is what it sounds like: plain text that you can put in your app. Even though it's just plain text you can still move and resize it using `setPosition`, and you can attach event handlers to it as well.\r\n\r\n**NOTE:** resizing a text label does not change the font size of the text.  We'll learn how to do that later.  \r\n\r\n# Do This:\r\n\r\n* **Read the documentation** for `textLabel`<img src=\"https://images.code.org/fe2ce5f335fd124dc3052270ca0af31f-image-1444336014658.gif\" style=\"float: right; width: 150px\">.\r\n* **Modify** the program so that your button is now a text label. Just as before, it should move randomly around the screen when clicked. You can make the text whatever you like.\r\n* **Tip:** If you reuse your button's ID you'll only need to change a single line of code to make your program work. Once you have your program working **choose a descriptive and meaningful ID** for your text label and make the appropriate changes in the event handler.\r\n\r\n<br>\r\n<br>\r\n<br>\r\n\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -84,7 +84,9 @@
     "hide_view_data_button": "true",
     "project_template_level_name": "U3L16 - projectTemplate",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

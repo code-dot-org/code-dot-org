@@ -1,5 +1,5 @@
 var constants = require('./constants');
-var readonly = require('./templates/readonly.html.ejs');
+var parseXmlElement = require('./xml').parseElement;
 
 var TestResults = constants.TestResults;
 
@@ -53,36 +53,50 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
   this.div = document.createElement('div');
-  this.html = readonly({
-    app: options.app,
-    assetUrl: studioApp.assetUrl,
-    options: {
-      readonly: true,
-      locale: studioApp.LOCALE,
-      localeDirection: studioApp.localeDirection(),
-      baseUrl: studioApp.BASE_URL,
-      cacheBust: studioApp.CACHE_BUST,
-      skinId: options.skin,
-      level: options.level,
-      blocks: this.xml
-    }
-  });
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-  this.div.appendChild(this.iframe);
+  this.div.setAttribute('id', 'feedbackBlocks');
+
+  // Will be set by this.render()
+  this.blockSpaceEditor = undefined;
 };
 
 module.exports = FeedbackBlocks;
 
-FeedbackBlocks.prototype.show = function() {
-  var iframe = document.getElementById('feedbackBlocks');
-  if (iframe) {
-    var doc = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(this.html);
-    doc.close();
+FeedbackBlocks.prototype.render = function () {
+  // Only render if this.div exists in the DOM
+  var div = document.getElementById("feedbackBlocks");
+  if (div !== this.div) {
+    return;
   }
+
+  // Initialize a new readOnly blockSpaceEditor with some custom sizing
+  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
+    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if (!metrics) {
+      return null;
+    }
+    // Expand the view so we don't see scrollbars
+    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+    return metrics;
+  }, function (xyRatio) {
+    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+  }, true, true);
+
+  var blockSpace = this.blockSpaceEditor.blockSpace;
+  var parsedXml = parseXmlElement(this.xml);
+  Blockly.Xml.domToBlockSpace(blockSpace, parsedXml);
+};
+
+FeedbackBlocks.prototype.show = function () {
+  this.div.style.visibility = '';
+  this.div.style.height = '';
+  if (this.blockSpaceEditor) {
+    this.blockSpaceEditor.svgResize();
+  }
+};
+
+FeedbackBlocks.prototype.hide = function() {
+  this.div.style.visibility = 'hidden';
+  this.div.style.height = '0px';
 };
 
 /**
@@ -91,7 +105,7 @@ FeedbackBlocks.prototype.show = function() {
  * @return {string} The generated string of XML.
  */
 FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
-  var blockXMLStrings = [];
+  var blockXMLStrings = ['<xml>'];
   var blockX = 10;  // Prevent left output plugs from being cut off.
   var blockY = 0;
   var blockXPadding = 200;
@@ -133,5 +147,6 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
       blockX += blockXPadding;
     }
   }
+  blockXMLStrings.push('</xml>');
   return blockXMLStrings.join('');
 };

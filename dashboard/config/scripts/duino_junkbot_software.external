@@ -1,0 +1,9 @@
+name 'duino junkbot software'
+title 'duino junkbot software'
+markdown <<MARKDOWN
+### Calibrating the JunkBot
+
+Because you're building your own robot hardware, every JunkBot will be have a little bit differently and will need to be calibrated. The servos we're using for the motors operate similarly to those that you've seen before in that they will take a value between 0 and 179, but instead of moving to the given location and staying, they will calculate their speed and direction of rotation from that number. Somewhere in the middle (between roughly 80 and 100) they will stop, going above that range will move in one direction and going below will move in the opposite. Experiment with your bot to figure out at what number each wheel stops moving and use those numbers for `LEFT_NEUTRAL` and `RIGHT_NEUTRAL`.
+
+<iframe style="height: 510px; width: 100%; margin: 10px 0 10px;" allowTransparency="true" src="https://codebender.cc/embed/sketch:185123" frameborder="0"></iframe>
+MARKDOWN

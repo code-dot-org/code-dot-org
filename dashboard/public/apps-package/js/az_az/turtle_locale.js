@@ -187,7 +187,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawASnowflake":function(d){return "qar dənəsi çək"},
 "drawASnowman":function(d){return "qar adamı çək"},
 "drawASquare":function(d){return "kvadrat çək"},
-"drawAStar":function(d){return "draw a star"},
+"drawAStar":function(d){return "bir ulduz çək"},
 "drawATree":function(d){return "bir ağac çək"},
 "drawATriangle":function(d){return "üçbucaq çək"},
 "drawUpperWave":function(d){return "draw upper wave"},

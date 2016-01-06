@@ -141,20 +141,7 @@ class FilesApi < Sinatra::Base
     result[:body]
   end
 
-  #
-  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
-  #
-  # Create or replace a file. Optionally overwrite a specific version.
-  #
-  put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    dont_cache
-
-    # read the entire request before considering rejecting it, otherwise varnish
-    # may return a 503 instead of whatever status code we specify. Unfortunately
-    # this prevents us from rejecting large files based on the Content-Length
-    # header.
-    body = request.body.read
-
+  def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
     file_too_large(endpoint) unless body.length < FilesApi::max_file_size
@@ -174,9 +161,47 @@ class FilesApi < Sinatra::Base
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
-    content_type :json
     category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+  end
+
+  #
+  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
+  #
+  # Create or replace a file. Optionally overwrite a specific version.
+  #
+  put %r{/v3/sources/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    # read the entire request before considering rejecting it, otherwise varnish
+    # may return a 503 instead of whatever status code we specify. Unfortunately
+    # this prevents us from rejecting large files based on the Content-Length
+    # header.
+    body = request.body.read
+
+    put_file('sources', encrypted_channel_id, filename, body)
+  end
+
+  # POST /v3/assets/<channel-id>/
+  #
+  # Upload a new file. We use this method so that IE9 can still upload by
+  # posting to an iframe.
+  #
+  post %r{/v3/assets/([^/]+)/$} do |encrypted_channel_id|
+    dont_cache
+    # though this is JSON data, we're making the POST request via iframe
+    # form submission. IE9 will try to download the response if we have
+    # content_type json
+    content_type 'text/plain'
+
+    bad_request unless request.POST['files'] && request.POST['files'][0]
+
+    file = request.POST['files'][0]
+
+    bad_request unless file[:filename] && file[:tempfile]
+
+    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
   #

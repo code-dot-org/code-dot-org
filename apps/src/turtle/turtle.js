@@ -193,12 +193,13 @@ Artist.prototype.init = function(config) {
     this.avatarHeight = 51;
   }
 
+  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -482,7 +483,9 @@ Artist.prototype.drawTurtle = function() {
       sourceY + sourceHeight > this.avatarImage.height)
   {
     if (console && console.log) {
-      console.log("drawImage is out of source bounds!");
+      // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
+      // better fix here?
+      // console.log("drawImage is out of source bounds!");
     }
     return;
   }
@@ -703,7 +706,7 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, null, scope, {
+    codegen.initJSInterpreter(interpreter, null, null, scope, {
       Turtle: this.api
     });
   }, this);
@@ -1287,6 +1290,7 @@ Artist.prototype.onReportComplete = function(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
+  this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
 };
 

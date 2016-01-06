@@ -21,7 +21,12 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
 
-  this.spritesCounterclockwise = options.spritesCounterclockwise || false;
+  this.className = options.className;
+
+  if (Studio.trackedBehavior.createdItems[this.className] === undefined) {
+    Studio.trackedBehavior.createdItems[this.className] = 0;
+  }
+  Studio.trackedBehavior.createdItems[this.className]++;
 
   /**
    * Rendering offset for item animation vs display position - applied as
@@ -31,13 +36,32 @@ var Item = function (options) {
   this.renderOffset = options.renderOffset || { x: 0, y: 0 };
 
   this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
+  this.normalSpeed = options.normalSpeed || constants.DEFAULT_ITEM_SPEED;
+  this.normalFrameDuration = options.animationFrameDuration ||
+      constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
   this.displayDir = Direction.SOUTH;
   this.startFadeTime = null;
   this.fadeTime = constants.ITEM_FADE_TIME;
 
   /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: new StudioSpriteSheet(options)
+    spriteSheet: new StudioSpriteSheet({
+      assetPath: options.image,
+      defaultFramesPerAnimation: options.frames,
+      frameWidth: this.width,
+      frameHeight: this.height,
+      animations: [
+        {
+          type: 'direction',
+          count: 8
+        },
+        {
+          type: 'idle',
+          count: 1
+        }
+      ]
+    }),
+    animationFrameDuration: this.getAnimationFrameDuration()
   }));
 };
 Item.inherits(Collidable);
@@ -62,8 +86,8 @@ Item.prototype.getDirectionFrame = function() {
     }
   }
 
-  var frameDirTable = this.spritesCounterclockwise ? 
-    constants.frameDirTableWalkingWithIdleCounterclockwise : 
+  var frameDirTable = this.spritesCounterclockwise ?
+    constants.frameDirTableWalkingWithIdleCounterclockwise :
     constants.frameDirTableWalkingWithIdleClockwise;
 
   return frameDirTable[this.displayDir];
@@ -87,7 +111,7 @@ Item.prototype.createElement = function (parentElement) {
  * options.
  */
 Item.prototype.update = function () {
-  
+
   // Do we have an active location in grid coords?  If not, determine it.
   if (this.gridX === undefined) {
     this.gridX = Math.floor(this.x / Studio.SQUARE_SIZE);
@@ -105,15 +129,21 @@ Item.prototype.update = function () {
   // update logic (facing the actor is handled every frame in display())
   if (this.activity === 'watchActor') {
     return;
+  } else if (this.activity === 'none') {
+    this.setDirection(Direction.NONE);
+
+    this.destGridX = undefined;
+    this.destGridY = undefined;
+    return;
   }
 
   if (this.destGridX !== undefined) {
     // Draw the item's destination grid square.
     Studio.drawDebugRect(
-      "roamGridDest", 
-      this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-      this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-      Studio.SQUARE_SIZE, 
+      "roamGridDest",
+      this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+      this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+      Studio.SQUARE_SIZE,
       Studio.SQUARE_SIZE);
   }
 
@@ -134,13 +164,6 @@ Item.prototype.update = function () {
   // If not, determine it.
   if (this.destGridX === undefined || reachedDestinationGridPosition) {
 
-    if (this.activity === 'none') {
-      this.dir = Direction.NONE;
-      this.destGridX = undefined;
-      this.destGridY = undefined;
-      return;
-    }
-
     var sprite = Studio.sprite[0];
 
     var spriteX = sprite.x + sprite.width/2;
@@ -152,10 +175,10 @@ Item.prototype.update = function () {
     var bufferDistance = 60;
 
     // The item can just go up/down/left/right.. no diagonals.
-    var candidateGridLocations = [ 
-      {row: -1, col: 0}, 
+    var candidateGridLocations = [
+      {row: -1, col: 0},
       {row: +1, col: 0},
-      {row: 0, col: -1}, 
+      {row: 0, col: -1},
       {row: 0, col: +1}];
 
     for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
@@ -199,10 +222,10 @@ Item.prototype.update = function () {
 
       if (candidate.score > 0) {
         Studio.drawDebugRect(
-          "roamGridPossibleDest", 
-          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE, 
-          Studio.SQUARE_SIZE, 
+          "roamGridPossibleDest",
+          candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+          candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
+          Studio.SQUARE_SIZE,
           Studio.SQUARE_SIZE);
       }
       candidates.push(candidate);
@@ -219,6 +242,7 @@ Item.prototype.update = function () {
       }
     }
 
+    var newDirection = Direction.NONE;
     if (candidates.length > 0) {
       // shuffle everything (so that even scored items are shuffled, even after the sort)
       candidates = _.shuffle(candidates);
@@ -233,27 +257,24 @@ Item.prototype.update = function () {
 
       // update towards the next location
       if (this.destGridX > this.gridX && this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTHEAST;
+        newDirection = Direction.SOUTHEAST;
       } else if (this.destGridX > this.gridX && this.destGridY < this.gridY) {
-        this.dir = Direction.NORTHEAST;
+        newDirection = Direction.NORTHEAST;
       } else if (this.destGridX < this.gridX && this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTHWEST;
+        newDirection = Direction.SOUTHWEST;
       } else if (this.destGridX < this.gridX && this.destGridY < this.gridY) {
-        this.dir = Direction.NORTHWEST;
+        newDirection = Direction.NORTHWEST;
       } else if (this.destGridX > this.gridX) {
-        this.dir = Direction.EAST;
+        newDirection = Direction.EAST;
       } else if (this.destGridX < this.gridX) {
-        this.dir = Direction.WEST;
+        newDirection = Direction.WEST;
       } else if (this.destGridY > this.gridY) {
-        this.dir = Direction.SOUTH;
+        newDirection = Direction.SOUTH;
       } else if (this.destGridY < this.gridY) {
-        this.dir = Direction.NORTH;
-      } else {
-        this.dir = Direction.NONE;
+        newDirection = Direction.NORTH;
       }
-    } else {
-      this.dir = Direction.NONE;
     }
+    this.setDirection(newDirection);
   }
 };
 
@@ -282,8 +303,16 @@ Item.prototype.turnToFaceActor = function (targetSpriteIndex) {
   var SQUARED_MINIMUM_DISTANCE = 25;
   if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
     Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
-    this.dir = constants.getClosestDirection(deltaX, deltaY);
+    this.setDirection(constants.getClosestDirection(deltaX, deltaY));
   }
+};
+
+/**
+ * Sets the activity property for this item.
+ * @param {string} type Valid options are: none, watchActor, roam, chase, or flee
+ */
+Item.prototype.setActivity = function (type) {
+  this.activity = type;
 };
 
 /**
@@ -296,16 +325,26 @@ Item.prototype.beginRemoveElement = function () {
 /**
  * Remove our element/clipPath/animator
  */
-Item.prototype.removeElement = function() {
+Item.prototype.removeElement = function () {
   this.animation_.removeElement();
+
   Studio.trackedBehavior.removedItemCount++;
+
+  if (Studio.trackedBehavior.removedItems[this.className] === undefined) {
+    Studio.trackedBehavior.removedItems[this.className] = 0;
+  }
+  Studio.trackedBehavior.removedItems[this.className]++;
 };
 
 /**
- * Stop our animations
+ * Retrieve animation frame duration (frames per tick)
  */
-Item.prototype.stopAnimations = function() {
-  this.animation_.stopAnimator();
+Item.prototype.getAnimationFrameDuration = function () {
+  if (this.dir === Direction.NONE) {
+    return this.normalFrameDuration;
+  } else {
+    return this.normalFrameDuration * this.normalSpeed / this.speed;
+  }
 };
 
 /**
@@ -343,11 +382,12 @@ Item.prototype.display = function () {
     this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
   }
 
-  this.animation_.setCurrentAnimation(this.getDirectionFrame());
+  this.animation_.setCurrentAnimation('direction', this.getDirectionFrame());
   this.animation_.redrawCenteredAt({
-    x: this.x + this.renderOffset.x,
-    y: this.y + this.renderOffset.y
-  });
+        x: this.x + this.renderOffset.x,
+        y: this.y + this.renderOffset.y
+      },
+      Studio.tickCount);
 };
 
 Item.prototype.getNextPosition = function () {
@@ -368,6 +408,25 @@ Item.prototype.moveToNextPosition = function () {
   var next = this.getNextPosition();
   this.x = next.x;
   this.y = next.y;
+};
+
+/**
+ * Sets the speed and changes the animation frame duration to match.
+ * @param {number} speed Number of pixels to move per tick
+ */
+Item.prototype.setSpeed = function (speed) {
+  this.speed = speed;
+  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+};
+
+/**
+ * Sets the direction and changes the animation frame duration to match.
+ * @param {number} direction
+ */
+Item.prototype.setDirection = function (direction) {
+  this.dir = direction;
+  // Update this because animation speed may change as we alter direction:
+  this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
 };
 
 /**

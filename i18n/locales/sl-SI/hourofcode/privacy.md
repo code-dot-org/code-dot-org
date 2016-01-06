@@ -176,23 +176,23 @@ Mi ne oddajamo ali prodajamo osebnih podatkov, ki jih zbiramo od uporabnikov, al
 
 Še prav posebej ne delimo nobenih osebnih podatkov, ki jih vnesete, našim donatorjem in podpornikom (razen "Javnih poročil", ki vključujejo anonimizirana poročila kot opisano spodaj).
 
-### We may share student achievement data with your school or school district
+### Lahko delimo podatke o uspehih učencev z vašo šolo
 
 V kolikor uporabljate spletno stran Code.org v sklopu partnerstva z vašo šolo, lahko omogočimo šoli dostop do istih podatkov o napredku učencev, kot je dostopen vašim učiteljem.
 
-### We may share teacher contact information with training facilitators
+### Lahko delimo kontaktne podatke učiteljev s ponudniki izobraževanja
 
 Del naših izobraževalnih programov je, da ponujamo profesionalne izobraževalne delavnice za pripravo učiteljev na poučevanje računalništva. V kolikor ste učitelj, ki sodeluje v teh delavnicah, bodo vaše ime in kontaktni podatki deljeni s ponudnikom izobraževanja, ki vodi delavnico.
 
-### We may share data with social networks at your request
+### Lahko delimo podatke s socialnimi omrežji v kolikor to želite
 
 Nekateri naši uporabniki se odločijo objaviti njihove izdelke v socialnih omrežjih. Ta funkcionalnost je v celoti neobvezna. Ko objavimo vsebino na socialna omrežja, je dejanska objavljena vsebina v celoti pod vašo kontrolo, in nikoli objavljena avtomatsko v vašem imenu. Tipično te vsebine vključujejo samo kodo (aplikacijo, animacijo, igro ali drugo) ki ste jo napisali, vključno z opombami, ki jih morebiti dodate.
 
-### We may share limited information when you contact us for support
+### Lahko delimo omejene podatke, ko se obrnete na nas za pomoč
 
 Ko se obrnete na nas s prošnjo za pomoč, lahko podate osebne podatke, ki so deljeni s podpornim osebjem Code.org, da lahko obravnavajo vašo prošnjo. Predstavniki za podporo uporabnikom Code.org so ali zaposleni ali neodvisni pogodbeni sodelavci Code.org, ki bodo imeli vedno podpisano pogodbo, ki od njih zahteva zaščito in ne-izdajo zaupnih informacij vključno z osebnimi podatki uporabnikov, in da uporabljajo te podatke izključno za potrebe reševanja vaših zahtevkov.
 
-### When you are chosen to be profiled on our site
+### Kdaj ste izbrani za prikaz na naši spletni strani
 
 Code.org tedensko promovira učenca tedna in učitelja meseca, skupaj z nagradami. Ti izbori in podobne izpovedi so vedno objavljeni z odobritvijo sodelujočega učenca ali učitelja in, kjer potrebno, njihovega starša, skrbnika ali učitelja, in lahko vključeje osebne podatke kot so ime, prikaz ali slika ali video posnetek izbrane osebe.
 
@@ -200,39 +200,39 @@ Code.org tedensko promovira učenca tedna in učitelja meseca, skupaj z nagradam
 
 Lahko objavimo anonimizirane podatke o dosežkih učencev pri naših vajah in spletnih straneh, vendar pri tem ne bomo nikoli javno objavili vaših osebnih podatkov. Podatki o dosežkih učencev bodo ostali anonimizirani, toda združeni, anonimizirani podatki večje populacije učencev se lahko uporabijo v poročilih po demografskih kriterijih kot so starost, lokacija, spol, narodnost in premoženjski status.
 
-### We may share anonymous or aggregate data to improve our services and learn more about our Users
+### Lahko delimo anonimne in združene podatke za izboljšanje naših storitev in za boljše spoznavanje naših uporabnikov
 
 V določenih primerih lahko Code.org dela z zunanjimi partnerji (npr. univerzami) za izboljšavo naših storitev. Lahko razkrijemo avtomatično zbrane in združene ne-osebne podatke avtoriziranim partnerjem za potrebe raziskav spletnega izobraževanje ali kot pomoč razumevanju vzorcev uporabe, ogledov in demografskih vzorcev določenih programov, vsebin, storitev, promocij in zmožnosti na spletni strani.
 
-### We will share data when required by law
+### Podatke bomo delili v kolikor tako zahteva zakon
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. V nekaterih primerih lahko opravimo tako razkritje ne da bi naprej obvestili uporabnika.
 
-### We may share data when necessary or appropriate to protect Code.org or others
+### Lahko delimo podatke, ko je potrebno ali primerno, da zaščitimo Code.org ali koga drugega
 
 Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
-### We may share data in the context of a change of business, including a merger or acquisition
+### Lahko delimo podatke v konteksu spremembe poslovanja, vključno z združitvijo in priključitvijo
 
 V primeru, da je Code.org prevzet, združen ali priključen drugemu subjektu, lahko prenesemo ali dodelimo osebne podatke o uporabnikih kot del take združitve, prevzema, prodaje ali spremembe nadzora. Naša obljuba je, da bodo osebni podatki, ki smo jih zbrali od uporabnikov, varovani z enako mero varnosti in zasebnosti kot določeno s to opombo o zasebnosti.
 
 ## Our Approach to Data Security
 
-### Website security is important to you, and to us
+### Varnost spletne strani je pomembna tako vam kot nam
 
 Da zaščitimo vašo zasebnost in varnost, delamo smiselne korake za preverjanje vaše identitete preden vam omogočimo dostop do vašega računa ali izvajanje popravkov vaših osebnih podatkov. Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. V kolikor želite povezavo zaščiteno s SSL ali za šifriranje podatkov, ki jih vnašate, ko uporabljate spletno stran, uporabite protokol HTTPS na naslovu https://code.org/.
 
-### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
+### Poskušamo zagotoviti, da je naša spletna stran varna in informacije, ki nam jih pošiljate, zaščitene, ampak nič ni stoodstotno varno
 
 Code.org uporablja določene fizične, upravljalske in tehnične varovalke, ki so namenjene zagotovitvi integrite in varnosti vaših osebnih podatkov in ostalih informacij, ki jih vzdržujemo za potrebe spletne strani. Toda ne moremo zagotoviti ali jamčiti varnosti kateregakoli osebnega podatka in drugih informacij, ki jih pošiljate Code.org, in vse to delate na lastno odgovornost. Ko prejmemo vašo informacijo, Code.org vrši komercialno še sprejemljive napore za zaščito naših sistemov. Toda, prosim upoštevajte, da to ni jamstvo, da ti osebni podatki ne bodo dostopani, razkriti, spremenjeni ali uničeni v primeru obvoda naših fizičnih, tehničnih in vodstvenih varovalk.
 
 V kolikor smo seznanjeni z varnostnim incidentom, ki ogroža ali potencialno ogroža vaše osebne podatke, vas bomo poskušali opozoriti po elektronski poti, da lahko izvedete ustrezne zaščitne ukrepe.
 
-### International visitors
+### Mednarodni obiskovalci
 
 Naša spletna stran je strežena in upravljana na strežnikih lociranih v ZDA. V kolikor se odločite uporabljati našo spletno strani iz Evropske unije ali drugih področjih sveta, ki imajo zakone o zbiranju podatkov in ki se razlikujejo od zakonodaje ZDA, potem priznavate in se strinjate, da svoje osebne podatke prenašate izven teh regij v ZDA in se tako strinjate s takšnim prenosom osebnih podatkov s spletne strani.
 
-### Conditions of Use and Notices
+### Pogoji uporabe in opombe
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 

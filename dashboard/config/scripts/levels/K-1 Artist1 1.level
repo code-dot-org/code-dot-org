@@ -17,7 +17,23 @@
     "free_play": "false",
     "ideal": "2",
     "slider_speed": "0.2",
-    "video_key": "C1_artist_intro"
+    "video_key": "C1_artist_intro",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -34,11 +50,11 @@
         <block type="simple_move_left"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="simple_move_right"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" movable="false" deletable="false">

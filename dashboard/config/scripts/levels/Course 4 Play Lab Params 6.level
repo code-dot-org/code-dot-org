@@ -21,14 +21,14 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Add another parameter called \"speed\" to the \"patrol\" function. Use a \"set speed\" block with the new \"speed\" parameter.",
+    "instructions": "Add another parameter called \"speed\" to the \"patrol\" function. Try using a \"set speed\" block with the new \"speed\" parameter to help Penguin get both flags before the other sprites even get one.",
     "first_sprite_index": "1",
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"edit_add_parameter\",\"callout_text\":\"Click edit to add a parameter in your function\",\"element_id\":\"#edit_add_parameter_qtip > .blocklyIconGroup:eq(-1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Add another parameter called `speed` to the `patrol` function. Use a `set speed` block with the new `speed` parameter.",
+    "markdown_instructions": "Add another parameter called `speed` to the `patrol` function. Try using a `set speed` block with the new `speed` parameter to help Penguin get both flags before the other sprites even get one.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -38,8 +38,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "min_workspace_height": "800",
-    "maze_data": null
+    "min_workspace_height": "800"
   }
 }]]></config>
   <blocks>

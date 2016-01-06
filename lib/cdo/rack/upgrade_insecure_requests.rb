@@ -44,20 +44,21 @@ module Rack
               "default-src 'self' https:",
               "script-src 'self' https: 'unsafe-inline' 'unsafe-eval'",
               "style-src 'self' https: 'unsafe-inline'",
-              "img-src 'self' https: data:",
+              "img-src 'self' https: data: blob:",
               "font-src 'self' https: data:",
               "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
         end
 
-        # If the CDO.allowed_iframe_ancestors configuration variable is
+        # If the DCDO or CDO allowed_iframe_ancestors configuration variable is
         # defined, override the default SAMEORIGIN policy to allow the
         # specified source list (as described in
         # http://w3c.github.io/webappsec-csp/#source-lists) to frame our
         # content.
-        if CDO.allowed_iframe_ancestors
-          policies << "frame-ancestors 'self' #{CDO.allowed_iframe_ancestors}"
+        allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
+        if allowed_iframe_ancestors
+          policies << "frame-ancestors 'self' #{allowed_iframe_ancestors}"
 
           # Clear the older X-Frame-Options header because it doesn't support
           # multiple domains. We need to clear this because on Chrome,

@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "если можно пройти в данном направлении, тогда исполнить следующие действия."},
 "ifelseTooltip":function(d){return "Если в данном направлении продвижение возможно, тогда выполняется первый блок команд. Иначе, выполняется второй блок."},
 "ifFlowerTooltip":function(d){return "Если в указанном направлении есть цветок/улей, выполнить некоторые действия."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Сделайте некоторые действия, если в указанном направлении есть цветок."},
 "ifelseFlowerTooltip":function(d){return "Если в указанном направлении есть цветок/улей, выполнить первый блок действий. В противном случае выполнить второй блок действий."},
 "insufficientHoney":function(d){return "Ты используешь правильные блоки, но тебе нужно сохранить правильное количество мёда."},
 "insufficientNectar":function(d){return "Ты исплользуешь правильные блоки, но тебе нужно собрать правильное количество нектара."},

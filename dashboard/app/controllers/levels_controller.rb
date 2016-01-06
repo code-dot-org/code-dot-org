@@ -151,6 +151,8 @@ class LevelsController < ApplicationController
         @game = Game.find_by(name: @type_class.to_s)
       elsif @type_class == NetSim
         @game = Game.netsim
+      elsif @type_class == Craft
+        @game = Game.craft
       end
       @level = @type_class.new
       render :edit

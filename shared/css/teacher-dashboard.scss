@@ -346,10 +346,11 @@ td.studentname {
     .content-text {
       color: $dark_charcoal;
       float: left;
-      max-height: 60px;
+      max-height: 90px;
       overflow: hidden;
       padding-left: 10px;
-      width: 610px;
+      line-height: 22px;
+      width: 690px;
 
       b {
         font-family: 'Gotham 5r', sans-serif;

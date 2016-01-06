@@ -28,6 +28,8 @@ el:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'
       placeholder: Τμήμα κώδικα (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Προσθήκη δασκαλου
   add_hint_form:
     placeholder: Παρακαλούμε εισάγετε την υπόδειξή σας εδώ
@@ -222,8 +224,9 @@ el:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
         calculate: Calculate Something
+        applab: Δημιουργήστε μια εφαρμογή
     user:
-      classroom: H Αρχική Σελίδα του Εκπαιδευτικού
+      classroom: Αρχική Σελίδα Εκπαιδευτή
       district_dashboard: Περιοχή Ταμπλό
       label: 'Γεια σου %{username}'
       stats: Η πρόοδός μου
@@ -245,63 +248,18 @@ el:
       prize_us_only: (Μόνο για μαθητές των ΗΠΑ)
       prizes_link: Περισσότερες πληροφορίες
   teacher:
+    answer: Απάντηση
+    for_teachers_only: Μόνο για εκπαιδευτικούς
     title:
       one: 'Ο δάσκαλος σας:'
       other: 'Οι δασκάλοι σου:'
     remove: (αφαιρέστε δάσκαλος)
     confirm:
       remove: Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτόν τον δάσκαλο;
-    tools: Εργαλεία Δασκάλου
-    followers:
-      section: 'Ενότητα:'
-      stages: 'Στάδιο(α) να εμφανίσει:'
-      show_past: 'Εμφάνιση φοιτητικών δραστηριοτήτων (%{bullet_html}) στο παρελθόν:'
-      levels_key: Επίπεδα κλειδί
-      perfect: Ολοκληρώθηκε, τέλειο
-      completed: Ολοκληρώθηκε, αλλά χρησιμοποιώντας πάρα πολλά μπλοκ
-      tried: Έγινε προσπάθεια, αλλά δεν ολοκληρώθηκε
-      not_tried: Δεν έχει γίνει προσπάθεια ακόμα
-      activity: 'Δείχνει την δραστηριότητα  του μαθητή τις τελευταίες%{hours}%{plural}'
-      no_section: 'Δεν έχει αποδωθεί  τμήμα'
-      trophies: τρόπαια
     students:
-      name: Όνομα
-      username: 'όνομα χρήστη '
-      password: κωδικός
-      manage: Διαχείριση μαθητών
       dashboard: 'Πηγαίνετε στον πίνακα δραστηριοτήτων  δάσκαλος'
-      add: Προσθήκη μαθητών
-      remove: κατάργησε μαθητή
-      confirm_remove: Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτό τον μαθητή;
-      help_reassign: 'Για να  διαχωρίσετε την  τάξη σας σε πολλαπλές ενότητες, επιλέξτε μαθητές για να την αντιστοιχίσετε σε μια νέα ενότητα.'
-      help_register: Αντί να σπαταλήσετε πολύ προσωπικό χρόνο εισάγοντας τα δεδομένα των μαθητών, μπορείτε να στήσετε την τάξη σας γρήγορα ζητώντας τους να κάνουν εγγραφή. Οι μαθητές σας θα χρειαστεί να διαλέξουν ονόματα χρηστών και κωδικούς πρόσβασης, αλλά ΔΕΝ ΘΑ τους ζητηθεί να παρέχουν κάποιον λογαριασμό ηλεκτρονικής αλληλογραφίας. Αν κάποιος μαθητής ξεχάσει τον κωδικό πρόσβασης του, θα μπορείτε να τον επαναφέρετε.
-      register: 'Ζητήστε από  τους μαθητές σας να εγγραφούν μόνοι τους'
-      vist: Ζητήστε από τους μαθητές σας να επισκεφθούν
-      section_code: 'και εισάγετε τους κωδικούς τμήματος:'
-      first_please: "Κατ ' αρχάς, παρακαλώ %{add_section}"
-      for: Για
-      enter: 'εισάγετε:'
-    sections:
-      add: Προσθήκη ενότητας
-      manage: Διαχείριση ενοτήτων
-      section: Ενότητα
-      students: Μαθητές
-      section_code: Κωδικός ενότητας
-      add_section_code: Προσθέστε φοιτητές τμήμα-κώδικα
-      secret: Μυστικός τύπος
-      grade: Βαθμος
-      course: Μάθημα
-      rename: μετονομασία
-      edit: επεξεργάσου
-      delete: διαγραφή
-      confirm_delete: Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το τμήμα;
-      email: Εστάλη με email
-    rollup: Σύνοψη Προόδου
-    activity: Πρόσφατη δραστηριότητα τμήματος
-    user_not_found: Ο δάσκαλος ή μαθητής δεν ήταν δυνατό να βρεθεί
-    cant_remove_student_no_email: 'Ο %{student_name} δεν μπορεί να αφαιρεθεί ως μαθητής σας επειδή ο %{student_name} δεν έχει καταχωρήσει μια διεύθυνση email'
-    cant_remove_teacher_no_email: 'Ο %{teacher_name} δεν μπορεί να αφαιρεθεί ως δάσκαλος σας, επειδή δεν έχετε καταχωρήσει μια διεύθυνση email'
-    student_teacher_disassociated: 'Ο %{teacher_name} αφαιρέθηκε από τους δασκάλους του %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Εμφάνιση Απαντήσεων
       student: φοιτητής/μαθητής
@@ -375,6 +333,7 @@ el:
   share:
     title: Μάθετε με κώδικα Studio
     description: Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -386,8 +345,8 @@ el:
     thank_you: 'Ευχαριστούμε τους <a href="https://code.org/about/donors"> χωρηγούς</a>, <a href="https://code.org/about/partners"> συνεργάτες</a>, μας <a href="https://code.org/about/team"> την εκτεταμένη ομάδα</a>, τους ανθρώπους που δούλεψαν στα βίντεο τους <a href="https://code.org/about/advisors"> συμβούλους εκπαίδευσης</a> για την υποστήριξή τους στη δημιουργία του κώδικα Studio.'
     help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν να δημιουργήσουμε αυτό το σεμινάριο.
     help_from_html_old: Μηχανικών από το Google, Microsoft, Facebook και Twitter βοήθησε στη δημιουργία αυτών των εκπαιδεευτικών υλικών.
-    art_from_html: 'Angry Birds ™ & © 2009-2013 Rovio Entertainment Ltd. Με την επιφύλαξη παντός δικαιώματος.<br/> Plants vs. Zombies ™ & © 2013 Electronic Arts&trade; S.A. Με την επιφύλαξη παντός δικαιώματος.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Με την υποστήριξη των Amazon Web Services
     trademark: '© Code.org, οι %{current_year}. Code.org®, το λογότυπο του κώδικα και την ώρα του κώδικα ® αποτελούν εμπορικά σήματα της Code.org.'
     copyright: Πνευματικά δικαιώματα
@@ -401,6 +360,10 @@ el:
     privacy: Πολιτική Aπορρήτου
     secure: Ασφαλής έκδοση
     report_abuse: Αναφορά κατάχρησης
+    built_on_code_studio: Φτιαγμένο με το Code Studio
+    make_my_own_app: Φτιάξε τη δική σου εφαρμογή
+    how_it_works: Πως λειτουργεί
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Χρειάζεσε βοήθεια;
     subtitle: Δες αυτά τα βίντεο και τις υποδείξεις
@@ -421,7 +384,7 @@ el:
       hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
     upgrade:
       header: Παρακαλούμε, αναβαθμίστε το πρόγραμμα περιήγησής σας.
-      message: "Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει το site πιο γρήγορα να χρησιμοποιήσετε. Δυστυχώς ο φυλλομετρητής σας δεν υποστηρίζει όλα τα χαρακτηριστικά που απαιτούνται για να τρέξει αυτό το μέρος της ιστοσελίδας. <br/> <br/>Εγκαταστήσετε ένα απο τα Υποστηριζόμενα προγράμματα περιήγησης για να συνεχίσετε. Μπορείτε να <a href='#'> δοκιμάσετε την προβολή της σελίδας</a>, αλλά να περιμένετε ότι η λειτουργικότητα θα είναι κακή ."
+      message: "Η Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει τον ιστότοπο πιο γρήγορο στη χρήση. Δυστυχώς ο φυλλομετρητής σας δεν υποστηρίζει όλα τα χαρακτηριστικά που απαιτούνται για να τρέξει αυτό το μέρος της ιστοσελίδας. <br/> <br/>Εγκαταστήσετε ένα από τα υποστηριζόμενα προγράμματα περιήγησης για να συνεχίσετε. Μπορείτε να <a href='#'> δοκιμάσετε την προβολή της σελίδας</a>, αλλά να περιμένετε ότι η λειτουργικότητα θα είναι κακή."
       button: 'Πήγαινε με  στη λίστα των προγραμμάτων περιήγησης που υποστηρίζονται'
   slow_loading: Αυτό διαρκεί περισσότερο από ότι συνήθως...
   try_reloading: Δοκίμασε να φορτώσεις ξανά τη σελίδα
@@ -432,8 +395,9 @@ el:
   pdf_download: Κατεβάστε το PDF
   download_coming_soon: Λήψη δραστηριότητας προσεχώς.
   video_coming_soon: Βίντεο Σύντομα κοντά σας!
+  not_started: Ο μαθητής δε δοκίμασε αυτό το επίπεδο.
   share_code:
-    title: "Κάντε κλικ στο κουμπί 'Run' για να δείτε το πρόγραμμα μου σε δράση"
+    title: "Κάντε κλικ στο κουμπί 'Εκτέλεση' για να δείτε το πρόγραμμά μου σε δράση"
     bounce_og_title: 'Έλεγξε το  αναπήδηση μου παιχνίδι'
     flappy_og_title: 'Ελέγξτε το  Flappy μου παιχνίδι'
     studio_og_title: 'Έλεγξε το  Παιχνίδι μου Εργαστήριο App'
@@ -456,7 +420,7 @@ el:
       unused: Αχρησιμοποίητα επίπεδα
   upsell:
     hoc:
-      title: Η Ώρα του Κώδικα
+      title: Classic Maze
       body: 'Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν ήδη δοκιμάσει.'
     flappy:
       title: Flappy κώδικα
@@ -473,9 +437,14 @@ el:
       body: 'Δείτε μια συλλογή απο εφαρμογές  και εικόνες καλλιτεχνών που δημιουργούνται από τους χρήστες μας'
     frozen:
       title: Ψυχρά κι ανάποδα
+    starwars:
+      title: Star Wars
     infinity:
       title: αιώνιο εργαστήρι παιχνιδιού
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
+    minecraft:
+      title: Minecraft
+      body: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα.
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
     students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
@@ -563,7 +532,7 @@ el:
     age: Η ηλικία σου
     header: Ενημέρωση Πληροφοριών Λογαριασμού
     message: 'Είμαστε στη διαδικασία της ενημέρωσης της εμπειρίας μας για να σας παρέχουμε ακόμη ισχυρότερη προστασία προσωπικών δεδομένων. Για να κάνουμε αυτό, χρειαζόμαστε τους υπάρχοντες χρήστες να εισαγάγουν την ηλικία τους εδώ. <br/>Όπως πάντα, η code.org ποτέ δεν θα νοικιάσει, πωλήσει η μοιράσει αυτή την πληροφορία με τρίτους.'
-    sign_out: 'Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε <a href="%{url}">αποσυνδεθείτε (sign out)</a>.'
+    sign_out: 'Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε να <a href="%{url}">αποσυνδεθείτε</a>.'
   zendesk_too_young_message: 'Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε στον ιστότοπο υποστήριξης. Μπορείτε να περιηγηθείτε στο <a href="http://support.code.org">support.code.org</a> χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει μαζί μας.'
   progress:
     not_started: δεν έχει ξεκινήσει
@@ -582,7 +551,7 @@ el:
     create_a_project: 'Δημιουργία ενός νέου έργου:'
     new: Δημιουργία Νέου
     rename: Μετονομασία
-    save: αποθήκευση
+    save: Αποθήκευση
     delete: Διαγραφή
     exit: Επιστροφή στο Μάθημα
     my_projects: Τα Έργα μου

@@ -43,5 +43,36 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
+
+    {
+      description: 'getX() tooltip shows up with 0 params',
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".tooltipster-content").text(), '', 'No tooltip to start');
+        testUtils.typeAceText('getX(');
+
+        assert.equal(/getX\(\)/.test($(".tooltipster-content").text()),
+          true, 'get tooltip');
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    }
   ]
 };

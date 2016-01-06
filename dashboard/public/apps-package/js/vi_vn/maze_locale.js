@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Nếu có một con đường đi theo hướng được định trước, hãy làm một số hành động."},
 "ifelseTooltip":function(d){return "Nếu có đường ở hướng được xét, thực hiện khối lệnh đầu tiên. Nếu không, thực hiện khối lệnh thứ hai."},
 "ifFlowerTooltip":function(d){return "Nếu có một bông hoa hoặc một tổ ong ở hướng được xem xét, thì thực hiện các lệnh ..."},
-"ifOnlyFlowerTooltip":function(d){return "If there is a flower in the specified direction, then do some actions."},
+"ifOnlyFlowerTooltip":function(d){return "Nếu có một bông hoa ở trong hướng định đi thì hãy làm một số hành động nào đó."},
 "ifelseFlowerTooltip":function(d){return "Nếu có một bông hoa hoặc một tổ ong ở hướng được xem xét, thì thực hiện khối lệnh đầu tiên. Nếu không có, thì thực hiện khối lệnh thứ hai."},
 "insufficientHoney":function(d){return "Bạn đã sử dụng đúng các lệnh, nhưng bạn cần tạo đúng số lượng mật ong."},
 "insufficientNectar":function(d){return "Bạn đã sử dụng đúng các lệnh, nhưng cần thu lượm đúng số lượng phấn hoa."},

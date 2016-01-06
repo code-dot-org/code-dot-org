@@ -1,11 +1,10 @@
 @no_ie
 @dashboard_db_access
+@as_student
 Feature: Editing examples in the contract editor
 
 Background: Testing example add and removal
-  Given I am on "http://learn.code.org/"
-  And I am a student
-  And I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I close the dialog
   Then element "#runButton" is visible

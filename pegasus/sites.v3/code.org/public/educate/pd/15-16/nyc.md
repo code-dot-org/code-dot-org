@@ -44,11 +44,12 @@ This workshop will be in Montgomery County, Maryland.
 Breakfast and lunch will be served.
 
 
-**December 5th Location**
+**February 27th Location**
 
-I/O Spaces<br/>
-8120 Fenton St, Ste 202<br/>
-Silver Spring, MD  20910
+[General Assembly <br/>
+Level 3 Concourse Room<br/>
+10 E 21st St<br/>
+New York, NY 10010](https://www.google.com/maps/place/General+Assembly+New+York/@40.739884,-73.990081,15z/data=!4m2!3m1!1s0x0:0x3884039b8867e84b)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -81,7 +82,7 @@ Milestone Complete!
 
 **Save the dates:**<br/>
 
-<i>Both Group 1 & 2 will attend the following dates</i><br/>
+<i>Due to low attendance, all attendees will now be in one group.</i><br/>
 Quarter 1: Saturday, October 3, 2015
  
 Quarter 2: Saturday, November 14, 2015
@@ -94,18 +95,13 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**November 14th Location**<br/>
-<i><b>Group 1</i></b><br/>
-Microsoft<br/>
-Music Box 5411<br/>
-Eleven Times Square<br/>
-NY, NY 10036
+**February 6th Location**
 
-<i><b>Group 2</i></b><br/>
-Microsoft<br/>
-Winter Garden 5412<br/>
-Eleven Times Square<br/>
-NY, NY 10036
+[Microsoft<br/>
+Music Box 5411<br/>
+11 Times Square<br/>
+NY, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -156,14 +152,13 @@ Semester 2: Saturday, February 6, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**October 3rd Location**
+**February 6th Location**
 
-Executive Conference Center<br/>
-8th Floor<br/>
-1601 Broadway<br/>
-New York, NY 10019<br/>
+[Microsoft<br/>
+Central Park East 6501A<br/>
+11 Times Square<br/>
+New York, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
 
-The entrance to the building is on 48th street, to the left of the Hersey's Store in Times Square. For more details, [click here](http://www.amaconferencecenter.org/new-york-directions-maps.htm).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -179,44 +174,6 @@ Water
 [**Back to the top**](#top)
 
 
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Administrators
-
-**Save the date**
-
-Thursday, November 5th, 2015  <br/>
-8:00am - 10:00am
-
-**Location**
-
-Yotel <br/>
-Studio - Fourth Floor<br/>
-570 10th Ave<br/>
-New York, NY 10036<br/>
-
-
-### Counselors
-
-**Save the date**
-
-Thursday, November 5th, 2015 <br/>
-11:00am - 3:00pm
-
-**Location**
-
-Yotel <br/>
-Studio - Fourth Floor<br/>
-570 10th Ave<br/>
-New York, NY 10036<br/>
-
-[**Back to the top**](#top)
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.

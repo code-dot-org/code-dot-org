@@ -8,9 +8,9 @@ class HttpCache
 
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language)
-  LANGUAGE_COOKIE = %w(language_)
+  LANGUAGE_COOKIES = %w(language_ pm)
 
-# HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
+  # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
 # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
 # This hash provides extra application-specific configuration for whitelisting specific request headers and
 # cookies based on the request path.
@@ -27,6 +27,7 @@ class HttpCache
       'scripts',
       'videos_seen',
       'callouts_seen',
+      'pm',
       session_key,
       storage_id,
     ]
@@ -36,7 +37,8 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
+            # Allow the company cookie to be read and set to track company users for tutorials.
+            cookies: whitelisted_cookies + ['company']
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
@@ -69,12 +71,24 @@ class HttpCache
             proxy: 'dashboard',
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
+          },
+          {
+            path: %w(
+              /
+              /learn*
+              /congrats
+              /mc
+              /starwars
+              /playlab
+            ),
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES,
           }
         ],
-        # Default Pegasus paths are cached but language-specific, whitelist only language cookie/header.
+        # Remaining Pegasus paths are English-only and don't require any extra headers or cookies.
         default: {
-          headers: LANGUAGE_HEADER,
-          cookies: LANGUAGE_COOKIE
+          headers: [],
+          cookies: 'none'
         }
       },
       dashboard: {
@@ -84,11 +98,17 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          # Ignore all cookies on publicly cachable hour of code levels.
           {
-            path: "/s/hoc2015/stage/1/puzzle/*",
+            path: %w{
+               /s/starwars/stage/1/puzzle/*
+               /s/starwarsblocks/stage/1/puzzle/*
+               /s/mc/stage/1/puzzle/*
+               /s/frozen/stage/1/puzzle/*
+               /s/gumball/stage/1/puzzle/*
+               /hoc/*
+            },
             headers: LANGUAGE_HEADER,
-            cookies: 'none',
+            cookies: LANGUAGE_COOKIES
           },
           {
             path: '/api/*',

@@ -9,7 +9,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 # Promouvoir Une Heure du Code
 
-## Vous voulez organiser Une heure du Code ? [See the how-to guide](<%= resolve_url('/how-to') %>)Voir le guide pratique</0>
+## Vous voulez organiser Une heure du Code ? [Voir le guide pratique](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -18,12 +18,6 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 ## Accrochez ces affiches dans votre école
 
 <%= view :promote_posters %>
-
-<a id="banners"></a>
-
-## Disposez ces bannières sur votre site Internet
-
-[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="social"></a>
 
@@ -40,6 +34,16 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Téléchargez les versions haute résolution](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Toute référence à « Une Heure de Code » ou Hour of Code doit être utilisée de manière à ne pas suggère qu'il s'agit de votre nom de marque, mais plutôt faire référence à Une Heure de Code comme un mouvement populaire. Bon exemple: « Participer à Une Heure de Code ™ sur ACMECorp.com ». Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Inclure la langue dans la page (ou en pied de page), y compris des liens vers les sites web CSEdWeek et Code.org, en indiquant ce qui suit :
+    
+    *« Une Heure de Code ™ est une initiative nationale organisée durant la semaine d'éducation aux Sciences Informatiques [csedweek.org] et Code.org[code.org] pour initier des millions d'étudiants à une heure d'informatique et à la programmation informatique. »*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

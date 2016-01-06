@@ -19,12 +19,6 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Bu bannerləri veb-saytınızda yerləşdirin
-
-[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Bunları sosial mediada bölüşün
@@ -40,6 +34,16 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -76,7 +80,7 @@ Kompüterlər artıq hər yerdə var, amma informatikanın tədris olunduğu mə
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! və "Disney" səhifələrində idi. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+Buna görədir ki, bizim [MƏKTƏBİN ADI] məktəbdə [X SAYI] şagirdin hər biri 7-13 dekabr tarixin ən böyük təhsil hadisəsi olan Kod Saatına qoşulur.
 
 Yazıb, sizi [DATE] tarixində açılış toplantısında iştirak etməyə və uşaqların fəaliyyətə start verməsini görməyə dəvət edirəm.
 
@@ -98,7 +102,7 @@ Hörmətli valideynlər,
 
 Biz texnologiyalarla əhatə olunmuş bir dünyada yaşayırıq. Biz həm də bilirik ki, şagirdlərimiz böyüyəndə hansı peşə sahəsini seçməyindən asılı olmayaraq, onların uğur qazanmaq bacarığı getdikcə daha çox texnologiyanın necə işləməsi barədə biliklərindən asılı olacaq. Lakin bizim ancaq çox az faizimiz informatikanı öyrənir və on il əvvəlkinə baxanda daha az tələbə bu sahədə təhsil alır.
 
-Buna görədir ki, bizim bütün məktəbimiz İnformatika Təhsili Həftəsində (8-14 dekabr) tarixin ən böyük təhsil hadisəsi olan Kod Saatına qoşulur. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Buna görədir ki, bizim bütün məktəbimiz İnformatika Təhsili Həftəsində (8-14 dekabr) tarixin ən böyük təhsil hadisəsi olan Kod Saatına qoşulur. 7-13 dekabr). More than 100 million students worldwide have already tried an Hour of Code.
 
 Bizi Kod Saatı ilə bağlı bəyanatımız odur ki, [MƏKTƏBİN ADI] 21-ci əsrin bu təməl bilik və bacarıqlarını öyrətməyə hazırdır. Proqramlaşdırma fəaliyyətlərini şagirdlərimizə təqdim etməyi davam etdirmək üçün biz Kod Saatı tədbirimizi daha böyük etmək istəyirik. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
@@ -118,7 +122,7 @@ Hörmətli [şəhər meri/icra hakimiyyəti başçısı/millət vəkili/deputat 
 
 Bilirdinizmi ki, günümüzün iqtisadiyyatında informatika üzrə iş yerləri bu sahədə məzun olacaq tələbələrdən 3-ün 1-ə nisbətində çoxdur? Bundan başqa, informatika bu gün *hər bir* sənayenin təməlidir. Yet most of schools don’t teach it. Biz, [MƏKTƏBİN ADI], bu vəziyyəti dəyişməyə çalışırıq.
 
-Buna görədir ki, bizim bütün məktəbimiz İnformatika Təhsili Həftəsində (8-14 dekabr) tarixin ən böyük təhsil hadisəsi olan Kod Saatına qoşulur. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+Buna görədir ki, bizim bütün məktəbimiz İnformatika Təhsili Həftəsində (8-14 dekabr) tarixin ən böyük təhsil hadisəsi olan Kod Saatına qoşulur. 7-13 dekabr). More than 100 million students worldwide have already tried an Hour of Code.
 
 Yazıb, sizi bizim Kod Saatı tədbirimizdə iştirak edərək, açılış toplantısında çıxış etməyə dəvət edirəm. Tədbir [TARİX, SAAT, MƏKAN] baş tutacaq və güclü bir bəyanat olacaq ki, [ÖLKƏ VƏ YA ŞƏHƏRİN ADI] şagirdlərimizə 21-ci əsrin mühüm əhəmiyyət daşıyan bilik və bacarıqlarını öyrətməyə hazırdır. Biz əmin olmaq istəyirik ki, şagirdlərimiz gələcəyin texnologiyalarını yaradanların ön cəbhəsində olsunlar - sadəcə onun istifadəçisi olmasınlar.
 

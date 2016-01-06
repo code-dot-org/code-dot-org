@@ -157,7 +157,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "atHoneycomb":function(d){return "at honeycomb"},
 "atFlower":function(d){return "at flower"},
 "avoidCowAndRemove":function(d){return "avoid the cow and remove 1"},
-"continue":function(d){return "Continue"},
+"continue":function(d){return "Davom etish"},
 "dig":function(d){return "remove 1"},
 "digTooltip":function(d){return "remove 1 unit of dirt"},
 "dirE":function(d){return "E"},

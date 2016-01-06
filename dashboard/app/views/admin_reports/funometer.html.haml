@@ -1,0 +1,100 @@
+- content_for :head do
+  %script{src:'https://www.google.com/jsapi'}
+
+%h1
+  Fun-O-Meter Stats
+
+%h2
+  Overall Percentage:
+  %span= number_to_percentage(@overall_percentage, precision: 2)
+
+%br
+
+= render 'funometer_percentages_by_day', :percentages_by_day => percentages_by_day
+
+%br
+
+%h2
+  Fun-O-Meter by Script
+
+%table
+  %tr
+    - @script_headers.each do |header|
+      %th
+        %span= header
+  - @script_ratings.each do |script|
+    %tr
+      %td
+        %span
+          = link_to funometer_by_script_path(:script_id => script.script_id) do
+            = script.script_id
+      %td
+        %span
+          = link_to script_url(script.script_id) do
+            = script.name
+      %td
+        %span= number_to_percentage(script.percentage, precision: 2)
+      %td
+        %span= script.cnt
+
+%h2
+  Favorite Levels
+
+%table
+  %tr
+    - @level_headers.each do |header|
+      %th
+        %span= header
+  - @favorite_level_ratings.each do |level|
+    %tr
+      %td
+        %span
+          = link_to funometer_by_script_path(:script_id => level.script_id) do
+            = level.script_id
+      %td
+        %span
+          = link_to funometer_by_script_level_path(:script_id => level.script_id, :level_id => level.level_id) do
+            = level.level_id
+      %td
+        %span
+          = link_to script_url(level.script_id) do
+            = level.script_name
+      %td
+        %span
+          = link_to level_url(level.level_id) do
+            = level.level_name
+      %td
+        %span= number_to_percentage(level.percentage, precision: 2)
+      %td
+        %span= level.cnt
+
+%h2
+  Hated Levels
+
+%table
+  %tr
+    - @level_headers.each do |header|
+      %th
+        %span= header
+  - @hated_level_ratings.each do |level|
+    %tr
+      %td
+        %span
+          = link_to funometer_by_script_path(:script_id => level.script_id) do
+            = level.script_id
+      %td
+        %span
+          = link_to funometer_by_script_level_path(:script_id => level.script_id, :level_id => level.level_id) do
+            = level.level_id
+      %td
+        %span
+          = link_to script_url(level.script_id) do
+            = level.script_name
+      %td
+        %span
+          = link_to level_url(level.level_id) do
+            = level.level_name
+      %td
+        %span= number_to_percentage(level.percentage, precision: 2)
+      %td
+        %span= level.cnt

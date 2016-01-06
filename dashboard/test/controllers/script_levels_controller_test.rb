@@ -48,12 +48,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_caching_disabled response.headers['Cache-Control']
   end
 
-  test 'should make script level pages cachable if configured' do
+  test 'should allow public caching for script level pages with default lifetime' do
     Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
 
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
-    assert_caching_enabled response.headers['Cache-Control'], ScriptLevelsController::DEFAULT_PUBLIC_MAX_AGE
+    assert_caching_enabled response.headers['Cache-Control'],
+                           ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
+                           ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
+  end
+
+  test 'should allow public caching for script level pages with dynamic lifetime' do
+    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    DCDO.set('public_max_age', 3600)
+    DCDO.set('public_proxy_max_age', 7200)
+    get_show_script_level_page(@script_level)
+    assert_caching_enabled response.headers['Cache-Control'], 3600, 7200
   end
 
   test 'should make script level pages uncachable if disabled' do
@@ -85,11 +95,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_cache_control_match expected_directives, cache_control_header
   end
 
-  def assert_caching_enabled(cache_control_header, max_age)
+  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
     expected_directives = [
         'public',
         "max-age=#{max_age}",
-        "s-maxage=#{max_age}"]
+        "s-maxage=#{proxy_max_age}"]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
@@ -451,11 +461,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    client_state.set_level_progress(5, 10)
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
 
     get :reset, script_id: Script::HOC_NAME
 
-    assert_redirected_to hoc_chapter_path(chapter: 1)
+    assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
@@ -477,13 +488,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    client_state.set_level_progress(5, 10)
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
 
     get :reset, script_id: 'laurel'
-    assert_redirected_to "/s/laurel/stage/1/puzzle/1"
+    assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
     assert !session['warden.user.user.key']
+  end
+
+  test "reset redirects for custom scripts for signed in users" do
+    sign_in(create(:user))
+
+    get :reset, script_id: 'laurel'
+    assert_redirected_to '/s/laurel/stage/1/puzzle/1'
   end
 
   test "should render blockly partial for blockly levels" do

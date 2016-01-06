@@ -144,5 +144,20 @@ $root: '/blockly/media/studio/'; //TODO: Parameterize for asset pipeline
       margin-left: 1em;
     }
   }
+
+  .instructionsImageContainer {
+    width: 67px;
+    text-align: center;
+    display: inline-block;
+
+    .instructionsImage {
+      height: 35px;
+      vertical-align: text-bottom;
+    }
+  }
 }
 
+/* fix transform-origin for IE / RTL in playlab levels */
+html[dir="RTL"] div#visualization.responsive > svg {
+  -ms-transform-origin: 0 0;
+}

@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Поднимает или опускает карандаш для того, чтобы начать или закончить рисовать."},
 "penUp":function(d){return "поднять карандаш"},
 "reinfFeedbackMsg":function(d){return "Вот ваш рисунок! Продолжайте работать или перейдите к следующей головоломке."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "Установить прозрачность"},
 "setColour":function(d){return "выбрать цвет"},
 "setPattern":function(d){return "установить шаблон"},
 "setWidth":function(d){return "задать ширину"},

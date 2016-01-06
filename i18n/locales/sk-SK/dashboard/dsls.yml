@@ -695,7 +695,7 @@ sk:
         /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
         Maze: Maze
-        Which answer solves this level?: Which answer solves this level?
+        Which answer solves this level?: Ktorá odpoveď rieši túto úroveň?
       K-1 Move It Multi 1:
         /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
         /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
@@ -703,14 +703,14 @@ sk:
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
         Multiple Choice: Viacnásobný výber
-        Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb to the flowers?
+        Which algorithm gets the Flurb to the flowers?: Akým algoritmom sa Flurb dostane ku kvetinám?
       K-1 Plant a Seed Multi 1:
         /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
         Multiple Choice: Viacnásobný výber
-        Which step should go at the beginning of this algorithm?: Which step should go at the beginning of this algorithm?
+        Which step should go at the beginning of this algorithm?: Ktorý krok by mal ísť na začiatok tohoto algoritmu?
       K-1 Plant a Seed Multi 2:
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
@@ -743,16 +743,16 @@ sk:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
+        Driver and Helper: Vodič a pomocník
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Jeden z týchto chlapcov je <b>vodič</b>.  A jeden je <b>pomocník</b>.'
+        Which boy is the <large>helper</large>?: 'Ktorý chlapec je <large>pomocník</large>?'
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
+        Driver and Helper: Vodič a pomocník
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Jeden z týchto chlapcov je <b>vodič</b>.  A jeden je <b>pomocník</b>.'
+        This time, which boy is the <large>driver</large>?: 'Ktorý chlapec je tentokrát <large>vodič</large>?'
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

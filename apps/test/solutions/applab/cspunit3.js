@@ -245,6 +245,35 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+    {
+      description: "Stop execution after error",
+      editCode: true,
+      xml: '' +
+        'button("id", "start");\n' +
+        'thisisanerror\n' +
+        // shouldn't set end text because of error
+        'setText("id", "end");\n',
+      delayLoadLevelDefinition: function () {
+        // override executePaletteApisOnly
+        return $.extend({}, levelDefinition, {
+          executePaletteApisOnly: false
+        });
+      },
+      runBeforeClick: function () {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        var button = document.getElementById('id');
+        assert.equal(button.textContent, 'start');
+        return true;
+      },
+      expected: {
+        result: false,
+        testResult: TestResults.RUNTIME_ERROR_FAIL
+      }
     }
   ]
 };

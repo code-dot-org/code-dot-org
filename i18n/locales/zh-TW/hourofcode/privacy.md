@@ -169,23 +169,23 @@ Code.org 的雇員、 代理人和承包商必須有合法的商業理由 （直
 
 尤其是，我們不做分享您與我們的捐助者或贊助者提供任何個人資訊 （除了"公共報告"的匿名報告如下所述）。
 
-### We may share student achievement data with your school or school district
+### 我們可以分享您的學校或學區學生成績資料
 
 如果您使用 Code.org 網站是在與您的學校或學區夥伴關係的背景下，我們可能允許學校或學校區來訪問與你的教師也共用同一學生進度報告。
 
-### We may share teacher contact information with training facilitators
+### 我們可能分享訓練輔導員老師聯繫資訊
 
 我們的教育計畫的一部分是提供專業發展工作坊，為教師提供了電腦科學的課程。 如果你是一名教師參與這些研討會之一，您的姓名和聯繫資訊將共用與領先的講習班的主持人。
 
-### We may share data with social networks at your request
+### 我們可能與您的請求在社交網路分享資料
 
 一些使用者選擇過帳這些代碼創造的社交網路。 此功能是完全可選的。 當我們發佈內容到社交網路時，發佈的實際內容是完全在你的掌握，並永遠不會以您的名義自動過帳。 通常此內容包括只有代碼 （應用程式或動畫或遊戲或其他），你寫道，同時您可以選擇要向其添加的任何其他評論張貼。
 
-### We may share limited information when you contact us for support
+### 我們可能會共用有限的資訊，當您聯繫我們的支援
 
 當你聯繫我們的支援請求時，您可以提供與 Code.org 支援代表以處理您的請求共用的個人資訊。 Code.org 支援代表雇員或獨立承包人的 Code.org，並總是將簽署一份合同，要求他們保護和不透露機密資訊包括使用者的個人資訊，並僅在解決您的產品支援請求的上下文中使用它。
 
-### When you are chosen to be profiled on our site
+### 當你被選為我們的網站上對其進行分析
 
 Code.org 促進每週的周師生每月月底，隨著獎品。 這些設定檔和類似的感言總是刊載與參賽的學生或老師的許可和，如果適用的話，他們的父母或法定監護人或老師，和可能包含個人資訊，如姓名、 肖像和照片或視頻被分析的人。
 
@@ -193,39 +193,39 @@ Code.org 促進每週的周師生每月月底，隨著獎品。 這些設定檔�
 
 我們可能會發佈有關學生的表現，在我們的教程和網站上的匿名的資訊，然而，我們將永遠不會公開披露您的個人資訊，這些報告中。 關於學生成績資料將保持匿名，但聚合、 匿名的資料，在人口眾多的學生可能會報告由人口的標準，例如年齡、 一般位置、 性別、 種族和社會經濟地位。
 
-### We may share anonymous or aggregate data to improve our services and learn more about our Users
+### 我們可能會共用匿名或聚合資料，來改善我們的服務和學習更多有關我們的使用者
 
 在某些場合，Code.org 還可能與協力廠商 （例如大學) 等的工作來改善我們的服務或產品。 我們可能會透露自動收集和其他聚合的非個人資訊，向經授權的合作夥伴進行線上教育研究或説明理解這個用法，觀賞，和人口模式對某些程式、 內容、 服務、 促銷活動或在網站上的功能。
 
-### We will share data when required by law
+### 我們將共用資料時所需的法律
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. 在某些情況下，我們可能會這樣未作出披露第一次提供通知給使用者。
 
-### We may share data when necessary or appropriate to protect Code.org or others
+### 當有需要或適宜保護 Code.org 或其他人的時候，我們可能會共用資料
 
 Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
-### We may share data in the context of a change of business, including a merger or acquisition
+### 我們可能會共用的業務，包括合併或收購的嬗變上下文中的資料
 
 事件中 Code.org 後天的組合或合併與另一個實體，我們可以轉讓或分配我們有作為一部分的此類並購、 收購、 出售或其他變化控制從使用者那裡收集的個人資訊。 我們對您的承諾是我們從使用者處收集任何個人資訊的安全和隱私，本隱私權聲明所提供的同一水準下將會得到保證。
 
 ## Our Approach to Data Security
 
-### Website security is important to you, and to us
+### 網站安全是重要的給你，並給我們
 
 為了保護您的隱私和安全，我們採取合理的步驟在授予您帳戶或修改您的個人資訊之前驗證您的身份。 Because some schools block SSL-secure websites, Code.org allows access with or without SSL protection, at the direction of those schools. 如果你想 SSL 加密的連接中的，或對資料進行加密同時使用本網站，那你輸入使用 HTTPS 協定訪問 HTTPs://code.org/。
 
-### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
+### 我們設法確保我們的網站併發送給我們的資訊是安全的但沒有安全措施是完美的
 
 Code.org 使用某些物理、 管理和技術保證措施，旨在保護您的個人資訊和其他資料，我們維持與本網站有關的安全與完整性。 我們不能，然而，確保或保證安全的任何或所有的個人資訊和其他資訊您傳送到 Code.org，和你這樣做您自擔風險。 一旦我們收到您的資訊的傳輸，Code.org 使商業上合理的努力，確保我們的系統的安全。 然而，請注意這並不保證此類個人資訊不得訪問、 披露、 改變，或違反任何我們物理、 技術或管理的保障措施被摧毀。
 
 如果我們學會的妥協或似乎妥協你的個人資訊的資料安全事件，我們將嘗試以電子方式通知您，以便您可以採取適當的防護措施。
 
-### International visitors
+### 國際遊客
 
 我們的網站運作和管理的伺服器位於美國。 如果您選擇使用我們的網站，從歐洲聯盟或世界其他地區用不同于美國法律的有關資料收集和使用的法律，然後您承認並同意您通過在網站上提供您的個人資訊將您的個人資訊，在這些區域之外轉移至美國，而且，您同意轉讓。
 
-### Conditions of Use and Notices
+### 使用條件和告示
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 

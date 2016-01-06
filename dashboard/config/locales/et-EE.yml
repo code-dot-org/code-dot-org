@@ -29,6 +29,8 @@
     code:
       label: 'Lisa õpetaja:'
       placeholder: Üksuse kood (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
@@ -132,7 +134,7 @@
       submit: Muuda mu parool
   welcome_email:
     subject: Liitu minu klassiga (Code.org lehel)
-    body: Kliki lingile, et registreeruda arvutiõpetuse  kursustele Code.org-is (koos
+    body: Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos
       minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja
       õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid
       kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt
@@ -200,7 +202,7 @@
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Olete saanud auhinna! (Ainult USA õpilased)
-      not_earned_title: Lõpeta juhend, teeni auhindu (ainult  USA õpilastele)
+      not_earned_title: Lõpeta juhend, teeni auhindu (ainult USA õpilastele)
       not_earned: 'Õpi kõiki arvuti teaduse kontseptsioone, kogu kõik %{num_trophies}
         trofeed ja teeni reaalmaailma auhindu. Võite valida 10GB vaba ruumi Dropboxis,
         $10 Skype''i krediiti, ja tasuta mängude allalaadimise vahel. Märkus: pakkumine
@@ -223,7 +225,7 @@
           ainult Ameerika Ühendriikide erakoolides.
         bonus:
           not_earned_title: Sa saad teenida täiendavat $250 <a target="_blank" href="http://DonorsChoose.org">
-            DonorsChoose.org</a> krediiti (ainult Usa õpetajatele)
+            DonorsChoose.org</a> krediiti (ainult USA õpetajatele)
           earned: 7 või enam õpilast, kes kõik %{num_trophies} trofeed kogusid on
             tüdrukud. Olete võitnud boonusauhinna! (Ainult USA õpetajatele)
           not_earned: Kui vähemalt 7 sinu õpilastest, kes teenivad kõik %{num_trophies}
@@ -252,11 +254,12 @@
         playlab: Loo äpp
         artist: Joonista midagi
         calculate: Calculate Something
+        applab: Loo äpp
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
       label: Tere, %{username}
-      stats: Koodi stuudio
+      stats: Koodistuudio
       settings: Minu konto
       prizes: Auhinnad
       logout: Logi välja
@@ -275,68 +278,17 @@
       prize_us_only: (Ainult USA õpilased)
       prizes_link: rohkem infot
   teacher:
+    answer: Vastus
+    for_teachers_only: Ainult õpetajatele
     title:
       one: 'Sinu õpetaja:'
       other: 'Sinu õpetajad:'
     remove: (eemalda õpetaja)
     confirm:
       remove: Oled kindel, et tahad seda õpetajat eemaldada?
-    tools: Õpetaja töövahendid
-    followers:
-      section: 'Jaotis:'
-      stages: 'Etappide kuvamine:'
-      show_past: 'Kuva õpilase aktiivsus (%{bullet_html}):'
-      levels_key: Tasemete võti
-      perfect: Tehtud, suurepärane
-      completed: Tehtud, kuid liiga paljude plokkidega
-      tried: Proovitud, aga ei lõpetanud
-      not_tried: Pole veel proovinud
-      activity: Näitab õpilase aktiivsust viimasel %{hours}%{plural}
-      no_section: Pole määratud sektsiooni
-      trophies: Trofeed
     students:
-      name: Nimi
-      username: Kasutajanimi
-      password: Salasõna
-      manage: Halda õpilasi
       dashboard: Mine õpetaja menüüsse
-      add: Lisa õpilasi
-      remove: eemalda õpilane
-      confirm_remove: Kas olete kindel et soovite selle õpilase eemaldada?
-      help_reassign: Et oma klassi erinevateks osadeks jagada, valige õpilased keda
-        tahate uude jaotisesse määrata.
-      help_register: Selle asemel, et iga õpilase infot eraldi importida, saate oma  klassi
-        kiirelt kokku panna, lastes neil registreeruda. Teie õpilased peavad valima
-        kasutajanimed ja paroolid aga nad ei pea andma oma e-maili aadressi. kui õpilane
-        oma parooli unustab saate selle ise lähtestada.
-      register: Palun laske oma õpilastel ise registreeruda
-      vist: Paluge õpilastel külastada
-      section_code: 'ja sisestage nende jaotise kood:'
-      first_please: Esiteks, palun %{add_section}
-      for: Jaoks
-      enter: 'Sisestage:'
-    sections:
-      add: Jaotise lisamine
-      manage: Halda jaotisi
-      section: Jaotis
-      students: Õpilased
-      section_code: Jaotise kood
-      add_section_code: Lisa õpilaste jagu-kood
-      secret: Salajane tüüp
-      grade: Klass
-      course: Kursus
-      rename: nimeta ümber
-      edit: muuda
-      delete: kustuta
-      confirm_delete: Oled kindel, et soovid selle sektsiooni kustutada?
-      email: Saada meiliga
-    rollup: Edusammude ülevaade
-    activity: Hiljutine klassi tegevus
     user_not_found: Õpetajat või õpilast ei leitud
-    cant_remove_student_no_email: '%{student_name} ei saa eemaldada teie õpilasena,
-      sest %{student_name} ei ole registreeritud e-posti aadressi'
-    cant_remove_teacher_no_email: '%{teacher_name} ei saa eemaldada oma õpetajat,
-      kuna sul pole registreeritud e posti aadress'
     student_teacher_disassociated: '%{teacher_name} on eemaldatud %{student_name}
       õpetajana'
     panel:
@@ -347,7 +299,7 @@
       section: Jaotis
       example: Näidislahendus
       example_with_number: Näidislahend %{solution_number}
-      submitted_on: Esitatud %{date}
+      submitted_on: 'Esitatud:'
       unsubmit: Võta vastus tagasi
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
@@ -425,6 +377,7 @@
   share:
     title: Õpi Code stuudios
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mees
     female: Naine
@@ -437,15 +390,17 @@
       href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team">
       tervet meeskonda</a>, video tiimi, ja meie <a href="https://code.org/about/advisors">
       haridusnõustajaid</a> nende teenete eest Code Studio valmimisele.
-    help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid  luua
-      selle õppekeskkonna.
+    help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid
+      luua selle õppekeskkonna.
     help_from_html_old: Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st
       aitasid luua neid materjale.
-    art_from_html: Jääaeg (Ice Age)&#8482;&amp;&copy;%{current_year} 20th Century
-      Fox. Kõik õigused kaitstud.<br />Vihased Linnud (Angry Birds)&#8482;&amp;&copy;
-      2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Taimed
-      vs Koolnud (Plants vs. Zombies)&#8482;&amp;&copy;%{current_year} Electronic
-      Arts Inc. Kõik õigused kaitstud
+    art_from_html: Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
+      Kõik õigused on reserveeritud.<br />Frozen&#8482; &amp; &copy; %{current_year}
+      Disney. Kõik õigused on reserveeritud.<br />Jääaeg&#8482; &amp; &copy; %{current_year}
+      20th Century Fox. Kõik õigused on reserveeritud.<br />Angry Birds&#8482; &amp;
+      &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused on reserveeritud.<br
+      />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc.
+      Kõik õigused on reserveeritud
     art_from_html_old: Vihased Linnud (Angry Birds)&#8482;&amp;&copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Taimed vs Koolnud (Plants
       vs. Zombies)&#8482;&amp;&copy;%{current_year} Electronic Arts Inc. Kõik õigused
@@ -464,6 +419,10 @@
     privacy: Privaatsuspoliitika
     secure: Turvaline versioon
     report_abuse: Teata rikkumisest
+    built_on_code_studio: Code Studio abil loodud
+    make_my_own_app: Oma rakenduse loomine
+    how_it_works: Tööpõhimõtted
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid
@@ -505,6 +464,7 @@
   pdf_download: Lae alla PDF-fail
   download_coming_soon: Allalaaditav tegevus tuleb varsti.
   video_coming_soon: Video tuleb varsti!
+  not_started: Õpilane pole seda taset veel proovinud.
   share_code:
     title: Klikka 'Run', et programm alustaks
     bounce_og_title: Tsekka mu Põrke mängu (Bounce Game)
@@ -530,7 +490,7 @@
       unused: Kasutamata tasemed
   upsell:
     hoc:
-      title: KoodiTund
+      title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
     flappy:
       title: Flappy kood
@@ -538,9 +498,9 @@
         Code õpetusvideot!
     20-hour:
       title: Kiirendatud kursus
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
+      body: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise
+        kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18
+        aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
       body_short: Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.
     hoc2014:
       try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
@@ -550,10 +510,15 @@
       body: Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Lõpmatu Play Lab
       body: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad Disney Infinity
         tegelased.
+    minecraft:
+      title: Minecraft
+      body: Uuri Minecrafti maailma koodi kaudu.
   gallery:
     students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
     students_made_these_with_code: Õpilased tegid need koodiga!

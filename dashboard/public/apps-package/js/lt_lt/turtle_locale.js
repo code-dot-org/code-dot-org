@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Pakelia arba nuleidžia pieštuką, kad pradėtų arba sustotų piešti."},
 "penUp":function(d){return "pakelk pieštuką"},
 "reinfFeedbackMsg":function(d){return "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "nustatyti permatomumą"},
 "setColour":function(d){return "spalva ="},
 "setPattern":function(d){return "šablonas = "},
 "setWidth":function(d){return "plotis = "},

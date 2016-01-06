@@ -14,6 +14,7 @@ require 'cdo/rake_utils'
 require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
+require 'cdo/aws/cloudfront'
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -132,6 +133,19 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   end
 
   #
+  # Define the CODE STUDIO BUILD task
+  #
+  CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
+  CODE_STUDIO_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| code_studio_dir(i)} + Dir.glob(code_studio_dir('build', '**/*'))
+  CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
+  CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
+    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+    RakeUtils.system 'rm', '-rf', dashboard_dir('public/code-studio-package')
+    RakeUtils.system 'cp', '-R', code_studio_dir('build'), dashboard_dir('public/code-studio-package')
+  end
+
+  #
   # Define the APPS COMMIT task. If APPS_TASK produces new output, that output needs to be
   #   committed because it's input for the DASHBOARD task.
   #
@@ -197,9 +211,43 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
     end
   end
+
+  #
+  # Define the SHARED COMMIT task. If SHARED_TASK produces new output, that output needs to be
+  #   committed because it's input for the DASHBOARD task.
+  #
+  CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit', [deploy_dir('rebuild'), CODE_STUDIO_TASK]) do
+    code_studio_changed = false
+    Dir.chdir(dashboard_dir('public/code-studio-package')) do
+      code_studio_changed = !`git status --porcelain .`.strip.empty?
+    end
+
+    if code_studio_changed
+      if RakeUtils.git_updates_available?
+        # NOTE: If we have local changes as a result of building SHARED_TASK, but there are new
+        # commits pending in the repository, it is better to pull the repository first and commit
+        # these changes after we're caught up with the repository because, if we committed the changes
+        # before pulling we would need to manually handle a "merge commit" even though it's impossible
+        # for there to be file conflicts (because nobody changes the files SHARED_TASK builds manually).
+        HipChat.log '<b>code-studio</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
+      else
+        HipChat.log 'Committing updated <b>code-studio</b> package...', color: 'purple'
+        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/code-studio-package')
+        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-code-studio'))}"
+        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
+        RakeUtils.git_push
+        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-code-studio')
+      end
+    else
+      HipChat.log '<b>code-studio</b> package unmodified, nothing to commit.'
+      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-code-studio')
+    end
+  end
+
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
   SHARED_COMMIT_TASK = build_task('shared-commit') {}
+  CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit') {}
 end
 
 file deploy_dir('rebuild') do
@@ -244,16 +292,20 @@ def upgrade_frontend(name, host)
   # out from under a running instance. The rake build command will restart the instance.
   stop_frontend name, host, log_path
 
+  success = false
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+    success = true
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
     # The frontend is in indeterminate state, so make sure it is stopped.
     stop_frontend name, host, log_path
+    success = false
   end
 
   puts IO.read log_path
+  success
 end
 
 # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
@@ -274,6 +326,19 @@ task :chef_update do
   end
 end
 
+# Deploy updates to CloudFront in parallel with the local build to optimize total CI build time.
+multitask build_with_cloudfront: [:build, :cloudfront]
+
+# Update CloudFront distribution with any changes to the http cache configuration.
+# If there are changes to be applied, the update can take 15 minutes to complete.
+task :cloudfront do
+  if CDO.daemon && CDO.chef_managed
+    with_hipchat_logging('Update CloudFront') do
+      AWS::CloudFront.create_or_update
+    end
+  end
+end
+
 # Perform a normal local build by calling the top-level Rakefile.
 # Additionally run the lint task if specified for the environment.
 task build: [:chef_update] do
@@ -289,20 +354,26 @@ end
 
 # Update the front-end instances, in parallel, updating up to 20% of the
 # instances at any one time.
+MAX_FRONTEND_UPGRADE_FAILURES = 5
 task :deploy do
   with_hipchat_logging("deploy frontends") do
     if CDO.daemon && CDO.app_servers.any?
       Dir.chdir(deploy_dir) do
+        num_failures = 0
         thread_count = (CDO.app_servers.keys.length * 0.20).ceil
         threaded_each CDO.app_servers.keys, thread_count do |name|
-          upgrade_frontend name, CDO.app_servers[name]
+          succeeded = upgrade_frontend name, CDO.app_servers[name]
+          if !succeeded
+            num_failures += 1
+            raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
+          end
         end
       end
     end
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, CODE_STUDIO_COMMIT_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -364,7 +435,7 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '110', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--auto_retry', '--html'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
@@ -383,7 +454,7 @@ task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', eyes_features.count.to_s
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', eyes_features.count.to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message
@@ -400,6 +471,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]

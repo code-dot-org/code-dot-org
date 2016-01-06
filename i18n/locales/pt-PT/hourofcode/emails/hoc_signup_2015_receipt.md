@@ -8,45 +8,39 @@ De: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#
 
 # Obrigado por se inscrever para promover uma Hora de Código!
 
-You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
+Você está a tornar possível que alunos de todo o mundo possam aprender uma Hora de Código, entre 7-13 de Dezembro, que poderá mudar o resto das suas vidas.
 
-*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift. [Details](https://<%= hostname %>/prizes).
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
+#### Nós manteremos contato relativo a novos tutoriais e outras atualizações emocionantes. O que pode fazer agora?
 
-## 1. Spread the word
+## 1. Find a local volunteer to help you with your event.
 
-We need your help to reach 100,000 organizers worldwide. Fala aos teus amigos sobre o #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-<% if international == 'true' %>
+## 2. Spread the word
 
-## 2. Ask your whole school to offer an Hour of Code
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). <% else %>
+## 3. Recruit your whole school for the Hour of Code
 
-## 2. Recruit your whole school for the Hour of Code and qualify to win $10,000
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources). Plan for every student at your school to participate and you can win $10,000 worth of technology for your school. [Complete this form to enter](https://<%= hostname %>/prizes/hardware-signup). <% end %>
+## 4. Ask your employer to get involved
 
-## 3. Ask your employer to get involved
+[Envie este e-mail](https://<%= hostname %>/promote/resources#sample-emails) ao seu gerente ou ao CEO.
 
-[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
+## 5. Promote the Hour of Code in your community
 
-## 4. Promove a Hora do Código junto da tua comunidade
+Recrute um grupo local ou até mesmo alguns amigos. [Envie este e-mail](https://<%= hostname %>/resources#sample-emails).
 
-Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
-
-## Solicita ao seu Presidente da Freguesia para apoiar a Hora de Código
-
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
-
-Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+Obrigado por liderar o movimento que quer dar a cada aluno a oportunidade de aprender habilidades de ciência computacional.
 
 Hadi Partovi  
-Founder, Code.org
+Fundador, Code.org
 
 * * *
 
-<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+<small> Você está a receber este e-mail porque você se inscreveu para uma Hora de Código, apoiado por mais de 200 parceiros e organizado pela Code.org. Code.org é uma 501c3 sem fins lucrativos. Nosso endereço é 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Não quer receber estes e-mails? <a href="%= unsubscribe_link %">Cancelar assinatura</a>. </small>
 
 ![](<%= tracking_pixel %>)

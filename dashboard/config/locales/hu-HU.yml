@@ -29,6 +29,8 @@
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -256,6 +258,7 @@
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
         calculate: Calculate Something
+        applab: Készíts egy applikációt
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
@@ -280,71 +283,18 @@
       prize_us_only: (Kizárólag U.S. Diákoknak)
       prizes_link: További információk
   teacher:
+    answer: Válasz
+    for_teachers_only: Csak tanároknak
     title:
       one: 'A tanára:'
       other: 'A tanáraid:'
     remove: (tanár eltávolítása)
     confirm:
       remove: Biztosan el szeretné bocsátani ezt a tanárt?
-    tools: Tanári eszközök
-    followers:
-      section: 'Szakasz:'
-      stages: 'Elérhető szintek:'
-      show_past: 'Mutasd meg a diákok tevékenységét (%{bullet_html}):'
-      levels_key: Szint kódja
-      perfect: Tökéletesen megcsináltad
-      completed: Sikeresen megcsináltad de túl sok blokkot használtál
-      tried: Megpróbáltad, de nem sikerült
-      not_tried: Még nem próbáltam
-      activity: Diákok tevékenységét jelzi az utóbbi %{hours}%{plural} órában
-      no_section: Nincs feladott szakasz
-      trophies: trófeák
     students:
-      name: Név
-      username: felhasználónév
-      password: jelszó
-      manage: Diákok kezelése
       dashboard: Vissza a Tanári Nyitólapra
-      add: Diákok hozzáadása
-      remove: diák eltávolítása
-      confirm_remove: Biztos el akarod távolítani ezt a diákot?
-      help_reassign: Ahhoz, hogy az osztályodat több részre oszd, válassz ki néhány
-        diákot, és adj fel nekik egy új szakaszt.
-      help_register: Ahelyett, hogy neked kéne sok időt töltened azzal, hogy egyesével
-        hozzáadd a diákjaidat a csoportodhoz, megkérheted őket, hogy regisztráljanak
-        az osztályodba. A diákjaidnak meg kell adniuk egy felhasználó nevet és jelszót,
-        de nekik NEM kell e-mail címet megadniuk. ha egy diák elfelejti a jelszavát,
-        te újat tudsz neki adni.
-      register: Kérd meg a diákjaidat, hogy regisztrálják magukat
-      vist: Kérd meg a diákjaidat, hogy látogassák meg
-      section_code: 'és írják be ezt a kódot:'
-      first_please: Először is kérjük, %{add_section}
-      for: nak
-      enter: 'írd be:'
-    sections:
-      add: Adj hozzá egy szakaszt
-      manage: Vezetési szakasz
-      section: Szakasz
-      students: Diákok
-      section_code: Szakasz kódja
-      add_section_code: Adj a listához diákokat a kódjukkal
-      secret: Titkos
-      grade: Évfolyam
-      course: Tanfolyam
-      rename: átnevezés
-      edit: szerkeszt
-      delete: törlés
-      confirm_delete: Biztos vagy benne, hogy törölni szeretnéd ezt a szakaszt?
-      email: Küldj e-mailt
-    rollup: Nyomonkövetési felület
-    activity: Legutóbbi osztálytermi aktivitás
-    user_not_found: A tanár vagy a diák nem található
-    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert
-      %{student_name} nem regisztrált e-mail címet'
-    cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál
-      e-mail címet'
-    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára
-      a rendszerben'
+    user_not_found: Ez a tanár nem található.
+    student_teacher_disassociated: Eltávolítottad %{teacher_name} a tanáraid közül.
     panel:
       answer_viewer: Válasz megtekintő
       student: Diák
@@ -353,8 +303,8 @@
       section: Szakasz
       example: Példa a megoldásra
       example_with_number: Példa a megoldásra %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: 'Benyújtva ekkor: %{date}'
+      unsubmit: Visszavon
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -376,7 +326,7 @@
     classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
-    description: A Code Studio az online tanfolyamok otthona, melyet a Code.org készített
+    description: A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített
     lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
     lines_of_code_linebreak: '%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
       TANULÓ'
@@ -423,7 +373,7 @@
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
-    no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
+    no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Igazolás kinyomtatása
@@ -431,6 +381,7 @@
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
       alkalmazásokat vagy alkoss a kódolás segítségével!
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   gender:
     male: Férfi
     female: Nő
@@ -467,7 +418,11 @@
     tos: Feltételek
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
-    report_abuse: Report Abuse
+    report_abuse: Visszaélés jelentése
+    built_on_code_studio: Készült a Code Studio seggítségével
+    make_my_own_app: Készítsd el saját alkalmazásod
+    how_it_works: Hogyan működik
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
@@ -508,6 +463,7 @@
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
+  not_started: A diák nem próbálta meg ezt a szintet.
   share_code:
     title: Kattints a "Fuss"-ra, hogy lásd a programomat működés közben
     bounce_og_title: Nézd meg a Visszapattanós játékomat
@@ -535,7 +491,7 @@
       unused: Nem használt szintek
   upsell:
     hoc:
-      title: A kódolás órája
+      title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód
@@ -556,10 +512,15 @@
       body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
     frozen:
       title: Jégvarázs
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity játéklabor
       body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney
         Infinity karakterek szereplésével.
+    minecraft:
+      title: Minecraft
+      body: Fedezd fel a Minecraft világát kódokkal.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -605,7 +566,7 @@
     badname_case: A függvények elnevezése érzékeny a kis-és nagybetűkre. Próbáld újra
       elnevezni a megkötést.
     badrange: A megkötésednek nem megfelelő a tartománya.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainsize: A szerződésben nincs megfelelő számú érték a tartományban.
     baddomainname: Egy vagy több tartományban helytelen név szerepel.
     baddomaintype: A tartomány elemek közül egy vagy több nem megfelelő típusú, vagy
       rossz sorrendben vannak.
@@ -724,25 +685,26 @@
         fel velünk a kapcsolatot.</a>
       go_to_code_studio: Menj a Kód stúdióba
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: A sértő tartalommal, fenyegetéssel, online zaklatással, visszaéléssel
+          vagy szerzői joggal kapcsolatos sérelemmel találkoztál a Kód Stúdióval készített
+          alkalmazások használata közben, kérjük, töltsd ki az alábbi űrlapot! Az
+          ügyet nagyon komolyan fogjuk venni, megfelelően ki fogjuk vizsgálni és meg
+          fogjuk tenni a szükséges lépéseket.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Kérjük, add meg az e-mail címed
+          age: Kérjük, add meg az életkorod
+          abuse_type: Kérjük, válaszold meg, hogyan sérti a tartalom a Felhasználói
+            szabályokat
+          abuse_detail: Kérjük, adj meg részleteket a jelenteni kívánt tartalomról
+        abusive_url: Jelenteni kívánt tartalom URL-je
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Miben sérti a tartalom a %{link_start}Felhasználói szabályokat%{link_end}?
+          harassment: Fenyegetések, online zaklatás, visszaélés
+          offensive: Sértő tartalom
+          infringement: Szerzői jog megsértése
           other: Egyéb
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Kérjük, adj meg a lehető legtöbb részletet a jelenteni kívánt tartalommal
+          kapcsolatban!
+        acknowledge: Az alábbi információk megadásával tudomásul veszed, hogy azokat
+          az %{link_start_privacy}Adatvédelmi szabályzatnak%{link_end} és a %{link_start_tos}Felhasználói
+          szabályoknak%{link_end} megfelelően kezeljük
