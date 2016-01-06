@@ -1,0 +1,12 @@
+<%=
+CSV.generate do |csv|
+  @online_pd_data.each do |script, script_data|
+    if !(script_data[:data].empty?)
+      csv << script << script_data[:headers]
+      script_data[:data].each do |data|
+        csv << data
+      end
+    end
+  end
+end
+%>

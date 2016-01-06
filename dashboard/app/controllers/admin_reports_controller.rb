@@ -156,9 +156,27 @@ class AdminReportsController < ApplicationController
     require 'cdo/properties'
     locals_options = Properties.get("pd_progress_#{script.id}")
     if locals_options
-      render locals: locals_options.symbolize_keys
+      render locals: {pd_script_data: locals_options.symbolize_keys}
     else
       render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
+    end
+  end
+
+  def online_pd
+    authorize! :read, :reports
+
+    @scripts = []
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @scripts = Script.where('properties LIKE ?', %q[%"pd":true%]).pluck(:id)
+    end
+
+    require 'cdo/properties'
+    @online_pd_data = {}
+    @scripts.each do |script_id|
+      @online_pd_data[script_id] = Properties.get("pd_progress_#{script_id}")
+    end
+    @online_pd_data.each do |script_id, data|
+      @online_pd_data[script_id] = data.symbolize_keys
     end
   end
 
