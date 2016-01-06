@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require src_dir 'database'
+require 'csv'
+require 'json'
+
+# Exports all results from HocSurvey2015 into a csv
+
+columns = %w[
+  email_s
+  event_country_s
+  experience_rating_s
+  event_location_type_s
+  school_teach_cs_s
+  cs_interest_s
+  cs_beyond_hoc_s
+  age_range_ss
+  longer_than_hour_s
+  students_number_total_s
+  students_number_girls_s
+  students_number_ethnicity_s
+  volunteer_participation_s
+  teacher_how_heard_ss
+  teacher_how_heard_other_s
+  hoc_centerpiece_s
+  event_improvement_s
+]
+
+CSV.open('HocSurvey2015-results.csv', 'wb') do |csv|
+  csv << columns
+  DB[:forms].where(kind: 'HocSurvey2015').each do |form|
+    data = JSON.load form[:data]
+    csv << columns.map{|column| data[column]}
+  end
+end
