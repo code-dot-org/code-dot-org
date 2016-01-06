@@ -9,172 +9,135 @@ The Internet is open, so everything that happens on it can be seen unless it’s
 So how can you make sure your information is safe?  Here are 9 tips to keep in mind. These aren’t just friendly recommendations, they are critically important. In fact, if you don’t follow these tips, it’s almost guaranteed criminals and hackers will collect your personal information and use it in ways you don’t expect.
 
 
-## Step 1: Look for the Lock
+## Tip 1: Look for the Lock
 
-When browsing the web, always look at the address bar of the site you’re on to see if it’s protected. If the U. R. L. address bar says **HTTPS** and shows a lock, that means any information you send is going on a secure line to the website you’re visiting. This means it’s very likely OK to send private information or passwords. Of course, you never know, somebody could’ve hacked the computers on the other end, in which case all bets are off.
+<img src="images/encrypt-https.PNG" style="float:right;">
 
-If there’s no lock and the web address says HTTP without an S, that means every bit of data you send is out in the open and definitely not safe. This isn’t a problem if you’re just browsing the news. But if you’re checking email, social networking, shopping, banking, or really anything that involves a password, you should always check for the lock. If the lock isn’t there, anything you type is going out on public wires, and you can be absolutely sure that somebody else is watching it and collecting data such as your password.
+When browsing the web, always look at the address bar of the site you’re on to see if it’s protected. If the URL address bar says **HTTPS** and shows a **lock**, that means any information you send is going on a secure line to the website you’re visiting. This means it’s very likely OK to send private information or passwords. (Of course, you never know; somebody could’ve hacked the computers on the other end, in which case all bets are off.)
 
-WOS: #1: Look for (image of lock) HTTPS when entering private information or passwords 
-
-Animation or footage of a person going to a website and checking for the log. Either make it look like a screencast with animation, or use an actual screencast.
-
-Highlight HTTPS and the lock, and show a thumbs up
-
-Highlight HTTP in the URL bar. No lock. Show something to signify danger.
+If there’s no lock and the web address says HTTP *without* an S, that means every bit of data you send is out in the open and definitely not safe. This isn’t a problem if you’re just browsing the news. But if you’re checking email, social networking, shopping, banking, or doing anything that involves a password, you should always check for the lock. If the lock isn’t there, anything you type is going out on public wires, and you can be absolutely sure that somebody else is watching it and collecting data, such as your password.
 
 
-## Step 2
+## Tip 2: Check the URL
 
-Next, always make sure you’re on the legitimate version of a website by checking the U. R. L.  Sometimes a web site might look like what you want, but it’s a fake. How did you end up here?
+Next, always make sure you’re on the legitimate version of a website by checking the URL. Sometimes a web site might *look* like what you want, but it’s a fake. How did you end up here?
 
-The main way people end up at fake web sites is by clicking on fake emails. This is called a phishing scam. 
+<div>
+<img src="images/security-phishing-email.PNG" height="200" style="float:right; margin:0px 20px;">
+The main way people end up at fake web sites is by clicking on fake emails. This is called a phishing scam. <br><br>
 
-A phishing scam is when you get an email from what seems like a trustworthy source, asking you to log in or download something, but the link goes to a fake site. If you log in, you’ve been tricked into giving away your password and now they have access to your real account.
+A phishing scam is when you get an email from what seems like a trustworthy source, asking you to log in or download something, but the link goes to a fake site. If you log in, you’ve been tricked into giving away your password and now they have access to your real account. <br><br>
+</div>
 
 The one way to avoid these scams is to make sure the address on your browser matches the web site you think you’re at - look for the first DOT COM followed by the slash. Also, look for the lock!
-Jenny
-WOS: #2: Avoid “phishing” scams: fake emails from fake websites
 
-Show a real-looking website.
+<nobr>
+<img src="images/security-phishing-fake.PNG" width="450">
+<img src="images/security-phishing-real.PNG" width="450">
+</nobr>
 
-Then zoom in on the address bar and it’s misspelled, eg facebook.com.profile.php.info/
-
-WOS: Phishing: using a real-looking email and a real-looking web site to steal personal information
-
-Show an example of a phishing email, and click through and log-in
-
-repeat: visual of a good website, and again highlight  HTTPS  and the lock.  Also zoom in to the domain name before the slash, eg facebook.com/ or bofa.com/
-
-
-## Step 3
+## Tip 3: Only Download From Trustworthy Sources
 
 Whether you click on links in emails or you’re just browsing the web or looking for games, you should take extra care when a web site asks you to download anything. This may lead you to install unwanted apps called viruses, or to add 3rd party browser extensions that snoop on your browsing habits. 
 
 If you accidentally download something like this from the Internet, don’t install it. Instead, only download software from verified, trustworthy sources.
 
-WOS: #3: Don’t install software, apps, or browser extensions from web sites you don’t recognize
+<img src="images/security-virus.PNG">
 
-Show examples of web sites that try to trick you into install software. (minecraft mod downloads have lots of these!)
-
-show example of “are you sure you want to install?” OS warning on Windows
+**image of "are you sure you want to install" warning on Windows**
 
 
-## Step 4
+## Tip 4: Install Security Updates
 
-Now, sometimes your computer can get attacked even if you don’t do anything because of vulnerabilities in the system you’re using. 
+Sometimes your computer can get attacked even if you don’t do anything, because of vulnerabilities in the system you’re using. 
 
-Whether it’s Windows or a Mac, whether it’s Android or iPhone, or really whatever it is, ALL computer systems are prone to vulnerabilities. These openings allow attackers to install unwanted apps or access data in a way you didn’t intend. 
+Whether it’s Windows or Mac, Android or iPhone, or really whatever it is, ALL computer systems are prone to vulnerabilities. These openings allow attackers to install unwanted apps or access data in a way you didn’t intend. 
 
-Of course, the company who makes your computer or device doesn’t want this to happen so when a vulnerability is discovered a patch to fix it is typically released as quickly as possible.
+Of course, the company who makes your computer or device doesn’t want this to happen, so when a vulnerability is discovered, a patch to fix it is typically released as quickly as possible.
 
 This is where you come in. You need to install these security updates quickly, ideally on the same day as they’re available.  If you don’t, you’re very likely exposing your personal information even if you’re safely using the web. Sometimes just leaving your computer turned on and connected to the Internet exposes it to dangers. Every computer that’s connected to the internet is always being attacked by hackers who test to see if the computer is prone to any known vulnerabilities. The only way to be safe is to always have the latest security updates.
 
-WOS: #4: Install the latest operating system security updates soon after they’re released
+**Show examples of Windows and iOS software update prompts.**
 
-Show examples of Windows and iOS software update prompts.
+<img src="images/security-backdoor.PNG">
 
 
-## Step 5
+## Tip 5: Do NOT Email Private Data
 
-Here’s something most people don’t know. Even if there’s a lock on your browser, not all the information you send and receive is private. 
+Even if there’s a lock on your browser, not all the information you send and receive is private. 
 
 Whenever you send email on the internet, unless you’re sending it to somebody on the same email domain as you, your email is out in the open, available for anybody in the world to access. In fact, almost ALL the emails you send can be seen by third party hackers. 
 
+<br>
+| From: | To: | Secure? |
+|------|----|---------|
+| gmail.com | gmail.com | SECURE |
+| yourcompany.com | yourcompany.com | SECURE |
+| gmail.com | anotherdomain.com | OPEN TO ALL EYES |
+<br>
+
 Unlike web-browsing, email is sent behind the scenes using a protocol called SMTP which is out in the open and has absolutely no security or privacy protection.
 
-This is a huge problem and it won’t change until EVERY email provider and every company sending and receiving email all come together to agree to use a new secure protocol.
-
-WOS: #5: Don’t send sensitive private data on email. EVER
-
-Show somebody checking their email on a phone or in a browser on a laptop.
-
-From: gmail.com
-To: gmail.com     = SECURE
-
-From: yourcompany.com
-To: yourcompany.com    = SECURE
-
-From: gmail.com
-To: anotherdomain.com = OPEN TO ALL EYES
-
-WOS - SMTP: Simple Mail Transfer Protocol
+This is a huge problem, and it won’t change until EVERY email provider and every company sending and receiving email all come together to agree to use a new secure protocol.
 
 Until that happens, we only have one safe choice: don’t send sensitive information, like your social security number, password, bank account number, or credit card number via email.
 
-It *IS* being watched by somebody, and you can bet that a hacker will get it if they want to. The same is probably true for texting, depending on your phone provider. 
-WOS: 
-Never ever send on email: 
-social security number
-passwords
-bank account number
-credit card number
+Your email *IS* being watched by somebody, and you can bet that a hacker will get your information if they want to. (The same is probably true for texting, depending on your phone provider.)
+
+<img src="images/encrypt-email.PNG">
 
 
-## Step 6
+## Tip 6: Use Strong Passwords
 
-In addition to smart browsing and email habits, nothing you do online is safe unless you use strong passwords that actually protect your information.
+Nothing you do online is safe unless you use strong passwords that actually protect your information.
 
 Most people use the same password everywhere, and their password is easy to guess. You’d be amazed how many people use the password “ABC123” or “12345”.  Using a password like this is basically like asking to be hacked.
 
 You may be advised to include special characters like exclamation marks or hyphens in passwords to make them stronger. This is helpful, but it’s not enough.
-Passwords like this [show examples] are all actually the same strength. This is because their length is the same. 
 
-For real protection it’s much more valuable to use LONGER passwords. Each additional character increases the amount of time for a hacker with a supercomputer to guess your password. An alphabetic password that’s 16 characters long is much stronger than an 8-letter password with special characters. 
+Passwords like "Rover2015" and "R0v3r2015" are actually the same strength. This is because their length is the same. 
+
+For real protection it’s much more valuable to use LONGER passwords. Each additional character increases the amount of time for a hacker with a supercomputer to guess your password. A 16-character alphabetic password is much stronger than an 8-character password with special characters. 
 
 Of course, even with a long password, you can always add in special characters to make it harder to guess.
 
-WOS #6: Use a strong password
+<img src="images/341586368.jpg">
 
-Show a bunch of the most commonly used passwords raining down on the screen. Perhaps this is a place where we can add a little humor as well.
-
-WOS: Do special characters make a password harder to guess? Not always
-
-“Rover2015”  =>. “R0v3r2015” 
-“GoHuskies” => “G0Hu5kie5”
-
-NOT stronger. Hackers know all these substitutions already.
-
-Which is a harder password to guess?
-
-G0Hu5kie5 VS itismuchhardertoguessalongerpassword
-
-Could show somebody using this: https://howsecureismypassword.net
+<img src="images/242345959.jpg">
 
 
-## Step 7
+<h2>Tip #7: Use Multiple Passwords</h2>
 
-In addition to creating strong passwords, you unfortunately must use a different password for each web site you use. Because if somebody hacks one password, you don’t want them to get into ALL your accounts. A few years back hackers got access to EVERY password at a popular social networking site and they published all these logins online for anybody to see. If your login was published, anybody in the world can now access your account on any website where you use that same password.
+In addition to creating strong passwords, you unfortunately must use a different password for each web site you use. If a hacker does get access to one of your passwords, you don’t want them to get into ALL your accounts.
 
-What’s worse, in the Spring of 2014, a vulnerability was discovered that let hackers tap into all secure communication with most web sites. This was so bad they called it “Heartbleed”. Because of Heartbleed, if you logged into almost any Web site before May 2014, hackers could steal your password even if you saw a lock in your browser. If they could steal it, that means somebody definitely has stolen it. Hackers don’t do this by hand, they write a computer program and that computer program steals everybody’s passwords. What this means is you really should change every password you’ve used back in 2014, especially on important web sites.
+A few years back, hackers got access to EVERY password at a popular social networking site and they published all these logins online for anybody to see. If your login was published, anybody in the world can now access your account on any website where you use that same password.
 
-Now, if it seems like a huge burden to remember all your new, longer passwords, that’s because it is. But there are tools you can add to your browser that can make this easier. Whether you use a browser add-on or not, it’s absolutely critical to use longer passwords, and a different password on any web site.
-Elena 
-WOS #7: Use a different password for every website, with a password tool
+What’s worse, in the Spring of 2014, a vulnerability was discovered that let hackers tap into all secure communication with most websites. This disastrous event was referred to as “Heartbleed”. Because of Heartbleed, if you logged into almost any Web site before May 2014, hackers could steal your password even if you saw a lock in your browser. If they could steal it, that means somebody definitely has stolen it. Hackers don’t do this by hand; they write a computer program that steals everybody’s passwords. This means you really should change every password you’ve used back in 2014, especially on important web sites.
 
+If it seems like a huge burden to remember all your new, longer passwords, that’s because it is. But there are tools you can add to your browser that can make this easier. Whether you use a browser add-on or not, it’s absolutely critical to use longer passwords, and a different password on any web site.
 
-## Step 8
+<nobr>
+<img src="images/239154217.jpg">
+<img src="images/244262566.jpg">
+<nobr>
+
+## Tip 8: Enable Two-Factor Authentication
 
 This next one makes a big difference! Enable two-factor authentication wherever possible, especially for your most sensitive data -- like email, social media, or cloud storage accounts.
 
-Two-factor authentication adds extra security to your password so even if somebody knows your password they need something else to log in as you. Usually this is a security code that’s sent to your phone, which means to login somebody needs your password AND your phone. Most email or social networking sites offer this security feature and when they do you should use it.
-Parisa
-WOS: #8: Turn on two-factor authentication
+Two-factor authentication adds extra security to your password, so even if somebody knows your password, they need something else to log in as you. Usually this is a security code that’s sent to your phone, which means to login somebody needs your password AND your phone. Most email or social networking sites offer this security feature. When they do, you should use it.
 
-WOS - “Two-factor authentication: adding to password security using a second factor, such as security code sent to your phone”
+<img src="images/330197285.jpg">
 
-Video of somebody accessing their gmail or dropbox account and receiving a pin number on their phone to access their account.
+## Tip 9: Do NOT Plug In Devices/Accessories From Strangers
 
+One last piece of advice: don’t plug in a device or accessory from a stranger. If somebody gives you a memory card for your computer or even a USB power cable for your phone, it could infect your device with a virus the moment you plug it in. The person giving it to you may not even know that their plug is infected. Of course, sometimes you don’t have a choice, and most of the time it’s probably not a big deal. But you should be aware that anytime you plug something into your computer or device, you take a small risk. 
 
-## Step 9
-
-One last piece of advice: don’t plug in a device or accessory from a stranger. If somebody gives you a memory card for your computer or even a USB power cable for your phone -- it could infect your device with a virus the moment you plug it in. The person giving it to you may not even know that their plug is infected. Of course, sometimes you don’t have a choice, and most of the time it’s probably not a big deal. But you should be aware that anytime you plug something into your computer or device, you take a small risk. 
-
-WOS: #9: Don’t plug in devices or accessories from a stranger
+**http://www.shutterstock.com/pic-331329218/stock-vector-hacker-hacking-smartphone-vector-flat-illustration.html?src=5Ml-TzfTFUkf9t1997OrXg-1-84**
 
 
 ## Conclusion
 
-This stuff may seem scary but it’s critically important. The Internet really isn’t safe enough to use if you don’t take these precautions. So if this was overwhelming, watch it again and share it with the people you care about.
+This stuff may seem scary, but it’s critically important. The Internet really isn’t safe enough to use if you don’t take these precautions. So if this was overwhelming, read it again and share it with the people you care about.
 
 Ten or twenty years from now, all the systems on the Web will come up with new protocols. All emails will be encrypted and you’ll be able to send sensitive information all day long without worry. Human-readable passwords will be completely replaced by fingerprint or retina scans or something else that can’t be guessed or hacked. Until then, your information or device is only as secure as you make it. So protect your stuff.
