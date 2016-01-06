@@ -6,26 +6,23 @@ nav: plc_plp_nav
 
 ## About the Program
 
-Code.org is selecting organizations, as partners, to help teach Computer Science in a local, sustainable fashion. Our goal is for these local organizations to work with Code.org’s School District Partners to host professional learning workshops for teachers who are new to computer science, and to build and sustain a local community of computer science educators. 
+Code.org is selecting organizations, as partners, to help teach computer science in a local, sustainable fashion. We view these to be long-term partnerships with selected partners joining a network of organizations supporting a nationwide computer science movement.
+ 
+Each partner's program manager will attend our Facilitation Summit, a fabulous experience designed to welcome Professional Learning Partners and facilitators to the extended Code.org family. In addition, we will provide the initial funding to help each organization establish itself as a local Code.org professional learning partner.
 
-
-We will provide the training, support, and initial funding to help each of these organizations establish themselves as the local partner of the Code.org professional learning community, with an expectation that each partner can find other sources of funding and sustain this work independently of Code.org in the long-run.
-
-The ideal Professional Learning Partner is a regional education unit, a non-profit, a school district, or a university with existing, positive relationships with nearby school districts and the local education community. Additionally, this partner must have experience managing and hosting professional development workshops.
-
-
+The ideal Professional Learning Partner is a regional education unit, a non-profit, a school district, or a university with existing, positive relationships with nearby school districts and the local education community. We hope you will apply!
 
 ## What we'd expect of you
 Below is a list of program commitments:
 
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
-- Attend our Facilitation Summit, May 20-22, 2016, and our 5-day Summer Professional Learning Experience with teachers from your state (dates vary)
-- Organize and host quality, local workshops for Code.org’s district partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators
+- Attend our Facilitation Summit, May 20-22, 2016, and our 5-day Summer Professional Learning Experience with teachers from your state (dates vary). 
+- Organize and host quality, local PD workshops for Code.org’s district partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators
 - Build, grow and sustain a local community of computer science educators (or join an existing community)
 - Develop independent funding sources for the long-term sustainability of the work (with Code.org's cooperation)
  
  
-## <a name="commitments"></a>What Code.org will provide in return
+## What Code.org will provide in return
 - Funding for your work in the initial year(s)
 - Marketing your organization as the official Code.org Professional Learning Partner for your region 
 
