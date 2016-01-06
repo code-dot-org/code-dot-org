@@ -107,7 +107,7 @@ def main()
         break
       elsif lines_of_code_from_milestone < DEFAULT_LINES_OF_CODE
         HipChat.log "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}", color: 'red'
-      end 
+      end
     end
   end
 
