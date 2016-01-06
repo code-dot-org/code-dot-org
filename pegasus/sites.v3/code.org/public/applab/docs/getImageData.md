@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## getImageData(startX, startY, endX, endY)
+## getImageData(x, y, width, height)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Canvas
 
 [short_description]
 
-Returns an object representing the image data captured from the canvas in the coordinate range from startX, startY to endX, endY.
+Returns an object representing the image data captured from the canvas by the bounding rectangle that starts at *x*, *y*, with size *width*, and *height*.
 
 [/short_description]
 
@@ -153,10 +153,10 @@ getImageData(startX, startY, endX, endY);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| startX | number | Yes | The x position in pixels starting from the upper left corner of image to start the capture.  |
-| startY | number | Yes | The y position in pixels starting from the upper left corner of image to start the capture.  |
-| endX | number | Yes | The x position in pixels starting from the upper left corner of image to end the capture.  |
-| endY | number | Yes | The y position in pixels starting from the upper left corner of image to end the capture.  |
+| x | number | Yes | The x position in pixels to start the capture.  |
+| y | number | Yes | The y position in pixels to start the capture.  |
+| width | number | Yes | The width of the bounding rectangle to capture the image data.  |
+| height | number | Yes | The height of the bounding rectangle to capture the image data.  |
 
 [/parameters]
 

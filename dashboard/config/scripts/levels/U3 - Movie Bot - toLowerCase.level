@@ -133,11 +133,8 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "markdown_instructions": "# Dealing with Character Case\r\n\r\nWhat if the user types ACTION instead of action? These are two different strings to the computer and therefore it won't recognize they are the same. We want Movie Bot to treat words the same ignoring the case of the letters. We can do this using the string command `toLowerCase()`.\r\n\r\n**Note: ** Check out the flow chart below to see the logic we are trying to add. \r\n\r\n# Do This\r\n\r\n* **Try typing COMEDY, ACtioN, horroR, and Romance** into Movie Bot.\r\n\r\n* **Use the `toLowerCase()` command** to change all user input into lower case letters after they enter it.\r\n\r\n* **Check that COMEDY, ACtioN, horroR, and Romance work** the same as comedy, action, horror, and romance.\r\n\r\n<img src=\"https://images.code.org/183082e89d296b88112a5a5380afac6c-image-1446069165327.png\" style=\"width: 100%\">\r\n\r\n<a src=\"https://images.code.org/183082e89d296b88112a5a5380afac6c-image-1446069165327.png\" target=\"_blank\">Click to open in separate window.</a>",
+    "markdown_instructions": "# Dealing with Character Case\r\n\r\nWhat if the user types **ACTION** instead of **action**? These are two different strings to the computer and therefore it won't recognize they are the same. We want Movie Bot to treat words the same ignoring the case of the letters. We can do this using the string command `toLowerCase`.\r\n\r\n**Note: ** Check out the flowchart below to see the logic we are trying to add. \r\n\r\n# Do This:\r\n\r\n* **Try typing COMEDY, ACtioN, horroR, and Romance** into Movie Bot.\r\n\r\n* **Use the `toLowerCase` command** to change all user input into lowercase letters after they enter it.\r\n\r\n* **Check that COMEDY, ACtioN, horroR, and Romance generate the same recommendations** as comedy, action, horror, and romance.\r\n\r\n<img src=\"https://images.code.org/183082e89d296b88112a5a5380afac6c-image-1446069165327.png\" style=\"width: 100%\">\r\n\r\n<a href=\"https://images.code.org/183082e89d296b88112a5a5380afac6c-image-1446069165327.png\" target=\"_blank\">Open diagram in a new tab</a>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -165,8 +162,10 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "execute_palette_apis_only": "false",
-    "instructions": "Use the toLowerCase() command to change all user input into lower case letters after they enter it. (Click to see full instructions)",
-    "project_template_level_name": "U3 - Movie Bot - Template"
+    "instructions": "Use the toLowerCase command to change all user input into lowercase letters after they enter it. (Click to see full instructions)",
+    "project_template_level_name": "U3 - Movie Bot - Template",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "/tgcscwPNd1h3iT80rkyextgzIcy1pF1uvzDQ4SW2PKMxM7rEFvj4dYHxs9u\ngWk3\n"
   }
 }]]></config>
   <blocks/>

@@ -5,6 +5,8 @@ var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
+var utils = require('../utils');
+var elementLibrary = require('./designElements/library');
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -25,6 +27,13 @@ var applabCommands = module.exports;
  * the browser.
  */
 var toBeCached = {};
+
+/**
+ * {Object} map from element id to the last mousemove event which occurred on
+ * that element. This is used to simulate movementX and movementY for browsers
+ * which do not support it natively.
+ */
+var lastMouseMoveEventMap = {};
 
 /**
  * @param value
@@ -132,14 +141,25 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
   apiValidateType(opts, funcName, varName, id, 'string');
   if (opts[validatedTypeKey] && typeof opts[validatedDomKey] === 'undefined') {
     var element = document.getElementById(id);
-    var exists = Boolean(element && divApplab.contains(element));
-    var valid = exists == shouldExist;
+
+    var existsInApplab = Boolean(element && divApplab.contains(element));
+    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+
+    var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
+
     if (!valid) {
       var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-      var errorString = funcName + "() " + varName +
-        " parameter refers to an id (" +id + ") which " +
-        (exists ? "already exists." : "does not exist.");
-      outputError(errorString, ErrorLevel.WARNING, line);
+      var errorString = "";
+      if (existsOutsideApplab) {
+        errorString = funcName + "() " + varName + " parameter refers to an id (" + id +
+            ") which is already in use outside of Applab. Choose a different id.";
+        throw new Error(errorString);
+      } else {
+        errorString = funcName + "() " + varName +
+            " parameter refers to an id (" + id + ") which " +
+            (existsInApplab ? "already exists." : "does not exist.");
+        outputError(errorString, ErrorLevel.WARNING, line);
+      }
     }
     opts[validatedDomKey] = valid;
   }
@@ -159,6 +179,9 @@ applabCommands.setScreen = function (opts) {
 };
 
 applabCommands.container = function (opts) {
+  if (opts.elementId) {
+    apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
+  }
   var newDiv = document.createElement("div");
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
@@ -191,6 +214,7 @@ applabCommands.button = function (opts) {
 };
 
 applabCommands.image = function (opts) {
+  apiValidateDomIdExistence(opts, 'image', 'id', opts.elementId, false);
   apiValidateType(opts, 'image', 'id', opts.elementId, 'string');
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
@@ -203,6 +227,7 @@ applabCommands.image = function (opts) {
 };
 
 applabCommands.imageUploadButton = function (opts) {
+  apiValidateDomIdExistence(opts, 'imageUploadButton', 'id', opts.elementId, false);
   // To avoid showing the ugly fileupload input element, we create a label
   // element with an img-upload class that will ensure it looks like a button
   var newLabel = document.createElement("label");
@@ -609,6 +634,10 @@ applabCommands.clearCanvas = function (opts) {
   return false;
 };
 
+/**
+ * Semi-deprecated. We still support this API, but no longer expose it in the
+ * toolbox. Replaced by drawImageURL
+ */
 applabCommands.drawImage = function (opts) {
   var divApplab = document.getElementById('divApplab');
   // PARAMNAME: drawImage: imageId vs. id
@@ -636,6 +665,68 @@ applabCommands.drawImage = function (opts) {
     return true;
   }
   return false;
+};
+
+/**
+ * We support a couple different version of this API
+ * drawImageURL(url, [callback])
+ * drawImaegURL(url, x, y, width, height, [calback])
+ */
+applabCommands.drawImageURL = function (opts) {
+  var divApplab = document.getElementById('divApplab');
+
+  apiValidateActiveCanvas(opts, 'drawImageURL');
+  apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
+  apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'y', opts.y, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'width', opts.width, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
+  apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
+
+  var jsInterpreter = Applab.JSInterpreter;
+  var callback = function (success) {
+    if (opts.callback) {
+      queueCallback(jsInterpreter, opts.callback, [success]);
+    }
+  };
+
+  var image = new Image();
+  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.onload = function () {
+    var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
+    if (!ctx) {
+      return;
+    }
+    var x = utils.valueOr(opts.x, 0);
+    var y = utils.valueOr(opts.y, 0);
+
+    // if given a width/height use that
+    var renderWidth = utils.valueOr(opts.width, image.width);
+    var renderHeight = utils.valueOr(opts.height, image.height);
+
+    // if undefined, extra width/height from image and potentially resize to
+    // fit
+    if (opts.width === undefined || opts.height === undefined) {
+      var aspectRatio = image.width / image.height;
+      if (aspectRatio > 1) {
+        renderWidth = Math.min(Applab.activeCanvas.width, image.width);
+        renderHeight = renderWidth / aspectRatio;
+      } else {
+        renderHeight = Math.min(Applab.activeCanvas.height, image.height);
+        renderWidth = renderHeight * aspectRatio;
+      }
+    }
+
+    ctx.save();
+    ctx.setTransform(renderWidth / image.width, 0, 0, renderHeight / image.height, x, y);
+    ctx.drawImage(image, 0, 0);
+    ctx.restore();
+
+    callback(true);
+  };
+  image.onerror = function () {
+    callback(false);
+  };
 };
 
 applabCommands.getImageData = function (opts) {
@@ -824,34 +915,7 @@ applabCommands.setText = function (opts) {
  * @private
  */
 applabCommands.getElementInnerText_ = function (element) {
-  var cleanedText = element.innerHTML;
-  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
-  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
-
-  // This next step requires some explanation
-  // In multiline text it's possible for the first line to render wrapped or unwrapped.
-  //     Line 1
-  //     Line 2
-  //   Can render as either of:
-  //     Line 1<div>Line 2</div>
-  //     <div>Line 1</div><div>Line 2</div>
-  //
-  // But leading blank lines will always render wrapped and should be preserved
-  //
-  //     Line 2
-  //     Line 3
-  //   Renders as
-  //    <div><br></div><div>Line 2</div><div>Line 3</div>
-  //
-  // To handle this behavior we strip leading newlines UNLESS they are followed
-  // by another newline, using a negative lookahead (?!)
-  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
-
-  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
-  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
-  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
-  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
-  return cleanedText;
+  return utils.unescapeText(element.innerHTML);
 };
 
 /**
@@ -863,18 +927,7 @@ applabCommands.getElementInnerText_ = function (element) {
  * @private
  */
 applabCommands.setElementInnerText_ = function (element, newText) {
-  var escapedText = newText.toString();
-  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
-  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
-  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
-  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
-
-  // Now wrap each line except the first line in a <div>,
-  // replacing blank lines with <div><br><div>
-  var lines = escapedText.split('\n');
-  element.innerHTML = lines[0] + lines.slice(1).map(function (line) {
-    return '<div>' + (line.length ? line : '<br>') + '</div>';
-  }).join('');
+  element.innerHTML = utils.escapeText(newText.toString());
 };
 
 applabCommands.getChecked = function (opts) {
@@ -945,10 +998,30 @@ applabCommands.playSound = function (opts) {
 
   if (studioApp.cdoSounds) {
     var url = Applab.maybeAddAssetPathPrefix(opts.url);
-    studioApp.cdoSounds.playURL(url,
-                               {volume: 1.0,
-                                forceHTML5: true,
-                                allowHTML5Mobile: true
+    if (studioApp.cdoSounds.isPlayingURL(url)) {
+      return;
+    }
+
+    studioApp.cdoSounds.playURL(url, {
+      volume: 1.0,
+      // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
+      //       See Pivotal #108279582
+      //
+      //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
+      //       Varnish 4.0 with certain forms of the Range request header.
+      //
+      //       By commenting this line out, we re-enable Web Audio API in App
+      //       Lab, which has the following effects:
+      //       GOOD: Web Audio should not use the Range header so it won't hit
+      //             the bug.
+      //       BAD: This disables cross-domain audio loading (hotlinking from an
+      //            App Lab app to an audio asset on another site) so it might
+      //            break some existing apps.  This should be less problematic
+      //            since we now allow students to upload and serve audio assets
+      //            from our domain via the Assets API now.
+      //
+      // forceHTML5: true,
+      allowHTML5Mobile: true
     });
   }
 };
@@ -1034,21 +1107,11 @@ applabCommands.setPosition = function (opts) {
     el.style.position = 'absolute';
     el.style.left = opts.left + 'px';
     el.style.top = opts.top + 'px';
-    var setWidthHeight = false;
-    // don't set width/height if
-    // (1) both parameters are undefined AND
-    // (2) width/height already specified OR IMG element with width/height attributes
-    if ((el.style.width.length > 0 && el.style.height.length > 0) ||
-        (el.tagName === 'IMG' && el.width > 0 && el.height > 0)) {
-      if (typeof opts.width !== 'undefined' || typeof opts.height !== 'undefined') {
-        setWidthHeight = true;
-      }
-    } else {
-      setWidthHeight = true;
-    }
-    if (setWidthHeight) {
-      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number');
-      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number');
+
+    // if we have a width and/or height given, validate args and setSize
+    if (opts.width !== undefined || opts.height !== undefined) {
+      apiValidateType(opts, 'setPosition', 'width', opts.width, 'number', OPTIONAL);
+      apiValidateType(opts, 'setPosition', 'height', opts.height, 'number', OPTIONAL);
       setSize_(opts.elementId, opts.width, opts.height);
     }
     return true;
@@ -1083,8 +1146,8 @@ applabCommands.getXPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var x = div.offsetLeft;
-    while (div !== divApplab) {
-      // TODO (brent) using offsetParent may be ill advised:
+    while (div && div !== divApplab) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
       // This property will return null on Webkit if the element is hidden
       // (the style.display of this element or any ancestor is "none") or if the
       // style.position of the element itself is set to "fixed".
@@ -1092,7 +1155,9 @@ applabCommands.getXPosition = function (opts) {
       // style.position of the element itself is set to "fixed".
       // (Having display:none does not affect this browser.)
       div = div.offsetParent;
-      x += div.offsetLeft;
+      if (div) {
+        x += div.offsetLeft;
+      }
     }
     return x;
   }
@@ -1106,14 +1171,23 @@ applabCommands.getYPosition = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
     var y = div.offsetTop;
-    while (div !== divApplab) {
+    while (div && div !== divApplab) {
       div = div.offsetParent;
-      y += div.offsetTop;
+      if (div) {
+        y += div.offsetTop;
+      }
     }
     return y;
   }
   return 0;
 };
+
+function clearLastMouseMoveEvent(e) {
+  var elementId = e.currentTarget && e.currentTarget.id;
+  if (elementId && (typeof lastMouseMoveEventMap[elementId] !== 'undefined')) {
+    delete lastMouseMoveEventMap[elementId];
+  }
+}
 
 applabCommands.onEventFired = function (opts, e) {
   if (typeof e != 'undefined') {
@@ -1131,7 +1205,7 @@ applabCommands.onEventFired = function (opts, e) {
     var applabEvent = {};
     // Pass these properties through to applabEvent:
     ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-      'keyLocation', 'location', 'metaKey', 'movementX', 'movementY', 'offsetX',
+      'keyLocation', 'location', 'metaKey', 'offsetX',
       'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
       function (prop) {
         if (typeof e[prop] !== 'undefined') {
@@ -1152,6 +1226,29 @@ applabCommands.onEventFired = function (opts, e) {
           applabEvent[prop] = (e[prop] - yOffset) / yScale;
         }
       });
+    // Set movementX and movementY, computing it from clientX and clientY if necessary.
+    // The element must have an element id for this to work.
+    if (typeof e.movementX !== 'undefined' && typeof e.movementY !== 'undefined') {
+      // The browser supports movementX and movementY natively.
+      applabEvent.movementX = e.movementX;
+      applabEvent.movementY = e.movementY;
+    } else if (e.type === 'mousemove') {
+      var currentTargetId = e.currentTarget && e.currentTarget.id;
+      var lastEvent = lastMouseMoveEventMap[currentTargetId];
+      if (currentTargetId && lastEvent) {
+        // Compute movementX and movementY from clientX and clientY.
+        applabEvent.movementX = e.clientX - lastEvent.clientX;
+        applabEvent.movementY = e.clientY - lastEvent.clientY;
+      } else {
+        // There has been no mousemove event on this element since the most recent
+        // mouseout event, or this element does not have an element id.
+        applabEvent.movementX = 0;
+        applabEvent.movementY = 0;
+      }
+      if (currentTargetId) {
+        lastMouseMoveEventMap[currentTargetId] = e;
+      }
+    }
     // Replace DOM elements with IDs and then add them to applabEvent:
     ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
       'toElement'].forEach(
@@ -1204,9 +1301,13 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
-    if (domElement.tagName.toUpperCase() === 'DIV' && domElement.contentEditable && opts.eventName === 'change') {
-      // contentEditable divs don't generate a change event, so
-      // synthesize one here.
+    var elementType = elementLibrary.getElementType(domElement);
+    if ((elementType === elementLibrary.ElementType.TEXT_INPUT ||
+        elementType === elementLibrary.ElementType.TEXT_AREA ) &&
+        opts.eventName === 'change') {
+      // contentEditable divs don't generate a change event, and change events
+      // on text inputs behave differently across browsers, so synthesize a
+      // change event here.
       var callback = applabCommands.onEventFired.bind(this, opts);
       ChangeEventHandler.addChangeEventHandler(domElement, callback);
       return true;
@@ -1244,7 +1345,6 @@ applabCommands.onEvent = function (opts) {
       case 'click':
       case 'change':
       case 'keyup':
-      case 'mousemove':
       case 'dblclick':
       case 'mousedown':
       case 'mouseup':
@@ -1259,6 +1359,16 @@ applabCommands.onEvent = function (opts) {
         domElement.addEventListener(
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
+        break;
+      case 'mousemove':
+        domElement.addEventListener(
+          opts.eventName,
+          applabCommands.onEventFired.bind(this, opts));
+        // Additional handler needed to ensure correct calculation of
+        // movementX and movementY.
+        domElement.addEventListener(
+          'mouseout',
+          clearLastMouseMoveEvent);
         break;
       default:
         return false;
@@ -1423,19 +1533,19 @@ applabCommands.updateRecord = function (opts) {
   apiValidateType(opts, 'updateRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'updateRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'updateRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'updateRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
   opts.JSInterpreter = Applab.JSInterpreter;
-  var onSuccess = applabCommands.handleUpdateRecord.bind(this, opts);
+  var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.updateRecord(opts.table, opts.record, onSuccess, onError);
+  AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
 applabCommands.handleUpdateRecord = function(opts, record) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
+  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(opts.onComplete, [record]);
   }
 };
 
@@ -1445,19 +1555,19 @@ applabCommands.deleteRecord = function (opts) {
   apiValidateType(opts, 'deleteRecord', 'table', opts.table, 'string');
   apiValidateType(opts, 'deleteRecord', 'record', opts.record, 'object');
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
-  apiValidateType(opts, 'deleteRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
+  apiValidateType(opts, 'deleteRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
   opts.JSInterpreter = Applab.JSInterpreter;
-  var onSuccess = applabCommands.handleDeleteRecord.bind(this, opts);
+  var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
-  AppStorage.deleteRecord(opts.table, opts.record, onSuccess, onError);
+  AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
 applabCommands.handleDeleteRecord = function(opts) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess);
+  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
+    Applab.JSInterpreter.queueEvent(opts.onComplete);
   }
 };
 
@@ -1466,6 +1576,74 @@ applabCommands.getUserId = function (opts) {
     throw new Error("User ID failed to load.");
   }
   return Applab.user.applabUserId;
+};
+
+/**
+ * How to execute the 'drawChart' function.
+ * Delegates most work to ChartApi.drawChart, but a few things are
+ * handled directly at this layer:
+ *   - Type validation (before execution)
+ *   - Queueing callbacks (after execution)
+ *   - Reporting errors and warnings (after execution)
+ * @see {ChartApi}
+ * @param {Object} opts
+ * @param {string} opts.chartId
+ * @param {ChartType} opts.chartType
+ * @param {Object[]} opts.chartData
+ * @param {Object} opts.options
+ * @param {function} opts.callback
+ */
+applabCommands.drawChart = function (opts) {
+  apiValidateType(opts, 'drawChart', 'chartId', opts.chartId, 'string');
+  apiValidateType(opts, 'drawChart', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChart', 'chartData', opts.chartData, 'array');
+  apiValidateType(opts, 'drawChart', 'options', opts.options, 'object', OPTIONAL);
+  apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
+  apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
+
+  // Bind a reference to the current interpreter so we can later make sure we're
+  // not doing anything asynchronous across re-runs.
+  var jsInterpreter = Applab.JSInterpreter;
+
+  var currentLineNumber = getCurrentLineNumber(jsInterpreter);
+
+  var chartApi = new ChartApi();
+
+  /**
+   * What to do after drawing the chart succeeds/completes:
+   *   1. Report any warnings, attributed to the current line.
+   *   2. Queue the user-provided success callback.
+   *
+   * @param {Error[]} warnings - Any non-terminal errors generated by the
+   *        drawChartFromRecords call, which we will report on after the fact
+   *        without halting execution.
+   */
+  var onSuccess = function () {
+    stopLoadingSpinnerFor(opts.chartId);
+    chartApi.warnings.forEach(function (warning) {
+      outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
+    });
+    queueCallback(jsInterpreter, opts.callback);
+  };
+
+  /**
+   * What to do if something goes wrong:
+   *   1. Report the error.
+   *
+   * @param {Error} error - A rejected promise usually passes an error.
+   */
+  var onError = function (error) {
+    stopLoadingSpinnerFor(opts.chartId);
+    outputError(error.message, ErrorLevel.ERROR, currentLineNumber);
+  };
+
+  startLoadingSpinnerFor(opts.chartId);
+  chartApi.drawChart(
+      opts.chartId,
+      opts.chartType,
+      opts.chartData,
+      opts.options
+  ).then(onSuccess, onError);
 };
 
 /**
@@ -1576,14 +1754,15 @@ function stopLoadingSpinnerFor(elementId) {
  * AND the interpreter is still the active interpreter for Applab.
  * @param {JSInterpreter} jsInterpreter
  * @param {function} callback
+ * @param {Object[]} args
  */
-var queueCallback = function (jsInterpreter, callback) {
+var queueCallback = function (jsInterpreter, callback, args) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active, so we don't queue callbacks for slow async events
   // from past executions of the app.
   // (We use a different interpreter instance for every run.)
   if (callback && jsInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(callback);
+    Applab.JSInterpreter.queueEvent(callback, args);
   }
 };
 

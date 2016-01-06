@@ -12,7 +12,7 @@ module.exports = {
   tests: [
     // These exercise all of the blocks in Turtle category
     // It does not validate that they behave correctly, just that we don't end
-    // up with an errors
+    // up with any errors
     {
       description: "Math blocks",
       editCode: true,
@@ -139,6 +139,37 @@ module.exports = {
         testUtils.typeAceText('randomNumber(');
 
         assert.equal(/randomNumber\(min, max\)/.test($(".tooltipster-content").text()),
+          true, 'get tooltip');
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        testUtils.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: 'Math.min tooltip shows up',
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".tooltipster-content").text(), '', 'No tooltip to start');
+        testUtils.typeAceText('Math.min(');
+
+        assert.equal(/Math.min\(\)/.test($(".tooltipster-content").text()),
           true, 'get tooltip');
 
         // clear contents before run

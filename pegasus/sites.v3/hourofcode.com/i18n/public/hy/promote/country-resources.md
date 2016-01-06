@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -44,6 +43,10 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
 [Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
 
 <% elsif @country == 'uk' %>
 
@@ -93,4 +96,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% end %>
 
-<%= view :signup_button %>

@@ -4,8 +4,7 @@
   We’re looking forward to seeing you at your #{@workshop.phase_long_name} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference at your school.
 %p
   As part of your commitment to this program, you are expected to participate in this workshop. If you have any conflicts with these dates, please email
-  %a{href:'mailto:pd@code.org'}
-    pd@code.org
+  = mail_to 'pd@code.org'
   If you have questions, check out our
   %a{href:'https:' + CDO.code_org_url("/educate/pd/15-16/faq")}
     FAQ
@@ -17,7 +16,7 @@
 %p
   See below or visit code.org/pd for your in-person workshop details and bookmark for future use!
 %h3
-  Dates and times
+  Date and Time
 - @workshop.segments.each do |segment|
   %p
     #{segment.start.strftime("%A, %B %d, %Y")}
@@ -30,7 +29,7 @@
 %h3
   Catering
 %p
-  Breakfast and lunch will be served every day. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
+  Breakfast and lunch will be served. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 %h3
   What to bring
 - if @workshop.phase == 2

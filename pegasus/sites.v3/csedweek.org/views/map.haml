@@ -3,33 +3,36 @@
   %h2.mapheader
     %a{:href=> "https://hourofcode.com/events"}
       = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
-    %a{:href=> "https://hourofcode.com/#join"}
-      %button.signup-button
-        = I18n.t(:csedweek_map_signup)
 
   .row
-    .col-xs-10.col-sm-12
+    .col-sm-12
       #gmap.full-width
-  #belowmaplegend.legend{style: "display: none;"}
+  #belowmaplegend.legend
     .legend-title= I18n.t(:csedweek_map_legend_title)
-    .color.blue
-    = I18n.t(:csedweek_map_legend_event)
     .color.red
-    = I18n.t(:csedweek_map_legend_cs_tech_jam)
+    %div= I18n.t(:csedweek_map_legend_event)
+    .color.blue
+    %div= I18n.t(:csedweek_map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
   var resizeZoom;
   var scrollwheelOption = false;
   var draggableOption = false;
+  var resizeThrottleTimerId;
+  var resizeThrottleTimeoutMs = 500;
+  var maxHeightPercentage = 0.65;
 
   $(document).ready(function() {
     initializeMap();
     addGeocomplete();
+    resizeMap();
 
     $(window).resize(function() {
-      resizeMap();
-    }).trigger('resize');
+      // Throttle calling of resizeMap
+      clearTimeout(resizeThrottleTimerId);
+      resizeThrottleTimerId = setTimeout(resizeMap, resizeThrottleTimeoutMs);
+    });
   });
 
   function initializeMap() {
@@ -63,16 +66,11 @@
 
     var legend = document.createElement('div');
     legend.id = 'inmaplegend';
-    legend.className = 'legend'
-
-    var content = [];
-    content.push('<div class="legend-title">#{I18n.t(:csedweek_map_legend_title)}</div>');
-    content.push('<div class="color red"></div>#{I18n.t(:csedweek_map_legend_event)}');
-    content.push('<br><div class="color blue"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
-    legend.innerHTML = content.join('');
+    legend.className = 'legend';
     legend.index = 1;
+    $("#belowmaplegend div").clone().appendTo(legend);
 
-    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 
@@ -111,8 +109,24 @@
     var map_zoom = gmap.getZoom();
     var map_center = gmap.getCenter();
 
-    var map_height = map_width / 2;
-    $('#gmap').height(map_height);
+    // Max height of map is 2/3 of screen height so user can always scroll.
+    var max_height = $(window).innerHeight() * maxHeightPercentage; 
+
+    var window_aspect_ratio = $(window).innerHeight() / $(window).innerWidth();
+    
+    if  (window_aspect_ratio < 1) {
+      // Landscape window. Use the current 1:2 ratio map size.
+      map_height = map_width / 2;
+
+      // But, make sure this size doesn't exceed our max height.
+       map_height = Math.min(map_height, max_height);
+    } 
+    else {
+      // Portrait window. Just use the max height so that it's taller and more usable.
+      map_height = max_height;
+    }
+
+    $('#gmap').height(Math.round(map_height));
 
     if (map_width < 256 && map_zoom < 3) {
       map_zoom = 0;

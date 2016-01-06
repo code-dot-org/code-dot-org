@@ -13,7 +13,9 @@
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
@@ -53,10 +55,12 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Combining AND and OR\r\n\r\nYou can express more complex conditions by combining **AND** and **OR** in one statement.  Here is the example from the previous page which you can use as reference. This statement will evaluate to true if the day is Tuesday or Thursday AND their age is 15 or 16.\r\n\r\n![](https://images.code.org/33681e68bc0e321aeba7483034ba048c-image-1446485973724.png)\r\n\r\n#  Do This\r\nWe've provided you with starting code that prompts the user to enter a **day** and their **age** and stores the result in variables.\r\n\r\n**Add an if statement that uses both AND and OR operators**\r\n\r\n * The app should write \"Sleep in!\" if it's a weekend and the user is a teenager.\r\n * Otherwise it should write \"Uh oh. Have to wake up.\"\r\n \r\n\r\nTry it out!",
-    "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nvar age = promptNum(\"Enter your age.\");\r\nwrite(\"Day is: \"+day);\r\nwrite(\"Age is: \"+age);\r\n//write your code here\r\n",
-    "instructions": "Write an if statement that uses AND and OR to display \"Sleep in\" if it's the weekend and the user is a teenager. (Click to see full instructions.",
-    "slider_speed": "1.0"
+    "markdown_instructions": "# Combining AND and OR\r\n\r\nYou can express more complex conditions by combining **AND** and **OR** in one statement.  Here is the example from the previous page which you can use as a reference. This statement will evaluate to **true** if the day is Tuesday or Thursday AND their age is 15 or 16.\r\n\r\n![](https://images.code.org/3f3aba7828abd88fdbd90eda60611bd3-image-1448062956405.06.36.png)\r\n\r\n#  Do This:\r\nWe've provided you with starting code that prompts the user to enter a **day** and their **age** and stores the result in variables.\r\n\r\n**Add an `if` statement that uses both AND and OR operators**\r\n\r\n * The app should write \"Sleep in!\" if it's a weekend and the user is a teenager.\r\n * Otherwise it should write \"Uh oh. Have to wake up.\"\r\n \r\n\r\nTry it out!\r\n",
+    "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nvar age = promptNum(\"Enter your age.\");\r\nwrite(\"Day is: \" + day);\r\nwrite(\"Age is: \" + age);\r\n//write your code here\r\n",
+    "instructions": "Write an if statement that uses AND and OR to display \"Sleep in!\" if it's the weekend and the user is a teenager. (Click to see full instructions.",
+    "slider_speed": "1.0",
+    "encrypted_examples": "ez9E1WWdhTzB39cbNu8GbhbuOz9A18QRmWfg+jAh8NXKVvqBfGvA87yOrTlQ\nuLQz\n",
+    "lock_zero_param_functions": "false"
   }
 }]]></config>
   <blocks/>

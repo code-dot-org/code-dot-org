@@ -1,0 +1,56 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2015-09-23T18:39:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"houseBottomB\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"flowerDandelion\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"houseLeftA\",\"\",\"\",\"houseRightA\",\"\",\"\",\"\",\"\",\"\",\"torch\",\"houseBottomA\",\"\",\"houseBottomC\",\"houseBottomD\",\"\",\"\",\"\",\"\",\"\",\"creeper\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"creeper\",\"torch\",\"\",\"creeper\",\"\",\"\",\"\",\"\",\"\",\"creeper\",\"\",\"\",\"\",\"\",\"\",\"creeper\",\"grass\",\"\",\"\",\"\",\"\",\"creeper\",\"\",\"creeper\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"creeper\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\"]",
+    "fluff_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[2, 6]",
+    "player_start_direction": "1",
+    "verification_function": "function (verificationAPI) {\r\n      // temporarily let them be in front of, or in the door\r\n      return verificationAPI.isPlayerAt([4, 1]) || verificationAPI.isPlayerAt([4, 2]) || verificationAPI.isPlayerAt([4, 0]) || verificationAPI.isPlayerAt([5, 0]);\r\n}",
+    "instructions": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "is_daytime": "false",
+    "ideal": "9",
+    "embed": "false",
+    "free_play": "false",
+    "grid_width": "10",
+    "grid_height": "10"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>

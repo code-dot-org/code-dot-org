@@ -160,6 +160,25 @@ exports.drawImage = function (imageId, x, y, width, height) {
                            'height': height });
 };
 
+exports.drawImageURL = function (url, x, y, width, height, callback) {
+  if (y === undefined && width === undefined && height === undefined &&
+      callback === undefined) {
+    // everything after x is undefined. assume the two param version (in which
+    // callback might still be undefined)
+    callback = x;
+    x = undefined;
+  }
+  return Applab.executeCmd(null,
+                          'drawImageURL',
+                          {'url': url,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height,
+                           'callback': callback});
+};
+
+
 exports.getImageData = function (x, y, width, height) {
   return Applab.executeCmd(null,
                           'getImageData',
@@ -374,21 +393,21 @@ exports.readRecords = function (table, searchParams, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.updateRecord = function (table, record, onSuccess, onError) {
+exports.updateRecord = function (table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'updateRecord',
                           {'table': table,
                            'record': record,
-                           'onSuccess': onSuccess,
+                           'onComplete': onComplete,
                            'onError': onError});
 };
 
-exports.deleteRecord = function (table, record, onSuccess, onError) {
+exports.deleteRecord = function (table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'deleteRecord',
                           {'table': table,
                            'record': record,
-                           'onSuccess': onSuccess,
+                           'onComplete': onComplete,
                            'onError': onError});
 };
 
@@ -537,6 +556,16 @@ exports.removeItem = function (array, index) {
                           'removeItem',
                           {'array': array,
                            'index': index });
+};
+
+exports.drawChart = function (chartId, chartType, chartData, options, callback) {
+  return Applab.executeCmd(null,
+                          'drawChart',
+                          {'chartId': chartId,
+                           'chartType': chartType,
+                           'chartData': chartData,
+                           'options': options,
+                           'callback': callback });
 };
 
 exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {

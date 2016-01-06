@@ -2,8 +2,7 @@
 
 var msg = require('../locale');
 var applabMsg = require('./locale');
-
-var NEW_SCREEN = 'New screen...';
+var constants = require('./constants');
 
 var Mode = {
   CODE: 'CODE',
@@ -48,7 +47,7 @@ module.exports = React.createClass({
 
   handleScreenChange: function (evt) {
     var screenId = evt.target.value;
-    if (screenId === NEW_SCREEN) {
+    if (screenId === constants.NEW_SCREEN) {
       screenId = this.props.onScreenCreate();
     }
     this.props.onScreenChange(screenId);
@@ -134,6 +133,18 @@ module.exports = React.createClass({
         return <option key={item}>{item}</option>;
       });
 
+      var defaultScreenId = $('#divApplab .screen').first().attr('id') || '';
+
+      options.sort(function (a, b) {
+        if (a.key === defaultScreenId) {
+          return -1;
+        } else if (b.key === defaultScreenId) {
+          return 1;
+        } else {
+          return a.key.localeCompare(b.key);
+        }
+      });
+
       selectDropdown = (
         <select
           id="screenSelector"
@@ -142,7 +153,7 @@ module.exports = React.createClass({
           onChange={this.handleScreenChange}
           disabled={Applab.isRunning()}>
           {options}
-          <option>{NEW_SCREEN}</option>
+          <option>{constants.NEW_SCREEN}</option>
         </select>
       );
     }

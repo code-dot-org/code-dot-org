@@ -55,13 +55,13 @@
     "encrypted_examples": "Zh3nyAa1UKqAsQPzzZ3N1mjD79CuHcnWv6mQpkQzmTqiwCZlNlNwCD54Kume\n32n2\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "markdown_instructions": "###Challenge\r\n**Define** a function called `turnAround` which turns the turtle around and moves the turtle forward, as shown below. Once you've defined the function **call** it to make sure it works as you expect.\r\n\r\n![](https://images.code.org/f7a03b073ea60c45280313e2d7c25ff8-image-1445301080308.gif)",
+    "markdown_instructions": "#Do This:\r\n**Define** a function called `turnAround` which turns the turtle around. Once you've defined the function **call** it to make sure it works as you expect then moves the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)",
     "submittable": "false",
     "hide_view_data_button": "true",
     "video_key": "csp_applab_functions",
     "droplet_tooltips_disabled": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false",
+    "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true"
   }
 }]]></config>

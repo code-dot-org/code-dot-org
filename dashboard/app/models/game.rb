@@ -41,9 +41,11 @@ class Game < ActiveRecord::Base
   STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   NETSIM = 'netsim'
+  CRAFT = 'craft'
   MAZE = 'maze'
   CALC = 'calc'
   EVAL = 'eval'
+  TEXT_COMPRESSION = 'text_compression';
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -71,6 +73,10 @@ class Game < ActiveRecord::Base
 
   def self.netsim
     @@game_netsim ||= find_by_name("NetSim")
+  end
+
+  def self.craft
+    @@game_craft ||= find_by_name("Craft")
   end
 
   def self.pixelation
@@ -106,11 +112,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
-  end
-
-  def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT
   end
 
   def flappy?
@@ -126,10 +128,10 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION
   end
 
-  # True if the app takes responsability for showing footer info
+  # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
     app === APPLAB
   end
@@ -192,6 +194,7 @@ class Game < ActiveRecord::Base
         Odometer:odometer
         FrequencyAnalysis:frequency_analysis
         Vigenere:vigenere
+        Craft:craft
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

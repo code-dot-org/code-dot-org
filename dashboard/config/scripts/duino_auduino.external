@@ -1,0 +1,11 @@
+name 'duino auduino'
+title 'duino auduino'
+markdown <<MARKDOWN
+### Playing your Synth
+
+Here's the basic Audino code for you to upload. Experiment with the 5 potentiometers that you've wired to see how they impact the sound. For our collective sanity music will only play when your button connected to pin 2 is pressed.
+
+<iframe style="height: 510px; width: 100%; margin: 10px 0 10px;" allowTransparency="true" src="https://codebender.cc/embed/sketch:185087" frameborder="0"></iframe>
+
+
+MARKDOWN

@@ -1,35 +1,33 @@
 ---
 
-title: <%= hoc_s(:title_prizes_thanks) %>
+Tytuł: <%= hoc_s(:title_prizes_thanks) %>
 layout: wide
 nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
-# Thanks for signing up for a chance to win the $10,000 Hardware Prize
+# Dziękujemy za zarejestrowanie się, by mieć szansę wygrać $10,000 jako Hardware Prize
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
+Od teraz, cała Twoja szkoła ma szansę wygrać zestaw laptopów dla całej klasy (lub $10,000 na inną technologię). Będziemy oceniać Twoje zgłoszenie i zwycięzców ogłosimy w grudniu.
 
-## 1. Udostępniaj
+## 1. Rozgłaszaj
 
-Opowiedz swoim znajomym o #HourOfCode.
+Opowiedz swoim znajomym o Godzinie Kodowania #HourOfCode.
 
-## 2. Zapytaj Twoją szkołę o chęć udziału w Hour of Code
+## 2. Zaproponuj całej swojej szkole udział w Godzinie Kodowania
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
+[Wyślij ten e-mail](<%= resolve_url('/promote/resources#email') %>) do swojego dyrektora.
 
-## 3. Poproś swojego pracodawcę o przyłączenie się do akcji
+## 3. Poproś swojego pracodawcę o przyłączenie się
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
+[Wyślij ten e-mail](<%= resolve_url('/promote/resources#email') %>) do swojego managera lub do generalnego dyrektora CEO.
 
 ## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-Zwerbuj lokalną grupę harcerzy, kościół, uczelnię, koło zainteresowań. Albo zorganizuj blokową Godzinę Kodowania dla sąsiadów. [Send this email](<%= resolve_url('/promote/resources#email') %>).
+Zwerbuj lokalną grupę - chłopców i dziewczęta z klubu harcerskiego, kościół, uczelnię, weteranów, związki zawodowe. Albo zorganizuj Godzinę Kodowania w swoim sąsiedztwie. [Wyślij ten e-mail](<%= resolve_url('/promote/resources#email') %>).
 
-## 6. Poproś władze lokalne o udzielenie wsparcia akcji 'Hour of Code'
+## 6. Poproś władze lokalne o udzielenie wsparcia Godzinie Kodowania
 
-[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Wyślij ten e-mail](<%= resolve_url('/promote/resources#politicians') %>) do swojego burmistrza, Rady Miejskiej czy Rady Szkoły i zaproś ich do odwiedzenia Twojej szkoły.
 
-<%= view :signup_button %>

@@ -7,12 +7,26 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,1,4],[0,0,0,0,0,4,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Use two loops to get to the pig using fewer blocks.",
+    "instructions": "Use two \"repeat\" loops to get to the pig with the fewest number of blocks.",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "6"
+    "ideal": "6",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "markdown_instructions": "Use two `repeat` loops to get to the pig with the fewest number of blocks."
   }
 }]]></config>
   <blocks>
@@ -35,11 +49,27 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="maze_moveForward"/>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_moveForward"/>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Maze>

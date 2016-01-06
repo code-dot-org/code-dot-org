@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # 안내 및 유용한 통계자료들
 
@@ -20,4 +19,3 @@ nav: promote_nav
 
 <%= view :stats_carousel %>
 
-<%= view :signup_button %>

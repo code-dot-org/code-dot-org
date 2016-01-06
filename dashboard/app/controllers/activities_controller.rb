@@ -20,17 +20,19 @@ class ActivitiesController < ApplicationController
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = ('true' == params[:result])
+    script_name = ''
+
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = @script_level.level
+      script_name = @script_level.script.name
     elsif params[:level_id]
       # TODO: do we need a cache_find for Level like we have for ScriptLevel?
       @level = Level.find(params[:level_id].to_i)
     end
 
-    @sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: params[:scriptName]}, default: true)
-
-    if params[:program] && @sharing_allowed
+    sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
+    if params[:program] && sharing_allowed
       begin
         share_failure = find_share_failure(params[:program])
       rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
@@ -128,17 +130,31 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    @activity = Activity.create!(user: current_user,
-                                 level: @level,
-                                 action: solved, # TODO I think we don't actually use this. (maybe in a report?)
-                                 test_result: test_result,
-                                 attempt: params[:attempt].to_i,
-                                 lines: lines,
-                                 time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.try(:id))
+    # Create the activity.
+    attributes = {
+        user: current_user,
+        level: @level,
+        action: solved, # TODO I think we don't actually use this. (maybe in a report?)
+        test_result: test_result,
+        attempt: params[:attempt].to_i,
+        lines: lines,
+        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+        level_source_id: @level_source.try(:id)
+    }
+    # Save the activity synchronously if the level might be saved to the gallery (for which
+    # the activity.id is required). This is true for levels auto-saved to the gallery, and for
+    # free play and "impressive" levels.
+    synchronous_save = solved &&
+        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
+            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
+    if synchronous_save
+      @activity = Activity.create!(attributes)
+    else
+      @activity = Activity.create_async!(attributes)
+    end
 
     if @script_level
-      @new_level_completed = current_user.track_level_progress(@script_level, test_result)
+      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result)
     end
 
     passed = Activity.passing?(test_result)
@@ -161,14 +177,13 @@ class ActivitiesController < ApplicationController
   end
 
   def track_progress_in_session
-    # hash of level_id => test_result
-    test_result = params[:testResult].to_i
-    old_result = client_state.level_progress(@level.id)
-
-    @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
-
     # track scripts
     if @script_level.try(:script).try(:id)
+      test_result = params[:testResult].to_i
+      old_result = client_state.level_progress(@script_level)
+
+      @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+
       client_state.add_script(@script_level.script_id)
     end
   end

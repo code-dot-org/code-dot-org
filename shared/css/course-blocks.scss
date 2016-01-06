@@ -6,20 +6,20 @@
 .twolineheader {
     h2 {
       font-family: $gotham-regular;
-      font-weight: normal; 
-      color: $purple; 
-      font-size: 24px; 
-      margin-bottom: 0px; 
+      font-weight: normal;
+      color: $purple;
+      font-size: 24px;
+      margin-bottom: 0px;
       line-height: 30px;
     }
     h1 {
       margin-top: 0px;
-      line-height: 30px; 
-      font-size: 30px;   
-      font-family: $gotham-bold; 
+      line-height: 30px;
+      font-size: 30px;
+      font-family: $gotham-bold;
       font-weight: normal;
     }
-} 
+}
 
 .coursesheader {
   h1 + h2 {
@@ -112,13 +112,15 @@
       padding-right: 0px;
     }
 
-    h3 {
+    .betatitle {
+      line-height: 40px;
       width: 135px;
       padding-left: 10px;
       float: left;
     }
 
     .betatext {
+      color: $realyellow;
       text-align: center;
       display: block;
       float: right;
@@ -128,11 +130,12 @@
       background-color: $light_gray;
       padding-left: 5px;
       padding-right: 5px;
-      font-size: 24px;
+      font-size: 20px;
       height: 35px;
       line-height: 40px;
       width: 60px;
       border-radius: 4px;
+      margin-right: 2px;
     }
   }
 

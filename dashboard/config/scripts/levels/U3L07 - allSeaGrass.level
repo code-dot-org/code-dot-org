@@ -128,7 +128,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add 50 pieces of seagrass to the image by writing drawAllSeagrass with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Sea Grass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of sea grass using your updated `drawSeagrass` function.\r\n\r\n",
+    "markdown_instructions": "# Add Seagrass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of sea grass using your updated `drawSeagrass` function.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

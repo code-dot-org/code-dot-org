@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Ispod je primjer podrške tjednu računarskog obrazovanja i njegovim ciljevima za državne i lokalne zakonodavce.
 
@@ -55,4 +54,3 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
-<%= view :signup_button %>

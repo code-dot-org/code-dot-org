@@ -1,4 +1,4 @@
-/* global Dialog, dashboard */
+/* global Dialog, dashboard, Applab */
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
 var AssetManager = require('./AssetManager.jsx');
@@ -21,6 +21,7 @@ module.exports = function(assetChosen, typeFilter) {
   });
   React.render(React.createElement(AssetManager, {
     typeFilter: typeFilter,
+    channelId: Applab.channelId,
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();

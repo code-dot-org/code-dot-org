@@ -224,7 +224,10 @@ class Blockly < Level
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt finalDirt goal softButtons inputOutputTable).concat(NetSim.json_object_attrs).each do |x|
+      %w(map initialDirt finalDirt goal softButtons inputOutputTable).
+          concat(NetSim.json_object_attrs).
+          concat(Craft.json_object_attrs).
+          each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 
@@ -247,7 +250,6 @@ class Blockly < Level
                              app: level.game.try(:app),
                              levelId: level.level_num,
                              level: non_nil_level_prop,
-                             cacheBust: level.class.cache_bust,
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',
                          })
@@ -263,18 +265,6 @@ class Blockly < Level
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
     (host.blank?) ? "" : "//#{host}"
-  end
-
-  # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
-  # must be specified to bust the CDN cache. CloudFront is enabled to forward
-  # query params. Don't cache bust during dev, so breakpoints work.
-  # See where ::CACHE_BUST is initialized for more details.
-  def self.cache_bust
-    if ::CACHE_BUST.blank?
-      false
-    else
-      ::CACHE_BUST
-    end
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the

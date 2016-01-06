@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## button(buttonId, text)
+## button(id, text)
 
 [/name]
 
@@ -19,11 +19,11 @@ Category: UI controls
 
 [short_description]
 
-Creates a button on the screen displaying the *text* provided and referenced by the given *ButtonId* at default location (0,0).
+Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).
 
 [/short_description]
 
-Many apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using [onEvent()](/applab/docs/onEvent) and the *buttonId*.
+Many apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using [onEvent()](/applab/docs/onEvent) and the *id*.
 
 [/description]
 
@@ -80,7 +80,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-button(buttonId, text)
+button(id, text)
 ```
 
 [/syntax]
@@ -91,7 +91,7 @@ button(buttonId, text)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| buttonId | string | yes | The unique identifier for the button. The buttonId is used for referencing the button in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
+| id | string | yes | The unique identifier for the button. The id is used for referencing the button in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 | text | string | yes | The text displayed within the button. |
 
 [/parameters]

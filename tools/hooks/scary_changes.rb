@@ -24,15 +24,6 @@ class ScaryChangeDetector
 
   private
 
-  def detect_level_changes
-    changes = @all.grep(/^dashboard\/config\/scripts/)
-    return if changes.empty?
-
-    puts "Looks like you changed script or level files outside of levelbuilder:"
-    puts changes
-    puts "You (or the dev of the day) may have to run `rake seed:all FORCE_CUSTOM_LEVELS=1` when you do the levelbuilder deploy."
-  end
-
   def detect_new_models
     changes = @added.grep(/^dashboard\/app\/models/)
     return if changes.empty?
@@ -57,7 +48,6 @@ class ScaryChangeDetector
 
   def detect_scary_changes
     detect_db_changes
-    detect_level_changes
     detect_new_models
   end
 

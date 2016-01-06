@@ -206,7 +206,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2 cspunit3}.
+    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2 cspunit3 starwarsblocks}.
       map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
@@ -252,5 +252,29 @@ class ScriptTest < ActiveSupport::TestCase
   test 'pd?' do
     assert !Script.find_by_name('flappy').pd?
     assert Script.find_by_name('ECSPD').pd?
+  end
+
+  test 'hoc?' do
+    assert Script.find_by_name('flappy').hoc?
+    assert Script.find_by_name('mc').hoc?
+    assert Script.find_by_name('hourofcode').hoc?
+    assert Script.find_by_name('Hour of Code').hoc?
+    assert Script.find_by_name('frozen').hoc?
+    assert Script.find_by_name('playlab').hoc?
+    assert_not Script.find_by_name('20-hour').hoc?
+    assert_not Script.find_by_name('course1').hoc?
+    assert_not Script.find_by_name('course2').hoc?
+    assert_not Script.find_by_name('course3').hoc?
+    assert_not Script.find_by_name('course4').hoc?
+  end
+
+  test 'minecraft?' do
+    assert_not Script.find_by_name('flappy').minecraft?
+    assert Script.find_by_name('mc').minecraft?
+  end
+
+  test 'twenty_hour?' do
+    assert Script.find_by_name('20-hour').twenty_hour?
+    assert_not Script.find_by_name('mc').twenty_hour?
   end
 end

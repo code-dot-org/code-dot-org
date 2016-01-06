@@ -1,10 +1,20 @@
+- page_mode = PageMode.get(request)
+- if page_mode == "feature-mc"
+  - first_tutorial = Script::MINECRAFT_NAME
+  - second_tutorial = Script::STARWARS_NAME
+- else
+  - first_tutorial = Script::STARWARS_NAME
+  - second_tutorial = Script::MINECRAFT_NAME
+
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
   = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: false }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
 %br/
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_wide_block', locals: { id: Script::PLAYLAB_NAME, showState: false }
-  = render partial: 'shared/course_wide_block', locals: { id: Script::ARTIST_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, showState: false }
 %br/

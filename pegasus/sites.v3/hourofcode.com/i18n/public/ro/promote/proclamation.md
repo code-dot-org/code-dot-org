@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
 
@@ -55,4 +54,3 @@ Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
 
 (5) încurajează oportunităţi, inclusiv prin programele existente, pentru femei şi minorităţile slab reprezentate înstiinta calculatorului si programare.
 
-<%= view :signup_button %>

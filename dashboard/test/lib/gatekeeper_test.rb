@@ -38,4 +38,22 @@ class GatekeeperTest < ActiveSupport::TestCase
     assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
   end
 
+  test 'deleting a where clause' do
+    feature = "test_feature4"
+    Gatekeeper.set(feature, where: { user_id: 4 }, value: true)
+    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), true
+
+    Gatekeeper.delete(feature, where: {user_id: 4})
+    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
+  end
+
+  test 'deleting a global clause' do
+    feature = "test_feature5"
+    Gatekeeper.set(feature, value: true)
+    assert_equal Gatekeeper.allows(feature), true
+
+    Gatekeeper.delete(feature)
+    assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
+
+  end
 end

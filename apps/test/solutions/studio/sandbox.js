@@ -146,8 +146,8 @@ module.exports = {
         testUtils.runOnStudioTick(5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
-          var proj = document.getElementById('studioanimation_clippath_0').nextSibling;
-          assert(proj.getAttribute('xlink:href') === '/media/skins/studio/blue_fireball.png',
+          var proj = document.getElementById('studioanimation_clippath_20').nextSibling;
+          assert(proj.getAttribute('xlink:href').indexOf('/media/skins/studio/blue_fireball.png') > -1,
             "We have the right image: " + proj.getAttribute('xlink:href'));
           assert(proj.getAttribute('visibility') !== 'hidden',
             "The image isn't hidden");
@@ -420,7 +420,7 @@ module.exports = {
         '</xml>',
       runBeforeClick: function (assert) {
         assert(Studio.sprite[0].visible === false, "Actor 1 starts out hidden");
-        var visibility = document.getElementById('sprite0').getAttribute('visibility');
+        var visibility = Studio.sprite[0].getLegacyElement().getAttribute('visibility');
         assert(visibility === 'hidden', 'Actor 1 html element is not visible');
         testUtils.runOnStudioTick(50, function () {
           assert(Studio.sprite[0].x === 250, "Actor 1 finished moving");
@@ -771,7 +771,6 @@ module.exports = {
     },
     {
       description: 'random background/avatar',
-      timeout: 15000,
       xml: '<xml>' +
         blockUtils.blockWithNext('when_run', {},
           blockUtils.blockWithNext('studio_setSprite', {
@@ -787,7 +786,7 @@ module.exports = {
         ) + '</xml>',
       runBeforeClick: function (assert) {
         testUtils.runOnStudioTick (5, function () {
-          var sprite = document.getElementById('sprite0');
+          var sprite = Studio.sprite[0].getLegacyElement();
           var vis = sprite.getAttribute('visibility');
           assert(sprite.getAttribute('visibility') === 'visible', 'vis: ' + vis);
           assert(sprite.getAttribute('xlink:href') !== undefined);

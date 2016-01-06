@@ -15,6 +15,7 @@ var codegen = require('../codegen');
 var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
+var paramLists = require('./paramLists');
 
 var Direction = constants.Direction;
 var Position = constants.Position;
@@ -465,20 +466,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  // todo (brent) - per skin
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
        [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
        [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
-  blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
-      [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
-       [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
-       [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
-       [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
-       [msg.whenSpriteCollidedWithPurpleHearts(), 'purple_hearts'],
-       [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts']];
+  blockly.Blocks.studio_whenSpriteCollided.PROJECTILES = skin.whenProjectileCollidedChoices;
 
   blockly.Blocks.studio_whenSpriteCollided.EDGES =
       [[msg.whenSpriteCollidedWithTopEdge(), 'top'],
@@ -626,9 +620,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_setItemSpeed.VALUES =
       [[msg.setSpriteSpeedRandom(), RANDOM_VALUE],
-       [msg.setSpriteSpeedSlow(), 'Studio.SpriteSpeed.VERY_SLOW'],
-       [msg.setSpriteSpeedNormal(), 'Studio.SpriteSpeed.SLOW'],
-       [msg.setSpriteSpeedFast(), 'Studio.SpriteSpeed.FAST']];
+       [msg.setSpriteSpeedSlow(), '"slow"'],
+       [msg.setSpriteSpeedNormal(), '"normal"'],
+       [msg.setSpriteSpeedFast(), '"fast"']];
 
   generator.studio_setItemSpeed = function () {
     return generateSetterCode({
@@ -713,13 +707,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_makeProjectile.VALUES =
-      [[msg.makeProjectileBlueFireball(), '"blue_fireball"'],
-       [msg.makeProjectilePurpleFireball(), '"purple_fireball"'],
-       [msg.makeProjectileRedFireball(), '"red_fireball"'],
-       [msg.makeProjectileYellowHearts(), '"yellow_hearts"'],
-       [msg.makeProjectilePurpleHearts(), '"purple_hearts"'],
-       [msg.makeProjectileRedHearts(), '"red_hearts"']];
+  blockly.Blocks.studio_makeProjectile.VALUES = skin.makeProjectileChoices;
 
   blockly.Blocks.studio_makeProjectile.ACTIONS =
         [[msg.makeProjectileBounce(), '"bounce"'],
@@ -1144,10 +1132,19 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   function onSoundSelected(soundValue) {
-    if (soundValue === RANDOM_VALUE) {
+    var lowercaseSound = utils.stripQuotes(soundValue).toLowerCase().trim();
+
+    if (lowercaseSound === RANDOM_VALUE) {
       return;
     }
-    studioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+    var playbackOptions = $.extend({
+      volume: 1.0
+    }, _.find(skinSoundMetadata, function (metadata) {
+      return metadata.name.toLowerCase().trim() === lowercaseSound;
+    }));
+
+    studioApp.playAudio(lowercaseSound, playbackOptions);
   }
 
   blockly.Blocks.studio_playSound = {
@@ -1159,10 +1156,10 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(commonMsg.play())
           .appendTitle(new blockly.FieldImage(skin.soundIcon))
-          .appendTitle(new blockly.FieldDropdown(this.K1_SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       } else {
         this.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(this.SOUNDS, onSoundSelected), 'SOUND');
+          .appendTitle(new blockly.FieldDropdown(this.soundChoices(), onSoundSelected), 'SOUND');
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1170,33 +1167,18 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_playSound.K1_SOUNDS =
-      [[msg.soundHit(), 'hit'],
-       [msg.soundWood(), 'wood'],
-       [msg.soundRetro(), 'retro'],
-       [msg.soundSlap(), 'slap'],
-       [msg.soundRubber(), 'rubber'],
-       [msg.soundCrunch(), 'crunch'],
-       [msg.soundWinPoint(), 'winpoint'],
-       [msg.soundWinPoint2(), 'winpoint2'],
-       [msg.soundLosePoint(), 'losepoint'],
-       [msg.soundLosePoint2(), 'losepoint2'],
-       [msg.soundGoal1(), 'goal1'],
-       [msg.soundGoal2(), 'goal2']];
-
-  blockly.Blocks.studio_playSound.SOUNDS =
-      [[msg.playSoundHit(), 'hit'],
-       [msg.playSoundWood(), 'wood'],
-       [msg.playSoundRetro(), 'retro'],
-       [msg.playSoundSlap(), 'slap'],
-       [msg.playSoundRubber(), 'rubber'],
-       [msg.playSoundCrunch(), 'crunch'],
-       [msg.playSoundWinPoint(), 'winpoint'],
-       [msg.playSoundWinPoint2(), 'winpoint2'],
-       [msg.playSoundLosePoint(), 'losepoint'],
-       [msg.playSoundLosePoint2(), 'losepoint2'],
-       [msg.playSoundGoal1(), 'goal1'],
-       [msg.playSoundGoal2(), 'goal2']];
+  blockly.Blocks.studio_playSound.soundChoices = function () {
+    var fullChoices = isK1 ? skin.soundChoicesK1 : skin.soundChoices;
+    var permittedValues = paramLists.getPlaySoundValues(true);
+    return fullChoices.filter(function (choice) {
+      for (var i = 0; i < permittedValues.length; i++) {
+        if (choice[1] === permittedValues[i]) {
+          return true;
+        }
+      }
+      return false;
+    });
+  };
 
   generator.studio_playSound = function() {
     // Generate JavaScript for playing a sound.
@@ -1252,7 +1234,7 @@ exports.install = function(blockly, blockInstallOptions) {
       [[msg.addPoints10(),   '10'],
        [msg.addPoints50(),   '50'],
        [msg.addPoints100(),  '100'],
-       [msg.addPoints400(),  '400'],
+       [msg.addPoints300(),  '300'],
        [msg.addPoints1000(), '1000']];
 
   generator.studio_addPoints = function() {
@@ -1278,7 +1260,7 @@ exports.install = function(blockly, blockInstallOptions) {
       [[msg.removePoints10(),   '10'],
        [msg.removePoints50(),   '50'],
        [msg.removePoints100(),  '100'],
-       [msg.removePoints400(),  '400'],
+       [msg.removePoints300(),  '300'],
        [msg.removePoints1000(), '1000']];
 
   generator.studio_removePoints = function() {
@@ -1575,7 +1557,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
-      
+
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1687,19 +1669,26 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        this.VALUES = skin.spriteChoices;
-        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
-        // default to first item after random/hidden
-        dropdown.setValue(skin.spriteChoices[2][1]);
-
+        // shallow copy array:
+        this.VALUES = [].concat(skin.spriteChoices);
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
           this.appendDummyInput()
             .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
         } else {
-          this.appendDummyInput()
-            .appendTitle(msg.setSprite());
+          // Modify the dropdownValues array to contain combined text
+          // (blockly renders this better than two adjacent text blocks)
+          var prefix = skin.setSpritePrefix + ' ';
+          for (var i = 0; i < this.VALUES.length; i++) {
+            // shallow copy this array within the larger array, then modify
+            // the string to be displayed to include the prefix:
+            this.VALUES[i] = [].concat(skin.spriteChoices[i]);
+            this.VALUES[i][0] = prefix + this.VALUES[i][0];
+          }
         }
+        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput()
           .appendTitle(dropdown, 'VALUE');
         this.setInputsInline(true);

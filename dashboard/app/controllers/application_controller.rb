@@ -1,5 +1,7 @@
+require 'cdo/date'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
+require 'dynamic_config/page_mode'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -55,7 +57,7 @@ class ApplicationController < ActionController::Base
   def reset_session_endpoint
     client_state.reset
     reset_session
-    render text: 'OK <script>localStorage.clear()</script>'
+    render text: 'OK <script>sessionStorage.clear()</script>'
   end
 
   rescue_from CanCan::AccessDenied do
@@ -114,7 +116,9 @@ class ApplicationController < ActionController::Base
   end
 
   def milestone_response(options)
-    response = {}
+    response = {
+      timestamp: DateTime.now.to_milliseconds
+    }
     script_level = options[:script_level]
 
     if script_level
@@ -151,16 +155,14 @@ class ApplicationController < ActionController::Base
     end
 
     if HintViewRequest.enabled?
-      if script_level && current_user && !options[:solved?]
+      if script_level && current_user
         response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
         response[:hint_view_request_url] = hint_view_requests_path
       end
     end
 
     if PuzzleRating.enabled?
-      if script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
-        response[:puzzle_rating_url] = puzzle_ratings_path
-      end
+      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
     end
 
     # logged in users can:
@@ -194,6 +196,8 @@ class ApplicationController < ActionController::Base
 
     # Set up the background design
     response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE
+
+    response[:activity_id] = options[:activity] && options[:activity].id
 
     response
   end

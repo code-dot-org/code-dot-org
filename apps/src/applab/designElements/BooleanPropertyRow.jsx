@@ -26,19 +26,13 @@ var BooleanPropertyRow = React.createClass({
       classes += ' fa-square-o';
     }
 
-    var style = {
-      width: 20,
-      height: 20,
-      fontSize: 20
-    };
-
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           <div
             className={classes}
-            style={style}
+            style={rowStyle.checkbox}
             onClick={this.handleClick}/>
         </div>
       </div>

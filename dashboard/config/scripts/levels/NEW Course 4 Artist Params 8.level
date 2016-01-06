@@ -9,7 +9,7 @@
     "instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "18",
+    "ideal": "16",
     "slider_speed": ".5",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",

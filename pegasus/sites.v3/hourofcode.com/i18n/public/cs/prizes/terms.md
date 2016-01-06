@@ -6,30 +6,36 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
-# Ceny - podmínky
+# Podmínky cen
 
-## Amazon.com, iTunes and Windows Store credit:
+## Kredit na Amazon.com, iTunes a Windows Store:
 
-The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Omezení na jednu odměnu na organizátora.
+Výhra kreditu na Amazon.com, iTunes a na Windows Store je omezena pouze na školy K-12, vyučující kroužků (mimo vyučování) a vzdělávací spolky. Kredit $10 musí být přidán k již existujícímu účtu a platí pouze 1 rok. Omezení na jednu odměnu na organizátora.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Jestli-li se vaše celá škola zúčastní Hodiny kódu, každý pedagog se musí jednotlivě zaregistrovat jako organizátor, aby získal právo na cenu.
+Každý organizátor se musí zaregistrovat na Hodinu kódu, aby mohl obdržet kredit na Amazon.com, iTunes nebo na Windows Store. Jestli-li se vaše celá škola zúčastní Hodiny kódu, každý pedagog se musí jednotlivě zaregistrovat jako organizátor, aby získal právo na cenu.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
+Code.org po Hodině kódu (7-13. prosince) kontaktuje organizátory s instrukcemi, jak uplatnit kredit na Amazon.com, iTunes a Windows Store.
 
 <% if @country == 'us' %>
 
 ## Sada notebooků (nebo pro jiné technologie za 10 000 dolarů) pro třídu:
 
-Cena je omezená pouze na USA veřejné K-12 školy. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org will select and notify winners via email by December 1, 2015.
+Cena je omezená pouze na USA veřejné K-12 školy. Abyste se kvalifikovali, celá vaše škola se musí registrovat do Hodiny kódu před 16. listopadem 2015. Jedna škola v každém státě USA obdrží sadu počítačů pro třídu. Code.org vybere a ozve se vítězům emailem do 1. prosince, 2015.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Aby bylo jasno, toto není loterie nebo soutěž s jistou výhrou.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Není zde žádný poplatek nebo riziko spojené s účastí v této soutěži - jakákoliv škola nebo třída se může účastnit, bez poplatků Code.org nebo jiné organizaci
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Vítězové budou vybráni pouze mezi školami, kde se celé třídy (nebo školy) podílely na Hodině kódu, který zahrnuje kolektivní test dovedností studentů a učitelů.
 
 <% end %>
 
-<%= view :signup_button %>
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat s pozvaným řečníkem:
+
+Cena pouze pro K-12 třídy v Usa a Kanada. Code.org vybere výherní třídy, poskytne časový otvor pro web chat, a bude pracovat s danými učitely, k nastavení technologických detajlů. Celá škola není třeba uplatňovat nárok na tuto cenu. Veřejné a soukromé školy mají nárok na výhru.
+
+<% end %>
+

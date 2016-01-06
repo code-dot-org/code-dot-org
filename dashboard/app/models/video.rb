@@ -53,7 +53,8 @@ class Video < ActiveRecord::Base
         showinfo: 1,
         autoplay: 1,
         wmode: 'transparent',
-        iv_load_policy: 3
+        iv_load_policy: 3,
+        enablejsapi: 1
     }
 
     language = I18n.locale.to_s.downcase.split('-').first

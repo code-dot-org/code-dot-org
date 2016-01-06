@@ -8,6 +8,7 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
 require 'cgi'
@@ -31,10 +32,6 @@ def http_vary_add_type(vary,type)
   types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
   types.push(type).join(',')
-end
-
-def document_max_age
-  rack_env?(:staging) ? 0 : DCDO.get('pegasus_document_max_age', 3600)
 end
 
 class Documents < Sinatra::Base
@@ -68,6 +65,13 @@ class Documents < Sinatra::Base
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
+  # Use dynamic config for max_age settings, with the provided default as fallback.
+  def self.set_max_age(type, default)
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", rack_env?(:staging) ? 60 : default) }
+  end
+
+  ONE_HOUR = 3600
+
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
@@ -75,8 +79,12 @@ class Documents < Sinatra::Base
     set :views, dir
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :exclude_extnames, ['.collate']
-    set :image_max_age, rack_env?(:staging) ? 0 : 36000
-    set :static_max_age, rack_env?(:staging) ? 0 : 36000
+    set_max_age :document, ONE_HOUR * 4
+    set_max_age :document_proxy, ONE_HOUR * 2
+    set_max_age :image, ONE_HOUR * 10
+    set_max_age :image_proxy, ONE_HOUR * 5
+    set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found','.404']
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
@@ -91,18 +99,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Table::NotFound'
       end
     end
-
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
-                 '/teacher-dashboard',
-                 '/teacher-dashboard/landing',
-                 '/teacher-dashboard/nav',
-                 '/teacher-dashboard/section_manage',
-                 '/teacher-dashboard/section_progress',
-                 '/teacher-dashboard/sections',
-                 '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student',
-                 '/language_test']
-    set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
   before do
@@ -111,11 +107,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    settings.vary.each_pair do |header,pages|
-      headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
-    end
-
-    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
+    locale = request.locale
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
@@ -148,9 +140,16 @@ class Documents < Sinatra::Base
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
-    cache_control :private, :must_revalidate, max_age: 0
+    dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
+  end
+
+  # Page mode selection
+  get '/private/pm/*' do |page_mode|
+    dont_cache
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    redirect "/learn?r=#{rand(100000)}"
   end
 
   # /private (protected area)
@@ -167,7 +166,7 @@ class Documents < Sinatra::Base
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     send_file(path)
   end
 
@@ -179,7 +178,7 @@ class Documents < Sinatra::Base
       IO.read(i)
     end.join("\n\n")
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     css
   end
 
@@ -190,11 +189,11 @@ class Documents < Sinatra::Base
   # Manipulated images
   get '/images/*' do |path|
     path = File.join('/images', path)
-    image_data = process_image(path, settings.image_extnames, settings.image_max_age)
+    image_data = process_image(path, settings.image_extnames)
     pass if image_data.nil?
     last_modified image_data[:last_modified]
     content_type image_data[:content_type]
-    cache_control *image_data[:cache_control]
+    cache :image
     send_file(image_data[:file]) if image_data[:file]
     image_data[:content]
   end
@@ -285,9 +284,9 @@ class Documents < Sinatra::Base
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age: @header['max_age']
+        cache_for @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age: document_max_age
+        cache :document
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -324,13 +323,26 @@ class Documents < Sinatra::Base
       full_document
     end
 
+    def log_drupal_link(dir, uri, path)
+      if dir == 'drupal.code.org'
+        Honeybadger.notify(
+          error_class: "Link to v3.sites/drupal.code.org",
+          error_message: "#{uri} fell through to the base config directory",
+          environment_name: "drupal_#{rack_env}",
+          context: {path: path}
+        )
+      end
+    end
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
-        return path if File.file?(path)
+        if File.file?(path)
+          log_drupal_link(dir, uri, path)
+          return path
+        end
       end
       nil
     end
@@ -339,7 +351,10 @@ class Documents < Sinatra::Base
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
-          return path if File.file?(path)
+          if File.file?(path)
+            log_drupal_link(dir, "#{uri}#{extname}", path)
+            return path
+          end
         end
       end
       nil
@@ -404,7 +419,7 @@ class Documents < Sinatra::Base
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age: settings.static_max_age
+        cache :static
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals

@@ -21,12 +21,6 @@ nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## 在您的網站加上這些標語
-
-[![圖片](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## 在社群網絡媒體張貼訊息
@@ -42,6 +36,16 @@ nav: promote_nav
 [![圖片](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
@@ -128,4 +132,3 @@ Hour of Code由非營利組織 Code.org 和 超過100 多個夥伴單位舉辦�
 
 此致， \[姓名\] \[職稱\]
 
-<%= view :signup_button %>

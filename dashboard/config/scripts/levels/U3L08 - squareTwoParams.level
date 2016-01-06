@@ -23,8 +23,8 @@
     "encrypted_examples": "uh0JuvFxhkLQrHkc5MNkb3DfqsNeL3JiEbf/2bI+KRURWVpMvR265LW9NmVz\n2fz0\n",
     "embed": "false",
     "instructions": "Call drawSquare() to complete the drawing of two squares. (Click to see full instructions)",
-    "markdown_instructions": "# Calling functions with multiple parameters\r\n\r\nYou're about to see a new definition for `drawSquare` that has two parameters: `drawSquare(size, width)` Notice how **multiple parameters are separated by commas**.\r\n\r\n![](https://images.code.org/a9c29d49444af73851d34445c686e3ba-image-1442526639409.50.19 PM.png)\r\n\r\n# Do this\r\nAdd to the code to **make two calls** to the new two-parameter version of `drawSquare()` to make an image similar to this one.\r\n\r\n![](https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38 PM.png)",
-    "start_blocks": "penUp();\r\nmoveTo(150,150);\r\n\r\nmoveTo(250,300);\r\n\r\n\r\nfunction drawSquare(size, width){\r\n  penDown();\r\n  penWidth(width);\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  penUp();\r\n}",
+    "markdown_instructions": "# Calling Functions with Multiple Parameters\r\n\r\nYou're about to see a new definition for `drawSquare` that has two parameters: `drawSquare(size, borderWidth)` Notice how **multiple parameters are separated by commas**.\r\n\r\n![](https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15 PM.png)\r\n\r\n# Do This:\r\nAdd to the code to **make two calls** to the new two-parameter version of `drawSquare()` to make an image similar to this one.\r\n\r\n![](https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38 PM.png)\r\n\r\n",
+    "start_blocks": "penUp();\r\nmoveTo(150,150);\r\n\r\nmoveTo(250,300);\r\n\r\n\r\nfunction drawSquare(size, borderWidth){\r\n  penDown();\r\n  penWidth(width);\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  penUp();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -53,7 +53,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

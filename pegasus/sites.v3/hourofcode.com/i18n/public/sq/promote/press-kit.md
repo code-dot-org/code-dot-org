@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## Si të tërheqësh mediat në eventin e Orës së Kodimit
 
@@ -24,10 +23,10 @@ nav: promote_nav
 **1. Planifiko eventin tënd**
 
   * Planifiko një takim të përgjithshëm për të nisur Orën e Kodimit.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Dërgo [një letër](<%= resolve_url('/promote/resources#sample-emails') %>) prindërve. Kërkoni nga ata të shpërndajnë fjalën.
+  * Dërgo [një letër](<%= resolve_url('/promote/resources#sample-emails') %>) për të ftuar kryetarin e bashkisë, deputetët, guvernatorin, apo një biznesmen me ndikim për të marrë pjesë dhe folur te studentët e tu.
   * Organizoni aktivitete grupi (siç është prezantimi i ndonjë programimi 'unplugged'), apo aktivitete të nxitura e të drejtuara nga nxënësit/studentët.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+  * Paraqit [Videon Ora e Kodimit](<%= resolve_url('/') %>) të Code.org apo njërën nga [këto](<%= resolve_url('/promote/resources#videos') %>) për motivacion.
 
 **2. Identifiko gazetarë specifik lokale që mbulojnë arsimin apo ngjarjet lokale.**
 
@@ -37,7 +36,7 @@ Kërko online për të gjetur informacionin e kontaktit për një reporter. Nës
 
 **3. Kontakto mediat lokale**
 
-Mënyra më e mirë për të kontaktuar është përmes email-it. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit e tjerë të interesohen për këtë event? Përfshi informacionet e kontaktit (pershirë një numër telefoni) për atë që do jetë në faqen e eventit. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>):**
+Mënyra më e mirë për të kontaktuar është përmes email-it. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit e tjerë të interesohen për këtë event? Përfshi informacionet e kontaktit (pershirë një numër telefoni) për atë që do jetë në faqen e eventit. **Shiko një [shembull të prezentimit në media](<%= resolve_url('/promote/resources#sample-emails') %>):**
 
 **4. Përgatitu për pyetjet për ngjarjen tënde të shkollës. Këtu janë disa shembuj:**
 
@@ -49,7 +48,7 @@ Shpresojmë se kjo do të nxisë interes te studentët që të vazhdojnë të m�
 
 *Pse është kjo e rëndësishme?*
 
-Në Kinë, secili nxënës mëson lëndë të shkencave kompjuterike deri në shkollë të mesme. Në Shba, 90 përqind e shkollave as që e shpjegojnë atë. Është koha që të kapim hapin e shekullit 21. E dimë se pavarësisht se çka do bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe dije praktike se si të kenë sukses.
+In China, every student takes computer science to graduate high school. Në Shba, 90 përqind e shkollave as që e shpjegojnë atë. Është koha që të kapim hapin e shekullit 21. E dimë se pavarësisht se çka do bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe dije praktike se si të kenë sukses.
 
 **Më shumë detaje dhe një shprehje që mund t'i përdorni në materiale**
 
@@ -60,6 +59,5 @@ Në Kinë, secili nxënës mëson lëndë të shkencave kompjuterike deri në sh
 Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rris pjesëmarrjen e femrave dhe nxënësit e pakpërfaqësuar me ngjyrë. Vizioni i saj është që çdo student në çdo shkollë duhet të ketë mundësinë të mësojë programim kompjuterik. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org mbështetet nga donacione filantropike nga korporatat, fondacionet, dhe individë bujar, përfshi Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dhe të tjerë. Për më shumë informacion, ju lutem vizitoni: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Gjeni më shumë burime dhe shembuj emaili [këtu](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

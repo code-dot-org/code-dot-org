@@ -48,6 +48,8 @@
       "forLoop_i_0_4": null,
       "randomNumber_min_max": null,
       "console.log": null,
+      "toUpperCase": null,
+      "toLowerCase": null,
       "functionParams_none": null,
       "functionParams_n": null,
       "callMyFunction": null,
@@ -60,9 +62,6 @@
       "setText": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -89,7 +88,9 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

@@ -4,7 +4,6 @@ layout: wide
 nav: promote_nav
 ---
 
-<%= view :signup_button %>
 
 ## How to attract media to your Hour of Code event
 
@@ -47,7 +46,7 @@ We hope it’ll spark interest in students to keep learning. Research also shows
 
 *Why is this important?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every student takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **More details and a quote you can use in materials**
 
@@ -60,4 +59,3 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 <br />
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>
