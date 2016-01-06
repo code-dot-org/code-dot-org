@@ -28,7 +28,7 @@ social:
     %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
   %h1.starwars-heading= I18n.t(:starwars_subtitle)
 
-  .col-25.starwars-tutorial.starwars-js-tutorial
+  .col-25.starwars-tutorial.starwars-js-tutorial{style: "display: none"}
     %div.tutorial-box
       %h2.sw-h2= I18n.t(:starwars_javascript_title)
       %div.sw-tutorial-info
@@ -55,3 +55,18 @@ social:
 %div.starwars-videos{style: "clear: both;"}
   %h2.sw-header2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
+
+= view 'mobilecheck.js'
+
+:javascript
+
+  $(document).ready(function() {
+    window.isIOS = function() {
+      var reg = /iP(hone|od|ad)/;
+      return reg.test(window.navigator.userAgent);
+    };
+
+    if (! window.isIOS() && ! window.mobilecheck()) {
+      $('.starwars-js-tutorial').show();
+    }
+  });
