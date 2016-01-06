@@ -5,11 +5,11 @@
 
 var build_commands = require('../../code-studio/build-commands.js');
 
-var program = require('commander');
+var commander = require('commander');
 
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
-program
+commander
     .option('--min', 'Build minified output', false)
     .option('--watch', 'Watch file system', false)
     .parse(process.argv);
@@ -26,8 +26,8 @@ build_commands.execute([
       ['initApp.js', 'shared.js']
     ],
     commonFile: 'shared-common.js',
-    shouldMinify: program.min,
-    shouldWatch: program.watch
+    shouldMinify: commander.min,
+    shouldWatch: commander.watch
   })
 ]);
 console.log('shared built');
