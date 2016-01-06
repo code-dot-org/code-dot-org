@@ -78,7 +78,7 @@
     - if @section.login_type == Section::LOGIN_TYPE_WORD
       %div#secret{style: 'display: none;'}
         %h4.instructions= t('signinsection.words')
-        = text_field_tag :secret_words
+        = text_field_tag :secret_words, nil, autocomplete: 'off'
         .clear
     = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
 

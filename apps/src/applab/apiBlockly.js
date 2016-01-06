@@ -263,6 +263,19 @@ exports.setText = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.getNumber = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getNumber',
+                          {'elementId': elementId });
+};
+
+exports.setNumber = function (blockId, elementId, number) {
+  return Applab.executeCmd(blockId,
+                          'setNumber',
+                          {'elementId': elementId,
+                           'number': number });
+};
+
 exports.getImageURL = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getImageURL',
