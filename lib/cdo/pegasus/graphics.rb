@@ -2,21 +2,27 @@ require 'rmagick'
 
 MAX_DIMENSION = 2880
 
-def load_manipulated_image(path, mode, width, height = nil)
-
+def load_manipulated_image(path, mode, width, height, scale = nil)
+  image = Magick::Image.read(path).first
+  width = image.columns if width <= 0
+  height = image.rows if height <= 0
+  if scale
+    width *= scale
+    height *= scale
+  end
   width = [MAX_DIMENSION, width].min
-  height = [MAX_DIMENSION, height].min if height
+  height = [MAX_DIMENSION, height].min
 
   case mode
-  when :fill
-    Magick::Image.read(path).first.resize_to_fill(width, height)
-  when :fit
-    Magick::Image.read(path).first.resize_to_fit(width, height)
-  when :resize
-    height ||= width
-    Magick::Image.read(path).first.resize(width, height)
-  else
-    nil
+    when :fill
+      image.resize_to_fill(width, height)
+    when :fit
+      image.resize_to_fit(width, height)
+    when :resize
+      height ||= width
+      image.resize(width, height)
+    else
+      nil
   end
 end
 
@@ -28,20 +34,28 @@ def process_image(path, ext_names, language=nil, site=nil)
   basename = File.basename(path, extname)
   dirname = File.dirname(path)
 
+  mode = :resize
+  width = 0
+  height = 0
+  manipulated = false
+
   # Manipulated?
-  if dirname =~ /\/(fit-|fill-)?(\d+)x?(\d*)$/ || dirname =~ /\/(fit-|fill-)?(\d*)x(\d+)$/
-    manipulation = File.basename(dirname)
-    dirname = File.dirname(dirname)
+  if (m = dirname.match /^(?<basedir>.*)\/(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)\/(?<dir>.*)$/m)
+    mode = m[:mode][0..-2].to_sym unless m[:mode].nil_or_empty?
+    width = m[:width].to_i
+    height = m[:height].to_i
+    manipulated = width > 0 || height > 0
+    dirname = m[:basedir].nil_or_empty? ? m[:dir] : File.join(m[:basedir], m[:dir])
   end
 
   # Assume we are returning the same resolution as we're reading.
   retina_in = retina_out = basename[-3..-1] == '_2x'
 
   path = nil
-  if ['hourofcode.com', 'translate.hourofcode.com'].include?(site)
-    path = resolve_image File.join(language, dirname, basename), ext_names
+  if %w(hourofcode.com translate.hourofcode.com).include?(site)
+    path = resolve_image File.join(language, dirname, basename)
   end
-  path ||= resolve_image File.join(dirname, basename), ext_names
+  path ||= resolve_image File.join(dirname, basename)
   unless path
     # Didn't find a match at this resolution, look for a match at the other resolution.
     if retina_out
@@ -51,70 +65,29 @@ def process_image(path, ext_names, language=nil, site=nil)
       basename += '_2x'
       retina_in = true
     end
-    path = resolve_image File.join(dirname, basename), ext_names
+    path = resolve_image File.join(dirname, basename)
   end
   return nil unless path # No match at any resolution.
-
   output = {
     last_modified: File.mtime(path),
     content_type: image_format.to_sym,
   }
 
-  if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
+  if ((retina_in == retina_out) || retina_out) && !manipulated && File.extname(path) == extname
     # No [useful] modifications to make, return the original.
     return output.merge(file: path)
+  end
+
+  scale = 1
+  if manipulated
+    # Manipulated images always specify non-retina sizes in the manipulation string.
+    scale = 2 if retina_out
   else
-    image = Magick::Image.read(path).first
-
-    mode = :resize
-
-    if manipulation
-      matches = manipulation.match /(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)$/m
-      mode = matches[:mode][0...-1].to_sym unless matches[:mode].blank?
-      width = matches[:width].to_i unless matches[:width].blank?
-      height = matches[:height].to_i unless matches[:height].blank?
-
-      if retina_out
-        # Manipulated images always specify non-retina sizes in the manipulation string.
-        width *= 2 if width
-        height *= 2 if height
-      end
-    else
-      width = image.columns
-      height = image.rows
-
-      # Retina sources need to be downsampled for non-retina output
-      if retina_in && !retina_out
-        width /= 2
-        height /= 2
-      end
-    end
+    # Retina sources need to be downsampled for non-retina output
+    scale = 0.5 if retina_in && !retina_out
   end
 
-  case mode
-    when :fill
-      # If only one dimension provided, assume a square
-      width ||= height
-      image = image.resize_to_fill(width, height)
-    when :fit
-      image = image.resize_to_fit(width, height)
-    when :resize
-      # If only one dimension provided, assume a square
-      height ||= width
-      width ||= height
-      image = image.resize(width, height)
-    else
-      raise StandardError, 'Unreachable code reached!'
-  end
-
+  image = load_manipulated_image(path, mode, width, height, scale)
   image.format = image_format
   output.merge(content: image.to_blob)
-end
-
-def resolve_image(uri, ext_names)
-  ext_names.each do |extname|
-    path = deploy_dir("#{uri}#{extname}")
-    return path if File.file?(path)
-  end
-  nil
 end
