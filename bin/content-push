@@ -15,7 +15,7 @@ end
 def check_changes
   puts `git status`
   print "Should I commit and push all of these unstaged and untracked files? [Y/n] "
-  input = gets
+  input = gets.chomp
   if input == '' || input[0].downcase == 'y'
     puts "Cool!"
     true
@@ -26,8 +26,9 @@ def check_changes
 end
 
 def commit_changes(name)
+  branchname = `git rev-parse --abbrev-ref HEAD`.strip
   puts `git add -A .`
-  puts `git commit -m "content changes (-#{name})"`
+  puts `git commit -m "#{branchname} content changes (-#{name})"`
   puts `git push`
 end
 
