@@ -16,16 +16,19 @@ namespace :lint do
 
   task :javascript do
     Dir.chdir(apps_dir) do
+      HipChat.log 'Linting <b>apps</b> JavaScript...'
       # lint all js/jsx files in dashboardd/app/assets/javascript
       RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
       # also do our standard apps lint
       RakeUtils.system 'grunt jshint'
     end
     Dir.chdir(shared_js_dir) do
+      HipChat.log 'Linting <b>shared</b> JavaScript...'
       RakeUtils.system 'npm run lint'
     end
     Dir.chdir(code_studio_dir) do
-      RakeUtils.system 'npm run lint:js -s'
+      HipChat.log 'Linting <b>code-studio</b> JavaScript...'
+      RakeUtils.system 'npm run lint-js'
     end
   end
 
@@ -102,7 +105,7 @@ namespace :build do
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>shared js</b>...'
-      RakeUtils.system 'npm run gulp'
+      RakeUtils.system 'npm run build'
     end
   end
 

@@ -32,6 +32,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
   gem 'konacha'  # Mocha + Chai JS testing in Rails

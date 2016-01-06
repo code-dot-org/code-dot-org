@@ -1,5 +1,6 @@
 require 'rack/request'
 require 'ipaddr'
+require 'json'
 
 module Rack
   class Request
@@ -9,7 +10,7 @@ module Rack
       end
 
       def trusted_proxy?(ip)
-        super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip}
+        super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip rescue false}
       end
     end
 

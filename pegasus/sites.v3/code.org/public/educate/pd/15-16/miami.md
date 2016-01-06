@@ -121,7 +121,7 @@ Water
 
 Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
 
-####Administrators
+####Administrators####
 
 **Save the date**
 
@@ -136,7 +136,7 @@ Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.
 
 This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
 
-####Counselors
+####Counselors####
 
 **Save the date**
 

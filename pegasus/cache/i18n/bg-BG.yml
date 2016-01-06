@@ -29,9 +29,9 @@
   twentyhours_heading: Опитайте нашите въвеждащи курсове по компютърни науки
   twentyhours_text: Завършихте ли първия Час на кодиране? Научете повече за основните
     понятия в компютърните науки и програмиране в този следващ курс.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Всяко дете заслужава възможност
+  og_description: Всеки ученик във всяко училище заслужава възможност да учи компютърни
+    науки.
   hoc2014_heading: Присъединете се към <a href="http://hourofcode.com"> Часът на кодирането</a>
     <br/>на 8-14 декември 2014 г. <br/>
   hoc2014_students: Ученици
@@ -371,7 +371,7 @@
   volunteer_engineer_submission_intro_links: Не сте доброволец? <a href="%{learn_more}">
     Научете повече</a> за организиране на Ваш Hour of Code събитие и намерете местни
     доброволци на нашата <a href="%{volunteer_local}"> доброволческа карта</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Актуализирайте вашата информация
   volunteer_engineer_submission_header_shared: Информацията, споделена от учители
     на доброволческата карта
   volunteer_engineer_submission_field_name: Име
@@ -695,11 +695,11 @@
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: Съобщения
   dashboard_announce_view_all: Преглед на всички
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+  dashboard_announce_message: '<b>16 декември 2015</b> - Благодарим ви за участието
+    в Hour of Code 2015! Проследяването и записването на прогреса сега е възможно
+    във всички код студио уроци и курсове. Забележка: Code.org уроците няма да са
+    достъпни в периода 19 декември - 3 януари. Моля очаквайте забавени отговори на
+    всички въпроси, които сте задали до 4 януари.'
   dashboard_announce_button_text: Научете повече
   dashboard_announce_hoc: <b>Ноември 23, 2015</b> - часът на кода 2015 идва! Присъединете
     се към класните стаи по целия свят за най-голямото обучително събитие в историята.
@@ -1504,13 +1504,3 @@
   infinity_shortcode: inf
   playlab_shortcode: играй
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

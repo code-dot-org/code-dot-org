@@ -152,7 +152,6 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
 Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
 will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
@@ -273,7 +272,6 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-<i>Both Group 1 & 2 will attend the following dates</i><br/>
 Semester 1: Saturday, October 17, 2015 
 
 Semester 2: Saturday, January 23, 2016 
@@ -283,19 +281,10 @@ Breakfast and lunch will be served.
 <br/><br/>
 **Location**
 
-<i><b>Group 1</i></b><br/>
-[Loyola University - Water Tower Campus<br/> 
-Corboy Law Center<br/> 
-Room: CLC 301<br/>
-25 E Pearson St <br/>
-Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
-
-<i><b>Group 2</i></b><br/>
-[Loyola University - Water Tower Campus<br/> 
-Corboy Law Center<br/> 
-Room: CLC 302<br/>
-25 E Pearson St <br/>
-Chicago, IL 60611](https://www.google.com/maps/place/Philip+H.+Corboy+Law+Center/@41.8973803,-87.6271242,15z/data=!4m2!3m1!1s0x0:0x45b3bb60ee4f6313)
+[Inn of Chicago<br/>
+Room TBD<br/>
+162 E. Ohio St.<br/> 
+Chicago, Illinois 60611](https://www.google.com/maps/place/162+E+Ohio+St,+Chicago,+IL+60611/@41.8927912,-87.6252035,17z/data=!3m1!4b1!4m2!3m1!1s0x880e2cab78338a6f:0x9e0b067b20b5dfa0)
 
 
 

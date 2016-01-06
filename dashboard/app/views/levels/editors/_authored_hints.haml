@@ -1,7 +1,3 @@
-- content_for(:head) do
-  = stylesheet_link_tag 'editor/json_editor', media: 'all'
-  = javascript_include_tag 'editor/json_editor'
-
 #authored_hints
   %label Authored Hints
   .json_editor
@@ -59,7 +55,7 @@
 
       })();
 
-      jsonEditor("#authored_hints", {
+      levelbuilder.jsonEditor("#authored_hints", {
         json_textarea: '#level_authored_hints',
         add_button: '#add_authored_hint',
         remove_button: ".remove_authored_hint",

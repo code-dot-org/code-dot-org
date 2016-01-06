@@ -157,8 +157,11 @@ Breakfast and lunch will be served.
 
 **February 20th Location**
 
-TBD
+[Courtyard Marriott Southcenter<br/>
+400 Andover Park West<br/>
+Tukwila, WA 98188](https://www.google.com/maps/place/Courtyard+Seattle+Southcenter/@47.45377,-122.253993,15z/data=!4m2!3m1!1s0x0:0x63b7ebb79d35ed90)
 
+Free parking is available.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
