@@ -80,28 +80,24 @@ exports.browserifyExt = function (config) {
   var shouldWatch = config.shouldWatch;
 
   // list of input files
-  var browserifyInputFiles = filenames.map(function (filePair) {
-    return srcPath + filePair[0];
+  var fileInput = filenames.map(function (file) {
+    return srcPath + file;
   }).join(' ');
 
-  var browserifyOutputs = filenames.map(function (filePair) {
-    if (shouldMinify) {
-      var minFile = path.basename(filePair[1], '.js') + '.min.js';
-      return "-o 'uglifyjs > " + buildPath + minFile + "'";
-    }
-    return '-o ' + buildPath + filePair[1];
-  }).join(' ');
+  var extension = (shouldMinify ? '.min.js' : '.js');
 
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
 
+  var fileOutput = (shouldMinify ? 'uglifyjs ' : '') + '>' +
+    buildPath + "`basename $FILE .js`" + extension;
+
   var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
-    '-o ' + buildPath + path.basename(commonFile, '.js') +
-    (shouldMinify ? '.min.js' : '.js');
+    '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
-    command + ' ' + browserifyInputFiles,
-    "-p [ factor-bundle " + browserifyOutputs + ']',
+    command + ' ' + fileInput,
+    "-p [ factor-bundle -o '" + fileOutput + "']",
     commonOutput
   ].join(" \\\n    ");
 };
