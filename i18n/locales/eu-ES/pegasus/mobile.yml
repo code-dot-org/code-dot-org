@@ -1,6 +1,6 @@
 eu-ES:
-  hour_of_code: Kode ordua
-  hello: Kaixo mundua
+  hour_of_code: Kode Ordua
+  hello: Kaixo, mundua
   select_language: Aukera ezazu zure hizkuntza, mesedez
   en: Informatika
   computer_science_edweek: Informatikaren Ikaskuntzaren astea
@@ -22,10 +22,10 @@ eu-ES:
   submit: Bidali
   twentyhours_heading: Probatu Informatikarako sarrera
   twentyhours_text: Bukatu duzu zure Kode Ordua? Ikasi informatika eta programazio kontzeptu gehiago ondorengo jarraipen ikastaroan.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Ume guztiek merezi dute aukera bat
+  og_description: Eskola bakoitzeko ikasle bakoitzak informatika ikasteko aukera merezi du.
   hoc2014_heading: 'Bat egin <a href="http://hourofcode.com">Kode Orduarekin</a><br/>2014ko abenduaren 8tik 14era<br/>'
-  hoc2014_students: Ikasleak
+  hoc2014_students: Ikasle
   hoc2014_try: Saiatu
   hoc2014_teachers: Irakasleak
   hoc2014_host: Antolatu
@@ -68,13 +68,13 @@ eu-ES:
   congratulations_on_completing_course: 'Zorionak %{course} betetzeagatik'
   congrats_next_tutorials_title: Jarraian saiatu gida-liburu hauekin
   congrats_next_tutorials_desc: 'Saiatu ordu bateko tutorial laburrago hauekin edo saiatu <a href="%{current_path}/next">honako honekin</a>.'
-  get_a_certificate_of_achievement: Lortu lorpen ziurtagiri bat
+  get_a_certificate_of_achievement: Eskuratu lorpen ziurtagiri bat
   enter_valid_age: Mesedez idatzi baliozko adina
   enter_valid_email: Mesedez sartu baliozko e-posta helbide bat
   get_a_certificate_message: "Ziurtagiri bat eta <a href='/learn/beyond'>Ikasi ordubetea baino gehiago</a>ri informazioa bidaliko dizugu"
   get_a_certificate_message_after: "Ziurtagiria deskargatzeko edo inprimatzeko klik egin bertan. Orain gure <a href='http://studio.code.org'>-rekin jarraitu, bestelako ikastaroak</a> edo ikusi aukera gehiago <a href='/learn/beyond'>Ordubete baino gehiago ikasi</a>."
   thanks_for_submitting: Eskerrik asko bidaltzeagatik!
-  if_you_enjoyed: Ondo pasa baduzu ikasten, gonbidatu zure lagunak saiatzen! Mundu guztiak ikastea nahi dugu.
+  if_you_enjoyed: Ondo pasa baduzu ikasten, gonbidatu zure lagunak saiatzeko! Mundu guztiak ikastea nahi dugu.
   personalize_certificate: Ziurtagiria zure neurrira egin
   share_achievement: Zure lorpenak elkarbanatu
   beyond_hour_message: "Jarraitu gure <a href='http://studio.code.org'>-rekin, bestelako ikastaroak</a>, edo ikusi aukera gehiago <a href='/learn/beyond'>Ordubete baino gehiago ikasi</a>."
@@ -92,7 +92,7 @@ eu-ES:
   thanks_for_voting: Eskerrik asko bozka emateagatik!
   share_on_facebook: Partekatu Facebooken
   share_on_twitter: Partekatu Twitterren
-  beyond_an_hour: Kode ordutik harago
+  beyond_an_hour: Kode Ordutik harago
   get_started: Hasiera
   i_agree: Ados
   participant_select: '- Aukeratu -'
@@ -103,7 +103,7 @@ eu-ES:
   participant_other: Goikoetatik bat ere ez
   print_all: Guztia inprimatu
   print_ice_art: Inprimatu zure izotz arte lana
-  create_art_with_zombie: edo zombiearekin arte aurreratua egin
+  create_art_with_zombie: edo zonbiarekin arte aurreratua egin
   i_am_a: Ni naiz
   never_spam: Ez dizugu inoiz spamik bidaliko
   enter_country: Sartu zure herrialdea Estatu Batuetatik kanpokoa bazara
@@ -128,8 +128,8 @@ eu-ES:
   lines_of_code: '<b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE.'
   lines_of_code_alt: '<b>#</b> KODE LERRO IKASLEEK IDATZIAK'
   who_has_done_hoc: 'Zeinek egin du #KodeOrdua? @codeorg'
-  hoc_leaderboards: Kode orduko buruak
-  students_and_lines: '%{students} ikaslek egin dute ordubete kode eta students have done the Hour of  %{lines} kode lerro idatzi dituzte.'
+  hoc_leaderboards: Kode Orduko buruak
+  students_and_lines: '%{students} ikaslek egin dute Kode Ordua eta %{lines} kode lerro idatzi dituzte.'
   start_hoc: Hasi Kode Ordua orain
   contact_form_topic_press: Prentsa / media ( elkarrizketa edo hitz konpromezua)
   stats_nina: 'Egunez egun emaitza berdinak lortu ziren&mdash; %100 konpromisoa." - Nina Nichols Peery, Irakaslea'
@@ -139,13 +139,13 @@ eu-ES:
   studiobar_title_nolink: Code Studio miatu
   studiobar_elementary_title: Oinarrizko ikastaroak
   studiobar_elementary_body: '&#8209;rentzako gure hiru ikastaro berriak'
-  studiobar_hoc_title: Programatzeko ordua
+  studiobar_hoc_title: Kode Ordua
   studiobar_hoc_body: Angry Birds-ekin programatzen ikasi
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Egin eta partekatu zure Flappy jolasa
   studiobar_teacher_title: Irakasleentzako egina
   studiobar_teacher_body: Zure ikasgelan Code Studio aurkeztea
-  studiobar_frozen_title: Kode ordua
+  studiobar_frozen_title: Kode Ordua
   studiobar_frozen_body: Sortu neguko paisai bat Anna eta Elsa-rekin
   studiobar_donate_title: Diruz lagundu
   studiobar_donate_body: Ume batek ikasiko du ematen duzun dolar bakoitzagatik
@@ -183,9 +183,9 @@ eu-ES:
   homepage_hero_text_stat_loc: 2.5 milioi neskak eman dute izena Code Studio-n, ikasteko
   homepage_hero_text_stat_students: '#student_count ikasle kopurua Code Studio-n'
   homepage_hero_text_stat_served: 'Kode Ordua: #served artatuak'
-  homepage_slot_text_hoc: Programatzeko ordua
+  homepage_slot_text_hoc: Kode Ordua
   homepage_slot_text_frozen: Frozen Anna eta Elsarekin
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Irakaslearen arbela
   homepage_slot_text_studio: Gure gida-liburu guztiak
   homepage_slot_text_course4: 4. Kurtsoa
   homepage_slot_text_shop: Denda
@@ -209,26 +209,26 @@ eu-ES:
   homepage_banner_text_link: Ikasi gehiago
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Ikasi gehiago
-  homepage_slot_text_title_hoc: Kode ordua
+  homepage_slot_text_title_hoc: Kode Ordua
   homepage_slot_text_blurb_hoc: Edonork ikasi dezake. Gaurtik hasi
   homepage_slot_text_link_hoc: Probatu Kode Ordua
-  homepage_slot_text_link_host: 'Bultzatu ezazu "kodigoaren ordua"'
+  homepage_slot_text_link_host: 'Bultza ezazu "Kode Ordua"'
   homepage_slot_text_link_hocserved: '# kopurua'
-  homepage_solot_text_link_volunteer: Kodearen Ordurako boluntarioa
-  homepage_slot_text_title_students: Ikasleak
+  homepage_solot_text_link_volunteer: Kode Ordurako boluntarioa
+  homepage_slot_text_title_students: Ikasle
   homepage_slot_text_blurb_students: Aztertu gure gida-liburu guztiak
   homepage_slot_text_link_codestudio: Saiatu Code Studio-rekin
   homepage_slot_text_link_local: Gertuko ikasgela bat topatu
   homepage_slot_text_link_othercourses: Beste ikastaroak online
   homepage_slot_text_title_educators: Irakasleak
   homepage_slot_text_blurb_educators: Irakatsi zure ikasleei
-  homepage_slot_text_link_k5: K-5 mailatarako ikastaroak
+  homepage_slot_text_link_k5: LH-5 mailarako ikastaroak
   homepage_slot_text_link_fullcurriculum: Ikusi gure curriculum osoa
   homepage_slot_text_link_pd: Garapen profesionala
-  homepage_slot_text_title_advocates: Defentsariak
-  homepage_slot_text_blurb_advocates: Aniztasuna sustatu informatika munduan
+  homepage_slot_text_title_advocates: Abokatuak
+  homepage_slot_text_blurb_advocates: Sustatu aniztasuna informatika munduan
   homepage_slot_text_link_stats: Estadistikak ikusi
-  homepage_slot_text_link_buy: Parte har ezazu
+  homepage_slot_text_link_buy: Har ezazu parte
   homepage_slot_text_link_donate: Diruz lagundu
   homepage_header_codestudio: Ikasleen Code Studio sorkuntzak
   homepage_header_donors: Code.org-eko laguntzaileei eskerrak
@@ -258,7 +258,7 @@ eu-ES:
   class_submission_out_of_school_summer_camp: Udako kanpaldia
   class_submission_out_of_school_afterschool_program: Eskola osteko programa
   class_submission_out_of_school_all-day_workshop: Egun osoko tailerra (astebete baino gehiago)
-  class_submission_out_of_school_multi-week_workshop: Aste-oroko tailerra
+  class_submission_out_of_school_multi-week_workshop: Hainbat astetako tailerra
   class_submission_out_of_school_other: Beste bat eskolaz kanpo
   class_submission_online: On-Line
   class_submission_online_programming_class: On-line programazio klasea
@@ -305,7 +305,7 @@ eu-ES:
     Irakasle hauek nahiko lukete <span style="font-family: 'Gotham 7r', sans-serif;">informatika gustuko duen baten bat</span> eskoletan laguntzeko, edo haien ikasleak <span style="font-family: 'Gotham 7r', sans-serif;">animatu</span> ditzakeen baten bat Informatikaren aukera zabalen berri ematen (bideo konferentzia bidez izan zitekeen). Ez baduzu boluntarioren beharrik, <a href="%{url}">ikasi</a> nola antolatu zure Kode Orduaren ekitaldia.
   volunteer_engineer_submission_intro_signup: 'Mesedez, informatika ikaslea edo programatzailea bazara hurrengo informazioa bete ezazu. <span class="form-required-field">*</span> batekin dauden eremuak beharrezkoak dira.'
   volunteer_engineer_submission_intro_links: 'Ez zaudela begiratzen bolondres lana egiteko? <a href="%{learn_more}">Ikasi gehiago</a> zure Kode Ordu propioa antolatzeari buruz eta bertako bolondresak aurkitu gure <a href="%{volunteer_local}">bolondres mapan</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Eguneratu zure informazioa
   volunteer_engineer_submission_header_shared: Informazioa bolondres mapan partekatua izango da irakasleekin
   volunteer_engineer_submission_field_name: Izena
   volunteer_engineer_submission_field_name_placeholder: Izen Osoa
@@ -344,7 +344,7 @@ eu-ES:
   volunteer_engineer_submission_commitment_more: Gehiago
   volunteer_engineer_submission_location_flexibility_onsite: bertarako bisita eskolan (1-2 ordu klasean)
   volunteer_engineer_submission_location_flexibility_remote: galdera-Erantzunak izan ikasleekin urrunetik (bideo motzen bidezko konferentzia bidez)
-  volunteer_engineer_submission_location_flexibility_curriculum: kode irekien proiektuei lagunduz
+  volunteer_engineer_submission_location_flexibility_curriculum: kode irekiko proiektuei lagunduz
   volunteer_engineer_submission_experience_unspecified: Espezifikatu gabea
   volunteer_engineer_submission_experience_tech_company: Ingeniaria ez den bat teknologia enpresa batean
   volunteer_engineer_submission_experience_university_student_or_researcher: Unibertsitateko informatika ikaslea
@@ -377,7 +377,7 @@ eu-ES:
   dashboard_landing_educator_blog: Irakurri berriak eta gure materialaren eguneraketak Hezitzaileen Blogean
   dashboard_landing_smart_hints: Mesedez, lagun gaitzazu iradokizun erabilgarriak gehitzen Code.org tutorialetan
   dashboard_landing_video_player: Probatu gure bideo irakurgailu berria zure eskolan
-  dashboard_landing_progress_title: Progresua gaiean
+  dashboard_landing_progress_title: Gelako aurrerapena
   dashboard_landing_progress_biggest: Hau da zure sekzio handienaren aurrerapena.
   dashboard_landing_view_progress: 'Ikusi aurrerapena %{biggest_section}'
   dashboard_landing_print_progress: Inprimatu progresua
@@ -385,23 +385,23 @@ eu-ES:
   dashboard_landing_available_courses: Hemen dituzu zuretzat eta zure ikasleentzat eskuragarri dauden kurtsoak.
   dashboard_landing_more_tutorials: Tutorial are gehiago ikusi nahi?
   dashboard_landing_more_tutorials_desc: 'Tutorial gehiago daude <a href="/learn/beyond"> eskainita gure bazkideengatik. </a> Ikasi programatzen robotekin, web orriak egin, egin zure aplikazioa edo ikasi lengoai berriak, ala nola C++, Ruby edo Python!'
-  dashboard_hoc_courses: Kode Ordua adin guztientzako
+  dashboard_hoc_courses: Kode Ordua adin guztietarako
   dashboard_hoc_courses_desc: Saiatu beste edozein tutorial ordu 1 baino gutxiagokoa zure ikasleekin!
   dashboard_hoc_courses_desc_and_cta: 'Probatu tutorial motz eta ordu batekoak zure ikasleekin. <a href="https://hourofcode.com"> Batu zaitez Kode Ordura </a> Informatika Edukazio Astean zehar.'
   dashboard_k5_courses: 20 orduko ikastaroak Lh5 kurtsoarentzako
   dashboard_k5_courses_desc: 'Hiru ikastaro hauek bikain elkartzen dira, norberak bere erritmoan tutorialak egin eta ordenagailurik gabeko jarduerak konbinatzen baititu. Ikastaro bakoitzak 20 ataza inguru ditu, unitate bakar gisa edo lauhilabeteko ikastaro gisa antolatu daitezkeenak. Haurtzaindegian dauden ikasle eta irakurtzen ez dakiten ikasleek ere har dezakete parte. Hasten laguntzeko, kalitate altuko tailerrak eskaintzen ditugu, doan, Estatu Batuetan zehar. <a href="/professional-development-workshops">Topatu bat zugandik gertu!</a>'
   dashboard_middle_courses: 20 orduko bigarren hezkuntzako kurtsoak
-  dashboard_middle_courses_desc: 'gure DBHko curriculuma konputagailu zienzia eta programazioa erabiltzen ditu, DBHko matematika eta zientzen kontextuan. Garapen profesionaleko talde lanetan erregistratzeko, <a href="/educate/districts">'
-  dashboard_high_courses: Urtebete luzeera Instituto kurtsoak
+  dashboard_middle_courses_desc: 'Gure DBHko curriculumak informatika eta programazioa biltzen ditu, DBHko matematika eta zientzien kontzeptuak irakasteko. Garapen profesionaleko lan taldetan erregistratzeko, eman izena <a href="/educate/districts">lan talde zabalak</a> aukeran Code.org-en.'
+  dashboard_high_courses: Ikasturte bateko Instituto ikastaroak
   dashboard_high_courses_desc: 'Gure bigarren mailako hezkuntza programa distrituetako eskoletan informatikari buruzko urte osorako klaseak eskaintzen ditu bertako langileak formatuz eta eremu berri hau eskainiz. Erregistratzeko (modu profesionalean) sar zaitez "distrituetako partehartzea"-n Code.org-ekin.'
-  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina: Informatika Aljebran
   dashboard_course_csina_desc: Code.org Bootstrap-ekin bildu da algebra eta geometria irakasteko curriculum-a sortzeko programazioaren bidez.
-  dashboard_course_csins: Ordenagailuen Zientzia zientzian
-  dashboard_course_csins_desc: Code.org Project GUTS-ekin elkartu da konputazio zientziako kontzeptuen sarrera bat eskaintzeko, modelatzearen eta simulazioaren testuinguruen barnean.
+  dashboard_course_csins: Informatika zientzian
+  dashboard_course_csins_desc: Code.org Project GUTS-ekin elkartu da informatikako kontzeptuen sarrera bat eskaintzeko, modelatzearen eta simulazioaren testuinguruen barnean.
   dashboard_course_ecs: Informatika aztertzen
   dashboard_course_ecs_desc: 'Informatika aztertzeko kurtsoa urtebetekoa da eta 6 unitate ditu: pertsona-konputagailu elkarrekintza, problemen ebazpena, web diseinua, programazioa, konputazioa eta datuen analisia, eta robotika.'
-  dashboard_course_csp: AP® Konputazio Zientziaren Printzipioak
-  dashboard_course_csp_desc: Code.org-k diseinuatu egin du ikastaro zorrotz, erakargarrian eta denontzako atzigarria non informatikaren ideia nagusiak hausnartzen dituen.
+  dashboard_course_csp: AP® Informatikaren Oinarriak
+  dashboard_course_csp_desc: Code.org-ek diseinatu egin du ikastaro zorrotz, erakargarri eta denontzako atzigarria, non informatikaren ideia nagusiak hausnartzen dituen.
   dashboard_landing_loading: Kargatzen...
   dashboard_action_edit: Editatu
   dashboard_action_save: Gorde
@@ -421,10 +421,10 @@ eu-ES:
   dashboard_navigation_section_lesson_plans: Ikasgaien Plangintza eta Baliabideak
   dashboard_navigation_section_community: Laguntza eta Komunitatea
   dashboard_navigation_section_pd: Garapen profesionala
-  dashboard_navigation_section_speakers: 'Ordenagailu Zientzia </b> Hizlari Gonbidatuak'
-  dashboard_navigation_all_sections: Ikasleen kontu eta aurrerapena
-  dashboard_navigation_view_progress: Garapena Ikusi
-  dashboard_navigation_view_text_responses: Textuaren erantzuna ikusi
+  dashboard_navigation_section_speakers: 'Informatika <br/> Hizlari Gonbidatuak'
+  dashboard_navigation_all_sections: Ikasleen kontuak eta aurrerapena
+  dashboard_navigation_view_progress: Aurrerapena Ikusi
+  dashboard_navigation_view_text_responses: Ikusi textu erantzunak
   dashboard_navigation_add_students: Ikasleak Gehitu
   dashboard_navigation_manage_students: Ikasleak Kudeatu
   dashboard_navigation_lesson_plans_resources: Ikasgaien Plangintza eta Baliabideak
@@ -497,14 +497,14 @@ eu-ES:
   dashboard_standards: Estandarrak
   dashboard_implementation_guide: Inplementazio Gida
   dashboard_glossary: Glosategia
-  dashboard_classroom_strategies: Ikaslega estrategiak irakasleentzat
+  dashboard_classroom_strategies: Ikasgelako estrategiak irakasleentzat
   dashboard_debugging: 'Arazketa:'
-  dashboard_puzzle_solving: 'Puzzle-ebazketa:'
+  dashboard_puzzle_solving: 'Ariketa-ebazketa:'
   dashboard_student_worksheet: ikasle lan orria
   dashboard_teacher_worksheet: irakasle lan orria
   dashboard_curriculum_csina: 'Informatika Algebran:'
   dashboard_curriculum_csins: 'Informatika Zientzian:'
-  dashboard_curriculum_csp: 'AP® Informatikaren printzipioak:'
+  dashboard_curriculum_csp: 'AP® Informatikaren Oinarriak:'
   dashboard_curriculum_ecs: 'Informatika aztertzen:'
   dashboard_grade_k: K
   dashboard_grade_other: Beste bat
@@ -519,7 +519,7 @@ eu-ES:
   dashboard_progress_completed_perfect: burutua, bikain
   dashboard_progress_furthest_level_attempted: saiatutako maila altuena
   dashboard_stage: Maila
-  dashboard_puzzle: Puzzlea
+  dashboard_puzzle: Ariketa
   dashboard_question: Galdera
   dashboard_response: Erantzuna
   stats_hoc_2013_heading: 'Aurreko urteko "Hour of Code" ekitaldiko estatistika harrigarriak. Astebetean bakarrik:'
@@ -536,24 +536,24 @@ eu-ES:
   dashboard_sections_sign_in_main: 'http://code.org eta klikatu "Saioa hasi"'
   dashboard_sections_password_account_creation: Ikasleek sortutako testu pasahitza
   dashboard_sections_login_type_explanation: 'Taula honek adierazten du sesioa hasieratzeko motak, <b> irudia, hitza edo korreoa </b>, atal bat aukeratu nahiko duzu.'
-  dashboard_faq: Askoetan galdeturiko galderak
-  dashboard_faq_k5: K-5 askoetan galdeturiko galderak
+  dashboard_faq: Sarri egindako galderak
+  dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>2015eko Abenduak 16</b> - Eskerrikasko 2015eko kode orduan parte hartzeagatik! Jarraipena eta gordetzea hasi dira Code Studioko kurtso eta tutorial guztietan. Oharra: Code.org en bulegoak itxita egongo dira abenduaren 19tik, urtarrilaren 3ra. Mesedez itxaron atzeratutako erantzunak urtarrilaren 4ra arte bidalitako edozein galderetan.'
   dashboard_announce_button_text: Ikasi gehiago
   dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash; antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean Abenduan 7-13 tartean."
   dashboard_announce_playlab: '<b>2015eko abenduaren 4a</b> - Kode ordua hemen da! Saiatu edozein adinetarako eta edozein gailurako 50 tutorial. Aste honetan berria: sortu istorio eta jokoak, Ice Age eta Gumball joko laborategi berrietan.'
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
-  code_sign_up: Izena eman CS Hezkuntzaren Astean parte hartzeko
+  code_sign_up: Izena eman Informatikaren Ikaskuntzaren Astean parte hartzeko
   learn_more: Gehiago ikasi
-  learn_sign_up_description: Izena eman CS Hezkuntzaren Asteko Kodearen Orduan parte hartzeko
+  learn_sign_up_description: Eman izena Kode Orduan parte hartzeko, Informatikaren Ikaskuntzaren Astearen barruan
   learn_sign_up_button: Eman izena
   learn_videos_watch: Ikusi bideo interesgarri hau zure gelakideekin
   learn_videos_show: Erakutsi bideo interesgarri hau zure ikasleei
   learn_videos_before_hoc: Ikusi bideo interesgarri bat Kode Orduari ekin baino lehen
-  learn_educator_resources_description: Ikasi Hour of Code nola irakatsi
-  learn_educator_resources_button: Irakaslearen baliabideak
+  learn_educator_resources_description: Ikasi nola irakatsi Kode Ordua
+  learn_educator_resources_button: Irakaslearentzako baliabideak
   learn_are_you_educator: 'Irakaslea? Ikasi <a href="http://hourofcode.com/resources/how-to">nola irakatsi Kode Ordu bat</a>'
   learn_find_volunteer: '<a href="https://code.org/volunteer/local">Aurkitu bertako bolondres bat</a> Kode Orduarekin lagunduko dizuna'
   learn_teacher_led_lesson_plans: 'Inspiratu zaitez <a href="https://code.org/teacher-led"> Kode Orduan irakasleek gidatutako ikasgai planekin</a>'
@@ -581,13 +581,13 @@ eu-ES:
   carousel_heading_beyond_languages: Beste programazio lengoaietan tutorialak
   carousel_heading_apps_games: Egin zure app edo joko propioak
   carousel_heading_university: Unibertsitatea ikastaroak online
-  carousel_heading_webpages: Ikas webguneak egiten
-  carousel_heading_robots: Ikasi errobotak programatzen
+  carousel_heading_webpages: Ikasi webguneak egiten
+  carousel_heading_robots: Ikasi programatzen robotekin
   carousel_heading_ide: Irakasleen artean arrakastatsuak diren plataformak
   educator_notes: Hezitzailearen oharrak
   teach_led_lesson_plans: Irakasleak gidatutako Kode Ordurako irakasgaien plangintza
   learn_footer_all_tutorials: 'Ezarri <a href="https://code.org/educate/allhourofcode">Kodearen Orduaren tutorialen zerrenda ulergarria</a>. Kodearen Orduaren tutorialen inguruko gure erizpideak eta bidaltzeko baldintzak ikusteko, <a href="https://hourofcode.com/tutorial-guidelines">egin klik hemen.</a>'
-  how_to_teach_hoc: Nola irakatsi Kode ordua
+  how_to_teach_hoc: Nola irakatsi Kode Ordua
   more_resources_educators: Irakasle eta hezitzaileentzako baliabide gehiago
   beyond_submission: Ordu bat baino gehiagoko tutorial bat bidali nahi duzu? Bidalketa baldintzak eta bidalketa formularioa ikusi.
   participants: parte hartzaileak
@@ -599,7 +599,7 @@ eu-ES:
   older_systems_subheading: 'Honek nabigatzaile zaharretan funtzionatu beharko luke. Tutorial guztietara sartzeko, eguneratu zure nabigatzailea <a href="http://browsehappy.com/" target="_blank">nabigatzaile berriago batera.</a>'
   mobile_devices: Gailu mugikorretarako tutorialak
   frozen_name: Anna eta Elsarekin programatu
-  starwars_name: 'Star Wars: Eraiki galaxia bat Coderen bitartez'
+  starwars_name: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen'
   codeorg_name: Labirinto klasikoa
   codeintl_name: Labirinto klasikoa
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -609,25 +609,25 @@ eu-ES:
   khanhe_name: JavaScript sarrera bat
   khanfr_name: JavaScript sarrera bat
   khanpl_name: JavaScript sarrera bat
-  tynker_name: Zure joku propioa sortu
+  tynker_name: Zure joko propioa sortu
   scratch_name: Izan sortzaile kodearekin
-  lightbot_name: Lightbot
+  lightbot_name: Argibot
   thinkersmith_name: Nire lagun robotikoak
   condcards_name: Baldintzak Txartelekin
-  lightbotintl_name: Lightbot
+  lightbotintl_name: Argibot
   codehs_name: Ikasi kodea idazten Karel txakurrarekin
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: KodeTximua
   codeavengers_name: Joko bat sortu JavaScript erabiliz
   processing_name: Kode erabiliz margotzen
-  robomind_name: Errobot birtual bat programatu
+  robomind_name: Programatu robot birtual bat
   groklearning_name: Eliza txateatzen duen medikua
   quorum_name: Programazio irisgarria (pantaila irakurgailuarentzako euskarriarekin)
   codespark_name: The Foos (ongi etorri eskolaurrekoak)
   kodable_name: Kodable (ongi etorri eskolaurrekoak)
   tynkerapp_name: 'Tynker - tabletentzako'
-  robomindnl_name: Errobot birtual bat programatu
+  robomindnl_name: Programatu robot birtual bat
   flappy_name: Flappy joko bat egin
   bitsbox_name: 'Bitsbox - joko bat egin'
   makeschool_name: Eraiki iPhone joko bat zure web nabigatzailean!
@@ -636,9 +636,9 @@ eu-ES:
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Harria, Papera, Gurizeak
+  projguts_name: Harria, Papera, Guraizeak
   hourofcode_name: Labirinto klasikoa
-  playlab_name: Jokoen Laborategia
+  playlab_name: Jolas Laborategia
   infinity_name: Infinity Jolas Laborategia
   artist_name: Artista
   monstercoding_name: Irla misteriotsuaren kode bilaketa
@@ -744,7 +744,7 @@ eu-ES:
   csfirst_platformtext: Web nabigatzaile modernoak
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Web nabigatzaile modernoak
-  texasinstruments_platformtext: TI kalkulgailuak
+  texasinstruments_platformtext: TI kalkulagailuak
   teacherled_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
   codeorg_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
   codeintl_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
@@ -755,9 +755,9 @@ eu-ES:
   khanhe_shortdescription: Ikasi JavaScriptekin marrazten
   khanfr_shortdescription: Ikasi JavaScriptekin marrazten
   khanpl_shortdescription: Ikasi JavaScriptekin marrazten
-  tynker_shortdescription: Ikasi programatzen puzle dibertigarriak ebatziz eta egin zure mogikorreko jokoak.
+  tynker_shortdescription: Ikasi programatzen ariketa dibertigarriak ebatziz eta egin zure mugikorreko jokoak.
   scratch_shortdescription: Sortu joko, istorio eta animazio elkarreragileak.
-  lightbot_shortdescription: Programatu Lightbot ariketak ebazteko prozedura eta begiztak erabiliz!
+  lightbot_shortdescription: Programatu Argibot ariketak ebazteko, prozedura eta begiztak erabiliz!
   thinkersmith_shortdescription: Gailurik gabeko taldeentzat lineaz kanpoko tutoriala
   condcards_shortdescription: Algoritmoak ikasi karta-sorta batekin
   lightbotintl_shortdescription: Programazio kontzeptuak irakasteko joko bat
@@ -767,13 +767,13 @@ eu-ES:
   codemonkey_shortdescription: Ikasleek tximu bat programatzen dute, bananak harrapa ditzan.
   codeavengers_shortdescription: Ikasi JavaScript programatzen web-nabigatzaileetan
   processing_shortdescription: Ordubeteko tutoriala prozesamendurako lengoaiei buruz
-  robomind_shortdescription: Idatzi kodea errobot birtual batentzat
+  robomind_shortdescription: Idatzi kodea robot birtual batentzat
   groklearning_shortdescription: 'Erakutsi "Eliza"-ri besteei gizakia dela pentsarazten!'
   quorum_shortdescription: Egin ezazu tour bat Maryrekin batera Quorum programazio lengoia ikasteko.
   codespark_shortdescription: The Fools dibertigarria da, umeentzako jokoa programazioa ikasteko.
   kodable_shortdescription: iPad joko dibertigarri bat programazioko hainbat kontzeptu ikasteko
-  tynkerapp_shortdescription: 'Ikasi programatzen puzle dibertigarriak ebazten. '
-  robomindnl_shortdescription: Idatzi kodea errobot birtual batentzat
+  tynkerapp_shortdescription: 'Ikasi programatzen ariketa dibertigarriak ebazten. '
+  robomindnl_shortdescription: Idatzi kodea robot birtual batentzat
   flappy_shortdescription: 'Sortu zure jokoa - Flappy Bird, Shark edo Submarine'
   bitsbox_shortdescription: Programatu benetako JavaScript erabiliz jokatu eta konpartitzeko aplikazio multzo bat .
   makeschool_shortdescription: Sortu iPhone joko bat! Ikasi kodea idatziz nola irakats diezazkiekezun mugimendu berriak zure mamuei!
@@ -786,7 +786,7 @@ eu-ES:
   hourofcode_shortdescription: Ikasi programatzen Mark Zuckerberg eta Angry Birds jokoarekin!
   frozen_shortdescription: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun izotz mundu magiko eta ederra esploratzeko.
   starwars_shortdescription: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
-  playlab_shortdescription: Sortu istorio bat edo egin ezazu jolas bat Play Labekin!
+  playlab_shortdescription: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
   infinity_shortdescription: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
   artist_shortdescription: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
   monsterocding_shortdescription: Umeentzako auto gidatutako programazio abentura koloretsua.
@@ -840,10 +840,10 @@ eu-ES:
   monstercoding_longdescription: Irla misteriotsuko kode bilaketak, umeei, zenbait programazio kontzeptu gako irakasten dien auto gidatutako eta dibertsioz betetako abentura eiskentzen du. Bloke bakoitzean oinarritutako jarduera, aurrekoan oinarritzen da, umeak, funtzio, balio boolear, begizta, If/Else agindu, eta Arrayetan murgilduz eta horretarako irudi koloretsu animatuak eta audio jarraibideak erabiliz.
   allcancode_longdescription: 'Ikasleek istorio original batean oinarritutako abentura joko bat jokatzen dute. Marco -pertsonai nagusia- gidatzen dute maila bakoitzean pausoz-pauso aginduak emanez Kode orduak erabiltzen duen programazio lengoai bisualarekin. Agindu sekuentzietan, iterazioetan eta baldintzetan murgiltzen hasten dira ia ia konturatu gabe.'
   csfirst_longdescription: Sortu itsaoan dauden bi pertsonaien istorioa. Animatu ura, eta egokitu eszenatokia zure neurrira zure distira emateko. Erabili kodea kontatu nahi duzun istorioa kontatzeko!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
-  texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "
-  teacherled_longdescription: Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans.
+  boxisland_longdescription: Eman buelta bat Box Islandetik eta lagundu Hirori oihanean sakabanatuta dauden erloju guztiak biltzen. Ikasgai honetan, algoritmoen, sekuentzien, begizten eta baldintzen oinarriak ikasiko dituzu.
+  codesters_longdescription: 'Sortu zure jokoak, animazioak eta artea Python erabiliz. Bukatzean, partekatu itzazu zure lagunekin. Programatu Pythonez, enpresetan egunero erabiltzen den benetako programazio lengoaia. "Arrastatu eta utzi" gure tresnari esker, oso erraza da ikastea. Saia zaitez saskibaloi joko bat sortzen, dantza baten koreografia egiten, edo txartel bizidun bat diseinatzen.'
+  texasinstruments_longdescription: 'Programatzeko 10 minutuko jarduerak eskolan erabil daitezke ikasleen programaziorako interesa pizteko motxilan egunero eramaten duten TI teknologia erabiliz. Ikasi programazioaren oinarriak TI-84&#8482; Plus kalkulagailua erabiliz, eta hasi programatzen 10 minututan – ez da aurreko eskarmenturik behar!  '
+  teacherled_longdescription: Hamaika mila irakaslek Kode Ordua saiatu ondoren, eskola askotan prest daude sormen handiagoa behar duten jarduerak egiteko, informatikaren oinarriak ikasteko. Irakasleei laguntzeko inspirazioa lortzen, irakasleak gidatutako ordu beteko ikasgai eta jardueren planak atondu ditugu, Kode Orduko beteranoek erabiltzeko hainbat irakasgaitan.
   codeorg_beyond_name: Informatikarako sarrera (DBH 2 kurtsoa)
   khan_beyond_name: Programatzen ikasi
   tynker_beyond_name: Programatzen ikasi etxean
@@ -878,7 +878,7 @@ eu-ES:
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino Sparkfun-ekin
-  processing_beyond_name: Programa prozesamenduarekin
+  processing_beyond_name: Programatu Processing-ekin
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: 4-104 adinentzat
@@ -918,7 +918,7 @@ eu-ES:
   processing_beyond_gradelevel: Batxilergoa
   alice_beyond_gradelevel: DBH eta gehiago
   sphero_beyond_gradelevel: 8 urtetik gora
-  codeorg_beyond_platformtext: Nabigatzaile eta tablet berriak
+  codeorg_beyond_platformtext: Nabigatzaile berriak, tabletak
   khan_beyond_platformtext: Nabigatzaile berriak
   tynker_beyond_platformtext: Web nabigatzaile modernoak ($$ beharrezkoa)
   scratch_beyond_platformtext: Edozein nabigatzaile
@@ -979,16 +979,16 @@ eu-ES:
   udacity_beyond_shortdescription: Hasi CS101ekin
   teachingtree_beyond_shortdescription: 'Online Ezagutza: Azkarra eta Mugagabekoa'
   kodu_beyond_shortdescription: Diseinatu 3D joko-mundu bat
-  cargobot_beyond_shortdescription: Programatu beso errobotiko bat zure iPadean
+  cargobot_beyond_shortdescription: Programatu robot beso bat zure iPadean
   kidsruby_beyond_shortdescription: Ikasi programazioa Ruby erabiliz
   w3schools_beyond_shortdescription: Ikasi webguneak egiten
   codeavengers_beyond_shortdescription: Ikasi joko eta webguneak programatzen
   mozilla_beyond_shortdescription: Sortu eta partekatu webguneak
   codecombat_beyond_shortdescription: Jolastu joko bat eta ikasi JavaScript irabazi ahal izateko
   codea_beyond_shortdescription: Sortu aplikazioak zure iPadean
-  lego_beyond_shortdescription: Eraiki eta programatu errobot bat
-  finch_beyond_shortdescription: Errobot bat informatika ikasteko
-  arduino_beyond_shortdescription: Ikasi Arduino Spakfun-en Harezko kutxa digitalrekin.
+  lego_beyond_shortdescription: Eraiki eta programatu robot bat
+  finch_beyond_shortdescription: Robot bat informatika ikasteko
+  arduino_beyond_shortdescription: Ikasi Arduino Spakfun-en Digital Sandbox-ekin.
   processing_beyond_shortdescription: Ikasi Prozesatze lengoaiak
   alice_beyond_shortdescription: Irakatsi programazioa 3D ingurune batean
   sphero_beyond_shortdescription: SPRK lekzioek robotak programatzeko kurtso dibertigarria erakusten dute matematika eta zientzietarako gaitasunak hobetzen dituzten bitartean.
@@ -1025,7 +1025,7 @@ eu-ES:
   codea_beyond_longdescription: |
     Codea iPad-entzat simulazioak eta jokuak sortzen laguntzen dizu, edota egin nahi duzunaren idearen errepresentazio grafikoa ikusteko. Pentsa itzazu nola ereabili ukimen-pantaila, azelerometroa, eta horrelako dispositiboak. Ustez, Codea kodetzeko editorerik politena da, eta erraza ere bai.
     Codea zure kodea ondo egituratzeko prestatuta dago, eta hori lan errezean bilakatzen du. Zenbaki bat aldatu nahi duzu? arrastatu ezazu. Irudia aldatzea nahin duzula, berdina egin. Cideakin nahi duzuna egin dezakezu.
-  lego_beyond_longdescription: Sor itzazu errobot txiki, eraldagarri eta programagarriak LEGO piezak erabiliz.
+  lego_beyond_longdescription: Sor itzazu robot txiki, eraldagarri eta programagarriak LEGO piezak erabiliz.
   finch_beyond_longdescription: "Fincha informatikarako edukaziorako robot berria da. Carnegie Mellos's CREATEko 4 urteko lanaren emaitza da. Fincha, programazioa modu erakargarrian ikasteko balio du. Hamaika programazio lengoaietan oinarritzen da, 8 urtekoentzako gazteentzako egokia."
   arduino_beyond_longdescription: Arduino plataforma ezaguna da artistei sentsore, LED, txirrin eta abarrekin lan egitea ahalbidetzen dielako. Sparkfun harezko kutxak Arduino kodea nola idatzi web nabigatzailean bertan irakatsiko dizu.
   processing_beyond_longdescription: Processing programazio lengoaia izateaz gain, garapen ingurunea eta online komunitatea ere bada. 2001ean sortua, Processing-ek alfabetismo digitala sustatu eta uztartu du arte bisualen munduan teknologia txertatuz. Hasiera batean marrazketa software bezala sortu zen, baita programazioaren oinarriak era bisualean azaltzeko tresna gisa ere. Processing asko eraldatu da, eta mundu profesionalean bere txokoa osatzea lortu du, egun milaka ikaste, artista, diseinatzaile eta ikertzailek erabiltzen dutelarik ikasi, prototipoak egin edota garatzeko.

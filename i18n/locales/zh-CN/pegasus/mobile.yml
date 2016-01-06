@@ -149,7 +149,7 @@ zh-CN:
   studiobar_donate_body: 你捐的每一美元让一个孩子学会
   studiobar_shop_title: 商店
   studiobar_shop_body: 突破束缚，骄傲的戴上我们的标志。
-  homepage_hero_text_malala: '&ldquo;我向每个国家的女孩子都发起学习“一小时编程”的挑战&rdquo;诺贝尔和平奖得主马拉拉说'
+  homepage_hero_text_malala: '&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;诺贝尔和平奖得主马拉拉说'
   homepage_hero_text_susan: '&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官'
   homepage_hero_text_fistbump: '&ldquo;别总是玩电话，写上面的程序吧。&rdquo;奥巴马总统'
   homepage_hero_text_sheryl: '&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo; 谢丽尔，Facebook 首席运营官说'
@@ -821,7 +821,7 @@ zh-CN:
   playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
   monstercoding_longdescription: 由怪物编码提供的神秘岛编程要求设计了充满乐趣的几个关键的编程概念教给孩子们自学。以每个模块为基础，构建活动，使用彩色动画的图形，音频说明，为孩子们介绍功能、 布尔值、 循环、 如果/否则语句和数组。
   allcancode_longdescription: 学生们玩一款基于原型的故事冒险游戏。他们指导马可-游戏里的主人公 — — 由编程一小时使用的可视化编程语言的形式，通过给他分步骤的指导，最终通过每一关。他们不知不觉会了解到测序命令模块、 迭代和条件。
-  csfirst_longdescription: 编写一个关于两个人物在海上的故事。动画处理水，并定制不同风景来添加你这个故事的吸引力。应用编程来讲这个故事！
+  csfirst_longdescription: 编写一个关于两个人物在海上的故事。动画处理水，并定制不同风景来添加这个故事的吸引力。用编程来讲这个故事！
   boxisland_longdescription: 在盒子岛上旅行，帮助阿宽收集散落在荒野中的所有时钟！在这套课件里你将学习关于算法、 序列、 循环和条件的基础知识！
   codesters_longdescription: '开发您自己的游戏、 动画并使用 Python 进行艺术编程。一旦你完成了，与朋友分享！在 Python（每天都被软件公司使用的真正编程语言） 中，我们拖、放工具包，让它简单易学！尝试设计一场篮球比赛，编排一套舞蹈，或者设计动画卡片！ '
   texasinstruments_longdescription: '10 分钟编程活动可以用在课堂上，来激发学生编程的兴趣，让他们经常把TI 技术教材放在书包里。 使用 TI-84 &#8482;+学习基本的编码。并且开始编程，只需 10 分钟 — — 不需要任何经验!  '
@@ -1013,7 +1013,7 @@ zh-CN:
   finch_beyond_longdescription: 芬奇是一个用于计算机科学教育的新机器人。它的是卡耐基梅隆大学创建实验室四年研究的结果. 芬奇的设计目的是提供一个吸引人的编程艺术介绍. 它支持超过始终编程语言和环境，包括一些适合年仅8岁学生的编程环境。达芬奇的设计也让学生能够用它写出丰富的互动程序。
   arduino_beyond_longdescription: Arduino是一个流行的平台, 让艺术家和设计师使用真实的传感器，LED灯，蜂鸣器, 等等. Sparkfun的虚拟环境会教你在浏览器中写出Arduino代码.
   processing_beyond_longdescription: Processing 是一种编程语言，也包括开发环境和在线社区。自2001年以来，通过可视化的技术，Processing提升了软件代码的可读性。最初创建时，它作为一个软件的草稿本和可视化计算机编程教学，现在Processing 演变成了一个专业人士的开发工具。今天，有数以万计的学生，艺术家，设计师，研究者和爱好者使用Processing 来学习，制造原型和产品。
-  alice_beyond_longdescription: 采用创新的编程环境，以支持创建三维动画，爱丽丝项目提供教学和学习计算思维的工具和材料，适合不同年龄和年级来学习如何解决问题和计算机编程。
+  alice_beyond_longdescription: 采用创新的编程环境，以支持创建三维动画，爱丽丝项目提供教学和学习计算式思维技巧的工具和材料，适合不同年龄和年级来学习如何解决问题和计算机编程。
   sphero_beyond_longdescription: 无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。
   compatibility_https_header: 请为 Code.org 启用 HTTPS。
   compatibility_https_message: "为了提高安全性，我们在%{https_date}之后使用HTTPS技术。在这一天之后您将无法访问 Code.org. <a href='%{it_requirements_url}'>点击这里</a>了解如何为 Code.org 启用HTTPS。"

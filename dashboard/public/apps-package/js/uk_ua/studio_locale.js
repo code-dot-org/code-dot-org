@@ -818,7 +818,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenGetAllCharacters":function(d){return "коли дістанемось усіх персонажів"},
 "whenGetAllCharactersTooltip":function(d){return "Виконувати дії, подані нижче, коли дроїд дістанеться усіх персонажів."},
 "whenGetAllCharacterPufferPig":function(d){return "коли дістанемось усіх Компресійних свиней"},
-"whenGetAllCharacterStormtrooper":function(d){return "коли дістанемось усіх Компресійних свиней"},
+"whenGetAllCharacterStormtrooper":function(d){return "коли дістанемось усіх Штурмовиків"},
 "whenGetAllCharacterTauntaun":function(d){return "коли дістанемось усіх Тантанів"},
 "whenGetAllCharacterMynock":function(d){return "коли дістанемось усіх Майноків"},
 "whenGetAllCharacterProbot":function(d){return "коли дістанемось усіх Проботів"},

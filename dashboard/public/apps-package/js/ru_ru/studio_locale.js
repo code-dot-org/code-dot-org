@@ -320,7 +320,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hoc2015_shareGame":function(d){return "Поделиться твоей игрой:"},
 "hoc2015_move_right_instructions":function(d){return "\"Нам нужен этот металлолом [scrapmetal1]. ВВ-8, вы можете его собрать?\""},
 "hoc2015_move_right_down_instructions":function(d){return "\"Нам нужно больше металлолома [scrapmetal2]. Вы можете собрать весь металла в этой области?\""},
-"hoc2015_move_diagonal_instructions":function(d){return "\"Остерегайся [hazard] Бандита!\""},
+"hoc2015_move_diagonal_instructions":function(d){return "\"Следите за Бандитом![опасность]!\""},
 "hoc2015_move_backtrack_instructions":function(d){return "«Езжай быстрее, BB-8.»"},
 "hoc2015_move_around_instructions":function(d){return "«Зависит от тебя, BB-8!»"},
 "hoc2015_move_finale_instructions":function(d){return "\"Нам нужно еще 4 кусочка металла [scrapmetal2]. Можешь его найти?\""},

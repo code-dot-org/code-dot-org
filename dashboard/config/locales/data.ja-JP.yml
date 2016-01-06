@@ -254,13 +254,9 @@
         bounce_6: 最終目標は画面の上にあります。パズルを解くために「ボールがあたったとき」ブロックにブロックを接続する必要があります
         bounce_7: 「〜のとき」ブロックにブロックを接続します。最終目標にヒットするまでボールをバウンドさせます
         bounce_10: 一番上にゴールがあります。ゲームを作るには、「得点」と「敵の得点」ブロックを「ボールがゴールにあるとき」と「ボールがラケットに当たらなかったとき」ブロックに接続します。相手が2回得点する前に自分がどれだけ得点するか見てみましょう
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
+        bounce_11: 「実行」ブロックにブロックを足していきましょう。「新しいボールを発射する」ブロックを一箇所以上使いましょう。背景を変更したり、ラケットやボールのスピードを変えてみましょう。対戦相手が二回スコアを決める前に何ポイント得点できるでしょうか？
         bounce_12: バウンス ゲームを作成してください。デザインやルールは自由に変更できます。終了したら、完了ボタンをクリックしてください。作成したゲームは、他のユーザが携帯電話からアクセスして遊ぶことができます。
-        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
-          level you wish to create. Press "Run" when you are ready.
+        Custom_builder: 作成したいレベルを描画するために、ツールボックスからブロックをワークスペースにドラッグします。準備ができたら「実行」を押します。
         flappy_1: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます
         flappy_2: いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です
         flappy_3: 「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください
@@ -294,11 +290,11 @@
         jigsaw_11: 絵が完成するようにブロックを配置しましょう。
         jigsaw_12: 絵が完成するようにブロックを配置しましょう。
         jigsaw_13: パズルをといて！
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        mazestep_1: 迷路の手順はこちら
+        mazestep_2: 迷路の手順はこちら
+        mazestep_3: 迷路の手順はこちら
+        mazestep_4: 迷路の手順はこちら
+        mazestep_5: 迷路の手順はこちら
         studio_c2_1: いぬに「こんにちは」といわせてみましょう。
         studio_c2_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
         studio_c2_3: いぬがねこのところに行くプログラムを作ってみてください。
@@ -333,14 +329,9 @@
         studio_playlab_8: ポイントが獲得できるブロックを追加してください。そして、ユニコーンがウィザードに接近したときにに音ができるようにブロックを追加し、ポイントを獲得するまで矢印キーでユニコーンが動けるようにしてください。
         studio_playlab_9: エイリアン侵入の際の背景を設定し、スペースボットがエリアンをより早く捕まえられるようスピード設定を行ってください。スペースボットに矢印キーで近づけるようにし、周囲に警告できるようにしてください。
         studio_playlab_10: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
+        studio_iceage_hello1: シドは新しい冒険に向けてみんなに集まってほしいようです。シドに「こんにちは」と言わせましょう。ワークエリアにブロックをドラッグします。そしてブロックの中に「こんにちは」と書いてみましょう。
+        studio_iceage_hello2: シド(キャラ１) がマニー(キャラ２) を見つけて、冒険に誘いたいと思っています。「キャラが話す」のブロックを二回使ってお互いにあいさつをさせましょう。
+        studio_iceage_move_to_flag: スクラットがドングリを探しています！「移動」のブロックを使って最後の200ピクセルを進ませてあげましょう。
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound

@@ -315,7 +315,7 @@ ar:
         studio_playlab_10: 'قم بانشاء اللعبة الخاصة بك. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح لأصدقاءك بتجربة اللعبة الخاصة بك على هواتفهم.'
         studio_iceage_hello1: |-
           سيد يريد جمع الجميع لمغامرة جديدة.هل يمكنك مساعدته ليقول "مرحبا" بسحب كتلة 'يقول' إلى منطقة العمل وكتابة كلمة "hello" داخلها ؟
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_hello2: '"سيد" (الممثل 1) وجد "ماني" (الممثل 2) ويريد أن يدعوه الى مغامرة. ساعدهم على تحية بعضهم البعض عن طريق استخدام مكعب "الممثل يقول" مرتين.'
         studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
@@ -325,7 +325,7 @@ ar:
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
         studio_iceage_throw_hearts: |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_free_play: حان الوقت لإنشاء اللعبة أو القصة الخاصة بك! عند انتهائك، انقر فوق زر الإنهاء للسماح لأصدقائك بلعب اللعبة الخاصة بك على هواتفهم، ألواحهم المحمولة، أو أجهزة الكمبيوتر!
         studio_gumball_hello1: 'تريد أناييس أن يكون لها بعض الأصدقاء الجدد. هل يمكنك مساعدتها لتقول "مرحبا" بنقل كتلة "قل" إلى مساحة العمل وكتابة كلمة "مرحبا" داخل الكتلة؟'
         studio_gumball_hello2: 'داروين (الممثل 1) وشقيقه غامبول (الممثل 2) يذهبان إلى المدرسة. ساعدهم على تحية بعضهم البعض باستخدام كتلة "يقول الممثل" مرتين.'
         studio_gumball_move_to_flag: 'الموز "جو"  على وشك الفوز بسباق الحقل اليوم!  ساعده على الذهاب آخر 200 بكسل باستخدام كتلة "تحريك".'
@@ -521,9 +521,9 @@ ar:
         gumball_intro: 'ساعة البرمجة غامبول - مقدّمة'
         gumball_events: 'ساعة البرمجة غامبول - الأحداث'
         gumball_repeat: 'ساعة البرمجة غامبول - تركيب التكرار'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: '"العصر الجليدي" ساعة من التعليمات البرمجية - التقديم'
+        iceage_events: '"العصر الجليدي" ساعة من التعليمات البرمجية - الأحداث'
+        iceage_repeat: '"العصر الجليدي" ساعة من التعليمات البرمجية - تكرار البيانات'
     callout:
       text:
         drag_blocks: 'اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر'

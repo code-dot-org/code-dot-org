@@ -28,6 +28,8 @@ ja:
     code:
       label: 先生を追加：
       placeholder: セクション ・ コード (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: 先生を追加
   add_hint_form:
     placeholder: ここにあなたのヒントを入力してください
@@ -255,8 +257,8 @@ ja:
       remove: この教師を削除してもよろしいですか。
     students:
       dashboard: 先生用のダッシュボードへ
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: 先生が見つかりませんでした。
+    student_teacher_disassociated: 'あなたの先生として %{teacher_name} を削除しました。'
     panel:
       answer_viewer: 回答者の画面で表示
       student: 生徒
@@ -332,7 +334,7 @@ ja:
   share:
     title: コード スタジオで学ぶ
     description: 誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: アワーオブコードを試してみよう！
   gender:
     male: 男性
     female: 女性
@@ -362,7 +364,7 @@ ja:
     built_on_code_studio: コードスタジオに構築された
     make_my_own_app: 自分のアプリを作る
     how_it_works: 動作の説明
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: アワーオブコードを試してみよう！
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
@@ -566,7 +568,7 @@ ja:
     need_help: スタートするのをお手伝いしましょうか？
     really_delete: 削除しますか？
     delete_yes: はい
-    delete_no: いいえ
+    delete_no: ちがいます
     saved: 保存されました
     not_saved: 保存されていません
     cancel: キャンセル

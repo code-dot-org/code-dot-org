@@ -28,6 +28,8 @@ ca:
     code:
       label: 'Afegeix un mestre:'
       placeholder: Secció Codi (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Afegeix un professor
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí

@@ -54,7 +54,7 @@
     #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
   = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: Applab.pretty_print(@level.start_html)
   :javascript
-    codeMirror('start_html', 'html');
+    levelbuilder.initializeCodeMirror('start_html', 'html');
 .field.examples
   = f.label :examples, 'Example solutions'
   %p
@@ -83,7 +83,7 @@
         }
   = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
   :javascript
-    codeMirror('data_tables', 'javascript');
+    levelbuilder.initializeCodeMirror('data_tables', 'javascript');
 
 .field
   = f.label 'Key-Value Data'
@@ -98,7 +98,7 @@
         }
   = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
-    codeMirror('data_properties', 'javascript');
+    levelbuilder.initializeCodeMirror('data_properties', 'javascript');
 
 .field
   = f.label 'Hide View Data Button'

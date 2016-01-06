@@ -2956,10 +2956,9 @@
       Ryan - 4-5 Bee Conditionals 2_instruction: Biet vill bara ha nektar just nu.
         Inte alla saker är blommor, så kolla under ALLA MOLN för att se om det döljer
         en blomma. Om det gör det kan du samla nektar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Biet vill bara ha nektar just nu. Alla
+        objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer
+        en blomma. Om det är en blomma så kan du samla nektar.
       Ryan Test Locked Blocks_instruction: Här är en funktion som kallas "patrol."
         Redigera den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
@@ -4543,6 +4542,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4550,6 +4552,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

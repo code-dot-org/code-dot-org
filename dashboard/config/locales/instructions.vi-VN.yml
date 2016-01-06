@@ -181,15 +181,13 @@
       2-3 Bee Conditionals 14_instruction: Thu thập phấn hoa và làm mật ong . Cẩn
         thận không lấy phấn hoa từ hoa tím vì nó có thể không có phấn .
       2-3 Bee Conditionals 15_instruction: Thu thập phấn hoa từ tất cả các bông.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
+      2-3 Bee Conditionals 2_instruction: Xin chào, tôi là Ong! Hãy giúp tôi thu thập
+        mật hoa từ những bông hoa. Sử dụng hàm Loop.
       2-3 Bee Conditionals 3_instruction: |
         Help me collect all of the nectar from
         the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
+      2-3 Bee Conditionals 4_instruction: Giúp tôi thu thập tất cả mật hoa từ những
+        bông hoa và dùng chúng để làm mật ong.
       2-3 Bee Conditionals 5_instruction: |
         Purple flowers may have either 1 or 0
         nectar, but you don't know which one! Be careful not to collect nectar from
@@ -4969,6 +4967,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4976,6 +4977,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

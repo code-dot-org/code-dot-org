@@ -724,7 +724,7 @@ zh:
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Multiple Choice: 选择题
-        Which blocks spell "MOVE"?: '哪个块拼出"MOVE"？'
+        Which blocks spell "MOVE"?: '哪些模块拼出了"MOVE"？'
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png

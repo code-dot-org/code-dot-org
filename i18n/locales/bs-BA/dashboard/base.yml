@@ -28,6 +28,8 @@ bs:
     code:
       label: 'Dodaj učitelja:'
       placeholder: Šifra Odjeljenja (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog

@@ -154,7 +154,7 @@ v:function(d,k){turtle_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:(k=turtle_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).turtle_locale = {
-"blocksUsed":function(d){return "블럭 사용: %1"},
+"blocksUsed":function(d){return "블록 사용: %1"},
 "branches":function(d){return "가지 수"},
 "catColour":function(d){return "색"},
 "catControl":function(d){return "반복"},

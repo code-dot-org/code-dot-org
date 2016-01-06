@@ -146,7 +146,7 @@ zh:
           description_short: 和小畫家一起畫圖和設計!
         hourofcode:
           Maze: 迷宮
-          title: Classic Maze
+          title: 經典迷宮
           description: 嘗試計算機科學的基礎知識與憤怒的小鳥人物，植物大戰殭屍，和Scrat從冰河時代！
           description_short: 嘗試計算機科學的基礎知識與許多好玩的人物！
         frozen:
@@ -680,6 +680,7 @@ zh:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1234,6 +1235,7 @@ zh:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.

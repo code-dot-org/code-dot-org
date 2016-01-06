@@ -28,9 +28,8 @@
   twentyhours_heading: Bilgisayar Bilimlerine Giriş kursumuzu deneyin
   twentyhours_text: İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar
     bilimleri ve programlama kavramlarını öğrenebilirsin.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Her çocuk uygun fırsatı hak ediyor
+  og_description: Okullarda her öğrenci bilgisayar bilimini okumayı hak ediyor.
   hoc2014_heading: <a href="http://hourofcode.com">Kodlama Saatine </a><br/> katılın  8
     - 14 Aralık, 2014<br/>
   hoc2014_students: Öğrenciler
@@ -370,7 +369,7 @@
   volunteer_engineer_submission_intro_links: Kendi Kod Saati etkinliğini düzenlemek
     ve <a href="%{volunteer_local}">yerel gönüllü haritamızdan</a> gönüllü bulmak
     için <a href="%{learn_more}">daha fazlasını öğren.</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Bilgilerinizi güncelleyin
   volunteer_engineer_submission_header_shared: Bilgiler gönüllüler haritasındaki öğretmenlerle
     paylaşıldı
   volunteer_engineer_submission_field_name: İsim
@@ -504,19 +503,18 @@
     this new field. To register for professional development workshops, apply for
     a <a href="/educate/districts">district-wide partnership</a> with Code.org.
   dashboard_course_csina: Cebirde Bilgisayar Bilimi
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csina_desc: Code.org Bootstrap işbirliği ile bilgisayar programlama
+    ile cebirsel ve geometrik kavramları öğreten müfredat geliştirmiştir.
   dashboard_course_csins: Bilimde Bilgisayar Bilimleri
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csins_desc: Code.org GUTS Projesi işbirliği ile modelleme ve simülasyon
+    yöntemleri kullanarak bilgisayar bilimine giriş kavramlarını geliştirmeye başlamıştır.
   dashboard_course_ecs: Bilgisayar Bilimlerini Keşfedin
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Bilgisayar Bilimi İlkeleri
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_csp_desc: Code.org titiz, ilgi çekici ve anlaşılır bir şekilde
+    bilgisayar bilimlerinin keşfedilmesi için kurslar tasarlamıştır.
   dashboard_landing_loading: Yükleniyor...
   dashboard_action_edit: Düzenle
   dashboard_action_save: Kaydet
@@ -1488,13 +1486,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

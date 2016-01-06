@@ -20,8 +20,8 @@ nl-NL:
   submit: Insturen
   twentyhours_heading: Probeer onze introductiecursus Informatica
   twentyhours_text: "Klaar met je eerste 'Hour of Code'? Leer meer over Informatica en programmeerconcepten in deze vervolgcursus."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Ieder kind verdient een kans
+  og_description: Elke leerling op elke school verdient de kans om te leren werken met computers.
   hoc2014_heading: 'Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br />8 - 14 december 2014<br/>'
   hoc2014_students: Leerlingen
   hoc2014_try: Probeer het
@@ -279,8 +279,8 @@ nl-NL:
   class_submission_languages_other: Andere taal(en)
   inspirational_videos_more: |-
     Meer <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirerende video's</a> van rolmodellen en beroemdheden
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Kies jouw speel lab thema
+  playlab_classic_title: Standaard
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Ice Age - Binnenkort'
   playlab_iceage_title_live: Ice Age
@@ -311,8 +311,8 @@ nl-NL:
   volunteer_engineer_submission_intro_recruit: |-
     Deze leerkrachten zijn op zoek naa iemand die <span style="font-family: 'Gotham 7r', sans-serif;">gepassioneerd is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun leerlingen kan <span style="font-family: 'Gotham 7r', sans-serif;">inspireren</span> door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees hier</a> over het organiseren van je eigen Uur Code.
   volunteer_engineer_submission_intro_signup: 'Voer de volgende gegevens in als je een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span> zijn verplicht.'
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: 'Ben je op zoek naar vrijwilligers? Vind een vrijwilliger op onze <a href="%{volunteer_local}">kaart</a>.'
+  volunteer_engineer_submission_update_information: Uw gegevens bijwerken
   volunteer_engineer_submission_header_shared: Informatie gedeeld met docenten op de vrijwilligerskaart
   volunteer_engineer_submission_field_name: naam
   volunteer_engineer_submission_field_name_placeholder: Volledige Naam
@@ -550,10 +550,10 @@ nl-NL:
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>16 December 2015</b> - Bedankt voor uw deelname aan het Hour of Code 2015! Het volgen en opslaan van de voortgang is nu hervat in alle Code Studio lessen en cursussen. Opmerking: Het kantoor van Code.org is gesloten van 19 December - 3 januari. Vragen die u voor 4 januari stelt zullen vertraagd worden beantwoord.'
   dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: '<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.'
-  dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
+  dashboard_announce_playlab: '<b>4 December 2015</b> - de Hour of Code is hier! 50 lessen voor elke leeftijd en elk device proberen. Nieuw deze week: uw eigen verhalen en spelletjes maken met de speel labs Ice Age en Gumball.'
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Probeer nu
@@ -565,7 +565,7 @@ nl-NL:
   learn_educator_resources_description: Leer om een Uur Code te onderwijzen
   learn_educator_resources_button: Middelen voor leerkrachten
   learn_are_you_educator: 'Ben je een leerkracht? Leer dan <a href="http://hourofcode.com/resources/how-to">hoe je een Uur Code kunt geven</a>'
-  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Find a local volunteer</a> to help during your Hour of Code'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Vind een vrijwilliger</a> om te helpen met uw Hour of Code'
   learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
   learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Meer informatie</a> over prijzen voor iedere leerkracht.'

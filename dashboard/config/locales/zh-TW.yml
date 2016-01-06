@@ -28,6 +28,8 @@
     code:
       label: 增加一位老師：
       placeholder: 單元代碼 (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: 新增教師
   add_hint_form:
     placeholder: 請在此處輸入您的提示
@@ -262,8 +264,8 @@
       remove: 你確認要刪除這個老師嗎？
     students:
       dashboard: 到教師主控台
-    user_not_found: 無法找到該名老師或學生
-    student_teacher_disassociated: '%{teacher_name}已經從%{student_name}的老師名單中移除'
+    user_not_found: 教師不能被找到
+    student_teacher_disassociated: 你已移除 %{teacher_name} 當作你的教師.
     panel:
       answer_viewer: 答案檢視器
       student: '學生 '
@@ -337,7 +339,7 @@
   share:
     title: 在程式碼工作室中學習
     description: 任何人都可以學習電腦科學並透過程式碼來設計遊戲、app及藝術創作。
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: 試試看做一個「一小時的程式課」!
   gender:
     male: 男性
     female: 女性
@@ -373,7 +375,7 @@
     built_on_code_studio: 在 Code Studio 上建立
     make_my_own_app: 製作自己的 app
     how_it_works: 它是如何運作的
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: 試試看做一個「一小時的程式課」!
   reference_area:
     title: 需要幫忙嗎？
     subtitle: 看看這些影片和提示
@@ -432,7 +434,7 @@
       unused: 未使用的關卡
   upsell:
     hoc:
-      title: 一小時的程式設計課程
+      title: 經典迷宮
       body: 請試試數百萬人已經體驗過的電腦科學基礎課程。
     flappy:
       title: Flappy遊戲設計

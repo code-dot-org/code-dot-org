@@ -230,7 +230,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level6FailureMessage":function(d){return "بگذارید بلوک در طرح خاک تا کامل کنید پازل را"},
 "level7FailureMessage":function(d){return "Use the \"plant\" command to place crops on each patch of dark tilled soil."},
 "level8FailureMessage":function(d){return "اگر شما به کریپر بخورید منفجر خواهد شد. حرکت کنید در اطراف انها و به خانه وارد شوید"},
-"level9FailureMessage":function(d){return "Don't forget to place at least 2 torches to light your way AND mine at least 2 coal."},
+"level9FailureMessage":function(d){return "فراموش نکنید که به جای حداقل 2 مشعل راه خود را به نور و معدن حداقل 2 ذغال سنگ است."},
 "minecraftBlock":function(d){return "بلوک"},
 "nextLevelMsg":function(d){return craft_locale.v(d,"puzzleNumber")+" پازل تکمیل شد. تبریک میگم!"},
 "playerSelectChooseCharacter":function(d){return "شخصیت خود را انتخاب کنید."},

@@ -327,8 +327,8 @@
   starwars_javascript_start_button: Probaj sada
   starwars_blocks_title: Blokovi
   starwars_blocks_description: Iskoristi povuci-ispusti blokove.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Mnogi jezici | Moderni preglednici, pametni telefoni, tableti
+    | Dob 6-10
   starwars_blocks_start_button: Probaj sad
   starwars_watch_videos: Prije nego počneš, pogledaj jedan od ovih inspirativnih klipova
   starwars_speak_languages: Govoriš li neki drugi jezik?
@@ -1481,13 +1481,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

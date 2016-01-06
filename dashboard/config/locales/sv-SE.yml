@@ -29,6 +29,8 @@
     code:
       label: 'Lägg till lärare:'
       placeholder: Avsnitt kod (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Lägg till lärare
   add_hint_form:
     placeholder: Skriv in ditt tips här
@@ -289,9 +291,8 @@
       remove: Är du säker du vill ta bort denna lärare?
     students:
       dashboard: Gå till Dashboard för lärare
-    user_not_found: Läraren eller eleven kunde inte hittas
-    student_teacher_disassociated: '%{teacher_name} har tagits bort som lärare för
-      %{student_name}'
+    user_not_found: Läraren kunde inte hittas.
+    student_teacher_disassociated: Du har tagit bort %{teacher_name} som din lärare.
     panel:
       answer_viewer: Svar ruta
       student: Student
@@ -376,7 +377,7 @@
   share:
     title: Lär med Code Studio
     description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prova en kodtimme!
   gender:
     male: Man
     female: Kvinna
@@ -416,7 +417,7 @@
     built_on_code_studio: Skapad i Code Studio
     make_my_own_app: Göra min egen app
     how_it_works: Hur det fungerar
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prova en kodtimme!
   reference_area:
     title: Behöver du hjälp?
     subtitle: Se dessa filmer och tips

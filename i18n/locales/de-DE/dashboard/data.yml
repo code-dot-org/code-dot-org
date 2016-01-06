@@ -315,25 +315,24 @@ de:
         studio_iceage_hello2: 'Sid (Schauspieler 1) hat Manny (Schauspieler 2) gefunden und will ihn auf ein Abendteuer einladen. Helfe ihnen sich gegenseitig zu begrüßen indem du den "Schauspieler sagt" Block zweimal benutzt.'
         studio_iceage_move_to_flag: 'Scrat sucht nach seiner Eichel! Hilf ihm dabei die letzten 200 Pixel zurückzulegen, indem du den "bewegen"-Baustein benutzt.'
         studio_iceage_move_to_actor: 'Diego (Figur 1) sucht nach Manni (Figur 2). Hilf Diego dabei sich 200 Pixel nach unten zu bewegen, indem du den Block "Figur bewegen" benutzt. Danach verbindest du einen Block mit dem "wenn Figur berührt wird" Ereignis, um einen Ton zu generieren, sobald die beiden sich finden.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_repeat: 'Der Baustein "ewig wiederholen" ermöglicht dir Code ununterbrochen auszuführen. Kannst du die Bausteine zusammenfügen, damit Granny ein wenig Übung im Bewegen nach rechts und links bekommt?'
+        studio_iceage_click_hello: Hilf Sid, dass er nach seinen Freunden ruft, wenn er angeklickt wird. Vergiss nicht auf ihn zu klicken, nachdem du das Programm gestartet hast.
         studio_iceage_move_events: 'Scrat sucht immer noch nach Eicheln! Hilf ihm dabei, indem du den "Bewegen" Block mit jedem der Ereignisse verknüpfst und durch drücken der Pfeiltasten seine Richtung geändert wird. Wenn du fertig bist, drücke auf "Ausführen", um alle Eicheln einzusammeln.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais will neue Freunde machen. Können Sie ihr helfen "Hallo" zu sagen,  indem Sie den Block "say" heraus in den Arbeitsbereich ziehen und das Wort "Hallo" zu tippen?'
+        studio_iceage_sound_and_points: 'Wir haben den größten Teil des Codes bereitgestellt, um Granny hin und her laufen zu lassen und Sid auf dem Bildschirm zu bewegen. Kannst du den Code mit dem Baustein "wenn die Figur berührt" so vervollständigen, dass ein Geräusch ertönt und du einen Punkt gewinnst, wenn Sid un Granny sich berühren? Klicke "Ausführen", um das Spiel zu starten.'
+        studio_iceage_warn_ice_age: 'Alle müssen sich schneller bewegen, denn es beginnt eine Eiszeit! Setze eine Eisfläche in den Hintergrund und ändere die Geschwindigkeit von Sid auf "schnell". Drücke auf "Ausführen" und bewege ihn zu Diego um ihn zu warnen.'
+        studio_iceage_throw_hearts: 'Sid möchte seiner Großmutter zeigen, dass er sie gern hat. Benutze den Baustein "Wurf von Figur" um Sid (Figur1) Herzen auf Granny (Figur 2) werfen zu lassen. Ändere Grannys Stimmung auf "fröhlich", wenn sie von den Herzen getroffen wird.'
+        studio_iceage_free_play: 'Es ist Zeit für eine eigenes Spiel oder eine eigene Geschichte! Klicke am Ende auf "Abschließen", damit deinen Freunden das Spiel auf ihren Geräten ausprobieren können.'
+        studio_gumball_hello1: 'Anais will neue Freunde kennen lernen. Kannst du ihr helfen "Hallo" zu sagen, indem du den Baustein "sagen" in den Arbeitsbereich ziehst und das Wort "Hallo" eingibst?'
         studio_gumball_hello2: 'Darwin (Schauspieler 1) und seinem Bruder Gumball (Schauspieler 2) gehen zur Schule.  Helfen sie einander zu grüßen, indem Sie den "Schauspieler sagen" Block zweimal benutzen.'
         studio_gumball_move_to_flag: 'Banana Joe soll ein gefundenes Fressen-Rennen zu gewinnen!  Helfen Sie ihm die letzten 200 Pixel mit dem "verschieben"-Block zu gehen.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_move_to_actor: 'Gumball (Figur 1) und Darwin (Figur 2) haben sich beim Klassenausflug verspätet! Bewege Gumball mit dem Baustein "bewege Figur" 200 Pixel nach unten zu Darwin. Setzte einen Baustein an das "wenn die Figur berührt"-Ereignis damit ein Geräusch ertönt, wenn Sie zueinander finden.'
+        studio_gumball_repeat: 'Der "ewig wiederholen"-Baustein ermöglicht die ununterbrochene Ausführung von Code. Kannst du ein paar Bausteine anbringen, damit sich Gumball durch Hin und Herlaufen für sein Rennen aufwärmt?'
+        studio_gumball_click_hello: 'Hilf Anton das Rennen zu beginnen, indem du ihn "Auf die Plätze, fertig, los" sagen lässt. Teste dein Programm. Vergiss nicht auf "Ausführen" zu klicken!'
+        studio_gumball_move_events: 'Darwin nimmt am Flaggen-sammeln-Wettbewerb teil. Setze "bewegen"-Bausteine an Ereignisse um ihn zu bewegen. Klicke auf "Ausführen" wenn du fertig bist und versuche alle Flaggen einzusammeln.'
+        studio_gumball_sound_and_points: 'Wir haben den meisten Code zum Hin und Herlaufen lassen von Anton (Figur 2) und zum Bewegen von Banana Joe (Figur 1) schon vorbereitet. Füge Bausteine an das "wenn die Figurberührt"-Ereignis an um ein Geräusch abzuspielen und einen Punkt zu machen, wenn Banana Joe und Anton sich berühren. Klicke zum Spielen auf "Ausführen".'
+        studio_gumball_warn_food_fight: 'Darwin ist gerade einer Essensschlacht entkommen! Ändere den Hintergrund zu "Figuren" und setze Darwin Geschwindigkeit auf schnell, klicke auf "Ausführen" und bewege ihn zu Penny, um sie zu warnen.'
+        studio_gumball_join_food_fight: 'Nimm an der Essensschlacht teil! Verwende den Baustein "Wurf von Figur... rechts" damit Banana Joe (Figur 1) Essen zu Anton (Figur 2) wirft. Ändere Antons Stimmung zu "wütend", wenn er getroffen wird.'
+        studio_gumball_free_play: 'Hier kannst du dein eigenes Spiel, oder deine eigene Geschichte erstellen. Wenn du fertig bist, klicke auf "Abschließen", damit Freunde dein Spiel auf ihrem Telefon, Tablet, oder Computer ausprobieren können.'
         studio_full_sandbox: |-
           Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_k1_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
@@ -518,11 +517,11 @@ de:
         mc_congrats_share: 'Minecraft - Glückwunsch'
         mc_congrats_no_share: 'Minecraft - Glückwunsch'
         gumball_intro: 'Gumball Hour of Code - Einführung'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Ereignisse'
+        gumball_repeat: 'Gumball Hour of Code - "wiederholen"-Anweisungen'
+        iceage_intro: 'Ice Age Hour of Code - Einführung'
         iceage_events: 'Ice Age Programmierstunde - Ereignisse'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_repeat: 'Ice Age Hour of Code - "wiederholen"-Anweisungen'
     callout:
       text:
         drag_blocks: 'Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten'

@@ -25,47 +25,47 @@ ta:
           Artist5: நிலை 19
           Unplug11: நிலை 20
         Hour of Code:
-          desc: Hour of Code
+          desc: நிரல்வரி நேரம்
           Maze: நிலை 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: நிரல்வரிகளை திருத்து
           MazeEC: நிலை 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: தாவு
           Bounce: நிலை 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: உபயோகிப்பாளர் உருவாக்கிய புதிர்கள்
           Custom: நிலை 1
         Flappy Levels:
-          desc: Flappy Bird
+          desc: சிறகடிக்கும் பறவை
           Flappy: நிலை 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
           Jigsaw: நிலை 1
         Step Levels:
-          desc: Maze (beta)
+          desc: புதிர்பாதை
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: நிரல்வரிகளை திருத்து
           MazeEC: நிலை 1
           Applab: நிலை 2
           ArtistEC: நிலை 3
           StudioEC: நிலை 4
         events:
-          desc: Bounce (beta)
+          desc: தாவு
           Bounce: நிலை 1
           Studio: நிலை 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: உபயோகிப்பாளர் உருவாக்கிய புதிர்கள்
           Custom: நிலை 1
         flappy:
-          desc: Flappy Bird
+          desc: சிறகடிக்கும் பறவை
           Flappy: நிலை 1
         jigsaw:
           desc: Jigsaw (beta)
           Jigsaw: நிலை 1
         step:
-          desc: Maze (beta)
+          desc: புதிர்பாதை
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -73,9 +73,9 @@ ta:
     game:
       name:
         Unplug1: கணினி அறிவியலின் அறிமுகம்
-        Maze: The Maze
+        Maze: புதிர்பாதை
         Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
+        Unplug2: கணினிபூர்வமான சிந்தனை
         Unplug3: வரைதாள் செய்நிரல்
         Artist: கலைஞர்
         Unplug4: வழிமுறைகள்
@@ -86,16 +86,16 @@ ta:
         Artist3: கலைஞர் 3
         Unplug7: பாடல் எழுதுதல்
         Farmer2: விவசாயி 2
-        Unplug8: Abstraction
+        Unplug8: நுண்புல
         Artist4: கலைஞர் 4
         Unplug9: Relay Programming
         Farmer3: விவசாயி 3
         Unplug10: இணையம்
         Artist5: கலைஞர் 5
         Unplug11: Wrap-up
-        MazeEC: The Maze
+        MazeEC: புதிர்பாதை
         Bounce: Bounce
-        Flappy: Flappy Bird
+        Flappy: சிறகடிக்கும் பறவை
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
@@ -104,18 +104,18 @@ ta:
         TextMatch: Text Match
         StudioEC: Play Lab
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: இணைய மாதிரி
         Custom: Artist
         CustomStudio: Play Lab
     trophy:
       name:
-        Bronze: Bronze
+        Bronze: வெண்கலம்
         Silver: வெள்ளி
         Gold: தங்கம்
     concept:
       description:
-        sequence: Sequence
-        if: If block
+        sequence: தொடர்வரிசை
+        if: If தொகுப்பு
         if_else: If-else block
         loop_times: Repeat times block
         loop_until: Repeat until block
@@ -391,13 +391,13 @@ ta:
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: Computational Thinking
+        Unplug2: கணினிபூர்வமான சிந்தனை
         Unplug3: வரைதாள் செய்நிரல்
         Unplug4: வழிமுறைகள்
         Unplug5: செயல்பாடுகள்
         Unplug6: Conditionals
         Unplug7: Songwriting
-        Unplug8: Abstraction
+        Unplug8: நுண்புல
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Wrap-up
@@ -446,7 +446,7 @@ ta:
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Computational Thinking
+        C3_computational_thinking: கணினிபூர்வமான சிந்தனை
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing

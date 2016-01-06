@@ -2382,9 +2382,8 @@
         kertaa 90 menee 360:een? Vihje: Se on todella pieni luku.'
       frozen cross rotate_instruction: Kokeile nyt toistaa se 10 kertaa. Kuinka monta
         astetta pitää kääntyä viivojen välillä?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
+      frozen cross_instruction: Käytä plusmerkin tekemiseen "toista"-lohkoa komentojen
+        ympärillä. Huomasitko, että Elsa voi liikkua eteen- ja taaksepäin?
       frozen diamond mini snowflake_instruction: |
         Did you know every snowflake is
         a different shape? Let's create a new snowflake by using another “Repeat"
@@ -4891,6 +4890,9 @@
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
@@ -4898,6 +4900,7 @@
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to

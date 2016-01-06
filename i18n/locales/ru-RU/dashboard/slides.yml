@@ -537,7 +537,7 @@ ru:
         text: 'Интернет супер весёлое место. Но когда вы становитесь он-лайн, вы должны быть так же осторожны как при переходе улицы в своём районе. Запомните три правила. Правило номер 1: сначала спросите ваших родителей. Правило номер 2: разговаривайте только с людьми, которых вы знаете. Правило номер 3: придерживайтесь мест, которые вам подходят.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: Ого, это было весело! Но уже время ужина. Я выхожу. Жду не дождусь, когда вернусь.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
@@ -550,44 +550,43 @@ ru:
         text: Общение это ключ к успеху в парном программировании. Без оскорблений, будьте вежливыми, не будьте высокомерным штурманом, потому что никому не нравятся надоедливые пассажиры. Вам и вашему партнёру следует всегда общаться. Водитель может объяснить, что она или он делают. А штурман может предложить помощь, что делать дальше.
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team.
+        text: Штурману следует думать об общей картине, а водителю фокусироваться на деталях. Обе роли важны. Парное программирование это всё о работе вместе как одна команда.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: 'Урок называется "Посадка семян" и он поможет нам понять алгоритмы. Алгоритмы - это определенные инструкции, которые объясняют в каком порядке что-то делается. Даже для того чтобы выполнить такие повседневные действия, как принятие пищи или чистка зубов, нужно выполнить ряд маленьких шагов.'
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: 'Компьютеры могут быть действительно умными, но они понимают только в том случае, если ты "говоришь" им шаг за шагом, что ты хочешь. В алгоритмах замечательно то, что если по-порядку следовать инструкциям, то можно сделать то, что до этого ты не знал как делать. Это как следовать рецепту.'
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: Сегодня, используя алгоритмы, мы будем сажать собственные семена. Создай алгоритм, разрезав картинки на части. Выбери те картинки, на которых изображена посадка семян, и расположи их в правильном порядке.
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: Пришло время проверить работу алгоритма. Очень внимательно выполняй шаги в алгоритме. Они в правильном порядке? Удалось тебе посадить семя, следуя алгоритму? Это как программирование с картинками!
       5:
         image: notes/C1_planting_seed_5.png
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: 'Когда мы хотим сделать шоколад, мы должны сделать много больших шагов на пути к этому, и каждый из этих шагов имеет набор небольших шагов, и также существуют различные рецепты или алгоритмы в зависимости от того, каким мы хотим сделать вкус шоколада. Каждый шаг является важным, даже самый маленький, ибо без него остальной процесс невозможен. Создание алгоритмов, которые могут быть понятными для других - это действительно важно. Вот почему каждый шаг должен быть написан так, что независимо от того, кто его делает, результат остается одинаковым.'
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell.
+        text: Время проявить творчество и использовать свои навыки кодирования, чтобы рассказать историю. Ваша история будет иметь актеров, и вы заставите этих актеров говорить и взаимодействовать друг с другом. Начните думать, какую именно историю вы хотите рассказать.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: |-
-          The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The "when run" block starts everything. The "move" block will move your character and the "say" block will make your character say whatever you type.
+        text: 'Кот всегда боится собаку, но что будет, если кот выяснит, что собака пытается понравиться? Всё начинается с блока "при запуске". Блок "движения" приведет в движение ваш персонаж, а блок "говорить" заставит ваш персонаж сказать всё, что вы введёте.'
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: 'This is the "when actors collide" block which you can link up to the other blocks.'
+        text: 'Это блок "когда персонажи сталкиваются", который ты можешь связать с другими блоками.'
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: 'I was making the dog come over and say "Hi" but then the cat got scared so it ran away. "Ahh" If there was more time, it would have been a happy ending. The end!'
+        text: 'Я делала так, что пес приходил и говорил "Привет", но тогда кот пугался и убегал прочь. "Ох", если бы было больше времени, был бы счастливый конец. Конец!'
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words.
+        text: Это уровень правописания. Используй кусочки пазла, чтобы переместить пчелу. Перемещаясь, она будет собирать буквы в слова.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: Посмотри, сможешь ли ты составить слово, которое дано под игровым полем в рамке. Но будь осторожен! Перемещение пчелы не в том направлении добавит ненужные буквы.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
@@ -597,46 +596,46 @@ ru:
         text: Например, если бы я хотел поздравить всех с днем рождения на Фейсбук, это могло бы потребовать более века для написания и отправки всех этих электронных писем. Но с помощью всего нескольких строк кода я могу получить систему, которая отправит всем электронные письма с поздравлениями.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: 'В этом примере вы должны двигать птицу, чтобы добраться до свиньи. Чтобы сделать это легче, мы будем использовать блок повтора. Это можно сделать двумя способами. Первый - это использовать команду двигаться вперед пять раз для продвижения птицы на один шаг за раз. Второй способ - это повторить блок двигаться вперед пять раз, используя блок повтора.'
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: 'In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward.'
+        text: Для того, чтобы сделать это, перенесите команду «двигаться вперед» в блок повтора. Вы можете нажать на него и указать сколько раз повторять выполнение блока внутри (на сколько шагов пройти вперёд).
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: Еще одна вещь, вы можете поместить несколько команд внутрь блока повторить. В этом примере мы говорим двигаться вперед и повернуть налево пять раз. Удачи!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: Вы даже не будет претендовать на участие в гонках, если у вас нет людей, которые являются специалистами в области компьютерных наук. Автомобили собирают много данных, которые надо анализировать. Люди должны писать программы, чтобы анализировать данные для повышения производительности.
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: В этом задании вы будете художником, который рисует фигуры с помощью карандаша. Когда художник шагает, то позади него рисуется линия.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: 'Для перемещения по полотну, вам надо будет использовать блок "двигаться вперед". Этот блок "двигаться вперед" говорит двигаться вперед на 100 пикселей. Что произойдёт, когда мы нажмём "выполнить"? Художник движется вперед на определенное расстояние, и это расстояние составляет 100 пикселей. Пиксели - это очень маленькие квадраты на экране вашего компьютера.'
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Другой блок в этой головоломке поворачивает направо на 90 градусов. Когда мы перенесём его в рабочую область, то наш художник повернется. Вы можете изменять на сколько он должен поворачиваться. Этот поворот на 90 градусов.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: А это поворот на 120 градусов. Помните, что вы можете изменить эти значения нажав на стрелки рядом с цифрами для пикселей и градусов. Наслаждайтесь рисованием с вашим художником!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: Это блок условия. Он говорит ЕСЛИ нектара или мёда меньше определённого числа, ТО делай что-нибудь.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Это полезно, когда мы не знаем, сколько нектара или мёда получить. Например, как мы видим это здесь с вопросительным знаком.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: В этом примере мы собираемся сказать ЕСЛИ фиолетовый цветок имеет нектара больше 0, ТО собрать нектар. Это скажет нашим пчелам собирать нектар до тех пор, как он не закончится!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!
+        text: Этот урок с двоичными браслетами. Мы запрограммируем наши инициалы на браслете, который вы можете носить и показывать друзьям!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites.
+        text: 'Двоичная система - это способ представления информации используя только два символа, например, 0 и 1. Также, включено-выключено, вверх-вниз, войти-выйти представляют двоичную информацию.'
       3:
         image: notes/C2_binary_bracelets_3.png
         text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
@@ -777,7 +776,7 @@ ru:
         text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
       3:
         image: notes/C2_relay_programming_3.png
-        text: Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it.
+        text: 'Для поиска и исправления ошибок в коде программисты используют отладку кода. Есть много способов исправить проблемы. Один из самых простых - двигаться шаг за шагом пока вы не найдёте место, где что-то не так, затем исправить это.'
       4:
         image: notes/C2_relay_programming_4.png
         text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
@@ -809,19 +808,19 @@ ru:
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
+        text: Вы даже не будет претендовать на участие в гонках, если у вас нет людей, которые являются специалистами в области компьютерных наук. Автомобили собирают много данных, которые надо анализировать. Люди должны писать программы, чтобы анализировать данные для повышения производительности.
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: В этом задании вы будете художником, который рисует фигуры с помощью карандаша. Когда художник шагает, то позади него рисуется линия.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: 'Для перемещения по полотну, вам надо будет использовать блок "двигаться вперед". Этот блок "двигаться вперед" говорит двигаться вперед на 100 пикселей. Что произойдёт, когда мы нажмём "выполнить"? Художник движется вперед на определенное расстояние, и это расстояние составляет 100 пикселей. Пиксели - это очень маленькие квадраты на экране вашего компьютера.'
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Другой блок в этой головоломке поворачивает направо на 90 градусов. Когда мы перенесём его в рабочую область, то наш художник повернется. Вы можете изменять на сколько он должен поворачиваться. Этот поворот на 90 градусов.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: А это поворот на 120 градусов. Помните, что вы можете изменить эти значения нажав на стрелки рядом с цифрами для пикселей и градусов. Наслаждайтесь рисованием с вашим художником!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -832,13 +831,13 @@ ru:
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that is less than, equal to or greater than a number, THEN do something.
+        text: Это блок условия. Он говорит ЕСЛИ нектара или мёда меньше определённого числа, ТО делай что-нибудь.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "This is useful when we don't know how much nectar or honey to get, as we see here with this question mark."
+        text: Это полезно, когда мы не знаем, сколько нектара или мёда получить. Например, как мы видим это здесь с вопросительным знаком.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
+        text: В этом примере мы собираемся сказать ЕСЛИ фиолетовый цветок имеет нектара больше 0, ТО собрать нектар. Это скажет нашим пчелам собирать нектар до тех пор, как он не закончится!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png

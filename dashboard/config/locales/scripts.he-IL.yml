@@ -27,7 +27,7 @@
           Flappy non blockly: Flappy non blockly
           title: קורס 1
           Artist 2: אמן 2
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -741,6 +741,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1280,7 +1281,7 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Graph Paper Programming: תכנות לנייר משבצות
@@ -1365,6 +1366,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development

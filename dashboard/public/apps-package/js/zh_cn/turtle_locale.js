@@ -195,7 +195,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawStamp":function(d){return "画图章"},
 "heightParameter":function(d){return "高度"},
 "hideTurtle":function(d){return "隐藏小艺术家"},
-"jump":function(d){return "跳转"},
+"jump":function(d){return "跳跃"},
 "jumpBackward":function(d){return "向后跳"},
 "jumpForward":function(d){return "向前跳"},
 "jumpTooltip":function(d){return "不着痕迹地移动小艺术家。"},

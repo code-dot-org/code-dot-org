@@ -28,6 +28,8 @@ lt:
     code:
       label: 'Pridėkite mokytoja:'
       placeholder: Grupės kodas (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia

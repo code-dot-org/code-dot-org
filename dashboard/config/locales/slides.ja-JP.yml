@@ -358,8 +358,7 @@
         text: 「正方形を作成」という関数として定義することができます。
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: これで　しかくが　たくさんつくれる　あたらしい　ブロックは　なんかいも　つかえます。
       7:
         image: notes/frozen3_7.jpg
         text: たくさんの簡単な図形で、複雑な模様を作ることができます。次のパズルでは、今あなたが円を作るために書いたコードが、様々な大きさの円を作る新たな関数として利用できます。あなたはそれで、エルサの綺麗で緻密な雪の模様を作ることができますか？

@@ -28,6 +28,8 @@ cs:
     code:
       label: 'Přidat učitele:'
       placeholder: Kód sekce (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Přidat učitele
   add_hint_form:
     placeholder: Zadej zde svůj tip
@@ -257,8 +259,8 @@ cs:
       remove: Jsi si jist/á, že chceš odstranit tohoto učitele?
     students:
       dashboard: Přejít na přehled učitele
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Učitel nebyl nalezen.
+    student_teacher_disassociated: 'Odebrali jste %{teacher_name} jako svého učitele.'
     panel:
       answer_viewer: Odpověď diváka
       student: student
@@ -332,7 +334,7 @@ cs:
   share:
     title: Poznat Code studio
     description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění s kódem.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Vyzkoušejte Hodinu kódu!
   gender:
     male: Muž
     female: Žena
@@ -362,7 +364,7 @@ cs:
     built_on_code_studio: Postavenn na Code Studio
     make_my_own_app: Vytvořit svou vlastní app
     how_it_works: Jak to funguje
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Vyzkoušejte Hodinu kódu!
   reference_area:
     title: Potřebujete pomoc?
     subtitle: Podívej se na tyto videa a tipy

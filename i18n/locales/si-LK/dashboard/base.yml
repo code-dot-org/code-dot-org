@@ -28,6 +28,8 @@ si:
     code:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: ගුරුවරයෙක් එකතු කරන්න
   add_hint_form:
     placeholder: කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න

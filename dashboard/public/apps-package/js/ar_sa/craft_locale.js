@@ -163,7 +163,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockPlaceXAheadPlace":function(d){return "ضع"},
 "blockPlaceXPlace":function(d){return "ضع"},
 "blockPlantCrop":function(d){return "ازرع المحصول"},
-"blockShear":function(d){return "قصّ"},
+"blockShear":function(d){return "قص"},
 "blockTillSoil":function(d){return "احرث التربة"},
 "blockTurnLeft":function(d){return "اتجه إلى اليسار"},
 "blockTurnRight":function(d){return "اتجه إلى اليمين"},

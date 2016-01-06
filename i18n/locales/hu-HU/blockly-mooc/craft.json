@@ -56,7 +56,7 @@
   "generatedCodeDescription":"A puzzle-darabok elhelyezésével igazából utasításokat adtál ki, melyek a JavaScript nevű programozási nyelven íródtak. Ez az utasítás-sorozat (programkód) mondja meg a számítógépnek, hogy mit és hogyan jelenítsen meg a képernyőn. Bármi, amit a Minecraftban látsz és csinálsz ilyen programkódban íródott.",
   "houseSelectChooseFloorPlan":"Válaszd ki a ház alaprajzát.",
   "houseSelectEasy":"Könnyű",
-  "houseSelectHard":"Kemény",
+  "houseSelectHard":"Nehéz",
   "houseSelectLetsBuild":"Építsünk házat.",
   "houseSelectMedium":"Közepes",
   "keepPlayingButton":"Folytasd",

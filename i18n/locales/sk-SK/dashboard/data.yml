@@ -141,10 +141,10 @@ sk:
         maze_2_13: 'Použi nový "pokiaľ!" blok aby si mňa nechal rozhodnúť kedy sa otočiť. Tip: potrebuješ už len jeden blok, ale nauč sa ako sme ho nastavili aby si to zvládol nabudúce sám.'
         maze_2_14: 'V poriadku, toto je naozaj posledná hádanka, ale musíš si zapamätať ako si použil bloky "pokiaľ" a "opakovať" spolu.'
         maze_2_15: 'Chcem slnečnicu! Použi blok "pokiaľ" aby som sa tam dostal čo s najmenším počtom použitých blokov.'
-        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
+        maze_2_16: 'Dobre, precvičme si to ešte raz - nie je to veľmi odlišné, ale dávaj pozor na mäsožravky!'
+        maze_2_17: 'Blok "ak-inak" overuje podmienku a potom vykoná jednu ALEBO druhú vec. Skús využiť tento nový blok, aby si ma dostal k slnečnici.'
+        maze_2_18: 'Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?'
+        maze_2_19: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak to urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku.
         turtle_1_1: Ahoj, som umelec. Možeš napísať kód aby som nakreslil skoro čokoľvek. Použi pár blokov aby som nakreslil nad šedé čiary v obrázku.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
         turtle_1_3: Urobte štvorec s použitím iba 3 častí.
