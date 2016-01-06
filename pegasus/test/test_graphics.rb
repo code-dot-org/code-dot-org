@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.root(File.absolute_path('../..', __dir__))
+SimpleCov.start
 require 'rack/test'
 require 'minitest/autorun'
 require 'rmagick'
@@ -10,13 +13,16 @@ class GraphicsTest < Minitest::Test
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
 
-  def assert_image(mode, path, columns, rows)
-    url = "/images/#{mode}/#{path}"
+  def assert_image_url(url, columns, rows)
     resp = get(url)
     assert_equal 200, resp.status, url
     image = Magick::Image.from_blob(resp.body).first
     assert_equal columns, image.columns, url if columns
     assert_equal rows, image.rows, url if rows
+  end
+
+  def assert_image(mode, path, columns, rows)
+    assert_image_url "/images/#{mode}/#{path}", columns, rows
   end
 
   def test_process_image
@@ -39,5 +45,14 @@ class GraphicsTest < Minitest::Test
     assert_image '320', kids_2x, 640, nil
     # No [useful] modifications to make, return the original.
     assert_image 'x', flag, 256, nil
+
+    # Didn't find a match at this resolution, look for a match at the other resolution.
+    assert_image '320', 'avatars/flag_sphere_2x.jpg', 640, nil
+
+    # Test localized image path routing
+    header 'Host', 'hourofcode.com'
+
+    assert_image_url '/es/images/320/hour-of-code-logo.png', 320, 320
+    assert_image_url '/es/images/hour-of-code-logo.png', 289, 289
   end
 end
