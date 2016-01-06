@@ -1185,7 +1185,7 @@
         image: notes/C2_maze_intro_4.png
         text: Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken,
           til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil
-          feste seg sammen. Når jeg trykker på "kjør" igjen, vil fuglen gjøre kommandoene
+          feste seg sammen. Når jeg trykker på "Kjør" igjen, vil fuglen gjøre kommandoene
           som er stablet i arbeidsområdet fra toppen og nedover.
       5:
         image: notes/C2_maze_intro_5.png
@@ -1337,7 +1337,7 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: Når du setter en løkke inni en annen løkke, kaller vi det en nøstet
+        text: Når du setter en løkke inni en annen løkke, kaller vi det en løkke i
           løkke. For eksempel, her er koden for å tegne en trekant med sider som er
           100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre
           - en for hver side av trekanten.
@@ -1408,9 +1408,9 @@
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Nå skal vi bruke nøstede løkker med bien. Vi har fått litt kode å starte
+        text: Nå skal vi bruke løkker i løkker med bien. Vi har fått litt kode å starte
           med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter
-          snu seg mot høyre. La oss ta hele kodestykket og nøste det inni en annen
+          snu seg mot høyre. La oss ta hele kodestykket og legge det inni en annen
           gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
     C3_bounce:
       1:
@@ -1423,9 +1423,9 @@
           på tastaturet.
       3:
         image: notes/C3_bounce_3.png
-        text: Dette gjør vi ved å koble "når venstre pil"-blokken til "flytt til venstre"-blokken,
-          og "når høyre pil"-blokken til "flytt til høyre"-blokken. Prøv det, så er
-          du i gang med å programmere ditt eget sprettespill så fort som bare det!
+        text: Dette gjør vi ved å koble "når pil venstre"-blokken til "flytt venstre"-blokken,
+          og "når pil høyre"-blokken til "flytt høyre"-blokken. Prøv det, så er du
+          i gang med å programmere ditt eget sprettespill så fort som bare det!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -3049,8 +3049,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
+          opp programmet.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

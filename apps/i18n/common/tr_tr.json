@@ -172,7 +172,11 @@
   "help": "Yardım",
   "hideToolbox": "(Gizle)",
   "hintHeader": "İşte bir ipucu:",
+  "hintPrompt": "Yardım ister misiniz?",
   "hintRequest": "İpucunu gör",
+  "hintReviewTitle": "ipuçlarını gözden geçir",
+  "hintSelectInstructions": "Yönergeler ve önceki ipuçlar",
+  "hintSelectNewHint": "Yeni bir ipucu al",
   "hintTitle": "İpucu:",
   "ignore": "Yoksay",
   "infinity": "Sonsuz",
@@ -243,9 +247,5 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Çalışma alanı: "
 }

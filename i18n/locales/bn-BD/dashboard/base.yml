@@ -28,6 +28,8 @@ bn:
     code:
       label: 'শিক্ষক যুক্ত করুন:'
       placeholder: অংশের কোড (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: শিক্ষক যুক্ত করুন
   add_hint_form:
     placeholder: আপনার সংকেত দিন
@@ -168,13 +170,13 @@ bn:
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
-      title: Please Confirm
+      title: অনুগ্রহ করে নিশ্চিত করুন
       "no": না
       "yes": '"হ্যাঁ"'
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg_visit_website: ওয়েব সাইট ভিজিট করুন
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -237,7 +239,7 @@ bn:
       progress_for_user: "%{name}'s progress"
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
+      close: বন্ধ
       mastery: Concepts
       puzzle_map: ষ্টেজসমূহ
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
@@ -245,71 +247,24 @@ bn:
       prize_us_only: (U.S. students only)
       prizes_link: আরও তথ্য
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: উত্তর
+    for_teachers_only: শুধু শিক্ষকদের জন্য
     title:
       one: 'আপনার শিক্ষক:'
       other: 'আপনার শিক্ষক:'
     remove: (শিক্ষক অপসারণ করুন)
     confirm:
       remove: Are you sure you want to remove this teacher?
-    tools: শিক্ষক টুল
-    followers:
-      section: 'শাখা:'
-      stages: 'Stage(s) প্রদর্শন করুন:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
-      trophies: পুরষ্কার
     students:
-      name: নাম
-      username: উজারন্যাম
-      password: পাসওআর্ড
-      manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: শিক্ষার্থীদের যুক্ত করন
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
-      for: For
-      enter: 'enter:'
-    sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Progress Dashboard
-    activity: Recent class activity
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Answer Viewer
       student: ছাত্র
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
-      section: Section
+      try_it_yourself: নিজে চেষ্টা করুন
+      section: শাখা
       example: Example Solution
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
@@ -327,9 +282,9 @@ bn:
     delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
-    tried: Tried
+    tried: চেষ্টা করা হয়েছে
   user_stats:
-    recent_activity: Recent activity
+    recent_activity: সাম্প্রতিক কর্মকান্ড
     show_more: Show more
     classroom_activity: Unplugged Activity
   home:
@@ -338,8 +293,8 @@ bn:
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: 'Already registered? %{link}'
+    lesson_plans: পাঠ পরিকল্পনা
+    signin_message: 'ইতিমধ্যে রেজিস্ট্রেশন করেছেন? %{link}'
     student_reg_link: Student Sign Up
     teacher_reg_link: Teacher Sign Up
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
@@ -356,8 +311,8 @@ bn:
     student_left_off: 'Where you left off:'
     student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
-    online: online
-    see_details: See details
+    online: অনলাইন
+    see_details: বিস্তারিত দেখুন
     view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -366,7 +321,7 @@ bn:
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    use_as_teacher: শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
@@ -378,6 +333,7 @@ bn:
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Male
     female: Female
@@ -389,8 +345,8 @@ bn:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -407,6 +363,7 @@ bn:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
@@ -498,8 +455,8 @@ bn:
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Stories and games
+    header_artist: Code art
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."

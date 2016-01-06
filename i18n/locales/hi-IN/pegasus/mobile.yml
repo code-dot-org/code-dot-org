@@ -20,6 +20,8 @@ hi-IN:
   submit: सबमिट करें
   twentyhours_heading: हमारे कंप्यूटर विज्ञान पाठ्यक्रम का इंट्रो प्रयास करें
   twentyhours_text: आपका पहला ऑवर ऑफ़ कोड समाप्त हो गया?अनुवर्ती कोर्स में कंप्यूटर विज्ञान और प्रोग्रामिंग अवधारणाओं को और अधिक विस्तार से जाने।
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: '<a href="http://hourofcode.com"> ऑवर ऑफ़ कोड</a> में शामिल <br/> 8-14 दिसंबर, 2014 <br/>'
   hoc2014_students: Students
   hoc2014_try: कर के देखे
@@ -35,7 +37,7 @@ hi-IN:
   csedweek_map_search_reset: Reset
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Special Event
   cded_sign_up: Sign up
   cded_try_it: कर के देखे
   twentyhours_trynow: अब कोशिश करे
@@ -293,7 +295,7 @@ hi-IN:
   inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: 'Ice Age - Coming soon'
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
@@ -303,7 +305,7 @@ hi-IN:
   starwars_javascript_start_button: अब कोशिश करे
   starwars_blocks_title: Blocks
   starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: अब कोशिश करे
   starwars_watch_videos: Before you get started, watch one of these inspirational videos
   starwars_speak_languages: Speak another language?
@@ -314,16 +316,17 @@ hi-IN:
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
   mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
+  volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: नाम
   volunteer_engineer_submission_field_name_placeholder: Full Name
@@ -350,7 +353,7 @@ hi-IN:
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: "I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)"
   volunteer_engineer_submission_submit: सबमिट करें
-  volunteer_engineer_submission_thankyou: 'Thank you for volunteering for the Hour of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn more here.</a>'
+  volunteer_engineer_submission_thankyou: 'Thank you for signing up to volunteer. Teachers will be using <a href="%{url}">this map</a> to search for and contact volunteers like you.'
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_one_hr_per_week: प्रति सप्ताह 1 घंटे
   volunteer_engineer_submission_commitment_three_hrs_per_week: प्रति सप्ताह 3 घंटे
@@ -558,6 +561,8 @@ hi-IN:
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: अधिक जानें
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'The Hour of Code is here - December 8-14!'
@@ -857,7 +862,7 @@ hi-IN:
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

@@ -10,7 +10,6 @@ nav: pd2_nav
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
-- [I'm attending Counsleor/Administrator PD](#counselor-admin)
 
 <a id="csp"></a>
 ## Computer Science Principles

@@ -28,6 +28,7 @@ en:
     code:
       label: crwdns23429:0crwdne23429:0
       placeholder: crwdns23430:0crwdne23430:0
+      instructions: crwdns55880:0crwdne55880:0
     submit: crwdns2559:0crwdne2559:0
   add_hint_form:
     placeholder: crwdns4360:0crwdne4360:0
@@ -246,57 +247,10 @@ en:
     remove: crwdns4339:0crwdne4339:0
     confirm:
       remove: crwdns4364:0crwdne4364:0
-    tools: crwdns2605:0crwdne2605:0
-    followers:
-      section: crwdns6511:0crwdne6511:0
-      stages: crwdns6512:0crwdne6512:0
-      show_past: 'crwdns6513:0%{bullet_html}crwdne6513:0'
-      levels_key: crwdns6514:0crwdne6514:0
-      perfect: crwdns6515:0crwdne6515:0
-      completed: crwdns6516:0crwdne6516:0
-      tried: crwdns6517:0crwdne6517:0
-      not_tried: crwdns6518:0crwdne6518:0
-      activity: 'crwdns6519:0%{hours}crwdnd6519:0%{plural}crwdne6519:0'
-      no_section: crwdns6520:0crwdne6520:0
-      trophies: crwdns6521:0crwdne6521:0
     students:
-      name: crwdns6522:0crwdne6522:0
-      username: crwdns6523:0crwdne6523:0
-      password: crwdns6524:0crwdne6524:0
-      manage: crwdns2606:0crwdne2606:0
       dashboard: crwdns7340:0crwdne7340:0
-      add: crwdns2607:0crwdne2607:0
-      remove: crwdns6525:0crwdne6525:0
-      confirm_remove: crwdns6526:0crwdne6526:0
-      help_reassign: crwdns6527:0crwdne6527:0
-      help_register: crwdns6528:0crwdne6528:0
-      register: crwdns6529:0crwdne6529:0
-      vist: crwdns6530:0crwdne6530:0
-      section_code: crwdns6531:0crwdne6531:0
-      first_please: 'crwdns6532:0%{add_section}crwdne6532:0'
-      for: crwdns6533:0crwdne6533:0
-      enter: crwdns6534:0crwdne6534:0
-    sections:
-      add: crwdns6535:0crwdne6535:0
-      manage: crwdns4868:0crwdne4868:0
-      section: crwdns6536:0crwdne6536:0
-      students: crwdns6537:0crwdne6537:0
-      section_code: crwdns6538:0crwdne6538:0
-      add_section_code: crwdns6539:0crwdne6539:0
-      secret: crwdns6540:0crwdne6540:0
-      grade: crwdns6541:0crwdne6541:0
-      course: crwdns6542:0crwdne6542:0
-      rename: crwdns6543:0crwdne6543:0
-      edit: crwdns6544:0crwdne6544:0
-      delete: crwdns6545:0crwdne6545:0
-      confirm_delete: crwdns6546:0crwdne6546:0
-      email: crwdns6547:0crwdne6547:0
-    rollup: crwdns3078:0crwdne3078:0
-    activity: crwdns2609:0crwdne2609:0
-    user_not_found: crwdns4365:0crwdne4365:0
-    cant_remove_student_no_email: 'crwdns4802:0%{student_name}crwdnd4802:0%{student_name}crwdne4802:0'
-    cant_remove_teacher_no_email: 'crwdns4803:0%{teacher_name}crwdne4803:0'
-    student_teacher_disassociated: 'crwdns4366:0%{teacher_name}crwdnd4366:0%{student_name}crwdne4366:0'
+    user_not_found: crwdns55874:0crwdne55874:0
+    student_teacher_disassociated: 'crwdns55875:0%{teacher_name}crwdne55875:0'
     panel:
       answer_viewer: crwdns38278:0crwdne38278:0
       student: crwdns38279:0crwdne38279:0
@@ -370,6 +324,7 @@ en:
   share:
     title: crwdns45291:0crwdne45291:0
     description: crwdns45292:0crwdne45292:0
+    try_hour_of_code: crwdns55876:0crwdne55876:0
   gender:
     male: crwdns2618:0crwdne2618:0
     female: crwdns2619:0crwdne2619:0
@@ -381,8 +336,8 @@ en:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
-    art_from_html_old: 'crwdns45346:0%{current_year}crwdnd45346:0%{current_year}crwdne45346:0'
+    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
+    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
     copyright: crwdns45295:0crwdne45295:0
@@ -399,6 +354,7 @@ en:
     built_on_code_studio: crwdns55144:0crwdne55144:0
     make_my_own_app: crwdns55145:0crwdne55145:0
     how_it_works: crwdns55146:0crwdne55146:0
+    try_hour_of_code: crwdns55879:0crwdne55879:0
   reference_area:
     title: crwdns2625:0crwdne2625:0
     subtitle: crwdns3090:0crwdne3090:0

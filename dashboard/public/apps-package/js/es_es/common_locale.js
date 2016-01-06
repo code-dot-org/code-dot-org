@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Ayuda"},
 "hideToolbox":function(d){return "(Ocultar)"},
 "hintHeader":function(d){return "Aquí hay un consejo:"},
+"hintPrompt":function(d){return "¿Necesitas ayuda?"},
 "hintRequest":function(d){return "Ver pista"},
+"hintReviewTitle":function(d){return "Revisa tus sugerencias"},
+"hintSelectInstructions":function(d){return "Instrucciones y sugerencias anteriores"},
+"hintSelectNewHint":function(d){return "Recibe una nueva sugerencia"},
 "hintTitle":function(d){return "Sugerencia:"},
 "ignore":function(d){return "Ignorar"},
 "infinity":function(d){return "Infinito"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Mira el Video"},
 "when":function(d){return "cuando"},
 "whenRun":function(d){return "cuando se ejecuta"},
-"workspaceHeaderShort":function(d){return "Espacio de trabajo: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Espacio de trabajo: "}};

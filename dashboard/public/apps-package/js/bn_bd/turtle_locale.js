@@ -227,7 +227,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "shareDrawing":function(d){return "Share your drawing:"},
 "showMe":function(d){return "আমাকে দেখান"},
 "showTurtle":function(d){return "show artist"},
-"sizeParameter":function(d){return "size"},
+"sizeParameter":function(d){return "আকার"},
 "step":function(d){return "step"},
 "tooFewColours":function(d){return "You need to use at least %1 different colors for this puzzle.  You used only %2."},
 "turnLeft":function(d){return "turn left by"},

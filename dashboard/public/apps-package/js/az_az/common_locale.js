@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Kömək"},
 "hideToolbox":function(d){return "(Gizlət)"},
 "hintHeader":function(d){return "Məsləhət belədir:"},
+"hintPrompt":function(d){return "Kömək lazımdır?"},
 "hintRequest":function(d){return "Məsləhətə baxın"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Məsləhət:"},
 "ignore":function(d){return "Nəzərə alma"},
 "infinity":function(d){return "Sonsuzluq"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoya baxın"},
 "when":function(d){return "nə zaman"},
 "whenRun":function(d){return "icra etdikdə"},
-"workspaceHeaderShort":function(d){return "iş sahəsi: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "iş sahəsi: "}};

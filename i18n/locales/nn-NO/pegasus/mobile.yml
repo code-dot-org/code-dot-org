@@ -20,6 +20,8 @@ nn-NO:
   submit: Send
   twentyhours_heading: Prøv vår introduksjonskurs til koding
   twentyhours_text: Fullført din første kodetime? Lær meir grunnleggjande koding og programmering i dette oppfølgingskurset.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Bli med på <a href="http://hourofcode.com">Kodetimen</a><br/> 8. – 14. desember 2014<br/>'
   hoc2014_students: Elevar
   hoc2014_try: Prøv sjølv
@@ -271,10 +273,10 @@ nn-NO:
   class_submission_languages_other: Andre språk
   inspirational_videos_more: 'Fleire <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> inspirerande videoar</a> av rollemodellar og kjendisar'
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_classic_title: Klassisk
+  playlab_gumball_title: The Amazing World of Gumball
+  playlab_iceage_title: 'Istid - kommer snart'
+  playlab_iceage_title_live: Istid
   starwars_subtitle: Bygg ein galakse med kode
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slepp blokker og JavaScript.
@@ -282,7 +284,7 @@ nn-NO:
   starwars_javascript_start_button: Prøv no
   starwars_blocks_title: Blokker
   starwars_blocks_description: Bruk dra-og-slepp blokker.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
   starwars_blocks_start_button: Prøv no
   starwars_watch_videos: Før du begynnar kan du sjå ein av desse inspirerande filmane
   starwars_speak_languages: Snakkar du eit anna språk?
@@ -293,7 +295,7 @@ nn-NO:
   mc_shortdescription: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda.
   mc_gradelevel: 'Frå 4 - 104 år'
   mc_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Kodetimen med Minecraft
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærarar skal ha ein Kodetime i sitt klasserom i år, 7.-13. desember 2015. Dei ønskjer di hjelp! '
@@ -303,6 +305,7 @@ nn-NO:
     Disse lærerne vil gjerne ha noen <span style="font-family: 'Gotham 7r', sans-serif;">tekonologer</span> som kan hjelpe til i klasserommet, eller noe som kan <span style="font-family: 'Gotham 7r', sans-serif;">inspirere</span> elevene deres ved å prate om bredden av muligheter med informatikk og programmering. Dette kan f. eks. bli gjort gjennom video-chat. Hvis du ikke er en ingeniør, skal du vite at alle kan organisere Kodetimen. <a href="%{url}">Lær mer her</a>.
   volunteer_engineer_submission_intro_signup: 'Ver gild å oppgi følgjande informasjon om du er ein informatikkstudent eller jobbar med programmering. Felta markert med <span class="form-required-field">*</span> er obligatoriske.'
   volunteer_engineer_submission_intro_links: 'Ser du ikke etter en frivillig? <a href="%{learn_more}"> Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informasjon vert delt med lærarar på eit kart over frivillige
   volunteer_engineer_submission_field_name: Namn
   volunteer_engineer_submission_field_name_placeholder: Fullt namn
@@ -537,6 +540,8 @@ nn-NO:
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjeringar
   dashboard_announce_view_all: Sjå alle
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Lær meir
   dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele dine egne spill i en galakse langt, langt borte.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Kodetimen er her - 8.- 14. desember!'
@@ -595,8 +600,8 @@ nn-NO:
   mobile_devices: Leksjonar for mobile einingar
   frozen_name: Koding med Anna og Elsa
   starwars_name: 'Star Wars: Bygg ein galakse med kode'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Klassisk labyrint
+  codeintl_name: Klassisk labyrint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ein introduksjon til JavaScript
   khanes_name: Ein introduksjon til JavaScript
@@ -632,16 +637,16 @@ nn-NO:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
-  hourofcode_name: Classic Maze
+  hourofcode_name: Klassisk labyrint
   playlab_name: Spel-lab
   infinity_name: Infinity Spill-lab
   artist_name: Kunstnar
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
-  csfirst_name: CS First
+  csfirst_name: CS først
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutter med kode
   teacherled_name: Lærarrettleiing til Kodetimen
   codeorg_gradelevel: 'Frå 4 - 104 år'
   codeintl_gradelevel: 'Frå 4 - 104 år'
@@ -695,7 +700,7 @@ nn-NO:
   teacherled_gradelevel: Ages 5+
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
-  thinkersmithspanish_platformtext: Straumlaust
+  thinkersmithspanish_platformtext: Trådlaust
   khan_platformtext: Moderne nettlesarar
   khanes_platformtext: Moderne nettlesarar
   khanpt_platformtext: Moderne nettlesarar
@@ -705,7 +710,7 @@ nn-NO:
   tynker_platformtext: Moderne nettlesarar
   scratch_platformtext: Berre for nettlesarar på datamaskin (ikkje nettbrett)
   lightbot_platformtext: ALLE nettlesarar og iOS, Android eller spelkonsoll
-  thinkersmith_platformtext: Straumlaust
+  thinkersmith_platformtext: Trådlaust
   condcards_platformtext: Struamlaust
   lightbotintl_platformtext: iOS, Android (eller nettlesar)
   codehs_platformtext: Moderne nettlesere. (Oppfølgingskurs krev $$)
@@ -727,9 +732,9 @@ nn-NO:
   touchdevelop_platformtext: Moderne nettlesarar, smarttelefonar, alle einingar
   appinventor_platformtext: Moderne nettlesarar + Android
   blockly_platformtext: Berre moderne nettlesarar
-  thinkersmith2_platformtext: Straumlaust
-  kodableunplugged_platformtext: Straumlaust
-  projguts_platformtext: Straumlaust
+  thinkersmith2_platformtext: Trådlaust
+  kodableunplugged_platformtext: Trådlaust
+  projguts_platformtext: Trådlaust
   hourofcode_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   frozen_platformtext: Moderne nettlesarar + nettbrett
   starwars_platformtext: Moderne nettlesarar + nettbrett
@@ -834,7 +839,7 @@ nn-NO:
   playlab_longdescription: 'Lag en historie eller lag et spill med "Spill-Lab"! Få dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage lyder, få poeng, og til og med kaste flammekuler!'
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

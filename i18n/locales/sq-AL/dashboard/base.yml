@@ -28,6 +28,8 @@ sq:
     code:
       label: 'Shto një mësues:'
       placeholder: Kodi i Seksionit (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
@@ -255,63 +257,16 @@ sq:
     remove: (hiq mësuesin)
     confirm:
       remove: A jeni i sigurtë që dëshironi ta hiqni këtë mësues?
-    tools: Mjetet e Mësuesit
-    followers:
-      section: 'Seksioni:'
-      stages: 'Faza(t) për tu shfaqur:'
-      show_past: 'Shfaq aktivitetin e studentit (%{bullet_html}) në të kaluarën:'
-      levels_key: Çelësi i niveleve
-      perfect: I përfunduar, perfekt
-      completed: I përfunduar, por ke përdorur shumë blloqe
-      tried: U përpoqe, por nuk u përfundua
-      not_tried: Nuk je përpjekur ende
-      activity: 'Tregon aktivitetin e studentit në %{hours}%{plural} të fundit'
-      no_section: Asnjë seksion i caktuar
-      trophies: Trofetë
     students:
-      name: Emri
-      username: Emri i përdoruesit
-      password: Fjalëkalimi
-      manage: Menaxhoni studentët
       dashboard: Shko tek Paneli i Mësuesit
-      add: Shto studentë
-      remove: hiq student
-      confirm_remove: A jeni i sigurtë që do ta heqësh këtë student?
-      help_reassign: Për të ndarë klasën tënde në shumë pjesë, përzgjidh studentët të caktojnë një pjesë të re.
-      help_register: "Në vend t'ju bëjmë të kaloni më shumë kohë në futjen e të dhënave të studentëve, ju mund të ngrini klasën tuaj shumë shpejt duke ju kërkuar atyre të rregjistrohen. Studentët tuaj do të zgjedhin emërin e përdoruesit dhe fjalëkalimin, por atyre NUK DO TU kërkohet një adresë email-i. Nëse një student harron fjalëkalimin, ju do ju duhet t'i rivendosni një për atë."
-      register: Pyet studentët për të rregjistruar veten e tyre
-      vist: Kërkoji studentët të vizitojnë
-      section_code: 'dhe fusni kodin e seksionit të tyre:'
-      first_please: 'Së pari, ju lutem %{add_section}'
-      for: Për
-      enter: 'hyr:'
-    sections:
-      add: Shto pjesë
-      manage: Menaxho seksionet
-      section: Seksion
-      students: Studentët
-      section_code: Kodi i Seksionit
-      add_section_code: Shto Studentët Pjesë-Kodi
-      secret: Lloj sekret
-      grade: Klasa
-      course: Kurs
-      rename: riemëro
-      edit: modifiko
-      delete: fshi
-      confirm_delete: A jeni i sigurtë që dëshironi të fshini këtë seksion?
-      email: Dërgoni në email
-    rollup: Paneli i ecurisë
-    activity: Aktivitetet e fundit të klasës
-    user_not_found: Mësuesi ose studenti nuk mund te gjendet
-    cant_remove_student_no_email: '%{student_name} nuk mund të hiqet si studenti juaj, sepse %{student_name} nuk ka rregjistruar një adresë emaili'
-    cant_remove_teacher_no_email: '%{teacher_name} nuk mund të hiqet si mësuesi juaj, sepse nuk keni rregjistruar një adresë emaili'
-    student_teacher_disassociated: '%{teacher_name} është hequr si mësues për %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Shfaqja e Pergjigjeve
       student: student
       viewing_solution: Duke parë zgjidhjen
       try_it_yourself: Bëje vetë
-      section: Seksion
+      section: Pjesë
       example: Shëmbuj Zgjidhjesh
       example_with_number: 'Shëmbuj Zgjidhjesh %{solution_number}'
       submitted_on: 'Submitted on:'
@@ -379,6 +334,7 @@ sq:
   share:
     title: Mëso në Code Studio
     description: Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione dhe art me kode.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Mashkull
     female: Femër
@@ -390,8 +346,8 @@ sq:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.
     help_from_html_old: Inxhinierët e Google, Microsoft, Facebook dhe Twitter kanë ndihmuar në krijimin e këtyre materialeve.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Të gjitha të drejtat e rezervuara.'
-    art_from_html_old: 'Zogj të nevrikosur&#8482;&#8482;&amp;&copy; 2009 %{current_year}  Zbavitje Rivio Ltd. Të drejtat e rezervuara.<br />Bimë dhe Xombi &#8482;&amp;&copy;%{current_year} Artet Elektronike Inc. Të drejtat e rezervuara'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: '&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora e Kodit&reg;  janë marka tregtare të Code.org.'
     copyright: E drejta e autorit
@@ -408,6 +364,7 @@ sq:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Keni nevojë për ndihmë?
     subtitle: Shiko këto video dhe udhëzimet

@@ -29,6 +29,8 @@
     code:
       label: 'Irakaslea gehitu:'
       placeholder: Atal Kodea (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
@@ -293,65 +295,10 @@
     remove: (irakaslea ezabatu)
     confirm:
       remove: Ziur zaude irakasle hau ezabatu nahi duzula?
-    tools: Irakasleentzako tresnak
-    followers:
-      section: 'Atala:'
-      stages: 'Erakusteko urratsa(k):'
-      show_past: 'Ikaslearen iraganeko (%{bullet_html}) jarduera erakutsi:'
-      levels_key: Mailetako gakoa
-      perfect: Osatuta, perfektoa
-      completed: Osatuta, baina bloke gehiegi erabilita
-      tried: Saiatuta, baina ez osatuta
-      not_tried: Oraindik saiatu gabe
-      activity: Ikaslearen azken %{hours} %{plural}-etako jarduera erakusten du
-      no_section: Atalik asignatu gabe
-      trophies: garaikurrak
     students:
-      name: Izena
-      username: Erabiltzaile-izena
-      password: Pasahitza
-      manage: Ikasleak kudeatu
       dashboard: Joan irakaslearen mahaigainera
-      add: Ikasleak gehitu
-      remove: ikaslea ezabatu
-      confirm_remove: Ziur zaude ikasle hau ezabatu nahi duzula?
-      help_reassign: Zure ikasgela hainbat ataletan banatzeko, aukeratu ikasleak atal
-        berri batean gehitzeko.
-      help_register: Zuk ikasleak banan-banan gehitzen denbora asko pasa ordez, zure
-        ikasgela sortu dezakezu beraiei izena emateko eskatuz. Zure ikasleek beren
-        erabiltzailea eta pasahitza aukeratu beharko dute, baina EZ dute beraien posta
-        elektronikoa zehaztu beharrik izango. Ikasle batek bere pasahitza ahazten
-        badu, zuk berrezarri ahal izango diozu.
-      register: Eskatu zure ikasleei beren burua erregistratzeko
-      vist: Eskatu zure ikasleei bisitatzeko
-      section_code: 'eta sartu beraien sekzio-kodea:'
-      first_please: Lehenengo, mesedez %{add_section}
-      for: Honetarako
-      enter: 'sartu:'
-    sections:
-      add: Gehitu sekzioa
-      manage: Sekzioak kudeatu
-      section: Atala
-      students: Ikasleak
-      section_code: Sekzio Kodea
-      add_section_code: Gehitu Ikasleen Sekzio-Kodea
-      secret: Mota sekretua
-      grade: Kalifikazioa
-      course: Ikastaroa
-      rename: berrizendatu
-      edit: editatu
-      delete: ezabatu
-      confirm_delete: Ziur zaude sekzio hau ezabatu nahi duzula?
-      email: Email-ez bidali
-    rollup: Aurrerapen panela
-    activity: Klasearen azkenaldiko jarduera
-    user_not_found: Ezin izan da irakasle edo ikaslea aurkitu
-    cant_remove_student_no_email: '%{student_name} ezin izan da zure ikasle moduan
-      ezabatu %{student_name} -(e)k ez duelako posta elektroniko helbiderik erregistratu'
-    cant_remove_teacher_no_email: '%{teacher_name} ezin da ezabatu zure irakasle gisa,
-      zuk ez duzulako email helbiderik erregistratu'
-    student_teacher_disassociated: '%{teacher_name} %{student_name}-(r)en irakasle
-      gisa ezabatua izan da'
+    user_not_found: Irakaslea ezin izan da aurkitu.
+    student_teacher_disassociated: '%{teacher_name} zure irakasleetatik ezabatu duzu.'
     panel:
       answer_viewer: Erantzun Ikusgailua
       student: Ikaslea
@@ -438,6 +385,7 @@
     title: Ezagutu Code Studio
     description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu
       programazioaren bidez.
+    try_hour_of_code: Saiatu Kode Ordu bat!
   gender:
     male: Gizona
     female: Emakumea
@@ -454,17 +402,24 @@
       ingeniariei, eta material hauek sortzen lagundu duten guztiei.
     help_from_html_old: Google, Microsoft, Facebook eta Twitterreko ingeniariek material
       hau sortzen lagundu dute.
-    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Eskubide
-      guztiak babestuak.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney
-      and Lucasfilm. Eskubide guztiak babestuak.<br />Frozen&#8482; &amp; &copy; %{current_year}
-      Disney. Eskubide guztiak babestuak.<br />Ice Age&#8482; &amp; &copy; %{current_year}
-      20th Century Fox. Eskubide guztiak babestuak.<br />Angry Birds&#8482; &amp;
-      &copy; 2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak babestuak.<br
-      />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc.
-      Eskubide guztiak babestuak
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Eskubide guztiak babestuak.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak babestuak
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide guztiak
+      erreserbatuta.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Eskubide guztiak erreserbatuta.<br />Frozen&#8482; &copy; %{current_year} Disney.
+      Eskubide guztiak erreserbatuta.<br />Ice Age&#8482; &copy; %{current_year} 20th
+      Century Fox. Eskubide guztiak erreserbatuta.<br />Angry Birds&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Eskubide guztiak erreserbatuta.<br
+      />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Eskubide
+      guztiak erreserbatuta.<br />The Amazing World of Gumball marka erregistratua
+      da eta &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Eskubide
+      guztiak erreserbatuta. Star Wars&#8482; &copy; %{current_year} Disney eta Lucasfilm.
+      Eskubide guztiak erreserbatuta. Frozen&#8482; &copy; %{current_year} Disney.
+      Eskubide guztiak erreserbatuta. Ice Age&#8482; &copy; %{current_year} 20th Century
+      Fox. Eskubide guztiak erreserbatuta. Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Eskubide guztiak erreserbatuta. Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Eskubide guztiak erreserbatuta.
+      The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon
+      Network.
     powered_by_aws: Amazon Web Servicesek sostengatua
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode
       Ordua&reg; Code.org-ren marka bereziak dira.'
@@ -479,9 +434,10 @@
     privacy: Pribatutasun politika
     secure: Bertsio segurua
     report_abuse: Erabilera okerra jakinarazi
-    built_on_code_studio: Code Studio-n oinarrituta
-    make_my_own_app: Nere app-a egin
+    built_on_code_studio: Code Studio-n eraikia
+    make_my_own_app: Nire app-a egin
     how_it_works: Funtzionamendua
+    try_hour_of_code: Saiatu Kode Ordu bat!
   reference_area:
     title: Laguntzarik behar?
     subtitle: Ikusi bideo eta aholku hauek
@@ -549,7 +505,7 @@
       unused: Erabili gabeko mailak
   upsell:
     hoc:
-      title: Kode ordua
+      title: Labirinto klasikoa
       body: Oinarrizko informatikarekin saiatu. Miliokak egin du proba.
     flappy:
       title: Flappy Code
@@ -594,8 +550,8 @@
     caption_by_name_age: '%{name}, adina %{age}'
     caption_time_ago: orain dela %{time_ago}
     header: Galeria
-    header_playlab: Jokoen Laborategia
-    header_artist: Artista
+    header_playlab: Istorio eta jokoak
+    header_artist: Arte kodea
   landing:
     prerelease: Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek
       esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta

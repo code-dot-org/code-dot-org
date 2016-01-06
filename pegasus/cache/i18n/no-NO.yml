@@ -26,6 +26,9 @@
   twentyhours_heading: Prøv vår introduksjon til koding
   twentyhours_text: Fullført din første kodetime? Lær mer grunnleggende koding og
     programmering i dette oppfølgingskurset.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Bli med i <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elever
@@ -309,10 +312,10 @@
   inspirational_videos_more: Flere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     videoer </a>
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Klassisk
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title: Istid - kommer snart
+  playlab_iceage_title_live: Istid
   starwars_subtitle: Skap en galakse med kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Bruk dra-og-slipp blokker og JavaScript.
@@ -361,6 +364,7 @@
   volunteer_engineer_submission_intro_links: Ser du ikke etter en frivillig? <a href="%{learn_more}">
     Lær mer</a> om å organisere din egen "Hour of code" begivenhet og finne en lokal
     frivillig på våre <a href="%{volunteer_local}"> frivillige kart</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Informasjon deles med lærere på frivillig-kartet
   volunteer_engineer_submission_field_name: Navn
   volunteer_engineer_submission_field_name_placeholder: Fullt navn
@@ -667,6 +671,12 @@
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjøringer
   dashboard_announce_view_all: Vis alle
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Lær mer
   dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er
     her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede
     nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele
@@ -742,8 +752,8 @@
   mobile_devices: Øvinger for mobile enheter
   frozen_name: Kode med Anna og Elsa
   starwars_name: 'Star Wars: Skap en galakse med kode'
-  codeorg_name: Skriv ditt første dataprogram
-  codeintl_name: Skriv ditt første dataprogram
+  codeorg_name: Klassisk labyrint
+  codeintl_name: Klassisk labyrint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduksjon til JavaScript
   khanes_name: En introduksjon til JavaScript
@@ -779,16 +789,16 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks papir
-  hourofcode_name: Skriv ditt første dataprogram
+  hourofcode_name: Klassisk labyrint
   playlab_name: Spill-lab
   infinity_name: Infinity Spill-Lab
   artist_name: Kunstner
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
-  csfirst_name: CS First
+  csfirst_name: CS først
   boxisland_name: Box Island
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minutter med kode
   teacherled_name: Planlegging av Kodetimen
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104
@@ -1461,13 +1471,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

@@ -274,7 +274,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "speedFast":function(d){return "nastavit vysokou rychlost"},
 "speedVeryFast":function(d){return "nastavit velmi vysokou rychlost"},
 "whenClick":function(d){return "když klikneš"},
-"whenClickTooltip":function(d){return "Provést akce uvedené níže, když dojde ke kliknutí."},
+"whenClickTooltip":function(d){return "Provést akce uvedené níže, když klikneš."},
 "whenCollideGround":function(d){return "když se dotkne země"},
 "whenCollideGroundTooltip":function(d){return "Provést akce uvedené níže, když se Flappy dotkne země."},
 "whenCollideObstacle":function(d){return "když se dotkne překážky"},
