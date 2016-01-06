@@ -157,7 +157,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockDestroyBlock":function(d){return "ब्लॉक नष्ट करें"},
 "blockIf":function(d){return "if"},
 "blockIfLavaAhead":function(d){return "यदि लावा आगे हो"},
-"blockMoveForward":function(d){return "move forward"},
+"blockMoveForward":function(d){return "आगे जाएं"},
 "blockPlaceTorch":function(d){return "टॉर्च रखें"},
 "blockPlaceXAheadAhead":function(d){return "आगे"},
 "blockPlaceXAheadPlace":function(d){return "रखें"},

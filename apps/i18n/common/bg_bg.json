@@ -172,7 +172,11 @@
   "help": "Помощ",
   "hideToolbox": "(Скрий)",
   "hintHeader": "Ето един съвет:",
+  "hintPrompt": "Нужда от помощ?",
   "hintRequest": "Вижте съвета",
+  "hintReviewTitle": "Прегледайте вашите съвети",
+  "hintSelectInstructions": "Инструкции и предишни съвети",
+  "hintSelectNewHint": "Получете нов съвет",
   "hintTitle": "Съвет:",
   "ignore": "Игнорирай",
   "infinity": "Инфинити",
@@ -243,9 +247,5 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: ",
-  "hintPrompt": "Need help?",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint"
+  "workspaceHeaderShort": "Работна област: "
 }

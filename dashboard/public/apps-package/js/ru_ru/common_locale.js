@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Справка"},
 "hideToolbox":function(d){return "(Скрыть)"},
 "hintHeader":function(d){return "Подсказка:"},
+"hintPrompt":function(d){return "Нужна помощь?"},
 "hintRequest":function(d){return "Посмотреть подсказку"},
+"hintReviewTitle":function(d){return "Просмотреть свои подсказки"},
+"hintSelectInstructions":function(d){return "Инструкции и старые подсказки"},
+"hintSelectNewHint":function(d){return "Получить новую подсказку"},
 "hintTitle":function(d){return "Подсказка:"},
 "ignore":function(d){return "Игнорировать"},
 "infinity":function(d){return "Бесконечность"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Посмотреть видео"},
 "when":function(d){return "когда"},
 "whenRun":function(d){return "При запуске"},
-"workspaceHeaderShort":function(d){return "Место сбора блоков: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Место сбора блоков: "}};

@@ -46,7 +46,7 @@
         <block type="maze_moveEast"/>
         <block type="maze_moveNorth"/>
         <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="2-6">3</title>
         </block>
       </xml>
     </recommended_blocks>

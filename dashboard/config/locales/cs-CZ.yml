@@ -28,6 +28,8 @@
     code:
       label: 'Přidat učitele:'
       placeholder: Kód sekce (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Přidat učitele
   add_hint_form:
     placeholder: Zadej zde svůj tip
@@ -285,64 +287,10 @@
     remove: (odstranit učitele)
     confirm:
       remove: Jsi si jist/á, že chceš odstranit tohoto učitele?
-    tools: Nástroje pro učitele
-    followers:
-      section: 'Sekce:'
-      stages: 'Zobrazit dílčí fáze:'
-      show_past: 'Zobrazit studentské aktivity (%{bullet_html}) v minulosti:'
-      levels_key: Úrovňové klíče
-      perfect: Dokončeno, perfektně
-      completed: Dokončeno, ale příliš použito mnoho bloků
-      tried: Pokus, ale není dokončeno
-      not_tried: Žádný pokus
-      activity: Označuje studentské aktivity v posledních %{hours} %{plural}
-      no_section: Nepřiřazená sekce
-      trophies: trofeje
     students:
-      name: Jméno
-      username: uživatelské jméno
-      password: heslo
-      manage: Správa studentů
       dashboard: Přejít na přehled učitele
-      add: Přidat studenty
-      remove: odebrání studenta
-      confirm_remove: Jste si jistý, že chcete smazat tento prvek?
-      help_reassign: Rozdělte třídu do několika skupin, vyberte studenty k přiřazení
-        do nové skupiny.
-      help_register: Místo strávení spousty času individuálním importem dat studentů,
-        nastavte rychle třídu požadavkem na registraci. Studenti si potřebují zvolit
-        uživatelská jména a hesla, ale nebudou mít povinnost poskytovat e-mailovou
-        adresu. Pokud student zapomene své heslo, budete schopni obnovit jej pro ně.
-      register: Požadejte studenty, aby se zaregistrovali
-      vist: Požádejte studenty, aby navšítivili
-      section_code: 'a zadejte jejich kód sekce:'
-      first_please: Prvně prosím %{add_section}
-      for: Pro
-      enter: 'zadejte:'
-    sections:
-      add: Přidat sekci
-      manage: Spravovat části
-      section: Sekce
-      students: Studenti
-      section_code: Kód sekce
-      add_section_code: Přidat studentům kód sekce
-      secret: Tajný typ
-      grade: Stupeň
-      course: Kurz
-      rename: přejmenovat
-      edit: úpravy
-      delete: smazat
-      confirm_delete: Jste si jisti, že chcete odstranit tuto sekci?
-      email: Odeslat v e-mailu
-    rollup: Panel pokroku
-    activity: Nedávné aktivity třídy
-    user_not_found: Učitel nebo student nebyl nalezen
-    cant_remove_student_no_email: '%{student_name} nemůže být zaregistrován jako tvůj
-      student, protože student%{student_name} nezaregistroval e-mailovou adresu'
-    cant_remove_teacher_no_email: '%{teacher_name} nemůže být odstraněn jako tvůj
-      učitel, protože jsi nezaregistroval e-mailovou adresu'
-    student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro
-      %{student_name}'
+    user_not_found: Učitel nebyl nalezen.
+    student_teacher_disassociated: Odebrali jste %{teacher_name} jako svého učitele.
     panel:
       answer_viewer: Odpověď diváka
       student: student
@@ -430,6 +378,7 @@
     title: Poznat Code studio
     description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění
       s kódem.
+    try_hour_of_code: Vyzkoušejte Hodinu kódu!
   gender:
     male: Muž
     female: Žena
@@ -469,6 +418,7 @@
     built_on_code_studio: Postavenn na Code Studio
     make_my_own_app: Vytvořit svou vlastní app
     how_it_works: Jak to funguje
+    try_hour_of_code: Vyzkoušejte Hodinu kódu!
   reference_area:
     title: Potřebujete pomoc?
     subtitle: Podívej se na tyto videa a tipy
@@ -535,7 +485,7 @@
       unused: Nepoužívané úrovně
   upsell:
     hoc:
-      title: Hodina kódu
+      title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
     flappy:
       title: Tenký kód

@@ -101,7 +101,7 @@ it:
         text: "In ogni esercizio di questa attività introduciamo nuovi tipi di eventi, rappresentati come blocchi verdi nell'area di lavoro, e tu puoi decidere i blocchi appropriati da aggiungere in risposta a questi eventi."
       9:
         image: notes/flappy09.jpg
-        text: "Quando vedi un triangolino con la punta in basso come qui, significa che è possibile modificare le impostazioni - come il suono da riprodurre quando l'uccello precipita a terra."
+        text: "Quando vedi un triangolino con la punta verso il basso come qui, significa che è possibile modificare le impostazioni - come il suono da riprodurre quando l'uccello precipita a terra."
       10:
         image: notes/flappy10.jpg
         text: "Nell'esercizio finale sarai in grado di creare il tuo gioco e condividerlo con i tuoi amici. Buon divertimento!"
@@ -272,7 +272,7 @@ it:
       7:
         image: note/stadio15_7.jpg
         text: |-
-          Per usare la tua funzione con parametri, clicca sulla categoria "Funzioni" (Functions) e sposta la tua funzione "disegna un triangolo di lunghezza" nell'area di lavoro.
+          Per usare la tua funzione con parametri, clicca sulla categoria "Funzioni" (Functions) e sposta la tua funzione "disegna un triangolo con lunghezza" (draw a triangle with length) nell'area di lavoro.
       8:
         image: note/stadio15_8.jpg
         text: 'Ora puoi usare i blocchi nella categoria "Matematica" (Math) per inserire numeri diversi e disegnare triangoli di dimensioni diverse.'
@@ -427,13 +427,13 @@ it:
       1:
         image: notes/C1_bee_level_intro_1.png
         text: |-
-          Le api non sono super mitiche? In questa serie di esercizi, il tuo obiettivo è quello di aiutare l'ape a raggiungere i fiori, a raccogliere il nettare dai fiori e a volare verso il favo per fare il miele. Per questo esercizio, devi usare i blocchi "prendi il nettare" e "fai il miele".
+          Le api non sono super mitiche? In questa serie di esercizi, il tuo obiettivo è quello di aiutare l'ape a raggiungere i fiori, a raccogliere il nettare dai fiori e a volare verso il favo per produrre il miele. Per questo esercizio, devi usare i blocchi "prendi il nettare" e "fai il miele".
       2:
         image: notes/C1_bee_level_intro_2.png
         text: "Ogni fiore ha una quantità diversa di nettare: 1, 2, 3 o più. Sappiamo quanto nettare è presente nei fiori rossi grazie al numerino visibile nell'angolo in basso. In questo modo sei sicuro di raccogliere tutto il nettare da un fiore prima di volare via. Inoltre, ogni favo può contenere solo una certa quantità di miele: 1, 2, 3 o più. In questo modo sei sicuro di produrre tanto miele quanto il favo può contenerne."
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: "Se sei capace di raccogliere tutto il nettare e fare tutto il miele, hai risolto l'esercizio e puoi passare al prossimo. Altrimenti, devi cercare di nuovo di risolverlo. Giocherella un po' e vedi come ci si sente ad essere un'ape che programma!"
+        text: "Se sei capace di raccogliere tutto il nettare e produrre tutto il miele, hai risolto l'esercizio e puoi passare al prossimo. Altrimenti, devi cercare di nuovo di risolverlo. Giocherella un po' e vedi come ci si sente ad essere un'ape che programma!"
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
@@ -441,7 +441,7 @@ it:
       2:
         image: notes/C1_bee_loops_2.png
         text: |-
-          In questo esercizio, l'ape deve raccogliere tre dosi di nettare dal fiore. Invece di usare tre blocchi "raccogli il nettare", prova ad usare il blocco "ripeti" per raccogliere il nettare tre volte. Premi "Esegui" e controlla se la soluzione è corretta. Bello, no?
+          In questo esercizio, l'ape deve raccogliere tre dosi di nettare dal fiore. Invece di usare tre blocchi "prendi il nettare", prova ad usare il blocco "ripeti" per raccogliere il nettare tre volte. Premi "Esegui" e controlla se la soluzione è corretta. Bello, no?
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -740,10 +740,10 @@ it:
         text: Usa la tua pancia per il mangiare e per ascoltare il suo brontolare, per dare una panciata e per sentire il gas nella bevanda gassata. Usa la tua pancia quando sei connesso, per riconoscere un segnale espresso e per farti guidare bene e dirti quando non conviene. Dalla testa fino ai tuoi piedi, fermati, riflettici adesso. Dai tuoi piedi fino al naso, fermati e pensa connesso!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
+        text: Quindi, pensa con la tua testa e senti con il tuo cuore, stai in equilibrio con le braccia e ascolta la tua pancia, online. Usa le tue gambe per correre e calciar, per saltare e rimbalzare sui trampoli con molla e per ballare intorno al blocco e per saltare lungo coi tuoi calzini maleodoranti. Usa le tue gambe quando sei online, per alzarti davanti ai bulli che attraversano la linea e ricordati di puntare in alto, sii gentile con creature grandi e piccole.
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online! So think with your head, and feel with your heart, balance with your arms, listen to your gut, stand up with your legs. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!
+        text: Dalla tua testa verso sotto fino alle tue dita dei piedi, pausa, e pensa in questo. Dalle tue gambe verso sopra fino al tuo naso, pausa, e pensa online! Quindi pensa con la tua testa, e senti con il tuo cuore, bilancia con le tue braccia, ascolta il tuo intestino, alzati con le tue gambe. Dalle tue gambe verso sopra fino al naso, pausa e pensa online!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
@@ -751,8 +751,7 @@ it:
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: 'Questa lezione si chiama "Grafico di Programmazione di Carta" e è tutto sugli algoritmi. Oggi impareremo a scrivere programmi che mostrano agli a vicenda come ricreare semplici immagini in bianco e nero, usando solamente freccette disegnate a mano.'
       2:
         image: notes/C2_graph_paper_2.png
         text: Un algoritmo è una lista di istruzioni per completare una mansione. Seguiremo questa lista di istruzioni per creare una ciotola. Gli algoritmi sono molto utili quando devi far capire a qualcuno come fare qualcosa.
@@ -777,7 +776,7 @@ it:
       2:
         image: notes/C2_bee_loops_2.png
         text: |-
-          Questo è il blocco "ripeti ... volte" (repeat ... times). Qualunque cosa inserisci all'interno di un blocco "ripeti ... volte" verrà ripetuto il numero di volte che gli hai detto di eseguirlo. Ad esempio, in questo esercizio, invece di spostare nell'area di lavoro un blocco "vai avanti" (move forward) e un blocco "raccogli il nettare" (get nectar) per tre volte, prova a spostarli nell'area di lavoro una sola volta e a ripetere queste azioni per tre volte. È semplice!
+          Questo è il blocco "ripeti ... volte" (repeat ... times). Qualunque cosa inserisci all'interno di un blocco "ripeti ... volte" verrà ripetuto il numero di volte che gli hai detto di eseguirlo. Ad esempio, in questo esercizio, invece di spostare nell'area di lavoro un blocco "vai avanti" (move forward) e un blocco "prendi il nettare" (get nectar) per tre volte, prova a spostarli nell'area di lavoro una sola volta e a ripetere queste azioni per tre volte. È semplice!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -923,12 +922,12 @@ it:
       4:
         image: notes/C3_bee_functions_4.png
         text: |-
-          In questo esempio, la nostra funzione si chiama "prendi 2 dosi di nettare" (get 2 nectar) ed è il blocco verde. Puoi sapere cosa fa "prendi 2 dosi di nettare" osservando questo blocco grigio che è la definizione della funzione. Se guardi al suo interno ti accorgi che "prendi 2 dosi di nettare" è formata da un blocco "prendi il nettare" seguito da un altro blocco "prendi il nettare". Guarda sempre cosa c'è nel blocco grigio per sapere cosa possono fare i blocchi verdi delle funzioni.
+          In questo esempio, la nostra funzione si chiama "prendi 2 dosi di nettare" (get 2 nectar) ed è il blocco verde. Puoi sapere cosa fa "prendi 2 dosi di nettare" osservando questo blocco grigio che è la definizione della funzione. Se guardi al suo interno ti accorgi che "prendi 2 dosi di nettare" è formata da un blocco "prendi il nettare" (get nectar) seguito da un altro blocco "prendi il nettare". Guarda sempre cosa c'è nel blocco grigio per sapere cosa possono fare i blocchi verdi delle funzioni.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
         text: |-
-          Ora usiamo i "cicli annidati" con l'ape. Nell'esercizio 3 trovi del codice già pronto che dice all'ape di andare avanti e prendere una dose di nettare, di ripetere queste azioni per tre volte e quindi girare a destra. Prendi tutto questo codice, inseriscilo all'interno di un altro blocco "ripeti ... volte" (repeat ... times) ed impostagli a tre il numero di ripetizioni. Hai realizzato un ciclo annidato!
+          Ora usiamo i "cicli annidati" con l'ape. Nell'esercizio 3 trovi del codice già pronto che dice all'ape di andare avanti e raccogliere una dose di nettare, di ripetere queste azioni per tre volte e quindi girare a destra. Prendi tutto questo codice, inseriscilo all'interno di un altro blocco "ripeti ... volte" (repeat ... times) ed impostagli a tre il numero di ripetizioni. Hai realizzato un ciclo annidato!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
@@ -1074,83 +1073,102 @@ it:
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: "Questo è il blocco condizionale. Dice se sei presso il fiore o l'alveare, allora fai qualcosa. E' utile quando non sappiamo quanto miele o nettare prendere come vediamo qui con questo punto interrogativo."
+        text: |-
+          Questo è il blocco condizionale. Il blocco controlla una certa condizione, ad esempio "se sei su un fiore (if at flower), oppure "se sei su un favo" (at honeycomb). Se (if) la condizione è vera allora "esegui" (do) qualche azione. Questo blocco è utile quando non sappiamo quanto nettare possiamo raccogliere o quanto miele possiamo produrre, come nell'esercizio della figura successiva in cui vediamo solo un punto interrogativo.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In questo esempio, diremo, se è un fiore, prendi tutto il nettare e quindi ne utilizzaremo un altro per dire, se è un alveare, fai il miele. Ta-dah!
+        text: |-
+          Nell'esercizio di questo esempio devi usare due blocchi "se". Col primo blocco devi dire "se c'è un fiore prendi il nettare". Poi col secondo blocco devi dire "se c'è un favo fai il miele". Qualunque dei due trovi sotto la nuvoletta, hai risolto!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: "We have a new block that's called the if/else block. It's a conditional statement just like the if block you've used in the puzzles before. But now there's a new part at the bottom that says else. The if/else block lets the bee make a decision between two sets of actions. If the bee is at a flower, the bee will do the set of actions you put in the first part where it says do. If the bee is not at a flower, the bee will do the set of actions you put in the slot where it says else."
+        text: |-
+          Abbiamo un nuovo blocco chiamato blocco "se-altrimenti" (if-else). Si tratta di un'istruzione condizionale proprio come il blocco "se" (if) che hai usato nell'esercizio precedente. Il blocco "se-altrimenti" fa scegliere all'ape cosa fare tra due insiemi di azioni possibili. Se l'ape è su un fiore, l'ape eseguirà l'insieme di azioni che sono inserite nella prima parte, dove c'è scritto "esegui" (do). Se l'ape non è su un fiore, l'ape eseguirà l'insieme di azioni che sono inserite nella seconda parte, dove c'è scritto "altrimenti" (else).
       2:
         image: notes/C4_conditionals_2.png
-        text: "If statements are how computers are able to make decisions. Humans set up conditions for the computer that say if the computer is presented with a certain situation do this. Else, which just means otherwise, do that. The top of our if/else block says if at flower. But the top of our block could say other things, like if nectar equals 2 or if there's a path ahead, our block will behave in the same way. That if the statement at the top is true it will do the first set of actions. But if the statement at the top is false, it will do the second set of actions."
+        text: "Le istruzioni condizionali consentono ai computer di prendere delle decisioni. Le persone impostano delle condizioni che dicono al computer “SE (if) si verifica una determinata situazione fai questo. ALTRIMENTI (else), ossia in caso contrario, fai quest'altro.” Nella figura precedente il blocco “se-altrimenti” dice “se c'è un fiore” (if at flower), mentre nella figura qui accanto “se ci sono 2 dosi di nettare” (if nectar = 2), ma potremmo dire altre cose, ad esempio “se c'è strada in avanti”. Il comportamento del blocco “se-altrimenti” è sempre lo stesso, ossia, “se” l'istruzione nella parte alta del blocco è vera, allora viene eseguito il primo insieme di azioni; “altrimenti”, se l'istruzione nella parte alta del blocco è falsa, viene eseguito il secondo insieme di azioni."
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: 'Quando usi un blocco "ripeti … volte" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco "ripeti … volte" in realtà utilizza un blocco più sofisticato detta "ciclo con contatore" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito.'
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+        text: |-
+          Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile "contatore" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile "contatore" (counter) e usarla nel ciclo.
       3:
         image: notes/C4_for_loops_3.png
-        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+        text: |-
+          Il vantaggio di usare un vero "ciclo con contatore" (repeat counter times) al posto di un blocco "ripeti … volte" sta nel fatto che si può effettivamente vedere la variabile "contatore" (counter) e usarla nel ciclo. Per esempio, se ho una fila di fiori e il primo ha una dose di nettare, il secondo ne ha due e il terzo ne ha tre, posso usare il "ciclo con contatore" per dire all'ape di raccogliere "contatore" dosi di nettare ogni volta, ossia una dose dal primo fiore, due dal secondo e tre dal terzo.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+        text: |-
+          Inoltre in un "ciclo con contatore", puoi far sì che il 'contatore' venga incrementato ogni volta di un numero diverso da uno. Puoi contare di 2 alla volta, di 4 alla volta o addirittura di una quantità ogni volta diversa.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: 'Quando usi un blocco "ripeti … volte" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco "ripeti … volte" in realtà utilizza un blocco più sofisticato detta "ciclo con contatore" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito.'
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+        text: |-
+          Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile "contatore" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile "contatore" (counter) e usarla nel ciclo.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+        text: |-
+          Il vantaggio di usare un vero "ciclo con contatore" (repeat counter times) al posto di un blocco "ripeti … volte" sta nel fatto che si può effettivamente vedere la variabile "contatore" (counter) e usarla nel ciclo. Per esempio, se ho una fila di fiori e il primo ha una dose di nettare, il secondo ne ha due e il terzo ne ha tre, posso usare il "ciclo con contatore" per dire all'ape di raccogliere "contatore" dosi di nettare ogni volta, ossia una dose dal primo fiore, due dal secondo e tre dal terzo.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+        text: |-
+          Inoltre in un "ciclo con contatore", puoi far sì che il 'contatore' venga incrementato ogni volta di un numero diverso da uno. Puoi contare di 2 alla volta, di 4 alla volta o addirittura di una quantità ogni volta diversa.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: 'Quando usi un blocco "ripeti … volte" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco "ripeti … volte" in realtà utilizza un blocco più sofisticato detta "ciclo con contatore" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito.'
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running. The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop.
+        text: |-
+          Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile "contatore" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile "contatore" (counter) e usarla nel ciclo.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: "Now that you've edited function blocks, it's time to create a new function block from scratch. It's really simple. You'll see the toolbox has a category called functions. If you click on this, you'll see an orange button called create a function. Clicking on this brings up the function editor that you've already used to edit existing function blocks."
+        text: |-
+          Ora che hai modificato i blocchi funzione, è arrivato il momento di provare a creare un nuovo blocco funzione partendo da zero. È davvero semplice. Guarda nella cassetta degli attrezzi: c'è una categoria chiamata "Funzioni" (Functions). Cliccandoci sopra visualizzi il blocco "Crea un funzione". Se lo clicchi si apre l'editor che hai già usato per modificare un blocco funzione già esistente.
       2:
         image: notes/C4_function_create_2.png
-        text: "Just like before, you started by naming your function, writing down a description for what the function is supposed to do. For instance, it's supposed to draw a square or draw a triangle and then drag blocks from the toolbox into the white work space below. Remember to drag these blocks inside the green wrapping block for the function."
+        text: |
+          Proprio come prima, inizia dando un nome alla tua funzione e subito dopo scrivi una descrizione di cosa la funzione dovrebbe fare, per esempio, se serve per disegnare un quadrato o un triangolo. Infine trascina i blocchi che ti servono dalla cassetta degli attrezzi all'area di lavoro ("workspace"), ossia lo spazio bianco più in basso. Ricordati di posizionare i blocchi all'interno del blocco verde della funzione.
+          
+          https://studio.code.org/s/course4/stage/14/puzzle/2
       3:
         image: notes/C4_function_create_3.png
-        text: "Once you're done, click on save and exit. This will take you back to the main puzzle work space. The new function you created will show up as a green block in the function category in your toolbox. Drag and drop this into the main work space and use it like any other block to solve the puzzle."
+        text: |-
+          Quando hai finito, clicca su "Chiudi" per salvare le modifiche. Questo ti farà tornare all'area di lavoro principale dell'esercizio. La nuova funzione che hai creato apparirà come un nuovo blocco verde all'interno della categoria "Funzioni" (Functions) nella cassetta degli attrezzi. Trascina questo nuovo blocco all'interno della tua area di lavoro e usalo come qualunque altro blocco per risolvere l'esercizio.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
         text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella funzione (FUNCTION). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
       2:
         image: notes/C4_function_edit_2.png
-        text: "In the program we built, we learned how to draw a square by moving and turning four times. We can take that function and give it a name, draw a square so that any time we want to do that, we simply say draw a square and it will go back and invoke that function, that code and it will get done for us. We've added that concept to our programming language."
+        text: 'Nel programma che hai costruito, hai imparato come disegnare un quadrato avanzando e poi girando per quattro volte. Puoi prendere quella funzione e darle un nome, ad esempio "disegna un quadrato" (draw a square), in modo tale che ogni volta che vorrai farlo, potrai semplicemente dire "disegna un quadrato" e il computer richiamerà la stessa funzione, eseguendo sempre quello stesso codice. Hai aggiunto quel concetto al tuo linguaggio di programmazione.'
       3:
         image: notes/C4_function_edit_3.png
-        text: "In this puzzle, we have already created a draw a square function for you. You'll see it in the toolbox as a green block. What you'll need to do is write the same code you wrote before to draw a square and put it in this function. To do that, click on the edit option in the green draw a square block. This will open up the function editor. The function editor has three parts. A place where you name your function. This will appear on the green block before that function. Then write out a short description of what your function is supposed to do."
+        text: |-
+          In questo esercizio, trovi già pronta nella cassetta degli attrezzi il blocco funzione "disegna un quadrato" (draw a square). L'abbiamo creato noi per te, è un blocco verde, ma è vuoto. Ciò che devi fare è scrivere lo stesso codice che hai già scritto per disegnare un quadrato e metterlo in questa funzione. Per farlo, clicca sul pulsante blu "modifica". Questo ti aprirà l'editor della funzione che è suddiviso in tre parti. Una parte in alto in cui puoi dare un nome alla funzione. Poi c'è una parte centrale in cui puoi descrivere brevemente cosa dovrebbe fare la funzione.
       4:
         image: notes/C4_function_edit_4.png
-        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+        text: |-
+          In questo caso, la funzione dovrebbe disegnare un quadrato. La parte bianca al di sotto della descrizione è l'area di lavoro e funziona esattamente come l'area di lavoro che stai già usando. Puoi prendere i blocchi dalla cassetta degli attrezzi e spostarli in quest'area di lavoro. Ricordati di mettere i blocchi che creano un quadrato all'interno del blocco verde della funzione. Quando hai finito clicca su "Chiudi". In questo modo ritorni all'area di lavoro dell'esercizio. Ora, per risolvere l'esercizio, puoi usare il blocco funzione "disegna un quadrato" (draw a square) proprio come qualunque altro blocco.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: "Here's a function that draws a square with 50 pixel sides. That's great but what if I wanted to draw a square with sides 50 pixels and another square with sides of 100 pixels? We shouldn't have to make two separate functions that do almost the same thing. Instead, we can use one function with a parameter."
+        text: Ecco una funzione che disegna un quadrato con i lati di 50 pixel. Ottimo, ma cosa succede se voglio disegnare un quadrato con i lati di 50 pixel e un altro quadrato con i lati di 100 pixel? Non è necessario creare due funzioni distinte per fare quasi la stessa cosa. Possiamo invece usare una funzione con un parametro.
       2:
         image: notes/C4_function_parameters_2.png
-        text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
+        text: |-
+          I parametri ti permettono di passare ad una funzione dei valori che vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi a questa funzione un parametro chiamato "Lunghezza" ("Length") da utilizzare per creare quadrati di diverse dimensioni. Nell'editor della funzione, come abbiamo già visto, puoi modificare il nome e la descrizione della funzione, ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello spazio a sinistra del pulsante "Aggiungi un parametro" e poi clicca sul pulsante. In questo modo viene creato un blocco rosso con il nome del parametro che hai appena creato. Ora nel blocco "vai avanti ..." (move forward ...) puoi inserire il blocco "Lunghezza" in modo tale da andare avanti di "Lunghezza” pixel.
       3:
         image: notes/C4_function_parameters_3.png
-        text: "Click save and close and drag out your new create a square block from the functions category in the toolbox. You'll notice there's an empty space next to length because the function wants to know what value the parameter Length should have. Drag a number block from the Math category and place it in this space. See how you can use the function again and again with different lengths to make squares of different sizes? Try it for yourself!"
+        text: |-
+          Quando hai finito, clicca su "Chiudi" per salvare le modifiche. Puoi trovare il nuovo blocco della funzione all'interno della categoria "Funzioni" (Functions) nella cassetta degli attrezzi. Noterai che c'è uno spazio vuoto vicino al parametro "Lunghezza" perché la funzione vuole sapere che valore dovrebbe avere il parametro. Trascina un blocco numerico dalla categoria "Matematica" (Math) e inseriscilo in questo spazio. Sai che è possibile usare la funzione più e più volte con lunghezze differenti per creare quadrati di diverse dimensioni? Prova per credere!
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -1162,11 +1180,12 @@ it:
           Blockly è diviso in tre parti principali. Sulla sinistra c'è il labirinto dell'uccellino, dove viene eseguito il programma. Le spiegazioni per ciascun esercizio sono scritte sotto il labirinto. La zona centrale è la "cassetta degli attrezzi"; ognuno di questi blocchi corrisponde ad un comando che l'uccellino può comprendere. Lo spazio bianco sulla destra si chiama "area di lavoro" e qui costruisci il tuo programma.
       3:
         image: notes/C4_intro_3.png
-        text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
+        text: |-
+          Se sposti un blocco "vai avanti" nell'area di lavoro e premi "Esegui" che cosa succede? L'uccello si sposta di una casella in avanti nel labirinto. E se desideri che l'uccello faccia qualcosa dopo essersi spostato di una casella in avanti? Puoi aggiungere un altro blocco al tuo programma.
       4:
         image: notes/C4_intro_4.png
         text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+          Per aggiungere il blocco "gira a sinistra" trascinalo sotto il blocco "vai avanti" fino a che non appare una linea gialla sul contorno. A quel punto rilascialo, e i due blocchi si attaccheranno insieme. Se premi nuovamente "Esegui", l'uccellino eseguirà le istruzioni associate ai blocchi presenti nella tua area di lavoro, procedendo dall'alto verso il basso.
       5:
         image: notes/C4_intro_5.png
         text: |-
@@ -1174,10 +1193,11 @@ it:
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: "If I want to draw a rectangle 50 pixels tall and that is twice as wide as it is tall, how would I program the computer to do that? Well, I could tell the artist to go up fifty, turn right, and then go over 100 and move the whole thing twice. But then I'm doing the math for the computer."
+        text: "Se voglio disegnare un rettangolo avente un'altezza pari a 50 pixel e una larghezza doppia rispetto all'altezza, in che modo posso programmare il computer per disegnarlo? Beh, posso dire all'artista di andare verso l'alto per 50 pixel, girare a destra e poi proseguire per 100 pixel e poi di ripetere l'intera sequenza due volte. Ma in questo modo sto facendo io i calcoli al posto del computer."
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers are really good at doing math so we should leave it to them whenever possible. If I just used a variable called height instead, then I could easily change height to fifty and then change my algorithm to tell the artist to go up by height, turn right and then go over by height times 2, which gives us a rectangle that is twice as wide as it is tall.
+        text: |-
+          Moltiplicare 50 per due può sembrarti semplice, ma siccome i computer sono veramente bravi a fare i calcoli, dovremmo lasciarglieli fare ogni volta che è possibile. In questo caso basta usare una variabile "altezza" (height), impostarne (set) il valore a 50, e quindi modificare l'algoritmo per dire all'artista di andare verso l'alto di "altezza" pixel, girare a destra, poi proseguire per "altezza" x 2 pixel, girare ancora a destra e ripetere il tutto due volte. In questo modo si disegna un rettangolo la cui larghezza è il doppio dell'altezza.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
@@ -1246,27 +1266,29 @@ it:
         text: Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+        text: "In qualsiasi momento avete bisogno di memorizzare una informazione per un successivo utilizzo, usate una variabile. Supponiamo che abbiamo bisogno di contare il numero di volte che l'utente ha twittato. Ogni volta che l'utente invia un Tweet, aggiungeremo uno a quel numero e ogni volta che l'utente elimina un tweet lo toglieremo. Ogni volta che abbiamo bisogno di sapere quante volte che l'utente ha twittato ci basterà guardare le variabile."
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that variable in an algorithm, it opens up the container and looks at the value inside. This lets you write smarter algorithms that behave differently depending on the value stored in the variable.
+        text: Una variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un programma, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere programmi più flessibili, che si comportano in maniera differente a seconda del valore memorizzato nella variabile.
       2:
         image: notes/C4_variables_artist_2.png
-        text: "For example, if you wanted to write an algorithm to say Happy birthday, you're turning 10! to my little brother, that's great now but when I run it next year I'd want it to say, Happy birthday, you're turning 11! I could create a variable called age to store my brother's age and write my algorithm to say Happy birthday, you're turning 'age' instead. Because variable can change, every year I can update the variable 'age' to equal 'age' plus 1."
+        text: |-
+          Ad esempio, se voglio scrivere un programma per dire al mio fratellino "Buon Compleanno, sei arrivato a 10 anni!", non ho alcun problema per quest'anno. Però vorrei che, mandandolo in esecuzione l'anno prossimo, dicesse "Buon Compleanno, sei arrivato a 11 anni!". Posso creare una variabile 'età' (age) per memorizzare l'età di mio fratello e poi scrivere un programma che dica "Buon Compleanno, sei arrivato a 'età' " (Happy birthday, you're turning 'age'). Dato che una variabile può essere modificata, ogni anno io posso aggiornare la variabile da 'età' ad 'età'+1 e il programma rimane sempre uguale.
       3:
         image: notes/C4_variables_artist_3.png
-        text: "In this puzzle, we're going to be using a variable that will set the length of the line our artist draws. Later on in our code, the move forward block will look at that length variable to see what value you've set it to."
+        text: |-
+          In questo esercizio, utilizziamo una variabile "lunghezza" (length) per impostare (set) la lunghezza della linea che l'artista deve disegnare. Più avanti nel codice, il blocco "vai avanti" (move forward) esamina il contenuto della variabile "lunghezza" per vedere a quale valore è stata impostata e l'artista si sposta di questo valore.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: Una variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un algoritmo, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere algoritmi intelligenti che si comportano in maniera differente a seconda del valore memorizzato nella variabile.
+        text: Una variabile è un contenitore in cui puoi memorizzare un valore. Quando usi quella variabile in un programma, questo apre il contenitore ed esamina il valore contenuto al suo interno. Questo ti permette di scrivere programmi più flessibili, che si comportano in maniera differente a seconda del valore memorizzato nella variabile.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: "Stai per provare il Laboratorio in cui ti verranno proposti diversi giochi in cui potrai cambiare i valori di alcune variabili come la velocità, l'altezza o il punteggio, in modo tale da personalizzare il gioco proposto. Non dovrai modificare l'algoritmo del gioco per cambiarne il comportamento, dovrai concentrarti solo sulle variabili. "
+        text: "Stai per provare il Laboratorio in cui ti verranno proposti diversi giochi in cui potrai cambiare i valori di alcune variabili come la velocità, l'altezza o il punteggio, in modo tale da personalizzare il gioco proposto. Non dovrai modificare il codice del gioco per cambiarne il comportamento, dovrai concentrarti solo sulle variabili."
       3:
         image: notes/C4_variables_playlab_3.png
-        text: "Nel mio lavoro per Kindle e sull'X-ray per i libri, noi usiamo le variabili in molti modi. Uno dei modi in cui si può usare una variabile è per memorizzare il numero di pagine di un libro. Un utente può aumentare o diminuire la grandezza dei caratteri di una pagina. A seconda della grandezza del carattere, il numero di pagine di un libro può cambiare. Possiamo risolvere il problema memorizzando il numero di pagine in una variabile."
+        text: Nel mio lavoro per il lettore Kindle e sulla radiografia per i libri, noi usiamo le variabili in molti modi. Uno dei modi in cui si può usare una variabile è per memorizzare il numero di pagine di un libro. Un utente può aumentare o diminuire la grandezza dei caratteri di una pagina. A seconda della grandezza del carattere, il numero di pagine di un libro può cambiare. Possiamo gestire questa situazione usando una variabile per memorizzare il numero di pagine.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
@@ -1414,7 +1436,7 @@ it:
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+        text: Questa attività spiega in un modo facile da capire come funziona Internet. Spieghiamo tutta la terminologia di cui hai bisogno in termini semplici di modo che gli studenti possano simulare la trasmissione dei messaggi, come per la posta elettronica.
       2:
         image: notes/unplug10_2.png
         text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
@@ -1531,7 +1553,7 @@ it:
         text: "Sei già arrivato all'ultimo esercizio. Complimenti! Hai già imparato tutto quello che ti serve per creare la tua versione personale del gioco basato su Guerre Stellari. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare il tuo gioco personale e decidere come funzionerà! Un'ultima cosa: hai a disposizione nuovi suoni e nuove istruzioni per fare ancora di più."
       3:
         image: notes/starwars_congrats_3.JPG
-        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi un Porco-Palla viene visualizzato uno Stormtrooper. Alla fine l'intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
+        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi un Porco-Palla viene visualizzato un Assaltatore. Alla fine l'intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
       4:
         image: notes/starwars_congrats_4.JPG
         text: "[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i tasti in modo che ogni volta che si preme la freccia verso l'alto, il personaggio va giù e quando si preme la freccia verso destra, il tuo personaggio va a sinistra. È molto difficile! A volte basta avere un vantaggio, e se sei lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l'ho fatta? Sìì!"
@@ -1606,7 +1628,7 @@ it:
         text: "Sei già arrivato all'ultimo esercizio. Complimenti! Hai già imparato tutto quello che ti serve per creare la tua versione personale del gioco basato su Guerre Stellari. Non ci sono più istruzioni, né enigmi da risolvere. Puoi creare il tuo gioco personale e decidere come funzionerà! Un'ultima cosa: hai a disposizione nuovi suoni e nuove istruzioni per fare ancora di più."
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi un Porco-Palla viene visualizzato uno Stormtrooper. Alla fine l'intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
+        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi un Porco-Palla viene visualizzato un Assaltatore. Alla fine l'intero schermo è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
         text: "[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i tasti in modo che ogni volta che si preme la freccia verso l'alto, il personaggio va giù e quando si preme la freccia verso destra, il tuo personaggio va a sinistra. È molto difficile! A volte basta avere un vantaggio, e se sei lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l'ho fatta? Sìì!"

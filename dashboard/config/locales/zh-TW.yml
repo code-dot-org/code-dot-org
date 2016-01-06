@@ -28,6 +28,8 @@
     code:
       label: 增加一位老師：
       placeholder: 單元代碼 (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: 新增教師
   add_hint_form:
     placeholder: 請在此處輸入您的提示
@@ -167,7 +169,7 @@
     error_already_redeemed: 您獲得的獎項已經兌現。
     no_prizes_available: 很抱歉，目前我們無法提供獎品。
     teacher_info_required: '教師的獎勵需要學校名稱跟地址:'
-    teacher_email_required: 老師獎需要一個已確認電子郵件地址：
+    teacher_email_required: 老師的獎項需要一個已確認電子郵件地址：
     confirm:
       title: 請確認
       'no': 否
@@ -191,7 +193,7 @@
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 你贏得了獎品！（僅適用於美國學生）
-      not_earned_title: 完成本教程，賺取報酬 (僅適用于美國學生)
+      not_earned_title: 完成此課程，並領取獎賞 (僅適用美國學生)
       not_earned: 學習所有的電腦科學概念，並收集完所有 %{num_trophies}個獎盃，就能獲得真實世界的獎品。您可以選擇 10 GB 的
         Dropbox 空間，10美元的Skype儲值或是免費遊戲下載。注意：獎項僅適用於美國學生，並僅有在獎品供應持續的情況下適用。
       teacher:
@@ -260,58 +262,10 @@
     remove: （將教師移除）
     confirm:
       remove: 你確認要刪除這個老師嗎？
-    tools: 教師工具
-    followers:
-      section: 班别：
-      stages: '要顯示的階段:'
-      show_past: 顯示之前的學生活動 (%{bullet_html})：
-      levels_key: 關卡精髓
-      perfect: 完美完成
-      completed: 完成了，但是用到太多程式積木
-      tried: 試過，但未完成
-      not_tried: 還沒試過
-      activity: 顯示過去學生 %{hours} %{plural} 的活動
-      no_section: 沒有指定班級
-      trophies: 獎盃
     students:
-      name: 你的名字
-      username: '使用者名稱 '
-      password: 密碼
-      manage: 學生管理
       dashboard: 到教師主控台
-      add: 新增學生
-      remove: 刪除學生
-      confirm_remove: 你確定要刪除這個學生嗎？
-      help_reassign: 要將你的學生分成不同班級，請選取要指派到新班級的學生
-      help_register: 與其花大量的時間一個人輸入所有學生的資料，不如請學生們各自註冊，可以更快建立您的班級。您的學生必須選擇使用者名稱和密碼，但我們不會要求他們提供電子信箱地址。如果學生忘記密碼，您也可以幫他們重新設置。
-      register: 請學生自行註冊
-      vist: 要求你的學生去參觀
-      section_code: '並輸入他們的班級代碼:'
-      first_please: 首先，請 %{add_section}
-      for: 為
-      enter: '輸入:'
-    sections:
-      add: 增加班級
-      manage: 管理班級
-      section: 班級
-      students: 學生
-      section_code: 班級代碼
-      add_section_code: 增加學生班級代碼
-      secret: 密碼類型
-      grade: 年級
-      course: 課程
-      rename: 重新命名
-      edit: 編輯
-      delete: 刪除
-      confirm_delete: 你確定要刪除這個班級嗎？
-      email: 在電子郵件中發送
-    rollup: 進度表
-    activity: 最近的班級活動
-    user_not_found: 無法找到該名老師或學生
-    cant_remove_student_no_email: 因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name}
-      從你的學生中移除
-    cant_remove_teacher_no_email: 因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}
-    student_teacher_disassociated: '%{teacher_name}已經從%{student_name}的老師名單中移除'
+    user_not_found: 教師不能被找到
+    student_teacher_disassociated: 你已移除 %{teacher_name} 當作你的教師.
     panel:
       answer_viewer: 答案檢視器
       student: '學生 '
@@ -385,6 +339,7 @@
   share:
     title: 在程式碼工作室中學習
     description: 任何人都可以學習電腦科學並透過程式碼來設計遊戲、app及藝術創作。
+    try_hour_of_code: 試試看做一個「一小時的程式課」!
   gender:
     male: 男性
     female: 女性
@@ -420,6 +375,7 @@
     built_on_code_studio: 在 Code Studio 上建立
     make_my_own_app: 製作自己的 app
     how_it_works: 它是如何運作的
+    try_hour_of_code: 試試看做一個「一小時的程式課」!
   reference_area:
     title: 需要幫忙嗎？
     subtitle: 看看這些影片和提示
@@ -478,7 +434,7 @@
       unused: 未使用的關卡
   upsell:
     hoc:
-      title: 一小時的程式設計課程
+      title: 經典迷宮
       body: 請試試數百萬人已經體驗過的電腦科學基礎課程。
     flappy:
       title: Flappy遊戲設計

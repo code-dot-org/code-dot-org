@@ -1,4 +1,5 @@
 var constants = require('./constants');
+var parseXmlElement = require('./xml').parseElement;
 
 var TestResults = constants.TestResults;
 
@@ -51,71 +52,51 @@ var FeedbackBlocks = function(options, missingRequiredBlocks, missingRecommended
 
   this.xml = this.generateXMLForBlocks_(blocksToDisplay);
 
-  this.iframeOptions = {
-    app: options.app,
-    options: {
-      readonly: true,
-      locale: studioApp.LOCALE,
-      localeDirection: studioApp.localeDirection(),
-      baseUrl: studioApp.BASE_URL,
-      skinId: options.skin,
-      level: options.level,
-      blocks: this.xml
-    }
-  };
-
   this.div = document.createElement('div');
-  this.div.setAttribute('id', 'feedbackBlocksContainer');
+  this.div.setAttribute('id', 'feedbackBlocks');
 
-  this.iframe = document.createElement('iframe');
-  this.iframe.setAttribute('id', 'feedbackBlocks');
-  this.iframe.setAttribute('allowtransparency', 'true');
-
-  this.div.appendChild(this.iframe);
+  // Will be set by this.render()
+  this.blockSpaceEditor = undefined;
 };
 
 module.exports = FeedbackBlocks;
 
-/**
- * Generate a url (with params) for the iFrame that's going to hold the
- * blocks.
- * TODO(elijah) replace this whole thing with an implementation that
- * doesn't require an iframe, since we can now have multiple blocklys on
- * the same page
- */
-FeedbackBlocks.prototype.readonlyTemplateUrl_ = function () {
-  var params = {
-    app: this.iframeOptions.app,
-    js_locale: this.iframeOptions.options.locale,
-    locale_dir: this.iframeOptions.options.localeDirection
-  };
+FeedbackBlocks.prototype.render = function () {
+  // Only render if this.div exists in the DOM
+  var div = document.getElementById("feedbackBlocks");
+  if (div !== this.div) {
+    return;
+  }
 
-  // Simple polyfill for $.params
-  var paramString = Object.keys(params).map(function (key) {
-    return key + "=" + encodeURIComponent(params[key]);
-  }).join("&");
+  // Initialize a new readOnly blockSpaceEditor with some custom sizing
+  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
+    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if (!metrics) {
+      return null;
+    }
+    // Expand the view so we don't see scrollbars
+    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+    return metrics;
+  }, function (xyRatio) {
+    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+  }, true, true);
 
-  return "/readonly_template?" + paramString;
+  var blockSpace = this.blockSpaceEditor.blockSpace;
+  var parsedXml = parseXmlElement(this.xml);
+  Blockly.Xml.domToBlockSpace(blockSpace, parsedXml);
 };
 
-FeedbackBlocks.prototype.show = function() {
-  var iframeOptions = this.iframeOptions;
-  var iframe = this.iframe;
-  iframe.setAttribute('src', this.readonlyTemplateUrl_());
-  iframe.onload = function () {
-    this[iframeOptions.app + "Main"](iframeOptions.options);
-  }.bind(iframe.contentWindow);
+FeedbackBlocks.prototype.show = function () {
+  this.div.style.visibility = '';
+  this.div.style.height = '';
+  if (this.blockSpaceEditor) {
+    this.blockSpaceEditor.svgResize();
+  }
 };
 
-FeedbackBlocks.prototype.hideDiv = function() {
-  this.div.className += " hiddenIframe";
-};
-
-FeedbackBlocks.prototype.revealDiv = function() {
-  // this regex should simply match the first FULL WORD instance of
-  // "hiddenIframe"; meaning it will ignore instances of, for example,
-  // "hiddenIframeSomethingElse"
-  this.div.className = this.div.className.replace(/\bhiddenIframe\b/,'');
+FeedbackBlocks.prototype.hide = function() {
+  this.div.style.visibility = 'hidden';
+  this.div.style.height = '0px';
 };
 
 /**
@@ -124,7 +105,7 @@ FeedbackBlocks.prototype.revealDiv = function() {
  * @return {string} The generated string of XML.
  */
 FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
-  var blockXMLStrings = [];
+  var blockXMLStrings = ['<xml>'];
   var blockX = 10;  // Prevent left output plugs from being cut off.
   var blockY = 0;
   var blockXPadding = 200;
@@ -166,5 +147,6 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
       blockX += blockXPadding;
     }
   }
+  blockXMLStrings.push('</xml>');
   return blockXMLStrings.join('');
 };

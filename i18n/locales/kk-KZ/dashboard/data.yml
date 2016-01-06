@@ -3,491 +3,476 @@ kk:
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: Kезең 1
-          Maze: Kезең 2
-          Unplug2: Kезең 3
-          Unplug3: Kезең 4
-          Artist: Kезең 5
-          Unplug4: Kезең 6
-          Artist2: Kезең 7
-          Unplug5: Kезең 8
-          Farmer: Kезең 9
-          Unplug6: Kезең 10
-          Artist3: Kезең 11
-          Unplug7: Kезең 12
-          Farmer2: Kезең 13
-          Unplug8: Kезең 14
-          Artist4: Kезең 15
-          Unplug9: Kезең 16
-          Farmer3: Kезең 17
-          Unplug10: Kезең 18
-          Artist5: Kезең 19
-          Unplug11: Kезең 20
+          desc: K-8 Информатика пәніне кіріспе
+          Unplug1: Деңгей 1
+          Maze: Деңгей 2
+          Unplug2: Деңгей 3
+          Unplug3: Деңгей 4
+          Artist: Деңгей 5
+          Unplug4: Деңгей 6
+          Artist2: Деңгей 7
+          Unplug5: Деңгей 8
+          Farmer: Деңгей 9
+          Unplug6: Деңгей 10
+          Artist3: Деңгей 11
+          Unplug7: Деңгей 12
+          Farmer2: Деңгей 13
+          Unplug8: Деңгей 14
+          Artist4: Деңгей 15
+          Unplug9: Деңгей 16
+          Farmer3: Деңгей 17
+          Unplug10: Деңгей 18
+          Artist5: Деңгей 19
+          Unplug11: Деңгей 20
         Hour of Code:
           desc: Код Жазу Сағаты
-          Maze: Kезең 1
+          Maze: Деңгей 1
         Edit Code:
-          desc: Kодты өңдеу(beta)
-          MazeEC: Kезең 1
+          desc: Кодты өзгерту (бета)
+          MazeEC: Деңгей 1
         2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Kезең 1
+          desc: Шар (бета)
+          Bounce: Деңгей 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Kезең 1
+          desc: Қолданушылар жасаған басқатырғыш (бета)
+          Custom: Деңгей 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Kезең 1
+          Flappy: Деңгей 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Kезең 1
+          desc: Jigsaw (бета)
+          Jigsaw: Деңгей 1
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Лабиринт (бета)
+          MazeStep: Қадам деңгейі
         edit-code:
-          desc: Kодты өңдеу(beta)
-          MazeEC: Kезең 1
-          Applab: Kезең 2
-          ArtistEC: Kезең 3
-          StudioEC: Kезең 4
+          desc: Кодты өзгерту (бета)
+          MazeEC: Деңгей 1
+          Applab: Деңгей 2
+          ArtistEC: Деңгей 3
+          StudioEC: Деңгей 4
         events:
-          desc: Bounce (beta)
-          Bounce: Kезең 1
-          Studio: Kезең 2
+          desc: Шар (бета)
+          Bounce: Деңгей 1
+          Studio: Деңгей 2
         builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Kезең 1
+          desc: Қолданушылар жасаған басқатырғыш (бета)
+          Custom: Деңгей 1
         flappy:
           desc: Flappy Bird
-          Flappy: Kезең 1
+          Flappy: Деңгей 1
         jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Kезең 1
+          desc: Jigsaw (бета)
+          Jigsaw: Деңгей 1
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Лабиринт (бета)
+          MazeStep: Қадам деңгейі
         wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Kезең 1
+          desc: Ара Анықтамасы (бета)
+          WordSearch: Деңгей 1
     game:
       name:
-        Unplug1: Introduction to Computer Science
-        Maze: The Maze
-        Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Artist: Артист
-        Unplug4: Algorithms
-        Artist2: Артист 2
-        Unplug5: Functions
-        Farmer: The Farmer
-        Unplug6: Conditionals
-        Artist3: Артист 3
-        Unplug7: Song Writing
-        Farmer2: The Farmer 2
-        Unplug8: Abstraction
-        Artist4: Артист 4
-        Unplug9: Relay Programming
-        Farmer3: The Farmer 3
-        Unplug10: The Internet
-        Artist5: Артист 5
-        Unplug11: Wrap-up
-        MazeEC: The Maze
-        Bounce: Bounce
+        Unplug1: Информатика пәніне кіріспе
+        Maze: Лабиринт
+        Multi: Бірнеше Материал Таңдау
+        Unplug2: Есептегіштік ойлау
+        Unplug3: Миллиметрлік Бағдарламалау
+        Artist: Кейіпкер
+        Unplug4: Алгоритмдер
+        Artist2: Кейіпкер 2
+        Unplug5: Функциялар
+        Farmer: Фермер
+        Unplug6: Шарттар
+        Artist3: Кейіпкер 3
+        Unplug7: Ән Жазу
+        Farmer2: Фермер 2
+        Unplug8: Абстракция
+        Artist4: Кейіпкер 4
+        Unplug9: Релелік Бағдарламалау
+        Farmer3: Фермер 3
+        Unplug10: Ғаламтор
+        Artist5: Кейіпкер 5
+        Unplug11: Орау
+        MazeEC: Лабиринт
+        Bounce: Секіру
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: App Lab
-        ArtistEC: Артист
-        TextMatch: Text Match
-        StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
-        Custom: Artist
-        CustomStudio: Play Lab
+        Jigsaw: Бас қатырғыш
+        MazeStep: Лабиринттің Қадамдық режимі
+        Wordsearch: Сөз іздеу
+        Webapp: Қосымшалар Лабораториясы
+        ArtistEC: Кейіпкер
+        TextMatch: Сәйкес Сөз
+        StudioEC: Ойындар Лабораториясы
+        Applab: Қосымшалар Лабораториясы
+        NetSim: Ғаламтор Симуляторы
+        Custom: Кейіпкер
+        CustomStudio: Ойындар Лабораториясы
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Қола
+        Silver: Күміс
+        Gold: Алтын
     concept:
       description:
-        sequence: Sequence
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
-        function: Functions
-        parameters: Functions with parameters
+        sequence: Жүйелілік
+        if: Егер блогі
+        if_else: Егер-немесе блогі
+        loop_times: Қайталау блоктары
+        loop_until: Шарт орындалғанша орындау блогі
+        loop_while: Шарт орындалғанша қайталау блогі
+        loop_for: Санағыш блогі
+        function: Функциялар
+        parameters: Параметрлі функциялар
     level:
       instructions:
-        maze_2_2: 'Маған мына тентек қорсылдақты ұстауға көмектесесің бе? Бірнеше «Алға» блоктарын қойып, «Орындау» батырмасын бас. '
-        maze_2_1: Мына қорсылдақ мазамды алды! Тезірек жетуіме көмектесші!
-        maze_2_2_5: Жолымды белгілеп ал да, мына ақымақ қорсылдаққа мені жеткіз. Жарылғыш заттан аулақ жүр, өйтпесе қауырсындарым шашылады!
-        maze_2_3: Көк құбыжыққа жетейін! (Жарылғыш заттан сақта)
-        maze_2_4: Тыныш. Маған зиянды қорсылдақты табуға көмектес. Әйтпесе, мені ашуландырасың!
-        maze_2_5: Тек екі блокты пайдаланып, ақылсызға жетуге болады. Шешуін таба аласың ба?
-        maze_2_6: Үш ақ блокты қолданып, көк құбыжыққа жеткізгейсің.
-        maze_2_7: Маған мүмкіндігіңше аз блоктарды пайдаланып, зиянды торайдан құтылуға көмектес. «Қайталау» блогын бір реттен артық пайдалан.
-        maze_2_8: Сұр блоктарды алып тастау мүмкін емес. «Қайталау» блогын пайдалану арқылы есепті шеш. 3 рет «қайталау» сұр блогының ішіне «алға», тағы да «алға», және «бұрылу» блоктарын орналастырып көр.
-        maze_2_9: 'Енді жаңа “... дейін қайталау” блогын қолдан - ол сен көрсеткен әрекеттерді, мен торайға жеткенге дейін қайталайды.'
-        maze_2_10: 'Ал енді соңғы талпыныс - тек қана 4 блокты қолданып, шеше аласың ба?'
-        maze_2_11: 'Құрметті бағдарламашы! Мен зомбимін. Өте ашпын. Маған күнбағысқа дейін жету керек. Тек 5  блокты қолданып мені оған жеткізе аласың ба?'
-        maze_2_12: Жарайды, қазір ұқсас сұрақ, бірақ кішкене басқашалау. Сен тек 5 блокты пайдаланып жасай аласың ба?
-        maze_2_13: 'Жаңа «егер» блогыпен таныс бол. Оны қолданып, қашан бұрылатындығымды шеш. Анықтама: саған тағы да бір блок қажет, бірақ оны қайда қоятындығын ұғынып ал. Келесі жолы өзің жасайтындай бол.'
-        maze_2_14: Жақсы, бұл өткен сұраққа ұқсайды, бірақ сен «қайталау» және «егер» блоктарын қалай қолданғаныңды еске түсіруің керек.
-        maze_2_15: 'Маған күнбағыс керек! "Егер" блогын алып, мүмкіндігінше аз блокты қолдан.'
-        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
-        turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
-        turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
-        turtle_4_3: |-
-          Ok, here's the code you wrote to draw a single triangle. Can you add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        turtle_4_8: "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        turtle_4_9: "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
-        turtle_4_10: "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
-        turtle_4_11: 'Try changing the numbers in the "turn" and "repeat" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want.'
-        maze_karel_1_1: |-
-          Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the "remove" block to remove it.
-        maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: |-
-          Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the "while" block tell me if I'm standing on a pile or a hole.
-        maze_karel_1_7: "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
-        maze_karel_1_11: |-
-          It's still dark outside. Move me along the field. If there is a pile, remove it, and if there is a hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
-        turtle_2_1: "Hello. Me zombie artist. Me love drawing! Help me draw a square in a special color. Important note: you have all the same blocks but they've now been arranged in categories."
-        turtle_2_2: 'Welcome to using functions, which let you define new blocks! Try the new "draw a square" block, found in the "Functions" category, to draw a small 50x50 green square.'
-        turtle_2_3: 'Use the "repeat" block (in the "Loops" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors.'
-        turtle_2_4: "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        turtle_2_5: |-
-          Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the "draw a square" function five times.
-        turtle_2_6: |-
-          Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the "counter" block. Hint: It's in the Variables category.
-        turtle_2_7: |-
-          Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a "count with" block (in the Loops category) and "counter" block (in the Variables category) to draw the same spiral.
-        turtle_2_7_5: |-
-          There's a new "draw a snowman" function (in the Functions category). Draw two snowmen, of height 250 and 100.
-        turtle_2_8: |-
-          This one's a bit tricky. Use the "draw a snowman" function and the new "jump forward" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart.
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: |-
-          We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles.
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
-        turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
-        turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        maze_karel_debug_seq_2: "What's wrong with this program? How should you fix it so I can remove that pile?"
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice and flat.
-        maze_karel_debug_while: How should you change this program to help me fill the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make my field flat?
-        maze_karel_debug_function_3: "Edit this program so I'll remove all the piles on my field. "
-        turtle_5_1: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the pig.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
-        bounce_5: |-
-          We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
-        bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
-        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        maze_2_2: 'Сіз маған тентек торапайды ұстауға көмектесесіз бе? Олай болса "алдыға жүру" блогымен бірге "Іске қосу " батырмасын басыңыз.'
+        maze_2_1: Бұл торапай менің қауырсындарымды сабады. Оларды табуға көмектес!
+        maze_2_2_5: Жолмен жүріп отырып мені тентек торапайға апар. Тротилден алыс жүріңіз, әйтпесе қауырсыңдарыңыздан айырыласыз!
+        maze_2_3: Мені жасыл зұлымға баста! (Жарылғыш заттан абайлаңыз)
+        maze_2_4: Сабырлық сақтаңыз және тентек торапайды табуға көмектесіңіз. Әйтпесе мен ренжіп қаламын!
+        maze_2_5: 2 блокты ғана пайдаланып ақымақ торапайды ұстай аламын. Сіз бұны шеше аласыз ба?
+        maze_2_6: Тек үш блокты пайдаланып жасыл зұлымды алуға тырысыңыз.
+        maze_2_7: 'Неғұрлым аз блокты пайдаланып бұзық торапайды қууға көмектес. Бірден көбірек "қайталау" блогын пайдаланып көріңіз.'
+        maze_2_8: 'Егер блок сұр болса, онда оны өшіруге болмайды. Бұл басқатырғышты шешу үшін 3 рет "қайталау" блогын пайдаланыңыз. Бұл 3 блокты сұр "қайталау" блогына қойыңыз: жылжу, жылжу, бұрылу.'
+        maze_2_9: 'Жақсы, жаңа "болғанша қайталау" блогын пайдаланып көріңіз - бұл тентек торапайды ұстағанша қайталанады.'
+        maze_2_10: Жақсы, соңғы тәжірибе үшін – сіз бұны 4 блокты ғана пайдаланып шеше аласыз ба?
+        maze_2_11: Мейірімді адам. Мен зомбимін. Мен ашпын. Маған ... күнбағыс ... керек... Маған 5 блокты пайдаланып күнбағысты алып бере аласың ба?
+        maze_2_12: Жақсы, бұл алдыңғы тапсырмаға ұқсас, бірақ аздап өзгешелігі бар. Сіз тек 5 блокты ғана пайдалана аласыз ба?
+        maze_2_13: 'Жаңа "if" блогын пайдаланып, маған қай кезде бұрылу керек екенін шешіңіз. Нұсқау: сізге тек бір ғана блокты пайдалануыңызға болады, бірақ бұл тапсырманы келесі жолы пайдалану үшін үйренуіңіз қажет.'
+        maze_2_14: Бұл соңғы тапсырма, бірақ сен «егер» және «қайталау» блогын бірге қалай қолдану керегін еске түсүруін тиіс.
+        maze_2_15: 'Маған күнбағыс керек! "егер" блогын пайдалану арқылы, маған күнбағысты алып беру үшін аз блокты пайдаланыңыз.'
+        maze_2_16: Жақсы, тәжірибе үшін тағы да қайталап көрейік – бұл тапсырмада қатты өзгешелік жоқ, бірақ жыртқыш өсімдіктерді байқаңыз!
+        maze_2_17: |-
+          "Егер-немесе" блоктары шартты тексереді, және біреуін НЕМЕСЕ басқасын орындайды. Жаңа блокты пайдаланып маған күнбағысты алып беріңінз.'
+        maze_2_18: ' "Егер-немесе" блогына тағы бір жаттығу, бірінші реттен шеше аласыз ба?'
+        maze_2_19: Бұл қиын лабиринтті шешу үшін тек 3 блокты қоса аласыз ба? Егер шеше алсаңыз, онда мен ұзындыққа қарамастан кез келген жолмен жүре аламын.
+        turtle_1_1: Сәлем, мен суретшімін. Код жазу арқылы менімен кез келген нәрсені сала аласыз. Бірнеше блокты пайдаланып суретке сұр түсті сызықтарды салыңыз.
+        turtle_1_2: 'Енді төртбұрыш салып көріңіз. ЕСКЕРТУ: "түсті таңдау" блогына шертіп өзіңіздің сүйікті түсіңізді қолданыңыз.'
+        turtle_1_3: Тек 3 блокты пайдаланып төртбұрыш салыңыз.
+        turtle_1_4: 'Әр кезде әртүрлі түсті таңдайтын "кездейсоқ түс" опциясын қолданып, қабырғалары әртүрлі түстен болатын үшбұрыш салыңыз. Нұсқау: бұру блогындағы санға басу арқылы фигураны қаншалықты бұруға болатынын көруге болады.'
+        turtle_1_5: Қазір конвертті салу үшін алдымен үшбұрыш, одан кейін төртбұрышты сал.
+        turtle_1_6: 'Үшбұрышты және төртбұрышты қалай салу керек екенін білесіз бе? Нұсқау: Алдымен үшбұрышты салып, одан кейін төртбұрышты салу үшін фигураны қаншалықты бұру керек екенін анықтаңыз.'
+        turtle_1_7: Жақсы, енді бұл жаттығуды сәл қиындатып көрейік – мына жасыл әйнекті сала аласыз ба. Бұл төртбұрыштың барлық жағы 100 пиксел, және арақашықтықтары 50 пиксел. Жасыл түсті қолданып салуды ұмытпаңыз!
+        turtle_1_8: 'Жақсы, енді бұл кодтың не істейтінін көріңіз (немесе "Жіберу" батырмасын басып көріңіз). Одан кейін суретті бітіру үшін бірнеше рет қайталап көріңіз. Әр кезде әртүрлі түс болу керек.'
+        turtle_1_9: Сұрақ белгісін қандай санға өзгерткенде шеңбер салынатынын біле аласыз ба?
+        turtle_1_10: 'Сіз бұны шештіңіз! Енді, қалаған суретіңізді салыңыз. Бірнеше көңілді кеңес: таяқтың фигурасы, ақша қар, немесе спираль. Және де жаңа "енін орнату"блогын пайдаланып көріңіз. Сәттілік!'
+        turtle_4_1: '3 блокты ғана пайдаланып үшбұрыш (әрбір қабырғасы 100 пиксел) сала аласыз ба? Нұсқау: "қайталау" блогын пайдаланыңыз.'
+        turtle_4_2: 'Бағдарламаның орта жағына "оң жаққа 90 градус бұру" блогын қойыңыз.'
+        turtle_4_3: 'Жақсы, сіз жазған код тек жалғыз үшбұрышты қолдану үшін ғана. Енді әдемі гүл салу үшін "қайталау" және "бұру" блоктарын қоса аласыз ба?'
+        turtle_4_4: 'Бұл жерде де өткен басқатырғышқа ұқсас код жазу керек, бірақ әрбір үшбұрыштан кейін 36 градусқа қана бұрылу керек. Қанша рет қайталау керек? (Нұсқау: 360 градустан кейін шеңбер салынуы керек)'
+        turtle_4_5: 'Бұл жерде де өткен басқатырғышқа ұқсас код жазу керек, бірақ 36 рет бұру қажет. Бұру үшін қанша градусты пайдалану керек? (Нұсқау: 360 градус бұрудан кейін толық шеңбер салынуы керек)'
+        turtle_4_6: Тек 3 блокты пайдаланып, қабырғасы 20 пикселден болатын төртбұрыш сала аласыз ба?
+        turtle_4_7: 'Бұл өткен басқатырғышта төртбұрышты салу үшін қолданылған код. 10 көрші торды баспалдақ сияқты пайдаланып, қайталай аласыз ба? Нұсқау: сізге тек 2 блок қана қажет.'
+        turtle_4_8: Бұл өткен басқатырғыштың шешімі. 2 блокты қосып, суретті аяқтай аласыз ба?
+        turtle_4_9: Бұл өткен басқатырғыштың шешімі. Суретті аяқтау үшін қанша градусқа бұру керек? (Мүмкін сіз қанша рет қайталау керек екенін тапқан шығарсыз)
+        turtle_4_10: Бұл өткен басқатырғыштың шешімі. Суретті аяқтау үшін қанша рет қайталау керек?
+        turtle_4_11: 'Басқаша сурет алу үшін "бұру" және "қайталау" блоктарының санын өзгертіп көріңіз. Немесе, қалаған суретіңізді салу үшін кодты өзгертіп көріңіз.'
+        maze_karel_1_1: 'Сәлем, Мен фермермін. Жерді тегістеу үшін маған сіздің көмегіңіз қажет. Мені жылжыту арқылы, "өшіру" блогын пайдаланып жерді тегістеңіз.'
+        maze_karel_1_2: |-
+          Келесі, мені жылжытып шұңқырға апарып, "толтыру" блогын пайдаланып ЕКІ күрек топырақпен шұңқырды толтырыңыз.'
+        maze_karel_1_3: Мені егіндікпен жылжыту арқылы, мейлінше аз блокты пайдаланып, қанша үйіндіні тегістей аласыз.
+        maze_karel_1_4: 'Барлық төрт үйіндіні тегістеуге көмектесесіз бе? Нұсқау: қайталау блогын қолданып көріңіз.'
+        maze_karel_1_5: '5 күрек топырақты пайдаланып осы шұңқырларды жабуға көмектесіңіз. Нұсқау: "болғанша қайталау" блогы ішінде "қайталау" блогын қолданып көріңіз.'
+        maze_karel_1_6: 'Барлық үйіндіні тегістеу үшін, мейлінше аз блокты пайдаланып көріңіз. Ашылмалы мәзірдегі "болғанша қайталау" блогының жаңа опциясы арқылы менің шұңқырда немесе үйінді үстінде тұрғанымды анықта.'
+        maze_karel_1_7: 'Мәссаған, мен өте үлкен шұңқыр таптым! Бұл шұңқырды жабу үшін қанша күрек топырақ керек екенін білмеймін.  Сіз бұл шұңқыр жабылғанша топырақ салатын бағдарлама жаза аласыз ба?'
+        maze_karel_1_8: Егіннің аяқ жағындағы шұңқырды, бірнеше блокты пайдаланып жабуға көмектес.
+        maze_karel_1_9: 'Маған барлық үйіндіні тегістеуге көмектес. Қажетті блок санын пайдаланыңыз. Нұсқау: "болғанша қайталау" блогын пайдаланып көріңіз.'
+        maze_karel_1_10: Мен түнде де жұмыс істеймін, сондықтан үйіндінің көлемін көре алмаймын. Менде барлық опциялар жоқ, тек болғанша қайталау блогын қолданамын. Мені егін үстімен жылжыта отырып, егер үйінді кездессе оны тегістеңіз.
+        maze_karel_1_11: 'Әлі де қараңғы. Мені егін үстімен жылжытыңыз. Егер үйінді кездессе тегістеңіз, және шұңқыр кездессе жабыңыз. Нұсқау: ашылмалы мәзірден "егер" блогы опциясын таңдап алыңыз.'
+        turtle_2_1: 'Сәлем. Мен зомби кейіпкерімін. Мен сурет салуды жақсы көремін! Маған арнайы түсті пайдаланып төртбұрыш салуға көмектес. Ескертетін жайт: сізде барлық блоктар бар, бірақ олар категорияларға бөлінген.'
+        turtle_2_2: 'Жаңа блоктарды анықтауға мүмкіндік беретін, функциялар әлеміне қош келдіңіз! Жаңа "төртбұрыш салу" блогын пайдаланып көріңіз. Кішкентай жасыл 50x50 пикселді төртбұрыш салу үшін "функциялар" категориясына шертіңіз.'
+        turtle_2_3: 'Арақашықтықтары 120 градус болатын, 100 пикселді 3 төртбұрышты салу үшін "қайталау" блогын ("Циклдер" категориясынан) пайдаланыңыз. Және 3 әртүрлі кездейсоқ түсті қолданыңыз.'
+        turtle_2_4: 'Енді, суретімізді кішкене әрлендіреміз. Кодты 100 пикселді және арақашықтығы 10 градус болатын 36 төртбұрышты салатын код жазыңыз. Нұсқау: жылдамдықты көбейту үшін сырғыманы пайдалансаңыз болады.'
+        turtle_2_5: '50, 60, 70, 80, жән 90 пикселді қабырғалардан тұратын төртбұрыш салыңыз. "Төртбұрыш салу" функциясын бес рет пайдаланыңыз.'
+        turtle_2_6: 'Жақсы, бұл бағдарлама алдыңғы басқатырғышты салу үшін санағышты қолданады. Бір көлемді төртбұрыш салу үшін "санағыш" блогын пайдаланыңыз. Нұсқау: санағыш Айнымалылар категориясында орналасқан.'
+        turtle_2_7: Бұл спиральді салу бағдарламасы, бірақ блоктар істемейді сондықтан жіберілмейді. Спираль сызу бағдарламасын жазу үшін «бірге санау» (Циклдер категориясында) блогын және «санағыш» (Айнымалылар категориясында) блогын пайдаланыңыз.
+        turtle_2_7_5: 'Жаңа "аққала салу" функциясы (Функциялар категориясында). Биіктіктері 100 және 250 болатын екі аққала салыңыз.'
+        turtle_2_8: 'Енді тапсырманы қиындатып көрейік. "Аққала салу" функциясын пайдлаланып және жаңа "алдыға секіру" блогын қолданыңыз (Әрекеттер категориясында). Әртүсті және арақашықтықтары 100 пиксел болатын 3 аққала салыңыз.'
+        turtle_2_9: '"Бірге санау" циклін пайдаланып биіктіктері 110, 100, 90, 80 және 70 болатын аққалалар отбасын салыңыз. Аққалалар арақашықтығы 60 пиксел болуы керек.'
+        turtle_2_10: Әтрүрлі спиральдармен тәжірибе жасап көріңіз. Бұру санын өзгертсеңіз қандай жағдай орын алады? Немесе циклде кездейсоқ түсті қолдансақ? Қалаған суретіңізді салыңыз.
+        maze_karel_2_1: 'Блоктарды пайдаланып маған барлық шұңқырларды толтырып, үйінділерді тегістеуге көмектесіңіз. Бірнеше блокты пайдалану үшін циклді қолданыңыз. Нұсқау: циклді басқа цикл ішінде қолдана аласыз.'
+        maze_karel_2_2: 'Функциялар категориясына орналасқан "5 күрекпен шұңқырды толтыру" блогін жасадық. Оны маған шұңқырды толтыру үшін пайдаланыңыз.'
+        maze_karel_2_3: 'Жаңа "5 күрекпен шұңқырды толтыру" функция блогын пайдаланып, барлық шұңқырды толтыруға көмектесіңіз. Функциялар категориясынан "5 күрекпен шұңқырды толтыру" блогын жылжыту арқылы пайдалана аласыз.'
+        maze_karel_2_4: 7 күрекпен шұңқырды толтыру функциясын жазыңыз. Одан кейін барлық шұңқырды тегістеу үшін бағдарламада қолданыңыз.
+        maze_karel_2_5: Үйіндіні 6 күрекпен тегістеу функциясын құрып, оны барлық үйіндіні тегістеуге қолданыңыз.
+        maze_karel_2_6: 'Екі жаңа "8 күрекпен шұңқырды толтыру" және "8 күрекпен тегістеу" Функцияларын қолданып, маған барлық шұңқырларды толтырып, үйінділерді тегістеуге көмектесіңіз.'
+        maze_karel_2_7: Егінде сиырлар жүр! Маған сиырдан қашатын және үйіндіні тегістейтін функция жазыңыз. Барлық блоктарды функция ішіне орналастырыңыз.
+        maze_karel_2_8: 'Осы жаңа "Сиырдан қашу және 1 үйіндіні тегістеу" функциясын қолданып, маған барлық үйіндіні тегістеуге көмектесіңіз.'
+        maze_karel_2_9: Жақсы, бұл функция тігінен орналасқан 4 әртүрлі үйіндіні тегістейді. Бұл функцияны цикл ішіне қойыңыз, бұл бірнеше блокты ғана пайдаланып барлық үйіндіні тегістеуге мүмкіндік береді.
+        maze_karel_2_10: Мені егіндікпен қозғалта отырып және екі Функцияны пайдаланып, маған барлық шұңқырларды толтырып, үйінділерді тегістеуге көмектесіңіз.
+        turtle_3_1: 'Бұл басқатырғыш "төрбұрыш салу" және "шеңбер салу" Функциялары қалай жазылғанын көрсетеді.  "Төртбұрыш салу" блогін қойсаңыз ол сізге төртбұрыш салып береді.'
+        turtle_3_2: 'Мысалдағыдай "төртбұрыш салу" функциясын пайдаланып, "үшбұрыш салу" функциясын құрып, оны қолданып көріңіз.'
+        turtle_3_3: 'Мысықтардың айналасына үшбұрышты қоршауларды, ал сиырлардың айналасына төрбұрышты қоршауларды салыңыз. Кеңес: бағдарламаны барынша тексеріңіз.'
+        turtle_3_4: 'Егер сіз "төртбұрыш салу" және "үшбұрыш салу" (және осыған ұқсас блоктар) блоктарын қолдануды білсеңіз, онда үй жанына арыстанды салыңыз.'
+        turtle_3_5: 'Енді жаңа "үй салу" функциясын құрыңыз және екі мысықты орналастыру үшін қолданыңыз. Нұсқау: "жасау" блогын пайдаланып жаңа функция құрыңыз, және блок атын жазыңыз.'
+        turtle_3_6: 'Мысалдағыдай "төртбұрыш салу" блогын пайдаланып, "үшбұрыш салу" блогына "ұзындық" атын енгізіңіз. Одан кейін, әртүрлі көлемдегі үшбұрыштарды салыңыз. (Нұсқау: функцияға жазу үшін жұлдызшаға басыңыз)'
+        turtle_3_7: '"Үй салу" блогына "ұзындық" жазуын жазып және пілдерге арнап үлкен үй салыңыз (қабырғалары 150 пиксел)'
+        turtle_3_8: '"Үй салу" блогын аяқтаған соң, оң жақ бұрыштан қайта шақыру үшін өзгертіңіз. Бұл өзгертілген функцияны үш үй салуға қолданыңыз.'
+        turtle_3_9: '"Үй салу" функциясын ешқандай көмек қолданбай қайта жаза аласыз ба? Байқап көріңіз, және бірнеше үй салыңыз.'
+        turtle_3_10: Сіз көп нәрсені үйрендіңіз! Енді тәжірибиеңізді қолданып қалаған суретіңізді салыңыз. Жұлдыз, спираль немесе әдемі ақша қар салып көріңіз.
+        maze_karel_debug_seq_1: Бағдарламаны ретке келтіруге қош келдіңіз! Менің кодым дұрыс жұмыс істемейді. Сіз маған егіндікті тегістеп, егін егуге дайындау үшін, қателікті анықтап оны түзе аласыз ба?
+        maze_karel_debug_seq_2: Бұл бағдарламадағы қателік қандай? Мен бұл үйіндіні тегістеуім үшін, бағдарламадағы қандай қателікті түзету қажет?
+        maze_karel_debug_repeat: Егіндік тегіс және жақсы болатындай бағдарламаны жазып жіберіңіз.
+        maze_karel_debug_while: Шұңқырларды толтыру үшін бағдарламаны қалай өзгерту қажет?
+        maze_karel_debug_if: Көмектесіңіз! Егіндік тегіс болуы үшін бағдарламадағы қателіктерді түзетіңіз.
+        maze_karel_debug_if_else: Мен егіндіктегі барлық үйіндіні тегістейтіндей және шұңқырларды толтыруым үшін бағдарламаны өзгертіңіз.
+        maze_karel_debug_function_1: Мен барлық үйіндіні тегістеуім үшін бағдарламаның қай жерін өзгерту қажет?
+        maze_karel_debug_function_2: Мен егіндікті тегіс қылуым үшін бағдарламаны қатесіз жасап жібере аласыз ба?
+        maze_karel_debug_function_3: Мен егіндіктегі барлық үйіндіні тегістейтіндей бағдарламаны өзгертіңіз.
+        turtle_5_1: Бұл бағдарламаны жіберіп, және өзгертулер енгізіп көріңіз. Оның қалай жұмыс істейтінін анықтап көріңіз? (Немесе өшіріп оны басқа бағдарламаға ауыстырыңыз)
+        turtle_5_2: Бұл бағдарламаны жіберіп, және өзгертулер енгізіп көріңіз. Оның қалай жұмыс істейтінін анықтап көріңіз? (Немесе өшіріп оны басқа бағдарламаға ауыстырыңыз)
+        turtle_5_3: Бұл бағдарламаны жіберіп, және өзгертулер енгізіп көріңіз. Оның қалай жұмыс істейтінін анықтап көріңіз? (Немесе өшіріп оны басқа бағдарламаға ауыстырыңыз)
+        turtle_5_4: Бұл бағдарламаны жіберіп, және өзгертулер енгізіп көріңіз. Оның қалай жұмыс істейтінін анықтап көріңіз? (Немесе өшіріп оны басқа бағдарламаға ауыстырыңыз)
+        turtle_5_5: Бұл бағдарламаны жіберіп, және өзгертулер енгізіп көріңіз. Оның қалай жұмыс істейтінін анықтап көріңіз? (Немесе өшіріп оны басқа бағдарламаға ауыстырыңыз)
+        turtle_5_6: Бұл бағдарламаны жіберіп, және өзгертулер енгізіп көріңіз. Оның қалай жұмыс істейтінін анықтап көріңіз? (Немесе өшіріп оны басқа бағдарламаға ауыстырыңыз)
+        maze_3_1: Маған торапайға жету керек! move() функциясын шақыру үшін қоңырауды пайдаланыңыз; сонда мен жұмыртқаларымды қайтара аламын.
+        maze_3_2: Маған торапайға жету үшін бағдарлама жазыңыз.
+        maze_3_3: Торапайға қалай жетемін? Менің жарылғыш заттың үстімен жүрмеуімді қадағалаңыз!
+        maze_3_4: Оһ! Маған жарылғыш заттарды айналып өтіп, торапайға жетудің бағдарламасын жазыңыз.
+        bounce_1: 'Блокке "солға бұру бағдары" блогін және "Жіберуді" тіркеңіз. Нысанға жету үшін, ескекті сол жақ бағдарды пайдаланып қозғалтыңыз.'
+        bounce_2: 'Блокке "оңға бұру бағдары" және "солға бұру бағдары" блоктарын тіркеңіз. Нысанға жету үшін, ескекті екі бағдарды пайдаланып қозғалтыңыз.'
+        bounce_3: 'Енді "жоғары қарай бағдары" блогін пайдаланып көріңіз. Нысанға жету үшін, ескекті жоғары қарай бағдарын пайдаланып қозғалтыңыз.'
+        bounce_4: Барлық төрт блокті бірге қолданатын кез келді. Бұл басқатырғышты аяқтау үшін барлық ескекті қозғалтыңыз.
+        bounce_5: 'Біз допты ескек жаққа қарай жіберейін деп жатырмыз. Блокке "доп ескекке тигенде" блогін тіркеңіз.'
+        bounce_6: 'Енді жоғарыдағы нысанды аяқтаңыз. Бұл басқатырғышты шешу үшін блокке екі бірдей "доп тигенде" блогін тіркеңіз.'
+        bounce_7: 'Әрбір блокті "қашан" блоктарына тіркеңіз. Шарды соңғы нысанға тимегенше кері қайтарыңыз.'
+        bounce_10: 'Ендігі кезек жоғарғы жақты орнату. "Шар нысанаға тигенде" және "шар ескекке тимегенде" блоктарына "ұпай саны" және "қарсыластың ұпай саны" блоктарын тіркеңіз. Қарсыласыңыз екі есе ұпай жинағанда сізде қанша ұпай болатынын көріңіз.'
+        bounce_11: 'Енді "жіберу кезінде" блогына блоктарды тіркей аласыз. "Жаңа шарды жіберу" блогін бірнеше жерде пайдалана аласыз. Сонымен қатар, оқиғаны немесе ескектің жылдамдығын және шарды өзгертіп көріңіз. Қарсыласыңыз екі есе ұпай жинағанда сізде қанша ұпай болатынын көріңіз '
+        bounce_12: Шар ойынын жасаңыз. Сіз барлық визуалды әсерлер мен ережелерді өзгерте аласыз. Аяқтаған соң, достарыңыздың өз телефондарында ойнап көрулері үшін Аяқтау батырмасына шертіңіз.
+        Custom_builder: 'Құралдар панелінен блоктарды жұмыс істеу орнына жылжытып, жаңа деңгей құрыңыз. Болғаннан кейін "Жіберу" батырмасына шертіңіз.'
+        flappy_1: 'Блокқа "шерту кезінде" блогін тіркеңіз, және "Жіберу" батырмасына басыңыз. Flappy-ді нысанаға қарай жылжыту үшін экранға түртіңіз немесе шертіңіз.'
         flappy_2: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+          Біз жерді қостық. Блокқа "жерге соғылу кезінде" блогін тіркеңіз.  Енді сізге Flappy жерге соғылған кезде 'ОЙЫН АЯҚТАЛДЫ' кодын қосу керек.
+        flappy_3: '"Жіберілген кезде" блогі ойын басталғанда кодты жіберуге мүмкіндік береді. Деңгей жылдамдығын және нысанаға жету үшін қанат қағу санын орнатыңыз.'
         flappy_4: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+          Егер сіз соғылу кодын жазбасаңыз, онда Flappy кедергілер арасынан ұшып өтеді. Блокке "кедергіге соғылған кезде" блогін тіркеңіз. Енді сізге Flappy бірінші құбырға соғылған кезде 'ОЙЫН АЯҚТАЛДЫ' кодын қосу керек.
+        flappy_5: 'Flappy кедергілерді өткенде ұпай қосылып отыратындай және ұпай санау тақтасын қосыңыз. "Кедергіні өткенде" блогі және бірінші құбырды өткендегі ұпай беруді қосыңыз.'
+        flappy_6: Flappy-дің қанат қағу санын көбейту немесе азайту кезінде ұпай саны бірдей болатынын тексеріп көріңіз.
+        flappy_7: '"Жіберу кезінде" блогіне басқа блокты тіркеп оқиғаны өзгертіп көріңіз.'
+        flappy_8: Визуалды әсерлерді тек ойын басында ғана емес, кез келген уақытта пайдалана аласыз. Басқа оқиғалар орындалып жатқанда КЕЗДЕЙСОҚ оқиғаны орнатып көріңіз. Мысалы, кедергілерден өту кезінде.
+        flappy_9: Кедергіге соғылу барысында, ойынды қайта бастаудың орнына ұпай санын 0-ден бастауға ауыстырып көріңіз.
+        flappy_11: Flappy ойынын жасаңыз. Сіз барлық визуалді әсерлер мен ережелерді, тіпті тартылыс күшін де өзгерте аласыз. Аяқтаған соң, достарыңыздың өз телефондарында ойнап көрулері үшін Аяқтау батырмасына шертіңіз.
+        flappy_k1_1: Flappy ойынын ойнау
+        flappy_k1_2: 'Блокқа "шерту кезінде" блогін тіркеңіз, және "Жіберу" батырмасына басыңыз. Flappy-ді нысанаға қарай жылжыту үшін экранға түртіңіз немесе шертіңіз.'
         flappy_k1_3: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+          Біз жерді қостық. Блокқа "жерге соғылу кезінде" блогін тіркеңіз.  Енді сізге Flappy жерге соғылған кезде 'ОЙЫН АЯҚТАЛДЫ' кодын қосу керек.
+        flappy_k1_4: '"Жіберілген кезде" блогі ойын басталғанда кодты жіберуге мүмкіндік береді. Деңгей жылдамдығын және нысанаға жету үшін қанат қағу санын орнатыңыз.'
         flappy_k1_5: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
-        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Waddles wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
-        studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+          Егер сіз соғылу кодын жазбасаңыз, онда Flappy кедергілер арасынан ұшып өтеді. Блокке "кедергіге соғылған кезде" блогін тіркеңіз. Енді сізге Flappy бірінші құбырға соғылған кезде 'ОЙЫН АЯҚТАЛДЫ' кодын қосу керек.
+        flappy_k1_6: 'Flappy кедергілерді өткенде ұпай қосылып отыратындай және ұпай санау тақтасын қосыңыз. "Кедергіні өткенде" блогі және бірінші құбырды өткендегі ұпай беруді қосыңыз.'
+        flappy_k1_7: Кедергілерді өтсеңіз ұпайыңызды біршама көбейте аласыз
+        flappy_k1_8: '"Жіберу кезінде" блогіне басқа блокты тіркеп оқиғаны өзгертіп көріңіз.'
+        flappy_k1_9: '"Жіберу кезінде" блогінде "ойыншыны орнату" блогын пайдаланып ойыншыны өзгертіңіз.'
+        jigsaw_1: Блокке шертіңіз
+        jigsaw_2: Блокты нысанаға қарай жылжытыңыз
+        jigsaw_3: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_4: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_5: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_6: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_7: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_8: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_9: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_10: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_11: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_12: Сурет салу үшін блоктарды орналастырыңыз
+        jigsaw_13: Басқатырғыш қателіктерін түзетіңіз!
+        mazestep_1: Лабиринт қадамы сипаттамасы осында
+        mazestep_2: Лабиринт қадамы сипаттамасы осында
+        mazestep_3: Лабиринт қадамы сипаттамасы осында
+        mazestep_4: Лабиринт қадамы сипаттамасы осында
+        mazestep_5: Лабиринт қадамы сипаттамасы осында
+        studio_c2_1: 'Итке "сәлем, әлем" деп айтқыза аласыз ба?'
+        studio_c2_2: Итке кез келген сөзді айтқызып, одан кейін мысыққа да кез келген сөзді айтқыза аласыз ба?
+        studio_c2_3: Итті мысыққа қарай жылжытатын бағдарлама жаза аласыз ба?
+        studio_c2_4: 'Итті мысыққа қарай жылжытып, одан кейін итке "сәлем" деген сөзді мысыққа айтқызыңыз?'
+        studio_c2_5: 'Сегізаяққа шерткен кезде "сәлем" деген сөзді айтқызатын бағдарлама жаза аласыз ба?'
+        studio_c2_6: Сіз Воддлсті жоғары/төмен/солға/оңға қарай басқанда барлық нысанды атып түсіре алатын бағдарлама жаза аласыз ба?
+        studio_c2_7: '"Шексіз қайталау" блогы кодты шексіз қайталауға мүмкіндік береді. Динозаврды жоғары және төмен қарай бірнеше рет қозғалту үшін блоктарды тіркей аласыз ба?'
+        studio_c2_8: 'Воддлске "Ой!" сөзін айтқызып және динозаврге қарай жүгіргенде "соққы" әуенін ойнатып, содан кейін осыларды көру үшін бағдарлармен жылжытуды жасай аласыз ба?'
+        studio_c2_9: Воддлс сегізаяққа қарай жүгіргенде ұпай қосу және жеңіске жеткенше бағдарды басу арқылы жылжыту блогын қоса аласыз ба?
+        studio_c2_10: Фон түсін өзгерту және Воддлстің жылдамдығын өзгертетін блоктарды қосып, одан кейін оны жеңгенше бағдарлармен қозғалта аласыз ба?
+        studio_c2_11: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
+        studio_c3_story_1: 'Итке "сәлем, әлем" деп айтқыза аласыз ба?'
+        studio_c3_story_2: Итке кез келген сөзді айтқызып, одан кейін мысыққа да кез келген сөзді айтқыза аласыз ба?
+        studio_c3_story_3: Итті мысыққа қарай жылжытатын бағдарлама жаза аласыз ба?
+        studio_c3_story_4: 'Итті мысыққа қарай жылжытып, одан кейін итке "сәлем" деген сөзді мысыққа айтқызыңыз?'
+        studio_c3_story_5: Сегізаяқты қуантатын блок қоса аласыз ба?
+        studio_c3_story_6: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
+        studio_c3_game_1: 'Сегізаяққа шерткен кезде "сәлем" деген сөзді айтқызатын бағдарлама жаза аласыз ба?'
+        studio_c3_game_2: Сіз Воддлсті жоғары/төмен/солға/оңға қарай басқанда барлық нысанды атып түсіре алатын бағдарлама жаза аласыз ба?
+        studio_c3_game_3: '"Шексіз қайталау" блогы кодты шексіз қайталауға мүмкіндік береді. Динозаврды жоғары және төмен қарай бірнеше рет қозғалту үшін блоктарды тіркей аласыз ба?'
+        studio_c3_game_4: 'Воддлске "Ой!" сөзін айтқызып және динозаврге қарай жүгіргенде "соққы" әуенін ойнатып, содан кейін осыларды көру үшін бағдарлармен жылжытуды жасай аласыз ба?'
+        studio_c3_game_5: Воддлс сегізаяққа қарай жүгіргенде ұпай қосу және жеңіске жеткенше бағдарды басу арқылы жылжыту блогын қоса аласыз ба?
+        studio_c3_game_6: Фон түсін өзгерту және Воддлстің жылдамдығын өзгертетін блоктарды қосып, одан кейін оны жеңгенше бағдарлармен қозғалта аласыз ба?
+        studio_c3_game_7: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
+        studio_playlab_1: 'Воддлс "сәлем" деген сөзді айтқысы келеді – оған көмектескіңіз келеді ме?'
+        studio_playlab_2: 'Үңгір Баласы (кейіпкер 1) және Жасмин (кейіпкер 2) бір-біріне "сәлем" деген сөзді айтқылары келеді. Оларға "айтқызу" блогін екі рет қолданып көмектесе аласыз ба?'
+        studio_playlab_3: Теннис Ойнаушы Қызға жалауды алуына көмектесе аласыз ба?
+        studio_playlab_4: Теннис Ойнаушы Балаға (кейіпкер 1) Теннис Ойнаушы Қызға (кейіпкер 2) жетуге және жеткенде әуен ойнауына көмектесе аласыз ба?
+        studio_playlab_5: 'Спэйсботқа шерткен кезде "сәлем жер тұрғындары" деп айтуына көмектесіз бе? Аяқтаған соң Жіберу батырмасын басуды ұмытпаңыз'
+        studio_playlab_6: Жоғары/төмен/оңға/солға пернелерін басып, жалмауыз кемпірге барлық сиқырлы отты шарларды алуға көмектесіңіз?
+        studio_playlab_7: '"Шексіз қайталау" блогы кодты әрқашан тоқтаусыз жіберуге мүмкіндік береді. Сиқыршыны оңға және солға қарай бірнеше рет қозғалту үшін блоктарды тіркей аласыз ба?'
+        studio_playlab_8: Сіз мүйізтұмсықтың сиқыршыға жүгірген кезінде ұпай қосу және әуен ойнау блогын, және оны бағдарлармен жеңгенше қозғалту блогын қоса аласыз ба?
+        studio_playlab_9: Жатғаламшарлықтардың басып кіруі кезінде әуенді қосып және Спэйсботтың жатғаламшарлықтан озуы үшін жылдамдығын орнатыңыз. Одан кейін басқаларды ескерту үшін, Спэйсботты бағдары бар пернелермен қозғалтыңыз
+        studio_playlab_10: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
+        studio_iceage_hello1: 'Сид бариін жаңа шытырман оқиғаға шақырғысы келеді. "Айту" блогын қолданып ішіне "сәлем" сөзін жасып, Сидке "сәлем" деп айтуға көмектесе аласын ба?'
+        studio_iceage_hello2: 'Сид(Кейіпкер 1) Манниді((Кейіпкер 2) тауып алды және оны шытырман оқиғаға шақырғысы келеді. Оларға "Кейіпкер соле" блогын екі рет қолдана отырып бір біріне сәлем беруге көмектес.'
+        studio_iceage_move_to_flag: 'Скрат өз жанғағын іздеуде. Оған соңгы 200 пиксель өтуіне көмектес, "қозғал" блогын қолдану керек.'
+        studio_iceage_move_to_actor: 'Диего (Кейіпкер 1) Манниді (Кейіпкер 2) іздеуде. Манниге жету үшін Диегоны 200 пиксель "Кейіпкер қозғалу" блогы арқылу төмен жылжыт. Келесі, блокты "Кейіпкер жанасқанда" блогымен қосып, кейіпкерлер жанасқанда дыбыс ойнат.'
+        studio_iceage_repeat: '"мәңгі қайталау" блогы кодты тоқтамстан орындауға көмектеседі. Сен оған блоктар қосып Гранниге тоқтамастан солға оңга жүруіп жаттығу жасауына көмектесе аласын ба?'
+        studio_iceage_click_hello: Түймеше басылғанда Сидке соңғы шақыру жасауға көметесе аласын ба? Орындауды басқаннан кейін оған басуды умытпа.
+        studio_iceage_move_events: 'Скрат әлі жаңғақтарды іздеуде! Бағыт пернесін басқанда, бағытын өзгертіп жүгіруі үшін, "жылжыту" бөлігін әрбір оқиғамен байланыстыр. Аяқтаған соң, "Жіберу" батырмасына бас және барлық жаңғақтарды жинап көр.'
+        studio_iceage_sound_and_points: 'Гренниге солға және оңға қозғалуға, сонымен қатар Сидке экранмен қозғалуға мүмкіндік беретін бағдарламаның көп бөлігі жазылып қойылған. Сид және Греннидің соқтығысуы кезінде ұпай қосылып, ән ойнайтындай "кейіпкер соқтығысқанда" оқиғасына бөлшектерді қосып кодты аяқтай аласың ба? Ойынды іске қосу үшін "Жіберу" батырмасына бас.'
+        studio_iceage_warn_ice_age: 'Мұзды дәуір басталып келе жатыр, сондықтан тезірек қозғалу керек! "Мұзды" фонын таңдап Сидтің жылдамдығын арттыр. Содан кейін "Жіберу" батырмасына басып Диегоны ескерту үшін соған қарай қозғалтыңыз.'
+        studio_iceage_throw_hearts: 'Сид өзінің әжесі, Гренниді, жақсы көретінін білгенін қалайды. Гренниге (кейіпкер 2) Сидтің (кейіпкер 1) жүрек жолдауы үшін "Кейіпкер жолдайды" пәрменін пайдаланыңыз! Гренни жүректі ұстап алғанда бақытты көңіл-күйге ауыстыр.'
+        studio_iceage_free_play: 'Өзіңіздің ойыныңызды немесе оқиғаңызды құрыңыз. Аяқтағаннан соң, сіз жасаған ойынды немесе оқиғаны достарыңыз өз телефонында, планшеттерінде немесе компьютерлерінде байқап көрулері үшін "Аяқтау" батырмасына басыңыз!'
+        studio_gumball_hello1: 'Анаис жаңа достар тапқысы келеді. Жұмыс орнына "Сәлем" бөлігін жылжытып және ішіне "Сәлем" сөзін жазу арқылы оған "Сәлем" деп айтуға көмектесе аласың ба?'
+        studio_gumball_hello2: 'Дарвин (кейіпкер 1) және оның ағасы Гамбол (кейіпкер 2) мектепке қарай бет алды. Олардың бір-бірімен сәлемдесулері үшін, "кейіпкер сөйлейді" бөлігін екі рет пайдаланыңыз.'
+        studio_gumball_move_to_flag: 'Банан Джо жүгіру сайысында жеңуді қалайды! "Жылжыту" бөлігін пайдаланып, оған соңғы 200 пикселді еңсеруге көмектес.'
+        studio_gumball_move_to_actor: 'Гамбол (кейіпкер 1) мен Дарвин (кейіпкер 2) жарысқа кешігіп қалды! "Кейіпкерді қозғалту" бөлігін пайдаланып, Гамболга Дарвинге дейін 200 пиксел түсуге көмектес. Одан кейін екеуі кездескенде ән ойнауы үшін, "кейіпкер соқтығысқанда" бөлігімен оқиғаны байланыстыр.'
+        studio_gumball_repeat: '"Мәңгілік қайталау" блогы код фрагментін тоқтатусыз қайталауға мүмкіндік береді. Гамбол жүгіруден алдын оңға және солға қозғала отырып бойын жазу үшін "мәңгілік қайталау" блогына басқа блоктарды орналастыра аласың ба?'
+        studio_gumball_click_hello: 'Сіз Антонға жарыстың басталғандығын "На старт! Внимание! Марш!" сөздерімен жариялауға көмектесе аласыз ба? Бағдарламаны тексеру үшін "Старт"-ты басқаннан соң Антонды шертуді ұмытпаңыз!'
+        studio_gumball_move_events: 'Дарвин жалаушаларды жинау жарысына қатысуда. Ол жалаушаларды жинай алу үшін "орнын ауыстыру" блогын барлық оқиғалармен байланыстыр. Аяқтаған сәтте "Орындау"-ды басып, барлық жалаушаларды жинап көр.'
+        studio_gumball_sound_and_points: 'Антонға (2-кейіпкер) оңға және солға дүріп отыруға, ал БананаДжоға (1-кейіпкер) экран бойынша -қозғалуға мүмкіндік беретін бағадарламаның көп бөлігі жазылып қойған. "Кейіпкер қозғалған кезде" оқиғасына БананаДжо мен Антон соқтығысқан кезде әуен ойнап, ұпай саналатындай қылып блокктарды қоса аласыз ба? Ойынды қосу үшін "Орындау" басыңыз.'
+        studio_gumball_warn_food_fight: 'Дарвин қазір ғана тамақ лақтырысудан аман қалды. Артқы фонды "Кейіпкерлер"-ге өзгерт және Дарвиннің жылдамдығын көбейт. Кейіннен "Орындау" батырмасын басып, Дарвинді ескерте алуы үшін Пенниге алып бар.'
+        studio_gumball_join_food_fight: 'Тамақ лақтырысу ойынына қосыл! БананаДжо (1-кейіпкер) Антонға (2-кейіпкер) тамақ лақтыра алуы үшін "кейіпкер нысанды солға лақтырады" командасын қолдан. Антонға тиген сәтте оның көңіл күйі ашуланған болып өзгеретіндей қылып жаса.'
+        studio_gumball_free_play: 'Өзіңіздің ойыныңызды немесе оқиғаңызды құрыңыз. Аяқтағаннан соң, сіз жасаған ойынды немесе оқиғаны достарыңыз өз телефонында, планшеттерінде немесе компьютерлерінде байқап көрулері үшін "Аяқтау" батырмасына басыңыз!'
+        studio_full_sandbox: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
+        studio_k1_1: 'Итке "сәлем, әлем" деп айтқыза аласыз ба?'
+        studio_k1_2: Итке кез келген сөзді айтқызып, одан кейін мысыққа да кез келген сөзді айтқыза аласыз ба?
+        studio_k1_3: Итті мысыққа қарай жылжытатын бағдарлама жаза аласыз ба?
+        studio_k1_4: 'Итті мысыққа қарай жылжытып, одан кейін итке "сәлем" деген сөзді мысыққа айтқызыңыз.'
+        studio_k1_5: Сегізаяқты қуантатын блок қоса аласыз ба?
+        studio_k1_6: Өзіңіздің оқиғаңызды құрыңыз! Мысық пен итті жылжытып, кезе келген сөзді айтқызыңыз.
+        maze_wordsearch_k_1: Жылжыту арқылы ШЫҒЫС сөзін айтқызыңыз
+        maze_wordsearch_k_2: Жылжыту арқылы ОҢТҮСТІК сөзін айтқызыңыз
+        maze_wordsearch_k_3: Жылжыту арқылы БАТЫС сөзін айтқызыңыз
+        maze_wordsearch_k_4: Жылжыту арқылы СОЛТҮСТІК сөзін айтқызыңыз
+        maze_wordsearch_k_6: Шығысқа және СЕКІРУ сөзін айтқызып Оңтүстікке жылжытыңыз
+        maze_wordsearch_k_9: Кез келген жаққа жылжытып, одан кейін КОД сөзін айтқызып басқа жаққа жылжытыңыз
+        maze_wordsearch_k_13: Кез келген жаққа жылжытып, одан кейін КОДТЫ ЖІБЕРУ сөзін айтқызып басқа жаққа жылжытыңыз
+        maze_wordsearch_k_15: Кез келген жаққа жылжытып, одан кейін ЖОҒАРЫ сөзін айтқызып басқа жаққа жылжытыңыз
+        maze_wordsearch_k_16: Кез келген жаққа жылжытып, одан кейін ТӨМЕН сөзін айтқызып басқа жаққа жылжытыңыз
+        maze_wordsearch_k_20: Бұл тест! Кез келген жаққа жылжытып одан кейін ОҚИҒА сөзін айтқызып басқа жаққа жылжытыңыз
+        applab_ec_simple: Құралдар панеліндегі блоктарды пайдаланып өзіңіздің қосымшаңызды жасаңыз.
+        turtle_ec_1_2: 'Енді төртбұрыш салыңыз. ЕСКЕРТУ:  жаңа "қаламТүсі" блогын пайдаланып өзіңіздің сүйікті түсіңізді қолданыңыз.'
+        turtle_ec_1_10: 'Сіздің қолыңыздан келді! Енді қалаған суретіңізді салыңыз. Кейбір қызықты идеялар: таяқ фигурасы, ақша қар, немесе спираль. Және де жаңа "қаламҚалыңдығы" блогын қолданып көріңіз. Сәттілік!'
+        studio_ec_sandbox: Өзіңіздің оқиғаңызды құрыңыз. Аяқтаған соң, достарыңыздың оны өз телефондарында ойнап көрулері үшін Аяқтау батырмасына басыңыз.
     video:
       name:
-        maze_intro: Maze Intro
-        artist_intro: Artist Intro
-        farmer_intro: Farmer Intro
-        flappy_intro: Flappy Intro
-        loop_times: Repeat Times Block
-        loop_until: Repeat Until Block
-        if: If Block
-        if_else: If/else Block
-        if_else_scrat: If/else Block
-        function: Functions
-        loop_while: While Block
-        loop_for: Counter Block
-        parameters: Functions with Parameters
-        hoc_wrapup: Hour of Code Wrapup
-        Unplug1: What is CS?
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Unplug4: Algorithms
-        Unplug5: Functions
-        Unplug6: Conditionals
-        Unplug7: Songwriting
-        Unplug8: Abstraction
-        Unplug9: Relay programming
-        Unplug10: Internet
-        Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: Artist Intro
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
-        C2_maze_intro: Maze Intro
-        C2_artist_intro: Artist Intro
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Conditionals
-        C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
-        C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C2_digital_footprint_v2: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
-        C3_artist_intro: Artist Intro
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
-        C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Computational Thinking
-        C3_dice_race: Dice Race
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        maze_intro: Лабиринтке Кіріспе
+        artist_intro: Кейіпкерге Кіріспе
+        farmer_intro: Фермерге Кіріспе
+        flappy_intro: Қанат қағуға Кіріспе
+        loop_times: Бірнеше рет Қайталау Блогы
+        loop_until: Шарт орындалғанша Қайталау Блогы
+        if: Егер Блогы
+        if_else: Егер/немесе Блогы
+        if_else_scrat: Егер/немесе Блогы
+        function: Функциялар
+        loop_while: Шарт орындалғанша Блогы
+        loop_for: Санағыш Блогы
+        parameters: Параметрлі Функциялар
+        hoc_wrapup: Код Жазу Сағатын Аяқтау
+        Unplug1: Информатика дегеніміз не?
+        Unplug2: Есептегіштік ойлау
+        Unplug3: Миллиметрлік Бағдарламалау
+        Unplug4: Алгоритмдер
+        Unplug5: Функциялар
+        Unplug6: Шарттар
+        Unplug7: Ән Жазу
+        Unplug8: Абстракция
+        Unplug9: Релелік Бағдарламалау
+        Unplug10: Ғаламтор
+        Unplug11: Орау
+        C1_happy_maps_unplugged: Көңілді Карталар
+        C1_moveitmoveit_unplugged: Қозғал, Қозғал
+        C1_bigevent_unplugged: Үлкен Оқиға
+        C1_getting_loopy: Ілмектерді үйрену
+        C1_pair_programming: Жұптасып Бағдарламалау
+        C1_maze_intro_sequencing: Тізбекті Лабиринтке Кіріспе
+        C1_maze_debugging: Лабиринт бағдарламасын тексеру
+        C1_bee_level_intro: 'Ара Деңгейі - Кіріспе'
+        C1_artist_intro: Кейіпкерге Кіріспе
+        C1_spelling_bee_intro: Сөзді Әріптеп Айту Арасына Кіріспе
+        C1_zuck_repeat_loop: Лабиринт Ілмектер
+        C1_bee_loops: Ара Циклдері
+        C1_maze_loops: Лабиринт Ілмектер
+        C1_playlab_storytelling: Ойын Лабораториясы – Оқиға Құру
+        C1_planting_seed: Тұқым Себу
+        C1_building_foundation: Ғимарат Салу
+        C1_going_places_safely: Қауіпсіз Жерді Табу
+        C2_maze_intro: Лабиринтке Кіріспе
+        C2_artist_intro: Кейіпкерге Кіріспе
+        C2_zuck_repeat_loop: Лабиринт Ілмектер
+        C2_artist_loops: Кейіпкер Циклдері
+        C2_artist_debugging: Кейіпкер бағдарламасын ретке келтіру
+        C2_bee_loops: Ара Циклдері
+        C2_bee_debugging: Ара бағдарламасын ретке келтіру
+        C2_bee_conditionals: Ара Шарттары
+        C2_playlab_createstory: Ойын Лабораториясы – Оқиға Құру
+        C2_graph_paper: Миллиметрлік Бағдарламалау
+        C2_conditionals_with_cards: Шарттар
+        C2_binary_bracelets: Екілік Білезіктер
+        C2_relay_programming: Релелік Бағдарламалау
+        C2_paper_airplanes: Қағаз Ұшақтар
+        C2_digital_footprint: Сіздің сандық іздеріңіз
+        C2_digital_footprint_v2: Сіздің сандық іздеріңіз
+        C3_maze_level_4: Лабиринт Ілмектер
+        C3_artist_intro: Кейіпкерге Кіріспе
+        C3_artist_functions: Кейіпкер Функциялары
+        C3_bee_functions: Ара Функциялары
+        C3_bee_conditionals: Ара Шарттары
+        C3_maze_conditionals: Лабиринт Шарттары
+        C3_artist_nested_loops: Кіріккен Циклдер
+        C3_farmer_while: Шарт орындалғанша Циклдері
+        C3_bee_nested_loops: Кіріккен Циклдер
+        C3_bee_debugging: Ара бағдарламасын ретке келтіру
+        C3_bounce: Секіру
+        C3_playlab_create_game: Ойын Лабораториясы – Ойын Құру
+        C3_computational_thinking: Есептегіштік ойлау
+        C3_dice_race: Ойын Сүйектерінің Жарысы
+        C3_internet: Ғаламтор
+        C3_crowdsourcing: Кроудсорсинг
+        C3_functional_suncatchers: Функционалдық Күн сәулесін аулаушы
+        C3_songwriting_with_parameters: Параметрлі Ән Жазу
+        C4_intro: Кіріспе
         C4_loops_zombie: Ілмек
-        C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
-        C4_for_loops_bee: For Loops
-        C4_for_loops_no_bee: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_function_parameters: Functions with Parameters
-        C4_conditionals: Conditionals
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
-        C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        C4_bee_conditional: Ара Шарттары
+        C4_variables_artist: "Айнымалылар - Кейіпкер C4_variables_playlab: 'Айнымалылар – Ойын Лабораториясы"
+        C4_variables_playlab: Айнымалылар – Ойын Лабораториясы
+        C4_for_loops: For ілмектері
+        C4_for_loops_bee: For ілмектері
+        C4_for_loops_no_bee: For ілмектері
+        C4_math_artist: Математикамен Кейіпкерді Бағдарламалау
+        C4_function_edit: Функцияларды Өзгерту
+        C4_function_create: Функцияларды Құру
+        C4_function_parameters: Параметрлі Функциялар
+        C4_conditionals: Шарттар
+        C4_unplugged_algorithms: Танграм Алгоритмдері
+        C4_unplugged_madlibs: Көңілді Кітапханалар
+        C4_unplugged_variables: Конверттегі Айнымалылар
+        C4_unplugged_forloops: For ілмектері
+        C4_unplugged_parameters: Параметрлермен ән жазу
+        C4_unplugged_binary: Бинарлы
+        frozen_intro: Код Жазу Сағатына Кіріспе
+        frozen_loops: Циклдерге Кіріспе
+        frozen_functions: Функцияларға Кіріспе
+        playlab_intro: Ойын Лабораториясына Кіріспе
+        playlab_events: Ойын Лабораториясы Оқиғалары
+        playlab_repeat_forever: Шексіз Қайталанатын Ойын Лабораториясы
+        tutorial_puzzle_challenge: Басқатырғыш Жарысы Сабағы
+        infinity_playlab_intro: 'Ойын Лабораториясы - Кіріспе'
+        infinity_playlab_events: 'Ойын Лабораториясы - Оқиғалар'
+        infinity_playlab_repeat_forever: Ойын Лабораториясы – Шексіз Қайталау
         csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
         csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
         csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
-        csp_applab_functions: Introduction to Functions
-        csp_applab_functions_parameters: Functions with Parameters
+        csp_applab_functions: Функцияларға Кіріспе
+        csp_applab_functions_parameters: Параметрлі Функциялар
         csp_applab_loops: Ілмек
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
@@ -521,100 +506,99 @@ kk:
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
-        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        starwars_intro: 'Жұлдызды соғыстар: Код арқылы галактика жасау - Кіріспе'
+        starwars_typing: 'Жұлдызды соғыстар: Код арқылы галактика жасау - JavaScript'
+        starwars_events: 'Жұлдызды соғыстар: Код арқылы галактика жасау - Іс-шаралар'
+        starwars_congrats: 'Жұлдызды соғыстар: Код арқылы галактика жасау - Құттықтау'
+        starwars_blocks_intro: 'Жұлдызды соғыстар: Код арқылы галактика жасау - Кіріспе'
+        starwars_blocks_events: 'Жұлдызды соғыстар: Код арқылы галактика жасау - Іс-шаралар'
+        starwars_blocks_congrats: 'Жұлдызды соғыстар: Код арқылы галактика жасау - Құттықтау'
+        mc_intro: 'Minecraft - Кіріспе'
+        mc_repeat: 'Minecraft - Қайталау'
+        mc_if_statements: 'Minecraft - Егер блогы'
+        mc_congrats_share: 'Minecraft - Құттықтау'
+        mc_congrats_no_share: 'Minecraft - Құттықтау'
+        gumball_intro: 'Gumball Кодтау Сағаты - Кіріспе'
+        gumball_events: 'Gumball Кодтау Сағаты - Іс-шаралар'
+        gumball_repeat: 'Gumball Кодтау Сағаты - Қайталау блоктары'
+        iceage_intro: 'Мұз дәуірі Кодтау Сағаты - Кіріспе'
+        iceage_events: 'Мұз дәуірі Кодтау Сағаты - Іс-шаралар'
+        iceage_repeat: 'Мұз дәуірі Кодтау Сағаты - Қайталау блоктары'
     callout:
       text:
-        drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
-        watch_again: Click here to watch the video again
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
-        show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: The instructions for each puzzle are repeated here
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
-        get_nectar: 'Use the new "get nectar" block.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
-        craft_run_button_callout: 'Hit "Run" to try your program'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        drag_blocks: '"Жылжыту" блогын алып оны төмендегі басқа блокке тіркеңіз'
+        run: 'Бағдарламаңыздың жұмыс істеуін көру үшін "Жіберу" батырмасын басыңыз'
+        watch_again: Видеоны қайталап көру үшін мұнда басыңыз
+        gray_block_explanation: Сұр түсті блоктар өшірілмейді. Сонда да басқатырғышты шеше аласыз ба?
+        show_code_explanation: Бағдарламаңыздың кодын көру үшін мұнда басыңыз
+        instructions_repeat_explanation: Әрбір басқатырғыш нұсқаулықтары мұнда қайталанады
+        category_explanation: Сізде барлық блоктар бар, бірақ олар категорияларға бөлінген
+        set_sprite_image: 'Ойын кейіпкері үшін, "суретке кейіпкерді тағайындау" блогын алып, оны "ойын басталғанда" блогына тіркеңіз'
+        studio_say_text: Кейіпкеріңіздің айтатын сөзін еңгізіңіз
+        jigsaw_click: Блокті шертіңіз!
+        move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
+        turn_elsa: 'Эльзаны бұру үшін "Бұру" блогын пайдаланыңыз. Ашылмалы тізімдегі санды таңдап Эльзаны қанша рет бұру керек анықтаңыз'
+        replace_questions: 'Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз'
+        replace_questions_degree: 'Ашылмалы тізбекті пайдаланып "???" бұру градусына ауыстырыңыз'
+        repeat_blocks: '"Қайталау" блогын пайдаланып және жұмыс істеу орнын осы блокпен қоршаңыз'
+        repeat_blocks_1: (1) Осы блокты пайдаланып және сұр түсті блоктын айналасына қойыңыз
+        repeat_blocks_2: '(2) "Қайталау" блогын осы жерге жылжытып, және сұр түсті блоктың ішіне қойыңыз'
+        snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
+        degrees_per_side: Әрбір бұрыштың градусын алу үшін қабырғаларды 360 санына бөліңіз.
+        set_sides: '"Қабырғалар" блогын қолданып басқатырғышты аяқтау үшін қажетті санды алыңыз.'
+        set_length: 'Дұрыс өлшемді беру үшін "ұзындық" блогын пайдаланыңыз.'
+        which_equation: Барлық қабырғаны кішірейтетін қандай теңдеу?
+        get_nectar: 'Жаңа "шырынды алу" блогын пайдаланыңыз.'
+        actions_category: 'Құралдар қорабы жаңа түрге ие болды! "Әрекеттер" блогы қосылды.'
+        draw_square_hint: 'Нұсқау: Төрбұрышты циклдерді пайдаланып сіз соңғы басқатырғышты жасадыңыз.'
+        edit_function: Функцияны өзгерту үшін мұнда басыңыз.
+        create_function: '"Функцияларды" ашу үшін жылжымалы мәзірге шертіңіз, одан кейін "Функция Құру" батырмасына басыңыз.'
+        house_hint: Сурет әлі де болса үйге ұқсамады. Біз бұл жағдайды келесі басқатырғышта түзетеміз.
+        edit_draw_square: Функцияны өзгерту және цикл қосу үшін батырманы басыңыз.
+        edit_get_nectar: Функцияны және Араның шырын жаққа қарай бұрылу жолын өзгерту үшін осы батырмаға басыңыз.
+        logic_category: '"Логикалық" жылжымалы мәзірін ашып, "егер/немесе" блогын табыңыз.'
+        length_parameter: '"Ұзындық" параметрін пайдаланатындай бұл функцияны өзгерте аласыз ба?'
+        frozen_diamond_repeat: Осы форманы жасау үшін қайталау блогын пайдаланыңыз.
+        frozen_circle_function_in_circle_turn: Әрбір шеңбер салғаннан кейін бұруды ұмытпаңыз.
+        frozen_circle_function_with_parameter_circle: '"Шеңбер салу" блогын қолданыңыз және көлемін өзгертіңіз.'
+        frozen_snowflake_branch: '"Ақша қар бұтағын құру" блогын пайдаланып көріңіз'
+        frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
+        playlab_drag_say: '"Сөйлеу" блогын жылжытып және "сәлем" сөзін жазыңыз'
+        playlab_use_twice: Бұл блокты екі рет қолданып және кейіпкер санын өзгертуді ұмытпаңыз
+        playlab_move_girl: '"Оңға жылжыту" блогын пайдаланып Теннис Ойнаушы Қызды жылжытыңыз'
+        playlab_play_sound: '"Әуенді ойнату" блогын осында қосыңыз'
+        playlab_arrow_keys: Жіберу батырмасын басқаннан кейін жалмауыз кемпірді жылжыту үшін пайдаланыңыз
+        playlab_add_move: '"Жылжыту" блогын қайталау блогы ішіне қойыңыз'
+        playlab_add_score: Бағалау блогын қосыңыз
+        playlab_add_blocks: Блоктарды осында қосыңыз
+        set_variable: Айнымалыларды орнату үшін сан блогын жылжытыңыз
+        place_variable: Айнымалыны блок ішіне жылжытып қойыңыз
+        bee_for_loop: Араның балды жинауы үшін үлкен санды қолданыңыз
+        place_counter_variable: Блок ішіне санағышты жылжытып қойыңыз
+        function_editor_draw_square: 'Бұл сіздің функцияныздың анықтамасы болып табылады. "Төртбұрышты салу" блогын пайдаланған сайын бұл блоктар әрдайым жіберілетін болады'
+        change_here: Өзгерту үшін мұнда басыңыз
+        write_draw_square_function: Құралдар панелінен блоктарды жылжытып төртбұрышты салыңыз
+        write_draw_triangle_function: Құралдар панелінен блоктарды жылжытып үшбұрышты салыңыз
+        edit_add_parameter: Функцияға параметрлер беру үшін басыңыз
+        add_and_drag_parameter: Параметріңіздің атын жазып, қосу батырмасына басып, одан кейін жылжытып отырып функцияға қойыңыз
+        fill_in_actor: '??? белгісін әрбір кейіпкерге сәйкес келетіндей сандармен толтыр (1, 2, және 3)'
+        repeat: Командаларды қайталау үшін блоктарды цикл ішіне қойыңыз
+        if_bee_nectar: '"Егер" блогын пайдаланып араның шырынды алу немесе алмауын шешіңіз'
+        if_else_bee: '"Егер/немесе" блогын пайдаланып, Араның гүлден шырын алып және гүл болмаса бал жасатыңыз'
+        repeat_full_circle: Зомбидің толық шеңберді айналып шығуы үшін қанша рет жылжу керек екенін көрсетіңіз
+        place_length_variable: Сұрақ белгісін ұзындыққа ауыстыру үшін жылжытыңыз
+        arrows_move_actor: Осы бағдарларды пайдаланып кейіпкерді жылжытыңыз
+        right_arrow_fireball: Отты шармен ату үшін оң жақ бағдарына басыңыз
+        name_function: Функция атын еңгізіңіз
+        Infinity_move_right_runbutton: қозғалу блогын қозыңыз
+        Infinity_move_directions_callout: Қай блок жоғары түймешесін басқанда Баймаксты жоғары жылжытады?
+        Infinity_move_directions_callout_arrow: Осы пернелерді бағытты тандау үшін қолдан
+        Infinity_move_collide_callout: Осы оқиға болғанда дымыс ойнат.
+        Infinity_repeat_callout: ішіне қозғалу блогын косыңыз
+        craft_run_button_callout: 'Бағдарламаңыздың жұмыс істеуін көру үшін "Жіберу" батырмасын басыңыз'
+        craft_drag_block_callout: '"moveForward();" алып, астындағы басқа блоктармен қос'
+        craft_callout_preplaced: Біз сен үшін осында бірнеше блок орнаттық
+        craft_inside_repeat: Әрекеттері қайталау үшін блоктарды осында орнат
+        craft_callout_preplaced_house: Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?
+        craft_what_is_iron: Осы темірді өнде!
+        craft_callout_moveforward: Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?

@@ -76,8 +76,8 @@ end
 
 # cronjobs that run on all instances in all environments go here:
 
-# Restart at 0, 6, 12, and 18 UTC (4AM/PM and 10AM/PM) over the holidays since we won't be deploying
-cronjob at:"#{rand(20)} */6 * * *", do:'service dashboard upgrade && service pegasus upgrade'
+# Restart at 0, 4, 8, 12, 16, 20  UTC (4AM/PM, 8AM/PM, 12AM/PM) over the holidays since we won't be deploying
+cronjob at:"#{rand(20)} */4 * * *", do:'service dashboard upgrade && service pegasus upgrade'
 
 cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>

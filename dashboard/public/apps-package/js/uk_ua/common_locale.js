@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Довідка"},
 "hideToolbox":function(d){return "(Приховати)"},
 "hintHeader":function(d){return "Підказка:"},
+"hintPrompt":function(d){return "Потрібна допомога?"},
 "hintRequest":function(d){return "Подивитись підказку"},
+"hintReviewTitle":function(d){return "Переглянути Ваші Підказки"},
+"hintSelectInstructions":function(d){return "Інструкції та попередні підказки"},
+"hintSelectNewHint":function(d){return "Отримати нову підказку"},
 "hintTitle":function(d){return "Підказка:"},
 "ignore":function(d){return "Ігнорувати"},
 "infinity":function(d){return "Infiinty"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Переглянути відео"},
 "when":function(d){return "коли"},
 "whenRun":function(d){return "коли гра починається"},
-"workspaceHeaderShort":function(d){return "Робоча область: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Робоча область: "}};

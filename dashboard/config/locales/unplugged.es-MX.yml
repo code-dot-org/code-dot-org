@@ -16,16 +16,17 @@
         video: Unplug1
       Unplug2:
         title: Pensamiento computacional
-        desc: Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del
-          pensamiento computacional.  Después de una breve introducción, los alumnos
-          deben dividirse en grupos donde darán instrucciones para otros alumnos que
-          les permitan dibujar un monstruo específico (del catálogo de monstruos preseleccionados).
-          La tarea debe ser dividida, para que luego los equipos encuentren patrones
-          en todos los monstruos del catálogo, y abstraigan detalles similares entre
-          los monstruos. Deben usar esa información para crear un algoritmo (instrucciones)
-          para que otro equipo dibuje un monstruo específico. Los equipos deben luego
-          intercambiar algoritmos con otro grupo y dibujar un monstruo siguiendo el
-          algoritmo que les toque. ¿El dibujo lo que el equipo original quiso hacer?
+        desc: Con nada mas que papel y marcadores, los estudiantes aprenderan los
+          cuatro pasos de pensamiento computacional. Despues de una breve introduccion,
+          los estudiantes deben ser divididos en grupos en donde van a crear direcciones
+          para otros estudiantes para dibujar un monstruo especifico (del catalago
+          de monstruos preseleccionados). Toda la tarea debe ser descompuesta, luego
+          los equipos analiziran todos los monstruos en el catalago por patrones,
+          diferentes detalles de abstracto en el monstruo, luego usaran la informacion
+          para crear un algoritmo (direcciones) para que otro equipo puedan crear
+          ese monstruo especifico. Despues los equipos cambiaran loas algoritmos con
+          otro grupo para dibujar ese monstruo. El dibujo del monstruo era como el
+          previo?
         pdfs:
         - unplug2-es-ES
         video: Unplug2
@@ -67,10 +68,9 @@
         - unplug5-es-ES
         video: Unplug5
       Unplug6:
-        title: Condicionales
-        desc: La clase trata de un juego.  Después de introducir la idea de condicionales,
-          sentencias “si”, y bucles, la clase puede practicar en conjunto el uso de
-          un programa ya escrito, con un mazo de tarjetas y suerte.
+        title: Condiciones
+        desc: 'Este es un juego de la clase. Después de introducir la idea de condicionales,
+          sentencias '
         pdfs:
         - unplug6-es-ES
         video: Unplug6

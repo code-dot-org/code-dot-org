@@ -327,7 +327,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "help":function(d){return "Tulong"},
 "hideToolbox":function(d){return "(itago)"},
 "hintHeader":function(d){return "Narito ang isang tip:"},
+"hintPrompt":function(d){return "Kailangan mo ba ng tulong?"},
 "hintRequest":function(d){return "Tingnan ang hint"},
+"hintReviewTitle":function(d){return "Review Your Hints"},
+"hintSelectInstructions":function(d){return "Instructions and old hints"},
+"hintSelectNewHint":function(d){return "Get a new hint"},
 "hintTitle":function(d){return "Pahiwatig:"},
 "ignore":function(d){return "I-ignore"},
 "infinity":function(d){return "Walang katapusan"},
@@ -398,8 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Panoorin ang Video"},
 "when":function(d){return "kelan"},
 "whenRun":function(d){return "kapag tumakbo"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"hintPrompt":function(d){return "Need help?"},
-"hintReviewTitle":function(d){return "Review Your Hints"},
-"hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};
