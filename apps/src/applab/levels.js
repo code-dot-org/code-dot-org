@@ -50,6 +50,8 @@ levels.custom = {
     "dropdown": null,
     "getText": null,
     "setText": null,
+    "getNumber": null,
+    "setNumber": null,
     "checkbox": null,
     "radioButton": null,
     "getChecked": null,

@@ -3,7 +3,7 @@
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
-var build_commands = require('../../code-studio/build-commands.js');
+var build_commands = require('./build-commands.js');
 
 var commander = require('commander');
 
