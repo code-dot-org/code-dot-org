@@ -86,7 +86,6 @@ exports.browserifyExt = function (config) {
 
   var browserifyOutputs = filenames.map(function (filePair) {
     if (shouldMinify) {
-      // todo - path.basename
       var minFile = path.basename(filePair[1], '.js') + '.min.js';
       return "-o 'uglifyjs > " + buildPath + minFile + "'";
     }
