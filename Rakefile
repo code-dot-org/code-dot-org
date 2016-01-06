@@ -105,7 +105,7 @@ namespace :build do
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>shared js</b>...'
-      RakeUtils.system 'npm run gulp'
+      RakeUtils.system 'npm run build'
     end
   end
 
