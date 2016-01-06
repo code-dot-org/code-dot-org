@@ -23,7 +23,7 @@ build_commands.execute([
     srcPath:  './',
     buildPath: BUILD_PATH,
     filenames: [
-      ['initApp.js', 'shared.js']
+      'shared.js'
     ],
     commonFile: 'shared-common.js',
     shouldMinify: commander.min,
