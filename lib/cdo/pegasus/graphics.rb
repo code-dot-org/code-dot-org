@@ -20,7 +20,7 @@ def load_manipulated_image(path, mode, width, height = nil)
   end
 end
 
-def process_image(path, ext_names, max_age, language=nil, site=nil)
+def process_image(path, ext_names, language=nil, site=nil)
   extname = File.extname(path).downcase
   return nil unless ext_names.include?(extname)
   image_format = extname[1..-1]
@@ -56,7 +56,6 @@ def process_image(path, ext_names, max_age, language=nil, site=nil)
   return nil unless path # No match at any resolution.
 
   output = {
-    cache_control: [:public, :must_revalidate, max_age: max_age],
     last_modified: File.mtime(path),
     content_type: image_format.to_sym,
   }
