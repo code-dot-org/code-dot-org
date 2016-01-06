@@ -13,7 +13,16 @@ module.exports = React.createClass({
 
   render: function () {
 
-    // The logic here needs some serious cleanup
+    // Body logic is as follows:
+    //
+    // If we have been given rendered markdown, render a div containing
+    // that, optionally with inline-styled margins. We don't need to
+    // worry about the title in this case, as it is rendered by the
+    // Dialog header
+    //
+    // Otherwise, render the title and up to two sets of instructions.
+    // These instructions may contain spans and images as determined by
+    // StudioApp.substituteInstructionImages
     var body;
     if (this.props.renderedMarkdown) {
       // Optionally give markdown dialog wide left margin so it looks more like a
