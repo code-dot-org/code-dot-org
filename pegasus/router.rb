@@ -189,7 +189,7 @@ class Documents < Sinatra::Base
   # Manipulated images
   get '/images/*' do |path|
     path = File.join('/images', path)
-    image_data = process_image(path, settings.image_extnames)
+    image_data = process_image(path, settings.image_extnames, @language, request.site)
     pass if image_data.nil?
     last_modified image_data[:last_modified]
     content_type image_data[:content_type]
