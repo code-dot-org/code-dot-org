@@ -907,6 +907,18 @@ applabCommands.setText = function (opts) {
   return false;
 };
 
+applabCommands.getNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'getNumber', 'id', opts.elementId, true);
+  return parseFloat(applabCommands.getText(opts), 10);
+};
+
+applabCommands.setNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'setNumber', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setNumber', 'value', opts.number, 'number');
+  opts.text = opts.number;
+  return applabCommands.setText(opts);
+};
+
 /**
  * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
  * for the simplified case of plain text content (in, for example, a

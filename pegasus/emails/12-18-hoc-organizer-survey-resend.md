@@ -6,7 +6,7 @@ subject: "Update about your thank-you gift"
 
 Dear Hour of Code organizer,
 
-We are re-sending your Hour of Code survey link. There was a glitch in our system that caused 82 people to receive the 2014 Hour of Code survey. You may have noticed the Skype code you request is invalid too.
+We are re-sending your Hour of Code survey link. There was a glitch in our system that caused 82 people to receive the 2014 Hour of Code survey. You may have noticed the Skype code you requested is invalid too.
 
 While the link looks the same, it will re-direct you to the 2015 survey and you can select a new prize.
 
