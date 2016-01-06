@@ -76,6 +76,18 @@
   width: 100%
 }
 
+@media screen and (min-width: 970px) {
+  .img-container {
+    min-height: 334px;
+  }
+}
+
+@media screen and (min-width: 513px) and (max-width: 970px) {
+  .img-container {
+    min-height: 202px;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .starwars-tutorial {
     width: 50%;
