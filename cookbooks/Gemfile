@@ -11,3 +11,4 @@ gem 'test-kitchen', github: 'wjordan/test-kitchen', branch: 'cdo'
 gem 'kitchen-docker'
 # Use with solve 2.0 to remove gecode dependency (cf. berkshelf/solve#46)
 gem 'berkshelf', github: 'wjordan/berkshelf'
+gem 'kitchen-ec2', github: 'wjordan/kitchen-ec2', branch: 'spot-duration'

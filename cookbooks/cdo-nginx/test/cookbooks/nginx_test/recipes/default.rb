@@ -22,13 +22,11 @@ end
 template "/etc/init.d/dashboard" do
   source 'init.d.erb'
   mode '0755'
-  variables ({
-    src_file: "/home/#{node[:current_user]}/unicorn.rb",
+  variables src_file: "/home/#{node[:current_user]}/unicorn.rb",
     app_root: "/home/#{node[:current_user]}",
     pid_file: "/home/#{node[:current_user]}/dashboard.pid",
     user: node[:current_user],
-    env: node.chef_environment,
-  })
+    env: node.chef_environment
 end
 
 file '/home/kitchen/Gemfile' do

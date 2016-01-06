@@ -11,3 +11,6 @@ gem_package 'bundler' do
   action :upgrade
   version node['cdo-ruby']['bundler_version']
 end
+
+# git is required for using git repos with bundler
+apt_package 'git'

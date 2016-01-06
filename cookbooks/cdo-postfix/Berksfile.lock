@@ -1,0 +1,11 @@
+DEPENDENCIES
+  cdo-postfix
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.9.2)
+  cdo-postfix (0.2.0)
+    apt (>= 0.0.0)
+    postfix (>= 0.0.0)
+  postfix (3.7.0)

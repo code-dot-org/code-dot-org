@@ -12,10 +12,19 @@ template "/home/#{node[:current_user]}/.gemrc" do
 end
 
 git "/home/#{node[:current_user]}/#{node.chef_environment}" do
-  repository 'git@github.com:code-dot-org/code-dot-org.git'
+  if node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
+    repository 'git@github.com:code-dot-org/code-dot-org.git'
+  else
+    repository 'https://github.com/code-dot-org/code-dot-org.git'
+  end
 
+  depth 5
   # Sync to the production or staging branch as appropriate.
-  branch = (node.chef_environment == 'adhoc') ? 'staging' : node.chef_environment
+  if node.chef_environment == 'adhoc'
+    branch = node['cdo-repository']['branch'] || 'staging'
+  else
+    branch = node.chef_environment
+  end
   revision branch
 
   # It is not necessary to checkout the staging branch because we get it automatically
