@@ -124,6 +124,17 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {},
           "title": "setText"
         },
+        "getNumber": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "getNumber",
+          "value": true
+        },
+        "setNumber": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "setNumber"
+        },
         "checkbox": {
           "color": "#FFF176",
           "dropdown": {
