@@ -1,51 +1,54 @@
 "zh-TW":
-  hour_of_code: 一小時的程式課程
+  hour_of_code: 一小時的程式設計課程
   hello: 世界您好
   select_language: 請選擇您的語言
   en: 資訊科學
   computer_science_edweek: 電腦科學教育周
   csedweek_dates: 2014 年 12 月 8-14 日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">編程一小時</a> 即將到來。招喚教師以及志願者們<a href="http://hourofcode.com" style="color:
-    white; text-decoration:underline; font-weight:bold">策劃您的編程一小時</a>'
+    font-weight:bold">一小時的程式設計課程</a>活動即將開始。所有的教師以及活動組織者們，請<a href="http://hourofcode.com"
+    style="color: white; text-decoration:underline; font-weight:bold">開始計畫您的活動吧！</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">您是電腦科學的導師嗎？請查閱其它CWSdWeek的資源</a>'
-  n_have_learned_an_hoc: <h1>即刻試下</h1><h2>一小時編程</h2><h3>#人已嘗試</h3>
+    none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
+  n_have_learned_an_hoc: '<h1>立刻嘗試</h1><h2>一小時的程式設計活動</h2><h3>目前已有 # 人玩過</h3>'
   anybody_can_learn: 任何人都可以學習。
-  learn_now: 現在就開始進行學習課程
-  petition_message: 每個在學校的學生都應該有機會去學習電腦科學
-  petition_sign_message: '如果您同意，簽署您的名字。 加入 # 其他人。'
-  petition_sign_message_support: '如果你支持我們，請在這裡簽名。加入 # 已簽名的。'
-  petition_join_others: 參與其他活動
+  learn_now: 現在就開始學習
+  petition_message: 每個在學校的學生都應該有機會去學習資訊科學
+  petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
+  petition_sign_message_support: '如果您支持我們的理想，請在此簽署您的名字。目前已有 # 人簽署。'
+  petition_join_others: '目前已有 # 人簽署。'
   name: 你的名字
   email: 電子郵件
   zipcode: 郵遞區號或國家
   submit: 送出
-  twentyhours_heading: 試試看我們的電腦科學課程簡介
-  twentyhours_text: 完成您的第一個小時的編程了嗎？在此後續課程可以瞭解更多核心電腦科學和程式設計的概念。
-  hoc2014_heading: 加入 <a href="HTTP://hourofcode.com"> 編程一小時</a> <br/>，2014 年 12 月
-    8日至14 日 <br/>
+  twentyhours_heading: 試試看我們的資訊科學課程簡介
+  twentyhours_text: 完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
+  hoc2014_heading: 加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12
+    月 8 日至 14 日 <br/>
   hoc2014_students: 學生
   hoc2014_try: 試一試
   hoc2014_teachers: 教師
-  hoc2014_host: 舉辦教學
+  hoc2014_host: 主辦活動
   hoc2014_everyone: 任何人
   hoc2014_support: 支援 &#x25BE;
-  hoc2014_whatishoc: 什麼是”一小時編程“？
-  csedweek_map_header: '#電腦科學教學週(CSEdWeek) / 世界各地都有 Hour of Code'
-  csedweek_map_signup: 註冊你的帳號
-  csedweek_map_search_placeholder: 搜尋Hour of Code的活動
+  hoc2014_whatishoc: 什麼是「一小時的程式設計課程」(Hour of Code)？
+  csedweek_map_header: '世界各地共同舉辦了 # 場資訊科學教學週 (CSEdWeek) / 「一小時的程式設計課程」活動'
+  csedweek_map_signup: 註冊您的活動
+  csedweek_map_search_placeholder: 搜尋「一小時的程式設計課程」活動
   csedweek_map_search_search: 搜尋
   csedweek_map_search_reset: 再試一次
-  csedweek_map_legend_title: 傳說
-  csedweek_map_legend_event: 一個小時的程式課程活動
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: 圖例
+  csedweek_map_legend_event: 一個小時的程式設計課程活動
+  csedweek_map_legend_cs_tech_jam: 資訊科學 Tech Jam 活動
   cded_sign_up: 註冊帳號
   cded_try_it: 試一試
   twentyhours_trynow: 快來試試
-  california_heading: 邀請你的學校推行計算機科學教育
-  california_text: 任何一個老師可以提供我們 <a href='HTTP://learn.code.org/'> 免費介紹課程</a>。任何小學可
-    <a href='HTTP://code.org/educate/k5'> 教導電腦科學</a>。誠邀高中<a href='http://code.org/educate/districts'>與我們合作。
+  california_heading: 要求您的學校推行資訊科學教育
+  california_text: 任何老師都可以<a href='http://studio.code.org/'>提供我們課程</a>。任何小學都可以<a href='http://code.org/educate/k5'>教導資訊科學</a>。誠摯邀請中學以上的學校<a
+    href='http://code.org/educate/districts'>與我們合作。
   california_button: 瞭解更多資訊
   flappy_heading: 祝 Code.org："Flappy" Birthday
   flappy_text: Code.org 剛滿 1 歲。 <br/> <br/> 藉著您製作自己的客製化 <b>Flappy</b> 遊戲和我們一起慶祝。撰寫您自己的程式規則，並與朋友們分享
@@ -58,26 +61,24 @@
     "重複迴圈" (repeat-loops)、 "如果-就"(if-then)語法、和簡易的演算法。
   all_ages: 適合所有年齢
   beginner: 初學者
-  n_participants: '# 參與者'
+  n_participants: '# 名參與者'
   go: 開始
   thank_you_: 謝謝！
   congratulations: 恭喜你！
-  congratulations_on_completing_hoc: 恭喜你，你已完成 1 個小時的程式設計課程。
-  congratulations_volunteer: 恭禧：你可以開始嘗試一個小時的程式課程, <a href="https://code.org/volunteer">註冊為教室志工</a>
-    幫助學生學習一個小時的程式課程
+  congratulations_on_completing_hoc: 恭喜你，你已完成一小時的程式設計課程。
+  congratulations_volunteer: 恭喜：你已經試過一小時的程式設計課程了，你可以<a href="https://code.org/volunteer">開一間教室並註冊為志工</a>來幫助學生學習一小時的程式設計課程
   course_name_accelerated: 速成課程
   course_name_course1: 課程 1
   course_name_course2: Course 2
   course_name_course3: 課程 3
   course_name_course4: 課程 4
-  congratulations_on_completing_course: 恭喜你完成 %{course}
-  congrats_next_tutorials_title: 接下來請嘗試下面這些教程
-  congrats_next_tutorials_desc: 嘗試這些較短，約一小時的教程或嘗試 <a href="%{current_path}/next">
-    合作夥伴教程</a>。
+  congratulations_on_completing_course: 恭喜你完成了 %{course}
+  congrats_next_tutorials_title: 接下來請嘗試下面這些課程
+  congrats_next_tutorials_desc: 嘗試這些較短，約一小時的課程或嘗試<a href="%{current_path}/next"> 合作夥伴教程</a>。
   get_a_certificate_of_achievement: 獲取成就證書
   enter_valid_age: 請選擇一個有效的年齡
   enter_valid_email: 請輸入一個有效的電子郵件信箱
-  get_a_certificate_message: 我們將會寄送給您有關<a href='/learn/beyond'>一小時後的學習</a>的證書和相關訊息。
+  get_a_certificate_message: 我們將會寄送給您一份證書，以及有關<a href='/learn/beyond'>一小時課程後的學習</a>的相關訊息。
   get_a_certificate_message_after: 點擊證書以便下載或打印。現在繼續<a href='http://studio.code.org'>其它的課程</a>，或點擊“<a
     href='/learn/beyond'>學習超過一小時</a>”查閱其它學習選項。
   thanks_for_submitting: 謝謝!
@@ -208,7 +209,7 @@
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
   homepage_slot_text_link_host: 舉辦「一小時程式學習」活動。
-  homepage_slot_text_link_hocserved: '#服務。'
+  homepage_slot_text_link_hocserved: '已有 # 個學生參加'
   homepage_solot_text_link_volunteer: 在「一小時程式學習」活動中擔任志工
   homepage_slot_text_title_students: 學生
   homepage_slot_text_blurb_students: 瀏覽所有教學課程
@@ -269,10 +270,10 @@
   inspirational_videos_more: 更多名人的 <a href="HTTPs://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     激勵影片</a>
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_classic_title: 經典
+  playlab_gumball_title: 陶阿甘
+  playlab_iceage_title: 冰原歷險記--敬請期待
+  playlab_iceage_title_live: 冰原歷險記
   starwars_subtitle: 用程式建立一個銀河系
   starwars_javascript_title: Javascript
   starwars_javascript_description: 使用拖拉區塊及JavaScript.
@@ -280,8 +281,7 @@
   starwars_javascript_start_button: 快來試試
   starwars_blocks_title: 程式積木
   starwars_blocks_description: 使用拖拉區塊
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: 許多語言 |現代的瀏覽器、 智慧手機、 平板電腦 |年齡在 6-10
   starwars_blocks_start_button: 快來試試
   starwars_watch_videos: 在開始始，先看一些激發靈感的影片
   starwars_speak_languages: 使用另一種語言?
@@ -292,7 +292,7 @@
   mc_shortdescription: 使用程式模塊幫助 Steve 或 Alex 闖過創世神的各種冒險
   mc_gradelevel: 年齡6歲以上
   mc_platformtext: 瀏覽器, 智慧手機, 平板
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: 多種語言│現代瀏覽器和平板電腦│適合6-106歲
   minecraft_subtitle: Minecraft 程式碼時間
   volunteer_engineer_submission_title: 激勵學生和志工參與一個小時的程式課程
   volunteer_engineer_submission_subtitle_generic: '2015年12/7-12/13有100,000個老師在教Hour
@@ -306,9 +306,9 @@
     來幫助學生<span style="font-family: ''Gotham 7r'', sans-serif;">激發</span>出靈感的人。'
   volunteer_engineer_submission_intro_signup: '如果你是在學習電腦科學的學生或是軟體的專業人士，請輸入下列資訊。此為必填:
     <span class="form-required-field">*</span>'
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_intro_links: 你需要找到志願者嗎? 在我們 的<a href="%{volunteer_local}">
+    志願者的地圖</a> 上找到當地的志願者。
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: 在志工地圖上與老師共用的資訊
   volunteer_engineer_submission_field_name: 你的名字
   volunteer_engineer_submission_field_name_placeholder: 全名
@@ -392,11 +392,9 @@
   dashboard_landing_more_tutorials_desc: 我們的合作夥伴提供更多教程 <a href="/learn/beyond">。</a>學會用機器人程式設計，
     製造網上頁面，製造你自己的應用程式，或探討其他電腦程式設計語言如C++、Ruby或Python!
   dashboard_hoc_courses: 適合所有年齡層的一個小時程式設計課程
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
+  dashboard_hoc_courses_desc: 和您的學生一起試試這不超過一小時的課程！
+  dashboard_hoc_courses_desc_and_cta: 跟您的學生一起試試這短短的、不超過一小時的課程。在電腦科學教育週<a href="https://hourofcode.com">加入Hour
+    of Code的活動</a>。
   dashboard_k5_courses: K-5 的 20 小時課程
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
@@ -423,9 +421,7 @@
     an introduction to computer science concepts within the context of modeling and
     simulation.
   dashboard_course_ecs: 探索電腦科學
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
+  dashboard_course_ecs_desc: 「探索電腦科學」是為期一年的課程，大致包括6個單元：人與電腦的互動、解決問題、網頁設計、程式語言、計算數據分析和機器。
   dashboard_course_csp: 電腦科學原則
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
@@ -571,9 +567,16 @@
   dashboard_faq_k5: K-5 的常見問題
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: 瞭解更多資訊
   dashboard_announce_hoc: <b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: |
+    <b>2015年12月4日</b> -- Hour of Code來了！試試這50個適合每個年齡層、每個裝置的教學課程。
+    本週最新：用「遊戲實驗室」、「冰原歷險記」和「陶阿甘」來設計你自己的故事和遊戲。
   code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 快來試試
@@ -639,8 +642,8 @@
   mobile_devices: 用於行動裝置的自學教案
   frozen_name: 與 Anna 和 Elsa 一起寫程式吧
   starwars_name: 星際大戰：用程式建立一個銀河系
-  codeorg_name: 編寫您的第一個電腦程式
-  codeintl_name: 編寫您的第一個電腦程式
+  codeorg_name: 經典迷宮
+  codeintl_name: 經典迷宮
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 簡介
   khanes_name: JavaScript 簡介
@@ -676,7 +679,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭，布
-  hourofcode_name: 編寫您的第一個電腦程式
+  hourofcode_name: 經典迷宮
   playlab_name: 播放實驗室
   infinity_name: Infinity Play Lab
   artist_name: 畫家
@@ -1163,13 +1166,3 @@
   infinity_shortcode: inf
   playlab_shortcode: 玩
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

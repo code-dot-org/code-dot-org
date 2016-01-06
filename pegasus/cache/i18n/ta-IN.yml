@@ -1,5 +1,5 @@
 "ta-IN":
-  hour_of_code: Hour of Code
+  hour_of_code: நிரல்வரி நேரம்
   hello: ஹலோ உலகம்
   select_language: உங்கள் மொழியை தேர்ந்தெடுக்கவும்
   en: கணினி அறிவியல்
@@ -29,6 +29,9 @@
   twentyhours_heading: நமது முதற் கணிப்பொறி அறிவியல் பயிற்சியை செய்ய முயற்சிக்கவும்
   twentyhours_text: உங்கள் முதல் மணி, குறியீடு பூர்த்தி? மேலும் முக்கிய கணினி அறிவியல்
     மற்றும் நிரலாக்க கருத்துக்கள் அறிய இந்த படாத்தை பின்பற்றுங்கள்.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: சேருங்கள்<a href="http://hourofcode.com"> மணி குறியீடை</a><br/>
     டிசம்பர் 8-14, 2014 <br/>
   hoc2014_students: Students
@@ -172,7 +175,7 @@
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_title: நிரல்வரி நேரம்
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
@@ -253,7 +256,7 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Learn more
-  homepage_slot_text_title_hoc: Hour of Code
+  homepage_slot_text_title_hoc: நிரல்வரி நேரம்
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
@@ -370,6 +373,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: பெயர்
@@ -392,7 +396,7 @@
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Description
+  volunteer_engineer_submission_field_description: விளக்கம்
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
@@ -624,7 +628,7 @@
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
-  dashboard_sequence: Sequence
+  dashboard_sequence: தொடர்வரிசை
   dashboard_framework: Framework
   dashboard_standards: Standards
   dashboard_implementation_guide: Implementation Guide
@@ -674,6 +678,12 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
@@ -1458,13 +1468,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

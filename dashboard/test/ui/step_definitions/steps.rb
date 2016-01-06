@@ -11,6 +11,10 @@ def replace_hostname(url)
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
+  if ENV['HOUROFCODE_TEST_DOMAIN']
+    url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
+  end
+
   # Convert http to https
   url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org

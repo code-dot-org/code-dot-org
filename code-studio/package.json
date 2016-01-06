@@ -10,27 +10,36 @@
   },
   "scripts": {
     "postinstall": "linklocal",
-    "build": "browserify --debug src/js/blockly_editor.js -o build/js/blockly_editor.js",
-    "build:min": "browserify src/js/blockly_editor.js | uglifyjs -o build/js/blockly_editor.min.js",
-    "prebuild": "mkdir -p build/js",
-    "prebuild:min": "mkdir -p build/js",
     "clean": "rm -rf build",
-    "env": "env",
-    "lint": "npm run lint:js -s",
-    "lint:js": "jshint src/js/*.js",
+    "lint": "npm run lint-js -s && npm run lint-css -s",
+    "lint-css": "sass-lint src/css/*css",
+    "lint-js": "jshint src/js/*.js",
+    "build": "npm run build-js && npm run build-css",
+    "build:min": "npm run build-js:min && npm run build-css:min",
+    "build-css": "node-sass --include-path node_modules --include-path src/css src/css/levelbuilder.scss build/css/levelbuilder.css",
+    "prebuild-css": "mkdir -p build/css",
+    "build-css:min": "node-sass --output-style compressed --include-path node_modules --include-path src/css src/css/levelbuilder.scss build/css/levelbuilder.min.css",
+    "prebuild-css:min": "mkdir -p build/css",
+    "build-js": "./build-js.js",
+    "build-js:min": "./build-js.js --min",
     "start": "echo \"Unimplemented.\"",
     "stop": "echo \"Unimplemented.\"",
-    "test": "test"
+    "test": "echo \"Unimplemented.\""
   },
   "devDependencies": {
     "browserify": "^12.0.1",
+    "commander": "^2.9.0",
+    "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
+    "node-sass": "^3.4.2",
+    "sass-lint": "^1.4.0",
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
     "linklocal": "^2.5.2",
+    "lodash": "^3.10.1",
     "marked": "0.3.2"
   }
 }

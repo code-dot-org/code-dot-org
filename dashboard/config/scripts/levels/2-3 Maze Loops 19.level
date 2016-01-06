@@ -42,10 +42,8 @@
         </block>
         <block type="controls_repeat">
           <title name="TIMES">5</title>
-          <statement name="DO">
-            <block type="maze_moveForward"/>
-          </statement>
         </block>
+        <block type="maze_moveForward"/>
       </xml>
     </recommended_blocks>
   </blocks>
