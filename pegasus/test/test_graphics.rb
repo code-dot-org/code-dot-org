@@ -10,7 +10,6 @@ class GraphicsTest < Minitest::Test
   end
 
   def test_process_image
-    # header 'host', 'code.org'
     [''] + %w(
       fit-320
       fill-320
@@ -21,6 +20,7 @@ class GraphicsTest < Minitest::Test
       response = get url
       assert_equal 200, response.status, "Error in #{url}"
 
+      # Downsample from kids4_2x.jpg
       url = "/images/#{mode}/homepage/kids4.jpg"
       response = get url
       assert_equal 200, response.status, "Error in #{url}"
