@@ -174,7 +174,7 @@ class ApplicationController < ActionController::Base
           options[:solved?] &&
           options[:activity] &&
           options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
+        response[:save_to_gallery_url] = gallery_save_path(gallery_activity: {activity_id: options[:activity].id})
       end
     end
 

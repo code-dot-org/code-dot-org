@@ -10,7 +10,16 @@ class GalleryActivitiesController < ApplicationController
   INDEX_PER_PAGE = 30
   MAX_PAGE = 100
 
+  GALLERY_PROXY_MAX_AGE = 900 # 15 minutes
+  GALLERY_MAX_AGE = GALLERY_PROXY_MAX_AGE * 2
+
   def index
+    request.session_options[:skip] = true
+
+    if Gatekeeper.allows('public_caching_for_gallery')
+      response.headers['Cache-Control'] = "public,max-age=#{GALLERY_MAX_AGE},s-maxage=#{GALLERY_PROXY_MAX_AGE}"
+    end
+
     page = params[:page].to_i rescue 0
     if page < 0 || page > MAX_PAGE
       redirect_to gallery_activities_path

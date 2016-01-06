@@ -12,12 +12,14 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update]
 
-  resources :gallery_activities, path: '/gallery' do
+  resources :gallery_activities, only: [:index], path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
       get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
     end
   end
+  post '/gallery_save', to: 'gallery_activities#create', as: 'gallery_save'
+
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]

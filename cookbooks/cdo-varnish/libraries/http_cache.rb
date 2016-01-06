@@ -106,6 +106,8 @@ class HttpCache
                /s/frozen/stage/1/puzzle/*
                /s/gumball/stage/1/puzzle/*
                /hoc/*
+               /gallery
+               /gallery/*
             },
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES
