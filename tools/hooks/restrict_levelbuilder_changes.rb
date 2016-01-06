@@ -7,7 +7,7 @@ Dir.chdir REPO_DIR
 branchname = `git rev-parse --abbrev-ref HEAD`.strip
 
 exit(0) unless branchname == 'levelbuilder'
-modified_files = HooksUtils.get_modified_files REPO_DIR
+modified_files = HooksUtils.get_modified_files
 
 modified_files.each do |filename|
   raise 'Levelbuilder branch should only commit files in levels directory' unless filename.start_with? LEVELS_DIR
