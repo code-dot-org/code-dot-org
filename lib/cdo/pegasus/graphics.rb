@@ -4,12 +4,20 @@ MAX_DIMENSION = 2880
 
 def load_manipulated_image(path, mode, width, height, scale = nil)
   image = Magick::Image.read(path).first
-  width = image.columns if width <= 0
-  height = image.rows if height <= 0
+
+  # If only one dimension provided, assume a square
+  height ||= width
+  width ||= height
+
+  # If both dimensions are nil, assume the original image dimension
+  width ||= image.columns
+  height ||= image.rows
+
   if scale
     width *= scale
     height *= scale
   end
+
   width = [MAX_DIMENSION, width].min
   height = [MAX_DIMENSION, height].min
 
@@ -35,16 +43,16 @@ def process_image(path, ext_names, language=nil, site=nil)
   dirname = File.dirname(path)
 
   mode = :resize
-  width = 0
-  height = 0
+  width = nil
+  height = nil
   manipulated = false
 
   # Manipulated?
   if (m = dirname.match /^(?<basedir>.*)\/(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)\/(?<dir>.*)$/m)
     mode = m[:mode][0..-2].to_sym unless m[:mode].nil_or_empty?
-    width = m[:width].to_i
-    height = m[:height].to_i
-    manipulated = width > 0 || height > 0
+    width = m[:width].to_i unless m[:width].nil_or_empty?
+    height = m[:height].to_i unless m[:height].nil_or_empty?
+    manipulated = width || height
     dirname = m[:basedir].nil_or_empty? ? m[:dir] : File.join(m[:basedir], m[:dir])
   end
 
@@ -73,7 +81,7 @@ def process_image(path, ext_names, language=nil, site=nil)
     content_type: image_format.to_sym,
   }
 
-  if ((retina_in == retina_out) || retina_out) && !manipulated && File.extname(path) == extname
+  if (retina_out || !retina_in) && !manipulated && File.extname(path) == extname
     # No [useful] modifications to make, return the original.
     return output.merge(file: path)
   end
