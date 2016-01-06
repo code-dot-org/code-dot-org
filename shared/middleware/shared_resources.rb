@@ -97,4 +97,12 @@ class SharedResources < Sinatra::Base
     image_data[:content]
   end
 
+  def resolve_image(uri)
+    settings.image_extnames.each do |extname|
+      path = deploy_dir("#{uri}#{extname}")
+      return path if File.file?(path)
+    end
+    nil
+  end
+
 end
