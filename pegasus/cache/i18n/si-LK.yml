@@ -26,6 +26,9 @@
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: සිසුන්
@@ -77,8 +80,8 @@
   course_name_course2: Course 2
   course_name_course3: Course 3
   course_name_course4: Course 4
-  congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
+  congratulations_on_completing_course: '%{course} සම්පුර්ණ කළාට සුභ පැතුම්'
+  congrats_next_tutorials_title: ඊළඟට මෙම නිබන්ධන උත්සාහ කරන්න
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Get a certificate of achievement
@@ -89,11 +92,11 @@
   get_a_certificate_message_after: Click on the certificate to download or print it.
     Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or
     see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
-  thanks_for_submitting: Thanks for submitting!
+  thanks_for_submitting: ඉදිරිපත් කිරීම පිළිබඳව ස්තූතියි!
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
-  share_achievement: Share your achievement
+  share_achievement: ඔබගේ ජයග්‍රාහණය Share කරන්න
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
@@ -106,19 +109,19 @@
   give_my_hour: 'Give my Hour to:'
   girls_team: Girls' Team
   boys_team: Boys' Team
-  tell_the_world: Tell the world!
+  tell_the_world: ලොවට කියන්න!
   thanks_for_voting: Thanks for voting!
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   beyond_an_hour: Beyond an Hour of Code
-  get_started: Start
+  get_started: ආරම්භ කරන්න
   i_agree: මම එකඟයි
   participant_select: '- තෝරන්න -'
   participant_student: ශිෂ්‍යයා
   participant_parent: දෙමව්පියා
   participant_educator: Educator
   participant_engineer: මෘදුකාංග ඉංජිනේරු
-  participant_other: None of the Above
+  participant_other: ඉහත කිසිවක් නොවේ
   print_all: Print all
   print_ice_art: Print your ice art
   create_art_with_zombie: or make advanced art with zombie
@@ -367,6 +370,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: නම
@@ -681,6 +685,12 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Learn more
   dashboard_announce_hoc: '<b>November 9, 2015</b> - A new Hour of Code tutorial is
     here, featuring upcoming film Star Wars: The Force Awakens. Work with Rey to guide
     the new droid, BB-8, through a mission. Then, join Leia to create and share your
@@ -1466,13 +1476,3 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
-  volunteer_engineer_submission_update_information: Update your information
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
-  dashboard_announce_button_text: Learn more

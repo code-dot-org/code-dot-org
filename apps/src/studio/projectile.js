@@ -102,7 +102,7 @@ var Projectile = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
-  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
+  this.speed = options.speed || constants.DEFAULT_PROJECTILE_SPEED;
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
@@ -111,16 +111,19 @@ var Projectile = function (options) {
             (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
 
   /** @private {StudioSpriteSheet} */
-  this.spriteSheet_ = new StudioSpriteSheet($.extend({}, options, {
-    width: options.spriteWidth,
-    height: options.spriteHeight,
+  this.spriteSheet_ = new StudioSpriteSheet({
+    frameWidth: options.spriteWidth,
+    frameHeight: options.spriteHeight,
+    defaultFramesPerAnimation: options.frames,
+    assetPath: options.image,
     horizontalAnimation: true,
     totalAnimations: 1
-  }));
+  });
 
   /** @private {StudioAnimation} */
   this.animation_ = new StudioAnimation($.extend({}, options, {
-    spriteSheet: this.spriteSheet_
+    spriteSheet: this.spriteSheet_,
+    animationFrameDuration: this.getAnimationFrameDuration()
   }));
 };
 Projectile.inherits(Collidable);
@@ -139,10 +142,11 @@ Projectile.prototype.createElement = function (parentElement) {
 };
 
 /**
- * Stop our animations
+ * Retrieve animation speed (frames per tick)
  */
-Projectile.prototype.stopAnimations = function() {
-  this.animation_.stopAnimator();
+Projectile.prototype.getAnimationFrameDuration = function () {
+  return constants.DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION *
+      constants.DEFAULT_PROJECTILE_SPEED / this.speed;
 };
 
 /**
@@ -150,6 +154,38 @@ Projectile.prototype.stopAnimations = function() {
  */
 Projectile.prototype.removeElement = function () {
   this.animation_.removeElement();
+};
+
+/**
+ * Flip the direction of the projectile
+ */
+Projectile.prototype.bounce = function () {
+  switch (this.dir) {
+    case Direction.NORTH:
+      this.dir = Direction.SOUTH;
+      break;
+    case Direction.WEST:
+      this.dir = Direction.EAST;
+      break;
+    case Direction.SOUTH:
+      this.dir = Direction.NORTH;
+      break;
+    case Direction.EAST:
+      this.dir = Direction.WEST;
+      break;
+    case Direction.NORTHEAST:
+      this.dir = Direction.SOUTHWEST;
+      break;
+    case Direction.SOUTHEAST:
+      this.dir = Direction.NORTHWEST;
+      break;
+    case Direction.SOUTHWEST:
+      this.dir = Direction.NORTHEAST;
+      break;
+    case Direction.NORTHWEST:
+      this.dir = Direction.SOUTHEAST;
+      break;
+  }
 };
 
 /**
@@ -162,11 +198,12 @@ Projectile.prototype.display = function () {
   };
 
   this.animation_.redrawCenteredAt({
-    x: this.x,
-    y: this.y
-  });
+        x: this.x,
+        y: this.y
+      },
+      Studio.tickCount);
 
-  if (this.spriteSheet_.framesPerAnimation > 1) {
+  if (this.spriteSheet_.defaultFramesPerAnimation > 1) {
     this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
