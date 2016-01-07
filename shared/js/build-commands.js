@@ -8,51 +8,6 @@ var path = require('path');
 /**
  * Generate command to:
  * Bundle JavaScript files using Browserify, break out common code using
- * factor-bundle, and (optionally) minify output using uglify.
- * @param {string} srcPath - Path to root of JavaScript source files, absolute
- *        or relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} buildPath - Path to root of output directory, absolute or
- *        relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string[]} files - List of files to build, given as paths rooted at
- *        the srcPath given.  Each will map to an output file.
- * @param {boolean} [shouldMinify] if provided and TRUE, will build minified
- *        output files (with .min.js extensions) instead of unminified output.
- * @returns {string}
- */
-exports.browserifyCommand = function (srcPath, buildPath, files, shouldMinify) {
-  var browserifyInputFiles = files.map(function (file) {
-    return srcPath + file;
-  }).join(' ');
-
-  if (shouldMinify) {
-    return [
-      'browserify ' + browserifyInputFiles,
-      "-p [ factor-bundle -o 'uglifyjs > " + buildPath + "`basename $FILE .js`.min.js' ]",
-      '| uglifyjs -o ' + buildPath + 'code-studio-common.min.js'
-    ].join(" \\\n    ");
-  }
-
-  return [
-    'browserify --debug ' +  browserifyInputFiles,
-    "-p [ factor-bundle -o '> " + buildPath + "`basename $FILE .js`.js' ]",
-    '-o ' + buildPath + 'code-studio-common.js'
-  ].join(" \\\n    ");
-
-  // This should work (I think) but untested
-  // return exports.browserifyExt({
-  //   srcPath: srcPath,
-  //   buildPath: buildPath,
-  //   files: files.map(function (file) { return [file, file]; }),
-  //   shouldMinify: shouldMinify,
-  //   shouldWatch: false
-  // });
-};
-
-/**
- * Generate command to:
- * Bundle JavaScript files using Browserify, break out common code using
  * factor-bundle, and (optionally) minify output using uglify and (optionally)
  * run watch in watch mode using watchify
  * @param {object} config
@@ -79,7 +34,6 @@ exports.browserifyExt = function (config) {
   var shouldMinify = config.shouldMinify;
   var shouldWatch = config.shouldWatch;
 
-  // list of input files
   var fileInput = filenames.map(function (file) {
     return srcPath + file;
   }).join(' ');
