@@ -1,3 +1,6 @@
+'use strict';
+/* global dashboard, Dialog, YT */
+
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 
@@ -12,7 +15,7 @@ var testImageAccess = require('./url_test');
     }
     setupVideoFallback(options, width, height);
     return video;
-  }
+  };
 
   function onVideoEnded() {
     $('.video-modal').trigger("ended");
@@ -62,8 +65,8 @@ var testImageAccess = require('./url_test');
     }
 
     upgradeInsecureOptions(options);
-    var widthRatio = .8;
-    var heightRatio = .8;
+    var widthRatio = 0.8;
+    var heightRatio = 0.8;
     var aspectRatio = 16 / 9;
 
     var body = $('<div/>');
@@ -79,7 +82,7 @@ var testImageAccess = require('./url_test');
     getShowNotes(options.key, notesDiv.children('#notes'));
 
     var dialog = new Dialog({ body: body, redirect : options.redirect });
-    $div = $(dialog.div);
+    var $div = $(dialog.div);
     $div.addClass('video-modal');
 
     $('.video-modal').on("remove", function () {
@@ -167,7 +170,9 @@ var testImageAccess = require('./url_test');
 
     dialog.show();
 
-    $('.video-modal').on("ended", function () {
+    var videoModal = $('.video-modal');
+
+    videoModal.on("ended", function () {
       dialog.hide();
     });
 
@@ -179,14 +184,14 @@ var testImageAccess = require('./url_test');
 
     // Don't add fallback player if a video modal has closed
     var shouldStillAdd = true;
-    $('.video-modal').one('hidden.bs.modal', function(){
+    videoModal.one('hidden.bs.modal', function(){
       shouldStillAdd = false;
     });
 
     setupVideoFallback(options, $div.width(), divHeight, function(){
       return shouldStillAdd;
     });
-  }
+  };
 
   /**
    * When hidden quickly after being shown, the videojs flash player progress tracker
@@ -198,25 +203,25 @@ var testImageAccess = require('./url_test');
       return;
     }
 
-    var fallbackPlayer = vjs($('.video-js')[0]);
+    var fallbackPlayer = videojs($('.video-js')[0]);
     fallbackPlayer.stopTrackingProgress();
     fallbackPlayer.stopTrackingCurrentTime();
   }
 
   // Precondition: $('#video') must exist on the DOM before this function is called.
   function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
-    shouldStillAddCallback = shouldStillAddCallback || function() { return true };
+    shouldStillAddCallback = shouldStillAddCallback || function() { return true; };
 
-    if (!videoInfo['enable_fallback']) {
+    if (!videoInfo.enable_fallback) {
       return;
     }
 
-    if (videoInfo['force_fallback']) {
+    if (videoInfo.force_fallback) {
       addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
       return;
     }
 
-    onYouTubeBlocked(function() {
+    window.onYouTubeBlocked(function() {
       if (!shouldStillAddCallback()) {
         return;
       }
@@ -224,9 +229,10 @@ var testImageAccess = require('./url_test');
     });
   }
 
+  // This is on window because it gets accessed externally for our video test page.
   window.onYouTubeBlocked = function(callback) {
     testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
-  }
+  };
 
   function youTubeAvailabilityEndpointURL() {
     if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
