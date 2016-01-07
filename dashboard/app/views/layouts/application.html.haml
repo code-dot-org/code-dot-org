@@ -9,6 +9,8 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+    = javascript_include_tag 'js/code-studio-common'
+    = javascript_include_tag 'js/code-studio'
     = csrf_meta_tags
     = yield :head
     - if content_for? :og

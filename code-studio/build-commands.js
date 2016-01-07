@@ -64,6 +64,10 @@ exports.browserify = function (config) {
   ].join(" \\\n    ");
 };
 
+exports.copyDirectory = function (srcDir, destDir) {
+  return 'cp -ru ' + srcDir + ' ' + destDir;
+};
+
 /**
  * Generate command to:
  * Creates given director(y|ies) to any depth if it does not exist, no-op if

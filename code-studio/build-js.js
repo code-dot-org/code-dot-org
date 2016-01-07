@@ -28,10 +28,12 @@ build_commands.execute([
     srcPath: SRC_PATH,
     buildPath: BUILD_PATH,
     filenames: [
+      'code-studio.js',
       'levelbuilder.js',
       'levelbuilder_dsl.js',
       'levelbuilder_studio.js',
-      'leveltype_widget.js'
+      'leveltype_widget.js',
+      'video.js' // TODO: Rename to video_embed.js?
     ],
     commonFile: 'code-studio-common',
     shouldFactor: true,

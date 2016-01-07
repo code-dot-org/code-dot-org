@@ -22,4 +22,4 @@ function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
   window.testImages = window.testImages || [];
   window.testImages.push(img);
 }
-window.testImageAccess = testImageAccess;
+module.exports = testImageAccess;
