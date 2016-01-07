@@ -102,10 +102,6 @@
   line-height: 120%;
   cursor: default; }
 
-.instructions-markdown.classic-margins {
-  padding-top: 0;
-  margin-left: 90px; }
-
 .instructions-markdown .character-text {
   line-height: 27px;
   font-size: 24px;

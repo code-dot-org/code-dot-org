@@ -1,3 +1,5 @@
+= javascript_include_tag 'levels/reference_area'
+
 #reference_area.reference_area
   - if current_user && (current_user.teacher? || current_user.admin?) && @level.ideal_level_source_id && @script && @level && @script_level && !@script.hide_solutions?
     .solution_link
@@ -9,24 +11,3 @@
     %p.help_subtitle= t('reference_area.subtitle')
     = render partial: 'levels/video', collection: related_videos
   %div{style: 'clear: both;'}
-:javascript
-  $('.video_link').each(function() {
-    dashboard.utils.addClickTouchEvent($(this), $.proxy(function() {
-      showVideoDialog({
-        src: $(this).attr('data-src'),
-        name: $(this).attr('data-name'),
-        key: $(this).attr('data-key'),
-        download: $(this).attr('data-download'),
-        thumbnail: $(this).attr('data-thumbnail'),
-        enable_fallback: true,
-        autoplay: true
-      }, true);
-    }, this));
-  });
-  // Allow levels to specify how and where the reference area is rendered.
-  // Reparent the reference area under the target if the target exists.
-  $('#reference_area_target').append($('#reference_area'));
-  // Show only text links if "data-minimal" is set.
-  if ($('#reference_area_target').data('minimal')) {
-    $('#reference_area .video_thumbnail').hide()
-  }
