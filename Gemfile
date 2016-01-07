@@ -34,9 +34,9 @@ end
 group :development, :test do
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
-  gem 'konacha', require: false  # Mocha + Chai JS testing in Rails
-  # TODO(bjordan): can remove ^ ?
-  gem 'poltergeist'  # Headless JS tests.p
+  gem 'konacha' # Mocha + Chai JS testing in Rails
+  # TODO(bjordan): can remove ^ ? or otherwise explicitly require when needed
+  gem 'poltergeist'  # Headless JS tests.
 
   # gem 'haml-rails', require: false # haml (instead of erb) generators
   # TODO(bjordan): removed in bundle_require branch, check w/ Will / can remove?

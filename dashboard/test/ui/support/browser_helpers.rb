@@ -12,6 +12,7 @@ module BrowserHelpers
   end
 
   def element_has_i18n_text(selector, language, locKey)
+    require File.expand_path('../../../../config/environment.rb', __FILE__)
     locKey.gsub!('\"', '"')
     text = @browser.execute_script("return $(\"#{selector}\").text();")
     text.should eq I18n.t locKey, locale: language
