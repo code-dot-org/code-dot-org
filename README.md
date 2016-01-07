@@ -145,7 +145,6 @@ You'll need to do this once:
   1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
   1. Add `use_my_apps: true`
 1. To build code_studio js, edit `locals.yml` to add:
-  1. Add `build_code_studio: true`
   1. Add `use_my_code_studio: true`
 1. `rake install`
 
