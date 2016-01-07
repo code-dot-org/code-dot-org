@@ -119,7 +119,7 @@ exports.execute = function (commands) {
  * Log a message in a box, so it stands out from the rest of the logging info.
  * @param {!string} message
  */
-exports.fancyLog = function (message) {
+exports.logBoxedMessage = function (message) {
   var bar = '+' + _.repeat('-', message.length + 2) + '+';
   console.log(bar + "\n| " + message + " |\n" + bar + "\n");
 };
