@@ -28,7 +28,7 @@ dashboard.header = (function () {
    *   }>
    * }}
    */
-  header.build = function (stageData, progressData, currentLevelId, userId, sectionId, scriptName) {
+  header.build = function (stageData, progressData, currentLevelId, scriptName) {
     stageData = stageData || {};
     progressData = progressData || {};
 
@@ -133,8 +133,8 @@ dashboard.header = (function () {
           data: {
             script_id: stageData.script_id,
             current_level_id: currentLevelId,
-            user_id: userId,
-            section_id: sectionId
+            user_id: dashboard.clientState.queryParams('user_id'),
+            section_id: dashboard.clientState.queryParams('section_id')
           }, success: function (result) {
             $('.header_popup_body').html(result);
             if (trophiesClicked) {
