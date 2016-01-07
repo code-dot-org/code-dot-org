@@ -15,7 +15,7 @@
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
     "build": "npm run copy-assets && npm run build-js && npm run build-css",
-    "build:min": "npm run build-js:min && npm run build-css:min",
+    "build:min": "npm run copy-assets && npm run build-js:min && npm run build-css:min",
     "build-css": "./build-css.js",
     "build-css:min": "./build-css.js --min",
     "build-js": "./build-js.js",

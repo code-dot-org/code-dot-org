@@ -3,7 +3,7 @@
  * package and its dependencies over into the build output directory. */
 'use strict';
 
-var build_commands = require('./build-commands');
+var build_commands = require('../shared/js/build-commands');
 
 /** @const {string} */
 var BUILD_PATH = './build/assets/';
