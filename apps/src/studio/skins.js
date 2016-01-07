@@ -1314,6 +1314,16 @@ function loadHoc2015x(skin, assetUrl) {
     clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
   };
 
+  skin.puzzle1 = {
+    background: skin.assetUrl('background_puzzle1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png'),
+    clouds: [skin.assetUrl('cloud_light.png'), skin.assetUrl('cloud_light2.png')]
+  };
+
+  skin.preloadMiscImages = [
+    skin.puzzle1.tiles
+  ];
+
   // It's possible to enlarge the rendering of some wall tiles so that they
   // overlap each other a little.  Define a bounding rectangle for the source
   // tiles that get this treatment.

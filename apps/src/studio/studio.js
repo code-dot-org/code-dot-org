@@ -1982,6 +1982,7 @@ Studio.init = function(config) {
     preloadActorImages();
     preloadProjectileAndItemImages();
     preloadBackgroundImages();
+    preloadMiscImages();
   }
 };
 
@@ -2036,6 +2037,16 @@ var preloadActorImages = function() {
     preloadImage(skin[skin.avatarList[i]].walk);
   }
 };
+
+var preloadMiscImages = function() {
+  if (skin.preloadMiscImages) {
+    var miscImages = skin.preloadMiscImages;
+    for (var i = 0; i < miscImages.length; i++) {
+      preloadImage(miscImages[i]);
+    }
+  }
+};
+
 
 /**
  * Clean up a list of Items or Projectiles.
@@ -3151,6 +3162,12 @@ Studio.drawWallTile = function (svg, wallVal, row, col) {
     srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
     srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
     srcWallType = (wallVal & constants.WallTypeMask) >> constants.WallTypeShift;
+
+    // Special value indicates that we should not attempt to actually draw this
+    // wall tile.
+    if (srcRow == 0xf && srcCol == 0xf) {
+      return;
+    }
 
     if (srcWallType === constants.WallType.JUMBO_SIZE) {
       // Jumbo tiles come from a separate sprite sheet which has oversize tiles
