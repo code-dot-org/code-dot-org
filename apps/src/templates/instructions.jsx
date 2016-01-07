@@ -5,10 +5,9 @@ module.exports = React.createClass({
     instructions: React.PropTypes.string,
     instructions2: React.PropTypes.string,
     renderedMarkdown: React.PropTypes.string,
-    authoredHints: React.PropTypes.array,
     markdownClassicMargins: React.PropTypes.bool,
     aniGifURL: React.PropTypes.string,
-    hintReviewTitle: React.PropTypes.string
+    authoredHints: React.PropTypes.element
   },
 
   render: function () {
@@ -55,23 +54,11 @@ module.exports = React.createClass({
       aniGif = <img className="aniGif example-image" src={ this.props.aniGifURL }/>;
     }
 
-    var authoredHints;
-    if (this.props.authoredHints && this.props.authoredHints.length) {
-      authoredHints = (
-        <div className="authored-hints">
-          <h1>{ this.props.hintReviewTitle }</h1>
-          {this.props.authoredHints.map(function (hint) {
-            return <div dangerouslySetInnerHTML={{ __html : hint.content }} />;
-          })}
-        </div>
-      );
-    }
-
     return (
       <div className='instructions-container'>
         {body}
         {aniGif}
-        {authoredHints}
+        {this.props.authoredHints}
       </div>
     );
   }
