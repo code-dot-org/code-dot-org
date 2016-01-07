@@ -24,6 +24,5 @@ build_commands.execute([
   build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH + 'video-js'),
   build_commands.copyDirectory('./node_modules/video.js/node_modules/vtt.js/dist', BUILD_PATH + 'vtt.js'),
 ]);
-
-console.log("code-studio assets copied\n");
+build_commands.fancyLog("code-studio assets copied");
 

@@ -44,5 +44,4 @@ build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
   build_commands.sassCommand(SRC_PATH, BUILD_PATH, FILES, INCLUDE_PATHS, commander.min)
 ]);
-
-console.log("code-studio css built\n");
+build_commands.fancyLog("code-studio css built");
